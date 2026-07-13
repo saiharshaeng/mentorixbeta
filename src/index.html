@@ -42,8 +42,8 @@ if (window.location.protocol.startsWith('http')) {
 <body>
 <div id="orbs"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <!-- Custom cursor: AI glowing orb -->
-<div id="cursor-orb"></div>
-<div id="cursor-aura"></div>
+<div id="cursor-orb"><div class="cursor-arrow-inner"></div></div>
+<div id="cursor-aura"><div class="cursor-label-inner"></div></div>
 <!-- 3D Particle canvas -->
 <canvas id="particle-canvas"></canvas>
 <div id="particles"></div>
@@ -3473,11 +3473,35 @@ const MxAudio=(function(){
   const aura = document.getElementById('cursor-aura');
   if (!orb || !aura) return;
 
-  let mouseX = 0, mouseY = 0;
-  let auraX = 0, auraY = 0;
+  const labelInner = aura.querySelector('.cursor-label-inner');
+
+  let mouseX = -9999, mouseY = -9999;
   let active = false;
   let rafId = null;
   let isTouch = false;
+
+  // Spring states for the arrow (snappier spring)
+  let arrowX = -9999, arrowY = -9999;
+  let avx = 0, avy = 0;
+  const arrowStiffness = 380;
+  const arrowDamping = 32;
+  const arrowMass = 0.6;
+
+  // Spring states for the label pill (laggier spring)
+  let labelX = -9999, labelY = -9999;
+  let lvx = 0, lvy = 0;
+  const labelStiffness = 220;
+  const labelDamping = 26;
+  const labelMass = 0.7;
+
+  // Rotation/Tilt spring states
+  let rotation = 0;
+  let rv = 0;
+  const rotStiffness = 200;
+  const rotDamping = 24;
+  const rotMass = 0.6;
+
+  let lastTime = performance.now();
 
   const onMouseMove = e => {
     if (isTouch) return;
@@ -3489,9 +3513,13 @@ const MxAudio=(function(){
       orb.style.display = 'block';
       aura.style.display = 'block';
       document.body.classList.add('has-cursor');
+      // Initialize springs to mouse position so it doesn't snap from -9999
+      arrowX = mouseX;
+      arrowY = mouseY;
+      labelX = mouseX + 28;
+      labelY = mouseY + 12;
+      lastTime = performance.now();
     }
-
-    orb.style.transform = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
   };
 
   const onTouchStart = () => {
@@ -3506,17 +3534,64 @@ const MxAudio=(function(){
     isTouch = false;
   };
 
-  function updateAura() {
-    if (D.settings?.customCursor !== false && D.settings?.animLevel !== 'none' && !isTouch) {
-      const dx = mouseX - auraX;
-      const dy = mouseY - auraY;
-      auraX += dx * 0.15;
-      auraY += dy * 0.15;
-      if (aura) {
-        aura.style.transform = `translate(${auraX - 10}px, ${auraY - 10}px)`;
+  function updateCursorPhysics() {
+    if (D.settings?.customCursor !== false && D.settings?.animLevel !== 'none' && !isTouch && active) {
+      const now = performance.now();
+      // Calculate delta time in seconds, capped to 0.1s to prevent extreme spring explosions on tab wake
+      const dt = Math.min(0.1, (now - lastTime) / 1000);
+      lastTime = now;
+
+      if (dt > 0) {
+        // Update user name in the pill
+        if (labelInner) {
+          const userName = D.profile?.name || 'Explorer';
+          if (labelInner.textContent !== userName) {
+            labelInner.textContent = userName;
+          }
+        }
+
+        // 1. Arrow Spring Physics
+        const axForce = arrowStiffness * (mouseX - arrowX) - arrowDamping * avx;
+        const axAcc = axForce / arrowMass;
+        avx += axAcc * dt;
+        arrowX += avx * dt;
+
+        const ayForce = arrowStiffness * (mouseY - arrowY) - arrowDamping * avy;
+        const ayAcc = ayForce / arrowMass;
+        avy += ayAcc * dt;
+        arrowY += avy * dt;
+
+        orb.style.transform = `translate3d(${arrowX}px, ${arrowY}px, 0)`;
+
+        // 2. Label Spring Physics (Offset by resolved label offset: x=28, y=12)
+        const targetLabelX = mouseX + 28;
+        const targetLabelY = mouseY + 12;
+
+        const lxForce = labelStiffness * (targetLabelX - labelX) - labelDamping * lvx;
+        const lxAcc = lxForce / labelMass;
+        lvx += lxAcc * dt;
+        labelX += lvx * dt;
+
+        const lyForce = labelStiffness * (targetLabelY - labelY) - labelDamping * lvy;
+        const lyAcc = lyForce / labelMass;
+        lvy += lyAcc * dt;
+        labelY += lvy * dt;
+
+        // 3. Label Rock/Tilt (derive target tilt from velocity magnitude cap at 25 deg, based on horizontal direction)
+        const speed = Math.hypot(lvx, lvy);
+        const norm = Math.min(1, speed / 1500);
+        const sign = lvx === 0 ? 0 : lvx > 0 ? 1 : -1;
+        const targetRot = sign * norm * 25; // 25 degrees tilt strength
+
+        const rotForce = rotStiffness * (targetRot - rotation) - rotDamping * rv;
+        const rotAcc = rotForce / rotMass;
+        rv += rotAcc * dt;
+        rotation += rv * dt;
+
+        aura.style.transform = `translate3d(${labelX}px, ${labelY}px, 0) rotate(${rotation}deg)`;
       }
     }
-    rafId = requestAnimationFrame(updateAura);
+    rafId = requestAnimationFrame(updateCursorPhysics);
   }
 
   // Hover detection
@@ -3567,7 +3642,7 @@ const MxAudio=(function(){
     document.addEventListener('mouseup', onMouseUp, { passive: true });
     
     if (!rafId) {
-      rafId = requestAnimationFrame(updateAura);
+      rafId = requestAnimationFrame(updateCursorPhysics);
     }
   }
 
