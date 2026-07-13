@@ -472,6 +472,9 @@ function rComp() {
 
   let tabContent = '';
   switch (compState.currentTab) {
+    case 'intel':
+      tabContent = renderIntelligenceTab(exam);
+      break;
     case 'syllabus':
       if (compState.syllabusLoading) {
         tabContent = renderSyllabusLoadingProgress();
@@ -526,6 +529,7 @@ function rComp() {
       <!-- Navigation Tabs -->
       <div style="display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;padding-bottom:6px">
         <button class="btn bsm ${compState.currentTab==='hub'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('hub')" style="${compState.currentTab==='hub'?'color:#fff':''}">📊 Study Hub</button>
+        <button class="btn bsm ${compState.currentTab==='intel'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('intel')" style="${compState.currentTab==='intel'?'color:#fff':''}">ℹ️ Exam Intelligence</button>
         <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('syllabus')" style="${compState.currentTab==='syllabus'?'color:#fff':''}">📚 Detailed Syllabus</button>
         <button class="btn bsm ${compState.currentTab==='tips'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('tips')" style="${compState.currentTab==='tips'?'color:#fff':''}">💡 Strategies & Tactics</button>
         <button class="btn bsm ${compState.currentTab==='practice'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('practice')" style="${compState.currentTab==='practice'?'color:#fff':''}">🎯 Custom Practice</button>
@@ -1165,6 +1169,225 @@ const EXAM_STRATEGIES = {
   ]
 };
 
+const EXAM_INTELLIGENCE = {
+  jee_main: {
+    officialDate: "Session 1: Last week of January 2027 | Session 2: First week of April 2027",
+    overview: "Joint Entrance Examination (Main) is a national-level computer-based entrance exam conducted by the National Testing Agency (NTA) in India. It serves as the primary gateway for admission into undergraduate engineering (B.Tech/B.E.) programs at National Institutes of Technology (NITs), Indian Institutes of Information Technology (IIITs), and Government Funded Technical Institutes (GFTIs). Additionally, it serves as the exclusive qualification filter for the JEE Advanced exam (for IIT admissions). Only the top ~250,000 candidates from JEE Main qualify to sit for JEE Advanced.",
+    targetColleges: "NIT Trichy, NIT Surathkal, NIT Warangal, MNNIT Allahabad, IIIT Hyderabad, IIIT Delhi, DTU, NSUT",
+    rankEstimator: "For your target score of {targetScore}/300, the predicted percentile is approximately 99.6% - 99.8%, correlating to an All India Rank (AIR) range of 1,800 to 3,500. This secures admissions to CS/ECE branches in Tier-1 NITs (like NIT Trichy or Surathkal) and IIIT Hyderabad.",
+    scoreGrid: [
+      { score: "250+", rank: "< 800 (99.9+%ile)", colleges: "NIT Trichy (CSE), NIT Surathkal (CSE), IIIT Hyderabad (CSE), DTU (CSE)" },
+      { score: "210-240", rank: "800 - 3,500 (99.6-99.8%ile)", colleges: "MNNIT Allahabad (CSE), NIT Warangal (CSE), IIIT Delhi (CS), NSUT (CS)" },
+      { score: "170-200", rank: "3,500 - 12,000 (98.8-99.5%ile)", colleges: "NIT Calicut (ECE), NIT Rourkela (CSE), IIIT Gwalior (CSE)" },
+      { score: "140-160", rank: "12,000 - 25,000 (97.5-98.7%ile)", colleges: "IIIT Lucknow (CSE), NIT Jalandhar (ECE), PEC Chandigarh (CSE)" },
+      { score: "100-130", rank: "25,000 - 60,000 (94.0-97.0%ile)", colleges: "NIT Srinagar (CSE), NIT Agartala (ECE), GFTIs" }
+    ],
+    pattern: "3 Hours duration. Contains 75 questions total across Mathematics, Physics, and Chemistry (25 questions each). Each subject is divided into Section A (20 mandatory MCQs) and Section B (10 Numerical Value questions, where the candidate must attempt any 5).",
+    marking: "Correct response awards +4 marks. Incorrect MCQ responses deduct -1 mark. Incorrect Numerical section responses deduct -1 mark. Unattempted questions receive 0 marks."
+  },
+  jee_adv: {
+    officialDate: "Mid-to-late May 2027",
+    overview: "JEE Advanced is conducted by one of the seven zonal IITs under the guidance of the Joint Admission Board (JAB). It is the sole gateway for admissions to the undergraduate programs (B.Tech, B.S., Dual Degree) at the 23 Indian Institutes of Technology (IITs). The exam is renowned for its high conceptual depth, multi-concept problems, and changing exam patterns. Eligibility is restricted exclusively to the top performers of the JEE Main examination.",
+    targetColleges: "IIT Bombay, IIT Delhi, IIT Madras, IIT Kanpur, IIT Kharagpur, IIT Roorkee, IIT Guwahati",
+    rankEstimator: "For your target score of {targetScore}/360, the predicted All India Rank (AIR) is approximately 1,500 to 2,500. This grants entry to Circuital/Mechanical branches at IIT Bombay, IIT Delhi, or IIT Madras, and CSE at newer IITs.",
+    scoreGrid: [
+      { score: "260+", rank: "< 150 (Top Tier)", colleges: "IIT Bombay (CSE), IIT Delhi (CSE), IIT Madras (CSE)" },
+      { score: "200-250", rank: "150 - 1,000", colleges: "IIT Kanpur (CSE/ECE), IIT Kharagpur (CSE/ECE), IIT Roorkee (CSE)" },
+      { score: "150-190", rank: "1,000 - 4,000", colleges: "IIT Guwahati (CSE), IIT BHU (ECE), IIT Hyderabad (Circuital)" },
+      { score: "120-140", rank: "4,000 - 8,000", colleges: "IIT Indore (EE), IIT Ropar (CSE), IIT Mandi (CSE)" },
+      { score: "90-110", rank: "8,000 - 15,000", colleges: "IIT Palakkad (CSE), IIT Dharwad (CSE), IIT Jammu (Circuital)" }
+    ],
+    pattern: "Consists of two mandatory papers: Paper 1 (3 Hours) and Paper 2 (3 Hours) on the same day. Question types vary annually and include Single Correct Option MCQs, Multiple Correct Options MCQs (MSQs), Numerical Value Questions (decimal answers), List-Match Grids, and Integer Value Questions.",
+    marking: "Single Correct MCQs: +3 for correct, -1 for incorrect. Multiple Correct MCQs (MSQs): +4 for correct, -2 for incorrect, with partial marking (+1 for each correct option chosen provided no incorrect option is chosen). Integer/Numerical: +3 or +4 for correct, 0 for incorrect."
+  },
+  neet: {
+    officialDate: "First Sunday of May 2027",
+    overview: "National Eligibility cum Entrance Test (Undergraduate) is conducted by the NTA. It is the single-window entrance exam for admissions to all MBBS, BDS, BAMS, BHMS, BSMS, BYNS, and B.V.Sc & A.H. programs across government, private, and deemed medical colleges in India, including AIIMS and JIPMER. Under one umbrella, it processes both 15% All India Quota (AIQ) and 85% State Quota seats.",
+    targetColleges: "AIIMS New Delhi, MAMC Delhi, JIPMER Puducherry, VMMC Delhi, KGMU Lucknow, Seth GS Mumbai",
+    rankEstimator: "For your target score of {targetScore}/720, the predicted rank is around 18,000 - 25,000. This secures an MBBS seat under the All India Quota in top-tier State Government Medical Colleges.",
+    scoreGrid: [
+      { score: "700+", rank: "< 100", colleges: "AIIMS New Delhi, MAMC Delhi, JIPMER Puducherry" },
+      { score: "670-690", rank: "100 - 1,000", colleges: "VMMC Delhi, LHMC Delhi, KGMU Lucknow, Seth GS Mumbai" },
+      { score: "640-660", rank: "1,000 - 5,000", colleges: "IMS BHU, SMS Jaipur, Madras Medical College, BMC Bangalore" },
+      { score: "610-630", rank: "5,000 - 15,000", colleges: "State-level Top Government Medical Colleges (MBBS)" },
+      { score: "580-600", rank: "15,000 - 25,000", colleges: "Regional/New Government Medical Colleges (MBBS)" }
+    ],
+    pattern: "3 Hours and 20 Minutes (200 minutes) duration. Contains 200 questions, out of which the candidate must attempt 180 questions. Divided into Physics (45 Qs), Chemistry (45 Qs), Botany (45 Qs), and Zoology (45 Qs). Each subject has Section A (35 mandatory questions) and Section B (15 questions, attempt any 10). All questions are single-correct MCQs.",
+    marking: "Correct answer awards +4 marks. Incorrect answer results in a -1 mark penalty. Unattempted questions receive 0 marks."
+  },
+  dsat: {
+    officialDate: "Multiple test dates: March, May, June, August, October, November, December 2026/2027",
+    overview: "Digital SAT is a standardized computer-adaptive test administered by the College Board. It is used widely for undergraduate college admissions in the United States, Canada, the United Kingdom, Singapore, Australia, and international universities. The test adapts to candidate skill level, presenting a harder or easier second module based on first module performance.",
+    targetColleges: "NYU, USC, Boston University, UC Berkeley, UT Austin, Georgia Tech, University of Michigan",
+    rankEstimator: "For your target score of {targetScore}/1600, you rank in the top 96% - 98% of global test-takers. This unlocks admissions to top-30 US national universities and elite public research institutes.",
+    scoreGrid: [
+      { score: "1550+", rank: "99+%ile (Top Tier)", colleges: "Harvard, MIT, Yale, Stanford, Princeton, Caltech, Columbia" },
+      { score: "1480-1540", rank: "97-99%ile", colleges: "UPenn, Cornell, Northwestern, Johns Hopkins, Carnegie Mellon" },
+      { score: "1400-1470", rank: "93-96%ile", colleges: "UCLA, Georgia Tech, NYU, Boston University, USC, UT Austin" },
+      { score: "1300-1390", rank: "85-92%ile", colleges: "UC San Diego, University of Florida, Penn State, Ohio State" },
+      { score: "1150-1290", rank: "70-84%ile", colleges: "Arizona State, Michigan State, University of Alabama" }
+    ],
+    pattern: "2 Hours and 14 Minutes duration. Consists of two sections: Section 1: Reading and Writing (54 questions in 64 mins, split into two adaptive modules). Section 2: Mathematics (44 questions in 70 mins, split into two adaptive modules). Calculator (built-in Desmos or physical) is allowed for the entire Math section.",
+    marking: "Standardized scaled score ranging from 400 to 1600 (each section scored between 200 and 800). No negative marking penalty for incorrect responses."
+  },
+  cat: {
+    officialDate: "Last Sunday of November 2026",
+    overview: "Common Admission Test (CAT) is a computer-based management entrance exam conducted by the Indian Institutes of Management (IIMs). It is the primary filter for postgraduate management programs (MBA/PGP) at the 20 IIMs, FMS Delhi, SPJIMR Mumbai, MDI Gurgaon, NITIE Mumbai, and IIT management departments.",
+    targetColleges: "IIM Shillong, MDI Gurgaon, IIT Bombay (SJMSOM), IIT Delhi (DMS), IIM Rohtak, Baby IIMs",
+    rankEstimator: "For your target score of {targetScore}/198, the predicted percentile is approximately 98.0% - 99.0%ile, unlocking admission calls from Tier-1 non-IIM institutes (like MDI, SPJIMR) and New/Baby IIMs.",
+    scoreGrid: [
+      { score: "120+", rank: "99.9+%ile", colleges: "IIM Ahmedabad, IIM Bangalore, IIM Calcutta" },
+      { score: "95-115", rank: "99.0 - 99.8%ile", colleges: "IIM Lucknow, IIM Kozhikode, IIM Indore, FMS Delhi" },
+      { score: "80-94", rank: "97.0 - 98.9%ile", colleges: "MDI Gurgaon, SPJIMR, IIT Bombay, IIT Delhi, IIM Shillong" },
+      { score: "65-79", rank: "90.0 - 96.9%ile", colleges: "New IIMs (Udaipur, Trichy, Raipur), IMT Ghaziabad, FORE" }
+    ],
+    pattern: "2 Hours duration. Divided into three timed sections of 40 minutes each: Section 1: Verbal Ability & Reading Comprehension (VARC - 24 Qs), Section 2: Data Interpretation & Logical Reasoning (DILR - 20 Qs), Section 3: Quantitative Ability (QA - 22 Qs). Free navigation between sections is locked.",
+    marking: "MCQ Questions: +3 for correct response, -1 for incorrect selection. Non-MCQ (Type In The Answer - TITA) Questions: +3 for correct response, 0 for incorrect (no negative marking)."
+  },
+  ipmat: {
+    officialDate: "Mid-to-late May 2027",
+    overview: "Integrated Program in Management Aptitude Test (IPMAT) is conducted by IIM Indore. It is the official entrance test for the 5-Year Integrated Program in Management (IPM - BBA+MBA) at IIM Indore, IIM Ranchi, and IIFT Kakinada.",
+    targetColleges: "IIM Ranchi, IIFT Kakinada, Department of Management Studies (Nirma University)",
+    rankEstimator: "For your target score of {targetScore}/360, the predicted percentile is 98.0% - 99.2%, unlocking admission calls for IIM Ranchi and IIFT Kakinada.",
+    scoreGrid: [
+      { score: "260+", rank: "99.5+%ile (Top Rank)", colleges: "IIM Indore (IPM)" },
+      { score: "220-250", rank: "98.0 - 99.4%ile", colleges: "IIM Ranchi (IPM), IIFT Kakinada (IPM)" },
+      { score: "180-210", rank: "95.0 - 97.9%ile", colleges: "NALSAR Hyderabad (IPM), Nirma University (IPM), TAPMI Manipal" }
+    ],
+    pattern: "2 Hours duration. Divided into three timed sections of 40 minutes each: Quantitative Ability (Multiple Choice Questions) - 30 questions; Quantitative Ability (Short Answer Questions) - 15 questions; Verbal Ability (Multiple Choice Questions) - 45 questions.",
+    marking: "MCQ Sections: +4 for correct, -1 for incorrect. Short Answer (SA) Section: +4 for correct, 0 for incorrect (no negative marking)."
+  },
+  act: {
+    officialDate: "Multiple sessions: September, October, December 2026; February, April, June, July 2027",
+    overview: "ACT is a standardized college entrance test in the United States administered by ACT Inc. It measures high school achievement and readiness for college-level courses in English, Mathematics, Reading, and Science.",
+    targetColleges: "Boston College, University of Washington, UCLA, UT Austin, University of Maryland",
+    rankEstimator: "For your target score of {targetScore}/36 composite, you stand in the top 93% - 95% of test-takers globally, granting admissions to competitive US state universities and private liberal arts colleges.",
+    scoreGrid: [
+      { score: "35-36", rank: "99%ile (Top Tier)", colleges: "Yale, Princeton, Harvard, MIT, Columbia, Stanford" },
+      { score: "33-34", rank: "97-98%ile", colleges: "Duke, Northwestern, Dartmouth, Brown, Vanderbilt" },
+      { score: "30-32", rank: "93-96%ile", colleges: "UCLA, NYU, UT Austin, Boston College, University of Michigan" },
+      { score: "27-29", rank: "85-92%ile", colleges: "UC Davis, University of Washington, Penn State, Ohio State" }
+    ],
+    pattern: "2 Hours and 55 Minutes duration. Consists of 4 required sections: English (75 questions in 45 mins), Mathematics (60 questions in 60 mins), Reading (40 questions in 35 mins), Science (40 questions in 35 mins). Optional writing section (essay) takes an additional 40 minutes.",
+    marking: "Each of the 4 sections is scored on a scale from 1 to 36. The composite score is the simple average of the 4 section scores. No negative marking."
+  },
+  olympiad: {
+    officialDate: "Stage 1 (NSEP/NSEC/PRMO): November/December | Stage 2 (INPhO/INChO/RMO): January/February 2027",
+    overview: "National and International Olympiads (like IMO, IPhO, IChO, IOI) are talent search tests targeting high school students. They identify the top students in Mathematics and Science subjects, leading to national camps (OCSC) and representing the country globally.",
+    targetColleges: "IISc Bangalore, CMI (Chennai), ISI (Kolkata), direct interview pathways to top research programs",
+    rankEstimator: "For your target score of {targetScore}% marks, you qualify for the Olympiad Training Camp (OCSC) and receive a Certificate of Merit. This grants direct admission interviews at top mathematical/scientific institutes.",
+    scoreGrid: [
+      { score: "80%+", rank: "International Team Selection", colleges: "IISc Bangalore (B.S.), ISI Kolkata (B.Math), CMI Chennai (B.Sc Math)" },
+      { score: "60-79%", rank: "OCSC Qualifier / Gold Medal", colleges: "Direct Interview calls at CMI/ISI, merit preference at IITs" },
+      { score: "40-59%", rank: "State-level Merit Topper", colleges: "Direct entry to IISERs (via IISER aptitude test preference)" }
+    ],
+    pattern: "Varies by subject. Stage 1 (PRMO/NSE) is usually 2-3 hours containing subjective/objective questions. Stage 2 (RMO/INo) is a 3-4 hour subjective problem-solving test with high-difficulty proof writing.",
+    marking: "Stage 1: varies. Stage 2 (Subjective): step-by-step descriptive grading with zero negative marks."
+  }
+};
+
+function startCompPracticeForChapter(subject, chapter) {
+  compState.practiceSubject = subject;
+  compState.practiceChapter = chapter;
+  compState.practiceCount = 5;
+  compState.practiceDifficulty = compState.practiceDifficulty || 'medium';
+  
+  const modal = document.getElementById('practice-modal');
+  if (modal) modal.remove();
+  
+  startCompPractice();
+}
+window.startCompPracticeForChapter = startCompPracticeForChapter;
+
+function renderIntelligenceTab(exam) {
+  const intel = EXAM_INTELLIGENCE[compState.examId] || EXAM_INTELLIGENCE.jee_main;
+  const targetScore = compState.targetScore;
+  const targetText = intel.rankEstimator.replace('{targetScore}', targetScore);
+
+  return `
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <!-- Overview & Critical Facts Card -->
+      <div class="card" style="padding:22px;border-color:var(--theme-accent);background:rgba(255,255,255,0.01)">
+        <div class="between mb12" style="border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px">
+          <span style="font-size:16px;font-weight:800;color:var(--theme-accent)">ℹ️ Official Exam Overview</span>
+          <span class="tag tp comp-accent-bg" style="font-size:10px;font-weight:700;color:#fff;border:none">General Info</span>
+        </div>
+        
+        <div style="font-size:13px;color:var(--sub);line-height:1.6">
+          <p style="margin:0 0 14px 0">${esc(intel.overview)}</p>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+            <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
+              <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:4px">📅 TARGET EXAM DATE</span>
+              <strong style="color:#fff;font-size:13px">${esc(intel.officialDate)}</strong>
+            </div>
+            
+            <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
+              <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:4px">🎯 ADMISSIONS PORTAL GATES</span>
+              <strong style="color:#fff;font-size:13px">${esc(intel.targetColleges)}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rank & College Predictor Gate -->
+      <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06);background:rgba(255,255,255,0.01)">
+        <div class="between mb12" style="border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px">
+          <span style="font-size:16px;font-weight:800;color:#fff">🏆 Rank & College Gate Predictor</span>
+          <span class="tag" style="font-size:10px;background:rgba(16,185,129,0.15);color:var(--okl);font-weight:700;border:none">Active Analysis</span>
+        </div>
+        
+        <div class="card mb18" style="padding:14px;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.2)">
+          <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">🎯 For Your Target Score: <strong style="color:var(--okl);font-size:16px">${targetScore}</strong></div>
+          <p style="font-size:12.5px;color:var(--sub);margin:0;line-height:1.5">${esc(targetText)}</p>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;margin-bottom:10px">ESTIMATED SCORE-TO-COLLEGE MAPPING TABLE:</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${intel.scoreGrid.map(row => {
+            let isMatch = false;
+            if (row.score.includes('+')) {
+              isMatch = targetScore >= parseInt(row.score);
+            } else if (row.score.includes('-')) {
+              const parts = row.score.split('-');
+              isMatch = targetScore >= parseInt(parts[0]) && targetScore <= parseInt(parts[1]);
+            }
+            return `
+              <div style="display:flex;gap:12px;padding:12px;border-radius:8px;font-size:12px;background:${isMatch?'rgba(16,185,129,0.05)':'rgba(255,255,255,0.01)'};border:1px solid ${isMatch?'rgba(16,185,129,0.2)':'rgba(255,255,255,0.03)'}">
+                <div style="flex:1;min-width:60px">
+                  <span style="font-size:10px;color:var(--mut);font-weight:700;display:block">SCORE BAND</span>
+                  <strong style="color:${isMatch?'var(--okl)':'#fff'};font-size:13px">${esc(row.score)}</strong>
+                </div>
+                <div style="flex:2">
+                  <span style="font-size:10px;color:var(--mut);font-weight:700;display:block">PROJECTED RANK / PERCENTILE</span>
+                  <span style="color:#fff;font-weight:600">${esc(row.rank)}</span>
+                </div>
+                <div style="flex:3">
+                  <span style="font-size:10px;color:var(--mut);font-weight:700;display:block">COLLEGES UNLOCKED</span>
+                  <span style="color:var(--sub);line-height:1.4">${esc(row.colleges)}</span>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- Pattern & Grading Card -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
+          <div class="h3 mb8" style="color:#fff">📋 Official Paper Pattern</div>
+          <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0">${esc(intel.pattern)}</p>
+        </div>
+        
+        <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
+          <div class="h3 mb8" style="color:#fff">💯 Marking & Grading System</div>
+          <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0">${esc(intel.marking)}</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderTipsTab(exam) {
   const list = EXAM_STRATEGIES[compState.examId] || EXAM_STRATEGIES.jee_main;
   return `
@@ -1575,6 +1798,7 @@ Return ONLY a valid JSON object matching this structure:
   "questions": [
     {
       "section": "${subject}",
+      "chap": "Chapter Name (e.g. Electrodynamics, Definite Integration, Mole Concept, etc. matched strictly to the official syllabus)",
       "q": "The question text with $LaTeX$",
       "type": "mcq" or "numerical",
       "opts": ["Option A", "Option B", "Option C", "Option D"], // Omit for numerical
@@ -1610,6 +1834,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
   "questions": [
     {
       "section": "Section name matching one of the requested sections exactly",
+      "chap": "Chapter Name (matched strictly to the official syllabus)",
       "q": "The question text, write math symbols in LaTeX format like $x^2$",
       "type": "mcq" or "numerical",
       "opts": ["Option A", "Option B", "Option C", "Option D"], // Omit for numerical
@@ -1931,7 +2156,9 @@ function submitMockExam() {
       opts: q.opts,
       correct: correctText,
       isCorrect,
-      explanation: q.expl || 'Self-explanatory standard answer.'
+      explanation: q.expl || 'Self-explanatory standard answer.',
+      chap: q.chap || q.section || 'General Integration',
+      section: q.section || 'Mathematics'
     };
   });
 
@@ -1950,6 +2177,76 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
 
   const targetScore = compState.targetScore;
   const isTargetAchieved = score >= targetScore;
+
+  // Group results by chapter
+  const chapStats = {};
+  results.forEach(res => {
+    const chap = res.chap || 'General Concepts';
+    const sec = res.section || 'General Studies';
+    if (!chapStats[chap]) {
+      chapStats[chap] = { subject: sec, correct: 0, total: 0 };
+    }
+    chapStats[chap].total++;
+    if (res.isCorrect) {
+      chapStats[chap].correct++;
+    }
+  });
+
+  const dangerZone = [];
+  const warningZone = [];
+  const masteryZone = [];
+
+  Object.keys(chapStats).forEach(chap => {
+    const stat = chapStats[chap];
+    const acc = stat.total > 0 ? (stat.correct / stat.total) * 100 : 0;
+    const item = { name: chap, subject: stat.subject, acc: Math.round(acc), correct: stat.correct, total: stat.total };
+    if (acc < 40) {
+      dangerZone.push(item);
+    } else if (acc <= 70) {
+      warningZone.push(item);
+    } else {
+      masteryZone.push(item);
+    }
+  });
+
+  const dangerHTML = dangerZone.length === 0 ? '<div style="color:var(--mut);font-size:12px;padding:4px 0">None! All topics are above danger limit.</div>' : dangerZone.map(item => `
+    <div style="padding:10px;background:rgba(239,68,68,0.03);border:1px solid rgba(239,68,68,0.15);border-radius:8px;margin-bottom:8px">
+      <div class="between" style="font-size:12px;font-weight:700;color:#fff">
+        <span>${esc(item.name)} <span style="font-size:10px;color:var(--mut)">(${esc(item.subject)})</span></span>
+        <span style="color:var(--redl)">${item.acc}% (${item.correct}/${item.total})</span>
+      </div>
+      <div class="pw" style="height:4px;background:rgba(255,255,255,0.03);margin:6px 0">
+        <div class="pf" style="width:${item.acc}%;background:var(--redl)"></div>
+      </div>
+      <button class="btn bsm bgh w100" style="padding:4px 8px;font-size:10px;min-height:auto;margin-top:6px;border-color:rgba(239,68,68,0.3)" onclick="startCompPracticeForChapter('${escON(item.subject)}', '${escON(item.name)}')">🎯 Practice this Chapter</button>
+    </div>
+  `).join('');
+
+  const warningHTML = warningZone.length === 0 ? '<div style="color:var(--mut);font-size:12px;padding:4px 0">None!</div>' : warningZone.map(item => `
+    <div style="padding:10px;background:rgba(245,158,11,0.03);border:1px solid rgba(245,158,11,0.15);border-radius:8px;margin-bottom:8px">
+      <div class="between" style="font-size:12px;font-weight:700;color:#fff">
+        <span>${esc(item.name)} <span style="font-size:10px;color:var(--mut)">(${esc(item.subject)})</span></span>
+        <span style="color:var(--goldl)">${item.acc}% (${item.correct}/${item.total})</span>
+      </div>
+      <div class="pw" style="height:4px;background:rgba(255,255,255,0.03);margin:6px 0">
+        <div class="pf" style="width:${item.acc}%;background:var(--goldl)"></div>
+      </div>
+      <button class="btn bsm bgh w100" style="padding:4px 8px;font-size:10px;min-height:auto;margin-top:6px;border-color:rgba(245,158,11,0.3)" onclick="startCompPracticeForChapter('${escON(item.subject)}', '${escON(item.name)}')">🎯 Practice this Chapter</button>
+    </div>
+  `).join('');
+
+  const masteryHTML = masteryZone.length === 0 ? '<div style="color:var(--mut);font-size:12px;padding:4px 0">None yet. Try harder questions!</div>' : masteryZone.map(item => `
+    <div style="padding:10px;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.15);border-radius:8px;margin-bottom:8px">
+      <div class="between" style="font-size:12px;font-weight:700;color:#fff">
+        <span>${esc(item.name)} <span style="font-size:10px;color:var(--mut)">(${esc(item.subject)})</span></span>
+        <span style="color:var(--okl)">${item.acc}% (${item.correct}/${item.total})</span>
+      </div>
+      <div class="pw" style="height:4px;background:rgba(255,255,255,0.03);margin:6px 0">
+        <div class="pf" style="width:${item.acc}%;background:var(--okl)"></div>
+      </div>
+      <button class="btn bsm bgh w100" style="padding:4px 8px;font-size:10px;min-height:auto;margin-top:6px;border-color:rgba(16,185,129,0.3)" onclick="startCompPracticeForChapter('${escON(item.subject)}', '${escON(item.name)}')">🎯 Practice this Chapter</button>
+    </div>
+  `).join('');
   
   main.innerHTML = `
     <div class="sw scr" style="padding-top:16px">
@@ -1976,6 +2273,37 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
         </div>
 
         <button class="btn bpri comp-accent-bg" style="padding:10px 24px;color:#fff" onclick="rComp()">Back to Hub</button>
+      </div>
+
+      <!-- Syllabus Accuracy & Danger Zones Grid -->
+      <div class="card mb20" style="padding:22px;border-color:rgba(255,255,255,0.06)">
+        <div class="h2 mb14" style="color:#fff;display:flex;align-items:center;gap:8px">📊 Syllabus Accuracy & Danger Zones</div>
+        
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:start">
+          <!-- Danger Zone -->
+          <div class="card" style="padding:14px;border-color:rgba(239,68,68,0.2);background:rgba(239,68,68,0.01);min-height:220px">
+            <span style="font-size:11px;font-weight:700;color:var(--redl);text-transform:uppercase;display:block;margin-bottom:10px">🔴 Danger Zone (&lt;40%)</span>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              ${dangerHTML}
+            </div>
+          </div>
+
+          <!-- Warning Zone -->
+          <div class="card" style="padding:14px;border-color:rgba(245,158,11,0.2);background:rgba(245,158,11,0.01);min-height:220px">
+            <span style="font-size:11px;font-weight:700;color:var(--goldl);text-transform:uppercase;display:block;margin-bottom:10px">⚠️ Warning Zone (40%-70%)</span>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              ${warningHTML}
+            </div>
+          </div>
+
+          <!-- Mastery Zone -->
+          <div class="card" style="padding:14px;border-color:rgba(16,185,129,0.2);background:rgba(16,185,129,0.01);min-height:220px">
+            <span style="font-size:11px;font-weight:700;color:var(--okl);text-transform:uppercase;display:block;margin-bottom:10px">🟢 Mastery Zone (&gt;70%)</span>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              ${masteryHTML}
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="h2 mb14" style="color:#fff">Review Questions & Explanations</div>
