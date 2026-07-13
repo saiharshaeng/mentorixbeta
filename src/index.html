@@ -3987,11 +3987,11 @@ function addHydrationBar(el){
 })();
 
 function init(){
-  function startApp(){
+  async function startApp(){
     try{
       const s=getSession();
       if(!s){renderAuth();return;}
-      loadUserData(s.id);
+      await loadUserData(s.id);
       // One-time migration to v5 theme system — preserves user choice, cleans up cream default
       if(!localStorage.getItem('mx3_migrated_v6_themes')){
         if(D.settings) {

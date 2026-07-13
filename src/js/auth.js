@@ -143,12 +143,12 @@ function createProfileSubmit() {
   selectProfile(id);
 }
 
-function selectProfile(id) {
+async function selectProfile(id) {
   const profiles = getProfiles();
   const p = profiles.find(x => x.id === id);
   if (!p) return;
   setSession({id: p.id, name: p.name});
-  loadUserData(p.id);
+  await loadUserData(p.id);
   showSuccessAndGo();
 }
 
@@ -212,12 +212,12 @@ function showSuccessAndGo(){
 /* saveUserData() → storage.js */
 /* clearUserData() → storage.js */
 
-function initWithSession(){
+async function initWithSession(){
   // Wipe any legacy email/password account store left over from pre-v3 builds.
   localStorage.removeItem('mx3_accounts');
   const s=getSession();
   if(!s){renderAuth();return;}
-  loadUserData(s.id);
+  await loadUserData(s.id);
   // Reapply experience mode
   if(D.profile?.mode==='creative')document.body.classList.add('creative');
   if(D.profile && (!D.courses || D.courses.length === 0)) {
