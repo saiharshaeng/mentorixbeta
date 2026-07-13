@@ -197,7 +197,38 @@ function rDash(){
         
         <!-- ══ HERO ZONE ══ -->
         <div class="dash-hero-zone s1">
-          <div class="dash-hero-greeting">Hey ${esc(name)}<span class="punct-anchor">.</span>${D.streak>=3?' 🔥':' 👋'}</div>
+          <div class="dash-hero-greeting" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+            <div>Hey ${esc(name)}<span class="punct-anchor">.</span>${D.streak>=3?' 🔥':' 👋'}</div>
+            <!-- Energy Check-in Scale -->
+            <div class="energy-checkin-scale" style="display:flex;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:3px;gap:2px;pointer-events:auto">
+              ${[
+                { id: 'tired', emoji: '😴', lbl: 'Tired' },
+                { id: 'balanced', emoji: '🙂', lbl: 'Balanced' },
+                { id: 'beast', emoji: '⚡', lbl: 'Beast' }
+              ].map(opt => {
+                const active = (D.settings?.energyLevel || 'balanced') === opt.id;
+                return `
+                  <button onclick="setEnergyLevel('${opt.id}')" class="energy-btn ${active?'active':''}" style="
+                    background:${active?'var(--bg)': 'transparent'};
+                    border:none;
+                    border-radius:9px;
+                    padding:5px 12px;
+                    color:${active?'var(--txt)':'var(--mut)'};
+                    font-size:12px;
+                    font-weight:600;
+                    display:flex;
+                    align-items:center;
+                    gap:6px;
+                    cursor:pointer;
+                    transition:all .15s;
+                  " title="${opt.lbl} Study Mode">
+                    <span>${opt.emoji}</span>
+                    <span class="energy-lbl-text" style="font-size:11px">${opt.lbl}</span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+          </div>
           <div class="dash-hero-meta">
             ${D.streak>0?`<span class="dash-hero-streak"><span aria-hidden="true">🔥</span> ${D.streak}-day streak</span>`:''}
             <span class="dash-hero-xp"><span aria-hidden="true">⚡</span> Level ${lv2} · ${D.xp} XP</span>
@@ -458,8 +489,33 @@ function rDash(){
   if (btn) btn.textContent = window.SprintTimerState.running ? '⏸️ Pause' : '▶️ Start';
 }
 
+function setEnergyLevel(level) {
+  if (!D.settings) D.settings = {};
+  D.settings.energyLevel = level;
+  
+  if (level === 'beast') {
+    D.settings.bossMode = true;
+    toast('⚡ Beast Mode Activated! Boss Mode enabled across tests.', 'warn');
+  } else {
+    D.settings.bossMode = false;
+    if (level === 'tired') {
+      toast('😴 Tired Mode: Relaxed study limits & gentle Tio settings active.', 'ok2');
+    } else {
+      toast('🙂 Balanced Mode: Standard syllabus and test limits.', 'ok2');
+    }
+  }
+  
+  saveNow();
+  rDash();
+  if (typeof window.updateTioSpeechBubble === 'function') {
+    window.updateTioSpeechBubble();
+  }
+}
+
 window.rDash = rDash;
 window.toggleSprintTimer = toggleSprintTimer;
 window.resetSprintTimer = resetSprintTimer;
+window.setEnergyLevel = setEnergyLevel;
+
 
 

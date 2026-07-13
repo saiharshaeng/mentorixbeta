@@ -41,6 +41,27 @@ if (window.location.protocol.startsWith('http')) {
 </head>
 <body>
 <div id="orbs"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+
+<!-- Floating Tio Widget -->
+<div id="tio-widget-container" class="tio-widget-container" style="display: none;">
+  <div id="tio-speech-bubble" class="tio-speech-bubble">
+    <div id="tio-speech-text" class="tio-speech-text">Hey there! Let's conquer today's study goal! 🚀</div>
+    <div class="tio-speech-arrow"></div>
+  </div>
+  <div id="tio-avatar-body" onclick="onTioWidgetClick()" class="tio-avatar-body">
+    <div class="tio-leaf">🍃</div>
+    <div class="tio-head">
+      <div class="tio-antenna"></div>
+      <div class="tio-eyes">
+        <div class="tio-eye left" id="tio-eye-left"></div>
+        <div class="tio-eye right" id="tio-eye-right"></div>
+      </div>
+    </div>
+    <div class="tio-chest">
+      <div class="tio-heart-light"></div>
+    </div>
+  </div>
+</div>
 <!-- Custom cursor: AI glowing orb -->
 <div id="cursor-orb"><div class="cursor-arrow-inner"></div></div>
 <div id="cursor-aura"><div class="cursor-label-inner"></div></div>
@@ -1452,6 +1473,11 @@ function initApp(){
   if(D.profile?.mode==='creative')document.body.classList.add('creative');
   else document.body.classList.remove('creative');
   applyMentorTheme();
+  const tioWidget = document.getElementById('tio-widget-container');
+  if (tioWidget) {
+    tioWidget.style.display = 'flex';
+    if (typeof window.updateTioEyes === 'function') window.updateTioEyes();
+  }
   // Re-apply cursor setting (could be restored from saved settings)
   if (D.settings?.customCursor === false) {
     if (typeof window.destroyCustomCursor === 'function') window.destroyCustomCursor();
@@ -3673,6 +3699,108 @@ const MxAudio=(function(){
   if (D.settings?.customCursor !== false) {
     initCustomCursor();
   }
+})();
+
+/* ── TIO FLOATING WIDGET ENGINE ── */
+(function initTioWidgetEngine() {
+  let bubbleTimeout = null;
+
+  function updateTioEyes() {
+    const left = document.getElementById('tio-eye-left');
+    const right = document.getElementById('tio-eye-right');
+    if (!left || !right) return;
+
+    left.className = 'tio-eye left';
+    right.className = 'tio-eye right';
+
+    const energy = D.settings?.energyLevel || 'balanced';
+    if (energy === 'tired') {
+      left.classList.add('tio-eye-tired');
+      right.classList.add('tio-eye-tired');
+    } else if (energy === 'beast') {
+      left.classList.add('tio-eye-beast');
+      right.classList.add('tio-eye-beast');
+    }
+  }
+
+  const TIO_QUOTES = {
+    tired: [
+      "No pressure! Let's take it easy. Even 5 minutes is progress 🍀",
+      "Low energy today? That's fine. A few flashcards and we're good! 🧠",
+      "Rest is part of training. Let's do some light reading today. ☕",
+      "Pace yourself. A little study is 100x better than zero study! 🌟"
+    ],
+    balanced: [
+      "Hey there! Ready to build momentum and master some concepts? 🚀",
+      "Consistency is our superpower. Let's tackle today's topic! 📐",
+      "Syllabus loading... Let's make today count! 🏆",
+      "Need a hint? Just open the study helper and ask me anything! 💡"
+    ],
+    beast: [
+      "BEAST MODE! Let's demolish some ultra-hard advanced problems! 😈🔥",
+      "No excuses today. Full focus, high speed, extreme mastery! ⚡",
+      "IIT level prep active. Let's solve those multi-stage concept tests! 🧬",
+      "We're here to conquer the leaderboard. Push your limits! ⚔️"
+    ]
+  };
+
+  function getTioSpeech() {
+    const energy = D.settings?.energyLevel || 'balanced';
+    const list = TIO_QUOTES[energy] || TIO_QUOTES.balanced;
+    return list[Math.floor(Math.random() * list.length)];
+  }
+
+  function showTioBubble(msg, dur = 5000) {
+    const bubble = document.getElementById('tio-speech-bubble');
+    const txt = document.getElementById('tio-speech-text');
+    if (!bubble || !txt) return;
+
+    txt.textContent = msg;
+    bubble.classList.add('visible');
+
+    clearTimeout(bubbleTimeout);
+    if (dur > 0) {
+      bubbleTimeout = setTimeout(() => {
+        bubble.classList.remove('visible');
+      }, dur);
+    }
+  }
+
+  function onTioWidgetClick() {
+    const avatar = document.getElementById('tio-avatar-body');
+    if (avatar) {
+      avatar.classList.add('spin');
+      setTimeout(() => avatar.classList.remove('spin'), 600);
+    }
+    showTioBubble(getTioSpeech(), 6000);
+  }
+
+  function updateTioSpeechBubble() {
+    updateTioEyes();
+    const energy = D.settings?.energyLevel || 'balanced';
+    let msg = "";
+    if (energy === 'tired') {
+      msg = "Tired mode active. Let's keep it light and easy! 🍀";
+    } else if (energy === 'beast') {
+      msg = "BEAST MODE ENABLED! Let's crush those hard ranks! 😈🔥";
+    } else {
+      msg = "Balanced study mode active. Steady wins the race! 📐";
+    }
+    showTioBubble(msg, 6000);
+  }
+
+  // Auto boot greeting
+  setTimeout(() => {
+    if (localStorage.getItem('mx3_session')) {
+      updateTioEyes();
+      showTioBubble(getTioSpeech(), 6500);
+    }
+  }, 3500);
+
+  window.onTioWidgetClick = onTioWidgetClick;
+  window.updateTioSpeechBubble = updateTioSpeechBubble;
+  window.updateTioEyes = updateTioEyes;
+  window.showTioBubble = showTioBubble;
 })();
 
 

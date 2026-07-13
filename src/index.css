@@ -4615,3 +4615,226 @@ body::before {
   z-index: -1;
 }
 
+/* ── FLOATING TIO WIDGET ── */
+.tio-widget-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .tio-widget-container {
+    bottom: 80px;
+    right: 16px;
+  }
+}
+
+.tio-avatar-body {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: tioFloat 3s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tio-avatar-body:hover {
+  transform: scale(1.15);
+}
+
+.tio-avatar-body:active {
+  transform: scale(0.95);
+}
+
+.tio-avatar-body.spin {
+  animation: tioClickSpin 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes tioFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes tioClickSpin {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.35) rotate(180deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+
+/* Leaf */
+.tio-leaf {
+  position: absolute;
+  top: -14px;
+  font-size: 16px;
+  animation: leafSway 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes leafSway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(10deg); }
+}
+
+/* Head */
+.tio-head {
+  width: 44px;
+  height: 32px;
+  background: linear-gradient(135deg, #1E293B, #0F172A);
+  border: 2px solid #06B6D4;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3), inset 0 2px 4px rgba(255,255,255,0.1);
+  margin-bottom: 2px;
+  z-index: 2;
+}
+
+/* Antenna */
+.tio-antenna {
+  width: 3px;
+  height: 8px;
+  background: #06B6D4;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tio-antenna::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #EC4899;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: -1.5px;
+  box-shadow: 0 0 8px #EC4899;
+}
+
+/* Eyes */
+.tio-eyes {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+.tio-eye {
+  width: 8px;
+  height: 8px;
+  background: #22C55E;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #22C55E;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Eye color modifiers */
+.tio-eye-tired {
+  background: #F59E0B !important;
+  box-shadow: 0 0 6px #F59E0B !important;
+}
+
+.tio-eye-beast {
+  background: #EC4899 !important;
+  box-shadow: 0 0 6px #EC4899 !important;
+}
+
+/* Body / Chest */
+.tio-chest {
+  width: 34px;
+  height: 18px;
+  background: linear-gradient(135deg, #1E293B, #0F172A);
+  border: 2px solid #06B6D4;
+  border-radius: 8px 8px 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+  z-index: 1;
+}
+
+.tio-heart-light {
+  width: 6px;
+  height: 6px;
+  background: #06B6D4;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #06B6D4;
+  animation: heartPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Speech Bubble */
+.tio-speech-bubble {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px 16px;
+  color: var(--txt);
+  font-size: 12.5px;
+  font-weight: 500;
+  max-width: 220px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(8px) scale(0.92);
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  position: relative;
+}
+
+.tio-speech-bubble.visible {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+  pointer-events: auto;
+}
+
+.tio-speech-arrow {
+  position: absolute;
+  bottom: -6px;
+  right: 24px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(15, 23, 42, 0.95);
+}
+
+/* Energy Button checkin highlights */
+.energy-btn:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--txt) !important;
+}
+.energy-btn.active {
+  background: var(--bg) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+@media (max-width: 480px) {
+  .energy-lbl-text {
+    display: none !important;
+  }
+}
+

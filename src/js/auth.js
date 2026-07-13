@@ -36,6 +36,12 @@ function spawnParticles(){
 
 /* ── PROFILE SELECTOR UI ── */
 function renderAuth() {
+  const tioWidget = document.getElementById('tio-widget-container');
+  if (tioWidget) {
+    tioWidget.style.display = 'none';
+    const bubble = document.getElementById('tio-speech-bubble');
+    if (bubble) bubble.classList.remove('visible');
+  }
   spawnParticles();
   const profiles = getProfiles();
   
@@ -259,6 +265,12 @@ function showConfirm(title,msg,okLabel,okClass,onOk,onCancel){
 function doLogout(){
   showConfirm('Sign out','Are you sure you want to sign out?','Sign Out','bgh',()=>{
     saveNow();clearSession();
+    const tioWidget = document.getElementById('tio-widget-container');
+    if (tioWidget) {
+      tioWidget.style.display = 'none';
+      const bubble = document.getElementById('tio-speech-bubble');
+      if (bubble) bubble.classList.remove('visible');
+    }
     if(typeof TM!=='undefined'&&TM.interval){clearInterval(TM.interval);TM.interval=null;TM.running=false;}
     D.profile=null;D.xp=0;D.streak=0;D.lastStudy='';D.streakFrozen=false;
     D.badges=[];D.topics=[];D.chatMsgs=[];D.exploredCats=[];
