@@ -1596,18 +1596,22 @@ async function generateMockBatchFromAI(exam, subject, count, difficulty) {
   }
   const mcqCount = count - numCount;
 
-  const prompt = `Act as the official examination paper setter for ${exam.name}.
-Generate exactly ${count} realistic, syllabus-bound questions for the subject section: "${subject}".
-Difficulty: ${difficulty} (Make it feel exactly like the actual official difficulty - do NOT make it generic).
+  const prompt = `Act as the official examination database for ${exam.name}.
+Generate exactly ${count} AUTHENTIC PREVIOUS YEAR QUESTIONS (PYQs) from actual official past papers of ${exam.name} (from years 2018-2026).
+Do NOT generate template-based, generic, or made-up questions. Every question must be a real, verified past year question (PYQ) with its exact original numbers, text, options, and difficulty.
+
+Subject section: "${subject}".
+Difficulty: ${difficulty} (Must match the exact tough, standard, or boss-level difficulty of actual ${exam.name} PYQs).
 
 Structure requirements:
 - ${mcqCount} MCQs (type: "mcq", with exactly 4 options in "opts" array)
-${numCount > 0 ? `- ${numCount} Numerical/Integer type questions (type: "numerical", do NOT include "opts" property. The correct answer in "ans" must be a single number or string value, e.g. 5 or -1.5)` : ''}
+${numCount > 0 ? `- ${numCount} Numerical/Integer type questions (type: "numerical", do NOT include "opts" property. The correct answer in "ans" must be a single number or string value representing the real official key, e.g. 5 or -1.5)` : ''}
 
 CRITICAL RULES:
-1. Every math expression must use standard LaTeX: $formula$ for inline, $$formula$$ for display.
-2. The questions must relate strictly to ${subject} syllabus of ${exam.name}. Do NOT mix up topics.
-3. Each question MUST contain a detailed, step-by-step mathematical or conceptual explanation in the "expl" field.
+1. Every single question MUST be an actual PYQ from ${exam.name} 2018-2026 papers. Do NOT include other stuff.
+2. Every math expression must use standard LaTeX: $formula$ for inline, $$formula$$ for display.
+3. The questions must relate strictly to the real ${subject} syllabus and weightage of ${exam.name}. Do NOT mix up topics.
+4. Each question MUST contain a highly detailed, step-by-step mathematical or conceptual explanation in the "expl" field demonstrating how the official correct answer is derived.
 
 Return ONLY a valid JSON object matching this structure:
 {
@@ -1638,9 +1642,11 @@ Return ONLY a valid JSON object matching this structure:
 
 async function generateDiagnosticPaperFromAI(exam, difficulty) {
   const subjects = exam.subjects || ['General Studies'];
-  const prompt = `Generate exactly 6 realistic, syllabus-matched exam questions for the "${exam.name}" exam.
+  const prompt = `Generate exactly 6 AUTHENTIC PREVIOUS YEAR QUESTIONS (PYQs) from actual past official papers of ${exam.name} (years 2018-2026).
 Sections: ${subjects.join(', ')}
-Difficulty level: ${difficulty}
+Difficulty level: ${difficulty} (Must match the exact, non-generic difficulty of real ${exam.name} PYQs).
+
+CRITICAL RULE: Generate ONLY actual, verified PYQ questions from past official papers. Do NOT write made-up or generic questions. Every question must contain its real-world numerical values and its exact verified step-by-step solution.
 
 Return ONLY a JSON object containing a "questions" array with exactly 6 questions matching this structure:
 {
@@ -2193,10 +2199,11 @@ async function startCompPractice() {
 
   if (isSingle) {
     // Generate 1 Question
-    const prompt = `Act as an official exam setter for ${exam.name}.
-Generate exactly 1 realistic question for the subject: "${compState.practiceSubject}", chapter: "${compState.practiceChapter}".
-Difficulty level: ${compState.practiceDifficulty}.
-Make it match the official exam style and difficulty.
+    const prompt = `Act as an official exam database for ${exam.name}.
+Generate exactly 1 AUTHENTIC PREVIOUS YEAR QUESTION (PYQ) from actual past official papers of ${exam.name} (years 2018-2026) for the subject: "${compState.practiceSubject}", chapter: "${compState.practiceChapter}".
+Difficulty level: ${compState.practiceDifficulty} (Must match the exact real-world difficulty of ${exam.name} PYQs).
+
+CRITICAL RULE: The question must be a real, verified past year question (PYQ) with its exact original numbers, text, and options (if MCQ). Do NOT write generic or simulated questions. Include its exact step-by-step verified official solution explanation.
 
 JSON format to output:
 {
@@ -2238,10 +2245,12 @@ JSON format to output:
     // Multi Practice Session (overlay slides)
     let questions = [];
     
-    const prompt = `Act as an official exam setter for ${exam.name}.
-Generate exactly ${count} realistic practice questions for the subject: "${compState.practiceSubject}", chapter: "${compState.practiceChapter}".
-Difficulty level: ${compState.practiceDifficulty}.
+    const prompt = `Act as an official exam database for ${exam.name}.
+Generate exactly ${count} AUTHENTIC PREVIOUS YEAR QUESTIONS (PYQs) from actual past official papers of ${exam.name} (years 2018-2026) for the subject: "${compState.practiceSubject}", chapter: "${compState.practiceChapter}".
+Difficulty level: ${compState.practiceDifficulty} (Must match the exact real-world difficulty of ${exam.name} PYQs).
 Mix of types (MCQ, MSQ, Numerical/Integer value).
+
+CRITICAL RULE: Every question must be a real, verified past year question (PYQ) with its exact original numbers, text, and options. Do NOT generate simulated or generic questions. Include its exact step-by-step verified official solution explanation.
 
 Return ONLY a JSON object:
 {
