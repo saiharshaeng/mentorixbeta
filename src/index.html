@@ -8,6 +8,7 @@
      offers font-size controls for users who want larger text by default. -->
 
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>MENTORIX — Your AI Learning Universe</title>
 <script>
@@ -3485,7 +3486,7 @@ const MxAudio=(function(){
       document.body.classList.add('has-cursor');
     }
 
-    orb.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    orb.style.transform = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
   };
 
   const onTouchStart = () => {

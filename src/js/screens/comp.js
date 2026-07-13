@@ -2142,6 +2142,30 @@ function checkPracticeNumericalAnswer(correctAns, explanation) {
   triggerMath();
 }
 
+function normalizeQuestionsList(questionsList) {
+  return questionsList.map(q => {
+    const type = q.type || 'mcq';
+    let ans = q.ans;
+    if (type !== 'numerical') {
+      if (Array.isArray(ans)) {
+        ans = ans.map(a => parseInt(a));
+      } else {
+        ans = [parseInt(ans)];
+      }
+    } else {
+      if (Array.isArray(ans)) {
+        ans = ans[0];
+      }
+      ans = String(ans).trim();
+    }
+    return {
+      ...q,
+      type,
+      ans
+    };
+  });
+}
+
 // Practice Session AI Question Fetcher
 async function startCompPractice() {
   const btn = document.getElementById('start-practice-btn');
@@ -2179,7 +2203,8 @@ JSON format to output:
         const escaped = escapeJsonLatex(reply);
         const data = JSON.parse(escaped);
         if (data && data.q) {
-          launchPracticeOverlay(data);
+          const normalized = normalizeQuestionsList([data])[0];
+          launchPracticeOverlay(normalized);
           if (btn) {
             btn.disabled = false;
             btn.innerHTML = '🚀 Start Practice Session';
@@ -2193,7 +2218,8 @@ JSON format to output:
     
     // Fallback
     const qList = getOfflineFallbackQuestions(exam.id, compState.practiceSubject, 1);
-    launchPracticeOverlay(qList[0]);
+    const normalized = normalizeQuestionsList(qList)[0];
+    launchPracticeOverlay(normalized);
     if (btn) {
       btn.disabled = false;
       btn.innerHTML = '🚀 Start Practice Session';
@@ -2240,7 +2266,8 @@ Return ONLY a JSON object:
       questions = getOfflineFallbackQuestions(exam.id, compState.practiceSubject, count);
     }
     
-    launchMultiPracticeOverlay(questions);
+    const normalized = normalizeQuestionsList(questions);
+    launchMultiPracticeOverlay(normalized);
     if (btn) {
       btn.disabled = false;
       btn.innerHTML = '🚀 Start Practice Session';
