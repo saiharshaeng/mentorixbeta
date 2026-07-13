@@ -2067,7 +2067,7 @@ function launchPracticeOverlay(q) {
             </span>
           </div>
         ` : (q.opts || []).map((opt, idx) => `
-          <button class="btn bsm bgh w100" style="text-align:left;justify-content:flex-start;padding:12px 14px;font-size:13px;display:flex;align-items:center;gap:8px" onclick="checkPracticeAnswer(${idx}, ${JSON.stringify(q.ans)}, '${escON(q.expl || '')}')">
+          <button class="btn bsm bgh w100" style="text-align:left;justify-content:flex-start;padding:12px 14px;font-size:13px;display:flex;align-items:center;gap:8px" onclick="checkPracticeAnswer(event, ${idx}, ${JSON.stringify(q.ans)}, '${escON(q.expl || '')}')">
             <span>${String.fromCharCode(65 + idx)}.</span>
             <span class="katex-render-target">${esc(opt)}</span>
           </button>
@@ -2097,9 +2097,9 @@ function closePracticeOverlay() {
   if (modal) modal.remove();
 }
 
-function checkPracticeAnswer(selectedIdx, correctAnswers, explanation) {
+function checkPracticeAnswer(evt, selectedIdx, correctAnswers, explanation) {
   const isCorrect = correctAnswers.includes(selectedIdx);
-  const btn = event.currentTarget;
+  const btn = evt.currentTarget;
   
   // Highlight
   if (isCorrect) {
@@ -2340,7 +2340,7 @@ function renderMultiPracticeSlide() {
         }).join('')}
       </div>
 
-      <div id="practice-expl-box" style="display:none;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:12px;font-size:12px;color:var(--okl);margin-bottom:14px" class="katex-render-target">
+      <div id="practice-expl-box" style="display:${isGraded?'block':'none'};background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:12px;font-size:12px;color:var(--okl);margin-bottom:14px" class="katex-render-target">
         <strong style="display:block;margin-bottom:4px;color:#fff">Answer Explanation:</strong>
         <span id="practice-expl-text">${esc(q.expl || 'Step-by-step calculation complete.')}</span>
       </div>
