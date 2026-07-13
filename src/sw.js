@@ -4,7 +4,7 @@
  * AI features (Groq proxy) won't work offline — that's expected and shown via the offline banner.
  */
 
-const CACHE_NAME = 'mentorix-v33';
+const CACHE_NAME = 'mentorix-v34';
 
 // Files to cache on install — the core app shell
 const CORE_ASSETS = [
