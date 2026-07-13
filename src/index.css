@@ -2488,12 +2488,13 @@ html, body {
 #sb {
   height: 100vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 #main {
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   scroll-behavior: smooth;
-  
+  -webkit-overflow-scrolling: touch;
 }
 
 </style>
@@ -3308,12 +3309,13 @@ html, body {
 #sb {
   height: 100vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 #main {
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   scroll-behavior: smooth;
-  
+  -webkit-overflow-scrolling: touch;
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -4417,9 +4419,13 @@ body.theme-emerald .ni.active {
 .pwa-install-btn { background:rgba(255,255,255,.2) !important;color:#fff !important;border:1px solid rgba(255,255,255,.3) !important;font-size:12px !important;flex-shrink:0 !important; }
 .pwa-close-btn { background:none !important;border:none !important;color:rgba(255,255,255,.5) !important;cursor:pointer !important;font-size:16px !important;padding:4px !important;flex-shrink:0 !important; }
 
-/* Disable horizontal scroll globally */
+/* Disable horizontal scroll globally and enforce vertical scroll on main content area */
 html, body, #app, #main, .scr {
   overflow-x: hidden !important;
+}
+#main {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Cream Theme Variable Defs (Soothing light green/mint palette) */
