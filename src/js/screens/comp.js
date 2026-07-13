@@ -1172,9 +1172,9 @@ const EXAM_STRATEGIES = {
 const EXAM_INTELLIGENCE = {
   jee_main: {
     officialDate: "Session 1: Last week of January 2027 | Session 2: First week of April 2027",
-    overview: "Joint Entrance Examination (Main) is a national-level computer-based entrance exam conducted by the National Testing Agency (NTA) in India. It serves as the primary gateway for admission into undergraduate engineering (B.Tech/B.E.) programs at National Institutes of Technology (NITs), Indian Institutes of Information Technology (IIITs), and Government Funded Technical Institutes (GFTIs). Additionally, it serves as the exclusive qualification filter for the JEE Advanced exam (for IIT admissions). Only the top ~250,000 candidates from JEE Main qualify to sit for JEE Advanced.",
+    overview: "Joint Entrance Examination (Main) is a national-level computer-based entrance exam conducted by the National Testing Agency (NTA) in India. It serves as the primary gateway for admission into undergraduate engineering (B.Tech/B.E.) programs at National Institutes of Technology (NITs), Indian Institutes of Information Technology (IIITs), and Government Funded Technical Institutes (GFTIs). Only the top ~250,000 candidates from JEE Main qualify to sit for JEE Advanced.",
     targetColleges: "NIT Trichy, NIT Surathkal, NIT Warangal, MNNIT Allahabad, IIIT Hyderabad, IIIT Delhi, DTU, NSUT",
-    rankEstimator: "For your target score of {targetScore}/300, the predicted percentile is approximately 99.6% - 99.8%, correlating to an All India Rank (AIR) range of 1,800 to 3,500. This secures admissions to CS/ECE branches in Tier-1 NITs (like NIT Trichy or Surathkal) and IIIT Hyderabad.",
+    rankEstimator: "For your target score of {targetScore}/300, the predicted percentile is approximately 99.6%–99.8%, correlating to an All India Rank (AIR) range of 1,800–3,500. This secures admissions to CS/ECE branches in Tier-1 NITs (like NIT Trichy or Surathkal) and IIIT Hyderabad.",
     scoreGrid: [
       { score: "250+", rank: "< 800 (99.9+%ile)", colleges: "NIT Trichy (CSE), NIT Surathkal (CSE), IIIT Hyderabad (CSE), DTU (CSE)" },
       { score: "210-240", rank: "800 - 3,500 (99.6-99.8%ile)", colleges: "MNNIT Allahabad (CSE), NIT Warangal (CSE), IIIT Delhi (CS), NSUT (CS)" },
@@ -1182,14 +1182,30 @@ const EXAM_INTELLIGENCE = {
       { score: "140-160", rank: "12,000 - 25,000 (97.5-98.7%ile)", colleges: "IIIT Lucknow (CSE), NIT Jalandhar (ECE), PEC Chandigarh (CSE)" },
       { score: "100-130", rank: "25,000 - 60,000 (94.0-97.0%ile)", colleges: "NIT Srinagar (CSE), NIT Agartala (ECE), GFTIs" }
     ],
-    pattern: "3 Hours duration. Contains 75 questions total across Mathematics, Physics, and Chemistry (25 questions each). Each subject is divided into Section A (20 mandatory MCQs) and Section B (10 Numerical Value questions, where the candidate must attempt any 5).",
-    marking: "Correct response awards +4 marks. Incorrect MCQ responses deduct -1 mark. Incorrect Numerical section responses deduct -1 mark. Unattempted questions receive 0 marks."
+    pattern: "3 Hours. 75 questions: Mathematics (25), Physics (25), Chemistry (25). Each subject: Section A = 20 mandatory MCQs, Section B = 10 Numerical Value Qs (attempt any 5).",
+    marking: "+4 correct MCQ | -1 wrong MCQ | +4 correct Numerical | -1 wrong Numerical | 0 skipped.",
+    eligibility: "1. Passed Class 12 (or appearing 2027) with Physics, Mathematics, and Chemistry/Biology/Biotechnology.\n2. 75% aggregate in Class 12 (65% for SC/ST) for NIT/IIIT/GFTI admission.\n3. Maximum 3 consecutive attempts from the year of passing Class 12.\n4. No specific age limit (earlier upper age limit of 25 was removed by NTA).",
+    examDayRules: "1. Printed Admit Card + valid photo ID (Aadhaar/PAN/Passport) mandatory.\n2. Report 2 hours before; gates close 30 minutes prior.\n3. Only transparent water bottle and blue/black ballpoint pen allowed.\n4. NTA provides Scribble Pad — must be signed and returned before leaving.\n5. No watches, calculators, mobile phones. Open sandals recommended; thick soles prohibited.",
+    careerOutcomes: "Gateway to premium engineering education. Average B.Tech placements: NIT Trichy CSE: Rs. 20-28 LPA | NIT Surathkal CSE: Rs. 18-24 LPA | IIIT Hyderabad CSE: Rs. 22-30 LPA | IIIT Delhi CSE: Rs. 20-28 LPA | Core branches (Mech/Civil): Rs. 8-12 LPA. Placement rate exceeds 90% in circuital branches. Top recruiters: Google, Microsoft, Amazon, Qualcomm, Deloitte, Goldman Sachs.",
+    collegesPool: [
+      { name: "NIT Trichy (CSE)", minScore: 255 }, { name: "NIT Surathkal (CSE)", minScore: 248 },
+      { name: "IIIT Hyderabad (CSE)", minScore: 250 }, { name: "NIT Warangal (CSE)", minScore: 245 },
+      { name: "MNNIT Allahabad (CSE)", minScore: 232 }, { name: "IIIT Delhi (CSE)", minScore: 225 },
+      { name: "DTU (CSE)", minScore: 220 }, { name: "NSUT (CSE)", minScore: 218 },
+      { name: "NIT Calicut (CSE)", minScore: 212 }, { name: "NIT Rourkela (CSE)", minScore: 210 },
+      { name: "VNIT Nagpur (CSE)", minScore: 205 }, { name: "IIIT Gwalior (CSE)", minScore: 195 },
+      { name: "NIT Calicut (ECE)", minScore: 190 }, { name: "IIIT Lucknow (CSE)", minScore: 185 },
+      { name: "NIT Jalandhar (CSE)", minScore: 180 }, { name: "PEC Chandigarh (CSE)", minScore: 178 },
+      { name: "NIT Hamirpur (CSE)", minScore: 170 }, { name: "NIT Raipur (CSE)", minScore: 165 },
+      { name: "IIIT Vadodara (CSE)", minScore: 145 }, { name: "NIT Srinagar (CSE)", minScore: 135 },
+      { name: "NIT Agartala (ECE)", minScore: 125 }, { name: "GFTI Tezpur (CSE)", minScore: 110 }
+    ]
   },
   jee_adv: {
     officialDate: "Mid-to-late May 2027",
-    overview: "JEE Advanced is conducted by one of the seven zonal IITs under the guidance of the Joint Admission Board (JAB). It is the sole gateway for admissions to the undergraduate programs (B.Tech, B.S., Dual Degree) at the 23 Indian Institutes of Technology (IITs). The exam is renowned for its high conceptual depth, multi-concept problems, and changing exam patterns. Eligibility is restricted exclusively to the top performers of the JEE Main examination.",
+    overview: "JEE Advanced is conducted by one of the seven zonal IITs under the guidance of the Joint Admission Board (JAB). It is the sole gateway for admissions to the 23 Indian Institutes of Technology (IITs). The exam is renowned for its high conceptual depth, multi-concept problems, and annually changing exam patterns. Only the top ~250,000 JEE Main qualifiers are eligible.",
     targetColleges: "IIT Bombay, IIT Delhi, IIT Madras, IIT Kanpur, IIT Kharagpur, IIT Roorkee, IIT Guwahati",
-    rankEstimator: "For your target score of {targetScore}/360, the predicted All India Rank (AIR) is approximately 1,500 to 2,500. This grants entry to Circuital/Mechanical branches at IIT Bombay, IIT Delhi, or IIT Madras, and CSE at newer IITs.",
+    rankEstimator: "For your target score of {targetScore}/360, the predicted All India Rank (AIR) is approximately 1,500–2,500. This grants entry to Circuital/Mechanical branches at IIT Bombay, IIT Delhi, or IIT Madras, and CSE at newer IITs.",
     scoreGrid: [
       { score: "260+", rank: "< 150 (Top Tier)", colleges: "IIT Bombay (CSE), IIT Delhi (CSE), IIT Madras (CSE)" },
       { score: "200-250", rank: "150 - 1,000", colleges: "IIT Kanpur (CSE/ECE), IIT Kharagpur (CSE/ECE), IIT Roorkee (CSE)" },
@@ -1197,14 +1213,29 @@ const EXAM_INTELLIGENCE = {
       { score: "120-140", rank: "4,000 - 8,000", colleges: "IIT Indore (EE), IIT Ropar (CSE), IIT Mandi (CSE)" },
       { score: "90-110", rank: "8,000 - 15,000", colleges: "IIT Palakkad (CSE), IIT Dharwad (CSE), IIT Jammu (Circuital)" }
     ],
-    pattern: "Consists of two mandatory papers: Paper 1 (3 Hours) and Paper 2 (3 Hours) on the same day. Question types vary annually and include Single Correct Option MCQs, Multiple Correct Options MCQs (MSQs), Numerical Value Questions (decimal answers), List-Match Grids, and Integer Value Questions.",
-    marking: "Single Correct MCQs: +3 for correct, -1 for incorrect. Multiple Correct MCQs (MSQs): +4 for correct, -2 for incorrect, with partial marking (+1 for each correct option chosen provided no incorrect option is chosen). Integer/Numerical: +3 or +4 for correct, 0 for incorrect."
+    pattern: "Two mandatory papers on the same day: Paper 1 (3 Hrs) + Paper 2 (3 Hrs). Question types vary annually: Single Correct MCQs, Multiple Correct MCQs (MSQs), Numerical Value Qs (decimals), List-Match Grids, and Integer Qs.",
+    marking: "Single Correct: +3 correct / -1 wrong. MSQs: +4 full correct / -2 wrong / +1 partial (correct option only, no wrong selected). Numerical/Integer: +3 or +4 correct / 0 wrong.",
+    eligibility: "1. Must rank among top 2,50,000 in JEE Main.\n2. Age: Born on or after October 1, 2001 (5-year relaxation for SC/ST/PwD).\n3. Maximum 2 attempts in 2 consecutive years only.\n4. 75% in Class 12 (65% for SC/ST).\n5. Candidates who have previously joined any IIT are not eligible.",
+    examDayRules: "1. Both Paper 1 and Paper 2 are compulsory — missing one disqualifies entirely.\n2. Admit Card + valid original photo ID mandatory.\n3. Strictly no watches, calculators, mobile phones, or personal pens (provided at center).\n4. Wear open sandals/slippers — closed shoes not allowed.\n5. Scribble pads must be signed and left on the desk at the end of each session.",
+    careerOutcomes: "Pinnacle of Indian engineering education. IIT B.Tech average placements: IIT Bombay/Delhi/Madras CSE: Rs. 32-40 LPA | IIT Kanpur/Kharagpur/Roorkee CSE: Rs. 25-35 LPA | Newer IITs CSE: Rs. 14-20 LPA. International packages exceed Rs. 1.5 Crore ($180k). Recruiters: Google, Jane Street, Two Sigma, McKinsey, Goldman Sachs, Qualcomm, Texas Instruments.",
+    collegesPool: [
+      { name: "IIT Bombay (CSE)", minScore: 275 }, { name: "IIT Delhi (CSE)", minScore: 265 },
+      { name: "IIT Madras (CSE)", minScore: 258 }, { name: "IIT Kanpur (CSE)", minScore: 250 },
+      { name: "IIT Kharagpur (CSE)", minScore: 245 }, { name: "IIT Roorkee (CSE)", minScore: 238 },
+      { name: "IIT Bombay (EE)", minScore: 225 }, { name: "IIT Delhi (EE)", minScore: 218 },
+      { name: "IIT Guwahati (CSE)", minScore: 215 }, { name: "IIT Hyderabad (CSE)", minScore: 210 },
+      { name: "IIT BHU (CSE)", minScore: 200 }, { name: "IIT Indore (CSE)", minScore: 185 },
+      { name: "IIT Ropar (CSE)", minScore: 175 }, { name: "IIT Gandhinagar (CSE)", minScore: 168 },
+      { name: "IIT Roorkee (Mechanical)", minScore: 155 }, { name: "IIT Mandi (CSE)", minScore: 135 },
+      { name: "IIT Palakkad (CSE)", minScore: 115 }, { name: "IIT Dharwad (CSE)", minScore: 105 },
+      { name: "IIT Jammu (EE)", minScore: 95 }, { name: "IIT Bhilai (Mechanical)", minScore: 85 }
+    ]
   },
   neet: {
     officialDate: "First Sunday of May 2027",
-    overview: "National Eligibility cum Entrance Test (Undergraduate) is conducted by the NTA. It is the single-window entrance exam for admissions to all MBBS, BDS, BAMS, BHMS, BSMS, BYNS, and B.V.Sc & A.H. programs across government, private, and deemed medical colleges in India, including AIIMS and JIPMER. Under one umbrella, it processes both 15% All India Quota (AIQ) and 85% State Quota seats.",
-    targetColleges: "AIIMS New Delhi, MAMC Delhi, JIPMER Puducherry, VMMC Delhi, KGMU Lucknow, Seth GS Mumbai",
-    rankEstimator: "For your target score of {targetScore}/720, the predicted rank is around 18,000 - 25,000. This secures an MBBS seat under the All India Quota in top-tier State Government Medical Colleges.",
+    overview: "National Eligibility cum Entrance Test (UG) conducted by NTA. Single-window exam for all MBBS, BDS, BAMS, BHMS, BSMS, BYNS and B.V.Sc & A.H. admissions at government, private and deemed medical colleges in India including AIIMS and JIPMER. Covers 15% All India Quota (AIQ) and 85% State Quota seats.",
+    targetColleges: "AIIMS New Delhi, MAMC Delhi, JIPMER Puducherry, VMMC Delhi, KGMU Lucknow, Seth GS Medical College Mumbai",
+    rankEstimator: "For your target score of {targetScore}/720, the predicted rank is approximately 18,000–25,000. This secures an MBBS seat in the All India Quota at top-tier State Government Medical Colleges.",
     scoreGrid: [
       { score: "700+", rank: "< 100", colleges: "AIIMS New Delhi, MAMC Delhi, JIPMER Puducherry" },
       { score: "670-690", rank: "100 - 1,000", colleges: "VMMC Delhi, LHMC Delhi, KGMU Lucknow, Seth GS Mumbai" },
@@ -1212,14 +1243,28 @@ const EXAM_INTELLIGENCE = {
       { score: "610-630", rank: "5,000 - 15,000", colleges: "State-level Top Government Medical Colleges (MBBS)" },
       { score: "580-600", rank: "15,000 - 25,000", colleges: "Regional/New Government Medical Colleges (MBBS)" }
     ],
-    pattern: "3 Hours and 20 Minutes (200 minutes) duration. Contains 200 questions, out of which the candidate must attempt 180 questions. Divided into Physics (45 Qs), Chemistry (45 Qs), Botany (45 Qs), and Zoology (45 Qs). Each subject has Section A (35 mandatory questions) and Section B (15 questions, attempt any 10). All questions are single-correct MCQs.",
-    marking: "Correct answer awards +4 marks. Incorrect answer results in a -1 mark penalty. Unattempted questions receive 0 marks."
+    pattern: "3 Hours 20 Minutes (200 mins). 200 questions total, attempt 180. Physics (45), Chemistry (45), Botany (45), Zoology (45). Each subject: Section A = 35 mandatory MCQs, Section B = 15 Qs (attempt any 10). All questions are single-correct MCQs.",
+    marking: "+4 correct | -1 wrong | 0 unattempted.",
+    eligibility: "1. Minimum age: 17 years by December 31 of admission year. No upper age limit.\n2. Must have passed Class 12 with Physics, Chemistry, Biology/Biotechnology, and English.\n3. Minimum 50% in PCB aggregate (General); 40% for OBC/SC/ST; 45% for General-PwD.\n4. No limit on the number of attempts.",
+    examDayRules: "1. NEET has the strictest dress code: Half-sleeved light clothes — no big buttons, brooches, or embroidery. Only low-heeled sandals/slippers (absolutely no shoes).\n2. No ornaments, jewelry, watches, hair clips, or electronics.\n3. Carry printed Admit Card, passport-size photo, 4x6 photo pasted on proforma, and original photo ID.\n4. Pen is provided by NTA — do not bring your own. Water is provided at center.",
+    careerOutcomes: "Pathway to becoming a registered Medical Practitioner (Doctor). AIIMS residents earn Rs. 90k–1.2L/month stipend. Post MBBS, private clinical practice or specialist doctors (post MD/MS) earn Rs. 18–50+ LPA. Government jobs provide high security and growth. Specializations: Surgery, Cardiology, Neurology, Orthopaedics.",
+    collegesPool: [
+      { name: "AIIMS New Delhi (MBBS)", minScore: 705 }, { name: "MAMC Delhi (MBBS)", minScore: 695 },
+      { name: "VMMC Delhi (MBBS)", minScore: 688 }, { name: "JIPMER Puducherry (MBBS)", minScore: 682 },
+      { name: "LHMC Delhi (MBBS)", minScore: 678 }, { name: "KGMU Lucknow (MBBS)", minScore: 672 },
+      { name: "Seth GS Medical Mumbai", minScore: 668 }, { name: "IMS BHU Varanasi (MBBS)", minScore: 662 },
+      { name: "SMS Medical College Jaipur", minScore: 658 }, { name: "Madras Medical College", minScore: 652 },
+      { name: "BMC Bangalore (MBBS)", minScore: 648 }, { name: "BJMC Pune (MBBS)", minScore: 642 },
+      { name: "Calcutta Medical College", minScore: 628 }, { name: "GMC Nagpur (MBBS)", minScore: 622 },
+      { name: "RIMS Ranchi (MBBS)", minScore: 615 }, { name: "LLRM Meerut (MBBS)", minScore: 602 },
+      { name: "State Govt Medical Colleges", minScore: 590 }, { name: "Private Medical Colleges", minScore: 500 }
+    ]
   },
   dsat: {
     officialDate: "Multiple test dates: March, May, June, August, October, November, December 2026/2027",
-    overview: "Digital SAT is a standardized computer-adaptive test administered by the College Board. It is used widely for undergraduate college admissions in the United States, Canada, the United Kingdom, Singapore, Australia, and international universities. The test adapts to candidate skill level, presenting a harder or easier second module based on first module performance.",
+    overview: "Digital SAT is a computer-adaptive test administered by the College Board, used for undergraduate admissions in the US, Canada, UK, Singapore, Australia and international universities worldwide. The test adapts in real time: Module 1 performance determines the difficulty of Module 2.",
     targetColleges: "NYU, USC, Boston University, UC Berkeley, UT Austin, Georgia Tech, University of Michigan",
-    rankEstimator: "For your target score of {targetScore}/1600, you rank in the top 96% - 98% of global test-takers. This unlocks admissions to top-30 US national universities and elite public research institutes.",
+    rankEstimator: "For your target score of {targetScore}/1600, you rank in the top 96%–98% of global test-takers. This unlocks admissions to top-30 US national universities and elite public research institutes.",
     scoreGrid: [
       { score: "1550+", rank: "99+%ile (Top Tier)", colleges: "Harvard, MIT, Yale, Stanford, Princeton, Caltech, Columbia" },
       { score: "1480-1540", rank: "97-99%ile", colleges: "UPenn, Cornell, Northwestern, Johns Hopkins, Carnegie Mellon" },
@@ -1227,64 +1272,121 @@ const EXAM_INTELLIGENCE = {
       { score: "1300-1390", rank: "85-92%ile", colleges: "UC San Diego, University of Florida, Penn State, Ohio State" },
       { score: "1150-1290", rank: "70-84%ile", colleges: "Arizona State, Michigan State, University of Alabama" }
     ],
-    pattern: "2 Hours and 14 Minutes duration. Consists of two sections: Section 1: Reading and Writing (54 questions in 64 mins, split into two adaptive modules). Section 2: Mathematics (44 questions in 70 mins, split into two adaptive modules). Calculator (built-in Desmos or physical) is allowed for the entire Math section.",
-    marking: "Standardized scaled score ranging from 400 to 1600 (each section scored between 200 and 800). No negative marking penalty for incorrect responses."
+    pattern: "2 Hours 14 Minutes. Section 1: Reading & Writing (54 Qs in 64 mins — two adaptive modules of 27 Qs each). Section 2: Mathematics (44 Qs in 70 mins — two adaptive modules of 22 Qs each). Built-in Desmos calculator available for entire Math section.",
+    marking: "Scaled score: 400–1600 (each section 200–800). No negative marking. Score is calculated based on adaptive module performance.",
+    eligibility: "1. No age limit or educational requirement — open to any candidate globally.\n2. Requires a College Board account (collegeboard.org) and valid Passport/ID.\n3. Bluebook app must be pre-downloaded and set up on the testing device.\n4. Unlimited test attempts permitted — colleges typically consider the highest score.",
+    examDayRules: "1. Bring fully charged testing device (laptop/iPad/Chromebook) with Bluebook installed.\n2. Bring charger/power adapter as backup.\n3. Bring printed Admission Ticket and valid Passport/School ID.\n4. Physical approved calculator (like TI-84) allowed for Math section only.\n5. Scratch paper is provided by the center — no personal paper.",
+    careerOutcomes: "Unlocks premium global higher education. SAT 1500+ opens Ivy League and top-20 US universities. US CS graduates from top-20 schools average $110k–$145k starting salary. Finance/IB roles average $85k–$120k. Top tech companies (FAANG) recruit at $150k+ packages including stocks.",
+    collegesPool: [
+      { name: "Harvard University", minScore: 1570 }, { name: "MIT", minScore: 1565 },
+      { name: "Stanford University", minScore: 1560 }, { name: "Yale University", minScore: 1555 },
+      { name: "Princeton University", minScore: 1550 }, { name: "Columbia University", minScore: 1545 },
+      { name: "UPenn (Wharton/SEAS)", minScore: 1530 }, { name: "Cornell University", minScore: 1510 },
+      { name: "Northwestern University", minScore: 1500 }, { name: "Carnegie Mellon (CS)", minScore: 1520 },
+      { name: "UC Berkeley (CS/Engineering)", minScore: 1490 }, { name: "UCLA", minScore: 1475 },
+      { name: "Georgia Tech", minScore: 1460 }, { name: "NYU (Stern/Tandon)", minScore: 1445 },
+      { name: "USC (Viterbi)", minScore: 1435 }, { name: "Boston University", minScore: 1420 },
+      { name: "UT Austin (Engineering)", minScore: 1410 }, { name: "UC San Diego", minScore: 1390 },
+      { name: "Penn State University", minScore: 1320 }, { name: "Arizona State University", minScore: 1210 }
+    ]
   },
   cat: {
     officialDate: "Last Sunday of November 2026",
-    overview: "Common Admission Test (CAT) is a computer-based management entrance exam conducted by the Indian Institutes of Management (IIMs). It is the primary filter for postgraduate management programs (MBA/PGP) at the 20 IIMs, FMS Delhi, SPJIMR Mumbai, MDI Gurgaon, NITIE Mumbai, and IIT management departments.",
+    overview: "Common Admission Test (CAT) is a computer-based management entrance exam conducted annually by one of the IIMs on a rotational basis. It is the primary filter for postgraduate management programs (MBA/PGP) at the 20 IIMs, FMS Delhi, SPJIMR Mumbai, MDI Gurgaon, and IIT management departments.",
     targetColleges: "IIM Shillong, MDI Gurgaon, IIT Bombay (SJMSOM), IIT Delhi (DMS), IIM Rohtak, Baby IIMs",
-    rankEstimator: "For your target score of {targetScore}/198, the predicted percentile is approximately 98.0% - 99.0%ile, unlocking admission calls from Tier-1 non-IIM institutes (like MDI, SPJIMR) and New/Baby IIMs.",
+    rankEstimator: "For your target score of {targetScore}/198, the predicted percentile is approximately 98.0%–99.0%, unlocking admission calls from Tier-1 non-IIM institutes (like MDI, SPJIMR) and New/Baby IIMs.",
     scoreGrid: [
       { score: "120+", rank: "99.9+%ile", colleges: "IIM Ahmedabad, IIM Bangalore, IIM Calcutta" },
       { score: "95-115", rank: "99.0 - 99.8%ile", colleges: "IIM Lucknow, IIM Kozhikode, IIM Indore, FMS Delhi" },
       { score: "80-94", rank: "97.0 - 98.9%ile", colleges: "MDI Gurgaon, SPJIMR, IIT Bombay, IIT Delhi, IIM Shillong" },
       { score: "65-79", rank: "90.0 - 96.9%ile", colleges: "New IIMs (Udaipur, Trichy, Raipur), IMT Ghaziabad, FORE" }
     ],
-    pattern: "2 Hours duration. Divided into three timed sections of 40 minutes each: Section 1: Verbal Ability & Reading Comprehension (VARC - 24 Qs), Section 2: Data Interpretation & Logical Reasoning (DILR - 20 Qs), Section 3: Quantitative Ability (QA - 22 Qs). Free navigation between sections is locked.",
-    marking: "MCQ Questions: +3 for correct response, -1 for incorrect selection. Non-MCQ (Type In The Answer - TITA) Questions: +3 for correct response, 0 for incorrect (no negative marking)."
+    pattern: "2 Hours total. Three timed sections of 40 minutes each (section switching locked): VARC (24 Qs — RC Passages + VA), DILR (20 Qs — Data sets + LR puzzles), QA (22 Qs — Quant). Mix of MCQs and TITA (Type-In-The-Answer) questions.",
+    marking: "MCQs: +3 correct / -1 wrong. TITA Qs: +3 correct / 0 wrong (no negative marking).",
+    eligibility: "1. Bachelor's Degree with minimum 50% aggregate marks (45% for SC/ST/PwD).\n2. Final year students awaiting results are eligible to apply.\n3. Professional qualifications (CA, CS, ICWA) also recognized.\n4. No age limit and unlimited attempts.",
+    examDayRules: "1. Biometric registration mandatory at the center entry.\n2. Bring printed Admit Card with pasted photo and original ID.\n3. Digital calculator is provided on-screen; physical calculators are banned.\n4. Light clothing recommended — no large pockets or metal items.\n5. Blank writing sheets provided and must be returned before exiting.",
+    careerOutcomes: "Entry to elite corporate leadership. Average MBA placements: IIM A/B/C: Rs. 32–35 LPA | IIM L/K/I: Rs. 26–30 LPA | New IIMs: Rs. 16–20 LPA | Baby IIMs: Rs. 12–15 LPA. Top roles: Investment Banking Associate, Management Consultant, Product Manager, Brand Manager. Recruiters: McKinsey, BCG, Bain, Goldman Sachs, JP Morgan, Google, HUL, P&G.",
+    collegesPool: [
+      { name: "IIM Ahmedabad (PGP)", minScore: 125 }, { name: "IIM Bangalore (PGP)", minScore: 122 },
+      { name: "IIM Calcutta (PGP)", minScore: 120 }, { name: "IIM Lucknow (PGP)", minScore: 110 },
+      { name: "IIM Kozhikode (PGP)", minScore: 105 }, { name: "IIM Indore (PGP)", minScore: 98 },
+      { name: "FMS Delhi (MBA)", minScore: 102 }, { name: "SPJIMR Mumbai (PGDM)", minScore: 95 },
+      { name: "MDI Gurgaon (PGDM)", minScore: 90 }, { name: "IIT Bombay SJMSOM", minScore: 88 },
+      { name: "IIT Delhi DMS", minScore: 86 }, { name: "IIM Shillong (PGP)", minScore: 84 },
+      { name: "IIM Udaipur (MBA)", minScore: 78 }, { name: "IIM Trichy (MBA)", minScore: 75 },
+      { name: "IIM Raipur (MBA)", minScore: 72 }, { name: "IMT Ghaziabad", minScore: 68 },
+      { name: "FORE School Delhi", minScore: 62 }, { name: "LBSIM Delhi", minScore: 58 }
+    ]
   },
   ipmat: {
     officialDate: "Mid-to-late May 2027",
-    overview: "Integrated Program in Management Aptitude Test (IPMAT) is conducted by IIM Indore. It is the official entrance test for the 5-Year Integrated Program in Management (IPM - BBA+MBA) at IIM Indore, IIM Ranchi, and IIFT Kakinada.",
-    targetColleges: "IIM Ranchi, IIFT Kakinada, Department of Management Studies (Nirma University)",
-    rankEstimator: "For your target score of {targetScore}/360, the predicted percentile is 98.0% - 99.2%, unlocking admission calls for IIM Ranchi and IIFT Kakinada.",
+    overview: "Integrated Program in Management Aptitude Test (IPMAT) is conducted by IIM Indore. It is the entrance test for the 5-Year Integrated Program in Management (IPM — BBA+MBA) at IIM Indore, IIM Ranchi, and IIFT Kakinada, designed for fresh Class 12 graduates.",
+    targetColleges: "IIM Ranchi (IPM), IIFT Kakinada (IPM), NALSAR Hyderabad (IPM), Nirma University (IPM)",
+    rankEstimator: "For your target score of {targetScore}/360, the predicted percentile is 98.0%–99.2%, unlocking admission calls for IIM Ranchi and IIFT Kakinada.",
     scoreGrid: [
       { score: "260+", rank: "99.5+%ile (Top Rank)", colleges: "IIM Indore (IPM)" },
       { score: "220-250", rank: "98.0 - 99.4%ile", colleges: "IIM Ranchi (IPM), IIFT Kakinada (IPM)" },
-      { score: "180-210", rank: "95.0 - 97.9%ile", colleges: "NALSAR Hyderabad (IPM), Nirma University (IPM), TAPMI Manipal" }
+      { score: "180-210", rank: "95.0 - 97.9%ile", colleges: "NALSAR Hyderabad (IPM), Nirma University, TAPMI Manipal" }
     ],
-    pattern: "2 Hours duration. Divided into three timed sections of 40 minutes each: Quantitative Ability (Multiple Choice Questions) - 30 questions; Quantitative Ability (Short Answer Questions) - 15 questions; Verbal Ability (Multiple Choice Questions) - 45 questions.",
-    marking: "MCQ Sections: +4 for correct, -1 for incorrect. Short Answer (SA) Section: +4 for correct, 0 for incorrect (no negative marking)."
+    pattern: "2 Hours total. Three locked sections (40 mins each): QA-MCQ (30 Qs, MCQ), QA-SA (15 Qs, Short Answer/TITA), VA-MCQ (45 Qs, MCQ). No section navigation once a section is started.",
+    marking: "QA-MCQ and VA-MCQ: +4 correct / -1 wrong. QA-SA (Short Answer): +4 correct / 0 wrong (no negative marking).",
+    eligibility: "1. Must have passed Class 10 and Class 12 with minimum 60% aggregate marks (55% for SC/ST/PwD).\n2. Age limit: Maximum 20 years as of July 31 of the entrance year (5-year relaxation for SC/ST/PwD).\n3. Unlimited attempts provided age criteria is met.",
+    examDayRules: "1. Admit Card and one photo ID mandatory.\n2. Section navigation is permanently locked — cannot revisit previous sections.\n3. Scribble pad is provided and must be returned before exiting.\n4. Thick-soled footwear and large buttons are not permitted.\n5. Biometric scanning mandatory on entry and exit.",
+    careerOutcomes: "Fast-track path to management post Class 12. IPM graduates from IIM Indore achieve placement parity with CAT MBA students: Average Rs. 25–30 LPA. IIM Ranchi IPM average: Rs. 16–18 LPA. Roles: Consulting, Finance, Sales, Marketing, Analytics. Recruited by McKinsey, Deloitte, P&G, Hindustan Unilever, Goldman Sachs.",
+    collegesPool: [
+      { name: "IIM Indore (IPM)", minScore: 265 }, { name: "IIM Ranchi (IPM)", minScore: 240 },
+      { name: "IIFT Kakinada (IPM)", minScore: 228 }, { name: "NALSAR Hyderabad (IPM)", minScore: 185 },
+      { name: "Nirma University (IPM)", minScore: 200 }, { name: "TAPMI Manipal (IPM)", minScore: 175 }
+    ]
   },
   act: {
     officialDate: "Multiple sessions: September, October, December 2026; February, April, June, July 2027",
-    overview: "ACT is a standardized college entrance test in the United States administered by ACT Inc. It measures high school achievement and readiness for college-level courses in English, Mathematics, Reading, and Science.",
+    overview: "ACT is a standardized college entrance test administered by ACT Inc. in the US. It measures high school achievement and college readiness across English, Mathematics, Reading, and Science. It is accepted by virtually every US college and many international universities as an alternative to the SAT.",
     targetColleges: "Boston College, University of Washington, UCLA, UT Austin, University of Maryland",
-    rankEstimator: "For your target score of {targetScore}/36 composite, you stand in the top 93% - 95% of test-takers globally, granting admissions to competitive US state universities and private liberal arts colleges.",
+    rankEstimator: "For your target score of {targetScore}/36 composite, you stand in the top 93%–95% of global test-takers, qualifying for competitive US state universities and selective private liberal arts colleges.",
     scoreGrid: [
       { score: "35-36", rank: "99%ile (Top Tier)", colleges: "Yale, Princeton, Harvard, MIT, Columbia, Stanford" },
       { score: "33-34", rank: "97-98%ile", colleges: "Duke, Northwestern, Dartmouth, Brown, Vanderbilt" },
       { score: "30-32", rank: "93-96%ile", colleges: "UCLA, NYU, UT Austin, Boston College, University of Michigan" },
       { score: "27-29", rank: "85-92%ile", colleges: "UC Davis, University of Washington, Penn State, Ohio State" }
     ],
-    pattern: "2 Hours and 55 Minutes duration. Consists of 4 required sections: English (75 questions in 45 mins), Mathematics (60 questions in 60 mins), Reading (40 questions in 35 mins), Science (40 questions in 35 mins). Optional writing section (essay) takes an additional 40 minutes.",
-    marking: "Each of the 4 sections is scored on a scale from 1 to 36. The composite score is the simple average of the 4 section scores. No negative marking."
+    pattern: "2 Hours 55 Minutes. Four required sections: English (75 Qs / 45 mins), Mathematics (60 Qs / 60 mins), Reading (40 Qs / 35 mins), Science (40 Qs / 35 mins). Optional Writing essay: additional 40 minutes. Total: 215 questions.",
+    marking: "Each of the 4 sections is scaled from 1–36. Composite = simple average of the 4 scores. No negative marking. Superscore policy (best section scores across test dates) accepted by most US universities.",
+    eligibility: "1. Open to candidates of any age — designed primarily for high school juniors/seniors (Grade 11/12).\n2. Requires a registered MyACT account and valid Passport (international candidates).\n3. Candidates can take the ACT up to 12 times total.",
+    examDayRules: "1. Print Admission Ticket and bring valid photo ID.\n2. Bring 2 sharpened No. 2 pencils (no mechanical pencils) and an eraser.\n3. A permitted graphing calculator (TI-84 or equivalent) is allowed in the Mathematics section only.\n4. No electronics, phones, smartwatches, or earbuds permitted in the testing room.",
+    careerOutcomes: "ACT composite 33+ qualifies for merit scholarships and makes candidates competitive for top-20 US universities. Unlocks finance, technology, medicine, and engineering careers in the US. Average starting salaries for US top-university CS graduates: $90k–$140k/year. Finance roles: $80k–$120k. US universities also offer strong global recruiting from Fortune 500 companies.",
+    collegesPool: [
+      { name: "Harvard / Yale / Princeton", minScore: 35 }, { name: "Stanford / MIT / Caltech", minScore: 35 },
+      { name: "Columbia / UChicago / UPenn", minScore: 34 }, { name: "Northwestern / Duke / Cornell", minScore: 33 },
+      { name: "Georgetown / Vanderbilt / Rice", minScore: 32 }, { name: "UCLA / NYU / USC", minScore: 31 },
+      { name: "Georgia Tech / Michigan / UT Austin", minScore: 30 }, { name: "Boston College / UIUC", minScore: 29 },
+      { name: "University of Washington", minScore: 28 }, { name: "Penn State / Ohio State / Purdue", minScore: 27 },
+      { name: "Arizona State / Michigan State", minScore: 24 }
+    ]
   },
   olympiad: {
-    officialDate: "Stage 1 (NSEP/NSEC/PRMO): November/December | Stage 2 (INPhO/INChO/RMO): January/February 2027",
-    overview: "National and International Olympiads (like IMO, IPhO, IChO, IOI) are talent search tests targeting high school students. They identify the top students in Mathematics and Science subjects, leading to national camps (OCSC) and representing the country globally.",
-    targetColleges: "IISc Bangalore, CMI (Chennai), ISI (Kolkata), direct interview pathways to top research programs",
-    rankEstimator: "For your target score of {targetScore}% marks, you qualify for the Olympiad Training Camp (OCSC) and receive a Certificate of Merit. This grants direct admission interviews at top mathematical/scientific institutes.",
+    officialDate: "Stage 1 (PRMO/NSE): November–December | Stage 2 (RMO/INO): January–February 2027 | OCSC Camp: April 2027",
+    overview: "National and International Science and Mathematics Olympiads (IMO, IPhO, IChO, IOI, IOAA) are talent-search competitions for high school students conducted by HBCSE (Homi Bhabha Centre for Science Education). They identify exceptional students in Mathematics, Physics, Chemistry, Biology, Astronomy, and Informatics, leading to national training camps (OCSC) and international representation.",
+    targetColleges: "IISc Bangalore, CMI Chennai, ISI Kolkata, IISERs — direct interview pathways to top global research programs",
+    rankEstimator: "For your target score of {targetScore}% marks, you qualify for the Olympiad Training Camp (OCSC). This grants direct admission consideration at CMI and ISI, and merit preference in IIT/IISER admission processes.",
     scoreGrid: [
-      { score: "80%+", rank: "International Team Selection", colleges: "IISc Bangalore (B.S.), ISI Kolkata (B.Math), CMI Chennai (B.Sc Math)" },
-      { score: "60-79%", rank: "OCSC Qualifier / Gold Medal", colleges: "Direct Interview calls at CMI/ISI, merit preference at IITs" },
-      { score: "40-59%", rank: "State-level Merit Topper", colleges: "Direct entry to IISERs (via IISER aptitude test preference)" }
+      { score: "80%+", rank: "International Team Selection (INMO/IPhO Gold)", colleges: "IISc Bangalore (B.S.), ISI Kolkata (B.Math), CMI Chennai (B.Sc Math)" },
+      { score: "60-79%", rank: "OCSC Qualifier / National Gold Medal", colleges: "Direct Interview calls at CMI/ISI, merit preference at IITs" },
+      { score: "40-59%", rank: "State-level Merit Topper / ZONAL Medal", colleges: "Direct entry to IISERs (via KVPY-equivalent preference)" }
     ],
-    pattern: "Varies by subject. Stage 1 (PRMO/NSE) is usually 2-3 hours containing subjective/objective questions. Stage 2 (RMO/INo) is a 3-4 hour subjective problem-solving test with high-difficulty proof writing.",
-    marking: "Stage 1: varies. Stage 2 (Subjective): step-by-step descriptive grading with zero negative marks."
+    pattern: "Stage 1 (PRMO — Math, NSE — Science): 2–3 Hours, Objective/Short-answer. Stage 2 (RMO/INO): 3 hours, Subjective proof-writing format. Stage 3 (INMO/IMO Team Selection): 4.5 Hours, high-difficulty proofs. Each stage is progressively harder and more selective.",
+    marking: "Stage 1: Objective marking, no negative marking. Stage 2/3: Purely descriptive grading with partial credit — examiners evaluate logical reasoning and proof quality. Zero penalty for wrong answers.",
+    eligibility: "1. Must be an Indian citizen studying in a CBSE/ICSE/State board school.\n2. Stage 1 (NSE) is open to students of Class 8–12. Age criterion released annually by HBCSE.\n3. Born on or after a specified date (e.g., July 1, 2007 for 2027 cycle).\n4. Must NOT have passed Class 12 board exams prior to the Olympiad year.",
+    examDayRules: "1. School identity card and HBCSE Admit Card mandatory.\n2. Geometry tools and a simple scientific non-programmable calculator allowed in Physics/Chemistry stages only — strictly banned in Mathematics.\n3. Subjective papers require detailed proof writing on sheets provided by HBCSE.\n4. Stage 2 and above is held at regional HBCSE/university centers.",
+    careerOutcomes: "Ultimate academic distinction. Olympiad Gold/Silver/Bronze medalists receive direct admission calls from CMI and ISI. Preferred candidates for Ph.D. programs at MIT, Caltech, Cambridge, and IISc. Career paths: Pure Math Research, Theoretical Physics, Quantum Computing, Cryptography, Academic Faculty. Most Olympiad medalists go on to publish in top international journals.",
+    collegesPool: [
+      { name: "IISc Bangalore (B.S. Research)", minScore: 82 }, { name: "ISI Kolkata (B.Stat/B.Math)", minScore: 78 },
+      { name: "CMI Chennai (B.Sc Math/CS)", minScore: 75 }, { name: "IISER Pune (BS-MS)", minScore: 60 },
+      { name: "IISER Kolkata (BS-MS)", minScore: 60 }, { name: "NISER Bhubaneswar", minScore: 55 }
+    ]
   }
 };
+
 
 function startCompPracticeForChapter(subject, chapter) {
   compState.practiceSubject = subject;
@@ -1304,89 +1406,127 @@ function renderIntelligenceTab(exam) {
   const targetScore = compState.targetScore;
   const targetText = intel.rankEstimator.replace('{targetScore}', targetScore);
 
+  // Build Safety / Match / Reach from college pool
+  const safetyColleges = [], matchColleges = [], reachColleges = [];
+  (intel.collegesPool || []).forEach(c => {
+    const diff = targetScore - c.minScore;
+    if (diff >= 20) safetyColleges.push(c);
+    else if (diff >= -8 && diff < 20) matchColleges.push(c);
+    else if (diff >= -35 && diff < -8) reachColleges.push(c);
+  });
+
+  const buildCollegeList = (list, color, fallback) => list.length === 0
+    ? `<div style="color:var(--mut);font-size:12px">${esc(fallback)}</div>`
+    : list.slice(0, 5).map(c => `
+      <div style="font-size:12px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.03)">
+        <span style="color:#fff;font-weight:600">• ${esc(c.name)}</span>
+        <span style="font-size:10px;color:${color};margin-left:6px">(min ~${c.minScore})</span>
+      </div>`).join('');
+
   return `
     <div style="display:flex;flex-direction:column;gap:20px">
-      <!-- Overview & Critical Facts Card -->
+
+      <!-- 1. Overview -->
       <div class="card" style="padding:22px;border-color:var(--theme-accent);background:rgba(255,255,255,0.01)">
         <div class="between mb12" style="border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px">
           <span style="font-size:16px;font-weight:800;color:var(--theme-accent)">ℹ️ Official Exam Overview</span>
           <span class="tag tp comp-accent-bg" style="font-size:10px;font-weight:700;color:#fff;border:none">General Info</span>
         </div>
-        
-        <div style="font-size:13px;color:var(--sub);line-height:1.6">
-          <p style="margin:0 0 14px 0">${esc(intel.overview)}</p>
-          
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
-            <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
-              <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:4px">📅 TARGET EXAM DATE</span>
-              <strong style="color:#fff;font-size:13px">${esc(intel.officialDate)}</strong>
-            </div>
-            
-            <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
-              <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:4px">🎯 ADMISSIONS PORTAL GATES</span>
-              <strong style="color:#fff;font-size:13px">${esc(intel.targetColleges)}</strong>
-            </div>
+        <p style="font-size:13px;color:var(--sub);line-height:1.6;margin:0 0 16px 0">${esc(intel.overview)}</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.05)">
+            <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:4px">📅 OFFICIAL EXAM DATES 2027</span>
+            <strong style="color:#fff;font-size:13px">${esc(intel.officialDate)}</strong>
+          </div>
+          <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.05)">
+            <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:4px">🎯 PRIMARY GATEWAY COLLEGES</span>
+            <strong style="color:#fff;font-size:13px">${esc(intel.targetColleges)}</strong>
           </div>
         </div>
       </div>
 
-      <!-- Rank & College Predictor Gate -->
-      <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06);background:rgba(255,255,255,0.01)">
+      <!-- 2. Interactive College Chance Predictor -->
+      <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06)">
         <div class="between mb12" style="border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px">
-          <span style="font-size:16px;font-weight:800;color:#fff">🏆 Rank & College Gate Predictor</span>
+          <span style="font-size:16px;font-weight:800;color:#fff">🎓 College Admission Chance Predictor</span>
+          <span class="tag" style="font-size:10px;background:rgba(139,92,246,0.15);color:var(--pl);font-weight:700;border:none">Target: ${targetScore}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
+          <div class="card" style="padding:14px;border-color:rgba(16,185,129,0.25);background:rgba(16,185,129,0.02)">
+            <div style="font-size:11px;font-weight:700;color:var(--okl);margin-bottom:10px">🟢 SAFETY (95%+ Admission Chance)</div>
+            ${buildCollegeList(safetyColleges, 'var(--okl)', 'None unlocked yet — increase your target score!')}
+          </div>
+          <div class="card" style="padding:14px;border-color:rgba(6,182,212,0.25);background:rgba(6,182,212,0.02)">
+            <div style="font-size:11px;font-weight:700;color:var(--theme-accent);margin-bottom:10px">🟡 MATCH (50–90% Admission Chance)</div>
+            ${buildCollegeList(matchColleges, 'var(--theme-accent)', 'None matched — adjust target!')}
+          </div>
+          <div class="card" style="padding:14px;border-color:rgba(239,68,68,0.25);background:rgba(239,68,68,0.02)">
+            <div style="font-size:11px;font-weight:700;color:var(--redl);margin-bottom:10px">🔴 REACH (Stretch Goal Colleges)</div>
+            ${buildCollegeList(reachColleges, 'var(--redl)', 'Already exceeding your target reach!')}
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Rank Predictor + Score Grid -->
+      <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06)">
+        <div class="between mb12" style="border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px">
+          <span style="font-size:16px;font-weight:800;color:#fff">🏆 Rank Predictor & Score-to-College Table</span>
           <span class="tag" style="font-size:10px;background:rgba(16,185,129,0.15);color:var(--okl);font-weight:700;border:none">Active Analysis</span>
         </div>
-        
-        <div class="card mb18" style="padding:14px;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.2)">
-          <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">🎯 For Your Target Score: <strong style="color:var(--okl);font-size:16px">${targetScore}</strong></div>
+        <div class="card mb16" style="padding:14px;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.2)">
+          <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">🎯 Your Target: <strong style="color:var(--okl);font-size:16px">${targetScore}</strong></div>
           <p style="font-size:12.5px;color:var(--sub);margin:0;line-height:1.5">${esc(targetText)}</p>
         </div>
-
-        <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;margin-bottom:10px">ESTIMATED SCORE-TO-COLLEGE MAPPING TABLE:</div>
+        <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;margin-bottom:10px">FULL SCORE → RANK → COLLEGE MAPPING:</div>
         <div style="display:flex;flex-direction:column;gap:8px">
           ${intel.scoreGrid.map(row => {
             let isMatch = false;
-            if (row.score.includes('+')) {
-              isMatch = targetScore >= parseInt(row.score);
-            } else if (row.score.includes('-')) {
-              const parts = row.score.split('-');
-              isMatch = targetScore >= parseInt(parts[0]) && targetScore <= parseInt(parts[1]);
-            }
+            if (row.score.includes('+')) isMatch = targetScore >= parseInt(row.score);
+            else if (row.score.includes('-')) { const p = row.score.split('-'); isMatch = targetScore >= parseInt(p[0]) && targetScore <= parseInt(p[1]); }
             return `
               <div style="display:flex;gap:12px;padding:12px;border-radius:8px;font-size:12px;background:${isMatch?'rgba(16,185,129,0.05)':'rgba(255,255,255,0.01)'};border:1px solid ${isMatch?'rgba(16,185,129,0.2)':'rgba(255,255,255,0.03)'}">
-                <div style="flex:1;min-width:60px">
-                  <span style="font-size:10px;color:var(--mut);font-weight:700;display:block">SCORE BAND</span>
-                  <strong style="color:${isMatch?'var(--okl)':'#fff'};font-size:13px">${esc(row.score)}</strong>
-                </div>
-                <div style="flex:2">
-                  <span style="font-size:10px;color:var(--mut);font-weight:700;display:block">PROJECTED RANK / PERCENTILE</span>
-                  <span style="color:#fff;font-weight:600">${esc(row.rank)}</span>
-                </div>
-                <div style="flex:3">
-                  <span style="font-size:10px;color:var(--mut);font-weight:700;display:block">COLLEGES UNLOCKED</span>
-                  <span style="color:var(--sub);line-height:1.4">${esc(row.colleges)}</span>
-                </div>
-              </div>
-            `;
+                <div style="flex:1;min-width:60px"><span style="font-size:10px;color:var(--mut);font-weight:700;display:block">SCORE BAND</span><strong style="color:${isMatch?'var(--okl)':'#fff'};font-size:13px">${esc(row.score)}</strong></div>
+                <div style="flex:2"><span style="font-size:10px;color:var(--mut);font-weight:700;display:block">RANK / PERCENTILE</span><span style="color:#fff;font-weight:600">${esc(row.rank)}</span></div>
+                <div style="flex:3"><span style="font-size:10px;color:var(--mut);font-weight:700;display:block">COLLEGES UNLOCKED</span><span style="color:var(--sub)">${esc(row.colleges)}</span></div>
+              </div>`;
           }).join('')}
         </div>
       </div>
 
-      <!-- Pattern & Grading Card -->
+      <!-- 4. Eligibility + Exam Day Rules -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
+          <div class="h3 mb8" style="color:#fff">🔍 Eligibility Criteria & Attempt Rules</div>
+          <p style="font-size:12.5px;color:var(--sub);line-height:1.6;margin:0;white-space:pre-line">${esc(intel.eligibility)}</p>
+        </div>
+        <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
+          <div class="h3 mb8" style="color:#fff">👕 Official Exam-Day Regulations</div>
+          <p style="font-size:12.5px;color:var(--sub);line-height:1.6;margin:0;white-space:pre-line">${esc(intel.examDayRules)}</p>
+        </div>
+      </div>
+
+      <!-- 5. Paper Pattern + Marking -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
           <div class="h3 mb8" style="color:#fff">📋 Official Paper Pattern</div>
           <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0">${esc(intel.pattern)}</p>
         </div>
-        
         <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
           <div class="h3 mb8" style="color:#fff">💯 Marking & Grading System</div>
           <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0">${esc(intel.marking)}</p>
         </div>
       </div>
+
+      <!-- 6. Career Outcomes -->
+      <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06)">
+        <div class="h3 mb8" style="color:#fff">💼 Career Pathways, Placements & ROI Outcomes</div>
+        <p style="font-size:12.5px;color:var(--sub);line-height:1.6;margin:0">${esc(intel.careerOutcomes)}</p>
+      </div>
+
     </div>
   `;
 }
+
 
 function renderTipsTab(exam) {
   const list = EXAM_STRATEGIES[compState.examId] || EXAM_STRATEGIES.jee_main;
