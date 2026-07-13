@@ -3616,21 +3616,22 @@ const MxAudio=(function(){
 (function initMagneticCards(){
   if('ontouchstart' in window)return; // desktop only
   document.addEventListener('mousemove',function(e){
-    const cards=document.querySelectorAll('.sc,.card-lift');
-    cards.forEach(card=>{
-      const rect=card.getBoundingClientRect();
-      if(e.clientX>rect.left-20&&e.clientX<rect.right+20&&e.clientY>rect.top-20&&e.clientY<rect.bottom+20){
-        const cx=rect.left+rect.width/2;
-        const cy=rect.top+rect.height/2;
-        const dx=(e.clientX-cx)/rect.width*6;
-        const dy=(e.clientY-cy)/rect.height*4;
-        card.style.transform=`translateY(-4px) scale(1.01) rotateX(${-dy}deg) rotateY(${dx}deg)`;
-        card.style.transition='transform .08s linear';
-      } else if(card.style.transform&&card.style.transform.includes('rotateX')){
-        card.style.transform='';
-        card.style.transition='transform .3s var(--spring-nav,cubic-bezier(.34,1.56,.64,1))';
-      }
-    });
+    const card=e.target.closest('.sc,.card-lift');
+    if(!card){
+      // Reset any active rotated cards
+      document.querySelectorAll('.sc[style*="rotateX"], .card-lift[style*="rotateX"]').forEach(c=>{
+        c.style.transform='';
+        c.style.transition='transform .3s var(--spring-nav,cubic-bezier(.34,1.56,.64,1))';
+      });
+      return;
+    }
+    const rect=card.getBoundingClientRect();
+    const cx=rect.left+rect.width/2;
+    const cy=rect.top+rect.height/2;
+    const dx=(e.clientX-cx)/rect.width*6;
+    const dy=(e.clientY-cy)/rect.height*4;
+    card.style.transform=`translateY(-4px) scale(1.01) rotateX(${-dy}deg) rotateY(${dx}deg)`;
+    card.style.transition='transform .08s linear';
   },{passive:true});
 })();
 

@@ -2268,7 +2268,20 @@ body.creative .ni.on{background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(
 .cursor-blink{display:inline-block;width:2px;height:14px;background:var(--pl);margin-left:2px;vertical-align:middle;animation:blink .8s step-start infinite}
 
 /* â”€â”€ CUSTOM CURSOR â€” MENTORIX ARROW â”€â”€ */
-body.has-cursor *{cursor:none!important}
+body.has-cursor,
+body.has-cursor a,
+body.has-cursor button,
+body.has-cursor input,
+body.has-cursor select,
+body.has-cursor textarea,
+body.has-cursor [role="button"],
+body.has-cursor .btn,
+body.has-cursor .ni,
+body.has-cursor .qa-chip,
+body.has-cursor .sc,
+body.has-cursor .card-lift {
+  cursor: none !important;
+}
 /* Allow text selection with custom cursor */
 body.has-cursor p,body.has-cursor span,body.has-cursor div,body.has-cursor h1,body.has-cursor h2,body.has-cursor h3,body.has-cursor li,body.has-cursor td,body.has-cursor .mbbl{-webkit-user-select: text!important}
 
