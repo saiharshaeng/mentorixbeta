@@ -1,0 +1,2503 @@
+/**
+ * screens/comp.js — Mentorix Competitive Exam Preparation Screen (Upgraded CBT Edition)
+ * 
+ * Provides an elite, high-fidelity Computer Based Test (CBT) simulator and learning hub
+ * for major competitive exams (JEE Main, JEE Advanced, NEET, Digital SAT, IPMAT, CAT, ACT, Olympiads).
+ * 
+ * Features:
+ *   1. Complete stepped personalization onboarding flow.
+ *   2. Custom Whitelist of active major competitive exams.
+ *   3. Specialized Exam-Specific Dashboards (unique themes, custom metrics, specific tips).
+ *   4. Detailed Syllabus 10-Second Loader (AI-generated chapter weightages cached locally).
+ *   5. Study Hub Top 5 High-Priority Chapters extractor across all subjects.
+ *   6. Mock Test (CBT) Parallel Batch AI Generator supporting MCQ and Numerical/Integer/TITA.
+ *   7. Strategies & Tactics tab with customized strategies (formulas completely removed).
+ *   8. Robust grading & scorecard rendering showing correct vs. submitted options and step-by-step detailed explanations.
+ */
+
+'use strict';
+
+// State Management
+let compState = {
+  examId: '',           // 'jee_main', 'jee_adv', 'neet', 'dsat', 'ipmat', 'cat', 'act', 'olympiad'
+  targetScore: 0,
+  dailyTime: 60,
+  currentTab: 'hub',    // 'hub', 'syllabus', 'tips', 'practice', 'mock'
+  
+  // Onboarding wizard state
+  obStep: 1,
+  searchQuery: '',
+  
+  // Practice settings
+  practiceSubject: '',
+  practiceDifficulty: 'medium',
+  practiceChapter: 'All Chapters',
+  practiceCount: 5,
+
+  // Syllabus loader state
+  syllabusLoading: false,
+  syllabusProgress: 0,
+  syllabusStatus: '',
+
+  // Mock test loader state
+  mockLoadingActive: false,
+  mockLoadingProgress: 0,
+  mockLoadingStatus: '',
+  
+  // Active exam state
+  activeExam: null,     // { questions, currentIndex, answers, status, timeLeft, timerInterval, instructionsRead: false, mode: 'diagnostic'|'full' }
+};
+
+// 1. Whitelist of Active Major Exams
+const WORLD_EXAMS = [
+  { id: 'jee_main', name: 'JEE Main', country: 'India', cat: 'Engineering', maxScore: 300, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ & Numerical (+4/-1)', marking: { correct: 4, wrong: -1, type: 'jee_main' }, isMajor: true, fullQuestions: 75, defaultTarget: 220 },
+  { id: 'jee_adv', name: 'JEE Advanced', country: 'India', cat: 'Engineering', maxScore: 360, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ, MSQ & Integer (+4/-1)', marking: { correct: 4, wrong: -1, type: 'jee_adv' }, isMajor: true, fullQuestions: 54, defaultTarget: 180 },
+  { id: 'neet', name: 'NEET UG', country: 'India', cat: 'Medical', maxScore: 720, duration: 200, subjects: ['Biology', 'Physics', 'Chemistry'], pattern: 'Single Correct MCQ (+4/-1)', marking: { correct: 4, wrong: -1, type: 'neet' }, isMajor: true, fullQuestions: 180, defaultTarget: 600 },
+  { id: 'dsat', name: 'Digital SAT', country: 'USA / Intl', cat: 'Undergrad', maxScore: 1600, duration: 134, subjects: ['Reading & Writing', 'Mathematics'], pattern: 'MCQ & Student Response (No Negative)', marking: { correct: 10, wrong: 0, type: 'dsat' }, isMajor: true, fullQuestions: 98, defaultTarget: 1450 },
+  { id: 'ipmat', name: 'IPMAT (IIM Indore)', country: 'India', cat: 'Integrated MBA', maxScore: 360, duration: 120, subjects: ['Quantitative Ability (MCQ)', 'Quantitative Ability (SA)', 'Verbal Ability'], pattern: 'MCQ (+4/-1) & Short Answer (+4/0)', marking: { correct: 4, wrong: -1, type: 'ipmat' }, isMajor: true, fullQuestions: 90, defaultTarget: 240 },
+  { id: 'cat', name: 'CAT (IIMs)', country: 'India', cat: 'Business', maxScore: 198, duration: 120, subjects: ['Verbal Ability & RC', 'Data Interpretation & LR', 'Quantitative Ability'], pattern: 'MCQ (+3/-1) & TITA (+3/0)', marking: { correct: 3, wrong: -1, type: 'cat' }, isMajor: true, fullQuestions: 66, defaultTarget: 120 },
+  { id: 'act', name: 'ACT', country: 'USA', cat: 'Undergrad', maxScore: 36, duration: 175, subjects: ['English', 'Mathematics', 'Reading', 'Science'], pattern: 'MCQ (No Negative)', marking: { correct: 1, wrong: 0, type: 'act' }, isMajor: true, fullQuestions: 215, defaultTarget: 30 },
+  { id: 'olympiad', name: 'International Olympiad', country: 'Intl', cat: 'Science & Maths', maxScore: 100, duration: 180, subjects: ['Advanced Problem Solving'], pattern: 'Advanced Numerical & Proofs (+5/0)', marking: { correct: 5, wrong: 0, type: 'olympiad' }, isMajor: true, fullQuestions: 30, defaultTarget: 75 }
+];
+
+// 2. Exam Specialized Dashboards Configuration
+const EXAM_DASHBOARDS = {
+  jee_main: {
+    accentColor: '#3b82f6', // blue
+    themeClass: 'theme-jee-main',
+    metricTitle1: 'Percentile Calibration',
+    metricValue1: '98.6th Est.',
+    metricTitle2: 'NIT Admission Chance',
+    metricValue2: 'High (85%)',
+    examTip: '💡 Focus on securing the 20 MCQs first before attempting the 5 numerical-value questions.'
+  },
+  jee_adv: {
+    accentColor: '#a855f7', // purple
+    themeClass: 'theme-jee-adv',
+    metricTitle1: 'Rank Projection',
+    metricValue1: 'Top 3,500',
+    metricTitle2: 'IIT Cutoff Match',
+    metricValue2: 'Matched (IIT Bombay)',
+    examTip: '💡 MSQs have partial marking. Be extremely careful and only select options you are 100% sure about.'
+  },
+  neet: {
+    accentColor: '#10b981', // green
+    themeClass: 'theme-neet',
+    metricTitle1: 'MBBS Seat Index',
+    metricValue1: '620/720 Est.',
+    metricTitle2: 'Biology Accuracy',
+    metricValue2: '94% (Target)',
+    examTip: '💡 Biology constitutes 50% of the marks. Finish it in 45 minutes to save time for Physics.'
+  },
+  dsat: {
+    accentColor: '#f59e0b', // gold/amber
+    themeClass: 'theme-dsat',
+    metricTitle1: 'Sectional Split',
+    metricValue1: 'RW: 740 | M: 780',
+    metricTitle2: 'Ivy-League Match',
+    metricValue2: '92% Score Match',
+    examTip: '💡 There is no negative marking. Never leave a student-produced response math question blank.'
+  },
+  ipmat: {
+    accentColor: '#ec4899', // pink
+    themeClass: 'theme-ipmat',
+    metricTitle1: 'IIM Indore Cutoff',
+    metricValue1: 'QA: 48 | VA: 120',
+    metricTitle2: 'SA Accuracy',
+    metricValue2: '80% Accuracy Target',
+    examTip: '💡 Quantitative Short Answer questions do not have negative marks. Answer all of them.'
+  },
+  cat: {
+    accentColor: '#06b6d4', // cyan
+    themeClass: 'theme-cat',
+    metricTitle1: 'Percentile Target',
+    metricValue1: '99.2%ile Est.',
+    metricTitle2: 'IIM Call Safety',
+    metricValue2: 'A, B, C Safe Zone',
+    examTip: '💡 CAT uses sectional time limits of 40 minutes. Manage your speed tightly.'
+  },
+  act: {
+    accentColor: '#f97316', // orange
+    themeClass: 'theme-act',
+    metricTitle1: 'Composite Score',
+    metricValue1: '32 / 36 Est.',
+    metricTitle2: 'Science Speed Index',
+    metricValue2: '52s / Question',
+    examTip: '💡 Speed is crucial in ACT. Mark answers quickly and keep moving.'
+  },
+  olympiad: {
+    accentColor: '#ef4444', // red
+    themeClass: 'theme-olympiad',
+    metricTitle1: 'Medal Probability',
+    metricValue1: 'Silver / Gold',
+    metricTitle2: 'Proof Rigor Index',
+    metricValue2: 'Advanced Level',
+    examTip: '💡 Olympiad problems require deep proofs. Spend time finding elegant mathematical shortcuts.'
+  }
+};
+
+// 3. Offline Specific Syllabus Database Fallbacks
+const OFFLINE_SYLLABI = {
+  jee_main: [
+    {
+      subject: 'Mathematics',
+      units: [
+        { name: 'Calculus (35% weight)', chapters: [{ name: 'Limits, Continuity & Differentiability', weight: 10 }, { name: 'Definite Integration', weight: 15 }, { name: 'Differential Equations', weight: 10 }] },
+        { name: 'Algebra & Matrices (40% weight)', chapters: [{ name: 'Matrices & Determinants', weight: 15 }, { name: 'Probability & Series', weight: 15 }, { name: 'Vector Algebra & 3D Space', weight: 10 }] },
+        { name: 'Coordinate Geometry (25% weight)', chapters: [{ name: 'Conic Sections', weight: 15 }, { name: 'Trigonometry & Properties', weight: 10 }] }
+      ]
+    },
+    {
+      subject: 'Physics',
+      units: [
+        { name: 'Mechanics (30% weight)', chapters: [{ name: 'Rotational Motion & Torque', weight: 12 }, { name: 'Laws of Motion', weight: 10 }, { name: 'Work, Power & Energy', weight: 8 }] },
+        { name: 'Electrodynamics (35% weight)', chapters: [{ name: 'Electrostatics & Fields', weight: 15 }, { name: 'Current Electricity', weight: 12 }, { name: 'Magnetic Effects', weight: 8 }] },
+        { name: 'Modern Physics & Optics (35% weight)', chapters: [{ name: 'Photoelectric Effect & Nuclear', weight: 20 }, { name: 'Wave & Ray Optics', weight: 15 }] }
+      ]
+    },
+    {
+      subject: 'Chemistry',
+      units: [
+        { name: 'Physical Chemistry (35% weight)', chapters: [{ name: 'Chemical Kinetics', weight: 15 }, { name: 'Thermodynamics & Equilibrium', weight: 20 }] },
+        { name: 'Organic Chemistry (35% weight)', chapters: [{ name: 'Alcohols & Phenols', weight: 15 }, { name: 'Reaction Mechanisms & isomerism', weight: 20 }] },
+        { name: 'Inorganic Chemistry (30% weight)', chapters: [{ name: 'Coordination Compounds', weight: 15 }, { name: 'p-Block Elements', weight: 15 }] }
+      ]
+    }
+  ],
+  jee_adv: [
+    {
+      subject: 'Mathematics',
+      units: [
+        { name: 'Calculus (35% weight)', chapters: [{ name: 'Limits, Continuity & Differentiability', weight: 10 }, { name: 'Definite Integration', weight: 15 }, { name: 'Differential Equations', weight: 10 }] },
+        { name: 'Algebra & Matrices (40% weight)', chapters: [{ name: 'Matrices & Determinants', weight: 15 }, { name: 'Probability & Series', weight: 15 }, { name: 'Vector Algebra & 3D Space', weight: 10 }] },
+        { name: 'Coordinate Geometry (25% weight)', chapters: [{ name: 'Conic Sections', weight: 15 }, { name: 'Trigonometry & Properties', weight: 10 }] }
+      ]
+    },
+    {
+      subject: 'Physics',
+      units: [
+        { name: 'Mechanics (30% weight)', chapters: [{ name: 'Rotational Motion & Torque', weight: 12 }, { name: 'Laws of Motion', weight: 10 }, { name: 'Work, Power & Energy', weight: 8 }] },
+        { name: 'Electrodynamics (35% weight)', chapters: [{ name: 'Electrostatics & Fields', weight: 15 }, { name: 'Current Electricity', weight: 12 }, { name: 'Magnetic Effects', weight: 8 }] },
+        { name: 'Modern Physics & Optics (35% weight)', chapters: [{ name: 'Photoelectric Effect & Nuclear', weight: 20 }, { name: 'Wave & Ray Optics', weight: 15 }] }
+      ]
+    },
+    {
+      subject: 'Chemistry',
+      units: [
+        { name: 'Physical Chemistry (35% weight)', chapters: [{ name: 'Chemical Kinetics', weight: 15 }, { name: 'Thermodynamics & Equilibrium', weight: 20 }] },
+        { name: 'Organic Chemistry (35% weight)', chapters: [{ name: 'Alcohols & Phenols', weight: 15 }, { name: 'Reaction Mechanisms & isomerism', weight: 20 }] },
+        { name: 'Inorganic Chemistry (30% weight)', chapters: [{ name: 'Coordination Compounds', weight: 15 }, { name: 'p-Block Elements', weight: 15 }] }
+      ]
+    }
+  ],
+  neet: [
+    {
+      subject: 'Biology',
+      units: [
+        { name: 'Physiology & Genetics (40% weight)', chapters: [{ name: 'Human Physiology', weight: 20 }, { name: 'Genetics & Inheritance', weight: 20 }] },
+        { name: 'Ecology & Welfare (30% weight)', chapters: [{ name: 'Ecology & Environment', weight: 15 }, { name: 'Biology in Human Welfare', weight: 15 }] },
+        { name: 'Cell Structure & Plant Phys (30% weight)', chapters: [{ name: 'Cell Structure & Division', weight: 15 }, { name: 'Plant Physiology', weight: 15 }] }
+      ]
+    },
+    {
+      subject: 'Physics',
+      units: [
+        { name: 'Mechanics (35% weight)', chapters: [{ name: 'Rotational Motion', weight: 15 }, { name: 'Laws of Motion & Friction', weight: 20 }] },
+        { name: 'Waves & Modern Physics (35% weight)', chapters: [{ name: 'Optics', weight: 15 }, { name: 'Modern Physics', weight: 20 }] },
+        { name: 'Electrodynamics & Thermal (30% weight)', chapters: [{ name: 'Current Electricity', weight: 15 }, { name: 'Thermodynamics', weight: 15 }] }
+      ]
+    },
+    {
+      subject: 'Chemistry',
+      units: [
+        { name: 'Organic Chemistry (35% weight)', chapters: [{ name: 'Hydrocarbons', weight: 15 }, { name: 'Alcohols & Phenols', weight: 20 }] },
+        { name: 'Inorganic Chemistry (35% weight)', chapters: [{ name: 'Periodic Properties & Bonding', weight: 15 }, { name: 'd-Block & Coordination', weight: 20 }] },
+        { name: 'Physical Chemistry (30% weight)', chapters: [{ name: 'Chemical Kinetics', weight: 15 }, { name: 'Solutions & Electrochemistry', weight: 15 }] }
+      ]
+    }
+  ],
+  dsat: [
+    {
+      subject: 'Reading & Writing',
+      units: [
+        { name: 'Information & Ideas (30% weight)', chapters: [{ name: 'Central Ideas & Details', weight: 15 }, { name: 'Command of Evidence', weight: 15 }] },
+        { name: 'Craft & Structure (30% weight)', chapters: [{ name: 'Words in Context', weight: 15 }, { name: 'Text Structure & Purpose', weight: 15 }] },
+        { name: 'Expression & Grammar (40% weight)', chapters: [{ name: 'Standard English Conventions', weight: 20 }, { name: 'Transitions & Rhetorical Synthesis', weight: 20 }] }
+      ]
+    },
+    {
+      subject: 'Mathematics',
+      units: [
+        { name: 'Algebra & Data (55% weight)', chapters: [{ name: 'Linear Equations & Systems', weight: 30 }, { name: 'Problem Solving & Data Analysis', weight: 25 }] },
+        { name: 'Advanced Math & Trig (45% weight)', chapters: [{ name: 'Equivalent Expressions & Quadratics', weight: 30 }, { name: 'Geometry & Trigonometry', weight: 15 }] }
+      ]
+    }
+  ],
+  ipmat: [
+    {
+      subject: 'Quantitative Ability (MCQ)',
+      units: [
+        { name: 'Arithmetic & Algebra (70% weight)', chapters: [{ name: 'Percentages, Profit & Loss', weight: 35 }, { name: 'Quadratic & Higher Equations', weight: 35 }] },
+        { name: 'Geometry & Modern Math (30% weight)', chapters: [{ name: 'Mensuration & Geometry', weight: 15 }, { name: 'Probability & Permutations', weight: 15 }] }
+      ]
+    },
+    {
+      subject: 'Quantitative Ability (SA)',
+      units: [
+        { name: 'Short Answer Math (100% weight)', chapters: [{ name: 'Numbers & Sequence Series', weight: 50 }, { name: 'Functions & Logarithms', weight: 50 }] }
+      ]
+    },
+    {
+      subject: 'Verbal Ability',
+      units: [
+        { name: 'Verbal & Comprehension (100% weight)', chapters: [{ name: 'Reading Comprehension Passages', weight: 40 }, { name: 'Sentence Correction & Grammar', weight: 30 }, { name: 'Para Jumbles & Summary', weight: 30 }] }
+      ]
+    }
+  ],
+  cat: [
+    {
+      subject: 'Verbal Ability & RC',
+      units: [
+        { name: 'Comprehension & Grammar (100% weight)', chapters: [{ name: 'Reading Comprehension Passages', weight: 70 }, { name: 'Para Jumbles & Summary', weight: 20 }, { name: 'Sentence Correction', weight: 10 }] }
+      ]
+    },
+    {
+      subject: 'Data Interpretation & LR',
+      units: [
+        { name: 'Data Interpretation & LR (100% weight)', chapters: [{ name: 'Data Arrangement & Grid Puzzles', weight: 40 }, { name: 'Graphs, Charts & Caselets', weight: 30 }, { name: 'Logical Games & Tournaments', weight: 30 }] }
+      ]
+    },
+    {
+      subject: 'Quantitative Ability',
+      units: [
+        { name: 'Core Quant (100% weight)', chapters: [{ name: 'Arithmetic (SI/CI, TSD, W&P)', weight: 40 }, { name: 'Algebra (Equations, Progressions)', weight: 30 }, { name: 'Geometry & Trigonometry', weight: 20 }, { name: 'Number System & Modern Math', weight: 10 }] }
+      ]
+    }
+  ],
+  act: [
+    {
+      subject: 'English',
+      units: [
+        { name: 'Grammar & Conventions (100% weight)', chapters: [{ name: 'Standard English Conventions', weight: 45 }, { name: 'Production of Writing', weight: 35 }, { name: 'Knowledge of Language', weight: 20 }] }
+      ]
+    },
+    {
+      subject: 'Mathematics',
+      units: [
+        { name: 'Math (100% weight)', chapters: [{ name: 'Preparing for Higher Math', weight: 60 }, { name: 'Integrating Essential Skills', weight: 30 }, { name: 'Number & Quantity', weight: 10 }] }
+      ]
+    },
+    {
+      subject: 'Reading',
+      units: [
+        { name: 'Reading Comprehension (100% weight)', chapters: [{ name: 'Key Ideas and Details', weight: 55 }, { name: 'Craft and Structure', weight: 30 }, { name: 'Integration of Ideas', weight: 15 }] }
+      ]
+    },
+    {
+      subject: 'Science',
+      units: [
+        { name: 'Science & Data (100% weight)', chapters: [{ name: 'Interpretation of Data', weight: 50 }, { name: 'Scientific Investigation', weight: 30 }, { name: 'Evaluation of Models', weight: 20 }] }
+      ]
+    }
+  ],
+  olympiad: [
+    {
+      subject: 'Advanced Problem Solving',
+      units: [
+        { name: 'Advanced Olympiad Division (100% weight)', chapters: [{ name: 'Abstract Algebra & Polynomials', weight: 25 }, { name: 'Elementary Number Theory', weight: 25 }, { name: 'Combinatorics & Counting', weight: 25 }, { name: 'Euclidean Geometry & Trigonometry', weight: 25 }] }
+      ]
+    }
+  ]
+};
+
+// Helper to escape LaTeX characters from double-unescaping issues
+function escapeJsonLatex(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '\\') {
+      const next = str[i + 1];
+      if (next === '\\') {
+        result += '\\\\';
+        i++; // skip second backslash
+      } else if (next === '"' || next === 'n' || next === '/' || next === 'r' || next === 'b') {
+        result += '\\';
+      } else {
+        result += '\\\\';
+      }
+    } else {
+      result += str[i];
+    }
+  }
+  return result;
+}
+
+// 🏁 Procedural Question Templates
+const MATHEMATICS_TEMPLATES = [
+  { q: "Evaluate the definite integral: $\\int_0^{a} \\frac{x}{\\sqrt{x^2 + b^2}} dx$ where $a = {a}$ and $b = {b}$.", opts: ["$\\sqrt{{a}^2+{b}^2} - {b}$", "$\\sqrt{{a}^2+{b}^2} + {b}$", "${a}$", "$0$"], ans: [0], type: "mcq", chap: "Definite Integration" },
+  { q: "Let $f(x) = \\int_0^x e^t (t-{a})(t-{b}) dt$. At which value of $x$ does $f(x)$ have a local minimum?", opts: ["$x = 0$", "$x = {a}$", "$x = {b}$", "No local minimum"], ans: [2], type: "mcq", chap: "Limits, Continuity & Differentiability" },
+  { q: "Find the equation of the normal to the parabola $y^2 = {4a}x$ at the point $({x1}, {y1})$.", opts: ["$y - {y1} = -\\frac{{y1}}{{2a}} (x - {x1})$", "$y - {y1} = \\frac{{y1}}{{2a}} (x - {x1})$", "$y = x$", "$y = 0$"], ans: [0], type: "mcq", chap: "Conic Sections" }
+];
+
+const PHYSICS_TEMPLATES = [
+  { q: "A block of mass ${m}$ kg is placed on a rough horizontal surface with coefficient of static friction $\\mu_s = {mu}$. A horizontal force of ${F}$ N is applied. Find the magnitude of the frictional force acting on the block.", opts: ["${f_static} N$", "${F} N$", "$0 N$", "${m} N$"], ans: [0], type: "mcq", chap: "Laws of Motion" },
+  { q: "Find the de Broglie wavelength of an electron accelerated through a potential difference of ${V}$ Volts.", opts: ["$\\frac{12.27}{\\sqrt{{V}}} \\text{ \\AA}$", "$\\frac{1.227}{\\sqrt{{V}}} \\text{ \\AA}$", "$1.22 \\text{ \\AA}$", "$12.27 \\text{ \\AA}$"], ans: [0], type: "mcq", chap: "Photoelectric Effect & Nuclear" }
+];
+
+const CHEMISTRY_TEMPLATES = [
+  { q: "For a first-order chemical reaction, the rate constant is $k = {k} \\text{ s}^{-1}$. Calculate the half-life ($t_{1/2}$) of this reaction.", opts: ["${t_half} s$", "$0.693 s$", "${k} s$", "$10 s$"], ans: [0], type: "mcq", chap: "Chemical Kinetics" },
+  { q: "Which of the following organic compounds will give a positive Iodoform test? (Select all that apply)", opts: ["Acetaldehyde", "Acetophenone", "Propan-1-ol", "Propan-2-ol"], ans: [0, 1, 3], type: "msq", chap: "Reaction Mechanisms & isomerism" }
+];
+
+const BIOLOGY_TEMPLATES = [
+  { q: "Which part of the nephron is highly permeable to water but nearly impermeable to salts and electrolytes?", opts: ["Proximal Convoluted Tubule", "Descending limb of Loop of Henle", "Ascending limb of Loop of Henle", "Distal Convoluted Tubule"], ans: [1], type: "mcq", chap: "Human Physiology" }
+];
+
+const GENERAL_TEMPLATES = [
+  { q: "Solve the linear equation: $2x + {a} = {b}$ for the value of $x$.", opts: ["${ans_val}$", "5", "10", "0"], ans: [0], type: "mcq", chap: "Advanced Problem Solving" }
+];
+
+// Instantiates template variables
+function instTemp(temp, vals) {
+  let qText = temp.q;
+  let opts = (temp.opts || []).map(o => o);
+  
+  Object.keys(vals).forEach(k => {
+    qText = qText.replace(new RegExp(`{${k}}`, 'g'), vals[k]);
+    opts = opts.map(o => o.replace(new RegExp(`{${k}}`, 'g'), vals[k]));
+  });
+
+  return {
+    q: qText,
+    opts,
+    ans: temp.ans,
+    type: temp.type,
+    chap: temp.chap,
+    expl: temp.expl || 'Standard step-by-step conceptual answer.'
+  };
+}
+
+// Procedural Fallback Paper Generator
+function generateProceduralMockQuestions(examDb, count) {
+  const subjects = examDb.subjects || ['General Studies'];
+  const questions = [];
+  
+  for (let i = 0; i < count; i++) {
+    const section = subjects[i % subjects.length];
+    const qObj = generateProceduralMockQuestionsForSubject(examDb, section, 1)[0];
+    questions.push({
+      ...qObj,
+      id: i + 1
+    });
+  }
+
+  return questions;
+}
+
+function generateProceduralMockQuestionsForSubject(examDb, subject, count) {
+  const questions = [];
+  for (let i = 0; i < count; i++) {
+    let qObj = null;
+    const isMath = subject.includes('Math') || subject.includes('Quant');
+    const isPhys = subject.includes('Phys');
+    const isChem = subject.includes('Chem');
+    const isBio = subject.includes('Bio');
+
+    if (isMath) {
+      const temp = MATHEMATICS_TEMPLATES[i % MATHEMATICS_TEMPLATES.length];
+      qObj = instTemp(temp, { a: (i%5)+2, b: (i%4)+1, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
+    } else if (isPhys) {
+      const temp = PHYSICS_TEMPLATES[i % PHYSICS_TEMPLATES.length];
+      qObj = instTemp(temp, { a: (i%5)+2, b: (i%4)+1, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
+    } else if (isChem) {
+      const temp = CHEMISTRY_TEMPLATES[i % CHEMISTRY_TEMPLATES.length];
+      qObj = instTemp(temp, { a: (i%5)+2, b: (i%4)+1, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
+    } else if (isBio) {
+      const temp = BIOLOGY_TEMPLATES[i % BIOLOGY_TEMPLATES.length];
+      qObj = instTemp(temp, { a: (i%5)+2, b: (i%4)+1, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
+    } else {
+      const temp = GENERAL_TEMPLATES[i % GENERAL_TEMPLATES.length];
+      qObj = instTemp(temp, { a: 2, b: 6, ans_val: 2 });
+    }
+    
+    // Vary the question type for numerical-value supported exams
+    const isNumerical = (examDb.id === 'jee_main' || examDb.id === 'jee_adv' || examDb.id === 'cat' || examDb.id === 'ipmat') && (i % 4 === 0);
+    if (isNumerical) {
+      qObj.type = 'numerical';
+      delete qObj.opts;
+      qObj.ans = "5"; // simple integer fallback
+      qObj.expl = "Procedural solution explanation: Substituting values gives result equal to 5.";
+    }
+
+    questions.push({
+      ...qObj,
+      section: subject
+    });
+  }
+  return questions;
+}
+
+// State Initializers & Persistors
+function initCompState() {
+  if (!D.compExam) {
+    D.compExam = {
+      configured: false,
+      examId: 'jee_main',
+      targetScore: 220,
+      dailyTime: 60,
+      difficulty: 'medium',
+      syllabi: {}
+    };
+  }
+  if (!D.compExam.syllabi) {
+    D.compExam.syllabi = {};
+  }
+  compState.examId = D.compExam.examId || 'jee_main';
+  compState.targetScore = D.compExam.targetScore || 220;
+  compState.dailyTime = D.compExam.dailyTime || 60;
+  compState.practiceDifficulty = D.compExam.difficulty || 'medium';
+}
+
+function saveCompState() {
+  if (!D.compExam) D.compExam = {};
+  D.compExam.examId = compState.examId;
+  D.compExam.targetScore = compState.targetScore;
+  D.compExam.dailyTime = compState.dailyTime;
+  D.compExam.difficulty = compState.practiceDifficulty;
+  D.compExam.configured = true;
+  saveAll();
+}
+
+function triggerMath() {
+  setTimeout(() => {
+    if (typeof renderMath === 'function') {
+      renderMath();
+    }
+  }, 500);
+}
+
+// 🏁 Router Render Entry
+function rComp() {
+  initCompState();
+
+  if (!D.compExam.configured) {
+    renderOnboardingWizard();
+    return;
+  }
+
+  const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const targetPct = Math.round((compState.targetScore / exam.maxScore) * 100);
+  const cfg = EXAM_DASHBOARDS[compState.examId] || EXAM_DASHBOARDS.jee_main;
+
+  // Render dynamic style rules for specialized styling
+  const styleElId = 'comp-exam-theme-styles';
+  let styleEl = document.getElementById(styleElId);
+  if (!styleEl) {
+    styleEl = document.createElement('style');
+    styleEl.id = styleElId;
+    document.head.appendChild(styleEl);
+  }
+  styleEl.innerHTML = `
+    .theme-jee-main { --theme-accent: #3b82f6; --theme-accent-glow: rgba(59,130,246,0.25); }
+    .theme-jee-adv { --theme-accent: #a855f7; --theme-accent-glow: rgba(168,85,247,0.25); }
+    .theme-neet { --theme-accent: #10b981; --theme-accent-glow: rgba(16,185,129,0.25); }
+    .theme-dsat { --theme-accent: #f59e0b; --theme-accent-glow: rgba(245,158,11,0.25); }
+    .theme-ipmat { --theme-accent: #ec4899; --theme-accent-glow: rgba(236,72,153,0.25); }
+    .theme-cat { --theme-accent: #06b6d4; --theme-accent-glow: rgba(6,182,212,0.25); }
+    .theme-act { --theme-accent: #f97316; --theme-accent-glow: rgba(249,115,22,0.25); }
+    .theme-olympiad { --theme-accent: #ef4444; --theme-accent-glow: rgba(239,68,68,0.25); }
+    
+    .comp-accent-border { border-color: var(--theme-accent) !important; }
+    .comp-accent-text { color: var(--theme-accent) !important; }
+    .comp-accent-bg { background-color: var(--theme-accent) !important; }
+    .comp-accent-glow-bg { background: radial-gradient(circle, var(--theme-accent-glow) 0%, transparent 70%) !important; }
+  `;
+
+  let tabContent = '';
+  switch (compState.currentTab) {
+    case 'syllabus':
+      if (compState.syllabusLoading) {
+        tabContent = renderSyllabusLoadingProgress();
+      } else {
+        tabContent = renderSyllabusTab(exam);
+      }
+      break;
+    case 'tips':
+      tabContent = renderTipsTab(exam);
+      break;
+    case 'practice':
+      tabContent = renderPracticeTab(exam);
+      break;
+    case 'mock':
+      if (compState.mockLoadingActive) {
+        tabContent = renderMockLoadingProgress(exam);
+      } else {
+        tabContent = renderMockTab(exam);
+      }
+      break;
+    case 'hub':
+    default:
+      tabContent = renderHubTab(exam, targetPct);
+      break;
+  }
+
+  const main = document.getElementById('main');
+  if (!main) return;
+
+  main.innerHTML = `
+    <div class="sw scr ${cfg.themeClass}" style="padding-top:16px">
+      <!-- Hub Banner -->
+      <div class="card mb20" style="padding:22px;position:relative;overflow:hidden;border:1px solid var(--theme-accent);background:rgba(255,255,255,0.01)">
+        <div class="comp-accent-glow-bg" style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;filter:blur(20px);z-index:0"></div>
+        
+        <div class="between" style="gap:16px;flex-wrap:wrap;position:relative;z-index:1">
+          <div>
+            <div class="h3 comp-accent-text" style="margin:0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase">🏆 AI COMPETITIVE HUB</div>
+            <div class="h1" style="color:#fff;margin:4px 0 6px 0;font-size:26px;display:flex;align-items:center;gap:10px">
+              <span>${esc(exam.name)} Preparation</span>
+              <span class="tag tp comp-accent-bg" style="font-size:11px;font-weight:700;color:#fff">${esc(exam.country)}</span>
+            </div>
+            <p class="sub" style="margin:0;max-width:550px">Pattern: ${esc(exam.pattern)}</p>
+          </div>
+
+          <button class="btn bsm bgh" onclick="reconfigureCompPlan()" style="display:flex;align-items:center;gap:6px">
+            ⚙️ Reset Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div style="display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;padding-bottom:6px">
+        <button class="btn bsm ${compState.currentTab==='hub'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('hub')" style="${compState.currentTab==='hub'?'color:#fff':''}">📊 Study Hub</button>
+        <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('syllabus')" style="${compState.currentTab==='syllabus'?'color:#fff':''}">📚 Detailed Syllabus</button>
+        <button class="btn bsm ${compState.currentTab==='tips'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('tips')" style="${compState.currentTab==='tips'?'color:#fff':''}">💡 Strategies & Tactics</button>
+        <button class="btn bsm ${compState.currentTab==='practice'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('practice')" style="${compState.currentTab==='practice'?'color:#fff':''}">🎯 Custom Practice</button>
+        <button class="btn bsm ${compState.currentTab==='mock'?'bpri comp-accent-bg':'bgh'}" onclick="setCompTab('mock')" style="${compState.currentTab==='mock'?'color:#fff':''}">⏱️ CBT Exam Room</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="reveal-step shown">
+        ${tabContent}
+      </div>
+    </div>
+  `;
+  triggerMath();
+}
+
+// 🧙 Onboarding Personalization Wizard
+function renderOnboardingWizard() {
+  const main = document.getElementById('main');
+  if (!main) return;
+
+  const majorExams = WORLD_EXAMS;
+  let stepHTML = '';
+
+  if (compState.obStep === 1) {
+    stepHTML = `
+      <div class="h2 text-center mb14" style="color:#fff">1. Select Target Exam</div>
+      <p class="sub text-center mb20" style="max-width:480px;margin:0 auto 20px">Choose from our list of major competitive examinations to align the personalization builder.</p>
+      
+      <div class="grid-2" style="gap:12px;margin-bottom:20px">
+        ${majorExams.map(e => `
+          <div class="card card-lift cglow${compState.examId===e.id?' on':''}" onclick="selectObExam('${e.id}')" style="padding:16px;cursor:pointer;border-color:${compState.examId===e.id?'var(--p)':'var(--brd)'};background:${compState.examId===e.id?'rgba(139,92,246,0.06)':'rgba(255,255,255,0.02)'}">
+            <div class="between mb6">
+              <span style="font-weight:700;color:#fff;font-size:15px">${esc(e.name)}</span>
+              <span class="tag tp" style="font-size:10px">${esc(e.cat)}</span>
+            </div>
+            <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.4">${esc(e.pattern)}</p>
+          </div>
+        `).join('')}
+      </div>
+
+      <div style="text-align:right">
+        <button class="btn bpri" onclick="navigateObStep(2)">Set Target Score →</button>
+      </div>
+    `;
+  } else if (compState.obStep === 2) {
+    const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+    const minTarget = Math.round(exam.maxScore * 0.3);
+    const targetPct = Math.round((compState.targetScore / exam.maxScore) * 100);
+
+    stepHTML = `
+      <div class="h2 text-center mb14" style="color:#fff">2. Set Target Score</div>
+      <p class="sub text-center mb20">Select your benchmark target score for ${esc(exam.name)} (Max score: ${exam.maxScore})</p>
+
+      <div class="card mb20" style="padding:22px;text-align:center">
+        <div style="position:relative;width:120px;height:120px;margin:0 auto 16px">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="none"></circle>
+            <circle cx="60" cy="60" r="50" stroke="url(#obGlow)" stroke-width="8" fill="none"
+              stroke-dasharray="314.16" stroke-dashoffset="${314.16 - (314.16 * targetPct) / 100}"
+              stroke-linecap="round" style="transition:stroke-dashoffset 0.3s ease-out"></circle>
+            <defs>
+              <linearGradient id="obGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8B5CF6"></stop>
+                <stop offset="100%" stop-color="#06B6D4"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <span style="font-size:22px;font-weight:800;color:#fff">${targetPct}%</span>
+            <span style="font-size:9px;color:var(--mut);text-transform:uppercase">Percent</span>
+          </div>
+        </div>
+
+        <div style="max-width:300px;margin:0 auto">
+          <input type="range" min="${minTarget}" max="${exam.maxScore}" value="${compState.targetScore}" style="width:100%;accent-color:var(--p)" oninput="updateTargetVal(this.value)">
+          <div class="between mt8" style="font-weight:700;font-size:16px;color:#fff">
+            <span>Goal Score:</span>
+            <span id="targetScoreDisplay" class="tag tp">${compState.targetScore}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="between">
+        <button class="btn bgh" onclick="navigateObStep(1)">← Back</button>
+        <button class="btn bpri" onclick="navigateObStep(3)">Commitments →</button>
+      </div>
+    `;
+  } else if (compState.obStep === 3) {
+    stepHTML = `
+      <div class="h2 text-center mb14" style="color:#fff">3. Setup Prep Commitments</div>
+      <p class="sub text-center mb20">Select your preferred study load and starting paper difficulty level.</p>
+
+      <div class="card mb20" style="padding:22px">
+        <div class="set-row">
+          <div>
+            <div style="color:#fff;font-weight:600">Daily Dedicated Prep</div>
+            <div style="color:var(--mut);font-size:12px">Practice time recommendation</div>
+          </div>
+          <select class="inp" style="width:140px;padding:6px 10px" onchange="compState.dailyTime=parseInt(this.value)">
+            <option value="30" ${compState.dailyTime==30?'selected':''}>30 Minutes</option>
+            <option value="60" ${compState.dailyTime==60?'selected':''}>1 Hour</option>
+            <option value="120" ${compState.dailyTime==120?'selected':''}>2 Hours</option>
+          </select>
+        </div>
+
+        <div class="set-row">
+          <div>
+            <div style="color:#fff;font-weight:600">Initial Difficulty Level</div>
+            <div style="color:var(--mut);font-size:12px">Practice & Mock initial level</div>
+          </div>
+          <select class="inp" style="width:140px;padding:6px 10px" onchange="compState.practiceDifficulty=this.value">
+            <option value="easy" ${compState.practiceDifficulty==='easy'?'selected':''}>Easy</option>
+            <option value="medium" ${compState.practiceDifficulty==='medium'?'selected':''}>Medium</option>
+            <option value="hard" ${compState.practiceDifficulty==='hard'?'selected':''}>Hard</option>
+            <option value="boss" ${compState.practiceDifficulty==='boss'?'selected':''}>😈 Boss Mode</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="between">
+        <button class="btn bgh" onclick="navigateObStep(2)">← Back</button>
+        <button class="btn bpri" onclick="completeCompOnboarding()">🚀 Complete Personalization</button>
+      </div>
+    `;
+  }
+
+  main.innerHTML = `
+    <div class="sw scr" style="padding-top:16px;max-width:560px;margin:0 auto">
+      <div class="card cglow" style="padding:28px;border-color:rgba(139,92,246,0.3)">
+        <div style="text-align:center;margin-bottom:24px">
+          <div style="font-size:32px;margin-bottom:8px">🏆</div>
+          <div class="h1" style="color:#fff;font-size:22px;margin:0">Configure Preparation Plan</div>
+          <div style="display:flex;justify-content:center;gap:6px;margin-top:12px">
+            <div style="width:24px;height:4px;border-radius:2px;background:${compState.obStep>=1?'var(--p)':'rgba(255,255,255,0.06)'}"></div>
+            <div style="width:24px;height:4px;border-radius:2px;background:${compState.obStep>=2?'var(--p)':'rgba(255,255,255,0.06)'}"></div>
+            <div style="width:24px;height:4px;border-radius:2px;background:${compState.obStep>=3?'var(--p)':'rgba(255,255,255,0.06)'}"></div>
+          </div>
+        </div>
+        ${stepHTML}
+      </div>
+    </div>
+  `;
+  triggerMath();
+}
+
+function selectObExam(id) {
+  compState.examId = id;
+  const exam = WORLD_EXAMS.find(e => e.id === id);
+  compState.targetScore = exam.defaultTarget || Math.round(exam.maxScore * 0.8);
+  compState.searchQuery = '';
+  navigateObStep(2);
+}
+
+function navigateObStep(step) {
+  compState.obStep = step;
+  renderOnboardingWizard();
+}
+
+function completeCompOnboarding() {
+  saveCompState();
+  rComp();
+}
+
+function reconfigureCompPlan() {
+  D.compExam.configured = false;
+  compState.obStep = 1;
+  rComp();
+}
+
+// Extract Top 5 high weightage chapters across all subjects
+function getHighPriorityChapters(exam) {
+  const storedSyllabi = D.compExam.syllabi || {};
+  const detailed = storedSyllabi[compState.examId] || OFFLINE_SYLLABI[compState.examId];
+  
+  if (!detailed) return null;
+  
+  const allChapters = [];
+  detailed.forEach(subj => {
+    (subj.units || []).forEach(unit => {
+      (unit.chapters || []).forEach(chap => {
+        allChapters.push({
+          subject: subj.subject,
+          unit: unit.name,
+          name: chap.name,
+          weight: chap.weight
+        });
+      });
+    });
+  });
+  
+  allChapters.sort((a, b) => b.weight - a.weight);
+  return allChapters.slice(0, 5);
+}
+
+// 1. Render Hub Tab
+function renderHubTab(exam, targetPct) {
+  const cfg = EXAM_DASHBOARDS[compState.examId] || EXAM_DASHBOARDS.jee_main;
+  const highPriority = getHighPriorityChapters(exam);
+  
+  let hpHTML = '';
+  if (highPriority && highPriority.length > 0) {
+    hpHTML = `
+      <div class="card" style="padding:18px;border-color:rgba(239,68,68,0.25);background:rgba(239,68,68,0.01)">
+        <div class="h3" style="color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:6px">🔥 High-Priority Chapters (Top 5 Overall)</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${highPriority.map(chap => `
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--sub);border-bottom:1px solid rgba(255,255,255,0.02);padding-bottom:6px">
+              <span><strong>${esc(chap.name)}</strong> <span style="font-size:10px;color:var(--mut)">(${esc(chap.subject)})</span></span>
+              <span style="color:var(--redl);font-weight:700">${chap.weight}% weight</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  } else {
+    hpHTML = `
+      <div class="card" style="padding:18px;border-color:var(--theme-accent);text-align:center">
+        <div style="font-size:24px;margin-bottom:8px">🔥</div>
+        <div class="h3" style="color:#fff;margin-bottom:6px">High-Priority Chapters</div>
+        <p style="font-size:11px;color:var(--mut);margin:0 0 10px 0">Click to load the detailed syllabus and reveal the top 5 highest-yield chapters.</p>
+        <button class="btn bsm bsec w100" onclick="setCompTab('syllabus')">Load Syllabus to Reveal</button>
+      </div>
+    `;
+  }
+
+  return `
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <!-- Exam Day Metric Widgets -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="card" style="padding:16px;background:rgba(255,255,255,0.015);border-color:rgba(255,255,255,0.06)">
+            <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase">${esc(cfg.metricTitle1)}</span>
+            <div style="font-size:20px;font-weight:800;color:#fff;margin-top:6px">${esc(cfg.metricValue1)}</div>
+          </div>
+          <div class="card" style="padding:16px;background:rgba(255,255,255,0.015);border-color:rgba(255,255,255,0.06)">
+            <span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase">${esc(cfg.metricTitle2)}</span>
+            <div style="font-size:20px;font-weight:800;color:#fff;margin-top:6px">${esc(cfg.metricValue2)}</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:20px;border-color:rgba(255,255,255,0.06)">
+          <div class="h2 mb14" style="color:#fff;display:flex;align-items:center;gap:8px">⚙️ Preparation Parameters</div>
+          
+          <div class="set-row">
+            <div>
+              <div style="color:#fff;font-size:14px;font-weight:600">Target Score</div>
+              <div style="color:var(--mut);font-size:12px">Your benchmark goal (Max: ${exam.maxScore})</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" min="${Math.round(exam.maxScore * 0.3)}" max="${exam.maxScore}" value="${compState.targetScore}" style="width:140px;accent-color:var(--theme-accent)" oninput="updateTargetVal(this.value)">
+              <span id="targetScoreDisplay" class="tag tp" style="font-size:13px;font-weight:700;min-width:60px;text-align:center;background:var(--theme-accent);color:#fff">${compState.targetScore}</span>
+            </div>
+          </div>
+
+          <div class="set-row">
+            <div>
+              <div style="color:#fff;font-size:14px;font-weight:600">Daily Dedication</div>
+              <div style="color:var(--mut);font-size:12px">Daily practice commitment time</div>
+            </div>
+            <select class="inp" style="width:140px;padding:6px 10px" onchange="updateDailyTime(this.value)">
+              <option value="30" ${compState.dailyTime==30?'selected':''}>30 Minutes</option>
+              <option value="60" ${compState.dailyTime==60?'selected':''}>1 Hour</option>
+              <option value="120" ${compState.dailyTime==120?'selected':''}>2 Hours</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="card card-lift" style="padding:16px;cursor:pointer;background:linear-gradient(135deg,var(--theme-accent-glow),transparent);border:1px solid rgba(255,255,255,0.06)" onclick="setCompTab('practice')">
+            <div style="font-size:28px;margin-bottom:8px">🎯</div>
+            <div class="h3" style="color:#fff;margin-bottom:4px">Topic Practice</div>
+            <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.5">Customize difficulty levels and solve conceptual questions.</p>
+          </div>
+          <div class="card card-lift" style="padding:16px;cursor:pointer;background:linear-gradient(135deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.06)" onclick="setCompTab('mock')">
+            <div style="font-size:28px;margin-bottom:8px">⏱️</div>
+            <div class="h3" style="color:#fff;margin-bottom:4px">CBT Exam Room</div>
+            <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.5">Simulate a timed mock exam with section tabs and marking scheme.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="card" style="padding:20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;border-color:rgba(255,255,255,0.06)">
+          <div class="h3" style="color:var(--mut);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Calibration Progress</div>
+          
+          <div style="position:relative;width:130px;height:130px;margin-bottom:14px">
+            <svg width="130" height="130" viewBox="0 0 130 130">
+              <circle cx="65" cy="65" r="54" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="none"></circle>
+              <circle cx="65" cy="65" r="54" stroke="url(#compGlow)" stroke-width="8" fill="none"
+                stroke-dasharray="339.29" stroke-dashoffset="${339.29 - (339.29 * targetPct) / 100}"
+                stroke-linecap="round" style="transition:stroke-dashoffset 0.6s ease-out"></circle>
+              <defs>
+                <linearGradient id="compGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--theme-accent)"></stop>
+                  <stop offset="100%" stop-color="#06B6D4"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+              <span style="font-size:24px;font-weight:800;color:#fff">${targetPct}%</span>
+              <span style="font-size:10px;color:var(--mut);text-transform:uppercase;font-weight:700">Target</span>
+            </div>
+          </div>
+          
+          <div class="h3" style="color:#fff;margin:0 0 4px 0">Targeting ${compState.targetScore} / ${exam.maxScore}</div>
+          <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.4">Requires steady practice on high-yield sections.</p>
+        </div>
+
+        ${hpHTML}
+      </div>
+    </div>
+  `;
+}
+
+// 2. Render Syllabus Tab
+function renderSyllabusTab(exam) {
+  const storedSyllabi = D.compExam.syllabi || {};
+  const detailed = storedSyllabi[compState.examId] || OFFLINE_SYLLABI[compState.examId];
+  
+  if (!detailed) {
+    return `
+      <div class="card" style="padding:38px 20px;text-align:center;max-width:500px;margin:20px auto;border-color:rgba(255,255,255,0.06)">
+        <div style="font-size:44px;margin-bottom:14px">📚</div>
+        <div class="h2 mb8" style="color:#fff">Official Syllabus Database</div>
+        <p class="sub mb20">Connect with the official testing agency to load and calibrate the chapter-by-chapter and unit-by-unit weightage syllabus for ${esc(exam.name)}.</p>
+        <button class="btn bpri comp-accent-bg" style="color:#fff;padding:10px 24px" onclick="startSyllabusLoader()">🚀 Load Detailed Syllabus</button>
+      </div>
+    `;
+  }
+  
+  const syllabusHTML = detailed.map(subj => `
+    <div class="card mb20" style="padding:18px;border-color:rgba(255,255,255,0.08)">
+      <div class="between mb12" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
+        <span style="font-size:16px;font-weight:800;color:var(--theme-accent)">${esc(subj.subject)} Division</span>
+        <span class="tag tp" style="font-size:11px;background:rgba(255,255,255,0.05);color:#fff">Weightage Map</span>
+      </div>
+      
+      <div style="display:flex;flex-direction:column;gap:16px">
+        ${subj.units.map(unit => `
+          <div style="background:rgba(255,255,255,0.015);border:1px solid var(--brd);border-radius:10px;padding:12px 14px">
+            <div class="between mb8">
+              <span style="font-size:13px;font-weight:700;color:#fff">📦 ${esc(unit.name)}</span>
+            </div>
+            
+            <div style="display:flex;flex-direction:column;gap:8px;padding-left:12px">
+              ${unit.chapters.map(chap => `
+                <div>
+                  <div class="between" style="font-size:12px;margin-bottom:2px">
+                    <span style="color:var(--sub)">• ${esc(chap.name)}</span>
+                    <span style="color:var(--cl);font-weight:600">${chap.weight}%</span>
+                  </div>
+                  <div class="pw" style="height:4px;background:rgba(255,255,255,0.03)">
+                    <div class="pf" style="width:${chap.weight}%;background:linear-gradient(90deg,var(--theme-accent),#06B6D4)"></div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  return `
+    <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06)">
+      <div class="h2 mb6" style="color:#fff">📚 Detailed Syllabus Weightage Board</div>
+      <p class="sub mb20">Explore subject-wise, unit-wise, and chapter-wise breakdowns calculated from past official papers.</p>
+      ${syllabusHTML}
+    </div>
+  `;
+}
+
+// Syllabus loader rendering
+function renderSyllabusLoadingProgress() {
+  const pct = compState.syllabusProgress || 0;
+  const status = compState.syllabusStatus || 'Connecting to syllabus servers...';
+  
+  return `
+    <div class="card" style="padding:40px 20px;text-align:center;max-width:500px;margin:30px auto;border-color:var(--theme-accent)">
+      <div class="loader-spinner mb14" style="margin:0 auto 16px;font-size:28px;animation:spin 1s linear infinite">⏳</div>
+      <div class="h2 mb8" style="color:#fff">Loading Syllabus Registry</div>
+      <p class="sub mb20" style="font-size:13px">${esc(status)}</p>
+      
+      <div class="pw" style="height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;max-width:300px;margin:0 auto">
+        <div class="pf" style="width:${pct}%;background:linear-gradient(90deg,var(--theme-accent),#06B6D4);transition:width 0.4s ease-out;height:100%"></div>
+      </div>
+      <div style="font-size:12px;color:var(--sub);margin-top:8px;font-weight:700">${pct}% Complete</div>
+    </div>
+  `;
+}
+
+function startSyllabusLoader() {
+  compState.syllabusLoading = true;
+  compState.syllabusProgress = 0;
+  compState.syllabusStatus = 'Connecting to official registries...';
+  rComp();
+
+  // Background AI fetch
+  const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const aiPromise = fetchSyllabusFromAI(exam);
+
+  const interval = setInterval(() => {
+    compState.syllabusProgress += 10;
+    
+    if (compState.syllabusProgress >= 100) {
+      clearInterval(interval);
+      aiPromise.then(structuredSyllabus => {
+        if (!D.compExam.syllabi) D.compExam.syllabi = {};
+        D.compExam.syllabi[compState.examId] = structuredSyllabus;
+        saveCompState();
+        compState.syllabusLoading = false;
+        rComp();
+      }).catch(e => {
+        console.warn('AI syllabus fetch failed, using local database fallback:', e);
+        const fallback = OFFLINE_SYLLABI[compState.examId] || OFFLINE_SYLLABI.jee_main;
+        if (!D.compExam.syllabi) D.compExam.syllabi = {};
+        D.compExam.syllabi[compState.examId] = fallback;
+        saveCompState();
+        compState.syllabusLoading = false;
+        rComp();
+      });
+    } else {
+      if (compState.syllabusProgress === 20) {
+        compState.syllabusStatus = `Verifying latest ${exam.name} syllabus metrics...`;
+      } else if (compState.syllabusProgress === 50) {
+        compState.syllabusStatus = 'Calibrating unit-wise and chapter-wise weights...';
+      } else if (compState.syllabusProgress === 80) {
+        compState.syllabusStatus = 'Formatting mathematical annotations and notations...';
+      }
+      rComp();
+    }
+  }, 1000); // 10 seconds total wait
+}
+
+async function fetchSyllabusFromAI(exam) {
+  const prompt = `Act as the official testing committee for ${exam.name}. Provide the latest syllabus structure as a JSON object.
+Subjects included: ${exam.subjects.join(', ')}.
+Return ONLY a valid JSON object matching this structure:
+{
+  "units": [
+    {
+      "subject": "${exam.subjects[0]}",
+      "name": "Unit Name (with estimated % weight)",
+      "chapters": [
+        { "name": "Chapter Name", "weight": 8 }
+      ]
+    }
+  ]
+}`;
+  
+  const sys = "You are a professional syllabus database API. Output ONLY valid JSON.";
+  const reply = await ai([{ role: 'user', content: prompt }], sys, 1500, true);
+  if (!reply) throw new Error('Empty AI response');
+  
+  const escaped = escapeJsonLatex(reply);
+  const data = JSON.parse(escaped);
+  if (!data || !data.units) throw new Error('Invalid JSON format');
+  
+  const subjectMap = {};
+  data.units.forEach(u => {
+    const subj = u.subject || exam.subjects[0];
+    if (!subjectMap[subj]) {
+      subjectMap[subj] = { subject: subj, units: [] };
+    }
+    subjectMap[subj].units.push({
+      name: u.name,
+      chapters: u.chapters || []
+    });
+  });
+  
+  return Object.values(subjectMap);
+}
+
+// 3. Render Tips & Tactics Tab
+const EXAM_STRATEGIES = {
+  jee_main: [
+    { title: "MCQ-Numerical Prioritisation", text: "Focus on the 20 MCQs first to build confidence. In the numerical section, only attempt questions with integer results or straightforward calculations." },
+    { title: "Chemistry First Rule", text: "Attempt Chemistry in the first 35-40 minutes. It is high-scoring and gives you extra time for complex Math/Physics questions." },
+    { title: "Option Substitution", text: "For algebraic or coordinate geometry questions, substitute option values back into the equation to verify solutions without solving fully." }
+  ],
+  jee_adv: [
+    { title: "MSQ Risk Mitigation", text: "MSQs have negative marking for incorrect selections. If you are only sure about 2 options out of 3, select only those 2 to get partial marks rather than guessing the 3rd and risking negative marks." },
+    { title: "Integer Guestimation", text: "In integer type questions, standard results are often 0, 1, 2, or simple constants. Use dimensional analysis to verify." },
+    { title: "Multi-Pass Filtering", text: "First pass through the entire paper looking for single-correct MCQs and simple matching list questions. Avoid numerical grids in the first hour." }
+  ],
+  neet: [
+    { title: "The 45-Minute Biology Sprint", text: "Complete Biology (90 questions) within 40-45 minutes. This leaves 75 minutes for Chemistry and 80 minutes for Physics." },
+    { title: "Anatomy Memory Anchors", text: "Use mnemonics for cranial nerves and physiological pathways." },
+    { title: "OMR Bubbling Strategy", text: "Mark answers on the OMR sheet in groups of 10 or section-wise to prevent misalignment and save bubbling time." }
+  ],
+  dsat: [
+    { title: "Desmos Calculator Mastery", text: "Use the built-in Desmos graphing calculator for all algebra, systems of equations, and function questions to save time." },
+    { title: "Active Reading Annotation", text: "Highlight transitions like 'however', 'therefore' to quickly locate shifts in argument." },
+    { title: "No Negative Penalty", text: "There is no negative marking. Never leave a student-produced response math question blank; guess if needed." }
+  ],
+  ipmat: [
+    { title: "SA Accuracy Drill", text: "Quantitative Short Answer questions do not have negative marks. Answer all of them and prioritize speed." },
+    { title: "Verbal Comprehension Flow", text: "Read the questions first before diving into dense passages to anchor your focus." },
+    { title: "Sectional Time Boxing", text: "Track your 40-minute limit per section tightly and do not get stuck on a single quant puzzle." }
+  ],
+  cat: [
+    { title: "VARC Reading Flow", text: "Read paragraphs quickly to capture the 'central theme' rather than getting bogged down in minor trivia." },
+    { title: "TITA Opportunity", text: "TITA (Type-In-The-Answer) questions have no negative marking. Always input an estimate." },
+    { title: "DILR Set Selection", text: "Spend the first 5 minutes scanning all sets. Pick the 2 easiest sets and solve them fully rather than half-solving all sets." }
+  ],
+  act: [
+    { title: "The 30-Second Drill", text: "In English, scan grammar rules quickly. In Science, look at the axes of graphs first before reading text." },
+    { title: "Science Section Gist", text: "ACT Science is mostly reading charts and graphs, not deep physics. Read the data directly." }
+  ],
+  olympiad: [
+    { title: "Combinatorial Double Counting", text: "When stuck on a counting problem, try counting the same set in two different ways." },
+    { title: "Symmetry Exploitation", text: "Look for symmetrical structures in algebra or geometry to simplify variables." }
+  ]
+};
+
+function renderTipsTab(exam) {
+  const list = EXAM_STRATEGIES[compState.examId] || EXAM_STRATEGIES.jee_main;
+  return `
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
+          <div class="h2 mb12" style="color:#fff">💡 Strategic CBT Tactics & Tips</div>
+          
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:13px;line-height:1.5;color:var(--sub)">
+            ${list.map(item => `
+              <div style="border-left:3px solid var(--theme-accent);padding-left:10px">
+                <strong style="color:#fff">${esc(item.title)}:</strong>
+                <div>${esc(item.text)}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card" style="padding:18px;border-color:rgba(255,255,255,0.06)">
+          <div class="h2 mb12" style="color:#fff">⏱️ Standard Time Allocation</div>
+          <div style="font-size:12px;color:var(--sub);line-height:1.6">
+            To mimic the exact pressure of the actual exam room, calibrate your sectional goals:
+            <ul style="margin:8px 0 0 12px;padding:0">
+              <li>Section 1: 30% of total duration</li>
+              <li>Section 2: 40% of total duration</li>
+              <li>Revision & Review: Last 10-15 minutes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// 4. Render Practice Tab
+function renderPracticeTab(exam) {
+  const subjects = exam.subjects || ['General Studies'];
+  if (!compState.practiceSubject) compState.practiceSubject = subjects[0];
+  if (!compState.practiceCount) compState.practiceCount = 5;
+
+  const storedSyllabi = D.compExam.syllabi || {};
+  const syllabusForExam = storedSyllabi[compState.examId] || OFFLINE_SYLLABI[compState.examId] || [];
+  const subjectData = syllabusForExam.find(s => s.subject === compState.practiceSubject);
+  const chapters = subjectData
+    ? (subjectData.units || []).flatMap(u => (u.chapters || []).map(c => c.name))
+    : [];
+  
+  if (!compState.practiceChapter || !chapters.includes(compState.practiceChapter)) {
+    compState.practiceChapter = 'All Chapters';
+  }
+
+  let chaptersHTML = '';
+  if (chapters.length > 0) {
+    chaptersHTML = `
+      <option value="All Chapters" ${(!compState.practiceChapter||compState.practiceChapter==='All Chapters')?'selected':''}>All Chapters (Mixed)</option>
+      ${chapters.map(c => `<option value="${c}" ${compState.practiceChapter===c?'selected':''}>${c}</option>`).join('')}
+    `;
+  } else {
+    chaptersHTML = `
+      <option value="All Chapters">⚠️ Load 'Detailed Syllabus' first to select chapters</option>
+    `;
+  }
+
+  return `
+    <div class="card" style="padding:22px;border-color:rgba(255,255,255,0.06)">
+      <div class="h2 mb8" style="color:#fff">🎯 Custom Practice Room</div>
+      <p class="sub mb20">Build a customized question set from any chapter, difficulty, and quantity. AI generates real exam-style questions.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+        <div>
+          <label class="inp-label">SUBJECT / SECTION</label>
+          <select class="inp" onchange="compState.practiceSubject=this.value;compState.practiceChapter='All Chapters';rComp()">
+            ${subjects.map(s => `<option value="${s}" ${compState.practiceSubject===s?'selected':''}>${s}</option>`).join('')}
+          </select>
+        </div>
+
+        <div>
+          <label class="inp-label">DIFFICULTY</label>
+          <select class="inp" onchange="compState.practiceDifficulty=this.value">
+            <option value="easy" ${compState.practiceDifficulty==='easy'?'selected':''}>Easy — Conceptual</option>
+            <option value="medium" ${compState.practiceDifficulty==='medium'?'selected':''}>Medium — Application</option>
+            <option value="hard" ${compState.practiceDifficulty==='hard'?'selected':''}>Hard — Problem Solving</option>
+            <option value="boss" ${compState.practiceDifficulty==='boss'?'selected':''}>😈 Boss — Previous Year Level</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+        <div>
+          <label class="inp-label">CHAPTER FOCUS</label>
+          <select class="inp" onchange="compState.practiceChapter=this.value">
+            ${chaptersHTML}
+          </select>
+        </div>
+
+        <div>
+          <label class="inp-label">NUMBER OF QUESTIONS</label>
+          <select class="inp" onchange="compState.practiceCount=parseInt(this.value)">
+            <option value="1" ${compState.practiceCount===1?'selected':''}>1 Question (Quick)</option>
+            <option value="5" ${compState.practiceCount===5?'selected':''}>5 Questions</option>
+            <option value="10" ${compState.practiceCount===10?'selected':''}>10 Questions</option>
+            <option value="20" ${compState.practiceCount===20?'selected':''}>20 Questions</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="background:var(--theme-accent-glow);border:1px solid var(--theme-accent);border-radius:10px;padding:14px;margin-bottom:20px;font-size:12px;color:#fff">
+        <strong style="color:#fff">📋 Practice Session:</strong> ${compState.practiceCount} question${compState.practiceCount>1?'s':''} · 
+        ${compState.practiceSubject} · 
+        ${compState.practiceChapter} · 
+        ${compState.practiceDifficulty} difficulty
+      </div>
+
+      <div style="text-align:center">
+        <button id="start-practice-btn" class="btn bpri blg comp-accent-bg" style="padding:13px 36px;font-size:15px;color:#fff" onclick="startCompPractice()">
+          🚀 Start Practice Session
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+// 5. Render Mock Exam Tab
+function renderMockTab(exam) {
+  if (compState.activeExam) {
+    if (!compState.activeExam.instructionsRead) {
+      return renderMockInstructions(exam);
+    }
+    return renderActiveExamUI();
+  }
+
+  const fullQuestionsCount = exam.fullQuestions || 50;
+  const fullDurationMin = exam.duration || 120;
+
+  return `
+    <div class="card" style="padding:22px;text-align:center;max-width:550px;margin:0 auto;border-color:rgba(255,255,255,0.06)">
+      <div style="font-size:54px;margin-bottom:14px">⏱️</div>
+      <div class="h2" style="color:#fff;margin-bottom:8px">CBT Exam Room</div>
+      <p class="sub mb20">Launch a professional computer-based mock exam simulator mapped exactly to the real paper pattern.</p>
+
+      <div class="card mb20" style="background:rgba(255,255,255,0.02);padding:18px;text-align:left;border-color:rgba(255,255,255,0.05)">
+        <div style="font-size:13px;color:#fff;font-weight:700;margin-bottom:12px">Choose Simulation Mode:</div>
+        
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <label style="display:flex;align-items:start;gap:10px;cursor:pointer">
+            <input type="radio" name="mock-mode-select" value="diagnostic" checked style="margin-top:4px;accent-color:var(--theme-accent)">
+            <div>
+              <div style="color:#fff;font-weight:600;font-size:13px">⚡ Diagnostic Test (6 Questions · 10 Mins)</div>
+              <div style="font-size:11px;color:var(--mut)">Fast, high-fidelity AI-curated paper across all subjects. Ideal for quick check.</div>
+            </div>
+          </label>
+          
+          <label style="display:flex;align-items:start;gap:10px;cursor:pointer;margin-top:6px">
+            <input type="radio" name="mock-mode-select" value="full" style="margin-top:4px;accent-color:var(--theme-accent)">
+            <div>
+              <div style="color:#fff;font-weight:600;font-size:13px">🏆 Full Exam Simulation (Exact ${fullQuestionsCount} Qs · ${fullDurationMin} Mins)</div>
+              <div style="font-size:11px;color:var(--mut)">Realistic CBT simulator matching the exact questions count, section weights, and exam duration.</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <button id="launch-mock-btn" class="btn bpri blg w100 comp-accent-bg" style="padding:14px 28px;font-size:15px;color:#fff" onclick="startMockExamSetup()">
+        🔥 Launch Mock Simulation
+      </button>
+    </div>
+  `;
+}
+
+// Mock Exam Instructions Page
+function renderMockInstructions(exam) {
+  const mode = compState.activeExam.mode;
+  const isFull = mode === 'full';
+  const duration = isFull ? (exam.duration || 120) : 10;
+
+  return `
+    <div class="card" style="padding:26px;max-width:600px;margin:0 auto;border-color:var(--theme-accent)">
+      <div class="h1" style="color:#fff;text-align:center;margin-bottom:18px">Examination Instructions</div>
+      
+      <div style="font-size:13px;color:var(--sub);line-height:1.6;display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+        <div>Please read the following guidelines carefully before starting the CBT:</div>
+        
+        <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px">
+          <strong style="color:#fff">1. Timer & Navigation:</strong>
+          <div>The test duration is <strong>${duration} minutes</strong>. The countdown timer starts immediately upon clicking the begin button. You can switch between questions and sections at any point.</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px">
+          <strong style="color:#fff">2. CBT Color Scheme & Symbols:</strong>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px">
+            <div><span class="btn bsm bgh" style="min-height:auto;padding:2px 8px;font-size:10px">1</span> Not Visited</div>
+            <div><span class="btn bsm" style="min-height:auto;padding:2px 8px;font-size:10px;background:#EF4444;color:#fff">1</span> Visited but Unanswered</div>
+            <div><span class="btn bsm" style="min-height:auto;padding:2px 8px;font-size:10px;background:#10B981;color:#fff">1</span> Saved & Answered</div>
+            <div><span class="btn bsm" style="min-height:auto;padding:2px 8px;font-size:10px;background:#F59E0B;color:#fff">1</span> Marked for Review</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px">
+          <strong style="color:#fff">3. Scoring Scheme:</strong>
+          <div>Correct Answer: <strong>+${exam.marking.correct}</strong>. Incorrect: <strong>${exam.marking.wrong}</strong>. Unattempted: <strong>0</strong>. (Negative markings applied).</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px;display:flex;align-items:center;gap:10px">
+        <input type="checkbox" id="instructions-agree-check" style="width:16px;height:16px;accent-color:var(--theme-accent)">
+        <label for="instructions-agree-check" style="font-size:12px;color:#fff;cursor:pointer;font-weight:600">I have read, understood, and agree to follow all instructions.</label>
+      </div>
+
+      <div class="between">
+        <button class="btn bgh" onclick="cancelMockExamSetup()">Cancel</button>
+        <button class="btn bpri comp-accent-bg" style="color:#fff" onclick="beginMockExamAfterInstructions()">🚀 BEGIN EXAMINATION</button>
+      </div>
+    </div>
+  `;
+}
+
+function cancelMockExamSetup() {
+  compState.activeExam = null;
+  rComp();
+}
+
+function beginMockExamAfterInstructions() {
+  const check = document.getElementById('instructions-agree-check');
+  if (!check || !check.checked) {
+    alert('Please check the box to confirm you have read the instructions.');
+    return;
+  }
+  
+  compState.activeExam.instructionsRead = true;
+  rComp();
+}
+
+// Mock Test Batch AI Loader
+function renderMockLoadingProgress(exam) {
+  const pct = compState.mockLoadingProgress || 0;
+  const status = compState.mockLoadingStatus || 'Initializing paper setter...';
+  
+  return `
+    <div class="card" style="padding:40px 20px;text-align:center;max-width:500px;margin:30px auto;border-color:var(--theme-accent)">
+      <div class="loader-spinner mb14" style="margin:0 auto 16px;font-size:28px;animation:spin 1.5s linear infinite">⚙️</div>
+      <div class="h2 mb8" style="color:#fff">Setting Up CBT Paper</div>
+      <p class="sub mb20" style="font-size:13px">${esc(status)}</p>
+      
+      <div class="pw" style="height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;max-width:300px;margin:0 auto">
+        <div class="pf" style="width:${pct}%;background:linear-gradient(90deg,var(--theme-accent),#06B6D4);transition:width 0.4s ease-out;height:100%"></div>
+      </div>
+      <div style="font-size:12px;color:var(--sub);margin-top:8px;font-weight:700">${pct}% Generated</div>
+    </div>
+  `;
+}
+
+async function startMockExamSetup() {
+  const checkedRadio = document.querySelector('input[name="mock-mode-select"]:checked');
+  const mode = checkedRadio ? checkedRadio.value : 'diagnostic';
+  const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const diff = compState.practiceDifficulty;
+  const subjects = exam.subjects || ['General Studies'];
+  const fullQuestionsCount = exam.fullQuestions || 50;
+  const fullDurationMin = exam.duration || 120;
+  
+  let durationSeconds = mode === 'full' ? fullDurationMin * 60 : 10 * 60;
+  
+  compState.mockLoadingActive = true;
+  compState.mockLoadingProgress = 0;
+  compState.mockLoadingStatus = 'Connecting to official exam registries...';
+  rComp();
+
+  let questions = [];
+
+  if (mode === 'full') {
+    const promises = [];
+    const questionsPerSubject = Math.floor(fullQuestionsCount / subjects.length);
+    const remainder = fullQuestionsCount % subjects.length;
+
+    // Split the question demands into parallel sub-batches of max 13 Qs to prevent context limit cuts
+    subjects.forEach((subj, sIdx) => {
+      const qCount = questionsPerSubject + (sIdx === 0 ? remainder : 0);
+      const subBatchSize = 13;
+      const numSubBatches = Math.ceil(qCount / subBatchSize);
+      
+      for (let b = 0; b < numSubBatches; b++) {
+        const startQIdx = b * subBatchSize;
+        const endQIdx = Math.min((b + 1) * subBatchSize, qCount);
+        const subCount = endQIdx - startQIdx;
+        
+        promises.push(
+          generateMockBatchFromAI(exam, subj, subCount, diff)
+            .then(qs => {
+              compState.mockLoadingProgress += Math.round(100 / (subjects.length * numSubBatches));
+              if (compState.mockLoadingProgress > 100) compState.mockLoadingProgress = 100;
+              compState.mockLoadingStatus = `Assembled ${subj} section batch... (${compState.mockLoadingProgress}%)`;
+              rComp();
+              return qs;
+            })
+            .catch(e => {
+              console.warn(`AI batch generation failed for ${subj}, using procedural fallback:`, e);
+              return generateProceduralMockQuestionsForSubject(exam, subj, subCount);
+            })
+        );
+      }
+    });
+
+    try {
+      const results = await Promise.all(promises);
+      questions = results.flat();
+    } catch(e) {
+      console.error('Parallel mock load failed, falling back to fully procedural:', e);
+      questions = generateProceduralMockQuestions(exam, fullQuestionsCount);
+    }
+  } else {
+    // Diagnostic 6 Qs
+    try {
+      questions = await generateDiagnosticPaperFromAI(exam, diff);
+    } catch(e) {
+      console.warn('Diagnostic AI mock generation failed, using local fallback:', e);
+      const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv;
+      questions = list.map((q, idx) => ({ ...q, id: idx + 1 }));
+    }
+  }
+
+  // Normalize all generated questions
+  questions = questions.map((q, idx) => {
+    const type = q.type || 'mcq';
+    let ans = q.ans;
+    if (type !== 'numerical') {
+      if (Array.isArray(ans)) {
+        ans = ans.map(a => parseInt(a));
+      } else {
+        ans = [parseInt(ans)];
+      }
+    } else {
+      if (Array.isArray(ans)) {
+        ans = ans[0];
+      }
+      ans = String(ans).trim();
+    }
+    return {
+      ...q,
+      id: idx + 1,
+      type,
+      ans
+    };
+  });
+
+  compState.activeExam = {
+    questions,
+    currentIndex: 0,
+    answers: {},
+    status: {}, 
+    timeLeft: durationSeconds,
+    timerInterval: null,
+    instructionsRead: false,
+    mode
+  };
+
+  compState.activeExam.status[0] = 'unanswered';
+  compState.mockLoadingActive = false;
+
+  compState.activeExam.timerInterval = setInterval(() => {
+    if (compState.activeExam && compState.activeExam.instructionsRead) {
+      compState.activeExam.timeLeft--;
+      if (compState.activeExam.timeLeft <= 0) {
+        submitMockExam();
+      } else {
+        updateExamTimerDisplay();
+      }
+    }
+  }, 1000);
+
+  rComp();
+}
+
+async function generateMockBatchFromAI(exam, subject, count, difficulty) {
+  const isNumericalSupported = exam.id === 'jee_main' || exam.id === 'jee_adv' || exam.id === 'cat' || exam.id === 'ipmat' || exam.id === 'olympiad';
+  let numCount = 0;
+  
+  if (isNumericalSupported) {
+    if (exam.id === 'jee_main' || exam.id === 'jee_adv') {
+      numCount = Math.round(count * 0.25); // ~25% Numerical/Integer Qs
+    } else if (exam.id === 'cat' || exam.id === 'ipmat') {
+      numCount = Math.round(count * 0.3);  // ~30% TITA Qs
+    } else if (exam.id === 'olympiad') {
+      numCount = count; // 100% numerical/short answer
+    }
+  }
+  const mcqCount = count - numCount;
+
+  const prompt = `Act as the official examination paper setter for ${exam.name}.
+Generate exactly ${count} realistic, syllabus-bound questions for the subject section: "${subject}".
+Difficulty: ${difficulty} (Make it feel exactly like the actual official difficulty - do NOT make it generic).
+
+Structure requirements:
+- ${mcqCount} MCQs (type: "mcq", with exactly 4 options in "opts" array)
+${numCount > 0 ? `- ${numCount} Numerical/Integer type questions (type: "numerical", do NOT include "opts" property. The correct answer in "ans" must be a single number or string value, e.g. 5 or -1.5)` : ''}
+
+CRITICAL RULES:
+1. Every math expression must use standard LaTeX: $formula$ for inline, $$formula$$ for display.
+2. The questions must relate strictly to ${subject} syllabus of ${exam.name}. Do NOT mix up topics.
+3. Each question MUST contain a detailed, step-by-step mathematical or conceptual explanation in the "expl" field.
+
+Return ONLY a valid JSON object matching this structure:
+{
+  "questions": [
+    {
+      "section": "${subject}",
+      "q": "The question text with $LaTeX$",
+      "type": "mcq" or "numerical",
+      "opts": ["Option A", "Option B", "Option C", "Option D"], // Omit for numerical
+      "ans": [0], // array of correct option index (0-3) for mcq, or a number/string for numerical
+      "expl": "Step-by-step detailed solution explanation here"
+    }
+  ]
+}`;
+
+  const sys = "You are a professional examiner API. Output ONLY valid JSON.";
+  const reply = await ai([{ role: 'user', content: prompt }], sys, 4000, true);
+  if (!reply) throw new Error('Empty response');
+  
+  const escaped = escapeJsonLatex(reply);
+  const data = JSON.parse(escaped);
+  if (!data || !data.questions || data.questions.length === 0) {
+    throw new Error('Malformed JSON response');
+  }
+  
+  return data.questions;
+}
+
+async function generateDiagnosticPaperFromAI(exam, difficulty) {
+  const subjects = exam.subjects || ['General Studies'];
+  const prompt = `Generate exactly 6 realistic, syllabus-matched exam questions for the "${exam.name}" exam.
+Sections: ${subjects.join(', ')}
+Difficulty level: ${difficulty}
+
+Return ONLY a JSON object containing a "questions" array with exactly 6 questions matching this structure:
+{
+  "questions": [
+    {
+      "section": "Section name matching one of the requested sections exactly",
+      "q": "The question text, write math symbols in LaTeX format like $x^2$",
+      "type": "mcq" or "numerical",
+      "opts": ["Option A", "Option B", "Option C", "Option D"], // Omit for numerical
+      "ans": [0], // array of correct indices or single string/fraction for numerical
+      "expl": "Detailed step-by-step solution"
+    }
+  ]
+}`;
+
+  const sys = "You are a professional examiner. Output valid JSON.";
+  const reply = await ai([{ role: 'user', content: prompt }], sys, 2000, true);
+  if (!reply) throw new Error('Empty response');
+  
+  const escaped = escapeJsonLatex(reply);
+  const data = JSON.parse(escaped);
+  if (!data || !data.questions || data.questions.length === 0) {
+    throw new Error('Malformed JSON');
+  }
+  return data.questions;
+}
+
+function updateExamTimerDisplay() {
+  const el = document.getElementById('exam-timer-text');
+  if (el && compState.activeExam) {
+    const m = Math.floor(compState.activeExam.timeLeft / 60);
+    const s = compState.activeExam.timeLeft % 60;
+    el.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+}
+
+// CBT Simulator UI
+function renderActiveExamUI() {
+  const exam = compState.activeExam;
+  if (!exam) return '';
+
+  const q = exam.questions[exam.currentIndex];
+  const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const sections = examDb.subjects || ['General'];
+  
+  const m = Math.floor(exam.timeLeft / 60);
+  const s = exam.timeLeft % 60;
+  const timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  const isTimeCritical = exam.timeLeft < 120;
+
+  return `
+    <div style="display:grid;grid-template-columns:3fr 1fr;gap:20px">
+      <!-- Left: Active Question -->
+      <div class="card" style="padding:22px;border-color:var(--theme-accent)">
+        <!-- Section Tabs -->
+        <div style="display:flex;gap:6px;margin-bottom:18px;border-bottom:1px solid var(--brd);padding-bottom:10px;overflow-x:auto">
+          ${sections.map(sec => {
+            const isCurrentSec = q.section === sec;
+            return `
+              <span class="tag ${isCurrentSec?'tp comp-accent-bg':'tgray'}" style="cursor:pointer;font-weight:700;font-size:12px;padding:6px 12px;white-space:nowrap;color:${isCurrentSec?'#fff':'var(--sub)'}" onclick="switchMockSection('${sec}')">
+                ${sec}
+              </span>
+            `;
+          }).join('')}
+        </div>
+
+        <!-- Question Content -->
+        <div style="font-size:15px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:20px;white-space:pre-line" class="katex-render-target">
+          ${esc(q.q)}
+        </div>
+
+        <!-- Answers -->
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
+          ${q.type === 'numerical' ? `
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:11px;color:var(--mut);font-weight:700">ENTER EXACT NUMERICAL ANSWER:</span>
+              <input type="text" id="numerical-ans-input" class="inp" placeholder="e.g. 5 or -12.5" value="${exam.answers[exam.currentIndex] || ''}" oninput="saveNumericalAnswer(this.value)">
+              <span style="font-size:10px;color:var(--theme-accent);font-weight:600">
+                ${(() => {
+                  if (examDb.id === 'jee_main' || examDb.id === 'jee_adv' || examDb.id === 'olympiad') {
+                    return '⚠️ JEE / Olympiad Rule: Integer answers only (e.g. 5, -12).';
+                  } else if (examDb.id === 'dsat' || examDb.id === 'act') {
+                    return '⚠️ SAT / ACT Rule: Decimals or fractions accepted (e.g. 2.5 or 3/4).';
+                  } else {
+                    return '⚠️ Alphanumeric characters accepted (TITA).';
+                  }
+                })()}
+              </span>
+            </div>
+          ` : q.opts.map((opt, oIdx) => {
+            let isSelected = false;
+            if (q.type === 'msq') {
+              isSelected = (exam.answers[exam.currentIndex] || []).includes(oIdx);
+            } else {
+              isSelected = exam.answers[exam.currentIndex] === oIdx;
+            }
+
+            return `
+              <div class="qopt${isSelected?' on':''}" onclick="selectMockOption(${oIdx}, '${q.type}')" style="padding:14px 18px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid ${isSelected?'var(--theme-accent)':'var(--brd)'};cursor:pointer;color:${isSelected?'#fff':'var(--sub)'};font-size:14px;display:flex;align-items:center;gap:12px">
+                <div style="width:20px;height:20px;border-radius:50%;border:1px solid ${isSelected?'var(--theme-accent)':'rgba(255,255,255,0.2)'};display:flex;align-items:center;justify-content:center;font-size:11px;background:${isSelected?'var(--theme-accent)':'transparent'};color:#fff">
+                  ${String.fromCharCode(65 + oIdx)}
+                </div>
+                <div class="katex-render-target">${esc(opt)}</div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        <!-- Controls -->
+        <div class="between" style="border-top:1px solid var(--brd);padding-top:18px">
+          <button class="btn bsec" onclick="clearActiveExamAnswer()">Clear Response</button>
+          <div style="display:flex;gap:8px">
+            <button class="btn bgh" onclick="markMockForReview()">Mark for Review & Next</button>
+            <button class="btn bpri comp-accent-bg" style="color:#fff" onclick="saveAndNextMock()">Save & Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Grid & Timer -->
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="card" style="padding:16px;text-align:center;border-color:${isTimeCritical?'#EF4444':'var(--brd)'}">
+          <span style="font-size:11px;font-weight:700;color:var(--mut);letter-spacing:0.5px">TIME REMAINING</span>
+          <div id="exam-timer-text" style="font-size:28px;font-family:monospace;font-weight:800;color:${isTimeCritical?'#EF4444':'#fff'};margin-top:6px">
+            ${timeStr}
+          </div>
+        </div>
+
+        <!-- Scrollable Grid Panel -->
+        <div class="card" style="padding:16px">
+          <span style="font-size:11px;font-weight:700;color:var(--mut);letter-spacing:0.5px;display:block;margin-bottom:12px">QUESTION PALETTE</span>
+          
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-height:220px;overflow-y:auto;padding-right:4px;margin-bottom:14px">
+            ${exam.questions.map((_, idx) => {
+              const status = exam.status[idx] || 'unvisited';
+              let btnClass = 'bgh';
+              if (status === 'unanswered') btnClass = 'btn-red';
+              if (status === 'answered') btnClass = 'bok';
+              if (status === 'marked') btnClass = 'btn-gold';
+              
+              const isCurrent = exam.currentIndex === idx;
+              const borderStyle = isCurrent ? 'border: 2px solid var(--theme-accent) !important;' : '';
+
+              return `
+                <button class="btn bsm ${btnClass}" style="min-height:34px;${borderStyle}" onclick="navigateExam(${idx})">
+                  ${idx + 1}
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <div style="font-size:10px;color:var(--mut);display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px dashed var(--brd);padding-top:10px">
+            <div style="display:flex;align-items:center;gap:4px">
+              <span style="width:10px;height:10px;background:rgba(255,255,255,0.06);border-radius:2px;display:inline-block"></span> Unvisited
+            </div>
+            <div style="display:flex;align-items:center;gap:4px">
+              <span style="width:10px;height:10px;background:#EF4444;border-radius:2px;display:inline-block"></span> Unanswered
+            </div>
+            <div style="display:flex;align-items:center;gap:4px">
+              <span style="width:10px;height:10px;background:#10B981;border-radius:2px;display:inline-block"></span> Answered
+            </div>
+            <div style="display:flex;align-items:center;gap:4px">
+              <span style="width:10px;height:10px;background:#F59E0B;border-radius:2px;display:inline-block"></span> Marked
+            </div>
+          </div>
+        </div>
+
+        <button class="btn bpri w100" style="padding:12px;font-weight:700;background:#EF4444;color:#fff" onclick="confirmSubmitMockExam()">
+          🏁 Submit Examination
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+function switchMockSection(sec) {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  const targetIdx = exam.questions.findIndex(q => q.section === sec);
+  if (targetIdx !== -1) {
+    navigateExam(targetIdx);
+  }
+}
+
+function markMockForReview() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  exam.status[exam.currentIndex] = 'marked';
+  
+  if (exam.currentIndex < exam.questions.length - 1) {
+    navigateExam(exam.currentIndex + 1);
+  } else {
+    rComp();
+  }
+}
+
+function saveAndNextMock() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  
+  const userAns = exam.answers[exam.currentIndex];
+  if (userAns !== undefined && userAns !== '') {
+    exam.status[exam.currentIndex] = 'answered';
+  } else {
+    exam.status[exam.currentIndex] = 'unanswered';
+  }
+
+  if (exam.currentIndex < exam.questions.length - 1) {
+    navigateExam(exam.currentIndex + 1);
+  } else {
+    rComp();
+  }
+}
+
+function confirmSubmitMockExam() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+
+  const total = exam.questions.length;
+  let answered = 0;
+  for (let i = 0; i < total; i++) {
+    if (exam.status[i] === 'answered') answered++;
+  }
+  const unanswered = total - answered;
+
+  const msg = `Are you sure you want to submit? \n\n• Total Questions: ${total}\n• Saved Answers: ${answered}\n• Unanswered / Marked: ${unanswered}\n\nYou cannot modify your answers after submitting.`;
+  if (confirm(msg)) {
+    submitMockExam();
+  }
+}
+
+function submitMockExam() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+
+  clearInterval(exam.timerInterval);
+  
+  const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const marking = examDb.marking || { correct: 4, wrong: -1 };
+
+  let score = 0;
+  let correct = 0;
+  let incorrect = 0;
+  let skipped = 0;
+  
+  const results = exam.questions.map((q, idx) => {
+    const userAns = exam.answers[idx];
+    let isCorrect = false;
+    let questionScoreAwarded = 0;
+    
+    if (userAns === undefined || userAns === '') {
+      skipped++;
+    } else {
+      if (q.type === 'msq') {
+        const sortedUser = (userAns || []).slice().sort().join(',');
+        const sortedCorrect = (q.ans || []).slice().sort().join(',');
+        isCorrect = sortedUser === sortedCorrect;
+        
+        // Exact partial marking for JEE Advanced MSQs
+        if (examDb.id === 'jee_adv') {
+          const userSet = new Set(userAns);
+          const correctSet = new Set(q.ans);
+          let hasWrongChoice = false;
+          
+          userSet.forEach(u => {
+            if (!correctSet.has(u)) {
+              hasWrongChoice = true;
+            }
+          });
+          
+          if (hasWrongChoice) {
+            questionScoreAwarded = -2; // -2 for choosing incorrect option
+          } else if (userSet.size === correctSet.size) {
+            questionScoreAwarded = 4;  // +4 if all correct options are selected
+            isCorrect = true;
+          } else {
+            // Partial marks: +1 for each correct option chosen, provided no incorrect is chosen
+            questionScoreAwarded = userSet.size;
+            isCorrect = false; // not fully correct, but gets partial marks
+          }
+        } else {
+          if (isCorrect) {
+            questionScoreAwarded = marking.correct;
+          } else {
+            questionScoreAwarded = marking.wrong;
+          }
+        }
+      } else if (q.type === 'numerical') {
+        isCorrect = String(userAns).trim() === String(q.ans).trim();
+        questionScoreAwarded = isCorrect ? marking.correct : marking.wrong;
+      } else {
+        isCorrect = parseInt(userAns) === q.ans[0];
+        questionScoreAwarded = isCorrect ? marking.correct : marking.wrong;
+      }
+      
+      score += questionScoreAwarded;
+      if (isCorrect) {
+        correct++;
+      } else if (questionScoreAwarded > 0) {
+        // partial correctness
+        correct++; 
+      } else {
+        incorrect++;
+      }
+    }
+    
+    let correctText = '';
+    if (q.type === 'numerical') {
+      correctText = q.ans;
+    } else {
+      if (q.opts) {
+        correctText = q.ans.map(a => {
+          const letter = String.fromCharCode(65 + a);
+          const optionText = q.opts[a] || '';
+          return optionText ? `${letter}. ${optionText}` : letter;
+        }).join(', ');
+      } else {
+        correctText = q.ans.map(a => String.fromCharCode(65 + a)).join(', ');
+      }
+    }
+    
+    return {
+      q: q.q,
+      user: userAns,
+      type: q.type,
+      opts: q.opts,
+      correct: correctText,
+      isCorrect,
+      explanation: q.expl || 'Self-explanatory standard answer.'
+    };
+  });
+
+  const xpEarned = correct * 30;
+  if (xpEarned > 0 && typeof addXP === 'function') {
+    addXP(xpEarned);
+  }
+
+  compState.activeExam = null;
+  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned);
+}
+
+function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned) {
+  const main = document.getElementById('main');
+  if (!main) return;
+
+  const targetScore = compState.targetScore;
+  const isTargetAchieved = score >= targetScore;
+  
+  main.innerHTML = `
+    <div class="sw scr" style="padding-top:16px">
+      <div class="card cglow mb20" style="padding:26px;text-align:center;border-color:${isTargetAchieved?'rgba(16,185,129,0.3)':'rgba(139,92,246,0.3)'};background:isTargetAchieved?'rgba(16,185,129,0.03)':'rgba(139,92,246,0.03)'">
+        <div style="font-size:54px;margin-bottom:12px">${isTargetAchieved?'🏆':'📊'}</div>
+        <div class="h1" style="color:#fff;margin-bottom:8px">Mock Scorecard</div>
+        
+        <div class="between" style="max-width:400px;margin:0 auto 24px;gap:20px">
+          <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
+            <span style="font-size:11px;font-weight:700;color:var(--mut)">YOUR SCORE</span>
+            <div class="h1" style="color:#fff;margin:8px 0 0 0;font-size:36px">${Math.round(score * 100) / 100}</div>
+          </div>
+          <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
+            <span style="font-size:11px;font-weight:700;color:var(--mut)">TARGET SCORE</span>
+            <div class="h1" style="color:#fff;margin:8px 0 0 0;font-size:36px">${targetScore}</div>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:center;gap:20px;font-size:13px;color:var(--sub);margin-bottom:20px">
+          <div>✅ Correct: <strong style="color:var(--okl)">${correct}</strong></div>
+          <div>❌ Incorrect: <strong style="color:var(--redl)">${incorrect}</strong></div>
+          <div>⚪ Skipped: <strong>${skipped}</strong></div>
+          <div>⚡ XP: <strong style="color:var(--pl)">+${xpEarned}</strong></div>
+        </div>
+
+        <button class="btn bpri comp-accent-bg" style="padding:10px 24px;color:#fff" onclick="rComp()">Back to Hub</button>
+      </div>
+
+      <div class="h2 mb14" style="color:#fff">Review Questions & Explanations</div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        ${results.map((res, idx) => `
+          <div class="card" style="padding:16px;border:1px solid ${res.isCorrect?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}">
+            <div class="between mb8" style="font-size:12px">
+              <span style="font-weight:700;color:var(--mut)">Question ${idx + 1}</span>
+              <span class="tag ${res.isCorrect?'tok':'tred'}">${res.isCorrect?'Correct':'Incorrect'}</span>
+            </div>
+            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:12px;white-space:pre-line" class="katex-render-target">${esc(res.q)}</p>
+            
+            <div style="font-size:12px;color:var(--sub);margin-bottom:6px">
+              Correct Answer: <strong style="color:var(--okl)">${esc(res.correct)}</strong>
+            </div>
+
+            <div style="font-size:12px;color:var(--sub);margin-bottom:12px">
+              Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':'var(--redl)'}">
+                ${(() => {
+                  if (res.user === undefined || res.user === '') return 'Skipped';
+                  if (res.type === 'numerical') return esc(res.user);
+                  const userIndices = Array.isArray(res.user) ? res.user : [res.user];
+                  if (res.opts) {
+                    return userIndices.map(u => {
+                      const idx = Number(u);
+                      const char = String.fromCharCode(65 + idx);
+                      const text = res.opts[idx] || '';
+                      return text ? `${char}. ${text}` : char;
+                    }).join(', ');
+                  } else {
+                    return userIndices.map(u => String.fromCharCode(65 + Number(u))).join(', ');
+                  }
+                })()}
+              </strong>
+            </div>
+
+            <div style="font-size:12px;color:var(--sub);background:rgba(255,255,255,0.02);padding:10px;border-radius:8px" class="katex-render-target">
+              <span style="font-weight:700;color:#fff;display:block;margin-bottom:4px">Solution Details:</span>
+              ${esc(res.explanation)}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  triggerMath();
+}
+
+// 🎯 Practice Overlay
+function launchPracticeOverlay(q) {
+  const existing = document.getElementById('practice-modal');
+  if (existing) existing.remove();
+
+  const wrap = document.createElement('div');
+  wrap.id = 'practice-modal';
+  wrap.className = 'modal-bg';
+  
+  wrap.innerHTML = `
+    <div class="modal-box" style="max-width:500px;padding:24px">
+      <div class="between mb14" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
+        <span class="tag tp comp-accent-bg" style="font-weight:700;color:#fff">🎯 Practice Question</span>
+        <button class="btn bsm bsec" onclick="closePracticeOverlay()" style="min-height:auto;padding:4px 8px">Close</button>
+      </div>
+
+      <div style="font-size:14px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:16px;white-space:pre-line" class="katex-render-target">
+        ${esc(q.q)}
+      </div>
+
+      <div id="practice-hint-box" style="display:none;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:10px;font-size:12px;color:var(--goldl);margin-bottom:14px" class="katex-render-target">
+        <strong>Hint:</strong> ${esc(q.hint || 'Analyze the question parameters carefully.')}
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
+        ${q.type === 'numerical' ? `
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11px;color:var(--mut);font-weight:700">ENTER VALUE:</span>
+            <input type="text" id="practice-num-input" class="inp" placeholder="e.g. 5 or -1.5">
+            <span style="font-size:10px;color:var(--theme-accent);font-weight:600">
+              ${(() => {
+                const curId = compState.examId;
+                if (curId === 'jee_main' || curId === 'jee_adv' || curId === 'olympiad') {
+                  return '⚠️ Integer answers only (e.g. 5, -12).';
+                } else if (curId === 'dsat' || curId === 'act') {
+                  return '⚠️ Decimals or fractions accepted (e.g. 2.5 or 3/4).';
+                } else {
+                  return '⚠️ Alphanumeric characters accepted.';
+                }
+              })()}
+            </span>
+          </div>
+        ` : (q.opts || []).map((opt, idx) => `
+          <button class="btn bsm bgh w100" style="text-align:left;justify-content:flex-start;padding:12px 14px;font-size:13px;display:flex;align-items:center;gap:8px" onclick="checkPracticeAnswer(${idx}, ${JSON.stringify(q.ans)}, '${escON(q.expl || '')}')">
+            <span>${String.fromCharCode(65 + idx)}.</span>
+            <span class="katex-render-target">${esc(opt)}</span>
+          </button>
+        `).join('')}
+      </div>
+
+      ${q.type === 'numerical' ? `
+        <button class="btn bpri w100 mb12 comp-accent-bg" style="color:#fff" onclick="checkPracticeNumericalAnswer('${q.ans}', '${escON(q.expl || '')}')">Submit Answer</button>
+      ` : ''}
+
+      <div style="display:flex;gap:10px;justify-content:flex-end">
+        <button class="btn bsm bgh" id="practice-hint-btn" onclick="document.getElementById('practice-hint-box').style.display='block';this.style.display='none'">💡 Hint</button>
+      </div>
+
+      <div id="practice-expl-box" style="display:none;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:12px;font-size:12px;color:var(--okl);margin-top:14px" class="katex-render-target">
+        <strong style="display:block;margin-bottom:4px;color:#fff">Answer Explanation:</strong>
+        <span id="practice-expl-text"></span>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(wrap);
+  triggerMath();
+}
+
+function closePracticeOverlay() {
+  const modal = document.getElementById('practice-modal');
+  if (modal) modal.remove();
+}
+
+function checkPracticeAnswer(selectedIdx, correctAnswers, explanation) {
+  const isCorrect = correctAnswers.includes(selectedIdx);
+  const btn = event.currentTarget;
+  
+  // Highlight
+  if (isCorrect) {
+    btn.style.background = 'rgba(16,185,129,0.15)';
+    btn.style.borderColor = 'var(--okl)';
+    btn.style.color = '#fff';
+    MxAudio.success();
+  } else {
+    btn.style.background = 'rgba(239,68,68,0.15)';
+    btn.style.borderColor = 'var(--redl)';
+    btn.style.color = '#fff';
+    MxAudio.fail();
+  }
+  
+  // Show explanation
+  document.getElementById('practice-expl-text').textContent = explanation;
+  document.getElementById('practice-expl-box').style.display = 'block';
+  triggerMath();
+}
+
+function checkPracticeNumericalAnswer(correctAns, explanation) {
+  const inp = document.getElementById('practice-num-input');
+  if (!inp) return;
+  
+  const userVal = inp.value.trim();
+  const isCorrect = userVal === correctAns.trim();
+  
+  if (isCorrect) {
+    inp.style.borderColor = 'var(--okl)';
+    inp.style.background = 'rgba(16,185,129,0.05)';
+    MxAudio.success();
+  } else {
+    inp.style.borderColor = 'var(--redl)';
+    inp.style.background = 'rgba(239,68,68,0.05)';
+    MxAudio.fail();
+  }
+  
+  document.getElementById('practice-expl-text').textContent = explanation;
+  document.getElementById('practice-expl-box').style.display = 'block';
+  triggerMath();
+}
+
+// Practice Session AI Question Fetcher
+async function startCompPractice() {
+  const btn = document.getElementById('start-practice-btn');
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '✨ Connecting to AI Question Bank...';
+  }
+
+  const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const count = compState.practiceCount;
+  const isSingle = count === 1;
+
+  if (isSingle) {
+    // Generate 1 Question
+    const prompt = `Act as an official exam setter for ${exam.name}.
+Generate exactly 1 realistic question for the subject: "${compState.practiceSubject}", chapter: "${compState.practiceChapter}".
+Difficulty level: ${compState.practiceDifficulty}.
+Make it match the official exam style and difficulty.
+
+JSON format to output:
+{
+  "q": "The question text, use standard LaTeX $...$ for math",
+  "type": "mcq" or "numerical",
+  "opts": ["Option A", "Option B", "Option C", "Option D"], // Omit for numerical
+  "ans": [0], // correct option index (0-3) for mcq, or a string/number for numerical
+  "expl": "Step-by-step detailed solution explanation here"
+}`;
+
+    try {
+      const sys = "You are a professional exam setter API. Output ONLY valid JSON.";
+      const reply = await ai([{ role: 'user', content: prompt }], sys, 1500, true);
+      
+      if (reply) {
+        const escaped = escapeJsonLatex(reply);
+        const data = JSON.parse(escaped);
+        if (data && data.q) {
+          launchPracticeOverlay(data);
+          if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = '🚀 Start Practice Session';
+          }
+          return;
+        }
+      }
+    } catch(e) {
+      console.warn('AI single practice generation failed, using procedural fallback:', e);
+    }
+    
+    // Fallback
+    const qList = generateProceduralMockQuestionsForSubject(exam, compState.practiceSubject, 1);
+    launchPracticeOverlay(qList[0]);
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '🚀 Start Practice Session';
+    }
+  } else {
+    // Multi Practice Session (overlay slides)
+    let questions = [];
+    
+    const prompt = `Act as an official exam setter for ${exam.name}.
+Generate exactly ${count} realistic practice questions for the subject: "${compState.practiceSubject}", chapter: "${compState.practiceChapter}".
+Difficulty level: ${compState.practiceDifficulty}.
+Mix of types (MCQ, MSQ, Numerical/Integer value).
+
+Return ONLY a JSON object:
+{
+  "questions": [
+    {
+      "q": "question text with $LaTeX$",
+      "type": "mcq" | "numerical",
+      "opts": ["A","B","C","D"],
+      "ans": [0],
+      "expl": "detailed explanation"
+    }
+  ]
+}`;
+
+    try {
+      const sys = "You are a professional exam setter API. Output ONLY valid JSON.";
+      const reply = await ai([{ role: 'user', content: prompt }], sys, 4000, true);
+      if (reply) {
+        const escaped = escapeJsonLatex(reply);
+        const data = JSON.parse(escaped);
+        if (data && data.questions && data.questions.length > 0) {
+          questions = data.questions;
+        }
+      }
+    } catch(e) {
+      console.warn('AI multi practice generation failed, using procedural:', e);
+    }
+
+    if (questions.length === 0) {
+      questions = generateProceduralMockQuestionsForSubject(exam, compState.practiceSubject, count);
+    }
+    
+    launchMultiPracticeOverlay(questions);
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '🚀 Start Practice Session';
+    }
+  }
+}
+
+// Multi Question Practice Slide System
+let activePracticeSession = null; // { questions, currentIndex, answers, status }
+
+function launchMultiPracticeOverlay(questions) {
+  const existing = document.getElementById('practice-modal');
+  if (existing) existing.remove();
+
+  activePracticeSession = {
+    questions: questions.map((q, i) => ({ ...q, id: i + 1 })),
+    currentIndex: 0,
+    answers: {},
+    status: {}
+  };
+
+  renderMultiPracticeSlide();
+}
+
+function renderMultiPracticeSlide() {
+  const session = activePracticeSession;
+  if (!session) return;
+
+  const q = session.questions[session.currentIndex];
+  const existing = document.getElementById('practice-modal');
+  if (existing) existing.remove();
+
+  const wrap = document.createElement('div');
+  wrap.id = 'practice-modal';
+  wrap.className = 'modal-bg';
+
+  const progressPct = Math.round((session.currentIndex / session.questions.length) * 100);
+
+  wrap.innerHTML = `
+    <div class="modal-box" style="max-width:550px;padding:24px">
+      <div class="between mb14" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
+        <span class="tag tp comp-accent-bg" style="font-weight:700;color:#fff">🎯 Practice Room (Q ${session.currentIndex + 1}/${session.questions.length})</span>
+        <button class="btn bsm bsec" onclick="closePracticeOverlay()" style="min-height:auto;padding:4px 8px">End Practice</button>
+      </div>
+
+      <div class="pw mb14" style="height:6px;background:rgba(255,255,255,0.04);border-radius:3px;overflow:hidden">
+        <div class="pf" style="width:${progressPct}%;background:var(--theme-accent);height:100%"></div>
+      </div>
+
+      <div style="font-size:14px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:18px;white-space:pre-line" class="katex-render-target">
+        ${esc(q.q)}
+      </div>
+
+      <div id="practice-hint-box" style="display:none;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:10px;font-size:12px;color:var(--goldl);margin-bottom:14px" class="katex-render-target">
+        <strong>Hint:</strong> Analyze the variables and formula relationships carefully.
+      </div>
+
+      <!-- Options -->
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px" id="mp-options-container">
+        ${q.type === 'numerical' ? `
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11px;color:var(--mut);font-weight:700">ENTER VALUE:</span>
+            <input type="text" id="practice-num-input" class="inp" placeholder="e.g. 5 or -1.5">
+            <span style="font-size:10px;color:var(--theme-accent);font-weight:600">
+              ${(() => {
+                const curId = compState.examId;
+                if (curId === 'jee_main' || curId === 'jee_adv' || curId === 'olympiad') {
+                  return '⚠️ Integer answers only (e.g. 5, -12).';
+                } else if (curId === 'dsat' || curId === 'act') {
+                  return '⚠️ Decimals or fractions accepted (e.g. 2.5 or 3/4).';
+                } else {
+                  return '⚠️ Alphanumeric characters accepted.';
+                }
+              })()}
+            </span>
+          </div>
+        ` : (q.opts || []).map((opt, idx) => {
+          const isSelected = session.answers[session.currentIndex] === idx;
+          const isGraded = session.status[session.currentIndex] !== undefined;
+          let btnStyle = '';
+          if (isGraded) {
+            const isCorrect = q.ans.includes(idx);
+            if (isCorrect) {
+              btnStyle = 'background:rgba(16,185,129,0.15);border-color:var(--okl);color:#fff;';
+            } else if (isSelected) {
+              btnStyle = 'background:rgba(239,68,68,0.15);border-color:var(--redl);color:#fff;';
+            }
+          } else if (isSelected) {
+            btnStyle = 'border-color:var(--theme-accent);color:#fff;';
+          }
+          return `
+            <button class="btn bsm bgh w100" style="text-align:left;justify-content:flex-start;padding:12px 14px;font-size:13px;display:flex;align-items:center;gap:8px;${btnStyle}" onclick="mpSelectOpt(${idx})">
+              <span>${String.fromCharCode(65 + idx)}.</span>
+              <span class="katex-render-target">${esc(opt)}</span>
+            </button>
+          `;
+        }).join('')}
+      </div>
+
+      <div id="practice-expl-box" style="display:none;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:12px;font-size:12px;color:var(--okl);margin-bottom:14px" class="katex-render-target">
+        <strong style="display:block;margin-bottom:4px;color:#fff">Answer Explanation:</strong>
+        <span id="practice-expl-text">${esc(q.expl || 'Step-by-step calculation complete.')}</span>
+      </div>
+
+      <div class="between">
+        <button class="btn bsm bgh" onclick="document.getElementById('practice-hint-box').style.display='block'">💡 Hint</button>
+        <div style="display:flex;gap:6px">
+          ${q.type === 'numerical' && session.status[session.currentIndex] === undefined ? `
+            <button class="btn bsm bpri comp-accent-bg" style="color:#fff" onclick="mpSubmitNumericalAnswer()">Submit</button>
+          ` : ''}
+          ${session.status[session.currentIndex] === undefined && q.type !== 'numerical' ? `
+            <button class="btn bsm bpri comp-accent-bg" style="color:#fff" onclick="mpSubmitAnswer()">Submit</button>
+          ` : ''}
+          ${session.status[session.currentIndex] !== undefined ? `
+            ${session.currentIndex < session.questions.length - 1 ? `
+              <button class="btn bsm bpri comp-accent-bg" style="color:#fff" onclick="mpNextQuestion()">Next Question →</button>
+            ` : `
+              <button class="btn bsm bpri comp-accent-bg" style="color:#fff;background:#EF4444" onclick="mpFinishSession()">Finish Practice</button>
+            `}
+          ` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(wrap);
+  triggerMath();
+}
+
+function mpSelectOpt(idx) {
+  const session = activePracticeSession;
+  if (!session || session.status[session.currentIndex] !== undefined) return;
+  session.answers[session.currentIndex] = idx;
+  renderMultiPracticeSlide();
+}
+
+function mpSubmitAnswer() {
+  const session = activePracticeSession;
+  if (!session) return;
+  
+  const q = session.questions[session.currentIndex];
+  const userAns = session.answers[session.currentIndex];
+  
+  if (userAns === undefined) {
+    alert('Please select an option before submitting.');
+    return;
+  }
+  
+  const isCorrect = q.ans.includes(userAns);
+  session.status[session.currentIndex] = isCorrect ? 'correct' : 'wrong';
+  if (isCorrect) MxAudio.success(); else MxAudio.fail();
+
+  document.getElementById('practice-expl-box').style.display = 'block';
+  renderMultiPracticeSlide();
+}
+
+function mpSubmitNumericalAnswer() {
+  const session = activePracticeSession;
+  if (!session) return;
+  
+  const q = session.questions[session.currentIndex];
+  const inp = document.getElementById('practice-num-input');
+  if (!inp) return;
+  
+  const val = inp.value.trim();
+  if (val === '') {
+    alert('Please enter a value before submitting.');
+    return;
+  }
+  
+  const isCorrect = val === String(q.ans).trim();
+  session.answers[session.currentIndex] = val;
+  session.status[session.currentIndex] = isCorrect ? 'correct' : 'wrong';
+  if (isCorrect) MxAudio.success(); else MxAudio.fail();
+  
+  document.getElementById('practice-expl-box').style.display = 'block';
+  renderMultiPracticeSlide();
+}
+
+function mpNextQuestion() {
+  const session = activePracticeSession;
+  if (!session) return;
+  session.currentIndex++;
+  renderMultiPracticeSlide();
+}
+
+function mpFinishSession() {
+  const session = activePracticeSession;
+  if (!session) return;
+  
+  let correct = 0;
+  session.questions.forEach((_, i) => {
+    if (session.status[i] === 'correct') correct++;
+  });
+  
+  const xp = correct * 20;
+  if (xp > 0 && typeof addXP === 'function') addXP(xp);
+  
+  alert(`Practice session complete!\n\nScore: ${correct} / ${session.questions.length}\nXP Earned: +${xp}`);
+  closePracticeOverlay();
+  rComp();
+}
+
+// Active Exam Helpers
+function navigateExam(idx) {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  
+  // Set unvisited questions to visited but unanswered
+  if (exam.status[idx] === undefined || exam.status[idx] === 'unvisited') {
+    exam.status[idx] = 'unanswered';
+  }
+  
+  exam.currentIndex = idx;
+  rComp();
+}
+
+function selectMockOption(oIdx, type) {
+  const exam = compState.activeExam;
+  if (!exam) return;
+
+  if (type === 'msq') {
+    let current = exam.answers[exam.currentIndex] || [];
+    if (current.includes(oIdx)) {
+      current = current.filter(x => x !== oIdx);
+    } else {
+      current.push(oIdx);
+    }
+    if (current.length === 0) {
+      delete exam.answers[exam.currentIndex];
+    } else {
+      exam.answers[exam.currentIndex] = current;
+    }
+  } else {
+    exam.answers[exam.currentIndex] = oIdx;
+  }
+  rComp();
+}
+
+function saveNumericalAnswer(val) {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  if (val.trim() === '') {
+    delete exam.answers[exam.currentIndex];
+  } else {
+    let clean = val.trim();
+    if (compState.examId === 'jee_main' || compState.examId === 'jee_adv' || compState.examId === 'olympiad') {
+      // JEE/Olympiad: Clean non-integer inputs (permit negative minus sign at start)
+      clean = clean.replace(/[^\d-]/g, '');
+      // Ensure minus sign is only at the beginning
+      if (clean.indexOf('-') > 0) {
+        clean = clean.replace(/-/g, '');
+      }
+    } else if (compState.examId === 'dsat' || compState.examId === 'act') {
+      // SAT/ACT: Permit digits, minus, dot, and slash /
+      clean = clean.replace(/[^\d./-]/g, '');
+    }
+    exam.answers[exam.currentIndex] = clean;
+  }
+}
+
+function clearActiveExamAnswer() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  delete exam.answers[exam.currentIndex];
+  exam.status[exam.currentIndex] = 'unanswered';
+  const numInput = document.getElementById('numerical-ans-input');
+  if (numInput) numInput.value = '';
+  rComp();
+}
+
+function markMockForReview() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  exam.status[exam.currentIndex] = 'marked';
+  
+  if (exam.currentIndex < exam.questions.length - 1) {
+    navigateExam(exam.currentIndex + 1);
+  } else {
+    rComp();
+  }
+}
+
+function saveAndNextMock() {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  
+  const userAns = exam.answers[exam.currentIndex];
+  if (userAns !== undefined && userAns !== '') {
+    exam.status[exam.currentIndex] = 'answered';
+  } else {
+    exam.status[exam.currentIndex] = 'unanswered';
+  }
+
+  if (exam.currentIndex < exam.questions.length - 1) {
+    navigateExam(exam.currentIndex + 1);
+  } else {
+    rComp();
+  }
+}
+
+function setCompTab(tab) {
+  compState.currentTab = tab;
+  rComp();
+}
+
+function updateTargetVal(val) {
+  compState.targetScore = parseInt(val);
+  const display = document.getElementById('targetScoreDisplay');
+  if (display) display.textContent = val;
+  saveCompState();
+}
+
+function updateDailyTime(val) {
+  compState.dailyTime = parseInt(val);
+  saveCompState();
+  rComp();
+}
+
+// Global exports
+window.rComp = rComp;
+window.setCompTab = setCompTab;
+window.updateTargetVal = updateTargetVal;
+window.updateDailyTime = updateDailyTime;
+window.selectObExam = selectObExam;
+window.navigateObStep = navigateObStep;
+window.completeCompOnboarding = completeCompOnboarding;
+window.reconfigureCompPlan = reconfigureCompPlan;
+window.startCompPractice = startCompPractice;
+window.startMockExamSetup = startMockExamSetup;
+window.cancelMockExamSetup = cancelMockExamSetup;
+window.beginMockExamAfterInstructions = beginMockExamAfterInstructions;
+window.switchMockSection = switchMockSection;
+window.markMockForReview = markMockForReview;
+window.saveAndNextMock = saveAndNextMock;
+window.confirmSubmitMockExam = confirmSubmitMockExam;
+window.selectMockOption = selectMockOption;
+window.saveNumericalAnswer = saveNumericalAnswer;
+window.clearActiveExamAnswer = clearActiveExamAnswer;
+window.navigateExam = navigateExam;
+window.submitMockExam = submitMockExam;
+window.closePracticeOverlay = closePracticeOverlay;
+window.launchMultiPracticeOverlay = launchMultiPracticeOverlay;
+window.mpSelectOpt = mpSelectOpt;
+window.mpSubmitAnswer = mpSubmitAnswer;
+window.mpSubmitNumericalAnswer = mpSubmitNumericalAnswer;
+window.mpNextQuestion = mpNextQuestion;
+window.mpFinishSession = mpFinishSession;
+window.checkPracticeAnswer = checkPracticeAnswer;
+window.checkPracticeNumericalAnswer = checkPracticeNumericalAnswer;
+window.startSyllabusLoader = startSyllabusLoader;

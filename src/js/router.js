@@ -1,0 +1,202 @@
+/**
+ * router.js — Mentorix Client-Side Router
+ * Extracted from mentorix_v2_4.html — Stage 5 of SPA modularization.
+ *
+ * Owns: go(), renderScr(), browser history, popstate, swipe gestures,
+ *       keyboard shortcut nav, screen-change analytics stub.
+ *
+ * Dependencies (globals):
+ *   D                — application state
+ *   SCREEN_TITLES    — constants.js
+ *   renderAuth       — auth.js
+ *   updateSB, buildMobileNav, closeMobDrawer — main script
+ *   rDash, rCourses, rRecovery, rNotebook, rRevision,
+ *   rExplore, rCareers, rRoadmap, rTests, rDoubt,
+ *   rProgress, rSettings, rMentor, rLearn — screen modules
+ */
+
+'use strict';
+
+/* ── SCREEN REGISTRY ────────────────────────────────────────── */
+
+const SCREEN_MAP = {
+  dash:     () => typeof rDash     === 'function' && rDash(),
+  courses:  () => typeof rCourses  === 'function' && rCourses(),
+  recovery: () => typeof rRecovery === 'function' && rRecovery(),
+  notebook: () => typeof rNotebook === 'function' && rNotebook(),
+  revision: () => typeof rRevision === 'function' && rRevision(),
+  explore:  () => typeof rExplore  === 'function' && rExplore(),
+  careers:  () => typeof rCareers  === 'function' && rCareers(),
+  roadmap:  () => typeof rRoadmap  === 'function' && rRoadmap(),
+  tests:    () => typeof rTests    === 'function' && rTests(),
+  doubt:    () => typeof rDoubt    === 'function' && rDoubt(),
+  progress: () => typeof rProgress === 'function' && rProgress(),
+  settings: () => typeof rSettings === 'function' && rSettings(),
+  mentor:   () => typeof rMentor   === 'function' && rMentor(),
+  learn:    () => typeof rLearn    === 'function' && rLearn(),
+  comp:     () => typeof rComp     === 'function' && rComp(),
+};
+
+/* ── MAIN ROUTING FUNCTION ──────────────────────────────────── */
+
+function go(scr, param) {
+  // Stop any active lesson sub-cycle
+  const learnSub = document.getElementById('learn-sub');
+  if (learnSub && learnSub._cycleStop) learnSub._cycleStop();
+
+  D.screen = scr;
+  if (param !== undefined) D._param = param;
+  document.body.setAttribute('data-screen', scr);
+
+  // Close mobile drawer if open
+  if (typeof closeMobDrawer === 'function') closeMobDrawer();
+  if (typeof updateSB       === 'function') updateSB();
+  if (typeof buildMobileNav === 'function') buildMobileNav();
+
+  // Step 10 — spring page transition
+  const main = document.getElementById('main');
+  if (main) {
+    // Exit: fade + slide up
+    main.style.opacity    = '0';
+    main.style.transform  = 'translateY(8px) scale(0.997)';
+    main.style.transition = 'opacity 90ms var(--ease-exit), transform 90ms var(--ease-exit)';
+
+    setTimeout(() => {
+      renderScr();
+      // Scroll to top on navigation
+      main.scrollTop = 0;
+      // Enter: spring slide down
+      main.style.transition = 'opacity 240ms var(--ease-smooth), transform 240ms var(--spring-settle,cubic-bezier(.34,1.3,.64,1))';
+      main.style.opacity    = '1';
+      main.style.transform  = 'translateY(0) scale(1)';
+
+      // ASMR: play navigation sound
+      if (typeof MxAudio !== 'undefined') MxAudio.tuck();
+
+      // A11y: announce screen change
+      const ann = document.getElementById('a11y-announce');
+      if (ann) ann.textContent = SCREEN_TITLES[scr] || scr;
+
+      // Focus management
+      requestAnimationFrame(() => {
+        const h = main.querySelector('h1,h2,[data-focus-first]');
+        if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+      });
+    }, 90);
+  } else {
+    renderScr();
+  }
+
+  // Push browser history state (omit dash to keep back-button clean)
+  if (window.history?.pushState && scr !== 'dash') {
+    window.history.pushState({ screen: scr }, '');
+  }
+}
+
+/* ── SCREEN RENDERER ────────────────────────────────────────── */
+
+/**
+ * Calls the correct render function for D.screen.
+ * Falls back to rDash if the screen is unknown.
+ */
+function renderScr() {
+  const fn = SCREEN_MAP[D.screen];
+  if (fn) {
+    fn();
+  } else {
+    console.warn('[Router] Unknown screen:', D.screen, '— falling back to dash');
+    D.screen = 'dash';
+    if (typeof rDash === 'function') rDash();
+  }
+}
+
+/* ── BACK BUTTON ────────────────────────────────────────────── */
+
+/**
+ * Initialise browser back-button handling via popstate.
+ * Uses the {screen} state object pushed by go() for accurate replay.
+ */
+function initPopstate() {
+  window.addEventListener('popstate', e => {
+    const target = e.state?.screen || 'dash';
+    // Re-route without pushing new history state
+    D.screen = target;
+    document.body.setAttribute('data-screen', target);
+    if (typeof updateSB       === 'function') updateSB();
+    if (typeof buildMobileNav === 'function') buildMobileNav();
+    renderScr();
+  });
+}
+
+/* ── SWIPE NAVIGATION ───────────────────────────────────────── */
+
+/**
+ * Horizontal swipe between main screens on mobile.
+ * Swipe right → go back (popstate); swipe left → go forward (history).
+ * Threshold: ≥ 60px horizontal with < 40px vertical drift.
+ */
+function initSwipe() {
+  let tx = 0, ty = 0;
+  const main = document.getElementById('main');
+  if (!main) return;
+
+  main.addEventListener('touchstart', e => {
+    tx = e.touches[0].clientX;
+    ty = e.touches[0].clientY;
+  }, { passive: true });
+
+  main.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    const dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) < 60 || Math.abs(dy) > 40) return;
+    if (dx > 0) {
+      window.history.back();
+    } else {
+      window.history.forward();
+    }
+  }, { passive: true });
+}
+
+/* ── KEYBOARD SHORTCUTS ─────────────────────────────────────── */
+
+/**
+ * Global keyboard shortcuts for power users:
+ *   Alt + D → Dashboard   Alt + C → Courses    Alt + M → Mentor
+ *   Alt + N → Notebook    Alt + R → Revision   Alt + T → Tests
+ *   Alt + P → Progress    Alt + S → Settings   Alt + E → Explore
+ *   / → open global search
+ */
+function initKeyboardShortcuts() {
+  document.addEventListener('keydown', e => {
+    // Skip when typing in inputs
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
+
+    // Global search
+    if (e.key === '/' && !e.altKey && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault();
+      if (typeof openGlobalSearch === 'function') openGlobalSearch();
+      return;
+    }
+
+    if (!e.altKey) return;
+    const map = {
+      d: 'dash', c: 'courses', m: 'mentor', n: 'notebook',
+      r: 'revision', t: 'tests', p: 'progress', s: 'settings',
+      e: 'explore'
+    };
+    const target = map[e.key.toLowerCase()];
+    if (target) { e.preventDefault(); go(target); }
+  });
+}
+
+/* ── INITIALISE ─────────────────────────────────────────────── */
+
+initPopstate();
+initSwipe();
+initKeyboardShortcuts();
+
+/* ── EXPORTS ────────────────────────────────────────────────── */
+window.go        = go;
+window.renderScr = renderScr;
+window.registerScreen = () => {};
+window.registerScreenMap = () => {};

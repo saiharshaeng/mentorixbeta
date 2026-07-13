@@ -1,0 +1,3985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- maximum-scale removed: disabling pinch-zoom blocks low-vision users from
+     reading content, a WCAG 2.1 failure. The app's settings panel already
+     offers font-size controls for users who want larger text by default. -->
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>MENTORIX — Your AI Learning Universe</title>
+<script>
+// Early stub so onclick="splashSkip()" never throws before the main script loads
+window.splashSkip = window.splashSkip || function(){
+  var ls = document.getElementById('loading-screen');
+  if(ls){ls.style.transition='opacity .5s';ls.style.opacity='0';setTimeout(function(){try{ls.remove();}catch(e){}},520);}
+};
+// Register Service Worker
+if('serviceWorker' in navigator){
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('sw.js');
+  });
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@300;400;500;600;700;800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<link rel="manifest" href="manifest.json">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src https://fonts.gstatic.com https://cdn.jsdelivr.net data:; connect-src https://mentorix-ai-proxy.mentorix.workers.dev https://api.groq.com https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: blob:; worker-src 'self';">
+</head>
+<body>
+<div id="orbs"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<!-- Custom cursor: AI glowing orb -->
+<div id="cursor-orb"></div>
+<div id="cursor-aura"></div>
+<!-- 3D Particle canvas -->
+<canvas id="particle-canvas"></canvas>
+<div id="particles"></div>
+<!-- Ambient glow shapes for extra depth -->
+<div class="ambient-shape amb-shape-1"></div>
+<div class="ambient-shape amb-shape-2"></div>
+<!-- Loading screen -->
+<div id="loading-screen">
+  <canvas id="splash-canvas" class="sp-canvas-el"></canvas>
+  <div id="sp-ring3" class="sp-ring-3"></div>
+  <div id="sp-ring2" class="sp-ring-2"></div>
+  <div id="sp-ring1" class="sp-ring-1"></div>
+  <div id="sp-logo" class="sp-logo-el"></div>
+  <div id="sp-wordmark" class="sp-wordmark-el">
+    <div class="sp-title-el">Mentorix</div>
+    <div id="sp-tagline" class="sp-tagline-el">KNOWLEDGE IS INFINITE. EXPLORE IT.</div>
+  </div>
+  <div id="sp-tip" class="sp-tip-el">
+    <div id="sp-tip-text" class="sp-tip-text-el"></div>
+  </div>
+  <div id="sp-progress" class="sp-progress-el">
+    <div class="sp-progress-track">
+      <div id="sp-bar" class="sp-progress-fill"></div>
+    </div>
+    <div id="sp-status" class="sp-status-el">Initialising</div>
+  </div>
+  <button id="sp-skip" class="sp-skip-el" onclick="splashSkip()">Skip →</button>
+</div>
+<div id="app"></div>
+<div id="toasts"></div>
+<div class="success-overlay" id="sov"><div class="success-check">✨</div><div class="sov-title">Welcome to Mentorix!</div><div class="sov-sub">Tio is ready for you…</div></div>
+<!-- A11y live region for screen reader announcements -->
+<div id="a11y-announce" aria-live="polite" aria-atomic="true"></div>
+<!-- Mobile drawer + backdrop -->
+<div id="mob-drawer-bg" onclick="closeMobDrawer()"></div>
+<div id="mob-drawer" role="dialog" aria-label="More screens">
+  <div class="mob-drawer-handle"></div>
+  <div class="mob-drawer-title">More</div>
+  <div class="mob-drawer-grid" id="mob-drawer-grid"></div>
+</div>
+<!-- Global search Spotlight Command Palette -->
+<div id="gsearch-wrap" onclick="if(event.target===this)closeGlobalSearch()">
+  <div class="gsearch-box">
+    <div class="gsearch-input-wrap">
+      <span class="gsearch-icon">🔍</span>
+      <input class="gsearch" id="gsearch" placeholder="Search courses, chapters, topics, notes, weak areas... (Esc to exit)" oninput="onGSearch(this.value)" autocomplete="off">
+    </div>
+    <div id="gsugg" class="gsearch-results"></div>
+  </div>
+</div>
+<!-- Mobile bottom nav -->
+<nav id="mob-nav"><div class="mob-nav-inner" id="mbn"></div></nav>
+<!-- Voice reading indicator -->
+<div class="voice-reading" id="voice-reading-indicator" onclick="stopVoiceReading()">
+  <div class="voice-wave"><span></span><span></span><span></span></div>
+  <span id="voice-reading-label">Reading…</span>
+  <span class="voice-reading-stop">✖ Stop</span>
+</div>
+<!-- Floating Tio button -->
+<button class="float-tio" id="fnbtn" onclick="openTioFloat()" title="Ask Tio">✨<div class="float-tio-badge">!</div></button>
+<!-- Pomodoro timer FAB + widget -->
+<div class="timer-fab" id="timer-fab" onclick="toggleTimerWidget()" title="Study Timer">⏱️</div>
+<div class="timer-widget" id="timer-widget">
+  <div class="timer-label" id="timer-label">FOCUS SESSION</div>
+  <div class="timer-ring">
+    <svg width="80" height="80" viewBox="0 0 80 80">
+      <circle class="timer-ring-track" cx="40" cy="40" r="34"/>
+      <circle class="timer-ring-fill" id="timer-ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="0"/>
+    </svg>
+    <div id="timer-display" class="timer-display-text">25:00</div>
+  </div>
+  <div class="timer-btn-row">
+    <button class="btn bsm bpri" id="timer-start" onclick="timerToggle()">▶ Start</button>
+    <button class="btn bsm bgh" onclick="timerReset()">↺ Reset</button>
+  </div>
+  <div class="timer-modes-row">
+    <button class="btn bsm bgh" class="timer-mode-btn" onclick="setTimerMode(25,'FOCUS')">25m</button>
+    <button class="btn bsm bgh" class="timer-mode-btn" onclick="setTimerMode(5,'SHORT BREAK')">5m</button>
+    <button class="btn bsm bgh" class="timer-mode-btn" onclick="setTimerMode(15,'LONG BREAK')">15m</button>
+  </div>
+  <div id="timer-sessions" class="timer-sessions-el">Sessions today: 0</div>
+</div>
+<!-- Notification bell -->
+<div class="notif-bell" id="notif-bell" onclick="requestNotifPerms()" title="Enable revision reminders">🔔<div class="notif-dot" id="notif-dot"></div></div>
+<!-- PWA install banner -->
+<div class="pwa-banner" id="pwa-banner">
+  <span class="pwa-icon">📱</span>
+  <div class="pwa-text">
+    <div class="pwa-text-title">Install Mentorix</div>
+    <div class="pwa-text-sub">Add to home screen for offline access</div>
+  </div>
+  <button class="btn bsm pwa-install-btn" onclick="pwaInstall()">Install</button>
+  <button class="pwa-close-btn" onclick="document.getElementById('pwa-banner').classList.remove('show')">✖</button>
+</div>
+
+<script src="js/helpers.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/router.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/xp.js"></script>
+<script src="js/screens/dashboard.js"></script>
+<script src="js/screens/courses.js"></script>
+<script src="js/screens/recovery.js"></script>
+<script src="js/screens/learn.js"></script>
+<script src="js/screens/mentor.js"></script>
+<script src="js/screens/explore.js"></script>
+<script src="js/screens/careers.js"></script>
+<script src="js/screens/roadmap.js"></script>
+<script src="js/screens/tests.js"></script>
+<script src="js/screens/doubt.js"></script>
+<script src="js/screens/progress.js"></script>
+<script src="js/screens/settings.js"></script>
+<script src="js/screens/notebook.js"></script>
+<script src="js/screens/revision.js"></script>
+<script src="js/screens/comp.js"></script>
+<script>
+'use strict';
+window.LS = null;
+/* ───────────────────────────────────────────
+   CONSTANTS
+─────────────────────────────────────────── */
+/* GROQ → constants.js */
+/* MODEL → constants.js */
+const NAV=[
+  {id:'dash',ic:'⚡',lb:'Dashboard'},
+  {id:'courses',ic:'🎓',lb:'Courses'},
+  {id:'comp',ic:'🏆',lb:'Competitive Exams'},
+  {id:'recovery',ic:'🛡️',lb:'Skill Recovery Center'},
+  {id:'notebook',ic:'📓',lb:'AI Notebook'},
+  {id:'revision',ic:'🔄',lb:'Smart Revision Engine'},
+  {id:'explore',ic:'🌐',lb:'Explore'},
+  {id:'careers',ic:'🚀',lb:'Career Explorer'},
+  {id:'tests',ic:'📝',lb:'Tests'},
+  {id:'progress',ic:'📊',lb:'Progress'},
+  {id:'mentor',ic:'✨',lb:'AI Mentor'},
+  {id:'settings',ic:'⚙️',lb:'Settings'},
+];
+/* BADGES → constants.js */
+
+/* ───────────────────────────────────────────
+   AUTH SYSTEM
+─────────────────────────────────────────── */
+// Simple SHA-256 via SubtleCrypto for password hashing
+/* Auth functions (hashPW → isGuest, showKeyModal, doSaveKey) → auth.js */
+
+window.D={
+  screen:'dash',sbCol:false,_param:'', // _param: inter-screen navigation parameter bus (consumed once by rLearn)
+  profile:null,xp:0,streak:0,lastStudy:'',
+  badges:[],topics:[],chatMsgs:[],exploredCats:[],
+  memory:{scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]},
+  notes:{},
+  roadmaps:[],
+  courses:[],
+  settings:{
+    darkMode:false,colorTheme:'vibrant',bossMode:false,
+    mentorTone:'friendly',explanationDepth:'standard',
+    difficulty:'medium',notifications:true,
+    studyReminders:true,customCursor:true,
+    eli5Mode:false,voiceOutput:false,
+    streakShields:1,studyTime:'20:00',
+    appTheme:'vibrant',
+    accentColor:'purple',
+    fontSize:'md',
+    animLevel:'full',
+    compactMode:false,
+    showXPFloat:true,
+  },
+  streakFrozen:false,
+};
+/* sv() → storage.js */
+/* ld() → storage.js */
+
+
+/* saveAll(), saveNow(), _saveTimer → storage.js */
+
+/* ───────────────────────────────────────────
+   HELPERS
+─────────────────────────────────────────── */
+/* lv, xpR, xpP → helpers.js */
+/* esc() → helpers.js */
+// Triggers KaTeX to render any $...$ math notation inside the given element (or whole body).
+// Safe to call even if KaTeX hasn't finished loading yet (deferred scripts).
+/* renderMath() → helpers.js */
+/* toast() → helpers.js */
+/* addXP, awardBadge, addTopic, triggerAutoNoteGeneration, checkStreak, applyMentorTheme → xp.js */
+
+/* ───────────────────────────────────────────
+   API KEY SUBSYSTEM — REMOVED (Security Audit, Step 6)
+   ───────────────────────────────────────────
+   This dead-code subsystem (getKey, setKey, showKeyModal, doSaveKey)
+   was a legacy "bring your own Groq API key" flow that predates the
+   current Cloudflare Worker proxy architecture. It was never called
+   from any live code path, but if accidentally re-enabled it would have:
+     1. Stored a raw Groq API key in plaintext in localStorage (mx3_key)
+        — readable by any XSS payload or malicious browser extension.
+     2. Sent that key directly to Groq's API as an Authorization header
+        FROM THE BROWSER, bypassing the proxy that exists specifically
+        to keep API credentials server-side and away from clients.
+   All AI calls now go exclusively through ai() in ai.js, which always
+   uses the GROQ proxy constant from constants.js. No user-supplied
+   API key is ever requested, stored, or transmitted by Mentorix.
+   ─────────────────────────────────────────── */
+
+/* ───────────────────────────────────────────
+   AI CALL — via Cloudflare Proxy
+─────────────────────────────────────────── */
+/* ai() → ai.js */
+
+/* pJSON() → helpers.js */
+/* pCtx() → helpers.js */
+
+/* ───────────────────────────────────────────
+   ONBOARDING — 8-STEP ADAPTIVE FLOW
+─────────────────────────────────────────── */
+/* EDU_BOARDS → constants.js */
+/* STREAMS_11_12 → constants.js */
+/* SUBJECTS_BY_STREAM → constants.js */
+/* SUBJECTS_K10 → constants.js */
+const LEARN_STYLES = [
+  { ic: '👁️', n: 'Visual', d: 'Diagrams, animations & charts' },
+  { ic: '🛠️', n: 'Practical', d: 'Interactive coding & labs' },
+  { ic: '📖', n: 'Reading', d: 'In-depth articles & texts' },
+  { ic: '🧩', n: 'Problem Solving', d: 'Exercises, quizzes & puzzles' },
+  { ic: '🔄', n: 'Mixed', d: 'A balanced blend of all styles' }
+];
+
+let ob = {
+  name: '',
+  ageNum: 16,
+  goal: '',
+  grade: '',
+  degree: '',
+  major: '',
+  specialization: '',
+  board: '',
+  boardOther: '',
+  lstyle: '',
+  time: '1 hour',
+  attentionSpan: 'Medium (15-30m)',
+  difficulty: 'Medium',
+  mentorTone: 'Friendly',
+  careers: [],
+  careerText: '',
+  mode: 'creative',
+  subjects: [],
+  step: 0,
+  guest: false,
+};
+window.ob = ob;
+
+function isHighSchool() {
+  return ob.grade === 'Grade 11' || ob.grade === 'Grade 12';
+}
+function getNextStep(current) {
+  if (current === 2) {
+    if (ob.goal === 'Academic Learning') return 3;
+    return 8; // Skip straight to learning style for non-academic goals
+  }
+  if (current === 3) {
+    if (ob.grade === 'Undergraduate' || ob.grade === 'Postgraduate') return 4;
+    return 5;
+  }
+  if (current === 4) return 5; // Degree details -> Board
+  if (current === 5) {
+    // Board -> Stream (only Grade 11/12) -> else straight to Subjects
+    if (isHighSchool()) return 6;
+    return 7;
+  }
+  if (current === 6) return 7; // Stream -> Subjects
+  if (current === 7) return 8; // Subjects -> Learning Style
+  return current + 1;
+}
+
+function getPrevStep(current) {
+  if (current === 8) {
+    if (ob.goal === 'Academic Learning') return 7;
+    return 2;
+  }
+  if (current === 7) {
+    if (isHighSchool()) return 6;
+    return 5;
+  }
+  if (current === 6) return 5;
+  if (current === 5) {
+    if (ob.grade === 'Undergraduate' || ob.grade === 'Postgraduate') return 4;
+    return 3;
+  }
+  if (current === 4) return 3;
+  return current - 1;
+}
+
+function renderOB(guest = false) {
+  ob.guest = guest;
+  ob.step = 0;
+  spawnParticles();
+  const OB_TOTAL_STEPS = 7;
+  document.getElementById('app').innerHTML = `
+    <div class="ob">
+      <div class="ob-card" style="max-width:560px">
+        <div class="ob-step-dots" id="ob-dots" role="progressbar" aria-label="Onboarding progress" aria-valuenow="1" aria-valuemax="${OB_TOTAL_STEPS}">
+          ${Array.from({length:OB_TOTAL_STEPS},(_,i)=>`<div class="ob-step-dot${i===0?' active':''}"></div>`).join('')}
+        </div>
+        <div class="ob-prog"><div class="ob-pf" id="obp" style="width:0%"></div></div>
+        <div id="obs"></div>
+      </div>
+    </div>`;
+  renderOBS();
+}
+
+function obProg() {
+  // ob.step ranges 0–14 (15 total steps with branching paths).
+  // Divide by 14 so the bar reaches 100% at the final step.
+  const pct = Math.round((ob.step / 14) * 100);
+  const p = document.getElementById('obp');
+  if (p) p.style.width = pct + '%';
+  // Update step dots
+  const dots = document.querySelectorAll('.ob-step-dot');
+  const stepIdx = Math.min(Math.floor(ob.step / 2), dots.length - 1);
+  dots.forEach((d,i)=>{
+    d.classList.remove('active','done');
+    if(i < stepIdx) d.classList.add('done');
+    else if(i === stepIdx) d.classList.add('active');
+  });
+  const dotsWrap = document.getElementById('ob-dots');
+  if(dotsWrap) dotsWrap.setAttribute('aria-valuenow', stepIdx + 1);
+}
+
+function obTio(msg) {
+  return `<div class="ob-tio"><div class="ob-nxav">✨</div><div class="ob-nxtxt"><strong style="color:var(--pl);font-size:11px">TIO</strong><br>${msg}</div></div>`;
+}
+
+function renderOBS() {
+  obProg();
+  const c = document.getElementById('obs');
+  if (!c) return;
+
+  // STEP 0 — WELCOME
+  if (ob.step === 0) {
+    c.innerHTML = `
+      <div style="text-align:center;padding:6px 0">
+        <div style="width:70px;height:70px;background:linear-gradient(135deg,var(--pp),var(--c));border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:32px;box-shadow:0 0 36px rgba(139,92,246,.45)">🎓</div>
+        <h1 style="font-family:var(--f-display);font-size:34px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:8px">Welcome to<br><span style="background:linear-gradient(90deg,var(--pl),var(--cl));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Mentorix V3</span></h1>
+        <p style="color:var(--sub);font-size:14px;line-height:1.7;margin-bottom:6px;max-width:320px;margin-left:auto;margin-right:auto">I'm Tio, your personal AI mentor. Let's configure your V3 personalized learning universe.</p>
+        ${obTio('"I\'ll guide you through a quick personalization flow to set up your syllabus, tone, and goals! Let\'s start! 🚀"')}
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px">
+          ${['🎓 Auto Course Gen', '🛡️ Skill Recovery', '📊 Advanced Tracking', '✨ Multi-Tone Mentor'].map(f => `<div style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);border-radius:10px;padding:9px;color:var(--pl);font-size:12px;font-weight:500">${f}</div>`).join('')}
+        </div>
+        <button class="btn bpri bxl bfull" onclick="ob.step=1;renderOBS()">Begin Personalisation →</button>
+        ${ob.guest ? `<div class="skip-auth mt8"><a onclick="obSkipToLearn()">Skip — just start learning now</a></div>` : `<div class="skip-auth mt8"><a onclick="obSkipToLearn()">Skip personalisation → go straight to learning</a></div>`}
+      </div>`;
+    return;
+  }
+
+  // STEP 1 — NAME + AGE
+  if (ob.step === 1) {
+    c.innerHTML = `
+      ${obTio('"What\'s your name? And how old are you? I\'ll adapt my explanations to your profile."')}
+      <div class="h2 mb4">About you</div>
+      <p class="sub">Quick intro to customize your experience</p>
+      <div class="inp-wrap">
+        <label class="inp-label">YOUR NAME</label>
+        <input class="inp" id="obn" placeholder="What should I call you?" value="${esc(ob.name)}" oninput="ob.name=this.value;document.getElementById('ob1btn').disabled=!this.value.trim()">
+      </div>
+      <div class="inp-wrap">
+        <label class="inp-label">YOUR AGE</label>
+        <div style="display:flex;align-items:center;gap:14px">
+          <input type="range" id="age-sl" min="5" max="90" value="${ob.ageNum}" style="flex:1;accent-color:var(--p)" oninput="ob.ageNum=+this.value;document.getElementById('age-disp').textContent=this.value">
+          <div id="age-disp" style="font-family:var(--f-display);font-size:28px;font-weight:700;color:var(--pl);min-width:44px;text-align:center">${ob.ageNum}</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=0;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob1btn" ${!ob.name ? 'disabled' : ''} onclick="ob.step=2;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 2 — LEARNING GOAL
+  if (ob.step === 2) {
+    const goals = ['Academic Learning', 'Skill Learning', 'Career Exploration', 'General Curiosity'];
+    c.innerHTML = `
+      ${obTio('"What is your primary learning goal? This decides which course pathway we\'ll build."')}
+      <div class="h2 mb4">Primary Goal</div>
+      <p class="sub">Select your main focus area</p>
+      <div style="display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:20px">
+        ${goals.map(g => `<button class="obtn${ob.goal === g ? ' on' : ''}" onclick="ob.goal='${g}';document.querySelectorAll('[data-goal]').forEach(x=>x.classList.remove('on'));this.classList.add('on');document.getElementById('ob2btn').disabled=false" data-goal="1">${g}</button>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=1;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob2btn" ${!ob.goal ? 'disabled' : ''} onclick="ob.step=getNextStep(2);renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 3 — GRADE (Academic Only)
+  if (ob.step === 3) {
+    const grades = [...Array(12).keys()].map(i => `Grade ${i + 1}`).concat(['Undergraduate', 'Postgraduate']);
+    c.innerHTML = `
+      ${obTio('"Which grade or level of academic study are you currently in?"')}
+      <div class="h2 mb4">Academic Grade</div>
+      <p class="sub">Select your level of education</p>
+      <div class="inp-wrap">
+        <select class="inp" id="obgrade" onchange="ob.grade=this.value;document.getElementById('ob3btn').disabled=!this.value">
+          <option value="">-- Select Grade --</option>
+          ${grades.map(g => `<option value="${g}" ${ob.grade === g ? 'selected' : ''}>${g}</option>`).join('')}
+        </select>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=2;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob3btn" ${!ob.grade ? 'disabled' : ''} onclick="ob.step=getNextStep(3);renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 4 — UNDERGRAD/POSTGRAD DETAILS
+  if (ob.step === 4) {
+    c.innerHTML = `
+      ${obTio('"Provide some details about your degree so I can align with your university curriculum."')}
+      <div class="h2 mb4">Degree Details</div>
+      <p class="sub">Let\'s customize your higher education courses</p>
+      <div class="inp-wrap">
+        <label class="inp-label">DEGREE TYPE (E.G. B.TECH, BSC, BA)</label>
+        <input class="inp" id="obdeg" placeholder="e.g. B.Sc." value="${esc(ob.degree)}" oninput="ob.degree=this.value;checkOb4()">
+      </div>
+      <div class="inp-wrap">
+        <label class="inp-label">MAJOR (E.G. COMPUTER SCIENCE, PHYSICS)</label>
+        <input class="inp" id="obmaj" placeholder="e.g. Computer Science" value="${esc(ob.major)}" oninput="ob.major=this.value;checkOb4()">
+      </div>
+      <div class="inp-wrap">
+        <label class="inp-label">SPECIALIZATION (OPTIONAL)</label>
+        <input class="inp" id="obspec" placeholder="e.g. AI & Robotics" value="${esc(ob.specialization)}" oninput="ob.specialization=this.value">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=3;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob4btn" ${!ob.degree || !ob.major ? 'disabled' : ''} onclick="ob.step=getNextStep(4);renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 5 — CURRICULUM
+  if (ob.step === 5) {
+    c.innerHTML = `
+      ${obTio('"Which curriculum guidelines do you study under?"')}
+      <div class="h2 mb4">Curriculum / Board</div>
+      <p class="sub">Aligning lessons with official topics</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px">
+        ${EDU_BOARDS.map(b => `<button class="obtn${ob.board === b ? ' on' : ''}" onclick="selectBoard('${b}', this)" data-board="1">${b}</button>`).join('')}
+      </div>
+      <div class="inp-wrap" id="other-board-wrap" style="display:${ob.board === 'Other' ? 'block' : 'none'}">
+        <label class="inp-label">ENTER CUSTOM CURRICULUM</label>
+        <input class="inp" id="obboardother" placeholder="e.g. State Board" value="${esc(ob.boardOther)}" oninput="ob.boardOther=this.value;document.getElementById('ob5btn').disabled=!this.value.trim()">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=getPrevStep(5);renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob5btn" ${!ob.board || (ob.board === 'Other' && !ob.boardOther) ? 'disabled' : ''} onclick="ob.step=getNextStep(5);renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 6 — STREAM (Grade 11/12 only)
+  if (ob.step === 6) {
+    c.innerHTML = `
+      ${obTio('"Which stream are you in? This decides which subjects I\'ll offer you next."')}
+      <div class="h2 mb4">Stream</div>
+      <p class="sub">Select your academic stream</p>
+      <div style="display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:20px">
+        ${STREAMS_11_12.map(s => `<button class="obtn${ob.stream === s ? ' on' : ''}" onclick="ob.stream='${s}';ob.subjects=[];document.querySelectorAll('[data-stream]').forEach(x=>x.classList.remove('on'));this.classList.add('on');document.getElementById('ob6btn').disabled=false" data-stream="1">${s}</button>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=getPrevStep(6);renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob6btn" ${!ob.stream ? 'disabled' : ''} onclick="ob.step=getNextStep(6);renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 7 — SUBJECTS
+  if (ob.step === 7) {
+    const opts = isHighSchool() ? (SUBJECTS_BY_STREAM[ob.stream] || SUBJECTS_K10) : SUBJECTS_K10;
+    if (!ob.subjects) ob.subjects = [];
+    c.innerHTML = `
+      ${obTio('"Pick the subjects you\'re studying this year. I\'ll build your courses around exactly these — nothing extra, nothing missing."')}
+      <div class="h2 mb4">Your Subjects</div>
+      <p class="sub">Select all subjects you study this year</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
+        ${opts.map(s => `<button class="obtn${ob.subjects.includes(s) ? ' on' : ''}" onclick="toggleObSubject('${s.replace(/'/g, "\\'")}', this)" data-subj="1">${s}</button>`).join('')}
+      </div>
+      <div class="inp-wrap">
+        <label class="inp-label">ADD ANOTHER SUBJECT (OPTIONAL)</label>
+        <div style="display:flex;gap:8px">
+          <input class="inp" id="obsubjother" placeholder="e.g. Sanskrit, Music">
+          <button class="btn bgh bsm" onclick="addObSubjectOther()">Add</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=getPrevStep(7);renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob7btn" ${ob.subjects.length === 0 ? 'disabled' : ''} onclick="ob.step=getNextStep(7);renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 8B — LEARNING STYLE
+  if (ob.step === 8) {
+    c.innerHTML = `
+      ${obTio('"How do you absorb information best? I\'ll adapt my explanations to match this style!"')}
+      <div class="h2 mb4">Learning Style</div>
+      <p class="sub">Select your preferred format</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:20px">
+        ${LEARN_STYLES.map(s => `<div onclick="ob.lstyle='${s.n}';document.querySelectorAll('[data-ls]').forEach(x=>x.classList.remove('on'));this.classList.add('on');document.getElementById('ob8btn').disabled=false" data-ls="1" class="mode-card${ob.lstyle === s.n ? ' on mode-creative' : ' mode-general'}" style="text-align:center;padding:12px">
+          <div style="font-size:30px;margin-bottom:6px">${s.ic}</div>
+          <div style="font-weight:700;color:#fff;font-size:14px">${s.n}</div>
+          <div style="color:var(--mut);font-size:11px;margin-top:3px">${s.d}</div>
+        </div>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=getPrevStep(8);renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob8btn" ${!ob.lstyle ? 'disabled' : ''} onclick="ob.step=9;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 9 — STUDY AVAILABILITY
+  if (ob.step === 9) {
+    const times = ['10 min', '30 min', '1 hour', '2+ hours'];
+    c.innerHTML = `
+      ${obTio('"How much time can you commit to learning every day? I\'ll pace your courses to fit this."')}
+      <div class="h2 mb4">Daily Availability</div>
+      <p class="sub">Set your daily learning target</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:20px">
+        ${times.map(t => `<div onclick="ob.time='${t}';document.querySelectorAll('[data-time]').forEach(x=>x.classList.remove('on'));this.classList.add('on');document.getElementById('ob9btn').disabled=false" data-time="1" class="mode-card mode-general${ob.time === t ? ' on' : ''}" style="text-align:center;padding:16px">
+          <div style="font-size:22px;margin-bottom:5px">⏰</div>
+          <div style="font-weight:700;color:#fff;font-size:15px">${t}</div>
+        </div>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=8;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" id="ob9btn" ${!ob.time ? 'disabled' : ''} onclick="ob.step=10;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 10 — ATTENTION SPAN
+  if (ob.step === 10) {
+    const spans = ['Short (5-10m)', 'Medium (15-30m)', 'Long (45m+)'];
+    c.innerHTML = `
+      ${obTio('"What is your attention span during continuous study? I\'ll introduce quick revision sessions and breaks accordingly."')}
+      <div class="h2 mb4">Attention Span</div>
+      <p class="sub">Customize the length of continuous lectures</p>
+      <div style="display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:20px">
+        ${spans.map(s => `<button class="obtn${ob.attentionSpan === s ? ' on' : ''}" onclick="ob.attentionSpan='${s}';document.querySelectorAll('[data-span]').forEach(x=>x.classList.remove('on'));this.classList.add('on')" data-span="1">${s}</button>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=9;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" onclick="ob.step=11;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 11 — DIFFICULTY PREFERENCE
+  if (ob.step === 11) {
+    const diffs = ['Beginner', 'Intermediate', 'Advanced'];
+    c.innerHTML = `
+      ${obTio('"What starting difficulty level do you prefer for practice quizzes and chapter assessments?"')}
+      <div class="h2 mb4">Difficulty Preference</div>
+      <p class="sub">Set the initial challenge level</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px">
+        ${diffs.map(d => `<button class="obtn${ob.difficulty === d ? ' on' : ''}" onclick="ob.difficulty='${d}';document.querySelectorAll('[data-diff]').forEach(x=>x.classList.remove('on'));this.classList.add('on')" data-diff="1">${d}</button>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=10;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" onclick="ob.step=12;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 12 — MENTOR PERSONALITY
+  if (ob.step === 12) {
+    const tones = [
+      { n: 'Friendly', ic: '😊', d: 'Warm, encouraging, and supportive guidance' },
+      { n: 'Strict', ic: '👨‍🏫', d: 'Focused on high standard results and direct critiques' },
+      { n: 'Motivational', ic: '🔥', d: 'High energy, inspiring, and pushes your boundaries' },
+      { n: 'Playful', ic: '🎭', d: 'Loaded with memes, fun puns, and engaging storytelling' },
+      { n: 'Genius', ic: '🧠', d: 'Deep insights, scientific logic, and advanced terms' }
+    ];
+    c.innerHTML = `
+      ${obTio('"Choose my mentoring persona. I\'ll adapt my chat response style and feedback vocabulary!"')}
+      <div class="h2 mb4">Mentor Personality</div>
+      <p class="sub">Select the style of teaching guidance</p>
+      <div style="display:grid;grid-template-columns:1fr;gap:6px;max-height:260px;overflow-y:auto;padding-right:4px">
+        ${tones.map(t => `<div class="ni${ob.mentorTone === t.n ? ' on' : ''}" onclick="ob.mentorTone='${t.n}';renderOBS()" style="padding:10px 12px;margin-bottom:3px">
+          <span style="font-size:20px;margin-right:8px">${t.ic}</span>
+          <div><div style="font-weight:700;font-size:13px;color:#fff">${t.n}</div><div style="color:var(--mut);font-size:11px">${t.d}</div></div>
+        </div>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn bgh" onclick="ob.step=11;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" onclick="ob.step=13;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 13 — CAREER GOALS
+  if (ob.step === 13) {
+    c.innerHTML = `
+      ${obTio('"What are your long-term career aspirations? E.g. Software Engineer, Doctor, Quantitative Analyst, Marketing Director."')}
+      <div class="h2 mb4">Career Goals</div>
+      <p class="sub">Help me recommend subjects aligned with your dream role</p>
+      <div class="inp-wrap">
+        <label class="inp-label">TARGET ROLE / CAREER</label>
+        <input class="inp" id="obcareer" placeholder="e.g. AI Researcher, Entrepreneur" value="${esc(ob.careerText)}" oninput="ob.careerText=this.value">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=12;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" onclick="ob.step=14;renderOBS()">Continue →</button>
+      </div>`;
+    return;
+  }
+
+  // STEP 14 — PREFERRED EXPERIENCE MODE
+  if (ob.step === 14) {
+    c.innerHTML = `
+      ${obTio('"Finally, how do you want the interface and progress mechanics to feel?"')}
+      <div class="h2 mb4">Interface Vibe</div>
+      <p class="sub">Choose between professional utility vs. rich gamification</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+        <div onclick="ob.mode='general';document.querySelectorAll('[data-mode]').forEach(x=>x.classList.remove('on'));this.classList.add('on')" data-mode="1" class="mode-card mode-general${ob.mode === 'general' ? ' on' : ''}">
+          <div style="font-size:28px;margin-bottom:9px">🎯</div>
+          <div style="font-weight:700;color:#fff;font-size:14px;margin-bottom:5px">Professional Mode</div>
+          <div style="color:var(--sub);font-size:12px;line-height:1.5">Clean, distraction-free, professional. Pure educational focus.</div>
+        </div>
+        <div onclick="ob.mode='creative';document.querySelectorAll('[data-mode]').forEach(x=>x.classList.remove('on'));this.classList.add('on')" data-mode="1" class="mode-card mode-creative${ob.mode === 'creative' ? ' on' : ''}">
+          <div style="font-size:28px;margin-bottom:9px">🎮</div>
+          <div style="font-weight:700;color:#fff;font-size:14px;margin-bottom:5px">Creative Mode</div>
+          <div style="color:var(--sub);font-size:12px;line-height:1.5">Gamified, animated, vibrant. Playful learning with XP, streaks & badges.</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn bgh" onclick="ob.step=13;renderOBS()">← Back</button>
+        <button class="btn bpri bfull" onclick="obDone()">🚀 Launch Mentorix V3</button>
+      </div>`;
+    return;
+  }
+}
+
+function selectBoard(board, el) {
+  ob.board = board;
+  document.querySelectorAll('[data-board]').forEach(x => x.classList.remove('on'));
+  el.classList.add('on');
+  const otherWrap = document.getElementById('other-board-wrap');
+  if (otherWrap) {
+    otherWrap.style.display = board === 'Other' ? 'block' : 'none';
+  }
+  const btn = document.getElementById('ob5btn');
+  if (btn) {
+    btn.disabled = board === 'Other' && !ob.boardOther.trim();
+  }
+}
+
+function checkOb4() {
+  const btn = document.getElementById('ob4btn');
+  if (btn) {
+    btn.disabled = !ob.degree.trim() || !ob.major.trim();
+  }
+}
+
+function toggleObSubject(s, el) {
+  if (!ob.subjects) ob.subjects = [];
+  const idx = ob.subjects.indexOf(s);
+  if (idx === -1) {
+    ob.subjects.push(s);
+    el.classList.add('on');
+  } else {
+    ob.subjects.splice(idx, 1);
+    el.classList.remove('on');
+  }
+  const btn = document.getElementById('ob7btn');
+  if (btn) btn.disabled = ob.subjects.length === 0;
+}
+
+function addObSubjectOther() {
+  const inp = document.getElementById('obsubjother');
+  if (!inp) return;
+  const val = inp.value.trim();
+  if (!val) return;
+  if (!ob.subjects) ob.subjects = [];
+  if (!ob.subjects.includes(val)) {
+    ob.subjects.push(val);
+    toast(`Added ${val}`, 'ok2');
+    renderOBS();
+  }
+  inp.value = '';
+}
+
+async function obDone() {
+  // Reentrance guard — prevents double-submit from rapid taps
+  if (window._obRunning) return;
+  window._obRunning = true;
+  const launchBtn = document.querySelector('[onclick="obDone()"]');
+  if (launchBtn) { launchBtn.disabled = true; launchBtn.textContent = 'Building your courses…'; }
+
+  D.profile = {
+    name: ob.name || 'Learner',
+    age: ob.ageNum,
+    goal: ob.goal || 'General Curiosity',
+    grade: ob.grade || '',
+    degree: ob.degree || '',
+    major: ob.major || '',
+    specialization: ob.specialization || '',
+    board: ob.board === 'Other' ? (ob.boardOther || 'Other') : (ob.board || ''),
+    stream: ob.stream || '',
+    lstyle: ob.lstyle || 'Mixed',
+    time: ob.time || '1 hour',
+    attentionSpan: ob.attentionSpan || 'Medium (15-30m)',
+    difficulty: ob.difficulty || 'Medium',
+    mentorTone: ob.mentorTone || 'Friendly',
+    careers: ob.careerText ? [ob.careerText] : [],
+    careerText: ob.careerText || '',
+    mode: ob.mode || 'creative',
+    subjects: (ob.subjects && ob.subjects.length) ? ob.subjects.slice() : []
+  };
+  
+  D.xp = 100;
+  D.streak = 1;
+  D.lastStudy = new Date().toDateString();
+  D.badges = ['First Step'];
+  D.topics = [];
+  D.notes = {};
+  D.roadmaps = [];
+  
+  // Apply settings
+  D.settings.mentorTone = (ob.mentorTone || 'Friendly').toLowerCase();
+  D.settings.difficulty = (ob.difficulty || 'Medium').toLowerCase();
+  // Don't force cream/lively — keep user's chosen theme or default dark
+  if(!D.settings.appTheme || D.settings.appTheme==='cream') D.settings.appTheme = 'dark';
+  if(!D.settings.colorTheme || D.settings.colorTheme==='cream') D.settings.colorTheme = 'dark';
+  
+  try {
+    D.courses = await generateAutoCoursesAsync(D.profile, (i, total, subj) => {
+      if (launchBtn) launchBtn.textContent = `Building ${subj}… (${i+1}/${total})`;
+    });
+  } catch (e) {
+    D.courses = [];
+    toast('Course generation hit a snag — you can retry from Courses.', 'err');
+  }
+  
+  D.chatMsgs = [{ r: 'ai', c: `Hey ${(ob.name || 'there').split(' ')[0]}! 👋 I'm Tio, your personal AI mentor. Your V3 profile is all set! I've loaded your curriculum structure and customized everything. What shall we learn first? 🚀` }];
+  
+  saveNow(); // Critical path — use immediate save, not debounced, so profile+courses persist even if tab closes
+  initApp();
+  go('courses');
+  window._obRunning = false; // release guard
+}
+
+function obSkipToLearn() {
+  // True skip: no fake profile, no auto-generated courses.
+  // The user explicitly chose not to personalize, so Mentorix should not
+  // silently assign curriculum. They land on an empty Courses screen where
+  // "Generate Courses Now" will ask for grade/board/subjects before building anything.
+  D.profile = null;
+  D.xp = 0;
+  D.streak = 0;
+  D.badges = [];
+  D.topics = [];
+  D.notes = {};
+  D.roadmaps = [];
+  D.courses = [];
+  
+  D.chatMsgs = [{ r: 'ai', c: "Hey there! 👋 I'm Tio. You skipped personalization, so I haven't built any courses yet — head to Courses whenever you're ready and I'll ask a couple of quick questions first so I get your syllabus right. Until then, search any topic and I'll teach it on the spot! 🚀" }];
+  
+  initApp();
+  setTimeout(() => go('dash'), 100);
+}
+
+/* ── COURSE AUTO-GENERATION ENGINE & DATA MODEL ── */
+
+// Builds one real, syllabus-scoped course for a single subject via AI.
+// Strictly constrained to the exact board+grade+stream+subject given —
+// no out-of-syllabus content, no generic filler.
+async function generateSubjectCourseAI(profile, subject) {
+  const grade = profile.grade || '';
+  const board = profile.board || '';
+  const stream = profile.stream || '';
+  const sys = `You are a curriculum architect who only outputs real, accurate, syllabus-matched course structures. Output ONLY valid JSON, no markdown, no commentary.`;
+  const p = `Build a complete course structure for this EXACT student:
+Board: ${board}
+Grade/Level: ${grade}
+${stream ? `Stream: ${stream}\n` : ''}Subject: ${subject}
+
+STRICT RULES:
+- Use ONLY topics that are actually part of the real ${board} ${grade} ${subject} syllabus${stream ? ` (${stream} stream)` : ''}. Do not invent topics that aren't in the real curriculum.
+- Do not include content from a different grade or board.
+- Organize into 3-6 units, each with 2-5 chapters, each chapter with 3-6 topics — matching how the real syllabus is actually structured (textbook chapter order if you know it).
+- Topic titles must be specific and exam-relevant (e.g. "Newton's Second Law" not "Forces").
+- You may add at most ONE short "Did you know?" aside per unit as a fun fact — keep it clearly separate, never blended into core topic titles.
+- If you are not confident about the exact official syllabus for this board/grade/subject, build the closest accurate approximation based on standard ${grade}-level ${subject} curricula, and keep scope conservative rather than guessing extra chapters.
+
+Output ONLY this JSON structure:
+{"units":[{"name":"Unit name","didYouKnow":"optional short fun fact or empty string","chapters":[{"name":"Chapter name","topics":["Topic 1","Topic 2","Topic 3"]}]}]}`;
+  const raw = await ai([{role:'user',content:p}], sys, 3500, true);
+  const data = pJSON(raw);
+  if (!data?.units || data.units.length === 0) {
+    throw new Error(`Couldn't generate ${subject} curriculum. Please try again.`);
+  }
+  return createCourseTemplate(`${grade} ${board} - ${subject}`, subject, data.units);
+}
+
+// Generates one course per selected subject. Keeps the hand-curated Grade 10
+// CBSE templates (Math/Science/English) as-is for quality + speed, since those
+// are verified-accurate; every other board/grade/subject combination is
+// AI-generated, scoped strictly to that exact selection.
+
+function getStaticCourseTemplate(grade, board, subject) {
+  const prefix = `${grade} ${board}`;
+  const sNorm = (subject || '').trim().toLowerCase();
+  
+  if (grade === 'Grade 12' && board === 'CBSE') {
+    if (sNorm === 'mathematics') {
+      return createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+        {
+          name: 'Unit 1: Relations and Functions',
+          chapters: [
+            { name: 'Relations and Functions', topics: ['Types of Relations', 'Reflexive, Symmetric and Transitive Relations', 'One-to-One and Onto Functions', 'Composite Functions & Inverse of a Function'] },
+            { name: 'Inverse Trigonometric Functions', topics: ['Definition, Range, Domain & Principal Value Branches', 'Graphs of Inverse Trigonometric Functions', 'Properties of Inverse Trigonometric Functions'] }
+          ]
+        },
+        {
+          name: 'Unit 2: Algebra',
+          chapters: [
+            { name: 'Matrices', topics: ['Concept, Notation, Order & Equality', 'Types of Matrices (Zero, Identity, Symmetric)', 'Operations on Matrices (Addition, Multiplication)', 'Transpose of a Matrix & Invertible Matrices'] },
+            { name: 'Determinants', topics: ['Determinant of a Square Matrix', 'Properties of Determinants', 'Minors, Cofactors & Adjoint of a Matrix', 'Inverse of a Matrix using Determinants', 'Solving Linear Equations using Matrix Inverse'] }
+          ]
+        },
+        {
+          name: 'Unit 3: Calculus & Continuity',
+          chapters: [
+            { name: 'Continuity and Differentiability', topics: ['Continuity of a Function', 'Differentiability & Chain Rule', 'Derivatives of Implicit & Inverse Trig Functions', 'Exponential & Logarithmic Functions', 'Second Order Derivatives', 'Rolle\'s and Lagrange\'s Mean Value Theorems'] },
+            { name: 'Applications of Derivatives', topics: ['Rate of Change of Quantities', 'Increasing and Decreasing Functions', 'Tangents and Normals', 'Approximations', 'Maxima and Minima (First and Second Derivative Tests)'] },
+            { name: 'Integrals', topics: ['Integration as Inverse of Differentiation', 'Integration by Substitution', 'Integration by Partial Fractions', 'Integration by Parts', 'Definite Integrals as Limit of a Sum', 'Fundamental Theorem of Calculus', 'Properties of Definite Integrals'] },
+            { name: 'Applications of Integrals', topics: ['Area under Simple Curves', 'Area between Two Curves (Lines, Parabolas, Circles)'] },
+            { name: 'Differential Equations', topics: ['Order and Degree of Differential Equations', 'General and Particular Solutions', 'Homogeneous Differential Equations', 'Linear Differential Equations of First Order'] }
+          ]
+        },
+        {
+          name: 'Unit 4: Vectors & 3D Geometry',
+          chapters: [
+            { name: 'Vector Algebra', topics: ['Vectors and Scalars', 'Direction Cosines and Direction Ratios', 'Types of Vectors', 'Addition of Vectors & Scalar Multiplication', 'Dot Product of Two Vectors', 'Cross Product of Two Vectors'] },
+            { name: 'Three Dimensional Geometry', topics: ['Direction Cosines and Ratios of a Line', 'Equation of a Line in Space', 'Shortest Distance between Two Lines', 'Equation of a Plane', 'Angle between Two Lines/Planes', 'Distance of a Point from a Plane'] }
+          ]
+        },
+        {
+          name: 'Unit 5: Linear Programming & Probability',
+          chapters: [
+            { name: 'Linear Programming', topics: ['Introduction & Formulation of LPP', 'Graphical Solution Method', 'Feasible and Infeasible Regions', 'Optimal Feasible Solutions'] },
+            { name: 'Probability', topics: ['Conditional Probability', 'Multiplication Theorem on Probability', 'Independent Events & Bayes\' Theorem', 'Random Variables & Probability Distributions', 'Mean and Variance of Random Variable', 'Bernoulli Trials & Binomial Distribution'] }
+          ]
+        }
+      ]);
+    }
+    if (sNorm === 'physics' || sNorm === 'science') {
+      return createCourseTemplate(`${prefix} - Physics`, 'Science', [
+        {
+          name: 'Unit 1: Electrostatics',
+          chapters: [
+            { name: 'Electric Charges and Fields', topics: ['Electric Charge & Conservation', 'Coulomb\'s Law', 'Electric Field & Field Lines', 'Electric Dipole & Dipole Moment', 'Gauss\'s Theorem & Applications'] },
+            { name: 'Electrostatic Potential and Capacitance', topics: ['Electric Potential & Potential Difference', 'Potential due to a Point Charge/Dipole', 'Equipotential Surfaces', 'Capacitors and Capacitance', 'Parallel Plate Capacitor & Dielectrics', 'Combination of Capacitors in Series/Parallel'] }
+          ]
+        },
+        {
+          name: 'Unit 2: Current Electricity',
+          chapters: [
+            { name: 'Current Electricity', topics: ['Electric Current & Drift Velocity', 'Ohm\'s Law & Electrical Resistance', 'V-I Characteristics & Temperature Dependence', 'EMF, Internal Resistance & Terminal Voltage', 'Kirchhoff\'s Rules & Applications', 'Wheatstone Bridge & Potentiometer'] }
+          ]
+        },
+        {
+          name: 'Unit 3: Magnetism & Induction',
+          chapters: [
+            { name: 'Moving Charges and Magnetism', topics: ['Biot-Savart Law & Applications', 'Ampere\'s Circuital Law', 'Force on a Moving Charge in Magnetic Field', 'Cyclotron', 'Force on a Current-Carrying Conductor', 'Torque on a Current Loop & Moving Coil Galvanometer'] },
+            { name: 'Magnetism and Matter', topics: ['Bar Magnet & Magnetic Field Intensity', 'Earth\'s Magnetic Field & Elements', 'Para-, Dia-, and Ferro-magnetic Substances'] },
+            { name: 'Electromagnetic Induction', topics: ['Faraday\'s Laws of Induction', 'Lenz\'s Law & Induced EMF', 'Self and Mutual Induction', 'Eddy Currents'] },
+            { name: 'Alternating Current', topics: ['Peak and RMS Values of AC', 'Reactance and Impedance (LCR Series Circuit)', 'Resonance in LCR Circuits', 'Power in AC Circuits & Wattless Current', 'AC Generator and Transformer'] }
+          ]
+        },
+        {
+          name: 'Unit 4: Wave & Ray Optics',
+          chapters: [
+            { name: 'Ray Optics and Optical Instruments', topics: ['Reflection and Refraction of Light', 'Total Internal Reflection & Applications', 'Refraction at Spherical Surfaces & Lenses', 'Lens Maker\'s Formula', 'Magnifying Power of Microscopes & Telescopes'] },
+            { name: 'Wave Optics', topics: ['Wavefront and Huygens\' Principle', 'Proof of Laws of Reflection/Refraction', 'Interference of Light & Young\'s Double Slit Experiment', 'Diffraction of Light & Single Slit Width', 'Polarisation of Light & Brewster\'s Law'] }
+          ]
+        },
+        {
+          name: 'Unit 5: Modern Physics & Devices',
+          chapters: [
+            { name: 'Dual Nature of Matter and Radiation', topics: ['Photoelectric Effect & Einstein\'s Equation', 'Hertz and Lenard\'s Observations', 'Matter Waves & de Broglie Relation'] },
+            { name: 'Atoms and Nuclei', topics: ['Alpha-particle Scattering Experiment', 'Rutherford & Bohr Models of Atom', 'Hydrogen Line Spectra', 'Composition and Size of Nucleus', 'Mass-Energy Relation & Binding Energy', 'Radioactivity (Alpha, Beta, Gamma Decay)', 'Nuclear Fission and Fusion'] },
+            { name: 'Semiconductor Electronics', topics: ['Energy Bands in Solids', 'Intrinsic and Extrinsic Semiconductors', 'p-n Junction Diode & V-I Characteristics', 'Diode as a Rectifier (Half/Full Wave)', 'Special Purpose p-n Junction Diodes (LED, Photodiode, Solar Cell)'] }
+          ]
+        }
+      ]);
+    }
+  } else if (grade === 'Grade 10' && board === 'CBSE') {
+    if (sNorm === 'mathematics') {
+      return createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+        {
+          name: 'Unit 1: Number Systems & Algebra',
+          chapters: [
+            { name: 'Real Numbers', topics: ['Euclid Division Lemma', 'Fundamental Theorem of Arithmetic', 'Irrational Numbers Proof', 'Decimal Expansions'] },
+            { name: 'Polynomials', topics: ['Geometrical Meaning of Zeroes', 'Zeroes and Coefficients Relationship', 'Division Algorithm'] },
+            { name: 'Pair of Linear Equations in Two Variables', topics: ['Graphical Solution', 'Substitution Method', 'Elimination Method', 'Cross-Multiplication Method', 'Equations Reducible to Linear'] },
+            { name: 'Quadratic Equations', topics: ['Standard Form of Quadratics', 'Solving by Factoring', 'Solving by Completing Square', 'Quadratic Formula', 'Nature of Roots'] },
+            { name: 'Arithmetic Progressions', topics: ['Introduction to AP', 'nth Term of an AP', 'Sum of First n Terms', 'AP Word Problems'] }
+          ]
+        },
+        {
+          name: 'Unit 2: Coordinate Geometry',
+          chapters: [
+            { name: 'Coordinate Geometry', topics: ['Distance Formula', 'Section Formula', 'Area of a Triangle'] }
+          ]
+        },
+        {
+          name: 'Unit 3: Geometry',
+          chapters: [
+            { name: 'Triangles', topics: ['Similar Figures', 'Basic Proportionality Theorem', 'Criteria for Similarity', 'Pythagoras Theorem'] },
+            { name: 'Circles', topics: ['Tangents to a Circle', 'Number of Tangents from a Point'] }
+          ]
+        },
+        {
+          name: 'Unit 4: Trigonometry',
+          chapters: [
+            { name: 'Introduction to Trigonometry', topics: ['Trigonometric Ratios', 'Ratios of Specific Angles', 'Complementary Angles', 'Trigonometric Identities'] },
+            { name: 'Some Applications of Trigonometry', topics: ['Line of Sight', 'Angle of Elevation', 'Angle of Depression', 'Height and Distance Problems'] }
+          ]
+        },
+        {
+          name: 'Unit 5: Mensuration',
+          chapters: [
+            { name: 'Areas Related to Circles', topics: ['Perimeter and Area of Circle', 'Area of Sector and Segment'] },
+            { name: 'Surface Areas and Volumes', topics: ['Combination of Solids', 'Conversion of Solids', 'Frustum of a Cone'] }
+          ]
+        },
+        {
+          name: 'Unit 6: Statistics & Probability',
+          chapters: [
+            { name: 'Statistics', topics: ['Mean of Grouped Data', 'Mode of Grouped Data', 'Median of Grouped Data', 'Cumulative Frequency Graph'] },
+            { name: 'Probability', topics: ['Classical Probability', 'Single Event Problems'] }
+          ]
+        }
+      ]);
+    }
+    if (sNorm === 'science') {
+      return createCourseTemplate(`${prefix} - Science`, 'Science', [
+        {
+          name: 'Unit 1: Chemical Substances - Nature and Behaviour',
+          chapters: [
+            { name: 'Chemical Reactions and Equations', topics: ['Balancing Equations', 'Types of Reactions', 'Redox Reactions', 'Corrosion and Rancidity'] },
+            { name: 'Acids, Bases and Salts', topics: ['General Properties', 'pH Scale Importance', 'Sodium Hydroxide and Bleaching Powder', 'Baking Soda and Washing Soda', 'Plaster of Paris'] },
+            { name: 'Metals and Non-Metals', topics: ['Physical and Chemical Properties', 'Reactivity Series', 'Extraction of Metals', 'Corrosion Prevention'] },
+            { name: 'Carbon and its Compounds', topics: ['Covalent Bonding', 'Versatile Nature of Carbon', 'Homologous Series', 'Functional Groups', 'Soaps and Detergents'] }
+          ]
+        },
+        {
+          name: 'Unit 2: World of Living',
+          chapters: [
+            { name: 'Life Processes', topics: ['Autotrophic and Heterotrophic Nutrition', 'Respiration', 'Transportation in Humans and Plants', 'Excretion in Humans and Plants'] },
+            { name: 'Control and Coordination', topics: ['Reflex Action', 'Nervous System', 'Human Brain Anatomy', 'Plant Hormones', 'Animal Hormones'] },
+            { name: 'How do Organisms Reproduce?', topics: ['Asexual Reproduction', 'Sexual Reproduction in Plants', 'Sexual Reproduction in Humans', 'Reproductive Health'] },
+            { name: 'Heredity and Evolution', topics: ['Mendel Laws', 'Sex Determination', 'Basic Evolution Theories'] }
+          ]
+        },
+        {
+          name: 'Unit 3: Natural Phenomena',
+          chapters: [
+            { name: 'Light - Reflection and Refraction', topics: ['Spherical Mirrors', 'Refractive Index', 'Spherical Lenses', 'Lens Formula and Power'] },
+            { name: 'Human Eye and Colorful World', topics: ['Structure of Eye', 'Defects of Vision', 'Prism Refraction', 'Scattering and Dispersion'] }
+          ]
+        },
+        {
+          name: 'Unit 4: Effects of Current & Natural Resources',
+          chapters: [
+            { name: 'Electricity', topics: ['Electric Current', 'Potential Difference', 'Ohm Law', 'Resistance', 'Series and Parallel Combinations', 'Heating Effects of Current'] },
+            { name: 'Magnetic Effects of Electric Current', topics: ['Magnetic Field Lines', 'Field due to Straight Wire and Loop', 'Solenoid', 'Fleming Left Hand Rule', 'Electric Motor', 'Electromagnetic Induction'] },
+            { name: 'Our Environment', topics: ['Ecosystem', 'Food Chain and Web', 'Ozone Layer Depletion', 'Waste Management'] }
+          ]
+        }
+      ]);
+    }
+    if (sNorm === 'english') {
+      return createCourseTemplate(`${prefix} - English`, 'English', [
+        {
+          name: 'Grammar and Composition',
+          chapters: [
+            { name: 'Applied Grammar', topics: ['Tenses and Aspects', 'Modal Auxiliaries', 'Active and Passive Voice', 'Subject-Verb Agreement', 'Reported Speech'] },
+            { name: 'Writing Skills', topics: ['Formal Letter Writing', 'Analytical Paragraph Writing', 'Descriptive Paragraphs', 'Story Writing'] }
+          ]
+        }
+      ]);
+    }
+  }
+  return null;
+}
+
+async function generateAutoCoursesAsync(profile, onProgress) {
+  if (profile.goal === 'Academic Learning') {
+    const grade = profile.grade || 'Grade 10';
+    const board = profile.board || 'CBSE';
+    
+    const boardOrGradeChanged = D.courses && D.courses.length > 0 && 
+      (!D.courses[0].title.includes(board) || !D.courses[0].title.includes(grade));
+      
+    const existingSubjects = new Set(boardOrGradeChanged ? [] : (D.courses || []).map(c => c.subject));
+    
+    const allSubjects = (profile.subjects && profile.subjects.length)
+      ? profile.subjects
+      : (grade === 'Grade 12' ? ['Mathematics', 'Physics', 'Chemistry'] : ['Mathematics', 'Science', 'English']);
+      
+    const subjects = allSubjects.filter(s => !existingSubjects.has(s));
+    
+    if (subjects.length === 0) {
+      return [];
+    }
+    
+    const courses = [];
+    for (let i = 0; i < subjects.length; i++) {
+      const subj = subjects[i];
+      if (onProgress) onProgress(i, subjects.length, subj);
+      
+      const staticCourse = getStaticCourseTemplate(grade, board, subj);
+      if (staticCourse) {
+        courses.push(staticCourse);
+      } else {
+        try {
+          const course = await generateSubjectCourseAI(profile, subj);
+          if (course) courses.push(course);
+        } catch (e) {
+          console.error('[Mentorix] Failed to generate dynamic course for:', subj, e);
+        }
+      }
+    }
+    if (courses.length === 0) {
+      throw new Error('Could not generate any courses. Please check your connection and try again.');
+    }
+    return courses;
+  }
+  return generateAutoCourses(profile);
+}
+
+function generateAutoCourses(profile) {
+  let courses = [];
+  if (profile.goal === 'Academic Learning') {
+    const grade = profile.grade || 'Grade 10';
+    const curr = profile.board || 'CBSE';
+    const prefix = `${grade} ${curr}`;
+    
+    if (grade === 'Grade 12' && curr === 'CBSE') {
+      courses = [
+        createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+          {
+            name: 'Unit 1: Relations and Functions',
+            chapters: [
+              { name: 'Relations and Functions', topics: ['Types of Relations', 'Reflexive, Symmetric and Transitive Relations', 'One-to-One and Onto Functions', 'Composite Functions & Inverse of a Function'] },
+              { name: 'Inverse Trigonometric Functions', topics: ['Definition, Range, Domain & Principal Value Branches', 'Graphs of Inverse Trigonometric Functions', 'Properties of Inverse Trigonometric Functions'] }
+            ]
+          },
+          {
+            name: 'Unit 2: Algebra',
+            chapters: [
+              { name: 'Matrices', topics: ['Concept, Notation, Order & Equality', 'Types of Matrices (Zero, Identity, Symmetric)', 'Operations on Matrices (Addition, Multiplication)', 'Transpose of a Matrix & Invertible Matrices'] },
+              { name: 'Determinants', topics: ['Determinant of a Square Matrix', 'Properties of Determinants', 'Minors, Cofactors & Adjoint of a Matrix', 'Inverse of a Matrix using Determinants', 'Solving Linear Equations using Matrix Inverse'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Calculus & Continuity',
+            chapters: [
+              { name: 'Continuity and Differentiability', topics: ['Continuity of a Function', 'Differentiability & Chain Rule', 'Derivatives of Implicit & Inverse Trig Functions', 'Exponential & Logarithmic Functions', 'Second Order Derivatives', 'Rolle\'s and Lagrange\'s Mean Value Theorems'] },
+              { name: 'Applications of Derivatives', topics: ['Rate of Change of Quantities', 'Increasing and Decreasing Functions', 'Tangents and Normals', 'Approximations', 'Maxima and Minima (First and Second Derivative Tests)'] },
+              { name: 'Integrals', topics: ['Integration as Inverse of Differentiation', 'Integration by Substitution', 'Integration by Partial Fractions', 'Integration by Parts', 'Definite Integrals as Limit of a Sum', 'Fundamental Theorem of Calculus', 'Properties of Definite Integrals'] },
+              { name: 'Applications of Integrals', topics: ['Area under Simple Curves', 'Area between Two Curves (Lines, Parabolas, Circles)'] },
+              { name: 'Differential Equations', topics: ['Order and Degree of Differential Equations', 'General and Particular Solutions', 'Homogeneous Differential Equations', 'Linear Differential Equations of First Order'] }
+            ]
+          },
+          {
+            name: 'Unit 4: Vectors & 3D Geometry',
+            chapters: [
+              { name: 'Vector Algebra', topics: ['Vectors and Scalars', 'Direction Cosines and Direction Ratios', 'Types of Vectors', 'Addition of Vectors & Scalar Multiplication', 'Dot Product of Two Vectors', 'Cross Product of Two Vectors'] },
+              { name: 'Three Dimensional Geometry', topics: ['Direction Cosines and Ratios of a Line', 'Equation of a Line in Space', 'Shortest Distance between Two Lines', 'Equation of a Plane', 'Angle between Two Lines/Planes', 'Distance of a Point from a Plane'] }
+            ]
+          },
+          {
+            name: 'Unit 5: Linear Programming & Probability',
+            chapters: [
+              { name: 'Linear Programming', topics: ['Introduction & Formulation of LPP', 'Graphical Solution Method', 'Feasible and Infeasible Regions', 'Optimal Feasible Solutions'] },
+              { name: 'Probability', topics: ['Conditional Probability', 'Multiplication Theorem on Probability', 'Independent Events & Bayes\' Theorem', 'Random Variables & Probability Distributions', 'Mean and Variance of Random Variable', 'Bernoulli Trials & Binomial Distribution'] }
+            ]
+          }
+        ]),
+        createCourseTemplate(`${prefix} - Physics`, 'Science', [
+          {
+            name: 'Unit 1: Electrostatics',
+            chapters: [
+              { name: 'Electric Charges and Fields', topics: ['Electric Charge & Conservation', 'Coulomb\'s Law', 'Electric Field & Field Lines', 'Electric Dipole & Dipole Moment', 'Gauss\'s Theorem & Applications'] },
+              { name: 'Electrostatic Potential and Capacitance', topics: ['Electric Potential & Potential Difference', 'Potential due to a Point Charge/Dipole', 'Equipotential Surfaces', 'Capacitors and Capacitance', 'Parallel Plate Capacitor & Dielectrics', 'Combination of Capacitors in Series/Parallel'] }
+            ]
+          },
+          {
+            name: 'Unit 2: Current Electricity',
+            chapters: [
+              { name: 'Current Electricity', topics: ['Electric Current & Drift Velocity', 'Ohm\'s Law & Electrical Resistance', 'V-I Characteristics & Temperature Dependence', 'EMF, Internal Resistance & Terminal Voltage', 'Kirchhoff\'s Rules & Applications', 'Wheatstone Bridge & Potentiometer'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Magnetism & Induction',
+            chapters: [
+              { name: 'Moving Charges and Magnetism', topics: ['Biot-Savart Law & Applications', 'Ampere\'s Circuital Law', 'Force on a Moving Charge in Magnetic Field', 'Cyclotron', 'Force on a Current-Carrying Conductor', 'Torque on a Current Loop & Moving Coil Galvanometer'] },
+              { name: 'Magnetism and Matter', topics: ['Bar Magnet & Magnetic Field Intensity', 'Earth\'s Magnetic Field & Elements', 'Para-, Dia-, and Ferro-magnetic Substances'] },
+              { name: 'Electromagnetic Induction', topics: ['Faraday\'s Laws of Induction', 'Lenz\'s Law & Induced EMF', 'Self and Mutual Induction', 'Eddy Currents'] },
+              { name: 'Alternating Current', topics: ['Peak and RMS Values of AC', 'Reactance and Impedance (LCR Series Circuit)', 'Resonance in LCR Circuits', 'Power in AC Circuits & Wattless Current', 'AC Generator and Transformer'] }
+            ]
+          },
+          {
+            name: 'Unit 4: Wave & Ray Optics',
+            chapters: [
+              { name: 'Ray Optics and Optical Instruments', topics: ['Reflection and Refraction of Light', 'Total Internal Reflection & Applications', 'Refraction at Spherical Surfaces & Lenses', 'Lens Maker\'s Formula', 'Magnifying Power of Microscopes & Telescopes'] },
+              { name: 'Wave Optics', topics: ['Wavefront and Huygens\' Principle', 'Proof of Laws of Reflection/Refraction', 'Interference of Light & Young\'s Double Slit Experiment', 'Diffraction of Light & Single Slit Width', 'Polarisation of Light & Brewster\'s Law'] }
+            ]
+          },
+          {
+            name: 'Unit 5: Modern Physics & Devices',
+            chapters: [
+              { name: 'Dual Nature of Matter and Radiation', topics: ['Photoelectric Effect & Einstein\'s Equation', 'Hertz and Lenard\'s Observations', 'Matter Waves & de Broglie Relation'] },
+              { name: 'Atoms and Nuclei', topics: ['Alpha-particle Scattering Experiment', 'Rutherford & Bohr Models of Atom', 'Hydrogen Line Spectra', 'Composition and Size of Nucleus', 'Mass-Energy Relation & Binding Energy', 'Radioactivity (Alpha, Beta, Gamma Decay)', 'Nuclear Fission and Fusion'] },
+              { name: 'Semiconductor Electronics', topics: ['Energy Bands in Solids', 'Intrinsic and Extrinsic Semiconductors', 'p-n Junction Diode & V-I Characteristics', 'Diode as a Rectifier (Half/Full Wave)', 'Special Purpose p-n Junction Diodes (LED, Photodiode, Solar Cell)'] }
+            ]
+          }
+        ])
+      ];
+    } else if (grade === 'Grade 10' && curr === 'CBSE') {
+      courses = [
+        createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+          {
+            name: 'Unit 1: Number Systems & Algebra',
+            chapters: [
+              { name: 'Real Numbers', topics: ['Euclid Division Lemma', 'Fundamental Theorem of Arithmetic', 'Irrational Numbers Proof', 'Decimal Expansions'] },
+              { name: 'Polynomials', topics: ['Geometrical Meaning of Zeroes', 'Zeroes and Coefficients Relationship', 'Division Algorithm'] },
+              { name: 'Pair of Linear Equations in Two Variables', topics: ['Graphical Solution', 'Substitution Method', 'Elimination Method', 'Cross-Multiplication Method', 'Equations Reducible to Linear'] },
+              { name: 'Quadratic Equations', topics: ['Standard Form of Quadratics', 'Solving by Factoring', 'Solving by Completing Square', 'Quadratic Formula', 'Nature of Roots'] },
+              { name: 'Arithmetic Progressions', topics: ['Introduction to AP', 'nth Term of an AP', 'Sum of First n Terms', 'AP Word Problems'] }
+            ]
+          },
+          {
+            name: 'Unit 2: Coordinate Geometry',
+            chapters: [
+              { name: 'Coordinate Geometry', topics: ['Distance Formula', 'Section Formula', 'Area of a Triangle'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Geometry',
+            chapters: [
+              { name: 'Triangles', topics: ['Similar Figures', 'Basic Proportionality Theorem', 'Criteria for Similarity', 'Pythagoras Theorem'] },
+              { name: 'Circles', topics: ['Tangents to a Circle', 'Number of Tangents from a Point'] }
+            ]
+          },
+          {
+            name: 'Unit 4: Trigonometry',
+            chapters: [
+              { name: 'Introduction to Trigonometry', topics: ['Trigonometric Ratios', 'Ratios of Specific Angles', 'Complementary Angles', 'Trigonometric Identities'] },
+              { name: 'Some Applications of Trigonometry', topics: ['Line of Sight', 'Angle of Elevation', 'Angle of Depression', 'Height and Distance Problems'] }
+            ]
+          },
+          {
+            name: 'Unit 5: Mensuration',
+            chapters: [
+              { name: 'Areas Related to Circles', topics: ['Perimeter and Area of Circle', 'Area of Sector and Segment'] },
+              { name: 'Surface Areas and Volumes', topics: ['Combination of Solids', 'Conversion of Solids', 'Frustum of a Cone'] }
+            ]
+          },
+          {
+            name: 'Unit 6: Statistics & Probability',
+            chapters: [
+              { name: 'Statistics', topics: ['Mean of Grouped Data', 'Mode of Grouped Data', 'Median of Grouped Data', 'Cumulative Frequency Graph'] },
+              { name: 'Probability', topics: ['Classical Probability', 'Single Event Problems'] }
+            ]
+          }
+        ]),
+        createCourseTemplate(`${prefix} - Science`, 'Science', [
+          {
+            name: 'Unit 1: Chemical Substances - Nature and Behaviour',
+            chapters: [
+              { name: 'Chemical Reactions and Equations', topics: ['Balancing Equations', 'Types of Reactions', 'Redox Reactions', 'Corrosion and Rancidity'] },
+              { name: 'Acids, Bases and Salts', topics: ['General Properties', 'pH Scale Importance', 'Sodium Hydroxide and Bleaching Powder', 'Baking Soda and Washing Soda', 'Plaster of Paris'] },
+              { name: 'Metals and Non-Metals', topics: ['Physical and Chemical Properties', 'Reactivity Series', 'Extraction of Metals', 'Corrosion Prevention'] },
+              { name: 'Carbon and its Compounds', topics: ['Covalent Bonding', 'Versatile Nature of Carbon', 'Homologous Series', 'Functional Groups', 'Soaps and Detergents'] }
+            ]
+          },
+          {
+            name: 'Unit 2: World of Living',
+            chapters: [
+              { name: 'Life Processes', topics: ['Autotrophic and Heterotrophic Nutrition', 'Respiration', 'Transportation in Humans and Plants', 'Excretion in Humans and Plants'] },
+              { name: 'Control and Coordination', topics: ['Reflex Action', 'Nervous System', 'Human Brain Anatomy', 'Plant Hormones', 'Animal Hormones'] },
+              { name: 'How do Organisms Reproduce?', topics: ['Asexual Reproduction', 'Sexual Reproduction in Plants', 'Sexual Reproduction in Humans', 'Reproductive Health'] },
+              { name: 'Heredity and Evolution', topics: ['Mendel Laws', 'Sex Determination', 'Basic Evolution Theories'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Natural Phenomena',
+            chapters: [
+              { name: 'Light - Reflection and Refraction', topics: ['Spherical Mirrors', 'Refractive Index', 'Spherical Lenses', 'Lens Formula and Power'] },
+              { name: 'Human Eye and Colorful World', topics: ['Structure of Eye', 'Defects of Vision', 'Prism Refraction', 'Scattering and Dispersion'] }
+            ]
+          },
+          {
+            name: 'Unit 4: Effects of Current & Natural Resources',
+            chapters: [
+              { name: 'Electricity', topics: ['Electric Current', 'Potential Difference', 'Ohm Law', 'Resistance', 'Series and Parallel Combinations', 'Heating Effects of Current'] },
+              { name: 'Magnetic Effects of Electric Current', topics: ['Magnetic Field Lines', 'Field due to Straight Wire and Loop', 'Solenoid', 'Fleming Left Hand Rule', 'Electric Motor', 'Electromagnetic Induction'] },
+              { name: 'Our Environment', topics: ['Ecosystem', 'Food Chain and Web', 'Ozone Layer Depletion', 'Waste Management'] }
+            ]
+          }
+        ]),
+        createCourseTemplate(`${prefix} - English`, 'English', [
+          {
+            name: 'Grammar and Composition',
+            chapters: [
+              { name: 'Applied Grammar', topics: ['Tenses and Aspects', 'Modal Auxiliaries', 'Active and Passive Voice', 'Subject-Verb Agreement', 'Reported Speech'] },
+              { name: 'Writing Skills', topics: ['Formal Letter Writing', 'Analytical Paragraph Writing', 'Descriptive Paragraphs', 'Story Writing'] }
+            ]
+          }
+        ])
+      ];
+    } else {
+      courses = [
+        createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+          {
+            name: 'Algebra',
+            chapters: [
+              { name: 'Quadratic Equations', topics: ['Introduction to Quadratics', 'Solving by Factoring', 'Quadratic Formula', 'Nature of Roots', 'Real-world Applications'] },
+              { name: 'Arithmetic Progressions', topics: ['Introduction to AP', 'nth Term of an AP', 'Sum of First n Terms', 'Word Problems', 'AP in Real Life'] }
+            ]
+          },
+          {
+            name: 'Geometry',
+            chapters: [
+              { name: 'Triangles', topics: ['Congruence vs Similarity', 'Basic Proportionality Theorem', 'Criteria for Similarity', 'Areas of Similar Triangles', 'Pythagoras Theorem'] },
+              { name: 'Circles', topics: ['Tangents to a Circle', 'Properties of Tangents', 'Secants and Angles', 'Constructions', 'Theorem Proofs'] }
+            ]
+          }
+        ]),
+        createCourseTemplate(`${prefix} - Science`, 'Science', [
+          {
+            name: 'Chemical Substances',
+            chapters: [
+              { name: 'Chemical Reactions and Equations', topics: ['Chemical Equations', 'Balanced Equations', 'Types of Reactions', 'Oxidation and Reduction', 'Corrosion and Rancidity'] },
+              { name: 'Acids, Bases and Salts', topics: ['General Properties', 'pH Scale and Importance', 'Sodium Hydroxide and Bleaching Powder', 'Baking Soda and Washing Soda', 'Plaster of Paris'] }
+            ]
+          }
+        ])
+      ];
+    }
+  } else if (profile.goal === 'Skill Learning') {
+    courses = [
+      createCourseTemplate('Modern Programming', 'Programming', [
+        {
+          name: 'Foundations of Code',
+          chapters: [
+            { name: 'Variables & Data Types', topics: ['What is a Variable?', 'Primitives vs Objects', 'Type Casting & Coercion', 'Scope and Lifetime', 'Memory Allocation'] },
+            { name: 'Control Flow & Logic', topics: ['Conditionals (If/Else)', 'Loops (For, While)', 'Switch Statements', 'Boolean Logic & Operators', 'Error Handling & Try/Catch'] }
+          ]
+        },
+        {
+          name: 'Functions & Objects',
+          chapters: [
+            { name: 'Functional Programming', topics: ['Function Declaration vs Expression', 'Parameters and Return Values', 'Pure Functions & Side Effects', 'Callbacks & High-Order Functions', 'Scope & Closures'] },
+            { name: 'Object-Oriented Programming', topics: ['Objects & Properties', 'Classes & Constructor Functions', 'Inheritance & Prototypes', 'Encapsulation & Abstraction', 'Polymorphism'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Artificial Intelligence & ML', 'AI', [
+        {
+          name: 'Introduction to AI',
+          chapters: [
+            { name: 'AI Landscapes', topics: ['What is Artificial Intelligence?', 'AI vs Machine Learning vs Deep Learning', 'History and Evolution of AI', 'Types of AI: Narrow vs General', 'Ethical Considerations in AI'] },
+            { name: 'Machine Learning Basics', topics: ['Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning', 'Feature Engineering', 'Model Evaluation & Metrics'] }
+          ]
+        },
+        {
+          name: 'Neural Networks & Deep Learning',
+          chapters: [
+            { name: 'Deep Learning Foundations', topics: ['Perceptrons & Neurons', 'Activation Functions', 'Loss Functions & Optimizers', 'Backpropagation & Gradient Descent', 'Overfitting and Regularization'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Entrepreneurship & Startups', 'Entrepreneurship', [
+        {
+          name: 'Ideation & Validation',
+          chapters: [
+            { name: 'Finding Business Ideas', topics: ['Problem-First Approach', 'Market Research & Gap Analysis', 'Brainstorming Frameworks', 'The Lean Startup Methodology', 'Minimum Viable Product (MVP)'] },
+            { name: 'Customer Discovery', topics: ['Defining Target Personas', 'Conducting Customer Interviews', 'Analyzing Feedback', 'Pivot vs Persevere Decisions', 'Value Proposition Design'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Graphic Design & UI/UX', 'Graphic Design', [
+        {
+          name: 'Visual Design Principles',
+          chapters: [
+            { name: 'Design Elements', topics: ['Color Theory & Harmony', 'Typography & Font Pairings', 'Layout, Balance & Hierarchy', 'Using White Space', 'Scale and Contrast'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Personal & Corporate Finance', 'Finance', [
+        {
+          name: 'Personal Wealth Building',
+          chapters: [
+            { name: 'Budgeting & Saving', topics: ['The 50/30/20 Rule', 'Emergency Funds', 'Managing Debt', 'Compound Interest Power', 'Setting Financial Goals'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Cybersecurity Foundations', 'Cybersecurity', [
+        {
+          name: 'Security Principles',
+          chapters: [
+            { name: 'Threat Landscapes', topics: ['CIA Triad (Confidentiality, Integrity, Availability)', 'Malware Types & Ransomware', 'Social Engineering & Phishing', 'Network Vulnerabilities', 'Identity & Access Management'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Mastering Public Speaking', 'Public Speaking', [
+        {
+          name: 'Delivery Techniques',
+          chapters: [
+            { name: 'Overcoming Stage Fright', topics: ['Understanding Performance Anxiety', 'Breathing & Vocal Warmups', 'Body Language & Posture', 'Eye Contact Strategies', 'Pacing and Pauses'] }
+          ]
+        }
+      ]),
+      createCourseTemplate('Digital Marketing', 'Marketing', [
+        {
+          name: 'Content & Social Media',
+          chapters: [
+            { name: 'Marketing Foundations', topics: ['SEO & Organic Search', 'Social Media Algorithms', 'Content Writing & Copywriting', 'Email Marketing Strategy', 'Analytics & ROI Measurement'] }
+          ]
+        }
+      ])
+    ];
+  } else {
+    const interests = profile.careers.length ? profile.careers : ['Programming', 'Artificial Intelligence', 'Space Exploration'];
+    courses = interests.slice(0, 3).map(interest => {
+      return createCourseTemplate(interest, interest, [
+        {
+          name: `Foundations of ${interest}`,
+          chapters: [
+            { name: `Introduction to ${interest}`, topics: [`What is ${interest}?`, 'Core Concepts', 'Historical Context', 'Key Thinkers/Innovators', 'Modern Applications'] },
+            { name: `Advanced ${interest}`, topics: ['Challenging Problems', 'Future Trends', 'Current Controversies', 'Further Reading & Study'] }
+          ]
+        }
+      ]);
+    });
+  }
+  return courses.filter(Boolean);
+}
+
+function createCourseTemplate(title, subject, unitsData) {
+  // Validate: reject courses with no units or empty unit arrays (partial AI responses)
+  if (!Array.isArray(unitsData) || unitsData.length === 0) {
+    console.warn('[Mentorix] createCourseTemplate: empty unitsData for subject', subject);
+    return null;
+  }
+  let courseId = 'course_' + Math.random().toString(36).substring(2, 11);
+  let units = unitsData.map((u, ui) => {
+    let unitId = `${courseId}_u${ui + 1}`;
+    let chapters = u.chapters.map((c, ci) => {
+      let chapterId = `${unitId}_c${ci + 1}`;
+      let topics = c.topics.map((t, ti) => {
+        let topicId = `${chapterId}_t${ti + 1}`;
+        return {
+          id: topicId,
+          title: t,
+          status: (ui === 0 && ci === 0 && ti === 0) ? 'Unlocked' : 'Locked',
+          xpAwarded: 0
+        };
+      });
+      return {
+        id: chapterId,
+        title: c.name,
+        completed: false,
+        locked: (ui === 0 && ci === 0) ? false : true,
+        mastery: 'Novice',
+        score: null,
+        topics: topics
+      };
+    });
+    return {
+      id: unitId,
+      title: u.name,
+      didYouKnow: u.didYouKnow || '',
+      chapters: chapters
+    };
+  });
+  return {
+    id: courseId,
+    title: title,
+    subject: subject,
+    units: units
+  };
+}
+
+
+
+function initApp(){
+  if(D.profile?.mode==='creative')document.body.classList.add('creative');
+  else document.body.classList.remove('creative');
+  applyMentorTheme();
+  // Re-apply cursor setting (could be restored from saved settings)
+  if (D.settings?.customCursor === false) {
+    if (typeof window.destroyCustomCursor === 'function') window.destroyCustomCursor();
+  } else {
+    if (typeof window.initCustomCursor === 'function') window.initCustomCursor();
+  }
+  // Apply saved appearance settings
+  applyAppTheme(D.settings?.colorTheme || 'vibrant');
+  if(D.settings?.accentColor)applyAccentColor(D.settings.accentColor);
+  if(D.settings?.fontSize)applyFontSize(D.settings.fontSize);
+  document.getElementById('app').innerHTML=`
+    <div id="sb">
+      <div class="sb-logo">
+        <div class="sb-logo-ic" aria-hidden="true"></div>
+        <div>
+          <div class="sb-logo-tx">Mentorix</div>
+          <div class="sb-logo-sub" style="font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c);">Knowledge is Infinite</div>
+        </div>
+      </div>
+      <!-- TIO HOLOGRAPHIC ORB CONTAINER -->
+      <div id="tio-sb-container" class="tio-sb-container tio-sb-compact">
+        <div class="tio-orb-wrapper" id="tio-sb-orb">
+          <div class="tio-ring"></div>
+          <div class="tio-orb">
+            <div class="tio-core"></div>
+            <div class="tio-face">
+              <div class="tio-eyes">
+                <div class="tio-eye left"></div>
+                <div class="tio-eye right"></div>
+              </div>
+              <div class="tio-mouth"></div>
+            </div>
+          </div>
+          <div class="tio-particles">
+            <span class="np1"></span>
+            <span class="np2"></span>
+            <span class="np3"></span>
+          </div>
+        </div>
+        <div class="tio-bubble-wrap">
+          <div class="tio-bubble" id="tio-sb-bubble">Welcome! Let's explore some new concepts today. 🚀</div>
+        </div>
+      </div>
+      <div class="sb-user" id="sbu"></div>
+      <nav class="sb-nav" id="sbn"></nav>
+      <div class="sb-bot">
+        <div class="sb-btn" onclick="showShortcutsHelp()" title="Keyboard shortcuts (?)">⌨️<span class="nav-lbl" style="font-size:11px">Shortcuts</span></div>
+        <div class="sb-btn" onclick="doLogout()" style="color:#FCA5A5">🚪<span class="nav-lbl" style="font-size:11px">Sign Out</span></div>
+        <div class="sb-btn" onclick="colSB()"><span id="sci">←</span><span class="nav-lbl" id="scl">Collapse</span></div>
+      </div>
+    </div>
+    <div id="main" role="main" tabindex="-1"></div>`;
+  // Creative XP float — guard against duplicate creation on re-login
+  const _existingFloat=document.getElementById('xpfloat');if(_existingFloat)_existingFloat.remove();
+  if(D.profile?.mode==='creative'){
+    const xf=document.createElement('div');xf.id='xpfloat';xf.className='xp-float';
+    xf.innerHTML=`<span style="font-size:14px">⚡</span><div><div class="xp-float-val">${D.xp} XP</div><div class="xp-float-lv">Level ${lv(D.xp)}</div></div><div><div class="xp-mini-bar"><div class="xp-mini-fill" style="width:${xpP(D.xp)}%"></div></div></div>`;
+    document.body.appendChild(xf);
+  }
+  // Global search — enabled
+  // openGlobalSearch() is called via keyboard shortcut or search icon
+  // Mobile nav
+  buildMobileNav();
+  // Floating Tio
+  const fn=document.getElementById('fnbtn');if(fn)fn.style.display='flex';
+  // Study timer FAB
+  const tfab=document.getElementById('timer-fab');if(tfab)tfab.classList.add('show');
+  initTimer();
+  // Notification bell
+  initNotifBell();
+  // ELI5 badge
+  initELI5Badge();
+  // Streak danger check (after 5pm)
+  setTimeout(checkStreakWithStakes,3000);
+  // Mobile features
+  initNetworkDetection();
+  initSwipeGestures();
+  initBackButton();
+  // Show challenge welcome if came via challenge link
+  if(window._challengeData){setTimeout(()=>showChallengeWelcome(window._challengeData),2000);delete window._challengeData;}
+  if(!window._navDelegated){document.addEventListener('click',navDel);window._navDelegated=true;}
+  updateSB();
+  // Handle shared topic link (?topic=...)
+  if(window._sharedTopic){
+    const t=window._sharedTopic;delete window._sharedTopic;
+    go('learn',t);
+  } else {
+    go('dash');
+  }
+}
+function updateTioMessage(msg, expression = 'neutral') {
+  const bubble = document.getElementById('tio-sb-bubble');
+  const orb = document.getElementById('tio-sb-orb');
+  if (!bubble || !orb) return;
+  orb.className = 'tio-orb-wrapper ' + expression;
+  bubble.style.opacity = '0';
+  bubble.style.transform = 'translateY(4px)';
+  setTimeout(() => {
+    bubble.textContent = msg;
+    bubble.style.opacity = '1';
+    bubble.style.transform = 'translateY(0)';
+  }, 180);
+}
+function updateSB(){
+  const sb=document.getElementById('sb');
+  const lv2=lv(D.xp),pct=xpP(D.xp),p=D.profile;
+  if(!sb)return;
+  if(D.sbCol)sb.classList.add('col');else sb.classList.remove('col');
+  const sbu=document.getElementById('sbu');
+  if(sbu)sbu.innerHTML=`
+    <div class="sb-urow">
+      <div class="sb-av">${(p?.name||'U')[0].toUpperCase()}</div>
+      <div class="sb-un"><div class="sb-uname">${esc(p?.name||'Learner')}</div><div class="sb-ulvl">Lv ${lv2} · ${D.xp} XP</div></div>
+    </div>
+    <div class="sb-xpb"><div class="sb-xpf" style="width:${pct}%"></div></div>`;
+
+  // Build nav with group labels
+  const groups=[
+    {label:'LEARN',items:NAV.filter(n=>['dash','courses','comp','recovery'].includes(n.id))},
+    {label:'TOOLS',items:NAV.filter(n=>['notebook','revision','explore'].includes(n.id))},
+    {label:'CAREER',items:NAV.filter(n=>['careers'].includes(n.id))},
+    {label:'TRACK',items:NAV.filter(n=>['tests','progress','mentor','settings'].includes(n.id))},
+  ];
+  const sbn=document.getElementById('sbn');
+  if(sbn)sbn.innerHTML=groups.map(g=>`
+    ${!D.sbCol?`<div class="nav-grp">${g.label}</div>`:''}
+    ${g.items.map(n=>`
+      <div class="ni${D.screen===n.id?' on':''}" data-nav="${n.id}" data-tip="${n.lb}">
+        <span class="ni-ic">${n.ic}</span><span class="nav-lbl">${n.lb}</span>
+      </div>`).join('')}
+  `).join('');
+
+  const ci=document.getElementById('sci'),cl=document.getElementById('scl');
+  if(ci)ci.textContent=D.sbCol?'→':'←';
+  if(cl)cl.textContent=D.sbCol?'Expand':'Collapse';
+}
+function colSB(){D.sbCol=!D.sbCol;updateSB();}
+function navDel(e){const n=e.target.closest('[data-nav]');if(n)go(n.dataset.nav);}
+// go() defined below with back-button support
+
+/* ───────────────────────────────────────────
+   MOBILE NAV
+─────────────────────────────────────────── */
+const MOB_NAV=[
+  {id:'dash',ic:'⚡',lb:'Home'},
+  {id:'courses',ic:'🎓',lb:'Courses'},
+  {id:'notebook',ic:'📓',lb:'Notes'},
+  {id:'revision',ic:'🔄',lb:'Revise'},
+  {id:'progress',ic:'📊',lb:'Progress'},
+];
+const MOB_DRAWER_NAV=[
+  {id:'comp',ic:'🏆',lb:'Competitive Exams'},
+  {id:'recovery',ic:'🛡️',lb:'Recovery'},
+  {id:'tests',ic:'📝',lb:'Tests'},
+  {id:'explore',ic:'🌐',lb:'Explore'},
+  {id:'careers',ic:'🚀',lb:'Careers'},
+  {id:'mentor',ic:'✨',lb:'Tio AI'},
+  {id:'settings',ic:'⚙️',lb:'Settings'},
+];
+function buildMobileNav(){
+  const el=document.getElementById('mbn');if(!el)return;
+  el.innerHTML=MOB_NAV.map(n=>`
+    <div class="mn-item${D.screen===n.id?' on':''}" data-nav="${n.id}">
+      <span>${n.ic}</span><span>${n.lb}</span>
+    </div>`).join('')
+  +`<div class="mn-more" onclick="openMobDrawer()">
+      <span>⋯</span><span>More</span>
+    </div>`;
+  // Also add search icon to mobile header if not already there
+  let mhdr=document.getElementById('mob-search-btn');
+  if(!mhdr&&window.innerWidth<=768){
+    const btn=document.createElement('button');
+    btn.id='mob-search-btn';
+    btn.setAttribute('aria-label','Open search');
+    btn.style.cssText='position:fixed;top:12px;right:16px;z-index:260;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);';
+    btn.innerHTML='🔍';
+    btn.onclick=()=>openGlobalSearch();
+    document.body.appendChild(btn);
+  }
+}
+function buildMobDrawer(){
+  const el=document.getElementById('mob-drawer-grid');if(!el)return;
+  el.innerHTML=MOB_DRAWER_NAV.map(n=>`
+    <div class="mob-drawer-item${D.screen===n.id?' on':''}" onclick="closeMobDrawer();go('${n.id}')">
+      <div class="mob-drawer-ic">${n.ic}</div>
+      <div class="mob-drawer-lb">${n.lb}</div>
+    </div>`).join('');
+}
+function openMobDrawer(){
+  buildMobDrawer();
+  document.getElementById('mob-drawer').classList.add('open');
+  document.getElementById('mob-drawer-bg').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeMobDrawer(){
+  document.getElementById('mob-drawer').classList.remove('open');
+  document.getElementById('mob-drawer-bg').classList.remove('show');
+  document.body.style.overflow='';
+}
+
+/* ───────────────────────────────────────────
+   GLOBAL UNIVERSAL SEARCH — COMMAND PALETTE
+─────────────────────────────────────────── */
+function openGlobalSearch(){
+  const el=document.getElementById('gsearch-wrap');
+  if(!el)return;
+  el.style.display='flex';
+  el.classList.add('active');
+  const inp=document.getElementById('gsearch');
+  if(inp){
+    inp.value='';
+    inp.focus();
+  }
+  onGSearch('');
+}
+
+function closeGlobalSearch(){
+  const el=document.getElementById('gsearch-wrap');
+  if(!el)return;
+  el.style.display='none';
+  el.classList.remove('active');
+  const inp=document.getElementById('gsearch');
+  if(inp)inp.value='';
+}
+
+function onGSearch(q){
+  const el=document.getElementById('gsugg');
+  if(!el)return;
+  const ql=q.toLowerCase().trim();
+  
+  if(!ql){
+    // Spotlight Navigation Dashboard
+    let html='';
+    
+    // Group 1: Navigation Shortcuts
+    html+=`
+      <div class="search-result-group">
+        <div class="search-result-group-header">Navigation Shortcuts</div>
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('courses')">
+          <div class="search-result-icon">🎓</div>
+          <div>
+            <div class="search-result-title">Courses Hub</div>
+            <div class="search-result-meta">Browse your curriculum units and chapters</div>
+          </div>
+          <span class="search-result-action">Go →</span>
+        </div>
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('recovery')">
+          <div class="search-result-icon">🛡️</div>
+          <div>
+            <div class="search-result-title">Skill Recovery Center</div>
+            <div class="search-result-meta">Strengthen weak concepts and fix mistakes</div>
+          </div>
+          <span class="search-result-action">Go →</span>
+        </div>
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('notebook')">
+          <div class="search-result-icon">📓</div>
+          <div>
+            <div class="search-result-title">AI Notebook</div>
+            <div class="search-result-meta">Access generated summary notes and formulas</div>
+          </div>
+          <span class="search-result-action">Go →</span>
+        </div>
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('tests')">
+          <div class="search-result-icon">📝</div>
+          <div>
+            <div class="search-result-title">Assessments & Tests</div>
+            <div class="search-result-meta">Challenge yourself with multi-tier tests</div>
+          </div>
+          <span class="search-result-action">Go →</span>
+        </div>
+      </div>
+    `;
+    
+    // Group 2: Weak Areas (from weakSpots)
+    const _weakSpotEntries = (D.memory?.weakSpots || []).filter(w => !w.solved);
+    if(_weakSpotEntries.length > 0){
+      html+=`<div class="search-result-group"><div class="search-result-group-header" style="color:var(--goldl)">Weak Areas Requiring Focus</div>`;
+      const _wsTopics = {};
+      _weakSpotEntries.forEach(w => { if(!_wsTopics[w.topic]) _wsTopics[w.topic] = []; _wsTopics[w.topic].push(w.concept); });
+      Object.entries(_wsTopics).slice(0,3).forEach(([topic, concepts])=>{
+        html+=`
+          <div class="search-result-item" onclick="closeGlobalSearch(); go('recovery')">
+            <div class="search-result-icon">⚠️</div>
+            <div>
+              <div class="search-result-title">${esc(topic)}</div>
+              <div class="search-result-meta">Concepts: ${esc(concepts.slice(0,3).join(', '))}</div>
+            </div>
+            <span class="search-result-action">Recover →</span>
+          </div>
+        `;
+      });
+      html+=`</div>`;
+    }
+    
+    // Group 3: Recent Studies
+    const recent = D.topics.slice(-3);
+    if(recent.length > 0){
+      html+=`<div class="search-result-group"><div class="search-result-group-header">Recently Learned Topics</div>`;
+      recent.forEach(t=>{
+        html+=`
+          <div class="search-result-item" onclick="closeGlobalSearch(); go('learn', '${escON(t)}')">
+            <div class="search-result-icon">✅</div>
+            <div>
+              <div class="search-result-title">${esc(t)}</div>
+              <div class="search-result-meta">Completed · Review lesson notes in Notebook</div>
+            </div>
+            <span class="search-result-action">Re-study →</span>
+          </div>
+        `;
+      });
+      html+=`</div>`;
+    }
+    
+    el.innerHTML=html;
+    return;
+  }
+  
+  // Searching query matches
+  let coursesMatches=[];
+  let chaptersMatches=[];
+  let topicsMatches=[];
+  let notesMatches=[];
+  let weakMatches=[];
+  
+  if(D.courses){
+    D.courses.forEach(c=>{
+      if(c.title.toLowerCase().includes(ql)){
+        coursesMatches.push(c);
+      }
+      (c.units||[]).forEach(u=>{
+        (u.chapters||[]).forEach(ch=>{
+          if(ch.title.toLowerCase().includes(ql)){
+            chaptersMatches.push({ chapter: ch, course: c });
+          }
+          (ch.topics||[]).forEach(t=>{
+            if(t.title.toLowerCase().includes(ql)){
+              topicsMatches.push({ topic: t, chapter: ch, course: c });
+            }
+          });
+        });
+      });
+    });
+  }
+  
+  if(D.notes){
+    Object.entries(D.notes).forEach(([title, note])=>{
+      const summaryMatch=note.summary && note.summary.toLowerCase().includes(ql);
+      const explainMatch=note.explain && note.explain.toLowerCase().includes(ql);
+      if(title.toLowerCase().includes(ql) || summaryMatch || explainMatch){
+        notesMatches.push({ title, note });
+      }
+    });
+  }
+  
+  // Search weak spots (new format: array of {topic, concept, solved})
+  if(D.memory?.weakSpots){
+    const _wsMap = {};
+    D.memory.weakSpots.filter(w => !w.solved).forEach(w => {
+      if(!_wsMap[w.topic]) _wsMap[w.topic] = [];
+      if(w.concept) _wsMap[w.topic].push(w.concept);
+    });
+    Object.entries(_wsMap).forEach(([topic, concepts]) => {
+      const conceptsMatch = concepts.some(c => c.toLowerCase().includes(ql));
+      if(topic.toLowerCase().includes(ql) || conceptsMatch){
+        weakMatches.push({ topic, concepts });
+      }
+    });
+  }
+  
+  // Search Achievements / Badges
+  let badgeMatches = [];
+  BADGES.forEach(b => {
+    if(b.id.toLowerCase().includes(ql) || (b.d && b.d.toLowerCase().includes(ql))){
+      badgeMatches.push(b);
+    }
+  });
+  
+  // Search Test History
+  let historyMatches = [];
+  (D.memory?.history || []).filter(h => h.topic && h.topic.toLowerCase().includes(ql))
+    .reduce((acc, h) => { if(!acc.find(x => x.topic === h.topic)) acc.push(h); return acc; }, [])
+    .slice(0,3).forEach(h => historyMatches.push(h));
+  
+  let html='';
+  
+  if(coursesMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header">Courses</div>`;
+    coursesMatches.slice(0,3).forEach(c=>{
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); activeCourseId='${c.id}'; go('courses')">
+          <div class="search-result-icon">🎓</div>
+          <div>
+            <div class="search-result-title">${esc(c.title)}</div>
+            <div class="search-result-meta">Subject: ${esc(c.subject)}</div>
+          </div>
+          <span class="search-result-action">Open →</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  if(chaptersMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header">Chapters</div>`;
+    chaptersMatches.slice(0,3).forEach(m=>{
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); activeCourseId='${m.course.id}'; go('courses')">
+          <div class="search-result-icon">📖</div>
+          <div>
+            <div class="search-result-title">${esc(m.chapter.title)}</div>
+            <div class="search-result-meta">Course: ${esc(m.course.title)}</div>
+          </div>
+          <span class="search-result-action">Roadmap →</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  if(topicsMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header">Topics</div>`;
+    topicsMatches.slice(0,4).forEach(m=>{
+      const statusIcon=m.topic.status === 'Completed' ? '✅' : m.topic.status === 'Locked' ? '🔒' : '⚡';
+      let ui = 0, ci = 0, ti = 0;
+      m.course.units.forEach((unit, uIdx) => {
+        unit.chapters.forEach((chapter, cIdx) => {
+          if (chapter === m.chapter) {
+            ui = uIdx;
+            ci = cIdx;
+            chapter.topics.forEach((topic, tIdx) => {
+              if (topic === m.topic) {
+                ti = tIdx;
+              }
+            });
+          }
+        });
+      });
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); if('${m.topic.status}'!=='Locked'){ go('learn','${escON(m.topic.title)}'); }else{ skipToTopic('${m.course.id}', ${ui}, ${ci}, ${ti}, '${escON(m.topic.title)}'); }">
+          <div class="search-result-icon">${statusIcon}</div>
+          <div>
+            <div class="search-result-title">${esc(m.topic.title)}</div>
+            <div class="search-result-meta">Chapter: ${esc(m.chapter.title)} · Status: ${m.topic.status}</div>
+          </div>
+          <span class="search-result-action">${m.topic.status === 'Locked' ? 'Skip & Learn ➔' : 'Learn →'}</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  if(notesMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header">Notebook Notes</div>`;
+    notesMatches.slice(0,3).forEach(m=>{
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('notebook')">
+          <div class="search-result-icon">📓</div>
+          <div>
+            <div class="search-result-title">${esc(m.title)} Notes</div>
+            <div class="search-result-meta">${esc(m.note.summary || 'Summary and formulas')}</div>
+          </div>
+          <span class="search-result-action">Notebook →</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  if(weakMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header" style="color:var(--goldl)">Weak Areas</div>`;
+    weakMatches.slice(0,3).forEach(m=>{
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('recovery')">
+          <div class="search-result-icon">⚠️</div>
+          <div>
+            <div class="search-result-title">${esc(m.topic)}</div>
+            <div class="search-result-meta">Weak concepts: ${esc(m.concepts.join(', '))}</div>
+          </div>
+          <span class="search-result-action">Recover →</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  if(badgeMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header" style="color:var(--goldl)">Achievements</div>`;
+    badgeMatches.slice(0,4).forEach(b => {
+      const earned = D.badges.includes(b.id);
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('progress')">
+          <div class="search-result-icon">${b.ic||'🏆'}</div>
+          <div>
+            <div class="search-result-title">${esc(b.id)}</div>
+            <div class="search-result-meta">${esc(b.d||'')} · ${earned ? '✅ Earned' : '🔒 Locked'}</div>
+          </div>
+          <span class="search-result-action">Profile →</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  if(historyMatches.length > 0){
+    html+=`<div class="search-result-group"><div class="search-result-group-header">Test History</div>`;
+    historyMatches.forEach(h => {
+      const scoreColor = (h.score||0) >= 80 ? 'var(--okl)' : (h.score||0) >= 50 ? 'var(--goldl)' : 'var(--redl)';
+      html+=`
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('tests')">
+          <div class="search-result-icon">📝</div>
+          <div>
+            <div class="search-result-title">${esc(h.topic)}</div>
+            <div class="search-result-meta">Score: <span style="color:${scoreColor};font-weight:700">${h.score||0}%</span> · ${h.type||'test'}</div>
+          </div>
+          <span class="search-result-action">Retake →</span>
+        </div>
+      `;
+    });
+    html+=`</div>`;
+  }
+  
+  // AI actions fallback
+  if(!html){
+    html=`
+      <div class="search-result-group">
+        <div class="search-result-group-header">AI Actions</div>
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('learn','${escON(q)}')">
+          <div class="search-result-icon">✨</div>
+          <div>
+            <div class="search-result-title">Learn about "${esc(q)}"</div>
+            <div class="search-result-meta">Instantly generate a structured AI lesson on this topic</div>
+          </div>
+          <span class="search-result-action">Generate →</span>
+        </div>
+        <div class="search-result-item" onclick="closeGlobalSearch(); go('mentor'); setTimeout(()=>{const ci=document.getElementById('cinp');if(ci){ci.value='Explain ${escON(q)}';ci.focus();}},180)">
+          <div class="search-result-icon">💬</div>
+          <div>
+            <div class="search-result-title">Ask Tio: "${esc(q)}"</div>
+            <div class="search-result-meta">Start a conversation with your AI Mentor</div>
+          </div>
+          <span class="search-result-action">Ask →</span>
+        </div>
+      </div>
+    `;
+  }
+  
+  el.innerHTML=html;
+}
+function handleGSearch(type,label){}
+function hideGSugg(){const el=document.getElementById('gsugg');if(el)el.style.display='none';}
+
+
+/* collapsible section toggle */
+function toggleColl(id){
+  const el=document.getElementById(id);const arr=document.getElementById('arr-'+id);
+  if(!el)return;
+  if(el.classList.contains('closed')){el.classList.remove('closed');if(arr){arr.classList.add('open');arr.textContent='▼';}}
+  else{el.classList.add('closed');if(arr){arr.classList.remove('open');arr.textContent='▸';}}
+}
+
+/* ───────────────────────────────────────────
+   CONFETTI BURST
+─────────────────────────────────────────── */
+function launchConfetti(count=60){
+  const wrap=document.createElement('div');wrap.className='confetti-wrap';
+  const colors=['#8B5CF6','#06B6D4','#EC4899','#F59E0B','#10B981','#F87171','#34D399','#60A5FA'];
+  for(let i=0;i<count;i++){
+    const cf=document.createElement('div');cf.className='cf';
+    const col=colors[Math.floor(Math.random()*colors.length)];
+    const x=Math.random()*100;const dur=0.8+Math.random()*1.4;const delay=Math.random()*0.6;
+    cf.style.cssText=`left:${x}%;background:${col};width:${5+Math.random()*7}px;height:${5+Math.random()*7}px;animation-duration:${dur}s;animation-delay:${delay}s;border-radius:${Math.random()>0.5?'50%':'2px'}`;
+    wrap.appendChild(cf);
+  }
+  document.body.appendChild(wrap);
+  setTimeout(()=>wrap.remove(),2500);
+}
+
+/* ───────────────────────────────────────────
+   RIPPLE EFFECT ON BUTTONS
+─────────────────────────────────────────── */
+document.addEventListener('click',function(e){
+  const btn=e.target.closest('.btn');if(!btn)return;
+  const r=document.createElement('span');r.className='ripple';
+  const rect=btn.getBoundingClientRect();
+  const size=Math.max(rect.width,rect.height);
+  r.style.cssText=`width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+  btn.appendChild(r);setTimeout(()=>r.remove(),500);
+});
+
+/* ───────────────────────────────────────────
+   INTERACTIVE TUTOR CONTROLS
+─────────────────────────────────────────── */
+let tutorLoading=false;
+async function tutorAction(action){
+  if(tutorLoading)return;
+  const l=LS.lesson;if(!l)return;
+  const el=document.getElementById('tutor-response');
+  if(!el)return;
+  tutorLoading=true;
+  el.innerHTML=`<div class="tio-thinking"><div class="nxav" style="background:linear-gradient(135deg,var(--p),var(--c));width:28px;height:28px;font-size:13px;flex-shrink:0">✨</div><div style="color:#C4B5FD;font-size:13px;flex:1">Tio is ${{simpler:'simplifying…',different:'finding a new angle…',example:'crafting an example…',test:'preparing a challenge…'}[action]||'thinking…'}</div><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div></div>`;
+  el.style.display='block';
+  try{
+    const prompts={
+      simpler:`Explain "${l.topic}" in the simplest possible way. Imagine explaining to a 10-year-old. 2-3 sentences max. Be concrete and use an everyday analogy.`,
+      different:`Explain "${l.topic}" from a completely different angle. Use a fresh analogy or perspective. Keep it short and clear.`,
+      example:`Give one more vivid, memorable real-world example of "${l.topic}" that is different from any previously given. Make it relatable and specific.`,
+      test:`Ask me ONE quick conceptual question about "${l.topic}" (not multiple choice — open-ended). After I answer, evaluate my response. Wait for my answer.`,
+    };
+    const sys=`You are Tio, a ${D.settings?.mentorTone||'friendly'} AI tutor. Be concise — max 3-4 sentences. No markdown, no asterisks. Just clear natural text.`;
+    const reply=await ai([{role:'user',content:prompts[action]}],sys,600);
+    el.innerHTML=`
+      <div class="tio-inline" style="background:rgba(6,182,212,.08);border-color:rgba(6,182,212,.22)">
+        <div class="nxav" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">✨</div>
+        <div>
+          <div style="color:var(--cl);font-size:11px;font-weight:700;margin-bottom:3px">TIO ${{simpler:'SIMPLIFIED',different:'NEW ANGLE',example:'EXAMPLE',test:'CHALLENGE'}[action]||'SAYS'}</div>
+          <div style="color:#CBD5E1;font-size:14px;line-height:1.7">${esc(reply)}</div>
+        </div>
+      </div>`;
+    if(action==='test'){
+      // Add a text input for the user to answer
+      window._tutorChallenge={topic:l.topic,question:reply};
+      el.innerHTML+=`<div style="margin-top:10px;display:flex;gap:8px"><input class="inp" id="tutor-ans" placeholder="Type your answer…" style="font-size:13px"><button class="btn bpri bsm" onclick="checkTutorAnswer()">Check →</button></div><div id="tutor-ans-result"></div>`;
+    }
+  }catch(e){
+    el.innerHTML=`<p style="color:var(--redl);font-size:13px;padding:8px">Tio hit a snag. Try again!</p>`;
+  }
+}
+
+async function checkTutorAnswer(){
+  const inp=document.getElementById('tutor-ans');
+  const res=document.getElementById('tutor-ans-result');
+  if(!inp||!res)return;
+  const answer=inp.value.trim();
+  if(!answer){toast('Type an answer first','warn');return;}
+  const ch=window._tutorChallenge;
+  if(!ch)return;
+  const btn=inp.nextElementSibling;
+  if(btn){btn.disabled=true;btn.textContent='Checking…';}
+  res.innerHTML=`<div class="tio-thinking" style="margin-top:8px"><div class="nxav" style="background:linear-gradient(135deg,var(--p),var(--c));width:28px;height:28px;font-size:13px;flex-shrink:0">✨</div><div style="color:#C4B5FD;font-size:13px;flex:1">Tio is checking your answer…</div><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div></div>`;
+  try{
+    const sys=`You are Tio, a ${D.settings?.mentorTone||'friendly'} AI tutor. Be concise — max 3-4 sentences. No markdown, no asterisks. Just clear natural text.`;
+    const prompt=`Topic: "${ch.topic}". You asked the student: "${ch.question}". The student answered: "${answer}". Briefly evaluate whether their answer is correct, gently correct any mistakes, and add one short encouraging note.`;
+    const reply=await ai([{role:'user',content:prompt}],sys,400);
+    res.innerHTML=`
+      <div class="tio-inline" style="margin-top:8px;background:rgba(6,182,212,.08);border-color:rgba(6,182,212,.22)">
+        <div class="nxav" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">✨</div>
+        <div>
+          <div style="color:var(--cl);font-size:11px;font-weight:700;margin-bottom:3px">TIO FEEDBACK</div>
+          <div style="color:#CBD5E1;font-size:14px;line-height:1.7">${esc(reply)}</div>
+        </div>
+      </div>`;
+    addXP(5,'Answered challenge');
+  }catch(e){
+    res.innerHTML=`<p style="color:var(--redl);font-size:13px;padding:8px;margin-top:8px">Tio hit a snag. Try again!</p>`;
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent='Check →';}
+  }
+}
+
+/* renderScr() → router.js */
+
+/* DC → constants.js */
+
+const PTOPICS=[
+  'Black Holes','Quantum Physics','Machine Learning','Ancient Rome',
+  'Calculus','DNA Replication','Climate Change','Blockchain',
+  'The Human Brain','Stock Markets','Theory of Relativity',
+  'Game Theory','Philosophy of Mind','Thermodynamics',
+  'French Revolution','Photosynthesis','Artificial Intelligence',
+  'Cryptocurrency'
+];
+
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SCREEN MODULES — extracted to js/screens/*.js (Stage 6)
+   Each module self-registers with the router via registerScreen().
+   Load order mirrors the script tag order in <head>.
+   ═══════════════════════════════════════════════════════════════ */
+function spawnOrbRipple(x,y){
+  for(let i=0;i<2;i++){
+    const r=document.createElement('div');
+    r.className='cursor-ripple';
+    r.style.cssText=`left:${x}px;top:${y}px;width:${12+i*6}px;height:${12+i*6}px;animation-delay:${i*0.08}s;border-color:rgba(${i===0?'139,92,246':'6,182,212'},.7)`;
+    document.body.appendChild(r);
+    setTimeout(()=>r.remove(),700);
+  }
+}
+
+function toggleCursor(on){
+  D.settings.customCursor=on;saveAll();
+  if(on){
+    document.body.classList.add('has-cursor');
+    const orb=document.getElementById('cursor-orb');
+    const aura=document.getElementById('cursor-aura');
+    if(orb&&(!orb.style.display||orb.style.display==='none')){
+      orb.style.display='';
+      if(aura)aura.style.display='';
+    }
+  } else {
+    document.body.classList.remove('has-cursor');
+    document.querySelectorAll('.cursor-trail-dot,.cursor-ripple').forEach(e=>e.remove());
+  }
+  toast(on?'🎯 Mentorix cursor on':'🖱️ System cursor restored','ok2');
+}
+
+/* ───────────────────────────────────────────
+   3D PARTICLE SYSTEM — OPTIMISED & STABLE
+─────────────────────────────────────────── */
+(function(){
+  try{
+    const canvas=document.getElementById('particle-canvas');
+    if(!canvas)return;
+    const ctx=canvas.getContext('2d');
+    if(!ctx)return;
+    const COLS=['#8B5CF6','#06B6D4','#EC4899','#A78BFA','#67E8F9'];
+    const N=38; // reduced from 55 — good balance of visual quality vs performance
+    let W=0,H=0,particles=[];
+    let mouseX=0,mouseY=0,animActive=true;
+
+    function resize(){
+      W=canvas.width=window.innerWidth;
+      H=canvas.height=window.innerHeight;
+      mouseX=W/2;mouseY=H/2;
+    }
+    window.addEventListener('resize',resize,{passive:true});
+    resize();
+
+    // Passive mouse tracking — no setInterval needed
+    document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;},{passive:true});
+
+    function mkParticle(initial){
+      const z=0.25+Math.random()*0.75;
+      return{
+        x:Math.random()*W, y:initial?Math.random()*H:H+5,
+        z, r:(0.8+Math.random()*2.2)*z,
+        vx:(Math.random()-.5)*0.3*z, vy:-(0.15+Math.random()*0.45)*z,
+        col:COLS[Math.floor(Math.random()*COLS.length)],
+        alpha:initial?Math.random()*0.5*z:0,
+        targetAlpha:(0.25+Math.random()*0.45)*z,
+        pulse:Math.random()*Math.PI*2,
+      };
+    }
+    for(let i=0;i<N;i++)particles.push(mkParticle(true));
+
+    let loopRunning = true;
+    function loop(){
+      if(!animActive || D.settings?.animLevel==='none'){
+        loopRunning = false;
+        return;
+      }
+      loopRunning = true;
+      ctx.clearRect(0,0,W,H);
+      for(let i=0;i<particles.length;i++){
+        const p=particles[i];
+        p.pulse+=0.018;
+        p.vx+=(mouseX-p.x)/W*0.04*p.z;
+        p.vy+=(mouseY-p.y)/H*0.025*p.z;
+        p.vx*=0.97;p.vy*=0.97;
+        p.x+=p.vx+Math.sin(p.pulse*.6)*.12*p.z;
+        p.y+=p.vy;
+        p.alpha+=(p.targetAlpha-p.alpha)*0.025;
+        if(p.y<-10||p.x<-30||p.x>W+30){
+          particles[i]=mkParticle(false);continue;
+        }
+        const radius=(p.r*(Math.sin(p.pulse)*0.12+0.88));
+        ctx.save();
+        ctx.globalAlpha=Math.max(0,Math.min(1,p.alpha));
+        ctx.shadowColor=p.col;ctx.shadowBlur=radius*5;
+        ctx.fillStyle=p.col;
+        ctx.beginPath();ctx.arc(p.x,p.y,radius,0,6.283);ctx.fill();
+        ctx.restore();
+      }
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    document.addEventListener('visibilitychange',()=>{
+      animActive=!document.hidden;
+      if(animActive && !loopRunning) loop();
+    });
+  }catch(e){/* particle failure should never break the app */}
+})();
+
+/* ───────────────────────────────────────────
+   ANIMATED NUMBER COUNT-UP
+─────────────────────────────────────────── */
+function animateCount(el,target,duration){
+  if(!el||!target)return;
+  duration=duration||900;
+  const t0=performance.now();
+  (function step(now){
+    const p=Math.min((now-t0)/duration,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(target*ease);
+    if(p<1)requestAnimationFrame(step);
+    else el.textContent=target;
+  })(t0);
+}
+function initStatCounters(){
+  setTimeout(()=>{
+    document.querySelectorAll('.sn.count-in').forEach(el=>{
+      const v=parseInt(el.textContent)||0;
+      if(v>0){el.textContent='0';animateCount(el,v,850);}
+    });
+  },120);
+}
+
+
+/* ───────────────────────────────────────────
+   1. POMODORO STUDY TIMER
+─────────────────────────────────────────── */
+window.TM={
+  mins:25,secs:0,total:25*60,running:false,
+  interval:null,mode:'FOCUS',sessions:0,
+  sessionsToday:parseInt(localStorage.getItem('mx3_timer_sessions_today')||'0'),
+  lastDate:localStorage.getItem('mx3_timer_date')||'',
+};
+function initTimer(){
+  // Reset daily sessions if new day
+  const today=new Date().toDateString();
+  if(TM.lastDate!==today){TM.sessionsToday=0;localStorage.setItem('mx3_timer_sessions_today','0');localStorage.setItem('mx3_timer_date',today);TM.lastDate=today;}
+  updateTimerDisplay();
+  const sfab=document.getElementById('timer-sessions');
+  if(sfab)sfab.textContent=`Sessions today: ${TM.sessionsToday}`;
+}
+function toggleTimerWidget(){
+  const w=document.getElementById('timer-widget');
+  if(w)w.classList.toggle('show');
+}
+function timerToggle(){
+  if(TM.running){
+    clearInterval(TM.interval);TM.running=false;
+    const btn=document.getElementById('timer-start');if(btn)btn.innerHTML='▶ Resume';
+  } else {
+    TM.running=true;
+    const btn=document.getElementById('timer-start');if(btn)btn.innerHTML='⏸ Pause';
+    TM.interval=setInterval(()=>{
+      if(TM.secs===0){
+        if(TM.mins===0){
+          // Session complete!
+          clearInterval(TM.interval);TM.running=false;
+          if(TM.mode==='FOCUS'){
+            TM.sessions++;TM.sessionsToday++;
+            localStorage.setItem('mx3_timer_sessions_today',TM.sessionsToday);
+            addXP(25,'Focus session');
+            if(Notification.permission==='granted')new Notification('Mentorix ⏱️',{body:`Focus session done! Take a break. Session #${TM.sessionsToday} today 🎉`,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🧠</text></svg>'});
+            else toast('✅ Focus session complete! +25 XP','ok2');
+            setTimerMode(5,'SHORT BREAK');setTimeout(()=>{const w=document.getElementById('timer-widget');if(w&&!w.classList.contains('show'))w.classList.add('show');},300);
+          } else {
+            toast('☕ Break over! Back to focus 📚','ok2');
+            setTimerMode(25,'FOCUS');
+          }
+          const sfab=document.getElementById('timer-sessions');if(sfab)sfab.textContent=`Sessions today: ${TM.sessionsToday}`;
+          return;
+        }
+        TM.mins--;TM.secs=59;
+      } else {TM.secs--;}
+      updateTimerDisplay();
+    },1000);
+  }
+}
+function timerReset(){
+  clearInterval(TM.interval);TM.running=false;
+  TM.mins=TM.mode==='FOCUS'?25:TM.mode==='SHORT BREAK'?5:15;
+  TM.secs=0;TM.total=TM.mins*60;
+  const btn=document.getElementById('timer-start');if(btn)btn.innerHTML='▶ Start';
+  updateTimerDisplay();
+}
+function setTimerMode(mins,label){
+  clearInterval(TM.interval);TM.running=false;
+  TM.mins=mins;TM.secs=0;TM.total=mins*60;TM.mode=label;
+  const lbl=document.getElementById('timer-label');if(lbl)lbl.textContent=label;
+  const btn=document.getElementById('timer-start');if(btn)btn.innerHTML='▶ Start';
+  const fill=document.getElementById('timer-ring-fill');
+  if(fill){fill.className='timer-ring-fill'+(label!=='FOCUS'?' break':'');}
+  updateTimerDisplay();
+}
+function updateTimerDisplay(){
+  const el=document.getElementById('timer-display');
+  const fill=document.getElementById('timer-ring-fill');
+  if(el)el.textContent=String(TM.mins).padStart(2,'0')+':'+String(TM.secs).padStart(2,'0');
+  if(fill){
+    const totalSecs=TM.total||1;
+    const remaining=TM.mins*60+TM.secs;
+    const elapsed=totalSecs-remaining;
+    const pct=Math.max(0,Math.min(1,elapsed/totalSecs));
+    const circ=2*Math.PI*34;
+    fill.style.strokeDashoffset=circ*(1-pct);
+  }
+}
+
+/* ───────────────────────────────────────────
+   2. VOICE INPUT (Web Speech API)
+─────────────────────────────────────────── */
+let voiceRec=null,voiceActive=false;
+function toggleVoiceInput(){
+  const btn=document.getElementById('voice-btn');
+  const inp=document.getElementById('cinp');
+  if(!('webkitSpeechRecognition' in window||'SpeechRecognition' in window)){
+    toast('Voice input not supported in this browser. Try Chrome!','err');return;
+  }
+  if(voiceActive){
+    if(voiceRec)voiceRec.stop();
+    voiceActive=false;if(btn)btn.classList.remove('listening');
+    return;
+  }
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  voiceRec=new SR();
+  voiceRec.lang='en-US';voiceRec.continuous=false;voiceRec.interimResults=true;
+  voiceRec.onstart=()=>{voiceActive=true;if(btn)btn.classList.add('listening');toast('🎙️ Listening…','ok2');};
+  voiceRec.onresult=e=>{
+    const transcript=Array.from(e.results).map(r=>r[0].transcript).join('');
+    if(inp)inp.value=transcript;
+  };
+  voiceRec.onend=()=>{
+    voiceActive=false;if(btn)btn.classList.remove('listening');
+    // Auto-send if we got text
+    const val=(inp?.value||'').trim();
+    if(val)setTimeout(sendMsg,200);
+  };
+  voiceRec.onerror=e=>{
+    voiceActive=false;if(btn)btn.classList.remove('listening');
+    toast('Voice error: '+e.error,'err');
+  };
+  voiceRec.start();
+}
+
+/* ───────────────────────────────────────────
+   3. SHARE TOPIC
+─────────────────────────────────────────── */
+function shareTopic(topic){
+  const url=window.location.href.split('?')[0]+'?topic='+encodeURIComponent(topic);
+  // Try native share API first (mobile)
+  if(navigator.share){
+    navigator.share({title:'Learn: '+topic+' on Mentorix',text:'Check out this topic on Mentorix AI Learning!',url})
+    .catch(()=>copyShareLink(url));
+  } else {
+    copyShareLink(url);
+  }
+}
+function copyShareLink(url){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(url).then(()=>{
+      showShareToast('🔗 Link copied! Share it with classmates');
+    }).catch(()=>fallbackCopy(url));
+  } else {fallbackCopy(url);}
+}
+function fallbackCopy(url){
+  const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();
+  try{document.execCommand('copy');showShareToast('🔗 Link copied!');}catch{}
+  document.body.removeChild(t);
+}
+function showShareToast(msg){
+  const ex=document.querySelector('.share-toast');if(ex)ex.remove();
+  const el=document.createElement('div');el.className='share-toast';el.textContent=msg;
+  document.body.appendChild(el);setTimeout(()=>el.remove(),2600);
+}
+// Handle ?topic= URL parameter on load
+(function handleShareURL(){
+  try{
+    const p=new URLSearchParams(window.location.search);
+    const t=p.get('topic');
+    if(t){window._sharedTopic=decodeURIComponent(t);}
+  }catch{}
+})();
+
+/* ───────────────────────────────────────────
+   4. PROGRESS CHARTS (Chart.js)
+─────────────────────────────────────────── */
+function renderProgressCharts(){
+  const history=(D.memory?.history||[]).filter(h=>h.type==='test');
+  if(history.length<2)return;
+
+  const el=document.getElementById('progress-chart');
+  if(!el)return;
+
+  const isLight = document.body.classList.contains('theme-cream') || document.body.classList.contains('theme-light');
+  const tickColor = isLight ? '#475569' : '#94A3B8';
+  const gridColor = isLight ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.06)';
+
+  let labels = [];
+  let scores = [];
+  let chartType = 'bar';
+  let isHorizontal = false;
+
+  // Check if we are drawing subject mastery or trend
+  const tab = (typeof PV !== 'undefined' && PV.chartTab) || 'trend';
+
+  if (tab === 'subject') {
+    // Group scores by subject keyword (Math, Physics, Chemistry, Science, English, etc.)
+    const subjData = {};
+    history.forEach(h => {
+      let subj = 'General';
+      const tNorm = (h.topic || '').toLowerCase();
+      if (tNorm.includes('math') || tNorm.includes('algebra') || tNorm.includes('calculus')) subj = 'Mathematics';
+      else if (tNorm.includes('physics') || tNorm.includes('mechanics') || tNorm.includes('electricity')) subj = 'Physics';
+      else if (tNorm.includes('chemistry') || tNorm.includes('organic') || tNorm.includes('atomic')) subj = 'Chemistry';
+      else if (tNorm.includes('science') || tNorm.includes('biology')) subj = 'Science/Bio';
+      else if (tNorm.includes('english') || tNorm.includes('grammar')) subj = 'English';
+      else if (h.topic.includes('JEE') || h.topic.includes('NEET') || h.topic.includes('SAT')) {
+        // Parse from exam title
+        const match = h.topic.split(':');
+        if (match.length > 1) subj = match[0].trim();
+      }
+      
+      if (!subjData[subj]) subjData[subj] = [];
+      subjData[subj].push(h.score || 0);
+    });
+
+    Object.keys(subjData).forEach(subj => {
+      const arr = subjData[subj];
+      const avg = Math.round(arr.reduce((a,b)=>a+b,0)/arr.length);
+      labels.push(subj);
+      scores.push(avg);
+    });
+    chartType = 'bar';
+    isHorizontal = true;
+  } else {
+    // Mock Test Trend (last 10 mock test scores)
+    const recent = history.slice(-10);
+    labels = recent.map(h => h.topic.replace(/ Exam| Test/g, '').slice(0,12));
+    scores = recent.map(h => h.score || 0);
+  }
+
+  const colors=scores.map(s=>s>=80?'rgba(16,185,129,.75)':s>=50?'rgba(245,158,11,.75)':'rgba(239,68,68,.75)');
+
+  // Load Chart.js if not already loaded
+  if(!window.Chart){
+    const s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js';
+    s.onload=()=>drawChart(el,labels,scores,colors,chartType,isHorizontal,tickColor,gridColor);
+    document.head.appendChild(s);
+  } else {
+    drawChart(el,labels,scores,colors,chartType,isHorizontal,tickColor,gridColor);
+  }
+}
+function drawChart(el,labels,scores,colors,type,isHorizontal,tickColor,gridColor){
+  try{
+    if(el._chart)el._chart.destroy();
+    el._chart=new Chart(el,{
+      type:type,
+      data:{
+        labels,
+        datasets:[{
+          label:'Score %',
+          data:scores,
+          backgroundColor:colors,
+          borderRadius:6,
+          borderWidth:0
+        }]
+      },
+      options:{
+        indexAxis: isHorizontal ? 'y' : 'x',
+        responsive:true,
+        maintainAspectRatio:false,
+        plugins:{
+          legend:{display:false},
+          tooltip:{callbacks:{label:ctx=>`${ctx.parsed.x || ctx.parsed.y}% Mastery`}}
+        },
+        scales:{
+          y:{
+            beginAtZero:true,
+            max:100,
+            grid:{color:gridColor},
+            ticks:{color:tickColor,callback:v=>v+'%'}
+          },
+          x:{
+            grid:{display:false},
+            ticks:{color:tickColor,maxRotation:30}
+          }
+        }
+      }
+    });
+  }catch(e){console.warn('Chart failed',e);}
+}
+
+/* ───────────────────────────────────────────
+   5. SPACED REPETITION NOTIFICATIONS
+─────────────────────────────────────────── */
+function requestNotifPerms(){
+  if(!('Notification' in window)){toast('Notifications not supported','err');return;}
+  if(Notification.permission==='granted'){scheduleRevisionNotif();return;}
+  Notification.requestPermission().then(p=>{
+    if(p==='granted'){
+      const bell=document.getElementById('notif-bell');
+      const dot=document.getElementById('notif-dot');
+      if(bell)bell.title='Reminders enabled!';
+      if(dot)dot.classList.remove('show');
+      toast('🔔 Revision reminders enabled!','ok2');
+      scheduleRevisionNotif();
+      localStorage.setItem('mx3_notifs','1');
+    } else {toast('Notifications blocked — you can enable in browser settings','err');}
+  });
+}
+function scheduleRevisionNotif(){
+  const queue=getRevisionQueue();
+  const urgent=queue.filter(q=>q.priority==='high').slice(0,3);
+  if(!urgent.length)return;
+  // Show notification now as a demo (in production would use service worker scheduling)
+  const topics=urgent.map(q=>q.topic).join(', ');
+  if(Notification.permission==='granted'){
+    new Notification('Mentorix 📚 — Time to Revise!',{
+      body:`These topics are overdue: ${topics.slice(0,60)}. Quick revision = stronger memory!`,
+      icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🧠</text></svg>'
+    });
+  }
+}
+function initNotifBell(){
+  const bell=document.getElementById('notif-bell');
+  const dot=document.getElementById('notif-dot');
+  if(!bell)return;
+  bell.classList.add('show');
+  const perms=localStorage.getItem('mx3_notifs');
+  if(Notification.permission==='granted'||perms==='1'){
+    if(dot)dot.classList.remove('show');
+    bell.title='Revision reminders on ✅';
+    // Auto-check for urgent revision topics
+    setTimeout(()=>{
+      const queue=getRevisionQueue();
+      const urgent=queue.filter(q=>q.priority==='high');
+      if(urgent.length&&Notification.permission==='granted'){
+        scheduleRevisionNotif();
+      }
+    },5000);
+  } else {
+    if(dot)dot.classList.add('show');
+    bell.title='Enable revision reminders';
+  }
+}
+
+/* ───────────────────────────────────────────
+   6. PWA — INSTALLABLE APP
+─────────────────────────────────────────── */
+let pwaPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();pwaPrompt=e;
+  setTimeout(()=>{
+    const banner=document.getElementById('pwa-banner');
+    if(banner&&!localStorage.getItem('mx3_pwa_dismissed'))banner.classList.add('show');
+  },8000);
+});
+function pwaInstall(){
+  const banner=document.getElementById('pwa-banner');
+  if(pwaPrompt){
+    pwaPrompt.prompt();
+    pwaPrompt.userChoice.then(r=>{
+      if(r.outcome==='accepted'){toast('✅ Mentorix installed!','ok2');localStorage.setItem('mx3_pwa_installed','1');}
+      if(banner)banner.classList.remove('show');
+      localStorage.setItem('mx3_pwa_dismissed','1');
+    });
+  } else {
+    // Fallback for iOS (no beforeinstallprompt)
+    if(banner)banner.classList.remove('show');
+    toast('On iOS: tap Share → "Add to Home Screen"','ok2');
+  }
+}
+// Add basic PWA manifest via JS (since we're a single-file app)
+(function addPWAMeta(){
+  const manifest={name:'Mentorix by Harsha',short_name:'Mentorix',start_url:window.location.href,display:'standalone',background_color:'#04040f',theme_color:'#8B5CF6',icons:[{src:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="%238B5CF6"/><text y=".9em" font-size="80" x="10">🧠</text></svg>',sizes:'192x192',type:'image/svg+xml'}]};
+  const blob=new Blob([JSON.stringify(manifest)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement('link');link.rel='manifest';link.href=url;
+  document.head.appendChild(link);
+})();
+
+
+/* enhanceRevisionWithSM2() removed — dead code.
+   rRevision() in screens/revision.js already calls sm2NextInterval(item.topic)
+   directly per-card and renders the due-date label inline (no DOM querying
+   needed). This function duplicated that work via a fragile post-render
+   DOM scan and was never called anywhere. */
+
+/* ───────────────────────────────────────────
+   2. SOCRATIC TEACHING MODE
+─────────────────────────────────────────── */
+let socraticActive=false;
+let socraticState={q:'',hints:[],answered:false};
+
+async function startSocraticMode(topic){
+  socraticActive=true;
+  const el=document.getElementById('socratic-area');
+  if(!el)return;
+  el.innerHTML=`<div class="tio-thinking" style="justify-content:center;padding:20px"><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div><span style="color:#C4B5FD;font-size:13px;margin-left:10px">Tio is preparing a Socratic challenge…</span></div>`;
+  try{
+    const sys='You are a Socratic tutor. Output ONLY valid JSON.';
+    const p=`Create a Socratic question for topic: "${topic.replace(/"/g,"'")}". Don't give the answer — lead the student to discover it.
+Output ONLY: {"question":"thought-provoking open question that requires reasoning?","hints":["subtle hint 1","subtle hint 2","subtle hint 3"],"answer":"the key insight they should reach","followup":"deeper question once they answer"}`;
+    const raw=await ai([{role:'user',content:p}],sys,1000,true);
+    const data=pJSON(raw);
+    if(!data?.question)throw new Error('No data');
+    socraticState={q:data.question,hints:data.hints||[],answered:false,fullData:data};
+    el.innerHTML=`
+      <div class="socratic-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+          <div class="nxav" style="width:28px;height:28px;font-size:13px;flex-shrink:0">✨</div>
+          <div style="color:var(--cl);font-size:11px;font-weight:700;letter-spacing:.4px">TIO ASKS — SOCRATIC MODE</div>
+        </div>
+        <div class="socratic-q">${esc(data.question)}</div>
+        <div style="margin-bottom:12px">
+          <div style="color:var(--mut);font-size:11px;font-weight:600;margin-bottom:7px;letter-spacing:.4px">HINTS (click to reveal)</div>
+          <div>${(data.hints||[]).map((h,i)=>`<span class="socratic-hint" onclick="revealHint(this,'${esc(h)}')" data-hint="${esc(h)}">💡 Hint ${i+1}</span>`).join('')}</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <input class="inp" id="socratic-ans" placeholder="Type your reasoning…" style="font-size:13px" onkeydown="if(event.key==='Enter')checkSocratic()">
+          <button class="btn bpri bsm" onclick="checkSocratic()">Submit →</button>
+        </div>
+        <div id="socratic-feedback" style="margin-top:10px"></div>
+      </div>`;
+  }catch(e){
+    el.innerHTML=`<p style="color:var(--redl);font-size:13px;padding:10px">Socratic mode unavailable. <button class="btn bsm bpri" onclick="startSocraticMode('${escON(topic)}')">Retry</button></p>`;
+  }
+}
+
+function revealHint(el,hint){
+  el.textContent=hint;el.style.borderColor='var(--c)';el.style.color='var(--cl)';el.onclick=null;
+}
+
+async function checkSocratic(){
+  const ans=(document.getElementById('socratic-ans')?.value||'').trim();
+  if(!ans)return;
+  const fb=document.getElementById('socratic-feedback');
+  if(!fb)return;
+  fb.innerHTML=`<div class="tio-thinking" style="background:transparent;border:none;padding:6px 0"><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div><span style="color:#C4B5FD;font-size:12px;margin-left:8px">Tio is evaluating your reasoning…</span></div>`;
+  try{
+    const sys='You are a Socratic tutor. Be encouraging. Max 3 sentences. No markdown.';
+    const prompt=`Question was: "${socraticState.q}". Key insight: "${socraticState.fullData?.answer||''}". Student answered: "${ans}". Did they get the insight? Give brief encouraging feedback and the follow-up question if they're on track: "${socraticState.fullData?.followup||''}"`;
+    const reply=await ai([{role:'user',content:prompt}],sys,400);
+    const correct=reply.toLowerCase().includes('correct')||reply.toLowerCase().includes('right')||reply.toLowerCase().includes('exactly')||reply.toLowerCase().includes('yes');
+    if(correct){addXP(20,'Socratic insight');}
+    fb.innerHTML=`<div class="tio-inline" style="background:${correct?'rgba(16,185,129,.08)':'rgba(139,92,246,.08)'};border-color:${correct?'rgba(16,185,129,.25)':'rgba(139,92,246,.25)'}">
+      <div class="nxav" style="background:${correct?'linear-gradient(135deg,#059669,var(--ok))':'linear-gradient(135deg,var(--p),var(--c))'};width:28px;height:28px;font-size:13px">✨</div>
+      <div><div style="color:${correct?'var(--okl)':'var(--pl)'};font-size:11px;font-weight:700;margin-bottom:2px">${correct?'✅ GREAT REASONING!':'💡 TIO RESPONDS'}</div>
+      <div style="color:#CBD5E1;font-size:13px;line-height:1.6">${esc(reply)}</div></div>
+    </div>`;
+  }catch(e){fb.innerHTML=`<p style="color:var(--redl);font-size:12px">Evaluation failed. Try again.</p>`;}
+}
+
+/* ───────────────────────────────────────────
+   3. KNOWLEDGE GRAPH (Canvas-based)
+─────────────────────────────────────────── */
+function renderKnowledgeGraph(containerId, centerTopic, relatedTopics){
+  const container=document.getElementById(containerId);
+  if(!container)return;
+  const W=container.clientWidth||500, H=260;
+  container.innerHTML=`<canvas class="kg-canvas" id="kg-canvas" width="${W}" height="${H}"></canvas><div class="kg-tooltip" id="kg-tip" style="display:none"></div>`;
+  const canvas=document.getElementById('kg-canvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+
+  // Build nodes
+  const cx=W/2, cy=H/2;
+  const nodes=[{label:centerTopic,x:cx,y:cy,r:42,type:'center',learned:D.topics.includes(centerTopic)}];
+  const count=relatedTopics.length;
+  relatedTopics.forEach((t,i)=>{
+    const angle=(i/count)*Math.PI*2 - Math.PI/2;
+    const dist=100+Math.random()*20;
+    nodes.push({label:t,x:cx+Math.cos(angle)*dist,y:cy+Math.sin(angle)*dist,r:28,type:D.topics.includes(t)?'learned':'related',learned:D.topics.includes(t)});
+  });
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    // Draw edges
+    nodes.slice(1).forEach(n=>{
+      ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(n.x,n.y);
+      ctx.strokeStyle=n.learned?'rgba(16,185,129,.3)':'rgba(139,92,246,.18)';
+      ctx.lineWidth=n.learned?2:1.2;ctx.setLineDash([4,6]);ctx.stroke();ctx.setLineDash([]);
+    });
+    // Draw nodes
+    nodes.forEach(n=>{
+      const grd=ctx.createRadialGradient(n.x-n.r*.3,n.y-n.r*.3,0,n.x,n.y,n.r);
+      if(n.type==='center'){grd.addColorStop(0,'#A78BFA');grd.addColorStop(1,'#6D28D9');}
+      else if(n.type==='learned'){grd.addColorStop(0,'#34D399');grd.addColorStop(1,'#059669');}
+      else{grd.addColorStop(0,'rgba(255,255,255,.12)');grd.addColorStop(1,'rgba(255,255,255,.04)');}
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+      ctx.fillStyle=grd;ctx.fill();
+      if(n.type==='related'){ctx.strokeStyle='rgba(139,92,246,.4)';ctx.lineWidth=1.5;ctx.stroke();}
+      // Label
+      ctx.fillStyle=n.type==='related'?'#94A3B8':'#fff';
+      ctx.font=`bold ${n.type==='center'?11:9}px 'Hanken Grotesk', sans-serif`;
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      const words=n.label.split(' ');
+      if(words.length>1&&n.r<35){
+        ctx.fillText(words[0],n.x,n.y-5);ctx.fillText(words.slice(1).join(' '),n.x,n.y+6);
+      } else {ctx.fillText(n.label.slice(0,12),n.x,n.y);}
+    });
+  }
+  draw();
+
+  // Hover tooltip
+  canvas.addEventListener('mousemove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    const mx=(e.clientX-rect.left)*(W/rect.width), my=(e.clientY-rect.top)*(H/rect.height);
+    const tip=document.getElementById('kg-tip');
+    let hit=null;
+    nodes.forEach(n=>{const dx=mx-n.x,dy=my-n.y;if(Math.sqrt(dx*dx+dy*dy)<n.r+4)hit=n;});
+    if(hit&&tip){
+      tip.style.display='block';tip.style.left=Math.min(mx+10,W-150)+'px';tip.style.top=(my-35)+'px';
+      tip.textContent=(hit.type==='center'?'📄 ':hit.learned?'✅ ':'🔗 ')+hit.label+(hit.learned?' (Learned)':' — Click to learn');
+    } else if(tip){tip.style.display='none';}
+  });
+  canvas.addEventListener('click',e=>{
+    const rect=canvas.getBoundingClientRect();
+    const mx=(e.clientX-rect.left)*(W/rect.width), my=(e.clientY-rect.top)*(H/rect.height);
+    nodes.forEach(n=>{const dx=mx-n.x,dy=my-n.y;if(Math.sqrt(dx*dx+dy*dy)<n.r+4&&n.type!=='center')go('learn',n.label);});
+  });
+}
+
+/* ───────────────────────────────────────────
+   4. PEER COMPARISON (Simulated, privacy-safe)
+─────────────────────────────────────────── */
+// Memoized peer stats — cached for the session to prevent flickering percentiles on re-render.
+// Cleared when XP or topics count changes significantly.
+let _peerStatsCache = null;
+let _peerStatsCacheKey = '';
+function getPeerStats(){
+  // Cache key: topic count + xp bucket so stats refresh when user progresses meaningfully
+  const cacheKey = `${D.topics.length}:${Math.floor(D.xp/50)}`;
+  if(_peerStatsCache && _peerStatsCacheKey === cacheKey) return _peerStatsCache;
+  // Simulate peer stats based on local data — no real server needed
+  const topics=D.topics.length;
+  const xp=D.xp;
+  const avgScore=Object.values(D.memory?.scores||{}).reduce((a,b)=>a+b,0)/Math.max(Object.values(D.memory?.scores||{}).length,1)||0;
+  // Deterministic jitter seeded by topic count to ensure stable render across re-renders
+  const jitter=(seed,max)=>Math.floor((seed*17+xp*3)%max);
+  const topicPct=Math.min(99,Math.round((topics/(topics+8))*100+jitter(topics,5)));
+  const xpPct=Math.min(99,Math.round((xp/(xp+600))*100+jitter(xp,5)));
+  const scorePct=Math.min(99,Math.round((avgScore/100)*85+jitter(Math.floor(avgScore),10)));
+  const streak=D.streak;
+  const streakPct=Math.min(99,Math.round((streak/(streak+5))*100+jitter(streak,5)));
+  _peerStatsCache={topicPct,xpPct,scorePct,streakPct,
+    totalLearners:1200+jitter(topics*7,800),
+    topStreak:Math.max(streak+jitter(streak,10)+3,10)};
+  _peerStatsCacheKey=cacheKey;
+  return _peerStatsCache;
+}
+
+function renderPeerStats(containerId){
+  const el=document.getElementById(containerId);if(!el)return;
+  const p=getPeerStats();
+  el.innerHTML=`
+    <div class="card cglow">
+      <div class="between mb14">
+        <div class="h3" style="color:var(--pl)">👥 How You Compare</div>
+        <span style="color:var(--mut);font-size:11px">vs ${p.totalLearners.toLocaleString()} learners</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        ${[
+          {label:'Topics Learned',pct:p.topicPct,ic:'📚'},
+          {label:'Total XP',pct:p.xpPct,ic:'⚡'},
+          {label:'Quiz Scores',pct:p.scorePct,ic:'🎯'},
+          {label:'Learning Streak',pct:p.streakPct,ic:'🔥'},
+        ].map(s=>`<div>
+          <div class="between mb5"><span style="color:var(--sub);font-size:13px">${s.ic} ${s.label}</span>
+          <span style="color:${s.pct>=75?'var(--okl)':s.pct>=50?'var(--goldl)':'var(--pl)'};font-size:12px;font-weight:700">Top ${100-s.pct}%</span></div>
+          <div class="peer-bar"><div class="peer-fill" style="width:${s.pct}%"></div></div>
+        </div>`).join('')}
+      </div>
+      <p style="color:var(--mut);font-size:11px;margin-top:12px;text-align:center">📊 Compared anonymously against Mentorix learners</p>
+    </div>`;
+}
+
+/* ───────────────────────────────────────────
+   5. AI MNEMONIC GENERATOR
+─────────────────────────────────────────── */
+async function generateMnemonic(topic, containerId){
+  const el=document.getElementById(containerId);if(!el)return;
+  el.innerHTML=`<div class="tio-thinking" style="background:transparent;border:none;padding:6px 0"><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div><span style="color:var(--goldl);font-size:12px;margin-left:8px">Creating a memory trick…</span></div>`;
+  try{
+    const sys='You are a memory expert. Output ONLY valid JSON. Be creative and memorable.';
+    const p=`Create a mnemonic device to remember the key idea of: "${topic.replace(/"/g,"'")}".
+Output ONLY: {"type":"acronym|rhyme|story|analogy","mnemonic":"the actual memory device","explanation":"how it helps remember the concept","keyword":"the single most important word to remember"}`;
+    const raw=await ai([{role:'user',content:p}],sys,500,true);
+    const data=pJSON(raw)||{};
+    const typeEmoji={'acronym':'🔤','rhyme':'🎵','story':'📖','analogy':'🔗'}[data.type]||'💡';
+    el.innerHTML=`<div class="mnemonic-card">
+      <div class="mnemonic-tag">${typeEmoji} Memory Trick · ${data.type||'mnemonic'}</div>
+      <div style="font-family:var(--f-display);font-size:16px;font-weight:700;color:var(--goldl);margin-bottom:6px">${esc(data.mnemonic||'')}</div>
+      <div style="color:#CBD5E1;font-size:13px;line-height:1.6">${esc(data.explanation||'')}</div>
+      ${data.keyword?`<div style="margin-top:8px"><span style="background:rgba(245,158,11,.2);color:var(--goldl);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700">🔑 Key word: ${esc(data.keyword)}</span></div>`:''}
+    </div>`;
+  }catch(e){el.innerHTML='';} // silent fail
+}
+
+/* ───────────────────────────────────────────
+   6. ADAPTIVE TEST DIFFICULTY
+─────────────────────────────────────────── */
+let adaptiveState={streak:0, currentDiff:'easy', escalated:false};
+
+function getAdaptiveDiff(qi, answers, qs){
+  // After 3 correct in a row, escalate difficulty for next tier
+  if(qi<3)return 'easy';
+  const recentCorrect=([0,1,2].filter(i=>answers[i]===qs[i]?.a)).length;
+  if(qi<6){
+    if(recentCorrect>=2)return 'medium';
+    return 'easy';
+  }
+  if(qi<9){
+    const medCorrect=([3,4,5].filter(i=>answers[i]===qs[i]?.a)).length;
+    if(medCorrect>=2)return 'hard';
+    return 'medium';
+  }
+  return 'expert';
+}
+
+function renderAdaptiveDiffBar(qs, answers){
+  const segs=qs.map((_,i)=>{
+    const diff=i<3?'easy':i<6?'med':i<9?'hard':'exp';
+    const answered=answers[i]!==undefined;
+    const correct=answered&&answers[i]===qs[i]?.a;
+    return `<div class="adp-seg adp-${diff}${answered?` done" style="background:${correct?'var(--ok)':'var(--red)'}`:'"'}></div>`;
+  });
+  return `<div class="adp-diff-bar" title="Test progress: Easy→Medium→Hard→Expert">${segs.join('')}</div>`;
+}
+
+function toggleDoubtVoice(){
+  const btn=document.getElementById('doubt-voice-btn');
+  const inp=document.getElementById('dq');
+  if(!('webkitSpeechRecognition' in window||'SpeechRecognition' in window)){
+    toast('Voice not supported in this browser. Try Chrome!','err');return;
+  }
+  if(voiceActive){if(voiceRec)voiceRec.stop();voiceActive=false;if(btn)btn.classList.remove('listening');return;}
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  voiceRec=new SR();voiceRec.lang='en-US';voiceRec.continuous=false;voiceRec.interimResults=true;
+  voiceRec.onstart=()=>{voiceActive=true;if(btn)btn.classList.add('listening');toast('🎙️ Listening for your question…','ok2');};
+  voiceRec.onresult=e=>{const t=Array.from(e.results).map(r=>r[0].transcript).join('');if(inp){inp.value=t;DS.q=t;}};
+  voiceRec.onend=()=>{voiceActive=false;if(btn)btn.classList.remove('listening');if((inp?.value||'').trim())setTimeout(askDoubt,200);};
+  voiceRec.onerror=e=>{voiceActive=false;if(btn)btn.classList.remove('listening');};
+  voiceRec.start();
+}
+
+/* ───────────────────────────────────────────
+   GLOBAL KEYBOARD SHORTCUTS
+─────────────────────────────────────────── */
+document.addEventListener('keydown',function(e){
+  // Don't fire if typing in an input/textarea
+  const tag=(e.target.tagName||'').toLowerCase();
+  if(tag==='input'||tag==='textarea'||tag==='select')return;
+  if(e.ctrlKey||e.metaKey||e.altKey)return;
+  // Only when app is running (not auth/onboarding)
+  if(!D.profile)return;
+
+  const shortcuts={
+    'd': ()=>go('dash'),
+    'l': ()=>go('courses'),
+    'n': ()=>go('mentor'),
+    'e': ()=>go('explore'),
+    'c': ()=>go('careers'),
+    't': ()=>go('tests'),
+    'q': ()=>go('doubt'),
+    'b': ()=>go('notebook'),
+    'r': ()=>go('revision'),
+    'p': ()=>go('progress'),
+    's': ()=>go('settings'),
+    '?': ()=>showShortcutsHelp(),
+  };
+  const fn=shortcuts[e.key];
+  if(fn){e.preventDefault();fn();}
+});
+
+let shortcutsHelpShown=false;
+function showShortcutsHelp(){
+  if(shortcutsHelpShown)return;
+  shortcutsHelpShown=true;
+  const m=document.createElement('div');m.className='modal-bg';m.id='kb-help';
+  m.innerHTML=`<div class="modal-box" style="max-width:420px">
+    <div class="between mb16"><div class="h2">⌨️ Keyboard Shortcuts</div><button onclick="document.getElementById('kb-help').remove();shortcutsHelpShown=false" style="background:none;border:none;cursor:pointer;color:var(--mut);font-size:20px">✖</button></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      ${[['D','Dashboard'],['L','Courses'],['N','AI Mentor'],['E','Explore'],['C','Career Explorer'],['T','Tests'],['Q','Doubt Solver'],['B','Notebook'],['R','Revision'],['P','Progress'],['S','Settings'],['Ctrl+K','Universal Search'],['?','This help']].map(([k,v])=>`
+        <div onclick="animKeyPress(this)" style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,.04);border-radius:8px;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(139,92,246,.1)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+          <span class="key-cap">${k}</span>
+          <span style="color:var(--sub);font-size:13px">${v}</span>
+        </div>`).join('')}
+    </div>
+    <p style="color:var(--mut);font-size:11px;text-align:center;margin-top:14px">Press keys directly to navigate · <span class="key-cap">?</span> to toggle this</p>
+  </div>`;
+  document.body.appendChild(m);
+  m.addEventListener('click',ev=>{if(ev.target===m){m.remove();shortcutsHelpShown=false;}});
+  // Also close on Escape key
+  const _kbEsc=(e)=>{if(e.key==='Escape'){const el=document.getElementById('kb-help');if(el){el.remove();shortcutsHelpShown=false;}document.removeEventListener('keydown',_kbEsc);}};
+  document.addEventListener('keydown',_kbEsc);
+}
+
+/* ───────────────────────────────────────────
+   VOICE OUTPUT — Read Lessons Aloud (Web Speech API)
+─────────────────────────────────────────── */
+let voiceUtterance=null;
+function readAloud(text,label){
+  if(!('speechSynthesis' in window)){toast('Voice not supported in this browser','err');return;}
+  stopVoiceReading();
+  const clean=text.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/\s+/g,' ').trim();
+  voiceUtterance=new SpeechSynthesisUtterance(clean);
+  voiceUtterance.rate=0.92;voiceUtterance.pitch=1.04;voiceUtterance.volume=1;
+  const setVoice=()=>{
+    const voices=speechSynthesis.getVoices();
+    const best=voices.find(v=>v.lang.startsWith('en')&&(v.name.includes('Natural')||v.name.includes('Neural')||v.name.includes('Google UK')||v.name.includes('Samantha')))||voices.find(v=>v.lang.startsWith('en'))||voices[0];
+    if(best)voiceUtterance.voice=best;
+  };
+  if(speechSynthesis.getVoices().length)setVoice();
+  else speechSynthesis.onvoiceschanged=setVoice;
+  const ind=document.getElementById('voice-reading-indicator');
+  const lbl=document.getElementById('voice-reading-label');
+  if(ind)ind.classList.add('active');
+  if(lbl)lbl.textContent='Reading: '+(label||'lesson').slice(0,24)+'…';
+  voiceUtterance.onend=()=>{if(ind)ind.classList.remove('active');voiceUtterance=null;};
+  voiceUtterance.onerror=()=>{if(ind)ind.classList.remove('active');voiceUtterance=null;};
+  speechSynthesis.speak(voiceUtterance);
+}
+function stopVoiceReading(){
+  if(typeof speechSynthesis!=='undefined')speechSynthesis.cancel();
+  const ind=document.getElementById('voice-reading-indicator');
+  if(ind)ind.classList.remove('active');
+  voiceUtterance=null;
+}
+function readLesson(){
+  if(!LS.lesson)return;
+  const l=LS.lesson;
+  let text=l.topic+'. ';
+  if(LS.tab==='overview'){
+    const currentSec = (l.sections || [])[LS.activeSectionIdx || 0];
+    if(currentSec) text += currentSec.title + '. ' + currentSec.content;
+  } else if(LS.tab==='notes'){
+    const notes = l.notes || { summary: '', formulas: [], facts: [] };
+    text += (notes.summary || '') + '. ';
+    if (notes.formulas && notes.formulas.length) {
+      text += 'Key formulas and rules: ' + notes.formulas.join('. ') + '. ';
+    }
+    if (notes.facts && notes.facts.length) {
+      text += 'Interesting facts: ' + notes.facts.join('. ') + '. ';
+    }
+  } else {
+    text += 'Assessment for ' + l.topic + '. Please answer the quiz questions.';
+  }
+  readAloud(text,l.topic);
+}
+
+/* ───────────────────────────────────────────
+   ELI5 — EXPLAIN LIKE I'M 5 MODE
+─────────────────────────────────────────── */
+function toggleELI5(){
+  if(!D.settings)D.settings={};
+  D.settings.eli5Mode=!D.settings.eli5Mode;
+  saveAll();
+  const badge=document.getElementById('eli5-badge');
+  if(badge)badge.style.display=D.settings.eli5Mode?'block':'none';
+  if(D.settings.eli5Mode){
+    toast('🧒 Simple Mode ON — Tio will explain everything as simply as possible!','ok2');
+    if(LS.topic&&LS.lesson){LS.lesson=null;LS.loading=false;LS.diagDone=true;go('learn',LS.topic);}
+  } else {toast('Simple Mode OFF — back to full explanations','ok2');}
+}
+function initELI5Badge(){
+  const badge=document.getElementById('eli5-badge');
+  if(badge)badge.style.display=(D.settings?.eli5Mode?'block':'none');
+}
+function getELI5Hint(){
+  return D.settings?.eli5Mode?'CRITICAL INSTRUCTION: Explain everything as if teaching a very curious 12-year-old. Use simple everyday words. Replace all jargon with plain English analogies. Make it fun, relatable, and exciting. Avoid any technical terminology without immediately explaining it with a real-life example.':'';
+}
+
+/* ───────────────────────────────────────────
+   STREAK WITH STAKES — Shield + Danger Banner
+─────────────────────────────────────────── */
+function checkStreakWithStakes(){
+  checkStreak();
+  if(D.streak<3)return;
+  const today=new Date().toDateString();
+  const hour=new Date().getHours();
+  if(D.lastStudy===today)return; // already studied today — safe
+  if(hour<17)return; // only show danger after 5pm
+  const shields=D.settings?.streakShields||0;
+  // In-app danger banner on dashboard
+  if(!document.getElementById('streak-danger')){
+    const banner=document.createElement('div');
+    banner.id='streak-danger';
+    banner.style.cssText='position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:9980;background:linear-gradient(135deg,rgba(239,68,68,.96),rgba(245,158,11,.92));border-radius:14px;padding:12px 18px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(239,68,68,.45);max-width:400px;width:92%;animation:scIn .3s ease';
+    banner.innerHTML=`<span style="font-size:22px;flex-shrink:0">🔥</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:700;color:#fff;font-size:13px">${D.streak}-day streak ends at midnight!</div>
+        <div style="color:rgba(255,255,255,.85);font-size:11px">${shields>0?`You have ${shields} streak shield${shields>1?'s':''}`:'Study for 5 min to save it'}</div>
+      </div>
+      ${shields>0?`<button onclick="useStreakShield();document.getElementById('streak-danger')?.remove()" style="background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:6px 11px;color:#fff;font-weight:700;font-size:12px;cursor:pointer;white-space:nowrap;flex-shrink:0">🛡️ Use Shield</button>`:''}
+      <button onclick="go('learn')" style="background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:6px 11px;color:#fff;font-weight:700;font-size:12px;cursor:pointer;white-space:nowrap;flex-shrink:0">Study now</button>
+      <button onclick="this.parentElement.remove()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.65);font-size:18px;padding:0 2px;flex-shrink:0">✖</button>`;
+    document.body.appendChild(banner);
+    setTimeout(()=>banner?.remove(),15000);
+  }
+  // Push notification if permission granted
+  if(Notification.permission==='granted'){
+    new Notification('Mentorix 🔥 Streak Alert!',{body:`Your ${D.streak}-day streak ends at midnight! ${shields>0?'Use a shield or ':''} study now to save it.`});
+  }
+}
+function useStreakShield(){
+  if(!D.settings)D.settings={};
+  const shields=D.settings.streakShields||0;
+  if(shields<=0){toast('No streak shields remaining! Earn one by completing a 7-day streak.','err');return;}
+  D.settings.streakShields=shields-1;
+  D.lastStudy=new Date().toDateString();
+  saveAll();
+  toast(`🛡️ Streak Shield used! Your ${D.streak}-day streak is protected. ${D.settings.streakShields} shields left.`,'ok2');
+  document.getElementById('streak-danger')?.remove();
+}
+function earnStreakShield(){
+  if(!D.settings)D.settings={};
+  D.settings.streakShields=(D.settings.streakShields||0)+1;
+  saveAll();
+  toast(`🛡️ Streak Shield earned! You now have ${D.settings.streakShields} shield${D.settings.streakShields>1?'s':''}.`,'badge');
+}
+
+/* ───────────────────────────────────────────
+   MASTERY CERTIFICATES
+─────────────────────────────────────────── */
+function checkAndAwardCertificate(topic,score){
+  if(score<80)return;
+  const key='mx3_cert_'+topic.replace(/\W+/g,'_').toLowerCase();
+  if(localStorage.getItem(key))return; // already awarded
+  localStorage.setItem(key,'1');
+  setTimeout(()=>{launchConfetti(90);setTimeout(()=>showMasteryCertificate(topic,score),500);},300);
+}
+function showMasteryCertificate(topic,score){
+  const name=D.profile?.name||'Learner';
+  const date=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  const modal=document.createElement('div');modal.className='modal-bg';modal.id='cert-modal';
+  modal.innerHTML=`
+  <div class="modal-box" style="max-width:480px;background:rgba(6,6,18,.98);padding:0;overflow:hidden">
+    <div class="cert-wrap" id="cert-content" style="border-radius:18px 18px 0 0">
+      <div style="font-size:56px;margin-bottom:10px;animation:pop .6s cubic-bezier(.34,1.56,.64,1)">🏆</div>
+      <div class="cert-title">Certificate of Mastery</div>
+      <div style="color:var(--mut);font-size:12px;margin-bottom:4px">This certifies that</div>
+      <div class="cert-name">${esc(name)}</div>
+      <div style="color:var(--mut);font-size:12px;margin-bottom:8px">has achieved mastery in</div>
+      <div class="cert-topic">${esc(topic)}</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:12px 0">
+        <div style="height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(245,158,11,.4))"></div>
+        <span style="font-family:var(--f-display);font-size:28px;font-weight:700;color:var(--goldl)">${score}%</span>
+        <div style="height:1px;flex:1;background:linear-gradient(90deg,rgba(245,158,11,.4),transparent)"></div>
+      </div>
+      <div style="color:var(--mut);font-size:11px;margin-bottom:14px">${date} · Verified by Tio AI</div>
+      <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.06);border-radius:20px;padding:5px 14px">
+        <div style="width:20px;height:20px;background:linear-gradient(135deg,var(--p),var(--c));border-radius:5px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:10px">M</div>
+        <span style="font-size:12px;font-weight:600;color:var(--sub)">Mentorix by Harsha</span>
+      </div>
+    </div>
+    <div style="padding:16px 20px;display:flex;gap:9px">
+      <button class="btn bpri bfull" onclick="shareCertificate('${esc(topic)}',${score})">🔗 Share This</button>
+      <button class="btn bgh bsm" onclick="go('tests');document.getElementById('cert-modal')?.remove()">📄 Take a Test</button>
+      <button class="btn bsec bsm" onclick="document.getElementById('cert-modal')?.remove()">Close</button>
+    </div>
+  </div>`;
+  document.body.appendChild(modal);
+  modal.addEventListener('click',e=>{if(e.target===modal)modal.remove();});
+  const _certEsc=(e)=>{if(e.key==='Escape'){modal.remove();document.removeEventListener('keydown',_certEsc);}};
+  document.addEventListener('keydown',_certEsc);
+}
+function shareCertificate(topic,score){
+  const name=(D.profile?.name||'Someone').split(' ')[0];
+  const text=`🏆 ${name} just earned a Mastery Certificate in "${topic}" with ${score}% on Mentorix! AI-powered learning that actually works 🚀`;
+  const url=window.location.href.split('?')[0]+'?topic='+encodeURIComponent(topic);
+  if(navigator.share){navigator.share({title:'My Mentorix Certificate',text,url}).catch(()=>copyShareLink(url));}
+  else{copyShareLink(text+'\n'+url);}
+}
+
+/* ───────────────────────────────────────────
+   PREREQUISITE DETECTION
+─────────────────────────────────────────── */
+async function checkPrerequisites(topic){
+  const known=new Set(D.topics.map(t=>t.toLowerCase()));
+  try{
+    const sys='Curriculum expert. Output ONLY valid JSON. Be strict — only truly essential prerequisites.';
+    const p=`What are the 2-3 most important prerequisite topics to know BEFORE studying "${topic.replace(/"/g,"'")}". Skip obvious ones like "basic math".
+Output ONLY: {"prerequisites":["prereq 1","prereq 2"],"reason":"why in ≤10 words"}`;
+    const raw=await ai([{role:'user',content:p}],sys,400,true);
+    const data=pJSON(raw);
+    if(!data?.prerequisites?.length)return null;
+    const missing=data.prerequisites.filter(p=>!known.has(p.toLowerCase())&&!topic.toLowerCase().startsWith(p.toLowerCase().slice(0,4)));
+    return missing.length?{missing,reason:data.reason}:null;
+  }catch{return null;}
+}
+function showPrereqBanner(container,missing,topic){
+  const div=document.createElement('div');
+  div.style.cssText='background:rgba(245,158,11,.09);border:1px solid rgba(245,158,11,.28);border-radius:14px;padding:13px 16px;margin-bottom:14px';
+  div.innerHTML=`<div style="display:flex;align-items:flex-start;gap:10px">
+    <span style="font-size:18px;flex-shrink:0">📚</span>
+    <div class="pwa-text">
+      <div style="color:var(--goldl);font-weight:700;font-size:13px;margin-bottom:5px">Recommended: study these first</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">${missing.map(p=>`<span onclick="go('learn','${esc(p)}')" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);border-radius:20px;padding:3px 11px;color:var(--goldl);font-size:12px;font-weight:600;cursor:pointer">${esc(p)} →</span>`).join('')}</div>
+      <button onclick="this.closest('div[style]').remove()" style="background:none;border:none;color:var(--mut);font-size:12px;cursor:pointer;padding:0">Continue anyway →</button>
+    </div>
+  </div>`;
+  container.insertBefore(div,container.firstChild);
+}
+
+/* ───────────────────────────────────────────
+   FRIEND CHALLENGE LINKS
+─────────────────────────────────────────── */
+function createFriendChallenge(topic){
+  const score=D.memory?.scores?.[topic]||0;
+  const name=(D.profile?.name||'Someone').split(' ')[0];
+  const payload=btoa(JSON.stringify({topic,score,challenger:name,ts:Date.now()}));
+  const url=window.location.href.split('?')[0]+'?challenge='+encodeURIComponent(payload);
+  const text=`🎯 ${name} scored ${score}% on "${topic}" — can you beat it? Try on Mentorix AI Learning!`;
+  if(navigator.share){navigator.share({title:'Mentorix Challenge!',text,url}).catch(()=>copyShareLink(url));}
+  else copyShareLink(url);
+  toast(`🎯 Challenge link ${navigator.share?'shared':'copied'}! Send to a friend.`,'ok2');
+}
+function showChallengeWelcome(data){
+  const banner=document.createElement('div');
+  banner.style.cssText='position:fixed;top:70px;left:50%;transform:translateX(-50%);z-index:9985;background:linear-gradient(135deg,rgba(6,182,212,.95),rgba(139,92,246,.9));border-radius:16px;padding:14px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(6,182,212,.4);max-width:380px;width:92%;animation:scIn .3s ease';
+  banner.innerHTML=`<span style="font-size:24px">🎯</span>
+    <div class="pwa-text"><div style="font-weight:700;color:#fff;font-size:13px">${esc(data.challenger)} challenged you!</div>
+    <div style="color:rgba(255,255,255,.85);font-size:12px">Beat their ${data.score}% on "${esc(data.topic)}"</div></div>
+    <button onclick="go('learn','${esc(data.topic)}');this.parentElement.remove()" style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:10px;padding:7px 13px;color:#fff;font-weight:700;font-size:12px;cursor:pointer">Accept 🚀</button>
+    <button onclick="this.parentElement.remove()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);font-size:18px">✖</button>`;
+  document.body.appendChild(banner);
+  setTimeout(()=>banner?.remove(),20000);
+}
+// Handle incoming challenge URL
+(function handleChallengeURL(){
+  try{
+    const p=new URLSearchParams(window.location.search);
+    const c=p.get('challenge');
+    if(c){const data=JSON.parse(atob(decodeURIComponent(c)));if(data?.topic){window._challengeData=data;window._sharedTopic=data.topic;}}
+  }catch{}
+})();
+
+/* ───────────────────────────────────────────
+   SERVICE WORKER — Offline Caching
+─────────────────────────────────────────── */
+// Registered in head to ensure early offline protection and shell caching
+
+
+/* ───────────────────────────────────────────
+   THEME SYSTEM — Dark / Light / Lively
+─────────────────────────────────────────── */
+function applyAppTheme(theme){
+  // Remove all theme classes — dark is the base (no class needed)
+  document.body.classList.remove(
+    'theme-light','theme-lively','theme-emerald','theme-cream',
+    'theme-green','theme-vibrant','theme-playful'
+  );
+  // dark = no class (base styles in :root are the dark theme)
+  if(theme==='light')        document.body.classList.add('theme-light');
+  else if(theme==='green')   document.body.classList.add('theme-green');
+  else if(theme==='vibrant') document.body.classList.add('theme-vibrant');
+  else if(theme==='playful') document.body.classList.add('theme-playful');
+  else if(theme==='emerald') document.body.classList.add('theme-emerald');
+  else if(theme==='cream')   document.body.classList.add('theme-cream');
+  else if(theme==='lively'){ document.body.classList.add('theme-lively'); startEmojiFloats(); }
+  // dark: no class — base root styles apply
+  if(theme!=='lively') stopEmojiFloats();
+  // Sync colorTheme with appTheme for consistency
+  if(D?.settings){ D.settings.colorTheme = theme; D.settings.appTheme = theme; }
+}
+function applyAccentColor(accent){
+  document.body.classList.remove('accent-purple','accent-pink','accent-cyan','accent-emerald','accent-orange','accent-rose');
+  if(accent&&accent!=='purple')document.body.classList.add('accent-'+accent);
+}
+function applyFontSize(size){
+  document.body.classList.remove('font-sm','font-md','font-lg');
+  if(size==='sm')document.body.classList.add('font-sm');
+  else if(size==='lg')document.body.classList.add('font-lg');
+  else document.body.classList.add('font-md');
+}
+function applyAnimLevel(level){
+  document.body.classList.remove('anim-none','anim-reduce');
+  if(level==='none')document.body.classList.add('anim-none');
+  else if(level==='reduce')document.body.classList.add('anim-reduce');
+}
+function applyAllSettings(){
+  const savedTheme = D.settings?.appTheme || D.settings?.colorTheme || 'vibrant';
+  applyAppTheme(savedTheme);
+  applyAccentColor(D.settings?.accentColor||'purple');
+  applyFontSize(D.settings?.fontSize||'md');
+  applyAnimLevel(D.settings?.animLevel||'full');
+  applyMentorTheme();
+  const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+  if (D.settings?.customCursor === false || isTouch) {
+    document.body.classList.remove('has-cursor');
+  } else {
+    document.body.classList.add('has-cursor');
+  }
+  initELI5Badge();
+}
+function setAppTheme(theme){
+  D.settings.appTheme=theme;saveAll();
+  applyAppTheme(theme);
+  const msgs={
+    light:'☀️ Light mode on',cream:'🍦 Cream mode on',lively:'🎉 Lively mode on!',
+    emerald:'🌲 Emerald mode on',green:'🌿 Green Universe on',
+    vibrant:'⚡ Vibrant mode on',playful:'🎨 Playful mode on'
+  };
+  toast(msgs[theme]||'🌙 Dark mode on','ok2');
+  rSettings();
+}
+function setAccentColor(accent){
+  D.settings.accentColor=accent;saveAll();
+  applyAccentColor(accent);
+  rSettings();
+}
+function setFontSize(size){
+  D.settings.fontSize=size;saveAll();
+  applyFontSize(size);
+}
+function setAnimLevel(level){
+  D.settings.animLevel=level;saveAll();
+  applyAnimLevel(level);
+  toast(level==='none'?'Animations off':level==='reduce'?'Reduced animations':'Full animations on','ok2');
+}
+
+/* ───────────────────────────────────────────
+   TYPING ANIMATION ENGINE
+─────────────────────────────────────────── */
+const tyQueue=[];let tyRunning=false;
+function typeText(el,text,speed=22,onDone){
+  if(!el)return;
+  el.innerHTML='';
+  const cursor=document.createElement('span');
+  cursor.className='typewriter-cursor';
+  let i=0;
+  function tick(){
+    if(!document.body.contains(el)){onDone&&onDone();return;}
+    if(i<text.length){
+      el.textContent=text.slice(0,++i);
+      el.appendChild(cursor);
+      setTimeout(tick,speed+(Math.random()*10-5));
+    } else {
+      cursor.remove();
+      onDone&&onDone();
+    }
+  }
+  tick();
+}
+function typeHTML(el,text,speed=18,onDone){
+  // Strips HTML for typing, preserves structure
+  const plain=text.replace(/<[^>]*>/g,'');
+  typeText(el,plain,speed,onDone);
+}
+
+// Type a Tio chat message with the typing dots first
+function typeTioMsg(el,text){
+  if(!el)return;
+  // Show typing dots briefly
+  el.innerHTML=`<div class="tio-typing-dots"><span></span><span></span><span></span></div>`;
+  const delay=Math.min(600,text.length*3);
+  setTimeout(()=>{
+    if(!document.body.contains(el))return;
+    el.innerHTML='';
+    typeText(el,text,16);
+  },delay);
+}
+
+/* ───────────────────────────────────────────
+   SPARKLE EFFECT ON INTERACTIONS
+─────────────────────────────────────────── */
+function spawnSparkles(x,y,count=6){
+  if(D.settings?.animLevel==='none')return;
+  const colors=['#A78BFA','#67E8F9','#F9A8D4','#FCD34D','#6EE7B7'];
+  for(let i=0;i<count;i++){
+    const s=document.createElement('div');
+    s.className='sparkle';
+    const angle=Math.random()*Math.PI*2;
+    const dist=30+Math.random()*50;
+    s.style.cssText=`left:${x}px;top:${y}px;background:${colors[i%colors.length]};--tx:${Math.cos(angle)*dist}px;--ty:${Math.sin(angle)*dist}px;animation-delay:${i*0.05}s`;
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),700);
+  }
+}
+// Trigger sparkles on XP gain
+const _origAddXP=typeof addXP==='function'?addXP:null;
+
+/* ───────────────────────────────────────────
+   EMOJI FLOAT PARTICLES (Lively mode)
+─────────────────────────────────────────── */
+const LIVELY_EMOJIS=['✨','🌌','💫','⚡','🎯','📚','🧠','🚀','💡','🎉','🔥','💯','🌍','💎','🎓'];
+let emojiFloatInterval=null;
+function startEmojiFloats(){
+  if(emojiFloatInterval)return;
+  emojiFloatInterval=setInterval(()=>{
+    if(D.settings?.animLevel==='none')return;
+    const el=document.createElement('div');
+    el.className='emoji-float';
+    el.textContent=LIVELY_EMOJIS[Math.floor(Math.random()*LIVELY_EMOJIS.length)];
+    const x=Math.random()*window.innerWidth;
+    const dur=4+Math.random()*6;
+    el.style.cssText=`left:${x}px;bottom:-30px;animation-duration:${dur}s;font-size:${14+Math.random()*16}px`;
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),(dur+0.5)*1000);
+  },1800);
+}
+function stopEmojiFloats(){
+  if(emojiFloatInterval){clearInterval(emojiFloatInterval);emojiFloatInterval=null;}
+  document.querySelectorAll('.emoji-float').forEach(e=>e.remove());
+}
+
+/* ───────────────────────────────────────────
+   FORBIDDEN WORDS — Age-based content filter
+   Applied when user's age profile is under 16
+─────────────────────────────────────────── */
+/* FORBIDDEN_TOPICS + isTopicForbidden() → helpers.js */
+
+function showForbiddenWarning(topic){
+  toast('⚠️ This topic isn\'t available for your age group. Try something else!','err');
+  const el=document.getElementById('larea');
+  if(el)el.innerHTML=`<div class="card" style="text-align:center;padding:48px;border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.06)">
+    <div style="font-size:48px;margin-bottom:12px">🔒</div>
+    <div class="h2 mb8" style="color:var(--goldl)">Topic Restricted</div>
+    <p style="color:var(--mut);font-size:14px;max-width:320px;margin:0 auto 18px;line-height:1.7">This topic isn't available for your age group. Explore something else — there's a whole universe of knowledge waiting! 🗺️</p>
+    <button class="btn bpri" onclick="go('explore')">Explore Topics →</button>
+  </div>`;
+}
+
+/* ───────────────────────────────────────────
+   HAPTIC FEEDBACK
+─────────────────────────────────────────── */
+/* haptic() → helpers.js */
+
+/* ───────────────────────────────────────────
+   NETWORK STATUS DETECTION
+─────────────────────────────────────────── */
+/* initNetworkDetection() → router.js */
+
+/* ───────────────────────────────────────────
+   SWIPE GESTURES — Mobile lesson tab nav
+─────────────────────────────────────────── */
+/* initSwipeGestures() → router.js */
+
+/* ───────────────────────────────────────────
+   BROWSER BACK BUTTON — Mobile navigation
+─────────────────────────────────────────── */
+/* initBackButton() → router.js */
+/* go() → router.js */
+/* ═══════════════════════════════════════════════════════
+   STEP 10 — ASMR AUDIO ENGINE
+   Organic micro-tones. No cognitive noise.
+═══════════════════════════════════════════════════════ */
+const MxAudio=(function(){
+  let ctx=null;
+  function getCtx(){
+    if(!ctx){try{ctx=new(window.AudioContext||window.webkitAudioContext)();}catch(e){}}
+    return ctx;
+  }
+  function tone(freq,type,vol,dur,delay=0){
+    const c=getCtx();if(!c)return;
+    try{
+      const osc=c.createOscillator();
+      const gain=c.createGain();
+      osc.connect(gain);gain.connect(c.destination);
+      osc.type=type;osc.frequency.setValueAtTime(freq,c.currentTime+delay);
+      gain.gain.setValueAtTime(0,c.currentTime+delay);
+      gain.gain.linearRampToValueAtTime(vol,c.currentTime+delay+0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001,c.currentTime+delay+dur);
+      osc.start(c.currentTime+delay);
+      osc.stop(c.currentTime+delay+dur+0.05);
+    }catch(e){}
+  }
+  return{
+    /* Warm marimba chord — milestone / task complete */
+    milestone(){
+      if(D.settings?.animLevel==='none')return;
+      tone(523.25,'sine',.14,.6,0);     // C5
+      tone(659.25,'sine',.11,.5,.05);   // E5
+      tone(783.99,'sine',.09,.4,.1);    // G5
+      tone(987.77,'sine',.07,.35,.15);  // B5
+      tone(1174.66,'sine',.05,.3,.2);   // D6
+    },
+    /* Muted wooden tuck — toggle / action */
+    tuck(){
+      if(D.settings?.animLevel==='none')return;
+      tone(350,'sine',.15,.08,0);
+      tone(600,'sine',.05,.05,0.002);
+    },
+    /* Soft low dull — error / warning */
+    warn(){
+      if(D.settings?.animLevel==='none')return;
+      tone(130,'sine',.12,.45,0);
+      tone(110,'sine',.08,.4,.08);
+    },
+    /* Quick chime — XP gain */
+    xp(){
+      if(D.settings?.animLevel==='none')return;
+      tone(987.77,'sine',.08,.3,0);     // B5
+      tone(1318.51,'sine',.06,.25,0.06); // E6
+      tone(1567.98,'sine',.04,.2,0.12);  // G6
+    },
+    /* Unlock sound — badge/chapter complete */
+    unlock(){
+      if(D.settings?.animLevel==='none')return;
+      [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50].forEach((f,i)=>tone(f,'sine',.12 - i*.015,.4,i*.05));
+    },
+  };
+})();
+
+/* Wire ASMR into existing events */
+(function wireAudio(){
+  /* Intercept addXP to play chime */
+  const _origToast=typeof toast==='function'?toast:null;
+  // XP sound on xp toasts — listen for DOM additions
+  const toastObs=new MutationObserver(muts=>{
+    muts.forEach(m=>{
+      m.addedNodes.forEach(n=>{
+        if(n.className&&n.className.includes&&n.className.includes('txp'))MxAudio.xp();
+        if(n.className&&n.className.includes&&n.className.includes('tbadge'))MxAudio.unlock();
+        if(n.className&&n.className.includes&&n.className.includes('terr'))MxAudio.warn();
+      });
+    });
+  });
+  const tc=document.getElementById('toasts');
+  if(tc)toastObs.observe(tc,{childList:true});
+
+  /* Button / toggle tuck sound */
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('.btn,.toggle,.obtn,.mn-item,.ni,.tb,.qa-chip,.tc-btn,.chip,.ob-tio');
+    if(btn&&!btn.closest('[data-no-sound]'))MxAudio.tuck();
+  },{passive:true});
+})();
+
+
+/* ── CUSTOM CURSOR ENGINE ── */
+(function initCustomCursorEngine() {
+  const orb = document.getElementById('cursor-orb');
+  const aura = document.getElementById('cursor-aura');
+  if (!orb || !aura) return;
+
+  let mouseX = 0, mouseY = 0;
+  let auraX = 0, auraY = 0;
+  let active = false;
+  let rafId = null;
+  let isTouch = false;
+
+  const onMouseMove = e => {
+    if (isTouch) return;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    if (!active && D.settings?.customCursor !== false) {
+      active = true;
+      orb.style.display = 'block';
+      aura.style.display = 'block';
+      document.body.classList.add('has-cursor');
+    }
+
+    orb.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+  };
+
+  const onTouchStart = () => {
+    isTouch = true;
+    active = false;
+    orb.style.display = 'none';
+    aura.style.display = 'none';
+    document.body.classList.remove('has-cursor');
+  };
+
+  const onMouseMoveRestore = () => {
+    isTouch = false;
+  };
+
+  function updateAura() {
+    if (D.settings?.customCursor !== false && D.settings?.animLevel !== 'none' && !isTouch) {
+      const dx = mouseX - auraX;
+      const dy = mouseY - auraY;
+      auraX += dx * 0.15;
+      auraY += dy * 0.15;
+      if (aura) {
+        aura.style.transform = `translate(${auraX - 10}px, ${auraY - 10}px)`;
+      }
+    }
+    rafId = requestAnimationFrame(updateAura);
+  }
+
+  // Hover detection
+  const onMouseOver = e => {
+    if (isTouch || D.settings?.customCursor === false) return;
+    const target = e.target;
+    if (!target) return;
+    const isInteractive = target.closest('a, button, [onclick], .obtn, .ni, .qa-chip, input, select, textarea, [role="button"], .tb, .sc, .card-lift');
+    if (isInteractive) {
+      document.body.classList.add('cursor-hover');
+    } else {
+      document.body.classList.remove('cursor-hover');
+    }
+  };
+
+  const onMouseOut = () => {
+    document.body.classList.remove('cursor-hover');
+  };
+
+  // Click handler
+  const onMouseDown = e => {
+    if (D.settings?.customCursor === false || isTouch) return;
+    document.body.classList.add('cursor-click');
+
+    const rip = document.createElement('div');
+    rip.className = 'cursor-ripple';
+    rip.style.left = `${e.clientX}px`;
+    rip.style.top = `${e.clientY}px`;
+    document.body.appendChild(rip);
+    setTimeout(() => rip.remove(), 500);
+  };
+
+  const onMouseUp = () => {
+    document.body.classList.remove('cursor-click');
+  };
+
+  function initCustomCursor() {
+    if (D.settings?.customCursor === false) {
+      destroyCustomCursor();
+      return;
+    }
+    document.addEventListener('mousemove', onMouseMove, { passive: true });
+    document.addEventListener('touchstart', onTouchStart, { passive: true });
+    document.addEventListener('mousemove', onMouseMoveRestore, { passive: true });
+    document.addEventListener('mouseover', onMouseOver, { passive: true });
+    document.addEventListener('mouseout', onMouseOut, { passive: true });
+    document.addEventListener('mousedown', onMouseDown, { passive: true });
+    document.addEventListener('mouseup', onMouseUp, { passive: true });
+    
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateAura);
+    }
+  }
+
+  function destroyCustomCursor() {
+    document.body.classList.remove('has-cursor');
+    orb.style.display = 'none';
+    aura.style.display = 'none';
+    active = false;
+    
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('touchstart', onTouchStart);
+    document.removeEventListener('mousemove', onMouseMoveRestore);
+    document.removeEventListener('mouseover', onMouseOver);
+    document.removeEventListener('mouseout', onMouseOut);
+    document.removeEventListener('mousedown', onMouseDown);
+    document.removeEventListener('mouseup', onMouseUp);
+
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  }
+
+  window.initCustomCursor = initCustomCursor;
+  window.destroyCustomCursor = destroyCustomCursor;
+
+  // Auto-init on page load if settings allow it
+  if (D.settings?.customCursor !== false) {
+    initCustomCursor();
+  }
+})();
+
+
+/* ── RIPPLE EFFECT — satisfying click ── */
+(function initRipple(){
+  document.addEventListener('click',function(e){
+    const target=e.target.closest('.btn,.card-lift,.sc,.ni,.mn-item,.obtn,.qa-chip');
+    if(!target||D.settings?.animLevel==='none')return;
+    const rect=target.getBoundingClientRect();
+    const r=document.createElement('div');
+    r.className='ripple-wave';
+    const size=Math.max(rect.width,rect.height)*2.2;
+    r.style.cssText=`width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+    if(!target.classList.contains('ripple-host'))target.style.position='relative',target.style.overflow='hidden';
+    target.appendChild(r);
+    setTimeout(()=>r.remove(),600);
+  },{passive:true});
+})();
+
+/* ── MAGNETIC CARD HOVER — cursor tracking ── */
+(function initMagneticCards(){
+  if('ontouchstart' in window)return; // desktop only
+  document.addEventListener('mousemove',function(e){
+    const cards=document.querySelectorAll('.sc,.card-lift');
+    cards.forEach(card=>{
+      const rect=card.getBoundingClientRect();
+      if(e.clientX>rect.left-20&&e.clientX<rect.right+20&&e.clientY>rect.top-20&&e.clientY<rect.bottom+20){
+        const cx=rect.left+rect.width/2;
+        const cy=rect.top+rect.height/2;
+        const dx=(e.clientX-cx)/rect.width*6;
+        const dy=(e.clientY-cy)/rect.height*4;
+        card.style.transform=`translateY(-4px) scale(1.01) rotateX(${-dy}deg) rotateY(${dx}deg)`;
+        card.style.transition='transform .08s linear';
+      } else if(card.style.transform&&card.style.transform.includes('rotateX')){
+        card.style.transform='';
+        card.style.transition='transform .3s var(--spring-nav,cubic-bezier(.34,1.56,.64,1))';
+      }
+    });
+  },{passive:true});
+})();
+
+/* ── REVEAL ANIMATION ON SCROLL ── */
+(function initReveal(){
+  if(!('IntersectionObserver' in window))return;
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('shown');obs.unobserve(e.target);}
+    });
+  },{threshold:.12});
+  function scanReveal(){document.querySelectorAll('.reveal-step:not(.shown)').forEach(el=>obs.observe(el));}
+  scanReveal();
+  // Re-scan on navigation
+  const _origGo=typeof go==='function'?go:null;
+  // Scan periodically for new elements added by screen renders
+  setInterval(scanReveal,800);
+})();
+
+/* ── HYDRATION BARS — thin progress on loading cards ── */
+function addHydrationBar(el){
+  if(!el||el.querySelector('.hydration-bar'))return;
+  const bar=document.createElement('div');
+  bar.className='hydration-bar';
+  el.style.position='relative';el.style.overflow='hidden';
+  el.prepend(bar);
+  setTimeout(()=>bar.remove(),1600);
+}
+
+/* ═══════════════════════════════════════════════════════
+   CINEMATIC SPLASH ENGINE — 5-SECOND MULTI-PHASE REVEAL
+   Particle field · Spring physics · Orbital rings · Typewriter
+═══════════════════════════════════════════════════════ */
+(function initSplash(){
+  const TIPS=[
+    'Your mentor. Your universe. Your path.',
+    'Every question you ask is a step forward.',
+    'Built for students who refuse to give up.',
+    'Learning that adapts to you, not the other way.',
+    'From confusion to clarity — that\'s the Mentorix way.',
+  ];
+
+  /* ── Particle field ── */
+  function initSplashParticles(){
+    const c=document.getElementById('splash-canvas');
+    if(!c)return;
+    const ctx=c.getContext('2d');
+    let W=c.width=window.innerWidth,H=c.height=window.innerHeight;
+    window.addEventListener('resize',()=>{W=c.width=window.innerWidth;H=c.height=window.innerHeight;},{ passive:true });
+
+    const COLS=['rgba(139,92,246,','rgba(6,182,212,','rgba(236,72,153,','rgba(16,185,129,'];
+    const pts=Array.from({length:55},()=>({
+      x:Math.random()*W, y:Math.random()*H,
+      vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35,
+      r:Math.random()*1.5+.4,
+      col:COLS[Math.floor(Math.random()*COLS.length)],
+      a:Math.random()*.5+.1
+    }));
+
+    let raf;
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      // Connection lines
+      pts.forEach((p,i)=>{
+        pts.slice(i+1).forEach(q=>{
+          const d=Math.hypot(p.x-q.x,p.y-q.y);
+          if(d<130){
+            ctx.beginPath();
+            ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
+            ctx.strokeStyle=`rgba(139,92,246,${.08*(1-d/130)})`;
+            ctx.lineWidth=.5;ctx.stroke();
+          }
+        });
+        p.x+=p.vx;p.y+=p.vy;
+        if(p.x<-5)p.x=W+5;if(p.x>W+5)p.x=-5;
+        if(p.y<-5)p.y=H+5;if(p.y>H+5)p.y=-5;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle=p.col+p.a+')';ctx.fill();
+      });
+      raf=requestAnimationFrame(draw);
+    }
+    draw();
+    return ()=>cancelAnimationFrame(raf);
+  }
+
+  /* ── Spring helper ── */
+  function spring(el,props,dur,ease){
+    Object.assign(el.style,{transition:`all ${dur}ms ${ease||'cubic-bezier(.34,1.56,.64,1)'}`,...props});
+  }
+  function fade(el,props,dur,ease){
+    Object.assign(el.style,{transition:`all ${dur}ms ${ease||'cubic-bezier(.4,0,.2,1)'}`,...props});
+  }
+
+  /* ── Typewriter ── */
+  function typewrite(el,text,speed=38){
+    return new Promise(res=>{
+      el.textContent='';let i=0;
+      const iv=setInterval(()=>{
+        if(i>=text.length){clearInterval(iv);res();return;}
+        el.textContent+=text[i++];
+      },speed);
+    });
+  }
+
+  /* ── Progress steps ── */
+  const STEPS=[
+    {pct:15,msg:'Loading core modules…'},
+    {pct:30,msg:'Initialising AI engine…'},
+    {pct:50,msg:'Preparing your workspace…'},
+    {pct:70,msg:'Loading knowledge graph…'},
+    {pct:88,msg:'Almost ready…'},
+    {pct:100,msg:'Welcome to Mentorix ✦'},
+  ];
+
+  /* ── Ring rotation animation ── */
+  function rotateRing(id,deg,dur){
+    const el=document.getElementById(id);
+    if(!el)return;
+    let r=0;const step=deg/60;
+    const iv=setInterval(()=>{r+=step;el.style.transform=`scale(1) rotate(${r}deg)`;},dur/60);
+    return ()=>clearInterval(iv);
+  }
+
+  /* ── Main sequence ── */
+  let _splashDone=false;
+  window.splashSkip=function(){
+    if(_splashDone)return;_splashDone=true;
+    const ls=document.getElementById('loading-screen');
+    if(ls){ls.style.transition='opacity .5s,transform .5s cubic-bezier(.4,0,.2,1)';ls.style.opacity='0';ls.style.transform='scale(1.04)';setTimeout(()=>{try{ls.remove()}catch(e){}},520);}
+  };
+
+  const stopParticles=initSplashParticles();
+  const tip=TIPS[Math.floor(Math.random()*TIPS.length)];
+
+  const logo=document.getElementById('sp-logo');
+  const ring1=document.getElementById('sp-ring1');
+  const ring2=document.getElementById('sp-ring2');
+  const ring3=document.getElementById('sp-ring3');
+  const wm=document.getElementById('sp-wordmark');
+  const tg=document.getElementById('sp-tagline');
+  const tipWrap=document.getElementById('sp-tip');
+  const tipText=document.getElementById('sp-tip-text');
+  const prog=document.getElementById('sp-progress');
+  const bar=document.getElementById('sp-bar');
+  const status=document.getElementById('sp-status');
+  const skip=document.getElementById('sp-skip');
+
+  /* Phase 1 — 0ms: Logo spring in */
+  setTimeout(()=>{
+    if(!logo)return;
+    spring(logo,{
+      opacity:'1',
+      transform:'scale(1) rotate(0deg)',
+      boxShadow:'0 0 60px rgba(139,92,246,.55),0 0 0 1px rgba(255,255,255,.15),0 12px 48px rgba(0,0,0,.7)'
+    },700,'cubic-bezier(.34,1.8,.64,1)');
+  },80);
+
+  /* Phase 1b — 250ms: Rings expand */
+  setTimeout(()=>{
+    [ring1,ring2,ring3].forEach((r,i)=>{
+      if(!r)return;
+      setTimeout(()=>{
+        spring(r,{opacity:'1',transform:'scale(1)'},600+i*80,'cubic-bezier(.34,1.4,.64,1)');
+      },i*90);
+    });
+    // Rotate rings continuously
+    let a1=0,a2=0,a3=0;
+    setInterval(()=>{
+      a1+=.35;a2-=.18;a3+=.1;
+      if(ring1)ring1.style.transform=`scale(1) rotate(${a1}deg)`;
+      if(ring2)ring2.style.transform=`scale(1) rotate(${a2}deg)`;
+      if(ring3)ring3.style.transform=`scale(1) rotate(${a3}deg)`;
+    },16);
+  },250);
+
+  /* Phase 1c — 500ms: Logo pulse glow */
+  setTimeout(()=>{
+    if(!logo)return;
+    logo.style.animation='splashLogoPulse 2s ease-in-out infinite';
+  },780);
+
+  /* Phase 2 — 900ms: Wordmark slides up */
+  setTimeout(()=>{
+    if(!wm)return;
+    fade(wm,{opacity:'1',transform:'translateY(0)'},500,'cubic-bezier(.34,1.3,.64,1)');
+    setTimeout(()=>{
+      if(!tg)return;
+      fade(tg,{opacity:'1',transform:'translateY(0)'},400,'cubic-bezier(.4,0,.2,1)');
+    },200);
+  },900);
+
+  /* Phase 3 — 1500ms: Tip typewriter */
+  setTimeout(async()=>{
+    if(!tipWrap||!tipText)return;
+    fade(tipWrap,{opacity:'1',transform:'translateY(0)'},400);
+    await typewrite(tipText,tip,32);
+  },1500);
+
+  /* Phase 4 — 1800ms: Progress bar */
+  setTimeout(()=>{
+    if(!prog)return;
+    fade(prog,{opacity:'1'},500);
+    let s=0;
+    function nextStep(){
+      if(s>=STEPS.length||_splashDone)return;
+      const st=STEPS[s++];
+      if(bar)bar.style.width=st.pct+'%';
+      if(status)status.textContent=st.msg;
+      setTimeout(nextStep,s<STEPS.length?480:0);
+    }
+    nextStep();
+  },1800);
+
+  /* Phase 5 — 2500ms: Skip button */
+  setTimeout(()=>{
+    if(skip)skip.style.opacity='1';
+  },2500);
+
+  /* Phase 6 — 4800ms: Logo glow intensifies then exit */
+  setTimeout(()=>{
+    if(_splashDone)return;
+    if(logo){
+      logo.style.transition='box-shadow .4s ease-in-out';
+      logo.style.boxShadow='0 0 100px rgba(139,92,246,.8),0 0 0 2px rgba(255,255,255,.25),0 12px 48px rgba(0,0,0,.7)';
+    }
+  },4400);
+
+  /* Final exit — 5000ms */
+  setTimeout(()=>{
+    if(_splashDone)return;
+    _splashDone=true;
+    if(stopParticles)stopParticles();
+    const ls=document.getElementById('loading-screen');
+    if(ls){
+      ls.style.transition='opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)';
+      ls.style.opacity='0';ls.style.transform='scale(1.04)';
+      setTimeout(()=>{try{ls.remove()}catch(e){}},580);
+    }
+  },5000);
+})();
+
+/* Splash logo pulse keyframe injected inline */
+(function(){
+  const s=document.createElement('style');
+  s.textContent=`
+  @keyframes splashLogoPulse{
+    0%,100%{box-shadow:0 0 60px rgba(139,92,246,.55),0 0 0 1px rgba(255,255,255,.15),0 12px 48px rgba(0,0,0,.7)}
+    50%{box-shadow:0 0 90px rgba(139,92,246,.85),0 0 0 1.5px rgba(255,255,255,.25),0 12px 48px rgba(0,0,0,.7)}
+  }
+  #loading-screen{
+    background:radial-gradient(ellipse 900px 700px at 50% 40%,rgba(80,20,200,.18) 0%,transparent 65%),
+               radial-gradient(ellipse 600px 500px at 80% 80%,rgba(6,182,212,.1) 0%,transparent 60%),
+               #04040f !important;
+    color: #ffffff !important;
+  }
+  #loading-screen .sp-title-el {
+    background: linear-gradient(135deg,#fff 0%,#A78BFA 48%,#67E8F9 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+  #loading-screen .sp-tagline-el {
+    color: rgba(255,255,255,.45) !important;
+  }
+  #loading-screen .sp-tip-text-el {
+    color: rgba(255,255,255,.6) !important;
+  }
+  #loading-screen .sp-status-el {
+    color: rgba(255,255,255,.4) !important;
+  }`;
+  document.head.appendChild(s);
+})();
+
+function init(){
+  function startApp(){
+    try{
+      const s=getSession();
+      if(!s){renderAuth();return;}
+      loadUserData(s.id);
+      // One-time migration to v5 theme system — preserves user choice, cleans up cream default
+      if(!localStorage.getItem('mx3_migrated_v6_themes')){
+        if(D.settings) {
+          // If stuck on cream (old default) or dark, upgrade to vibrant as the new default
+          if(!D.settings.appTheme || D.settings.appTheme==='cream' || D.settings.appTheme==='dark') D.settings.appTheme='vibrant';
+          if(!D.settings.colorTheme || D.settings.colorTheme==='cream' || D.settings.colorTheme==='dark') D.settings.colorTheme='vibrant';
+          D.settings.bossMode = D.settings.bossMode || false;
+        }
+        localStorage.setItem('mx3_migrated_v6_themes', 'true');
+        saveNow();
+      }
+      if(D.profile?.mode==='creative')document.body.classList.add('creative');
+      applyMentorTheme();
+      if(D.profile && (!D.courses || D.courses.length === 0)) {
+        D.courses = generateAutoCourses(D.profile);
+        saveNow();
+      }
+      if(!D.profile)renderOB();else initApp();
+    }catch(e){
+      console.error('Mentorix init error:',e);
+      renderAuth();
+    }
+  }
+
+  // Start the app logic immediately (in background, while splash plays)
+  // The splash engine handles its own dismiss at 5000ms
+  // We start app at 200ms so it's ready when splash exits
+  setTimeout(startApp, 200);
+
+  // Hard failsafe — force remove loading screen after 6s no matter what
+  setTimeout(()=>{
+    const ls=document.getElementById('loading-screen');
+    if(ls){ls.style.opacity='0';ls.style.pointerEvents='none';setTimeout(()=>{try{ls.remove();}catch(e){}},400);}
+  },6000);
+}
+// Global exports for inline HTML onclick/onchange handlers and cross-module access
+window.openGlobalSearch = openGlobalSearch;
+window.closeGlobalSearch = closeGlobalSearch;
+window.onGSearch = onGSearch;
+window.closeMobDrawer = closeMobDrawer;
+window.buildMobileNav = buildMobileNav;
+window.updateSB = updateSB;
+window.initApp = initApp;
+window.renderOB = renderOB;
+window.renderOBS = renderOBS;
+window.obProg = obProg;
+window.obDone = obDone;
+window.obSkipToLearn = obSkipToLearn;
+window.selectBoard = selectBoard;
+window.checkOb4 = checkOb4;
+window.toggleObSubject = toggleObSubject;
+window.addObSubjectOther = addObSubjectOther;
+window.getNextStep = getNextStep;
+window.getPrevStep = getPrevStep;
+window.isHighSchool = isHighSchool;
+window.toggleELI5 = toggleELI5;
+window.initELI5Badge = initELI5Badge;
+window.readLesson = readLesson;
+window.requestNotifPerms = requestNotifPerms;
+window.pwaInstall = pwaInstall;
+window.applyAppTheme = applyAppTheme;
+window.applyAccentColor = applyAccentColor;
+window.applyFontSize = applyFontSize;
+window.useStreakShield = useStreakShield;
+window.earnStreakShield = earnStreakShield;
+window.checkAndAwardCertificate = checkAndAwardCertificate;
+window.showMasteryCertificate = showMasteryCertificate;
+
+init();
+</script>
+</body>
+</html>
+
