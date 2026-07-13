@@ -762,6 +762,106 @@ function getHighPriorityChapters(exam) {
   return allChapters.slice(0, 5);
 }
 
+// Calibrate customized roadmap focus suggestions based on target score and exam style
+function getScoreCalibratedPlan(exam, targetPct) {
+  let riskLevel = '';
+  let badgeColor = '';
+  let strategyText = '';
+  let checklist = [];
+
+  if (targetPct >= 85) {
+    riskLevel = '🔥 Extreme Mastery Target (Top Tier)';
+    badgeColor = '#EF4444'; // Red
+    strategyText = `Securing a ${targetPct}% score on ${exam.name} requires near-flawless execution. Focus intensely on 'Boss' level difficulty questions and eliminate weaknesses in high-priority units immediately.`;
+    
+    if (exam.id.includes('jee')) {
+      checklist = [
+        "🔬 Achieve 90%+ accuracy in Chemistry to create a time buffer.",
+        "📊 Target rotation & electromagnetism chapters in Physics.",
+        "📐 Solve advanced calculus and matrices under strict time limits.",
+        "⏱️ Complete 3 full Boss-mode CBT simulated mocks."
+      ];
+    } else if (exam.id === 'neet') {
+      checklist = [
+        "🧬 Secure 340+ marks in Biology by completing it under 40 mins.",
+        "⚡ Target mechanics & electrodynamics in Physics.",
+        "🧪 Perfect organic synthesis reaction sheets.",
+        "⏱️ Maintain a speed index of under 50 seconds per question."
+      ];
+    } else if (exam.id === 'dsat' || exam.id === 'act') {
+      checklist = [
+        "📐 Minimize mistakes in Math Module 2 (Advanced passport questions).",
+        "📖 Build structural understanding of grammar/transition word rules.",
+        "⏱️ Target hard-level practice sets on writing style."
+      ];
+    } else {
+      checklist = [
+        "🔥 Master advanced/boss level quantitative problem sets.",
+        "📊 Aim to solve the top 5 highest weightage units with zero errors.",
+        "⏱️ Practice 3 full mock exams with exact patterns."
+      ];
+    }
+  } else if (targetPct >= 60) {
+    riskLevel = '⚡ Targeted Performance Push (Mid-High Tier)';
+    badgeColor = '#F59E0B'; // Gold/Amber
+    strategyText = `To hit your target of ${compState.targetScore} on ${exam.name}, focus on core concepts in high-priority chapters. Aim for solid accuracy over speed first.`;
+
+    if (exam.id.includes('jee')) {
+      checklist = [
+        "🔬 Secure basic organic chemistry and block elements formulas.",
+        "📊 Solve medium-level kinematics, work-energy, and modern physics questions.",
+        "📐 Master vector algebra and coordinate straight lines (easy marks).",
+        "⏱️ Attempt 2 medium-difficulty CBT mock tests."
+      ];
+    } else if (exam.id === 'neet') {
+      checklist = [
+        "🧬 Ensure human physiology and genetics are highly polished.",
+        "🧪 Memorize coordination compound names and direct kinetic equations.",
+        "⚡ Avoid negative marks by leaving highly complex Physics calculation questions.",
+        "⏱️ Attempt 2 full mock exams under standard timed limits."
+      ];
+    } else {
+      checklist = [
+        "📐 Target the top 3 highest weightage chapters specifically.",
+        "📖 Refine medium-difficulty writing and comprehension passages.",
+        "⏱️ Solve 10 medium-difficulty practice questions per day."
+      ];
+    }
+  } else {
+    riskLevel = '🌱 Foundational Core Build';
+    badgeColor = '#10B981'; // Green
+    strategyText = `Your target of ${compState.targetScore} (${targetPct}%) requires solidifying your grasp on standard foundation chapters. Prioritize high-weightage topics that yield easy points.`;
+
+    if (exam.id.includes('jee')) {
+      checklist = [
+        "🔬 Focus primarily on Inorganic Chemistry and polymer chemistry.",
+        "📊 Master Modern Physics (Photoelectric/atoms) as they are high-yield and simple.",
+        "📐 Practice straight lines, sequences, and basic vector arithmetic.",
+        "⏱️ Begin with easy-difficulty practice sets to build confidence."
+      ];
+    } else if (exam.id === 'neet') {
+      checklist = [
+        "🧬 Focus heavily on ecology, biology in human welfare, and plant physiology.",
+        "🧪 Learn direct physical chemistry equations (Solutions & Kinetics).",
+        "⏱️ Complete daily 30-minute foundational practice sessions."
+      ];
+    } else {
+      checklist = [
+        "📖 Learn standard sentence corrections and vocabulary words.",
+        "📐 Focus on basic arithmetic, proportions, and percentage calculations.",
+        "⏱️ Perform daily 20-minute conceptual checks."
+      ];
+    }
+  }
+
+  return {
+    riskLevel,
+    badgeColor,
+    strategyText,
+    checklist
+  };
+}
+
 // 1. Render Hub Tab
 function renderHubTab(exam, targetPct) {
   const cfg = EXAM_DASHBOARDS[compState.examId] || EXAM_DASHBOARDS.jee_main;
@@ -792,6 +892,28 @@ function renderHubTab(exam, targetPct) {
       </div>
     `;
   }
+
+  const plan = getScoreCalibratedPlan(exam, targetPct);
+  const planHTML = `
+    <div class="card" style="padding:20px;border-color:${plan.badgeColor};background:rgba(255,255,255,0.01)">
+      <div class="between mb12" style="border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:10px">
+        <div class="h2" style="color:#fff;margin:0;display:flex;align-items:center;gap:6px;font-size:16px">🎯 AI Calibrated Focus Plan</div>
+        <span class="tag" style="background:${plan.badgeColor};color:#111;font-weight:800;font-size:10px;border:none">${esc(plan.riskLevel)}</span>
+      </div>
+      
+      <p style="font-size:13px;line-height:1.5;color:var(--sub);margin:0 0 16px 0">${esc(plan.strategyText)}</p>
+      
+      <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;margin-bottom:8px">ROADMAP CHECKLIST FOR ${exam.maxScore === 36 ? 'ACT COMPOSITE' : `TARGET ${compState.targetScore}+`}:</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        ${plan.checklist.map(item => `
+          <div style="display:flex;gap:8px;font-size:12px;color:#fff;align-items:start">
+            <span style="color:${plan.badgeColor};font-weight:700">✓</span>
+            <span style="line-height:1.4">${esc(item)}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
 
   return `
     <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px">
@@ -847,6 +969,8 @@ function renderHubTab(exam, targetPct) {
             <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.5">Simulate a timed mock exam with section tabs and marking scheme.</p>
           </div>
         </div>
+
+        ${planHTML}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:18px">
