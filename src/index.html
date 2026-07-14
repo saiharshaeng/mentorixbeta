@@ -149,6 +149,8 @@ if (window.location.protocol.startsWith('http')) {
 </div>
 <!-- Notification bell -->
 <div class="notif-bell" id="notif-bell" onclick="requestNotifPerms()" title="Enable revision reminders">🔔<div class="notif-dot" id="notif-dot"></div></div>
+<!-- ELI5 / Simple Mode badge - only visible in app, not on auth/onboarding -->
+<div class="eli5-active" id="eli5-badge" onclick="toggleELI5()" style="display:none" title="Simple Mode ON — tap to toggle">🧒 Simple Mode ON · tap to off</div>
 <!-- PWA install banner -->
 <div class="pwa-banner" id="pwa-banner">
   <span class="pwa-icon">📱</span>
@@ -362,6 +364,9 @@ function renderOB(guest = false) {
   ob.guest = guest;
   ob.step = 0;
   spawnParticles();
+  // Hide all floating app-level UI during onboarding
+  const _hideOB=['eli5-badge','fnbtn','timer-fab','notif-bell','pwa-banner'];
+  _hideOB.forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
   const OB_TOTAL_STEPS = 7;
   document.getElementById('app').innerHTML = `
     <div class="ob">
@@ -464,13 +469,14 @@ function renderOBS() {
   // STEP 3 — GRADE (Academic Only)
   if (ob.step === 3) {
     const grades = [...Array(12).keys()].map(i => `Grade ${i + 1}`).concat(['Undergraduate', 'Postgraduate']);
+    // Pre-select a default grade if none set yet
+    if (!ob.grade) ob.grade = 'Grade 10';
     c.innerHTML = `
       ${obTio('"Which grade or level of academic study are you currently in?"')}
       <div class="h2 mb4">Academic Grade</div>
       <p class="sub">Select your level of education</p>
       <div class="inp-wrap">
         <select class="inp" id="obgrade" onchange="ob.grade=this.value;document.getElementById('ob3btn').disabled=!this.value">
-          <option value="">-- Select Grade --</option>
           ${grades.map(g => `<option value="${g}" ${ob.grade === g ? 'selected' : ''}>${g}</option>`).join('')}
         </select>
       </div>
@@ -3030,7 +3036,10 @@ function toggleELI5(){
 }
 function initELI5Badge(){
   const badge=document.getElementById('eli5-badge');
-  if(badge)badge.style.display=(D.settings?.eli5Mode?'block':'none');
+  if(!badge)return;
+  const on=D.settings?.eli5Mode;
+  badge.style.display=on?'block':'none';
+  badge.textContent=on?'🧒 Simple Mode ON · tap to off':'🧒 Simple Mode OFF · tap to on';
 }
 function getELI5Hint(){
   return D.settings?.eli5Mode?'CRITICAL INSTRUCTION: Explain everything as if teaching a very curious 12-year-old. Use simple everyday words. Replace all jargon with plain English analogies. Make it fun, relatable, and exciting. Avoid any technical terminology without immediately explaining it with a real-life example.':'';

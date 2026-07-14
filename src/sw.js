@@ -4,7 +4,7 @@
  * AI features (Groq proxy) won't work offline — that's expected and shown via the offline banner.
  */
 
-const CACHE_NAME = 'mentorix-v37';
+const CACHE_NAME = 'mentorix-v38';
 
 // Files to cache on install — the core app shell
 const CORE_ASSETS = [
@@ -34,6 +34,7 @@ const CORE_ASSETS = [
   './js/screens/explore.js',
   './js/screens/careers.js',
   './js/screens/roadmap.js',
+  './js/screens/comp.js',
 ];
 
 // Install: cache all core assets

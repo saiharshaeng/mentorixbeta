@@ -42,6 +42,10 @@ function renderAuth() {
     const bubble = document.getElementById('tio-speech-bubble');
     if (bubble) bubble.classList.remove('visible');
   }
+  // Hide app-level floating UI on auth screen
+  ['eli5-badge','fnbtn','timer-fab','notif-bell','pwa-banner'].forEach(id=>{
+    const el=document.getElementById(id);if(el)el.style.display='none';
+  });
   spawnParticles();
   const profiles = getProfiles();
   
