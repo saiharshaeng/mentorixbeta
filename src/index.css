@@ -1441,12 +1441,10 @@ select.inp{cursor:pointer}
 .sec-divider-lbl{color:var(--mut);font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
 
 /* â”€â”€ ONBOARDING â”€â”€ */
-/* .ob — the full-page onboarding wrapper. Scrolls itself — NOT the card. */
-.ob{min-height:100vh;width:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6vh 20px 40px;position:relative;z-index:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+/* .ob — the full-page onboarding wrapper. Styled as a fixed full-viewport overlay to bypass parent #app constraints. */
+.ob{position:fixed;inset:0;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6vh 20px 80px;z-index:9999;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--bg)}
 /* .ob-card — no max-height, no overflow. Let .ob scroll the page. */
 .ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:20px 24px;width:100%;max-width:560px;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);margin:0 auto;}
-/* Unblock app container when onboarding is active */
-#app:has(.ob){overflow-y:auto!important;height:auto!important}
 .ob-step{display:none}.ob-step.on{display:block; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); animation:scIn .3s ease}
 .ob-prog{height:8px; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
 .ob-prog{height:8px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;margin-bottom:var(--sp-6);position:relative}
@@ -2507,10 +2505,12 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-r
 /* â”€â”€ BUTTON ACTIVE PRESS â”€â”€ */
 .btn:active{transform:scale(.94)!important;transition:transform .08s!important}
 
-/* Mentorix V3 Scroll & Layout Polish */
+/* Mentorix V3 Scroll & Layout Polish
+   overflow-x:hidden prevents horizontal overflow on all screens.
+   overflow-y is NOT hidden here — #main and .ob handle vertical scroll internally. */
 html, body {
   height: 100%;
-  overflow: hidden; /* Prevent body scroll to avoid double scrollbars */
+  overflow-x: hidden; /* ONLY block horizontal scroll — vertical scroll must remain open */
 }
 #app {
   height: 100%;
@@ -3328,10 +3328,10 @@ textarea{font-size:16px!important}
 .ni.on{box-shadow:inset 3px 0 0 var(--p);background:linear-gradient(90deg,rgba(139,92,246,.15),transparent)}
 
 
-/* Mentorix V3 Scroll & Layout Polish */
+/* Mentorix V3 Scroll & Layout Polish (duplicate block — sync with above) */
 html, body {
   height: 100%;
-  overflow: hidden; /* Prevent body scroll to avoid double scrollbars */
+  overflow-x: hidden;
 }
 #app {
   height: 100%;
@@ -4905,7 +4905,7 @@ body::before {
 
 /* ── ONBOARDING: tighter at 375px ── */
 @media(max-width:400px){
-  .ob{padding:4vh 12px 20px!important}
+  .ob{padding:4vh 12px 80px!important}
   .ob-card{padding:16px 14px!important}
 }
 
@@ -4919,8 +4919,3 @@ body::before {
   }
 }
 
-/* Ensure #app fills and has no gaps on mobile */
-@media(max-width:768px){
-  #app{flex-direction:column;height:auto;min-height:100vh}
-  #main{height:auto;min-height:100vh}
-}
