@@ -901,27 +901,6 @@ function goBackToChapter() {
   go('courses');
 }
 
-function goToNextCourseTopic() {
-  const cont = getContinueLearningChapter();
-  if (cont && cont.nextTopic) {
-    go('learn', cont.nextTopic.title);
-  } else {
-    go('courses');
-  }
-}
-
-function rQQ(q,qi,sub){
-  return `<div class="card mb12">
-    <p style="color:var(--txt);font-weight:600;margin-bottom:12px;line-height:1.65"><span style="color:var(--pl)">Q${qi+1}. </span>${esc(q.q||'')}</p>
-    ${(q.o||[]).map((opt,oi)=>{
-      let cls='qopt';
-      if(sub){if(oi===q.a)cls+=' cor';else if(LS.ans[qi]===oi)cls+=' wrg';}
-      else if(LS.ans[qi]===oi)cls+=' sel';
-      return `<div class="${cls}" ${sub?'':` onclick="pickAns(${qi},${oi})"`}><span class="qltr">${['A','B','C','D'][oi]}</span>${esc(opt)}</div>`;
-    }).join('')}
-    ${sub?`<div class="expl">💡 ${esc(q.e||'')}</div>`:''}
-  </div>`;
-}
 function animKeyPress(el){
   const key=el.querySelector('.key-cap');
   if(key){key.classList.add('key-tap');setTimeout(()=>key.classList.remove('key-tap'),250);}
@@ -1160,3 +1139,4 @@ function retakeQuiz() {
 window.retakeQuiz = retakeQuiz;
 window.saveCheckpoint = saveCheckpoint;
 window.rLearn = rLearn;
+window.animKeyPress = animKeyPress;
