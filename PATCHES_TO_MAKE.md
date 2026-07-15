@@ -34,8 +34,8 @@ These must be done before React migration begins.
 - [x] Add comp.js to sw.js CORE_ASSETS — already present (verified July 15)
 - [x] mpSelectOpt ReferenceError on comp screen — FIXED: added no-op window stubs at module scope (commit 7c8d668)
 - [x] Streak only increments on real study action — VERIFIED: checkStreak(true) only called in Pomodoro complete handler (July 15 audit)
-- [ ] netlify.toml: confirm `publish = "src"`
-- [ ] Zero red console errors on localhost (mpSelectOpt fixed — re-verify on next session)
+- [x] netlify.toml: confirm `publish = "src"` — CONFIRMED (July 15)
+- [x] Zero red console errors on localhost (mpSelectOpt and openTioFloat fixed — verified July 15)
 
 ### P0.2 — Deploy current version
 - [ ] Drag src/ to netlify.com/drop → get live URL
