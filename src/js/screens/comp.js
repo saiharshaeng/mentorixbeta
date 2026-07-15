@@ -185,6 +185,116 @@ const DETAILED_SYLLABUS = {
         }
       ]
     }
+  ],
+  eamcet: [
+    {
+      subject: 'Mathematics',
+      units: [
+        {
+          name: 'Algebra (30% weight)',
+          chapters: [
+            { name: 'Functions & Mathematical Induction', weight: 8 },
+            { name: 'Matrices & Determinants', weight: 8 },
+            { name: 'Complex Numbers & De Moivre\'s Theorem', weight: 8 },
+            { name: 'Quadratic Expressions & Theory of Equations', weight: 6 }
+          ]
+        },
+        {
+          name: 'Trigonometry (20% weight)',
+          chapters: [
+            { name: 'Trigonometric Ratios up to Transformations', weight: 8 },
+            { name: 'Trigonometric Equations & Inverse Trigonometric Functions', weight: 6 },
+            { name: 'Properties of Triangles', weight: 6 }
+          ]
+        },
+        {
+          name: 'Calculus (30% weight)',
+          chapters: [
+            { name: 'Limits & Continuity', weight: 6 },
+            { name: 'Differentiation & Applications', weight: 10 },
+            { name: 'Integration & Definite Integrals', weight: 8 },
+            { name: 'Differential Equations', weight: 6 }
+          ]
+        },
+        {
+          name: 'Coordinate Geometry (20% weight)',
+          chapters: [
+            { name: 'Straight Lines & Pair of Straight Lines', weight: 8 },
+            { name: 'Circles & System of Circles', weight: 7 },
+            { name: 'Conic Sections (Parabola, Ellipse, Hyperbola)', weight: 5 }
+          ]
+        }
+      ]
+    },
+    {
+      subject: 'Physics',
+      units: [
+        {
+          name: 'Mechanics (35% weight)',
+          chapters: [
+            { name: 'Units & Measurements, Motion in a Straight Line', weight: 7 },
+            { name: 'Laws of Motion & Work Energy Power', weight: 9 },
+            { name: 'System of Particles & Rotational Motion', weight: 10 },
+            { name: 'Oscillations & Gravitation', weight: 9 }
+          ]
+        },
+        {
+          name: 'Thermodynamics & Properties of Matter (25% weight)',
+          chapters: [
+            { name: 'Mechanical Properties of Solids & Fluids', weight: 8 },
+            { name: 'Thermal Properties of Matter & Thermodynamics', weight: 10 },
+            { name: 'Kinetic Theory of Gases', weight: 7 }
+          ]
+        },
+        {
+          name: 'Electromagnetism (25% weight)',
+          chapters: [
+            { name: 'Electrostatics & Current Electricity', weight: 10 },
+            { name: 'Moving Charges, Magnetism & EMI', weight: 10 },
+            { name: 'Alternating Current & Electromagnetic Waves', weight: 5 }
+          ]
+        },
+        {
+          name: 'Optics & Modern Physics (15% weight)',
+          chapters: [
+            { name: 'Ray & Wave Optics', weight: 7 },
+            { name: 'Dual Nature, Atoms, Nuclei & Semiconductor Devices', weight: 8 }
+          ]
+        }
+      ]
+    },
+    {
+      subject: 'Chemistry',
+      units: [
+        {
+          name: 'Physical Chemistry (35% weight)',
+          chapters: [
+            { name: 'Atomic Structure & Chemical Bonding', weight: 10 },
+            { name: 'States of Matter & Thermodynamics', weight: 9 },
+            { name: 'Chemical & Ionic Equilibrium', weight: 8 },
+            { name: 'Electrochemistry & Chemical Kinetics', weight: 8 }
+          ]
+        },
+        {
+          name: 'Inorganic Chemistry (30% weight)',
+          chapters: [
+            { name: 'Classification of Elements & Periodicity', weight: 8 },
+            { name: 's-Block & p-Block Elements', weight: 10 },
+            { name: 'd-Block, f-Block & Coordination Compounds', weight: 8 },
+            { name: 'Metallurgy & Environmental Chemistry', weight: 4 }
+          ]
+        },
+        {
+          name: 'Organic Chemistry (35% weight)',
+          chapters: [
+            { name: 'Basic Principles & Techniques (GOC)', weight: 10 },
+            { name: 'Hydrocarbons (Alkanes, Alkenes, Alkynes, Arenes)', weight: 10 },
+            { name: 'Compounds containing Oxygen & Nitrogen', weight: 10 },
+            { name: 'Biomolecules & Polymers', weight: 5 }
+          ]
+        }
+      ]
+    }
   ]
 };
 
@@ -196,7 +306,7 @@ const WORLD_EXAMS = [
   { id: 'sat', name: 'Digital SAT', country: 'USA / International', cat: 'Undergrad', maxScore: 1600, duration: 134, subjects: ['Reading & Writing', 'Mathematics'], pattern: 'MCQs & Student Response (No negative marks)', marking: { correct: 10, wrong: 0, type: 'sat' }, isMajor: true, fullQuestions: 98 },
   { id: 'gre', name: 'GRE General', country: 'USA / International', cat: 'Grad School', maxScore: 340, duration: 118, subjects: ['Verbal Reasoning', 'Quantitative Reasoning'], pattern: 'MCQ & Multiple-Select (No negative marks)', marking: { correct: 1, wrong: 0, type: 'gre' }, isMajor: true, fullQuestions: 54 },
   { id: 'gmat', name: 'GMAT Focus', country: 'USA / International', cat: 'Business', maxScore: 805, duration: 135, subjects: ['Quantitative', 'Verbal', 'Data Insights'], pattern: 'Computer-Adaptive MCQs (No negative marks)', marking: { correct: 10, wrong: 0, type: 'gmat' }, isMajor: true, fullQuestions: 64 },
-  { id: 'mcat', name: 'MCAT', country: 'USA / Canada', cat: 'Medical', maxScore: 528, duration: 450, subjects: ['Biological Systems', 'Physical Foundations', 'Psychological Foundations', 'Critical Analysis'], pattern: 'Passage-based MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'mcat' }, isMajor: true, fullQuestions: 230 },
+  { id: 'eamcet', name: 'EAMCET (Engineering)', country: 'India', cat: 'Engineering', maxScore: 160, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'Single correct MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'eamcet' }, isMajor: true, fullQuestions: 160 },
   { id: 'lsat', name: 'LSAT', country: 'USA / Canada', cat: 'Law', maxScore: 180, duration: 175, subjects: ['Logical Reasoning', 'Reading Comprehension'], pattern: 'Logic & reading MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'lsat' }, isMajor: true, fullQuestions: 100 },
   { id: 'upsc', name: 'UPSC CSE (Prelims)', country: 'India', cat: 'Civil Services', maxScore: 200, duration: 120, subjects: ['General Studies I', 'CSAT (Aptitude)'], pattern: 'Single correct MCQs with +2/-0.66 marks', marking: { correct: 2, wrong: -0.66, type: 'upsc' }, isMajor: true, fullQuestions: 100 },
   { id: 'ielts', name: 'IELTS Academic', country: 'UK / International', cat: 'Language', maxScore: 9, duration: 165, subjects: ['Listening', 'Reading', 'Writing', 'Speaking'], pattern: 'Listening, reading & grammar (No negative marks)', marking: { correct: 0.25, wrong: 0, type: 'ielts' }, isMajor: true, fullQuestions: 40 },
@@ -701,14 +811,14 @@ function rComp() {
 
   let tabContent = '';
   switch (compState.currentTab) {
+    case 'hub':        tabContent = renderHubTab(exam, targetPct); break;
     case 'syllabus':   tabContent = renderSyllabusTab(exam); break;
-    case 'tips':       tabContent = renderTipsTab(exam); break;
+    case 'formula':    tabContent = renderFormulaTab(exam); break;
     case 'practice':   tabContent = renderPracticeTab(exam); break;
     case 'mock':       tabContent = renderMockTab(exam); break;
     case 'analytics':  tabContent = renderAnalyticsTab(exam); break;
     case 'diary':      tabContent = renderMistakeDiaryTab(exam); break;
     case 'pyq':        tabContent = renderPYQTab(exam); break;
-    case 'hub':
     default:           tabContent = renderHubTab(exam, targetPct); break;
   }
 
@@ -739,11 +849,11 @@ function rComp() {
 
       <!-- Navigation Tabs -->
       <div style="display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;padding-bottom:6px">
-        <button class="btn bsm ${compState.currentTab==='hub'?'bpri':'bgh'}" onclick="setCompTab('hub')">📊 Hub</button>
-        <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri':'bgh'}" onclick="setCompTab('syllabus')">📚 Syllabus</button>
-        <button class="btn bsm ${compState.currentTab==='pyq'?'bpri':'bgh'}" onclick="setCompTab('pyq')">📋 PYQ Bank</button>
-        <button class="btn bsm ${compState.currentTab==='practice'?'bpri':'bgh'}" onclick="setCompTab('practice')">🎯 Practice</button>
-        <button class="btn bsm ${compState.currentTab==='mock'?'bpri':'bgh'}" onclick="setCompTab('mock')">⏱️ Mock Exam</button>
+        <button class="btn bsm ${compState.currentTab==='hub'?'bpri':'bgh'}" onclick="setCompTab('hub')">🏠 Exam Hub</button>
+        <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri':'bgh'}" onclick="setCompTab('syllabus')">📚 Syllabus & Pattern</button>
+        <button class="btn bsm ${compState.currentTab==='formula'?'bpri':'bgh'}" onclick="setCompTab('formula')">🧮 Formula Quick Reference</button>
+        <button class="btn bsm ${compState.currentTab==='practice'?'bpri':'bgh'}" onclick="setCompTab('practice')">🎯 Topic Practice</button>
+        <button class="btn bsm ${compState.currentTab==='mock'?'bpri':'bgh'}" onclick="setCompTab('mock')">⏱️ CBT Exam Room</button>
         <button class="btn bsm ${compState.currentTab==='analytics'?'bpri':'bgh'}" onclick="setCompTab('analytics')">📈 Analytics</button>
         <button class="btn bsm ${compState.currentTab==='diary'?'bpri':'bgh'}" onclick="setCompTab('diary')">📓 Mistake Diary</button>
       </div>
@@ -992,6 +1102,16 @@ function renderHubTab(exam, targetPct) {
             <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.5">Simulate a timed mock exam with section tabs and marking scheme.</p>
           </div>
         </div>
+        
+        <div class="card" style="padding:18px;background:rgba(139,92,246,0.05);border-color:rgba(139,92,246,0.25)">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <div style="width:28px;height:28px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;font-size:14px">🧠</div>
+            <div style="font-size:12px;font-weight:700;color:var(--pl);letter-spacing:0.5px">TIO'S PRE-EXAM BRIEFING</div>
+          </div>
+          <div style="font-size:13px;color:#fff;line-height:1.5;padding-left:38px">
+            ${getTioBriefing(exam)}
+          </div>
+        </div>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:18px">
@@ -1030,12 +1150,46 @@ function renderSyllabusTab(exam) {
   const detailed = DETAILED_SYLLABUS[compState.examId];
   
   let syllabusHTML = '';
+  
+  // Paper pattern pie chart visualizer
+  const numSubjects = (exam.subjects || []).length || 1;
+  const pieSections = (exam.subjects || []).map((sub, i) => {
+    const angle = 360 / numSubjects;
+    return `<path d="M 65 65 L 65 11 A 54 54 0 ${angle > 180 ? 1 : 0} 1 ${65 + 54 * Math.sin(angle * Math.PI / 180)} ${65 - 54 * Math.cos(angle * Math.PI / 180)} Z" fill="hsl(${i * (360/numSubjects)}, 70%, 60%)" stroke="#0a0a1a" stroke-width="2"/>`;
+  }).join('');
+  
+  const patternHTML = `
+    <div class="card mb20" style="padding:18px;border-color:rgba(6,182,212,0.18)">
+      <div class="between mb12" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
+        <span style="font-size:16px;font-weight:800;color:var(--cl)">Paper Pattern Visualizer</span>
+        <span class="tag tc" style="font-size:11px">Exam Structure</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:24px">
+        <svg width="100" height="100" viewBox="0 0 130 130" style="flex-shrink:0;transform:rotate(-90deg)">
+          ${pieSections}
+          <circle cx="65" cy="65" r="30" fill="#0a0a1a"></circle>
+        </svg>
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;font-size:13px;color:#fff">
+          <div class="between">
+            <span style="color:var(--mut)">Total Questions:</span> <strong>${exam.fullQuestions}</strong>
+          </div>
+          <div class="between">
+            <span style="color:var(--mut)">Duration:</span> <strong>${exam.duration} Mins</strong>
+          </div>
+          <div class="between">
+            <span style="color:var(--mut)">Marking Scheme:</span> <strong>+${exam.marking.correct} / ${exam.marking.wrong}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
   if (detailed) {
     syllabusHTML = detailed.map(subj => `
       <div class="card mb20" style="padding:18px;border-color:rgba(139,92,246,0.18)">
         <div class="between mb12" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
           <span style="font-size:16px;font-weight:800;color:var(--pl)">${esc(subj.subject)} Division</span>
-          <span class="tag tp" style="font-size:11px">Weightage Map</span>
+          <span class="tag tp" style="font-size:11px">Weightage Heatmap</span>
         </div>
         
         <div style="display:flex;flex-direction:column;gap:16px">
@@ -1046,17 +1200,19 @@ function renderSyllabusTab(exam) {
               </div>
               
               <div style="display:flex;flex-direction:column;gap:8px;padding-left:12px">
-                ${unit.chapters.map(chap => `
+                ${unit.chapters.map(chap => {
+                  let color = chap.weight > 9 ? '#EF4444' : chap.weight > 6 ? '#F59E0B' : 'var(--p)';
+                  return `
                   <div>
                     <div class="between" style="font-size:12px;margin-bottom:2px">
                       <span style="color:var(--sub)">• ${esc(chap.name)}</span>
-                      <span style="color:var(--cl);font-weight:600">${chap.weight}%</span>
+                      <span style="color:${color};font-weight:600">${chap.weight}%</span>
                     </div>
                     <div class="pw" style="height:4px;background:rgba(255,255,255,0.03)">
-                      <div class="pf" style="width:${chap.weight}%;background:linear-gradient(90deg,var(--p),var(--c))"></div>
+                      <div class="pf" style="width:${chap.weight}%;background:${color}"></div>
                     </div>
                   </div>
-                `).join('')}
+                `}).join('')}
               </div>
             </div>
           `).join('')}
@@ -1096,10 +1252,13 @@ function renderSyllabusTab(exam) {
   }
 
   return `
-    <div class="card" style="padding:22px">
-      <div class="h2 mb6" style="color:#fff">📚 Detailed Syllabus Weightage Board</div>
-      <p class="sub mb20">Explore subject-wise, unit-wise, and chapter-wise breakdowns calculated from past official papers.</p>
-      ${syllabusHTML}
+    <div class="sw scr" style="padding-top:16px">
+      ${patternHTML}
+      <div class="card" style="padding:22px">
+        <div class="h2 mb6" style="color:#fff">📚 Detailed Syllabus Weightage Board</div>
+        <p class="sub mb20">Explore subject-wise, unit-wise, and chapter-wise breakdowns calculated from past official papers.</p>
+        ${syllabusHTML}
+      </div>
     </div>
   `;
 }
@@ -1347,6 +1506,7 @@ function beginMockExamAfterInstructions() {
   }
   
   compState.activeExam.instructionsRead = true;
+  compState.activeExam.lastEntryTime = Date.now();
   rComp();
 }
 
@@ -1484,7 +1644,9 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
     timeLeft: durationSeconds,
     timerInterval: null,
     instructionsRead: false,
-    mode
+    mode,
+    timeSpent: questions.map(() => 0),
+    lastEntryTime: null
   };
 
   // Visited first question
@@ -1702,6 +1864,11 @@ function submitMockExam() {
   if (!exam) return;
 
   clearInterval(exam.timerInterval);
+
+  if (exam.lastEntryTime) {
+    const elapsed = Math.floor((Date.now() - exam.lastEntryTime) / 1000);
+    exam.timeSpent[exam.currentIndex] = (exam.timeSpent[exam.currentIndex] || 0) + elapsed;
+  }
   
   const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
   const marking = examDb.marking || { correct: 4, wrong: -1 };
@@ -1711,10 +1878,23 @@ function submitMockExam() {
   let incorrect = 0;
   let skipped = 0;
   
+  // Track stats per subject
+  const subjectStats = {};
+  (examDb.subjects || ['General']).forEach(sub => {
+    subjectStats[sub] = { correct: 0, total: 0, time: 0 };
+  });
+
   const results = exam.questions.map((q, idx) => {
     const userAns = exam.answers[idx];
     let isCorrect = false;
     
+    const sub = q.section || 'General';
+    if (!subjectStats[sub]) {
+      subjectStats[sub] = { correct: 0, total: 0, time: 0 };
+    }
+    subjectStats[sub].total++;
+    subjectStats[sub].time += (exam.timeSpent[idx] || 0);
+
     if (userAns === undefined || userAns === '') {
       skipped++;
     } else {
@@ -1731,6 +1911,7 @@ function submitMockExam() {
       if (isCorrect) {
         correct++;
         score += marking.correct;
+        subjectStats[sub].correct++;
       } else {
         incorrect++;
         score += marking.wrong;
@@ -1746,16 +1927,94 @@ function submitMockExam() {
     };
   });
 
+  // Mistake Pattern Analysis & Spaced Repetition Auto-Add
+  let newtonCount = 0;
+  let calculusCount = 0;
+  let organicCount = 0;
+  let thermoCount = 0;
+  
+  exam.questions.forEach((q, idx) => {
+    if (!results[idx].isCorrect) {
+      const text = q.q.toLowerCase();
+      if (text.includes('newton') || text.includes('force') || text.includes('law of motion')) newtonCount++;
+      if (text.includes('limit') || text.includes('integr') || text.includes('deriv')) calculusCount++;
+      if (text.includes('organic') || text.includes('ether') || text.includes('carbon') || text.includes('reaction')) organicCount++;
+      if (text.includes('thermo') || text.includes('heat') || text.includes('entropy')) thermoCount++;
+    }
+  });
+
+  const patterns = [];
+  if (newtonCount > 0) {
+    patterns.push(`You always get <strong>Newton's Laws & Mechanics</strong> wrong in application questions (${newtonCount} mistakes).`);
+    addTopicToRevision("Newton's Laws & Work-Energy");
+  }
+  if (calculusCount > 0) {
+    patterns.push(`You struggle with <strong>Calculus & Derivatives</strong> under timed pressure (${calculusCount} mistakes).`);
+    addTopicToRevision("Calculus");
+  }
+  if (organicCount > 0) {
+    patterns.push(`You made mistakes in <strong>Organic Chemistry Reactions</strong> (${organicCount} mistakes).`);
+    addTopicToRevision("Organic Chemistry");
+  }
+  if (thermoCount > 0) {
+    patterns.push(`You face conceptual gaps in <strong>Thermodynamics</strong> (${thermoCount} mistakes).`);
+    addTopicToRevision("Thermodynamics");
+  }
+
+  let mistakeAnalysisHTML = '';
+  if (patterns.length > 0) {
+    mistakeAnalysisHTML = `
+      <div class="card cred mb20" style="padding:16px;border-color:rgba(239,68,68,0.3)">
+        <div style="font-size:12px;font-weight:700;color:var(--redl);margin-bottom:6px">⚠️ MISTAKE PATTERN ANALYSIS (Auto-added to Spaced Repetition)</div>
+        <div style="font-size:13px;color:#fff;line-height:1.5">${patterns.join('<br>')}</div>
+      </div>
+    `;
+  }
+
+  // Time-per-question analytics
+  let totalTimeSpent = exam.timeSpent.reduce((a, b) => a + b, 0);
+  let avgTime = Math.round(totalTimeSpent / (exam.questions.length || 1));
+  let subjectTimeHTML = Object.keys(subjectStats).map(sub => {
+    let stats = subjectStats[sub];
+    let avgSubTime = Math.round(stats.time / (stats.total || 1));
+    let warn = avgSubTime > 90 ? ' <span style="color:var(--redl);font-weight:700">(Too Slow!)</span>' : '';
+    return `<div>• ${sub}: <strong>${avgSubTime}s / question</strong>${warn}</div>`;
+  }).join('');
+
+  let timeAnalyticsHTML = `
+    <div class="card mb20" style="padding:16px;border-color:rgba(6,182,212,0.3)">
+      <div style="font-size:12px;font-weight:700;color:var(--cl);margin-bottom:6px">⏱️ TIME-PER-QUESTION ANALYTICS</div>
+      <div style="font-size:13px;color:#fff;line-height:1.5">
+        <div>Average speed: <strong>${avgTime}s / question</strong></div>
+        <div style="margin-top:4px">${subjectTimeHTML}</div>
+      </div>
+    </div>
+  `;
+
   const xpEarned = correct * 30;
   if (xpEarned > 0 && typeof addXP === 'function') {
     addXP(xpEarned);
   }
 
   compState.activeExam = null;
-  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned);
+  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML);
 }
 
-function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned) {
+function addTopicToRevision(topic) {
+  if (typeof D === 'undefined') return;
+  if (!D.topics) D.topics = [];
+  if (!D.topics.includes(topic)) {
+    D.topics.push(topic);
+  }
+  if (!D.memory) D.memory = {scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
+  if (!D.memory.weakSpots) D.memory.weakSpots = [];
+  if (!D.memory.weakSpots.some(w => w.topic === topic)) {
+    D.memory.weakSpots.push({ topic, solved: false, date: new Date().toISOString() });
+  }
+  if (typeof saveAll === 'function') saveAll();
+}
+
+function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML) {
   const main = document.getElementById('main');
   if (!main) return;
 
@@ -1788,6 +2047,9 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
 
         <button class="btn bpri" style="padding:10px 24px" onclick="rComp()">Back to Hub</button>
       </div>
+
+      ${mistakeAnalysisHTML || ''}
+      ${timeAnalyticsHTML || ''}
 
       <div class="h2 mb14" style="color:#fff">Review Questions & Explanations</div>
       <div style="display:flex;flex-direction:column;gap:12px">
@@ -2177,6 +2439,13 @@ function launchMultiPracticeOverlay(questions) {
 // CBT Navigation Helpers
 function navigateExam(idx) {
   if (compState.activeExam) {
+    if (compState.activeExam.lastEntryTime) {
+      const elapsed = Math.floor((Date.now() - compState.activeExam.lastEntryTime) / 1000);
+      const curr = compState.activeExam.currentIndex;
+      compState.activeExam.timeSpent[curr] = (compState.activeExam.timeSpent[curr] || 0) + elapsed;
+    }
+    compState.activeExam.lastEntryTime = Date.now();
+
     if (!compState.activeExam.status[compState.activeExam.currentIndex]) {
       compState.activeExam.status[compState.activeExam.currentIndex] = 'unanswered';
     }
@@ -2277,4 +2546,41 @@ window.closePracticeOverlay = closePracticeOverlay;
 window.launchMultiPracticeOverlay = launchMultiPracticeOverlay;
 window.checkPracticeAnswer = checkPracticeAnswer;
 window.checkPracticeNumericalAnswer = checkPracticeNumericalAnswer;
+
+function getTioBriefing(exam) {
+  if (exam.id === 'jee_adv') return 'Calculus and Electrodynamics hold over 30% weightage historically. Secure these to hit top ranks.';
+  if (exam.id === 'jee_main') return 'Coordinate Geometry & Modern Physics are scoring areas. Focus on speed in numericals.';
+  if (exam.id === 'neet') return 'Human Physiology and Genetics make up 38% of Biology. Revise NCERT line by line.';
+  if (exam.id === 'eamcet') return 'Algebra and Mechanics carry heavy weight (30-35%). Focus on these and solve pyqs!';
+  if (exam.id === 'sat') return 'Algebra and Data Analysis are critical. Master graphing linear inequalities.';
+  return 'Review your syllabus weightage and focus your daily practice on topics worth 10% or more.';
+}
+
+function renderFormulaTab(exam) {
+  return `
+    <div style="max-width:800px;margin:0 auto;padding-top:10px;padding-bottom:100px">
+      <div class="h2 mb14" style="color:#fff">🧮 Exam-Specific Formula Sheets</div>
+      
+      <div class="card mb20" style="padding:18px;border-color:rgba(139,92,246,0.3)">
+        <div class="h3" style="color:var(--pl);margin-bottom:12px">Physics: Mechanics (Kinematics & Dynamics)</div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;color:#fff;line-height:1.6">
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">1D Motion: $$v = u + at, \\; s = ut + \\frac{1}{2}at^2, \\; v^2 = u^2 + 2as$$</div>
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">Newton's 2nd Law: $$\\vec{F} = m\\vec{a} = \\frac{d\\vec{p}}{dt}$$</div>
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">Work-Energy Theorem: $$W_{net} = \\Delta K.E.$$</div>
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">Center of Mass: $$\\vec{R}_{CM} = \\frac{\\sum m_i \\vec{r}_i}{\\sum m_i}$$</div>
+        </div>
+      </div>
+      
+      <div class="card" style="padding:18px;border-color:rgba(6,182,212,0.3)">
+        <div class="h3" style="color:var(--cl);margin-bottom:12px">Chemistry: Physical Chemistry</div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;color:#fff;line-height:1.6">
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">Ideal Gas Law: $$PV = nRT$$</div>
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">First Law of Thermodynamics: $$\\Delta U = q + w$$</div>
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">Nernst Equation: $$E = E^0 - \\frac{0.0591}{n} \\log Q$$</div>
+          <div class="katex-render-target" style="padding:10px;background:rgba(0,0,0,0.2);border-radius:8px">First Order Kinetics: $$k = \\frac{2.303}{t} \\log\\left(\\frac{[A]_0}{[A]}\\right)$$</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
 

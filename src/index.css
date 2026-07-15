@@ -1445,7 +1445,7 @@ select.inp{cursor:pointer}
 .ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:36px;width:100%;max-width:520px;-webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
 .ob-step{display:none}.ob-step.on{display:block; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
 .ob-step{display:none}.ob-step.on{display:block;animation:scIn .3s ease}
-.ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:36px;width:100%;max-width:560px;-webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
+.ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:36px;width:100%;max-width:560px;-webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); max-height: 85vh; overflow-y: auto;}
 .ob-prog{height:8px; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
 .ob-prog{height:8px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;margin-bottom:var(--sp-6);position:relative}
 .ob-pf{height:100%;background:linear-gradient(90deg,var(--p),var(--c));border-radius:4px;transition:width .4s var(--ease-smooth);box-shadow:0 0 8px rgba(139,92,246,.5)}
