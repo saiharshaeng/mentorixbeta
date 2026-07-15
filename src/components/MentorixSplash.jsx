@@ -562,15 +562,12 @@ export default function MentorixSplash({ onComplete }) {
           width: 96px;
           height: 96px;
           border-radius: 22px;
-          background: ${COLORS.surface};
+          background: ${COLORS.surface} url('logo.png') center/cover no-repeat;
           border: 1px solid rgba(139,92,246,0.35);
           box-shadow: 
             0 0 0 1px rgba(139,92,246,0.1),
             0 0 40px ${COLORS.glowP},
             0 24px 64px rgba(0,0,0,0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
           opacity: 0;
           transform: translateY(-24px) scale(0.82);
           margin-bottom: 24px;
@@ -694,10 +691,6 @@ export default function MentorixSplash({ onComplete }) {
             border-radius: 20px;
             margin-bottom: 18px;
           }
-          #mx-icon svg {
-            width: 50px;
-            height: 50px;
-          }
           #mx-nebula {
             width: 280px;
             height: 280px;
@@ -727,41 +720,6 @@ export default function MentorixSplash({ onComplete }) {
       <div ref={contentRef} id="mx-content" className="will-change-anim">
         {/* App Icon Container */}
         <div ref={iconRef} id="mx-icon" className="will-change-anim">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="3" result="blur"/>
-                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-              </filter>
-            </defs>
-            <g filter="url(#glow)">
-              {/* Left Stem of M */}
-              <circle cx="14" cy="14" r="3.5" fill="#8b5cf6" />
-              <circle cx="14" cy="24" r="3.5" fill="#8b5cf6" />
-              <circle cx="14" cy="34" r="3.5" fill="#8b5cf6" />
-              <circle cx="14" cy="44" r="3.5" fill="#8b5cf6" />
-              <circle cx="14" cy="54" r="3.5" fill="#8b5cf6" />
-              
-              {/* Right Stem of M */}
-              <circle cx="50" cy="14" r="3.5" fill="#8b5cf6" />
-              <circle cx="50" cy="24" r="3.5" fill="#8b5cf6" />
-              <circle cx="50" cy="34" r="3.5" fill="#8b5cf6" />
-              <circle cx="50" cy="44" r="3.5" fill="#8b5cf6" />
-              <circle cx="50" cy="54" r="3.5" fill="#8b5cf6" />
-
-              {/* Diagonal Left-to-Center */}
-              <circle cx="23" cy="24" r="3.5" fill="#8b5cf6" />
-              <circle cx="32" cy="34" r="4.0" fill="#8b5cf6" />
-              
-              {/* Diagonal Right-to-Center */}
-              <circle cx="41" cy="24" r="3.5" fill="#8b5cf6" />
-
-              {/* Design Triangles/Polygons */}
-              <polygon points="32,38 28,44 36,44" fill="#8b5cf6" opacity="0.9" />
-              <polygon points="14,14 20,20 14,26" fill="#8b5cf6" opacity="0.8" />
-              <polygon points="50,14 44,20 50,26" fill="#8b5cf6" opacity="0.8" />
-            </g>
-          </svg>
         </div>
 
         {/* Brand Wordmark */}
