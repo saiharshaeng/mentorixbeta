@@ -428,16 +428,16 @@ function renderOBS() {
   // STEP 0 — WELCOME
   if (ob.step === 0) {
     c.innerHTML = `
-      <div style="text-align:center;padding:6px 0">
-        <div style="width:70px;height:70px;background:linear-gradient(135deg,var(--pp),var(--c));border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:32px;box-shadow:0 0 36px rgba(139,92,246,.45)">🎓</div>
-        <h1 style="font-family:var(--f-display);font-size:34px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:8px">Welcome to<br><span style="background:linear-gradient(90deg,var(--pl),var(--cl));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Mentorix V3</span></h1>
-        <p style="color:var(--sub);font-size:14px;line-height:1.7;margin-bottom:6px;max-width:320px;margin-left:auto;margin-right:auto">I'm Tio, your personal AI mentor. Let's configure your V3 personalized learning universe.</p>
+      <div style="text-align:center;padding:4px 0">
+        <div style="width:58px;height:58px;background:linear-gradient(135deg,var(--pp),var(--c));border-radius:15px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:26px;box-shadow:0 0 28px rgba(139,92,246,.35)">🎓</div>
+        <h1 style="font-family:var(--f-display);font-size:28px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:6px">Welcome to<br><span style="background:linear-gradient(90deg,var(--pl),var(--cl));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Mentorix V3</span></h1>
+        <p style="color:var(--sub);font-size:13px;line-height:1.6;margin-bottom:6px;max-width:320px;margin-left:auto;margin-right:auto">I'm Tio, your personal AI mentor. Let's configure your V3 personalized learning universe.</p>
         ${obTio('"I\'ll guide you through a quick personalization flow to set up your syllabus, tone, and goals! Let\'s start! 🚀"')}
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px">
-          ${['🎓 Auto Course Gen', '🛡️ Skill Recovery', '📊 Advanced Tracking', '✨ Multi-Tone Mentor'].map(f => `<div style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);border-radius:10px;padding:9px;color:var(--pl);font-size:12px;font-weight:500">${f}</div>`).join('')}
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+          ${['🎓 Auto Course Gen', '🛡️ Skill Recovery', '📊 Advanced Tracking', '✨ Multi-Tone Mentor'].map(f => `<div style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);border-radius:10px;padding:6px;color:var(--pl);font-size:11px;font-weight:500">${f}</div>`).join('')}
         </div>
         <button class="btn bpri bxl bfull" onclick="ob.step=1;renderOBS()">Begin Personalisation →</button>
-        ${ob.guest ? `<div class="skip-auth mt8"><a onclick="obSkipToLearn()">Skip — just start learning now</a></div>` : `<div class="skip-auth mt8"><a onclick="obSkipToLearn()">Skip personalisation → go straight to learning</a></div>`}
+        ${ob.guest ? `<div class="skip-auth mt6"><a onclick="obSkipToLearn()">Skip — just start learning now</a></div>` : `<div class="skip-auth mt6"><a onclick="obSkipToLearn()">Skip personalisation → go straight to learning</a></div>`}
       </div>`;
     return;
   }
