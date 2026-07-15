@@ -2855,6 +2855,15 @@ window.renderImportantChaptersTab = renderImportantChaptersTab;
 window.renderStrategyTab = renderStrategyTab;
 window.categorizeMistake = categorizeMistake;
 
+// Safe no-op stubs — these are overridden by launchMultiPracticeOverlay()
+// when a practice session is active. Defined here to prevent ReferenceError
+// if onclick handlers fire before the overlay is opened.
+if (!window.mpSelectOpt)     window.mpSelectOpt     = function() {};
+if (!window.mpSubmitAnswer)  window.mpSubmitAnswer  = function() {};
+if (!window.mpRevealAnswer)  window.mpRevealAnswer  = function() {};
+if (!window.mpNextQuestion)  window.mpNextQuestion  = function() {};
+if (!window.mpFinishSession) window.mpFinishSession = function() {};
+
 function getTioBriefing(exam) {
   if (exam.id === 'jee_adv') return 'Calculus and Electrodynamics hold over 30% weightage historically. Secure these to hit top ranks.';
   if (exam.id === 'jee_main') return 'Coordinate Geometry & Modern Physics are scoring areas. Focus on speed in numericals.';

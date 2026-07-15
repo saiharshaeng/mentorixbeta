@@ -4837,3 +4837,86 @@ body::before {
   }
 }
 
+
+/* ═══════════════════════════════════════════════════════════════
+   PHASE 0 — 375px MOBILE FIXES
+   Targeted at the smallest common phone width.
+   These override anything above — always last in cascade.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Lock the layout container — no overflow on any phone */
+#app{display:flex;width:100%;max-width:100vw;overflow-x:hidden}
+#main{flex:1;min-width:0;width:100%;max-width:100vw;overflow-x:hidden}
+
+/* ── ALL BUTTONS: 44px minimum touch target (WCAG 2.5.5) ── */
+@media(max-width:768px){
+  .btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .obtn{min-height:44px}
+}
+
+/* ── COMPETITIVE EXAMS TABS — scrollable horizontal strip ── */
+@media(max-width:768px){
+  .comp-tabs,.tab-bar{
+    display:flex!important;
+    overflow-x:auto!important;
+    white-space:nowrap!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+    gap:6px!important;
+    padding-bottom:4px!important;
+  }
+  .comp-tabs::-webkit-scrollbar,.tab-bar::-webkit-scrollbar{display:none}
+  .comp-tabs .tb,.tab-bar .tb{
+    flex-shrink:0!important;
+    padding:8px 14px!important;
+    font-size:12px!important;
+    white-space:nowrap!important;
+  }
+}
+
+/* ── LEARN SCREEN — stack search row vertically ── */
+@media(max-width:480px){
+  #ltop{width:100%!important;box-sizing:border-box!important}
+  #lbtn{width:100%!important;min-height:44px!important}
+}
+
+/* ── COURSE ROADMAP — single column ── */
+@media(max-width:480px){
+  .chapter-roadmap-card{padding:12px!important}
+  .chapter-roadmap-card .btn{font-size:10px!important;padding:4px 8px!important}
+}
+
+/* ── REVISION GRID — force 1 col, full-width cards ── */
+@media(max-width:480px){
+  .rev-card{width:100%!important}
+}
+
+/* ── DASHBOARD HERO — tighten spacing ── */
+@media(max-width:480px){
+  .dash-hero-zone{padding:12px 0!important}
+  .dash-hero-greeting{font-size:26px!important;line-height:1.2!important}
+  .dash-hero-meta{flex-wrap:wrap;gap:6px}
+  .dash-study-console{grid-template-columns:1fr!important;gap:10px!important}
+}
+
+/* ── ONBOARDING: tighter at 375px ── */
+@media(max-width:400px){
+  .ob{padding:4vh 12px 20px!important}
+  .ob-card{padding:16px 14px!important;max-height:68vh!important}
+}
+
+/* ── COMP PRACTICE MODAL — full width on small screens ── */
+@media(max-width:540px){
+  #practice-modal .modal-box{
+    max-width:100%!important;
+    margin:8px!important;
+    padding:16px!important;
+    border-radius:16px!important;
+  }
+}
+
+/* Ensure #app fills and has no gaps on mobile */
+@media(max-width:768px){
+  #app{flex-direction:column;height:auto;min-height:100vh}
+  #main{height:auto;min-height:100vh}
+}
