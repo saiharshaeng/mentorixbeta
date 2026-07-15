@@ -1,6 +1,6 @@
 # PATCHES_TO_MAKE.md
-### Version 2.0 | Complete Development Roadmap
-### Last Updated: July 14, 2026
+### Version 2.1 | Complete Development Roadmap
+### Last Updated: July 15, 2026
 ### Launch Target: July 31, 2026
 
 ---
@@ -28,11 +28,14 @@
 These must be done before React migration begins.
 
 ### P0.1 — Critical bugs
-- [ ] Mobile layout completely broken — fix sidebar, nav, course cards, learn screen, revision for 375px
-- [ ] Add comp.js to sw.js CORE_ASSETS (currently missing)
+- [x] Mobile layout completely broken — FIXED: sidebar hides at 768px, bottom tab bar shows, comprehensive 375px breakpoints added for all screens (commit 7c8d668)
+- [x] Scroll broken in onboarding and all screens — FIXED: .ob is now the scroll container, #app:has(.ob) unblocks overflow, removed stale max-height:60vh (commit 995eb39)
+- [x] Buttons too low/unreachable — FIXED: all .btn min-height:44px on mobile, .ob-card no longer clips content (commit 995eb39)
+- [x] Add comp.js to sw.js CORE_ASSETS — already present (verified July 15)
+- [x] mpSelectOpt ReferenceError on comp screen — FIXED: added no-op window stubs at module scope (commit 7c8d668)
+- [x] Streak only increments on real study action — VERIFIED: checkStreak(true) only called in Pomodoro complete handler (July 15 audit)
 - [ ] netlify.toml: confirm `publish = "src"`
-- [ ] Streak only increments on real study action (already fixed — verify)
-- [ ] Zero red console errors on localhost
+- [ ] Zero red console errors on localhost (mpSelectOpt fixed — re-verify on next session)
 
 ### P0.2 — Deploy current version
 - [ ] Drag src/ to netlify.com/drop → get live URL
