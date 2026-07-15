@@ -157,123 +157,6 @@ const DETAILED_SYLLABUS = {
       ]
     }
   ],
-  jee_main: [
-    {
-      subject: 'Mathematics',
-      units: [
-        {
-          name: 'Calculus (30% weight)',
-          chapters: [
-            { name: 'Limits, Continuity & Differentiability', weight: 8 },
-            { name: 'Application of Derivatives', weight: 8 },
-            { name: 'Indefinite & Definite Integrals', weight: 8 },
-            { name: 'Differential Equations', weight: 6 }
-          ]
-        },
-        {
-          name: 'Algebra & Matrices (30% weight)',
-          chapters: [
-            { name: 'Determinants & Matrices', weight: 8 },
-            { name: 'Complex Numbers & Quadratics', weight: 8 },
-            { name: 'Probability & Permutations', weight: 8 },
-            { name: 'Binomial Theorem & Sequence Series', weight: 6 }
-          ]
-        },
-        {
-          name: 'Coordinate Geometry (20% weight)',
-          chapters: [
-            { name: 'Straight Lines & Circles', weight: 10 },
-            { name: 'Conic Sections', weight: 10 }
-          ]
-        },
-        {
-          name: 'Vectors & 3D Geometry (12% weight)',
-          chapters: [
-            { name: 'Vector Algebra', weight: 6 },
-            { name: 'Three Dimensional Geometry', weight: 6 }
-          ]
-        },
-        {
-          name: 'Trigonometry (8% weight)',
-          chapters: [
-            { name: 'Trigonometric Equations & Identities', weight: 8 }
-          ]
-        }
-      ]
-    },
-    {
-      subject: 'Physics',
-      units: [
-        {
-          name: 'Mechanics (30% weight)',
-          chapters: [
-            { name: 'Rotational Motion & System of Particles', weight: 9 },
-            { name: 'Newton\'s Laws of Motion & Work-Energy', weight: 8 },
-            { name: 'Gravitation & Properties of Matter', weight: 7 },
-            { name: 'Oscillations & Waves', weight: 6 }
-          ]
-        },
-        {
-          name: 'Electrodynamics (25% weight)',
-          chapters: [
-            { name: 'Electrostatics & Capacitance', weight: 8 },
-            { name: 'Current Electricity & Magnetism', weight: 9 },
-            { name: 'EMI & Alternating Current', weight: 8 }
-          ]
-        },
-        {
-          name: 'Thermodynamics (15% weight)',
-          chapters: [
-            { name: 'Thermodynamics & Heat Transfer', weight: 9 },
-            { name: 'Kinetic Theory of Gases', weight: 6 }
-          ]
-        },
-        {
-          name: 'Optics (15% weight)',
-          chapters: [
-            { name: 'Ray Optics', weight: 9 },
-            { name: 'Wave Optics', weight: 6 }
-          ]
-        },
-        {
-          name: 'Modern Physics (15% weight)',
-          chapters: [
-            { name: 'Dual Nature of Matter & Atoms', weight: 8 },
-            { name: 'Nuclear Physics & Semiconductors', weight: 7 }
-          ]
-        }
-      ]
-    },
-    {
-      subject: 'Chemistry',
-      units: [
-        {
-          name: 'Physical Chemistry (35% weight)',
-          chapters: [
-            { name: 'Chemical Kinetics & Equilibrium', weight: 12 },
-            { name: 'Electrochemistry & Solutions', weight: 13 },
-            { name: 'Atomic Structure & Mole Concept', weight: 10 }
-          ]
-        },
-        {
-          name: 'Organic Chemistry (35% weight)',
-          chapters: [
-            { name: 'Alcohols, Phenols & Ethers', weight: 12 },
-            { name: 'Aldehydes, Ketones & Amines', weight: 13 },
-            { name: 'General Organic Chemistry (GOC)', weight: 10 }
-          ]
-        },
-        {
-          name: 'Inorganic Chemistry (30% weight)',
-          chapters: [
-            { name: 'Coordination Compounds & Periodic Table', weight: 12 },
-            { name: 'p-Block & d-Block Elements', weight: 10 },
-            { name: 'Chemical Bonding & Metallurgy', weight: 8 }
-          ]
-        }
-      ]
-    }
-  ],
   neet: [
     {
       subject: 'Biology',
@@ -302,116 +185,6 @@ const DETAILED_SYLLABUS = {
         }
       ]
     }
-  ],
-  eamcet: [
-    {
-      subject: 'Mathematics',
-      units: [
-        {
-          name: 'Algebra (30% weight)',
-          chapters: [
-            { name: 'Functions & Mathematical Induction', weight: 8 },
-            { name: 'Matrices & Determinants', weight: 8 },
-            { name: 'Complex Numbers & De Moivre\'s Theorem', weight: 8 },
-            { name: 'Quadratic Expressions & Theory of Equations', weight: 6 }
-          ]
-        },
-        {
-          name: 'Trigonometry (20% weight)',
-          chapters: [
-            { name: 'Trigonometric Ratios up to Transformations', weight: 8 },
-            { name: 'Trigonometric Equations & Inverse Trigonometric Functions', weight: 6 },
-            { name: 'Properties of Triangles', weight: 6 }
-          ]
-        },
-        {
-          name: 'Calculus (30% weight)',
-          chapters: [
-            { name: 'Limits & Continuity', weight: 6 },
-            { name: 'Differentiation & Applications', weight: 10 },
-            { name: 'Integration & Definite Integrals', weight: 8 },
-            { name: 'Differential Equations', weight: 6 }
-          ]
-        },
-        {
-          name: 'Coordinate Geometry (20% weight)',
-          chapters: [
-            { name: 'Straight Lines & Pair of Straight Lines', weight: 8 },
-            { name: 'Circles & System of Circles', weight: 7 },
-            { name: 'Conic Sections (Parabola, Ellipse, Hyperbola)', weight: 5 }
-          ]
-        }
-      ]
-    },
-    {
-      subject: 'Physics',
-      units: [
-        {
-          name: 'Mechanics (35% weight)',
-          chapters: [
-            { name: 'Units & Measurements, Motion in a Straight Line', weight: 7 },
-            { name: 'Laws of Motion & Work Energy Power', weight: 9 },
-            { name: 'System of Particles & Rotational Motion', weight: 10 },
-            { name: 'Oscillations & Gravitation', weight: 9 }
-          ]
-        },
-        {
-          name: 'Thermodynamics & Properties of Matter (25% weight)',
-          chapters: [
-            { name: 'Mechanical Properties of Solids & Fluids', weight: 8 },
-            { name: 'Thermal Properties of Matter & Thermodynamics', weight: 10 },
-            { name: 'Kinetic Theory of Gases', weight: 7 }
-          ]
-        },
-        {
-          name: 'Electromagnetism (25% weight)',
-          chapters: [
-            { name: 'Electrostatics & Current Electricity', weight: 10 },
-            { name: 'Moving Charges, Magnetism & EMI', weight: 10 },
-            { name: 'Alternating Current & Electromagnetic Waves', weight: 5 }
-          ]
-        },
-        {
-          name: 'Optics & Modern Physics (15% weight)',
-          chapters: [
-            { name: 'Ray & Wave Optics', weight: 7 },
-            { name: 'Dual Nature, Atoms, Nuclei & Semiconductor Devices', weight: 8 }
-          ]
-        }
-      ]
-    },
-    {
-      subject: 'Chemistry',
-      units: [
-        {
-          name: 'Physical Chemistry (35% weight)',
-          chapters: [
-            { name: 'Atomic Structure & Chemical Bonding', weight: 10 },
-            { name: 'States of Matter & Thermodynamics', weight: 9 },
-            { name: 'Chemical & Ionic Equilibrium', weight: 8 },
-            { name: 'Electrochemistry & Chemical Kinetics', weight: 8 }
-          ]
-        },
-        {
-          name: 'Inorganic Chemistry (30% weight)',
-          chapters: [
-            { name: 'Classification of Elements & Periodicity', weight: 8 },
-            { name: 's-Block & p-Block Elements', weight: 10 },
-            { name: 'd-Block, f-Block & Coordination Compounds', weight: 8 },
-            { name: 'Metallurgy & Environmental Chemistry', weight: 4 }
-          ]
-        },
-        {
-          name: 'Organic Chemistry (35% weight)',
-          chapters: [
-            { name: 'Basic Principles & Techniques (GOC)', weight: 10 },
-            { name: 'Hydrocarbons (Alkanes, Alkenes, Alkynes, Arenes)', weight: 10 },
-            { name: 'Compounds containing Oxygen & Nitrogen', weight: 10 },
-            { name: 'Biomolecules & Polymers', weight: 5 }
-          ]
-        }
-      ]
-    }
   ]
 };
 
@@ -423,7 +196,7 @@ const WORLD_EXAMS = [
   { id: 'sat', name: 'Digital SAT', country: 'USA / International', cat: 'Undergrad', maxScore: 1600, duration: 134, subjects: ['Reading & Writing', 'Mathematics'], pattern: 'MCQs & Student Response (No negative marks)', marking: { correct: 10, wrong: 0, type: 'sat' }, isMajor: true, fullQuestions: 98 },
   { id: 'gre', name: 'GRE General', country: 'USA / International', cat: 'Grad School', maxScore: 340, duration: 118, subjects: ['Verbal Reasoning', 'Quantitative Reasoning'], pattern: 'MCQ & Multiple-Select (No negative marks)', marking: { correct: 1, wrong: 0, type: 'gre' }, isMajor: true, fullQuestions: 54 },
   { id: 'gmat', name: 'GMAT Focus', country: 'USA / International', cat: 'Business', maxScore: 805, duration: 135, subjects: ['Quantitative', 'Verbal', 'Data Insights'], pattern: 'Computer-Adaptive MCQs (No negative marks)', marking: { correct: 10, wrong: 0, type: 'gmat' }, isMajor: true, fullQuestions: 64 },
-  { id: 'eamcet', name: 'EAMCET (Engineering)', country: 'India', cat: 'Engineering', maxScore: 160, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'Single correct MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'eamcet' }, isMajor: true, fullQuestions: 160 },
+  { id: 'mcat', name: 'MCAT', country: 'USA / Canada', cat: 'Medical', maxScore: 528, duration: 450, subjects: ['Biological Systems', 'Physical Foundations', 'Psychological Foundations', 'Critical Analysis'], pattern: 'Passage-based MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'mcat' }, isMajor: true, fullQuestions: 230 },
   { id: 'lsat', name: 'LSAT', country: 'USA / Canada', cat: 'Law', maxScore: 180, duration: 175, subjects: ['Logical Reasoning', 'Reading Comprehension'], pattern: 'Logic & reading MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'lsat' }, isMajor: true, fullQuestions: 100 },
   { id: 'upsc', name: 'UPSC CSE (Prelims)', country: 'India', cat: 'Civil Services', maxScore: 200, duration: 120, subjects: ['General Studies I', 'CSAT (Aptitude)'], pattern: 'Single correct MCQs with +2/-0.66 marks', marking: { correct: 2, wrong: -0.66, type: 'upsc' }, isMajor: true, fullQuestions: 100 },
   { id: 'ielts', name: 'IELTS Academic', country: 'UK / International', cat: 'Language', maxScore: 9, duration: 165, subjects: ['Listening', 'Reading', 'Writing', 'Speaking'], pattern: 'Listening, reading & grammar (No negative marks)', marking: { correct: 0.25, wrong: 0, type: 'ielts' }, isMajor: true, fullQuestions: 40 },
@@ -666,18 +439,6 @@ function markMistakeReviewed(id) {
 }
 window.markMistakeReviewed = markMistakeReviewed;
 
-function categorizeMistake(id, category) {
-  const mistakes = D.compExam && D.compExam.mistakes;
-  if (mistakes) {
-    const m = mistakes.find(x => x.id === id);
-    if (m) {
-      m.category = category;
-      saveAll();
-      rComp();
-    }
-  }
-}
-
 function clearAllMistakes() {
   if (!confirm('Clear all mistakes?')) return;
   if (D.compExam) D.compExam.mistakes = [];
@@ -713,19 +474,9 @@ function renderMistakeDiaryTab(exam) {
       <div class="between mb10"><div style="font-size:12px;font-weight:700;color:#fff">Recent Mistakes</div><button class="btn bsm bgh" onclick="clearAllMistakes()" style="font-size:10px">Clear All</button></div>
       <div style="display:flex;flex-direction:column;gap:8px;max-height:480px;overflow-y:auto">
         ${mistakes.slice(0,30).map(m => `<div class="card" style="padding:12px;border-color:${m.reviewed?'var(--brd)':'rgba(239,68,68,0.2)'};opacity:${m.reviewed?'0.6':'1'}">
-          <div class="between mb5" style="font-size:10px;flex-wrap:wrap;gap:8px">
+          <div class="between mb5" style="font-size:10px">
             <span class="tag tred" style="font-size:9px">${esc(m.chap)}</span>
-            <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-              <select class="inp" style="width:130px;font-size:10px;padding:2px 4px;min-height:auto;background:rgba(255,255,255,0.04)" onchange="categorizeMistake(${m.id}, this.value)">
-                <option value="Uncategorized" ${!m.category||m.category==='Uncategorized'?'selected':''}>Select Reason</option>
-                <option value="Concept mistake" ${m.category==='Concept mistake'?'selected':''}>Concept Gap</option>
-                <option value="Calculation" ${m.category==='Calculation'?'selected':''}>Calculation Error</option>
-                <option value="Silly error" ${m.category==='Silly error'?'selected':''}>Silly Mistake</option>
-                <option value="Time pressure" ${m.category==='Time pressure'?'selected':''}>Time Pressure</option>
-                <option value="Guess" ${m.category==='Guess'?'selected':''}>Blind Guess</option>
-                <option value="Forgot formula" ${m.category==='Forgot formula'?'selected':''}>Forgot Formula</option>
-                <option value="Overconfidence" ${m.category==='Overconfidence'?'selected':''}>Overconfidence</option>
-              </select>
+            <div style="display:flex;gap:6px;align-items:center">
               <span style="color:var(--mut)">${new Date(m.date).toLocaleDateString()}</span>
               ${!m.reviewed ? `<button class="btn bsm bok" style="font-size:9px;padding:2px 6px;min-height:auto" onclick="markMistakeReviewed(${m.id})">Mark Reviewed</button>` : '<span style="color:var(--okl);font-size:10px">✅</span>'}
             </div>
@@ -879,30 +630,16 @@ function initCompState() {
   if (!D.compExam) {
     D.compExam = {
       configured: false,
-      examId: 'jee_main',
-      targetScore: 240,
+      examId: 'jee_adv',
+      targetScore: 280,
       dailyTime: 60,
-      difficulty: 'medium',
-      targetYear: 2027,
-      currentClass: 'Class 12',
-      prepLevel: 'Intermediate',
-      coaching: 'Self Study',
-      dailyHours: 4,
-      targetRank: 'AIR 1000',
-      prevAttempts: 'None'
+      difficulty: 'medium'
     };
   }
-  compState.examId = D.compExam.examId || 'jee_main';
-  compState.targetScore = D.compExam.targetScore || 240;
+  compState.examId = D.compExam.examId || 'jee_adv';
+  compState.targetScore = D.compExam.targetScore || 280;
   compState.dailyTime = D.compExam.dailyTime || 60;
   compState.practiceDifficulty = D.compExam.difficulty || 'medium';
-  compState.targetYear = D.compExam.targetYear || 2027;
-  compState.currentClass = D.compExam.currentClass || 'Class 12';
-  compState.prepLevel = D.compExam.prepLevel || 'Intermediate';
-  compState.coaching = D.compExam.coaching || 'Self Study';
-  compState.dailyHours = D.compExam.dailyHours || 4;
-  compState.targetRank = D.compExam.targetRank || 'AIR 1000';
-  compState.prevAttempts = D.compExam.prevAttempts || 'None';
 }
 
 function saveCompState() {
@@ -911,13 +648,6 @@ function saveCompState() {
   D.compExam.targetScore = compState.targetScore;
   D.compExam.dailyTime = compState.dailyTime;
   D.compExam.difficulty = compState.practiceDifficulty;
-  D.compExam.targetYear = compState.targetYear;
-  D.compExam.currentClass = compState.currentClass;
-  D.compExam.prepLevel = compState.prepLevel;
-  D.compExam.coaching = compState.coaching;
-  D.compExam.dailyHours = compState.dailyHours;
-  D.compExam.targetRank = compState.targetRank;
-  D.compExam.prevAttempts = compState.prevAttempts;
   D.compExam.configured = true;
   saveAll();
 }
@@ -967,18 +697,19 @@ function rComp() {
   }
 
   const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const targetPct = Math.round((compState.targetScore / exam.maxScore) * 100);
 
   let tabContent = '';
   switch (compState.currentTab) {
-    case 'hub':        tabContent = renderHubTab(exam); break;
     case 'syllabus':   tabContent = renderSyllabusTab(exam); break;
+    case 'tips':       tabContent = renderTipsTab(exam); break;
     case 'practice':   tabContent = renderPracticeTab(exam); break;
     case 'mock':       tabContent = renderMockTab(exam); break;
-    case 'diary':      tabContent = renderMistakeDiaryTab(exam); break;
     case 'analytics':  tabContent = renderAnalyticsTab(exam); break;
-    case 'important':  tabContent = renderImportantChaptersTab(exam); break;
-    case 'strategy':   tabContent = renderStrategyTab(exam); break;
-    default:           tabContent = renderHubTab(exam); break;
+    case 'diary':      tabContent = renderMistakeDiaryTab(exam); break;
+    case 'pyq':        tabContent = renderPYQTab(exam); break;
+    case 'hub':
+    default:           tabContent = renderHubTab(exam, targetPct); break;
   }
 
   const main = document.getElementById('main');
@@ -992,30 +723,29 @@ function rComp() {
         
         <div class="between" style="gap:16px;flex-wrap:wrap;position:relative;z-index:1">
           <div>
-            <div class="h3" style="color:var(--pl);margin:0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase">🏆 AI COMPETITIVE EXAM SUITE</div>
+            <div class="h3" style="color:var(--pl);margin:0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase">🏆 AI COMPETITIVE HUB</div>
             <div class="h1" style="color:#fff;margin:4px 0 6px 0;font-size:26px;display:flex;align-items:center;gap:10px">
-              <span>${esc(exam.name)} Training Desk</span>
+              <span>${esc(exam.name)} Preparation</span>
               <span class="tag tp" style="font-size:11px;font-weight:700">${esc(exam.country)}</span>
             </div>
-            <p class="sub" style="margin:0;max-width:550px">Syllabus Pattern: ${esc(exam.pattern)} · Goal Score: <strong>${compState.targetScore}</strong></p>
+            <p class="sub" style="margin:0;max-width:550px">Pattern: ${esc(exam.pattern)}</p>
           </div>
 
           <button class="btn bsm bgh" onclick="reconfigureCompPlan()" style="display:flex;align-items:center;gap:6px">
-            ⚙️ Reconfigure Plan
+            ⚙️ Reset Plan
           </button>
         </div>
       </div>
 
       <!-- Navigation Tabs -->
-      <div style="display:flex;gap:6px;margin-bottom:20px;overflow-x:auto;padding-bottom:6px">
-        <button class="btn bsm ${(!compState.currentTab||compState.currentTab==='hub')?'bpri':'bgh'}" onclick="setCompTab('hub')">🏠 Dashboard</button>
-        <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri':'bgh'}" onclick="setCompTab('syllabus')">📚 Syllabus & Weightage</button>
-        <button class="btn bsm ${compState.currentTab==='practice'?'bpri':'bgh'}" onclick="setCompTab('practice')">🎯 Practice Rooms</button>
-        <button class="btn bsm ${compState.currentTab==='mock'?'bpri':'bgh'}" onclick="setCompTab('mock')">⏱️ CBT Mock Tests</button>
+      <div style="display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;padding-bottom:6px">
+        <button class="btn bsm ${compState.currentTab==='hub'?'bpri':'bgh'}" onclick="setCompTab('hub')">📊 Hub</button>
+        <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri':'bgh'}" onclick="setCompTab('syllabus')">📚 Syllabus</button>
+        <button class="btn bsm ${compState.currentTab==='pyq'?'bpri':'bgh'}" onclick="setCompTab('pyq')">📋 PYQ Bank</button>
+        <button class="btn bsm ${compState.currentTab==='practice'?'bpri':'bgh'}" onclick="setCompTab('practice')">🎯 Practice</button>
+        <button class="btn bsm ${compState.currentTab==='mock'?'bpri':'bgh'}" onclick="setCompTab('mock')">⏱️ Mock Exam</button>
+        <button class="btn bsm ${compState.currentTab==='analytics'?'bpri':'bgh'}" onclick="setCompTab('analytics')">📈 Analytics</button>
         <button class="btn bsm ${compState.currentTab==='diary'?'bpri':'bgh'}" onclick="setCompTab('diary')">📓 Mistake Diary</button>
-        <button class="btn bsm ${compState.currentTab==='analytics'?'bpri':'bgh'}" onclick="setCompTab('analytics')">📈 Analytics & Predictor</button>
-        <button class="btn bsm ${compState.currentTab==='important'?'bpri':'bgh'}" onclick="setCompTab('important')">👑 High Priority Chapters</button>
-        <button class="btn bsm ${compState.currentTab==='strategy'?'bpri':'bgh'}" onclick="setCompTab('strategy')">💡 Strategy Hub</button>
       </div>
 
       <!-- Tab Content -->
@@ -1039,136 +769,116 @@ function renderOnboardingWizard() {
 
   if (compState.obStep === 1) {
     stepHTML = `
-      <div class="h2 text-center mb8" style="color:#fff">1. Target Exam & Academic Details</div>
-      <p class="sub text-center mb14" style="font-size:12px">Tell us what you are preparing for and your current target timeline.</p>
-
-      <div style="position:relative;margin-bottom:12px">
+      <div class="h2 text-center mb14" style="color:#fff">1. Select Target Exam</div>
+      <p class="sub text-center mb20" style="max-width:480px;margin:0 auto 20px">Search our database of the World's Top 100 Exams or choose from the list of major entrance tests.</p>
+      
+      <div style="position:relative;max-width:480px;margin:0 auto 20px">
         <span class="gsearch-icon" style="top:50%;transform:translateY(-50%)">🔍</span>
-        <input type="text" id="exam-search" class="gsearch" style="padding-left:40px;background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)" placeholder="Search 100+ global exams (e.g. JEE Main, NEET, EAMCET, SAT...)" value="${esc(compState.searchQuery || '')}" oninput="filterExams(this.value)">
+        <input type="text" id="exam-search" class="gsearch" style="padding-left:40px;background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)" placeholder="Search 100+ global exams (e.g. GMAT, Gaokao, CFA, GATE...)" value="${esc(compState.searchQuery)}" oninput="filterExams(this.value)">
         
         ${compState.searchQuery ? `
-          <div id="exam-search-results" style="position:absolute;top:calc(100% + 6px);left:0;right:0;background:rgba(15,12,28,0.98);border:1px solid rgba(139,92,246,0.3);border-radius:12px;max-height:200px;overflow-y:auto;z-index:1000">
+          <div id="exam-search-results" style="position:absolute;top:calc(100% + 6px);left:0;right:0;background:rgba(15,12,28,0.98);border:1px solid rgba(139,92,246,0.3);border-radius:12px;max-height:220px;overflow-y:auto;z-index:1000">
             ${filtered100.length > 0 ? filtered100.map(e => `
               <div class="gsugg-item" onclick="selectObExam('${e.id}')" style="padding:10px 14px;cursor:pointer;display:flex;justify-content:between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.04)">
                 <div>
                   <strong style="color:#fff">${esc(e.name)}</strong>
                   <span style="font-size:11px;color:var(--mut)"> · ${esc(e.cat)} (${esc(e.country)})</span>
                 </div>
-                <span class="tag tp" style="font-size:10px">${compState.examId===e.id?'Selected':'Select'}</span>
+                <span class="tag tp" style="font-size:10px">Select</span>
               </div>
             `).join('') : `<div style="padding:14px;color:var(--mut);text-align:center;font-size:13px">No exams matched your search</div>`}
           </div>
         ` : ''}
       </div>
 
-      <div style="margin-bottom:14px">
-        <label class="inp-label" style="margin-bottom:6px">CHOOSE POPULAR EXAMS</label>
-        <div style="display:flex;flex-wrap:wrap;gap:6px">
-          ${majorExams.map(e => {
-            const isSelected = compState.examId === e.id;
-            return `<button class="btn bsm ${isSelected?'bpri':'bgh'}" style="min-height:auto;padding:6px 12px;font-size:12px" onclick="selectObExam('${e.id}')">${esc(e.name)}</button>`;
-          }).join('')}
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px">
-        <div>
-          <label class="inp-label">TARGET YEAR</label>
-          <select class="inp" style="padding:8px 10px;font-size:13px" onchange="compState.targetYear=parseInt(this.value)">
-            <option value="2026" ${compState.targetYear===2026?'selected':''}>2026</option>
-            <option value="2027" ${(!compState.targetYear||compState.targetYear===2027)?'selected':''}>2027</option>
-            <option value="2028" ${compState.targetYear===2028?'selected':''}>2028</option>
-          </select>
-        </div>
-        <div>
-          <label class="inp-label">CURRENT CLASS</label>
-          <select class="inp" style="padding:8px 10px;font-size:13px" onchange="compState.currentClass=this.value">
-            <option value="Class 11" ${compState.currentClass==='Class 11'?'selected':''}>Class 11</option>
-            <option value="Class 12" ${(!compState.currentClass||compState.currentClass==='Class 12')?'selected':''}>Class 12</option>
-            <option value="Dropper" ${compState.currentClass==='Dropper'?'selected':''}>Dropper / Repeater</option>
-            <option value="Other" ${compState.currentClass==='Other'?'selected':''}>Other</option>
-          </select>
-        </div>
+      <div class="grid-2" style="gap:12px;margin-bottom:20px">
+        ${majorExams.map(e => `
+          <div class="card card-lift cglow${compState.examId===e.id?' on':''}" onclick="selectObExam('${e.id}')" style="padding:16px;cursor:pointer;border-color:${compState.examId===e.id?'var(--p)':'var(--brd)'};background:${compState.examId===e.id?'rgba(139,92,246,0.06)':'rgba(255,255,255,0.02)'}">
+            <div class="between mb6">
+              <span style="font-weight:700;color:#fff;font-size:15px">${esc(e.name)}</span>
+              <span class="tag tp" style="font-size:10px">${esc(e.cat)}</span>
+            </div>
+            <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.4">${esc(e.pattern)}</p>
+          </div>
+        `).join('')}
       </div>
 
       <div style="text-align:right">
-        <button class="btn bpri" style="width:100%" onclick="navigateObStep(2)">Continue to Step 2 →</button>
+        <button class="btn bpri" onclick="navigateObStep(2)">Set Target Score →</button>
       </div>
     `;
   } else if (compState.obStep === 2) {
+    const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+    const minTarget = Math.round(exam.maxScore * 0.3);
+    const targetPct = Math.round((compState.targetScore / exam.maxScore) * 100);
+
     stepHTML = `
-      <div class="h2 text-center mb8" style="color:#fff">2. Preparation & Coaching Status</div>
-      <p class="sub text-center mb14" style="font-size:12px">Tell us about your learning support system and current prep level.</p>
+      <div class="h2 text-center mb14" style="color:#fff">2. Set Target Score</div>
+      <p class="sub text-center mb20">Select your benchmark target score for ${esc(exam.name)} (Max score: ${exam.maxScore})</p>
 
-      <div class="card mb14" style="padding:14px;background:rgba(255,255,255,0.01)">
-        <div style="margin-bottom:12px">
-          <label class="inp-label">CURRENT PREPARATION LEVEL</label>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
-            ${['Beginner', 'Intermediate', 'Advanced'].map(lvl => {
-              const isSelected = compState.prepLevel === lvl || (!compState.prepLevel && lvl === 'Intermediate');
-              return `<button class="btn bsm ${isSelected?'bpri':'bgh'}" style="min-height:auto;padding:8px;font-size:11px" onclick="compState.prepLevel='${lvl}';renderOnboardingWizard()">${lvl}</button>`;
-            }).join('')}
+      <div class="card mb20" style="padding:22px;text-align:center">
+        <div style="position:relative;width:120px;height:120px;margin:0 auto 16px">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="none"></circle>
+            <circle cx="60" cy="60" r="50" stroke="url(#obGlow)" stroke-width="8" fill="none"
+              stroke-dasharray="314.16" stroke-dashoffset="${314.16 - (314.16 * targetPct) / 100}"
+              stroke-linecap="round" style="transition:stroke-dashoffset 0.3s ease-out"></circle>
+            <defs>
+              <linearGradient id="obGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8B5CF6"></stop>
+                <stop offset="100%" stop-color="#06B6D4"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <span style="font-size:22px;font-weight:800;color:#fff">${targetPct}%</span>
+            <span style="font-size:9px;color:var(--mut);text-transform:uppercase">Percent</span>
           </div>
         </div>
 
-        <div style="margin-bottom:12px">
-          <label class="inp-label">COACHING STATUS</label>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
-            ${['Self Study', 'Coaching', 'School+Coaching'].map(mode => {
-              const isSelected = compState.coaching === mode || (!compState.coaching && mode === 'Self Study');
-              return `<button class="btn bsm ${isSelected?'bpri':'bgh'}" style="min-height:auto;padding:8px;font-size:11px" onclick="compState.coaching='${mode}';renderOnboardingWizard()">${mode}</button>`;
-            }).join('')}
-          </div>
-        </div>
-
-        <div>
-          <label class="inp-label">DAILY DEDICATED PREP HOURS</label>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
-            ${[2, 4, 6, 8].map(h => {
-              const isSelected = compState.dailyHours === h || (!compState.dailyHours && h === 4);
-              return `<button class="btn bsm ${isSelected?'bpri':'bgh'}" style="min-height:auto;padding:8px;font-size:11px" onclick="compState.dailyHours=${h};renderOnboardingWizard()">${h} Hours</button>`;
-            }).join('')}
+        <div style="max-width:300px;margin:0 auto">
+          <input type="range" min="${minTarget}" max="${exam.maxScore}" value="${compState.targetScore}" style="width:100%;accent-color:var(--p)" oninput="updateTargetVal(this.value)">
+          <div class="between mt8" style="font-weight:700;font-size:16px;color:#fff">
+            <span>Goal Score:</span>
+            <span id="targetScoreDisplay" class="tag tp">${compState.targetScore}</span>
           </div>
         </div>
       </div>
 
       <div class="between">
         <button class="btn bgh" onclick="navigateObStep(1)">← Back</button>
-        <button class="btn bpri" onclick="navigateObStep(3)">Step 3: Goals & Targets →</button>
+        <button class="btn bpri" onclick="navigateObStep(3)">Commitments →</button>
       </div>
     `;
   } else if (compState.obStep === 3) {
-    const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
-    const minTarget = Math.round(exam.maxScore * 0.3);
-    const targetPct = Math.round((compState.targetScore / exam.maxScore) * 100);
-
     stepHTML = `
-      <div class="h2 text-center mb8" style="color:#fff">3. Target Benchmarks & History</div>
-      <p class="sub text-center mb14" style="font-size:12px">Specify your goal score/rank and previous attempt history.</p>
+      <div class="h2 text-center mb14" style="color:#fff">3. Setup Prep Commitments</div>
+      <p class="sub text-center mb20">Select your preferred study load and starting paper difficulty level.</p>
 
-      <div class="card mb14" style="padding:14px;background:rgba(255,255,255,0.01)">
-        <div style="margin-bottom:12px;text-align:center">
-          <label class="inp-label" style="text-align:left">TARGET SCORE FOR ${esc(exam.name)} (Max: ${exam.maxScore})</label>
-          <input type="range" min="${minTarget}" max="${exam.maxScore}" value="${compState.targetScore || 240}" style="width:100%;accent-color:var(--p);margin-top:6px" oninput="updateTargetVal(this.value)">
-          <div class="between mt6" style="font-weight:700;font-size:14px;color:#fff">
-            <span>Goal Score:</span>
-            <span id="targetScoreDisplay" class="tag tp">${compState.targetScore || 240} (${targetPct}%)</span>
+      <div class="card mb20" style="padding:22px">
+        <div class="set-row">
+          <div>
+            <div style="color:#fff;font-weight:600">Daily Dedicated Prep</div>
+            <div style="color:var(--mut);font-size:12px">Practice time recommendation</div>
           </div>
+          <select class="inp" style="width:140px;padding:6px 10px" onchange="compState.dailyTime=parseInt(this.value)">
+            <option value="30" ${compState.dailyTime==30?'selected':''}>30 Minutes</option>
+            <option value="60" ${compState.dailyTime==60?'selected':''}>1 Hour</option>
+            <option value="120" ${compState.dailyTime==120?'selected':''}>2 Hours</option>
+          </select>
         </div>
 
-        <div style="margin-bottom:12px">
-          <label class="inp-label">TARGET RANK / TARGET PERCENTILE</label>
-          <input type="text" id="target-rank" class="inp" style="padding:8px 10px;font-size:13px" placeholder="e.g. AIR 500, State Rank 50, 99.5 Percentile" value="${esc(compState.targetRank || 'AIR 1000')}" oninput="compState.targetRank=this.value">
-        </div>
-
-        <div>
-          <label class="inp-label">PREVIOUS ATTEMPTS</label>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
-            ${['None', '1 Attempt', '2+ Attempts'].map(att => {
-              const isSelected = compState.prevAttempts === att || (!compState.prevAttempts && att === 'None');
-              return `<button class="btn bsm ${isSelected?'bpri':'bgh'}" style="min-height:auto;padding:8px;font-size:11px" onclick="compState.prevAttempts='${att}';renderOnboardingWizard()">${att}</button>`;
-            }).join('')}
+        <div class="set-row">
+          <div>
+            <div style="color:#fff;font-weight:600">Initial Difficulty Level</div>
+            <div style="color:var(--mut);font-size:12px">Practice & Mock initial level</div>
           </div>
+          <select class="inp" style="width:140px;padding:6px 10px" onchange="compState.practiceDifficulty=this.value">
+            <option value="easy" ${compState.practiceDifficulty==='easy'?'selected':''}>Easy</option>
+            <option value="medium" ${compState.practiceDifficulty==='medium'?'selected':''}>Medium</option>
+            <option value="hard" ${compState.practiceDifficulty==='hard'?'selected':''}>Hard</option>
+            <option value="boss" ${compState.practiceDifficulty==='boss'?'selected':''}>😈 Boss Mode</option>
+          </select>
         </div>
       </div>
 
@@ -1180,12 +890,12 @@ function renderOnboardingWizard() {
   }
 
   main.innerHTML = `
-    <div class="sw scr" style="padding-top:16px;max-width:540px;margin:0 auto">
-      <div class="card cglow" style="padding:22px;border-color:rgba(139,92,246,0.3)">
-        <div style="text-align:center;margin-bottom:14px">
-          <div style="font-size:28px;margin-bottom:4px">🏆</div>
-          <div class="h1" style="color:#fff;font-size:20px;margin:0">Configure Preparation Plan</div>
-          <div style="display:flex;justify-content:center;gap:6px;margin-top:8px">
+    <div class="sw scr" style="padding-top:16px;max-width:560px;margin:0 auto">
+      <div class="card cglow" style="padding:28px;border-color:rgba(139,92,246,0.3)">
+        <div style="text-align:center;margin-bottom:24px">
+          <div style="font-size:32px;margin-bottom:8px">🏆</div>
+          <div class="h1" style="color:#fff;font-size:22px;margin:0">Configure Preparation Plan</div>
+          <div style="display:flex;justify-content:center;gap:6px;margin-top:12px">
             <div style="width:24px;height:4px;border-radius:2px;background:${compState.obStep>=1?'var(--p)':'rgba(255,255,255,0.06)'}"></div>
             <div style="width:24px;height:4px;border-radius:2px;background:${compState.obStep>=2?'var(--p)':'rgba(255,255,255,0.06)'}"></div>
             <div style="width:24px;height:4px;border-radius:2px;background:${compState.obStep>=3?'var(--p)':'rgba(255,255,255,0.06)'}"></div>
@@ -1203,7 +913,7 @@ function selectObExam(id) {
   const exam = WORLD_EXAMS.find(e => e.id === id);
   compState.targetScore = exam.isMajor ? exam.defaultTarget : Math.round(exam.maxScore * 0.8);
   compState.searchQuery = '';
-  renderOnboardingWizard();
+  navigateObStep(2);
 }
 
 function filterExams(query) {
@@ -1237,212 +947,79 @@ function reconfigureCompPlan() {
   rComp();
 }
 
-function startChapterPractice(subj, chap) {
-  compState.practiceSubject = subj;
-  compState.practiceChapter = chap;
-  compState.currentTab = 'practice';
-  rComp();
-}
-window.startChapterPractice = startChapterPractice;
-
-// 1. Render Hub Tab (Dashboard)
-function renderHubTab(exam) {
-  const stats = (D.compExam && D.compExam.chapterStats) || {};
-  const history = (D.compExam && D.compExam.sessionHistory) || [];
-  
-  // 1. Calculate Syllabus Completion
-  const detailed = DETAILED_SYLLABUS[compState.examId] || [];
-  let totalChapters = 0;
-  detailed.forEach(s => s.units.forEach(u => totalChapters += u.chapters.length));
-  if (totalChapters === 0) totalChapters = 15; // fallback
-  
-  let practicedChapters = 0;
-  Object.keys(stats).forEach(k => {
-    if (stats[k] && stats[k].total > 0) practicedChapters++;
-  });
-  const syllabusCompletionPct = Math.min(100, Math.round((practicedChapters / totalChapters) * 100));
-
-  // 2. Questions Solved & Accuracy
-  let questionsSolved = 0;
-  let correctAnswers = 0;
-  Object.keys(stats).forEach(k => {
-    if (stats[k]) {
-      questionsSolved += (stats[k].total || 0);
-      correctAnswers += (stats[k].correct || 0);
-    }
-  });
-  const accuracy = questionsSolved > 0 ? Math.round((correctAnswers / questionsSolved) * 100) : 0;
-
-  // 3. Mock Exams Taken
-  const mocksTaken = history.filter(h => h.type === 'mock').length;
-
-  // 4. Avg Time per Question
-  let totalSecs = 0;
-  let timedQuestions = 0;
-  history.forEach(h => {
-    if (h.timeSpent && h.questionsSolved) {
-      totalSecs += h.timeSpent;
-      timedQuestions += h.questionsSolved;
-    }
-  });
-  const avgTime = timedQuestions > 0 ? Math.round(totalSecs / timedQuestions) : 52; // default 52s
-
-  // 5. Overall Prep Score
-  const prepPct = Math.round((syllabusCompletionPct * 0.4) + (accuracy * 0.6));
-
-  // 6. Estimated Rank & Score
-  let estRank = 'Not Calibrated';
-  let rankColor = 'var(--mut)';
-  if (questionsSolved > 0) {
-    if (accuracy >= 85) { estRank = 'AIR Top 500 🌟'; rankColor = 'var(--okl)'; }
-    else if (accuracy >= 70) { estRank = 'AIR Top 2,000 📈'; rankColor = 'var(--cl)'; }
-    else if (accuracy >= 55) { estRank = 'AIR Top 10,000 ⚡'; rankColor = '#F59E0B'; }
-    else { estRank = 'AIR Top 50,000 ⚠️'; rankColor = '#EF4444'; }
-  }
-  const estScore = questionsSolved > 0 ? Math.round(exam.maxScore * (accuracy / 100)) : 0;
-
-  // 7. Strengths & Weaknesses
-  const subjAccuracies = {};
-  const subjCounts = {};
-  Object.keys(stats).forEach(k => {
-    const parts = k.split('::');
-    if (parts.length === 2) {
-      const sub = parts[0];
-      if (!subjAccuracies[sub]) { subjAccuracies[sub] = 0; subjCounts[sub] = 0; }
-      subjAccuracies[sub] += stats[k].correct;
-      subjCounts[sub] += stats[k].total;
-    }
-  });
-  let weakestSubj = 'Not Enough Data';
-  let strongestSubj = 'Not Enough Data';
-  let minAcc = 101, maxAcc = -1;
-  Object.keys(subjAccuracies).forEach(sub => {
-    const acc = subjCounts[sub] > 0 ? (subjAccuracies[sub] / subjCounts[sub]) : 0;
-    if (acc < minAcc && subjCounts[sub] >= 5) { minAcc = acc; weakestSubj = sub; }
-    if (acc > maxAcc && subjCounts[sub] >= 5) { maxAcc = acc; strongestSubj = sub; }
-  });
-
+// 1. Render Hub Tab
+function renderHubTab(exam, targetPct) {
   return `
     ${renderCountdownBanner(exam)}
-
-    <!-- 📊 Personalized Stats Dashboard -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:20px">
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Prep Percentage</div>
-        <div style="font-size:24px;font-weight:800;color:var(--pl)">${prepPct}%</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">Target: ${compState.targetScore} points</div>
-      </div>
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Syllabus Covered</div>
-        <div style="font-size:24px;font-weight:800;color:var(--cl)">${syllabusCompletionPct}%</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">${practicedChapters} of ${totalChapters} chapters</div>
-      </div>
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Solve Accuracy</div>
-        <div style="font-size:24px;font-weight:800;color:var(--okl)">${accuracy}%</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">${questionsSolved} total solved</div>
-      </div>
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Avg Time / Q</div>
-        <div style="font-size:24px;font-weight:800;color:#F59E0B">${avgTime}s</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">Target pace: &lt; 90s</div>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px;margin-bottom:20px" class="grid-1-mob">
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px">
       <div style="display:flex;flex-direction:column;gap:18px">
-        <!-- 🎯 Prediction Card -->
-        <div class="card" style="padding:18px;background:linear-gradient(135deg,rgba(139,92,246,0.04),rgba(6,182,212,0.02))">
-          <div class="h2 mb10" style="color:#fff">🔮 AI Rank & Score Predictor</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-            <div style="border-right:1px solid var(--brd);padding-right:10px">
-              <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase">Estimated Rank</div>
-              <div style="font-size:20px;font-weight:800;color:${rankColor};margin-top:4px">${estRank}</div>
-              <div style="font-size:11px;color:var(--mut);margin-top:4px">Goal target: ${esc(compState.targetRank || 'AIR 1000')}</div>
-            </div>
+        <div class="card" style="padding:20px">
+          <div class="h2 mb14" style="color:#fff;display:flex;align-items:center;gap:8px">⚙️ Preparation Parameters</div>
+          
+          <div class="set-row">
             <div>
-              <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase">Estimated Score</div>
-              <div style="font-size:20px;font-weight:800;color:#fff;margin-top:4px">${estScore} / ${exam.maxScore}</div>
-              <div style="font-size:11px;color:var(--mut);margin-top:4px">Goal target: ${compState.targetScore}</div>
+              <div style="color:#fff;font-size:14px;font-weight:600">Target Score</div>
+              <div style="color:var(--mut);font-size:12px">Your benchmark goal (Max: ${exam.maxScore})</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" min="${Math.round(exam.maxScore * 0.3)}" max="${exam.maxScore}" value="${compState.targetScore}" style="width:140px;accent-color:var(--p)" oninput="updateTargetVal(this.value)">
+              <span id="targetScoreDisplay" class="tag tp" style="font-size:13px;font-weight:700;min-width:60px;text-align:center">${compState.targetScore}</span>
             </div>
           </div>
-        </div>
 
-        <!-- 🧠 Tio Briefing -->
-        <div class="card" style="padding:18px;background:rgba(139,92,246,0.03);border-color:rgba(139,92,246,0.2)">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-            <div style="width:28px;height:28px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;font-size:14px">🤖</div>
-            <div style="font-size:12px;font-weight:700;color:var(--pl);letter-spacing:0.5px">TIO'S PRE-EXAM BRIEFING</div>
-          </div>
-          <div style="font-size:13px;color:#fff;line-height:1.5;padding-left:38px">
-            ${getTioBriefing(exam)}
-          </div>
-        </div>
-      </div>
-
-      <!-- Subject Balance Card -->
-      <div class="card" style="padding:18px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div class="h2 mb10" style="color:#fff">📚 Subject Diagnostics</div>
-          <div class="between mb6" style="font-size:12px">
-            <span style="color:var(--mut)">Strongest subject:</span>
-            <span style="color:var(--okl);font-weight:700">${strongestSubj}</span>
-          </div>
-          <div class="between mb12" style="font-size:12px">
-            <span style="color:var(--mut)">Weakest subject:</span>
-            <span style="color:#EF4444;font-weight:700">${weakestSubj}</span>
+          <div class="set-row">
+            <div>
+              <div style="color:#fff;font-size:14px;font-weight:600">Daily Dedication</div>
+              <div style="color:var(--mut);font-size:12px">Daily practice commitment time</div>
+            </div>
+            <select class="inp" style="width:140px;padding:6px 10px" onchange="updateDailyTime(this.value)">
+              <option value="30" ${compState.dailyTime==30?'selected':''}>30 Minutes</option>
+              <option value="60" ${compState.dailyTime==60?'selected':''}>1 Hour</option>
+              <option value="120" ${compState.dailyTime==120?'selected':''}>2 Hours</option>
+            </select>
           </div>
         </div>
 
-        <div style="background:rgba(255,255,255,0.02);border-radius:8px;padding:10px;font-size:11px;color:var(--sub);line-height:1.4">
-          💡 <strong>Tip:</strong> Spend 60% of your daily study time (${compState.dailyHours || 4} hours) practicing the weakest subject to raise overall cut-off probability.
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="card card-lift cglow" style="padding:16px;cursor:pointer;background:linear-gradient(135deg,rgba(139,92,246,0.06),rgba(6,182,212,0.02));border-color:rgba(139,92,246,0.2)" onclick="setCompTab('practice')">
+            <div style="font-size:28px;margin-bottom:8px">🎯</div>
+            <div class="h3" style="color:#fff;margin-bottom:4px">Topic Practice</div>
+            <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.5">Customize difficulty levels and solve conceptual questions.</p>
+          </div>
+          <div class="card card-lift cglow" style="padding:16px;cursor:pointer;background:linear-gradient(135deg,rgba(6,182,212,0.06),rgba(236,72,153,0.02));border-color:rgba(6,182,212,0.2)" onclick="setCompTab('mock')">
+            <div style="font-size:28px;margin-bottom:8px">⏱️</div>
+            <div class="h3" style="color:#fff;margin-bottom:4px">CBT Exam Room</div>
+            <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.5">Simulate a timed mock exam with section tabs and marking scheme.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- 🗺️ Main Examination Hub Actions -->
-    <div class="h2 mb12" style="color:#fff">🛠️ Competitive Exam Action Grid</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('syllabus')">
-        <div style="font-size:26px;margin-bottom:8px">📋</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Official Syllabus Board</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Examine official chapters, weightage heatmap, and marking schemes.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('practice')">
-        <div style="font-size:26px;margin-bottom:8px">🎯</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Chapter & Topic Practice</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Configure custom practice rooms by difficulty, quantity, and PYQs.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('mock')">
-        <div style="font-size:26px;margin-bottom:8px">⏱️</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">CBT Exam Room</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Simulate strict time-restricted mock papers under actual exam patterns.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('diary')">
-        <div style="font-size:26px;margin-bottom:8px">📓</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Mistake Diary</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Review and categorize wrong answers to eliminate conceptual holes.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('analytics')">
-        <div style="font-size:26px;margin-bottom:8px">📈</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Performance Analytics</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Inspect speed-accuracy trade-offs and negative mark diagnostics.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('important')">
-        <div style="font-size:26px;margin-bottom:8px">👑</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">High Priority ROI Chapters</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Audit top-scoring chapters that appear most in recent historical exams.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('strategy')">
-        <div style="font-size:26px;margin-bottom:8px">💡</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Topper Attempt Strategies</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Implement scientific exam attempt methods to minimize negative marks.</p>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="card" style="padding:20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="h3" style="color:var(--mut);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Calibration Progress</div>
+          
+          <div style="position:relative;width:130px;height:130px;margin-bottom:14px">
+            <svg width="130" height="130" viewBox="0 0 130 130">
+              <circle cx="65" cy="65" r="54" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="none"></circle>
+              <circle cx="65" cy="65" r="54" stroke="url(#compGlow)" stroke-width="8" fill="none"
+                stroke-dasharray="339.29" stroke-dashoffset="${339.29 - (339.29 * targetPct) / 100}"
+                stroke-linecap="round" style="transition:stroke-dashoffset 0.6s ease-out"></circle>
+              <defs>
+                <linearGradient id="compGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6"></stop>
+                  <stop offset="100%" stop-color="#06B6D4"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+              <span style="font-size:24px;font-weight:800;color:#fff">${targetPct}%</span>
+              <span style="font-size:10px;color:var(--mut);text-transform:uppercase;font-weight:700">Target</span>
+            </div>
+          </div>
+          
+          <div class="h3" style="color:#fff;margin:0 0 4px 0">Targeting ${compState.targetScore} / ${exam.maxScore}</div>
+          <p style="font-size:12px;color:var(--mut);margin:0;line-height:1.4">Requires steady practice on high-yield sections.</p>
+        </div>
       </div>
     </div>
   `;
@@ -1453,176 +1030,135 @@ function renderSyllabusTab(exam) {
   const detailed = DETAILED_SYLLABUS[compState.examId];
   
   let syllabusHTML = '';
-  
-  // Paper pattern pie chart visualizer
-  const numSubjects = (exam.subjects || []).length || 1;
-  const pieSections = (exam.subjects || []).map((sub, i) => {
-    const angle = 360 / numSubjects;
-    return `<path d="M 65 65 L 65 11 A 54 54 0 ${angle > 180 ? 1 : 0} 1 ${65 + 54 * Math.sin(angle * Math.PI / 180)} ${65 - 54 * Math.cos(angle * Math.PI / 180)} Z" fill="hsl(${i * (360/numSubjects)}, 70%, 60%)" stroke="#0a0a1a" stroke-width="2"/>`;
-  }).join('');
-  
-  const patternHTML = `
-    <div class="card mb20" style="padding:18px;border-color:rgba(6,182,212,0.18)">
-      <div class="between mb12" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
-        <span style="font-size:16px;font-weight:800;color:var(--cl)">Paper Pattern Visualizer</span>
-        <span class="tag tc" style="font-size:11px">Structure & Marking</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:24px" class="flex-col-mob">
-        <svg width="100" height="100" viewBox="0 0 130 130" style="flex-shrink:0;transform:rotate(-90deg)">
-          ${pieSections}
-          <circle cx="65" cy="65" r="30" fill="#0a0a1a"></circle>
-        </svg>
-        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px;color:#fff;width:100%">
-          <div>
-            <span style="color:var(--mut)">Total Questions:</span> <strong style="color:var(--cl)">${exam.fullQuestions} Questions</strong>
-          </div>
-          <div>
-            <span style="color:var(--mut)">Exam Duration:</span> <strong style="color:#fff">${exam.duration} Minutes</strong>
-          </div>
-          <div>
-            <span style="color:var(--mut)">Marking System:</span> <strong style="color:#fff">+${exam.marking.correct} Marks</strong>
-          </div>
-          <div>
-            <span style="color:var(--mut)">Negative Marking:</span> <strong style="color:#EF4444">${exam.marking.wrong || 0} Marks</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
   if (detailed) {
     syllabusHTML = detailed.map(subj => `
       <div class="card mb20" style="padding:18px;border-color:rgba(139,92,246,0.18)">
-        <div class="between mb14" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
-          <span style="font-size:16px;font-weight:800;color:var(--pl)">${esc(subj.subject)}</span>
-          <span class="tag tp" style="font-size:11px">Weightage Analysis</span>
+        <div class="between mb12" style="border-bottom:1px solid var(--brd);padding-bottom:10px">
+          <span style="font-size:16px;font-weight:800;color:var(--pl)">${esc(subj.subject)} Division</span>
+          <span class="tag tp" style="font-size:11px">Weightage Map</span>
         </div>
         
-        <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-direction:column;gap:16px">
           ${subj.units.map(unit => `
-            <div>
-              <div class="between mb10" style="padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,0.04)">
-                <span style="font-size:13px;font-weight:700;color:#C4B5FD">📦 ${esc(unit.name)}</span>
+            <div style="background:rgba(255,255,255,0.015);border:1px solid var(--brd);border-radius:10px;padding:12px 14px">
+              <div class="between mb8">
+                <span style="font-size:13px;font-weight:700;color:#fff">📦 ${esc(unit.name)}</span>
               </div>
               
-              <div style="display:flex;flex-direction:column;gap:10px">
-                ${unit.chapters.map(chap => {
-                  const key = subj.subject + '::' + chap.name;
-                  const stats = (D.compExam && D.compExam.chapterStats && D.compExam.chapterStats[key]) || { correct: 0, total: 0 };
-                  const accuracy = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
-                  const status = stats.total === 0 ? 'Not Started' : (accuracy >= 80 && stats.total >= 10 ? 'Mastered' : 'In Progress');
-                  const statusColor = status === 'Mastered' ? 'var(--okl)' : status === 'In Progress' ? 'var(--cl)' : 'var(--mut)';
-                  const priority = chap.weight >= 9 ? 'High' : (chap.weight >= 6 ? 'Medium' : 'Low');
-                  const priorityColor = priority === 'High' ? '#EF4444' : (priority === 'Medium' ? '#F59E0B' : 'var(--p)');
-                  const diff = chap.weight >= 9 ? 'Hard' : (chap.weight >= 6 ? 'Medium' : 'Easy');
-                  
-                  return `
-                    <div style="background:rgba(255,255,255,0.01);border:1px solid var(--brd);border-radius:10px;padding:12px;display:grid;grid-template-columns:2.5fr 1fr 1fr 1.2fr 1fr;gap:10px;align-items:center" class="grid-1-mob">
-                      <div>
-                        <div style="font-size:13px;font-weight:700;color:#fff">${esc(chap.name)}</div>
-                        <div style="font-size:11px;color:var(--mut);margin-top:2px">Syllabus Weight: ${chap.weight}%</div>
-                      </div>
-                      <div style="text-align:center">
-                        <span class="tag" style="background:rgba(255,255,255,0.02);color:${priorityColor};font-size:10px;border:1px solid ${priorityColor}">${priority} Priority</span>
-                      </div>
-                      <div style="text-align:center">
-                        <span style="font-size:12px;color:var(--sub)">Diff: <strong>${diff}</strong></span>
-                      </div>
-                      <div style="text-align:center">
-                        <span style="font-size:12px;color:${statusColor};font-weight:700">${status}</span>
-                      </div>
-                      <div style="text-align:right">
-                        <button class="btn bsm bpri" style="min-height:auto;padding:5px 12px;font-size:11px;width:100%" onclick="startChapterPractice('${esc(subj.subject)}', '${esc(chap.name)}')">Practice →</button>
-                      </div>
+              <div style="display:flex;flex-direction:column;gap:8px;padding-left:12px">
+                ${unit.chapters.map(chap => `
+                  <div>
+                    <div class="between" style="font-size:12px;margin-bottom:2px">
+                      <span style="color:var(--sub)">• ${esc(chap.name)}</span>
+                      <span style="color:var(--cl);font-weight:600">${chap.weight}%</span>
                     </div>
-                  `;
-                }).join('')}
+                    <div class="pw" style="height:4px;background:rgba(255,255,255,0.03)">
+                      <div class="pf" style="width:${chap.weight}%;background:linear-gradient(90deg,var(--p),var(--c))"></div>
+                    </div>
+                  </div>
+                `).join('')}
               </div>
             </div>
           `).join('')}
         </div>
       </div>
     `).join('');
+  } else {
+    const subjects = exam.subjects || ['General Studies'];
+    syllabusHTML = subjects.map(subj => `
+      <div class="card mb20" style="padding:18px">
+        <div class="between mb12">
+          <span style="font-size:15px;font-weight:700;color:var(--pl)">${esc(subj)} Syllabus</span>
+          <span class="tag tp" style="font-size:11px">Standard Weight</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:rgba(255,255,255,0.02);padding:10px;border-radius:8px">
+            <div class="between mb6" style="font-size:12px;font-weight:700;color:#fff">
+              <span>Unit 1: Fundamentals & Theory</span>
+              <span>45%</span>
+            </div>
+            <div class="pw" style="height:4px;background:rgba(255,255,255,0.04)">
+              <div class="pf" style="width:45%;background:var(--p)"></div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.02);padding:10px;border-radius:8px">
+            <div class="between mb6" style="font-size:12px;font-weight:700;color:#fff">
+              <span>Unit 2: Advanced Integration & Applications</span>
+              <span>55%</span>
+            </div>
+            <div class="pw" style="height:4px;background:rgba(255,255,255,0.04)">
+              <div class="pf" style="width:55%;background:var(--c)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
   }
 
   return `
-    <div class="sw scr" style="padding-top:16px">
-      ${patternHTML}
-      <div class="card" style="padding:22px">
-        <div class="h2 mb6" style="color:#fff">📚 Detailed Syllabus Board</div>
-        <p class="sub mb20">Explore official chapters, weightages, difficulties, and practice statuses calculated dynamically.</p>
-        ${syllabusHTML}
-      </div>
+    <div class="card" style="padding:22px">
+      <div class="h2 mb6" style="color:#fff">📚 Detailed Syllabus Weightage Board</div>
+      <p class="sub mb20">Explore subject-wise, unit-wise, and chapter-wise breakdowns calculated from past official papers.</p>
+      ${syllabusHTML}
     </div>
   `;
 }
 
 // 3. Render Tips & Tricks Tab
-function renderImportantChaptersTab(exam) {
-  const examId = compState.examId;
-  let listHTML = '';
-
-  const importantData = {
-    jee_main: [
-      { subject: 'Mathematics', chapter: 'Determinants & Matrices', weight: 8, roi: '🔥 Very High', tag: 'Scoring' },
-      { subject: 'Mathematics', chapter: 'Limits, Continuity & Differentiability', weight: 8, roi: '🔥 High', tag: 'High ROI' },
-      { subject: 'Physics', chapter: 'Rotational Motion & System of Particles', weight: 9, roi: '⚠️ High Risk / High Reward', tag: 'Concept Intensive' },
-      { subject: 'Physics', chapter: 'Current Electricity & Magnetism', weight: 9, roi: '🔥 Very High', tag: 'Scoring' },
-      { subject: 'Chemistry', chapter: 'General Organic Chemistry (GOC)', weight: 10, roi: '🔥 Crucial Foundation', tag: 'Foundation' },
-      { subject: 'Chemistry', chapter: 'Electrochemistry & Solutions', weight: 13, roi: '🔥 High ROI', tag: 'Formula Intensive' }
-    ],
-    jee_adv: [
-      { subject: 'Mathematics', chapter: 'Indefinite & Definite Integrals', weight: 10, roi: '🔥 Very High', tag: 'High ROI' },
-      { subject: 'Mathematics', chapter: 'Determinants & Matrices', weight: 8, roi: '🔥 High', tag: 'Scoring' },
-      { subject: 'Physics', chapter: 'Rotational Motion & Inertia', weight: 9, roi: '⚠️ Critical', tag: 'Concept Intensive' },
-      { subject: 'Physics', chapter: 'Current Electricity & Magnetism', weight: 10, roi: '🔥 High ROI', tag: 'Scoring' },
-      { subject: 'Chemistry', chapter: 'General Organic Chemistry (GOC)', weight: 10, roi: '🔥 Critical', tag: 'Foundation' },
-      { subject: 'Chemistry', chapter: 'Electrochemistry & Solutions', weight: 13, roi: '🔥 High ROI', tag: 'Formula Intensive' }
-    ],
-    neet: [
-      { subject: 'Biology', chapter: 'Principles of Inheritance', weight: 10, roi: '🔥 Extremely High', tag: 'High ROI' },
-      { subject: 'Biology', chapter: 'Molecular Basis of Inheritance', weight: 8, roi: '🔥 Extremely High', tag: 'High ROI' },
-      { subject: 'Biology', chapter: 'Neural Control & Coordination', weight: 8, roi: '🔥 High', tag: 'Foundation' }
-    ],
-    eamcet: [
-      { subject: 'Mathematics', chapter: 'Matrices & Determinants', weight: 8, roi: '🔥 Very High', tag: 'Scoring' },
-      { subject: 'Mathematics', chapter: 'Differentiation & Applications', weight: 10, roi: '🔥 High ROI', tag: 'High ROI' },
-      { subject: 'Physics', chapter: 'System of Particles & Rotational Motion', weight: 10, roi: '⚠️ High Risk', tag: 'Concept Intensive' },
-      { subject: 'Physics', chapter: 'Thermal Properties of Matter & Thermodynamics', weight: 10, roi: '🔥 Very High', tag: 'Scoring' },
-      { subject: 'Chemistry', chapter: 'Atomic Structure & Chemical Bonding', weight: 10, roi: '🔥 High ROI', tag: 'Foundation' }
-    ]
-  };
-
-  const list = importantData[examId] || [
-    { subject: 'General', chapter: 'Unit 1: Core Fundamentals', weight: 12, roi: '🔥 High ROI', tag: 'Foundation' },
-    { subject: 'General', chapter: 'Unit 2: Applied Concepts', weight: 15, roi: '🔥 High ROI', tag: 'Scoring' }
-  ];
-
-  listHTML = list.map(item => `
-    <div style="background:rgba(255,255,255,0.015);border:1px solid var(--brd);border-radius:12px;padding:14px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;align-items:center" class="grid-1-mob">
-      <div>
-        <div style="font-size:14px;font-weight:700;color:#fff">${esc(item.chapter)}</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:2px">${esc(item.subject)} · Historical weight: ${item.weight}%</div>
-      </div>
-      <div style="text-align:center">
-        <span class="tag" style="background:rgba(139,92,246,0.06);color:var(--pl);font-size:11px;border:1px solid rgba(139,92,246,0.2)">${esc(item.tag)}</span>
-      </div>
-      <div style="text-align:center">
-        <span style="font-size:12px;color:var(--okl);font-weight:700">${esc(item.roi)} ROI</span>
-      </div>
-      <div style="text-align:right">
-        <button class="btn bsm bpri" style="min-height:auto;padding:5px 12px;font-size:11px;width:100%" onclick="startChapterPractice('${esc(item.subject)}', '${esc(item.chapter)}')">Practice Now →</button>
-      </div>
-    </div>
-  `).join('');
-
+function renderTipsTab(exam) {
   return `
-    <div class="card" style="padding:22px">
-      <div class="h2 mb6" style="color:#fff">👑 High ROI & Important Chapters</div>
-      <p class="sub mb20">These chapters offer the maximum marks per hour of study. Prioritize mastering these first to quickly hit your cut-off threshold.</p>
-      
-      <div style="display:flex;flex-direction:column;gap:12px">
-        ${listHTML}
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card" style="padding:18px">
+          <div class="h2 mb12" style="color:#fff">📝 High-Yield Formulas (LaTeX Rendered)</div>
+          
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="background:rgba(255,255,255,0.015);padding:14px;border-radius:10px;border:1px solid var(--brd)">
+              <span class="tag tp mb6" style="font-size:10px">Mathematics (Calculus/Algebra)</span>
+              <div style="font-size:16px;color:#fff;margin:8px 0;text-align:center">
+                $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$
+              </div>
+              <p style="font-size:12px;color:var(--mut);margin:0">Quadratic solution formula. Essential for algebra roots calculation.</p>
+            </div>
+
+            <div style="background:rgba(255,255,255,0.015);padding:14px;border-radius:10px;border:1px solid var(--brd)">
+              <span class="tag tp mb6" style="font-size:10px">Physics (Modern / Quantum)</span>
+              <div style="font-size:16px;color:#fff;margin:8px 0;text-align:center">
+                $E = mc^2 \\quad \\text{and} \\quad \\lambda = \\frac{h}{p}$
+              </div>
+              <p style="font-size:12px;color:var(--mut);margin:0">Mass-energy equivalence and De Broglie wavelength equations.</p>
+            </div>
+
+            <div style="background:rgba(255,255,255,0.015);padding:14px;border-radius:10px;border:1px solid var(--brd)">
+              <span class="tag tp mb6" style="font-size:10px">Chemistry (Physical / Kinetics)</span>
+              <div style="font-size:16px;color:#fff;margin:8px 0;text-align:center">
+                $PV = nRT \\quad \\text{and} \\quad K = A e^{-\\frac{E_a}{RT}}$
+              </div>
+              <p style="font-size:12px;color:var(--mut);margin:0">Ideal gas equation and Arrhenius rate constant equation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card" style="padding:18px">
+          <div class="h2 mb12" style="color:#fff">⏱️ Strategic CBT Tactics</div>
+          
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:13px;line-height:1.5;color:var(--sub)">
+            <div style="border-left:3px solid var(--p);padding-left:10px">
+              <strong style="color:#fff">The 3-Pass Method:</strong>
+              <div>Pass 1: Direct conceptual / fast questions. Pass 2: Solvable but calculation-heavy. Pass 3: Hard / complex problems.</div>
+            </div>
+            <div style="border-left:3px solid var(--c);padding-left:10px">
+              <strong style="color:#fff">Option Elimination:</strong>
+              <div>Identify dimensional mismatches, evaluate extreme conditions ($x \\to 0, \\infty$), and eliminate distractors before solving.</div>
+            </div>
+            <div style="border-left:3px solid var(--okl);padding-left:10px">
+              <strong style="color:#fff">Save & Next Habit:</strong>
+              <div>In computer-based tests, always click "Save & Next" to record answers. Do not leave them pending in review state.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   `;
@@ -1811,7 +1347,6 @@ function beginMockExamAfterInstructions() {
   }
   
   compState.activeExam.instructionsRead = true;
-  compState.activeExam.lastEntryTime = Date.now();
   rComp();
 }
 
@@ -1949,9 +1484,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
     timeLeft: durationSeconds,
     timerInterval: null,
     instructionsRead: false,
-    mode,
-    timeSpent: questions.map(() => 0),
-    lastEntryTime: null
+    mode
   };
 
   // Visited first question
@@ -2169,11 +1702,6 @@ function submitMockExam() {
   if (!exam) return;
 
   clearInterval(exam.timerInterval);
-
-  if (exam.lastEntryTime) {
-    const elapsed = Math.floor((Date.now() - exam.lastEntryTime) / 1000);
-    exam.timeSpent[exam.currentIndex] = (exam.timeSpent[exam.currentIndex] || 0) + elapsed;
-  }
   
   const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
   const marking = examDb.marking || { correct: 4, wrong: -1 };
@@ -2183,23 +1711,10 @@ function submitMockExam() {
   let incorrect = 0;
   let skipped = 0;
   
-  // Track stats per subject
-  const subjectStats = {};
-  (examDb.subjects || ['General']).forEach(sub => {
-    subjectStats[sub] = { correct: 0, total: 0, time: 0 };
-  });
-
   const results = exam.questions.map((q, idx) => {
     const userAns = exam.answers[idx];
     let isCorrect = false;
     
-    const sub = q.section || 'General';
-    if (!subjectStats[sub]) {
-      subjectStats[sub] = { correct: 0, total: 0, time: 0 };
-    }
-    subjectStats[sub].total++;
-    subjectStats[sub].time += (exam.timeSpent[idx] || 0);
-
     if (userAns === undefined || userAns === '') {
       skipped++;
     } else {
@@ -2216,7 +1731,6 @@ function submitMockExam() {
       if (isCorrect) {
         correct++;
         score += marking.correct;
-        subjectStats[sub].correct++;
       } else {
         incorrect++;
         score += marking.wrong;
@@ -2232,94 +1746,16 @@ function submitMockExam() {
     };
   });
 
-  // Mistake Pattern Analysis & Spaced Repetition Auto-Add
-  let newtonCount = 0;
-  let calculusCount = 0;
-  let organicCount = 0;
-  let thermoCount = 0;
-  
-  exam.questions.forEach((q, idx) => {
-    if (!results[idx].isCorrect) {
-      const text = q.q.toLowerCase();
-      if (text.includes('newton') || text.includes('force') || text.includes('law of motion')) newtonCount++;
-      if (text.includes('limit') || text.includes('integr') || text.includes('deriv')) calculusCount++;
-      if (text.includes('organic') || text.includes('ether') || text.includes('carbon') || text.includes('reaction')) organicCount++;
-      if (text.includes('thermo') || text.includes('heat') || text.includes('entropy')) thermoCount++;
-    }
-  });
-
-  const patterns = [];
-  if (newtonCount > 0) {
-    patterns.push(`You always get <strong>Newton's Laws & Mechanics</strong> wrong in application questions (${newtonCount} mistakes).`);
-    addTopicToRevision("Newton's Laws & Work-Energy");
-  }
-  if (calculusCount > 0) {
-    patterns.push(`You struggle with <strong>Calculus & Derivatives</strong> under timed pressure (${calculusCount} mistakes).`);
-    addTopicToRevision("Calculus");
-  }
-  if (organicCount > 0) {
-    patterns.push(`You made mistakes in <strong>Organic Chemistry Reactions</strong> (${organicCount} mistakes).`);
-    addTopicToRevision("Organic Chemistry");
-  }
-  if (thermoCount > 0) {
-    patterns.push(`You face conceptual gaps in <strong>Thermodynamics</strong> (${thermoCount} mistakes).`);
-    addTopicToRevision("Thermodynamics");
-  }
-
-  let mistakeAnalysisHTML = '';
-  if (patterns.length > 0) {
-    mistakeAnalysisHTML = `
-      <div class="card cred mb20" style="padding:16px;border-color:rgba(239,68,68,0.3)">
-        <div style="font-size:12px;font-weight:700;color:var(--redl);margin-bottom:6px">⚠️ MISTAKE PATTERN ANALYSIS (Auto-added to Spaced Repetition)</div>
-        <div style="font-size:13px;color:#fff;line-height:1.5">${patterns.join('<br>')}</div>
-      </div>
-    `;
-  }
-
-  // Time-per-question analytics
-  let totalTimeSpent = exam.timeSpent.reduce((a, b) => a + b, 0);
-  let avgTime = Math.round(totalTimeSpent / (exam.questions.length || 1));
-  let subjectTimeHTML = Object.keys(subjectStats).map(sub => {
-    let stats = subjectStats[sub];
-    let avgSubTime = Math.round(stats.time / (stats.total || 1));
-    let warn = avgSubTime > 90 ? ' <span style="color:var(--redl);font-weight:700">(Too Slow!)</span>' : '';
-    return `<div>• ${sub}: <strong>${avgSubTime}s / question</strong>${warn}</div>`;
-  }).join('');
-
-  let timeAnalyticsHTML = `
-    <div class="card mb20" style="padding:16px;border-color:rgba(6,182,212,0.3)">
-      <div style="font-size:12px;font-weight:700;color:var(--cl);margin-bottom:6px">⏱️ TIME-PER-QUESTION ANALYTICS</div>
-      <div style="font-size:13px;color:#fff;line-height:1.5">
-        <div>Average speed: <strong>${avgTime}s / question</strong></div>
-        <div style="margin-top:4px">${subjectTimeHTML}</div>
-      </div>
-    </div>
-  `;
-
   const xpEarned = correct * 30;
   if (xpEarned > 0 && typeof addXP === 'function') {
     addXP(xpEarned);
   }
 
   compState.activeExam = null;
-  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML);
+  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned);
 }
 
-function addTopicToRevision(topic) {
-  if (typeof D === 'undefined') return;
-  if (!D.topics) D.topics = [];
-  if (!D.topics.includes(topic)) {
-    D.topics.push(topic);
-  }
-  if (!D.memory) D.memory = {scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
-  if (!D.memory.weakSpots) D.memory.weakSpots = [];
-  if (!D.memory.weakSpots.some(w => w.topic === topic)) {
-    D.memory.weakSpots.push({ topic, solved: false, date: new Date().toISOString() });
-  }
-  if (typeof saveAll === 'function') saveAll();
-}
-
-function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML) {
+function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned) {
   const main = document.getElementById('main');
   if (!main) return;
 
@@ -2352,9 +1788,6 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
 
         <button class="btn bpri" style="padding:10px 24px" onclick="rComp()">Back to Hub</button>
       </div>
-
-      ${mistakeAnalysisHTML || ''}
-      ${timeAnalyticsHTML || ''}
 
       <div class="h2 mb14" style="color:#fff">Review Questions & Explanations</div>
       <div style="display:flex;flex-direction:column;gap:12px">
@@ -2744,13 +2177,6 @@ function launchMultiPracticeOverlay(questions) {
 // CBT Navigation Helpers
 function navigateExam(idx) {
   if (compState.activeExam) {
-    if (compState.activeExam.lastEntryTime) {
-      const elapsed = Math.floor((Date.now() - compState.activeExam.lastEntryTime) / 1000);
-      const curr = compState.activeExam.currentIndex;
-      compState.activeExam.timeSpent[curr] = (compState.activeExam.timeSpent[curr] || 0) + elapsed;
-    }
-    compState.activeExam.lastEntryTime = Date.now();
-
     if (!compState.activeExam.status[compState.activeExam.currentIndex]) {
       compState.activeExam.status[compState.activeExam.currentIndex] = 'unanswered';
     }
@@ -2841,6 +2267,8 @@ window.startMockExamSetup = startMockExamSetup;
 window.cancelMockExamSetup = cancelMockExamSetup;
 window.beginMockExamAfterInstructions = beginMockExamAfterInstructions;
 window.switchMockSection = switchMockSection;
+window.markMockForReview = markMockForReview;
+window.saveAndNextMock = saveAndNextMock;
 window.confirmSubmitMockExam = confirmSubmitMockExam;
 window.selectMockOption = selectMockOption;
 window.saveNumericalAnswer = saveNumericalAnswer;
@@ -2849,63 +2277,10 @@ window.navigateExam = navigateExam;
 window.submitMockExam = submitMockExam;
 window.closePracticeOverlay = closePracticeOverlay;
 window.launchMultiPracticeOverlay = launchMultiPracticeOverlay;
+window.mpSelectOpt = mpSelectOpt;
+window.mpSubmitAnswer = mpSubmitAnswer;
+window.mpRevealAnswer = mpRevealAnswer;
+window.mpNextQuestion = mpNextQuestion;
+window.mpFinishSession = mpFinishSession;
 window.checkPracticeAnswer = checkPracticeAnswer;
 window.checkPracticeNumericalAnswer = checkPracticeNumericalAnswer;
-window.renderImportantChaptersTab = renderImportantChaptersTab;
-window.renderStrategyTab = renderStrategyTab;
-window.categorizeMistake = categorizeMistake;
-
-function getTioBriefing(exam) {
-  if (exam.id === 'jee_adv') return 'Calculus and Electrodynamics hold over 30% weightage historically. Secure these to hit top ranks.';
-  if (exam.id === 'jee_main') return 'Coordinate Geometry & Modern Physics are scoring areas. Focus on speed in numericals.';
-  if (exam.id === 'neet') return 'Human Physiology and Genetics make up 38% of Biology. Revise NCERT line by line.';
-  if (exam.id === 'eamcet') return 'Algebra and Mechanics carry heavy weight (30-35%). Focus on these and solve pyqs!';
-  if (exam.id === 'sat') return 'Algebra and Data Analysis are critical. Master graphing linear inequalities.';
-  return 'Review your syllabus weightage and focus your daily practice on topics worth 10% or more.';
-}
-
-function renderStrategyTab(exam) {
-  return `
-    <div style="display:flex;flex-direction:column;gap:20px;padding-bottom:60px">
-      <!-- Attempt Strategy -->
-      <div class="card" style="padding:20px;border-color:rgba(139,92,246,0.2)">
-        <div class="h2 mb10" style="color:#fff">⏱️ The 3-Pass Exam Attempt Strategy</div>
-        <p class="sub mb14" style="font-size:12px">Top rankers never solve papers sequentially from Q1 to Q75. They use a multi-pass approach to maximize score while avoiding time traps.</p>
-        
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px" class="grid-1-mob">
-          <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.15);border-radius:10px;padding:12px">
-            <div style="font-size:12px;font-weight:700;color:var(--okl);margin-bottom:6px">PASS 1: Speed Run (0-45m)</div>
-            <div style="font-size:11px;color:var(--sub);line-height:1.5">Solve direct formula, conceptual, or memory-based questions. If a question takes >60 seconds to solve, skip and mark for later. Secure easy marks first.</div>
-          </div>
-          <div style="background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.15);border-radius:10px;padding:12px">
-            <div style="font-size:12px;font-weight:700;color:var(--cl);margin-bottom:6px">PASS 2: Application (45-120m)</div>
-            <div style="font-size:11px;color:var(--sub);line-height:1.5">Solve standard multi-step calculations, analytical questions, and ones you know you can do but require derivation. This is where you score the bulk of your marks.</div>
-          </div>
-          <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.15);border-radius:10px;padding:12px">
-            <div style="font-size:12px;font-weight:700;color:var(--goldl);margin-bottom:6px">PASS 3: Critical (120-180m)</div>
-            <div style="font-size:11px;color:var(--sub);line-height:1.5">Re-verify doubtful questions, attempt extremely tough ones where you can eliminate 2 options, and clean up numerical calculations to avoid silly errors.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Guessing & Accuracy Guide -->
-      <div class="card" style="padding:20px;border-color:rgba(6,182,212,0.2)">
-        <div class="h2 mb10" style="color:#fff">🎯 Managing Negative Marking & Guesswork</div>
-        <p class="sub mb14" style="font-size:12px">Negative marking (-1 mark per wrong MCQ) acts as a tax on wild guesses. Here is how to mathematically optimize your attempt strategy:</p>
-        
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:12px;color:var(--sub);line-height:1.5">
-          <div style="background:rgba(255,255,255,0.01);padding:10px;border-radius:8px">
-            💡 <strong>The 2-Option Rule:</strong> If you cannot eliminate any options, your random probability of success is 25%. Wild guessing will cost you negative marks. If you can confidently eliminate 2 options, the probability increases to 50%. Mathematically, you should ALWAYS guess in this scenario.
-          </div>
-          <div style="background:rgba(255,255,255,0.01);padding:10px;border-radius:8px">
-            💡 <strong>Avoid Overconfidence Bias:</strong> When finishing early, do not blindly attempt extra questions just to feel good. Only solve when you have a structured logic path.
-          </div>
-          <div style="background:rgba(255,255,255,0.01);padding:10px;border-radius:8px">
-            💡 <strong>Numerical Value Questions:</strong> Note that for JEE, numerical response questions usually do NOT have negative marking. In these, ALWAYS input an answer, even if it is a calculated guess!
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
