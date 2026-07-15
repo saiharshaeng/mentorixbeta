@@ -1441,8 +1441,12 @@ select.inp{cursor:pointer}
 .sec-divider-lbl{color:var(--mut);font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
 
 /* â”€â”€ ONBOARDING â”€â”€ */
-.ob{min-height:100vh;width:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6vh 20px 30px;position:relative;z-index:1}
-.ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:20px 24px;width:100%;max-width:560px;-webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); max-height: 60vh; overflow-y: auto; margin: 0 auto;}
+/* .ob — the full-page onboarding wrapper. Scrolls itself — NOT the card. */
+.ob{min-height:100vh;width:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6vh 20px 40px;position:relative;z-index:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+/* .ob-card — no max-height, no overflow. Let .ob scroll the page. */
+.ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:20px 24px;width:100%;max-width:560px;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);margin:0 auto;}
+/* Unblock app container when onboarding is active */
+#app:has(.ob){overflow-y:auto!important;height:auto!important}
 .ob-step{display:none}.ob-step.on{display:block; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); animation:scIn .3s ease}
 .ob-prog{height:8px; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
 .ob-prog{height:8px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;margin-bottom:var(--sp-6);position:relative}
@@ -4902,7 +4906,7 @@ body::before {
 /* ── ONBOARDING: tighter at 375px ── */
 @media(max-width:400px){
   .ob{padding:4vh 12px 20px!important}
-  .ob-card{padding:16px 14px!important;max-height:68vh!important}
+  .ob-card{padding:16px 14px!important}
 }
 
 /* ── COMP PRACTICE MODAL — full width on small screens ── */
