@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What does the acronym GSM stand for in the context of mobile communications?",
+    "options": {
+      "a": "General Standard for Mobile Connections",
+      "b": "Global System for Mobile Communications",
+      "c": "Geographic System for Mobile Cells",
+      "d": "Global Signal Management"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "According to the source topics under 'Acronyms & Terminologies', GSM is a fundamental cellular standard which stands for Global System for Mobile Communications.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Which of the following is the correct full meaning of the acronym SIM?",
+    "options": {
+      "a": "Subscriber Identity Module",
+      "b": "System Interface Memory",
+      "c": "Secure Information Microchip",
+      "d": "Standard Internal Memory"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The source lists 'SIM' under Acronyms & Terminologies. SIM stands for Subscriber Identity Module, which holds subscriber network data.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is the full meaning of the acronym SMS?",
+    "options": {
+      "a": "System Messaging Service",
+      "b": "Short Multimedia Stream",
+      "c": "Short Message Service",
+      "d": "Standard Mobile System"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Based on standard acronyms in the source text, SMS stands for Short Message Service, widely used for text messaging.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What does the acronym IMEI represent?",
+    "options": {
+      "a": "Internal Mobile Equipment Interface",
+      "b": "International Mobile Equipment Identity",
+      "c": "Integrated Mobile Electronic Indicator",
+      "d": "International Media Exchange Identifier"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "IMEI stands for International Mobile Equipment Identity, a critical acronym listed in the syllabus for identifying mobile devices.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What does PIN stand for in mobile phone security?",
+    "options": {
+      "a": "Private Internet Network",
+      "b": "Pre-installed Information Number",
+      "c": "Personal Identification Number",
+      "d": "Portable Internal Network"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Listed under acronyms, PIN stands for Personal Identification Number, typically used as a primary security barrier for SIM cards.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Which category of mobile phones is typically defined by running advanced operating systems like Android or iOS?",
+    "options": {
+      "a": "Feature phones",
+      "b": "Bar phones",
+      "c": "Smartphones",
+      "d": "Clamshell phones"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The source identifies 'modern smartphones' explicitly in conjunction with Android/iOS operating systems under 'Types of Phones'.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Which universally recognized USSD code is used to view a mobile phone's IMEI number?",
+    "options": {
+      "a": "*123#",
+      "b": "*#06#",
+      "c": "*0000#",
+      "d": "*#111#"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The source text explicitly highlights '*#06#' as the USSD code for checking the IMEI of a mobile device.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is the primary function of a power bank accessory?",
+    "options": {
+      "a": "To boost network signal reception",
+      "b": "To provide portable electrical charging for the device's battery",
+      "c": "To expand internal storage capacity",
+      "d": "To act as an external speaker"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Listed under 'Phone Accessories', a power bank is primarily a portable battery used for charging mobile devices on the go.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "According to mobile phone form factors, a flip phone is also commonly referred to as a(n):",
+    "options": {
+      "a": "Slider phone",
+      "b": "Bar phone",
+      "c": "Clamshell phone",
+      "d": "Phablet"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The source lists 'flip/clamshell' together under 'Types of Phones', indicating these terms refer to the same hinged design.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is the primary purpose of a Bluetooth earpiece accessory?\n\n",
+    "options": {
+      "a": "To provide physical connection to a computer",
+      "b": "To allow hands-free voice calls and wireless audio listening",
+      "c": "To read external SD cards",
+      "d": "To project the phone's screen"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Listed under 'Phone Accessories', earpieces and Bluetooth devices primarily facilitate hands-free audio and calls.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What does the acronym CDMA represent in cellular networks?",
+    "options": {
+      "a": "Cellular Digital Mobile Application",
+      "b": "Code Division Multiple Access",
+      "c": "Carrier Division Modulation Access",
+      "d": "Centralized Digital Network Architecture"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Listed under acronyms in the syllabus, CDMA stands for Code Division Multiple Access, an alternative cellular technology to GSM.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is the full meaning of the term PUK in GSM terminology?",
+    "options": {
+      "a": "Private Unblocking Key",
+      "b": "Personal Unblocking Key",
+      "c": "Pin Universal Key",
+      "d": "Primary User Key"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "PUK stands for Personal Unblocking Key, used to unlock a SIM card when the PIN has been incorrectly entered.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "How does MMS fundamentally differ from SMS?",
+    "options": {
+      "a": "MMS works over Bluetooth only, while SMS uses cellular networks",
+      "b": "MMS is strictly for longer text documents, while SMS handles short texts",
+      "c": "MMS supports multimedia content like pictures and audio, whereas SMS is restricted to text",
+      "d": "MMS is an acronym for Micro Messaging Service"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "MMS stands for Multimedia Messaging Service, which supports media attachments (photos, videos, audio), unlike the text-only Short Message Service (SMS).",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Which mobile phone form factor features a mechanism where the screen pushes upward to reveal the physical keypad beneath?\n",
+    "options": {
+      "a": "Clamshell phone",
+      "b": "Bar phone",
+      "c": "Slider phone",
+      "d": "Foldable phone"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "As noted under 'Types of Phones', a slider phone has two main sections that slide past each other on rails.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Which type of phone takes the physical shape of a single block with no moving mechanisms or hinges?",
+    "options": {
+      "a": "Bar phone",
+      "b": "Clamshell phone",
+      "c": "Slider phone",
+      "d": "Flip phone"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A 'bar' phone (or candybar) consists of a single unarticulated block. It is explicitly distinguished from slider and flip types in the syllabus.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is the primary function of an OTG (On-The-Go) cable for a smartphone?",
+    "options": {
+      "a": "To connect the phone to an external high-definition monitor via HDMI",
+      "b": "To enable the phone to host standard USB peripherals like flash drives and mice",
+      "c": "To convert AC mains power to lower DC voltage",
+      "d": "To permanently boost the phone's internal antenna gain"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Under 'Phone Accessories', OTG (USB On-The-Go) cables are used to switch a smartphone into host mode, allowing standard USB devices to be connected.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "According to the source, which of the following lists the major telecom service providers operating in Nigeria?",
+    "options": {
+      "a": "AT&T, T-Mobile, Vodafone, Sprint",
+      "b": "MTN, Airtel, Glo, 9Mobile",
+      "c": "Orange, Safaricom, Cell C, O2",
+      "d": "Ntel, Verizon, Airtel, Etisalat"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The source explicitly names 'MTN, Airtel, Glo, 9Mobile in Nigeria' as the major service providers.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is a practical advantage of the 900MHz frequency band over the 1800MHz frequency band in mobile communications?",
+    "options": {
+      "a": "It supports much higher data transfer speeds",
+      "b": "It offers better penetration through buildings and travels longer distances",
+      "c": "It accommodates a vastly larger number of concurrent users",
+      "d": "It requires significantly more cellular towers"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Lower frequencies, like 900MHz, provide a larger coverage area and superior penetration through obstacles like building walls compared to 1800MHz.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What are USSD codes typically utilized for by a mobile phone subscriber?",
+    "options": {
+      "a": "Sending encrypted multimedia files over Wi-Fi",
+      "b": "Formatting the internal storage of the device",
+      "c": "Directly checking balances, contacting customer care, and accessing network menus",
+      "d": "Automatically updating the Android or iOS software"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The syllabus mentions USSD codes specifically for 'checking balances, customer care, and IMEI (*#06#)'.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "When a subscriber is prompted by their device to input a PUK code, what security event has typically just occurred?",
+    "options": {
+      "a": "The user entered an incorrect USSD command",
+      "b": "The phone's main processor experienced an overheat warning",
+      "c": "The SIM PIN was entered incorrectly three times, locking the SIM",
+      "d": "The user attempted to download a restricted application"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Personal Unblocking Key (PUK) is requested by the SIM card system strictly after the standard PIN has been failed (usually 3 times).",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "How many consecutive incorrect attempts at a PIN usually trigger the mobile device to block the SIM and ask for a PUK?",
+    "options": {
+      "a": "2 attempts",
+      "b": "3 attempts",
+      "c": "5 attempts",
+      "d": "10 attempts"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Under standard GSM security architectures (covering PIN and PUK concepts in the syllabus), a PIN gets blocked after exactly 3 unsuccessful attempts.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "In which primary geographic region was the 1900MHz mobile frequency band historically deployed instead of 900/1800MHz?",
+    "options": {
+      "a": "Africa",
+      "b": "Europe",
+      "c": "North America",
+      "d": "Asia"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The 1900MHz band (also known as PCS1900) was primarily deployed in North America, while Europe, Africa, and Asia generally adopted 900MHz and 1800MHz.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What electrical task does a standard mobile phone charger perform when plugged into a wall outlet?",
+    "options": {
+      "a": "It converts high-voltage AC from the mains into low-voltage DC for the battery",
+      "b": "It steps up battery DC to high AC voltage for transmission",
+      "c": "It strictly acts as an antenna booster for the charging cable",
+      "d": "It directly transmits AC power into the lithium-ion battery"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Under 'Phone Accessories', chargers must contain a transformer/rectifier circuit to convert high alternating current (AC) to direct current (DC) safely for phone electronics.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Android and iOS are prominently classified as what type of software on modern mobile devices?",
+    "options": {
+      "a": "Firmware interfaces strictly for modems",
+      "b": "Bootloader unlocking tools",
+      "c": "USSD protocols",
+      "d": "Operating Systems (OS)"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The syllabus points to '(Android/iOS)' to describe modern smartphones, which are the sophisticated operating systems that manage the hardware and software.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Does an IMEI primarily identify the telecommunication subscriber (the user) or the actual physical mobile equipment?",
+    "options": {
+      "a": "It exclusively identifies the physical hardware equipment",
+      "b": "It exclusively identifies the subscriber billing account",
+      "c": "It identifies the network's local cell tower",
+      "d": "It identifies the specific phone number attached to the SIM"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "IMEI (International Mobile Equipment Identity) uniquely identifies the handset/hardware. The SIM and IMSI identify the subscriber.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "At a core technological level, what defines the difference between GSM and CDMA networking?",
+    "options": {
+      "a": "GSM uses wired connections, whereas CDMA is entirely wireless",
+      "b": "GSM separates channels strictly by unique encryption codes, while CDMA uses standard SIM cards for timing",
+      "c": "GSM primarily divides transmission by distinct time slots and frequencies (TDMA/FDMA), while CDMA uses mathematical spread-spectrum codes across the same frequency",
+      "d": "GSM operates only on 1900MHz, while CDMA operates only on 900MHz"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "GSM and CDMA are competing original network standards. GSM uses Time Division Multiple Access (TDMA), isolating users by time and frequency. CDMA isolates users via code division.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Why do telecom engineers implement the 1800MHz GSM band in densely populated city areas rather than relying exclusively on the 900MHz band?",
+    "options": {
+      "a": "Because 1800MHz penetrates thick concrete walls more effectively than 900MHz",
+      "b": "Because the 1800MHz band naturally prevents unauthorized eavesdropping",
+      "c": "Because higher frequencies like 1800MHz provide more available bandwidth to handle a higher capacity of simultaneous calls",
+      "d": "Because older feature phones are not technically compatible with 900MHz"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Higher frequency bands (1800/1900MHz) cover shorter distances but offer a larger spectrum slice, thereby granting vastly superior user capacity in dense urban centers.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "If a user forgets their PIN, inputs it wrong 3 times, and then subsequently inputs the PUK code incorrectly 10 consecutive times, what is the exact hardware consequence?",
+    "options": {
+      "a": "The mobile phone processor burns out and must be replaced",
+      "b": "The SIM card is permanently disabled/ruined and must be physically replaced by the provider",
+      "c": "The network temporarily suspends the account for 24 hours",
+      "d": "The phone prompts for an administrator recovery password to unlock the SIM"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A strict security feature of the GSM standard is that 10 wrong PUK attempts permanently fry or 'brick' the SIM chip to prevent unauthorized cloning or access.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What is the fixed, standard digit length of a Personal Unblocking Key (PUK) code?",
+    "options": {
+      "a": "4 digits",
+      "b": "8 digits",
+      "c": "10 digits",
+      "d": "15 digits"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Standard PIN codes are generally 4 digits, but the Personal Unblocking Key (PUK) is mandated by GSM specifications to be an 8-digit numerical code.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "How many digits typically comprise a standard IMEI number assigned to a mobile phone?",
+    "options": {
+      "a": "8 digits",
+      "b": "10 digits",
+      "c": "15 digits",
+      "d": "32 digits"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The International Mobile Equipment Identity (IMEI) number is uniformly configured as a 15-digit number globally (though a 16th software-version digit sometimes exists, standard is 15).",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "At a hardware level, how does an OTG cable physically signal a mobile device's charging port to switch from acting as a 'client' to a 'USB Host'?",
+    "options": {
+      "a": "It applies 12 volts to the power pin",
+      "b": "It grounds the micro-USB/USB-C ID pin, notifying the controller chip to supply power outwards",
+      "c": "It sends a USSD code through the data line",
+      "d": "It reverses the polarity of the data pins (D+ and D-)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "An OTG (On-The-Go) cable features a wired short between the ID (Sense) pin and the Ground pin. The smartphone detects this short and transitions to acting as the USB Host.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "A modern mobile phone designed for truly global international roaming is often designated as a 'quad-band' device. Which four frequencies does it support?",
+    "options": {
+      "a": "400, 800, 900, 1800 MHz",
+      "b": "850, 900, 1800, 1900 MHz",
+      "c": "900, 1800, 2100, 2400 MHz",
+      "d": "1800, 1900, 2100, 2600 MHz"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To seamlessly roam between European/African grids (900/1800MHz) and American grids (850/1900MHz), quad-band devices support all four major GSM bands: 850, 900, 1800, and 1900 MHz.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Historically, what primary hardware trait distinguished original CDMA network devices from standard GSM devices regarding user subscriber identity?",
+    "options": {
+      "a": "Original CDMA phones natively lacked removable SIM cards, with subscriber identity flashed directly into the phone's memory",
+      "b": "Original CDMA devices utilized dual SIM card slots exclusively",
+      "c": "Original CDMA devices used paper voucher cards for identity instead of microchips",
+      "d": "Original CDMA devices required physically plugging the phone into a wall to swap users"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "While GSM mandated the Subscriber Identity Module (SIM) for portability, original CDMA networks (like Verizon/Sprint initially) programmed the Electronic Serial Number (ESN) directly, requiring carrier intervention to switch handsets.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "The acronym USSD, famously used for strings like *#06#, stands for which of the following terms?",
+    "options": {
+      "a": "Universal Subscriber Security Database",
+      "b": "Unstructured Supplementary Service Data",
+      "c": "Unified Systems Standards Directive",
+      "d": "User Secure Stream Data"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "USSD stands for Unstructured Supplementary Service Data, a protocol used by GSM phones to communicate with service providers.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "What fundamental networking mechanism defines the technological difference between USSD operations and SMS messaging?",
+    "options": {
+      "a": "USSD is restricted to internet connectivity, while SMS works over pure cellular waves",
+      "b": "USSD establishes a responsive real-time open session between phone and server, while SMS employs a 'store-and-forward' methodology",
+      "c": "SMS sends commands directly to cell towers, while USSD only interfaces directly with SIM files",
+      "d": "SMS requires the input of the '#' symbol to function, unlike USSD"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A USSD query opens an immediate two-way live session with the provider's server (crucial for menus/balances), whereas SMS sends messages that wait at a server center until the recipient device is available (store-and-forward).",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "The capacity metric for phone battery accessories, explicitly power banks, is predominantly measured using which unit?",
+    "options": {
+      "a": "Kilowatts (kW)",
+      "b": "Megahertz (MHz)",
+      "c": "Volts (V)",
+      "d": "Milliampere-hour (mAh)"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Power banks and mobile batteries describe their total electrical charge capacity in $mAh$ (milliampere-hour), for instance, a 10000 mAh power bank.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Aside from aesthetic compactness, what primary mechanical and functional advantage did early clamshell phone designs provide over standard bar phones?",
+    "options": {
+      "a": "The clamshell form physically shielded the interior screen and keys when closed, negating the need for a software key-lock to prevent 'pocket-dialing'",
+      "b": "The folding hinge inherently contained dual GSM antennas for double network reception",
+      "c": "The mechanical folding motion acted to manually charge the battery slightly each time",
+      "d": "They inherently operated purely on 1900MHz frequency bandwidth"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "A prominent practical engineering feature of the flip/clamshell design was its natural screen/key protection and elimination of accidental pocket dials simply by folding shut.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "Standard Bluetooth mobile earpieces and connectivity modules generally use 'Class 2' Bluetooth specifications. What is the approximate functional maximum range for this class?",
+    "options": {
+      "a": "1 meter (3 feet)",
+      "b": "10 meters (33 feet)",
+      "c": "100 meters (330 feet)",
+      "d": "1000 meters (1 kilometer)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Under 'Bluetooth devices', the most standard short-range classification utilized for standard mobile phone pairing (Class 2 Bluetooth) has an effective operating radius of 10 meters.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "The 1800MHz frequency band, commonly implemented alongside 900MHz for expanded capacity in GSM networks, is historically referred to by which specific technical acronym?",
+    "options": {
+      "a": "PCS (Personal Communications Service)",
+      "b": "WCDMA (Wideband CDMA)",
+      "c": "DCS (Digital Cellular System)",
+      "d": "LTE (Long Term Evolution)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "While the 1900MHz band is termed PCS, the 1800MHz band deployed mostly in Europe, Africa, and Asia to augment GSM-900 is technically designated as DCS (Digital Cellular System) 1800.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Computer Hardware and GSM Repairs",
+    "topic": "Introduction to Mobile Phones and Service Providers",
+    "question_text": "If a subscriber imports a simple dual-band 'feature phone' manufactured exclusively to support 900MHz and 1800MHz from Nigeria to the United States, what failure will almost certainly occur?",
+    "options": {
+      "a": "The USSD interface will revert exclusively to the French language",
+      "b": "The device's power charger will blow a fuse instantly upon entry",
+      "c": "The device will fail to locate cellular signal because the USA primarily employs 850MHz and 1900MHz bands",
+      "d": "The phone will force the CDMA protocol to override GSM automatically"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Because North America traditionally uses the 850MHz and 1900MHz bands, older hardware only equipped with European/African dual-band modems (900/1800MHz) lack the physical antennas/chips to communicate with US cell towers.",
+    "section_id": null
+  }
+]

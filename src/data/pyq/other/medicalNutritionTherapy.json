@@ -1,0 +1,770 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Diabetes",
+    "question_text": "A 45-year-old male with Type 2 Diabetes Mellitus visits the clinic. He has a BMI of 32 and reports consuming large portions of pasta and bread. Which of the following medical nutrition therapy (MNT) goals is the **primary** initial focus for this patient to improve glycemic control?",
+    "options": {
+      "a": "Achieve a 5-10% weight loss through calorie reduction and portion control.",
+      "b": "Eliminate all carbohydrates from the diet immediately.",
+      "c": "Switch to a high-protein, ketogenic diet exclusively.",
+      "d": "Start insulin therapy to cover his current carbohydrate intake."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "According to standard MNT guidelines (and texts like Roth), moderate weight loss (5-10%) is the primary goal for overweight patients with T2DM as it significantly improves insulin sensitivity and glycemic control. Eliminating carbs is not sustainable or recommended; portion control is key.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Diabetes",
+    "question_text": "A school nurse is managing a student with Type 1 Diabetes who becomes shaky and sweaty before lunch. A blood glucose check reveals a level of 60 mg/dL. What is the most appropriate immediate intervention using the '15-15 Rule'?",
+    "options": {
+      "a": "Give the student a chocolate bar due to its high fat content.",
+      "b": "Administer 15 grams of fast-acting carbohydrates (e.g., 4 oz juice) and recheck in 15 minutes.",
+      "c": "Provide a turkey sandwich with whole wheat bread.",
+      "d": "Send the student to the cafeteria to eat lunch immediately."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Hypoglycemia (blood glucose < 70 mg/dL) requires immediate treatment with the 15-15 Rule: Consume 15g of simple carbs (juice, glucose tablets), wait 15 minutes, and recheck. Chocolate contains fat which delays absorption; a sandwich is too slow.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Renal",
+    "question_text": "A patient with End-Stage Renal Disease (ESRD) on hemodialysis complains of severe itching and fatigue. Lab results show elevated serum phosphorus. Which of the following foods should the patient be instructed to limit?",
+    "options": {
+      "a": "White rice and green beans",
+      "b": "Apples and grapes",
+      "c": "Dairy products like milk and hard cheeses",
+      "d": "Olive oil and unsalted butter"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Dairy products are high in phosphorus. In ESRD, the kidneys cannot excrete excess phosphorus, leading to hyperphosphatemia (itching, bone damage). MNT for renal patients restricts high-phosphorus foods.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Cardiac",
+    "question_text": "A 68-year-old female is admitted with an exacerbation of Congestive Heart Failure (CHF). She has 3+ pitting edema. The dietician recommends a diet restriction to help manage her fluid retention. What is the standard sodium restriction often prescribed for this condition?",
+    "options": {
+      "a": "4000 mg/day",
+      "b": "3000 mg/day",
+      "c": "2000 mg/day or less",
+      "d": "Sodium restriction is not necessary for CHF."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "CHF patients retain fluid. Sodium restriction (typically 2000 mg/day or 2g/day) helps reduce fluid retention and edema. Higher intakes exacerbate symptoms.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - GI",
+    "question_text": "A client has recently been diagnosed with Celiac Disease. Which of the following lunch options is safe for them to consume?",
+    "options": {
+      "a": "Whole wheat wrap with grilled chicken",
+      "b": "Barley soup with vegetables",
+      "c": "Quinoa salad with grilled salmon and olive oil dressing",
+      "d": "Rye bread sandwich with turkey"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Celiac disease requires a strictly Gluten-Free diet. Wheat, Barley, and Rye contain gluten. Quinoa is a naturally gluten-free grain.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - GI",
+    "question_text": "A patient with Diverticulosis asks for dietary advice to prevent complications. Which dietary modification is most appropriate?",
+    "options": {
+      "a": "Low fiber diet to rest the bowel",
+      "b": "High fiber diet with adequate fluid intake",
+      "c": "Liquid diet only",
+      "d": "Avoidance of all seeds and nuts"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "For Diverticulosis (the asymptomatic condition), a high fiber diet is recommended to prevent constipation and diverticula formation. (Contrast with Diverticulitis, where low fiber is used during acute inflammation).",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - GI",
+    "question_text": "A patient with Irritable Bowel Syndrome (IBS) is advised to follow a Low-FODMAP diet. Which of the following foods should be avoided during the elimination phase?",
+    "options": {
+      "a": "Bananas and blueberries",
+      "b": "Carrots and cucumbers",
+      "c": "Onions and garlic",
+      "d": "Maple syrup and hard cheese"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Onions and garlic are high in fructans (a type of FODMAP) and are common triggers for IBS symptoms. The other options are generally low-FODMAP.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Renal",
+    "question_text": "A patient with Chronic Kidney Disease (Stage 3) who is **not** on dialysis asks about protein intake. What is the general recommendation to preserve kidney function?",
+    "options": {
+      "a": "High protein intake (>1.5 g/kg) to build muscle.",
+      "b": "Moderate restriction (0.6 - 0.8 g/kg) to reduce nitrogenous waste.",
+      "c": "No restriction on protein is needed until Stage 5.",
+      "d": "Protein-free diet."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "In predialysis CKD, restricting protein to 0.6–0.8 g/kg helps slow the progression of renal damage and reduces the buildup of urea (nitrogenous waste). Once on dialysis, protein needs increase.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Cardiovascular",
+    "question_text": "A 50-year-old male with hypertension is starting the DASH diet. Which of the following nutrient profiles best describes the DASH diet?",
+    "options": {
+      "a": "High in sodium, low in potassium.",
+      "b": "High in fruits, vegetables, and low-fat dairy; low in saturated fat and sodium.",
+      "c": "High in protein and fat, low in carbohydrates.",
+      "d": "Exclusively plant-based with no animal products."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Dietary Approaches to Stop Hypertension (DASH) emphasizes fruits, vegetables, low-fat dairy, whole grains, and limits saturated fat and sodium.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Oncology",
+    "question_text": "A chemotherapy patient is experiencing severe neutropenia (low white blood cell count). Which food safety practice is critical for this patient?",
+    "options": {
+      "a": "Eating fresh, organic salads from a buffet.",
+      "b": "Consuming raw sushi to increase protein intake.",
+      "c": "Avoiding raw fruits/vegetables unless peeled/cooked and ensuring meat is well-done.",
+      "d": "Taking high-dose probiotic supplements."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Neutropenic patients are highly susceptible to infection. A low-microbial (neutropenic) diet often excludes raw unpeeled produce, raw meats/fish, and unpasteurized items to minimize pathogen exposure.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Dysphagia",
+    "question_text": "A stroke patient has been diagnosed with dysphagia and is cleared for a 'Level 2: Mechanically Altered' diet. Which food item is appropriate?",
+    "options": {
+      "a": "Whole apple with skin",
+      "b": "Ground turkey with gravy",
+      "c": "Dry toast",
+      "d": "Thin vegetable soup with large chunks"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Mechanically altered diets require moist, soft-textured foods that are easily formed into a bolus. Ground meat with gravy is appropriate. Dry, hard, or mixed-texture foods (thin soup with chunks) are aspiration risks.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Diabetes",
+    "question_text": "A patient with Type 1 Diabetes plans to exercise for an hour. His blood glucose is currently 110 mg/dL. What is the recommended nutritional adjustment before starting?",
+    "options": {
+      "a": "Inject a correction dose of insulin.",
+      "b": "Eat a small carbohydrate snack (approx. 15g) to prevent hypoglycemia.",
+      "c": "Avoid eating anything to burn more fat.",
+      "d": "Drink 1 liter of water only."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Exercise increases glucose uptake by muscles, risking hypoglycemia in T1DM. If BG is < 100-110 mg/dL before exercise, a 15g carb snack is recommended.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Hepatic",
+    "question_text": "A patient with liver cirrhosis and elevated ammonia levels is demonstrating signs of encephalopathy. How might protein intake be managed in this specific acute phase?",
+    "options": {
+      "a": "Eliminate all protein permanently.",
+      "b": "Temporarily restrict protein, then gradually increase as tolerated.",
+      "c": "Increase protein to 2.0 g/kg immediately.",
+      "d": "Focus only on fat intake."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "While adequate protein is needed for liver regeneration, in severe hepatic encephalopathy (where ammonia, a protein byproduct, accumulates), protein may be temporarily restricted and then re-introduced based on tolerance.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Wound Healing",
+    "question_text": "An elderly patient with a Stage IV pressure ulcer is admitted. Which two nutrients are most critical to increase for wound healing?",
+    "options": {
+      "a": "Carbohydrates and Iron",
+      "b": "Protein and Vitamin C",
+      "c": "Fat and Vitamin K",
+      "d": "Fiber and Calcium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Wound healing requires increased Protein (for tissue rebuilding) and Vitamin C (for collagen synthesis).",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Pulmonary",
+    "question_text": "A patient with COPD (Chronic Obstructive Pulmonary Disease) reports early satiety and fatigue while eating. Which dietary strategy is best?",
+    "options": {
+      "a": "Three large meals a day.",
+      "b": "Small, frequent, nutrient-dense meals.",
+      "c": "A strictly low-fat diet.",
+      "d": "Drinking large amounts of fluid with meals."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "COPD patients often struggle to breathe while eating. Large meals increase diaphragm pressure. Small, frequent, calorie-dense meals reduce the work of eating and breathing. Fluids should be taken between meals to avoid fullness.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Diabetes",
+    "question_text": "A patient asks about the Glycemic Index (GI). Which statement correctly explains the concept to the patient?",
+    "options": {
+      "a": "It measures how much fat is in the food.",
+      "b": "It ranks carbohydrates based on how quickly they raise blood glucose compared to a reference food.",
+      "c": "It counts the total grams of sugar in a serving.",
+      "d": "It determines if a food is gluten-free."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Glycemic Index measures the speed at which a carbohydrate-containing food raises blood glucose levels compared to pure glucose or white bread.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Cardiac",
+    "question_text": "A client taking Warfarin (Coumadin) for atrial fibrillation asks if they should eat spinach. What is the appropriate advice?",
+    "options": {
+      "a": "Completely avoid spinach and all green leafy vegetables.",
+      "b": "Eat as much spinach as desired; it has no interaction.",
+      "c": "Maintain a consistent daily intake of Vitamin K-rich foods like spinach.",
+      "d": "Stop taking the medication if eating spinach."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Warfarin works by antagonizing Vitamin K. Sudden changes in Vitamin K intake can alter the INR. Patients should not avoid Vitamin K but must keep their intake *consistent*.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Renal",
+    "question_text": "A hemodialysis patient has a high serum potassium level (6.0 mEq/L). Which of the following beverage choices likely contributed to this?",
+    "options": {
+      "a": "Apple juice",
+      "b": "Orange juice",
+      "c": "Cranberry juice cocktail",
+      "d": "Lemon-lime soda"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Orange juice is very high in potassium. Apple, cranberry, and lemon-lime sodas are generally lower potassium choices suitable for renal diets.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Gallbladder",
+    "question_text": "A patient is recovering from an acute cholecystitis (gallbladder inflammation) attack. Which macronutrient should be restricted to reduce stimulation of the gallbladder?",
+    "options": {
+      "a": "Protein",
+      "b": "Carbohydrates",
+      "c": "Fat",
+      "d": "Fiber"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Fat intake stimulates the gallbladder to release bile. In cholecystitis, a low-fat diet helps minimize pain and stimulation.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - GI",
+    "question_text": "A patient with Gastroesophageal Reflux Disease (GERD) complains of heartburn at night. Which recommendation is most appropriate?",
+    "options": {
+      "a": "Drink peppermint tea before bed.",
+      "b": "Lie down immediately after eating.",
+      "c": "Avoid eating within 3 hours of bedtime.",
+      "d": "Increase intake of chocolate and caffeine."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Eating close to bedtime increases the risk of reflux. Peppermint, chocolate, and lying down decrease lower esophageal sphincter (LES) pressure, worsening GERD.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Surgery",
+    "question_text": "A post-operative patient has been cleared for a 'Clear Liquid Diet'. Which item is allowed?",
+    "options": {
+      "a": "Vanilla ice cream",
+      "b": "Orange juice with pulp",
+      "c": "Chicken broth",
+      "d": "Milk"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Clear liquid diets include fluids that are transparent at room temperature (broth, gelatin, tea, apple juice). Milk and ice cream are 'Full Liquid'. OJ with pulp is not clear.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - GI",
+    "question_text": "A patient with Cystic Fibrosis (CF) has malabsorption due to pancreatic insufficiency. What specific nutritional supplement is routinely required?",
+    "options": {
+      "a": "Iron supplements",
+      "b": "Pancreatic enzymes (PERT) with meals and snacks",
+      "c": "Vitamin C restriction",
+      "d": "Low-sodium electrolyte powder"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "CF blocks pancreatic ducts, preventing enzymes from reaching the intestine. PERT (Pancreatic Enzyme Replacement Therapy) is necessary to digest food.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Anemia",
+    "question_text": "A pregnant woman is diagnosed with iron-deficiency anemia. To maximize iron absorption from her supplement, she should take it with:",
+    "options": {
+      "a": "Milk",
+      "b": "Coffee or Tea",
+      "c": "Orange Juice",
+      "d": "Antacids"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Vitamin C (ascorbic acid) enhances non-heme iron absorption. Calcium (milk), tannins (tea/coffee), and antacids inhibit absorption.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Pediatrics",
+    "question_text": "An infant has been diagnosed with Galactosemia. Which formula is appropriate for this infant?",
+    "options": {
+      "a": "Standard cow's milk formula",
+      "b": "Soy-based formula",
+      "c": "Goat's milk formula",
+      "d": "Breast milk"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Galactosemia is the inability to metabolize galactose (found in lactose). Breast milk and cow's milk contain lactose. Soy formula is galactose-free and safe.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Enteral Nutrition",
+    "question_text": "A patient in the ICU requires enteral nutrition but has a high risk of aspiration. Which tube placement is generally preferred to reduce this risk?",
+    "options": {
+      "a": "Nasogastric (NG)",
+      "b": "Nasojenunal (NJ)",
+      "c": "Gastrostomy (PEG)",
+      "d": "Oral supplements"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Feeding into the jejunum (post-pyloric) reduces the risk of reflux and aspiration compared to feeding into the stomach (NG or PEG), as it bypasses the pyloric sphincter.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Obesity",
+    "question_text": "A bariatric surgery patient (Roux-en-Y gastric bypass) complains of 'Dumping Syndrome' (dizziness, sweating, diarrhea) after eating. Which dietary error most likely caused this?",
+    "options": {
+      "a": "Eating high-protein foods.",
+      "b": "Consuming concentrated sweets or simple sugars.",
+      "c": "Drinking water between meals.",
+      "d": "Eating too slowly."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Dumping syndrome occurs when simple sugars rapidly enter the small intestine, drawing fluid in. Avoiding concentrated sweets prevents this.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Gout",
+    "question_text": "A male patient with gout is advised to modify his diet to lower uric acid levels. Which food should be limited due to its high purine content?",
+    "options": {
+      "a": "Low-fat dairy",
+      "b": "Cherries",
+      "c": "Organ meats (liver, kidneys)",
+      "d": "Complex carbohydrates"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Gout is caused by uric acid buildup from purine metabolism. Organ meats, alcohol, and certain seafood are high in purines.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Metabolic Stress",
+    "question_text": "A patient with severe burns covering 40% of their body is admitted. What is the primary characteristic of their nutritional requirement?",
+    "options": {
+      "a": "Low calorie, low protein.",
+      "b": "Normal calorie, high fluid.",
+      "c": "Hypermetabolic: High calorie, high protein.",
+      "d": "Ketogenic diet."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Severe burns induce a hypermetabolic state requiring significantly increased calories and protein for tissue repair and immune function.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Diabetes",
+    "question_text": "A patient with Type 2 Diabetes is prescribed Metformin. They report gastrointestinal side effects. What advice regarding meal timing might help?",
+    "options": {
+      "a": "Take the medication on an empty stomach.",
+      "b": "Take the medication with meals.",
+      "c": "Crush the medication and mix with water.",
+      "d": "Take the medication only before sleep."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Metformin often causes GI upset (nausea, diarrhea). Taking it with meals reduces these side effects.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Renal",
+    "question_text": "A patient on peritoneal dialysis absorbs dextrose from the dialysate. How does this affect their dietary calculation?",
+    "options": {
+      "a": "They need to increase carbohydrate intake.",
+      "b": "They need to account for extra calories absorbed from the dialysate.",
+      "c": "They do not need to count these calories.",
+      "d": "They should avoid all protein."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Peritoneal dialysis uses a glucose (dextrose) solution. The body absorbs a significant amount of this glucose, providing extra calories that must be factored into the total energy intake to prevent excess weight gain.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Oncology",
+    "question_text": "A cancer patient reports 'dysgeusia' (altered taste), specifically stating that meat tastes metallic. Which intervention is most helpful?",
+    "options": {
+      "a": "Force them to eat red meat.",
+      "b": "Use plastic utensils instead of metal ones and marinate meats.",
+      "c": "Switch to a liquid-only diet.",
+      "d": "Serve food extremely hot."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Using plastic utensils reduces the metallic sensation. Marinades and cold/room-temp foods can also improve palatability.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Lipids",
+    "question_text": "A patient with hyperlipidemia is advised to use therapeutic lifestyle changes (TLC). Which fat substitution is most effective for lowering LDL cholesterol?",
+    "options": {
+      "a": "Replacing butter with coconut oil.",
+      "b": "Replacing saturated fats with mono- and polyunsaturated fats (e.g., olive oil, avocado).",
+      "c": "Replacing fats with refined carbohydrates.",
+      "d": "Eliminating all cholesterol from diet."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Replacing saturated fats with unsaturated fats lowers LDL. Coconut oil is high in saturated fat. Refined carbs can increase triglycerides.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Parenteral Nutrition",
+    "question_text": "A patient has been on Total Parenteral Nutrition (TPN) for two weeks. The physician orders a gradual transition to enteral feeding. Why is the TPN not stopped abruptly?",
+    "options": {
+      "a": "To prevent rebound hypoglycemia.",
+      "b": "To prevent hyperkalemia.",
+      "c": "To allow the stomach to shrink.",
+      "d": "To avoid dehydration."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "TPN contains high concentrations of dextrose, stimulating high insulin levels. Abrupt cessation can cause rapid hypoglycemia (rebound) because insulin levels remain high while glucose supply stops.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Nutrition",
+    "topic": "Medical Nutrition Therapy - Eating Disorders",
+    "question_text": "A 16-year-old female with Anorexia Nervosa is being re-fed. The medical team is monitoring for 'Refeeding Syndrome.' Which electrolyte imbalance is the hallmark warning sign of this condition?",
+    "options": {
+      "a": "Hypernatremia",
+      "b": "Hypophosphatemia",
+      "c": "Hypercalcemia",
+      "d": "Hypochloremia"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Refeeding syndrome is characterized by a dangerous drop in electrolytes (especially Phosphorus, also Potassium and Magnesium) as cells rapidly take up nutrients after starvation. Hypophosphatemia can lead to cardiac failure.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Nutrition",
+    "topic": "Recall - Sources",
+    "question_text": "Which vitamin is primarily responsible for blood clotting and is synthesized by bacteria in the gut?",
+    "options": {
+      "a": "Vitamin A",
+      "b": "Vitamin D",
+      "c": "Vitamin E",
+      "d": "Vitamin K"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Vitamin K is essential for the synthesis of clotting factors. About half of the body's requirement is synthesized by intestinal bacteria.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Nutrition",
+    "topic": "Recall - Minerals",
+    "question_text": "Wilson's Disease is a genetic disorder characterized by the accumulation of which mineral in the liver and brain?",
+    "options": {
+      "a": "Iron",
+      "b": "Copper",
+      "c": "Zinc",
+      "d": "Magnesium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Wilson's disease involves defective copper metabolism, leading to toxicity. MNT involves low-copper diet and chelating agents.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Nutrition",
+    "topic": "Recall - GI",
+    "question_text": "The medical term for 'difficulty swallowing' is:",
+    "options": {
+      "a": "Dyspepsia",
+      "b": "Dysphagia",
+      "c": "Dysgeusia",
+      "d": "Dyspnea"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Dysphagia = difficulty swallowing. Dyspepsia = indigestion. Dysgeusia = altered taste. Dyspnea = shortness of breath.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Nutrition",
+    "topic": "Recall - Parenteral",
+    "question_text": "What is the primary difference between Peripheral Parenteral Nutrition (PPN) and Total Parenteral Nutrition (TPN)?",
+    "options": {
+      "a": "PPN uses the gut; TPN uses veins.",
+      "b": "TPN has a higher dextrose concentration and requires a central line; PPN is more dilute.",
+      "c": "PPN is for long-term use; TPN is for short-term.",
+      "d": "TPN contains no fat."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "TPN (Total Parenteral Nutrition) is hypertonic (high dextrose/osmolarity) and requires a large central vein. PPN (Peripheral) has lower osmolarity to prevent damaging smaller peripheral veins.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Nutrition",
+    "topic": "Recall - Fiber",
+    "question_text": "Which type of fiber is known to lower blood cholesterol levels?",
+    "options": {
+      "a": "Insoluble fiber",
+      "b": "Soluble fiber",
+      "c": "Crude fiber",
+      "d": "Synthetic fiber"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Soluble fiber (found in oats, beans, fruits) binds bile acids in the gut, promoting their excretion and forcing the liver to use cholesterol to make more bile, thus lowering blood cholesterol.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Nutrition",
+    "topic": "Recall - Deficiencies",
+    "question_text": "Pernicious anemia is caused by a deficiency in which nutrient, often due to a lack of Intrinsic Factor?",
+    "options": {
+      "a": "Iron",
+      "b": "Folic Acid",
+      "c": "Vitamin B12",
+      "d": "Vitamin B6"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Vitamin B12 (Cobalamin) requires Intrinsic Factor (gastric secretion) for absorption. Lack of IF leads to Pernicious Anemia.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Nutrition",
+    "topic": "Recall - Assessment",
+    "question_text": "In a nutritional assessment, albumin is often used as a lab marker. However, its reliability is affected because it is a:",
+    "options": {
+      "a": "Positive acute-phase reactant",
+      "b": "Negative acute-phase reactant",
+      "c": "Marker of short-term intake",
+      "d": "Direct measure of fat stores"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Albumin decreases during inflammation/stress (negative acute-phase reactant), so low levels may reflect illness rather than just malnutrition. Prealbumin is better for shorter-term changes.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Nutrition",
+    "topic": "Recall - Metabolism",
+    "question_text": "The RQ (Respiratory Quotient) for pure fat oxidation is approximately:",
+    "options": {
+      "a": "0.7",
+      "b": "0.85",
+      "c": "1.0",
+      "d": "1.2"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "RQ is the ratio of CO2 produced to O2 consumed. Fat = 0.7, Protein = 0.8, Carbohydrate = 1.0. An RQ > 1.0 indicates lipogenesis (overfeeding).",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Nutrition",
+    "topic": "Recall - Diabetes",
+    "question_text": "Which class of diabetes medication works by inhibiting the enzyme alpha-glucosidase, thereby delaying carbohydrate absorption?",
+    "options": {
+      "a": "Biguanides (Metformin)",
+      "b": "Sulfonylureas",
+      "c": "Starch Blockers (e.g., Acarbose)",
+      "d": "Insulin"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Alpha-glucosidase inhibitors (like Acarbose) block the breakdown of starches in the intestine, slowing glucose absorption.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Nutrition",
+    "topic": "Calculation - BMI",
+    "question_text": "A patient weighs 80 kg and is 1.75 meters tall. Calculate their Body Mass Index (BMI). (Formula: $BMI = \\frac{kg}{m^2}$)",
+    "options": {
+      "a": "22.9",
+      "b": "26.1",
+      "c": "28.5",
+      "d": "45.7"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "$$BMI = \\frac{80}{1.75^2} = \\frac{80}{3.0625} \\approx 26.1$$",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Nutrition",
+    "topic": "Calculation - Carb Counting",
+    "question_text": "A diabetic patient plans to eat the following lunch: 1 cup of cooked pasta (45g carbs), 1 slice of bread (15g carbs), and 1 small apple (15g carbs). How many carbohydrate exchanges (servings) does this represent?",
+    "options": {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "d": "6"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "One carb exchange/serving is 15g. Total grams = 45 (pasta) + 15 (bread) + 15 (apple) = 75g. $$75g / 15g = 5$$ servings.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Nutrition",
+    "topic": "Calculation - Fluid Needs",
+    "question_text": "Using the standard estimation of 30 ml/kg for a stable adult, calculate the daily fluid requirement for a patient weighing 70 kg.",
+    "options": {
+      "a": "1500 ml",
+      "b": "1800 ml",
+      "c": "2100 ml",
+      "d": "2500 ml"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "$$70 \\text{ kg} \\times 30 \\text{ ml/kg} = 2100 \\text{ ml}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Nutrition",
+    "topic": "Calculation - Calories",
+    "question_text": "A solution of Dextrose 50% (D50) provides 3.4 kcal/gram of dextrose. How many calories are in 500 ml of D50?",
+    "options": {
+      "a": "850 kcal",
+      "b": "1700 kcal",
+      "c": "500 kcal",
+      "d": "250 kcal"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "D50 means 50g dextrose per 100ml. So 500ml contains $$5 \\times 50 = 250\\text{g}$$ dextrose. Calories = $$250\\text{g} \\times 3.4\\text{ kcal/g} = 850\\text{ kcal}$$. Note: Hydrous dextrose is 3.4 kcal/g.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Nutrition",
+    "topic": "Calculation - Protein",
+    "question_text": "A burn patient requires 2.0 g/kg of protein. If they weigh 165 lbs, approximately how many grams of protein should they consume daily?",
+    "options": {
+      "a": "75 g",
+      "b": "110 g",
+      "c": "150 g",
+      "d": "330 g"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "First convert lbs to kg: $$165 / 2.2 = 75 \\text{ kg}$$. Then multiply by requirement: $$75 \\text{ kg} \\times 2.0 \\text{ g/kg} = 150 \\text{ g}$$.",
+    "section_id": null
+  }
+]

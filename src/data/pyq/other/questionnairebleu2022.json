@@ -1,0 +1,930 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Mathématiques",
+    "topic": "Croissance exponentielle",
+    "question_text": "Une culture de cellules, débutée au départ d'une seule cellule, croît selon une loi exponentielle. On souhaite comparer les intervalles de temps correspondant à différentes variations de population.\n\nL'intervalle de temps le plus court est celui pour passer de…",
+    "options": {
+      "a": "1 à 2 cellules.",
+      "b": "1 à 4 cellules.",
+      "c": "1 000 à 1 500 cellules.",
+      "d": "14 000 000 à 20 000 000 de cellules."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "La croissance étant exponentielle, l'intervalle de temps est proportionnel au logarithme du facteur de croissance. Les facteurs sont : A (2/1 = 2), B (4/1 = 4), C (1500/1000 = 1,5), D (20/14 ≈ 1,42). Le facteur le plus petit correspond au temps le plus court.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Mathématiques",
+    "topic": "Algèbre",
+    "question_text": "On considère les nombres réels positifs $a$ et $b$ tels que $a^2 \\ge b$.\n\nParmi les propositions suivantes, laquelle est égale à $$\\sqrt{\\frac{a + \\sqrt{a^2 - b}}{2}} + \\sqrt{\\frac{a - \\sqrt{a^2 - b}}{2}} \\text{ ?}$$",
+    "options": {
+      "a": "$\\sqrt{\\frac{a + b}{2}}$",
+      "b": "$\\sqrt{a - \\sqrt{b}}$",
+      "c": "$\\sqrt{a + \\sqrt{b}}$",
+      "d": "$\\sqrt{\\sqrt{a} - b}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "En posant l'expression comme égale à S et en calculant $S^2$, on trouve que la double somme des racines s'annule en partie. $S^2 = a + \\sqrt{b}$. Comme $S > 0$, l'expression est bien $\\sqrt{a + \\sqrt{b}}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Mathématiques",
+    "topic": "Dérivées",
+    "question_text": "On considère la fonction $f$ définie sur l'ensemble $]0, +\\infty[$ par l'expression\n$$f(x) = \\frac{\\ln(x) + 1}{x}.$$\nParmi les expressions suivantes, quelle est celle qui correspond à la dérivée $f'$ de $f$ ?",
+    "options": {
+      "a": "$\\frac{x}{x+1}$",
+      "b": "$-\\frac{1}{x^3}$",
+      "c": "$-\\frac{\\ln(x)}{x^2}$",
+      "d": "$-\\frac{\\ln(x+1)}{x^2}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "En utilisant la règle du quotient $(u/v)' = (u'v - uv') / v^2$ avec $u(x) = \\ln(x)+1$ et $v(x) = x$, on obtient $f'(x) = \\frac{(1/x \\cdot x) - (\\ln(x)+1) \\cdot 1}{x^2} = -\\frac{\\ln(x)}{x^2}.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Mathématiques",
+    "topic": "Moyennes et systèmes",
+    "question_text": "Un étudiant a présenté successivement trois examens.\nSi au quatrième examen il obtient une note égale à celle du premier examen, sa moyenne (des quatre examens) vaudra 10 ; si à ce quatrième examen, il obtient une note égale à celle du deuxième examen, sa moyenne vaudra 12 et enfin s'il obtient une note égale à celle du troisième examen à ce quatrième examen, sa moyenne vaudra 14.\n\nQuelles ont été, dans l'ordre chronologique, les notes des trois premiers examens ?",
+    "options": {
+      "a": "2, 10 et 26",
+      "b": "3, 11 et 23",
+      "c": "4, 12 et 20",
+      "d": "5, 9 et 21"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "En posant les équations, on obtient que l'augmentation de la note simulée est directement proportionnelle à l'augmentation de la moyenne. Résoudre le système amène à trouver $m_1 = 4$, $m_2 = 12$ et $m_3 = 20$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Mathématiques",
+    "topic": "Analyse",
+    "question_text": "On considère la parabole obtenue comme le graphe de la fonction $f$ définie explicitement par $f(x) = 36x - 2x^2 - 34$.\n\nParmi les propositions suivantes concernant l'ordonnée et la nature du sommet de cette parabole, laquelle est vraie ?",
+    "options": {
+      "a": "Le sommet est un point de minimum et son ordonnée est négative.",
+      "b": "Le sommet est un point de minimum et son ordonnée est positive.",
+      "c": "Le sommet est un point de maximum et son ordonnée est négative.",
+      "d": "Le sommet est un point de maximum et son ordonnée est positive."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Le coefficient du terme $x^2$ est négatif (-2), ce qui indique une parabole orientée vers le bas et possédant donc un maximum. En dérivant, on trouve un maximum en $x=9$ dont l'image vaut 128 (positive).",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Mathématiques",
+    "topic": "Modélisation",
+    "question_text": "Un couple se lance dans l'élevage de chiens et planifie le volet financier relatif à cette activité.\nChaque année, une somme $F$ rassemble les frais fixes incompressibles (bâtiment, chauffage, eau, électricité). Un autre poste de dépense est consacré aux frais de nourriture et de vétérinaire. Les frais annuels de nourriture sont estimés à un montant $B$ par chien adulte et à douze euros par chiot. Les frais vétérinaires sont évalués annuellement à un montant $V$ par adulte, le suivi des chiots étant comptabilisé dans le suivi de la mère.\n\nSachant que le prix de vente d'un chiot est de 1200 euros, que l'élevage comprend $N_a$ femelles adultes et $N_y$ chiots, que tous les chiots sont vendus à la fin de l'année, laquelle de ces quatre formules mathématiques décrit correctement le bénéfice annuel du plan comptable de cet élevage ?",
+    "options": {
+      "a": "$(1200 - 12)N_y - N_a(F + N_aV + B)$",
+      "b": "$(1200 - 12)N_y - (F + N_a(V + B))$",
+      "c": "$(1200 - 12)N_y - (F + N_aV + B)$",
+      "d": "$(1200 - 12)N_y - (F + V + B)N_a$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Les recettes sont de $1200 \\times N_y$. Les dépenses incluent : $F$ (frais fixes), $B \\times N_a$ et $12 \\times N_y$ pour la nourriture, $V \\times N_a$ pour les frais vétérinaires. Le bénéfice est Recettes - Dépenses = $1200 N_y - 12 N_y - F - N_a(B+V) = (1200-12)N_y - (F + N_a(V+B))$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Mathématiques",
+    "topic": "Dérivées",
+    "question_text": "On considère la dérivée $f'$ de la fonction $f$ définie explicitement par\n$$f(x) = 3\\sqrt[3]{x^2} - 4\\sqrt{x^3}$$\nQue vaut cette dérivée en $x = 1$ ?",
+    "options": {
+      "a": "$-4$",
+      "b": "$-2$",
+      "c": "$-4/3$",
+      "d": "$-2/3$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "On exprime la fonction sous la forme $f(x) = 3x^{2/3} - 4x^{3/2}$. La dérivée est $f'(x) = 2x^{-1/3} - 6x^{1/2}$. En substituant $x=1$, la valeur est $2 - 6 = -4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Mathématiques",
+    "topic": "Équations Polynomiales",
+    "question_text": "Considérons l'équation suivante en $x$ :\n$$(ax)^3 - (ax)^2 + ax = 0$$\nPour quelle(s) valeur(s) réelle(s) de $a$ existe-t-il des solutions autres que $x = 0$ pour cette équation ?",
+    "options": {
+      "a": "Aucune valeur de $a$",
+      "b": "Uniquement $a = 0$",
+      "c": "Uniquement $a = 0$ et $a = 1$",
+      "d": "Toutes les valeurs de $a$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Posons $y = ax$. On obtient $y^3 - y^2 + y = 0 \\implies y(y^2-y+1) = 0$. Puisque $y^2-y+1=0$ a un discriminant négatif, sa seule solution réelle est $y=0$, c'est-à-dire $ax=0$. Si $a=0$, on obtient $0=0$, valide pour tout $x$. Si $a \\neq 0$, $x$ doit être 0.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Mathématiques",
+    "topic": "Asymptotes",
+    "question_text": "On considère la fonction $f$ définie explicitement par\n$$f(x) = \\frac{3}{x} - 2 + \\frac{4x^2 - 2}{x^2 + 1}$$\nOn constate que la fonction $f$ admet une asymptote horizontale.\nQuel est le point d'intersection de cette asymptote avec l'axe $Oy$ ?",
+    "options": {
+      "a": "$(0 ; -4)$",
+      "b": "$(0 ; -2)$",
+      "c": "$(0 ; 2)$",
+      "d": "$(0 ; 4)$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "On étudie la limite quand $x \\to \\pm\\infty$ pour trouver l'asymptote horizontale. $\\frac{3}{x}$ tend vers 0, et $\\frac{4x^2 - 2}{x^2 + 1}$ tend vers 4. L'asymptote est donc $y = -2 + 4 = 2$. Son intersection avec $Oy$ (x=0) est $(0; 2)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Mathématiques",
+    "topic": "Radicaux",
+    "question_text": "Parmi les nombres suivants, lequel est égal à\n$$\\sqrt{(1 + \\sqrt{5})^2} - \\sqrt{(2 - \\sqrt{5})^2} \\text{ ?}$$",
+    "options": {
+      "a": "$\\sqrt{6\\sqrt{5} - \\sqrt{3}}$",
+      "b": "$\\sqrt{6\\sqrt{5} - 3}$",
+      "c": "$2\\sqrt{9} - 3$",
+      "d": "$2\\sqrt{5} - 1$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "L'expression vaut $|1+\\sqrt{5}| - |2-\\sqrt{5}|$. Comme $\\sqrt{5} > 2$, le deuxième terme en valeur absolue s'inverse en $(\\sqrt{5}-2)$. Le résultat vaut $(1+\\sqrt{5}) - (\\sqrt{5}-2) = 3$. L'option C correspond à $2(3)-3 = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Mathématiques",
+    "topic": "Géométrie analytique",
+    "question_text": "Dans le plan muni d'un repère cartésien orthonormé, on considère les points\n$$A(2 ; 3) , \\quad B(7 ; 6) , \\quad C(4 ; 1)$$\nSoit $d_1$ la droite comprenant les points $A$ et $B$, $d_2$ la droite comprenant le point $C$ et perpendiculaire à $d_1$ et enfin $d_3$ la droite d'équation $y = -2x + 8$.\n\nQuelles sont les coordonnées du point d'intersection de $d_2$ et $d_3$ ?",
+    "options": {
+      "a": "$(-2 ; 6)$",
+      "b": "$(-1 ; 5)$",
+      "c": "$(1 ; 6)$",
+      "d": "$(1 ; 7)$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La pente de $d_1$ est $(6-3)/(7-2) = 3/5$. La pente de $d_2$ (perpendiculaire) est $-5/3$. L'équation de $d_2$ est $y - 1 = (-5/3)(x - 4)$. En résolvant le système entre $d_2$ et $d_3$, on trouve $x = 1, y = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "On considère la relation $\\sin(\\alpha) = -0,8$ où $\\pi < \\alpha < \\frac{3\\pi}{2}$\n\nQue vaut $\\tan(\\alpha)$ ?",
+    "options": {
+      "a": "2/3",
+      "b": "3/4",
+      "c": "4/3",
+      "d": "$\\sqrt{3}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "L'angle se trouve dans le troisième quadrant, donc le cosinus est négatif. $\\cos(\\alpha) = -\\sqrt{1 - (-0,8)^2} = -0,6$. La tangente vaut $(-0,8)/(-0,6) = 4/3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Mathématiques",
+    "topic": "Vecteurs",
+    "question_text": "On considère quatre points $P, Q, S$ et $R$ formant un parallélogramme tel que $\\overrightarrow{PQ}$ est parallèle à $\\overrightarrow{SR}$ et $\\overrightarrow{PS}$ est parallèle à $\\overrightarrow{QR}$.\n\nParmi les expressions suivantes, quelle est celle qui exprime le vecteur $\\overrightarrow{QS} - 2\\overrightarrow{PQ}$ comme une combinaison linéaire des vecteurs $\\overrightarrow{PS}$ et $\\overrightarrow{PR}$ ?",
+    "options": {
+      "a": "$3\\overrightarrow{PS} - 4\\overrightarrow{PR}$",
+      "b": "$4\\overrightarrow{PS} - 3\\overrightarrow{PR}$",
+      "c": "$-3\\overrightarrow{PS} + 4\\overrightarrow{PR}$",
+      "d": "$-4\\overrightarrow{PS} + 3\\overrightarrow{PR}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "En utilisant la relation de Chasles dans un parallélogramme. En décomposant tout selon les bases PS et PQ et en remplaçant au final par la combinaison voulue on aboutit à la proposition B.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "On considère un angle $\\alpha$, exprimé en radians, qui vérifie les inégalités $\\frac{\\pi}{2} \\le \\alpha < \\pi$ et la relation $\\cos^4(\\alpha) - \\sin^4(\\alpha) = \\frac{1}{2}$\nQue vaut cet angle $\\alpha$ (en radians) ?",
+    "options": {
+      "a": "$\\alpha = \\frac{\\pi}{2}$",
+      "b": "$\\alpha = \\frac{2\\pi}{3}$",
+      "c": "$\\alpha = \\frac{3\\pi}{4}$",
+      "d": "$\\alpha = \\frac{5\\pi}{6}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "On factorise : $(\\cos^2\\alpha - \\sin^2\\alpha)(\\cos^2\\alpha + \\sin^2\\alpha) = \\frac{1}{2}$, d'où $\\cos(2\\alpha) = 1/2$. Étant dans le quadrant $\\pi/2 \\le \\alpha < \\pi$, on obtient $\\alpha = 5\\pi/6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "question_text": "Vous obtenez un écart-type pour une série de vingt données. Après vérification, deux de ces données paraissent erronées. On les retire de la série et on recalcule l'écart-type.\n\nParmi les affirmations suivantes concernant le nouvel écart-type sur les dix-huit données par rapport à l'ancien écart-type sur les vingt données, laquelle est nécessairement vraie ?",
+    "options": {
+      "a": "Il va nécessairement diminuer par rapport à l'ancien.",
+      "b": "Il va nécessairement rester inchangé par rapport à l'ancien.",
+      "c": "Il va nécessairement augmenter par rapport à l'ancien.",
+      "d": "Il peut diminuer, augmenter ou rester inchangé par rapport à l'ancien."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Le retrait de points de données dans une distribution peut modifier l'écart-type dans un sens comme dans l'autre (ex. en enlevant les points moyens, l'écart-type monte ; en enlevant des points extrêmes, l'écart-type chute).",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Biologie",
+    "topic": "Biologie Cellulaire",
+    "question_text": "Lequel des rôles suivants n'est pas attribué aux chloroplastes ?",
+    "options": {
+      "a": "Le stockage de l'amidon.",
+      "b": "La fixation de l'azote.",
+      "c": "La fixation du carbone.",
+      "d": "La photosynthèse."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "La fixation de l'azote est typiquement réalisée par certaines bactéries (ex. rhizobium) ou cyanobactéries, et non par les chloroplastes des cellules végétales.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Biologie",
+    "topic": "Division Cellulaire",
+    "question_text": "Dans une cellule humaine en métaphase de mitose…",
+    "options": {
+      "a": "les chromosomes d'une même paire se font face.",
+      "b": "chaque chromosome est formé d'une seule molécule d'ADN linéaire.",
+      "c": "il y a 92 molécules d'ADN chromosomiques identiques 2 à 2.",
+      "d": "l'enveloppe nucléaire se reforme."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Pendant la métaphase, les 46 chromosomes s'alignent. Chacun est encore constitué de 2 chromatides soeurs, d'où $46 \\times 2 = 92$ molécules d'ADN identiques deux à deux.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Biologie",
+    "topic": "Biologie Cellulaire",
+    "question_text": "Dans lequel des compartiments cellulaires proposés ci-dessous ne peut-on pas mettre en évidence de l'ARN ?",
+    "options": {
+      "a": "Le noyau.",
+      "b": "L'appareil de Golgi.",
+      "c": "La mitochondrie.",
+      "d": "Le cytoplasme."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "L'ARN est présent dans le noyau (synthèse), le cytoplasme (traduction par les ribosomes) et la mitochondrie (génome mitochondrial). L'appareil de Golgi est dédié aux protéines (maturation et transport) et n'est pas le siège caractéristique de l'ARN.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Le caryotype d'une cellule permet de visualiser au microscope optique les chromosomes mitotiques en…",
+    "options": {
+      "a": "anaphase.",
+      "b": "métaphase.",
+      "c": "prophase.",
+      "d": "télophase."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "En métaphase, les chromosomes sont à leur niveau maximal de condensation, ce qui facilite leur visualisation pour le caryotype.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Le gène A peut être représenté par 220 allèles différents dans le génome humain.\nCombien d'allèles de ce gène trouve-t-on au maximum dans une cellule somatique appartenant à un individu féminin ?",
+    "options": {
+      "a": "2",
+      "b": "110",
+      "c": "220",
+      "d": "440"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Une cellule humaine somatique est diploïde, c'est-à-dire qu'elle possède deux chromosomes de chaque paire (même les chromosomes sexuels chez la femme). Elle ne peut donc abriter que 2 allèles distincts pour un locus donné.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Biologie",
+    "topic": "Génétique Mendélienne",
+    "question_text": "Chez le labrador, la couleur du pelage est contrôlée par 2 gènes : C et R. Le gène C code le pigment du pelage. Il existe deux allèles : l'allèle «noir» dominant et l'allèle «chocolat» récessif. Le gène R détermine si le pigment se déposera dans le poil ou non. Il existe deux allèles : l'allèle «poils colorés» dominant et l'allèle «poils non colorés» récessif. Votre labrador est beige ce qui traduit l'absence de dépôt de pigment dans le poil.\n\nSachant que le pelage de son père est chocolat et celui de sa mère, noir, lequel des génotypes suivants, pourrait être celui de votre labrador ?",
+    "options": {
+      "a": "c/c R/R",
+      "b": "C/c r/r",
+      "c": "C/C r/r",
+      "d": "C/C R/r"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Un labrador beige doit avoir le génotype r/r. Ses parents doivent donc tous deux posséder l'allèle r. Le père chocolat doit être c/c R/r. Le chien beige peut recevoir un allèle c ou C de ses parents (mère C/-). L'option C/c r/r est possible, ce qui induit une couleur beige par l'épistasie de 'r/r'.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Biologie",
+    "topic": "Traduction",
+    "question_text": "En vous référant au code génétique, déterminez lequel des oligopeptides proposés pourrait être codé par la séquence d'ARNm suivante :\n\n5’- …UGGAUGUGGUUUUGGUAGUUU… -3’\n\n(Extrait du code : AUG = Méthionine, UGG = Tryptophane, UUU = Phénylalanine, UAG = STOP)",
+    "options": {
+      "a": "Tryptophane-Méthionine-Tryptophane-Phénylalanine-Tryptophane-Phénylalanine.",
+      "b": "Méthionine-Tryptophane-Phénylalanine-Tryptophane.",
+      "c": "Méthionine-Tryptophane-Phénylalanine-Tryptophane-Phénylalanine.",
+      "d": "Tryptophane-Phénylalanine-Tryptophane-Méthionine."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "La traduction commence par le codon START : AUG. On a donc la séquence AUG (Met) - UGG (Trp) - UUU (Phe) - UGG (Trp) - UAG (STOP). La traduction s'arrête là.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Biologie",
+    "topic": "Noyau et Chromatine",
+    "question_text": "Parmi les propositions suivantes se rapportant à la chromatine, laquelle est fausse ?",
+    "options": {
+      "a": "L'essentiel de la transcription se déroule dans la chromatine décondensée.",
+      "b": "Elle contient des protéines.",
+      "c": "Elle ne se forme qu'au moment de la division cellulaire.",
+      "d": "En interphase, la chromatine condensée est localisée principalement en périphérie du noyau et du nucléole."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "La chromatine est au contraire la forme d'arrangement du matériel génétique (ADN+protéines) durant l'interphase cellulaire, elle n'est donc pas formée uniquement au moment de la division cellulaire (où elle devient les chromosomes ultra-condensés).",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Biologie",
+    "topic": "Génétique / Maladies liées au sexe",
+    "question_text": "Quelle est la probabilité pour un couple d'avoir un enfant hémophile si le père est hémophile et la mère saine et non porteuse de l'allèle muté ?",
+    "options": {
+      "a": "0 % quel que soit le sexe de l'enfant.",
+      "b": "0% si c'est une fille.",
+      "c": "100 % quel que soit le sexe de l'enfant.",
+      "d": "100 % si c'est un garçon."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "L'hémophilie est liée à l'X. Mère = X_H X_H, Père = X_h Y. Garçons (recevant X_H et Y) et Filles (recevant X_H et X_h) auront l'allèle fonctionnel X_H dominant et ne seront donc pas malades (risque 0%).",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Biologie",
+    "topic": "Microbiologie",
+    "question_text": "Un virus se distingue d'un procaryote par l'absence…",
+    "options": {
+      "a": "de ribosomes.",
+      "b": "de génome.",
+      "c": "d'enzymes.",
+      "d": "de phospholipides."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Les virus sont dépourvus de métabolisme et des mécanismes autonomes de traduction protéique, ne possédant aucun ribosome. À l'inverse, on peut y trouver des acides nucléiques et certaines structures enzymatiques/lipidiques récupérées de l'hôte.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Biologie",
+    "topic": "Évolution",
+    "question_text": "La sélection naturelle…",
+    "options": {
+      "a": "s'exerce aléatoirement sur tous les individus.",
+      "b": "est le seul facteur permettant l'évolution des populations.",
+      "c": "modifie le génotype des individus sous la pression de facteurs environnementaux.",
+      "d": "conduit à l'adaptation des populations à leur environnement."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "La sélection naturelle oriente la dynamique d'une population vers une meilleure compatibilité des espèces vis-à-vis des contraintes de leur écosystème.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Biologie",
+    "topic": "Évolution",
+    "question_text": "La raison pour laquelle la forme générale des cétacés ressemble à celle des poissons est une conséquence…",
+    "options": {
+      "a": "du hasard.",
+      "b": "de la sélection naturelle.",
+      "c": "de leur proximité évolutive.",
+      "d": "d'un flux génétique inter-espèce."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Il s'agit de la convergence évolutive, une sélection naturelle où des lignées distinctes adoptent une morphologie adaptée par la présence d'une pression environnementale analogue (vie aquatique).",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Biologie",
+    "topic": "Taxonomie",
+    "question_text": "Sachant que les champignons de Paris sont cultivés sur du compost formé à partir de fumier de cheval, on peut déduire que ce sont des organismes...",
+    "options": {
+      "a": "autotrophes.",
+      "b": "parasites.",
+      "c": "producteurs.",
+      "d": "saprophytes."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "L'usage de compost ou de matières organiques en décomposition est typique des organismes saprophytes pour puiser leurs nutriments.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Ethique",
+    "topic": "Éthique clinique et de la recherche",
+    "question_text": "En matière d'expérimentation sur la personne humaine, le consentement préalable et éclairé de la personne (accord en connaissance de cause des risques et dangers liés à l'expérience)…",
+    "options": {
+      "a": "devrait uniquement être requis dans le cadre d'expérimentations comportant un risque majeur pour la santé des personnes y participant.",
+      "b": "ne devrait pas être indispensable dans le cas d'expérimentations dont il est prouvé que les bénéfices profiteront à l'humanité entière.",
+      "c": "est un principe éthique de base incontournable qui conditionne tout essai clinique.",
+      "d": "ne devrait pas être requis dans des situations exceptionnelles : guerre, pandémie, incarcération etc."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Le consentement libre et éclairé du patient est la pierre d'assise inaltérable de la bioéthique et de la médecine.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Ethique",
+    "topic": "Recherche et éthique de l'investigation",
+    "question_text": "Vous êtes chercheur et vous contribuez à un essai clinique portant sur l'efficacité thérapeutique d'un médicament. L'expérimentation ne semble pas confirmer l'hypothèse d'une action bénéfique de celui-ci. Les sponsors de l'étude ne souhaitent pas publier les résultats de cette étude.\n\nQu'en pensez-vous ?",
+    "options": {
+      "a": "Vous ne réagissez pas car vous considérez que les questions d'éthique de la recherche et d'intégrité scientifique ne concernent que les sponsors, seuls responsables de l'étude.",
+      "b": "Vous tentez de les persuader de publier ces résultats car vous estimez que l'infirmation de l'hypothèse est un résultat valable qui peut faire avancer la science.",
+      "c": "Vous êtes d'accord avec eux, ce serait une perte de temps de travailler à la publication des résultats de cette étude.",
+      "d": "Vous êtes d'accord avec eux, une publication des résultats de cette étude risquerait de compromettre la réputation des sponsors et de rendre difficile l'obtention de subventions de recherche futures."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Un résultat clinique infirmant (négatif) possède une valeur scientifique incontestable; son absence de publication entache la rigueur scientifique (publication sélective).",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Ethique",
+    "topic": "Relation soignant-soigné",
+    "question_text": "Parmi les propositions suivantes, que désignerait de la manière la plus correcte le concept de « paternalisme médical », qui est peu recommandable du point de vue éthique ?",
+    "options": {
+      "a": "La prise en charge et le suivi, par un médecin, de l'ensemble des membres d'une même famille.",
+      "b": "Un diagnostic réalisé en se référant aux pères fondateurs de la médecine.",
+      "c": "La dimension collégiale de la décision médicale prise via la consultation des pairs.",
+      "d": "Le fait de considérer un patient comme incapable de prendre une décision en ce qui concerne sa santé."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Le paternalisme se réfère à la substitution d'une opinion d'autorité sur l'opinion individuelle du patient, souvent relégué au rang d'un incapable ou soumis en décision.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Ethique",
+    "topic": "Décision Médicale Partagée",
+    "question_text": "Une patiente de 52 ans atteinte d'un cancer du sein généralisé avec métastases pulmonaires, hépatiques et cérébrales a déjà reçu plusieurs traitements, mais aucun d'entre eux ne s'est avéré efficace. La maladie évolue défavorablement et la patiente vous demande de lui donner un nouveau médicament dont elle a appris l'existence via Internet. Vous n'êtes pas certain(e) de l'efficacité, même si des premiers résultats préliminaires chez d'autres patientes semblent encourageants.\n\nQuelle attitude adopteriez-vous ?",
+    "options": {
+      "a": "Vous refusez de prescrire un nouveau médicament et vous adressez la patiente à un autre collègue.",
+      "b": "Vous expliquez à la patiente qu'en raison du manque d'information, vous ne pouvez lui prescrire le nouveau médicament.",
+      "c": "Vous expliquez à la patiente qu'avant de prescrire un nouveau médicament, il faut attendre que plus de patientes soient traitées.",
+      "d": "Vous expliquez à la patiente que vous allez demander l'avis d'autres collègues afin d'évaluer l'opportunité de prescrire ce nouveau médicament."
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Faire appel à la collégialité devant une impasse thérapeutique montre de la prudence et ne ferme pas de façon prématurée une voie qui pourrait apaiser ou réconforter (même illusoirement) la patiente.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Ethique",
+    "topic": "Autonomie du Patient",
+    "question_text": "Une patiente qui présente une maladie très agressive au pronostic sombre a reçu un tout nouveau médicament et vous devez faire face à la situation suivante : après une semaine de traitement, la patiente demande qu'on arrête celui-ci en raison d'effets secondaires qu'elle ne peut supporter.\n\nQuelle serait la meilleure attitude à adopter ?",
+    "options": {
+      "a": "Vous arrêtez le traitement récent et reprenez le traitement précédent en intensifiant le suivi de la patiente.",
+      "b": "Vous expliquez à la patiente qu'elle doit continuer son traitement parce que la décision a été prise au préalable.",
+      "c": "Vous expliquez à la patiente que les effets secondaires vont s'atténuer grâce à des soins appropriés et qu'elle pourra bénéficier du traitement prescrit, sachant que les effets positifs, s'ils surviennent, ne seront observés que dans les prochains jours.",
+      "d": "Vous arrêtez le traitement et vous demandez à la patiente de rentrer chez elle."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Cette attitude respecte directement l'autonomie et le ressenti du patient (arrêt de ce qui le détruit), en continuant à garantir la continuité active des soins (pas d'abandon).",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Ethique",
+    "topic": "Information et Communication",
+    "question_text": "Un patient de 62 ans est admis en soins intensifs suite à un accident de roulage. Il bénéficie d'une réanimation lourde sans laquelle il ne pourrait survivre, et reçoit des traitements permettant de maintenir une circulation sanguine suffisante. L'équipe médicale estime que la réanimation permettra de récupérer les fonctions vitales et que le patient a des chances de s'en sortir. La famille demande qu'on arrête les manœuvres de réanimation parce que malgré le pronostic favorable, elle craint que les fonctions intellectuelles soient altérées de façon permanente.\nComment doit réagir l'équipe médicale ?",
+    "options": {
+      "a": "L'équipe doit arrêter immédiatement la réanimation afin d'éviter un conflit avec la famille.",
+      "b": "L'équipe ne doit pas tenir compte de l'avis de la famille et décider seule du devenir du patient.",
+      "c": "L'équipe doit dialoguer avec la famille et expliquer que rien ne permet d'affirmer une perte irréversible des fonctions intellectuelles du patient.",
+      "d": "L'équipe doit proposer un transfert vers une autre unité de soins dans un autre hôpital où une décision sera prise."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Informer, dialoguer avec transparence tout en s'appuyant sur l'état scientifique des connaissances médicales.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Ethique",
+    "topic": "Génétique et Éthique",
+    "question_text": "Dans l'hypothèse où les techniques scientifiques permettraient de conserver des embryons humains congelés et qu'il soit possible d'en modifier le génome afin d'obtenir des individus ayant des caractéristiques spécifiques (couleurs des yeux, taille, etc.) ou de modifier le ou les gènes responsables de maladies incurables, quelle serait la position le plus éthiquement défendable par rapport à cela ?",
+    "options": {
+      "a": "Vous estimez que chacun fait ce qu'il veut et que cela ne vous regarde pas.",
+      "b": "Vous estimez que ce type de recherche est inutile et qu'il vaut mieux laisser faire la nature.",
+      "c": "Vous estimez que ce type de recherche nécessite un cadrage par la société.",
+      "d": "Vous estimez qu'il faut condamner les chercheurs qui proposent ces techniques."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Les choix sociétaux liés à des transformations génomiques héréditaires incombent en premier lieu à un examen collégial de la société et au débat, loin des interdictions pures et de la complaisance totale.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Ethique",
+    "topic": "Formation médicale",
+    "question_text": "L'enseignement de l'éthique doit-il occuper une place importante dans la formation des futurs soignants dentistes et médecins ?",
+    "options": {
+      "a": "Les matières de ce type doivent rester des cours à option du fait de leur subjectivité intrinsèque.",
+      "b": "Cela est peu pertinent sachant que c'est surtout apprendre à guérir et pratiquer les soins des malades qui est important.",
+      "c": "Ce sont des matières que l'on peut apprendre par soi-même. Un enseignement dirigé est inutile.",
+      "d": "L'éthique fait partie intégrante de la pratique des soins, donc les bases de sa réflexion doivent être connues des soignants."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "La réflexion éthique se retrouve au cœur d'une multitude de décisions médicales quotidiennes et encadre le rapport soignant-soigné.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Ethique",
+    "topic": "Société et médecine",
+    "question_text": "Les nouvelles biotechnologies permettent de soigner des maladies jusqu'alors qualifiées d'incurables. Cependant, leur coût peut être extrêmement élevé et ceci peut poser des questions sur le plan éthique.\nDès lors, il serait préférable de…",
+    "options": {
+      "a": "arrêter leur développement trop coûteux afin de pérenniser le financement des soins de santé.",
+      "b": "se concentrer sur les maladies les plus fréquentes.",
+      "c": "limiter l'utilisation des biotechnologies à des maladies fréquentes dans les pays développés.",
+      "d": "considérer au cas par cas la pertinence de leur utilisation."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'approche cas par cas permet de préserver la notion de justice (bénéfice/coût) tout en autorisant l'intégration proportionnée de la médecine nouvelle.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Ethique",
+    "topic": "Santé Publique",
+    "question_text": "Une partie de la population générale ne souhaite pas se faire vacciner contre la COVID-19 pour différentes raisons. Il a été rappelé par nos experts que le refus de la vaccination comporte un risque de contracter l'infection mais aussi de la transmettre à des individus fragilisés par différentes pathologies.\nDans ce cas,…",
+    "options": {
+      "a": "la vaccination obligatoire est une décision politique et ne relève pas du soignant.",
+      "b": "il faudrait clairement identifier les individus non vaccinés et limiter leurs libertés.",
+      "c": "les soignants doivent bien expliquer l'intérêt de la vaccination avant de l'imposer.",
+      "d": "il faudrait refuser de prodiguer les soins aux personnes qui ont refusé les vaccinations."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Bien que le soignant participe à l'information (et ne doit pas imposer sans base légale), c'est in fine à la collectivité et l'état par la force de ses lois (politique) que revient le droit d'imposer des obligations touchant à l'ensemble du public.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Ethique",
+    "topic": "Bioéthique",
+    "question_text": "Que devraient permettre de façon sécurisée les avancées récentes et majeures des connaissances autour du génome et de ses manipulations ?",
+    "options": {
+      "a": "De parfaire une société trop injustement inégale en augmentant les capacités de chacun.",
+      "b": "Leur utilisation sans limite afin d'améliorer le contenu du génome de chaque individu.",
+      "c": "De diagnostiquer et de traiter de manière personnalisée les maladies à transmission génétique.",
+      "d": "De les utiliser librement, sans contrainte et limites éthiques imposées par divers comités."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Le but médical propre se limite à la remédiation aux désordres pathologiques pour restaurer une forme de norme fonctionnelle, loin des dérives de transformation libre.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Ethique",
+    "topic": "Vérité en Médecine",
+    "question_text": "Il peut arriver, dans certains régimes totalitaires, que l'information des citoyens soit contrôlée voire transformée (manipulée) de façon à servir le régime en question.\n\nParmi les quatre affirmations suivantes, laquelle est la plus éthique ?",
+    "options": {
+      "a": "Cela ne pose pas de problème car il revient à chaque citoyen de faire le tri entre « fake news » et données crédibles.",
+      "b": "Il ne s'agit pas d'un problème éthique mais plutôt journalistique et politique.",
+      "c": "Cela peut parfois être nécessaire pour préserver l'ordre dans la nation.",
+      "d": "Cela constitue une entrave à l'éthique et ne devrait pas être pratiqué."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Le principe de véracité est crucial pour le contrat social.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Ethique",
+    "topic": "Crise et devoirs professionnels",
+    "question_text": "Dans le cadre d'une pandémie due à un agent viral extrêmement contagieux, il est demandé aux personnes de rester confinées chez elles pour éviter la propagation du virus. La durée du confinement n'est pas précisée et les hôpitaux ne disposent pas de tout le matériel nécessaire pour assurer l'accueil des malades. Les soignants doivent toutefois continuer d'assurer leurs fonctions coûte que coûte.\n\nParmi les quatre affirmations suivantes, laquelle est la plus éthique ?",
+    "options": {
+      "a": "Il est normal que quelques soignants soient mis en danger pour sauver un maximum de personnes.",
+      "b": "Ce sont les risques du métier.",
+      "c": "Il est indispensable de prendre toutes les mesures nécessaires pour protéger au mieux les soignants.",
+      "d": "Les soignants devraient refuser de travailler dans de telles conditions."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La sécurité des soignants est un impératif qui, ignoré, peut non seulement léser gravement des professionnels mais aussi effondrer la totalité du système médical par attrition.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Ethique",
+    "topic": "Droits de l'Homme et Santé Publique",
+    "question_text": "Dans le cadre d'une pandémie due à un agent viral extrêmement contagieux, des mesures drastiques sont prises par les dirigeants politiques. Celles-ci réduisent considérablement les libertés individuelles.\n\nD'un point de vue éthique, ces mesures…",
+    "options": {
+      "a": "ne doivent pas s'appliquer aux personnes considérées comme importantes (personnalités politiques, patrons d'entreprises…).",
+      "b": "sont sans appel et devront être maintenues le plus longtemps possible même après la pandémie, par souci de sécurité.",
+      "c": "doivent faire l'objet d'une analyse stricte et être levées le plus tôt possible pour rétablir une vie sociale normale.",
+      "d": "ne concernent pas des éléments essentiels de la vie sociale et peuvent donc être appliquées pour le bien de tous."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Toute réduction des libertés doit s'inscrire dans une proportionnalité (nécessité vs préjudice) et être temporaire (révocabilité rapide).",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Ethique",
+    "topic": "Personnes âgées / Discrimination",
+    "question_text": "Certains courants de pensée considèrent qu'il faut limiter voire supprimer l'accès à des soins dits lourds (chirurgie, soins intensifs) pour les personnes au-delà de 80 ans.\n\nQuelle est la position la plus éthique par rapport à ce genre d'affirmation ?",
+    "options": {
+      "a": "C'est une bonne idée mais les personnes âgées qui ont des moyens financiers suffisants pourront de toute façon encore bénéficier des soins nécessaires.",
+      "b": "C'est une bonne idée et cela réduira les frais imposés à la société.",
+      "c": "C'est une bonne idée puisque ces personnes n'apportent plus grand-chose à la société en termes de rentabilité.",
+      "d": "C'est une proposition inacceptable, d'autant que, dans ce contexte, l'âge chronologique n'est pas un critère valide."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Imposer des restrictions purement chronologiques sans tenir compte de la fragilité réelle, de l'état fonctionnel physiologique ni de l'autonomie et dignité de la personne, est un marqueur fort de discrimination (âgisme).",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Empathie",
+    "topic": "Relations collégiales",
+    "question_text": "N. est médecin assistante en oncologie. Elle suit une jeune fille depuis deux ans qui a un cancer du rein. La patiente demande l'euthanasie, et l'idée est insupportable pour N.\n\nAfin d'être empathique avec elle-même, quelle attitude N. devrait choisir parmi les propositions ci-dessous ?",
+    "options": {
+      "a": "Elle se raisonne car elle sait que cela fait partie de son travail. Elle prendra un verre de vin et un bain chaud le soir pour se détendre.",
+      "b": "Elle se renseigne afin de trouver un collègue pouvant gérer l'euthanasie à sa place, car ce sera au-dessus de ses forces.",
+      "c": "Elle annule une réunion pour se promener et se détendre avant sa consultation. Elle prendra le temps de se préparer à l'idée de la fin.",
+      "d": "Elle demandera une entrevue avec son chef de service. Il a souvent été confronté à ce type de situation, il pourra comprendre son angoisse et l'écouter."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Rechercher la présence d'une personne de référence ayant l'expérience en la matière pour y déverser en confiance ses appréhensions témoigne d'une grande attention en self-care médical.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Empathie",
+    "topic": "Relation conjugale",
+    "question_text": "Monsieur S. continue à se laver les mains très régulièrement et à porter le masque dès qu'il sort de sa maison, alors que cela n'est plus obligatoire. Madame S., son épouse, est préoccupée par les comportements de son mari.\nParmi les attitudes que Madame S. pourrait adopter, laquelle témoigne le plus d'empathie vis-à-vis de son mari ?",
+    "options": {
+      "a": "Madame S. fait part à son mari de son inquiétude concernant les comportements qu'il adopte, elle aimerait comprendre ce qui les motive.",
+      "b": "Madame S. a lu différents articles décrivant des réactions similaires et pense qu'il est en train de développer un trouble obsessionnel-compulsif.",
+      "c": "Madame S. confie à son mari qu'elle est inquiète pour lui et qu'elle aimerait qu'ils retrouvent une vie normale.",
+      "d": "Pour ne pas contrarier son mari, Madame S. décide d'adopter les mêmes comportements que lui lorsqu'ils sont ensemble à l'extérieur du domicile familial."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Une approche empathique sincère est avant tout axée sur l'exploration ouverte et l'expression claire des ressentis, en validant ou cherchant activement la rationalité d'autrui dans un cadre de confiance.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Empathie",
+    "topic": "Entourage familial",
+    "question_text": "Ces dernières semaines, votre belle-sœur se montre très irritable. Elle se plaint de la météo, de son voisin, et de votre frère.\n\nLaquelle de ces attitudes est la meilleure pour témoigner votre empathie ?",
+    "options": {
+      "a": "Vous lui proposez de prendre un café ensemble pour discuter et essayez, à cette occasion, de comprendre ce qui est difficile pour elle.",
+      "b": "Vous ne réagissez pas. Vous trouvez qu'elle s'énerve pour un rien, mais vous vous gardez bien de le lui dire pour éviter de lui faire de la peine.",
+      "c": "Vous lui proposez de parler à votre frère pour encourager ce dernier à l'aider un peu plus dans les tâches ménagères, car elle semble être dépassée.",
+      "d": "Vous l'encouragez à ne pas s'attarder sur ces détails insignifiants, lui rappelant qu'il y a des situations bien plus graves dans la vie."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Offrir le temps et l'espace aux paroles sans en atténuer préalablement la dimension est fondamental.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Empathie",
+    "topic": "Relation Médecin-Patient",
+    "question_text": "Madame J. se présente à votre consultation avec tous les signes d'un état dépressif majeur. Elle a arrêté le traitement antidépresseur que vous lui aviez prescrit au bout d'une semaine, par peur de grossir et par manque d'effets rapides.\nComment aborderiez-vous la situation afin d'être le plus empathique ?",
+    "options": {
+      "a": "Vous la rassurez sur le fait qu'en adoptant une activité physique régulière et un régime alimentaire sain, la plupart de vos patients sont parvenus à maintenir leur poids.",
+      "b": "Vous encouragez Madame J. à vous faire part de ses inquiétudes vis-à-vis du traitement par antidépresseurs avant d'explorer avec elle les avantages et inconvénients de chaque option.",
+      "c": "Vous prenez le temps de lui expliquer que les études scientifiques montrent que les effets positifs ne se mettent en place qu'après une quinzaine de jours et l'encouragez à reprendre le traitement.",
+      "d": "Vous insistez sur le fait que son humeur risque de continuer à se détériorer si aucun traitement n'est mis en place."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Le comportement orienté vers les peurs réelles et l'espace de négociation qui en découlent renforcent directement l'observance en s'appuyant sur l'empathie.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Empathie",
+    "topic": "Écoute et reconnaissance",
+    "question_text": "Monsieur L., visiblement à bout de nerfs, se plaint auprès de l'instituteur du comportement de son fils, K. [...] L'instituteur voit K. comme tout à fait adapté. La tension monte chez Monsieur L. qui finit par dire : « Donc, vous pensez que c'est moi qui ne sais pas gérer mon fils ? ».\nAfin de témoigner une attitude empathique, laquelle des attitudes suivantes devrait adopter l'instituteur ?",
+    "options": {
+      "a": "Il devrait expliquer que K. est tout à fait adapté en classe où les choses se passent très bien et suggérer à Monsieur L. de consulter un psychologue.",
+      "b": "Il devrait orienter Monsieur L. vers la psychologue de l'école afin de faire tester K.",
+      "c": "Il devrait rassurer Monsieur L. sur le fait que les garçons de l'âge de K. sont souvent difficiles, mais que les choses s'améliorent à mesure qu'ils grandissent.",
+      "d": "Il devrait reconnaître le stress et l'inquiétude manifestés par Monsieur L. et essayer d'adopter sa perspective pour comprendre ce qui est difficile, au quotidien, avec son fils."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Devant une question tendue cherchant à dévaloriser, reconnaître sincèrement l'émotion initiale est de la pure écoute active et abaisse radicalement les murailles.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Empathie",
+    "topic": "Jugement de valeur",
+    "question_text": "Lorsque Madame U. vient faire son vaccin, elle vous explique que son petit-fils a cassé sa collection de poupées en porcelaine. Vous ne pouvez pas vous empêcher de penser que cela ne sera pas une grande perte, ces poupées étaient hideuses.\nQuelle attitude adopteriez-vous pour vous montrer empathique et authentique durant le reste de la consultation ?",
+    "options": {
+      "a": "Vous réorientez la conversation vers le suivi des douleurs dorsales pour lesquelles elle vous avait consulté(e) précédemment.",
+      "b": "Vous lui conseillez un site de vente en ligne où vous avez récemment vu des poupées du même type, afin qu'elle puisse rapidement remplacer sa collection.",
+      "c": "Vous lui témoignez votre soutien, en essayant d'imaginer comment vous vous sentiriez si votre fils avait embouti l'abri de jardin que vous avez passé des heures à construire.",
+      "d": "Vous essayez de lui faire voir le bon côté des choses, en lui faisant remarquer qu'elle passera moins de temps à faire le ménage."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Faire le lien mental personnel (« se mettre à la place » et re-contextualiser selon son propre investissement de cœur) déclenche des effets de résonance qui transparaissent positivement en face.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Empathie",
+    "topic": "Supervision Clinique",
+    "question_text": "Vous accueillez un stagiaire dans votre cabinet médical. Il a l'air mal à l'aise, ne semble pas savoir où s'installer et évite le regard des patient(e)s. Vous avez remarqué qu'il a les joues rouges et qu'il transpire abondamment.\n\nParmi les propositions suivantes, laquelle privilégieriez-vous pour vous montrer empathique ?",
+    "options": {
+      "a": "Vous lui faites remarquer qu'il devrait être capable de contrôler son anxiété, car celle-ci met les patient(e)s mal à l'aise.",
+      "b": "Vous lui renvoyez le fait qu'il vous semble être anxieux et lui demandez comment se passe cette première journée pour lui.",
+      "c": "Entre les consultations, vous blaguez pour essayer de détendre l'atmosphère.",
+      "d": "Vous lui racontez à quel point vous étiez stressé(e) lors de votre premier stage, en espérant dédramatiser la situation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Procurer le rôle actif par le questionnement d'état permet d'amener les constats physiques anxieux à la parole sans aucune moquerie ni infantilisation.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Empathie",
+    "topic": "Ressources Personnelles",
+    "question_text": "Vous êtes bénévole dans une association qui vient en aide aux personnes en situation irrégulière. En quittant l'hôpital, où vous êtes urgentiste, vous apprenez qu'une des femmes que vous avez soignées, au sein de l'association, a été expulsée. Cette situation vous rend extrêmement triste et en colère.\nComment gérez-vous ce type de situation pour manifester de la compassion pour vous-même ?",
+    "options": {
+      "a": "Vous vous isolez pour réfléchir à ce que vous auriez pu faire pour éviter cette expulsion.",
+      "b": "Dans votre métier d'urgentiste, vous avez appris à ne pas vous laisser déstabiliser par les situations difficiles.",
+      "c": "Vous appelez une amie qui a travaillé pour la Croix-Rouge. Parler de ce que vous ressentez avec une personne qui a vécu des choses similaires vous fait habituellement du bien.",
+      "d": "En constatant à quel point vous êtes touché(e) par la situation, vous remettez en question votre capacité à faire face aux situations difficiles."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Partager son trouble avec quelqu'un qui, par son parcours, se trouve en mesure de le comprendre entièrement et d'écouter, sert de bouclier contre l'essoufflement ou les questionnements auto-destructeurs.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Empathie",
+    "topic": "Limites Personnelles",
+    "question_text": "Un de vos amis est très anxieux à l'idée que sa conjointe puisse lui être infidèle. Lorsqu'elle est absente, il lui arrive fréquemment de vous appeler à n'importe quelle heure. Vous vous sentez de plus en plus irrité(e) par ses coups de fil (par ex. ce soir, pendant le coucher des enfants).\nParmi les propositions suivantes, laquelle des attitudes est à la fois empathique et compassionnelle, pour lui et pour vous ?",
+    "options": {
+      "a": "Vous prenez le temps de l'écouter. Il est en souffrance, cela passe avant les difficultés que vous aurez ensuite à mettre vos enfants au lit.",
+      "b": "Vous lui dites gentiment que vous êtes occupé(e) et promettez de le rappeler plus tard pour prendre de ses nouvelles.",
+      "c": "Vous lui dites que vous sentez sa détresse et lui demandez s'il peut attendre que vous le rappeliez après avoir mis les enfants au lit.",
+      "d": "Vous êtes authentique et lui dites qu'il appelle au mauvais moment. Vous l'encouragez à regarder la télévision pour se distraire."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Signaler la présence du sentiment de l'autre de manière claire et différer de la seule manière dont vous êtes encore capable de le prendre en considération permet l'empathie mutuelle et la clarté.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Empathie",
+    "topic": "Le médecin compatissant",
+    "question_text": "Le Dr G. est réputé auprès de ses patient(e)s pour être plein de compassion à leur égard.\n\nParmi les comportements qu'il adopte ordinairement, lequel est le moins compassionnel ?",
+    "options": {
+      "a": "Il réoriente la consultation quand ses patient(e)s expriment des angoisses qu'il juge lui-même exagérées.",
+      "b": "Il se fait du souci, avec ses patient(e)s, des conséquences de leurs difficultés de santé sur les différents aspects de leur vie.",
+      "c": "Il vérifie qu'il comprend bien l'état d'esprit de ses patient(e)s en les questionnant abondamment sur l'impact de leurs problèmes de santé.",
+      "d": "Il se préoccupe des compétences personnelles et de la situation dans laquelle vivent ses patient(e)s."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Refuser sciemment la valeur d'une anxiété au moment de sa perception est contraire à l'essence de l'empathie.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Empathie",
+    "topic": "Reticence thérapeutique",
+    "question_text": "Un patient vient vous voir à la consultation pour une douleur diffuse au niveau de son thorax. Au fur et à mesure de l'entretien, vous comprenez qu'il ne tient pas à réaliser l'examen prescrit, pourtant indispensable.\nSi vous voulez vous montrer empathique à l'égard de ce patient, quel comportement adoptez-vous en premier lieu ?",
+    "options": {
+      "a": "Vous essayez de comprendre pourquoi votre patient ne souhaite pas faire cet examen que vous jugez indispensable.",
+      "b": "Vous respectez sa décision et mettez respectueusement un terme à la consultation.",
+      "c": "Vous prenez le temps de lui expliquer l'importance du système pulmonaire pour sa qualité de vie.",
+      "d": "Vous faites entrer le partenaire de votre patient à la consultation afin que ce dernier puisse à son tour convaincre votre patient."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "L'élucidation du motif de ce blocage ou de l'appréhension sous-jacente est une règle absolue pour se connecter au patient (déverrouiller par la parole l'éventuelle phobie).",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Empathie",
+    "topic": "Dynamique d'Équipe",
+    "question_text": "Vous exposez à vos collègues les grandes directions d'un projet qui vous tient à cœur. Mais de nombreux avis contradictoires apparaissent dans le groupe.\nParmi les attitudes que vous pourriez prendre devant ces avis contradictoires, laquelle est la plus respectueuse de chacun de vos collègues ?",
+    "options": {
+      "a": "Vous interrogez tour à tour les personnes afin d'écouter et comprendre leur point de vue, et ce avant de reprendre votre exposé.",
+      "b": "Vous êtes convaincu(e) que vous avez raison : vous prenez dès lors le temps d'exprimer pédagogiquement votre point de vue.",
+      "c": "Vous expliquez votre point de vue en privé à la personne la plus responsable, afin qu'elle puisse expliquer votre point de vue aux autres.",
+      "d": "Afin d'éviter la zizanie au sein du groupe, vous proposez de faire un team-building avant de reprendre à nouveau l'exposé."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Répondre au tumulte par une volonté claire d'entendre posément les contre-arguments marque le respect total de l'audience.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Empathie",
+    "topic": "Situations Intimes",
+    "question_text": "Un patient vous dit : « Docteur, mon fils vient de me dire qu'il est une femme. C'est insupportable, je ne peux pas admettre cette idée. »\nParmi les propositions suivantes, laquelle allez-vous utiliser en premier pour lui répondre de façon empathique ?",
+    "options": {
+      "a": "« Je vous comprends vraiment, mais la société laisse vraiment le choix de vivre son genre comme on veut. »",
+      "b": "« Quand il se rendra compte qu'il s'est égaré, il viendra vers ses parents en s'excusant. »",
+      "c": "« Saviez-vous qu'il était perturbé et insatisfait de sa sexualité au point de vouloir changer de sexe ? »",
+      "d": "« Vous semblez être estomaqué et avoir de nombreuses interrogations sur cette situation. »"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Formuler sous forme de retour validant du comportement émotionnel que vous avez sous les yeux est un pur acte d'empathie qui donne place, sans juger de ce qui l'engendre.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Empathie",
+    "topic": "Soutien Intrafamilial",
+    "question_text": "Votre partenaire vous avoue timidement qu'il(elle) vérifie sans cesse la bonne fermeture des portes et des becs de gaz de sa cuisinière depuis un certain temps. Bien que ça occupe la majorité de ses journées, il(elle) ne souhaite pas qu'on le(la) dérange.\nParmi les attitudes suivantes, laquelle est la plus empathique ?",
+    "options": {
+      "a": "Vous lui expliquez combien vous avez vous-même été très mal lors de l'explosion de votre cuisinière et lui avouez vérifier plus régulièrement.",
+      "b": "Vous lui proposez, pour le(la) soulager, de faire à sa place quelques vérifications afin qu'il(elle) puisse faire autre chose.",
+      "c": "Vous lui dites que vous avez l'impression qu'il(elle) souffre de ce comportement et vous vous enquérez de ce qu'il(elle) ressent.",
+      "d": "Vous le(la) rassurez sur le fait qu'on n'est jamais trop prudent avec la sécurité et qu'il vaut mieux vérifier avant qu'il ne soit trop tard."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "En parlant directement du mal qui est visible à cet instant donné, il est possible d'arriver au-delà des apparences et de l'interdiction de parler, en ouvrant doucement une vanne vers les ressentis oppressants.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Empathie",
+    "topic": "Addictions",
+    "question_text": "Vous suivez de longue date une patiente fumeuse âgée de 60 ans. Lors d'une consultation, elle est clairement essoufflée et signale souffrir de douleurs aux membres inférieurs.\n\nParmi les attitudes suivantes, laquelle est la plus empathique ?",
+    "options": {
+      "a": "Vous respectez son choix de fumer et ne parlez pas de cela avec elle, lui rappelant que la liberté est un principe fondamental de la santé.",
+      "b": "Vous essayez de comprendre ses réticences à arrêter de fumer et l'informez que prendre en charge son tabagisme est indispensable.",
+      "c": "Avec un sourire en coin, vous lui demandez si elle compte arrêter de fumer un jour.",
+      "d": "Vous l'envoyez voir un(e) hypnotiseur(se) car vous êtes certain(e) qu'elle doit avoir un problème psychique au vu de son impossibilité à arrêter de fumer."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "On couple une injonction médicale fondée et solide à un profond support dans la sphère d'écoute psychologique associée aux troubles addictifs qui y feront barrage.",
+    "section_id": null
+  }
+]

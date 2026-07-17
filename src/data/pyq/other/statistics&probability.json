@@ -1,0 +1,770 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "Which of the following charts uses sectors of a circle to represent data?",
+    "options": {
+      "a": "Bar chart",
+      "b": "Histogram",
+      "c": "Pie chart",
+      "d": "Line graph"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A pie chart represents data using sectors of a circle where the angle of each sector is proportional to the frequency of the data.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "In a pie chart, the total angle at the center of the circle is:",
+    "options": {
+      "a": "90 degrees",
+      "b": "180 degrees",
+      "c": "270 degrees",
+      "d": "360 degrees"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A full circle represents the total data, which corresponds to an angle of $360^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "A student spends 8 hours sleeping in a day. What is the sector angle for sleep in a pie chart representing his daily activities?",
+    "options": {
+      "a": "90 degrees",
+      "b": "100 degrees",
+      "c": "120 degrees",
+      "d": "240 degrees"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Sector angle $= \\frac{\\text{Value}}{\\text{Total}} \\times 360^\\circ$. A day has 24 hours. Angle $= \\frac{8}{24} \\times 360 = \\frac{1}{3} \\times 360 = 120^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "In a frequency table, what symbol is used to represent a count of 5 items using tally marks?",
+    "options": {
+      "a": "||||",
+      "b": "|||||",
+      "c": "An oblique line crossing four vertical lines",
+      "d": "V"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A standard tally for 5 is four vertical strokes crossed by a diagonal stroke.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "If 40 students took a test and 10 of them passed with an A, calculate the sector angle for grade A in a pie chart.",
+    "options": {
+      "a": "45 degrees",
+      "b": "90 degrees",
+      "c": "100 degrees",
+      "d": "40 degrees"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Angle $= \\frac{10}{40} \\times 360 = \\frac{1}{4} \\times 360 = 90^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "Which diagram uses pictures or symbols to represent data?",
+    "options": {
+      "a": "Histogram",
+      "b": "Pictogram",
+      "c": "Bar Chart",
+      "d": "Frequency Polygon"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A pictogram uses pictures or icons to represent specific quantities of data.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "In a bar chart, the height of the bar usually represents the:",
+    "options": {
+      "a": "Class width",
+      "b": "Frequency",
+      "c": "Cumulative frequency",
+      "d": "Average"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In a standard bar chart, the height (or length) of the bar corresponds directly to the frequency of the category.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "A bag contains 60 marbles. If 15 are blue, what fraction of the circle in a pie chart represents the blue marbles?",
+    "options": {
+      "a": "1/2",
+      "b": "1/3",
+      "c": "1/4",
+      "d": "1/5"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Fraction $= \\frac{15}{60} = \\frac{1}{4}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "In a survey of 120 cars, 30 are red. Calculate the angle for red cars in a pie chart.",
+    "options": {
+      "a": "30 degrees",
+      "b": "60 degrees",
+      "c": "90 degrees",
+      "d": "120 degrees"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Angle $= \\frac{30}{120} \\times 360 = \\frac{1}{4} \\times 360 = 90^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "The main difference between a bar chart and a histogram is:",
+    "options": {
+      "a": "Bar charts have gaps between bars, histograms do not",
+      "b": "Histograms use circles",
+      "c": "Bar charts are for continuous data",
+      "d": "Histograms always have horizontal bars"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Bar charts generally represent discrete categories with gaps, whereas histograms represent continuous data intervals with no gaps between bars.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "A sector in a pie chart has an angle of $72^\\circ$. What percentage of the total data does this represent?",
+    "options": {
+      "a": "10%",
+      "b": "20%",
+      "c": "25%",
+      "d": "72%"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Percentage $= \\frac{\\text{Angle}}{360} \\times 100 = \\frac{72}{360} \\times 100 = \\frac{1}{5} \\times 100 = 20\\%$. ",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "The table below shows the favorite colors of students:\n| Color | Red | Blue | Green |\n| --- | --- | --- | --- |\n| Freq | 5 | 8 | 7 |\nWhat is the total number of students?",
+    "options": {
+      "a": "15",
+      "b": "18",
+      "c": "20",
+      "d": "25"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Total frequency $= 5 + 8 + 7 = 20$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "If a pictogram key shows that one circle symbol represents 10 balls, how many balls are represented by 3 full circles and one half circle?",
+    "options": {
+      "a": "30",
+      "b": "35",
+      "c": "40",
+      "d": "3.5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Value $= (3 \\times 10) + (0.5 \\times 10) = 30 + 5 = 35$ balls.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "Which of these is NOT a method of presenting data?",
+    "options": {
+      "a": "Pie Chart",
+      "b": "Bar Chart",
+      "c": "Protractor",
+      "d": "Frequency Table"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A protractor is a measuring instrument, not a method of presenting statistical data.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Mathematics",
+    "topic": "Data Presentation",
+    "question_text": "In a pie chart representing a total of $3600$, how much does a sector of $90^\\circ$ represent?",
+    "options": {
+      "a": "360",
+      "b": "900",
+      "c": "1800",
+      "d": "90"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Value $= \\frac{90}{360} \\times 3600 = \\frac{1}{4} \\times 3600 = 900$.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "The 'Mean' of a set of numbers is calculated by:",
+    "options": {
+      "a": "Finding the middle number",
+      "b": "Finding the most frequent number",
+      "c": "Adding all numbers and dividing by the count",
+      "d": "Subtracting the smallest from the largest"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The mean is the arithmetic average, calculated by summing values and dividing by the number of values.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Find the mean of the numbers: 2, 4, 6, 8, 10.",
+    "options": {
+      "a": "5",
+      "b": "6",
+      "c": "8",
+      "d": "30"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Sum $= 2+4+6+8+10 = 30$. Count $= 5$. Mean $= 30 / 5 = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "The number which appears most often in a set of data is called the:",
+    "options": {
+      "a": "Mean",
+      "b": "Median",
+      "c": "Mode",
+      "d": "Range"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The mode is defined as the most frequently occurring value in a dataset.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Find the mode of the following set of numbers: 3, 5, 2, 5, 8, 5, 9.",
+    "options": {
+      "a": "3",
+      "b": "5",
+      "c": "8",
+      "d": "9"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The number 5 appears three times, which is more than any other number.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "To find the median, the data must first be:",
+    "options": {
+      "a": "Added together",
+      "b": "Arranged in order of size",
+      "c": "Multiplied",
+      "d": "Grouped into twos"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The median is the middle value, which can only be determined after the data is sorted (ordered).",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Calculate the median of: 3, 1, 7, 2, 9.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "7",
+      "d": "9"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "First arrange in order: 1, 2, 3, 7, 9. The middle number is 3.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "What is the range of the following numbers: 12, 5, 8, 20, 3?",
+    "options": {
+      "a": "8",
+      "b": "12",
+      "c": "17",
+      "d": "20"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Range $= \\text{Highest} - \\text{Lowest} = 20 - 3 = 17$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "If the mean of $5, 7, x, 9$ is $7​$, find the value of $x​$.",
+    "options": {
+      "a": "6",
+      "b": "7",
+      "c": "8",
+      "d": "9"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "$\\frac{5+7+x+9}{4} = 7 \\Rightarrow 21+x = 28 \\Rightarrow x = 28-21 = 7$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Find the median of these even numbers: 2, 4, 6, 8, 10, 12.",
+    "options": {
+      "a": "6",
+      "b": "7",
+      "c": "8",
+      "d": "42"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The numbers are ordered. There are two middle numbers: 6 and 8. Median $= \\frac{6+8}{2} = 7$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Which measure of central tendency is affected most by extreme values (outliers)?",
+    "options": {
+      "a": "Mode",
+      "b": "Median",
+      "c": "Mean",
+      "d": "Range"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The mean uses all values in the calculation, so an extremely high or low number will shift the mean significantly compared to the median or mode.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Find the range of this dataset: $2, 2, 2, 2, 2$.",
+    "options": {
+      "a": "0",
+      "b": "2",
+      "c": "4",
+      "d": "1"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Range $= \\text{Max} - \\text{Min} = 2 - 2 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Calculate the mean of the first five prime numbers: 2, 3, 5, 7, 11.",
+    "options": {
+      "a": "5",
+      "b": "5.6",
+      "c": "6",
+      "d": "28"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Sum $= 2+3+5+7+11 = 28$. Mean $= 28 / 5 = 5.6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "If a data set has two modes, it is called:",
+    "options": {
+      "a": "Unimodal",
+      "b": "Bimodal",
+      "c": "Trimodal",
+      "d": "Multimodal"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A set with two modes is referred to as bimodal.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "What is the mean of $10, 20, 30$?",
+    "options": {
+      "a": "15",
+      "b": "20",
+      "c": "25",
+      "d": "30"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Sum $= 60$. Count $= 3$. Mean $= 20$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Given the set: $4, 1, 8, 9$. What is the median?",
+    "options": {
+      "a": "4.5",
+      "b": "6",
+      "c": "6.5",
+      "d": "8"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Order: 1, 4, 8, 9. Middle two are 4 and 8. Median $= \\frac{4+8}{2} = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "If the range of a set of numbers is 10 and the smallest number is 5, what is the largest number?",
+    "options": {
+      "a": "5",
+      "b": "10",
+      "c": "15",
+      "d": "50"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Range $= \\text{Largest} - \\text{Smallest} \\Rightarrow 10 = L - 5 \\Rightarrow L = 15$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "The mean of 4 numbers is 5. What is their sum?",
+    "options": {
+      "a": "9",
+      "b": "20",
+      "c": "25",
+      "d": "1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Sum $= \\text{Mean} \\times \\text{Count} = 5 \\times 4 = 20$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "In the set $3, 3, 3, 5, 10$, the mode is:",
+    "options": {
+      "a": "3",
+      "b": "5",
+      "c": "10",
+      "d": "None"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "3 appears most frequently.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "Find the median of the first 5 odd numbers: 1, 3, 5, 7, 9.",
+    "options": {
+      "a": "3",
+      "b": "5",
+      "c": "7",
+      "d": "9"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The numbers are already ordered. The middle one is 5.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Mathematics",
+    "topic": "Measures of Central Tendency",
+    "question_text": "The difference between the highest and lowest value in a data set is known as:",
+    "options": {
+      "a": "Mean",
+      "b": "Standard Deviation",
+      "c": "Range",
+      "d": "Median"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "This is the definition of the Range.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Probability is measured on a scale from:",
+    "options": {
+      "a": "0 to 10",
+      "b": "0 to 1",
+      "c": "1 to 100",
+      "d": "-1 to 1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The probability scale ranges from 0 (impossible) to 1 (certain).",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "If an event is impossible, its probability is:",
+    "options": {
+      "a": "1",
+      "b": "0.5",
+      "c": "0",
+      "d": "-1"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "An impossible event has a probability of 0.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "When tossing a fair coin, what is the probability of getting a Head?",
+    "options": {
+      "a": "1",
+      "b": "1/2",
+      "c": "1/3",
+      "d": "0"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A coin has 2 sides (Head, Tail). Probability $= 1/2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "A fair six-sided die is rolled. What is the probability of obtaining an even number?",
+    "options": {
+      "a": "1/6",
+      "b": "1/3",
+      "c": "1/2",
+      "d": "2/3"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Even numbers on a die are 2, 4, 6 (3 outcomes). Total outcomes = 6. Prob $= 3/6 = 1/2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "A bag contains 3 red balls and 2 blue balls. What is the probability of picking a blue ball?",
+    "options": {
+      "a": "2/3",
+      "b": "3/5",
+      "c": "2/5",
+      "d": "1/2"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Total balls $= 3 + 2 = 5$. Blue balls $= 2$. Prob $= 2/5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "If the probability of it raining is 0.3, what is the probability that it will NOT rain?",
+    "options": {
+      "a": "0.3",
+      "b": "0.7",
+      "c": "0",
+      "d": "1.3"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Prob(Not Event) $= 1 - \\text{Prob(Event)} = 1 - 0.3 = 0.7$.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "What is the probability of rolling a number greater than 4 on a single six-sided die?",
+    "options": {
+      "a": "1/6",
+      "b": "1/3",
+      "c": "1/2",
+      "d": "2/5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Numbers greater than 4 are 5 and 6 (2 outcomes). Prob $= 2/6 = 1/3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Which of the following probability values indicates an event that is 'Certain' to happen?",
+    "options": {
+      "a": "0",
+      "b": "0.5",
+      "c": "0.9",
+      "d": "1"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A probability of 1 represents certainty.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "A letter is chosen at random from the word 'CHANCE'. What is the probability that it is the letter 'C'?",
+    "options": {
+      "a": "1/6",
+      "b": "1/3",
+      "c": "1/2",
+      "d": "2/5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Total letters = 6. 'C' appears 2 times. Prob $= 2/6 = 1/3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "In a bag of 10 balls, 10 are red. What is the probability of picking a green ball?",
+    "options": {
+      "a": "0",
+      "b": "0.5",
+      "c": "1",
+      "d": "0.1"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "It is impossible to pick a green ball if all balls are red. Probability is 0.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "A number is picked at random from 1 to 10. What is the probability of picking a multiple of 3?",
+    "options": {
+      "a": "1/5",
+      "b": "3/10",
+      "c": "2/5",
+      "d": "1/2"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Multiples of 3 between 1 and 10 are 3, 6, 9 (3 outcomes). Prob $= 3/10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "The sum of probabilities of all possible outcomes of an event is always:",
+    "options": {
+      "a": "0",
+      "b": "0.5",
+      "c": "1",
+      "d": "100"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The sum of all mutually exclusive probabilities in a complete sample space equals 1.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Two coins are tossed simultaneously. What is the probability of getting two Heads?",
+    "options": {
+      "a": "1/2",
+      "b": "1/4",
+      "c": "3/4",
+      "d": "1/3"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Sample space: {HH, HT, TH, TT}. Only HH is two heads. Prob $= 1/4$.",
+    "section_id": null
+  }
+]

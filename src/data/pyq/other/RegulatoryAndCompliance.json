@@ -1,0 +1,1922 @@
+[
+  {
+    "question_number": 1,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Warranties",
+    "question_text": "Under the Uniform Commercial Code (UCC), which type of warranty is created when a seller affirms a specific fact, makes a promise relating to the goods, or provides a sample or model of the goods?",
+    "options": {
+      "a": "Implied warranty of merchantability",
+      "b": "Express warranty",
+      "c": "Implied warranty of fitness for a particular purpose",
+      "d": "Warranty of title"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An express warranty is explicitly created by the seller's affirmations, promises, descriptions, or the use of samples/models regarding the goods being sold. Implied warranties exist automatically by operation of law.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Warranties",
+    "question_text": "A public buyer purchases a specialized heavy-duty pump after explicitly telling the supplier it must be able to handle highly corrosive chemicals. The supplier assures the buyer the pump will work for this specific use. The pump later fails due to corrosion. Which warranty has primarily been breached?",
+    "options": {
+      "a": "Implied warranty of fitness for a particular purpose",
+      "b": "Implied warranty of merchantability",
+      "c": "Express warranty of title",
+      "d": "Implied warranty of deliverability"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The implied warranty of fitness for a particular purpose applies when a buyer relies on the seller's skill or judgment to select suitable goods, and the seller knows the specific purpose for which the goods are required.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Shipping Terms",
+    "question_text": "If a contract specifies shipping terms as 'FOB Destination,' who holds the risk of loss while the goods are in transit?",
+    "options": {
+      "a": "The Buyer",
+      "b": "The Common Carrier",
+      "c": "The Seller",
+      "d": "The Freight Forwarder"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Under 'FOB Destination' terms, the seller retains the risk of loss and title to the goods until they are delivered to the specified destination and received by the buyer.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Shipping Terms",
+    "question_text": "A shipment of office furniture sent 'FOB Origin' is destroyed in a warehouse fire at the shipping terminal halfway to the agency. Who is legally responsible for the lost goods, and who must file the claim with the carrier?",
+    "options": {
+      "a": "The Seller is responsible and must file the claim.",
+      "b": "The Buyer is responsible and must file the claim.",
+      "c": "The Carrier is automatically responsible without a claim being filed.",
+      "d": "The Seller and Buyer share the liability and must file a joint claim."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Under 'FOB Origin,' title and risk of loss pass to the buyer the moment the goods are handed over to the carrier. The buyer owns the goods during transit and must file any claims for loss or damage.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Rights of Buyer/Seller",
+    "question_text": "A vendor delivers a shipment of goods to a public agency, but the buyer notices the items do not meet the exact specifications of the contract. The buyer rejects the delivery. Under the UCC, what right does the vendor generally have if the contract performance time has not yet expired?",
+    "options": {
+      "a": "The right to cancel the contract without penalty",
+      "b": "The right to sue for specific performance",
+      "c": "The right to cure the defect",
+      "d": "The right to force the buyer to accept a discount"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Under the UCC, if a buyer rejects a nonconforming delivery and the contract time for performance has not yet expired, the seller has a 'right to cure'—meaning they can notify the buyer of their intent to provide conforming goods within the original contract timeframe.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Rights of Buyer/Seller",
+    "question_text": "Which of the following describes the UCC principle that allows a buyer to reject goods entirely if they fail in any respect to conform to the contract?",
+    "options": {
+      "a": "Substantial Performance Rule",
+      "b": "Perfect Tender Rule",
+      "c": "Right to Rejection Doctrine",
+      "d": "Absolute Conformity Statute"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The 'Perfect Tender Rule' under the UCC allows buyers of goods to reject the delivery if the goods or the tender of delivery fail in any respect to conform to the contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Law of Agency",
+    "question_text": "In the context of public procurement, the purchasing officer typically acts in which of the following capacities on behalf of the government entity?",
+    "options": {
+      "a": "Principal",
+      "b": "Agent",
+      "c": "Independent Contractor",
+      "d": "Surety"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Under the Law of Agency, the government entity is the 'Principal,' and the public purchaser acts as the 'Agent' who is authorized to make decisions and enter into contracts on the Principal's behalf.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Law of Agency",
+    "question_text": "The fundamental legal duty that an agent owes to their principal—requiring loyalty, care, obedience, and good faith—is known as a(n):",
+    "options": {
+      "a": "Statutory obligation",
+      "b": "Apparent duty",
+      "c": "Fiduciary duty",
+      "d": "Express liability"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A fiduciary duty is the highest standard of care at either equity or law, requiring the agent to act primarily for the benefit of the principal in matters connected with the agency.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Types of Authority",
+    "question_text": "An agency manual states that a buyer is permitted to issue purchase orders up to $10,000 without additional approval. This is an example of which type of authority?",
+    "options": {
+      "a": "Actual Express Authority",
+      "b": "Apparent Authority",
+      "c": "Actual Implied Authority",
+      "d": "Inherent Authority"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Actual Express Authority is specifically and explicitly granted to the agent by the principal, often through statutes, policies, job descriptions, or direct instruction.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Types of Authority",
+    "question_text": "Which type of authority occurs when a third party reasonably believes an agent has the authority to bind the principal, even though the principal has not actually granted such authority, often based on the principal's actions or inaction?",
+    "options": {
+      "a": "Express Authority",
+      "b": "Implied Authority",
+      "c": "Apparent Authority",
+      "d": "Constructive Authority"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Apparent Authority arises when the principal's behavior leads a third party to reasonably believe the agent is authorized to act, regardless of whether actual authority exists.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Types of Authority",
+    "question_text": "In public procurement, what is the crucial legal distinction regarding 'Apparent Authority' when compared to private sector purchasing?",
+    "options": {
+      "a": "Apparent authority is stronger in the public sector.",
+      "b": "Public entities generally cannot be bound by the apparent authority of their agents.",
+      "c": "Elected officials are the only ones who can utilize apparent authority.",
+      "d": "Apparent authority protects public buyers from personal liability."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A key tenet of public contract law is that a sovereign entity (the government) generally cannot be bound by the unauthorized acts of its employees. Therefore, unlike private corporations, public entities are rarely bound by Apparent Authority.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Types of Authority",
+    "question_text": "A department manager without purchasing authority signs a contract with a vendor. The procurement director later reviews the contract, determines it is highly beneficial, and officially approves and signs it. What legal concept has occurred?",
+    "options": {
+      "a": "Novation",
+      "b": "Delegation",
+      "c": "Ratification",
+      "d": "Estoppel"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Ratification occurs when a principal retroactively approves and adopts an act performed by an agent (or non-agent) who did not have the authority to act at the time the act was performed.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "Which of the following is NOT one of the essential elements required to form a legally binding contract?",
+    "options": {
+      "a": "Offer and Acceptance",
+      "b": "Consideration",
+      "c": "Notarized Signatures",
+      "d": "Competent Parties"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The core elements of a valid contract are Offer, Acceptance, Consideration, Competent Parties, and Legal Purpose. Notarization is not a strict requirement for a basic contract to be legally binding.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "In contract law, what is 'Consideration'?",
+    "options": {
+      "a": "The mutual understanding of the contract terms by both parties.",
+      "b": "Something of legal value exchanged between the parties.",
+      "c": "The time allowed for a buyer to review goods upon delivery.",
+      "d": "A thoughtful review of the contract by legal counsel."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Consideration is the bargained-for exchange of value between parties to a contract (e.g., money exchanged for goods or services). Without consideration, a promise is generally a non-binding gift.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "A public agency issues an Invitation for Bids (IFB). Under common law contract principles, the issuance of the IFB is legally considered:",
+    "options": {
+      "a": "An offer",
+      "b": "A request for offers (invitation to treat)",
+      "c": "An acceptance",
+      "d": "Consideration"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Solicitations like an IFB or RFP are legally categorized as 'invitations to treat' or a request for offers. The bid submitted by the vendor is the actual 'Offer' that the agency may then choose to accept.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "Vendor A submits an offer to sell 100 laptops for $50,000. The purchasing agent responds: 'We agree to buy 100 laptops, but only for $45,000.' In contract law, the agent's response is classified as a(n):",
+    "options": {
+      "a": "Conditional acceptance",
+      "b": "Breach of contract",
+      "c": "Counteroffer",
+      "d": "Option contract"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A counteroffer occurs when the offeree materially alters the terms of the original offer. A counteroffer simultaneously rejects the original offer and creates a new one.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "To be enforceable, certain types of contracts—such as contracts for the sale of goods over $500, or contracts that cannot be performed within one year—must be in writing. This legal principle is known as:",
+    "options": {
+      "a": "The Parol Evidence Rule",
+      "b": "The Statute of Frauds",
+      "c": "The Uniform Commercial Code",
+      "d": "The Doctrine of Laches"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Statute of Frauds requires certain types of contracts to be memorialized in writing and signed by the party against whom enforcement is sought to be legally binding.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "A contract that involves purchasing stolen property lacks which essential element, thereby rendering it unenforceable?",
+    "options": {
+      "a": "Consideration",
+      "b": "Mutual Assent",
+      "c": "Competent Parties",
+      "d": "Legal Purpose"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A contract must have a Legal Purpose. Agreements to perform illegal acts, such as trafficking stolen goods, are void because they lack a legal purpose.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "What is the difference between a void contract and a voidable contract?",
+    "options": {
+      "a": "A void contract is lacking an element and was never legally valid; a voidable contract is valid but can be affirmed or rejected at the option of one party.",
+      "b": "A void contract can be canceled by mutual consent; a voidable contract can only be canceled by a judge.",
+      "c": "Void contracts involve goods; voidable contracts involve services.",
+      "d": "There is no difference; the terms are synonymous in contract law."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A void contract has no legal effect from inception (e.g., illegal purpose). A voidable contract is one where one party has the right to either escape the contract or enforce it (e.g., a contract signed by a minor).",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Common Law vs. Statutory Law",
+    "question_text": "In the United States legal system, 'Common Law' is primarily created by:",
+    "options": {
+      "a": "Legislative assemblies and city councils",
+      "b": "Executive orders from the Governor or President",
+      "c": "Precedents established by judicial rulings and court decisions",
+      "d": "Administrative rules drafted by procurement officials"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Common Law is derived from judicial decisions and custom (case law or precedents) rather than from statutes or constitutions enacted by legislative bodies.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Common Law vs. Statutory Law",
+    "question_text": "When a direct conflict arises between an applicable Common Law precedent and a newly enacted Statutory Law regarding public procurement procedures, which takes precedence?",
+    "options": {
+      "a": "Common Law always supersedes Statutory Law.",
+      "b": "Statutory Law supersedes Common Law.",
+      "c": "The procurement director has discretion to choose.",
+      "d": "The conflict must be resolved by federal arbitration."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Statutory Law (passed by a legislative body) takes precedence over Common Law. Statutes are often enacted specifically to overrule, modify, or clarify common law precedents.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Warranties",
+    "question_text": "A buyer purchases standard printer paper from a vendor without any specific discussions about the quality. It is assumed the paper will be of average, acceptable quality and pass without objection in the trade. This assumption is protected by:",
+    "options": {
+      "a": "The Implied Warranty of Merchantability",
+      "b": "The Express Warranty of Quality",
+      "c": "The Doctrine of Good Faith",
+      "d": "The Implied Warranty of Fitness for a Particular Purpose"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The implied warranty of merchantability requires that goods sold by a merchant be fit for the ordinary purposes for which they are used and conform to standard trade quality.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Law of Agency",
+    "question_text": "Which scenario best demonstrates an agent breaching their fiduciary duty to the principal?",
+    "options": {
+      "a": "The agent awards a contract to the lowest responsive and responsible bidder.",
+      "b": "The agent unknowingly accepts an offer that contains a minor math error.",
+      "c": "The agent routes a public contract to a firm owned by their spouse without disclosing it.",
+      "d": "The agent negotiates aggressively to lower the cost of goods for the principal."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Fiduciary duty requires loyalty and putting the principal's interests first. Awarding a contract to a spouse's firm without disclosure creates a massive conflict of interest and breaches the duty of loyalty.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "When assessing 'Mutual Assent' (or a meeting of the minds) during contract formation, courts generally look at:",
+    "options": {
+      "a": "The secret, subjective intent of the purchasing agent.",
+      "b": "The objective manifestations of intent by both parties, such as words and conduct.",
+      "c": "The financial status of the vendor.",
+      "d": "The length of time it took to draft the solicitation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Mutual assent is judged objectively by what the parties said and did (their outward manifestations), rather than what they secretly intended.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Applicability",
+    "question_text": "Article 2 of the Uniform Commercial Code (UCC) explicitly governs which of the following?",
+    "options": {
+      "a": "Transactions in goods",
+      "b": "Real estate transactions",
+      "c": "Employment contracts",
+      "d": "Service contracts"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "UCC Article 2 applies specifically to the sale of 'goods' (tangible, movable personal property). It does not primarily govern services, real estate, or employment.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Shipping Terms",
+    "question_text": "If a contract is marked 'FOB Destination, Freight Prepaid', which of the following is true?",
+    "options": {
+      "a": "Buyer pays freight charges; Seller assumes risk of loss.",
+      "b": "Seller pays freight charges; Buyer assumes risk of loss during transit.",
+      "c": "Buyer pays freight charges; Buyer assumes risk of loss during transit.",
+      "d": "Seller pays freight charges; Seller assumes risk of loss during transit."
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "'FOB Destination' means the seller retains risk of loss until the goods arrive at the destination. 'Freight Prepaid' means the seller pays the cost of transportation upfront.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Law of Agency",
+    "question_text": "When an agent terminates the agency relationship by quitting their job at the public procurement office, this termination is classified legally as:",
+    "options": {
+      "a": "Revocation",
+      "b": "Renunciation",
+      "c": "Operation of Law",
+      "d": "Estoppel"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "In agency law, 'Renunciation' occurs when the agent terminates the relationship, whereas 'Revocation' occurs when the principal terminates the agent's authority.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "In public procurement, a bidder's capacity to legally enter into a contract involves analyzing whether the entity is legally authorized to do business and whether the signatory has the right to bind the company. This evaluates which contract element?",
+    "options": {
+      "a": "Offer",
+      "b": "Competent Parties",
+      "c": "Consideration",
+      "d": "Legal Purpose"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "'Competent Parties' refers to the legal capacity of both parties to enter into an agreement, which includes age, mental capacity, and the actual corporate authority to bind a business entity.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Types of Authority",
+    "question_text": "The purchasing manual gives a buyer the explicit authority to 'manage the acquisition of fleet vehicles.' The buyer, needing to verify specs, travels to a nearby dealership using an agency pool car. Though traveling wasn't explicitly mentioned in the manual, it is considered which type of authority?",
+    "options": {
+      "a": "Actual Express Authority",
+      "b": "Actual Implied Authority",
+      "c": "Apparent Authority",
+      "d": "Delegated Authority"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Actual Implied Authority consists of the unwritten powers that are reasonably necessary to carry out the duties that were expressly authorized.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Common Law vs. Statutory Law",
+    "question_text": "Which of the following is considered 'Statutory Law'?",
+    "options": {
+      "a": "A judge's ruling in a recent contract dispute.",
+      "b": "The state's Public Procurement Code passed by the state legislature.",
+      "c": "The traditions of purchasing recognized by the agency over the last 50 years.",
+      "d": "An interpretation of a legal principle written in a law textbook."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Statutory laws are written laws enacted by a legislative body, such as a state's Public Procurement Code.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Mixed Contracts",
+    "question_text": "A public agency enters a contract for a specialized computer server (cost $40,000) and installation services (cost $2,000). Under the 'predominant purpose test' used by most courts, does UCC Article 2 govern this contract?",
+    "options": {
+      "a": "No, because any inclusion of services removes it from the UCC.",
+      "b": "Yes, because the predominant purpose of the transaction is the sale of goods.",
+      "c": "No, because computer servers are not considered goods.",
+      "d": "Only the $2,000 service portion is governed by the UCC."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "For mixed contracts (goods and services), courts often use the 'predominant purpose test.' Since the vast majority of the cost and purpose is the goods (server), UCC Article 2 applies to the whole transaction.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "What does a 'breach of contract' fundamentally entail?",
+    "options": {
+      "a": "The expiration of a contract term without renewal.",
+      "b": "A mutual agreement to terminate performance.",
+      "c": "The failure of a party to perform an obligation defined in the contract without legal excuse.",
+      "d": "The invocation of a force majeure clause due to an act of God."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A breach of contract is an unexcused failure to perform any promise that forms all or part of the contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Rejection of Goods",
+    "question_text": "Under the UCC, if a buyer wishes to reject a shipment of nonconforming goods, the buyer must:",
+    "options": {
+      "a": "Pay for the goods first, then request a refund.",
+      "b": "Reject the goods within a reasonable time and notify the seller.",
+      "c": "Wait for the seller's contract term to expire entirely before speaking up.",
+      "d": "Accept the goods and file a lawsuit for punitive damages."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Under the UCC, rejection of goods must be made within a reasonable time after delivery or tender, and it is ineffective unless the buyer reasonably notifies the seller.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Law of Agency",
+    "question_text": "The legal concept that holds a principal liable for the negligent or wrongful acts of an agent acting within the scope of their employment is known as:",
+    "options": {
+      "a": "Caveat Emptor",
+      "b": "Res Ipsa Loquitur",
+      "c": "Respondeat Superior",
+      "d": "Force Majeure"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "'Respondeat Superior' (let the master answer) is a legal doctrine holding an employer/principal legally responsible for the wrongful acts of an employee/agent if such acts occur within the scope of the employment or agency.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Types of Authority",
+    "question_text": "Which of the following documents is the most common way a principal formally grants actual express authority to an agent?",
+    "options": {
+      "a": "A formal contract signed by a vendor",
+      "b": "A purchase order",
+      "c": "A Delegation of Authority policy or Purchasing Ordinance",
+      "d": "A vendor registration form"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Delegation of Authority or a municipal purchasing ordinance officially and expressly outlines exactly what level of authority a buyer or purchasing agent has to bind the public entity.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "An agreement among competitors to divide a market by allocating customers or geographic territories among themselves is an illegal practice known as:",
+    "options": {
+      "a": "Market Division",
+      "b": "Bid Rotation",
+      "c": "Complementary Bidding",
+      "d": "Monopoly Generation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Market Division or Allocation schemes occur when competing firms agree to divide specific customers, products, or territories amongst themselves rather than competing for them.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "Three local paving contractors meet secretly and agree that Contractor A will be the low bidder on Project 1, Contractor B on Project 2, and Contractor C on Project 3. This specific scheme is called:",
+    "options": {
+      "a": "Price-fixing",
+      "b": "Complementary bidding",
+      "c": "Bid rotation",
+      "d": "Subcontractor allocation"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Bid rotation is a form of bid-rigging where competitors agree to take turns being the winning (lowest) bidder on a series of contracts.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "To ensure Contractor A wins a bid, Contractors B and C submit bids that are intentionally too high to be competitive or contain unacceptable terms. What type of bid-rigging are B and C participating in?",
+    "options": {
+      "a": "Bid suppression",
+      "b": "Market allocation",
+      "c": "Complementary bidding",
+      "d": "Phantom bidding"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Complementary bidding (also known as 'cover bidding' or 'courtesy bidding') occurs when competitors submit token bids that are intentionally designed to fail to give the appearance of genuine competition.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "A buyer is reviewing five submitted bids and notices that three different vendors have the exact same mathematical miscalculation in their pricing sheet, and all three submissions use identical font and formatting. This is a primary red flag for:",
+    "options": {
+      "a": "An Organizational Conflict of Interest",
+      "b": "Collusion / Bid-rigging",
+      "c": "Lack of responsive vendors",
+      "d": "Apparent authority"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Identical typos, formatting, or bizarre identical mathematical errors across bids from supposedly independent companies are strong red flags indicating that the vendors colluded in preparing their bids.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "The core federal statute in the United States that outlaws combinations, contracts, or conspiracies in restraint of trade (such as price-fixing and bid-rigging) is the:",
+    "options": {
+      "a": "Robinson-Patman Act",
+      "b": "Sherman Antitrust Act",
+      "c": "Lanham Act",
+      "d": "Federal Trade Commission Act"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Sherman Antitrust Act is the fundamental federal law prohibiting anti-competitive practices like price-fixing and bid-rigging that restrain interstate trade.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "Competitors agreeing to establish a standard minimum fee or a standard formula for determining prices is known as:",
+    "options": {
+      "a": "Price-fixing",
+      "b": "Complementary bidding",
+      "c": "Vertical integration",
+      "d": "Tying arrangement"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Price-fixing involves an agreement among competitors to raise, fix, or otherwise maintain the price at which their goods or services are sold.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "If a procurement official suspects that vendors are engaging in bid-rigging, what is the most appropriate first course of action?",
+    "options": {
+      "a": "Immediately cancel the solicitation and publicly accuse the vendors.",
+      "b": "Notify legal counsel and follow agency procedures for reporting anti-competitive behavior.",
+      "c": "Call the vendors individually and ask if they colluded.",
+      "d": "Award the contract to the lowest bidder and investigate post-award."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Procurement officials should never confront suspects directly as it may destroy evidence. The proper action is to notify the agency's legal counsel or appropriate investigatory authority (e.g., Inspector General) and follow internal reporting procedures.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "A procurement officer is evaluating proposals for IT software. One of the proposals is from a company where the officer's daughter is the Vice President of Sales. Which of the following best describes this situation?",
+    "options": {
+      "a": "An Organizational Conflict of Interest (OCI)",
+      "b": "A Personal Conflict of Interest",
+      "c": "Bid-rigging",
+      "d": "A breach of the Perfect Tender Rule"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A personal conflict of interest arises when a public employee's private interests (such as family connections or personal finances) could improperly influence their official public duties.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "Vendor X was hired by an agency to write the technical specifications for a new water treatment facility. Later, the agency issues an RFP to build the facility based on those specs, and Vendor X submits a proposal. This creates:",
+    "options": {
+      "a": "A Personal Conflict of Interest",
+      "b": "An Organizational Conflict of Interest",
+      "c": "A legally binding Option Contract",
+      "d": "An Implied Warranty of Fitness"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An Organizational Conflict of Interest (OCI) occurs when a contractor's performance on one government contract compromises its ability to be impartial on another, or gives them an unfair competitive advantage (e.g., writing the specs for a bid they plan to pursue).",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "How can a public agency mitigate an Organizational Conflict of Interest (OCI) when a vendor has overlapping contracts?",
+    "options": {
+      "a": "Require the vendor to offer a 10% discount on the new bid.",
+      "b": "Implement an information 'firewall' or require the vendor to formally recuse itself from bidding on related downstream work.",
+      "c": "Ask the vendor to sign a waiver ignoring the OCI.",
+      "d": "Hire the vendor's competitor as a subcontractor."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "OCI mitigation often involves implementing strict informational firewalls to prevent data sharing between different divisions of the vendor's company, or including a contract clause that precludes the vendor from bidding on subsequent related implementations.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "The ethical standard known as the 'Appearance of Impropriety' dictates that a public buyer should:",
+    "options": {
+      "a": "Avoid actions that are explicitly illegal.",
+      "b": "Avoid actions that, while not strictly illegal, would cause a reasonable observer to suspect bias or wrongdoing.",
+      "c": "Maintain professional attire in the workplace.",
+      "d": "Publish all personal bank records to the public."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The 'Appearance of Impropriety' standard means public officials must not only avoid actual wrongdoing, but also any circumstances that would cause a reasonable person to question the integrity, fairness, or impartiality of the public process.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "A purchasing agent owns $50,000 worth of stock in a large software company. The agency is about to evaluate proposals for a new ERP system, and the software company is bidding. The agent should:",
+    "options": {
+      "a": "Evaluate the proposals impartially and keep their stock ownership private.",
+      "b": "Disclose the financial interest and recuse themselves from the evaluation process.",
+      "c": "Sell the stock to a family member and continue evaluating.",
+      "d": "Only evaluate the proposals of the competitor companies."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Having a direct financial interest in a bidding vendor creates a massive personal conflict of interest. The buyer must disclose the conflict and recuse themselves from any part of the solicitation, evaluation, or award process.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "To prevent 'revolving door' conflicts of interest, many public agencies enforce policies regarding 'Former Employee Lobbying.' These policies typically:",
+    "options": {
+      "a": "Forbid former public employees from ever working in the private sector.",
+      "b": "Require former employees to surrender their government pensions.",
+      "c": "Implement a 'cooling-off period' (e.g., 1-2 years) during which former employees cannot lobby their former agency.",
+      "d": "Allow former employees to bid on contracts, but only if they offer a discount."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Revolving door policies generally impose a mandatory cooling-off period, restricting a former public employee from representing a vendor in front of their former agency for a certain time frame (often 1 or 2 years).",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Bribery and Gratuities",
+    "question_text": "Which of the following would universally be considered an illegal kickback?",
+    "options": {
+      "a": "A vendor mailing a calendar with their logo on it to a buyer.",
+      "b": "A vendor offering the agency an early-payment discount written into the contract.",
+      "c": "A vendor secretly paying the buyer 2% of the contract value in cash in exchange for securing the award.",
+      "d": "A vendor providing a standard volume-rebate check payable to the public agency."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A kickback is an illegal, secret payment made to a public official in return for a favorable contracting decision or for steering work to the vendor.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Bribery and Gratuities",
+    "question_text": "While many agencies have a 'zero-tolerance' gift policy, some jurisdictions allow buyers to accept 'nominal promotional items.' Which of the following represents a nominal promotional item?",
+    "options": {
+      "a": "A $50 gift card to a steakhouse.",
+      "b": "Tickets to a local professional baseball game.",
+      "c": "An inexpensive coffee mug branded with the vendor's logo.",
+      "d": "A weekend stay at the vendor's vacation property."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Nominal promotional items are inexpensive goods given widely for advertising purposes, such as cheap pens, mugs, or calendars bearing the company logo. Anything of notable monetary value (like tickets, vacations, or gift cards) is strictly forbidden.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Bribery and Gratuities",
+    "question_text": "During the holiday season, a long-time vendor unexpectedly sends a large, expensive gift basket containing high-end electronics to the procurement manager's home. What is the most appropriate ethical action for the manager to take?",
+    "options": {
+      "a": "Keep it, since it was sent to their home and not the office.",
+      "b": "Return the gift basket to the vendor with a polite letter explaining the agency's strict no-gift policy.",
+      "c": "Distribute the electronics to the staff so one person doesn't benefit alone.",
+      "d": "Donate the electronics to a local charity without notifying the vendor."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The most appropriate and defensible action is to return the prohibited gift directly to the sender alongside a formal note outlining the agency's ethics/gift policy. This makes the boundary clear to the vendor and creates a record of refusal.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Bribery and Gratuities",
+    "question_text": "What is the primary legal distinction between a 'gratuity/gift' and a 'bribe'?",
+    "options": {
+      "a": "A bribe requires 'quid pro quo' intent to influence an official act, whereas a gratuity might lack explicit mutual intent.",
+      "b": "A bribe is over $500 in value, while a gratuity is under $500.",
+      "c": "Bribes are offered by vendors; gratuities are offered by citizens.",
+      "d": "There is no legal distinction; the terms are synonymous in all criminal codes."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Bribery fundamentally requires corrupt intent—a 'quid pro quo' (this for that) to influence a specific official act. An illegal gratuity is a reward for a past or future official act but may not have the explicit 'I am paying you so you will do X' agreement of a bribe.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "The practice of 'nepotism' in public procurement most accurately refers to:",
+    "options": {
+      "a": "Favoring out-of-state vendors over local vendors.",
+      "b": "Showing favoritism in contract awards to relatives or close friends.",
+      "c": "Hiring a competitor's employees to gain proprietary secrets.",
+      "d": "A vendor offering gifts to multiple buyers at once."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Nepotism is the practice of those with power or influence favoring relatives or friends, especially by giving them jobs or awarding them public contracts.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "Four regional suppliers of chlorine gas meet at a trade association event and agree not to sell to agencies outside their traditional zip codes. This prevents them from competing against one another. This is an example of:",
+    "options": {
+      "a": "Bid suppression",
+      "b": "Market division by geographic allocation",
+      "c": "Legal strategic partnership",
+      "d": "Express actual authority"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "This is a geographic market allocation scheme, a severe antitrust violation where competitors agree to stay out of each other's territories, creating miniature monopolies in each area.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Anti-Competitive Practices",
+    "question_text": "Vendor A tells Vendor B: 'If you do not submit a bid for the downtown road project, I will hire your firm as a lucrative subcontractor once I win it.' Vendor B agrees and withdraws their bid. This is known as:",
+    "options": {
+      "a": "Bid suppression",
+      "b": "Joint venturing",
+      "c": "Cover bidding",
+      "d": "Novation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Bid suppression occurs when one or more competitors agree to refrain from bidding or agree to withdraw a previously submitted bid so that a designated competitor's bid will be accepted.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Bribery and Gratuities",
+    "question_text": "A procurement professional attends an out-of-state conference. A prospective vendor offers to pay for the buyer's fancy dinner and a round of golf. Based on NIGP ethical guidelines, the buyer should:",
+    "options": {
+      "a": "Accept, because out-of-state conferences are exempt from local ethics laws.",
+      "b": "Decline the offer, paying for their own meals and entertainment.",
+      "c": "Accept, but only if they promise not to give the vendor a contract.",
+      "d": "Accept, then report the cost to the IRS."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "NIGP Code of Ethics strictly advises against accepting any gifts, meals, or entertainment from vendors or prospective vendors to avoid any appearance of impropriety or undue influence. Buyers should pay their own way.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Law of Agency",
+    "question_text": "If a purchasing agent signs a contract knowing it exceeds their legal authority and limits, who could be held personally liable for the obligations in the contract if the public agency refuses to ratify it?",
+    "options": {
+      "a": "No one; the contract simply vanishes.",
+      "b": "The supplier",
+      "c": "The purchasing agent",
+      "d": "The Mayor or City Manager"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If an agent acts wholly outside their actual authority and the principal does not ratify the act, the third party (vendor) may sue the agent personally for breach of the implied warranty of authority.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Conflicts of Interest",
+    "question_text": "In a formal solicitation, providing a specific vendor with advanced drafts of the RFP to review and comment on before the RFP is released to the general public generally causes what type of issue?",
+    "options": {
+      "a": "A breach of the UCC right to cure",
+      "b": "An Organizational Conflict of Interest leading to an unfair competitive advantage",
+      "c": "A personal conflict of interest",
+      "d": "Bid rotation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Giving one potential bidder advanced access to the solicitation documents gives them an unfair competitive advantage (more time to prepare, ability to influence specs), creating a severe Organizational Conflict of Interest.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Contract Law Basics",
+    "question_text": "An agency mails a formal purchase order (an offer) to a supplier. The supplier begins manufacturing and shipping the goods as described in the PO without formally signing and returning the document. Under contract law, shipping the goods constitutes:",
+    "options": {
+      "a": "An unaccepted counteroffer",
+      "b": "Consideration without mutual assent",
+      "c": "Acceptance by performance",
+      "d": "A breach of the Perfect Tender Rule"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "An offer can often be accepted by promising to perform or by actual performance. By beginning to ship the requested goods, the supplier manifests acceptance of the agency's offer.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "UCC: Warranties",
+    "question_text": "A warranty of title under the UCC guarantees the buyer that:",
+    "options": {
+      "a": "The goods are of acceptable quality in the trade.",
+      "b": "The goods will last for at least one year.",
+      "c": "The seller owns the goods, has the right to transfer them, and they are free from any unknown liens or encumbrances.",
+      "d": "The title documentation has been notarized by an attorney."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The UCC Warranty of Title promises that the seller is the rightful owner of the goods, the transfer is rightful, and the goods are free from security interests or liens unknown to the buyer.",
+    "section_id": null
+  },
+  {
+    "question_number": 61,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Reporting Mechanisms",
+    "question_text": "A procurement specialist notices systemic bid-rigging occurring within their department and decides to report it to an external investigatory agency after internal leadership ignored the issue. Which type of law primarily protects this employee from termination or retaliation?",
+    "options": {
+      "a": "Freedom of Information Act (FOIA)",
+      "b": "Whistleblower Protection Laws",
+      "c": "The Uniform Commercial Code (UCC)",
+      "d": "The Hatch Act"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Whistleblower protection laws are specifically designed to protect public employees from retaliation, such as termination or demotion, when they report illegal activities, fraud, or abuse of power to appropriate authorities.",
+    "section_id": null
+  },
+  {
+    "question_number": 62,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Reporting Mechanisms",
+    "question_text": "When a public agency receives an anonymous tip alleging that a current contractor is substituting inferior materials, what is the most appropriate first step in the chain of command for the procurement officer?",
+    "options": {
+      "a": "Immediately terminate the contract for default.",
+      "b": "Document the tip, gather preliminary evidence silently, and report the findings to the agency's legal or investigatory office (e.g., Inspector General).",
+      "c": "Forward the anonymous tip directly to the contractor and ask for an explanation.",
+      "d": "Ignore the tip, as anonymous allegations are legally inadmissible."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Anonymous tips should be taken seriously but verified. The procurement officer should document the allegation and elevate it to the proper investigative body or legal counsel rather than confronting the vendor, which could destroy evidence.",
+    "section_id": null
+  },
+  {
+    "question_number": 63,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Sanctions and Debarment",
+    "question_text": "What is the primary legal distinction between the 'suspension' and 'debarment' of a vendor in public procurement?",
+    "options": {
+      "a": "Suspension is an indefinite ban, while debarment lasts exactly one year.",
+      "b": "Suspension is a temporary measure often used pending the outcome of an investigation or legal proceeding, while debarment is a final, formal exclusion for a specified period.",
+      "c": "Debarment only applies to federal contracts, whereas suspension applies to local contracts.",
+      "d": "Suspension involves financial fines, while debarment involves criminal charges."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Suspension is a temporary action (often immediate) to protect the government while an investigation or legal proceeding is active. Debarment is a final decision excluding the vendor from government contracting for a specific term (e.g., 3 years).",
+    "section_id": null
+  },
+  {
+    "question_number": 64,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Sanctions and Debarment",
+    "question_text": "Before an agency can officially debar a vendor from future contracting opportunities, the agency is generally required to provide the vendor with notice and an opportunity to be heard. This legal requirement is rooted in:",
+    "options": {
+      "a": "The Sherman Antitrust Act",
+      "b": "The Uniform Commercial Code",
+      "c": "The Due Process Clause",
+      "d": "The Freedom of Information Act"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Because debarment significantly impacts a company's livelihood and liberty interests, Constitutional Due Process requires that the government provide formal notice and a fair opportunity for the vendor to contest the action.",
+    "section_id": null
+  },
+  {
+    "question_number": 65,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Sanctions and Debarment",
+    "question_text": "Which of the following is typically considered a legally justifiable ground for the debarment of a government contractor?",
+    "options": {
+      "a": "Submitting a bid that is 1% higher than the lowest bidder.",
+      "b": "Failing to attend an optional pre-bid conference.",
+      "c": "Conviction for embezzlement, theft, forgery, or bribery related to a public contract.",
+      "d": "Requesting a legally allowable contract extension."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Criminal convictions related to business integrity (e.g., fraud, bribery, embezzlement, or antitrust violations) demonstrate a lack of present responsibility and are standard legal grounds for debarment.",
+    "section_id": null
+  },
+  {
+    "question_number": 66,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "The primary objective of state 'Sunshine Laws' and the federal Freedom of Information Act (FOIA) is to:",
+    "options": {
+      "a": "Ensure public funds are invested in renewable energy.",
+      "b": "Maximize the speed of public procurement transactions.",
+      "c": "Guarantee that the public has access to the records and proceedings of their government to promote transparency.",
+      "d": "Protect vendors from having their contracts scrutinized by competitors."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Sunshine Laws and FOIA mandates transparency by ensuring that the public has a fundamental right to access government records and observe meetings, functioning as a check on government operations.",
+    "section_id": null
+  },
+  {
+    "question_number": 67,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "Under typical public records laws, if a government agency wishes to withhold a requested procurement document from a citizen, who bears the legal burden of proof to justify the withholding?",
+    "options": {
+      "a": "The citizen requesting the document.",
+      "b": "The government agency holding the document.",
+      "c": "The vendor whose name is on the document.",
+      "d": "The state's attorney general automatically."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Under FOIA and state equivalents, there is a presumption of disclosure. The government agency bears the burden of proof to demonstrate that a specific legal exemption applies to justify withholding the record.",
+    "section_id": null
+  },
+  {
+    "question_number": 68,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "A competitor files a public records request for a winning vendor's proposal one day after the bid opening, but before the evaluation committee has made an award recommendation. Most jurisdictions will handle this request by:",
+    "options": {
+      "a": "Releasing the proposals immediately, as all public records must be released within 24 hours.",
+      "b": "Delaying the release under an exemption that protects active solicitations until a notice of intent to award is issued.",
+      "c": "Denying the request permanently, as vendor proposals are always classified.",
+      "d": "Charging the competitor a mandatory $1,000 fee to release the documents."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Most state public records laws include an exemption for active solicitations. Proposals are typically shielded from public release during the evaluation phase to maintain a fair competitive environment, becoming public only after an award decision (or notice of intent) is made.",
+    "section_id": null
+  },
+  {
+    "question_number": 69,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "If a FOIA request demands thousands of pages of procurement data that will require a week of staff time to compile and copy, how does the law typically direct the agency to handle the costs?",
+    "options": {
+      "a": "The agency must fulfill the request entirely for free, regardless of staff time.",
+      "b": "The agency can deny the request entirely as an unreasonable burden.",
+      "c": "The agency may charge a reasonable, legally defined fee for the labor and materials required to fulfill the request.",
+      "d": "The agency should tell the requester to physically come and sort through the agency's filing cabinets."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Most public records laws allow agencies to charge reasonable fees (as defined by statute) to cover the actual costs of extensive search, review, and duplication, particularly when fulfilling the request requires significant staff labor.",
+    "section_id": null
+  },
+  {
+    "question_number": 70,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "Are personal notes taken by an evaluation committee member during a vendor presentation considered public records subject to disclosure?",
+    "options": {
+      "a": "No, because they were handwritten.",
+      "b": "Yes, if they were created in the course of conducting public business and used to make an agency decision.",
+      "c": "No, personal notes are explicitly exempt under the federal FOIA.",
+      "d": "Yes, but only if the vendor explicitly requests them."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "In many jurisdictions, personal notes taken by public employees during the course of official duties—especially those used to score or evaluate a public contract—are considered public records subject to disclosure.",
+    "section_id": null
+  },
+  {
+    "question_number": 71,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Protection of Trade Secrets",
+    "question_text": "For a vendor's information to be legally protected from public disclosure as a 'Trade Secret,' the information must generally possess independent economic value from not being known AND:",
+    "options": {
+      "a": "Be copyrighted with the US Copyright Office.",
+      "b": "Be the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+      "c": "Be printed on yellow paper.",
+      "d": "Relate solely to computer software code."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Under the Uniform Trade Secrets Act (UTSA), a trade secret must derive independent economic value from its secrecy and the owner must make reasonable efforts to maintain that secrecy.",
+    "section_id": null
+  },
+  {
+    "question_number": 72,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Protection of Trade Secrets",
+    "question_text": "A vendor submits a proposal and stamps every single page, including the cover page and table of contents, as 'CONFIDENTIAL - TRADE SECRET.' How should a public procurement officer legally view this?",
+    "options": {
+      "a": "The entire document must be shielded from the public permanently.",
+      "b": "Blanket confidentiality claims are generally invalid; only specific data meeting the legal definition of a trade secret is exempt from disclosure.",
+      "c": "The proposal must be rejected immediately as non-responsive.",
+      "d": "The buyer must sue the vendor for making a false claim."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Vendors often over-designate their materials as confidential. Blanket designations are rarely legally binding. The burden remains on identifying specific information (like formulas or client lists) that truly meets the statutory definition of a trade secret.",
+    "section_id": null
+  },
+  {
+    "question_number": 73,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Protection of Trade Secrets",
+    "question_text": "Which of the following elements of a vendor's successful bid is almost NEVER legally protected as a trade secret or confidential information?",
+    "options": {
+      "a": "A proprietary software algorithm.",
+      "b": "The total bottom-line price or contract amount offered to the public agency.",
+      "c": "Detailed blueprints of a highly secure banking vault.",
+      "d": "An unpatented manufacturing formula."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "How public money is spent is the cornerstone of public records law. Therefore, the final pricing, bottom-line contract cost, and public funds exchanged are almost universally forbidden from being claimed as confidential trade secrets.",
+    "section_id": null
+  },
+  {
+    "question_number": 74,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "The Evaluation Blackout Period",
+    "question_text": "The period during an active procurement in which all communications between potential bidders and agency staff/evaluators are strictly restricted is commonly known as:",
+    "options": {
+      "a": "The Cone of Silence",
+      "b": "The FOIA Window",
+      "c": "The Due Diligence Phase",
+      "d": "The Estoppel Period"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The 'Cone of Silence' or blackout period is a rule designed to prevent undue influence. It restricts communications between vendors and government officials during the solicitation and evaluation phase.",
+    "section_id": null
+  },
+  {
+    "question_number": 75,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "The Evaluation Blackout Period",
+    "question_text": "During a blackout period (Cone of Silence), how are vendors typically required to communicate their technical questions about the solicitation to the agency?",
+    "options": {
+      "a": "By calling the mayor or city council directly.",
+      "b": "By directly emailing the subject matter experts on the evaluation committee.",
+      "c": "By submitting questions in writing solely to the designated procurement officer.",
+      "d": "Vendors are not allowed to ask any questions once a solicitation is published."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "To ensure fairness and consistency of information, all inquiries during the blackout period must be funneled in writing through a single point of contact, usually the designated procurement officer, who then issues an addendum to all.",
+    "section_id": null
+  },
+  {
+    "question_number": 76,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "The Evaluation Blackout Period",
+    "question_text": "When does the 'Cone of Silence' typically end in a public procurement cycle?",
+    "options": {
+      "a": "Immediately after the bids are opened.",
+      "b": "When the highest-ranked vendor gives their oral presentation.",
+      "c": "Upon the formal award of the contract or the issuance of a Notice of Intent to Award.",
+      "d": "It never ends; vendor communication remains restricted indefinitely."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The blackout period ends when the decision-making process is complete, which is usually signaled by a formal Notice of Intent to Award or the final approval of the contract by the governing body.",
+    "section_id": null
+  },
+  {
+    "question_number": 77,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "The Evaluation Blackout Period",
+    "question_text": "An evaluator accidentally runs into a representative of a bidding vendor at a local grocery store during the active blackout period. The vendor begins discussing their pending proposal. What is the evaluator's legal and ethical obligation?",
+    "options": {
+      "a": "Listen politely but offer no response.",
+      "b": "Immediately stop the conversation, explain the blackout period, and report the encounter to the procurement officer.",
+      "c": "Allow the vendor to talk, but write down everything they say for the other evaluators.",
+      "d": "Tell the vendor that their proposal is currently in last place."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "To maintain integrity, the evaluator must immediately halt the improper communication, remind the vendor of the blackout rules, and notify procurement so the incident is documented and addressed.",
+    "section_id": null
+  },
+  {
+    "question_number": 78,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Proper Redaction",
+    "question_text": "When fulfilling a public records request, an agency discovers that a vendor's proposal contains legitimate trade secrets, specifically a proprietary chemical formula. The agency must:",
+    "options": {
+      "a": "Deny the public records request in its entirety.",
+      "b": "Release the document but request the citizen not to share the formula.",
+      "c": "Redact only the specific formula from the document and release the remainder of the proposal.",
+      "d": "Contact the vendor and allow them to sue the requester."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If a record contains both exempt and non-exempt material, the agency has a duty to redact (obscure) only the specific exempt information (the formula) and disclose the rest of the public record.",
+    "section_id": null
+  },
+  {
+    "question_number": 79,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Proper Redaction",
+    "question_text": "In the digital age, which of the following represents an improper and legally risky method of redacting electronic PDF documents?",
+    "options": {
+      "a": "Using dedicated redaction software that permanently scrubs the underlying metadata.",
+      "b": "Drawing a black box over the text using standard markup tools without flattening or removing the hidden text layer.",
+      "c": "Printing the document, using a black marker, scanning it back to PDF, and destroying the original.",
+      "d": "Replacing the text with an explicit label marking it '[REDACTED]'"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Simply drawing a black shape over text in a standard PDF does not remove the underlying text layer. Requesters can easily copy and paste the hidden text, resulting in a data breach. Proper redaction requires permanently scrubbing the data.",
+    "section_id": null
+  },
+  {
+    "question_number": 80,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Proper Redaction",
+    "question_text": "Many public solicitations explicitly require bidders to submit both a complete proposal and a separate 'Redacted Copy' for public release. If the vendor fails to submit the redacted copy, what is the usual legal consequence stated in the solicitation?",
+    "options": {
+      "a": "The agency will redact the document for them for a fee.",
+      "b": "The vendor assumes all risk, and the agency may release the full, unredacted proposal in response to a public records request.",
+      "c": "The proposal becomes voidable by the state attorney general.",
+      "d": "The vendor's competitors can claim the proprietary data as their own."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Solicitations typically place the burden of claiming confidentiality on the vendor. If a vendor fails to supply a properly redacted copy as instructed, they waive their right to confidentiality, and the agency is legally authorized to release the full document.",
+    "section_id": null
+  },
+  {
+    "question_number": 81,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Proper Redaction",
+    "question_text": "Before releasing a redacted procurement document to a competitor, the procurement officer notices that the vendor redacted their financial audited statements, which are protected under state law. The procurement officer should:",
+    "options": {
+      "a": "Proceed with releasing the redacted copy, as the financial data is legally exempt.",
+      "b": "Unredact the financials to promote absolute transparency.",
+      "c": "Send the document to the FBI for review.",
+      "d": "Reject the vendor's bid for being too secretive."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Audited financial statements submitted to prove vendor capability are frequently shielded by state public records exemptions to protect private financial security. Retaining the vendor's redactions here is appropriate.",
+    "section_id": null
+  },
+  {
+    "question_number": 82,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "Which of the following documents is most likely to be completely EXEMPT from disclosure under freedom of information or public records laws?",
+    "options": {
+      "a": "A fully executed contract with a janitorial service.",
+      "b": "The scoring matrix utilized by an evaluation team.",
+      "c": "Draft internal security plans detailing vulnerabilities in the agency's cybersecurity infrastructure.",
+      "d": "An email from the procurement director setting up a meeting time."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Documents that reveal critical security vulnerabilities, infrastructure weaknesses, or active security protocols are broadly exempt from public records laws to protect public safety and prevent cyber/physical attacks.",
+    "section_id": null
+  },
+  {
+    "question_number": 83,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "The Evaluation Blackout Period",
+    "question_text": "During an RFP blackout period, Vendor A wishes to clarify a confusing technical specification. What is the standard procedural mechanism the agency uses to ensure Vendor A receives the answer without violating the blackout rules?",
+    "options": {
+      "a": "The buyer calls Vendor A privately.",
+      "b": "The buyer requires Vendor A to guess.",
+      "c": "The buyer collects Vendor A's written question, then publishes the question and answer in a formal Addendum available to all potential bidders.",
+      "d": "The buyer tells Vendor A to submit a separate bid covering both interpretations."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The proper mechanism is issuing an addendum. This addresses the vendor's question in writing and ensures all competing vendors have access to the exact same information simultaneously, preserving fairness.",
+    "section_id": null
+  },
+  {
+    "question_number": 84,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "A citizen submits a FOIA request asking the procurement officer to 'explain why Vendor X was chosen.' The officer does not have any existing document that explicitly writes out this explanation, though the score sheets show Vendor X scored highest. Is the officer required to type out a new explanatory document to fulfill the FOIA request?",
+    "options": {
+      "a": "Yes, FOIA requires government employees to explain their actions in writing upon request.",
+      "b": "No, FOIA laws generally require the production of existing records, not the creation of new records or explanations.",
+      "c": "Yes, but only if the citizen pays a consulting fee.",
+      "d": "No, because evaluating vendors is considered a state secret."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Freedom of Information laws require agencies to provide access to existing records. They do not obligate government officials to create new documents, answer written interrogatories, or write explanations that do not currently exist.",
+    "section_id": null
+  },
+  {
+    "question_number": 85,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Intergovernmental Treaties and Trade Agreements",
+    "question_text": "In the United States, how do international trade agreements, such as the WTO Government Procurement Agreement (GPA), primarily affect sub-central (state and local) government procurements?",
+    "options": {
+      "a": "They strictly dictate all local purchasing rules regardless of dollar value.",
+      "b": "They prohibit local agencies from buying from foreign vendors.",
+      "c": "State and local governments are only bound if their state has voluntarily committed to the agreement and the procurement exceeds a specific dollar threshold.",
+      "d": "They require local entities to use federal funds for all international purchases."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "International treaties like the WTO GPA apply to US states only if the specific state explicitly opted-in (committed) to the agreement. Furthermore, the rules only trigger when a specific procurement surpasses high international dollar thresholds.",
+    "section_id": null
+  },
+  {
+    "question_number": 86,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Intergovernmental Treaties and Trade Agreements",
+    "question_text": "A fundamental principle of international trade agreements (like USMCA or WTO GPA) regarding public procurement is 'National Treatment'. What does this require?",
+    "options": {
+      "a": "Agencies must treat domestic suppliers better than foreign suppliers.",
+      "b": "Agencies must treat suppliers from signatory countries no less favorably than they treat their own domestic suppliers.",
+      "c": "Procurements must be advertised in the national newspaper of all participating countries.",
+      "d": "Only national governments, not local ones, can enter into contracts."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "'National Treatment' is the principle that a government must treat goods, services, and suppliers of other party nations the same as (no less favorably than) its own domestic goods, services, and suppliers.",
+    "section_id": null
+  },
+  {
+    "question_number": 87,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Intergovernmental Treaties and Trade Agreements",
+    "question_text": "If a procurement is subject to the USMCA (United States-Mexico-Canada Agreement) trade rules, an agency is generally PROHIBITED from:",
+    "options": {
+      "a": "Using clear, technical specifications.",
+      "b": "Applying mandatory local geographical preference margins that heavily favor a hometown business over a Canadian bidder.",
+      "c": "Evaluating proposals based on best value.",
+      "d": "Requiring the vendor to be financially stable."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Trade agreements enforce non-discrimination. When they apply, they typically ban offsets and mandatory local preference laws that automatically disadvantage foreign bidders from signatory nations in favor of domestic/local bidders.",
+    "section_id": null
+  },
+  {
+    "question_number": 88,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "In international logistics, what is the primary purpose of INCOTERMS (International Commercial Terms)?",
+    "options": {
+      "a": "To define the engineering standards for manufacturing products.",
+      "b": "To establish the precise rules regarding currency exchange rates.",
+      "c": "To define the responsibilities of buyers and sellers for the delivery of goods, including transfer of risk and allocation of transport costs.",
+      "d": "To list the customs tariffs for every country."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Incoterms (e.g., EXW, FOB, DDP) are standard trade definitions used in international contracts to allocate the risks, costs, and responsibilities of transporting and clearing goods between the buyer and seller.",
+    "section_id": null
+  },
+  {
+    "question_number": 89,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "Under the Incoterm 'DDP' (Delivered Duty Paid), who is responsible for paying the import customs and tariffs when goods enter the buyer's country?",
+    "options": {
+      "a": "The Buyer",
+      "b": "The Seller",
+      "c": "The Freight Forwarder",
+      "d": "The Government Agency"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "DDP (Delivered Duty Paid) places the maximum obligation on the seller. The seller is responsible for all costs and risks involved in delivering the goods to the destination, including paying any import duties and clearing customs.",
+    "section_id": null
+  },
+  {
+    "question_number": 90,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "Under the Incoterm 'EXW' (Ex Works), at what point does the buyer assume all risk and transportation costs?",
+    "options": {
+      "a": "Once the goods are loaded onto a ship at the seller's port.",
+      "b": "Once the goods cross the border into the buyer's country.",
+      "c": "Immediately when the seller makes the goods available at their own premises (factory or warehouse).",
+      "d": "Upon final delivery to the buyer's municipal warehouse."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "EXW (Ex Works) places the minimum responsibility on the seller. The buyer assumes all risk and costs for loading, transporting, and clearing the goods the moment they are made available at the seller's facility.",
+    "section_id": null
+  },
+  {
+    "question_number": 91,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "A public agency in the US buys specialized transit vehicles from Europe. The contract is priced in Euros. If the value of the US Dollar drops significantly against the Euro before the payment is due, who assumes the currency exchange risk?",
+    "options": {
+      "a": "The Seller",
+      "b": "The Buyer",
+      "c": "The European Central Bank",
+      "d": "The Federal Reserve"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If a contract requires a US agency to pay in a foreign currency (Euros), the buyer assumes the currency fluctuation risk. It will cost the buyer more US dollars to purchase the necessary Euros if the dollar weakens.",
+    "section_id": null
+  },
+  {
+    "question_number": 92,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "To classify traded products and correctly determine the applicable customs tariffs and duties worldwide, customs authorities rely on an internationally standardized system of names and numbers. This is called:",
+    "options": {
+      "a": "The Harmonized System (HS) Codes",
+      "b": "The Universal Product Code (UPC)",
+      "c": "The North American Industry Classification System (NAICS)",
+      "d": "The ISO 9001 Standard"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The Harmonized Commodity Description and Coding System (HS) is an internationally standardized system of names and numbers to classify traded products, determining the duties and taxes assessed by customs.",
+    "section_id": null
+  },
+  {
+    "question_number": 93,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "When a local US government uses federal grant money to fund a procurement, they must comply with a sweeping set of federal administrative requirements, cost principles, and audit rules. What is the common citation for this uniform guidance?",
+    "options": {
+      "a": "The Federal Acquisition Regulation (FAR)",
+      "b": "UCC Article 2",
+      "c": "2 CFR 200 (Uniform Guidance)",
+      "d": "Title IX"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "2 CFR 200 (Uniform Administrative Requirements, Cost Principles, and Audit Requirements for Federal Awards) is the definitive set of rules—commonly known as the Uniform Guidance—that non-federal entities must follow when spending federal grant funds.",
+    "section_id": null
+  },
+  {
+    "question_number": 94,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "Under 2 CFR 200, public agencies using federal funds are explicitly required to take 'all necessary affirmative steps' to ensure that they use which types of businesses when possible?",
+    "options": {
+      "a": "Fortune 500 corporations",
+      "b": "International conglomerates",
+      "c": "Minority businesses, women's business enterprises, and labor surplus area firms",
+      "d": "Local vendors located strictly within city limits"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "2 CFR 200.321 strictly mandates that non-federal entities must take six affirmative steps to assure that minority businesses, women's business enterprises, and labor surplus area firms are used when possible.",
+    "section_id": null
+  },
+  {
+    "question_number": 95,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "A local agency is applying geographical preferences (giving bonus points to hometown vendors) on an RFP. Suddenly, the project receives a massive federal grant making it fully federally funded. According to 2 CFR 200, what must the agency do regarding geographical preference?",
+    "options": {
+      "a": "Increase the preference points to support local federal taxpayers.",
+      "b": "Remove the geographic preference, as 2 CFR 200 explicitly prohibits the use of statutorily or administratively imposed state or local geographical preferences in the evaluation of bids or proposals.",
+      "c": "Request a waiver from the local Mayor to keep the preference.",
+      "d": "Change the geographic preference to encompass the entire state rather than just the city."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "2 CFR 200.319(c) explicitly states that the non-Federal entity must conduct procurements in a manner that prohibits the use of statutory or administratively imposed state, local, or tribal geographical preferences in the evaluation of bids or proposals, except where applicable Federal statutes expressly mandate or encourage geographic preference.",
+    "section_id": null
+  },
+  {
+    "question_number": 96,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Regional Compliance",
+    "question_text": "In the United States, if a state passes a public procurement law that creates a massive burden on businesses in neighboring states, effectively suffocating interstate trade, the law could be struck down as a violation of which Constitutional provision?",
+    "options": {
+      "a": "The Second Amendment",
+      "b": "The Dormant Commerce Clause",
+      "c": "The Due Process Clause",
+      "d": "The Equal Protection Clause"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The 'Dormant Commerce Clause' is a legal doctrine derived from the US Constitution's Commerce Clause. It prohibits states from passing legislation that improperly discriminates against or heavily burdens interstate commerce.",
+    "section_id": null
+  },
+  {
+    "question_number": 97,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "Under the Build America, Buy America Act (BABA) guidelines linked to federal infrastructure funding, a public agency constructing a water treatment plant must ensure that all of the iron, steel, manufactured products, and construction materials used in the project are:",
+    "options": {
+      "a": "Produced in the United States",
+      "b": "Produced within the state where the project occurs",
+      "c": "Procured using low-bid methodologies only",
+      "d": "Exempt from the Uniform Commercial Code"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The Build America, Buy America Act (BABA) implements strong domestic content procurement preferences, requiring that all iron, steel, manufactured products, and construction materials used in federally funded infrastructure projects be produced in the USA.",
+    "section_id": null
+  },
+  {
+    "question_number": 98,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Regional Compliance",
+    "question_text": "In Canada, a foundational domestic trade agreement designed to reduce and eliminate barriers to the free movement of persons, goods, services, and investments across provincial and territorial borders is the:",
+    "options": {
+      "a": "United States-Mexico-Canada Agreement (USMCA)",
+      "b": "Canadian Free Trade Agreement (CFTA)",
+      "c": "North American Free Trade Agreement (NAFTA)",
+      "d": "Uniform Commercial Code (UCC)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Canadian Free Trade Agreement (CFTA) establishes the rules for domestic, inter-provincial trade in Canada, ensuring non-discriminatory procurement practices between provinces.",
+    "section_id": null
+  },
+  {
+    "question_number": 99,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Sanctions and Debarment",
+    "question_text": "Before awarding a contract utilizing federal grant funds, the public buyer must check which federal system to ensure the prospective vendor is not currently suspended or debarred by the federal government?",
+    "options": {
+      "a": "The IRS Vendor Portal",
+      "b": "The System for Award Management (SAM.gov)",
+      "c": "The Federal Trade Commission Database",
+      "d": "The Better Business Bureau"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "SAM.gov is the official U.S. government system that consolidates federal procurement data. A primary step in federal grant compliance is checking SAM.gov to ensure a vendor is not actively excluded, suspended, or debarred.",
+    "section_id": null
+  },
+  {
+    "question_number": 100,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Proper Redaction",
+    "question_text": "A procurement office is releasing vendor employee resumes via a public records request. The resumes contain personal home addresses, personal cell phone numbers, and Social Security Numbers. This information is collectively known as:",
+    "options": {
+      "a": "Trade Secrets",
+      "b": "Protected Critical Infrastructure Information (PCII)",
+      "c": "Personally Identifiable Information (PII), which must be redacted to protect privacy.",
+      "d": "Public Knowledge"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "PII (Personally Identifiable Information) includes SSNs, personal phone numbers, and home addresses. Most public records laws mandate the redaction of sensitive PII to protect individuals from identity theft and privacy invasions.",
+    "section_id": null
+  },
+  {
+    "question_number": 101,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "An agency is purchasing complex scientific equipment from Japan. To mitigate the risk of the seller taking payment and not shipping the goods, the agency utilizes a document issued by a bank guaranteeing that the buyer's payment to the seller will be received on time and for the correct amount, provided specific shipping documents are presented. This instrument is called a:",
+    "options": {
+      "a": "Bill of Lading",
+      "b": "Letter of Credit",
+      "c": "Customs Declaration",
+      "d": "Surety Bond"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Letter of Credit (LC) is a bank-issued guarantee utilized heavily in international trade. It ensures the seller receives payment as long as they provide the bank with compliant documentation proving the goods were shipped.",
+    "section_id": null
+  },
+  {
+    "question_number": 102,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "A government buyer discovers that the imported electronics they intend to purchase will be subject to a 10% 'tariff'. What does this mean?",
+    "options": {
+      "a": "It is a discount applied for international diplomacy.",
+      "b": "It is a tax imposed by the importing government on goods brought into the country, increasing the final landed cost.",
+      "c": "It is a fee charged by the ocean freight carrier for late pickup.",
+      "d": "It is an insurance premium mandated by maritime law."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A tariff is a tax or duty assessed by a government on imported goods. Tariffs increase the total cost of acquisition (the 'landed cost') and must be factored into evaluations of foreign goods.",
+    "section_id": null
+  },
+  {
+    "question_number": 103,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "Under the federal Uniform Guidance (2 CFR 200), if a local government executes a purchase below the 'Micro-purchase Threshold' using federal funds, they may:",
+    "options": {
+      "a": "Award the contract without soliciting competitive quotations, provided they consider the price to be reasonable.",
+      "b": "Publish a formal RFP for 30 days.",
+      "c": "Bypass checking SAM.gov for vendor debarment entirely for all future purchases.",
+      "d": "Only buy from minority-owned businesses."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Micro-purchases under 2 CFR 200 allow an agency to acquire supplies or services without soliciting competitive price or rate quotations if the non-Federal entity considers the price to be reasonable based on research, experience, or recent purchases.",
+    "section_id": null
+  },
+  {
+    "question_number": 104,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Regional Compliance",
+    "question_text": "Two adjacent counties in the same state wish to combine their purchasing volume to buy fleet vehicles at a cheaper price. To do this legally, they would most likely execute a:",
+    "options": {
+      "a": "Bilateral Trade Treaty",
+      "b": "Joint Powers Agreement / Interlocal Agreement",
+      "c": "Non-Disclosure Agreement (NDA)",
+      "d": "Letter of Credit"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A Joint Powers Agreement or Interlocal Agreement is a legal instrument that allows two or more public agencies to exercise their powers jointly, typically to leverage cooperative purchasing.",
+    "section_id": null
+  },
+  {
+    "question_number": 105,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Regional Compliance",
+    "question_text": "When a direct conflict occurs between a State Procurement Statute and a Federal Grant Regulation (like 2 CFR 200) regarding how a federally-funded contract must be procured, what is the guiding principle for the local agency?",
+    "options": {
+      "a": "The agency must follow the State law exclusively.",
+      "b": "The agency must use an arithmetic average of the two thresholds.",
+      "c": "The agency must follow whichever regulation is more restrictive.",
+      "d": "The agency can choose the regulation that yields the lowest cost."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "In public procurement, when dealing with multiple layers of funding and regulation (local, state, federal), the universal rule of thumb is to comply with whichever regulation is the most restrictive to ensure compliance with all governing bodies.",
+    "section_id": null
+  },
+  {
+    "question_number": 106,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Reporting Mechanisms",
+    "question_text": "The primary intent of the False Claims Act in the context of government contracting is to:",
+    "options": {
+      "a": "Provide criminal penalties for agencies that fail to award to the lowest bidder.",
+      "b": "Allow citizens and employees to sue contractors on behalf of the government if the contractor is defrauding the government.",
+      "c": "Protect vendors from being accused of mathematical errors.",
+      "d": "Prevent local governments from buying foreign goods."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The False Claims Act allows private individuals (whistleblowers) to file 'qui tam' lawsuits against contractors or individuals who have defrauded the government, imposing severe liability for presenting false claims for payment.",
+    "section_id": null
+  },
+  {
+    "question_number": 107,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Protection of Trade Secrets",
+    "question_text": "If a government employee knowingly and willfully releases a vendor's highly guarded, clearly marked, and legally validated trade secret to a competitor to sabotage the vendor, this employee has most likely committed:",
+    "options": {
+      "a": "Misappropriation of Trade Secrets",
+      "b": "Novation",
+      "c": "A breach of the Perfect Tender Rule",
+      "d": "Force Majeure"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Misappropriation occurs when a trade secret is acquired, disclosed, or used by someone who knows or has reason to know that the secret was acquired by improper means.",
+    "section_id": null
+  },
+  {
+    "question_number": 108,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "An agency receives a public records request for emails between the City Manager and the agency's Legal Counsel discussing the legal strategy for an upcoming breach of contract lawsuit against a vendor. These documents are generally:",
+    "options": {
+      "a": "Released immediately because all emails are public records.",
+      "b": "Exempt from disclosure under the Attorney-Client Privilege or work-product doctrine.",
+      "c": "Released, but only to the vendor being sued.",
+      "d": "Destroyed immediately."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Communications between a government entity and its legal counsel made for the purpose of obtaining or providing legal advice—especially regarding active litigation—are protected by attorney-client privilege and exempt from public disclosure.",
+    "section_id": null
+  },
+  {
+    "question_number": 109,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Sanctions and Debarment",
+    "question_text": "In a formal debarment hearing, the primary focus is to determine the vendor's:",
+    "options": {
+      "a": "Past performance metrics on delivery times.",
+      "b": "Present responsibility and integrity to perform government contracts.",
+      "c": "Financial credit score.",
+      "d": "Minority or women-owned business certification status."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The purpose of debarment is not punitive (though it feels like a punishment). Legally, its purpose is to protect the public interest by ensuring the government only does business with contractors demonstrating 'present responsibility' and integrity.",
+    "section_id": null
+  },
+  {
+    "question_number": 110,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Proper Redaction",
+    "question_text": "After evaluating proposals, an agency issues a Notice of Intent to Award. A competitor requests the winning proposal. The winning vendor insists the entire proposal is confidential and threatens to sue the agency if anything is released. To legally navigate this, the agency should:",
+    "options": {
+      "a": "Submit to the vendor's threat and deny the public records request.",
+      "b": "Inform the vendor of the impending release and provide a short window (e.g., 10 days) for the vendor to seek a protective order or injunction from a judge.",
+      "c": "Arrest the vendor for interfering with public operations.",
+      "d": "Cancel the entire procurement and start over."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "When a vendor asserts aggressive confidentiality claims that conflict with public records laws, standard legal practice is to inform the vendor of the agency's intent to release the documents unless the vendor secures a court-issued protective order within a specified timeframe.",
+    "section_id": null
+  },
+  {
+    "question_number": 111,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "When preparing a solicitation that will be funded by federal grants, what type of contract is expressly disfavored or heavily restricted under 2 CFR 200?",
+    "options": {
+      "a": "Firm Fixed-Price Contracts",
+      "b": "Time and Materials (T&M) Contracts",
+      "c": "Indefinite Delivery Indefinite Quantity (IDIQ) Contracts",
+      "d": "Requirements Contracts"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Under 2 CFR 200, a Time and Materials (T&M) contract is heavily restricted and may only be used after a determination that no other contract is suitable, and if the contract includes a ceiling price that the contractor exceeds at its own risk.",
+    "section_id": null
+  },
+  {
+    "question_number": 112,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "Which organization primarily publishes and updates the INCOTERMS used in international procurement logistics?",
+    "options": {
+      "a": "The United Nations (UN)",
+      "b": "The World Trade Organization (WTO)",
+      "c": "The International Chamber of Commerce (ICC)",
+      "d": "The Universal Postal Union (UPU)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Incoterms (International Commercial Terms) are developed, published, and regularly updated by the International Chamber of Commerce (ICC).",
+    "section_id": null
+  },
+  {
+    "question_number": 113,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Intergovernmental Treaties and Trade Agreements",
+    "question_text": "If a procurement falls under the purview of a major international trade agreement (like the WTO GPA), which evaluation practice is commonly restricted?",
+    "options": {
+      "a": "Considering the life-cycle costs of an asset.",
+      "b": "Demanding offsets (e.g., requiring the foreign vendor to invest back into the local economy).",
+      "c": "Evaluating the technical expertise of the foreign firm.",
+      "d": "Requiring environmental sustainability certifications."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "International trade agreements generally prohibit 'offsets', which are conditions placed on foreign firms requiring them to use local content, license local technology, or invest back into the local economy as a condition of winning a contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 114,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "International Logistics",
+    "question_text": "A 'Customs Broker' in an international procurement transaction acts as:",
+    "options": {
+      "a": "The primary manufacturer of the goods.",
+      "b": "The entity that physically transports the goods across the ocean.",
+      "c": "An agent who assists the buyer or seller in clearing goods through customs by preparing and submitting documentation and paying duties.",
+      "d": "The bank guaranteeing the Letter of Credit."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A customs broker is a licensed individual or firm that assists importers and exporters in meeting federal requirements governing imports and exports, specifically managing the complex documentation, duties, and taxes required at customs.",
+    "section_id": null
+  },
+  {
+    "question_number": 115,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "The Evaluation Blackout Period",
+    "question_text": "Under typical 'Cone of Silence' regulations, which of the following communications is permitted during an active solicitation phase?",
+    "options": {
+      "a": "A vendor emailing the Mayor to complain about the specifications.",
+      "b": "A vendor asking an evaluator for a status update at a networking event.",
+      "c": "A vendor publicly speaking during the allotted open question time at a mandatory pre-bid conference.",
+      "d": "A vendor taking a city council member to lunch to discuss community needs."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Formal public meetings, such as pre-bid conferences, public bid openings, or recorded evaluation presentations, are explicit exceptions to the Cone of Silence, provided the communication occurs openly in the formal, structured environment.",
+    "section_id": null
+  },
+  {
+    "question_number": 116,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Intergovernmental Treaties and Trade Agreements",
+    "question_text": "When assessing whether an international trade agreement applies to a local procurement, the agency must calculate the 'Estimated Value of the Procurement.' This value must include:",
+    "options": {
+      "a": "Only the first year of the contract.",
+      "b": "The base term, plus all possible options, renewals, and potential premiums or fees.",
+      "c": "The amount minus local taxes.",
+      "d": "Only the labor costs, not the materials."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Trade agreements stipulate that when calculating the value of a procurement to see if it meets the treaty threshold, the agency must estimate the maximum total value over the entire life of the contract, inclusive of all options, renewals, and premiums.",
+    "section_id": null
+  },
+  {
+    "question_number": 117,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "When purchasing specialized equipment under a federal grant (2 CFR 200), a sole-source (non-competitive) procurement is permitted ONLY if:",
+    "options": {
+      "a": "The buyer really likes the vendor's previous work.",
+      "b": "The item is available from only one source, there is a public exigency/emergency, the federal awarding agency expressly authorizes it, or after solicitation of a number of sources, competition is determined inadequate.",
+      "c": "The purchase exceeds $100,000.",
+      "d": "The agency has a longstanding geographic preference for the vendor."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "2 CFR 200.320 dictates strict rules for noncompetitive procurement. It can only be used under specific circumstances: true sole source availability, emergency/exigency, explicit approval by the federal awarding agency, or inadequate competition after a good faith effort.",
+    "section_id": null
+  },
+  {
+    "question_number": 118,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "National/Federal Grant Regulations",
+    "question_text": "To comply with the 'Byrd Anti-Lobbying Amendment' linked to federal grants, contractors who bid for an award exceeding $100,000 must file a certification stating:",
+    "options": {
+      "a": "They have not paid and will not pay anyone using appropriated federal funds to influence an officer or employee of any agency or Congress regarding the award.",
+      "b": "They will hire at least three federal lobbyists to manage the grant.",
+      "c": "They will limit all profit margins to 5%.",
+      "d": "They have never donated to a political campaign."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The Byrd Anti-Lobbying Amendment prohibits the use of federal funds to pay persons or organizations for influencing or attempting to influence the executive or legislative branch with respect to obtaining a federal contract or grant. Bidders must certify compliance.",
+    "section_id": null
+  },
+  {
+    "question_number": 119,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Regional Compliance",
+    "question_text": "If a local municipality utilizes an out-of-state vendor, the agency might still have to withhold taxes or ensure the vendor pays taxes regarding the business conducted within the state. This legal requirement hinges heavily on the vendor having:",
+    "options": {
+      "a": "A trade secret on file.",
+      "b": "A physical warehouse in Europe.",
+      "c": "'Nexus' (a sufficient physical or economic presence in the state).",
+      "d": "More than 500 employees."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "'Nexus' refers to a business having a significant enough presence (physical, personnel, or economic volume) in a state to be legally bound to comply with that state's taxing jurisdiction, such as collecting and remitting sales or use tax.",
+    "section_id": null
+  },
+  {
+    "question_number": 120,
+    "subject": "CPPB Domain I: Regulatory & Compliance",
+    "topic": "Public Records Law / FOIA",
+    "question_text": "When fulfilling a public records request, an agency discovers an email chain between the buyer and a vendor. Half of the email discusses lunch plans, and the other half contains sensitive trade secrets. Under FOIA principles, what is the correct handling?",
+    "options": {
+      "a": "Destroy the entire email so the trade secrets are protected.",
+      "b": "Release the entire email because personal lunch plans void trade secret protections.",
+      "c": "Apply the principle of 'severability' by redacting the trade secrets and releasing the remainder of the email.",
+      "d": "Ask the vendor to write a new email that doesn't contain the trade secrets."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The principle of severability (or partial disclosure) requires that if a record contains both exempt and non-exempt material, the agency must sever (redact) the exempt portion and disclose the non-exempt portion.",
+    "section_id": null
+  }
+]

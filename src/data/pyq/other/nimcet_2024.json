@@ -1,0 +1,1442 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Mathematics",
+    "question_text": "The number of solutions of 5^(1+|sin x|+|sin x|^2+...)=25 is for x ∈ (−π, π)",
+    "options": {
+      "a": "2",
+      "b": "0",
+      "c": "4",
+      "d": "infinite"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 2,
+    "subject": "Mathematics",
+    "question_text": "Consider the function f(x) = {(-x^3 + 3x^2 + 1, if x ≤ 2), (cos x, if 2 < x ≤ 4), (e^x, if x > 4)}. Which of the following statement about f(x) is true?",
+    "options": {
+      "a": "f(x) has a local maximum at x = 1, which is also the global maximum",
+      "b": "f(x) has a local maximum at x = 2, which is not the global maximum.",
+      "c": "f(x) has a local maximum at x = π, but it is not the global maximum.",
+      "d": "f(x) has a global maximum at x = 0."
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 3,
+    "subject": "Mathematics",
+    "question_text": "The two parabolas y^2 = 4a(x + c) and y^2 = 4bx, a > b > 0 cannot have a common normal unless",
+    "options": {
+      "a": "c > 2(a + b)",
+      "b": "c > 2(a - b)",
+      "c": "c < 2(a – b)",
+      "d": "c < 2/(a-c)"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 4,
+    "subject": "Mathematics",
+    "question_text": "Let Z be the set of all integers, and consider the sets X = {(x, y): x^2 + 2y^2 = 3, x, y ∈ Z} and Y = {(x, y) : x > y, x, y ∈ Z}. Then the number of elements in X ∩ Y is",
+    "options": {
+      "a": "2",
+      "b": "1",
+      "c": "3",
+      "d": "4"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 5,
+    "subject": "Mathematics",
+    "question_text": "Region R is defined as region in first quadrant satisfying the condition x^2 + y^2 < 4. Given that a point P = (r, s) lies in R, what is the probability that r > s?",
+    "options": {
+      "a": "1",
+      "b": "0",
+      "c": "1/2",
+      "d": "1/3"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 6,
+    "subject": "Mathematics",
+    "question_text": "Let f : R → R be a function such that f(0)= 1/π and f(x) = (e^(πx) - 1) / (e^x - 1) for x ≠ 0",
+    "options": {
+      "a": "f(x) is not continuous at x = 0",
+      "b": "f(x) is continuous but not differentiable at x = 0",
+      "c": "f(x) is differentiable at x = 0 and f'(0) = -π/2",
+      "d": "None of these"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 7,
+    "subject": "Mathematics",
+    "question_text": "Consider the function f(x) = x^3 (6-x)^2. Which of the following statement is FALSE?",
+    "options": {
+      "a": "f is increasing in the interval (0, 4)",
+      "b": "f is decreasing in the interval (6, ∞)",
+      "c": "f has a point of inflection at x = 0",
+      "d": "f has a point of inflection at x = 6"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 8,
+    "subject": "Mathematics",
+    "question_text": "The vector A = (2x + 1)î + (x^2 - 6y)ĵ + (xy^2 + 3z)k is a",
+    "options": {
+      "a": "sink field",
+      "b": "solenoidal field",
+      "c": "source field",
+      "d": "None of these"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 9,
+    "subject": "Mathematics",
+    "question_text": "For an invertible matrix A, which of the following is not always true:",
+    "options": {
+      "a": "|adj(A)| ≠ 0",
+      "b": "|A| ≠ 0",
+      "c": "|AA^-1| = 1",
+      "d": "|A adj(A)| ≠ 1"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 10,
+    "subject": "Mathematics",
+    "question_text": "The value of the limit lim (x->0) [(1^x + 2^x + 3^x + 4^x) / 4]^(1/x) is",
+    "options": {
+      "a": "1",
+      "b": "(3!)^(1/3!)",
+      "c": "(3!)^(1/4)",
+      "d": "(4!)^(1/4)"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 11,
+    "subject": "Mathematics",
+    "question_text": "At how many points the following curves intersect: y^2/16 - x^2/4 = 1 and x^2/16 + (y-4)^2/4 = 1",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "4"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 12,
+    "subject": "Mathematics",
+    "question_text": "The value of tan(π/4 + θ) tan(3π/4 + θ) is",
+    "options": {
+      "a": "-2",
+      "b": "2",
+      "c": "1",
+      "d": "-1"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 13,
+    "subject": "Mathematics",
+    "question_text": "The system of equations x + 2y + 2z = 5, x + 2y + 3z = 6, x + 2y + λz = μ has infinitely many solution if",
+    "options": {
+      "a": "λ ≠ 2",
+      "b": "λ ≠ 2, μ ≠ 5",
+      "c": "λ = 2, μ = 5",
+      "d": "μ ≠ 5"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 14,
+    "subject": "Mathematics",
+    "question_text": "The value of lim (x->0) (e^x - e^(-x) - 2x) / (1 - cos x) equal to",
+    "options": {
+      "a": "2",
+      "b": "1",
+      "c": "0",
+      "d": "-1"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 15,
+    "subject": "Mathematics",
+    "question_text": "If the line a^2*x + ay + 1 = 0, for some real number a, is normal to the curve xy = 1, then",
+    "options": {
+      "a": "a < 0",
+      "b": "0 < a < 1",
+      "c": "a > 0",
+      "d": "-1 < a < 1"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 16,
+    "subject": "Mathematics",
+    "question_text": "A coin is thrown 8 number of times. What is the probability of getting a head in an odd number of throw?",
+    "options": {
+      "a": "1/2",
+      "b": "1/4",
+      "c": "1/8",
+      "d": "3/8"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 17,
+    "subject": "Mathematics",
+    "question_text": "A critical orthopaedic surgery is performed on 3 patients. The probability of recovering a patient is 0.6. Then the probability that after surgery, exactly two of them will recover is",
+    "options": {
+      "a": "0.123",
+      "b": "0.432",
+      "c": "0.321",
+      "d": "0.234"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 18,
+    "subject": "Mathematics",
+    "question_text": "The value of f(1) for f((1-x)/(1+x)) = x + 2 is",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 19,
+    "subject": "Mathematics",
+    "question_text": "Let C denote the set of all tuples (x, y) which satisfy x^2 = 2^y where x and y are natural numbers. What is the cardinality of C?",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "infinite"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 20,
+    "subject": "Mathematics",
+    "question_text": "If f(x) = cos[π^2]x + cos[-π^2]x , where [.] stands for the greatest integer function, then f(π/2) =",
+    "options": {
+      "a": "-1",
+      "b": "0",
+      "c": "1",
+      "d": "2"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 21,
+    "subject": "Mathematics",
+    "question_text": "If sin x = sin y and cos x = cos y, then the value of x - y is",
+    "options": {
+      "a": "π/4",
+      "b": "nπ/2",
+      "c": "nπ",
+      "d": "2nπ"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 22,
+    "subject": "Mathematics",
+    "question_text": "Lines L1, L2, ..., L10 are distinct among which the lines L2, L4, L6, L8, L10 are parallel to each other and the lines L1, L3, L5, L7, L9 pass through a given point C. The number of points of intersection of pairs of lines from the complete set L1, L2, L3, ..., L10 is:",
+    "options": {
+      "a": "24",
+      "b": "25",
+      "c": "26",
+      "d": "27"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 23,
+    "subject": "Mathematics",
+    "question_text": "If the perpendicular bisector of the line segment joining P(1,4) and Q(k,3) has y-intercept -4, then the possible value of k are",
+    "options": {
+      "a": "-4 and 4",
+      "b": "-2 and 2",
+      "c": "-3 and 3",
+      "d": "-1 and 1"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 24,
+    "subject": "Mathematics",
+    "question_text": "Out of a group of 50 students taking examinations in Mathematics, Physics, and Chemistry, 37 students passed Mathematics, 24 passed Physics, and 43 passed Chemistry. Additionally, no more than 19 students passed both Mathematics and Physics, no more than 29 passed both Mathematics and Chemistry, and no more than 20 passed both Physics and Chemistry. What is the maximum number of students who could have passed all three examinations?",
+    "options": {
+      "a": "14",
+      "b": "12",
+      "c": "10",
+      "d": "9"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 25,
+    "subject": "Mathematics",
+    "question_text": "If one AM (Arithmetic mean) ‘a' and two GM's (Geometric means) p and q be inserted between any two positive numbers, the value of (p^3 + q^3) / (pqa) is",
+    "options": {
+      "a": "2",
+      "b": "1",
+      "c": "p + q",
+      "d": "(p + q + a) / a"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 26,
+    "subject": "Mathematics",
+    "question_text": "Find the given numbers below, the smallest number which will be divided by 9, 10, 15 and 20, leaves the remainders 4, 5, 10 and 15 respectively",
+    "options": {
+      "a": "265",
+      "b": "535",
+      "c": "175",
+      "d": "85"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 27,
+    "subject": "Mathematics",
+    "question_text": "It is given that the mean, median and mode of a data set is 1, 3^x and 9^x respectively. The possible values of the mode is",
+    "options": {
+      "a": "1,4",
+      "b": "1,9",
+      "c": "3,9",
+      "d": "9,8"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 28,
+    "subject": "Mathematics",
+    "question_text": "A man starts at the origin O and walks a distance of 3 units in the north-east direction and then walks a distance of 4 units in the north-west direction to reach the point P, then OP is equal to",
+    "options": {
+      "a": "(1/√2)(-î+ĵ)",
+      "b": "(1/√2)(î+ĵ)",
+      "c": "(1/√2)(î-7ĵ)",
+      "d": "(1/√2)(-î+7ĵ)"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 29,
+    "subject": "Mathematics",
+    "question_text": "The points (1, 1/2) and (3, -1/2) are",
+    "options": {
+      "a": "In between the lines 2x + 3y = 6 and 2x + 3y = -6",
+      "b": "on the same side of the line 2x + 3y = 6",
+      "c": "on the same side of the line 2x + 3y = -6",
+      "d": "on the opposite side of the line 2x + 3y = -6"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 30,
+    "subject": "Mathematics",
+    "question_text": "If (4, -3) and (12, 5) are the two foci of an ellipse passing through the origin, then the eccentricity of the ellipse is",
+    "options": {
+      "a": "√13 / 9",
+      "b": "√13 / 18",
+      "c": "√17 / 18",
+      "d": "√17 / 9"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 31,
+    "subject": "Mathematics",
+    "question_text": "The value of series 2/3! + 4/5! + 6/7! + ... is",
+    "options": {
+      "a": "2e^(-2)",
+      "b": "e^(-2)",
+      "c": "e^(-1)",
+      "d": "2e^(-1)"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 32,
+    "subject": "Mathematics",
+    "question_text": "There are 9 bottle labelled 1, 2, 3...9 and 9 boxes labelled 1, 2, 3, ...9. The number of ways one can put these bottles in the boxes so that each box gets one bottle and exactly 5 bottles go in their corresponding numbered boxes is",
+    "options": {
+      "a": "9 * C(9, 5)",
+      "b": "5 * C(9, 5)",
+      "c": "25 * C(9, 5)",
+      "d": "4 * C(9, 5)"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 33,
+    "subject": "Mathematics",
+    "question_text": "A committee of 5 is to be chosen from a group of 9 people. The probability that a certain married couple will either serve together or not at all is",
+    "options": {
+      "a": "5/9",
+      "b": "1/2",
+      "c": "2/3",
+      "d": "4/9"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 34,
+    "subject": "Mathematics",
+    "question_text": "If x = (1 + √2 + √4 + √8 + √16 + √32)^(1/24) then",
+    "options": {
+      "a": "1",
+      "b": "4",
+      "c": "16",
+      "d": "24"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 35,
+    "subject": "Mathematics",
+    "question_text": "For what values of λ does the equation 6x^2 - xy + λy^2 = 0 represents two perpendicular lines and two lines inclined at an angle of π/4.",
+    "options": {
+      "a": "-6 and -2",
+      "b": "6 and 1",
+      "c": "-6 and -35",
+      "d": "-6 and 1"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 36,
+    "subject": "Mathematics",
+    "question_text": "If |F| = 40 N (Newtons), |D| = 3m, and θ = 60°, then the work done by F acting from P to Q is",
+    "options": {
+      "a": "60√3 J",
+      "b": "120 J",
+      "c": "60√2 J",
+      "d": "60 J"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 37,
+    "subject": "Mathematics",
+    "question_text": "If three distinct numbers are chosen randomly from the first 100 natural numbers, then the probability that all three of them are divisible by both 2 and 3 is",
+    "options": {
+      "a": "4/35",
+      "b": "4/33",
+      "c": "4/1155",
+      "d": "4/25"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 38,
+    "subject": "Mathematics",
+    "question_text": "The value of m for which volume of the parallelepiped is 4 cubic units whose three edges are represented by a = mî + ĵ + k, b = î - ĵ + k, c = î + 2ĵ - k is",
+    "options": {
+      "a": "0",
+      "b": "-2",
+      "c": "-1",
+      "d": "1"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 39,
+    "subject": "Mathematics",
+    "question_text": "Let f(x) = {(x^2 * sin(1/x), if x ≠ 0), (0, if x = 0)}. Then which of the following is true",
+    "options": {
+      "a": "f(x) is not continuous at x = 0",
+      "b": "f(x) is not differentiable at x = 0",
+      "c": "f'(x) is not continuous at x = 0",
+      "d": "f'(x) is continuous at x = 0"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 40,
+    "subject": "Mathematics",
+    "question_text": "Which of the following is TRUE?",
+    "options": {
+      "a": "If f is continuous on [a, b], then ∫[a to b] xf(x)dx = x ∫[a to b] f(x)dx",
+      "b": "∫[-5 to 5] e^(x^2) dx = ∫[-5 to -2] e^(x^2) dx + ∫[2 to 5] e^(x^2) dx",
+      "c": "If f is continuous on [a, b], then d/dx(∫[a to x] f(t)dt) = f(x)",
+      "d": "Both (a) and (b)"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 41,
+    "subject": "Mathematics",
+    "question_text": "Given a set A with median m1 = 2 and set B with median m2 = 4. What can we say about the median of the combined set?",
+    "options": {
+      "a": "at most 1",
+      "b": "at most 2",
+      "c": "at least 1",
+      "d": "at least 2"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 42,
+    "subject": "Mathematics",
+    "question_text": "The value of ∑[r=1 to n] (nPr / r!) is",
+    "options": {
+      "a": "2^n",
+      "b": "1 - 2^(-n)",
+      "c": "2^n - 1",
+      "d": "2^(2n) - 1"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 43,
+    "subject": "Mathematics",
+    "question_text": "The number of one-one function f: {1,2,3} → {a, b, c, d, e} is",
+    "options": {
+      "a": "125",
+      "b": "60",
+      "c": "243",
+      "d": "None of the above"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 44,
+    "subject": "Mathematics",
+    "question_text": "Find the cardinality of the set C which is defined as C = {x | sin 4x = 1/2 for x ∈ (−9π, 3π)}",
+    "options": {
+      "a": "24",
+      "b": "48",
+      "c": "36",
+      "d": "12"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 45,
+    "subject": "Mathematics",
+    "question_text": "How much work does it take to slide a crate for a distance of 25m along a loading dock by pulling on it with a 180 N force where the dock is at an angle of 45° from the horizontal?",
+    "options": {
+      "a": "3.18198 × 10^3 J",
+      "b": "3.18198 × 10^2 J",
+      "c": "3.4341 × 10^3 J",
+      "d": "3.4341 × 10^4 J"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 46,
+    "subject": "Mathematics",
+    "question_text": "If for non-zero x, c*f(x) + d*f(1/x) = log|x| + 3, where c ≠ d, then ∫[1 to e] f(x)dx",
+    "options": {
+      "a": "(c-d)(2e-1) / (c^2-d^2)",
+      "b": "(c-d)(3e-2) / (c^2-d^2)",
+      "c": "(c-d)(3e+2) / (c^2-d^2)",
+      "d": "(c-d)(2e+1) / (c^2-d^2)"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 47,
+    "subject": "Mathematics",
+    "question_text": "The equation 3x^2 + 10xy + 11y^2 + 14x + 12y + 5 = 0 represent,",
+    "options": {
+      "a": "a circle",
+      "b": "an ellipse",
+      "c": "a hyperbola",
+      "d": "a parabola"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 48,
+    "subject": "Mathematics",
+    "question_text": "Let A and B be two events defined on a sample space Ω. Suppose A^c the complement of A relative to the sample space Ω. Then the probability P((A ∩ B^c ) ∪ (A^c ∩ B)) equal",
+    "options": {
+      "a": "P(A) + P(B) + P(A ∩ B)",
+      "b": "P(A) + P(B) – P(A ∩ B)",
+      "c": "P(A) + P(B) + 2P(A ∩ B)",
+      "d": "P(A) + P(B) – 2P(A ∩ B)"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 49,
+    "subject": "Mathematics",
+    "question_text": "The number of distinct real values of λ for which vectors λ^2î + ĵ + k, î + λ^2ĵ + k and î + ĵ + λ^2k are coplanar is",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "6"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 50,
+    "subject": "Mathematics",
+    "question_text": "A speaks truth in 40% and B in 50% of the cases. The probability that they contradict each other while narrating same incident is",
+    "options": {
+      "a": "2/3",
+      "b": "1/2",
+      "c": "1/3",
+      "d": "0"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 51,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Which pairs of bits can be joined together to form two words that have opposite meanings? Bits: ER/T (1), UC/E (2), DE/S (3), EN/D (4), EX/P (5), EA/R (6), AN/D (7), SI/P (8), RE/D (9), GO/S (10).",
+    "options": {
+      "a": "(9,2)(5,7)",
+      "b": "(1,3)(8,10)",
+      "c": "(1,5), (10,8)",
+      "d": "(4,2), (7,8)"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 52,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Rajesh will not go to the concert if Rakesh goes. Rakesh will go to the concert if his dog barks three times. Based only on the information above, which of the following must be true?",
+    "options": {
+      "a": "Rakesh will not go to the concert unless Rajesh goes.",
+      "b": "If Rakesh's dog does not bark three times, then Rakesh will not go to the concert",
+      "c": "If Rakesh's dog barks three times, then Rajesh will not go to the concert",
+      "d": "If Rajesh doesn't go to the concert, then Rakesh will go"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 53,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Which one of the following is the odd one from the given alternative?",
+    "options": {
+      "a": "years of experience",
+      "b": "Salary",
+      "c": "Highest education",
+      "d": "Age"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 54,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Looking at the portrait of a man, Lucky (male) said, \"This person is the only child of my paternal grandmother's daughter.\" Whose portrait was Lucky looking at?",
+    "options": {
+      "a": "His brother",
+      "b": "His cousin",
+      "c": "His uncle",
+      "d": "Himself"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 55,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Study the following diagram (Venn Diagram with regions T, Q, R, S, P within a Universe U) and answer the following question. By which letter, the married teachers who do not live in joint family are represented?",
+    "options": {
+      "a": "Q",
+      "b": "P",
+      "c": "R",
+      "d": "S"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 56,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Study the following information carefully and answer the given question: Eight friends A, B, C, D, E, F, G and H are sitting on a round table facing the centre. A sits second to the left of D, who sits third to the left of E. C sits third to the right of G, who is not an immediate neighbour of E. H sits opposite to the E. B is between A and C. Who sits opposite G?",
+    "options": {
+      "a": "E",
+      "b": "D",
+      "c": "G",
+      "d": "F"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 57,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "From the given options, find the pair which is like the given pair 8:4",
+    "options": {
+      "a": "27: 9",
+      "b": "216: 32",
+      "c": "72: 24",
+      "d": "45: 5"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 58,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Select the pair of words, which are related in the same way as the capitalized words are related to each other. DATA : GRAPH",
+    "options": {
+      "a": "Mother : Father",
+      "b": "Plant : Leaf",
+      "c": "Milk : Butter",
+      "d": "Water : Glass"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 59,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "A cat climbs a 21- meter pole. In the first minute it climbs 3 meter and in the second minute it descends one meter. In how minutes the cat would reach the top of the pole?",
+    "options": {
+      "a": "18 min",
+      "b": "21 min",
+      "c": "19 min",
+      "d": "20 min"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 60,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Arrange the words given below in a meaningful sequence (1) Software (2) Code (3) Data (4) Analysis (5) Report",
+    "options": {
+      "a": "5,4,3,1,2",
+      "b": "2,1,5,3,4",
+      "c": "3,1,2,5,4",
+      "d": "3,1,2,4,5"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 61,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "The question contains six statements followed by four sets of combinations of three. Choose the set in which the combinations are most logically related. A. Some buildings are not sky scrapers. B. Some sky scrapers are not buildings. C. No structure is a skyscraper. D. All skyscrapers are structures. E. Some skyscrapers are buildings F. Some structures are not buildings.",
+    "options": {
+      "a": "ACF",
+      "b": "ACE",
+      "c": "BDF",
+      "d": "FDA"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 62,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Select the one which is different from the other three.",
+    "options": {
+      "a": "HEM",
+      "b": "JGP",
+      "c": "OLT",
+      "d": "NKS"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 63,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Two cars, Car A and Car B, are travelling on a highway. Car A starts from point X and travels at a constant speed of 60 km/h, while Car B starts from the same point X but travels at a constant speed of 80 km/hr. If both cars travel for 1.5 hours, what is the difference in distance covered by Car B compared to Car A?",
+    "options": {
+      "a": "20 km",
+      "b": "25 km",
+      "c": "35 km",
+      "d": "30 km"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 64,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "After allowing 20% cash discount, a trader still earns a profit of 11.11%. How much above the cost price, the trader marks his goods?",
+    "options": {
+      "a": "38.88%",
+      "b": "40%",
+      "c": "30.33%",
+      "d": "28%"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 65,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In the following question, three statements and three conclusions are given. Statements: 1. All students are intelligent. 2. No intelligent person is lazy. 3. Some lazy people are poor. Conclusions: 1. No student is lazy. 2. Some poor people are not intelligent. 3. All poor people are lazy. Find out the most appropriate conclusion(s) from the following options.",
+    "options": {
+      "a": "Only conclusion 2 follows.",
+      "b": "Only conclusions 2 and 3 follow",
+      "c": "Only conclusion 1 follows",
+      "d": "Only conclusions 1 and 2 follows"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 66,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In which year was Arjun born? Arjun at present is 25 years younger to his mother. Arjun's brother, who was born in 1964, is 35 years younger to his mother.",
+    "options": {
+      "a": "1974",
+      "b": "1964",
+      "c": "1944",
+      "d": "1954"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 67,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "You are on an island with two tribes. One tribe always tells the truth, and the other tribe always lies. You meet three individuals from the island A, B and C. Each individual belongs to one of the tribes. You ask each of them the same question \"Is B a truthteller?\" A says, \"Yes B is a truth-teller.” B says, \"No, I am not a truth-teller\" C. Says, “B is a liar” Given that each individual is either a truth-teller or a liar, who is telling the truth?",
+    "options": {
+      "a": "A only",
+      "b": "Both B and C",
+      "c": "C only",
+      "d": "B only"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 68,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In a recent survey of 500 employees in a company, it was found that 60% of the employees prefer coffee over tea, 25% prefer tea over coffee, and the remaining 15% have no preference. If 20% of the employees who prefer coffee are also tea drinkers, how many employees prefer only tea?",
+    "options": {
+      "a": "75",
+      "b": "50",
+      "c": "65",
+      "d": "55"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 69,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In certain language, HEART is written as 2018010508, and LUNGS is written as 1907142112. If Brain is written in that language, what will be the last number?",
+    "options": {
+      "a": "2",
+      "b": "5",
+      "c": "4",
+      "d": "9"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 70,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "The mean of consecutive positive integers from 2 to n is",
+    "options": {
+      "a": "(n+2)/2",
+      "b": "n(n+1)/2",
+      "c": "(n+1)/2",
+      "d": "(n-1)/2"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 71,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In a tournament, how many teams participated? All teams in the tournament have 5 to 15 players. If a team has more than 10 players, then they have reversible t-shirts?",
+    "options": {
+      "a": "Teams with 8 players do not have reversible t-shirts",
+      "b": "Teams that have 12 players do not have reversible t-shirts.",
+      "c": "Only people on teams can have reversible t-shirts.",
+      "d": "Teams that have 13 players have reversible t-shirts."
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 72,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "If by rearranging the letters of the word NABMODINT, a name of a game is formed. What would be the first and last letter of the mirror image of the name of the game?",
+    "options": {
+      "a": "T, B",
+      "b": "B, N",
+      "c": "B, T",
+      "d": "N, B"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 73,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "What is the value of x^2 + y^2 = ? Statement I: xy = 5 Statement II: x + y = 10",
+    "options": {
+      "a": "Choose this option if the question can be answered by using one of the statements alone, but cannot be answered using the other statement.",
+      "b": "Choose this option if the question can be answered by using the statement together, but cannot be answered using either statement alone.",
+      "c": "Choose this option if the question can be answered by using either statement alone.",
+      "d": "Choose this option if the question cannot be answered even by using both the statement together."
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 74,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Four friends, Aditi, Bharat, Chandan, and Deepika, went to a restaurant for dinner. Each of them ordered a different dish from the menu: pizza, pasta, burger, and salad. Additionally, each friend ordered a different drink: cola, lemonade, orange juice, and water. Based on the following clues, determine the combination of friend, dish, and drink: Aditi didn't order pizza or cola. Bharat ordered salad but not lemonade. Chandan ordered pasta. Deepika didn't order burger or orange juice. Aditi ordered orange juice. Who ordered the burger, and what drink did they order?",
+    "options": {
+      "a": "Deepika, cola",
+      "b": "Bharat, water",
+      "c": "Aditi, orange juice",
+      "d": "Chandan, lemonade"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 75,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "This question contains six statements followed by four sets of combinations of three. Choose the set in which the combinations are most logically related. A. All falcons fly high. B. All falcons are blind. C. All falcons are birds. D. All birds are yellow. E. All birds are thirsty. F. All falcons are yellow.",
+    "options": {
+      "a": "DEF",
+      "b": "CDF",
+      "c": "ABC",
+      "d": "BCA"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 76,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In the half yearly exam only 60% of the students were passed. Out of these (passed in half-yearly) only 70% students are passed in annual exam, out of remaining students (who fail in half-yearly exam) 80% passed in annual exam. What percent of the students passed the annual exam?",
+    "options": {
+      "a": "76%",
+      "b": "74%",
+      "c": "72%",
+      "d": "65%"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 77,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Odometer is to mileage as compass is to",
+    "options": {
+      "a": "Needle",
+      "b": "Hiking",
+      "c": "Speed",
+      "d": "Direction"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 78,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Which of the following words will appear last in the dictionary.",
+    "options": {
+      "a": "complicit",
+      "b": "compline",
+      "c": "compliment",
+      "d": "complete"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 79,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Aryan bought 100 shares of a company at Rs. 50 per share. He paid a brokerage fee of 2% on the purchase. Later, he sold all the shares at Rs. 55 per share and paid a brokerage fee of 2% on the sale. What is Aryan's net profit percentage on his investment?",
+    "options": {
+      "a": "5.5%",
+      "b": "6%",
+      "c": "5.69%",
+      "d": "6.1%"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 80,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Ramu visits Delhi on every 15 days and Samu goes to Delhi every 20 days. They met at Delhi 5 days back. After how many days, from today, they will meet at Delhi next time?",
+    "options": {
+      "a": "35",
+      "b": "55",
+      "c": "60",
+      "d": "65"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 81,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "If 30th September, 1991 was a Wednesday, then what was the day on 14th March 1992?",
+    "options": {
+      "a": "Wednesday",
+      "b": "Monday",
+      "c": "Saturday",
+      "d": "Sunday"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 82,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "In a reality show, two judges independently provided marks based on the performance of the participants. If the marks provided by the second judge are given by Y = 10.5 + 2x, where X is the marks provided by the first judge. If the variance of the marks provided by the second judge is 100, then the variance of the marks provided by the first judge is:",
+    "options": {
+      "a": "49.5",
+      "b": "25",
+      "c": "50",
+      "d": "99"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 83,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "At what time between 2 pm and 3 pm, will the hour and minute hands of a clock point in opposite directions (diametrically opposite)?",
+    "options": {
+      "a": "2:45 PM",
+      "b": "2:44 PM",
+      "c": "2:43 7/11 PM",
+      "d": "2:43 9/11 PM"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 84,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (84-86): A, B, C, D, E, F and G are travelling in three different vehicles (Swift, Creta, Nexon). At least two passengers per vehicle. Only one male. Two engineers, two doctors, three teachers. i. C is a lady doctor, not with sisters A and F. ii. B, male engineer, travels only with G, a teacher in Swift. iii. D is a male doctor. iv. Same professions don't travel together. v. A is not an engineer, travels in Creta. vi. Sisters A and F travel together. What is F's profession?",
+    "options": {
+      "a": "Doctor",
+      "b": "Data inadequate",
+      "c": "Teacher",
+      "d": "Engineer"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 85,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (84-86): A, B, C, D, E, F and G are travelling in three different vehicles (Swift, Creta, Nexon). At least two passengers per vehicle. Only one male. Two engineers, two doctors, three teachers. i. C is a lady doctor, not with sisters A and F. ii. B, male engineer, travels only with G, a teacher in Swift. iii. D is a male doctor. iv. Same professions don't travel together. v. A is not an engineer, travels in Creta. vi. Sisters A and F travel together. In which vehicle does C travel?",
+    "options": {
+      "a": "Creta",
+      "b": "Swift",
+      "c": "Nexon",
+      "d": "Data inadequate"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 86,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (84-86): A, B, C, D, E, F and G are travelling in three different vehicles (Swift, Creta, Nexon). At least two passengers per vehicle. Only one male. Two engineers, two doctors, three teachers. i. C is a lady doctor, not with sisters A and F. ii. B, male engineer, travels only with G, a teacher in Swift. iii. D is a male doctor. iv. Same professions don't travel together. v. A is not an engineer, travels in Creta. vi. Sisters A and F travel together. Which of the following represents the three teachers?",
+    "options": {
+      "a": "Data inadequate",
+      "b": "GEA",
+      "c": "GEF",
+      "d": "GBF"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 87,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (87-90): A, B, C, D and E are five different integers. In ascending order, difference between adjacent integers is 8. D is greatest, A is least. B > E, B < C. Sum of the integers = E. The value of A is the least",
+    "options": {
+      "a": "-18",
+      "b": "-15",
+      "c": "None of these",
+      "d": "-17"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 88,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (87-90): A, B, C, D and E are five different integers. In ascending order, difference between adjacent integers is 8. D is greatest, A is least. B > E, B < C. Sum of the integers = E. The sum of A and B is",
+    "options": {
+      "a": "-30",
+      "b": "-15",
+      "c": "None of these",
+      "d": "-20"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 89,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (87-90): A, B, C, D and E are five different integers. In ascending order, difference between adjacent integers is 8. D is greatest, A is least. B > E, B < C. Sum of the integers = E. The greatest number has the value",
+    "options": {
+      "a": "14",
+      "b": "12",
+      "c": "15",
+      "d": "17"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 90,
+    "subject": "Analytical Ability & Logical Reasoning",
+    "question_text": "Comprehension (87-90): A, B, C, D and E are five different integers. In ascending order, difference between adjacent integers is 8. D is greatest, A is least. B > E, B < C. Sum of the integers = E. The sum of the integers is",
+    "options": {
+      "a": "None of these",
+      "b": "-10",
+      "c": "-8",
+      "d": "-6"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 91,
+    "subject": "Computer Awareness & General English",
+    "question_text": "The quotient, if the binary number 11010111 is divided by 101, is__",
+    "options": {
+      "a": "101101",
+      "b": "101010",
+      "c": "111001",
+      "d": "101011"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 92,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Any given truth table can be represented by",
+    "options": {
+      "a": "a Karnaugh map",
+      "b": "a product of sum Boolean expression",
+      "c": "a sum of product Boolean expression",
+      "d": "all of the options"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 93,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which of the following interfaces perform the transfer of data between the memory and the I/O peripheral without involving the CPU?",
+    "options": {
+      "a": "DMA",
+      "b": "Serial Interface",
+      "c": "branch interface",
+      "d": "DDA"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 94,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Cache memory functions as an intermediary between",
+    "options": {
+      "a": "CPU and Hard Disk",
+      "b": "None of these",
+      "c": "CPU and RAM",
+      "d": "RAM and ROM"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 95,
+    "subject": "Computer Awareness & General English",
+    "question_text": "A CPU generates 32 bits virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128-page table entries and is 4-way set associative. The minimum size of the TLB tag is",
+    "options": {
+      "a": "11 bits",
+      "b": "20 bits",
+      "c": "13 bit",
+      "d": "15 bit"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 96,
+    "subject": "Computer Awareness & General English",
+    "question_text": "The expression P+QR is the reduced form of",
+    "options": {
+      "a": "(P + R)Q",
+      "b": "(P+Q)(P+R)",
+      "c": "PQ + QR",
+      "d": "(P+Q)R"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 97,
+    "subject": "Computer Awareness & General English",
+    "question_text": "The primary purpose of cache memory in a computer system is",
+    "options": {
+      "a": "to temporarily store frequently accessed data and instruction for faster access by the CPU.",
+      "b": "To permanently store data and programs",
+      "c": "to provide additional storage space when the main memory is full.",
+      "d": "to manage input and output operations between the CPU and peripherals."
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 98,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Consider the program below which uses six temporary variables a, b, c, d, e, and f.\na = 10\nb = 20\nc = 30\nd = a + c\ne = b + d\nf = c + e\nb = c + e\ne = b + f\nd = 5 + e\nreturn d + f\nAssuming that all the above operations take their operands from registers, the minimum number of registers needed to execute this program without spilling is",
+    "options": {
+      "a": "6",
+      "b": "4",
+      "c": "5",
+      "d": "3"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 99,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which of the following is the smallest unit of data in a computer ?",
+    "options": {
+      "a": "Bit",
+      "b": "Byte",
+      "c": "KB",
+      "d": "Nibble"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 100,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Consider the following 4- bit binary numbers represented in the 2's complement form : 1101 and 0100 What would be the result when we add them?",
+    "options": {
+      "a": "0001 and no overflow",
+      "b": "1001 and an overflow",
+      "c": "0001 and an overflow",
+      "d": "1001 and no overflow"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 101,
+    "subject": "Computer Awareness & General English",
+    "question_text": "A computer system has 16-bit wide address/data bus that uses RAM chips of 4K x 8-bit capacity. The number of RAM chips are needed to provide a memory capacity of 64 Kbytes memory is",
+    "options": {
+      "a": "32",
+      "b": "16",
+      "c": "64",
+      "d": "8"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 102,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Given that numbers A and B are two 8 bit 2's complement numbers with A = 11111111, B = 11111111. Then sum A + B is",
+    "options": {
+      "a": "00000010",
+      "b": "11111100",
+      "c": "11111110",
+      "d": "00000000"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 103,
+    "subject": "Computer Awareness & General English",
+    "question_text": "The Boolean expression for the following truth table is\n x | y | z | f\n---|---|---|---\n 0 | 0 | 0 | 0\n 0 | 0 | 1 | 0\n 0 | 1 | 0 | 1\n 0 | 1 | 1 | 0\n 1 | 0 | 0 | 0\n 1 | 0 | 1 | 1\n 1 | 1 | 0 | 0\n 1 | 1 | 1 | 1",
+    "options": {
+      "a": "F = x'yz' + xy'z + x'y'z'",
+      "b": "F = x'y'z' + xy'z + xyz'",
+      "c": "F = x'yz' + xy'z + xyz",
+      "d": "None of these"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 104,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Consider an arbitrary number system with independent digits as 0,1 and A. If we generate first few numbers in sequence as 00, 01, 0A, 10, 11, 1A and if this process is continued to generate the numbers, then the position of 10A is",
+    "options": {
+      "a": "15",
+      "b": "10",
+      "c": "12",
+      "d": "9"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 105,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which of the following components is not a part of an instruction formation in CPU processing?",
+    "options": {
+      "a": "Opcode",
+      "b": "Register file",
+      "c": "Source operand",
+      "d": "Destination operand"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 106,
+    "subject": "Computer Awareness & General English",
+    "question_text": "The range of the exponent E in the IEEE754 double precision (Binary 64) format is",
+    "options": {
+      "a": "−1023 ≤ E ≤ 1022",
+      "b": "−1022 ≤ E ≤ 1022",
+      "c": "−1022 ≤ E ≤ 1023",
+      "d": "−1023 ≤ E ≤ 1023"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 107,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which of the following components is used to establish a communication link between a CPU and the peripheral devices to transfer data?",
+    "options": {
+      "a": "index register",
+      "b": "memory address register",
+      "c": "memory data register",
+      "d": "instruction registers"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 108,
+    "subject": "Computer Awareness & General English",
+    "question_text": "In the figure (Venn Diagram with overlapping shapes representing employed, social worker, illiterate, truthful), the circle stands for employed, the square stands for a social worker, the triangle stands for illiterate, and the rectangle stands for truthful. Study the figure with its regions and find the number of neither truthful nor illiterate people among the employed only. (Region 8 is the target)",
+    "options": {
+      "a": "4",
+      "b": "8",
+      "c": "11",
+      "d": "1"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 109,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which of the following do not affects CPU performance?",
+    "options": {
+      "a": "number of cores",
+      "b": "Cache size",
+      "c": "Amount of RAM",
+      "d": "Clock speed"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 110,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Let the given number 11001, 1001 and 111001 be correspond to the 2's complement representation. Then with which one of the following decimal number, the given numbers match",
+    "options": {
+      "a": "-6, -6 and -6, respectively",
+      "b": "-7, -7 and -7 respectively",
+      "c": "-25, -9 and -57 respectively",
+      "d": "25, 9 and 57, respectively"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 111,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Select the correct meaning of 'Peruse':",
+    "options": {
+      "a": "Examine",
+      "b": "Pursue",
+      "c": "Continue",
+      "d": "Rescue"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 112,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Identify the word that means the same as \"ostentatious”.",
+    "options": {
+      "a": "Lavish",
+      "b": "Simple",
+      "c": "Modest",
+      "d": "Unassuming"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 113,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Write the antonym for ‘Inscrutable'",
+    "options": {
+      "a": "Mysterious",
+      "b": "obscure",
+      "c": "comprehensible",
+      "d": "Opaque"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 114,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Choose the correct combination of preposition to complete the sentence: \"The cat jumped ____the table____ the chair.",
+    "options": {
+      "a": "into, beside",
+      "b": "onto, towards",
+      "c": "on, from",
+      "d": "off, in"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question_number": 115,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which sentence demonstrates correct preposition usage?",
+    "options": {
+      "a": "Prefer coffee over tea",
+      "b": "He is interested on learning new languages",
+      "c": "She arrived to the party at 8 pm.",
+      "d": "They were surprised of the sudden announcement"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 116,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Select the appropriate synonym for 'coercive'",
+    "options": {
+      "a": "Forceful",
+      "b": "corrective",
+      "c": "Merciful",
+      "d": "Gentle"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 117,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Choose the best option that indicates the change of voice for the sentence given below: Had you invited Alice?",
+    "options": {
+      "a": "Had you invited Alice?",
+      "b": "Was Alice invited you?",
+      "c": "Did you invited by Alice?",
+      "d": "Were you invited by Alice?"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question_number": 118,
+    "subject": "Computer Awareness & General English",
+    "question_text": "The company's ________ growth in revenue surprised analysts.",
+    "options": {
+      "a": "erratic",
+      "b": "gradual",
+      "c": "Exponential",
+      "d": "Stagnant"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question_number": 119,
+    "subject": "Computer Awareness & General English",
+    "question_text": "What does the idiom \"jump on the bandwagon\" mean?",
+    "options": {
+      "a": "To start a business",
+      "b": "To repair a vehicle",
+      "c": "To criticize something unfairly",
+      "d": "To join a popular trend or activity"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question_number": 120,
+    "subject": "Computer Awareness & General English",
+    "question_text": "Which of the following is an essential element of a technical report?",
+    "options": {
+      "a": "Creative storytelling",
+      "b": "Statistical data and analysis",
+      "c": "Anecdotes and personal opinions",
+      "d": "Emotional appeals"
+    },
+    "correct_answer": "b"
+  }
+]

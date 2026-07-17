@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "According to mobile phone maintenance guidelines, which of the following activities is best described as preventive maintenance?",
+    "options": {
+      "a": "Replacing a cracked LCD screen",
+      "b": "Cleaning the charging port and internal components",
+      "c": "Replacing a burnt-out resistor on the motherboard",
+      "d": "Reflowing a damaged integrated circuit"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Cleaning is a routine action taken to prevent future hardware failures, making it a classic example of preventive maintenance, whereas replacing broken parts is classified as corrective maintenance.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which of the following describes the two variations of a multi-meter explicitly mentioned for use in GSM repairs?",
+    "options": {
+      "a": "Internal and External",
+      "b": "Static and Dynamic",
+      "c": "Digital and Analog",
+      "d": "Software and Hardware"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Multi-meters come in two main variations: digital, which provides precise numerical readouts, and analog, which uses a moving mechanical needle to display measurements.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "A technician is utilizing a soldering iron to replace a damaged charging flex. Which safety protocol must be implemented specifically to handle the byproducts of this tool?",
+    "options": {
+      "a": "Wearing an ESD band to prevent static",
+      "b": "Isolating the lithium-ion battery",
+      "c": "Using a heat gun instead",
+      "d": "Ensuring adequate ventilation for soldering fumes"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Soldering produces harmful chemical fumes from the flux and solder wire. Ensuring adequate ventilation is a critical safety protocol to prevent inhalation of these toxic byproducts.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "A hot air rework station is commonly referred to by which alternative name in the repair guidelines?",
+    "options": {
+      "a": "Heat gun",
+      "b": "Soldering iron",
+      "c": "Flash dongle",
+      "d": "BGA kit"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A hot air rework station is commonly referred to as a heat gun. It is used to blow precisely temperature-controlled hot air to melt solder for surface-mount components.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "If a mobile phone is diagnosed with a physically damaged microphone, the act of desoldering the old part and soldering a new one is an example of:",
+    "options": {
+      "a": "Preventive Maintenance",
+      "b": "Cosmetic Maintenance",
+      "c": "Corrective Maintenance",
+      "d": "Predictive Maintenance"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Corrective maintenance involves fixing or replacing components that have already failed or broken, such as removing a damaged microphone and installing a functional one to restore operation.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "When implementing anti-static precautions during motherboard repair, which equipment is standardly utilized according to safety procedures?",
+    "options": {
+      "a": "Heat sink compounds",
+      "b": "Ventilation fans",
+      "c": "Flash boxes",
+      "d": "ESD bands"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "ESD (Electrostatic Discharge) bands or wrist straps are standard safety equipment worn by technicians to safely ground any static electricity and prevent it from discharging into sensitive microchips.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which of the following is listed as a primary screwdriving tool shape used in mobile phone dismantling?",
+    "options": {
+      "a": "Torx",
+      "b": "Hex key",
+      "c": "Spanner",
+      "d": "Pliers"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Torx is a very common type of screw used in mobile phones. Technicians rely heavily on Torx screwdrivers to safely dismantle device housings without stripping the star-shaped screw heads.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "Which specific battery technology is highlighted as a primary hazard regarding fires in mobile phone repairs?",
+    "options": {
+      "a": "Nickel-Cadmium",
+      "b": "Lithium-ion",
+      "c": "Lead-acid",
+      "d": "Alkaline"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Lithium-ion batteries are highly volatile if punctured, bent, or exposed to extreme heat, making them a primary fire and chemical hazard during mobile phone teardowns and repairs.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "A technician needs to recreate the grid of solder connections underneath a detached motherboard chip. Which specialized item from the equipment list should be used?",
+    "options": {
+      "a": "Flash box",
+      "b": "Phillips screwdriver",
+      "c": "BGA re-balling kit",
+      "d": "DC power supply"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "BGA (Ball Grid Array) chips connect to the motherboard via a grid of tiny solder balls. A re-balling kit contains the metal stencils and solder paste needed to recreate these connections when a chip is removed.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which tool is explicitly recommended to provide external voltage and current testing when diagnosing mobile phone power faults?",
+    "options": {
+      "a": "Flash dongle",
+      "b": "DC power supply",
+      "c": "Magnifying glass",
+      "d": "Soldering iron"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A DC power supply allows a technician to inject a specific, controlled voltage and current into a logic board, making it an essential tool for identifying short circuits, dead components, and power faults.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "To manipulate tiny surface mount components safely without burning one's fingers during heat gun operations, which standard hand tool is utilized?",
+    "options": {
+      "a": "Tweezers",
+      "b": "Flash box",
+      "c": "Analog multimeter",
+      "d": "ESD band"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Tweezers are a precision hand tool indispensable for safely gripping, placing, and removing tiny, hot surface-mount components during soldering or rework processes.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "During an audit of a repair workshop's workflow, a technician classifies regular board cleaning and removing dust buildup. This process ultimately minimizes the need for which subsequent procedure?",
+    "options": {
+      "a": "Preventive Maintenance",
+      "b": "Corrective Maintenance",
+      "c": "Safety Precautions",
+      "d": "Anti-static precautions"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "By performing regular preventive maintenance like removing dust and debris, a technician reduces the likelihood of component failure, thus minimizing the need for reactive, corrective maintenance later.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which visual aid tool is included in the basic GSM repair tool list?",
+    "options": {
+      "a": "Microscope only",
+      "b": "Binoculars",
+      "c": "Magnifying glass",
+      "d": "Telescope"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Because mobile phone components are extremely small, a magnifying glass or microscope is a basic visual aid required to inspect motherboard traces, solder joints, and microchips effectively.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "If a mobile phone is bricked due to a corrupt operating system and requires a firmware rewrite, which listed equipment is appropriate for this software-level repair?",
+    "options": {
+      "a": "BGA re-balling kit",
+      "b": "DC power supply",
+      "c": "Multi-meter",
+      "d": "Flash boxes/dongles"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Flash boxes and dongles are specialized hardware interfaces that allow technicians to bypass standard software locks, repair bootloaders, and write fresh firmware directly to a device's memory.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "When extracting a damaged charging IC, a technician fails to use an ESD wrist strap. What invisible hazard could catastrophically damage the new IC before it is even soldered?",
+    "options": {
+      "a": "Lithium-ion thermal runaway",
+      "b": "Electrostatic discharge",
+      "c": "Toxic soldering fumes",
+      "d": "Excessive heat gun pressure"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The human body naturally builds up static electricity. Without an ESD band to ground the technician, this static can discharge into sensitive logic board components (Electrostatic Discharge), destroying them instantly.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Phillips is a type of what commonly used mobile repair tool?",
+    "options": {
+      "a": "Tweezers",
+      "b": "Screwdriver",
+      "c": "Multimeter",
+      "d": "Flash box"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Phillips is a standard type of screwdriver with a cross-shaped tip, frequently used to remove internal screws and securing brackets within mobile phones.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "Which pair directly represents the concepts of 'Preventive' and 'Corrective' maintenance respectively, as strictly defined by the guidelines?",
+    "options": {
+      "a": "Replacing damaged parts vs. Using a heat gun",
+      "b": "Cleaning vs. Replacing damaged parts",
+      "c": "Ventilation vs. Anti-static bands",
+      "d": "Soldering vs. Desoldering"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Preventive maintenance includes proactive actions like cleaning to avoid future issues, while corrective maintenance involves reactive actions like replacing components that are already broken.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "A technician accidentally punctures a mobile phone battery with sharp tweezers during a teardown, causing sudden extreme heat and smoke. This is an example of which safety hazard highlighted in the text?",
+    "options": {
+      "a": "Electrostatic discharge shock",
+      "b": "Lithium-ion fire",
+      "c": "Soldering fume asphyxiation",
+      "d": "DC power supply short circuit"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Puncturing a Lithium-ion battery breaches the separator between the anode and cathode, causing an immediate internal short circuit that results in extreme heat, smoke, and often a dangerous chemical fire.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which tool would a technician require primarily for melting metallic filler to join electrical components on a printed circuit board?",
+    "options": {
+      "a": "Flash box",
+      "b": "Soldering iron",
+      "c": "ESD band",
+      "d": "Torx screwdriver"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A soldering iron heats up a metallic alloy (solder) until it melts, allowing technicians to create secure electrical and physical bonds between components and the printed circuit board.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "What is the primary function of utilizing proper ventilation equipment during hardware repairs?",
+    "options": {
+      "a": "To clear dust from the LCD screen",
+      "b": "To mitigate and clear soldering fumes",
+      "c": "To keep the lithium-ion battery cool",
+      "d": "To dry adhesive compounds faster"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "During board-level repairs, the flux and solder used release toxic chemical fumes when heated. Proper ventilation equipment is necessary to extract these fumes and protect the technician's respiratory system.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "A GSM repair technician uses a hot air rework station to reflow a faulty power IC, but realizes the new component must be extracted and accurately placed while the solder is liquid. Which secondary hand tool from the syllabus is mandatory to grip the IC safely?",
+    "options": {
+      "a": "Magnifying glass",
+      "b": "Tweezers",
+      "c": "Phillips screwdriver",
+      "d": "Flash dongle"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Since a hot air rework station blasts high heat to melt solder, tweezers are required to carefully and precisely grip or place tiny integrated circuits without burning the technician's fingers.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which tool type, mentioned in the guidelines, helps verify continuity and voltage drops across a logic board?",
+    "options": {
+      "a": "Multi-meter",
+      "b": "Flash dongle",
+      "c": "Magnifying glass",
+      "d": "BGA re-balling kit"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A multi-meter is the standard diagnostic tool for checking continuity (unbroken electrical paths) and measuring voltage, current, and resistance across a phone's logic board.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "To prevent component destruction from microscopic electrical arcs caused by a technician's moving body, what should be worn?",
+    "options": {
+      "a": "Ventilation mask",
+      "b": "ESD band",
+      "c": "Lithium protective gloves",
+      "d": "Magnifying glasses"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An ESD (Electrostatic Discharge) band grounds the technician, ensuring that any static electricity generated by bodily movement is safely channeled away rather than arcing into and destroying delicate microchips.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "A logic board demonstrates a continuous short-to-ground which drops the voltage drastically. What equipment listed in the GSM repair tools is actively used to safely inject a specific voltage to find the localized heating of the shorted component?",
+    "options": {
+      "a": "DC power supply",
+      "b": "BGA re-balling kit",
+      "c": "Analog multi-meter",
+      "d": "Flash dongle"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "By using a DC power supply to inject a specific, controlled voltage into a shorted line, the compromised component will draw excess current and heat up, allowing the technician to physically locate the fault.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "Which component is most accurately described as a 'damaged part' that would require replacing under Corrective Maintenance?",
+    "options": {
+      "a": "Dust in the speaker mesh",
+      "b": "Shattered glass digitizer",
+      "c": "Lint in the charging port",
+      "d": "Old firmware"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Corrective maintenance responds to existing physical faults. A shattered glass digitizer is a broken hardware piece that must be entirely replaced to restore function, making it a clear corrective task.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "In the context of the prescribed safety protocols, how are Lithium-ion fires structurally categorized?",
+    "options": {
+      "a": "As an anti-static failure",
+      "b": "As an electrostatic discharge hazard",
+      "c": "As a battery hazard",
+      "d": "As a ventilation issue"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Lithium-ion batteries store a massive amount of dense energy. When mishandled, punctured, or exposed to excessive heat, they pose a severe battery hazard due to their tendency to ignite and cause chemical fires.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "A mobile device keeps entering 'bootloop' status, suggesting a corrupted bootloader. A technician connects the logic board to a computer interface tool to push raw software files into the phone's memory. Which item from the syllabus is utilized?",
+    "options": {
+      "a": "BGA re-balling kit",
+      "b": "Flash boxes/dongles",
+      "c": "DC power supply",
+      "d": "Hot air rework station"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Flash boxes and dongles are proprietary hardware tools that connect a phone to a PC, enabling a technician to force-write lower-level software, flash firmware, or repair a corrupted bootloader.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which of the following describes the shape of the Torx screwdriver tip?",
+    "options": {
+      "a": "Flat linear edge",
+      "b": "Star-shaped",
+      "c": "Hexagonal recess",
+      "d": "Cross-shaped"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Torx screw head features a distinct 6-point star-shaped pattern. It provides excellent grip and reduces the risk of cam-out (stripping the screw) during delicate phone assembly.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "When assessing a diagnostic tool for varying electrical levels in older phone systems, why might a technician choose the 'analog' version of a multi-meter over the 'digital' version?",
+    "options": {
+      "a": "It prevents electrostatic discharge",
+      "b": "It provides visual software logs",
+      "c": "It is easier to observe rapid fluctuations via needle sweeps",
+      "d": "It can re-ball BGA chips automatically"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "While digital multi-meters show precise numbers, analog meters feature a sweeping mechanical needle. This makes it easier to visually detect rapid, pulsating voltage drops or shorts that might just look like jumping numbers on a digital screen.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "A phone dropped in water requires thorough cleaning of the motherboard to prevent future corrosion, but also needs its shorted backlight filter replaced. How is this combined workflow classified according to the GSM guidelines?",
+    "options": {
+      "a": "Strictly Preventive Maintenance",
+      "b": "Strictly Corrective Maintenance",
+      "c": "Preventive and Corrective Maintenance sequentially",
+      "d": "Diagnostic and Safety Precautions only"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Cleaning the board clears away minerals that cause future corrosion (preventive maintenance), while replacing the shorted backlight filter addresses an already broken component (corrective maintenance).",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "If a BGA chip is structurally sound but the micro-connections underneath are fractured due to drop damage, what is the most appropriate action utilizing the prescribed tools?",
+    "options": {
+      "a": "Replace the motherboard immediately",
+      "b": "Use a BGA re-balling kit to restore the solder connections",
+      "c": "Use a flash dongle to reconfigure the system hardware flags",
+      "d": "Wash the board with a magnifying glass"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When a chip's underlying solder joints break, the chip itself often still works. A BGA re-balling kit uses a metal stencil and solder paste to perfectly reform those microscopic solder balls so the chip can be safely reattached.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which combination of parameters MUST be correctly regulated on a Hot Air Rework Station (heat gun) to successfully detach a delicate Surface Mount Device (SMD) without blowing away neighboring components?",
+    "options": {
+      "a": "Software firmware version and Flash protocol",
+      "b": "Voltage injection and Current limit",
+      "c": "Temperature and Airflow velocity",
+      "d": "Screwdriver torque and Magnification level"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "A hot air rework station has two critical settings: temperature (to safely melt the specific solder alloy) and airflow velocity (which must be kept low enough to prevent blowing microscopic, neighboring components off the board).",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "What type of hazard do ESD bands primarily prevent?",
+    "options": {
+      "a": "Lithium-ion fires",
+      "b": "Static buildup and discharge",
+      "c": "Soldering fumes inhalation",
+      "d": "Chemical burns from flux"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "ESD bands prevent the buildup of static electricity on a technician's body. Without this grounding, a sudden electrostatic discharge from a finger could easily fry the microscopic transistors inside a mobile phone.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "When a technician uses a DC power supply to 'wake up' a deeply discharged battery that refuses to accept charge via normal methods, what technical requirement of the tool is being leveraged?",
+    "options": {
+      "a": "Its ability to read data paths via analog needles",
+      "b": "Its ability to output direct, adjustable voltage and current",
+      "c": "Its static shielding capabilities",
+      "d": "Its built-in re-balling stencil"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A DC power supply provides a heavily regulated output of direct voltage and current. This allows technicians to manually force a charge into a battery whose voltage has dropped too low for the phone's native charging circuit to recognize.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "Which tool would be essentially useless for a repair requiring board-level physical modification, but critical for a device locked by a network carrier?",
+    "options": {
+      "a": "Heat gun",
+      "b": "Soldering iron",
+      "c": "Flash boxes/dongles",
+      "d": "BGA re-balling kit"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Flash boxes and USB dongles are dedicated entirely to software repairs, such as flashing firmware, unlocking network carrier restrictions, and rewriting baseband data, offering no utility for physical board-level fixes.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "If a Lithium-ion fire starts during a repair due to an accidental puncture, what represents a severe hazard progression standard in battery emergencies?",
+    "options": {
+      "a": "Thermal runaway",
+      "b": "Static buildup",
+      "c": "Solder oxidization",
+      "d": "Software bootloop"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Thermal runaway is a dangerous chemical chain reaction inside a lithium-ion battery where a fault causes the cell to heat up uncontrollably. This rapidly accelerates, leading to violent venting of smoke and a self-sustaining fire.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "What type of screwdriver is identified by a cross-shaped head and is commonly paired with Torx in the mobile repair toolset?",
+    "options": {
+      "a": "Tri-wing",
+      "b": "Pentalobe",
+      "c": "Phillips",
+      "d": "Flathead"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Phillips screwdriver is an industry standard characterized by its cross-shaped tip, which centers itself in the screw head to provide even torque when removing internal components.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Repair Tools & Equipment",
+    "question_text": "While checking the continuous connection between two traces on a motherboard (continuity testing), the digital multi-meter will typically emit what kind of indicator if the connection is good?",
+    "options": {
+      "a": "A high-pitched beep or buzzer tone",
+      "b": "A cloud of soldering fumes",
+      "c": "A spark indicating anti-static discharge",
+      "d": "It will flash the smartphone firmware"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "When set to continuity mode, a digital multi-meter will emit a continuous, high-pitched beep if an unbroken electrical path exists between the two test probes, confirming the trace is intact.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Safety Precautions",
+    "question_text": "Which action contradicts the recommended safety protocol when operating a hot air rework station and a soldering iron?",
+    "options": {
+      "a": "Opening a window or running an extractor fan",
+      "b": "Closing all air vents to prevent dust entry",
+      "c": "Wearing an ESD band",
+      "d": "Using tweezers for component extraction"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Soldering produces harmful smoke from vaporized flux. Closing air vents traps these toxic fumes in the workspace, directly violating essential ventilation safety protocols meant to protect the technician's lungs.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Preventive vs Corrective Maintenance",
+    "question_text": "A client brings in a phone with a completely dead logic board that requires a new main IC soldered on, software flashed via dongle, and external casing cleaned. Which phase of this service definitively matches 'preventive maintenance' as per the source text?",
+    "options": {
+      "a": "Soldering the new main IC",
+      "b": "Flashing software via dongle",
+      "c": "Replacing the logic board",
+      "d": "Cleaning the external casing"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Cleaning the external casing prevents future accumulation of dirt and grime in ports and buttons, acting as a preventive measure. In contrast, soldering ICs and flashing software fix existing issues, which is corrective maintenance.",
+    "section_id": null
+  }
+]

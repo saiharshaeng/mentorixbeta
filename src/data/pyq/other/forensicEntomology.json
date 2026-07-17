@@ -1,0 +1,642 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "Which of the following insect families is typically the first to arrive and colonize a corpse?",
+        "options": {
+            "a": "Dermestidae (Skin beetles)",
+            "b": "Calliphoridae (Blowflies)",
+            "c": "Silphidae (Carrion beetles)",
+            "d": "Piophilidae (Cheese skippers)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Blowflies (Family Calliphoridae) have highly developed olfactory senses that allow them to detect the odors of putrescine and cadaverine from miles away, making them the first insects to arrive, often within minutes of death.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "Based on standard terrestrial insect succession, which of the following represents the correct general order of arrival?",
+        "options": {
+            "a": "Blowflies -> Flesh flies -> Carrion beetles -> Dermestid beetles",
+            "b": "Dermestid beetles -> Blowflies -> Carrion beetles -> Flesh flies",
+            "c": "Flesh flies -> Dermestid beetles -> Blowflies -> Carrion beetles",
+            "d": "Carrion beetles -> Blowflies -> Dermestid beetles -> Flesh flies"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Blowflies and flesh flies arrive early during the fresh and bloat stages. Carrion beetles arrive to feed on maggots during active decay, while Dermestid (skin) beetles arrive late to feed on dried tissue and hair during dry decay.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "During which stage of decomposition are hide beetles (Trogidae) and skin beetles (Dermestidae) most likely to become the dominant insects on a corpse?",
+        "options": {
+            "a": "Fresh stage",
+            "b": "Bloat stage",
+            "c": "Active decay",
+            "d": "Advanced/Dry decay"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "These beetles have chewing mouthparts capable of consuming dried skin, cartilage, and hair, making them characteristic of the advanced or dry decay stage when moisture levels are too low to support blowfly maggots.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "In the ecological categorization of carrion insects, ants and wasps that eat the blowfly maggots but may also feed on the body are classified as:",
+        "options": {
+            "a": "Necrophages",
+            "b": "Omnivores",
+            "c": "Predators and Parasites",
+            "d": "Incidentals"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Omnivores, such as ants, wasps, and some beetles, feed on both the corpse itself and the maggots/other insects residing on it. This can complicate PMI calculations because they deplete the necrophage population.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "How do insects belonging to the family Sarcophagidae (flesh flies) uniquely colonize a corpse compared to standard blowflies?",
+        "options": {
+            "a": "They deposit live first-instar maggots directly onto the body instead of laying eggs.",
+            "b": "They exclusively colonize buried bodies by digging through the soil.",
+            "c": "They wait until the skeletonization stage to consume bone marrow.",
+            "d": "They spin a silk web around the corpse to trap competing blowflies."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Sarcophagidae undergo internal egg hatching and larviposit, meaning they deposit live, motile larvae (maggots) directly onto the remains, giving them a slight head start over egg-laying blowflies.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "Which category of forensic insects uses the corpse simply as an extension of their natural habitat rather than for direct feeding on tissues or necrophages?",
+        "options": {
+            "a": "Necrophages",
+            "b": "Incidentals",
+            "c": "Omnivores",
+            "d": "Predators"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Incidental insects (e.g., spiders, centipedes, and certain mites) use the corpse as an extension of their normal habitat for shelter or random wandering rather than specifically feeding on it.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "Which insect behavior represents a significant challenge to forensic entomologists estimating a precise timeline, due to early-arriving populations being consumed?",
+        "options": {
+            "a": "Wandering behavior of third-instar maggots",
+            "b": "Predation by early-arriving carrion beetles and ants",
+            "c": "Eclosion of the pupa",
+            "d": "Formation of a maggot mass"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Predatory species like carrion beetles and omnivorous ants consume the oldest blowfly maggots. Since entomologists use the oldest maggots to estimate PMI, their consumption can lead to an artificially shortened PMI estimate.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "Cheese skippers (Piophilidae) typically colonize a corpse during which transitional phase of decomposition?",
+        "options": {
+            "a": "Minutes after death",
+            "b": "From active decay to advanced decay",
+            "c": "Exclusively during the completely skeletonized phase",
+            "d": "Immediately following blowfly eclosion but before bloat"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Cheese skippers typically arrive later than blowflies and flesh flies, most commonly peaking during late active decay and early advanced decay when the body begins to dry out and proteins ferment.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "If only empty pupal casings of blowflies are found on a corpse alongside living dermestid beetles, an investigator can conclude that:",
+        "options": {
+            "a": "The victim has been dead for less than 48 hours.",
+            "b": "Blowflies never actually colonized the body.",
+            "c": "At least one complete generation of blowflies has finished its life cycle.",
+            "d": "The body was stored in a freezer prior to being moved outdoors."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Empty puparial cases mean that the blowflies developed fully from egg to adult and the adult flies have emerged (eclosed) and left, signifying a minimum PMI of the duration of one entire life cycle.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Insect Succession",
+        "question_text": "What evolutionary advantage does a \"maggot mass\" provide to the developing larvae?",
+        "options": {
+            "a": "It decreases the ambient temperature to prevent overheating in direct sun.",
+            "b": "It produces significant metabolic heat, allowing continued rapid development even if ambient temperatures drop.",
+            "c": "It repels dermestid beetles through chemical signals.",
+            "d": "It permanently crystallizes the corpse tissue to preserve it as a food source."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "A maggot mass generates immense metabolic heat, sometimes elevating temperatures $5-15^\\circ \\text{C}$ above ambient. This heat allows rapid larval development even if the outside weather is cold.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "What type of life cycle do blowflies undergo, characterized by distinct egg, larva, pupa, and adult stages?",
+        "options": {
+            "a": "Ametabolous",
+            "b": "Hemimetabolous",
+            "c": "Paurometabolous",
+            "d": "Holometabolous"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "Holometabolous insects undergo complete metamorphosis, which includes distinct stages: egg, multiple larval instars, pupa, and adult.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "![Alt text: Microscopic view of the posterior end of a maggot showing three distinct spiracular slits in each spiracle](https://ars.els-cdn.com/content/image/1-s2.0-S0001706X2400010X-gr2.jpg)\n\nBased on the number of spiracular slits typical for this developmental phase, what instar stage is depicted?",
+        "options": {
+            "a": "First instar",
+            "b": "Second instar",
+            "c": "Third instar",
+            "d": "Prepupa"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Blowfly instars are identified by the number of slits in their posterior spiracles: Instar I has one slit, Instar II has two, and Instar III has three distinct slits. Since the image clearly shows three slits per spiracle, it represents the third instar.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "What is the primary function of the crop in a blowfly maggot, and how does it assist forensic entomologists?",
+        "options": {
+            "a": "It is an external structure used for digging; its length determines the species.",
+            "b": "It is a breathing tube; its color indicates the post-mortem interval.",
+            "c": "It is a food storage organ; its dark color clears just before the wandering phase, indicating maturity.",
+            "d": "It secretes enzymes for pupation; its presence confirms eclosion."
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "The crop holds ingested food and appears as a dark mass moving anteriorly as the maggot feeds. In the late 3rd instar, the maggot stops feeding, and the crop clears out as it prepares for the wandering phase.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "Which phase of the blowfly life cycle is characterized by the insect actively leaving the food source to find a safe, dry place to undergo pupation?",
+        "options": {
+            "a": "First Instar",
+            "b": "Second Instar",
+            "c": "Early Third Instar",
+            "d": "Late Third Instar (Wandering Phase)"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "During the late third instar, also known as the prepupal or wandering phase, the larva ceases feeding and migrates away from the decomposing remains to find a suitable, secure environment to pupate.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "When adult blowflies arrive at a fresh corpse, where do they preferentially lay their eggs?",
+        "options": {
+            "a": "On the largest flat surfaces of the skin, such as the back or chest.",
+            "b": "In natural orifices and open traumatic wounds.",
+            "c": "Underneath the fingernails and toenails.",
+            "d": "Strictly in the hair of the victim."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Female blowflies seek moist, dark environments to protect eggs from desiccation and to provide soft tissue for the newly hatched first instars. Natural orifices (eyes, nose, mouth, ears, genitalia) and open wounds are ideal.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "Which term describes the physical emergence of the adult fly from the puparium?",
+        "options": {
+            "a": "Ecdysis",
+            "b": "Eclosion",
+            "c": "Pupariation",
+            "d": "Oviposition"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Eclosion is the scientific term for the emergence of an adult insect from its pupal case or of a larva from its egg.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "During development, the blowfly pupa case undergoes a notable color change. Which sequence best describes this typical progression?",
+        "options": {
+            "a": "Black -> Dark Brown -> Light Brown -> White",
+            "b": "White -> Light Brown -> Dark Brown -> Black",
+            "c": "Green -> Blue -> Metallic Red",
+            "d": "Translucent -> Bright Red -> Dark Black"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "As the puparium forms and ages, the outer cuticle hardens and darkens progressively from a pale yellowish-white to light brown, dark brown, and finally black prior to eclosion.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "What physical feature is located at the anterior (front) end of a blowfly maggot?",
+        "options": {
+            "a": "Mouth hooks used to scrape and tear flesh",
+            "b": "Spiracular slits used for respiration",
+            "c": "A specialized ovipositor for mating",
+            "d": "The crop used to sense temperature changes"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The anterior (tapered) end of the maggot contains mouth hooks used to tear and scrape flesh, while the posterior (blunt) end houses the spiracles for breathing.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "At a consistent optimal temperature (e.g., $70^{\\circ}\\text{F}$), roughly how long does the blowfly egg stage typically last before hatching into the first instar?",
+        "options": {
+            "a": "1 to 2 hours",
+            "b": "12 to 24 hours",
+            "c": "3 to 4 days",
+            "d": "1 week"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "While it varies slightly by species and exact temperature, blowfly eggs generally hatch within 12 to 24 hours under standard warm conditions.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Blowfly Life Cycle",
+        "question_text": "Why do forensic entomologists usually collect live specimens at a crime scene and rear them to adulthood in a laboratory setting?",
+        "options": {
+            "a": "To collect their pupal casings for DNA extraction.",
+            "b": "To ensure they survive long enough to serve as courtroom evidence.",
+            "c": "Because species identification is significantly more accurate and easier on adult flies than on maggots.",
+            "d": "To harvest the maggots' crop contents for toxicological testing later."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Larvae of closely related blowfly species are notoriously difficult to distinguish under a microscope. Rearing them to adults ensures highly accurate morphological identification of the exact species.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "When forensic entomologists refer to Post-Mortem Interval (PMI), what are they most accurately calculating based solely on insect evidence?",
+        "options": {
+            "a": "The exact time the heart stopped beating",
+            "b": "The time since the maximum temperature was reached",
+            "c": "The Time of Colonization (minimum PMI)",
+            "d": "The time since the onset of rigor mortis"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Insects cannot determine the exact moment of death; they indicate the minimum PMI, or the Time of Colonization (TOC). This is the time elapsed since the very first insects deposited eggs on the remains.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "What does the abbreviation ADH stand for in the context of forensic entomology?",
+        "options": {
+            "a": "Approximate Death Hour",
+            "b": "Accumulated Degree Hours",
+            "c": "Average Decay Heat",
+            "d": "Atmospheric Daily Humidity"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "ADH stands for Accumulated Degree Hours, a measurement of thermal energy required for an insect to progress through its life cycle.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "In ADH and ADD calculations, what is the 'Base Temperature' or 'Lower Developmental Threshold'?",
+        "options": {
+            "a": "The ambient temperature at the crime scene at the time of body discovery.",
+            "b": "The highest temperature the maggot mass reached before the body was moved.",
+            "c": "The temperature below which insect development pauses or effectively stops.",
+            "d": "The average daily temperature minus the daily low."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The base temperature (lower threshold) is the critical temperature minimum for a specific insect species; below this, metabolic functions essential for development essentially halt.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "Calculate the Accumulated Degree Hours (ADH). A species of blowfly requires 500 ADH to progress from egg to the second instar. If the constant ambient temperature is $20^{\\circ}\\text{C}$ and the base temperature is $10^{\\circ}\\text{C}$, how many hours will it take to reach the second instar?",
+        "options": {
+            "a": "25 hours",
+            "b": "50 hours",
+            "c": "75 hours",
+            "d": "100 hours"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "The effective temperature is $20^{\\circ}\\text{C} - 10^{\\circ}\\text{C} = 10^{\\circ}\\text{C}$. Using the formula $\\text{ADH} = \\text{Effective Temperature} \\times \\text{Time}$, we get $500 = 10 \\times \\text{Time}$. $\\text{Time} = 500 / 10 = 50$ hours.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "An investigator is calculating Accumulated Degree Days (ADD) with a threshold temperature of $10^{\\circ}\\text{C}$. Over three days, the average daily temperatures were $18^{\\circ}\\text{C}$, $20^{\\circ}\\text{C}$, and $12^{\\circ}\\text{C}$. What is the total ADD for this period?",
+        "options": {
+            "a": "20 ADD",
+            "b": "30 ADD",
+            "c": "40 ADD",
+            "d": "50 ADD"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "Daily ADD is calculated as $(T_{\\text{avg}} - T_{\\text{base}})$. Day 1: $18 - 10 = 8$. Day 2: $20 - 10 = 10$. Day 3: $12 - 10 = 2$. Total ADD $= 8 + 10 + 2 = 20$.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "Which insects collected from the corpse provide the most crucial information for determining the minimum Post-Mortem Interval?",
+        "options": {
+            "a": "The smallest and youngest maggots found",
+            "b": "The oldest and largest maggots of the primary colonizing species",
+            "c": "The highest number of incidental insects",
+            "d": "The adult flies currently mating near the body"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "To establish the time of first colonization (the minimum PMI), entomologists must determine the developmental age of the oldest maggots present on the remains.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "When taking historical weather data to calculate ADH retrospectively, why might data from a local airport weather station need adjustments by a forensic entomologist?",
+        "options": {
+            "a": "Because airports strictly measure wind speed, not temperature.",
+            "b": "Because the microclimate of the body (e.g., in a ditch, shaded forest) may differ significantly from the open conditions of the weather station.",
+            "c": "Because weather stations only use Fahrenheit and ADH requires Celsius.",
+            "d": "Because airports reset their barometric data weekly."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Microclimates dramatically affect insect development. A corpse in deep shade, a trench, or inside a vehicle will experience different localized temperatures compared to an open, standardized meteorological station.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "In a laboratory, you are observing blowflies reared at $25^{\\circ}\\text{C}$ (base temp $10^{\\circ}\\text{C}$). If the pupal stage naturally requires 1500 ADH for this species, how many total days in the pupal stage should you expect?",
+        "options": {
+            "a": "2.5 days",
+            "b": "4.17 days",
+            "c": "5.5 days",
+            "d": "6.0 days"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Effective temperature $= 25 - 10 = 15^{\\circ}\\text{C}$. $\\text{Time (hours)} = \\text{ADH} / \\text{Effective Temp} = 1500 / 15 = 100$ hours. $\\text{Days} = 100 / 24 \\approx 4.166$ days.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "When a forensic team recovers a body and moves it to the morgue cooler, how does this affect the ADH calculation?",
+        "options": {
+            "a": "It resets the ADH counter back to zero.",
+            "b": "It adds a constant 500 ADH to the total estimate.",
+            "c": "It halts further significant ADH accumulation because the cooler is typically below the developmental base temperature.",
+            "d": "It drastically speeds up ADH accumulation, as the maggots compensate for the cold."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "A morgue cooler is normally kept at around $4^{\\circ}\\text{C}$, which is below the typical $10^{\\circ}\\text{C}$ threshold. This stops maggot development, so time in the cooler adds virtually zero ADH to the timeline.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - PMI and ADH",
+        "question_text": "How must the formula for Post-Mortem Interval (PMI) based on entomology be adjusted if the body is found indoors in a climate-controlled room ($72^{\\circ}\\text{F}$ constantly)?",
+        "options": {
+            "a": "Daily weather station fluctuations are ignored, and a constant ADH calculation based on the room temperature is used instead.",
+            "b": "The PMI is automatically doubled because flies fly slower indoors.",
+            "c": "No PMI calculation is possible since flies cannot enter buildings.",
+            "d": "The base temperature must be subtracted from the outdoor temperature anyway."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Indoors in a climate-controlled environment, temperature fluctuations are practically negligible. The entomologist uses the constant room temperature to calculate thermal energy, bypassing outdoor meteorological data.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "How does the presence of significant amounts of cocaine in a deceased victim's tissues affect the growth of blowfly maggots feeding on that tissue?",
+        "options": {
+            "a": "It decelerates the growth, causing PMI to be underestimated.",
+            "b": "It accelerates their growth, leading to a potentially overestimated PMI if unaccounted for.",
+            "c": "It causes them to immediately enter the pupal stage.",
+            "d": "It has no measurable physiological effect on insects."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Cocaine is a central nervous system stimulant that severely accelerates blowfly maggot development. If entomologists are unaware of its presence, they might conclude the body has been there longer than it actually has (overestimated PMI).",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "What effect do heavy metals like arsenic typically have on insect colonization and growth on a corpse?",
+        "options": {
+            "a": "They dramatically speed up the pupation process.",
+            "b": "They attract twice as many adult flies due to a sweet odor.",
+            "c": "They retard development and can be highly toxic to the insects.",
+            "d": "They convert the insects into an ametabolous life cycle."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Arsenic and other toxic heavy metals act as systemic poisons. They tend to inhibit insect colonization and severely slow the developmental cycle, potentially causing an underestimation of PMI.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "If a body is deeply buried under a meter of compacted soil immediately after death, how is the standard insect succession altered?",
+        "options": {
+            "a": "Succession is unaffected; blowflies will easily burrow up to a meter deep.",
+            "b": "Normal terrestrial succession by blowflies is prevented; instead, unique taxa like \"coffin flies\" (Phoridae) might colonize.",
+            "c": "Dermestid beetles will colonize the body within hours instead of weeks.",
+            "d": "Aquatic midges will replace blowflies."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Standard blowflies generally do not burrow into soil. Bodies buried significantly deep exclude typical initial colonizers, shifting succession exclusively to small, specialized burrowing insects like Phoridae (coffin flies).",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "A body left in an enclosed vehicle sitting in the summer sun will typically exhibit what entomological timeline compared to a body left in a shaded forest?",
+        "options": {
+            "a": "Accelerated insect development due to the \"greenhouse effect\" causing much higher ambient temperatures.",
+            "b": "Complete lack of insect colonization because windows block UV light.",
+            "c": "Slower development due to lack of airflow oxygenating the maggots.",
+            "d": "Identical developmental timelines, as insects regulate their own temperatures perfectly."
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Vehicles trap heat (the greenhouse effect), pushing temperatures drastically higher than outside ambient conditions, which severely accelerates the metabolic rate and growth of colonizing maggots until lethal thermal limits are reached.",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "How does tightly wrapping a body in multiple layers of heavy plastic garbage bags affect entomological investigations?",
+        "options": {
+            "a": "It speeds up blowfly colonization by providing a chemically attractive surface.",
+            "b": "It delays initial colonization significantly until flies can find an opening or tear.",
+            "c": "It changes the insect fauna strictly to Dermestid beetles from day one.",
+            "d": "It entirely blocks decomposition, preventing any insects from surviving."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Physical barriers like thick plastic wrap, heavy blankets, or a sealed container impede female flies from physically reaching the body to lay eggs, creating a distinct delay in the time of colonization relative to the actual time of death.",
+        "section_id": null
+    },
+    {
+        "question_number": 36,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "What does the subfield of 'Entomotoxicology' primarily focus on?",
+        "options": {
+            "a": "Testing chemical insecticides at crime scenes to find trace evidence.",
+            "b": "Using chemical baits to capture forensic flies.",
+            "c": "Extracting and analyzing the tissues of maggots to detect drugs or toxins ingested from the corpse.",
+            "d": "Studying venomous insect stings as a primary cause of death."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "When a corpse is severely skeletonized or decomposed, normal tissue/blood may no longer be viable for toxicology. Entomotoxicologists can test the maggots or empty pupal casings, which bioaccumulate the drugs/toxins the maggots fed upon.",
+        "section_id": null
+    },
+    {
+        "question_number": 37,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "A person is killed and deposited in a heavily shaded ditch at midnight. Given normal fly behavior, when will initial colonization most likely occur?",
+        "options": {
+            "a": "Immediately; blowflies are highly nocturnal.",
+            "b": "The following morning at sunrise; blowflies generally do not fly or oviposit at night.",
+            "c": "Not until at least 48 hours have passed.",
+            "d": "Around sunset the next evening, triggered by the dropping temperature."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Blowflies are generally diurnal (active during the day). They rely on sunlight and warmer daytime temperatures to fly and search for oviposition sites, meaning nighttime deaths face delayed colonization until dawn.",
+        "section_id": null
+    },
+    {
+        "question_number": 38,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "Which condition is most likely to cause rapid desiccation (mummification) of a corpse, thereby severely restricting typical maggot mass development?",
+        "options": {
+            "a": "A high humidity environment like a swamp",
+            "b": "An extremely dry, arid environment with persistent strong winds",
+            "c": "Burial in moist, loosely packed loam",
+            "d": "Storage in the trunk of a car on a rainy day"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Blowfly maggots require high moisture levels to survive and feed. In extremely dry, hot, windy environments (like a desert), the body mummifies quickly, creating a tough, dry tissue landscape unsuitable for maggots but ideal for certain beetles.",
+        "section_id": null
+    },
+    {
+        "question_number": 39,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "If forensic investigators find aquatic midge larvae and caddisflies on a body rather than blowfly maggots, what does this environment indicate?",
+        "options": {
+            "a": "The victim was suspended high in the canopy of a forest.",
+            "b": "The victim was buried under concrete.",
+            "c": "The victim was submerged in a freshwater environment (like a river or lake).",
+            "d": "The victim died in a pristine desert landscape."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "A completely submerged body is inaccessible to terrestrial blowflies until it floats to the surface. Instead, aquatic insect species, such as midges, caddisflies, and aquatic beetles, will interact with the submerged remains.",
+        "section_id": null
+    },
+    {
+        "question_number": 40,
+        "subject": "Forensic Science",
+        "topic": "Forensic Entomology - Variables (Drugs, Weather)",
+        "question_text": "How might heavily layered clothing on a deceased person paradoxically accelerate certain localized aspects of colonization?",
+        "options": {
+            "a": "It emits a chemical identical to putrescine.",
+            "b": "It provides additional dark, moist, insulated folds which are highly attractive for flies to lay massive numbers of eggs.",
+            "c": "It attracts omnivorous birds, which drop additional maggots onto the body.",
+            "d": "It instantly dissolves upon contact with decomposition fluids, raising the localized temperature."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "While wrapping can sometimes act as a barrier, layered or thick clothing on an exposed body absorbs decomposition fluids and creates sheltered, moist, warm microhabitats (like a collar or waistband) that flies seek out, leading to heavy, concentrated egg deposition.",
+        "section_id": null
+    }
+]

@@ -1,0 +1,562 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Early Theories",
+        "question_text": "Which of the following statements from John Dalton’s original atomic theory was later proven incorrect by the discovery of isotopes?",
+        "options": {
+            "a": "Matter is composed of extremely small particles called atoms.",
+            "b": "Atoms of different elements combine in simple whole-number ratios to form chemical compounds.",
+            "c": "All atoms of a given element are identical in mass and properties.",
+            "d": "In chemical reactions, atoms are combined, separated, or rearranged."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Dalton postulated that all atoms of a particular element are identical in mass. The existence of isotopes—atoms of the same element with different masses (different numbers of neutrons)—proved this specific postulate wrong.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Early Theories",
+        "question_text": "In Rutherford's gold foil experiment, most alpha particles passed directly through the foil with no deflection. What did this observation suggest about the structure of the atom?",
+        "options": {
+            "a": "The atom is a solid sphere of uniform density.",
+            "b": "The atom consists mostly of empty space.",
+            "c": "Electrons are embedded in a positive jelly-like substance.",
+            "d": "The nucleus occupies the majority of the atom's volume."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Since the vast majority of alpha particles passed through undeflected, Rutherford concluded that the atom is composed mostly of empty space, with the mass concentrated in a tiny nucleus.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Early Theories",
+        "question_text": "Which scientist proposed the \"plum pudding\" model, suggesting that the atom was a positively charged sphere with negatively charged electrons embedded within it?",
+        "options": {
+            "a": "John Dalton",
+            "b": "Ernest Rutherford",
+            "c": "J.J. Thomson",
+            "d": "Niels Bohr"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "J.J. Thomson proposed the plum pudding model after discovering the electron, conceptualizing the atom as a positive mass with electrons embedded like plums in a pudding.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Early Theories",
+        "question_text": "A chemist analyzes two compounds composed of carbon and oxygen. Compound A contains 1.33 g of oxygen per gram of carbon. Compound B contains 2.66 g of oxygen per gram of carbon. This observation best illustrates which law?",
+        "options": {
+            "a": "Law of Conservation of Mass",
+            "b": "Law of Definite Proportions",
+            "c": "Law of Multiple Proportions",
+            "d": "Law of Isobars"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The Law of Multiple Proportions states that when two elements form more than one compound, the ratios of the masses of the second element that combine with a fixed mass of the first element can be reduced to small whole numbers (in this case, 2.66:1.33 is a 2:1 ratio).",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Subatomic Particles",
+        "question_text": "Which subatomic particle has a charge of zero and a mass of approximately 1 amu?",
+        "options": {
+            "a": "Proton",
+            "b": "Electron",
+            "c": "Neutron",
+            "d": "Positron"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Neutrons are neutral particles (charge of 0) located in the nucleus and have a mass of approximately 1 atomic mass unit (amu).",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Subatomic Particles",
+        "question_text": "Where are electrons located in the modern model of the atom?",
+        "options": {
+            "a": "Inside the nucleus with the protons",
+            "b": "Inside the nucleus with the neutrons",
+            "c": "In a cloud or region of space surrounding the nucleus",
+            "d": "Embedded on the surface of the nucleus"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Electrons orbit the nucleus in a diffuse cloud or specific orbitals, occupying the vast majority of the atom's volume but very little of its mass.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Subatomic Particles",
+        "question_text": "Which statement correctly compares the relative masses of protons and electrons?",
+        "options": {
+            "a": "A proton has approximately the same mass as an electron.",
+            "b": "A proton is approximately 1800 times more massive than an electron.",
+            "c": "An electron is approximately 1800 times more massive than a proton.",
+            "d": "Protons have mass, while electrons have absolutely zero mass."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Protons and neutrons have a mass of ~1 amu, while electrons have a mass of ~1/1836 amu. Therefore, a proton is roughly 1800 times heavier than an electron.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Subatomic Particles",
+        "question_text": "In the Rutherford gold foil experiment, what caused the deflection of the small percentage of alpha particles?",
+        "options": {
+            "a": "Repulsion by the negative electrons",
+            "b": "Attraction to the positive nucleus",
+            "c": "Collision with the neutral neutrons",
+            "d": "Repulsion by the dense, positively charged nucleus"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Alpha particles are positively charged. When they approached the small, dense, positively charged nucleus of the gold atoms, the strong electrostatic repulsion caused them to deflect.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Subatomic Particles",
+        "question_text": "Which subatomic particle identifies an atom as a specific element?",
+        "options": {
+            "a": "Electron",
+            "b": "Neutron",
+            "c": "Proton",
+            "d": "Quark"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The number of protons (atomic number) defines the identity of an element. Changing the number of protons changes the element.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Atomic/Mass Number",
+        "question_text": "An atom of Carbon-14 ($^{14}\\text{C}$) contains how many neutrons? (Atomic number of Carbon is 6).",
+        "options": {
+            "a": "6",
+            "b": "8",
+            "c": "14",
+            "d": "20"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The number of neutrons is calculated by $A - Z$, where $(A)$ is the mass number (14) and $(Z)$ is the atomic number (6). $14 - 6 = 8$ neutrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Atomic/Mass Number",
+        "question_text": "Consider the isotope symbol $^{31}_{15}\\text{P}$. What does the number 15 represent?",
+        "options": {
+            "a": "Mass number",
+            "b": "Atomic number",
+            "c": "Number of neutrons",
+            "d": "Isotopic abundance"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "In the notation $^{A}_{Z}\\text{X}$, the subscript $Z$ represents the atomic number (number of protons).",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Atomic/Mass Number",
+        "question_text": "An atom contains 11 protons, 12 neutrons, and 10 electrons. What is its mass number?",
+        "options": {
+            "a": "11",
+            "b": "12",
+            "c": "21",
+            "d": "23"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "The mass number $(A)$ is the sum of protons and neutrons. $11 + 12 = 23$.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Atomic/Mass Number",
+        "question_text": "Which of the following quantities is always equal to the atomic number $(Z)$ of a neutral atom?",
+        "options": {
+            "a": "Number of neutrons",
+            "b": "Number of electrons",
+            "c": "Mass number minus atomic number",
+            "d": "Atomic mass"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "For a *neutral* atom, the positive charge of the protons must be balanced by an equal number of negatively charged electrons. Thus, $(Z)$ = number of electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Atomic/Mass Number",
+        "question_text": "A species has 16 protons, 16 neutrons, and 18 electrons. What is its net charge?",
+        "options": {
+            "a": "+2",
+            "b": "0",
+            "c": "-2",
+            "d": "-18"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Charge = (Number of Protons) - (Number of Electrons) = $16 - 18 = -2$.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "Which of the following pairs represents isotopes of the same element?",
+        "options": {
+            "a": "$^{14}\\text{N}$ and $^{14}\\text{C}$",
+            "b": "$^{12}\\text{C}$ and $^{13}\\text{C}$",
+            "c": "$^{32}\\text{S}$ and $^{32}\\text{S}^{2-}$",
+            "d": "$^{40}\\text{Ar}$ and $^{40}\\text{K}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Isotopes are atoms of the same element (same atomic number/symbol) with different mass numbers. $^{12}\\text{C}$ and $^{13}\\text{C}$ are both Carbon but have different masses.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "Copper has two naturally occurring isotopes: $^{63}\\text{Cu}$ (mass 62.93 amu, abundance 69.17%) and $^{65}\\text{Cu}$ (mass 64.93 amu, abundance 30.83%). Which expression correctly calculates the average atomic mass?",
+        "options": {
+            "a": "$(62.93 \\times 0.6917) + (64.93 \\times 0.3083)$",
+            "b": "$(62.93 + 64.93) / 2$",
+            "c": "$(62.93 \\times 69.17) + (64.93 \\times 30.83)$",
+            "d": "$(69.17 / 62.93) + (30.83 / 64.93)$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Average atomic mass is the weighted average: $\\sum (\t\\text{Isotope Mass} \\times \t\\text{Fractional Abundance})$. The percentages must be converted to decimals (e.g., 69.17% = 0.6917).",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "Element X has two isotopes: X-10 (mass 10.0 amu, 20.0% abundance) and X-11 (mass 11.0 amu, 80.0% abundance). What is the average atomic mass of Element X?",
+        "options": {
+            "a": "10.2 amu",
+            "b": "10.5 amu",
+            "c": "10.8 amu",
+            "d": "11.0 amu"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Calculation: $(10.0 \\times 0.20) + (11.0 \\times 0.80) = 2.0 + 8.8 = 10.8 \\text{ amu}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "Why is the atomic mass of Chlorine listed as 35.45 amu on the periodic table rather than a whole number?",
+        "options": {
+            "a": "Protons and neutrons have slightly different masses.",
+            "b": "The mass of electrons is included.",
+            "c": "It is a weighted average of the masses of naturally occurring isotopes.",
+            "d": "Experimental error prevents precise measurement."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The atomic mass on the periodic table is a weighted average of all naturally occurring isotopes. Since Chlorine exists as Cl-35 and Cl-37, the average falls between them.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "Boron has an average atomic mass of 10.81 amu. It consists of two isotopes: Boron-10 and Boron-11. Which isotope is more abundant?",
+        "options": {
+            "a": "Boron-10",
+            "b": "Boron-11",
+            "c": "They are equally abundant.",
+            "d": "Cannot be determined without density data."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The average mass (10.81) is much closer to 11 than to 10, implying that Boron-11 is the more abundant isotope (approx 80%).",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "An element has three isotopes with masses 24, 25, and 26. If the average atomic mass is 24.31, which isotope is likely the most abundant?",
+        "options": {
+            "a": "Isotope-24",
+            "b": "Isotope-25",
+            "c": "Isotope-26",
+            "d": "All are equal"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Since the average (24.31) is closest to 24, the isotope with mass 24 must have the highest natural abundance.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "Two atoms are isotopes if they have:",
+        "options": {
+            "a": "Different atomic numbers but same mass number",
+            "b": "Same atomic number but different number of electrons",
+            "c": "Same atomic number but different mass numbers",
+            "d": "Same mass number but different chemical properties"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Isotopes are defined as atoms with the same number of protons (atomic number) but different numbers of neutrons (and thus different mass numbers).",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Isotopes & Atomic Mass",
+        "question_text": "If a sample of element Z consists of 60% Z-50 (mass 50 amu) and 40% Z-52 (mass 52 amu), what is the atomic mass of the sample?",
+        "options": {
+            "a": "50.8 amu",
+            "b": "51.0 amu",
+            "c": "51.2 amu",
+            "d": "50.4 amu"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Calculation: $(50 \\times 0.60) + (52 \\times 0.40) = 30.0 + 20.8 = 50.8 \\text{ amu}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Electromagnetic Radiation",
+        "question_text": "Which equation correctly represents the relationship between the speed of light $(c)$, wavelength ($\\lambda$), and frequency ($\\nu$)?",
+        "options": {
+            "a": "$c = \\lambda \\times \\nu$",
+            "b": "$c = \\lambda / \\nu$",
+            "c": "$\\lambda = c \\times \\nu$",
+            "d": "$\\nu = c \\times \\lambda$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The speed of light is the product of wavelength and frequency: $c = \\lambda\\nu$.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Electromagnetic Radiation",
+        "question_text": "What happens to the frequency of a light wave if its wavelength increases?",
+        "options": {
+            "a": "The frequency increases.",
+            "b": "The frequency decreases.",
+            "c": "The frequency remains the same.",
+            "d": "The speed of light increases."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Wavelength and frequency are inversely proportional ($c = \\lambda\\nu$). If wavelength increases, frequency must decrease to keep $(c)$ constant.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Electromagnetic Radiation",
+        "question_text": "According to the equation $E = h\\nu$, the energy of a photon is directly proportional to its:",
+        "options": {
+            "a": "Wavelength",
+            "b": "Frequency",
+            "c": "Speed",
+            "d": "Amplitude"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "In Planck's equation $E = h\\nu$, Energy $(E)$ is directly proportional to Frequency ($\\nu$).",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Electromagnetic Radiation",
+        "question_text": "Which of the following types of electromagnetic radiation has the highest energy?",
+        "options": {
+            "a": "Radio waves",
+            "b": "Visible light",
+            "c": "Microwaves",
+            "d": "Gamma rays"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Gamma rays have the highest frequency and thus the highest energy in the electromagnetic spectrum.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Bohr Model",
+        "question_text": "In the Bohr model of the hydrogen atom, electrons are described as:",
+        "options": {
+            "a": "Moving freely in a random cloud",
+            "b": "Embedded in the nucleus",
+            "c": "Orbiting the nucleus in fixed, quantized energy levels",
+            "d": "Stationary at fixed distances from the nucleus"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Bohr proposed that electrons move in specific circular orbits (energy levels) around the nucleus and cannot exist between these levels.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Bohr Model",
+        "question_text": "What occurs when an electron in an atom moves from a higher energy level ($n=3$) to a lower energy level ($n=2$)?",
+        "options": {
+            "a": "Energy is absorbed in the form of a photon.",
+            "b": "Energy is emitted in the form of a photon.",
+            "c": "The electron gains mass.",
+            "d": "The atom becomes a negative ion."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "When an electron falls to a lower energy state, the difference in energy is released (emitted) as electromagnetic radiation (light).",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Bohr Model",
+        "question_text": "The lowest possible energy state of an atom is called the:",
+        "options": {
+            "a": "Excited state",
+            "b": "Ground state",
+            "c": "Quantized state",
+            "d": "Photonic state"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The ground state is the lowest energy level an electron can occupy. Any higher level is an excited state.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Bohr Model",
+        "question_text": "Which transition in a hydrogen atom would result in the emission of the photon with the **highest** energy?",
+        "options": {
+            "a": "$n=2 \\to n=1$",
+            "b": "$n=3 \\to n=2$",
+            "c": "$n=4 \\to n=3$",
+            "d": "$n=5 \\to n=4$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "Energy gaps between levels decrease as $(n)$ increases. The gap between $n=1$ and $n=2$ is the largest energy difference, resulting in the highest energy photon.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Modern/Quantum",
+        "question_text": "In the quantum mechanical model, an orbital is best defined as:",
+        "options": {
+            "a": "A circular path the electron follows.",
+            "b": "A region of space where there is a high probability of finding an electron.",
+            "c": "A fixed point where the electron is located.",
+            "d": "A shell that contains exactly 8 electrons."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Unlike Bohr's orbits, quantum orbitals are 3D probability maps indicating where an electron is likely (usually 90% probability) to be found.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Modern/Quantum",
+        "question_text": "The Heisenberg Uncertainty Principle states that it is impossible to simultaneously determine which two properties of a particle with perfect precision?",
+        "options": {
+            "a": "Mass and Velocity",
+            "b": "Position and Momentum",
+            "c": "Energy and Time",
+            "d": "Charge and Spin"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Werner Heisenberg showed that one cannot measure both the position and the momentum (velocity) of a quantum particle simultaneously with absolute precision.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Modern/Quantum",
+        "question_text": "What is the shape of an $(s)$ orbital?",
+        "options": {
+            "a": "Dumbbell",
+            "b": "Spherical",
+            "c": "Cloverleaf",
+            "d": "Toroidal"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "$(s)$ orbitals are spherical in shape. $(p)$ orbitals are dumbbell-shaped.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Modern/Quantum",
+        "question_text": "How does the quantum mechanical model of the atom differ from the Bohr model?",
+        "options": {
+            "a": "It treats the electron as a particle only.",
+            "b": "It places electrons in fixed circular orbits.",
+            "c": "It treats the electron mathematically as a wave and uses probability.",
+            "d": "It assumes the nucleus is neutral."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The quantum mechanical model treats electrons as having wave-like properties and uses wave functions to calculate the probability of finding electrons (orbitals), rather than fixed paths (orbits).",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Modern/Quantum",
+        "question_text": "What is the maximum number of electrons that can occupy a single orbital?",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "6",
+            "d": "8"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "According to the Pauli Exclusion Principle, a single orbital can hold a maximum of 2 electrons, which must have opposite spins.",
+        "section_id": null
+    }
+]

@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "The total area of all the bars in a histogram is directly proportional to the...",
+    "options": {
+      "a": "total frequency",
+      "b": "mean",
+      "c": "class boundaries",
+      "d": "class interval"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "In a histogram, the area of each rectangular bar represents the frequency of that class. Therefore, the total area of all the bars combined is directly proportional to the total frequency of the distribution.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "A probability tree diagram shows two stages. The probability of choosing branch A is $0.6$ and branch B is $0.4$. If A is chosen, the probability of outcome C is $0.8$. If B is chosen, the probability of outcome C is $0.3$. What is the overall probability of outcome C occurring?",
+    "options": {
+      "a": "$0.60$",
+      "b": "$0.48$",
+      "c": "$0.12$",
+      "d": "$0.80$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Using the law of total probability, $P(C) = P(A \\cap C) + P(B \\cap C)$. \n$P(C) = (P(A) \\times P(C|A)) + (P(B) \\times P(C|B)) = (0.6 \\times 0.8) + (0.4 \\times 0.3) = 0.48 + 0.12 = 0.60$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "The sum of the frequencies of a grouped data is $40$ and $\\sum fx = 280$. Calculate the mean.",
+    "options": {
+      "a": "$5$",
+      "b": "$7$",
+      "c": "$14$",
+      "d": "$28$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The mean of a grouped frequency distribution is given by the formula $\\bar{x} = \\frac{\\sum fx}{\\sum f}$. \nSubstituting the given values, $\\bar{x} = \\frac{280}{40} = 7$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "Which of the following is NOT a necessary condition for a binomial distribution?",
+    "options": {
+      "a": "The number of trials must be fixed.",
+      "b": "The trials must be independent of each other.",
+      "c": "The probability of success must vary from trial to trial.",
+      "d": "Each trial has only two possible outcomes."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A key condition for the binomial distribution is that the probability of success, denoted as $p$, must remain constant across all trials. Therefore, stating that the probability must vary is incorrect.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "Five competitors are ranked by two judges. The sum of the squares of the differences in their ranks is $\\sum D^2 = 8$. Calculate the Spearman's rank correlation coefficient.",
+    "options": {
+      "a": "$0.4$",
+      "b": "$0.5$",
+      "c": "$0.6$",
+      "d": "$0.8$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Spearman's rank correlation is $r_s = 1 - \\frac{6 \\sum D^2}{n(n^2 - 1)}$. \nWith $n = 5$ and $\\sum D^2 = 8$, \n$r_s = 1 - \\frac{6 \\times 8}{5(25 - 1)} = 1 - \\frac{48}{120} = 1 - 0.4 = 0.6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "If two events $A$ and $B$ are mutually exclusive, then the probability of both occurring together, $P(A \\cap B)$, is:",
+    "options": {
+      "a": "$1$",
+      "b": "$0$",
+      "c": "$P(A) \\times P(B)$",
+      "d": "$P(A) + P(B)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "By definition, mutually exclusive events cannot occur at the same time. Therefore, their intersection is an empty set, making $P(A \\cap B) = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "Given that $\\sum f = 20$, $\\sum fx = 100$, and $\\sum fx^2 = 580$, calculate the standard deviation of the distribution.",
+    "options": {
+      "a": "$2$",
+      "b": "$4$",
+      "c": "$16$",
+      "d": "$24$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Variance is given by $\\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2$. \nMean $= \\frac{100}{20} = 5$. \nVariance $= \\frac{580}{20} - 5^2 = 29 - 25 = 4$. \nStandard Deviation $= \\sqrt{4} = 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "When constructing a cumulative frequency curve (ogive), the cumulative frequencies are plotted against the...",
+    "options": {
+      "a": "lower class boundaries",
+      "b": "upper class boundaries",
+      "c": "class midpoints",
+      "d": "class frequencies"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An ogive, or cumulative frequency curve, represents the accumulation of frequencies up to a certain point. Therefore, the cumulative frequency is plotted against the corresponding upper class boundary of each class interval.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "A fair coin is tossed $4$ times. What is the probability of obtaining exactly $2$ heads?",
+    "options": {
+      "a": "$\\frac{1}{4}$",
+      "b": "$\\frac{3}{8}$",
+      "c": "$\\frac{1}{2}$",
+      "d": "$\\frac{5}{8}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Let $X$ be the number of heads. $X \\sim B(n=4, p=0.5)$. \n$P(X=2) = \\binom{4}{2} (0.5)^2 (0.5)^2 = 6 \\times \\left(\\frac{1}{2}\\right)^4 = 6 \\times \\frac{1}{16} = \\frac{6}{16} = \\frac{3}{8}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "In a scatter diagram, if the points are closely clustered around a line that trends downwards from left to right, this indicates a:",
+    "options": {
+      "a": "strong positive correlation",
+      "b": "strong negative correlation",
+      "c": "weak positive correlation",
+      "d": "zero correlation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A downward trend from left to right means as one variable increases, the other decreases. The tight clustering indicates a 'strong' relationship, hence a strong negative correlation.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "Events $A$ and $B$ are independent such that $P(A) = 0.4$ and $P(B) = 0.5$. Calculate the probability that both events occur.",
+    "options": {
+      "a": "$0.2$",
+      "b": "$0.9$",
+      "c": "$0.1$",
+      "d": "$0.4$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "For two independent events $A$ and $B$, the probability of both occurring is $P(A \\cap B) = P(A) \\times P(B)$. \nTherefore, $P(A \\cap B) = 0.4 \\times 0.5 = 0.2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "For a frequency distribution, the assumed mean is $A = 20$. If $\\sum f = 50$ and $\\sum fd = -10$ (where $d = x - A$), calculate the true mean of the distribution.",
+    "options": {
+      "a": "$19.8$",
+      "b": "$20.2$",
+      "c": "$19.0$",
+      "d": "$21.0$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The formula linking true mean and assumed mean is $\\bar{x} = A + \\frac{\\sum fd}{\\sum f}$. \nSubstituting the given values, $\\bar{x} = 20 + \\frac{-10}{50} = 20 - 0.2 = 19.8$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "To estimate the mode of grouped data from a histogram, one must...",
+    "options": {
+      "a": "find the area under the tallest rectangle",
+      "b": "draw diagonal lines from the top corners of the tallest rectangle to the adjacent top corners of the neighboring rectangles",
+      "c": "calculate the average of the class boundaries of the tallest rectangle",
+      "d": "plot a cumulative frequency curve"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "To geometrically estimate the mode from a histogram, one draws crossing diagonal lines inside the tallest bar (modal class), connecting its top corners to the nearest top corners of the adjacent bars. The x-coordinate of the intersection point is the mode.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "The probability of a marksman hitting a target is $\\frac{1}{3}$. If he shoots $5$ times, what is the probability that he hits the target at least once?",
+    "options": {
+      "a": "$\\frac{32}{243}$",
+      "b": "$\\frac{211}{243}$",
+      "c": "$\\frac{64}{243}$",
+      "d": "$\\frac{179}{243}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Using binomial probability, $P(\\text{at least } 1) = 1 - P(\\text{zero hits})$. \nThe probability of missing is $q = 1 - \\frac{1}{3} = \\frac{2}{3}$. \n$P(X = 0) = \\left(\\frac{2}{3}\\right)^5 = \\frac{32}{243}$. \n$P(X \\ge 1) = 1 - \\frac{32}{243} = \\frac{211}{243}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "Suppose a rank correlation analysis yields $r_s = -1$ for $n$ items. If judge A ranks an item as $1$st, what rank must judge B assign to this same item?",
+    "options": {
+      "a": "$1$st",
+      "b": "$n$th",
+      "c": "$\\frac{n}{2}$th",
+      "d": "The rank cannot be determined."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A Spearman's rank correlation coefficient of $r_s = -1$ indicates a perfect negative correlation (the rankings are exactly reversed). Therefore, the item ranked $1$st by judge A will necessarily be ranked last ($n$th) by judge B.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "If the class intervals of a frequency distribution are $1-5, 6-10, 11-15$, what is the lower class boundary of the second class ($6-10$)?",
+    "options": {
+      "a": "$5.5$",
+      "b": "$6.0$",
+      "c": "$6.5$",
+      "d": "$5.0$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The class boundaries close the gap between consecutive class limits. The gap between the upper limit of the first class ($5$) and the lower limit of the second class ($6$) is $1$. Half of this gap ($0.5$) is subtracted from the lower limit of the second class to find its lower boundary: $6 - 0.5 = 5.5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "In a probability tree diagram, the sum of probabilities on the mutually exclusive branches originating from the same node must always equal:",
+    "options": {
+      "a": "$0$",
+      "b": "$0.5$",
+      "c": "$1$",
+      "d": "$2$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The branches from any single node represent all possible mutually exclusive outcomes of that particular stage. Because these outcomes are exhaustive, their probabilities must sum to $1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "For a binomial distribution $X \\sim B(n, p)$, the mean is equal to:",
+    "options": {
+      "a": "$npq$",
+      "b": "$\\sqrt{npq}$",
+      "c": "$n p$",
+      "d": "$p / n$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "For any binomial distribution characterized by the number of trials $n$ and probability of success $p$, the expected value or mean is given by the product $n \\times p$.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "Find the range of the following set of data: $14, 21, 8, 30, 11, 45, 18, 9$.",
+    "options": {
+      "a": "$37$",
+      "b": "$36$",
+      "c": "$45$",
+      "d": "$53$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The range is the difference between the maximum and minimum values in the dataset. Maximum $= 45$, Minimum $= 8$. \nRange $= 45 - 8 = 37$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "When calculating Spearman's rank correlation coefficient, if two items have exactly the same value, how are they typically ranked?",
+    "options": {
+      "a": "They are arbitrarily assigned the next two available ranks.",
+      "b": "They are both given the highest possible rank.",
+      "c": "They are both assigned the average of the two ranks they would have otherwise occupied.",
+      "d": "The ties are ignored and one is removed from the dataset."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In cases of tied values, the standard procedure is to calculate the average of the ranks that the tied values would have taken, and assign this average rank to each of the tied items.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "Events $X$ and $Y$ are such that $P(X) = 0.5$, $P(Y) = 0.4$, and $P(X \\cup Y) = 0.7$. Are events $X$ and $Y$ independent?",
+    "options": {
+      "a": "Yes, because $P(X \\cap Y) = P(X) \\times P(Y)$.",
+      "b": "No, because $P(X \\cup Y) \\neq P(X) + P(Y)$.",
+      "c": "Yes, because $P(X \\cap Y) = 0$.",
+      "d": "No, because $P(X \\cap Y) \\neq P(X) \\times P(Y)$."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "By the general addition rule, $P(X \\cup Y) = P(X) + P(Y) - P(X \\cap Y)$. \n$0.7 = 0.5 + 0.4 - P(X \\cap Y) \\implies P(X \\cap Y) = 0.2$. \nFor independent events, $P(X \\cap Y)$ must equal $P(X) \\times P(Y)$. Here, $0.5 \\times 0.4 = 0.2$. Since $0.2 = 0.2$, the events are independent.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "In a grouped frequency distribution, the median class is $20 - 29$ with a frequency of $20$. The cumulative frequency before the median class is $20$, and the total frequency is $60$. What is the median? (Assume continuous class boundaries $19.5 - 29.5$).",
+    "options": {
+      "a": "$24.5$",
+      "b": "$24.0$",
+      "c": "$25.0$",
+      "d": "$25.5$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Median = $L_m + \\frac{\\frac{N}{2} - F}{f_m} \\times c$. \n$N = 60 \\implies N/2 = 30$. \n$L_m = 19.5$. $F = 20$. $f_m = 20$. $c = 10$. \nMedian = $19.5 + \\frac{30 - 20}{20} \\times 10 = 19.5 + \\left(\\frac{10}{20} \\times 10\\right) = 19.5 + 5 = 24.5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "In the formula for binomial probability $P(X=r) = \\binom{n}{r} p^r q^{n-r}$, what does $q$ represent?",
+    "options": {
+      "a": "The probability of success.",
+      "b": "The number of trials.",
+      "c": "The probability of failure, equal to $1 - p$.",
+      "d": "The number of successes."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "In binomial distributions, $p$ and $q$ represent the complementary probabilities of the only two possible outcomes per trial. $p$ is the probability of success, making $q$ the probability of failure, with $q = 1 - p$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "Group $A$ has $30$ students with a mean score of $60$. Group $B$ has $20$ students with a mean score of $70$. What is the combined mean score of the two groups?",
+    "options": {
+      "a": "$64$",
+      "b": "$65$",
+      "c": "$66$",
+      "d": "$68$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Sum of scores for Group $A = 30 \\times 60 = 1800$. \nSum of scores for Group $B = 20 \\times 70 = 1400$. \nTotal sum = $1800 + 1400 = 3200$. \nTotal number of students = $30 + 20 = 50$. \nCombined Mean = $\\frac{3200}{50} = 64$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "For $n = 6$ pairs of observations, a student calculated $\\sum D^2 = 0$. This implies that the ranks given to the observations by the two judges are:",
+    "options": {
+      "a": "completely opposite",
+      "b": "entirely unrelated",
+      "c": "exactly the same",
+      "d": "randomly assigned"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The term $D$ represents the difference between the ranks assigned by the two judges for each observation. If $\\sum D^2 = 0$, every single difference must be $0$, which implies both judges awarded identical ranks to all items.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "A bag contains $3$ red balls and $5$ blue balls. Two balls are drawn at random from the bag without replacement. Calculate the probability that they are of different colors.",
+    "options": {
+      "a": "$\\frac{15}{56}$",
+      "b": "$\\frac{15}{28}$",
+      "c": "$\\frac{15}{64}$",
+      "d": "$\\frac{25}{28}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Probability of picking Red then Blue: $P(R \\cap B) = \\frac{3}{8} \\times \\frac{5}{7} = \\frac{15}{56}$. \nProbability of picking Blue then Red: $P(B \\cap R) = \\frac{5}{8} \\times \\frac{3}{7} = \\frac{15}{56}$. \nTotal probability = $\\frac{15}{56} + \\frac{15}{56} = \\frac{30}{56} = \\frac{15}{28}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "For a histogram representing data with unequal class intervals, the height of each rectangular bar is proportional to the:",
+    "options": {
+      "a": "frequency",
+      "b": "cumulative frequency",
+      "c": "frequency density",
+      "d": "class midpoint"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "When class widths vary, making heights purely proportional to frequencies would distort the visual representation of the area. Therefore, the frequency is adjusted by plotting frequency density (frequency divided by class width) to ensure the area of each bar remains proportional to its frequency.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "A machine produces items, of which $10\\%$ are defective. If a random sample of $3$ items is taken, what is the probability that exactly one is defective?",
+    "options": {
+      "a": "$0.027$",
+      "b": "$0.243$",
+      "c": "$0.729$",
+      "d": "$0.081$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Let $X$ be the number of defective items. $n=3$, $p=0.10$, $q=0.90$. \n$P(X=1) = \\binom{3}{1} (0.1)^1 (0.9)^2 = 3 \\times 0.1 \\times 0.81 = 3 \\times 0.081 = 0.243$.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "The variance of a set of numbers is $25$. If each number in the set is multiplied by $3$, what is the standard deviation of the new set of numbers?",
+    "options": {
+      "a": "$15$",
+      "b": "$25$",
+      "c": "$75$",
+      "d": "$225$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The original standard deviation is $\\sqrt{25} = 5$. If each observation is multiplied by a constant $k$, the new standard deviation is scaled by the absolute value of $k$. \nNew standard deviation = $5 \\times 3 = 15$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "Spearman's rank correlation coefficient ($r_s$) can only take values in the range:",
+    "options": {
+      "a": "$0 \\le r_s \\le 1$",
+      "b": "$-1 \\le r_s \\le 1$",
+      "c": "$1 \\le r_s \\le 10$",
+      "d": "$0 \\le r_s \\le 100$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Spearman's rank correlation coefficient is designed to output $+1$ for perfect positive correlation, $-1$ for perfect negative correlation, and values in between for varying strengths of relationship.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "The probability of an event $E$ occurring is $\\frac{2}{7}$. What is the probability of the event $E$ not occurring?",
+    "options": {
+      "a": "$\\frac{2}{7}$",
+      "b": "$\\frac{5}{7}$",
+      "c": "$\\frac{1}{7}$",
+      "d": "$0$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The sum of the probabilities of an event occurring and not occurring is $1$. Therefore, $P(\\text{not } E) = 1 - P(E) = 1 - \\frac{2}{7} = \\frac{5}{7}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "In a distribution, the lower quartile is $45$ and the upper quartile is $65$. What is the semi-interquartile range?",
+    "options": {
+      "a": "$10$",
+      "b": "$20$",
+      "c": "$30$",
+      "d": "$55$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The semi-interquartile range is given by $\\frac{Q_3 - Q_1}{2}$. \nGiven $Q_3 = 65$ and $Q_1 = 45$, the semi-interquartile range is $\\frac{65 - 45}{2} = \\frac{20}{2} = 10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "If $X \\sim B(10, 0.2)$, find the variance of the distribution.",
+    "options": {
+      "a": "$2.0$",
+      "b": "$1.6$",
+      "c": "$0.8$",
+      "d": "$8.0$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The variance of a binomial distribution is given by the formula $n \\times p \\times q$. \nHere, $n = 10$, $p = 0.2$, and $q = 1 - 0.2 = 0.8$. \nVariance $= 10 \\times 0.2 \\times 0.8 = 1.6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "Which of the following measures of dispersion is equal to the square of the standard deviation?",
+    "options": {
+      "a": "Mean deviation",
+      "b": "Variance",
+      "c": "Range",
+      "d": "Coefficient of variation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The variance is mathematically defined as the expected value of the squared deviations from the mean. The standard deviation is simply the square root of the variance, making variance the square of the standard deviation.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "If the Spearman's rank correlation coefficient for $4$ pairs of variables is $1$, what is the sum of the squares of the differences between the ranks, $\\sum D^2$?",
+    "options": {
+      "a": "$0$",
+      "b": "$1$",
+      "c": "$4$",
+      "d": "$6$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The formula is $r_s = 1 - \\frac{6 \\sum D^2}{n(n^2 - 1)}$. If $r_s = 1$, then $1 = 1 - \\frac{6 \\sum D^2}{n(n^2 - 1)}$. \nThis implies that $\\frac{6 \\sum D^2}{n(n^2 - 1)} = 0$, which can only happen if the numerator $\\sum D^2 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Probability",
+    "question_text": "A fair six-sided die is rolled twice. What is the probability of obtaining two $6$s?",
+    "options": {
+      "a": "$\\frac{1}{6}$",
+      "b": "$\\frac{1}{12}$",
+      "c": "$\\frac{1}{36}$",
+      "d": "$\\frac{1}{3}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Since the rolls are independent events, the probability of obtaining a $6$ on both rolls is the product of their individual probabilities. \n$P(6 \\text{ and } 6) = P(6) \\times P(6) = \\frac{1}{6} \\times \\frac{1}{6} = \\frac{1}{36}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Statistics",
+    "question_text": "An ogive is plotted for a set of $200$ observations.\n\nTo find the interquartile range from the graph, you would read the values on the x-axis corresponding to which cumulative frequencies?",
+    "options": {
+      "a": "50th and 100th",
+      "b": "50th and 150th",
+      "c": "100th and 200th",
+      "d": "25th and 75th"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The interquartile range is $Q_3 - Q_1$. The lower quartile ($Q_1$) corresponds to $\\frac{N}{4}$ and the upper quartile ($Q_3$) corresponds to $\\frac{3N}{4}$. \nFor $N=200$, $Q_1$ is at $200/4 = 50$, and $Q_3$ is at $3 \\times 200 / 4 = 150$.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Distributions",
+    "question_text": "The mean and variance of a binomial distribution are $4$ and $2.4$ respectively. Find the number of trials, $n$.",
+    "options": {
+      "a": "$4$",
+      "b": "$8$",
+      "c": "$10$",
+      "d": "$12$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "We know $np = 4$ and $npq = 2.4$. \nDividing the second by the first: $q = \\frac{2.4}{4} = 0.6$. \nSince $p = 1 - q$, $p = 0.4$. \nSubstituting $p$ into the mean equation: $n(0.4) = 4 \\implies n = 10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Measures of Dispersion",
+    "question_text": "In the formula for calculating variance from grouped data, $\\frac{\\sum f(x - \\bar{x})^2}{\\sum f}$, the symbol $\\bar{x}$ represents the:",
+    "options": {
+      "a": "Assumed mean",
+      "b": "True mean",
+      "c": "Median",
+      "d": "Class midpoint"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In standard mathematical notation for statistics, the symbol $\\bar{x}$ denotes the true arithmetic mean of the sample or distribution.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Correlation",
+    "question_text": "A scatter diagram plotting a person's shoe size against their mathematical ability would most likely show:",
+    "options": {
+      "a": "a perfect positive correlation",
+      "b": "a perfect negative correlation",
+      "c": "no correlation",
+      "d": "an exponential curve"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Shoe size is a physical trait while mathematical ability is a cognitive trait; these variables are conceptually entirely unrelated, resulting in a random scattering of data points showing no linear correlation.",
+    "section_id": null
+  }
+]

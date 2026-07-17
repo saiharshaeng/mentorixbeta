@@ -1,0 +1,402 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Buffer Solutions and Their Importance",
+        "question_text": "Which of the following mixtures would result in a buffer solution?",
+        "options": {
+            "a": "$$ \\text{HCl} \\text{ and } \\text{NaCl} $$",
+            "b": "$$ \\text{NaOH} \\text{ and } \\text{H}_2\\text{O} $$",
+            "c": "$$ \\text{CH}_3\\text{COOH} \\text{ and } \\text{CH}_3\\text{COONa} $$",
+            "d": "$$ \\text{NH}_3 \\text{ and } \\text{NaOH} $$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "A buffer solution consists of a weak acid and its conjugate base (or a weak base and its conjugate acid). **Option (c)** contains acetic acid (weak acid) and sodium acetate (source of conjugate base), forming a valid buffer. Option (a) involves a strong acid, and Option (d) involves two bases.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Buffer Solutions and Their Importance",
+        "question_text": "How does an acidic buffer resist changes in pH when a small amount of strong base ($$ \\text{OH}^- $$) is added?",
+        "options": {
+            "a": "The $$ \\text{OH}^- $$ ions react with the water to form $$ \\text{H}_3\\text{O}^+ $$.",
+            "b": "The $$ \\text{OH}^- $$ ions react with the weak acid component ($$ \\text{HA} $$) to produce water and the conjugate base ($$ \\text{A}^- $$).",
+            "c": "The $$ \\text{OH}^- $$ ions react with the conjugate base ($$ \\text{A}^- $$) to reform the weak acid.",
+            "d": "The buffer precipitates the $$ \\text{OH}^- $$ ions out of the solution."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "When a strong base is added, the hydroxide ions ($$ \\text{OH}^- $$) are neutralized by the weak acid component of the buffer: $$ \\text{HA} + \\text{OH}^- \\rightarrow \\text{A}^- + \\text{H}_2\\text{O} $$. This converts the strong base into the much weaker conjugate base, preventing a drastic pH change.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Buffer Solutions and Their Importance",
+        "question_text": "Which of the following statements best describes **buffer capacity**?",
+        "options": {
+            "a": "The ability of a solution to change color at the equivalence point.",
+            "b": "The amount of acid or base that can be added to a buffer before the pH changes significantly.",
+            "c": "The pH range in which an indicator works effectively.",
+            "d": "The volume of titrant required to reach the end point."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Buffer capacity is defined as the amount of strong acid or base that can be added to a given volume of a buffer solution before the pH changes significantly (usually by one unit). It depends on the absolute concentrations of the buffer components.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Buffer Solutions and Their Importance",
+        "question_text": "Which conjugate acid-base pair is primarily responsible for maintaining the pH of human blood around 7.4?",
+        "options": {
+            "a": "$$ \\text{HCl} / \\text{Cl}^- $$",
+            "b": "$$ \\text{H}_2\\text{PO}_4^- / \\text{HPO}_4^{2-} $$",
+            "c": "$$ \\text{CH}_3\\text{COOH} / \\text{CH}_3\\text{COO}^- $$",
+            "d": "$$ \\text{H}_2\\text{CO}_3 / \\text{HCO}_3^- $$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "The principal buffer system in human blood is the carbonic acid/bicarbonate ion system ($$ \\text{H}_2\\text{CO}_3 / \\text{HCO}_3^- $$). This system neutralizes metabolic acids and bases to keep blood pH within the narrow range of 7.35–7.45.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "Select the correct form of the Henderson-Hasselbalch equation for a weak acid ($$ \\text{HA} $$) and its conjugate base ($$ \\text{A}^- $$).",
+        "options": {
+            "a": "$$ \\text{pH} = \\text{p}K_a - \\log \\left( \\frac{[\\text{A}^-]}{[\\text{HA}]} \\right) $$",
+            "b": "$$ \\text{pH} = \\text{p}K_a + \\log \\left( \\frac{[\\text{HA}]}{[\\text{A}^-]} \\right) $$",
+            "c": "$$ \\text{pH} = \\text{p}K_a + \\log \\left( \\frac{[\\text{A}^-]}{[\\text{HA}]} \\right) $$",
+            "d": "$$ \\text{pH} = \\text{p}K_a \\times \\log \\left( \\frac{[\\text{A}^-]}{[\\text{HA}]} \\right) $$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The Henderson-Hasselbalch equation is derived from the $$ K_a $$ expression and is written as: $$ \\text{pH} = \\text{p}K_a + \\log \\left( \\frac{[\\text{base}]}{[\\text{acid}]} \\right) $$. For a weak acid/conjugate base pair, this is $$ \\text{pH} = \\text{p}K_a + \\log \\left( \\frac{[\\text{A}^-]}{[\\text{HA}]} \\right) $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "What is the pH of a buffer solution where the concentration of the weak acid ($$ \\text{HA} $$) is equal to the concentration of its conjugate base ($$ \\text{A}^- $$)?",
+        "options": {
+            "a": "$$ \\text{pH} = 7 $$",
+            "b": "$$ \\text{pH} = 1 $$",
+            "c": "$$ \\text{pH} = \\text{p}K_a $$",
+            "d": "$$ \\text{pH} = 14 - \\text{p}K_a $$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "According to the Henderson-Hasselbalch equation: $$ \\text{pH} = \\text{p}K_a + \\log \\left( \\frac{[\\text{A}^-]}{[\\text{HA}]} \\right) $$. If $$ [\\text{A}^-] = [\\text{HA}] $$, then the ratio is 1, and $$ \\log(1) = 0 $$. Therefore, $$ \\text{pH} = \\text{p}K_a $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "Calculate the pH of a buffer solution containing $$ 0.10\\,\\text{M} $$ acetic acid and $$ 0.10\\,\\text{M} $$ sodium acetate. Given: $$ K_a $$ for acetic acid is $$ 1.8 \\times 10^{-5} $$.",
+        "options": {
+            "a": "2.87",
+            "b": "4.74",
+            "c": "5.35",
+            "d": "9.26"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "First, calculate $$ \\text{p}K_a = -\\log(1.8 \\times 10^{-5}) \\approx 4.74 $$. Since the concentrations of acid and base are equal ($$ 0.10\\,\\text{M} $$ each), $$ \\text{pH} = \\text{p}K_a + \\log(1) = 4.74 + 0 = 4.74 $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "A buffer solution contains $$ 0.50\\,\\text{M} $$ ​$$ \\text{HA} $$ ($$ \\text{p}K_a = 5.0 $$) and $$ 0.50\\,\\text{M} $$ ​$$ \\text{A}^- $$. If $$ 0.01\\,\\text{mol} $$ of solid NaOH is added to $$ 1.0\\,\\text{L} $$ of this buffer (assuming negligible volume change), what is the new pH?",
+        "options": {
+            "a": "4.98",
+            "b": "5.00",
+            "c": "5.02",
+            "d": "6.00"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Initial moles: $$ \\text{HA} = 0.50 $$, $$ \\text{A}^- = 0.50 $$. Added NaOH ($$ 0.01\\,\\text{mol} $$) reacts with HA: $$ \\text{HA} + \\text{OH}^- \\rightarrow \\text{A}^- + \\text{H}_2\\text{O} $$. \nNew moles HA = $$ 0.50 - 0.01 = 0.49 $$. \nNew moles $$ \\text{A}^- $$ = $$ 0.50 + 0.01 = 0.51 $$. \n$$ \\text{pH} = 5.0 + \\log(0.51/0.49) \\approx 5.0 + 0.017 = 5.017 \\approx 5.02 $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "You need to prepare a buffer with pH 5.00 using an acid with $$ \\text{p}K_a = 4.70 $$. What ratio of $$ [\\text{A}^-]/[\\text{HA}] $$ is required?",
+        "options": {
+            "a": "0.30",
+            "b": "0.50",
+            "c": "2.00",
+            "d": "1.00"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Using $$ \\text{pH} = \\text{p}K_a + \\log(\\text{ratio}) $$: \n$$ 5.00 = 4.70 + \\log(\\text{ratio}) $$ \n$$ 0.30 = \\log(\\text{ratio}) $$ \n$$ \\text{ratio} = 10^{0.30} \\approx 1.995 \\approx 2.00 $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "In a buffer solution, if the concentration of the conjugate base ($$ [\\text{A}^-] $$) is ten times the concentration of the weak acid ($$ [\\text{HA}] $$), the pH of the solution will be:",
+        "options": {
+            "a": "$$ \\text{p}K_a + 1 $$",
+            "b": "$$ \\text{p}K_a - 1 $$",
+            "c": "$$ \\text{p}K_a + 10 $$",
+            "d": "$$ \\text{p}K_a $$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$$ \\text{pH} = \\text{p}K_a + \\log \\left( \\frac{10[\\text{HA}]}{[\\text{HA}]} \\right) = \\text{p}K_a + \\log(10) $$. \nSince $$ \\log(10) = 1 $$, the pH is $$ \\text{p}K_a + 1 $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "What is the effective pH range of a buffer usually considered to be relative to its $$ \\text{p}K_a $$?",
+        "options": {
+            "a": "$$ \\text{p}K_a \\pm 0.1 $$",
+            "b": "$$ \\text{p}K_a \\pm 1.0 $$",
+            "c": "$$ \\text{p}K_a \\pm 2.0 $$",
+            "d": "$$ \\text{p}K_a \\pm 5.0 $$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A buffer is generally effective when the ratio of base to acid is between 1:10 and 10:1. This corresponds to a pH range of $$ \\text{p}K_a - 1 $$ to $$ \\text{p}K_a + 1 $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "Under which condition does the Henderson-Hasselbalch approximation fail to accurately predict pH?",
+        "options": {
+            "a": "When the acid is weak.",
+            "b": "When the concentrations of acid and base are equal.",
+            "c": "When the acid or base concentrations are extremely dilute or the $$ K_a $$ is relatively strong (approaching $$ 10^{-2} $$).",
+            "d": "When the solution is at room temperature."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The Henderson-Hasselbalch equation assumes that the dissociation of the weak acid is negligible and that water autoionization is negligible. These assumptions break down for relatively strong 'weak' acids or extremely dilute solutions.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "Calculate the pH of a buffer solution composed of $$ 0.20\\,\\text{M} $$ ammonia ($$ \\text{NH}_3 $$) and $$ 0.20\\,\\text{M} $$ ammonium chloride ($$ \\text{NH}_4\\text{Cl} $$). $$ K_b $$ for $$ \\text{NH}_3 $$ is $$ 1.8 \\times 10^{-5} $$.",
+        "options": {
+            "a": "4.74",
+            "b": "7.00",
+            "c": "9.26",
+            "d": "11.12"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "First, find $$ \\text{p}K_b = -\\log(1.8 \\times 10^{-5}) = 4.74 $$. \nUsing the basic form: $$ \\text{pOH} = \\text{p}K_b + \\log([\\text{salt}]/[\\text{base}]) = 4.74 + \\log(1) = 4.74 $$. \nThen, $$ \\text{pH} = 14.00 - \\text{pOH} = 14.00 - 4.74 = 9.26 $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Henderson–Hasselbalch Equation",
+        "question_text": "What mass of sodium acetate ($$ \\text{CH}_3\\text{COONa} $$, molar mass = 82 g/mol) must be added to 1.0 L of 0.10 M acetic acid ($$ \\text{p}K_a = 4.74 $$) to produce a buffer of pH 4.74? (Assume no volume change)",
+        "options": {
+            "a": "4.1 g",
+            "b": "8.2 g",
+            "c": "16.4 g",
+            "d": "0.82 g"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Since the target pH (4.74) equals the $$ \\text{p}K_a $$ (4.74), the ratio of $$ [\\text{A}^-] $$ to $$ [\\text{HA}] $$ must be 1. \nThus, $$ [\\text{CH}_3\\text{COONa}] $$ must equal $$ [\\text{CH}_3\\text{COOH}] = 0.10\\,\\text{M} $$. \nMoles needed = $$ 0.10\\,\\text{mol}/\\text{L} \\times 1.0\\,\\text{L} = 0.10\\,\\text{mol} $$. \nMass = $$ 0.10\\,\\text{mol} \\times 82\\,\\text{g/mol} = 8.2\\,\\text{g} $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Acid–Base Titrations",
+        "question_text": "In a titration, what is the difference between the **equivalence point** and the **end point**?",
+        "options": {
+            "a": "They are identical terms for the same moment.",
+            "b": "The equivalence point is determined geometrically, while the end point is calculated stoichiometrically.",
+            "c": "The equivalence point is the stoichiometric point where moles of acid equals moles of base; the end point is the visible color change of the indicator.",
+            "d": "The equivalence point always occurs at pH 7, whereas the end point depends on the indicator."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The equivalence point is the theoretical point where the titrant has exactly reacted with the analyte in stoichiometric proportions. The end point is the experimental point where the indicator changes color. Ideally, these points are close, but they are conceptually distinct.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Acid–Base Titrations",
+        "question_text": "What is a **standard solution** in the context of titration?",
+        "options": {
+            "a": "A solution that always has a pH of 7.",
+            "b": "A solution of accurately known concentration used to determine the concentration of an unknown.",
+            "c": "A solution containing an indicator.",
+            "d": "A buffer solution used to calibrate pH meters."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A standard solution is a solution containing a known concentration of an element or substance. In titrations, it is the titrant used to react with the analyte to determine its concentration.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Acid–Base Titrations",
+        "question_text": "What volume of $$ 0.200\\,\\text{M} $$ NaOH is required to exactly neutralize $$ 25.0\\,\\text{mL} $$ of $$ 0.100\\,\\text{M} $$ HCl?",
+        "options": {
+            "a": "12.5 mL",
+            "b": "25.0 mL",
+            "c": "50.0 mL",
+            "d": "100.0 mL"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Using $$ M_a V_a = M_b V_b $$ (since stoichiometry is 1:1): \n$$ (0.100\\,\\text{M})(25.0\\,\\text{mL}) = (0.200\\,\\text{M})(V_b) $$ \n$$ 2.50 = 0.200 V_b $$ \n$$ V_b = 12.5\\,\\text{mL} $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Acid–Base Titrations",
+        "question_text": "When titrating a diprotic weak acid (like $$ \\text{H}_2\\text{CO}_3 $$) with a strong base, how many distinct equivalence points are theoretically observable on the titration curve?",
+        "options": {
+            "a": "One",
+            "b": "Two",
+            "c": "Three",
+            "d": "None"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "A diprotic acid has two ionizable protons. Titration with a strong base will show two stepwise neutralization reactions, resulting in two distinct equivalence points (provided the $$ K_a $$ values are sufficiently different).",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Titration Curves",
+        "question_text": "Which titration curve features an equivalence point at exactly pH 7.00 (at 25°C)?",
+        "options": {
+            "a": "Weak Acid titrated with Strong Base",
+            "b": "Strong Acid titrated with Weak Base",
+            "c": "Strong Acid titrated with Strong Base",
+            "d": "Weak Acid titrated with Weak Base"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The titration of a strong acid with a strong base produces a neutral salt and water. At the equivalence point, the pH is determined solely by the autoionization of water, which is pH 7.00 at 25°C.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Titration Curves",
+        "question_text": "During the titration of a **weak acid** with a **strong base**, the pH at the equivalence point is:",
+        "options": {
+            "a": "Less than 7",
+            "b": "Exactly 7",
+            "c": "Greater than 7",
+            "d": "Depending solely on the indicator used"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "At the equivalence point of a weak acid/strong base titration, all the weak acid ($$ \\text{HA} $$) has been converted to its conjugate base ($$ \\text{A}^- $$). The conjugate base undergoes hydrolysis ($$ \\text{A}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HA} + \\text{OH}^- $$), producing hydroxide ions and resulting in a basic solution (pH > 7).",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Titration Curves",
+        "question_text": "On the titration curve of a weak acid with a strong base, at which point is the pH equal to the $$ \\text{p}K_a $$ of the weak acid?",
+        "options": {
+            "a": "At the start of the titration",
+            "b": "At the half-equivalence point",
+            "c": "At the equivalence point",
+            "d": "At the end point"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "At the half-equivalence point, exactly half of the weak acid has been neutralized, meaning $$ [\\text{HA}] = [\\text{A}^-] $$. Using the Henderson-Hasselbalch equation, $$ \\text{pH} = \\text{p}K_a + \\log(1) $$, so $$ \\text{pH} = \\text{p}K_a $$.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Titration Curves",
+        "question_text": "Why is it difficult to obtain a precise end point when titrating a weak acid with a weak base?",
+        "options": {
+            "a": "The indicator reacts with the weak base.",
+            "b": "There is no steep vertical section in the titration curve near the equivalence point.",
+            "c": "The reaction is too fast to monitor.",
+            "d": "The pH remains constant throughout the titration."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "In a weak acid/weak base titration, the pH change near the equivalence point is very gradual (no sharp inflection point). This lack of a steep vertical section makes it difficult for any indicator to show a sharp color change at the specific equivalence volume.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Indicators and End Point Determination",
+        "question_text": "Most acid-base indicators function as:",
+        "options": {
+            "a": "Strong acids",
+            "b": "Weak organic acids or bases",
+            "c": "Neutral salts",
+            "d": "Catalysts"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Indicators are typically weak organic acids ($$ \\text{HIn} $$) or bases whose undissociated form ($$ \\text{HIn} $$) has a different color than its conjugate ion form ($$ \\text{In}^- $$). The color change depends on the pH of the solution.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Indicators and End Point Determination",
+        "question_text": "Which criterion is most important when selecting an indicator for a titration?",
+        "options": {
+            "a": "The indicator must be the same color as the acid.",
+            "b": "The indicator's pH range for color change must coincide with the steep part of the titration curve (equivalence point).",
+            "c": "The indicator must have a $$ \\text{p}K_a $$ of exactly 7.0.",
+            "d": "The indicator must be phenolphthalein for all titrations."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "For an accurate titration, the indicator must change color (its transition range) within the steep vertical section of the pH curve that encompasses the equivalence point. This ensures the end point (color change) matches the equivalence point (stoichiometry).",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Indicators and End Point Determination",
+        "question_text": "Which indicator is most suitable for titrating a **weak acid** ($$ \\text{CH}_3\\text{COOH} $$) with a **strong base** ($$ \\text{NaOH} $$)?",
+        "options": {
+            "a": "Methyl Orange ($$ \\text{pH range 3.1 - 4.4} $$)",
+            "b": "Phenolphthalein ($$ \\text{pH range 8.3 - 10.0} $$)",
+            "c": "Bromophenol Blue ($$ \\text{pH range 3.0 - 4.6} $$)",
+            "d": "Methyl Red ($$ \\text{pH range 4.4 - 6.2} $$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "The equivalence point for a Weak Acid/Strong Base titration occurs at a pH > 7 (typically around 8-9). Phenolphthalein changes color in the basic range (8.3 - 10.0), matching the vertical section of this specific titration curve. Methyl orange would change color far too early.",
+        "section_id": null
+    }
+]

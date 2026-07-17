@@ -1,0 +1,578 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which of the following temperature ranges is defined as the 'Danger Zone' by the USDA, where bacteria multiply most rapidly in food?",
+    "options": {
+      "a": "0°F to 32°F ( -18°C to 0°C)",
+      "b": "32°F to 60°F (0°C to 15°C)",
+      "c": "40°F to 140°F (4°C to 60°C)",
+      "d": "140°F to 165°F (60°C to 74°C)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The USDA defines the Temperature Danger Zone as 40°F to 140°F, where bacteria grow most rapidly. (Note: Food service standards like ServSafe may use 41°F–135°F, but general nutrition texts used in HOSA often cite the USDA consumer standard).",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "A patient arrives at the clinic with symptoms of nausea, vomiting, and diarrhea 12–72 hours after attending a barbecue. The symptoms are most likely caused by **Salmonella**. Which food was the probable vector?",
+    "options": {
+      "a": "Canned green beans",
+      "b": "Undercooked chicken breast",
+      "c": "Unwashed spinach",
+      "d": "Improperly reheated rice"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Salmonella is most commonly associated with raw or undercooked poultry and eggs. Canned goods are associated with Botulism; spinach with E. coli; rice with Bacillus cereus.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which internal temperature must poultry (such as chicken or turkey) reach to be considered safe for consumption?",
+    "options": {
+      "a": "135°F",
+      "b": "145°F",
+      "c": "155°F",
+      "d": "165°F"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "According to USDA and HOSA guidelines, poultry must be cooked to an internal temperature of 165°F to kill Salmonella and Campylobacter.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "A clinical dietitian is educating a patient with **Celiac disease**. Which of the following grains must the patient strictly avoid?",
+    "options": {
+      "a": "Quinoa",
+      "b": "Rice",
+      "c": "Barley",
+      "d": "Corn"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Celiac disease requires the avoidance of gluten, found in wheat, barley, and rye. Quinoa, rice, and corn are naturally gluten-free.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Distinguishing between a food allergy and a food intolerance is critical. Which of the following best describes the physiological mechanism of a **food allergy**?",
+    "options": {
+      "a": "The body lacks a specific enzyme to digest the food",
+      "b": "The immune system produces IgE antibodies against a food protein",
+      "c": "The digestive tract becomes irritated by acidic compounds",
+      "d": "Bacteria in the gut ferment the food causing gas"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A food allergy involves the immune system (specifically IgE antibodies) reacting to a protein. Intolerances (like lactose intolerance) are usually enzymatic deficiencies or digestive sensitivities.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which pathogen is notoriously associated with **improperly canned foods** (especially home-canned vegetables) and can cause paralysis or death?",
+    "options": {
+      "a": "Staphylococcus aureus",
+      "b": "Clostridium botulinum",
+      "c": "Listeria monocytogenes",
+      "d": "Escherichia coli"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Clostridium botulinum is an anaerobic bacterium that produces a neurotoxin in low-oxygen environments like improperly canned foods. It causes botulism.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "A food handler has an open cut on their finger and does not wear a glove while preparing potato salad. Several hours later, customers report rapid onset of vomiting (within 1–6 hours). The likely pathogen is:",
+    "options": {
+      "a": "Staphylococcus aureus",
+      "b": "Salmonella",
+      "c": "Hepatitis A",
+      "d": "Toxoplasma gondii"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Staphylococcus aureus is found on human skin and in nasal passages. It produces a heat-stable toxin that causes rapid vomiting. It is a classic sign of poor personal hygiene/handling.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which of the following describes the correct emergency treatment for a patient exhibiting signs of anaphylaxis (swelling of throat, difficulty breathing)?",
+    "options": {
+      "a": "Administer oral antihistamines and wait 30 minutes",
+      "b": "Induce vomiting immediately",
+      "c": "Administer epinephrine (EpiPen) immediately",
+      "d": "Offer small sips of water to clear the throat"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Anaphylaxis is a life-threatening medical emergency requiring immediate administration of epinephrine to reverse airway constriction and hypotension.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which population is at the highest risk for severe complications from **Listeria monocytogenes**, and which food should they avoid?",
+    "options": {
+      "a": "Adolescents; peanut butter",
+      "b": "Pregnant women; unheated deli meats and soft cheeses",
+      "c": "Athletes; protein shakes",
+      "d": "Toddlers; apple juice"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Listeria can cross the placenta and cause miscarriage or stillbirth. Pregnant women are advised to avoid soft cheeses (brie, feta) and cold deli meats unless heated to steaming.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Ground beef poses a unique risk for *E. coli* O157:H7 compared to whole steaks because:",
+    "options": {
+      "a": "Ground beef is harvested from a different animal",
+      "b": "Surface bacteria are mixed into the center of the meat during grinding",
+      "c": "Ground beef has a lower water content",
+      "d": "Whole steaks are cooked to higher temperatures"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Bacteria live on the surface of meat. Grinding distributes surface bacteria throughout the interior, necessitating a higher cooking temperature (155°F) compared to whole cuts (145°F).",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which enzyme is deficient in a patient with **lactose intolerance**?",
+    "options": {
+      "a": "Pepsin",
+      "b": "Amylase",
+      "c": "Lactase",
+      "d": "Lipase"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Lactose intolerance is caused by a deficiency in lactase, the enzyme required to break down lactose (milk sugar) in the small intestine.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "The minimal internal safe cooking temperature for ground beef is:",
+    "options": {
+      "a": "135°F",
+      "b": "145°F",
+      "c": "155°F",
+      "d": "165°F"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Ground meats (beef, pork) must be cooked to 155°F (for 17 seconds) to ensure safety. Poultry is 165°F; whole cuts are 145°F.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "**Hemorrhagic colitis** and **Hemolytic Uremic Syndrome (HUS)** are severe complications associated with which foodborne pathogen?",
+    "options": {
+      "a": "Salmonella typhi",
+      "b": "Norovirus",
+      "c": "E. coli O157:H7",
+      "d": "Clostridium perfringens"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Shiga toxin-producing E. coli (STEC), such as O157:H7, can cause bloody diarrhea (hemorrhagic colitis) and kidney failure (HUS), particularly in children.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which of the following is the **safest** method for thawing a frozen turkey?",
+    "options": {
+      "a": "Leaving it on the kitchen counter overnight",
+      "b": "Submerging it in warm water",
+      "c": "Thawing in the refrigerator on the bottom shelf",
+      "d": "Using a hair dryer"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Thawing in the refrigerator keeps the bird out of the Danger Zone (40°F-140°F). Thawing on the counter allows dormant bacteria to multiply rapidly as the outer layers warm up.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "A food worker diagnosed with **Hepatitis A** or **Norovirus** must be:",
+    "options": {
+      "a": "Allowed to work if they wear double gloves",
+      "b": "Restricted to washing dishes only",
+      "c": "Excluded from the food operation until medically cleared",
+      "d": "Allowed to work if asymptomatic for 12 hours"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Hepatitis A and Norovirus are highly contagious and spread via the fecal-oral route. Infected workers must be excluded from the operation to prevent an outbreak.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Cross-contamination refers to:",
+    "options": {
+      "a": "Cooking different foods at different temperatures",
+      "b": "The transfer of pathogens from one food/surface to another",
+      "c": "Cleaning surfaces with soap but not sanitizer",
+      "d": "Storing food in the refrigerator for too long"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Cross-contamination occurs when pathogens are transferred from raw food (like chicken) to ready-to-eat food (like lettuce) via hands, cutting boards, or utensils.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which of the following foods is one of the **Big 9** major food allergens regulated in the US?",
+    "options": {
+      "a": "Strawberries",
+      "b": "Corn",
+      "c": "Soy",
+      "d": "Chocolate"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The major allergens are Milk, Eggs, Fish, Shellfish, Tree Nuts, Peanuts, Wheat, Soy, and Sesame. Corn and strawberries are not classified as major allergens under current US labeling laws.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Infants under one year of age should not be fed honey because of the risk of:",
+    "options": {
+      "a": "Anaphylaxis",
+      "b": "Infant botulism",
+      "c": "Salmonellosis",
+      "d": "Choking"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Honey can contain Clostridium botulinum spores. While harmless to adults/older children, an infant's digestive system allows the spores to grow and produce toxins.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "When properly washing hands, the total time spent should be at least 20 seconds, with vigorous scrubbing taking up at least:",
+    "options": {
+      "a": "5 seconds",
+      "b": "10-15 seconds",
+      "c": "30 seconds",
+      "d": "60 seconds"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Proper handwashing involves wetting hands, applying soap, and scrubbing for 10-15 seconds, followed by rinsing and drying, for a total process of ~20 seconds.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "What is the primary danger of leaving cooked rice at room temperature for an extended period?",
+    "options": {
+      "a": "Growth of *Bacillus cereus*",
+      "b": "Growth of *Salmonella*",
+      "c": "Formation of mold",
+      "d": "Chemical oxidation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Cooked rice is prone to *Bacillus cereus*, a spore-forming bacterium that survives cooking. If left at room temp, spores germinate and produce a toxin causing 'Fried Rice Syndrome'.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "In a clinical setting, a 'gluten-free' label guarantees that the food contains less than which concentration of gluten?",
+    "options": {
+      "a": "Zero detected gluten",
+      "b": "20 parts per million (ppm)",
+      "c": "100 parts per million (ppm)",
+      "d": "5 grams per serving"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "FDA regulations allow the 'gluten-free' label on foods with less than 20 ppm of gluten, the level consistently shown to be safe for most people with Celiac disease.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "Which of the following symptoms is unique to **Botulism** compared to other common foodborne illnesses?",
+    "options": {
+      "a": "Projectile vomiting",
+      "b": "Bloody diarrhea",
+      "c": "Double vision and difficulty swallowing",
+      "d": "High fever and chills"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Botulism neurotoxins cause descending paralysis, starting with cranial nerves. Early symptoms include diplopia (double vision), dysphagia (difficulty swallowing), and ptosis (drooping eyelids).",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "To prevent parasitic infection from **Trichinella spiralis**, which food was historically the primary concern, requiring thorough cooking?",
+    "options": {
+      "a": "Beef",
+      "b": "Pork",
+      "c": "Chicken",
+      "d": "Fish"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Trichinosis is caused by parasitic roundworms found in undercooked pork (and game meats like bear). Modern farming has reduced this risk, but pork safety remains the classic context.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Nutrition",
+    "topic": "Food-related Illnesses, Intolerances & Allergies",
+    "question_text": "An older adult in a nursing home is immunocompromised. Which of the following items should be removed from their menu to ensure food safety?",
+    "options": {
+      "a": "Pasteurized apple cider",
+      "b": "Well-done steak",
+      "c": "Alfalfa sprouts",
+      "d": "Canned peaches"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Raw sprouts (alfalfa, bean) pose a high risk for Salmonella and E. coli because the warm, humid conditions required for sprouting are ideal for bacterial growth. They are contraindicated for vulnerable populations.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "Which term describes the process by which an immigrant group adopts the dietary habits of the host country, often leading to increased intake of processed foods and fats in the US?",
+    "options": {
+      "a": "Ethnocentrism",
+      "b": "Acculturation",
+      "c": "Cultural competence",
+      "d": "Holistic nutrition"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Acculturation (or dietary acculturation) refers to adopting the eating patterns of the host country. In the US, this often correlates with negative health outcomes due to the 'Western diet'.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "A patient following a **Kosher** (Jewish) diet would strictly avoid which of the following combinations?",
+    "options": {
+      "a": "Chicken and rice",
+      "b": "Beef and potatoes",
+      "c": "Cheeseburger (Meat and Dairy)",
+      "d": "Fish and vegetables"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Kosher laws (Kashrut) prohibit the consumption of meat and dairy products in the same meal. A cheeseburger mixes beef and cheese, which is forbidden.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "During the month of **Ramadan**, Muslims observe fasting (sawm) by abstaining from food and drink:",
+    "options": {
+      "a": "All day and night for 30 days",
+      "b": "From sunrise to sunset",
+      "c": "Only on Fridays",
+      "d": "Only from meat products"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Ramadan fasting involves total abstinence from food and fluids from dawn (fajr) until sunset (maghrib).",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "Which of the following is a characteristic feature of the traditional **Mediterranean Diet**?",
+    "options": {
+      "a": "High intake of red meat",
+      "b": "Butter as the primary added fat",
+      "c": "High intake of olive oil, fruits, and vegetables",
+      "d": "Large portions of refined grains"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Mediterranean Diet is characterized by plant-based foods, healthy fats (olive oil), moderate fish/poultry, and very limited red meat and sweets.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "A **Food Desert** is best defined as:",
+    "options": {
+      "a": "An area with an overabundance of restaurants",
+      "b": "A region where agriculture is impossible due to climate",
+      "c": "A geographic area with limited access to affordable, nutritious food",
+      "d": "A diet lacking in dessert foods"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Food deserts are urban or rural areas where residents lack access to affordable, healthy food options (like grocery stores), often relying on convenience stores with processed foods.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "Which nutrient is most likely to be deficient in a strict **Vegan** diet if not supplemented?",
+    "options": {
+      "a": "Vitamin C",
+      "b": "Vitamin B12",
+      "c": "Folate",
+      "d": "Magnesium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Vitamin B12 is found naturally only in animal products. Vegans must consume fortified foods or supplements to avoid anemia and neurological damage.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "In traditional **Asian** dietary patterns, which food group is typically consumed in much lower quantities compared to the Western diet, often due to high rates of intolerance?",
+    "options": {
+      "a": "Leafy greens",
+      "b": "Soy products",
+      "c": "Dairy products",
+      "d": "Grains"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Many Asian populations have a high prevalence of lactose intolerance, so dairy is not a traditional staple (calcium is often sourced from tofu, greens, or fish bones).",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "For a patient following a **Halal** diet, which of the following items is strictly prohibited?",
+    "options": {
+      "a": "Shellfish",
+      "b": "Alcohol and Pork",
+      "c": "Caffeine",
+      "d": "Eggs"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Halal guidelines (Islamic dietary laws) strictly prohibit pork (swine) and intoxicants like alcohol. Most seafood is permitted (unlike strict Kosher rules which ban shellfish).",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "Members of the **Seventh-day Adventist** church typically follow which dietary pattern?",
+    "options": {
+      "a": "Paleo diet",
+      "b": "Lacto-ovo vegetarian diet",
+      "c": "High-protein carnivore diet",
+      "d": "Gluten-free diet"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Seventh-day Adventists are encouraged to follow a vegetarian diet (often lacto-ovo). They also typically avoid alcohol, caffeine, and tobacco.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "The concept of 'Hot' and 'Cold' foods (unrelated to temperature) to balance the body's humors is a traditional belief common in which culture?",
+    "options": {
+      "a": "Hispanic / Latino",
+      "b": "Northern European",
+      "c": "Australian",
+      "d": "Inuit"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The hot-cold theory of health (derived from humoral medicine) is prevalent in many Hispanic/Latino and Asian cultures, where illnesses are treated with foods of the opposing quality.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "A traditional **Hindu** diet usually avoids beef primarily because:",
+    "options": {
+      "a": "Cattle are considered scarce",
+      "b": "Beef is considered unhealthy",
+      "c": "The cow is considered sacred",
+      "d": "Beef is too expensive"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "In Hinduism, the cow is revered as a symbol of life and is considered sacred, leading to the strict avoidance of beef (and often vegetarianism to practice Ahimsa/non-violence).",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Nutrition",
+    "topic": "Cultural Food Patterns & Food Choice",
+    "question_text": "When counseling a client from a different culture, what is the first step in providing culturally competent care?",
+    "options": {
+      "a": "Hand them a standard meal plan",
+      "b": "Assess their personal food habits and preferences",
+      "c": "Tell them their traditional foods are unhealthy",
+      "d": "Assume they eat only traditional foods"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Cultural competence begins with assessment—asking questions to understand the individual's specific acculturation level, preferences, and constraints, rather than making assumptions.",
+    "section_id": null
+  }
+]

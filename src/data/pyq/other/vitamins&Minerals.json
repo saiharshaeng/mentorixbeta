@@ -1,0 +1,578 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Which of the following vitamins is classified as **fat-soluble**, meaning it requires dietary fat for absorption and is stored in the body's liver and fatty tissues?",
+    "options": {
+      "a": "Vitamin C",
+      "b": "Vitamin B12",
+      "c": "Vitamin A",
+      "d": "Vitamin B6"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Vitamins are classified by solubility. Vitamins A, D, E, and K are fat-soluble and stored in the body, whereas B-complex vitamins and Vitamin C are water-soluble.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "A patient presents with **night blindness** and dry, scaly skin. A deficiency in which of the following vitamins is the most likely cause?",
+    "options": {
+      "a": "Vitamin A",
+      "b": "Vitamin D",
+      "c": "Vitamin E",
+      "d": "Vitamin K"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Vitamin A is essential for the formation of rhodopsin, a pigment in the retina responsible for vision in low light. Deficiency leads to nyctalopia (night blindness) and xerophthalmia.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Which vitamin is synthesized in the skin upon exposure to ultraviolet (UV) radiation from sunlight?",
+    "options": {
+      "a": "Vitamin K",
+      "b": "Vitamin D",
+      "c": "Vitamin E",
+      "d": "Vitamin A"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Vitamin D (cholecalciferol) is synthesized in the skin when 7-dehydrocholesterol reacts with UVB light.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "A 5-year-old child presents with bowed legs and skeletal deformities. This condition, known as **Rickets**, is caused by a deficiency in:",
+    "options": {
+      "a": "Calcium and Vitamin D",
+      "b": "Iron and Vitamin C",
+      "c": "Magnesium and Vitamin A",
+      "d": "Potassium and Vitamin K"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Rickets is a childhood condition caused by Vitamin D, calcium, or phosphate deficiency, leading to soft and weak bones.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Which vitamin is known chemically as **ascorbic acid** and is essential for collagen synthesis?",
+    "options": {
+      "a": "Vitamin B1",
+      "b": "Vitamin B12",
+      "c": "Vitamin C",
+      "d": "Vitamin E"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Vitamin C is also known as ascorbic acid. It is a cofactor for enzymes that hydroxylate proline and lysine in collagen synthesis.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Gingivitis, petechiae (small blood spots), and delayed wound healing are classic signs of **Scurvy**. This results from a severe lack of:",
+    "options": {
+      "a": "Thiamine",
+      "b": "Vitamin C",
+      "c": "Riboflavin",
+      "d": "Vitamin K"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Scurvy is the clinical manifestation of severe Vitamin C deficiency, leading to the breakdown of collagen-rich tissues.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "A patient on long-term antibiotic therapy may develop a deficiency in this vitamin because it is partially synthesized by intestinal bacteria. Its primary role is in blood clotting.",
+    "options": {
+      "a": "Vitamin A",
+      "b": "Vitamin D",
+      "c": "Vitamin E",
+      "d": "Vitamin K"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Vitamin K is essential for the synthesis of clotting factors II, VII, IX, and X. It is produced by gut flora, which can be disrupted by antibiotics.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Which B-vitamin is correctly matched with its chemical name?",
+    "options": {
+      "a": "Vitamin B1 - Riboflavin",
+      "b": "Vitamin B2 - Thiamine",
+      "c": "Vitamin B3 - Niacin",
+      "d": "Vitamin B12 - Folate"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The correct pairings are: B1 (Thiamine), B2 (Riboflavin), B3 (Niacin), and B12 (Cobalamin).",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "A deficiency in **Thiamine (Vitamin B1)** is associated with which condition, characterized by nerve damage and muscle wasting?",
+    "options": {
+      "a": "Pellagra",
+      "b": "Beriberi",
+      "c": "Scurvy",
+      "d": "Pernicious Anemia"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Beriberi is caused by thiamine deficiency. 'Dry' beriberi affects the nervous system, while 'wet' beriberi affects the cardiovascular system.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Which nutrient is critical for women of childbearing age to prevent **neural tube defects** (like spina bifida) in the developing fetus?",
+    "options": {
+      "a": "Folate (Vitamin B9)",
+      "b": "Iron",
+      "c": "Calcium",
+      "d": "Vitamin A"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Adequate Folate intake before and during early pregnancy is crucial for proper closure of the neural tube.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Strict vegans are most at risk for developing a deficiency in which vitamin, as it is found naturally only in animal products?",
+    "options": {
+      "a": "Vitamin C",
+      "b": "Vitamin B12",
+      "c": "Folate",
+      "d": "Vitamin E"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Vitamin B12 (Cobalamin) is found almost exclusively in animal foods. Vegans typically require supplementation or fortified foods.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "The deficiency disease **Pellagra** is characterized by the \"4 Ds\": Dermatitis, Diarrhea, Dementia, and Death. It is caused by a lack of:",
+    "options": {
+      "a": "Niacin (Vitamin B3)",
+      "b": "Riboflavin (Vitamin B2)",
+      "c": "Thiamine (Vitamin B1)",
+      "d": "Pantothenic Acid (Vitamin B5)"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Pellagra is a systemic disease resulting from a deficiency in Niacin (Vitamin B3).",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "Which mineral is the most abundant in the human body, with 99% of it stored in bones and teeth?",
+    "options": {
+      "a": "Phosphorus",
+      "b": "Magnesium",
+      "c": "Calcium",
+      "d": "Potassium"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Calcium is the most abundant mineral, essential for bone structure, muscle contraction, and nerve transmission.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "A condition characterized by an enlargement of the thyroid gland, known as a **goiter**, is primarily caused by a deficiency in:",
+    "options": {
+      "a": "Iron",
+      "b": "Zinc",
+      "c": "Iodine",
+      "d": "Selenium"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The thyroid gland requires iodine to synthesize thyroid hormones. Deficiency causes the gland to enlarge in an attempt to capture more iodine.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "Which trace mineral is a critical component of hemoglobin, the protein responsible for transporting oxygen in the blood?",
+    "options": {
+      "a": "Zinc",
+      "b": "Magnesium",
+      "c": "Iron",
+      "d": "Copper"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Iron is the central component of the heme group in hemoglobin, allowing it to bind oxygen.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Nutrition",
+    "topic": "Application",
+    "question_text": "A patient is taking **Warfarin** (Coumadin), a blood thinner. Which vitamin intake should be kept consistent to avoid interfering with the medication's efficacy?",
+    "options": {
+      "a": "Vitamin C",
+      "b": "Vitamin K",
+      "c": "Vitamin B12",
+      "d": "Vitamin D"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Warfarin works by inhibiting Vitamin K-dependent clotting factors. Sudden changes in dietary Vitamin K (e.g., leafy greens) can alter the drug's effect.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Nutrition",
+    "topic": "Application",
+    "question_text": "To maximize the absorption of **non-heme iron** (from plant sources), a dietitian should recommend consuming it alongside foods rich in:",
+    "options": {
+      "a": "Calcium",
+      "b": "Vitamin C",
+      "c": "Vitamin E",
+      "d": "Phytates"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Vitamin C (ascorbic acid) enhances non-heme iron absorption by reducing iron from the ferric ($Fe^{3+}$) to the ferrous ($Fe^{2+}$) state, which is more soluble.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "**Wilson's disease** is a genetic disorder resulting in the accumulation of which mineral in vital organs like the liver and brain?",
+    "options": {
+      "a": "Iron",
+      "b": "Copper",
+      "c": "Zinc",
+      "d": "Magnesium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Wilson's disease causes the body to retain copper, leading to toxicity. Zinc is often used in treatment to block copper absorption.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "Which electrolyte is the primary **intracellular cation** and plays a key role in maintaining fluid balance and nerve impulse transmission?",
+    "options": {
+      "a": "Sodium",
+      "b": "Potassium",
+      "c": "Chloride",
+      "d": "Calcium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Potassium ($K^+$) is the major cation inside cells, while Sodium ($Na^+$) is the major cation in extracellular fluid.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "**Pernicious anemia** is a specific type of anemia caused by the body's inability to absorb Vitamin B12 due to a lack of:",
+    "options": {
+      "a": "Hydrochloric acid",
+      "b": "Pepsin",
+      "c": "Intrinsic factor",
+      "d": "Insulin"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Intrinsic factor, a protein secreted by the stomach, is required for Vitamin B12 absorption in the ileum. Pernicious anemia is an autoimmune attack on parietal cells that produce intrinsic factor.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Excessive intake of this fat-soluble vitamin is teratogenic (causes birth defects) and can lead to liver toxicity.",
+    "options": {
+      "a": "Vitamin A",
+      "b": "Vitamin C",
+      "c": "Vitamin B12",
+      "d": "Vitamin K"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Vitamin A (specifically preformed retinoids) can be toxic in high doses, causing birth defects and liver damage. Beta-carotene (precursor) is generally safer.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "Hypokalemia (low levels of this mineral) can cause life-threatening cardiac arrhythmias and muscle cramps.",
+    "options": {
+      "a": "Sodium",
+      "b": "Iron",
+      "c": "Potassium",
+      "d": "Zinc"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Potassium is critical for cardiac muscle repolarization. Hypokalemia can disrupt heart rhythm.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "Which mineral is a component of more than 300 enzyme systems, including those involved in protein synthesis and DNA production, and is crucial for wound healing?",
+    "options": {
+      "a": "Calcium",
+      "b": "Zinc",
+      "c": "Sodium",
+      "d": "Iodine"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Zinc is a cofactor for many enzymes and is notably involved in tissue repair, immune function, and DNA synthesis.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Nutrition",
+    "topic": "Application",
+    "question_text": "A patient with **chronic alcoholism** is admitted with confusion, ataxia, and ophthalmoplegia (Wernicke-Korsakoff syndrome). Which vitamin should be administered immediately?",
+    "options": {
+      "a": "Vitamin C",
+      "b": "Vitamin B1 (Thiamine)",
+      "c": "Vitamin B6 (Pyridoxine)",
+      "d": "Vitamin B12"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Alcohol inhibits thiamine absorption and utilization. Wernicke-Korsakoff syndrome is an acute thiamine deficiency requiring immediate IV thiamine.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Which vitamin functions primarily as an antioxidant, protecting cell membranes from oxidative damage?",
+    "options": {
+      "a": "Vitamin E",
+      "b": "Vitamin D",
+      "c": "Vitamin K",
+      "d": "Vitamin B1"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Vitamin E (tocopherol) is a major lipid-soluble antioxidant that protects cell membranes (polyunsaturated fatty acids) from oxidation.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "**Fluoride** is commonly added to water supplies to perform which function?",
+    "options": {
+      "a": "Prevent thyroid disease",
+      "b": "Strengthen tooth enamel and prevent caries",
+      "c": "Improve cognitive development",
+      "d": "Enhance water absorption"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Fluoride is incorporated into hydroxyapatite crystals in teeth, making them more resistant to acid attack and preventing dental cavities.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Cheilosis (cracks at the corners of the mouth) and glossitis (inflamed tongue) are classic signs of a deficiency in:",
+    "options": {
+      "a": "Vitamin B2 (Riboflavin)",
+      "b": "Vitamin D",
+      "c": "Vitamin E",
+      "d": "Vitamin K"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Riboflavin (B2) deficiency (ariboflavinosis) manifests as lesions on the lips (cheilosis), mouth angles (stomatitis), and tongue (glossitis).",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Nutrition",
+    "topic": "Application",
+    "question_text": "A client asks about sources of Vitamin A. Which of the following foods contains the highest amount of preformed Vitamin A (retinol)?",
+    "options": {
+      "a": "Carrots",
+      "b": "Spinach",
+      "c": "Beef Liver",
+      "d": "Sweet Potatoes"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Preformed Vitamin A (retinol) is found in animal products like liver. Plant sources like carrots contain provitamin A carotenoids, which must be converted by the body.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "**Tetany**, a condition characterized by muscle spasms and cramps, is a primary sign of deficiency in which mineral?",
+    "options": {
+      "a": "Calcium",
+      "b": "Iron",
+      "c": "Iodine",
+      "d": "Selenium"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Hypocalcemia (low calcium) increases neuromuscular excitability, leading to tetany (spasms like Trousseau's or Chvostek's signs).",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Biotin (Vitamin B7) deficiency is rare but can be induced by the excessive consumption of raw:",
+    "options": {
+      "a": "Fish",
+      "b": "Egg whites",
+      "c": "Milk",
+      "d": "Spinach"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Raw egg whites contain avidin, a protein that binds strongly to biotin and prevents its absorption. Cooking denatures avidin.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "The DASH diet (Dietary Approaches to Stop Hypertension) emphasizes increasing potassium and magnesium while decreasing:",
+    "options": {
+      "a": "Calcium",
+      "b": "Fiber",
+      "c": "Sodium",
+      "d": "Vitamin C"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Excess sodium intake is a major risk factor for hypertension. The DASH diet focuses on lowering sodium to reduce blood pressure.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Nutrition",
+    "topic": "Vitamins",
+    "question_text": "Hemolytic anemia in premature infants can be caused by a deficiency in this vitamin, which protects red blood cell membranes.",
+    "options": {
+      "a": "Vitamin E",
+      "b": "Vitamin A",
+      "c": "Vitamin D",
+      "d": "Vitamin C"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Premature infants have low Vitamin E stores. Deficiency makes red blood cell membranes susceptible to oxidative hemolysis.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "**Koilonychia** (spoon-shaped nails) is a specific clinical sign associated with chronic deficiency of:",
+    "options": {
+      "a": "Zinc",
+      "b": "Calcium",
+      "c": "Iron",
+      "d": "Magnesium"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Koilonychia is a classic sign of iron deficiency anemia.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Nutrition",
+    "topic": "Application",
+    "question_text": "Which cooking method typically results in the **greatest loss** of water-soluble vitamins (Vitamin C and B-complex)?",
+    "options": {
+      "a": "Steaming",
+      "b": "Stir-frying",
+      "c": "Boiling",
+      "d": "Microwaving"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Boiling causes water-soluble vitamins to leach out of vegetables into the water, which is often discarded. Steaming or microwaving preserves more nutrients.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Nutrition",
+    "topic": "Minerals",
+    "question_text": "A deficiency in **Magnesium** is most likely to result in:",
+    "options": {
+      "a": "Weight gain",
+      "b": "Tremors and neuromuscular irritability",
+      "c": "Excessive clotting",
+      "d": "Hyperglycemia"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Magnesium acts as a sedative at the neuromuscular junction. Deficiency leads to hyperexcitability, tremors, and arrhythmias.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Nutrition",
+    "topic": "Application",
+    "question_text": "A patient with **osteomalacia** (soft bones) should be advised to increase intake of fortified milk, fatty fish, and:",
+    "options": {
+      "a": "Vitamin C supplements",
+      "b": "Sunlight exposure",
+      "c": "Red meat",
+      "d": "Whole grains"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Osteomalacia is the adult form of Rickets, caused by Vitamin D deficiency. Sunlight allows the body to synthesize its own Vitamin D.",
+    "section_id": null
+  }
+]

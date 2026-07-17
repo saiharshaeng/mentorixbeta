@@ -1,0 +1,2402 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "Which of the following elements is strictly required for a contract to be legally valid and enforceable?",
+    "options": {
+      "a": "Notarized signatures from both parties",
+      "b": "Mutual consideration",
+      "c": "The inclusion of performance bonds",
+      "d": "Legal representation for both parties during negotiations"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "For a contract to be legally valid and enforceable, it must include an offer, acceptance, consideration, competent parties, and a lawful purpose. Mutual consideration (the exchange of something of value) is a fundamental required element.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "A public procurement professional is drafting a contract. To protect the agency from financial liabilities arising out of the contractor's negligence or actions, which clause is most critical to include?",
+    "options": {
+      "a": "Force Majeure",
+      "b": "Liquidated Damages",
+      "c": "Indemnification",
+      "d": "Severability"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "An indemnification (or hold harmless) clause protects the public agency by requiring the contractor to compensate the agency for harm or liability caused by the contractor's actions or negligence.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "During the active execution of a service, a conflict is discovered between the agency's standard boilerplate terms and the special terms and conditions drafted specifically for the current solicitation. According to standard contract law principles, how should this conflict be resolved?",
+    "options": {
+      "a": "Standard boilerplate terms always take precedence over special terms.",
+      "b": "Special terms and conditions take precedence over general boilerplate terms.",
+      "c": "The contract is rendered voidable and must be re-solicited.",
+      "d": "The vendor's standard terms take precedence."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "In contract interpretation, specific or special terms written for a particular contract generally take precedence over general boilerplate language, as they better reflect the specific intent of the parties for that particular agreement.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "In the context of contract formation, the concept of 'consideration' is best described as:",
+    "options": {
+      "a": "The thoughtful legal review of contract terms before formal execution.",
+      "b": "Something of value mutually exchanged between the contracting parties.",
+      "c": "An unwritten allowance of extra time to deliver goods.",
+      "d": "An act of goodwill or voluntary gift provided by the supplier."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Consideration is a fundamental element of a legal contract representing the mutuality of obligation; it is something of value given by both parties to a contract that induces them to enter into the agreement.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "To effectively incorporate a vendor's proposal into the final contract while managing potential conflicts, a buyer includes an 'Order of Precedence' clause. Which document typically holds the highest precedence in standard public contracting?",
+    "options": {
+      "a": "The vendor's original proposal",
+      "b": "The executed contract or agreement document",
+      "c": "The agency's original solicitation",
+      "d": "The vendor's standard terms of service"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The order of precedence establishes which document governs if there is a conflict. Typically, the signed agreement/contract document sits at the top, followed by special terms, the solicitation, and finally the vendor's proposal.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "Under the Statute of Frauds (adopted via the Uniform Commercial Code), a contract for the sale of goods must generally be in writing to be enforceable if the value of the goods equals or exceeds:",
+    "options": {
+      "a": "$100",
+      "b": "$500",
+      "c": "$1,000",
+      "d": "$5,000"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The UCC Statute of Frauds (Section 2-201) generally requires that contracts for the sale of goods priced at $500 or more must be in writing to be legally enforceable.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "If a court later declares a specific clause of a public contract invalid or unenforceable due to a change in state law, what contract provision prevents the entire contract from being nullified?",
+    "options": {
+      "a": "Termination for Convenience",
+      "b": "Integration Clause",
+      "c": "Severability Clause",
+      "d": "Assignment Clause"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A severability clause states that if any part or provision of the contract is found to be invalid, the remainder of the contract remains in full force and effect.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "An agency signs a contract to construct a new library. An unexpected hurricane severely damages the construction site, delaying the project by three months. Which contract clause applies to excuse the contractor from delay penalties?",
+    "options": {
+      "a": "Force Majeure",
+      "b": "Indemnification",
+      "c": "Liquidated Damages",
+      "d": "Economic Price Adjustment"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Force Majeure ('Acts of God') clauses excuse a party from liability if an unforeseeable, unavoidable event prevents them from fulfilling their contractual obligations.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "In public contract law, the legal rule 'Contra Proferentem' addresses how ambiguities in drafted contracts are handled. What does it dictate?",
+    "options": {
+      "a": "Contracts must always be awarded to the lowest responsive bidder.",
+      "b": "Ambiguities in a contract are interpreted against the party that drafted it.",
+      "c": "Verbal agreements automatically supersede previous written contracts.",
+      "d": "Mutual consideration is not required when modifying a sovereign government contract."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Contra Proferentem is a legal doctrine stating that if a contract's term is ambiguous, the preferred meaning should be the one that works against the interests of the party who provided or drafted the wording (typically the government in public procurement).",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "Which of the following clauses asserts that the written contract contains the complete understanding between the parties, thereby superseding any prior oral or written agreements?",
+    "options": {
+      "a": "Excusable Delay Clause",
+      "b": "Severability Clause",
+      "c": "Merger/Integration Clause (Entire Agreement)",
+      "d": "Hold Harmless Agreement"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A merger or integration clause (also known as an 'entire agreement' clause) establishes that the written contract represents the final and complete agreement, invoking the parol evidence rule to exclude previous negotiations.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "From a risk allocation perspective, which contract pricing type places the maximum financial risk on the contractor?",
+    "options": {
+      "a": "Cost-Plus-Fixed-Fee",
+      "b": "Firm-Fixed-Price",
+      "c": "Time and Materials",
+      "d": "Cost-Plus-Incentive-Fee"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In a Firm-Fixed-Price contract, the contractor bears maximum risk because they must deliver the product or service for the agreed-upon price regardless of how much it actually costs them to perform.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "Liquidated damages are frequently utilized in construction and service contracts to establish a predetermined sum to be paid if the contractor defaults. For a liquidated damages clause to be legally enforceable, it must be:",
+    "options": {
+      "a": "Approved by a third-party bonding company prior to award.",
+      "b": "A reasonable estimate of actual anticipated damages, and not structured as a penalty.",
+      "c": "Substantially higher than actual anticipated damages to ensure deterrence.",
+      "d": "Equal to at least 25% of the total contract value."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Courts will not enforce a liquidated damages clause if it is punitive. It must represent a genuine, reasonable pre-estimate of the losses the agency would suffer due to delay or breach.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "In standard contract formation, the elements of Offer and Acceptance combined result in a 'meeting of the minds', legally known as:",
+    "options": {
+      "a": "Mutual Assent",
+      "b": "Promissory Estoppel",
+      "c": "Substantial Performance",
+      "d": "Fiduciary Duty"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Mutual assent is the process of offer and acceptance through which the parties reach a shared understanding and 'meeting of the minds' on the contract's terms.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "An agency negotiates an IT system implementation. The contract states that the agency's obligation to pay is completely dependent on the successful outcome of a User Acceptance Testing (UAT) phase. In contract law, this successful testing acts as a:",
+    "options": {
+      "a": "Condition Subsequent",
+      "b": "Condition Precedent",
+      "c": "Concurrent Condition",
+      "d": "Mutual Warranty"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A condition precedent is an event or action that must occur before a contract becomes binding or before a party is obligated to perform a duty (in this case, payment).",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Contract Development & Administration",
+    "topic": "Enforceable Documents",
+    "question_text": "While drafting terms for a high-risk service contract, the procurement officer requires the vendor to list the agency as an 'Additional Insured' on the vendor's policy. The primary risk allocation purpose of this requirement is:",
+    "options": {
+      "a": "To lower the agency's overall general liability premiums.",
+      "b": "To ensure the agency is directly protected and can file a claim against the vendor's policy in the event of a covered loss.",
+      "c": "To guarantee that the vendor cannot file for corporate bankruptcy.",
+      "d": "To eliminate the necessity of requiring a performance bond."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Adding the agency as an 'Additional Insured' protects the agency by extending coverage to them under the vendor's insurance policy, providing direct defense and indemnity for claims arising out of the vendor's work.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "In public procurement, a program manager tells a vendor to begin delivering supplies before the contract is officially approved or signed by the procurement director. The program manager holds no legal right to bind the government. What type of authority is the program manager projecting?",
+    "options": {
+      "a": "Express Actual Authority",
+      "b": "Implied Actual Authority",
+      "c": "Apparent Authority",
+      "d": "Sovereign Authority"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Apparent authority occurs when a person acts as if they have authority to represent an organization, even though they do not have the actual, documented authority to do so.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "Because government entities are generally not bound by agents acting outside their actual designated authority, an agreement created by an unauthorized employee and a relying vendor is best described as:",
+    "options": {
+      "a": "A ratified agreement",
+      "b": "An unauthorized commitment",
+      "c": "An unconscionable contract",
+      "d": "A tortious interference"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An unauthorized commitment is an agreement that is not binding solely because the government representative who made it lacked the authority to enter into that agreement on behalf of the government.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "Which term describes the formal administrative process through which an agency retroactively reviews and formally approves an unauthorized commitment?",
+    "options": {
+      "a": "Ratification",
+      "b": "Mitigation",
+      "c": "Delegation",
+      "d": "Subrogation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Ratification is the process used by a legally authorized official to retroactively approve an unauthorized commitment made by someone without actual authority.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "When routing a negotiated agreement for final signatures, which sequential strategy is typically considered a best practice to mitigate risk for the agency?",
+    "options": {
+      "a": "The Agency Head signs first, followed by Legal, followed by the Vendor.",
+      "b": "The Vendor signs first, binding their offer, followed by internal Agency countersignatures.",
+      "c": "Procurement signs first, followed by the Vendor, followed by Legal.",
+      "d": "Simultaneous electronic execution is strictly required."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "It is best practice for the vendor to sign first. This makes the vendor's proposal/contract a binding offer, which the agency then has the power to review internally and officially accept via the final authorized countersignature.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "What is the core purpose of 'encumbering' funds during the contract approval and award process?",
+    "options": {
+      "a": "To transfer money directly into the vendor's checking account prior to execution.",
+      "b": "To commit or set aside specific budgeted funds to ensure they are exclusively available to pay the vendor.",
+      "c": "To determine the appropriate accounting method for fixed asset depreciation.",
+      "d": "To establish internal profit margins for the buying agency."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Encumbrance reserves part of an appropriation to ensure that funds are available when invoices matching the specific contract or purchase order are presented.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "A buyer executes an emergency contract using authority passed down via a formal written policy established by the Chief Procurement Officer. What type of authority does this buyer possess?",
+    "options": {
+      "a": "Apparent authority",
+      "b": "Estoppel authority",
+      "c": "Express actual authority",
+      "d": "Implied authority"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Express actual authority is explicitly granted to an agent by the principal, typically through written statutes, charters, or written delegations of authority.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "Prior to final execution, a multi-million-dollar technology contract must be reviewed by the agency's designated legal counsel. What is the primary focus of this specific step in the approval routing?",
+    "options": {
+      "a": "Ensuring the technical specifications align perfectly with operational needs.",
+      "b": "Determining the vendor's long-term stock market viability.",
+      "c": "Reviewing for legal sufficiency, format correctness, and statutory compliance.",
+      "d": "Verifying that funds have been securely encumbered in the financial system."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Legal review prior to contract execution focuses on verifying legal sufficiency, ensuring all required clauses are present, limiting risk, and ensuring compliance with applicable statutory and regulatory laws.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "In accordance with federal regulations like the E-SIGN Act and corresponding state adoptions like UETA, what is the legal standing of electronically signed public contracts?",
+    "options": {
+      "a": "E-signatures are only valid internally and cannot legally bind a third-party vendor.",
+      "b": "Wet ink signatures remain a statutory requirement for any contract exceeding the formal bid threshold.",
+      "c": "An electronic signature carries the same legal weight and enforceability as a traditional wet ink signature.",
+      "d": "E-signatures must be validated by a third-party escrow service to be considered enforceable."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Under the UETA (Uniform Electronic Transactions Act) and E-SIGN Act, electronic signatures are legally valid and enforceable in the same manner as physical ('wet') signatures, provided intent to sign is demonstrated.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "While an agent without signature authority cannot formally bind the agency, an agent with actual authority may sometimes bind the agency to commitments that are necessary to perform their stated duties. This legal principle is known as:",
+    "options": {
+      "a": "Implied Actual Authority",
+      "b": "Eminent Domain",
+      "c": "Non-delegable Duty",
+      "d": "Apparent Authority"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Implied actual authority is the authority to do whatever is reasonably necessary, usual, and proper to accomplish or perform an agent's express actual responsibilities.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Contract Development & Administration",
+    "topic": "Approval Process",
+    "question_text": "If a government end-user with apparent authority improperly instructs a vendor to change scope, leading the vendor to incur additional costs, why is the vendor at significant risk of bearing those unrecoverable costs?",
+    "options": {
+      "a": "Because apparent authority strictly allows for contract termination by the principal.",
+      "b": "Because the government is generally protected by the doctrine of sovereign immunity against acts of apparent authority.",
+      "c": "Because the Prompt Payment Act applies only to initial vendor invoices.",
+      "d": "Because vendors are legally barred from seeking ratification."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "In public procurement, unlike in the private sector, the government is rarely bound by the apparent authority of its employees. Vendors deal with the government at their own risk and must ascertain the actual authority of government agents.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "What is the primary purpose of a post-award kick-off meeting between the contracting agency and the successful vendor?",
+    "options": {
+      "a": "To renegotiate pricing and basic terms and conditions.",
+      "b": "To ensure a clear, mutual understanding of contract requirements, roles, and administrative procedures.",
+      "c": "To formally issue the solicitation and receive the vendor's best and final offer.",
+      "d": "To determine which end-users have the authority to alter the contract scope."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A post-award conference or kick-off meeting sets the foundation for a successful contract by aligning both parties on expectations, performance metrics, and administrative procedures before work begins.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A procurement officer issues a formal change order to alter the delivery location of contracted goods. The vendor's signature is not required for this specific change. What type of modification is this?",
+    "options": {
+      "a": "Bilateral Modification",
+      "b": "Constructive Change",
+      "c": "Unilateral Modification",
+      "d": "Cardinal Change"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A unilateral modification is signed only by the contracting officer and is typically used for administrative changes, issuing termination notices, or making changes authorized by the contract's Changes clause.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A project manager requests multiple small additional features from a software vendor over several months, none of which were in the original contract, leading to unbudgeted cost increases. What contract administration issue does this represent?",
+    "options": {
+      "a": "Value Engineering",
+      "b": "Scope Creep",
+      "c": "Novation",
+      "d": "Mitigation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Scope creep refers to the continuous or uncontrolled growth in a project's scope, resulting from undocumented changes and additions that impact cost and timeline.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A government agency verbally directs a contractor to perform extra work but refuses to issue a formal modification. The contractor performs the work and incurs costs. What legal concept allows the contractor to seek payment?",
+    "options": {
+      "a": "Constructive Change",
+      "b": "Termination for Convenience",
+      "c": "Liquidated Damages",
+      "d": "Anticipatory Repudiation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "A constructive change occurs when agency personnel, through action or inaction, force the contractor to perform beyond the contract's scope without issuing a formal change order.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "An agency awarded a contract for 10 police vehicles. Later, they attempt to use a change order to add the construction of a new police station to the same contract. This invalid modification is known as a:",
+    "options": {
+      "a": "Definitive Modification",
+      "b": "Bilateral Amendment",
+      "c": "Cardinal Change",
+      "d": "Substantial Performance"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A cardinal change fundamentally alters the scope, nature, or purpose of the original contract to such an extent that it essentially becomes a new procurement, bypassing competitive bidding laws.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "When a legitimate change order increases the contractor's cost of performance, the contractor is entitled to financial compensation to restore them to their previous financial position. This is called:",
+    "options": {
+      "a": "Liquidated Damages",
+      "b": "Equitable Adjustment",
+      "c": "Progress Payment",
+      "d": "Severance Pay"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An equitable adjustment is a fair price or time adjustment to the contract made to compensate the contractor for added costs or time resulting from a formal or constructive change.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "Which of the following modifications generally requires the mutual agreement and signatures of both the contracting agency and the contractor?",
+    "options": {
+      "a": "Correcting a typographical error in the agency's billing address.",
+      "b": "Issuing a notice of termination for default.",
+      "c": "Adding a mutually agreed new scope of work and adjusting the contract price.",
+      "d": "Exercising an established, pre-priced renewal option."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Adding new scope and altering the price requires a bilateral modification (supplemental agreement) because it changes the fundamental obligations of both parties.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A procurement professional corrects a typographical error in a vendor's phone number on the contract document. What type of change is this?",
+    "options": {
+      "a": "Administrative Change",
+      "b": "Substantive Change",
+      "c": "Cardinal Change",
+      "d": "Constructive Change"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "An administrative change does not affect the substantive rights of the parties, such as price, delivery, or scope, and can typically be made unilaterally.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "Which document is utilized by contract administrators to detail the timeline, deliverables, milestones, and responsible parties to track performance throughout the life of the contract?",
+    "options": {
+      "a": "Contract Management Plan (CMP)",
+      "b": "Non-Disclosure Agreement (NDA)",
+      "c": "Notice of Intent to Award",
+      "d": "Cure Notice"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A Contract Management Plan (CMP) outlines how the agency will manage, track, and ensure compliance with the contract from commencement to close-out.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "Under standard contract management principles, who typically holds the actual authority to formally modify a contract on behalf of a public agency?",
+    "options": {
+      "a": "The End-User or Project Manager",
+      "b": "The Agency's General Counsel",
+      "c": "The Contracting Officer or delegated Procurement Professional",
+      "d": "The Accounts Payable Clerk"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Only the Contracting Officer (or an officially delegated procurement professional) has the actual warrant and authority to enter into, administer, or terminate contracts and make related determinations.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "If a contractor suggests a change to the contract that reduces the overall cost of performance while maintaining quality, and requests a share of the savings, what mechanism are they using?",
+    "options": {
+      "a": "Value Engineering Change Proposal (VECP)",
+      "b": "Equitable Adjustment Claim",
+      "c": "Force Majeure Clause",
+      "d": "Liquidated Damages Reduction"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "A Value Engineering Change Proposal (VECP) is submitted by a contractor to suggest cost-saving changes to the contract specifications, with the resulting savings usually shared between the agency and contractor.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "When exercising a contract renewal option that was pre-priced and clearly defined in the original solicitation, what type of modification is typically used?",
+    "options": {
+      "a": "Bilateral Modification",
+      "b": "Unilateral Modification",
+      "c": "Cardinal Modification",
+      "d": "Definitization Modification"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If the renewal option was pre-evaluated and its terms pre-established, the agency generally possesses the right to exercise the option unilaterally without requiring a new signature from the vendor.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "To effectively mitigate the risk of constructive changes, a procurement professional should ensure which of the following?",
+    "options": {
+      "a": "End-users communicate directly with vendor line staff regarding scope adjustments.",
+      "b": "Vendors are prohibited from ever speaking to the project manager.",
+      "c": "All changes to the scope of work are documented and approved exclusively by the contracting officer.",
+      "d": "The contract omits a 'Changes' clause entirely."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "By strictly enforcing the rule that only the contracting officer can authorize scope changes, the agency prevents end-users from inadvertently committing the government to constructive changes.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "During a post-award conference, the procurement professional establishes an escalation matrix. What is the purpose of this matrix?",
+    "options": {
+      "a": "To calculate the percentage of price increases for option years.",
+      "b": "To define the hierarchy of personnel to contact when issues or disputes arise during contract performance.",
+      "c": "To outline the steps for processing progress payments.",
+      "d": "To determine the order of precedence of contract documents."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An escalation matrix outlines the specific chain of command for reporting and resolving issues, ensuring that disputes are handled promptly and at the appropriate administrative levels.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A contractor claims a delay due to a national labor strike. The agency agrees the delay is excusable. To formalize the revised completion date, the agency will issue a:",
+    "options": {
+      "a": "Notice of Termination for Default",
+      "b": "Show Cause Notice",
+      "c": "Contract Modification extending the schedule",
+      "d": "Deduction against the contractor's invoice"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "When an excusable delay occurs, the appropriate administrative action is to issue a contract modification (often bilateral) to adjust the period of performance without penalizing the contractor.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A sudden funding freeze forces an agency to temporarily pause a construction contract. The contracting officer issues an order requiring the contractor to cease all work immediately for 30 days. This order is known as a:",
+    "options": {
+      "a": "Cure Notice",
+      "b": "Stop-Work Order",
+      "c": "Notice of Intent",
+      "d": "Termination for Convenience"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Stop-Work Order is a formal directive that halts all work on a contract for a specified period, allowing the agency to resolve issues (like funding) without terminating the contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "Before executing a bilateral modification that increases the contract price by a significant amount, what critical financial step must the procurement professional verify?",
+    "options": {
+      "a": "The vendor's tax returns from the previous year.",
+      "b": "That the original contract was a firm-fixed-price contract.",
+      "c": "That sufficient budgeted funds are available and encumbered for the increase.",
+      "d": "That the contractor has not filed any past claims against the agency."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Procurement cannot legally commit the agency to an increased financial obligation without ensuring that adequate funds are budgeted, available, and properly encumbered.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "When transitioning services from an incumbent vendor to a newly awarded vendor, the initial overlap period where knowledge transfer occurs is designated in the contract as the:",
+    "options": {
+      "a": "Warranty Period",
+      "b": "Cure Period",
+      "c": "Transition-in Phase",
+      "d": "Close-out Phase"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The transition-in phase is specifically designed to facilitate the smooth handover of operations from an outgoing contractor (or in-house staff) to the new contractor.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "A contract requires monthly strategic meetings, weekly operational updates, and automated daily data reports. These structured interactions are components of a:",
+    "options": {
+      "a": "Dispute Resolution Process",
+      "b": "Communication Plan",
+      "c": "Quality Assurance Surveillance Plan",
+      "d": "Corrective Action Plan"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A communication plan establishes the framework for how, when, and by whom information will be shared between the contracting agency and the supplier throughout the contract lifecycle.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Contract Development & Administration",
+    "topic": "Commencement & Modifications",
+    "question_text": "If a contract contains a 'Changes' clause, what inherent right does it grant to the purchasing agency?",
+    "options": {
+      "a": "To unilaterally change the overall core purpose of the contract.",
+      "b": "To replace the prime contractor with a new vendor without cause.",
+      "c": "To make unilateral, in-scope adjustments to specific parts of the contract, subject to equitable adjustment.",
+      "d": "To force the contractor to accept price reductions without any alteration to scope."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The standard 'Changes' clause allows the government to unilaterally order changes within the general scope of the contract, obligating the contractor to perform while retaining the right to an equitable adjustment for cost or time.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Which mechanism is typically used to formally initiate a specific transaction, obligate funds, and instruct a vendor to deliver goods against an established master term contract?",
+    "options": {
+      "a": "A Purchase Requisition",
+      "b": "An Invoice",
+      "c": "A Purchase Order",
+      "d": "A Packing Slip"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Purchase Order (PO) is the primary ordering document used to authorize a vendor to deliver specific goods or services under the terms of a master contract, effectively encumbering funds.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "A shipping term states 'FOB Destination'. Who bears the risk of loss or damage while the goods are in transit?",
+    "options": {
+      "a": "The Buyer (Receiving Agency)",
+      "b": "The Freight Carrier",
+      "c": "The Seller (Vendor)",
+      "d": "Both the Buyer and Seller equally"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Under 'FOB Destination' terms, the seller holds the title and bears the risk of loss until the goods are physically delivered to and accepted at the buyer's specified destination.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "If goods are shipped 'FOB Origin', at what exact point does the title and risk of loss transfer to the purchasing agency?",
+    "options": {
+      "a": "When the goods are delivered to the agency's loading dock.",
+      "b": "When the goods are loaded onto the carrier at the seller's facility.",
+      "c": "When the agency formally issues payment.",
+      "d": "When the agency completes a functional inspection of the goods."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "In 'FOB Origin', title and risk of loss transfer to the buyer the moment the goods are placed in the possession of the transport carrier at the seller's shipping dock.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Upon receiving a shipment of laptops, the receiving clerk notices the boxes are heavily crushed. This type of easily observable defect is legally categorized as a:",
+    "options": {
+      "a": "Latent Defect",
+      "b": "Constructive Defect",
+      "c": "Patent Defect",
+      "d": "Material Breach"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A patent defect is an obvious flaw or damage that can be easily discovered through an ordinary, visual inspection of the goods upon receipt.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Three months after accepting and using a batch of steel pipes, the agency discovers a hidden internal metallurgical flaw that causes the pipes to burst. Because this flaw could not have been discovered during routine receiving inspection, it is classified as a:",
+    "options": {
+      "a": "Patent Defect",
+      "b": "Latent Defect",
+      "c": "Force Majeure Event",
+      "d": "Mutual Mistake"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A latent defect is a hidden flaw that exists at the time of acceptance but cannot be discovered through a reasonable and customary inspection process.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Under the Uniform Commercial Code (UCC), what fundamental right does the buyer possess before becoming legally obligated to pay for delivered goods?",
+    "options": {
+      "a": "The right to return the goods within 90 days for any reason.",
+      "b": "The right to a reasonable opportunity to inspect the goods.",
+      "c": "The right to immediately terminate the contract if the delivery is one day late.",
+      "d": "The right to require the seller to assemble the goods at no cost."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The UCC grants buyers the right to a reasonable opportunity to inspect goods after delivery to ensure they conform to contract specifications before acceptance and payment.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "An agency receives a delivery of furniture that does not match the contractual specifications. What is the immediate legal right of the agency regarding the non-conforming goods?",
+    "options": {
+      "a": "The agency must accept the goods and demand a 50% discount.",
+      "b": "The agency can reject the non-conforming goods entirely, accept them all, or accept any commercial unit and reject the rest.",
+      "c": "The agency must immediately file a lawsuit against the vendor.",
+      "d": "The agency must accept the goods but cancel all future orders."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "According to the UCC's Perfect Tender Rule (or commercial variations thereof), if goods fail to conform to the contract, the buyer may reject the whole, accept the whole, or accept any conforming commercial units and reject the rest.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "What does 'Constructive Acceptance' mean in the context of receiving goods?",
+    "options": {
+      "a": "The goods were explicitly accepted in writing by the agency's inspector.",
+      "b": "The agency failed to reject the goods within a reasonable time after delivery, thereby legally accepting them by default.",
+      "c": "The goods were accepted despite known patent defects.",
+      "d": "The goods were accepted by the end-user rather than the central receiving department."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Constructive acceptance occurs when the buyer retains the goods without giving notice of rejection to the seller within a reasonable timeframe, legally implying that the goods are accepted.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Accounts payable processes an invoice for payment using the 'Three-Way Match' system. Which three documents are being matched?",
+    "options": {
+      "a": "Purchase Order, Packing Slip, and Requisition",
+      "b": "Purchase Order, Receiving Report, and Vendor Invoice",
+      "c": "Solicitation, Contract, and Vendor Invoice",
+      "d": "Receiving Report, Vendor Invoice, and Check"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A three-way match verifies that the Purchase Order, the Receiving Report (confirming goods were received), and the Vendor's Invoice all match before payment is issued.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Which transportation document serves as a receipt issued by a carrier to the shipper, detailing the type, quantity, and destination of the goods being carried?",
+    "options": {
+      "a": "Purchase Order",
+      "b": "Packing Slip",
+      "c": "Bill of Lading",
+      "d": "Receiving Report"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A Bill of Lading is a legally binding document issued by a carrier to a shipper that serves as a receipt for freight services, a contract of carriage, and a document of title.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "A vendor delivers an over-shipment (delivers 120 items when the PO requested 100). If the agency decides to keep the extra 20 items, what must occur?",
+    "options": {
+      "a": "The agency pays nothing for the extra items.",
+      "b": "The vendor is penalized with liquidated damages.",
+      "c": "The contract or PO must be modified to accept the overage, and the agency must pay for the additional items.",
+      "d": "The agency must return all 120 items and require exactly 100 to be re-shipped."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If a buyer elects to retain over-shipped quantities, they must pay for them at the contract rate, which typically requires a modification to the purchase order to reflect the increased quantity.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "When receiving goods, what is the primary purpose of the packing slip enclosed in the shipment?",
+    "options": {
+      "a": "To serve as the final invoice for payment processing.",
+      "b": "To provide an itemized list of the items actually contained in that specific shipment package.",
+      "c": "To transfer the legal title of the goods.",
+      "d": "To document the transportation carrier's routing details."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A packing slip is provided by the shipper to list the exact contents of the physical package, enabling the receiving clerk to verify that everything shipped has arrived.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "If a procurement contract utilizes a Blanket Purchase Agreement (BPA), how are actual orders placed against it?",
+    "options": {
+      "a": "By issuing individual delivery orders or calls as needs arise during the term.",
+      "b": "By paying the entire estimated contract value upfront.",
+      "c": "By re-bidding each individual order among the pre-qualified vendors.",
+      "d": "By verbal request without any written documentation."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A BPA sets up charge accounts with qualified sources. Actual purchases are made by placing individual 'calls' or delivery orders against the BPA when specific items or services are needed.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "A vendor delivers specialized software. The agency runs an agreed-upon series of tests to ensure it performs according to the statement of work before accepting it. This process is called:",
+    "options": {
+      "a": "Latent Defect Discovery",
+      "b": "User Acceptance Testing (UAT)",
+      "c": "Constructive Acceptance",
+      "d": "Random Sampling Inspection"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "User Acceptance Testing (UAT) is the final phase of testing where the end-users verify that the delivered system functions correctly according to contractual requirements before formal acceptance.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Even after formal acceptance, an agency retains the right to revoke acceptance and require the vendor to fix the problem under which of the following circumstances?",
+    "options": {
+      "a": "The agency finds a lower price from another vendor.",
+      "b": "A patent defect is discovered one year later.",
+      "c": "A latent defect is discovered that substantially impairs the value of the goods.",
+      "d": "The end-user simply decides they do not like the color."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Revocation of acceptance is generally legally permissible when a defect that substantially impairs the value of the goods could not have been discovered during normal receiving inspection (latent defect).",
+    "section_id": null
+  },
+  {
+    "question_number": 61,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "If a carrier delays unloading a delivery truck at an agency's receiving dock beyond the allotted time, the carrier may assess a penalty charge to the agency known as:",
+    "options": {
+      "a": "Demurrage",
+      "b": "Liquidated Damages",
+      "c": "Retainage",
+      "d": "Freight Fencing"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Demurrage is a charge assessed by carriers for holding equipment (like trucks or shipping containers) beyond the permitted free time allocated for loading or unloading.",
+    "section_id": null
+  },
+  {
+    "question_number": 62,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "Which of the following describes a situation where a buyer returns rejected goods to the seller, and the seller charges a fee to place the items back into their inventory?",
+    "options": {
+      "a": "Demurrage Charge",
+      "b": "Restocking Fee",
+      "c": "Indemnification Cost",
+      "d": "Cancellation Penalty"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A restocking fee is an administrative charge assessed by a vendor when a buyer returns items, compensating the vendor for the cost of processing and returning the items to stock.",
+    "section_id": null
+  },
+  {
+    "question_number": 63,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "To effectively process a partial delivery under a purchase order, what administrative action is vital?",
+    "options": {
+      "a": "Canceling the original purchase order completely.",
+      "b": "Documenting exactly what was received so a partial payment can be authorized while leaving the balance open.",
+      "c": "Withholding all payment until the entire order is completely fulfilled.",
+      "d": "Initiating a cure notice immediately for the undelivered portion."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "For partial deliveries, receiving reports must accurately reflect only the quantities delivered so that AP can issue partial payments, keeping the PO open for backordered items.",
+    "section_id": null
+  },
+  {
+    "question_number": 64,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "In expedited purchasing, when a buyer calls a supplier to urge them to accelerate a delayed shipment, this contract administration activity is referred to as:",
+    "options": {
+      "a": "Expediting",
+      "b": "Mitigating",
+      "c": "Ratifying",
+      "d": "Terminating"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Expediting is the process of attempting to speed up the delivery of goods or completion of services that are delayed or urgently needed.",
+    "section_id": null
+  },
+  {
+    "question_number": 65,
+    "subject": "Contract Development & Administration",
+    "topic": "Ordering & Receiving",
+    "question_text": "An agency receives goods shipped FOB Destination that arrive visibly damaged. What is the appropriate initial action by the receiving clerk?",
+    "options": {
+      "a": "Accept the goods and fix the damage using agency funds.",
+      "b": "Note the damage on the Bill of Lading, refuse the damaged portion, and notify the vendor.",
+      "c": "Sue the freight carrier directly for breach of contract.",
+      "d": "Pay the invoice immediately to avoid late fees."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Because FOB Destination places the risk of loss on the seller, the agency should note the damage on the delivery receipt/bill of lading, refuse the damaged items, and immediately contact the seller for replacement.",
+    "section_id": null
+  },
+  {
+    "question_number": 66,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "In a managed services contract, the vendor agrees to maintain 99.9% network uptime. This specific measurable commitment is outlined in the:",
+    "options": {
+      "a": "General Terms and Conditions",
+      "b": "Non-Disclosure Agreement",
+      "c": "Service Level Agreement (SLA)",
+      "d": "Corrective Action Plan"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Service Level Agreement (SLA) defines the specific level of service expected from a vendor, laying out metrics (like uptime) and penalties/remedies if targets are missed.",
+    "section_id": null
+  },
+  {
+    "question_number": 67,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "To systematically measure vendor performance against the contract requirements over time, a contract manager tracks quantifiable metrics known as:",
+    "options": {
+      "a": "Cure Notices",
+      "b": "Key Performance Indicators (KPIs)",
+      "c": "Liquidated Damages",
+      "d": "VECPs"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Key Performance Indicators (KPIs) are specific, quantifiable measurements used to track a vendor's performance and ensure compliance with the contract's objectives.",
+    "section_id": null
+  },
+  {
+    "question_number": 68,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "When a vendor fails to perform a critical contract requirement, what formal document is typically sent to notify them of the deficiency and give them a defined number of days to fix the issue before termination?",
+    "options": {
+      "a": "Show Cause Notice",
+      "b": "Stop Work Order",
+      "c": "Cure Notice",
+      "d": "Termination for Convenience"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A Cure Notice formally informs the contractor of their default and grants them a specified timeframe (often 10 days) to 'cure' or fix the deficiency before the agency terminates for default.",
+    "section_id": null
+  },
+  {
+    "question_number": 69,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "If a vendor fails to resolve a performance issue after the timeframe specified in a Cure Notice has expired, what is the most appropriate next step for the contracting officer?",
+    "options": {
+      "a": "Issue a Show Cause Notice or a Termination for Default.",
+      "b": "Issue a second Cure Notice extending the timeframe indefinitely.",
+      "c": "Approve full payment and assign the work to an internal department.",
+      "d": "Renegotiate the contract to lower the required standards."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "If the cure period lapses without resolution, the agency typically escalates by issuing a Show Cause Notice (asking why they shouldn't be terminated) or immediately issues a Termination for Default.",
+    "section_id": null
+  },
+  {
+    "question_number": 70,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "What is the primary purpose of issuing a 'Show Cause Notice' to a non-compliant vendor?",
+    "options": {
+      "a": "To provide instructions on how to submit their final invoice.",
+      "b": "To demand the vendor stop all work immediately.",
+      "c": "To afford the vendor a final opportunity to present reasons why the contract should not be terminated for default.",
+      "d": "To officially invoke the termination for convenience clause."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "A Show Cause Notice is used when default is imminent. It demands that the contractor 'show cause' or explain why they should not be held liable and why the contract should not be terminated.",
+    "section_id": null
+  },
+  {
+    "question_number": 71,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A contractor misses a critical construction deadline, triggering an assessment of $1,000 per day in Liquidated Damages. From a contract administration perspective, what is the nature of this assessment?",
+    "options": {
+      "a": "It is a punitive fine designed to punish the vendor.",
+      "b": "It is a pre-estimated contractual remedy to compensate the agency for losses caused by the delay.",
+      "c": "It is an illegal deduction under public procurement law.",
+      "d": "It replaces the need for standard invoice processing."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Liquidated damages are an agreed-upon mechanism representing a reasonable pre-estimate of the agency's actual damages incurred due to the vendor's delay, not a penalty.",
+    "section_id": null
+  },
+  {
+    "question_number": 72,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A vendor delivers a software module that meets 95% of the specifications but contains minor bugs that do not hinder its primary operational function. In contract law, this vendor has achieved:",
+    "options": {
+      "a": "Material Breach",
+      "b": "Substantial Performance",
+      "c": "Constructive Change",
+      "d": "Anticipatory Repudiation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Substantial performance occurs when a contractor fulfills the essential purpose of the contract, even though slight, minor omissions or defects exist. The agency cannot terminate for default but may seek a price reduction.",
+    "section_id": null
+  },
+  {
+    "question_number": 73,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A janitorial contractor fails a monthly inspection. The contract manager requires the contractor to submit a document outlining how they will fix the current issue and prevent it from recurring. This document is a:",
+    "options": {
+      "a": "Quality Assurance Surveillance Plan (QASP)",
+      "b": "Show Cause Notice",
+      "c": "Corrective Action Plan (CAP)",
+      "d": "Performance Bond"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Corrective Action Plan (CAP) is developed by the vendor in response to performance deficiencies, detailing the root cause of the problem, the solution, and steps to prevent future occurrences.",
+    "section_id": null
+  },
+  {
+    "question_number": 74,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "When administering a complex service contract (like facility maintenance), the agency relies on a document that dictates exactly how, when, and what it will evaluate to ensure contractor performance. This document is the:",
+    "options": {
+      "a": "Quality Assurance Surveillance Plan (QASP)",
+      "b": "Independent Government Cost Estimate (IGCE)",
+      "c": "Transition-Out Plan",
+      "d": "Merger Clause"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The QASP serves as the government's roadmap for contract monitoring, establishing the methods, schedule, and criteria for inspecting and evaluating vendor performance.",
+    "section_id": null
+  },
+  {
+    "question_number": 75,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "For low-cost, high-volume commodity orders (e.g., millions of pens), which inspection strategy is the most cost-effective for ensuring compliance while minimizing agency labor?",
+    "options": {
+      "a": "100% Inspection",
+      "b": "Random Sampling",
+      "c": "User Acceptance Testing (UAT)",
+      "d": "First-Article Inspection"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Random sampling (or statistical sampling) is used for high-volume, low-risk items where checking every single item (100% inspection) is financially or logistically impractical.",
+    "section_id": null
+  },
+  {
+    "question_number": 76,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A construction contract allows the agency to hold back 5% of each progress payment until final project completion. This mechanism, used to ensure final compliance and leverage against defects, is known as:",
+    "options": {
+      "a": "Liquidated Damages",
+      "b": "Retainage",
+      "c": "Novation",
+      "d": "Mobilization Fee"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Retainage is a portion of the agreed-upon contract price deliberately withheld until the work is substantially complete to assure that the contractor will satisfy their obligations.",
+    "section_id": null
+  },
+  {
+    "question_number": 77,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "During documentation of poor supplier performance, which characteristic is essential for the documentation to be legally defensible in a dispute?",
+    "options": {
+      "a": "It must contain emotional appeals to vendor loyalty.",
+      "b": "It must be completely subjective based on end-user opinions.",
+      "c": "It must be objective, factual, clearly tied to contract requirements, and well-dated.",
+      "d": "It must not be shared with the vendor to maintain the element of surprise."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Objective, fact-based documentation that directly references the breached contract terms is vital for supporting adverse actions like payment deductions or termination.",
+    "section_id": null
+  },
+  {
+    "question_number": 78,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A vendor chronically delivers goods three days late. For six months, the agency accepts the late goods without complaint or penalty. When the agency finally tries to terminate for default based on late delivery, the vendor could successfully argue:",
+    "options": {
+      "a": "Constructive Change",
+      "b": "Force Majeure",
+      "c": "Waiver by Estoppel",
+      "d": "Latent Defect"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "By repeatedly accepting late deliveries without enforcing the contract's delivery schedule, the agency inadvertently 'waived' its right to strict enforcement through estoppel, establishing a new accepted pattern of performance.",
+    "section_id": null
+  },
+  {
+    "question_number": 79,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "In a Prime Contractor/Subcontractor relationship, if the subcontractor fails to deliver on time, causing the prime to miss the deadline, who is legally responsible for the default to the purchasing agency?",
+    "options": {
+      "a": "The Subcontractor",
+      "b": "The Prime Contractor",
+      "c": "The Bonding Company",
+      "d": "The Agency"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Privity of contract exists only between the agency and the Prime Contractor. The Prime is fully responsible for the performance and compliance of its chosen subcontractors.",
+    "section_id": null
+  },
+  {
+    "question_number": 80,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "To ensure transparency and compliance with billing rates on a Time and Materials contract, which contract clause must the agency include and actively exercise?",
+    "options": {
+      "a": "Right to Audit Clause",
+      "b": "Hold Harmless Clause",
+      "c": "Severability Clause",
+      "d": "Order of Precedence Clause"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A Right to Audit clause grants the purchasing agency the authority to review the contractor's financial records, timesheets, and invoices to verify that the amounts billed are accurate and compliant.",
+    "section_id": null
+  },
+  {
+    "question_number": 81,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A supplier voluntarily informs the contract administrator, 'Due to supply chain failure, we will not be able to fulfill the delivery required next month.' Under the UCC, this premature declaration of default is known as:",
+    "options": {
+      "a": "Excusable Delay",
+      "b": "Anticipatory Repudiation",
+      "c": "Constructive Termination",
+      "d": "Force Majeure"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Anticipatory repudiation occurs when one party to a contract unambiguously indicates, before performance is due, that they will not fulfill their contractual obligations.",
+    "section_id": null
+  },
+  {
+    "question_number": 82,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "When assessing performance, standard commercial items (like standard office paper) come with a built-in unwritten promise that they are reasonably fit for the ordinary purposes for which such goods are used. This is called the:",
+    "options": {
+      "a": "Implied Warranty of Merchantability",
+      "b": "Express Warranty",
+      "c": "Implied Warranty of Fitness for a Particular Purpose",
+      "d": "Extended Service Warranty"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Under the UCC, the implied warranty of merchantability guarantees that a product sold by a merchant is basic, functional, and suitable for the ordinary purpose for which it is intended.",
+    "section_id": null
+  },
+  {
+    "question_number": 83,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "If a buyer explicitly relies on the vendor's specialized expertise to select the exact right software for a very specific, unique agency need, and the software fails to meet that need, the vendor likely breached the:",
+    "options": {
+      "a": "Implied Warranty of Fitness for a Particular Purpose",
+      "b": "Implied Warranty of Merchantability",
+      "c": "Express Title Warranty",
+      "d": "Liquidated Damages clause"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "This implied warranty is created when a seller knows the specific purpose for which goods are required and the buyer relies on the seller's skill to select suitable goods.",
+    "section_id": null
+  },
+  {
+    "question_number": 84,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "In compliance monitoring, what is an 'Incentive Contract' designed to achieve?",
+    "options": {
+      "a": "To penalize vendors who miss minimum delivery dates.",
+      "b": "To align the contractor’s financial interests with those of the agency by offering additional profit for exceeding specific cost, schedule, or performance targets.",
+      "c": "To convert a firm-fixed-price contract into a time-and-materials contract.",
+      "d": "To ensure the lowest responsive bidder receives the initial award."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Incentive contracts are structured to motivate the contractor to perform better, faster, or cheaper by tying their profit/fee directly to their performance against predetermined targets.",
+    "section_id": null
+  },
+  {
+    "question_number": 85,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "During formal vendor performance evaluations (e.g., vendor report cards), when should performance expectations ideally be set to ensure fair compliance scoring?",
+    "options": {
+      "a": "At the conclusion of the contract right before final payment.",
+      "b": "During the pre-solicitation and solicitation drafting phases, and reiterated at the post-award meeting.",
+      "c": "Immediately after the first failure occurs.",
+      "d": "When an auditor requests the file."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "To fairly evaluate a vendor, performance metrics and expectations must be clearly defined in the initial solicitation/contract documents and confirmed early at the post-award meeting.",
+    "section_id": null
+  },
+  {
+    "question_number": 86,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "If a contract administrator observes a safety violation on a construction site that represents an imminent threat to human life, what is their immediate compliance authority?",
+    "options": {
+      "a": "Send a written Cure Notice giving 10 days to resolve the safety hazard.",
+      "b": "Issue an immediate verbal or written Stop Work order for the affected area until the hazard is mitigated.",
+      "c": "Deduct $500 from the next progress payment.",
+      "d": "Wait until the next scheduled quarterly performance review to bring it up."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When imminent danger to life, health, or property exists, the contract administrator has the authority and responsibility to issue an immediate stop-work order to mitigate the risk.",
+    "section_id": null
+  },
+  {
+    "question_number": 87,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A contractor claims they cannot perform due to a global pandemic and supply chain collapse. This is considered an 'Excusable Delay'. What is the practical result for the contractor regarding compliance?",
+    "options": {
+      "a": "They are granted additional time to perform without being subject to default terminations or liquidated damages.",
+      "b": "They are entitled to double payment due to the hardship.",
+      "c": "They are automatically terminated for convenience.",
+      "d": "They must secure a new performance bond within 24 hours."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "An excusable delay (Force Majeure) relieves the contractor from liability (e.g., liquidated damages or default) because the failure to perform is beyond their control and without their fault or negligence.",
+    "section_id": null
+  },
+  {
+    "question_number": 88,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A vendor submits a progress report indicating they are 50% complete, but the agency's QA inspector verifies they have only completed 20% of the work. What financial control prevents overpayment?",
+    "options": {
+      "a": "Performance bonds only pay out at 100% completion.",
+      "b": "The agency cross-verifies milestones via the Receiving Report/QA inspection before approving progress payments.",
+      "c": "The agency cannot prevent overpayment but can sue later.",
+      "d": "The vendor is protected under the prompt payment act."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Progress payments must be directly tied to verifiable progress. The agency inspector's verification serves as the internal control (receiving report equivalent) that prevents paying for work not yet performed.",
+    "section_id": null
+  },
+  {
+    "question_number": 89,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "What is the key difference between a Material Breach and a Minor Breach of contract?",
+    "options": {
+      "a": "A Minor Breach completely excuses the non-breaching party from further performance.",
+      "b": "A Material Breach severely impairs the core value or purpose of the contract, giving the agency the right to terminate.",
+      "c": "A Minor Breach must be cured within 30 days, while a Material Breach requires 60 days.",
+      "d": "Only Minor Breaches allow the agency to claim actual damages."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A material breach strikes at the heart of the contract, defeating its purpose and allowing the injured party to terminate the contract. A minor breach requires the parties to continue performance but allows for damage recovery.",
+    "section_id": null
+  },
+  {
+    "question_number": 90,
+    "subject": "Contract Development & Administration",
+    "topic": "Supplier Compliance",
+    "question_text": "A compliance matrix (or Requirements Traceability Matrix) is often used during active execution. What is its main administrative function?",
+    "options": {
+      "a": "To cross-reference and track each specific contract requirement against the vendor's ongoing deliverables and test results.",
+      "b": "To calculate the final retainage percentage.",
+      "c": "To map out the vendor's internal organizational chart.",
+      "d": "To list the environmental laws of the state."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A compliance or requirements matrix ensures nothing is missed by tracing each specific contract requirement from the statement of work to the vendor's deliverables and validation tests.",
+    "section_id": null
+  },
+  {
+    "question_number": 91,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "When a disagreement arises between a public agency and a contractor regarding contract requirements, what is the most cost-effective and preferred first step in the dispute resolution process?",
+    "options": {
+      "a": "Filing a lawsuit in the appropriate jurisdiction",
+      "b": "Binding arbitration",
+      "c": "Good faith negotiation at the project manager or contracting officer level",
+      "d": "Issuing a Termination for Default"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The primary and most preferred method of dispute resolution is good faith negotiation. Resolving issues informally at the lowest possible administrative level preserves the working relationship and avoids the high costs of formal escalation.",
+    "section_id": null
+  },
+  {
+    "question_number": 92,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Which Alternative Dispute Resolution (ADR) method involves a neutral third party who facilitates discussions between the agency and the contractor to help them reach a voluntary, non-binding settlement?",
+    "options": {
+      "a": "Litigation",
+      "b": "Mediation",
+      "c": "Arbitration",
+      "d": "Show Cause Notification"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Mediation uses a neutral third-party facilitator to help the disputing parties communicate and negotiate a mutually acceptable, non-binding resolution.",
+    "section_id": null
+  },
+  {
+    "question_number": 93,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Unlike mediation, which Alternative Dispute Resolution (ADR) process results in a final, legally binding decision made by a neutral third party (or panel) outside of the formal court system?",
+    "options": {
+      "a": "Partnering",
+      "b": "Arbitration",
+      "c": "Constructive Accord",
+      "d": "Conciliation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Arbitration is a more formal ADR process where a neutral arbitrator (or panel) hears the arguments and evidence from both sides and imposes a final, legally binding decision.",
+    "section_id": null
+  },
+  {
+    "question_number": 94,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "In public contracting, 'Partnering' is a technique best described as:",
+    "options": {
+      "a": "A joint venture legal entity formed to share profits equally.",
+      "b": "A proactive, voluntary team-building approach established post-award to prevent disputes and foster collaborative problem-solving.",
+      "c": "A clause that allows the vendor to subcontract up to 50% of the work.",
+      "d": "The requirement for local small businesses to act as the prime contractor."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Partnering is a proactive management process, usually starting with a retreat or workshop, where the agency and contractor align their goals, establish open communication, and commit to resolving problems collaboratively before they escalate into formal disputes.",
+    "section_id": null
+  },
+  {
+    "question_number": 95,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A contractor submits a formal written demand seeking the payment of a specific amount of money, an adjustment of contract terms, or other relief related to the contract. In contract administration, this document is formally known as a:",
+    "options": {
+      "a": "Claim",
+      "b": "Value Engineering Change Proposal",
+      "c": "Constructive Change",
+      "d": "Novation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A claim is a formal, written demand or assertion by one of the contracting parties seeking the payment of money, an adjustment or interpretation of contract terms, or other specific relief.",
+    "section_id": null
+  },
+  {
+    "question_number": 96,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Which standard contract clause permits the public agency to end the contract at any time, simply because it is in the best interest of the government, even if the contractor has not breached the agreement?",
+    "options": {
+      "a": "Termination for Cause",
+      "b": "Termination for Convenience",
+      "c": "Excusable Delay Clause",
+      "d": "Severability Clause"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Termination for Convenience (T4C) clause gives the government the unilateral right to terminate a contract wholly or partially when it is in the agency's best interest, regardless of the vendor's performance.",
+    "section_id": null
+  },
+  {
+    "question_number": 97,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "When a contract is Terminated for Convenience, what financial compensation is the contractor generally legally entitled to recover?",
+    "options": {
+      "a": "The full original contract value, regardless of work performed.",
+      "b": "Only the costs for goods already delivered and accepted, with zero profit allowed.",
+      "c": "Costs incurred for work performed, costs of settling subcontracts, and a reasonable profit on work performed, but excluding anticipated future profits.",
+      "d": "Liquidated damages equivalent to 10% of the remaining unperformed work."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Under a Termination for Convenience settlement, the contractor is entitled to fair compensation for work completed, allowable settlement expenses, and a reasonable profit on the performed work, but they are not entitled to unearned/anticipated future profits.",
+    "section_id": null
+  },
+  {
+    "question_number": 98,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "An agency terminates a janitorial contract because the vendor failed to show up for work for three consecutive weeks despite receiving a Cure Notice. What type of termination is this?",
+    "options": {
+      "a": "Termination for Default (Cause)",
+      "b": "Termination for Convenience",
+      "c": "Constructive Termination",
+      "d": "Mutual Rescission"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Termination for Default (or Cause) is the exercise of the government's right to completely or partially terminate a contract due to the contractor's actual or anticipatory failure to perform their contractual obligations.",
+    "section_id": null
+  },
+  {
+    "question_number": 99,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "If a contract is Terminated for Default and the agency must hire a new vendor at a higher price to finish the remaining work, what legal right does the agency have regarding the cost difference?",
+    "options": {
+      "a": "The agency must absorb the extra cost as a penalty for poor contractor selection.",
+      "b": "The agency can assess excess reprocurement costs (cover) against the defaulting contractor.",
+      "c": "The agency can demand the bonding company pay the entire value of the new contract.",
+      "d": "The agency cannot charge the vendor but can bar them from ever doing business in the state again."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When terminated for default, the contractor is generally liable for any excess reprocurement costs. This means the agency can recover the financial difference between the original contract price and the cost of obtaining the remaining goods/services from another source.",
+    "section_id": null
+  },
+  {
+    "question_number": 100,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A standard dispute clause states that while a formal claim or dispute is actively being resolved, the contractor must:",
+    "options": {
+      "a": "Immediately halt all work until a final decision is reached.",
+      "b": "Continue to perform diligently according to the contract and the contracting officer's directions.",
+      "c": "Deposit the disputed amount in an escrow account.",
+      "d": "Demobilize from the site to prevent further costs."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Most standard disputes clauses require the contractor to proceed diligently with contract performance pending the final resolution of any request for relief, claim, appeal, or action arising under the contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 101,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "If an agency wrongly issues a Termination for Default, and a review board later determines that the contractor's failure to perform was actually due to an excusable delay (Force Majeure), what typically happens to the termination?",
+    "options": {
+      "a": "The agency must pay triple damages for wrongful termination.",
+      "b": "The contract is immediately reinstated and extended.",
+      "c": "The Termination for Default is legally converted into a Termination for Convenience.",
+      "d": "The contractor must forfeit all claims and re-bid the work."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Under standard public contracting clauses, if it is determined that the default was excusable (beyond the control and without the fault or negligence of the contractor), the Termination for Default is automatically converted to a Termination for Convenience.",
+    "section_id": null
+  },
+  {
+    "question_number": 102,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A public works project halts because the general contractor goes bankrupt mid-project. To ensure the project is completed without financial loss to the agency, the agency will call upon which risk mitigation instrument?",
+    "options": {
+      "a": "Bid Bond",
+      "b": "Performance Bond",
+      "c": "Payment Bond",
+      "d": "Certificate of General Liability Insurance"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A Performance Bond ensures that if the contractor defaults or goes bankrupt, the surety company guarantees completion of the contract or pays the agency the amount required to finish the work (up to the bond amount).",
+    "section_id": null
+  },
+  {
+    "question_number": 103,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Upon receiving a written 'Stop Work Order', what is the immediate responsibility of the contractor?",
+    "options": {
+      "a": "File a claim for anticipatory profits for the remainder of the year.",
+      "b": "Continue working but at half-speed until the order is lifted.",
+      "c": "Immediately suspend all work as directed and take all reasonable steps to minimize the incurrence of further costs.",
+      "d": "Terminate all their subcontracts immediately with cause."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A stop-work order requires the contractor to immediately suspend performance and make all reasonable efforts to mitigate costs, including safely securing the site and pausing related subcontract work.",
+    "section_id": null
+  },
+  {
+    "question_number": 104,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "When assessing whether to terminate a contract for default, the contracting officer should consider which of the following as a primary factor?",
+    "options": {
+      "a": "The political affiliation of the contractor's board of directors.",
+      "b": "The availability of the supplies or services from other commercial sources and the urgency of the need.",
+      "c": "The current balance of the agency's general travel fund.",
+      "d": "Whether the vendor has previously requested an extension on a different contract."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When deciding on a default termination, the CO must weigh the urgency of the agency's need, the time it will take to reprocure from another source, and whether defaulting the current vendor will ultimately delay or harm the agency's mission.",
+    "section_id": null
+  },
+  {
+    "question_number": 105,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "If an agency and a vendor cannot reach an agreement regarding the final amount owed after a Termination for Convenience, what is the vendor's required next step to pursue the disputed funds?",
+    "options": {
+      "a": "Submit a formal Claim to the Contracting Officer for a final written decision.",
+      "b": "Seize agency property to offset the amount owed.",
+      "c": "Refuse to return government-furnished equipment until paid.",
+      "d": "Issue a Cure Notice to the government."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "If a settlement cannot be reached by negotiation, the contractor must submit a formal, quantified claim to the contracting officer under the Disputes clause, prompting the CO to issue a final determination, which can then be appealed.",
+    "section_id": null
+  },
+  {
+    "question_number": 106,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Which common law doctrine generally prevents a subcontractor from filing a direct lawsuit or claim against the government agency when there is an issue with payment or changes?",
+    "options": {
+      "a": "Contra Proferentem",
+      "b": "Promissory Estoppel",
+      "c": "Lack of Privity of Contract",
+      "d": "The Severin Doctrine"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Privity of Contract is the legal relationship between the parties who signed the agreement. Since the agency only signed with the prime contractor, there is no privity with the subcontractor, meaning the sub cannot sue the agency directly.",
+    "section_id": null
+  },
+  {
+    "question_number": 107,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "What type of bond ensures that subcontractors and material suppliers will be paid by the prime contractor, thereby protecting the public agency from liens or work stoppages?",
+    "options": {
+      "a": "Fidelity Bond",
+      "b": "Bid Bond",
+      "c": "Performance Bond",
+      "d": "Payment Bond"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A Payment Bond (often required by the Miller Act or Little Miller Acts) guarantees that the prime contractor will pay their laborers, material suppliers, and subcontractors, preventing them from disrupting the project.",
+    "section_id": null
+  },
+  {
+    "question_number": 108,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Under the concept of 'Anticipatory Repudiation', what right does an agency immediately gain if a vendor explicitly states in writing that they will abandon the contract two months before the delivery date?",
+    "options": {
+      "a": "The agency must wait until the actual delivery date passes before taking any action.",
+      "b": "The agency may immediately terminate the contract for default without waiting for the performance date.",
+      "c": "The agency is required to double the contract value to entice the vendor to stay.",
+      "d": "The agency must unilaterally convert it to a cost-plus contract."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Anticipatory repudiation constitutes an immediate material breach. The non-breaching party (agency) does not have to wait for the actual deadline to pass and can terminate for default and seek remedies immediately.",
+    "section_id": null
+  },
+  {
+    "question_number": 109,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "In evaluating a contractor's claim for extra compensation due to agency-caused delays, the contractor must prove that the delay affected the critical path of the project. This type of delay is known as a:",
+    "options": {
+      "a": "Concurrent Delay",
+      "b": "Compensable Delay",
+      "c": "Non-excusable Delay",
+      "d": "Routine Administrative Delay"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A compensable delay is a delay caused entirely by the agency (or owner) that affects the critical path, entitling the contractor not only to a time extension but also to financial compensation for extended overhead costs.",
+    "section_id": null
+  },
+  {
+    "question_number": 110,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A contractor delivers goods past the firm delivery date. What is a critical administrative step the buyer must AVOID doing if they intend to preserve their right to terminate the contract for default?",
+    "options": {
+      "a": "Continuing to accept partial shipments of the late goods without reserving rights.",
+      "b": "Documenting the exact date and time the delivery was supposed to arrive.",
+      "c": "Communicating with the end-user about the impact of the delay.",
+      "d": "Calculating the total amount of liquidated damages owed."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "If the agency continues to accept late deliveries and act as if the contract is still in good standing without explicitly reserving its rights, it acts as a 'waiver' of the original delivery schedule, preventing an immediate default termination.",
+    "section_id": null
+  },
+  {
+    "question_number": 111,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "During formal contract dispute litigation, 'Discovery' is the phase where:",
+    "options": {
+      "a": "The judge delivers the final verdict.",
+      "b": "The agency publicly announces a new solicitation to replace the vendor.",
+      "c": "Both parties are legally required to exchange relevant documents, communications, and evidence.",
+      "d": "The surety takes over the construction site."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Discovery is the pre-trial phase in litigation (or formal arbitration) where parties exchange information, including emails, contract files, and depositions, to ascertain the facts of the dispute.",
+    "section_id": null
+  },
+  {
+    "question_number": 112,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "Which of the following is considered an invalid reason to execute a Termination for Convenience?",
+    "options": {
+      "a": "The agency has lost funding for the program.",
+      "b": "The agency no longer requires the services.",
+      "c": "To intentionally avoid paying the contractor a legally earned milestone payment acting in bad faith.",
+      "d": "A major change in state law makes the contract's goal obsolete."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "While a Termination for Convenience is a broad unilateral right, it cannot be exercised in 'bad faith' or as a clear abuse of discretion (such as maliciously avoiding a contractual payment obligation already earned).",
+    "section_id": null
+  },
+  {
+    "question_number": 113,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A 'Notice of Intent to Disallow Costs' is an administrative tool utilized primarily in which type of contract during a dispute over vendor billing?",
+    "options": {
+      "a": "Firm-Fixed-Price",
+      "b": "Cost-Reimbursement",
+      "c": "Indefinite Delivery Indefinite Quantity (IDIQ) Commodity",
+      "d": "Fixed-Price with Economic Price Adjustment"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "In cost-reimbursement contracts, if an auditor or contracting officer identifies billed costs that violate the contract's allowability rules, they issue this notice to inform the vendor that specific costs will not be reimbursed.",
+    "section_id": null
+  },
+  {
+    "question_number": 114,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A procurement file is brought into a courtroom to resolve a dispute. Because a public contract is a fully integrated document, the judge refuses to allow the vendor to testify about an unwritten, verbal promise the buyer allegedly made before signing. What legal rule is the judge applying?",
+    "options": {
+      "a": "The Statute of Frauds",
+      "b": "The Parol Evidence Rule",
+      "c": "The Severin Doctrine",
+      "d": "The Doctrine of Sovereign Immunity"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Parol Evidence Rule dictates that if an agreement is written and intended to be the final, complete expression of the contract (integrated), prior or contemporaneous verbal or written statements cannot be introduced to alter or contradict it.",
+    "section_id": null
+  },
+  {
+    "question_number": 115,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "To protect a public agency from lawsuits initiated by third parties due to injuries caused by a vendor's negligence, the contract MUST include and properly execute an:",
+    "options": {
+      "a": "Arbitration Clause",
+      "b": "Indemnification / Hold Harmless Clause",
+      "c": "Economic Price Adjustment Clause",
+      "d": "Incentive Fee Structure"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An indemnification or hold harmless clause requires the contractor to protect, defend, and financially compensate the public agency against claims, damages, or lawsuits brought by third parties resulting from the contractor's actions.",
+    "section_id": null
+  },
+  {
+    "question_number": 116,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "If a contracting officer issues a final written decision regarding a contractor's claim and denies the requested payment, what is the contractor's remaining recourse under standard disputes procedures?",
+    "options": {
+      "a": "Issue a retaliatory Termination for Convenience.",
+      "b": "The decision is final and absolute, leaving no further recourse.",
+      "c": "Appeal the decision to a higher administrative board of contract appeals or a court of competent jurisdiction within a statutory timeframe.",
+      "d": "Deduct the denied amount from future tax liabilities owed to the state."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "When a contracting officer denies a claim in a final decision, the disputes clause or local statutes provide the contractor the right to appeal that decision to an administrative board or file suit in an appropriate court.",
+    "section_id": null
+  },
+  {
+    "question_number": 117,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "When terminating a contract for convenience that involves partially completed tangible goods, what right does the agency usually have regarding those unfinished goods?",
+    "options": {
+      "a": "The agency cannot claim them under any circumstance.",
+      "b": "The agency has the right to require the contractor to transfer title and deliver any completed supplies, partially completed supplies, and materials to the agency.",
+      "c": "The agency must pay the vendor to destroy them.",
+      "d": "The goods immediately become the property of the state's surplus program without compensation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Under standard T4C clauses, the government can instruct the vendor to transfer title and deliver any completed or partially completed goods and materials that the agency has compensated the vendor for in the termination settlement.",
+    "section_id": null
+  },
+  {
+    "question_number": 118,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "A public agency and a supplier cannot agree on the cause of a massive software failure. They agree to hire a respected industry expert to hear both sides and issue a non-binding opinion on who is at fault before they decide whether to go to court. This is a form of ADR called:",
+    "options": {
+      "a": "Early Neutral Evaluation",
+      "b": "Binding Arbitration",
+      "c": "Value Engineering",
+      "d": "Novation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Early Neutral Evaluation involves bringing in a neutral expert who listens to the facts and issues a non-binding opinion on the merits of the case, helping both parties understand their likelihood of winning in court and fostering a settlement.",
+    "section_id": null
+  },
+  {
+    "question_number": 119,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "In a dispute regarding the application of a poorly written contract specification, the court determines the language could reasonably be interpreted in two different ways. According to the legal principle of 'Contra Proferentem', the court will rule in favor of:",
+    "options": {
+      "a": "The party with the larger financial risk.",
+      "b": "The party that drafted the ambiguous language.",
+      "c": "The party that did not draft the ambiguous language.",
+      "d": "Neither party; the contract will be voided entirely."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Contra proferentem states that if a term is ambiguous, it should be construed strictly against the party that drafted it. Since public agencies usually draft the IFB/RFP specifications, courts often rule in favor of the vendor's reasonable interpretation.",
+    "section_id": null
+  },
+  {
+    "question_number": 120,
+    "subject": "Contract Development & Administration",
+    "topic": "Dispute Resolution & Terminations",
+    "question_text": "What action formally removes a contractor's eligibility to compete for future public contracts for a specified period due to a severe breach, criminal conviction, or continuous poor performance?",
+    "options": {
+      "a": "Novation",
+      "b": "Termination for Convenience",
+      "c": "Suspension or Debarment",
+      "d": "Liquidated Damages Assessment"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Debarment is a formal administrative action that excludes a contractor from participating in public procurement for a specific period of time due to serious offenses, severe default, or lack of business integrity.",
+    "section_id": null
+  },
+  {
+    "question_number": 121,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "When deciding whether to exercise a renewal option embedded in an existing contract, what is the most critical analysis a procurement professional must conduct?",
+    "options": {
+      "a": "Verify that the vendor's CEO has not changed.",
+      "b": "Perform market research to determine if the option pricing remains fair, reasonable, and competitive compared to current market conditions.",
+      "c": "Calculate the vendor's profit margin for the expiring year.",
+      "d": "Request new references from the vendor to prove continued competency."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Before exercising an option, the agency must verify that it is still in the government's best interest. This primarily requires market research to ensure the predetermined option price is still highly competitive and fair.",
+    "section_id": null
+  },
+  {
+    "question_number": 122,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "What is the primary difference between 'exercising a renewal option' and 'executing a contract extension'?",
+    "options": {
+      "a": "Options require the vendor's signature, while extensions are unilateral.",
+      "b": "Options are predetermined rights established in the original contract; extensions generally require a new bilateral agreement or amendment to add time not originally contemplated.",
+      "c": "Extensions can span five years, while options are strictly month-to-month.",
+      "d": "There is no functional or legal difference between the two."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An option is a unilateral right built into the original competitively bid contract. An extension is typically a bilateral amendment adding additional time beyond the evaluated options, often used as a bridge during re-procurement.",
+    "section_id": null
+  },
+  {
+    "question_number": 123,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Contract close-out processes should officially begin:",
+    "options": {
+      "a": "Immediately after the initial award is posted.",
+      "b": "When the contract is 50% physically complete.",
+      "c": "When the contract is physically complete (all goods/services have been delivered and accepted).",
+      "d": "After the vendor submits a dispute claim."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Administrative closeout begins immediately upon physical completion of the contract, meaning the vendor has delivered all required goods/services, and the agency has inspected and accepted them.",
+    "section_id": null
+  },
+  {
+    "question_number": 124,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "To finalize the financial close-out of a contract, what must the agency secure from the contractor before processing the absolute final payment (including retained funds)?",
+    "options": {
+      "a": "A fully executed Release of Claims document.",
+      "b": "The vendor's internal payroll tax records.",
+      "c": "A newly renewed Certificate of Insurance valid for 5 more years.",
+      "d": "A Value Engineering proposal."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Before making the final payment and releasing retainage, it is critical to obtain a 'Release of Claims' (or waiver of liens) from the contractor. This legally prevents them from subsequently demanding more money for past work.",
+    "section_id": null
+  },
+  {
+    "question_number": 125,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "An agency is closing out a cost-reimbursement research contract. What mandatory process must be completed to verify that the vendor did not over-bill for allowable costs before final financial settlement?",
+    "options": {
+      "a": "A Final Indirect Rate Settlement and Financial Audit.",
+      "b": "A Termination for Convenience.",
+      "c": "An Environmental Impact Study.",
+      "d": "A Vendor Presentation."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Cost-reimbursement contracts require a final audit to establish the final indirect cost rates and reconcile total allowable costs billed against the payments already made before final closeout.",
+    "section_id": null
+  },
+  {
+    "question_number": 126,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "A standard contract typically requires a vendor to be notified of the agency's intent to exercise a renewal option:",
+    "options": {
+      "a": "Within 24 hours after the contract expires.",
+      "b": "By a specific preliminary deadline detailed in the contract (e.g., 30 to 60 days before expiration).",
+      "c": "Only via a verbal phone call from the end-user.",
+      "d": "At the post-award kick-off meeting."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Option clauses explicitly state the timeframe in which the agency must give written notice of its intent to renew (often 30-60 days). Failure to notify the vendor within this window can result in the loss of the right to renew unilaterally.",
+    "section_id": null
+  },
+  {
+    "question_number": 127,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "During contract close-out, it is discovered that $15,000 remains encumbered on the purchase order for services that were never utilized. What is the correct administrative action?",
+    "options": {
+      "a": "Pay the remaining $15,000 to the contractor as a bonus.",
+      "b": "Transfer the funds to an unrelated contract with the same vendor.",
+      "c": "De-obligate the unspent funds so they can be returned to the agency's budget.",
+      "d": "Leave the purchase order open indefinitely."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "De-obligation is the financial process of canceling the reservation of unspent funds on a contract, returning that money to the appropriate general or program fund.",
+    "section_id": null
+  },
+  {
+    "question_number": 128,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Which of the following is an essential administrative task during the close-out of an IT hardware contract?",
+    "options": {
+      "a": "Deleting the original solicitation from the public procurement portal.",
+      "b": "Ensuring the assignment and transfer of manufacturer warranties and software licenses to the agency.",
+      "c": "Redacting the vendor's original pricing from the public file.",
+      "d": "Filing a lawsuit to recover the bid bond."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Transferring asset ownership, capturing manufacturer warranties, and transferring software licenses are critical physical and administrative steps in closing out equipment/hardware purchases.",
+    "section_id": null
+  },
+  {
+    "question_number": 129,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "What is the principle purpose of a 'Lessons Learned' post-contract review conducted during closeout?",
+    "options": {
+      "a": "To document the contractor's internal trade secrets.",
+      "b": "To retroactively reduce the final payment if the end-users were dissatisfied.",
+      "c": "To capture successes, document challenges, and identify actionable improvements for future solicitations.",
+      "d": "To initiate debarment proceedings against the lowest bidder."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A lessons-learned session evaluates what worked well and what didn't during the contract lifecycle, providing valuable insights to improve the drafting and management of future procurements.",
+    "section_id": null
+  },
+  {
+    "question_number": 130,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "An agency cannot successfully administratively close out a contract if which of the following conditions exists?",
+    "options": {
+      "a": "The manufacturer's warranty is still active.",
+      "b": "There is a pending, unresolved formal dispute or litigation claim regarding the contract.",
+      "c": "The procurement officer who awarded the contract has retired.",
+      "d": "The vendor declined to bid on the replacement contract."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A contract cannot be officially closed out while open claims, appeals, unresolved audits, or litigation are actively pending. All disputes must be finalized and settled prior to closeout.",
+    "section_id": null
+  },
+  {
+    "question_number": 131,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "When assessing vendor performance for the final close-out record, the evaluation must primarily be based on:",
+    "options": {
+      "a": "Objective data measured against the documented contract requirements and SLAs.",
+      "b": "The subjective personal opinions of the end-users.",
+      "c": "The number of complaints the vendor filed against the agency.",
+      "d": "How well the vendor's competitors performed on similar contracts."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Vendor performance evaluations must be objective, factual, and strictly based on the explicit requirements, performance metrics, and terms set forth in the contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 132,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "If a contract involves Government-Furnished Property (GFP) given to the contractor to perform the work, what must occur during the close-out phase?",
+    "options": {
+      "a": "The contractor must automatically keep the GFP as a bonus.",
+      "b": "A final inventory audit must be conducted, and the GFP must be returned, properly disposed of, or accounted for.",
+      "c": "The agency must invoice the contractor for the original purchase price of the GFP.",
+      "d": "The GFP must be donated to a local charity."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The contractor must account for all Government-Furnished Property. Property must be returned to the agency in acceptable condition or disposed of exactly as instructed by the contract officer before closeout.",
+    "section_id": null
+  },
+  {
+    "question_number": 133,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Regarding record retention, the general rule in public procurement dictates that the clock for the mandatory retention period of a contract file begins ticking:",
+    "options": {
+      "a": "On the date the original solicitation was advertised.",
+      "b": "On the date the contract was signed by the vendor.",
+      "c": "On the date of final payment or final administrative close-out, whichever is later.",
+      "d": "On the date the procurement officer leaves the agency."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Most state and federal document retention policies require contract files to be retained for a set number of years (e.g., 3, 5, or 7) starting from the date of final payment and formal contract closeout.",
+    "section_id": null
+  },
+  {
+    "question_number": 134,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "A buyer is finalizing a contract file for long-term storage. What is the foundational standard for a properly maintained public procurement file?",
+    "options": {
+      "a": "It must contain only original, wet-ink signatures.",
+      "b": "It must be capable of 'standing on its own', meaning an independent auditor can reconstruct the entire history and logic of the procurement without outside explanation.",
+      "c": "It must be physically bound in a secure safe.",
+      "d": "It must omit all internal emails and negative performance reports."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A complete public procurement file must 'stand on its own.' This means all decisions, correspondence, changes, payments, and approvals are thoroughly documented so an independent auditor can understand the entire contract history.",
+    "section_id": null
+  },
+  {
+    "question_number": 135,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Which tool is commonly used by contract administrators to ensure no step is missed during the transition from physical completion to final archive?",
+    "options": {
+      "a": "A Show Cause Notice",
+      "b": "A Contract Close-out Checklist",
+      "c": "A Non-Disclosure Agreement",
+      "d": "An Order of Precedence"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A contract close-out checklist is a standard administrative tool used to systematically ensure that deliverables are met, funds are de-obligated, final payments are made, warranties are logged, and files are complete.",
+    "section_id": null
+  },
+  {
+    "question_number": 136,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "An agency is transitioning a complex IT helpdesk service from 'Vendor A' to 'Vendor B'. To prevent a lapse in critical services, the expiring contract with Vendor A should have included a:",
+    "options": {
+      "a": "Transition-out / Phase-out Clause",
+      "b": "Liquidated Damages multiplier for options",
+      "c": "Severability clause prohibiting knowledge transfer",
+      "d": "Merger Clause"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A transition-out (or phase-out) clause mandates that the outgoing vendor cooperates, hands over data/keys, and provides necessary overlap services to ensure a smooth transition to the incoming vendor.",
+    "section_id": null
+  },
+  {
+    "question_number": 137,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "After the contract is closed out, a defect is found in a roof installed by the contractor, covered under a 10-year warranty. What is the contract administrator's responsibility regarding this warranty?",
+    "options": {
+      "a": "Because the contract is closed, the agency must fix the roof using its own maintenance staff.",
+      "b": "Re-open the contract and issue a Termination for Default.",
+      "c": "Enforce the warranty provisions, as warranties survive the administrative closeout of the contract.",
+      "d": "Issue a cure notice to the current groundskeeping vendor."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Warranties explicitly survive the contract's period of performance and administrative closeout. The agency has the right and responsibility to demand warranty remedies for defects covered within the warranty timeframe.",
+    "section_id": null
+  },
+  {
+    "question_number": 138,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "What happens if a public agency fails to explicitly exercise an option to renew a contract before the current term fully expires?",
+    "options": {
+      "a": "The contract automatically enters a month-to-month holdover status at the same rate.",
+      "b": "The option expires and the contract terminates on the specified expiration date, requiring a new procurement or a bilateral emergency extension to continue services.",
+      "c": "The vendor can sue for anticipated lost profits.",
+      "d": "The vendor automatically gains the right to increase prices by 10%."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Options must be exercised strictly within the timeframe and conditions set in the contract. If a contract lapses before the option is exercised, the option legally dies, and the contract ends.",
+    "section_id": null
+  },
+  {
+    "question_number": 139,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "During close-out of a major construction contract, what document signifies that the facility is physically completed to the point it can be used for its intended purpose, even if minor punch-list items remain?",
+    "options": {
+      "a": "Certificate of Substantial Completion",
+      "b": "Value Engineering Sign-off",
+      "c": "Notice to Proceed",
+      "d": "Final Lien Waiver"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A Certificate of Substantial Completion establishes that the project is functional for its intended use. It is a critical milestone because it typically stops the clock on liquidated damages and starts the clock on warranties.",
+    "section_id": null
+  },
+  {
+    "question_number": 140,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Why must the procurement department closely coordinate with the Accounts Payable (AP) department during the close-out phase?",
+    "options": {
+      "a": "To ensure AP issues the next solicitation.",
+      "b": "To reconcile all final invoices, ensure no double payments occurred, confirm all penalties/deductions were applied, and zero out the purchase order.",
+      "c": "To shift contract management duties permanently to AP.",
+      "d": "To ensure AP rewrites the specifications for the renewal."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Financial reconciliation is a core element of closeout. Procurement and Finance/AP must collaborate to ensure total payments match the contract value, retainage is handled properly, and encumbered balances are released.",
+    "section_id": null
+  },
+  {
+    "question_number": 141,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "A contractor requests final payment but refuses to sign a Final Release of Claims, stating they might find additional costs later. How should the contracting officer proceed?",
+    "options": {
+      "a": "Pay the final invoice to close the book on the fiscal year.",
+      "b": "Withhold final payment until the Release of Claims is signed, or accept a release with specific outstanding claims explicitly exempted and documented.",
+      "c": "Issue a Termination for Default.",
+      "d": "Transfer the final payment to the bonding company instead."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Final payment should generally not be made without a release. If the contractor has legitimate outstanding issues, they can sign a release with explicitly stated, quantified exceptions, allowing the agency to hold only the disputed amount.",
+    "section_id": null
+  },
+  {
+    "question_number": 142,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Which of the following scenarios best justifies a short-term, bilateral 'bridge' extension rather than a standard renewal option?",
+    "options": {
+      "a": "The buyer forgot to check the market price for the option year.",
+      "b": "All renewal options have been exhausted, but an ongoing bid protest has unexpectedly delayed the award of the replacement contract.",
+      "c": "The contractor offered a 50% discount to sign a new 5-year term.",
+      "d": "The current vendor is performing poorly and the agency wants to avoid conflict."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Bridge extensions are stop-gap measures used when a contract's options have expired but critical services must be maintained while an unavoidable delay (like a protest or complex re-procurement) is resolved.",
+    "section_id": null
+  },
+  {
+    "question_number": 143,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "If a contract dictates a renewal option 'subject to mutual agreement', how does this alter the agency's leverage compared to a standard unilateral option?",
+    "options": {
+      "a": "The agency cannot renew without the vendor's signature, giving the vendor the right to refuse or demand renegotiation of prices.",
+      "b": "The agency can still force the vendor to accept the renewal.",
+      "c": "It automatically converts the contract to a cost-plus model.",
+      "d": "It requires the city council to sign the document."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A unilateral option gives the agency the total power to demand continued performance at predetermined prices. A 'mutual' option requires both parties to agree, meaning the vendor has the power to reject it or demand changes.",
+    "section_id": null
+  },
+  {
+    "question_number": 144,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "In a Firm-Fixed-Price service contract, a vendor finished all work exactly to specifications but spent 20% less on labor than they initially estimated in their proposal. During close-out, how does this impact the final payment?",
+    "options": {
+      "a": "The agency must deduct 20% from the final payment.",
+      "b": "The vendor is paid the full firm-fixed price; the vendor retains the extra savings as profit.",
+      "c": "The agency must conduct a final audit and only pay actual costs plus a fixed fee.",
+      "d": "The vendor must refund the 20% to the general fund."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In a Firm-Fixed-Price contract, the risk and reward of cost variances lie with the contractor. If they perform efficiently and lower their costs, they keep the full fixed price and realize a higher profit margin.",
+    "section_id": null
+  },
+  {
+    "question_number": 145,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Before renewing an annual maintenance contract for an aging HVAC system, the contract manager analyzes the escalating frequency of repairs. This evaluation is an example of checking the:",
+    "options": {
+      "a": "Return on Investment (ROI) and Economic Life-cycle cost to determine if replacement is a better strategy than renewal.",
+      "b": "Parol Evidence of the vendor.",
+      "c": "Statute of Limitations.",
+      "d": "Cost-Plus-Fixed-Fee."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "During the renewal decision process, procurement must evaluate if it remains economically viable to continue maintaining the old asset or if the total lifecycle costs suggest it is time to draft a new solicitation to replace the system.",
+    "section_id": null
+  },
+  {
+    "question_number": 146,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "When closing out a construction contract, what is a 'Punch List'?",
+    "options": {
+      "a": "A list of sub-contractors who filed legal claims against the prime contractor.",
+      "b": "A detailed document compiled at the end of a project listing minor defective or incomplete items that the contractor must fix before receiving final payment.",
+      "c": "The safety report detailing worker injuries.",
+      "d": "The list of the agency's internal stakeholders who approved the final payment."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The punch list is generated during the substantial completion walk-through and lists all remaining minor repairs, adjustments, and finishing touches required before final completion and final payment.",
+    "section_id": null
+  },
+  {
+    "question_number": 147,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "An agency decides NOT to exercise a valid, pre-priced renewal option and instead lets the contract expire. The vendor files a lawsuit demanding compensation for lost profits in the option year. Why will the vendor likely lose?",
+    "options": {
+      "a": "Because public agencies possess Sovereign Immunity against all lawsuits.",
+      "b": "Because the agency has the unilateral legal right, but not the obligation, to exercise an option.",
+      "c": "Because the vendor failed to issue a Cure Notice to the agency.",
+      "d": "Because options are inherently illegal in public procurement."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "An option clause is a unilateral right belonging to the buyer. The government has no legal obligation to exercise an option year, and non-exercise is not a breach of contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 148,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Which of the following files is most likely to have the longest statutory record retention requirement after closeout?",
+    "options": {
+      "a": "A one-time spot purchase of $500 worth of printer paper.",
+      "b": "A massive architectural, engineering, and construction contract for a highly public suspension bridge.",
+      "c": "A monthly rental agreement for a forklift.",
+      "d": "A landscaping contract for weeding a local median."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Capital projects, structural construction, and contracts carrying long-term liability, warranties, or potential structural defects are typically subject to much longer document retention periods (sometimes permanent) compared to routine goods or minor services.",
+    "section_id": null
+  },
+  {
+    "question_number": 149,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "In a post-project review, the project manager notes that a major reason for cost overruns was poorly written technical specifications in the original solicitation. How should the procurement office use this information?",
+    "options": {
+      "a": "Demand a refund from the contractor.",
+      "b": "Incorporate this lesson learned by standardizing reviews and utilizing market research earlier in the planning phase for future procurements.",
+      "c": "Immediately delete the contract file to avoid FOIA requests.",
+      "d": "Ban the end-user from participating in future committees."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The primary purpose of a lessons-learned review during closeout is to identify internal agency weaknesses (like poor specs) and correct those processes to improve future procurements.",
+    "section_id": null
+  },
+  {
+    "question_number": 150,
+    "subject": "Contract Development & Administration",
+    "topic": "Renewals & Close-out",
+    "question_text": "Ultimately, a contract is considered fully, legally, and successfully completed when:",
+    "options": {
+      "a": "The contract physically reaches its expiration date.",
+      "b": "Both parties have completely fulfilled all of their respective obligations, including all deliveries, performance metrics, and final financial settlements.",
+      "c": "The contracting officer logs the final invoice into the AP system.",
+      "d": "The vendor successfully completes the post-award meeting."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Successful completion and termination of a contract relationship occurs when both parties have fully performed their mutual contractual obligations and all financial/administrative matters are entirely resolved.",
+    "section_id": null
+  }
+]

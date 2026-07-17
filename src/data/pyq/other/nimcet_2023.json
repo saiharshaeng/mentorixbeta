@@ -1,0 +1,1442 @@
+[
+    {
+      "question_number": 1,
+      "subject": "Mathematics",
+      "question_text": "A circle touches the x-axis and also touches the circle with centre (0, 3) and radius 2. The locus of the centre of the circle is",
+      "options": {
+        "a": "a circle",
+        "b": "an ellipse",
+        "c": "a parabola",
+        "d": "a hyperbola"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 2,
+      "subject": "Mathematics",
+      "question_text": "A computer producing factory has only two plants T₁ and T₂. Plant T₁ produces 20% and plant T₂ produces 80% of total computers produced. 7% of computers produced in the factory turn out to be defective. It is known that P (computer turns out to be defective given that it is produced in plant T₁) = 10P (computer turns out to be defective given that it is produced in plant T₂). where P(E) denotes the probability of an event E. A computer produced in the factory is randomly selected and it does not turn out to be defective. Then the probability that it is produced in plant T₂ is",
+      "options": {
+        "a": "36/73",
+        "b": "47/75",
+        "c": "78/93",
+        "d": "79/83"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 3,
+      "subject": "Mathematics",
+      "question_text": "The mean of 5 observation is 5 and their variance is 124. If three of the observations are 1,2 and 6; then the mean deviation from the mean of the data is:",
+      "options": {
+        "a": "2.3",
+        "b": "2.6",
+        "c": "2.8",
+        "d": "2.4"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 4,
+      "subject": "Mathematics",
+      "question_text": "The perimeter of a ∆ABC is 6 times the arithmetic mean of the sines of its angles. If the side a is 1, then the angle A is",
+      "options": {
+        "a": "π/6",
+        "b": "π/3",
+        "c": "π/2",
+        "d": "π"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 5,
+      "subject": "Mathematics",
+      "question_text": "In an examination of nine papers, a candidate has to pass in more papers than the number of papers in which he fails in order to be successful. The number of ways in which he can be unsuccessful is",
+      "options": {
+        "a": "255",
+        "b": "256",
+        "c": "128",
+        "d": "9 × 8!"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 6,
+      "subject": "Mathematics",
+      "question_text": "For a group of 100 candidates, the mean and standard deviation of scores were found to be 40 and 15 respectively. Later on, it was found that the scores 25 and 35 were misread as 52 and 53 respectively. Then the corrected mean and standard deviation corresponding to the corrected figures are",
+      "options": {
+        "a": "39.9, 14.79",
+        "b": "39.5, 14",
+        "c": "39.55, 14.97",
+        "d": "40.19, 15.1"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 7,
+      "subject": "Mathematics",
+      "question_text": "Consider the following frequency distribution table.\nClass Interval: 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80\nFrequency: 180, f1, 34, 180, 136, f2, 50\nIf the total frequency is 685 & median is 42.6 then the values of f₁ and f₂ are",
+      "options": {
+        "a": "80, 25",
+        "b": "83, 22",
+        "c": "79, 26",
+        "d": "82, 23"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 8,
+      "subject": "Mathematics",
+      "question_text": "If f(x) = lim (6^x - 3^x - 2^x + 1) / (loge 9(1-cos x)) as x->0 is a real number the lim f(x) as x->0 is",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "loge 2",
+        "d": "loge 3"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 9,
+      "subject": "Mathematics",
+      "question_text": "The sum of infinite terms of decreasing GP is equal to the greatest value of the function f(x) = x³ + 3x – 9 in the interval [−2, 3] and difference between the first two terms is f'(0). Then the common ratio of the GP is",
+      "options": {
+        "a": "-2/3",
+        "b": "2/3",
+        "c": "+1/3",
+        "d": "-1/3"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 10,
+      "subject": "Mathematics",
+      "question_text": "The value of ∫[from -π/3 to π/3] (x sinx) / cos²x dx is",
+      "options": {
+        "a": "(1/3)(4π + 1)",
+        "b": "(4π/3) - 2 log tan(5π/12)",
+        "c": "(π/3) + log tan(5π/12)",
+        "d": "(4π/3) - log tan(5π/12)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 11,
+      "subject": "Mathematics",
+      "question_text": "The equation of the tangent at any point of curve x = a cos³2t, y = 2√2 a sin t with m as its slope is",
+      "options": {
+        "a": "y = mx + a(m - 1/m)",
+        "b": "y = mx - a(m + 1/m)",
+        "c": "y = mx + a(1 + 1/m²)",
+        "d": "y = amx + a(m - 1/m)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 12,
+      "subject": "Mathematics",
+      "question_text": "If Π[i=1 to n] tan(αᵢ) = 1 ∀ αᵢ ∈ [0, π/2] where i = 1,2,3, ... n. Then maximum of value of Π[i=1 to n] sin αᵢ",
+      "options": {
+        "a": "1/2ⁿ",
+        "b": "1/2^(n/2)",
+        "c": "1/√n",
+        "d": "None of these"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 13,
+      "subject": "Mathematics",
+      "question_text": "A speaks truth in 60% and B speaks the truth in 50% cases. In what percentage of cases, they are likely in contradict each other while narrating some incident is",
+      "options": {
+        "a": "1/2",
+        "b": "1/4",
+        "c": "2/3",
+        "d": "1/3"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 14,
+      "subject": "Mathematics",
+      "question_text": "If a = (î-2ĵ)/√5 and b = (2î+ĵ+3k̂)/√14 are vector in space, then the value of (2a + b) . [(a × b) × (a – 2b)] is",
+      "options": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 15,
+      "subject": "Mathematics",
+      "question_text": "Let A = 2i + j - 2k and B = i + j. If C is a vector such that |C - A| = 3 and the angle between A × B and C is 30°, then |(A × B) × C| = 3 then the value of A . C is equal to",
+      "options": {
+        "a": "25/8",
+        "b": "2",
+        "c": "5",
+        "d": "1/8"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 16,
+      "subject": "Mathematics",
+      "question_text": "Let A and B be sets. A ∩ X = B ∩ X = φ and A U X = B U X for some set X, relation between A & B.",
+      "options": {
+        "a": "A=B",
+        "b": "A U B = X",
+        "c": "B = X",
+        "d": "A = X"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 17,
+      "subject": "Mathematics",
+      "question_text": "If a, b, c, d are in HP and arithmetic mean of ab, bc, cd is 9 then which of the following number is the value of ad?",
+      "options": {
+        "a": "3",
+        "b": "9",
+        "c": "12",
+        "d": "4"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 18,
+      "subject": "Mathematics",
+      "question_text": "Find foci of the equation x² + 2x – 4y² + 8y - 7 = 0",
+      "options": {
+        "a": "(√5 ± 1, 1)",
+        "b": "(−1 ± √5, 1)",
+        "c": "(−1, √5 ± 1)",
+        "d": "(1,−1 ± √5)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 19,
+      "subject": "Mathematics",
+      "question_text": "The locus of the mid-point of all chords of the parabola y² = 4x which are drawn through its vertex is",
+      "options": {
+        "a": "y² = 8x",
+        "b": "y² = 2x",
+        "c": "x² + 4y² = 16",
+        "d": "x² = 2y"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 20,
+      "subject": "Mathematics",
+      "question_text": "If a = î − k̂ and b = xî + ĵ + (1 − x)k̂ and c = yî + xĵ + (1 + x - y)k̂, then [a b c] depends on",
+      "options": {
+        "a": "Neither x nor y",
+        "b": "Only x",
+        "c": "Only y",
+        "d": "Both x and y"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 21,
+      "subject": "Mathematics",
+      "question_text": "If a, b are unit vectors such that |2a + b| = 3 then which of the following statement is true?",
+      "options": {
+        "a": "a is parallel to b",
+        "b": "a is perpendicular to b.",
+        "c": "a is perpendicular to 2a + b",
+        "d": "b is parallel to 2a + b"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 22,
+      "subject": "Mathematics",
+      "question_text": "If ∫f(x)dx = g(x) then ∫ x⁵ f(x³) dx",
+      "options": {
+        "a": "(1/3)x³g(x³) – ∫ x²g(x³)dx + C",
+        "b": "(1/3)x³g(x³) − ∫ x²g(x³)dx + C",
+        "c": "(1/3)x³g(x³) - ∫ x³g(x³)dx + C",
+        "d": "None of these"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 23,
+      "subject": "Mathematics",
+      "question_text": "lim (x⁴-1)/(x-1) as x->1 = lim (x³-k³)/(x²-k²) as x->k, then find k",
+      "options": {
+        "a": "8/3",
+        "b": "4/3",
+        "c": "2/3",
+        "d": "1"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 24,
+      "subject": "Mathematics",
+      "question_text": "The graph of function f(x) = logₑ(x³ + √(x⁶ + 1)) is symmetric about:",
+      "options": {
+        "a": "x-axis",
+        "b": "y-axis",
+        "c": "origin",
+        "d": "y = x"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 25,
+      "subject": "Mathematics",
+      "question_text": "If the equation |x²- 6x + 8| = a has four real solution then find the value of a?",
+      "options": {
+        "a": "a ∈ 0 (likely typo, assuming a=0)",
+        "b": "a = 1",
+        "c": "a ∈ (0,1)",
+        "d": "a ∈ [1,2]"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 26,
+      "subject": "Mathematics",
+      "question_text": "Largest value of cos² θ – 6 sin θ cos θ + 3 sin² θ + 2",
+      "options": {
+        "a": "4",
+        "b": "0",
+        "c": "4 + √10",
+        "d": "4√10"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 27,
+      "subject": "Mathematics",
+      "question_text": "Given to events A and B such that odd in favour A are 2: 1 and odd in favour of A U B are 3: 1. Consistent with this information the smallest and largest value for the probability of event B are given by",
+      "options": {
+        "a": "1/12 ≤ P(B) ≤ 3/4",
+        "b": "1/6 ≤ P(B) ≤ 1/2",
+        "c": "1/12 ≤ P(B) ≤ 1/4",
+        "d": "None of these"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 28,
+      "subject": "Mathematics",
+      "question_text": "If A and B are square matrices such that B = - A⁻¹ BA, then (A + B)² is",
+      "options": {
+        "a": "0",
+        "b": "A² + B²",
+        "c": "A² + 2AB + B²",
+        "d": "A + B"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 29,
+      "subject": "Mathematics",
+      "question_text": "A bag contain different kind of balls in which 5 yellow, 4 black & 3 green balls. If 3 balls are drawn at random then find the probability that no black ball is chosen",
+      "options": {
+        "a": "14/55",
+        "b": "1/66",
+        "c": "2/9",
+        "d": "None of these"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 30,
+      "subject": "Mathematics",
+      "question_text": "Between any two real roots of the equation eˣ sinx = 1, the equation eˣ cosx = -1 has",
+      "options": {
+        "a": "Atleast one root",
+        "b": "Exactly one root",
+        "c": "No root",
+        "d": "None of these"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 31,
+      "subject": "Mathematics",
+      "question_text": "If f(x) is a polynomial of degree 4, f(n) = n + 1 & f(0) = 25, then find f(5) = ?",
+      "options": {
+        "a": "30",
+        "b": "20",
+        "c": "25",
+        "d": "None of these"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 32,
+      "subject": "Mathematics",
+      "question_text": "The maximum value of f(x) = (x − 1)²(x + 1)³ is equal to 2ᴾ3<0xE1><0xB5><0xA9>/3125 then the ordered pair of (p, q) will be",
+      "options": {
+        "a": "(3,7)",
+        "b": "(7,3)",
+        "c": "(5,5)",
+        "d": "(4,4)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 33,
+      "subject": "Mathematics",
+      "question_text": "The coefficient of x⁵⁰ in the expression of (1 + x)¹⁰⁰⁰ + 2x(1 + x)⁹⁹⁹ + 3x²(1 + x)⁹⁹⁸ + ...... + 1001x¹⁰⁰⁰",
+      "options": {
+        "a": "¹⁰⁰⁵C₅₀",
+        "b": "¹⁰⁰⁵C₄₈",
+        "c": "¹⁰⁰²C₅₀",
+        "d": "¹⁰⁰²C₅₁"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 34,
+      "subject": "Mathematics",
+      "question_text": "If X<0xE2><0x82><0x96> = cos(2kπ/n) + i sin(2kπ/n) then Σ[k=1 to n] (X<0xE2><0x82><0x96>) =?",
+      "options": {
+        "a": "1",
+        "b": "-1",
+        "c": "0",
+        "d": "None of these"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 35,
+      "subject": "Mathematics",
+      "question_text": "Number of points of which f(x) is not differentiable f(x) = |cos x| + 3 in [−π, π]",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "None of these"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 36,
+      "subject": "Mathematics",
+      "question_text": "If n₁ and n₂ are the number of real valued solutions x = |sin⁻¹x| & x = sin(x) respectively, then the value of n₂ - n₁ is",
+      "options": {
+        "a": "1",
+        "b": "0",
+        "c": "2",
+        "d": "3"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 37,
+      "subject": "Mathematics",
+      "question_text": "Let a, b, c, d be no zero numbers. If the point of intersection of the line 4ax + 2ay + c = 0 & 5bx + 2by + d=0 lies in the fourth quadrant and is equidistance from the two are then",
+      "options": {
+        "a": "a + b + c + d = 0",
+        "b": "ad - bc = 0",
+        "c": "3bc - 2ad = 0",
+        "d": "3bc + 2ad = 0"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 38,
+      "subject": "Mathematics",
+      "question_text": "The negation of ~S v (~R ∧ S) is equivalent to",
+      "options": {
+        "a": "S v (R v ~S)",
+        "b": "S ∧ ~R",
+        "c": "S ∧ R",
+        "d": "S ∧ (R ∧ ~S)"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 39,
+      "subject": "Mathematics",
+      "question_text": "A point P in the first quadrant, lies on y² = 4ax, a > 0, and keeps a distance of 5a units from its focus. Which of the following points lies on the locus of P?",
+      "options": {
+        "a": "(1,0)",
+        "b": "(1,1)",
+        "c": "(0,2)",
+        "d": "(2,0)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 40,
+      "subject": "Mathematics",
+      "question_text": "If ∫ x sin x sec³ x dx = (1/2)[f(x) sec² x + g(x) (tanx)] + C, then which of the following is true?",
+      "options": {
+        "a": "f(x) - g(x) = 0",
+        "b": "f(x) . g(x) = 0",
+        "c": "f(x) + g(x) = 0",
+        "d": "f(x) + g(x) = 1"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 41,
+      "subject": "Mathematics",
+      "question_text": "θ = cos⁻¹(3/√20) is the angle between a = î - 2xĵ + 2yk̂ & b = xî + ĵ + yk̂ then possible values at (x, y) that lie on the locus",
+      "options": {
+        "a": "(0,1)",
+        "b": "(1,0)",
+        "c": "(1,1)",
+        "d": "(0,0)"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 42,
+      "subject": "Mathematics",
+      "question_text": "Let R be reflexive relation on the finite set a having 10 elements and if m is the number of ordered pair in R, then",
+      "options": {
+        "a": "m ≥ 10",
+        "b": "m = 100",
+        "c": "m = 10",
+        "d": "m ≤ 10"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 43,
+      "subject": "Mathematics",
+      "question_text": "If |x - 6| = |x² - 4x| - |x² - 5x + 6|, where x is a real variable",
+      "options": {
+        "a": "x ∈ (2,5)",
+        "b": "x ∈ [2,3] U [6, ∞)",
+        "c": "R - [2,6]",
+        "d": "None of these"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 44,
+      "subject": "Mathematics",
+      "question_text": "The range of values of θ in the interval (0, π) such that the points (3, 2) and (cos θ, sin θ) lie on the same sides of the line x + y − 1 = 0, is",
+      "options": {
+        "a": "(0, 3π/4)",
+        "b": "(0, π/2)",
+        "c": "(0, π/3)",
+        "d": "(0, π/4)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 45,
+      "subject": "Mathematics",
+      "question_text": "Which of the following number is the coefficient of x¹⁰⁰ in the expansion of logₑ((1+x)/(1+x²)), |x| < 1?",
+      "options": {
+        "a": "0.01",
+        "b": "0.02",
+        "c": "-0.03",
+        "d": "-0.01"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 46,
+      "subject": "Mathematics",
+      "question_text": "A real valued function f is defined as f(x) = { x-1, if -1 ≤ x ≤ 0; |x-1|, if 0 ≤ x ≤ 2 }. Which of the following statement is FALSE?",
+      "options": {
+        "a": "f(|x|) = |x| − 1, if 0 ≤ x ≤ 1",
+        "b": "|f(x)| = x − 1, if 1 ≤ x ≤ 2",
+        "c": "f(|x|) + |f(x)| = 1, if 0 ≤ x ≤ 1",
+        "d": "f(|x|) - |f(x)| = 0, if 1 ≤ x ≤ 2"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 47,
+      "subject": "Mathematics",
+      "question_text": "A line segment AB of length 10 meters is passing through the foot of the perpendicular of a pillar, which is standing at right angle to the ground. Tip of the pillar subtends angles tan⁻¹ 3 and tan⁻¹ 2 at A and B respectively. Which of the following choice represents the height of the pillar?",
+      "options": {
+        "a": "10 meter",
+        "b": "8 meter",
+        "c": "12 meter",
+        "d": "15 meter"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 48,
+      "subject": "Mathematics",
+      "question_text": "If a vector having magnitude of 5 units, makes equal angle with each of the three mutually perpendicular axes, then the sum of the magnitude of the projections on each of the axis is",
+      "options": {
+        "a": "15/√3 unit",
+        "b": "5√3 unit",
+        "c": "15√3/2 unit",
+        "d": "None of these"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 49,
+      "subject": "Mathematics",
+      "question_text": "Bag I contains 3 red, 4 black and 3 white balls and Bag II contains 2 red, 5 black and 2 white balls. One balls is transferred from Bag I to Bag II and then a ball is drawn from Bag II. The ball so drawn is found to be black in colour. Then the probability, that the transferred is red, is:",
+      "options": {
+        "a": "4/9",
+        "b": "5/18",
+        "c": "1/6",
+        "d": "3/10"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 50,
+      "subject": "Mathematics",
+      "question_text": "Let f(x) = (x²−1)/|x²−1|. Then the value of lim f(x) as x→-1 is",
+      "options": {
+        "a": "-1",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 51,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Complete the series: 3, 10, 24, 45, 73, ......",
+      "options": {
+        "a": "69",
+        "b": "91",
+        "c": "108",
+        "d": "121"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 52,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Pointing towards a person in the photograph, Anjali said, “He is the only son of the father of my sister's brother”. How is that person related to Anjali?",
+      "options": {
+        "a": "Father",
+        "b": "Mother",
+        "c": "Cousin",
+        "d": "None of these"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 53,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Book: Publisher : : Film:?",
+      "options": {
+        "a": "Director",
+        "b": "Producer",
+        "c": "Editor",
+        "d": "Writer"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 54,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "A sum of money distributed among four person P, Q, R, S in ratio 2: 5:4 : 3. If Q get Rs. 2000 more than S, then what will be the total amount",
+      "options": {
+        "a": "18000",
+        "b": "16000",
+        "c": "14000",
+        "d": "15000"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 55,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "P, Q, R, S, T, U, V, W are sitting around a table in the same order, for group discussion at equal distances. Their position are clockwise. If V sit in north, then what will be the position of 'S'",
+      "options": {
+        "a": "East",
+        "b": "South",
+        "c": "South - East",
+        "d": "South – West"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 56,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "If yellow is called white, white is called black, black is called green, green is called pink, pink is called blue and blue is called water, what is the colour of sky",
+      "options": {
+        "a": "Black",
+        "b": "Water",
+        "c": "White",
+        "d": "Blue"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 57,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Which of the following can be formed from \"RECCOMMENDATION\" word letters",
+      "options": {
+        "a": "MEDIATE",
+        "b": "COMMUNICATE",
+        "c": "MEDICINE",
+        "d": "REMAINDER"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 58,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "How many meaningful words can be formed with the first, the third, the seventh and the ninth letters of the word SEPERATION using each letter only once in each word?",
+      "options": {
+        "a": "3",
+        "b": "4",
+        "c": "more than 4",
+        "d": "2"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 59,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Find a number from the given options which best completes the series: 39, 416, 525, ........, 749, 864",
+      "options": {
+        "a": "439",
+        "b": "436",
+        "c": "636",
+        "d": "644"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 60,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "A can do a piece of work in 10 days and B can do a work in 20 days after 4 days B left and C joins then A and C to work together in 2 days. In how many days C alone do the work",
+      "options": {
+        "a": "12 days",
+        "b": "15 days",
+        "c": "10 days",
+        "d": "20 days"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 61,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Thirty-six vehicles are parked in a parking lot in a single row. After the first car, there is one scooter. After the second car, there are two scooters. After the third car, there are three scooters and so on. Work out the number of scooter in the second half row",
+      "options": {
+        "a": "15",
+        "b": "17",
+        "c": "12",
+        "d": "10"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 62,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Deepa moved a distance of 75 metre towards the north. She then turned left and walking for about 25 meter, turned left again and waked 80 meters. Finally, she turned to the right at an angle of 45°. In which direction was she moving finally?",
+      "options": {
+        "a": "North – East",
+        "b": "North – West",
+        "c": "South – East",
+        "d": "South - West"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 63,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "A 30 litres mixture of milk and water 10% water. How much milk should be added so that the percentage of water in the mixture comes down to 2%?",
+      "options": {
+        "a": "120",
+        "b": "80",
+        "c": "90",
+        "d": "60"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 64,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Rakesh says to Mahesh – “I am as old as you were when I was one-third as you are”. If the sum of their ages is 60 year, find the present age of the Mahesh (in years).",
+      "options": {
+        "a": "45",
+        "b": "36",
+        "c": "30",
+        "d": "24"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 65,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Hari invested an amount at a certain rate of interest on simple interest and he got 60% more amount after 8 years. If he invest Rs. 9600 at the same rate of interest on simple interest then find total interest he would get after four years.",
+      "options": {
+        "a": "Rs. 2520",
+        "b": "Rs. 2260",
+        "c": "Rs. 2880",
+        "d": "Rs. 2160"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 66,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Ritu purchased 20 dozen of Banana at the rate of Rs. 375 per dozen. She sold each one of them at the rate of Rs. 33. What was the percentage profit.",
+      "options": {
+        "a": "12.3%",
+        "b": "5.6%",
+        "c": "6.5%",
+        "d": "10%"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 67,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "A university is offering elective courses in Mathematics, Economics and Sociology. Each of its 100 undergraduate students has to opt for at least one of these electives. Course enrollment data showed that 47 students enrolled for Mathematics, 47 students enrolled for Economics and 57 students enrolled for Sociology. If 7 students enrolled for all three courses, how many students enrolled for exactly one course?",
+      "options": {
+        "a": "60",
+        "b": "56",
+        "c": "58",
+        "d": "Cann't say"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 68,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Yamini has atleast two sister younger than her. Rakhi, Pooja, Yamini and Sweta are four sister. Pooja is younger than Rakhi who is not oldest. Sweta is older than Pooja but younger than Rakhi, then who is oldest among them?",
+      "options": {
+        "a": "Sweta",
+        "b": "Yamini",
+        "c": "Pooja",
+        "d": "Rakhi"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 69,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Statements:\nStatement I: At most teachers are boys.\nStatement II: Some boys are students.\nConclusion:\nI. Some teacher are students.\nII. Some students are boys.",
+      "options": {
+        "a": "Neither I or II follows",
+        "b": "Neither I nor II follows",
+        "c": "Only II follows",
+        "d": "Only I follows"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 70,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Identify the next two numbers in the following sequence: 17, 20, 9, 12, 5, 6, 3, 2, ?, ?",
+      "options": {
+        "a": "(0,2)",
+        "b": "(1,2)",
+        "c": "(2,0)",
+        "d": "(2,1)"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 71,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Study the diagram and answer the question that follows: (Diagram shows overlapping circles for Player, Coach, Girl with numbers in sections). How many girls are players but not coaches?",
+      "options": {
+        "a": "16",
+        "b": "31",
+        "c": "15",
+        "d": "61"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 72,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Three persons A, B and C are standing in queue. There are five persons between A and B and eight persons between B and C. If there are three persons ahead of C and 21 behind A, then what could be the minimum number of persons in the queue?",
+      "options": {
+        "a": "40",
+        "b": "27",
+        "c": "28",
+        "d": "41"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 73,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Hemant deposits 10% of his salary in PF. He saves 30% of remaining salary. The ratio of his expenses on medicine and groceries is 3:4 of remaining salary after saving. If his expenses in medicine was Rs. 2700, then find his monthly salary.",
+      "options": {
+        "a": "Rs. 30,000",
+        "b": "Rs. 20,000",
+        "c": "Rs. 10,000",
+        "d": "Rs. 15,000"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 74,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Rajdhani Train running at a speed of 54 km/hr crosses a platform of length same as that of the train in 36 sec. If a Duranto train, which is 230 meters long crosses the same platform in 25 sec, then find speed of Duranto train (in km/hr)?",
+      "options": {
+        "a": "54km/h",
+        "b": "72km/h",
+        "c": "84km/h",
+        "d": "90km/h"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 75,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "If 20 - 10 means 200, 8 ÷ 4 mean 12, 6 × 2 means 4 then [(100 – 10) × (1000 ÷ 1000)] + (100 × 10) =",
+      "options": {
+        "a": "20",
+        "b": "0",
+        "c": "1090",
+        "d": "None of these"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 76,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "If DENMARK in coded on FCPKCPM Then code SINGAPORE of which option.",
+      "options": {
+        "a": "UGPECNQPG",
+        "b": "UGPFCNRPG",
+        "c": "UGPEDNQTC",
+        "d": "UGPECNQTC"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 77,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "In the given word \"LAVISHLY\" if all the consonants replaced with its previous letter and all the vowel replaced with its next letter after that remove all the repeated letter and arranged them in alphabetical order then, which of the following letters is 3rd from the left end",
+      "options": {
+        "a": "R",
+        "b": "U",
+        "c": "J",
+        "d": "G"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 78,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "In the half yearly exam only 60% of the student were passes. Out of these (passed in half-yearly) only 70% students are passed in annual exam, out of remaining students (who fail in half-yearly exam) 80% passed in annual exam. What percent of the students passed the annual exam?",
+      "options": {
+        "a": "76%",
+        "b": "72%",
+        "c": "74%",
+        "d": "65%"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 79,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Arrange in correct order\n(1) Database\n(2) Analysis\n(3) Survery\n(4) Policy formation\n(5) Interpretation",
+      "options": {
+        "a": "2, 1, 5, 3, 4",
+        "b": "5, 4, 3, 1, 2",
+        "c": "3, 1, 2, 4, 5",
+        "d": "3, 1, 2, 5, 4"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 80,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Two friends A and B were standing at the diagonally opposite corners of a rectangular plot whose perimeter is 100m. A first walked x meters along the length of the plot towards East and then y meters towards the South. B walked x meters along the breadth towards North and then y meters towards West. At the end of their walks, A and B were standing at the diagonally opposite corners of a smaller rectangular plot whose perimeter is 40m. How much distance did A walk?",
+      "options": {
+        "a": "15",
+        "b": "40",
+        "c": "25",
+        "d": "50"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 81,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "On Monday, Akash run 4 km less than the distance he ran on Tuesday. Sanjay, who ran the same distance on Monday and Tuesday, ran 5 km more on Tuesday than the distance Akash ran on Monday. Find the difference between the distance covered by Akash and Sanjay over the two days.",
+      "options": {
+        "a": "5 km",
+        "b": "6 km",
+        "c": "4 km",
+        "d": "8 km"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 82,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Statement:\nNo table is chair.\nNot a single chair is stand.\nEver stand is statue.\nConclusion:\n1. Some statue which are stand are table as well.\n2. Some statue are not chair.",
+      "options": {
+        "a": "If neither conclusion 1 nor 2 follow",
+        "b": "If only conclusion 1 follows",
+        "c": "Only conclusion 2 follows",
+        "d": "None of these"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 83,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "If the word IMPACT is coded as RNKZXG, then which of the following represents the code for the word DESCEND?",
+      "options": {
+        "a": "WVHXVMW",
+        "b": "MNBLNWM",
+        "c": "MFBDFOM",
+        "d": "MFBDNOM"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 84,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "A junior school is offering five after-school activities - Karate, Handwork, Music Dance and Gymnastics. Each of the five students – Leena, Megan, Neha, Omar and Pixia has subscribed to at least one activity. As per the school rules, anyone who subscribes to Gymnastics must also subscribe to Dance. Karate and Handwork must always be subscribed together. Music and Dance cannot be subscribed together. The following information is available about the student's subscriptions. • Megan subscribed to four activities. • Leena subscribed to Gymnastics but not Karate. • Pixie subscribed to only one activity and is the only one subscribe to that activity. • Omar subscribed to three activities. • Neha subscribed to only one activity. How many activities are subscribed by exactly two people each?",
+      "options": {
+        "a": "1",
+        "b": "4",
+        "c": "2",
+        "d": "3"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 85,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "If 'E' stands for +, 'F' stands for '-', 'M' stands for 'x', 'N' stands for '÷', then 19 M 5 E 39 N 3 F 8 = ?",
+      "options": {
+        "a": "105",
+        "b": "100",
+        "c": "95",
+        "d": "90"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 86,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "In a reality show, two judges independently provided marks based on the performance of the participants. If the marks provided by the second judge are given by y = 1 + x, where x is the marks provided by the first judge. Then for a participant",
+      "options": {
+        "a": "Ranks given by both the judge differ by 2",
+        "b": "Rank given by the second judge is more than that of the first judge",
+        "c": "Ranks given by both the judges are same.",
+        "d": "Rank given by the first judge is more than that of the second judge"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 87,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "Fill the blanks with the most appropriate combination of options.\nFurther, to augment bond market liquidity, corporates need to be encouraged to ______ exiting bonds under the same International Securities Identification Number, to duly shore up floating ______.",
+      "options": {
+        "a": "affect, negotiate",
+        "b": "abandon, imply",
+        "c": "precaution, abstract",
+        "d": "reissue, stocks"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 88,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "A vessel contains total 95 litre mixture of milk & water in the ratio of 15 : 4 respectively P litre of mixture taken out from the vessel and 18 litres water added in the remaining mixture, then the new ratio of milk to water becomes 3 : 2, find the value of P?",
+      "options": {
+        "a": "57",
+        "b": "19",
+        "c": "27.5",
+        "d": "38"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 89,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "For security reasons, a bank manager decided to encrypt the account number in the server. If A/C No. 46873 is coded as 91317157, then 52191 is coded as",
+      "options": {
+        "a": "4108041",
+        "b": "5219152",
+        "c": "1153193",
+        "d": "1043293"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 90,
+      "subject": "Analytical Ability and Logical Reasoning",
+      "question_text": "If 3 is subtracted from the middle digit of each of the following numbers and then the position of the digits are reversed, which of the following will be last digit of the middle number after they are arranged in descending order?\n589 362 554 371 442",
+      "options": {
+        "a": "3",
+        "b": "2",
+        "c": "4",
+        "d": "1"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 91,
+      "subject": "Computer Awareness",
+      "question_text": "The maximum and minimum value represented in signed 16 bit 2's complement representations are",
+      "options": {
+        "a": "-16684 and 16383",
+        "b": "0 and 32767",
+        "c": "0 and 65535",
+        "d": "-32768 and 32767"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 92,
+      "subject": "Computer Awareness",
+      "question_text": "The time required for fetching & execution one machine instruction is",
+      "options": {
+        "a": "Delay time",
+        "b": "CPU cycle",
+        "c": "Real time",
+        "d": "Seek time"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 93,
+      "subject": "Computer Awareness",
+      "question_text": "Consider the circuit shown below and find minimum number of NAND gates required to design it. (Diagram shows a NOR gate with inputs A and B, output Q)",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "3",
+        "d": "5"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 94,
+      "subject": "Computer Awareness",
+      "question_text": "If a processor clock is rated as 2500 million cycles per seconds, then its clock period is",
+      "options": {
+        "a": "2.50 × 10⁻¹⁰sec",
+        "b": "4.0 × 10⁻¹⁰sec",
+        "c": "1.0 × 10⁻¹⁰sec",
+        "d": "5.0 × 10⁻¹⁰sec"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 95,
+      "subject": "Computer Awareness",
+      "question_text": "Which of the following registers is used to keep track of address of memory location where the next instruction is located?",
+      "options": {
+        "a": "Program counter",
+        "b": "Memory Address Register",
+        "c": "Memory data register",
+        "d": "Instruction counters"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 96,
+      "subject": "Computer Awareness",
+      "question_text": "How many 32K × 1 RAM chips are needed to provided a memory capacity of 256 K bytes?",
+      "options": {
+        "a": "8",
+        "b": "128",
+        "c": "64",
+        "d": "32"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 97,
+      "subject": "Computer Awareness",
+      "question_text": "The number of minterms in a n variable truth table is",
+      "options": {
+        "a": "n²",
+        "b": "(n − 1)²",
+        "c": "2ⁿ",
+        "d": "2ⁿ⁻¹"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 98,
+      "subject": "Computer Awareness",
+      "question_text": "A bulb in the staircase has two switches, one switch is at the ground floor and the other one is at the first floor. The bulb can be turned ON and also can be turned OFF by any of the switches irrespective of the state of the other switch. The logic of the switching of the bulb resembles.",
+      "options": {
+        "a": "XOR Gate",
+        "b": "AND Gate",
+        "c": "OR Gate",
+        "d": "XNOR Gate"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 99,
+      "subject": "Computer Awareness",
+      "question_text": "What is a potential problem of 1's complement representation of numbers?",
+      "options": {
+        "a": "Binary substructions are not possible",
+        "b": "There are two different representations of zero",
+        "c": "Multiplication of two numbers cannot be carried out",
+        "d": "Binary additions are not possible."
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 100,
+      "subject": "Computer Awareness",
+      "question_text": "A wrong sentence related to FAT 32 and NTFS file system is",
+      "options": {
+        "a": "FAT 32 has lower disk utilization compared to NTFS",
+        "b": "Read and Write speeds of NTFS are faster than that of FAT 32",
+        "c": "FAT 32 store individual files of size up to 32 GB",
+        "d": "NTFS stands for New Technology File System"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 101,
+      "subject": "Computer Awareness",
+      "question_text": "Consider the following minterm expression for F : F(P, Q, R, S) = Σ(0, 2, 5, 7, 8, 10, 13, 15). The minterms 2, 7, 8 and 13 are don't care terms. The minimal sum of products form for F is",
+      "options": {
+        "a": "QS + Q'S'",
+        "b": "Q'S + QS'",
+        "c": "Q'S' + QRS + Q'RS + QRS'",
+        "d": "PQS + P'QS + PQ'S + P'Q'S'"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 102,
+      "subject": "Computer Awareness",
+      "question_text": "The reduced form of the Boolean function F = xyz + xyz' + x'yz + xy'z is",
+      "options": {
+        "a": "xy + yz",
+        "b": "x + yz + xz",
+        "c": "x + y + z",
+        "d": "xy + yz + xz"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 103,
+      "subject": "Computer Awareness",
+      "question_text": "Suppose we have a 10-bit computer that uses 10-bit 2's complement representation. The representation of -35 is",
+      "options": {
+        "a": "0000100011",
+        "b": "1100100011",
+        "c": "1111011101",
+        "d": "1111011101"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 104,
+      "subject": "Computer Awareness",
+      "question_text": "Consider the following Boolean expression for F: F(P,Q,R,S) = PQ + PQR + PQRS. The minimum sum of products form of F is",
+      "options": {
+        "a": "PQ + QR + QS",
+        "b": "P + Q + R + S",
+        "c": "P' + Q' + R' + S'",
+        "d": "PR + P'RS + P"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 105,
+      "subject": "Computer Awareness",
+      "question_text": "What is the name of the storage device that compensates the difference in rates of flow of data from one device to another?",
+      "options": {
+        "a": "Cache",
+        "b": "Buffer",
+        "c": "Concentrator",
+        "d": "RAM"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 106,
+      "subject": "Computer Awareness",
+      "question_text": "Equivalent of the decimal number (25.375)₁₀ in binary form",
+      "options": {
+        "a": "(11001.011)₂",
+        "b": "(11101.011)₂",
+        "c": "(11011.111)₂",
+        "d": "(11001.101)₂"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 107,
+      "subject": "Computer Awareness",
+      "question_text": "A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:",
+      "options": {
+        "a": "13 bits",
+        "b": "20 bits",
+        "c": "11 bits",
+        "d": "15 bits"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 108,
+      "subject": "Computer Awareness",
+      "question_text": "Which of the following is true about Von Newmann architecture?",
+      "options": {
+        "a": "It has separate storage for input/output operations",
+        "b": "It has a separate processing unit for data and instructions",
+        "c": "It has separate memory for data and instructions",
+        "d": "It has a single memory unit for both data and instructions"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 109,
+      "subject": "Computer Awareness",
+      "question_text": "Let ⊕ and ⊙ denote the Exclusive – OR and Exclusive NOR operations respectively. Which one of the following is not correct?",
+      "options": {
+        "a": "P'⊕Q = P⊙Q",
+        "b": "P⊕Q' = P⊙Q",
+        "c": "P'⊕Q' = P⊕Q",
+        "d": "(P⊕P)⊕Q = (P⊙P)⊙Q'"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 110,
+      "subject": "Computer Awareness",
+      "question_text": "Suppose we have a 10-bit computer that uses 10-bit floating point computational unit (Flot number uses IEEE floating-point arithmetic where a floating point number has 1 sign bit, 5 exponent bits, and 4 fraction bits). The representation for (+ infinity) is",
+      "options": {
+        "a": "0 11111 0000",
+        "b": "1 11111 0000",
+        "c": "0 00000 1111",
+        "d": "0 11111 1111"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 111,
+      "subject": "English",
+      "question_text": "Which of the following statements according to the passage is correct:",
+      "options": {
+        "a": "The religious spirit assumes that human mind can penetrate the mysteries of the universe.",
+        "b": "Science follows the metaphysical path.",
+        "c": "Science believes in the humility born of fear of God.",
+        "d": "Religion believes in ultimate reality"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 112,
+      "subject": "English",
+      "question_text": "Which of the following reasons according to the passage provide material comforts to people in case of science?",
+      "options": {
+        "a": "Tangible proofs of the theories of science",
+        "b": "Materialistic thinking being cultivated by science",
+        "c": "Promotion of fearless inquiry by science",
+        "d": "The subjectivity of science"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 113,
+      "subject": "English",
+      "question_text": "Select the most appropriate meaning of the underlined idiom in the given sentence:\nOff and on, I take a break from my hectic schedule to refresh myself.",
+      "options": {
+        "a": "Periodically",
+        "b": "Rarely",
+        "c": "Seldom",
+        "d": "Immediately"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 114,
+      "subject": "English",
+      "question_text": "I have ____ umbrella. I bought it ____ year ago.",
+      "options": {
+        "a": "A, An",
+        "b": "An, A",
+        "c": "An, The",
+        "d": "Then, An"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question_number": 115,
+      "subject": "English",
+      "question_text": "Synonym for “Nonplussed” is",
+      "options": {
+        "a": "Flummoxed",
+        "b": "Dumbfounded",
+        "c": "Befuddled",
+        "d": "Oriented"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 116,
+      "subject": "English",
+      "question_text": "Select the most appropriate preposition to fill in the blank.\nA baby sister is someone who look ____ other people's children.",
+      "options": {
+        "a": "after",
+        "b": "for",
+        "c": "on",
+        "d": "over"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 117,
+      "subject": "English",
+      "question_text": "Select the most appropriate preposition to fill in the blank.\nWe haven't been to Delhi ____ almost five years.",
+      "options": {
+        "a": "to",
+        "b": "since",
+        "c": "from",
+        "d": "for"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "question_number": 118,
+      "subject": "English",
+      "question_text": "Meaning of “Abrogate” is",
+      "options": {
+        "a": "Abolish",
+        "b": "Absorb",
+        "c": "Abstract",
+        "d": "Ablaze"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question_number": 119,
+      "subject": "English",
+      "question_text": "Choose the best option that indicates the change of voice for the sentence given below:\nThey sent for a doctor because Pamela had fainted",
+      "options": {
+        "a": "Pamela fainted and a doctor was sent for",
+        "b": "A doctor was sent for them because Pamela has fainted",
+        "c": "A doctor was sent for because Pamela had fainted",
+        "d": "Pamela had sent for a doctor because they had fainted"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "question_number": 120,
+      "subject": "English",
+      "question_text": "Antonym for \"Spendthrift\" is",
+      "options": {
+        "a": "Profligate",
+        "b": "Extravagant",
+        "c": "Frugal",
+        "d": "Squanderer"
+      },
+      "correct_answer": "c"
+    }
+  ]

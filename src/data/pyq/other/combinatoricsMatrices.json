@@ -1,0 +1,802 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The 4th term of an Arithmetic Progression is 10 and the 7th term is 19. Find the common difference.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Let the first term be $a$ and the common difference be $d$. The formula for the nth term is $U_n = a + (n-1)d$. We have $U_4 = a + 3d = 10$ and $U_7 = a + 6d = 19$. Subtracting the first equation from the second gives: $(a + 6d) - (a + 3d) = 19 - 10 \\Rightarrow 3d = 9 \\Rightarrow d = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "Find the determinant of the matrix $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 6 & 0 \\end{pmatrix}$.",
+    "options": {
+      "a": "1",
+      "b": "-1",
+      "c": "15",
+      "d": "-24"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Expanding along the first row: Det $= 1(1(0) - 4(6)) - 2(0(0) - 4(5)) + 3(0(6) - 1(5))$. Thus, Det $= 1(0 - 24) - 2(0 - 20) + 3(0 - 5) = -24 + 40 - 15 = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "How many ways can 4 men and 4 women sit around a circular table if no two women are to sit together?",
+    "options": {
+      "a": "5040",
+      "b": "144",
+      "c": "576",
+      "d": "40320"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To ensure no two women sit together, we first arrange the 4 men in a circle. The number of ways to do this is $(4-1)! = 3! = 6$ ways. This creates exactly 4 spaces between the 4 men. We then place the 4 women in these 4 linear spaces, which can be done in $4! = 24$ ways. Total arrangements $= 6 \\times 24 = 144$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Find the coefficient of $x^2y^2$ in the binomial expansion of $(x - 2y)^4$.",
+    "options": {
+      "a": "-24",
+      "b": "24",
+      "c": "16",
+      "d": "6"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The general term in the expansion of $(a+b)^n$ is $\\binom{n}{r} a^{n-r} b^r$. For the $x^2y^2$ term, we let $r=2$. The term is $\\binom{4}{2} (x)^2 (-2y)^2$. $\\binom{4}{2} = 6$, and $(-2y)^2 = 4y^2$. The term is $6 \\times x^2 \\times 4y^2 = 24x^2y^2$. The coefficient is 24.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "In how many ways can a committee of 3 be chosen from 7 people if a particular person must always be included?",
+    "options": {
+      "a": "35",
+      "b": "21",
+      "c": "15",
+      "d": "10"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Since one particular person must be on the committee, we only need to select the remaining 2 members from the remaining 6 people. This is a combination problem: $\\binom{6}{2} = \\frac{6!}{2!(6-2)!} = \\frac{6 \\times 5}{2 \\times 1} = 15$ ways.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "A Geometric Progression has first term $a$ and common ratio $r$. The sum to infinity is 8, and the sum of the first two terms is 6. Find the positive value of $r$.",
+    "options": {
+      "a": "$\\frac{1}{2}$",
+      "b": "$\\frac{1}{4}$",
+      "c": "$\\frac{1}{3}$",
+      "d": "$\\frac{3}{4}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The sum to infinity is $S_\\infty = \\frac{a}{1-r} = 8 \\Rightarrow a = 8(1-r)$. The sum of the first two terms is $a + ar = a(1+r) = 6$. Substitute $a$: $8(1-r)(1+r) = 6 \\Rightarrow 8(1-r^2) = 6 \\Rightarrow 1-r^2 = \\frac{6}{8} = \\frac{3}{4}$. Solving for $r^2$ gives $r^2 = \\frac{1}{4}$, so $r = \\pm \\frac{1}{2}$. The positive value is $\\frac{1}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "Find the inverse of the matrix $P = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix}$.",
+    "options": {
+      "a": "$\\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}$",
+      "b": "$\\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}$",
+      "c": "$\\begin{pmatrix} -3 & 1 \\\\ 5 & -2 \\end{pmatrix}$",
+      "d": "$\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "For a $2 \\times 2$ matrix $P = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, its inverse is $P^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$. The determinant is $(2)(3) - (1)(5) = 6 - 5 = 1$. Swapping elements on the main diagonal and negating the others yields $\\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "In Pascal's triangle, where the very top '1' represents the 0th row, what is the sum of all the numbers in the 4th row?",
+    "options": {
+      "a": "8",
+      "b": "16",
+      "c": "32",
+      "d": "64"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The sum of the coefficients in the $n$-th row of Pascal's triangle is given by $2^n$. For the 4th row, $n = 4$. Thus, the sum is $2^4 = 16$. Explicitly, the 4th row is 1, 4, 6, 4, 1, which sums to 16.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The first term of an Arithmetic Progression is 5, and the sum of its first 10 terms is 185. Find the common difference.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The formula for the sum of the first $n$ terms of an AP is $S_n = \\frac{n}{2}[2a + (n-1)d]$. Given $S_{10} = 185$, $n = 10$, and $a = 5$: $185 = \\frac{10}{2}[2(5) + 9d] \\Rightarrow 185 = 5(10 + 9d)$. Dividing by 5 gives $37 = 10 + 9d \\Rightarrow 27 = 9d \\Rightarrow d = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "A team of 4 is to be selected from 5 boys and 4 girls. How many possible teams consist of exactly 2 boys and 2 girls?",
+    "options": {
+      "a": "60",
+      "b": "120",
+      "c": "24",
+      "d": "30"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "We need to choose 2 boys from 5, which can be done in $\\binom{5}{2} = 10$ ways. We also need to choose 2 girls from 4, which can be done in $\\binom{4}{2} = 6$ ways. By the multiplication principle, the total number of teams is $10 \\times 6 = 60$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Using the binomial expansion of $(1 + x)^3$, find the estimated value of $(1.02)^3$.",
+    "options": {
+      "a": "1.0612",
+      "b": "1.061208",
+      "c": "1.0812",
+      "d": "1.060408"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The expansion of $(1+x)^3$ is $1 + 3x + 3x^2 + x^3$. Let $x = 0.02$, so $1+x = 1.02$. Substitute $x = 0.02$ into the expansion: $1 + 3(0.02) + 3(0.02)^2 + (0.02)^3$. This gives $1 + 0.06 + 3(0.0004) + 0.000008 = 1 + 0.06 + 0.0012 + 0.000008 = 1.061208$.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "Given that the determinant $\\begin{vmatrix} 3 & x \\\\ 2 & 4 \\end{vmatrix} = 10$, find the value of $x$.",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "-1",
+      "d": "-2"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The determinant of a $2 \\times 2$ matrix $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ is $ad - bc$. Thus, $(3)(4) - (x)(2) = 10 \\Rightarrow 12 - 2x = 10$. Solving for $x$: $2x = 2 \\Rightarrow x = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "In a Geometric Progression, the 2nd term is 12 and the 5th term is 324. Find the common ratio.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The general term is $U_n = ar^{n-1}$. We are given $U_2 = ar = 12$ and $U_5 = ar^4 = 324$. Dividing the two equations: $\\frac{ar^4}{ar} = \\frac{324}{12} \\Rightarrow r^3 = 27$. Taking the cube root of both sides gives $r = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "How many 4-digit numbers greater than 4000 can be formed from the digits 2, 3, 4, 5, 6 without repeating any digit?",
+    "options": {
+      "a": "72",
+      "b": "120",
+      "c": "48",
+      "d": "24"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "For a 4-digit number to be greater than 4000, its first digit must be 4, 5, or 6. Thus, there are 3 choices for the first digit. We then have 3 more digits to select from the remaining 4 available digits. The number of permutations for the remaining 3 slots is $P(4, 3) = 4 \\times 3 \\times 2 = 24$. Total numbers $= 3 \\times 24 = 72$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Find the constant term (the term independent of $x$) in the binomial expansion of $(x - \\frac{2}{x})^6$.",
+    "options": {
+      "a": "-160",
+      "b": "160",
+      "c": "-20",
+      "d": "20"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The general term is $T_{r+1} = \\binom{6}{r} x^{6-r} (-\\frac{2}{x})^r = \\binom{6}{r} x^{6-r} (-2)^r x^{-r} = \\binom{6}{r} (-2)^r x^{6-2r}$. For the constant term, the exponent of $x$ must be 0, so $6 - 2r = 0 \\Rightarrow r = 3$. Substitute $r=3$: $\\binom{6}{3} (-2)^3 = 20 \\times (-8) = -160$.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "Solve the simultaneous equations $2x + y = 5$ and $3x - 2y = 4$ using matrices. Which of the following matrix products gives the solution for $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$?",
+    "options": {
+      "a": "$\\frac{1}{7} \\begin{pmatrix} 2 & 1 \\\\ 3 & -2 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$",
+      "b": "$-\\frac{1}{7} \\begin{pmatrix} 2 & 1 \\\\ 3 & -2 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$",
+      "c": "$\\frac{1}{7} \\begin{pmatrix} -2 & -1 \\\\ -3 & 2 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$",
+      "d": "$\\frac{1}{7} \\begin{pmatrix} 2 & -1 \\\\ -3 & -2 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The system in matrix form is $\\begin{pmatrix} 2 & 1 \\\\ 3 & -2 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$. To find $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$, multiply both sides by the inverse of $A = \\begin{pmatrix} 2 & 1 \\\\ 3 & -2 \\end{pmatrix}$. The determinant of $A$ is $(2)(-2) - (1)(3) = -7$. The inverse is $-\\frac{1}{7} \\begin{pmatrix} -2 & -1 \\\\ -3 & 2 \\end{pmatrix} = \\frac{1}{7} \\begin{pmatrix} 2 & 1 \\\\ 3 & -2 \\end{pmatrix}$. Thus, the solution is $\\frac{1}{7} \\begin{pmatrix} 2 & 1 \\\\ 3 & -2 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The sum of the first $n$ terms of a sequence is given by $S_n = 3n^2 - 2n$. Find the 5th term of the sequence.",
+    "options": {
+      "a": "65",
+      "b": "40",
+      "c": "25",
+      "d": "15"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The $n$-th term $U_n$ of a sequence can be found using $U_n = S_n - S_{n-1}$. For the 5th term, $U_5 = S_5 - S_4$. Calculate $S_5 = 3(5^2) - 2(5) = 75 - 10 = 65$. Calculate $S_4 = 3(4^2) - 2(4) = 48 - 8 = 40$. Thus, $U_5 = 65 - 40 = 25$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "How many distinct linear arrangements can be made from the letters of the word 'MATHEMATICS'?",
+    "options": {
+      "a": "$\\frac{11!}{2!2!2!}$",
+      "b": "$\\frac{11!}{2!}$",
+      "c": "$11!$",
+      "d": "$\\frac{11!}{3!}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The word 'MATHEMATICS' has 11 letters in total. The letter M appears 2 times, A appears 2 times, and T appears 2 times; all other letters (H, E, I, C, S) appear exactly once. The formula for permutations of multisets gives $\\frac{11!}{2!2!2!}$ arrangements.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "What is the total number of terms in the binomial expansion of $(2x - 3y)^{10}$?",
+    "options": {
+      "a": "9",
+      "b": "10",
+      "c": "11",
+      "d": "12"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "For any positive integer $n$, the expansion of a binomial expression $(a+b)^n$ has exactly $n + 1$ terms. Since $n=10$, there will be $10 + 1 = 11$ terms.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "If the matrix $A = \\begin{pmatrix} 4 & 2 \\\\ -1 & x \\end{pmatrix}$ has no inverse (i.e., it is a singular matrix), find the value of $x$.",
+    "options": {
+      "a": "2",
+      "b": "-2",
+      "c": "$\\frac{1}{2}$",
+      "d": "$-\\frac{1}{2}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "A matrix has no inverse if its determinant is zero. Det$(A) = (4)(x) - (2)(-1) = 4x + 2$. Setting the determinant to zero gives $4x + 2 = 0 \\Rightarrow 4x = -2 \\Rightarrow x = -\\frac{2}{4} = -\\frac{1}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "Find the sum to infinity of the geometric series: $1 + \\frac{1}{3} + \\frac{1}{9} + \\dots$",
+    "options": {
+      "a": "$\\frac{3}{2}$",
+      "b": "$\\frac{2}{3}$",
+      "c": "2",
+      "d": "3"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The first term $a = 1$ and the common ratio $r = \\frac{1}{3}$. Since $|r| < 1$, the sum to infinity exists and is $S_\\infty = \\frac{a}{1 - r}$. Therefore, $S_\\infty = \\frac{1}{1 - 1/3} = \\frac{1}{2/3} = \\frac{3}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Find the coefficient of $x^3$ in the expansion of $(1+2x)(1-x)^6$.",
+    "options": {
+      "a": "-20",
+      "b": "30",
+      "c": "10",
+      "d": "-10"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "First, expand $(1-x)^6$ up to $x^3$: $1 - 6x + \\binom{6}{2}x^2 - \\binom{6}{3}x^3 = 1 - 6x + 15x^2 - 20x^3$. We then multiply by $(1+2x)$. The $x^3$ terms will be generated by $(1 \\times -20x^3)$ and $(2x \\times 15x^2)$. Summing these gives $-20x^3 + 30x^3 = 10x^3$. The coefficient is 10.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "In how many ways can 5 boys and 5 girls be seated around a circular table so that boys and girls alternate?",
+    "options": {
+      "a": "14400",
+      "b": "2880",
+      "c": "3628800",
+      "d": "1440"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "First, arrange the 5 boys in a circle. This can be done in $(5-1)! = 4! = 24$ ways. Doing so creates exactly 5 spaces between the boys. To ensure they alternate, the 5 girls must occupy these 5 spaces, which can be done in $5! = 120$ linear arrangements. The total number of ways is $24 \\times 120 = 2880$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "Let matrix $A = \\begin{pmatrix} 1 & -1 \\\\ 2 & 3 \\end{pmatrix}$ and matrix $B = \\begin{pmatrix} 0 & 2 \\\\ 1 & -1 \\end{pmatrix}$. Find the product $AB$.",
+    "options": {
+      "a": "$\\begin{pmatrix} -1 & 3 \\\\ 3 & 1 \\end{pmatrix}$",
+      "b": "$\\begin{pmatrix} -1 & 1 \\\\ 3 & 1 \\end{pmatrix}$",
+      "c": "$\\begin{pmatrix} 3 & -1 \\\\ 1 & 3 \\end{pmatrix}$",
+      "d": "$\\begin{pmatrix} 0 & -2 \\\\ 2 & -3 \\end{pmatrix}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Multiply the rows of $A$ by the columns of $B$: Element 1,1 is $1(0) + (-1)(1) = -1$. Element 1,2 is $1(2) + (-1)(-1) = 3$. Element 2,1 is $2(0) + 3(1) = 3$. Element 2,2 is $2(2) + 3(-1) = 1$. This forms the matrix $\\begin{pmatrix} -1 & 3 \\\\ 3 & 1 \\end{pmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The sum of three consecutive terms of an Arithmetic Progression is 21 and their product is 315. Find the largest of the three terms if they are all integers.",
+    "options": {
+      "a": "9",
+      "b": "7",
+      "c": "11",
+      "d": "5"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Let the terms be $a-d$, $a$, and $a+d$. Their sum is $3a = 21 \\Rightarrow a = 7$. Their product is $(7-d)(7)(7+d) = 315$. Dividing by 7 gives $(7-d)(7+d) = 45 \\Rightarrow 49 - d^2 = 45 \\Rightarrow d^2 = 4 \\Rightarrow d = \\pm 2$. The terms are 5, 7, 9 or 9, 7, 5. The largest term is 9.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "If the determinant of the matrix $\\begin{pmatrix} x & 1 & 2 \\\\ 0 & 1 & 3 \\\\ 1 & 2 & 4 \\end{pmatrix}$ is equal to 5, find the value of $x$.",
+    "options": {
+      "a": "-2",
+      "b": "2",
+      "c": "-1",
+      "d": "1"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Expanding the determinant along the first column gives: $x(1 \\times 4 - 3 \\times 2) - 0 + 1(1 \\times 3 - 2 \\times 1)$. This simplifies to $x(4 - 6) + 1(3 - 2) = -2x + 1$. Setting this equal to 5, we have $-2x + 1 = 5 \\Rightarrow -2x = 4 \\Rightarrow x = -2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "Find the 6th term of the Geometric Progression whose first term is 4 and common ratio is $\\frac{1}{2}$.",
+    "options": {
+      "a": "$\\frac{1}{4}$",
+      "b": "$\\frac{1}{8}$",
+      "c": "$\\frac{1}{16}$",
+      "d": "$\\frac{1}{32}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The formula for the nth term of a Geometric Progression is $U_n = ar^{n-1}$. For the 6th term, $n = 6$, $a = 4$, and $r = \\frac{1}{2}$. $U_6 = 4 \\times (\\frac{1}{2})^{6-1} = 4 \\times (\\frac{1}{2})^5 = 4 \\times \\frac{1}{32} = \\frac{4}{32} = \\frac{1}{8}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "In how many ways can a committee of 3 members be chosen from 5 boys and 4 girls if the committee must contain at least 2 girls?",
+    "options": {
+      "a": "34",
+      "b": "30",
+      "c": "60",
+      "d": "24"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "To have at least 2 girls in a 3-member committee, we can have exactly 2 girls and 1 boy, or exactly 3 girls. \nCase 1 (2 girls, 1 boy): $\\binom{4}{2} \\times \\binom{5}{1} = 6 \\times 5 = 30$ ways. \nCase 2 (3 girls, 0 boys): $\\binom{4}{3} \\times \\binom{5}{0} = 4 \\times 1 = 4$ ways. \nTotal ways = $30 + 4 = 34$ ways.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Find the term independent of $x$ (the constant term) in the binomial expansion of $(x^2 - \\frac{1}{x})^9$.",
+    "options": {
+      "a": "-84",
+      "b": "84",
+      "c": "-36",
+      "d": "36"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The general term is $\\binom{n}{r} a^{n-r} b^r$. For this expansion: $\\binom{9}{r} (x^2)^{9-r} (-x^{-1})^r = \\binom{9}{r} (-1)^r x^{18-2r-r}$. For the term independent of $x$, the exponent of $x$ must be 0: $18 - 3r = 0 \\Rightarrow r = 6$. The constant term is $\\binom{9}{6}(-1)^6 = \\frac{9!}{3!6!} (1) = \\frac{9 \\times 8 \\times 7}{3 \\times 2 \\times 1} = 84$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "How many different 4-member committees can be formed from a group of 8 people if the chairman of the group must be included?",
+    "options": {
+      "a": "35",
+      "b": "70",
+      "c": "56",
+      "d": "21"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Since the chairman must be on the committee, 1 spot is automatically filled. We need to select the remaining 3 members from the remaining 7 people. This can be done in $\\binom{7}{3} = \\frac{7!}{3!(7-3)!} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35$ ways.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The values $x, x+2,$ and $x+6$ are three consecutive terms of a Geometric Progression. Find the value of $x$.",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "4",
+      "d": "-2"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "For three terms to form a GP, the ratio of consecutive terms must be equal: $\\frac{x+2}{x} = \\frac{x+6}{x+2}$. Cross-multiplying gives $(x+2)^2 = x(x+6) \\Rightarrow x^2 + 4x + 4 = x^2 + 6x$. Subtracting $x^2$ from both sides gives $4x + 4 = 6x \\Rightarrow 2x = 4 \\Rightarrow x = 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "Find the matrix $X$ such that $X \\begin{pmatrix} 2 & 1 \\\\ 3 & 4 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+    "options": {
+      "a": "$\\begin{pmatrix} 4 & -1 \\\\ -3 & 2 \\end{pmatrix}$",
+      "b": "$\\frac{1}{5} \\begin{pmatrix} 4 & -1 \\\\ -3 & 2 \\end{pmatrix}$",
+      "c": "$\\frac{1}{5} \\begin{pmatrix} 2 & -1 \\\\ -3 & 4 \\end{pmatrix}$",
+      "d": "$\\begin{pmatrix} 0.2 & -0.6 \\\\ -0.2 & 0.8 \\end{pmatrix}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The equation is $XA = I$, which implies $X = A^{-1}$. Let $A = \\begin{pmatrix} 2 & 1 \\\\ 3 & 4 \\end{pmatrix}$. The determinant is $(2)(4) - (1)(3) = 8 - 3 = 5$. The inverse matrix is $\\frac{1}{5} \\begin{pmatrix} 4 & -1 \\\\ -3 & 2 \\end{pmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "Evaluate the sum to infinity of the series $1 - \\frac{1}{2} + \\frac{1}{4} - \\frac{1}{8} + \\dots$",
+    "options": {
+      "a": "2",
+      "b": "$\\frac{2}{3}$",
+      "c": "$\\frac{1}{2}$",
+      "d": "$\\frac{3}{2}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "This is a geometric series with first term $a = 1$ and common ratio $r = -\\frac{1}{2}$. The sum to infinity is $S_\\infty = \\frac{a}{1 - r} = \\frac{1}{1 - (-1/2)} = \\frac{1}{1 + 1/2} = \\frac{1}{3/2} = \\frac{2}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Using the first three terms of the binomial expansion of $(1-x)^3$, estimate the value of $(0.998)^3$.",
+    "options": {
+      "a": "0.994012",
+      "b": "0.994008",
+      "c": "0.996004",
+      "d": "0.994112"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The expansion of $(1-x)^3 = 1 - 3x + 3x^2 - x^3$. Let $1-x = 0.998$, so $x = 0.002$. Substituting $x = 0.002$ into the first three terms: $1 - 3(0.002) + 3(0.002)^2 = 1 - 0.006 + 3(0.000004) = 1 - 0.006 + 0.000012 = 0.994012$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "Find the number of distinguishable arrangements of the letters of the word 'SUCCESS'.",
+    "options": {
+      "a": "5040",
+      "b": "1260",
+      "c": "420",
+      "d": "840"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The word 'SUCCESS' contains 7 letters in total. The letter 'S' repeats 3 times, 'C' repeats 2 times, and 'U' and 'E' occur 1 time each. Using the formula for permutations with repetition, we have $\\frac{7!}{3!2!} = \\frac{5040}{6 \\times 2} = \\frac{5040}{12} = 420$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "Three arithmetic means are inserted between 8 and 20. Find the value of the second arithmetic mean.",
+    "options": {
+      "a": "11",
+      "b": "12",
+      "c": "14",
+      "d": "17"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Let the sequence be $8, a_1, a_2, a_3, 20$, which form an AP of 5 terms. The formula is $U_n = a + (n-1)d$. $U_5 = 8 + 4d = 20 \\Rightarrow 4d = 12 \\Rightarrow d = 3$. The second arithmetic mean is the third term of the sequence: $U_3 = a + 2d = 8 + 2(3) = 14$.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Given that the coefficient of $x^2$ in the expansion of $(1+kx)^5$ is 90 and $k > 0$, find the value of $k$.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "9"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The term involving $x^2$ is $\\binom{5}{2} 1^3 (kx)^2 = 10(k^2 x^2) = 10k^2 x^2$. We are given that the coefficient is 90, so $10k^2 = 90 \\Rightarrow k^2 = 9$. Since $k > 0$, $k = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "A linear transformation $T$ maps the point $(x, y)$ to $(2x+y, 3x-y)$. Find the matrix representing $T$.",
+    "options": {
+      "a": "$\\begin{pmatrix} 2 & 1 \\\\ 3 & -1 \\end{pmatrix}$",
+      "b": "$\\begin{pmatrix} 2 & 3 \\\\ 1 & -1 \\end{pmatrix}$",
+      "c": "$\\begin{pmatrix} 1 & 2 \\\\ -1 & 3 \\end{pmatrix}$",
+      "d": "$\\begin{pmatrix} 2 & -1 \\\\ 3 & 1 \\end{pmatrix}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The linear transformation mapping $(x, y)$ to a new point $(x', y')$ can be written in matrix form as $\\begin{pmatrix} x' \\\\ y' \\end{pmatrix} = M \\begin{pmatrix} x \\\\ y \\end{pmatrix}$. Since $x' = 2x + 1y$ and $y' = 3x - 1y$, the matrix $M$ simply takes the coefficients of $x$ and $y$ as its rows: $\\begin{pmatrix} 2 & 1 \\\\ 3 & -1 \\end{pmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "In how many ways can 6 people sit around a circular table if the Chairman and the Vice Chairman must sit next to each other?",
+    "options": {
+      "a": "120",
+      "b": "48",
+      "c": "24",
+      "d": "720"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Treat the Chairman and Vice Chairman as a single combined unit or 'block'. Now we are arranging 5 blocks in a circle, which can be done in $(5-1)! = 4! = 24$ ways. However, within their combined unit, the Chairman and Vice Chairman can swap positions in $2! = 2$ ways. Total ways = $24 \\times 2 = 48$.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "If $2 \\begin{pmatrix} x \\\\ 3 \\end{pmatrix} - \\begin{pmatrix} 4 \\\\ y \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 5 \\end{pmatrix}$, find the value of $x + y$.",
+    "options": {
+      "a": "6",
+      "b": "5",
+      "c": "4",
+      "d": "7"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "We can expand the matrix equation into two simultaneous linear equations. First row: $2(x) - 4 = 6 \\Rightarrow 2x = 10 \\Rightarrow x = 5$. Second row: $2(3) - y = 5 \\Rightarrow 6 - y = 5 \\Rightarrow y = 1$. Therefore, $x + y = 5 + 1 = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Find the coefficient of $x^3$ in the binomial expansion of $(2 - 3x)^5$.",
+    "options": {
+      "a": "-1080",
+      "b": "1080",
+      "c": "-720",
+      "d": "720"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The general term is $\\binom{5}{r} (2)^{5-r} (-3x)^r$. We want the coefficient of $x^3$, so we set $r = 3$. The term is $\\binom{5}{3} 2^{5-3} (-3x)^3 = 10(2^2)(-27x^3) = 10 \\times 4 \\times -27x^3 = -1080x^3$. The coefficient is -1080.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "In an Arithmetic Progression, the 3rd term is 8 and the sum of the 1st and 7th terms is 20. Find the 5th term.",
+    "options": {
+      "a": "10",
+      "b": "11",
+      "c": "12",
+      "d": "14"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Let the 1st term be $a$ and the common difference be $d$. $U_3 = a + 2d = 8$. Also, $U_1 + U_7 = a + (a + 6d) = 2a + 6d = 20$, which simplifies to $a + 3d = 10$. We have the system:\n1) $a + 2d = 8$\n2) $a + 3d = 10$\nSubtract (1) from (2) to get $d = 2$. Substitute $d=2$ into (1): $a + 4 = 8 \\Rightarrow a = 4$. The 5th term is $U_5 = a + 4d = 4 + 4(2) = 12$.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "How many ways can a committee of 4 be selected from 6 men and 5 women if it must contain exactly 1 woman?",
+    "options": {
+      "a": "30",
+      "b": "100",
+      "c": "150",
+      "d": "20"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The committee needs exactly 1 woman and exactly 3 men. The number of ways to select 1 woman from 5 is $\\binom{5}{1} = 5$. The number of ways to select 3 men from 6 is $\\binom{6}{3} = 20$. Multiplying these possibilities together gives $5 \\times 20 = 100$ ways.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "For what value of $a$ is the matrix $\\begin{pmatrix} a & 2 \\\\ 3 & 4 \\end{pmatrix}$ a singular matrix?",
+    "options": {
+      "a": "1.5",
+      "b": "2.5",
+      "c": "-1.5",
+      "d": "0"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A singular matrix is a matrix whose determinant is equal to 0. Det = $a(4) - (3)(2) = 4a - 6$. Setting this to 0 yields $4a - 6 = 0 \\Rightarrow 4a = 6 \\Rightarrow a = 1.5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The sum of the first $n$ terms of the geometric progression $1, 3, 9, 27, \\dots$ is 121. Find the value of $n$.",
+    "options": {
+      "a": "4",
+      "b": "5",
+      "c": "6",
+      "d": "7"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "For a GP, the sum of the first $n$ terms is $S_n = \\frac{a(r^n - 1)}{r - 1}$. Here, $a = 1$ and $r = 3$. We set $S_n = 121$: $\\frac{1(3^n - 1)}{3 - 1} = 121 \\Rightarrow \\frac{3^n - 1}{2} = 121$. Multiplying by 2 gives $3^n - 1 = 242 \\Rightarrow 3^n = 243$. Recognizing that $3^5 = 243$, we find $n = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binomial Theorem",
+    "question_text": "Fully simplify the expression $(1+x)^4 + (1-x)^4$.",
+    "options": {
+      "a": "$2 + 8x^2 + 2x^4$",
+      "b": "$2 + 12x^2 + 2x^4$",
+      "c": "$1 + 6x^2 + x^4$",
+      "d": "$8x + 8x^3$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Expanding both terms: $(1+x)^4 = 1 + 4x + 6x^2 + 4x^3 + x^4$ and $(1-x)^4 = 1 - 4x + 6x^2 - 4x^3 + x^4$. When adding them together, the terms with odd powers of $x$ cancel out: $(4x - 4x) = 0$ and $(4x^3 - 4x^3) = 0$. The remaining terms add up to $2(1) + 2(6x^2) + 2(x^4) = 2 + 12x^2 + 2x^4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Permutations & Combinations",
+    "question_text": "How many diagonals can be drawn in a regular octagon (an 8-sided polygon)?",
+    "options": {
+      "a": "20",
+      "b": "28",
+      "c": "14",
+      "d": "56"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A diagonal is formed by choosing any 2 of the 8 vertices and drawing a line between them, EXCEPT for the 8 lines that form the outer edges of the polygon. Number of possible lines between any 2 points is $\\binom{8}{2} = \\frac{8 \\times 7}{2} = 28$. Subtracting the 8 edges gives $28 - 8 = 20$ diagonals.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "Express the recurring decimal $0.\\overline{23}$ ($0.232323...$) as a fraction in its lowest terms by considering it as a sum to infinity of a Geometric Progression.",
+    "options": {
+      "a": "$\\frac{23}{100}$",
+      "b": "$\\frac{23}{90}$",
+      "c": "$\\frac{23}{99}$",
+      "d": "$\\frac{2}{9}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The decimal $0.232323\\dots$ can be written as $0.23 + 0.0023 + 0.000023 + \\dots$ This is a GP with first term $a = 0.23 = \\frac{23}{100}$ and common ratio $r = 0.01 = \\frac{1}{100}$. Sum to infinity is $S_\\infty = \\frac{a}{1 - r} = \\frac{23/100}{1 - 1/100} = \\frac{23/100}{99/100} = \\frac{23}{99}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Matrices & Determinants",
+    "question_text": "To solve the simultaneous equations $2x + 3y = 8$ and $4x - y = 2$ using matrices, one finds the determinant of the coefficient matrix. What is its value?",
+    "options": {
+      "a": "10",
+      "b": "-14",
+      "c": "-10",
+      "d": "14"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The coefficient matrix for the given system of linear equations is $\\begin{pmatrix} 2 & 3 \\\\ 4 & -1 \\end{pmatrix}$. Its determinant is calculated as $(2)(-1) - (3)(4) = -2 - 12 = -14$.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sequences & Series",
+    "question_text": "The sum of the first $n$ terms of a sequence is $S_n = 2n^2 + n$. Find the 3rd term of this sequence.",
+    "options": {
+      "a": "11",
+      "b": "21",
+      "c": "15",
+      "d": "10"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The $n$-th term $U_n$ of a sequence can be calculated using $U_n = S_n - S_{n-1}$. Thus, the 3rd term is $U_3 = S_3 - S_2$. Calculate $S_3$: $2(3^2) + 3 = 2(9) + 3 = 18 + 3 = 21$. Calculate $S_2$: $2(2^2) + 2 = 2(4) + 2 = 8 + 2 = 10$. The 3rd term is $21 - 10 = 11$.",
+    "section_id": null
+  }
+]

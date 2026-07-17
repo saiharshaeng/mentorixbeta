@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Which of the following is the correct expansion for the compound angle $\\sin(A - B)$?",
+    "options": {
+      "a": "$\\sin A \\cos B + \\cos A \\sin B$",
+      "b": "$\\sin A \\cos B - \\cos A \\sin B$",
+      "c": "$\\cos A \\cos B + \\sin A \\sin B$",
+      "d": "$\\cos A \\cos B - \\sin A \\sin B$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The compound angle formula for the sine of a difference is a standard trigonometric identity: $\\sin(A - B) = \\sin A \\cos B - \\cos A \\sin B$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the equation of the straight line parallel to $3x - 2y + 5 = 0$ which passes through the point $(1, -2)$.",
+    "options": {
+      "a": "$3x - 2y - 7 = 0$",
+      "b": "$3x - 2y + 7 = 0$",
+      "c": "$2x + 3y + 4 = 0$",
+      "d": "$3x + 2y - 1 = 0$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Parallel lines have the same gradient. Rearranging $3x - 2y + 5 = 0$ gives $y = \\frac{3}{2}x + \\frac{5}{2}$, so the gradient $m = \\frac{3}{2}$. Using the point-slope form: $y - (-2) = \\frac{3}{2}(x - 1) \\implies 2(y + 2) = 3(x - 1) \\implies 2y + 4 = 3x - 3 \\implies 3x - 2y - 7 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Find the equation of the normal to the parabola $y^2 = 4x$ at the point $(1, 2)$.",
+    "options": {
+      "a": "$y - x = 1$",
+      "b": "$y + x = 3$",
+      "c": "$2y + x = 5$",
+      "d": "$y + 2x = 4$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Differentiating $y^2 = 4x$ implicitly yields $2y \\frac{dy}{dx} = 4 \\implies \\frac{dy}{dx} = \\frac{2}{y}$. At $(1, 2)$, the tangent gradient is $m = \\frac{2}{2} = 1$. The normal is perpendicular to the tangent, so its gradient $m' = -1$. The equation is $y - 2 = -1(x - 1) \\implies y + x = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Solve the equation $2\\cos^2\\theta + \\sin\\theta - 1 = 0$ for $0^\\circ \\le \\theta \\le 180^\\circ$.",
+    "options": {
+      "a": "$30^\\circ, 150^\\circ$",
+      "b": "$90^\\circ$",
+      "c": "$60^\\circ, 120^\\circ$",
+      "d": "$90^\\circ, 270^\\circ$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Use the identity $\\cos^2\\theta = 1 - \\sin^2\\theta$. Substitute to get $2(1 - \\sin^2\\theta) + \\sin\\theta - 1 = 0 \\implies 2 - 2\\sin^2\\theta + \\sin\\theta - 1 = 0 \\implies 2\\sin^2\\theta - \\sin\\theta - 1 = 0$. Factoring gives $(2\\sin\\theta + 1)(\\sin\\theta - 1) = 0$. So, $\\sin\\theta = -0.5$ (no solution in $0^\\circ \\le \\theta \\le 180^\\circ$) or $\\sin\\theta = 1 \\implies \\theta = 90^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "What is the midpoint of the line segment joining the points $(-4, 6)$ and $(2, -2)$?",
+    "options": {
+      "a": "$(-1, 2)$",
+      "b": "$(-2, 4)$",
+      "c": "$(3, -4)$",
+      "d": "$(-1, 4)$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The midpoint formula is $\\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$. Thus, $\\left(\\frac{-4 + 2}{2}, \\frac{6 + (-2)}{2}\\right) = \\left(\\frac{-2}{2}, \\frac{4}{2}\\right) = (-1, 2)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Find the coordinates of the focus of the parabola $y^2 = 16x$.",
+    "options": {
+      "a": "$(0, 4)$",
+      "b": "$(4, 0)$",
+      "c": "$(-4, 0)$",
+      "d": "$(0, -4)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The standard equation of a parabola opening to the right is $y^2 = 4ax$, where the focus is at $(a, 0)$. Comparing this with $y^2 = 16x$, we get $4a = 16 \\implies a = 4$. Therefore, the focus is $(4, 0)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Calculate the exact value of $\\cos 75^\\circ$ without using mathematical tables.",
+    "options": {
+      "a": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+      "b": "$\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+      "c": "$\\frac{\\sqrt{2} - \\sqrt{6}}{4}$",
+      "d": "$\\frac{\\sqrt{3} - 1}{4}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Express $75^\\circ$ as $45^\\circ + 30^\\circ$. Using the identity $\\cos(A + B) = \\cos A \\cos B - \\sin A \\sin B$, we have $\\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ \\cos 30^\\circ - \\sin 45^\\circ \\sin 30^\\circ = \\left(\\frac{\\sqrt{2}}{2}\\right)\\left(\\frac{\\sqrt{3}}{2}\\right) - \\left(\\frac{\\sqrt{2}}{2}\\right)\\left(\\frac{1}{2}\\right) = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the ratio in which the x-axis divides the line segment joining the points $A(2, -3)$ and $B(5, 6)$.",
+    "options": {
+      "a": "$1:2$",
+      "b": "$2:1$",
+      "c": "$3:2$",
+      "d": "$2:3$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Let the x-axis divide the segment in the ratio $k:1$. Any point on the x-axis has a y-coordinate of $0$. Using the section formula for the y-coordinate: $y = \\frac{k y_2 + 1 y_1}{k + 1} = 0 \\implies \\frac{k(6) + 1(-3)}{k + 1} = 0 \\implies 6k - 3 = 0 \\implies k = \\frac{1}{2}$. The ratio is $\\frac{1}{2}:1$, which simplifies to $1:2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "What are the coordinates of the center of the circle given by the equation $(x - 5)^2 + (y + 3)^2 = 49$?",
+    "options": {
+      "a": "$(-5, 3)$",
+      "b": "$(5, -3)$",
+      "c": "$(5, 3)$",
+      "d": "$(-5, -3)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The standard equation of a circle is $(x - h)^2 + (y - k)^2 = r^2$, where the center is $(h, k)$. Comparing the given equation to the standard form, $h = 5$ and $k = -3$. Thus, the center is $(5, -3)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Solve the equation $\\tan^2 x + \\sec x = 1$ for $0^\\circ \\le x < 360^\\circ$.",
+    "options": {
+      "a": "$0^\\circ, 120^\\circ, 240^\\circ$",
+      "b": "$60^\\circ, 180^\\circ, 300^\\circ$",
+      "c": "$0^\\circ, 60^\\circ, 120^\\circ$",
+      "d": "$90^\\circ, 210^\\circ, 330^\\circ$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Use the identity $\\tan^2 x = \\sec^2 x - 1$. Substitute into the equation: $\\sec^2 x - 1 + \\sec x = 1 \\implies \\sec^2 x + \\sec x - 2 = 0$. Factoring this quadratic in $\\sec x$ yields $(\\sec x + 2)(\\sec x - 1) = 0$. Thus, $\\sec x = -2 \\implies \\cos x = -\\frac{1}{2}$ (which gives $x = 120^\\circ, 240^\\circ$) or $\\sec x = 1 \\implies \\cos x = 1$ (which gives $x = 0^\\circ$).",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the acute angle between the straight lines $y = 2x - 5$ and $y = -3x + 1$.",
+    "options": {
+      "a": "$30^\\circ$",
+      "b": "$45^\\circ$",
+      "c": "$60^\\circ$",
+      "d": "$75^\\circ$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The gradients of the lines are $m_1 = 2$ and $m_2 = -3$. The acute angle $\\theta$ between them is given by $\\tan \\theta = \\left|\\frac{m_1 - m_2}{1 + m_1 m_2}\\right|$. Plugging in the values: $\\tan \\theta = \\left|\\frac{2 - (-3)}{1 + (2)(-3)}\right| = \\left|\\frac{5}{1 - 6}\\right| = \\left|\\frac{5}{-5}\\right| = 1$. Hence, $\\theta = \\tan^{-1}(1) = 45^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Find the coordinates of the points of intersection of the line $y = x + 1$ and the circle $x^2 + y^2 = 25$.",
+    "options": {
+      "a": "$(3, 4)$ and $(-4, -3)$",
+      "b": "$(4, 3)$ and $(-3, -4)$",
+      "c": "$(3, -4)$ and $(4, -3)$",
+      "d": "$(4, 5)$ and $(-5, -4)$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Substitute $y = x + 1$ into the circle equation: $x^2 + (x + 1)^2 = 25 \\implies x^2 + x^2 + 2x + 1 = 25 \\implies 2x^2 + 2x - 24 = 0 \\implies x^2 + x - 12 = 0$. Factoring yields $(x + 4)(x - 3) = 0 \\implies x = -4$ or $x = 3$. If $x = -4$, $y = -4 + 1 = -3$. If $x = 3$, $y = 3 + 1 = 4$. The intersection points are $(-4, -3)$ and $(3, 4)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Which of the following expressions is identically equal to $\\cos^2 \\theta - \\sin^2 \\theta$?",
+    "options": {
+      "a": "$\\cos 2\\theta$",
+      "b": "$\\sin 2\\theta$",
+      "c": "$1$",
+      "d": "$\\tan 2\\theta$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "This is a direct application of the double angle formula for cosine: $\\cos 2\\theta = \\cos^2 \\theta - \\sin^2 \\theta$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "What is the perpendicular distance from the point $(3, 4)$ to the line $4x + 3y - 12 = 0$?",
+    "options": {
+      "a": "$2.4$",
+      "b": "$4.8$",
+      "c": "$1.2$",
+      "d": "$3.6$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The distance $d$ from a point $(x_1, y_1)$ to the line $Ax + By + C = 0$ is $d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}}$. Substituting the values: $d = \\frac{|4(3) + 3(4) - 12|}{\\sqrt{4^2 + 3^2}} = \\frac{|12 + 12 - 12|}{\\sqrt{25}} = \\frac{12}{5} = 2.4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Find the general equation of a circle with center $(-2, 3)$ that passes through the origin $(0,0)$.",
+    "options": {
+      "a": "$x^2 + y^2 - 4x + 6y = 0$",
+      "b": "$x^2 + y^2 + 4x - 6y = 0$",
+      "c": "$x^2 + y^2 + 2x - 3y = 0$",
+      "d": "$x^2 + y^2 - 2x + 3y = 0$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The squared radius $r^2$ is the distance from $(-2, 3)$ to $(0,0)$, so $r^2 = (-2 - 0)^2 + (3 - 0)^2 = 4 + 9 = 13$. The standard equation is $(x + 2)^2 + (y - 3)^2 = 13$. Expanding: $x^2 + 4x + 4 + y^2 - 6y + 9 = 13 \\implies x^2 + y^2 + 4x - 6y = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "If $\\sin A = \\frac{3}{5}$ and $A$ is an obtuse angle, find the exact value of $\\tan A$.",
+    "options": {
+      "a": "$\\frac{4}{3}$",
+      "b": "$\\frac{3}{4}$",
+      "c": "$-\\frac{3}{4}$",
+      "d": "$-\\frac{4}{3}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If $A$ is obtuse, it is in the second quadrant where cosine is negative. $\\cos A = -\\sqrt{1 - \\sin^2 A} = -\\sqrt{1 - (3/5)^2} = -\\frac{4}{5}$. Then $\\tan A = \\frac{\\sin A}{\\cos A} = \\frac{3/5}{-4/5} = -\\frac{3}{4}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "What is the distance between the points $P(-1, 2)$ and $Q(2, 6)$?",
+    "options": {
+      "a": "$4$",
+      "b": "$5$",
+      "c": "$6$",
+      "d": "$7$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Using the distance formula: $D = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. $D = \\sqrt{(2 - (-1))^2 + (6 - 2)^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "The line $y = mx + c$ is a tangent to the circle $x^2 + y^2 = a^2$. What is the condition that relates $c$, $a$, and $m$?",
+    "options": {
+      "a": "$c^2 = a^2(1 - m^2)$",
+      "b": "$c^2 = a^2(1 + m^2)$",
+      "c": "$c = a(1 + m^2)$",
+      "d": "$c^2 = a(1 + m^2)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "For tangency, the perpendicular distance from the center $(0,0)$ to the line $mx - y + c = 0$ must equal the radius $a$. Thus, $\\frac{|c|}{\\sqrt{m^2 + (-1)^2}} = a \\implies |c| = a\\sqrt{1 + m^2}$. Squaring both sides yields $c^2 = a^2(1 + m^2)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Find the maximum possible value of the expression $5\\sin \\theta - 12\\cos \\theta$.",
+    "options": {
+      "a": "$17$",
+      "b": "$7$",
+      "c": "$13$",
+      "d": "$60$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "An expression of the form $a\\sin \\theta + b\\cos \\theta$ can be expressed as $R\\sin(\\theta \\pm \\alpha)$, where $R = \\sqrt{a^2 + b^2}$. The maximum value is $R$. Here, $R = \\sqrt{5^2 + (-12)^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the value of $k$ if the points $(1, k)$, $(2, 3)$, and $(4, 7)$ are collinear.",
+    "options": {
+      "a": "$1$",
+      "b": "$-1$",
+      "c": "$2$",
+      "d": "$0$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "For points to be collinear, the gradient between the first and second point must equal the gradient between the second and third. Gradient $m_1 = \\frac{3 - k}{2 - 1} = 3 - k$. Gradient $m_2 = \\frac{7 - 3}{4 - 2} = \\frac{4}{2} = 2$. Equating gradients: $3 - k = 2 \\implies k = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Find the radius of the circle given by the equation $x^2 + y^2 - 8x + 10y + 16 = 0$.",
+    "options": {
+      "a": "$4$",
+      "b": "$5$",
+      "c": "$16$",
+      "d": "$25$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Completing the square or using the formula $r = \\sqrt{g^2 + f^2 - c}$, where $2g = -8 \\implies g = -4$, $2f = 10 \\implies f = 5$, and $c = 16$. Then $r = \\sqrt{(-4)^2 + 5^2 - 16} = \\sqrt{16 + 25 - 16} = \\sqrt{25} = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Simplify the expression $\\frac{\\sin 2A}{1 + \\cos 2A}$.",
+    "options": {
+      "a": "$\\cot A$",
+      "b": "$\\tan A$",
+      "c": "$\\sin A$",
+      "d": "$\\sec A$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Using double angle identities: $\\sin 2A = 2\\sin A \\cos A$ and $\\cos 2A = 2\\cos^2 A - 1$. Substituting these into the expression: $\\frac{2\\sin A \\cos A}{1 + (2\\cos^2 A - 1)} = \\frac{2\\sin A \\cos A}{2\\cos^2 A}$. The factors $2$ and $\\cos A$ cancel out, leaving $\\frac{\\sin A}{\\cos A} = \\tan A$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the coordinates of the foot of the perpendicular from the origin to the line $3x + 4y - 25 = 0$.",
+    "options": {
+      "a": "$(4, 3)$",
+      "b": "$(3, 4)$",
+      "c": "$(-3, 4)$",
+      "d": "$(3, -4)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The line $L_1$ has the equation $3x + 4y = 25 \\implies y = -\\frac{3}{4}x + \\frac{25}{4}$, with gradient $m = -\\frac{3}{4}$. The perpendicular line $L_2$ passing through the origin has gradient $\\frac{4}{3}$, so its equation is $y = \\frac{4}{3}x$. Substituting $L_2$ into $L_1$: $3x + 4(\\frac{4}{3}x) = 25 \\implies 3x + \\frac{16}{3}x = 25 \\implies \\frac{25}{3}x = 25 \\implies x = 3$. Then $y = \\frac{4}{3}(3) = 4$. The foot is $(3, 4)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Determine the equation of the directrix of the parabola $x^2 = -12y$.",
+    "options": {
+      "a": "$y = -3$",
+      "b": "$x = 3$",
+      "c": "$x = -3$",
+      "d": "$y = 3$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The standard form is $x^2 = 4ay$. Comparing this with $x^2 = -12y$, we have $4a = -12 \\implies a = -3$. The equation of the directrix for $x^2 = 4ay$ is $y = -a$. Thus, $y = -(-3) \\implies y = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Given that $\\sin 30^\\circ = 0.5$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, what is the exact value of $\\sin 60^\\circ$ using the multiple angle identity?",
+    "options": {
+      "a": "$0.5$",
+      "b": "$\\frac{1}{2}$",
+      "c": "$\\frac{\\sqrt{3}}{2}$",
+      "d": "$1$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Using the double angle identity $\\sin 2\\theta = 2\\sin \\theta \\cos \\theta$ with $\\theta = 30^\\circ$, we have $\\sin(2 \\times 30^\\circ) = 2(0.5)(\\frac{\\sqrt{3}}{2}) = 1 \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the gradient of the straight line passing through the points $(3, -2)$ and $(-1, -10)$.",
+    "options": {
+      "a": "$-2$",
+      "b": "$\\frac{1}{2}$",
+      "c": "$2$",
+      "d": "$-\\frac{1}{2}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The gradient formula is $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Substituting the coordinates: $m = \\frac{-10 - (-2)}{-1 - 3} = \\frac{-8}{-4} = 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "The line $y = 2x + c$ is a tangent to the parabola $y^2 = 8x$. Find the value of $c$.",
+    "options": {
+      "a": "$2$",
+      "b": "$1$",
+      "c": "$-1$",
+      "d": "$\\frac{1}{2}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "For $y^2 = 4ax$, the condition for $y = mx + c$ to be a tangent is $c = \\frac{a}{m}$. Here $4a = 8 \\implies a = 2$. The line gradient is $m = 2$. So, $c = \\frac{2}{2} = 1$. Alternatively, solving $(2x + c)^2 = 8x$ for exactly one intersection yields a discriminant equal to zero, giving the same result.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Solve the equation $\\cos 2\\theta = \\cos \\theta$ for $0^\\circ \\le \\theta \\le 360^\\circ$.",
+    "options": {
+      "a": "$0^\\circ, 120^\\circ, 240^\\circ, 360^\\circ$",
+      "b": "$60^\\circ, 180^\\circ, 300^\\circ$",
+      "c": "$0^\\circ, 150^\\circ, 210^\\circ, 360^\\circ$",
+      "d": "$90^\\circ, 180^\\circ, 270^\\circ$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Use the double angle identity $\\cos 2\\theta = 2\\cos^2\\theta - 1$. Substitute to get $2\\cos^2\\theta - 1 = \\cos \\theta \\implies 2\\cos^2\\theta - \\cos \\theta - 1 = 0$. Factoring gives $(2\\cos \\theta + 1)(\\cos \\theta - 1) = 0$. So $\\cos \\theta = 1 \\implies \\theta = 0^\\circ, 360^\\circ$. Also $\\cos \\theta = -\\frac{1}{2} \\implies \\theta = 120^\\circ, 240^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "If the gradient of a line is $-\\frac{2}{3}$, what is the gradient of any straight line perpendicular to it?",
+    "options": {
+      "a": "$-\\frac{3}{2}$",
+      "b": "$\\frac{2}{3}$",
+      "c": "$\\frac{3}{2}$",
+      "d": "$-\\frac{2}{3}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The product of the gradients of two perpendicular lines is $-1$ (i.e., $m_1 m_2 = -1$). Therefore, $m_2 = -1 / (-\\frac{2}{3}) = \\frac{3}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "A circle has its center at $(-3, 4)$ and is tangent to the x-axis. What is its general equation?",
+    "options": {
+      "a": "$x^2 + y^2 - 6x + 8y + 9 = 0$",
+      "b": "$x^2 + y^2 + 6x - 8y + 9 = 0$",
+      "c": "$x^2 + y^2 + 6x - 8y + 16 = 0$",
+      "d": "$x^2 + y^2 - 6x + 8y + 16 = 0$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If a circle is tangent to the x-axis, its radius is equal to the absolute value of the y-coordinate of its center. So $r = |4| = 4$. The equation is $(x + 3)^2 + (y - 4)^2 = 16$. Expanding this gives $x^2 + 6x + 9 + y^2 - 8y + 16 = 16 \\implies x^2 + y^2 + 6x - 8y + 9 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Simplify the trigonometric expression $\\sin(A + B) - \\sin(A - B)$.",
+    "options": {
+      "a": "$2\\sin A \\cos B$",
+      "b": "$2\\cos A \\sin B$",
+      "c": "$2\\sin A \\sin B$",
+      "d": "$2\\cos A \\cos B$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Expanding both terms: $(\\sin A\\cos B + \\cos A\\sin B) - (\\sin A\\cos B - \\cos A\\sin B)$. Distributing the minus sign and collecting like terms yields $2\\cos A \\sin B$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the area of the triangle formed by the vertices $P(-1, 2)$, $Q(3, -4)$, and $R(5, 6)$.",
+    "options": {
+      "a": "$26$",
+      "b": "$52$",
+      "c": "$13$",
+      "d": "$30$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Area $= \\frac{1}{2} |x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$. Substituting the points: Area $= \\frac{1}{2} |-1(-4 - 6) + 3(6 - 2) + 5(2 - (-4))| = \\frac{1}{2} |-1(-10) + 3(4) + 5(6)| = \\frac{1}{2} |10 + 12 + 30| = \\frac{1}{2} (52) = 26$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Identify the coordinates of the vertex of the parabola given by $(x - 2)^2 = 8(y + 1)$.",
+    "options": {
+      "a": "$(-2, 1)$",
+      "b": "$(2, -1)$",
+      "c": "$(2, 1)$",
+      "d": "$(-2, -1)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The standard vertex form of a vertical parabola is $(x - h)^2 = 4a(y - k)$, where $(h, k)$ is the vertex. Comparing equations, $h = 2$ and $k = -1$. The vertex is $(2, -1)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Given that $\\tan A = \\frac{1}{2}$ and $\\tan B = \\frac{1}{3}$, calculate the exact value of $\\tan(A + B)$.",
+    "options": {
+      "a": "$\\frac{5}{6}$",
+      "b": "$1$",
+      "c": "$\\frac{1}{6}$",
+      "d": "$5$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Use the compound angle formula for tangent: $\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A\\tan B} = \\frac{\\frac{1}{2} + \\frac{1}{3}}{1 - (\\frac{1}{2})(\\frac{1}{3})} = \\frac{\\frac{5}{6}}{1 - \\frac{1}{6}} = \\frac{\\frac{5}{6}}{\\frac{5}{6}} = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "Find the equation of the perpendicular bisector of the line segment joining $A(1, 2)$ and $B(3, 6)$.",
+    "options": {
+      "a": "$x + 2y - 10 = 0$",
+      "b": "$2x + y - 8 = 0$",
+      "c": "$x - 2y + 6 = 0$",
+      "d": "$2x - y = 0$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The midpoint is $\\left(\\frac{1+3}{2}, \\frac{2+6}{2}\\right) = (2, 4)$. The gradient of AB is $\\frac{6 - 2}{3 - 1} = \\frac{4}{2} = 2$. The perpendicular bisector has a gradient of $-\\frac{1}{2}$. Its equation is $y - 4 = -\\frac{1}{2}(x - 2) \\implies 2(y - 4) = -x + 2 \\implies 2y - 8 = -x + 2 \\implies x + 2y - 10 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Find the equation of the tangent to the circle $x^2 + y^2 = 25$ at the point $(3, -4)$.",
+    "options": {
+      "a": "$3x + 4y - 25 = 0$",
+      "b": "$4x - 3y - 25 = 0$",
+      "c": "$3x - 4y - 25 = 0$",
+      "d": "$3x - 4y + 25 = 0$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Using the point-tangency formula for a circle at origin $xx_1 + yy_1 = r^2$. Here, $x_1 = 3, y_1 = -4$, so $x(3) + y(-4) = 25 \\implies 3x - 4y - 25 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Further Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Which of the following functions is equivalent to $\\frac{2\\tan \\theta}{1 - \\tan^2 \\theta}$?",
+    "options": {
+      "a": "$\\sin 2\\theta$",
+      "b": "$\\cos 2\\theta$",
+      "c": "$\\tan 2\\theta$",
+      "d": "$\\sec 2\\theta$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "This is exactly the standard double angle identity for tangent: $\\tan 2\\theta = \\frac{2\\tan \\theta}{1 - \\tan^2 \\theta}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Further Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "A straight line has an x-intercept of $4$ and a y-intercept of $-3$. What is its general equation?",
+    "options": {
+      "a": "$3x + 4y - 12 = 0$",
+      "b": "$4x - 3y + 12 = 0$",
+      "c": "$3x - 4y - 12 = 0$",
+      "d": "$3x - 4y + 12 = 0$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Using the intercept form $\\frac{x}{a} + \\frac{y}{b} = 1 \\implies \\frac{x}{4} + \\frac{y}{-3} = 1$. Multiply through by $12$ to clear denominators: $3x - 4y = 12 \\implies 3x - 4y - 12 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Identify the specific type of conic section represented by the equation $2x^2 + 2y^2 - 4x + 8y - 10 = 0$.",
+    "options": {
+      "a": "Parabola",
+      "b": "Hyperbola",
+      "c": "Ellipse",
+      "d": "Circle"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Because the coefficients of $x^2$ and $y^2$ are equal (both are 2) and there is no $xy$ term, the equation can be simplified by dividing by $2$, confirming it represents a circle.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Further Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "Determine the coordinates of the ends of the latus rectum for the parabola $y^2 = 12x$.",
+    "options": {
+      "a": "$(3, 6)$ and $(3, -6)$",
+      "b": "$(6, 3)$ and $(-6, 3)$",
+      "c": "$(3, 12)$ and $(3, -12)$",
+      "d": "$(12, 3)$ and $(-12, 3)$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The equation is $y^2 = 4ax \\implies 4a = 12 \\implies a = 3$. The focus is $(3, 0)$. The latus rectum passes through the focus, so its endpoints have $x = 3$. Substituting $x = 3$ into the parabola's equation gives $y^2 = 12(3) = 36 \\implies y = \\pm 6$. The endpoints are $(3, 6)$ and $(3, -6)$.",
+    "section_id": null
+  }
+]

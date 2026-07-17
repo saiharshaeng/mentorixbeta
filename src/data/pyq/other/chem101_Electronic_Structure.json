@@ -1,0 +1,562 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "Which quantum number describes the main energy level or shell of an electron and is related to the average distance of the electron from the nucleus?",
+        "options": {
+            "a": "Principal quantum number $(n)$",
+            "b": "Angular momentum quantum number $(l)$",
+            "c": "Magnetic quantum number $(m_l)$",
+            "d": "Spin quantum number $(m_s)$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The principal quantum number $(n)$ indicates the main energy level or shell. As $n​$ increases, the energy of the electron increases and it is, on average, found further from the nucleus.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "If the principal quantum number $n = 3$, what are the allowed values for the angular momentum quantum number $(l)$?",
+        "options": {
+            "a": "0, 1, 2, 3",
+            "b": "1, 2, 3",
+            "c": "0, 1, 2",
+            "d": "-3, -2, -1, 0, 1, 2, 3"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The angular momentum quantum number $l​$ can take integer values from $0​$ to $n-1$. For $n=3$, the possible values for $l​$ are $0, 1,$ and $2​$.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "Which of the following sets of quantum numbers is **impossible** (invalid)?",
+        "options": {
+            "a": "$n=4, l=3, m_l=-3, m_s=+\\frac{1}{2}$",
+            "b": "$n=2, l=2, m_l=0, m_s=-\\frac{1}{2}$",
+            "c": "$n=3, l=2, m_l=1, m_s=+\\frac{1}{2}$",
+            "d": "$n=5, l=0, m_l=0, m_s=-\\frac{1}{2}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "For any given shell $n​$, the maximum value of $l​$ is $n-1$. In option $(b)$, $n=2$, so the maximum allowed $l​$ is $1​$. Therefore, $l=2$ is impossible.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "Which letter designation corresponds to the orbital with the angular momentum quantum number $l = 2$?",
+        "options": {
+            "a": "$s​$",
+            "b": "$p​$",
+            "c": "$d​$",
+            "d": "$f​$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The letter designations for subshells are based on the value of $l​$: $l=0 \\rightarrow s$, $l=1 \\rightarrow p$, $l=2 \\rightarrow d$, $l=3 \\rightarrow f$.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "What is the maximum number of electrons that can be accommodated in the shell with $n = 3$?",
+        "options": {
+            "a": "8",
+            "b": "18",
+            "c": "32",
+            "d": "10"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The maximum number of electrons in a shell is given by the formula $2n^2$. For $n=3$, $2(3)^2 = 2(9) = 18$ electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "How many individual orbitals are contained within a $d​$ subshell?",
+        "options": {
+            "a": "1",
+            "b": "3",
+            "c": "5",
+            "d": "7"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "A $d​$ subshell corresponds to $l=2$. The number of orbitals is given by $2l + 1$. For $l=2$, $2(2)+1 = 5$ orbitals (with $m_l$ values $-2, -1, 0, +1, +2$).",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "What is the shape of an $s​$ orbital?",
+        "options": {
+            "a": "Dumbbell shaped",
+            "b": "Spherical",
+            "c": "Cloverleaf shaped",
+            "d": "Toroidal (doughnut) shaped"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "An $s​$ orbital ($l=0$) is spherically symmetrical around the nucleus.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Orbitals & Quantum Numbers",
+        "question_text": "Which quantum number specifies the orientation of an orbital in space?",
+        "options": {
+            "a": "Principal quantum number $(n)$",
+            "b": "Angular momentum quantum number $(l)$",
+            "c": "Magnetic quantum number $(m_l)$",
+            "d": "Spin quantum number $(m_s)$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The magnetic quantum number $(m_l)$ describes the orientation of the orbital in space relative to the other orbitals.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Aufbau/Pauli/Hund",
+        "question_text": "The statement \"Electrons fill the lowest energy orbitals available before filling higher energy orbitals\" defines which principle?",
+        "options": {
+            "a": "Pauli Exclusion Principle",
+            "b": "Heisenberg Uncertainty Principle",
+            "c": "Hund's Rule",
+            "d": "Aufbau Principle"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "The Aufbau Principle (German for 'building up') states that electrons occupy the lowest energy orbitals first.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Aufbau/Pauli/Hund",
+        "question_text": "Which principle states that no two electrons in the same atom can have the exact same set of four quantum numbers?",
+        "options": {
+            "a": "Aufbau Principle",
+            "b": "Pauli Exclusion Principle",
+            "c": "Hund's Rule",
+            "d": "Bohr's Postulate"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The Pauli Exclusion Principle states that no two electrons can have the same four quantum numbers; therefore, an orbital can hold a maximum of two electrons with opposite spins.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Aufbau/Pauli/Hund",
+        "question_text": "Consider three electrons filling a $2p$ subshell. According to Hund's Rule, which configuration minimizes electron-electron repulsion and is most stable?",
+        "options": {
+            "a": "Two electrons in the first orbital, one in the second, zero in the third.",
+            "b": "Three electrons in the first orbital.",
+            "c": "One electron in each of the three orbitals, all with parallel spins.",
+            "d": "One electron in each of the three orbitals, with alternating spins."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Hund's Rule states that for degenerate orbitals (like $p​$, $d​$, or $f​$), electrons fill each orbital singly with parallel spins before pairing up.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Aufbau/Pauli/Hund",
+        "question_text": "Which of the following orbital diagrams represents a violation of the Pauli Exclusion Principle?",
+        "options": {
+            "a": "An orbital containing two electrons with 'up' spin $(\\uparrow\\uparrow)$.",
+            "b": "An orbital containing one electron with 'up' spin $(\\uparrow)$.",
+            "c": "An orbital containing two electrons with opposite spins $(\\uparrow\\downarrow)$.",
+            "d": "Three degenerate orbitals each containing one electron $(\\uparrow)(\\uparrow)(\\uparrow)$."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The Pauli Exclusion Principle requires that if two electrons occupy the same orbital, they must have opposite spins. Two electrons with the same spin $(\\uparrow\\uparrow)$ in one orbital is forbidden.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Aufbau/Pauli/Hund",
+        "question_text": "According to the $(n+l)$ rule used in the Aufbau principle, which orbital is filled immediately after the $3p$ orbital?",
+        "options": {
+            "a": "$3d$",
+            "b": "$4s$",
+            "c": "$4p$",
+            "d": "$4d$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Energy is determined by $n+l$. For $3p$: $3+1=4$. For $3d$: $3+2=5$. For $4s$: $4+0=4$. When $n+l$ is equal ($3p$ and $4s$), the one with lower $n​$ fills first ($3p$). The next lowest energy is $4s$ ($n+l=4$), which fills before $3d$ ($n+l=5$). So the order is $3p \\rightarrow 4s$.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "What is the correct ground-state electron configuration for Carbon (atomic number 6)?",
+        "options": {
+            "a": "$1s^2 2s^2 2p^3$",
+            "b": "$1s^2 2s^2 2p^2$",
+            "c": "$1s^2 2s^2 3s^2$",
+            "d": "$1s^2 2p^4$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Carbon has 6 electrons. Filling order: $1s$ (2 electrons), $2s$ (2 electrons), remaining 2 go into $2p$. Configuration: $1s^2 2s^2 2p^2$.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "Which is the correct electron configuration for Calcium ($Ca$, $Z=20$) using noble gas notation?",
+        "options": {
+            "a": "$[Ar] 4s^2$",
+            "b": "$[Ar] 3d^2$",
+            "c": "$[Ne] 3s^2 3p^6 4s^2$",
+            "d": "$[Kr] 4s^2$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The noble gas preceding Calcium is Argon ($Ar$, 18 electrons). Calcium has 20 electrons, so the remaining 2 go into the $4s$ orbital. Notation: $[Ar] 4s^2$.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "What is the full electron configuration for Iron ($Fe$, $Z=26$)?",
+        "options": {
+            "a": "$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6$",
+            "b": "$1s^2 2s^2 2p^6 3s^2 3p^6 3d^8$",
+            "c": "$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 4p^6$",
+            "d": "$1s^2 2s^2 2p^6 3s^2 3p^6 3d^6 4s^2$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Iron has 26 electrons. Order: $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6$. Note that while $4s$ fills before $3d$, standard writing convention often groups shells by principal quantum number, but option (a) and (d) are chemically equivalent in content. ExamOven standard often accepts the filling order or the principal shell order. $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6$ correctly accounts for all electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "Which neutral element has the electron configuration $[Ar] 4s^2 3d^{10} 4p^5$?",
+        "options": {
+            "a": "Chlorine $(Cl)$",
+            "b": "Bromine $(Br)$",
+            "c": "Iodine $(I)$",
+            "d": "Krypton $(Kr)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Argon is 18 electrons. $18 + 2 (4s) + 10 (3d) + 5 (4p) = 35$ electrons. Element 35 is Bromine ($Br$).",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "How many valence electrons does an atom of Sulfur ($S​$, Group 16) possess?",
+        "options": {
+            "a": "2",
+            "b": "4",
+            "c": "6",
+            "d": "16"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Sulfur is in Group 16. Its configuration is $[Ne] 3s^2 3p^4$. The valence electrons are those in the outermost shell ($n=3$): $2 + 4 = 6$.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "What is the correct electron configuration for the Iron(II) ion, $Fe^{2+}$?",
+        "options": {
+            "a": "$[Ar] 4s^2 3d^4$",
+            "b": "$[Ar] 3d^6$",
+            "c": "$[Ar] 4s^1 3d^5$",
+            "d": "$[Ar] 4s^2 3d^6$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "When transition metals form cations, they lose electrons from the highest $s​$ orbital first. $Fe$ is $[Ar] 4s^2 3d^6$. Removing two electrons from the $4s$ orbital leaves $[Ar] 3d^6$.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "The oxide ion ($O^{2-}$) is isoelectronic with which noble gas?",
+        "options": {
+            "a": "Helium $(He)$",
+            "b": "Neon $(Ne)$",
+            "c": "Argon $(Ar)$",
+            "d": "Krypton $(Kr)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Oxygen ($Z=8$) gains 2 electrons to form $O^{2-}$, resulting in 10 electrons. Neon ($Z=10$) has 10 electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "Identify the element with the ground state electron configuration ending in $5p^3$.",
+        "options": {
+            "a": "Arsenic $(As)$",
+            "b": "Antimony $(Sb)$",
+            "c": "Bismuth $(Bi)$",
+            "d": "Tin $(Sn)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "An element ending in $5p^3$ is in Period 5, Group 15. Looking at the periodic table, this element is Antimony ($Sb$).",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "Which general electron configuration represents the valence shell of Group 2 (Alkaline Earth Metals) elements?",
+        "options": {
+            "a": "$ns^1$",
+            "b": "$ns^2$",
+            "c": "$ns^2 np^2$",
+            "d": "$ns^2 (n-1)d^1$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Group 2 elements have 2 valence electrons in their outermost $s​$ subshell. The general form is $ns^2$.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "Scandium forms a $Sc^{3+}$ ion. What is the electron configuration of this ion?",
+        "options": {
+            "a": "$[Ar] 4s^2 3d^1$",
+            "b": "$[Ar]$",
+            "c": "$[Ar] 3d^3$",
+            "d": "$[Kr]$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Scandium ($Z=21$) is $[Ar] 4s^2 3d^1$. To form $Sc^{3+}$, it loses all 3 valence electrons ($2​$ from $4s$, $1​$ from $3d$), resulting in the configuration of Argon ($[Ar]$).",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "What is the total number of electrons in $p​$ orbitals for a ground-state atom of Phosphorus ($P​$, $Z=15$)?",
+        "options": {
+            "a": "3",
+            "b": "6",
+            "c": "9",
+            "d": "15"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Phosphorus config: $1s^2 2s^2 2p^6 3s^2 3p^3$. Electrons in $p​$ orbitals: $6​$ (from $2p$) + $3​$ (from $3p$) = $9​$ total electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Electron Config",
+        "question_text": "Which pair of species is **isoelectronic** (having the same number of electrons)?",
+        "options": {
+            "a": "$K^+$ and $Ar$",
+            "b": "$Na^+$ and $K^+$",
+            "c": "$Mg^{2+}$ and $Ar$",
+            "d": "$O^{2-}$ and $Cl^-$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Potassium ($K​$, $Z=19$) loses 1 electron to become $K^+$ (18 electrons). Argon ($Ar$, $Z=18$) has 18 electrons. Thus, they are isoelectronic.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Orbital Diagrams",
+        "question_text": "Which orbital diagram correctly represents the valence shell of Nitrogen ($N​$, $2s^2 2p^3$) according to Hund's Rule?",
+        "options": {
+            "a": "$2s: (\\uparrow\\downarrow) \\quad 2p: (\\uparrow\\downarrow)(\\uparrow)( )$",
+            "b": "$2s: (\\uparrow\\downarrow) \\quad 2p: (\\uparrow)(\\uparrow)(\\uparrow)$",
+            "c": "$2s: (\\uparrow\\uparrow) \\quad 2p: (\\uparrow)(\\uparrow)(\\downarrow)$",
+            "d": "$2s: (\\uparrow\\downarrow) \\quad 2p: (\\uparrow)(\\downarrow)(\\uparrow)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Hund's rule dictates that the three $2p$ electrons must occupy separate orbitals with parallel spins to maximize stability. Option (b) shows three unpaired electrons with the same spin orientation.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Orbital Diagrams",
+        "question_text": "In the ground state orbital diagram for Nickel ($Ni$, $Z=28$), how many unpaired electrons are present?",
+        "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "4"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Nickel is $[Ar] 4s^2 3d^8$. The $d​$ subshell has 5 orbitals. With 8 electrons, 3 orbitals are filled ($3 \\\\times 2 = 6$) and 2 orbitals are half-filled ($2 \\\\times 1 = 2$). Total unpaired electrons = 2.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Orbital Diagrams",
+        "question_text": "An atom is **diamagnetic** if all its electrons are paired. Which of the following elements is diamagnetic in its ground state?",
+        "options": {
+            "a": "Lithium $(Li)$",
+            "b": "Oxygen $(O)$",
+            "c": "Zinc $(Zn)$",
+            "d": "Iron $(Fe)$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Zinc ($Zn$, $Z=30$) has the configuration $[Ar] 4s^2 3d^{10}$. Both the $s​$ and $d​$ subshells are fully filled, meaning all electrons are paired. Therefore, Zinc is diamagnetic.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Orbital Diagrams",
+        "question_text": "Which orbital diagram represents an atom in an **excited** state?",
+        "options": {
+            "a": "$1s: (\\uparrow\\downarrow) \\quad 2s: (\\uparrow)$",
+            "b": "$1s: (\\uparrow\\downarrow) \\quad 2s: (\\uparrow\\downarrow)$",
+            "c": "$1s: (\\uparrow\\downarrow) \\quad 2s: ( ) \\quad 2p: (\\uparrow)$",
+            "d": "$1s: (\\uparrow\\downarrow) \\quad 2s: (\\uparrow) \\quad 2p: (\\uparrow)(\\uparrow)(\\uparrow)$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "In option (c), the $1s$ orbital is full, but the electron that should be in the $2s$ orbital has been promoted to a higher energy $2p$ orbital. This represents an excited state.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Orbital Diagrams",
+        "question_text": "Which notation correctly represents the box diagram for the $2p^4$ subshell configuration?",
+        "options": {
+            "a": "$(\\uparrow\\downarrow)(\\uparrow\\downarrow)( )$",
+            "b": "$(\\uparrow\\downarrow)(\\uparrow)(\\uparrow)$",
+            "c": "$(\\uparrow\\downarrow)(\\uparrow\\downarrow)(\\uparrow\\downarrow)$",
+            "d": "$(\\uparrow)(\\uparrow)(\\uparrow)(\\uparrow)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "For $p^4$ (4 electrons in 3 orbitals): First place one electron in each orbital $(\\uparrow)(\\uparrow)(\\uparrow)$, then pair the fourth electron in the first orbital $(\\uparrow\\downarrow)(\\uparrow)(\\uparrow)$.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Stability",
+        "question_text": "What is the anomalous ground-state electron configuration of Chromium ($Cr$, $Z=24$)?",
+        "options": {
+            "a": "$[Ar] 4s^2 3d^4$",
+            "b": "$[Ar] 4s^1 3d^5$",
+            "c": "$[Ar] 4s^2 3d^5$",
+            "d": "$[Ar] 3d^6$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Expected config is $4s^2 3d^4$, but an electron promotes from $4s$ to $3d$ to achieve a stable half-filled $d​$-subshell. Correct config: $[Ar] 4s^1 3d^5$.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Stability",
+        "question_text": "What is the anomalous ground-state electron configuration of Copper ($Cu$, $Z=29$)?",
+        "options": {
+            "a": "$[Ar] 4s^2 3d^9$",
+            "b": "$[Ar] 4s^1 3d^{10}$",
+            "c": "$[Ar] 4s^2 3d^{10}$",
+            "d": "$[Ar] 3d^{11}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Expected config is $4s^2 3d^9$, but an electron promotes from $4s$ to $3d$ to achieve a stable fully-filled $d​$-subshell. Correct config: $[Ar] 4s^1 3d^{10}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Stability",
+        "question_text": "Why do elements like Chromium and Copper exhibit anomalous electron configurations?",
+        "options": {
+            "a": "Because $d​$ orbitals are lower in energy than $s​$ orbitals in all cases.",
+            "b": "Because half-filled ($d^5$) and fully-filled ($d^{10}$) subshells possess extra stability.",
+            "c": "Because they are magnetic elements.",
+            "d": "Because they violate the Pauli Exclusion Principle."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The specific stability associated with exactly half-filled or fully-filled subshells (due to exchange energy and symmetry) favors the $s^1 d^5$ and $s^1 d^{10}$ configurations over $s^2 d^4$ and $s^2 d^9$.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Stability",
+        "question_text": "Given the stability rules, what is the configuration for the Copper(I) ion, $Cu^+$?",
+        "options": {
+            "a": "$[Ar] 4s^1 3d^9$",
+            "b": "$[Ar] 4s^0 3d^{10}$",
+            "c": "$[Ar] 4s^2 3d^8$",
+            "d": "$[Ar] 3d^9$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Copper is $[Ar] 4s^1 3d^{10}$. To form the $+1$ ion, it loses the single $4s$ electron, leaving a stable filled $d​$ subshell: $[Ar] 3d^{10}$ (or $[Ar] 4s^0 3d^{10}$).",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Stability",
+        "question_text": "Molybdenum ($Mo$) is directly below Chromium on the periodic table. What is its likely ground-state valence configuration?",
+        "options": {
+            "a": "$5s^2 4d^4$",
+            "b": "$5s^1 4d^5$",
+            "c": "$5s^2 4d^5$",
+            "d": "$5s^0 4d^6$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Since Molybdenum is in the same group as Chromium, it follows the same stability trend favoring a half-filled $d​$ subshell. Thus, it adopts the $5s^1 4d^5$ configuration.",
+        "section_id": null
+    }
+]

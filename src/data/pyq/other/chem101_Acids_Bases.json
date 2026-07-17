@@ -1,0 +1,642 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Definitions (Arrhenius & Brønsted–Lowry)",
+        "question_text": "According to the Arrhenius definition, what does an acid produce when dissolved in water?",
+        "options": {
+            "a": "Hydroxide ions ($OH^-$)",
+            "b": "Hydrogen ions ($H^+$)",
+            "c": "Salt and water",
+            "d": "Electron pairs"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "An Arrhenius acid is a substance that increases the concentration of hydrogen ions ($H^+$) when dissolved in water.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Definitions (Arrhenius & Brønsted–Lowry)",
+        "question_text": "In the Brønsted–Lowry theory, a base is defined as a substance that:",
+        "options": {
+            "a": "Accepts a proton ($H^+$)",
+            "b": "Donates a proton ($H^+$)",
+            "c": "Produces $OH^-$ ions",
+            "d": "Accepts an electron pair"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The Brønsted–Lowry theory defines a base as a proton ($H^+$) acceptor.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Definitions (Arrhenius & Brønsted–Lowry)",
+        "question_text": "Identify the conjugate base of sulfuric acid ($H_2SO_4$).",
+        "options": {
+            "a": "$SO_4^{2-}$",
+            "b": "$HSO_4^-$",
+            "c": "$H_3SO_4^+$",
+            "d": "$H_2O$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "A conjugate base is formed when an acid loses one proton. $H_2SO_4 \\rightarrow H^+ + HSO_4^-$.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Definitions (Arrhenius & Brønsted–Lowry)",
+        "question_text": "What is the conjugate acid of ammonia ($NH_3$)?",
+        "options": {
+            "a": "$NH_2^-$",
+            "b": "$NH_4^+$",
+            "c": "$NH_4OH$",
+            "d": "$N_2$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "A conjugate acid is formed when a base accepts a proton. $NH_3 + H^+ \\rightarrow NH_4^+$.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Definitions (Arrhenius & Brønsted–Lowry)",
+        "question_text": "Consider the following equilibrium reaction:\n$$CH_3COOH(aq) + H_2O(l) \\rightleftharpoons CH_3COO^-(aq) + H_3O^+(aq)$$\nWhich species acts as the Brønsted–Lowry base in the forward reaction?",
+        "options": {
+            "a": "$CH_3COOH$",
+            "b": "$H_2O$",
+            "c": "$CH_3COO^-$",
+            "d": "$H_3O^+$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "In the forward reaction, $H_2O$ accepts a proton from acetic acid ($CH_3COOH$) to become $H_3O^+$, making it the base.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Definitions (Arrhenius & Brønsted–Lowry)",
+        "question_text": "Which of the following substances is amphoteric (can act as both an acid and a base)?",
+        "options": {
+            "a": "$HCl$",
+            "b": "$NaOH$",
+            "c": "$H_2O$",
+            "d": "$NaCl$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Water ($H_2O$) is amphoteric because it can donate a proton to become $OH^-$ or accept a proton to become $H_3O^+$.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Strong and Weak Acids and Bases",
+        "question_text": "Which of the following is NOT one of the 7 common strong acids?",
+        "options": {
+            "a": "$HCl$",
+            "b": "$HNO_3$",
+            "c": "$H_2SO_4$",
+            "d": "$HF$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "Hydrofluoric acid ($HF$) is a weak acid. $HCl$, $HNO_3$, and $H_2SO_4$ are strong acids.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Strong and Weak Acids and Bases",
+        "question_text": "What distinguishes a strong acid from a weak acid?",
+        "options": {
+            "a": "A strong acid is always more concentrated than a weak acid.",
+            "b": "A strong acid dissociates completely in water, while a weak acid dissociates partially.",
+            "c": "A strong acid has a higher pH than a weak acid.",
+            "d": "A strong acid cannot be neutralized by a base."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The strength of an acid refers to its ability to ionize or dissociate. Strong acids dissociate 100%, whereas weak acids exist in equilibrium with their ions.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Strong and Weak Acids and Bases",
+        "question_text": "Select the strong base from the list below.",
+        "options": {
+            "a": "$NH_3$",
+            "b": "$CH_3NH_2$",
+            "c": "$Ba(OH)_2$",
+            "d": "$Al(OH)_3$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Barium hydroxide ($Ba(OH)_2$) is a Group 2 metal hydroxide and is considered a strong base. Ammonia and methylamine are weak bases; aluminum hydroxide is insoluble/weak.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Strong and Weak Acids and Bases",
+        "question_text": "Which acid is considered strong because it fully ionizes in solution?",
+        "options": {
+            "a": "Acetic acid ($CH_3COOH$)",
+            "b": "Perchloric acid ($HClO_4$)",
+            "c": "Carbonic acid ($H_2CO_3$)",
+            "d": "Phosphoric acid ($H_3PO_4$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Perchloric acid ($HClO_4$) is one of the standard strong acids.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Calculate the pH of a solution where the hydrogen ion concentration $[H^+]$ is $1.0 \\times 10^{-4}$ M.",
+        "options": {
+            "a": "4.0",
+            "b": "10.0",
+            "c": "-4.0",
+            "d": "1.0"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "$pH = -\\log[H^+] = -\\log(10^{-4}) = 4.0$.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "If the pH of a solution is 9, what is the pOH?",
+        "options": {
+            "a": "9",
+            "b": "5",
+            "c": "14",
+            "d": "7"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "At $25^\\circ C$, $pH + pOH = 14$. Thus, $pOH = 14 - 9 = 5$.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "What is the concentration of hydroxide ions $[OH^-]$ in a solution with a pOH of 3?",
+        "options": {
+            "a": "$1.0 \\times 10^{-3}$ M",
+            "b": "$1.0 \\times 10^3$ M",
+            "c": "$1.0 \\times 10^{-11}$ M",
+            "d": "$3.0$ M"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "$[OH^-] = 10^{-pOH} = 10^{-3}$ M.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Calculate the pH of a $0.01$ M $HCl$ solution. (Assume complete dissociation).",
+        "options": {
+            "a": "1.0",
+            "b": "2.0",
+            "c": "12.0",
+            "d": "0.01"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Since HCl is a strong acid, $[H^+] = 0.01$ M. $pH = -\\log(0.01) = -\\log(10^{-2}) = 2.0$.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Calculate the pH of a $0.001$ M $NaOH$ solution.",
+        "options": {
+            "a": "3.0",
+            "b": "11.0",
+            "c": "1.0",
+            "d": "13.0"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "NaOH is a strong base. $[OH^-] = 0.001$ M. $pOH = -\\log(0.001) = 3$. $pH = 14 - 3 = 11$.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Which statement correctly describes the relationship between pH and $[H^+]$?",
+        "options": {
+            "a": "As $[H^+]$ increases, pH increases.",
+            "b": "As $[H^+]$ increases, pH decreases.",
+            "c": "There is no relationship.",
+            "d": "pH is directly proportional to $[H^+]$."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Because pH is the negative logarithm of $[H^+]$, an increase in concentration results in a lower pH value.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "A solution has a proton concentration of $2.5 \\times 10^{-5}$ M. What is its pH?",
+        "options": {
+            "a": "4.60",
+            "b": "5.40",
+            "c": "4.40",
+            "d": "3.60"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$pH = -\\log(2.5 \\times 10^{-5}) \\approx -(0.4 - 5) = 4.6$.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "If you dilute a strong acid solution by a factor of 10, how does the pH change?",
+        "options": {
+            "a": "It decreases by 1 unit.",
+            "b": "It increases by 1 unit.",
+            "c": "It stays the same.",
+            "d": "It becomes 7."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Diluting by 10 decreases $[H^+]$ by 10. $\\log(1/10) = -1$, and since pH is negative log, the pH increases by 1.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "What is the $[H^+]$ of a solution with a pH of 7.0 at $25^\\circ C$?",
+        "options": {
+            "a": "$1.0 \\times 10^{-14}$ M",
+            "b": "$1.0 \\times 10^{-7}$ M",
+            "c": "$0​$ M",
+            "d": "$7.0$ M"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A neutral solution at $25^\\circ C$ has $[H^+] = 10^{-7}$ M.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "What is the pH of a $0.05$ M $Ba(OH)_2$ solution? (Assume complete dissociation).",
+        "options": {
+            "a": "1.0",
+            "b": "1.3",
+            "c": "12.7",
+            "d": "13.0"
+        },
+        "correct_answer": "d",
+        "difficulty": "Hard",
+        "explanation": "$Ba(OH)_2$ provides 2 $OH^-$ ions per formula unit. $[OH^-] = 2 \\times 0.05 = 0.1$ M. $pOH = -\\log(0.1) = 1$. $pH = 14 - 1 = 13$.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Calculate the $[OH^-]$ concentration if $[H^+] = 4.0 \\times 10^{-9}$ M. ($K_w = 1.0 \\times 10^{-14}$)",
+        "options": {
+            "a": "$2.5 \\times 10^{-6}$ M",
+            "b": "$4.0 \\times 10^{-5}$ M",
+            "c": "$2.5 \\times 10^{-5}$ M",
+            "d": "$1.0 \\times 10^{-7}$ M"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$[OH^-] = \\frac{K_w}{[H^+]} = \\frac{1.0 \\times 10^{-14}}{4.0 \\times 10^{-9}} = 0.25 \\times 10^{-5} = 2.5 \\times 10^{-6}$ M.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Which of the following solutions is the most acidic?",
+        "options": {
+            "a": "pH = 2",
+            "b": "pOH = 13",
+            "c": "pH = 5",
+            "d": "pOH = 8"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Convert all to pH. (a) pH=2. (b) pH = 14-13 = 1. (c) pH=5. (d) pH = 14-8 = 6. The lowest pH (1) is the most acidic.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "A solution with $[H^+] = 1 \\times 10^{-8}$ M is:",
+        "options": {
+            "a": "Acidic",
+            "b": "Basic",
+            "c": "Neutral",
+            "d": "Amphoteric"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "$pH = -\\log(10^{-8}) = 8$. Since pH > 7, it is basic.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "If the pH of stomach acid is 2, what is the molarity of hydrogen ions?",
+        "options": {
+            "a": "0.01 M",
+            "b": "0.02 M",
+            "c": "0.1 M",
+            "d": "0.001 M"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "$[H^+] = 10^{-pH} = 10^{-2} = 0.01$ M.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "pH and pOH Scale",
+        "question_text": "Which mathematical operation is used to calculate pOH from $[OH^-]$?",
+        "options": {
+            "a": "$\\ln[OH^-]$",
+            "b": "$-\\log[OH^-]$",
+            "c": "$10^{[OH^-]}$",
+            "d": "$1/[OH^-]$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "pOH is defined as the negative base-10 logarithm of the hydroxide ion concentration.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "The acid dissociation constant $K_a$ for a weak acid $HA$ is represented by which expression?",
+        "options": {
+            "a": "$K_a = \\frac{[H^+][A^-]}{[HA]}$",
+            "b": "$K_a = \\frac{[HA]}{[H^+][A^-]}$",
+            "c": "$K_a = [H^+][A^-]$",
+            "d": "$K_a = \\frac{[H^+]^2}{[HA]}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "For the reaction $HA \\rightleftharpoons H^+ + A^-$, the equilibrium constant $K_a = \\frac{\\text{Products}}{\\text{Reactants}} = \\frac{[H^+][A^-]}{[HA]}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "What is the relationship between $K_a$ and $K_b$ for a conjugate acid-base pair at $25^\\circ C$?",
+        "options": {
+            "a": "$K_a + K_b = 14$",
+            "b": "$K_a \\times K_b = 1.0 \\times 10^{-14}$",
+            "c": "$K_a / K_b = K_w$",
+            "d": "$K_a - K_b = 0$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The product of the acid dissociation constant and the base dissociation constant for a conjugate pair equals the ion product constant of water ($K_w$). $K_a \\times K_b = K_w$.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "Calculate the $[H^+]$ of a $0.1$ M solution of acetic acid, given $K_a = 1.8 \\times 10^{-5}$.",
+        "options": {
+            "a": "$1.34 \\times 10^{-3}$ M",
+            "b": "$1.8 \\times 10^{-6}$ M",
+            "c": "$4.2 \\times 10^{-3}$ M",
+            "d": "$1.8 \\times 10^{-4}$ M"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "Using the approximation $[H^+] = \\sqrt{K_a \\times C}$. $[H^+] = \\sqrt{1.8 \\times 10^{-5} \\times 0.1} = \\sqrt{1.8 \\times 10^{-6}} \\approx 1.34 \\times 10^{-3}$ M.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "A weak acid has a pKa of 4.74. What is its $K_a$ value?",
+        "options": {
+            "a": "$1.8 \\times 10^{-5}$",
+            "b": "$5.5 \\times 10^{-5}$",
+            "c": "$1.8 \\times 10^{-4}$",
+            "d": "$4.7 \\times 10^{-5}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$K_a = 10^{-pKa} = 10^{-4.74} \\approx 1.8 \\times 10^{-5}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "Percent ionization of a weak acid is defined as:",
+        "options": {
+            "a": "$\\frac{[H^+]_{eq}}{[HA]_{initial}} \\times 100$",
+            "b": "$\\frac{[HA]_{initial}}{[H^+]_{eq}} \\times 100$",
+            "c": "$K_a \\times 100$",
+            "d": "$\\frac{[A^-]}{[H^+]} \\times 100$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Percent ionization is the ratio of the concentration of ionized acid at equilibrium to the initial concentration, multiplied by 100.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "Which acid is stronger: Acid A ($K_a = 1 \\times 10^{-4}$) or Acid B ($K_a = 1 \\times 10^{-6}$)?",
+        "options": {
+            "a": "Acid A",
+            "b": "Acid B",
+            "c": "They are equal strength",
+            "d": "Cannot determine without concentration"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "A larger $K_a$ value indicates a stronger acid. $10^{-4} > 10^{-6}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "Calculate the pH of a $0.5$ M solution of ammonia ($NH_3$) given $K_b = 1.8 \\times 10^{-5}$.",
+        "options": {
+            "a": "2.5",
+            "b": "11.5",
+            "c": "4.8",
+            "d": "9.2"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "$[OH^-] = \\sqrt{K_b \\times C} = \\sqrt{1.8 \\times 10^{-5} \\times 0.5} = \\sqrt{0.9 \\times 10^{-5}} = \\sqrt{9 \\times 10^{-6}} = 3 \\times 10^{-3}$.\n$pOH = -\\log(3 \\times 10^{-3}) \\approx 2.52$.\n$pH = 14 - 2.52 = 11.48 \\approx 11.5$.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "For a diprotic acid $H_2A$, which is generally true about its dissociation constants?",
+        "options": {
+            "a": "$K_{a1} > K_{a2}$",
+            "b": "$K_{a1} < K_{a2}$",
+            "c": "$K_{a1} = K_{a2}$",
+            "d": "$K_{a2} = 0$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The first proton is always easier to remove than the second proton (removing a positive ion from a neutral molecule vs. removing a positive ion from a negative ion). Therefore $K_{a1} > K_{a2}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "What is the $K_b$ of the fluoride ion ($F^-$) if the $K_a$ of $HF$ is $6.8 \\times 10^{-4}$?",
+        "options": {
+            "a": "$1.47 \\times 10^{-11}$",
+            "b": "$6.8 \\times 10^{-10}$",
+            "c": "$1.0 \\times 10^{-14}$",
+            "d": "$1.47 \\times 10^{-4}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "$K_b = K_w / K_a = (1.0 \\times 10^{-14}) / (6.8 \\times 10^{-4}) \\approx 1.47 \\times 10^{-11}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Acid-Base Calculations",
+        "question_text": "If a $0.10$ M weak acid is $1.0\\%$ ionized, what is its $K_a$?",
+        "options": {
+            "a": "$1.0 \\times 10^{-5}$",
+            "b": "$1.0 \\times 10^{-3}$",
+            "c": "$1.0 \\times 10^{-4}$",
+            "d": "$1.0 \\times 10^{-2}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "$[H^+] = 1\\% \\text{ of } 0.10 = 0.001$ M.\n$K_a \\approx \\frac{[H^+]^2}{[HA]} = \\frac{(0.001)^2}{0.10} = \\frac{10^{-6}}{10^{-1}} = 10^{-5}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 36,
+        "subject": "Chemistry",
+        "topic": "Salt Hydrolysis",
+        "question_text": "Predict the nature of an aqueous solution of sodium chloride ($NaCl$).",
+        "options": {
+            "a": "Acidic",
+            "b": "Basic",
+            "c": "Neutral",
+            "d": "Amphoteric"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "$NaCl$ is formed from a strong acid ($HCl$) and a strong base ($NaOH$), so it does not hydrolyze. The solution is neutral.",
+        "section_id": null
+    },
+    {
+        "question_number": 37,
+        "subject": "Chemistry",
+        "topic": "Salt Hydrolysis",
+        "question_text": "An aqueous solution of ammonium chloride ($NH_4Cl$) will be:",
+        "options": {
+            "a": "Acidic",
+            "b": "Basic",
+            "c": "Neutral",
+            "d": "Supersaturated"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$NH_4Cl$ comes from a weak base ($NH_3$) and a strong acid ($HCl$). The cation $NH_4^+$ hydrolyzes to produce $H^+$, making the solution acidic.",
+        "section_id": null
+    },
+    {
+        "question_number": 38,
+        "subject": "Chemistry",
+        "topic": "Salt Hydrolysis",
+        "question_text": "Which salt will form a basic solution when dissolved in water?",
+        "options": {
+            "a": "$NaCl$",
+            "b": "$NH_4NO_3$",
+            "c": "$K_2CO_3$",
+            "d": "$AlCl_3$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "$K_2CO_3$ is derived from a strong base ($KOH$) and a weak acid ($H_2CO_3$). The carbonate ion ($CO_3^{2-}$) hydrolyzes to form $OH^-$, making the solution basic.",
+        "section_id": null
+    },
+    {
+        "question_number": 39,
+        "subject": "Chemistry",
+        "topic": "Salt Hydrolysis",
+        "question_text": "Why do solutions of small, highly charged metal cations like $Al^{3+}$ react as acids?",
+        "options": {
+            "a": "They accept protons from water.",
+            "b": "They hydrate and the hydration complex releases protons.",
+            "c": "They react with $H^+$ to form precipitates.",
+            "d": "They are strong bases."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Metal cations like $Al^{3+}$ form hydrated complexes (e.g., $[Al(H_2O)_6]^{3+}$) which then donate a proton to water, acting as weak acids.",
+        "section_id": null
+    },
+    {
+        "question_number": 40,
+        "subject": "Chemistry",
+        "topic": "Salt Hydrolysis",
+        "question_text": "For a salt derived from a weak acid and a weak base, how do you determine if the solution is acidic or basic?",
+        "options": {
+            "a": "It is always neutral.",
+            "b": "Compare the $K_a$ of the cation and $K_b$ of the anion.",
+            "c": "It depends only on concentration.",
+            "d": "It is always acidic."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "If $K_a$ (cation) > $K_b$ (anion), the solution is acidic. If $K_b$ > $K_a$, it is basic. If equal, it is neutral.",
+        "section_id": null
+    }
+]

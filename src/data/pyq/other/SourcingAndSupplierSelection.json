@@ -1,0 +1,2562 @@
+[
+  {
+    "question_number": 1,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "When a procurement involves highly standardized commodities where price is the only determining factor for award, which competitive sourcing method is most appropriate?",
+    "options": {
+      "a": "Request for Proposals (RFP)",
+      "b": "Invitation for Bids (IFB)",
+      "c": "Qualification-Based Selection (QBS)",
+      "d": "Request for Information (RFI)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An Invitation for Bids (IFB) or Invitation to Bid (ITB) is utilized when the specifications are clear, the product is standard, and price is the sole factor in determining the award.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "A public entity needs to procure a complex software system where experience, implementation methodology, and ongoing support are just as critical as the cost. Which sourcing method should be used?",
+    "options": {
+      "a": "Multi-step Invitation for Bids",
+      "b": "Qualification-Based Selection",
+      "c": "Request for Proposals (RFP)",
+      "d": "Request for Quotations (RFQ)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "An RFP is used when qualitative factors such as vendor experience and methodology must be evaluated alongside price to determine the best overall value for the agency.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - QBS",
+    "question_text": "Under the Brooks Act principles, Qualification-Based Selection (QBS) strictly mandates that which of the following cannot be used as an initial evaluation criterion?",
+    "options": {
+      "a": "Past performance",
+      "b": "Technical expertise",
+      "c": "Project timeline",
+      "d": "Price"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The Brooks Act requires that Architecture and Engineering (A&E) firms be evaluated and ranked strictly on their technical qualifications before price is ever considered or negotiated.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Multi-step bidding",
+    "question_text": "In a Multi-step Invitation for Bids, what is strictly evaluated during the first phase of the process?",
+    "options": {
+      "a": "Unpriced technical proposals",
+      "b": "Sealed financial bids",
+      "c": "Vendor negotiation terms",
+      "d": "Best and Final Offers (BAFO)"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "In multi-step bidding, the first step evaluates unpriced technical proposals to determine which bidders are qualified. Only those deemed technically acceptable are permitted to submit priced bids in the second step.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "A buyer is awarding an IFB. According to standard procurement principles, the award must be given to the lowest bidder who is both:",
+    "options": {
+      "a": "Experienced and certified",
+      "b": "Responsive and responsible",
+      "c": "Available and affordable",
+      "d": "Bonded and insured"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In an IFB, the standard standard for award is to the lowest responsive (complied with all bid rules/specs) and responsible (has the capability to perform) bidder.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Emergency Purchases",
+    "question_text": "A severe storm has destroyed the roof of the city's main water treatment plant, causing an immediate threat to the public water supply. The buyer should process the replacement as a(n):",
+    "options": {
+      "a": "Emergency Purchase",
+      "b": "Single Source Procurement",
+      "c": "Sole Source Procurement",
+      "d": "Pilot Program"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "An emergency purchase is justified when there is an immediate threat to public health, welfare, or safety, or to prevent severe damage to government property.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Emergency Purchases",
+    "question_text": "A department forgot to submit a requisition for standard seasonal supplies, and they are now out of stock just as their busy season begins. The department requests an emergency purchase to avoid downtime. How should the buyer proceed?",
+    "options": {
+      "a": "Process as an emergency due to the operational downtime risk",
+      "b": "Deny the emergency request because poor planning does not constitute a valid emergency",
+      "c": "Process as a sole source to expedite delivery",
+      "d": "Approve it as a single source exception"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Failure to plan properly by a department does not legally constitute an emergency. Emergency exceptions are reserved for true, unforeseeable threats to health, safety, or property.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "Which of the following scenarios is the most valid justification for a Sole Source procurement?",
+    "options": {
+      "a": "The requested vendor offers a steep, limited-time discount",
+      "b": "The requested software is highly preferred by the IT department",
+      "c": "The requested item is patented and manufactured by only one vendor who has no authorized resellers",
+      "d": "The current vendor is locally owned and heavily supports the community"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A sole source procurement is strictly used when a single vendor is the ONLY source that exists in the market capable of meeting the requirement, such as with exclusive patents or original equipment manufacturer (OEM) restrictions.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Single Source",
+    "question_text": "A municipality decides to buy all its future police radios from Motorola, even though Harris and Kenwood make similar radios, in order to ensure seamless compatibility and reduce training costs. This is an example of a:",
+    "options": {
+      "a": "Sole Source",
+      "b": "Single Source",
+      "c": "Emergency Purchase",
+      "d": "Request for Qualifications"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A single source procurement occurs when multiple viable suppliers exist, but the agency intentionally chooses one specific vendor for reasons such as standardization, compatibility, or maintenance efficiency. It requires strict legal justification.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - QBS",
+    "question_text": "During a Qualification-Based Selection (QBS) process, the procurement officer successfully ranks the firms. The agency begins price negotiations with the highest-ranked firm, but they cannot agree on a fair and reasonable price. What is the buyer's required next step?",
+    "options": {
+      "a": "Cancel the solicitation and start over",
+      "b": "Ask the top three firms to submit priced best and final offers (BAFOs)",
+      "c": "Formally terminate negotiations with the top firm and open negotiations with the second-ranked firm",
+      "d": "Accept the highest-ranked firm's price because qualifications matter more than budget"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "In QBS, if a fair and reasonable price cannot be negotiated with the highest-ranked firm, negotiations must be formally terminated with that firm, and the agency then proceeds to negotiate with the second-ranked firm.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "Which of the following describes the key distinction between an IFB and an RFP?",
+    "options": {
+      "a": "An IFB is publicly advertised, whereas an RFP is only sent to prequalified vendors",
+      "b": "An RFP permits the consideration of non-price factors to determine the best value, whereas an IFB is awarded solely on price and responsiveness",
+      "c": "An IFB allows for negotiations after bid opening, while an RFP requires strict adherence to the submitted price",
+      "d": "An RFP is used primarily for construction, while an IFB is used for consulting services"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The fundamental difference is that IFBs are awarded based solely on the lowest price from a responsive/responsible bidder, whereas RFPs evaluate qualitative factors along with price to determine best overall value.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Pilot Programs",
+    "question_text": "An agency implements a pilot program to test a new automated traffic enforcement technology from a specific vendor. After a successful 6-month trial, the agency decides to deploy the technology city-wide. What is the standard procurement requirement for the city-wide deployment?",
+    "options": {
+      "a": "The agency can award directly to the pilot vendor since the technology is proven",
+      "b": "The agency must use an emergency purchase to avoid losing the trial setup",
+      "c": "The agency must issue a competitive solicitation (e.g., RFP) to allow all market participants to compete",
+      "d": "The pilot vendor must be excluded from the subsequent competition to avoid a conflict of interest"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A pilot or trial procurement is typically a small-scale, limited-duration test. It cannot be used to bypass competition for a permanent, full-scale implementation; a formal competitive process must follow.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "A bidder submits a response to an IFB for janitorial supplies. Their bid includes a substitute product that does not meet the minimum active ingredient specifications stated in the solicitation. The buyer should deem this bid:",
+    "options": {
+      "a": "Non-responsible",
+      "b": "Non-responsive",
+      "c": "Acceptable if it offers cost savings",
+      "d": "A candidate for immediate negotiation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A bid is 'non-responsive' if it fails to conform in all material respects to the essential requirements, specifications, and terms outlined in the IFB.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFQ",
+    "question_text": "Which method is typically used to create a 'shortlist' of highly qualified vendors before issuing a detailed Request for Proposals (RFP) for a complex, large-scale project?",
+    "options": {
+      "a": "Invitation for Bids (IFB)",
+      "b": "Request for Qualifications (RFQ)",
+      "c": "Request for Quotations (RFQ)",
+      "d": "Sole Source Justification"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A Request for Qualifications (RFQ) is often used as a preliminary step in a multi-step process to pre-qualify vendors based strictly on their experience and capability, forming a shortlist for the subsequent RFP phase.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "Which of the following is required before an agency can officially award a sole source contract?",
+    "options": {
+      "a": "A formal negotiation with at least three vendors",
+      "b": "A detailed written justification documenting market research proving no other sources exist",
+      "c": "Approval from a minimum of three competing contractors",
+      "d": "An independent financial audit of the chosen vendor"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Sole source procurements circumvent the standard competitive process and legally require robust, written justification and market research to prove only one viable vendor exists.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Emergency Purchases",
+    "question_text": "An agency is executing an emergency purchase to fix a collapsed sewer line. Which of the following limits should strictly apply to this emergency procurement?",
+    "options": {
+      "a": "The procurement should be limited to the materials and services necessary to alleviate the immediate threat",
+      "b": "The procurement should include preventive maintenance for all other sewer lines in the city",
+      "c": "The procurement requires an IFB to be published on a 5-day accelerated timeline",
+      "d": "The contract awarded must be a firm-fixed-price 5-year agreement"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Emergency procurements must be strictly limited in scope to what is absolutely necessary to resolve the immediate threat. Any subsequent, non-immediate work must be competitively bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFQ",
+    "question_text": "For small dollar purchases that fall below the agency's formal competitive threshold, buyers frequently use an informal process known as:",
+    "options": {
+      "a": "Request for Proposals (RFP)",
+      "b": "Invitation to Bid (ITB)",
+      "c": "Request for Quotations (RFQ)",
+      "d": "Qualification-Based Selection (QBS)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Request for Quotations (RFQ) is an informal, often simplified method used for small purchases where price is the primary factor, saving the time and administrative burden of a formal IFB.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Trial Procurements",
+    "question_text": "If a supplier provides free trial equipment to an agency to demonstrate its capabilities, what ethical and procedural risk does the buyer face when later drafting the formal IFB?",
+    "options": {
+      "a": "The vendor may claim an automatic sole-source award",
+      "b": "Writing restrictive specifications biased toward the trial equipment's unique features",
+      "c": "Being required to negotiate price before the bid opens",
+      "d": "Triggering a mandatory Brooks Act selection process"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When an agency tests trial equipment, buyers must ensure subsequent IFB/RFP specifications remain generic and open to maximum competition, avoiding bias toward the unique features of the trial equipment.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Multi-step bidding",
+    "question_text": "In a two-step competitive sealed bidding process, which vendors are invited to submit sealed financial pricing in Step Two?",
+    "options": {
+      "a": "All vendors who downloaded the solicitation in Step One",
+      "b": "Only the vendor who ranked highest in technical qualifications",
+      "c": "Any vendor whose unpriced technical offer was determined acceptable in Step One",
+      "d": "Only those vendors who can prove local small business certification"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Two-step IFBs invite unpriced technical proposals first. Only the vendors who pass the technical threshold (determined acceptable) are allowed to submit sealed pricing in the second phase.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Single Source",
+    "question_text": "Standardization is often used as a justification for which non-competitive sourcing strategy?",
+    "options": {
+      "a": "Emergency Purchase",
+      "b": "Brooks Act Selection",
+      "c": "Pilot Program",
+      "d": "Single Source Procurement"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Standardizing on a specific manufacturer's equipment to reduce training time or ensure inter-operability is a common rationale for approving a Single Source procurement.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "When utilizing an IFB, public bid openings are typically required by statute. What is the primary purpose of a public bid opening?",
+    "options": {
+      "a": "To allow vendors to revise their prices after hearing competitors' prices",
+      "b": "To evaluate the quality of the products submitted",
+      "c": "To provide transparency by publicly declaring the identities of the bidders and their bid amounts",
+      "d": "To officially negotiate terms and conditions with the lowest bidder"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Public bid openings promote transparency and integrity in the procurement process by making the identity of bidders and their proposed prices a matter of public record immediately.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "During an RFP process, what mechanism ensures that qualitative factors are objectively and fairly reviewed?",
+    "options": {
+      "a": "Awarding strictly to the lowest price",
+      "b": "Publicly revealing all technical proposals before scoring",
+      "c": "Utilizing an evaluation committee and a structured, pre-established scoring matrix",
+      "d": "Allowing the requesting department's director to pick their favorite proposal"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "RFPs use structured scoring matrices with predefined weights and a diverse evaluation committee to ensure that qualitative proposals are scored objectively.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - QBS",
+    "question_text": "Which federal law originally mandated Qualification-Based Selection (QBS) for the procurement of architectural and engineering (A&E) services?",
+    "options": {
+      "a": "The Davis-Bacon Act",
+      "b": "The Brooks Act",
+      "c": "The Sherman Antitrust Act",
+      "d": "The Sarbanes-Oxley Act"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Brooks Act of 1972 established the requirement that the U.S. Federal Government must select engineering and architecture firms based upon their competency, qualifications and experience rather than by price.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "A department submits a sole source request stating, 'Vendor X is the only vendor we trust based on 10 years of successful past performance.' How should the buyer respond?",
+    "options": {
+      "a": "Approve it, as past performance guarantees future success",
+      "b": "Reject it, because 'trust' and past history do not prove Vendor X is the only source in the marketplace",
+      "c": "Approve it, but classify it as an emergency",
+      "d": "Reject it, but process it as a Qualification-Based Selection"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A sole source must be justified by market reality (i.e., only one supplier exists for a required good or service), not by mere preference, comfort, or past relationship with the vendor.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "In a Request for Proposals (RFP), how is the 'Best Value' generally determined?",
+    "options": {
+      "a": "By dividing the lowest price by the number of pages in the proposal",
+      "b": "By weighting technical merit, experience, and price according to the criteria stated in the solicitation",
+      "c": "By holding a public auction until only one vendor remains",
+      "d": "By excluding the highest and lowest prices and averaging the remainder"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Best Value is determined by evaluating both cost and non-cost factors (such as technical approach and experience) based on the specific weights declared in the RFP.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Multi-step bidding",
+    "question_text": "When is a multi-step bidding process most advantageous for an agency?",
+    "options": {
+      "a": "When the agency needs office supplies delivered overnight",
+      "b": "When specifications are inadequate to permit a standard IFB, but price will still be the final determining factor among qualified designs",
+      "c": "When purchasing strictly A&E consulting services",
+      "d": "When an emergency is declared and competition is suspended"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Multi-step bidding is ideal when the agency knows what it needs but doesn't have specifications rigid enough for a standard IFB. It allows the agency to accept diverse technical solutions in step 1, then use price as the final deciding factor in step 2 among acceptable solutions.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "During an IFB evaluation, it is discovered that the lowest bidder has filed for bankruptcy and lacks the financial resources to purchase materials required for the project. The buyer will likely reject the bid because the vendor is:",
+    "options": {
+      "a": "Non-responsive",
+      "b": "Non-responsible",
+      "c": "Not pre-qualified",
+      "d": "A single source"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Responsibility assesses whether a vendor has the capacity, financial capability, and integrity to perform the contract. A bankrupt vendor lacking resources would be deemed non-responsible.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Emergency Purchases",
+    "question_text": "If a situation arises outside of normal business hours that constitutes a true emergency, end-user departments are typically authorized to bypass formal competition, but they are still required to:",
+    "options": {
+      "a": "Wait until the procurement office opens to issue a PO",
+      "b": "Issue an RFP within 24 hours of the emergency",
+      "c": "Maintain thorough documentation justifying the emergency and keep costs as low as reasonably possible given the circumstances",
+      "d": "Sole source the rest of the agency's needs for the year to the responding vendor"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Emergency purchases allow bypassing the normal time-consuming bid process, but agencies must heavily document the nature of the emergency, why competition was bypassed, and efforts made to ensure fair pricing.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "Which of the following elements is critical to include in a formally advertised Request for Proposals (RFP), but is NOT required in an Invitation for Bids (IFB)?",
+    "options": {
+      "a": "A deadline for submission",
+      "b": "Standard Terms and Conditions",
+      "c": "The evaluation criteria and their relative importance/weights",
+      "d": "The delivery address for the goods"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "An IFB does not need weighted evaluation criteria because price is the only factor. An RFP requires a clear statement of evaluation criteria and their relative importance so vendors know how they will be judged.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - QBS",
+    "question_text": "Which of the following professional services is nearly universally required by public procurement law to be procured via Qualification-Based Selection (QBS)?",
+    "options": {
+      "a": "Janitorial Services",
+      "b": "Landscaping and Grounds Maintenance",
+      "c": "Architecture and Engineering Services",
+      "d": "Information Technology Helpdesk"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Due to the Brooks Act and similar 'mini-Brooks Acts' at state/local levels, Architecture and Engineering (A&E) services must be procured using QBS.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Single Source",
+    "question_text": "When writing a justification for a Single Source procurement, a buyer should emphasize:",
+    "options": {
+      "a": "Why competition is impossible due to patent laws",
+      "b": "The immediate threat to public safety",
+      "c": "The strategic, financial, or operational benefits of standardizing on one vendor despite the existence of other market players",
+      "d": "The vendor's willingness to skip negotiations"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Single source justifications must defend the decision to intentionally bypass available competition, usually by citing long-term savings from standardization, compatibility constraints, or specific administrative efficiencies.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "An agency is purchasing an upgrade for its proprietary dispatch software. The original software developer is the only entity with the source code and legal right to modify it. This procurement should be classified as a:",
+    "options": {
+      "a": "Sole Source",
+      "b": "Single Source",
+      "c": "Pilot Program",
+      "d": "QBS"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Because only the original developer holds the proprietary rights and access to the source code, no other vendor could legally or technically fulfill the requirement, making it a true sole source.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "In the RFP process, if a vendor submits a highly technical proposal that meets all operational needs but has a significantly higher price than competitors, the evaluation committee will:",
+    "options": {
+      "a": "Automatically reject it as non-responsive",
+      "b": "Automatically award to it because technical quality overrules price",
+      "c": "Score it based on the pre-established weighting of technical merit versus price",
+      "d": "Convert the RFP to a Sole Source"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In an RFP, price and technical merit are weighed against each other according to the published scoring rubric to determine the best overall value to the agency.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Pre-sourcing",
+    "question_text": "An agency is planning a large procurement but does not yet know what technological solutions exist in the market. Before deciding whether to use an IFB or RFP, the buyer should issue a(n):",
+    "options": {
+      "a": "Multi-step IFB",
+      "b": "Request for Information (RFI)",
+      "c": "Emergency Authorization",
+      "d": "Sole Source Notice"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An RFI is used to gather market intelligence and understand available solutions, best practices, and industry standards before drafting a formal solicitation.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Pre-sourcing",
+    "question_text": "Which of the following is true regarding a Request for Information (RFI)?",
+    "options": {
+      "a": "An agency can directly award a contract to the best response from an RFI",
+      "b": "An RFI is legally binding on the vendor who responds",
+      "c": "An RFI is strictly a research and planning tool and cannot result in an award",
+      "d": "RFIs require a public bid opening"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "An RFI is a pre-solicitation market research tool. It does not contain final specifications and cannot be used to execute a contract or make an award.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Pilot Programs",
+    "question_text": "A key risk of utilizing a Pilot Program with a specific vendor prior to issuing a formal RFP is:",
+    "options": {
+      "a": "The vendor may gain an unfair competitive advantage or inside information for the ensuing RFP",
+      "b": "The agency cannot legally publish an RFP after a pilot",
+      "c": "The pilot automatically converts into a sole source agreement",
+      "d": "The Brooks Act requires the pilot to be awarded to the lowest bidder"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Incumbency and inside knowledge gained during a pilot can skew the upcoming RFP. Buyers must ensure the pilot vendor does not write the RFP specifications and that all competitors get equal information.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Multi-step bidding",
+    "question_text": "During Step One of a multi-step IFB, technical proposals are received. How are these proposals categorized by the procurement team?",
+    "options": {
+      "a": "Scored on a scale of 1 to 100",
+      "b": "Acceptable, potentially acceptable, or unacceptable",
+      "c": "Lowest price, median price, or highest price",
+      "d": "Sole source or single source"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "In a multi-step IFB, Step One does not involve scoring numerical weights. Proposals are evaluated on a pass/fail basis as acceptable, potentially acceptable (needing clarification), or unacceptable.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFQ",
+    "question_text": "A procurement professional receives three quotes for a purchase of power tools valued at $4,500, which is below the agency's formal bidding threshold. This process is best described as an informal:",
+    "options": {
+      "a": "Qualification-Based Selection",
+      "b": "Request for Quotations (RFQ)",
+      "c": "Request for Proposals",
+      "d": "Multi-step Bid"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Request for Quotations (RFQ) is an informal process designed to solicit pricing for small purchases rapidly and efficiently without the strict formatting and advertising rules of an IFB or RFP.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "To properly vet a Sole Source request, an agency will often publicly post a 'Notice of Intent to Sole Source.' What is the primary reason for this?",
+    "options": {
+      "a": "To satisfy public relations requirements",
+      "b": "To give the selected vendor a timeline for delivery",
+      "c": "To allow other potential vendors the opportunity to prove they can also provide the good/service, thus verifying if competition truly exists",
+      "d": "To waive the agency's terms and conditions"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A Notice of Intent allows the market to challenge the sole source claim. If another vendor demonstrates they can meet the need, the agency must cancel the sole source and issue a competitive solicitation.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "In a competitive sealed bidding (IFB) scenario, what should the buyer do if all received bids exceed the available budget for the project?",
+    "options": {
+      "a": "Award to the lowest bidder and ask the finance department to issue emergency funds",
+      "b": "Convert the IFB to a QBS process immediately",
+      "c": "Cancel the IFB or seek authorization to negotiate price with the lowest responsive/responsible bidder (if permitted by local law)",
+      "d": "Award to a local vendor regardless of price"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "When all bids exceed the budget, the buyer typically must cancel the solicitation. However, many jurisdictions have provisions allowing negotiation strictly with the lowest bidder to reduce scope and align with budget.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFP",
+    "question_text": "An agency is evaluating RFP responses. Vendor A submitted the best technical proposal but the highest price. Vendor B submitted an acceptable technical proposal at a significantly lower price. Vendor C submitted a poor technical proposal at the lowest price. Who should win?",
+    "options": {
+      "a": "Vendor A automatically, because they are the most qualified",
+      "b": "Vendor C automatically, because they have the lowest price",
+      "c": "The vendor who yields the highest combined score based on the weighted criteria set forth in the RFP",
+      "d": "The decision must be sent to a judge to determine fairness"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In an RFP, award is made based on 'best value.' The scoring methodology established in the RFP mathematically determines which vendor represents the best balance of cost and qualitative factors.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Pre-sourcing",
+    "question_text": "When deciding whether to use an IFB or an RFP, what is the most important question a procurement officer should ask?",
+    "options": {
+      "a": "How quickly does the end-user need the item?",
+      "b": "Is price the only consideration, or do we need to evaluate different vendor solutions and methodologies?",
+      "c": "Is the budget above or below $1,000,000?",
+      "d": "Does the vendor have a local office?"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The defining factor between an IFB and RFP is whether the agency knows exactly what it wants and only needs a price (IFB), or if it needs to evaluate subjective factors like methodology or design (RFP).",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Emergency Purchases",
+    "question_text": "Which of the following scenarios absolutely does NOT meet the legal standard for an emergency purchase?",
+    "options": {
+      "a": "A generator failure at an active public hospital",
+      "b": "A sudden bridge collapse on a major thoroughfare",
+      "c": "A fiscal year-end deadline approaching, and the department wants to spend remaining funds before they expire",
+      "d": "A breach in a public data server actively leaking citizen social security numbers"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Expiring funds and failure to plan do not constitute an emergency. Emergencies are strictly physical, operational, or health/safety threats.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "A buyer is reviewing a sole source request for a replacement part. The department states the manufacturer will void the warranty of the entire million-dollar machine if an aftermarket part is used. How does this impact the sourcing method?",
+    "options": {
+      "a": "It prevents a sole source because warranties are negotiable",
+      "b": "It provides a valid basis for a sole source or single source to OEM parts to preserve the valuable warranty",
+      "c": "The buyer must issue an IFB and inform bidders they assume warranty risk",
+      "d": "The buyer must convert the purchase to an emergency"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Preserving a critical warranty by adhering strictly to Original Equipment Manufacturer (OEM) parts is a recognized and valid justification for waiving full and open competition via a sole/single source.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Sole Source",
+    "question_text": "Which condition below frequently leads to a legitimate sole source procurement?",
+    "options": {
+      "a": "The item is heavily advertised by a single distributor",
+      "b": "The commodity is a highly traded agricultural product",
+      "c": "The procurement requires compatibility with existing proprietary intellectual property",
+      "d": "The department director has an existing relationship with a vendor"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Proprietary intellectual property, such as copyrighted materials or closed-architecture software interfaces, physically restricts other vendors from fulfilling the need, justifying a sole source.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - RFQ vs RFP",
+    "question_text": "When comparing an RFQ (Request for Quotations) and an RFP (Request for Proposals), an RFQ is typically:",
+    "options": {
+      "a": "More structured, taking several months to evaluate",
+      "b": "Used for highly complex consulting projects",
+      "c": "An informal process for smaller dollar purchases that do not require complex evaluation",
+      "d": "Used exclusively for A&E services"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "RFQs are simplified, informal processes used when the value of the procurement is below statutory formal thresholds, focusing generally on securing price quotes quickly.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Emergency Purchases",
+    "question_text": "Following an emergency purchase, best practice and most public procurement statutes require the procurement officer to:",
+    "options": {
+      "a": "Place the vendor on a permanent do-not-call list",
+      "b": "File a written determination outlining the basis of the emergency and the vendor selection for the procurement file",
+      "c": "Demand the vendor discount their invoice by 15%",
+      "d": "Immediately issue a new RFP for the exact same services"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Accountability is paramount. Even when competition is bypassed due to a threat, a formal, written determination of the emergency must be added to the public file to justify the action.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - QBS",
+    "question_text": "Why is price excluded from the initial phase of Qualification-Based Selection (QBS)?",
+    "options": {
+      "a": "To ensure engineers are paid above market rate",
+      "b": "To prevent agencies from knowing how much a project will cost",
+      "c": "Because evaluating complex design competence and public safety should prioritize qualifications over finding the cheapest architect",
+      "d": "Because price evaluation is illegal in all forms of public procurement"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Brooks Act asserts that in A&E work, public safety and design integrity are paramount. Prioritizing lowest cost could compromise safety and design quality, so competence must be established first.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - IFB/ITB",
+    "question_text": "If two identical low bids are received in response to an IFB, this situation is known as a:",
+    "options": {
+      "a": "Tie bid",
+      "b": "Collusive bid",
+      "c": "Non-responsive bid",
+      "d": "Sole source"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A tie bid occurs when two or more responsive/responsible vendors submit the exact same price. Statutes usually prescribe how to break ties (e.g., preference to in-state vendors or coin toss).",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Single Source",
+    "question_text": "A valid difference between a Sole Source and a Single Source is:",
+    "options": {
+      "a": "Sole Source refers to construction; Single Source refers to services",
+      "b": "Sole Source means no other supplier exists; Single Source means the agency is voluntarily restricting competition to one vendor for strategic reasons",
+      "c": "Single Source requires no justification",
+      "d": "There is no difference; the terms are perfectly synonymous"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A sole source is driven by market reality (only one exists). A single source is an agency choice to waive competition and use one supplier among many, typically for standardization.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Selection",
+    "question_text": "The primary goal of employing open competitive bidding methods in public procurement is to:",
+    "options": {
+      "a": "Prolong the procurement cycle to ensure job security",
+      "b": "Favor local vendors over national competitors",
+      "c": "Ensure maximum transparency, fair access for all vendors, and obtain the best value for public funds",
+      "d": "Create complex evaluation matrices"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Public procurement exists to be transparent, foster a fair and competitive environment, and protect taxpayer funds by achieving best value.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Exigency",
+    "question_text": "In federal procurement terms, a situation where the need is compelling and urgent, but does not strictly involve an immediate physical threat to health or property, is often referred to as a(n):",
+    "options": {
+      "a": "Standard Exigency",
+      "b": "Public Exigency",
+      "c": "Emergency",
+      "d": "Planned Single Source"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Public Exigency is a condition requiring immediate action where delayed purchasing would result in serious financial or operational harm, distinct from an immediate physical emergency.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - QBS",
+    "question_text": "When performing Qualification-Based Selection (QBS) under the Brooks Act, if an agency reaches an impasse with the first-ranked firm over price, what must occur before negotiating with the second firm?",
+    "options": {
+      "a": "The second firm must lower their price below the first firm's offer",
+      "b": "The agency must formally and in writing terminate negotiations with the first firm",
+      "c": "The agency must combine the top two firms into a joint venture",
+      "d": "The agency issues an IFB"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "An agency cannot bounce back and forth between vendors in QBS. They must formally end negotiations with the #1 firm before opening talks with #2. Once ended, they cannot go back to #1.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Alternative Methods - Pre-planning",
+    "question_text": "Which action best mitigates the likelihood of an agency inappropriately declaring an 'emergency' purchase due to poor inventory management?",
+    "options": {
+      "a": "Eliminating formal bidding thresholds",
+      "b": "Establishing robust term contracts, inventory tracking, and reorder points",
+      "c": "Buying entirely from a single supplier without contracts",
+      "d": "Issuing more sole source justifications"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Good planning, forecasting, and having long-term cooperative or agency term contracts in place prevents artificial emergencies caused by sudden stock-outs.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Competitive Methods - Formal vs Informal",
+    "question_text": "The exact dollar figure that determines whether an agency must issue a formal competitive solicitation (like an IFB/RFP) rather than gathering informal quotes is established by:",
+    "options": {
+      "a": "The Federal Government for all local agencies",
+      "b": "The requesting department's budget director",
+      "c": "State statute or local governmental ordinances/charters",
+      "d": "The NIGP code of ethics"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Formal competition thresholds are strictly a matter of statutory law, defined by state legislation or local municipal codes/charters.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "Which type of specification focuses on the required outcome or the intended use of a product, allowing vendors the flexibility to propose their own technical solutions?",
+    "options": {
+      "a": "Design Specification",
+      "b": "Performance Specification",
+      "c": "Brand Name Specification",
+      "d": "Standardized Specification"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A performance specification describes what the product or service is expected to do (its function and outcome) rather than how it must be built, encouraging innovation and wider competition.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "When an agency uses a 'Brand Name or Equal' specification, what must the buyer prominently include in the solicitation document to ensure fair competition?",
+    "options": {
+      "a": "The manufacturer's wholesale pricing list",
+      "b": "A mandatory requirement that only the brand name manufacturer can bid",
+      "c": "The salient characteristics and essential features that an 'equal' product must meet",
+      "d": "A waiver of the public bid opening requirement"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "To allow vendors to offer 'equal' alternatives, the solicitation must clearly list the salient physical, functional, or performance characteristics of the brand name item that must be met.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "A requesting department submits a specification for a fleet of trucks that lists engine dimensions exact to the millimeter. Only one manufacturer makes this exact engine. The specification is considered:",
+    "options": {
+      "a": "Comprehensive and well-researched",
+      "b": "Overly restrictive and anti-competitive",
+      "c": "A standard performance specification",
+      "d": "Legally required for safety tolerances"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Specifications that unnecessarily restrict competition to a single vendor, without a valid operational or safety justification, violate public procurement principles of full and open competition.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "What is the primary difference between a Scope of Work (SOW) and a Statement of Work (SOW) in standard procurement terminology?",
+    "options": {
+      "a": "There is no difference; they are interchangeable terms",
+      "b": "A Scope of Work broadly defines the high-level goals and limits of a project, while a Statement of Work provides detailed, specific tasks and deliverables required",
+      "c": "A Scope of Work is used for goods, while a Statement of Work is used strictly for services",
+      "d": "A Scope of Work is written by the vendor, while a Statement of Work is written by the buyer"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "While often used interchangeably in practice, formally, a Scope of Work is a high-level description of boundaries and objectives. A Statement of Work details the specific tasks, timelines, deliverables, and performance standards required.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "A specification requires a material to withstand temperatures of 500 degrees Fahrenheit, +/- 5 degrees. The '+/- 5 degrees' is known as a:",
+    "options": {
+      "a": "Tolerance",
+      "b": "Salient characteristic",
+      "c": "Waiver",
+      "d": "Design flaw"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A tolerance is the allowable variation from a specified standard or measurement in a specification. It provides acceptable boundaries for physical or performance characteristics.",
+    "section_id": null
+  },
+  {
+    "question_number": 61,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "An agency repeatedly purchases a highly specific grade of safety equipment. To streamline future bidding, the procurement office pre-tests various manufacturers' items and creates a list of approved products. This is known as a:",
+    "options": {
+      "a": "Request for Information (RFI)",
+      "b": "Qualified Products List (QPL)",
+      "c": "Pre-Bid Matrix",
+      "d": "Sole Source Registry"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Qualified Products List (QPL) identifies products that have been tested and approved in advance of a solicitation, allowing only those pre-approved products to be bid on future contracts.",
+    "section_id": null
+  },
+  {
+    "question_number": 62,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "If a design specification is used, who typically assumes the risk if the final product is manufactured exactly to specification but fails to perform the intended function?",
+    "options": {
+      "a": "The awarded vendor",
+      "b": "The purchasing agency",
+      "c": "The manufacturer of the raw materials",
+      "d": "The bonding company"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Under the Spearin Doctrine, if an agency issues a detailed design specification, there is an implied warranty that the design is adequate. Therefore, the agency assumes the risk if the design fails to produce the desired result, provided the vendor followed it perfectly.",
+    "section_id": null
+  },
+  {
+    "question_number": 63,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Specifications",
+    "question_text": "To ensure maximum competition and obtain the most current technological solutions, an agency should draft specifications based heavily on:",
+    "options": {
+      "a": "A single vendor's whitepaper",
+      "b": "The previous 10-year-old contract documents",
+      "c": "Thorough market research and industry standards",
+      "d": "The specific preferences of the department's longest-tenured employee"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Market research allows buyers to understand current commercial capabilities, standard industry practices, and innovations, ensuring specifications are modern, non-restrictive, and highly competitive.",
+    "section_id": null
+  },
+  {
+    "question_number": 64,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "Which part of the solicitation document contains clauses that are applied uniformly to virtually all procurement actions within the agency, regardless of the specific commodity?",
+    "options": {
+      "a": "Special Terms and Conditions",
+      "b": "Standard Terms and Conditions",
+      "c": "The Scope of Work",
+      "d": "The Addendum"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Standard (or General) Terms and Conditions contain boilerplate legal and administrative clauses (e.g., governing law, non-discrimination) applicable to all agency contracts. Special T&Cs are tailored to a specific bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 65,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "An agency realizes halfway through a multi-year software contract that it is migrating entirely to a new, broader ERP system and no longer needs the software. Which clause gives the agency the right to end the contract without the vendor being at fault?",
+    "options": {
+      "a": "Termination for Default",
+      "b": "Force Majeure",
+      "c": "Termination for Convenience",
+      "d": "Indemnification"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A Termination for Convenience clause permits the public entity to unilaterally terminate a contract when it is in the best interest of the government to do so, even if the vendor has not breached the contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 66,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "Which clause is invoked to protect a contracting party from liability when an unforeseeable, unavoidable event (like a hurricane or pandemic) makes fulfilling the contract impossible?",
+    "options": {
+      "a": "Hold Harmless",
+      "b": "Order of Precedence",
+      "c": "Severability",
+      "d": "Force Majeure"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Force Majeure (or 'Act of God') is a clause that excuses a party from fulfilling their contractual obligations when an extraordinary event or circumstance beyond their control occurs.",
+    "section_id": null
+  },
+  {
+    "question_number": 67,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "To protect the agency from third-party lawsuits arising due to the negligence of a contractor while performing services, the buyer must ensure the solicitation contains an appropriate:",
+    "options": {
+      "a": "Liquidated Damages clause",
+      "b": "Escalation clause",
+      "c": "Indemnification and Hold Harmless clause",
+      "d": "Alternative Dispute Resolution clause"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "An Indemnification (or hold harmless) clause requires the contractor to compensate the public agency for harm or loss, and to defend the agency against third-party claims arising from the contractor's actions.",
+    "section_id": null
+  },
+  {
+    "question_number": 68,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "A construction contract states that for every day the project is delayed beyond the final deadline, the contractor will be deducted $1,000 to cover the agency's estimated actual financial losses. This is known as:",
+    "options": {
+      "a": "A penalty fee",
+      "b": "Liquidated damages",
+      "c": "Consequential damages",
+      "d": "Retainage"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Liquidated damages are pre-agreed amounts representing reasonable estimates of actual damages the agency will suffer due to delays. Unlike penalties, which are typically unenforceable in public contracts, liquidated damages strictly represent compensation for actual anticipated harm.",
+    "section_id": null
+  },
+  {
+    "question_number": 69,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "To allow other governmental entities to use the resulting contract pricing and terms, the buyer should include which type of clause in the solicitation?",
+    "options": {
+      "a": "Assignment clause",
+      "b": "Cooperative Procurement (Piggyback) clause",
+      "c": "Severability clause",
+      "d": "Most Favored Nation clause"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Cooperative Procurement or 'Piggyback' clause allows other public agencies to purchase off the competitively bid contract under the same terms and conditions, leveraging the administrative work of the lead agency.",
+    "section_id": null
+  },
+  {
+    "question_number": 70,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "If there is a conflict between the Standard Terms & Conditions and the Special Terms & Conditions within a solicitation document, which provision typically dictates how to resolve the conflict?",
+    "options": {
+      "a": "The Force Majeure clause",
+      "b": "The Order of Precedence clause",
+      "c": "The State Constitution",
+      "d": "The vendor's exceptions list"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An Order of Precedence clause explicitly states which section of the contract document governs in the event of a conflict or ambiguity. Usually, Special Terms overrule Standard Terms.",
+    "section_id": null
+  },
+  {
+    "question_number": 71,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Terms & Conditions",
+    "question_text": "Under what circumstance would a 'Termination for Default' or 'Termination for Cause' clause be appropriately utilized by a public agency?",
+    "options": {
+      "a": "The agency simply decides it wants to use a different vendor",
+      "b": "The vendor fails to deliver the goods within the agreed-upon timeline or fails to meet material contract specifications",
+      "c": "A natural disaster destroys the vendor's primary manufacturing plant",
+      "d": "The agency's budget for the current year has been unexpectedly slashed"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Termination for Default/Cause is used when the contractor commits a material breach of the contract, such as failure to deliver, failing to perform required services, or supplying non-conforming goods.",
+    "section_id": null
+  },
+  {
+    "question_number": 72,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "When drafting an RFP, the evaluation criteria and their respective weights must be established and finalized:",
+    "options": {
+      "a": "Immediately after proposals are opened but before they are read",
+      "b": "Before the solicitation is publicly published and distributed to potential proposers",
+      "c": "During the first meeting of the evaluation committee",
+      "d": "After all vendor questions have been answered and the bid closes"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "To ensure fairness, transparency, and prevent manipulation of the scoring to favor a specific vendor, evaluation criteria and their weights must be firmly established prior to publishing the RFP.",
+    "section_id": null
+  },
+  {
+    "question_number": 73,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "An agency issues an RFP that lists 'Experience,' 'Technical Approach,' and 'Cost' as evaluation criteria, but fails to state their relative importance. How must vendors and evaluators legally interpret this under standard public procurement practices?",
+    "options": {
+      "a": "Cost is always worth 50% by default",
+      "b": "All listed criteria must be assumed to carry equal weight",
+      "c": "The evaluation committee can assign weights as they see fit during scoring",
+      "d": "The RFP is immediately voided and cannot be corrected via addendum"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "If an RFP fails to declare the relative weighting or importance of the evaluation criteria, standard legal and ethical practice generally requires them to be treated as having equal importance.",
+    "section_id": null
+  },
+  {
+    "question_number": 74,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "Which of the following describes a 'Mandatory' requirement in an evaluation matrix?",
+    "options": {
+      "a": "A requirement that is evaluated on a sliding scale from 1 to 10 points",
+      "b": "A requirement that provides a small preference bonus to local businesses",
+      "c": "A pass/fail condition that, if not met, results in immediate rejection of the proposal as non-responsive",
+      "d": "An item that vendors can optionally choose to price separately"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Mandatory requirements (e.g., minimum years in business, possession of a specific license) are evaluated strictly on a pass/fail basis. Failure to meet them means the proposal cannot be further evaluated.",
+    "section_id": null
+  },
+  {
+    "question_number": 75,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "A standard best practice for scoring the 'Cost/Price' criteria in an RFP evaluation matrix is to:",
+    "options": {
+      "a": "Assign it the lowest possible weight to focus on quality",
+      "b": "Have the committee vote on whose price seems most fair",
+      "c": "Use an objective mathematical formula where the lowest responsive price automatically receives the maximum allotted points for cost",
+      "d": "Eliminate the highest and lowest prices and score only the median price"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Unlike qualitative factors, cost should be scored using an objective mathematical formula. The lowest price typically receives 100% of the possible cost points, with higher prices receiving a proportionally lower score.",
+    "section_id": null
+  },
+  {
+    "question_number": 76,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "Many jurisdictions incorporate Local Preference policies into their IFBs or RFPs. What is the standard purpose of these policies?",
+    "options": {
+      "a": "To entirely exclude out-of-state vendors from submitting bids",
+      "b": "To apply a specific percentage discount to a local vendor's bid price for evaluation purposes to encourage local economic development",
+      "c": "To ensure local vendors do not have to pay performance bonds",
+      "d": "To waive all insurance requirements for vendors located within the city limits"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Local preference laws generally provide a competitive advantage to businesses located within the jurisdiction's boundaries by applying a mathematical discount or point bonus during evaluation, aiming to recirculate tax dollars locally.",
+    "section_id": null
+  },
+  {
+    "question_number": 77,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "Before access to RFP proposals is granted, what crucial document must every member of an evaluation committee sign to preserve the integrity of the procurement?",
+    "options": {
+      "a": "A Notice of Intent to Award",
+      "b": "A Non-Disclosure and Conflict of Interest Declaration form",
+      "c": "A Cooperative Purchasing Agreement",
+      "d": "A Surety Bond"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Evaluators must certify that they do not have personal, financial, or relational conflicts of interest with any of the proposing vendors, and they must agree to keep proposal contents confidential during the evaluation process.",
+    "section_id": null
+  },
+  {
+    "question_number": 78,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Evaluation Criteria",
+    "question_text": "Which of the following would be considered a highly subjective evaluation criterion in an RFP?",
+    "options": {
+      "a": "Total life-cycle cost of the equipment",
+      "b": "The vendor possesses ISO 9001 certification",
+      "c": "The creativity and visual appeal of the proposed marketing campaign",
+      "d": "Number of similar projects completed in the last five years"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Creativity and visual appeal are subjective because they rely on the personal judgment, tastes, and opinions of the evaluators, unlike quantifiable metrics like certifications or costs.",
+    "section_id": null
+  },
+  {
+    "question_number": 79,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "The primary purpose of requiring a Bid Bond (Bid Security) in a formal solicitation is to:",
+    "options": {
+      "a": "Guarantee that the project will be completed on time",
+      "b": "Ensure that subcontractors will be paid if the prime contractor defaults",
+      "c": "Protect the agency against a bidder refusing to execute the contract at their submitted bid price",
+      "d": "Fund the agency's procurement department overhead"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A bid bond provides a financial guarantee that if the bidder is selected for award, they will honor their bid and sign the contract. If they back out, the bond compensates the agency for the difference in cost to award to the next lowest bidder.",
+    "section_id": null
+  },
+  {
+    "question_number": 80,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "A contractor is halfway through building a new fire station when they file for bankruptcy and walk off the job. Which form of financial security will step in to ensure the project is completed at no additional cost to the agency?",
+    "options": {
+      "a": "Payment Bond",
+      "b": "General Liability Insurance",
+      "c": "Performance Bond",
+      "d": "Bid Bond"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Performance Bond protects the agency by guaranteeing that the contract will be executed according to the terms and specifications. If the contractor defaults, the surety company is responsible for completing the project.",
+    "section_id": null
+  },
+  {
+    "question_number": 81,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "Under the Miller Act (and state-level Little Miller Acts), which bond is legally mandated for public construction projects exceeding specific thresholds to protect suppliers and subcontractors?",
+    "options": {
+      "a": "Performance Bond",
+      "b": "Payment Bond",
+      "c": "Fidelity Bond",
+      "d": "Completion Bond"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Miller Act requires a Payment Bond on federal construction contracts over a certain amount (mirrored by state laws) to guarantee that all laborers, material suppliers, and subcontractors will be paid, preventing liens on public property.",
+    "section_id": null
+  },
+  {
+    "question_number": 82,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "To verify that a vendor maintains adequate workers' compensation and commercial general liability coverage, an agency requires the vendor to submit a:",
+    "options": {
+      "a": "Statement of Qualifications",
+      "b": "W-9 Form",
+      "c": "Certificate of Insurance (COI)",
+      "d": "Letter of Credit"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Certificate of Insurance (COI) is the standard document issued by an insurance company verifying the existence of insurance policies, coverage amounts, and effective dates for the vendor.",
+    "section_id": null
+  },
+  {
+    "question_number": 83,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "A public agency typically requires vendors to name the agency as an 'Additional Insured' on their General Liability policy. What does this accomplish?",
+    "options": {
+      "a": "It makes the agency responsible for paying the vendor's insurance premiums",
+      "b": "It allows the agency's own employees to file claims against the agency",
+      "c": "It extends the vendor's insurance coverage to protect the agency from liability arising out of the vendor's operations under the contract",
+      "d": "It replaces the need for a performance bond entirely"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Naming the agency as an Additional Insured provides direct rights under the vendor's policy, meaning the vendor's insurance will cover and defend the agency if the agency is sued due to the vendor's negligence.",
+    "section_id": null
+  },
+  {
+    "question_number": 84,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "Which standard disclosure form requires bidders to swear under oath that their bid was formulated independently, without secret agreements or price-fixing with competitors?",
+    "options": {
+      "a": "Anti-Lobbying Certificate",
+      "b": "Non-Collusion Affidavit",
+      "c": "Debarment and Suspension Certification",
+      "d": "E-Verify Affidavit"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Non-Collusion Affidavit is a legal document signed by the bidder affirming that they did not participate in any price-fixing, bid-rigging, or anti-competitive behavior while preparing their bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 85,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Solicitation Assembly - Forms & Bonding",
+    "question_text": "Which industry type most heavily and consistently requires Bid, Performance, and Payment bonds in public procurement?",
+    "options": {
+      "a": "Information Technology Hardware",
+      "b": "Professional Consulting Services",
+      "c": "Facilities Construction and Public Works",
+      "d": "Janitorial Commodity Supplies"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Bonds (Bid, Performance, Payment) are heavily utilized and statutorily mandated primarily in the construction and public works industries due to the high financial risk and complexity of such projects.",
+    "section_id": null
+  },
+  {
+    "question_number": 86,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Advertising",
+    "question_text": "What is the primary legal purpose of posting a public notice or advertisement for a formal IFB or RFP?",
+    "options": {
+      "a": "To provide public notification ensuring a fair, transparent opportunity for all qualified vendors to compete",
+      "b": "To inform internal departments of the procurement timeline",
+      "c": "To survey the general public on budget usage",
+      "d": "To permanently restrict international suppliers"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Publicly advertising solicitations fulfills legal mandates for transparency and ensures that every interested, qualified vendor in the market has a fair opportunity to bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 87,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Advertising",
+    "question_text": "Most local and state statutes require an agency to advertise a formal solicitation for a minimum number of days before the bid opening. If a statute requires 14 days, when does this timeline officially begin?",
+    "options": {
+      "a": "The date the requisition is approved by finance",
+      "b": "The date the solicitation document is first published/made available to the public",
+      "c": "The date the first vendor downloads the document",
+      "d": "The date of the mandatory pre-bid conference"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Statutory advertising timelines start strictly on the first day the advertisement hits the designated publication (e.g., newspaper, eProcurement portal) making the document publicly available.",
+    "section_id": null
+  },
+  {
+    "question_number": 88,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Advertising",
+    "question_text": "A buyer utilizing an eProcurement system sends direct email invitations to bid to a registered 'bidder's list.' To comply with full and open competition rules, the buyer must also:",
+    "options": {
+      "a": "Guarantee at least one vendor on the list wins",
+      "b": "Ensure the opportunity is also posted publicly for any non-registered vendors to discover and participate",
+      "c": "Charge a fee to any vendor not on the original list",
+      "d": "Refuse bids from anyone who was not directly emailed"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "While directly inviting known vendors is a great sourcing practice, formal public procurement requires that the opportunity also be posted publicly so that unknown or new vendors have equal opportunity to compete.",
+    "section_id": null
+  },
+  {
+    "question_number": 89,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Advertising",
+    "question_text": "When structuring a solicitation's outreach strategy, sending specific notifications to minority-owned, women-owned, and veteran-owned businesses is a practice associated with:",
+    "options": {
+      "a": "Supplier Diversity Programs",
+      "b": "Qualification-Based Selection",
+      "c": "Restricted Sourcing",
+      "d": "Single Source Procurement"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Supplier diversity initiatives encourage broad outreach to disadvantaged, minority, women, and veteran-owned business enterprises (M/WBE/DBE) to ensure they are aware of and participate in government contracting opportunities.",
+    "section_id": null
+  },
+  {
+    "question_number": 90,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Advertising",
+    "question_text": "To increase international competition, larger government procurements (especially federal or those using federal funds) may require publication in broad portals such as:",
+    "options": {
+      "a": "A local neighborhood newsletter",
+      "b": "SAM.gov or specialized trade journals",
+      "c": "The agency's internal intranet page",
+      "d": "Social media groups exclusively"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Large-scale procurements, particularly those subject to federal regulations or treaties, require publication in widely accessible, official centralized platforms like SAM.gov to ensure broad domestic and international access.",
+    "section_id": null
+  },
+  {
+    "question_number": 91,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Pre-Bid Meetings",
+    "question_text": "An agency is hosting a highly complex IT infrastructure procurement. The buyer decides to hold a Pre-Proposal Conference and designates it as 'Mandatory.' What is the direct consequence for a vendor who fails to attend?",
+    "options": {
+      "a": "Their proposal will be evaluated with a 10% penalty",
+      "b": "They are prohibited from submitting a proposal, and any submission they make will be rejected as non-responsive",
+      "c": "They must write an apology letter to the procurement director",
+      "d": "They can substitute attendance by sending an email the following day"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When a pre-bid or pre-proposal conference is explicitly designated as 'Mandatory,' attendance is a prerequisite for bidding. Any bids from absent vendors must be automatically rejected to ensure fairness.",
+    "section_id": null
+  },
+  {
+    "question_number": 92,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Pre-Bid Meetings",
+    "question_text": "During an optional pre-bid conference, a vendor asks a highly technical question about the specifications. The project manager gives a verbal answer that slightly changes the published specification. As the buyer, how must you handle this?",
+    "options": {
+      "a": "Do nothing, since all attendees heard the answer verbally",
+      "b": "Inform the group that verbal statements are not binding, and a formal written addendum must be issued to officially change the specification",
+      "c": "Ask the vendor to write the addendum for the agency",
+      "d": "Cancel the bid completely because specifications cannot be altered"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A foundational rule of public procurement is that verbal instructions or answers provided during a pre-bid conference do not alter the bid document. Changes are only official when issued in a formal written addendum.",
+    "section_id": null
+  },
+  {
+    "question_number": 93,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Pre-Bid Meetings",
+    "question_text": "Why might a buyer choose to make a site visit 'Optional' rather than 'Mandatory' for a standard commercial service like window washing?",
+    "options": {
+      "a": "To reduce the risk of accidentally exposing the vendors to each other",
+      "b": "To minimize restrictive barriers to entry, thereby maximizing the number of competitors",
+      "c": "To avoid issuing any addenda",
+      "d": "To guarantee that out-of-state vendors will win the award"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Mandatory meetings restrict competition by automatically eliminating anyone who cannot attend. Making visits optional ensures more vendors can bid, which is appropriate for routine, straightforward tasks where seeing the site isn't strictly necessary for a valid bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 94,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Addenda",
+    "question_text": "What is a Procurement Addendum?",
+    "options": {
+      "a": "The final contract document signed by both parties",
+      "b": "A formal, written modification or clarification to the solicitation documents issued before the bid opening date",
+      "c": "An invoice sent by the vendor",
+      "d": "A post-award change order to adjust pricing"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An Addendum (or Amendment) is the only legally binding mechanism used to clarify, correct, or change the contents of a solicitation while it is actively out on the street prior to the due date.",
+    "section_id": null
+  },
+  {
+    "question_number": 95,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Addenda",
+    "question_text": "If a buyer receives a critical, clarifying question from Vendor A regarding ambiguous specs via email, the buyer should:",
+    "options": {
+      "a": "Reply directly to Vendor A so they have an advantage",
+      "b": "Call Vendor A to provide an off-the-record explanation",
+      "c": "Draft a formal addendum containing the question and answer, and distribute it to all plan-holders/registered vendors",
+      "d": "Ignore the question if the answer is difficult"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "To maintain a level playing field, if an ambiguity is identified by one vendor, the clarification must be distributed to all potential bidders simultaneously via an addendum.",
+    "section_id": null
+  },
+  {
+    "question_number": 96,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Addenda",
+    "question_text": "An agency issues a major addendum completely overhauling the required pricing sheet just 48 hours before the scheduled public bid opening. What is the most appropriate action for the buyer to take?",
+    "options": {
+      "a": "Maintain the original opening date and tell vendors to work quickly",
+      "b": "Issue a subsequent addendum extending the bid opening date to give vendors adequate time to adjust their pricing",
+      "c": "Accept late bids up to three days after the opening",
+      "d": "Permit vendors to submit the old pricing sheet and negotiate later"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When a material change is made close to the due date, best practice (and often statute) requires the agency to extend the due date to ensure vendors have sufficient time to formulate accurate, responsible bids.",
+    "section_id": null
+  },
+  {
+    "question_number": 97,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Addenda",
+    "question_text": "During bid evaluation, the buyer notices that the lowest bidder failed to sign or return the acknowledgment of Addendum #1. Addendum #1 added a requirement for a high-cost warranty. How should this be handled?",
+    "options": {
+      "a": "Call the vendor and let them email the acknowledgment",
+      "b": "Assume they read it and proceed to award",
+      "c": "Deem the bid non-responsive because the unacknowledged addendum materially affected price and liability",
+      "d": "Deduct points from their evaluation score"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Failing to acknowledge a material addendum (one that impacts price, quantity, quality, or delivery) means the vendor has not agreed to the new terms, rendering their bid non-responsive. Waiving this would give them an unfair pricing advantage over others who included the warranty cost.",
+    "section_id": null
+  },
+  {
+    "question_number": 98,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Solicitation Close",
+    "question_text": "The strict deadline for an IFB is published as 2:00:00 PM local time. A vendor hands their physical bid package to the procurement receptionist at 2:02 PM, claiming there was heavy traffic. According to standard procurement law, the buyer must:",
+    "options": {
+      "a": "Accept the bid because traffic is a valid excuse",
+      "b": "Reject the bid as late and return it unopened to the vendor",
+      "c": "Open the bid but add a $500 penalty to the price",
+      "d": "Delay the opening for all other vendors by 5 minutes"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In competitive sealed bidding, the time deadline is absolute. Bids received after the exact time must be rejected as late and returned unopened to preserve the integrity of the competitive process.",
+    "section_id": null
+  },
+  {
+    "question_number": 99,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Solicitation Close",
+    "question_text": "Under which highly specific exception might a 'late' physical bid occasionally be accepted in some jurisdictions?",
+    "options": {
+      "a": "If the vendor's CEO personally delivered it",
+      "b": "If the delay was solely caused by the agency's own mishandling of the package after it arrived on time at the agency's mailroom",
+      "c": "If the vendor's price is extremely low",
+      "d": "If the courier company experienced a mechanical failure"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "While late bids are strictly rejected, many jurisdictions allow an exception only if the bidder can irrefutably prove the bid arrived at the government facility on time, but was delayed reaching the bid room solely due to government staff error.",
+    "section_id": null
+  },
+  {
+    "question_number": 100,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Solicitation Close",
+    "question_text": "Before the public bid opening, what is the critical responsibility of the procurement officer regarding received physical or electronic sealed bids?",
+    "options": {
+      "a": "To pre-read the bids and verify the math",
+      "b": "To keep the bids securely locked, sealed, and confidential to prevent premature disclosure of pricing",
+      "c": "To send a summary of prices to the requesting department",
+      "d": "To ask the vendors if they want to lower their prices"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Maintaining the integrity of the sealed process is paramount. Bids must remain absolutely secured and unread until the exact moment of the public bid opening to prevent leaks or tampering.",
+    "section_id": null
+  },
+  {
+    "question_number": 101,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Opening",
+    "question_text": "At exactly 2:00 PM, a procurement officer commences the public bid opening for an IFB. What actions are typically performed during this event?",
+    "options": {
+      "a": "The proposals are read aloud, evaluated for technical merit, and awarded immediately",
+      "b": "The name of each bidder and their total submitted price are read aloud to the public, and a bid tabulation is created",
+      "c": "The procurement officer negotiates the prices downward in front of the audience",
+      "d": "Vendors are allowed to alter their pricing based on what the first vendor bid"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A public bid opening is an administrative function of transparency where bids are unsealed, and the vendor names and bid amounts are read aloud and recorded on a tabulation sheet. No evaluation or award occurs at the opening.",
+    "section_id": null
+  },
+  {
+    "question_number": 102,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Opening",
+    "question_text": "If an agency discovers a significant error in the solicitation document on the morning of the bid opening, the most appropriate ethical and legal action is to:",
+    "options": {
+      "a": "Proceed with the opening and fix the error later during contract negotiation",
+      "b": "Open the bids privately, fix the error, and ask vendors to re-price secretly",
+      "c": "Formally postpone the bid opening via an urgent addendum to allow time to correct the error and give vendors a chance to adjust their bids",
+      "d": "Award to the vendor who noticed the error first"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If a critical error is found before opening, the process must be paused. The opening should be officially postponed (extended) to issue a corrective addendum, ensuring all vendors bid on accurate, fair specifications.",
+    "section_id": null
+  },
+  {
+    "question_number": 103,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Opening",
+    "question_text": "How does a public opening for an RFP (Request for Proposals) generally differ from a public opening for an IFB (Invitation for Bids)?",
+    "options": {
+      "a": "RFP openings do not happen at all",
+      "b": "Only the names of the proposers are read aloud at an RFP opening to protect trade secrets and negotiations; prices are usually kept confidential until notice of award",
+      "c": "RFP openings require the vendors to read their own proposals aloud",
+      "d": "There is no difference; prices and technical approaches are read aloud for both"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Because RFPs involve subjective evaluations, trade secrets, and eventual negotiations, typically only the names of the submitting vendors are read aloud at the closing. Prices and proposal details are shielded from competitors until the evaluation/negotiation phase concludes.",
+    "section_id": null
+  },
+  {
+    "question_number": 104,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Addenda",
+    "question_text": "A vendor submits a written question asking for clarification on the packaging requirements. The buyer realizes the answer is already clearly stated on page 14 of the IFB. How should the buyer proceed?",
+    "options": {
+      "a": "Issue an addendum answering the question and pointing to page 14 to ensure all vendors have clarity",
+      "b": "Ignore the question since the vendor obviously didn't read the document",
+      "c": "Reject the vendor's eventual bid because they showed a lack of understanding",
+      "d": "Wait until the pre-bid conference and only mention it if asked again"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Even if the answer is already in the document, best practice dictates addressing all formal questions submitted prior to the deadline via an addendum, simply citing the existing section to reinforce clarity and maintain transparency for all potential bidders.",
+    "section_id": null
+  },
+  {
+    "question_number": 105,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Managing the Process - Solicitation Close",
+    "question_text": "A massive winter storm shuts down government operations and mail delivery on the day an IFB is scheduled to close. Under standard procedures, what happens to the bid opening?",
+    "options": {
+      "a": "The bids are considered cancelled and the process starts over in the spring",
+      "b": "The bid deadline is automatically pushed to the same time on the next official government business day the office is open",
+      "c": "The procurement director opens them at home via email",
+      "d": "Vendors must navigate the storm to deliver it on time or face rejection"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If a government facility is officially closed due to an emergency or inclement weather on a bid due date, statutes and policies universally extend the deadline to the next official business day at the original stated time.",
+    "section_id": null
+  },
+  {
+    "question_number": 106,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Responsiveness",
+    "question_text": "During the evaluation of an IFB, it is discovered that the apparent lowest bidder failed to sign the official bid certification form. According to standard public procurement law, the buyer must:",
+    "options": {
+      "a": "Call the vendor to come in and sign it immediately",
+      "b": "Reject the bid as non-responsive because a missing signature represents a failure to be legally bound to the offer",
+      "c": "Waive the missing signature as a minor informality",
+      "d": "Accept the bid but hold the vendor's bid bond until they sign"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A signature on a bid form is a material requirement that legally binds the vendor to the terms and prices offered. Failure to sign renders the bid non-responsive and cannot be waived.",
+    "section_id": null
+  },
+  {
+    "question_number": 107,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Responsibility",
+    "question_text": "A vendor submitted a flawless, correctly signed bid with the lowest price. However, a routine Dun & Bradstreet financial check reveals they filed for Chapter 7 bankruptcy liquidation the day before the bid opened. The buyer should determine this vendor to be:",
+    "options": {
+      "a": "Non-responsive",
+      "b": "Non-responsible",
+      "c": "Ineligible for future state contracts",
+      "d": "Technically unacceptable"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Responsibility refers to the bidder's financial, technical, and physical capability to perform the contract. A firm in Chapter 7 bankruptcy lacks the financial capacity to be deemed responsible.",
+    "section_id": null
+  },
+  {
+    "question_number": 108,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Principles",
+    "question_text": "What is the defining distinction between 'Responsiveness' and 'Responsibility' in public procurement?",
+    "options": {
+      "a": "Responsiveness relates strictly to price; Responsibility relates to quality",
+      "b": "Responsiveness refers to the vendor's historical performance; Responsibility refers to their future plans",
+      "c": "Responsiveness focuses on whether the submitted document conforms to the bid's exact rules and specifications; Responsibility focuses on whether the vendor has the capability and integrity to perform the work",
+      "d": "There is no distinction; they are interchangeable legal terms"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Responsiveness is about the bid itself (did it follow the rules, include forms, meet specs?). Responsibility is about the bidder (do they have the money, equipment, and ethical standing to do the job?).",
+    "section_id": null
+  },
+  {
+    "question_number": 109,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Minor Informalities",
+    "question_text": "A vendor submits their physical bid on time and meets all material requirements, but provides three copies of the bid instead of the four requested in the instructions. How should the procurement officer handle this?",
+    "options": {
+      "a": "Waive the issue as a minor informality or irregularity, as it does not affect price, quantity, or quality",
+      "b": "Reject the bid as entirely non-responsive",
+      "c": "Penalize the vendor's final evaluation score by 5 points",
+      "d": "Cancel the solicitation and re-bid to ensure fairness"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A minor informality is an error or omission that does not prejudice other bidders or materially affect the price, quality, quantity, or delivery of the goods/services. It can and should be waived by the agency.",
+    "section_id": null
+  },
+  {
+    "question_number": 110,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Responsibility",
+    "question_text": "While evaluating a federally funded infrastructure bid, the procurement officer checks the federal SAM.gov database and finds the lowest bidder is listed as 'Suspended.' What action is required?",
+    "options": {
+      "a": "The bidder must be given 10 days to resolve their suspension",
+      "b": "The bid must be rejected because the vendor is not responsible and is ineligible to receive federal funds",
+      "c": "The agency can proceed with award if they secure a waiver from the mayor",
+      "d": "The vendor's bid is processed normally but requires a larger performance bond"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A suspended or debarred vendor is legally excluded from receiving public contracts. They lack the requisite integrity and responsibility, meaning the agency must reject their bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 111,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Evaluation Committees",
+    "question_text": "During an RFP evaluation, an evaluation committee member realizes their spouse is an executive at one of the firms that submitted a proposal. What is the immediate required action?",
+    "options": {
+      "a": "The member must simply score that particular vendor objectively",
+      "b": "The member must disclose the conflict of interest immediately and recuse themselves from the evaluation committee entirely",
+      "c": "The member may evaluate the proposals but must skip scoring that specific vendor",
+      "d": "The vendor's proposal must be automatically disqualified"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Any actual or perceived conflict of interest must be disclosed immediately, and the compromised evaluator must be removed from the committee to maintain the integrity of the procurement process.",
+    "section_id": null
+  },
+  {
+    "question_number": 112,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Evaluation Committees",
+    "question_text": "When conducting technical evaluation committee meetings, standard best practice to arrive at a fair final score for each proposal is to:",
+    "options": {
+      "a": "Have the procurement officer dictate the scores to ensure mathematical accuracy",
+      "b": "Allow the requesting department director to override the committee's scores",
+      "c": "Have evaluators score independently first, then meet to discuss variances and achieve a consensus score or allow score revisions based on group fact-finding",
+      "d": "Force evaluators to debate until all individual scores are identical"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Best practice involves independent review followed by a group consensus meeting where evaluators can discuss their findings, ensure nothing was missed, and optionally adjust their scores based on clarified facts before final tallying.",
+    "section_id": null
+  },
+  {
+    "question_number": 113,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Cost/Price Analysis",
+    "question_text": "An agency is evaluating three quotes for commercial off-the-shelf software. The buyer compares the bottom-line totals of the quotes against each other and against historical pricing paid last year. This technique is formally known as:",
+    "options": {
+      "a": "Cost Analysis",
+      "b": "Life-Cycle Costing",
+      "c": "Value Analysis",
+      "d": "Price Analysis"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Price Analysis is the process of comparing the total bottom-line price of a product or service against market data, historical prices, or competing bids without examining the individual components of the cost.",
+    "section_id": null
+  },
+  {
+    "question_number": 114,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Cost/Price Analysis",
+    "question_text": "A procurement officer asks a vendor to submit a detailed breakdown of their direct labor rates, raw material costs, overhead multipliers, and profit margin. The officer is preparing to conduct a:",
+    "options": {
+      "a": "Market Survey",
+      "b": "Cost Analysis",
+      "c": "Price Analysis",
+      "d": "Qualification-Based Selection"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Cost Analysis is the evaluation of the separate, specific elements that make up a vendor's total price (labor, materials, overhead, profit) to determine if they are fair and reasonable.",
+    "section_id": null
+  },
+  {
+    "question_number": 115,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Cost/Price Analysis",
+    "question_text": "Under which sourcing scenario is conducting a detailed Cost Analysis most critical?",
+    "options": {
+      "a": "When procuring standard office supplies via an IFB",
+      "b": "When a Sole Source contract is being negotiated, as no market competition exists to validate the final price",
+      "c": "When conducting an RFQ for micro-purchases under $1,000",
+      "d": "When buying fuel using daily commodity market index pricing"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Because sole source procurements lack market competition to naturally drive prices to a fair level, the buyer must rely on Cost Analysis to ensure the vendor isn't taking advantage of the monopoly and inflating profit margins.",
+    "section_id": null
+  },
+  {
+    "question_number": 116,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Low Bids",
+    "question_text": "A bidder submits a price that is drastically lower than the agency's engineer estimate and 50% lower than the next competitor. What is the primary risk to the public agency if it blindly awards to this abnormally low bid?",
+    "options": {
+      "a": "The agency will face audits for saving too much money",
+      "b": "The vendor may realize their error and default, walk off the job, or attempt to cut corners on quality to mitigate their financial losses",
+      "c": "The procurement officer's salary will be reduced",
+      "d": "The vendor will automatically be reclassified as a sole source"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Abnormally low bids carry severe risk of non-performance. A vendor who bids too low to cover costs is highly likely to default or deliver substandard work, ultimately costing the agency more in delays and re-bidding.",
+    "section_id": null
+  },
+  {
+    "question_number": 117,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Unbalanced Bids",
+    "question_text": "During bid tabulation for a road project, the buyer notes the vendor priced 'Phase 1: Mobilization' at an exorbitant rate, but priced 'Phase 4: Final Paving' at pennies. The overall total price makes them the low bidder. This pricing strategy is known as:",
+    "options": {
+      "a": "Front-end loading or unbalanced bidding",
+      "b": "Collusive bidding",
+      "c": "Value engineering",
+      "d": "Life-cycle cost optimization"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Unbalanced bidding (specifically front-end loading) occurs when a contractor artificially inflates the prices of early work items and deflates later items to receive advance working capital early in the project.",
+    "section_id": null
+  },
+  {
+    "question_number": 118,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Unbalanced Bids",
+    "question_text": "An unbalanced bid should typically be rejected as non-responsive if it is deemed 'Materially Unbalanced.' A bid is materially unbalanced when:",
+    "options": {
+      "a": "The numbers on the page are not aligned correctly",
+      "b": "There is a reasonable doubt that awarding to the bidder will result in the lowest ultimate cost to the agency",
+      "c": "The bidder requires a 30-day payment term instead of 45 days",
+      "d": "The vendor's profit margin exceeds 10%"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A bid is materially unbalanced if the skewed pricing structures pose an unacceptable financial risk, creating doubt that the superficially low total bid will actually yield the lowest final cost to the government.",
+    "section_id": null
+  },
+  {
+    "question_number": 119,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Responsiveness",
+    "question_text": "In response to a sealed IFB, a vendor includes a cover letter stating that their price is valid only if the agency deletes the 'Liquidated Damages' clause. How must the buyer respond?",
+    "options": {
+      "a": "Accept the bid but ignore the letter",
+      "b": "Reject the bid as non-responsive because the vendor took exception to material terms and conditions",
+      "c": "Negotiate the clause since they are the lowest bidder",
+      "d": "Forward the letter to the agency's legal counsel to redraft the contract"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In an IFB, taking exception to material terms and conditions or attempting to impose counter-offers renders the bid conditionally qualified, which is legally non-responsive and must be rejected.",
+    "section_id": null
+  },
+  {
+    "question_number": 120,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Responsibility",
+    "question_text": "If a procurement officer asks the apparent lowest bidder to provide three professional references and an audited financial statement five days after the bid opening, the officer is verifying the vendor's:",
+    "options": {
+      "a": "Responsiveness",
+      "b": "Responsibility",
+      "c": "Unbalanced pricing",
+      "d": "Collusion risk"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Responsiveness is judged at the exact time of bid opening based on the document submitted. Responsibility (capability, finances, past performance) can be investigated and verified after the bid opening prior to award.",
+    "section_id": null
+  },
+  {
+    "question_number": 121,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Ties",
+    "question_text": "Following a rigorous RFP evaluation, the evaluation committee calculates the final scores. Vendor A and Vendor B have exactly the same total score out of 1000 points. What is the appropriate mechanism to resolve this tie?",
+    "options": {
+      "a": "Ask the requesting department director to choose their favorite",
+      "b": "Apply the agency's formal tie-breaking procedure (e.g., local preference, coin toss) as defined by statute or policy",
+      "c": "Award the contract to the vendor who submitted their proposal first",
+      "d": "Cancel the RFP entirely"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Ties must be broken systematically using objective, predetermined methods established by agency policy or state statute, such as granting preference to an in-state vendor, a certified minority vendor, or drawing lots.",
+    "section_id": null
+  },
+  {
+    "question_number": 122,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Minor Informalities",
+    "question_text": "A vendor forgets to sign and return the acknowledgment form for Addendum #3. Addendum #3 only contained a correction to a misspelled word in the background section of the IFB. What is the standard action?",
+    "options": {
+      "a": "Reject the bid as strictly non-responsive",
+      "b": "Waive the failure to acknowledge the addendum as a minor informality since it had no impact on price, quantity, quality, or delivery",
+      "c": "Delay the award for 30 days to allow them to sign it",
+      "d": "Deduct the cost of the addendum from their bid"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "While failing to acknowledge material addenda causes a bid to be non-responsive, an addendum that is purely administrative or informational (like fixing a typo) can be waived as a minor informality.",
+    "section_id": null
+  },
+  {
+    "question_number": 123,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Evaluation Committees",
+    "question_text": "What is the primary role of the Procurement Officer during an RFP technical evaluation committee meeting?",
+    "options": {
+      "a": "To serve as the tie-breaking vote on technical quality",
+      "b": "To aggressively argue for the vendor with the lowest price",
+      "c": "To act as a neutral facilitator, ensuring the committee adheres to the RFP evaluation criteria, follows procurement law, and documents their decisions properly",
+      "d": "To dictate the final scores to the end-users"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Procurement Officer acts as a procedural guide and compliance officer. They ensure fairness, guard against bias, and ensure evaluations strictly follow the published rubric. They typically do not score the technical aspects themselves.",
+    "section_id": null
+  },
+  {
+    "question_number": 124,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Responsibility",
+    "question_text": "A vendor submits the lowest bid for a lawn maintenance contract. However, the agency terminated this exact vendor for cause six months ago for failing to cut the grass on multiple city properties. The buyer rejects the bid based on:",
+    "options": {
+      "a": "The vendor being non-responsive",
+      "b": "The vendor lacking responsibility due to documented poor past performance",
+      "c": "The bid being an unbalanced offer",
+      "d": "The vendor lacking a bid bond"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Past performance is a critical element of vendor responsibility. Documented failure to perform on recent agency contracts provides a valid legal basis to declare a vendor non-responsible for future awards of a similar nature.",
+    "section_id": null
+  },
+  {
+    "question_number": 125,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Discrepancies",
+    "question_text": "On a manual paper bid, a vendor's pricing sheet states the total price in handwritten words as 'Four thousand dollars,' but writes the numerical figure next to it as '$40,000'. Under standard commercial and procurement rules, which price governs?",
+    "options": {
+      "a": "The numerical figure ($40,000)",
+      "b": "The handwritten words ('Four thousand dollars')",
+      "c": "The median between the two ($22,000)",
+      "d": "The bid is automatically discarded as fraudulent"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Standard contract law and Uniform Commercial Code (UCC) principles dictate that when there is a discrepancy between words and numbers expressing an amount, the written words prevail over the numbers.",
+    "section_id": null
+  },
+  {
+    "question_number": 126,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Discrepancies",
+    "question_text": "During bid tabulation, the buyer notices a math error on Vendor A's bid. The unit price for an item is $5, the quantity is 10, but the vendor wrote $500 in the extended total column. According to standard procurement practice, how is this handled?",
+    "options": {
+      "a": "The bid is rejected for math errors",
+      "b": "The extended price of $500 is binding",
+      "c": "The unit price of $5 governs, and the agency corrects the extended price to $50",
+      "d": "The vendor is allowed to submit a new price"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In public bidding, the unit price represents the true intent of the offer. If there is a mathematical error in the extension (multiplication), the unit price governs and the total is corrected.",
+    "section_id": null
+  },
+  {
+    "question_number": 127,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Price Indexes",
+    "question_text": "An incumbent vendor requests a 6% price increase upon contract renewal, citing rising raw material costs. To conduct an objective price analysis to determine if this increase is fair, the buyer should compare the request against the:",
+    "options": {
+      "a": "Producer Price Index (PPI) or Consumer Price Index (CPI)",
+      "b": "Vendor's internal payroll records",
+      "c": "Gross Domestic Product (GDP)",
+      "d": "Federal Reserve interest rate"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The Producer Price Index (PPI) measures the average change over time in the selling prices received by domestic producers for their output, making it the standard tool for verifying inflation-based price increase requests.",
+    "section_id": null
+  },
+  {
+    "question_number": 128,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Discounts",
+    "question_text": "A bidder submits a price of $100,000 but includes a '2% / 10 days, Net 30' prompt payment discount. Unless the solicitation specifically states otherwise, how is this discount evaluated when determining the lowest bidder?",
+    "options": {
+      "a": "The bid is evaluated as $98,000",
+      "b": "The discount is ignored for evaluation purposes, and the bid is evaluated at $100,000",
+      "c": "The bid is deemed non-responsive for offering conditional pricing",
+      "d": "The discount is converted into bonus technical points"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Standard public procurement practice mandates that prompt payment discounts are NOT considered in determining the low bid because the agency cannot guarantee its accounts payable department will process the invoice within 10 days. The gross amount is evaluated.",
+    "section_id": null
+  },
+  {
+    "question_number": 129,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Substitutions",
+    "question_text": "An IFB allows for a 'Brand Name or Equal' product. A vendor submits a bid with a much cheaper substitute brand but fails to include the requested technical literature proving the substitute meets the salient characteristics. The buyer should:",
+    "options": {
+      "a": "Conduct their own internet research to see if it is equal",
+      "b": "Deem the bid non-responsive because equivalency cannot be verified at the time of bid opening",
+      "c": "Award the bid, then test the product upon delivery",
+      "d": "Assume it is equal since the vendor signed the bid form"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When offering an 'equal' product, the burden of proof rests entirely on the bidder to provide descriptive literature with their bid. Failure to do so renders the bid non-responsive as the agency cannot evaluate the offer.",
+    "section_id": null
+  },
+  {
+    "question_number": 130,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Evaluating Responses - Clarifications",
+    "question_text": "During an RFP evaluation, the procurement officer emails a vendor to ask if the '100 hours' listed on page 5 was a typo and should have read '1,000 hours' to match the pricing table. The vendor is not allowed to change their price. This communication is called a:",
+    "options": {
+      "a": "Negotiation",
+      "b": "Clarification",
+      "c": "Best and Final Offer",
+      "d": "Technical Transfusion"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Clarifications are limited exchanges between the government and proposers intended to resolve minor clerical errors or ambiguities without allowing the vendor to alter their proposal or price.",
+    "section_id": null
+  },
+  {
+    "question_number": 131,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - When Permitted",
+    "question_text": "Under standard public procurement principles, in which competitive method is the negotiation of scope, specifications, or terms strictly prohibited prior to award?",
+    "options": {
+      "a": "Sole Source Procurement",
+      "b": "Qualification-Based Selection (QBS)",
+      "c": "Request for Proposals (RFP)",
+      "d": "Invitation for Bids (IFB)"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Competitive sealed bidding (IFB) requires an award to the lowest responsive and responsible bidder exactly as specified in the bid documents. Post-bid negotiation is fundamentally prohibited to maintain a fair, apples-to-apples sealed process.",
+    "section_id": null
+  },
+  {
+    "question_number": 132,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - BATNA",
+    "question_text": "In the context of procurement negotiations, what does the acronym BATNA represent?",
+    "options": {
+      "a": "Bid Award Technical Needs Assessment",
+      "b": "Best Alternative to a Negotiated Agreement",
+      "c": "Budget Allocated Target Negotiation Amount",
+      "d": "Basic Administrative Tools for Negotiating Agreements"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "BATNA (Best Alternative to a Negotiated Agreement) is the most advantageous alternative course of action a party can take if negotiations fail and an agreement cannot be reached.",
+    "section_id": null
+  },
+  {
+    "question_number": 133,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - BATNA",
+    "question_text": "Why is establishing a strong BATNA critical before entering negotiations with a sole source vendor?",
+    "options": {
+      "a": "It legally forces the vendor to lower their price",
+      "b": "It determines the maximum profit the vendor can make",
+      "c": "It identifies the agency's 'walk-away' point and alternatives, preventing the agency from accepting a bad deal out of desperation",
+      "d": "It waives the requirement to post a contract award notice"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Without a BATNA, a buyer negotiating with a monopoly (sole source) has no leverage. Knowing the alternative (e.g., using an older system, delaying the project, redesigning the need) gives the buyer the power to walk away from unreasonable demands.",
+    "section_id": null
+  },
+  {
+    "question_number": 134,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Tactics",
+    "question_text": "During RFP negotiations, a vendor opens the discussion by stating a software implementation fee of $500,000, which they know is extremely high. They do this so that their subsequent 'discount' to $300,000 seems generous. This psychological tactic is known as:",
+    "options": {
+      "a": "Anchoring",
+      "b": "The Bogey",
+      "c": "Good Cop/Bad Cop",
+      "d": "Technical Leveling"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Anchoring is a cognitive bias tactic where one party sets a high initial extreme value. This 'anchor' shifts the reference point of the negotiation, making subsequent, slightly lower offers appear more reasonable.",
+    "section_id": null
+  },
+  {
+    "question_number": 135,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Tactics",
+    "question_text": "An agency and a vendor engage in negotiations focusing on mutual interests rather than rigid demands. The agency needs quick delivery, and the vendor needs flexible working hours. They agree on a schedule that satisfies both without increasing cost. This is an example of:",
+    "options": {
+      "a": "Zero-sum negotiation",
+      "b": "Win-Win (Principled) negotiation",
+      "c": "Adversarial negotiation",
+      "d": "Bait and switch"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Win-Win or Principled negotiation focuses on interests, generating options for mutual gain, and solving problems collaboratively rather than fighting over a fixed pie.",
+    "section_id": null
+  },
+  {
+    "question_number": 136,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Tactics",
+    "question_text": "A buyer truthfully tells a vendor, 'Your proposal is fantastic, but we only have exactly $75,000 in the grant fund for this project. If you can't hit that number, we can't do the deal.' This classic negotiation tactic is known as:",
+    "options": {
+      "a": "The Crunch",
+      "b": "The Bogey",
+      "c": "Low-balling",
+      "d": "Cherry-picking"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The 'Bogey' tactic involves tying the negotiator's hands by establishing a strict, unchangeable external constraint (like a strict budget or grant limit) to compel the other party to adapt their price to that reality.",
+    "section_id": null
+  },
+  {
+    "question_number": 137,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - BAFO",
+    "question_text": "In a formal RFP process, after discussions and negotiations have concluded with the short-listed vendors, what is the required mechanism to formally close negotiations and obtain their final pricing?",
+    "options": {
+      "a": "Request for Information (RFI)",
+      "b": "Invitation for Bids (IFB)",
+      "c": "Notice of Intent to Award (NOI)",
+      "d": "Request for Best and Final Offer (BAFO)"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A BAFO is a formal request allowing short-listed proposers one last opportunity to revise their technical proposals and pricing based on the preceding discussions and negotiations.",
+    "section_id": null
+  },
+  {
+    "question_number": 138,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - BAFO",
+    "question_text": "What is a major ethical and practical risk of an agency repeatedly requesting multiple rounds of Best and Final Offers (BAFOs) from the same vendors?",
+    "options": {
+      "a": "It increases the agency's bonding costs",
+      "b": "It risks 'auctioning' or technical leveling, signaling to vendors that their prices are known, destroying trust, and reducing the value of initial competitive pricing",
+      "c": "It forces vendors to automatically lower their quality",
+      "d": "It violates the Brooks Act"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Requesting more than one BAFO is heavily discouraged because it borders on auctioning. Vendors will learn that their first prices don't matter, and it implies the buyer is simply shopping prices back and forth, eroding the integrity of the sealed proposal process.",
+    "section_id": null
+  },
+  {
+    "question_number": 139,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Documentation",
+    "question_text": "To ensure public accountability, transparency, and auditability after concluding complex RFP discussions, the buyer must draft and place which document in the procurement file?",
+    "options": {
+      "a": "A Non-Disclosure Agreement",
+      "b": "A Memorandum of Negotiations",
+      "c": "A Sole Source Justification",
+      "d": "A Surety Bond"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Memorandum (or Record) of Negotiations provides a documented trail detailing who attended, what was discussed, what concessions were made, and the rationale for the final agreed-upon price and terms.",
+    "section_id": null
+  },
+  {
+    "question_number": 140,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Public Limits",
+    "question_text": "Although IFBs generally strictly forbid negotiation, many public jurisdictions allow a specific exception permitting a buyer to negotiate price in an IFB ONLY if:",
+    "options": {
+      "a": "The lowest bid is from an out-of-state vendor",
+      "b": "The lowest responsive and responsible bid exceeds the agency's available project budget",
+      "c": "The procurement officer feels the profit margin is too high",
+      "d": "The vendor asks to negotiate"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "When all competitive bids exceed the budgeted funds, some state/local laws allow the agency to negotiate directly with the lowest responsive/responsible bidder to reduce scope and bring the price within budget, preventing a costly re-bid.",
+    "section_id": null
+  },
+  {
+    "question_number": 141,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Tactics",
+    "question_text": "During a negotiation, the IT Director becomes visibly frustrated, demanding aggressive penalties for software bugs. The Procurement Officer then smoothly steps in, apologizing for the Director's temper, and offers to drop the penalty demand if the vendor reduces their hourly rate by $10. This team tactic is called:",
+    "options": {
+      "a": "Fact-finding",
+      "b": "Good Cop / Bad Cop",
+      "c": "Technical Transfusion",
+      "d": "The Missing Person"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Good Cop/Bad Cop relies on one team member being unreasonable or hostile (Bad Cop) to make the other member's 'compromise' offer (Good Cop) seem highly appealing and reasonable by contrast.",
+    "section_id": null
+  },
+  {
+    "question_number": 142,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - BAFO",
+    "question_text": "An agency issues a formal request for a BAFO with a firm deadline of Friday at 3:00 PM. Vendor A fails to submit any response. According to standard procurement protocols, how is Vendor A evaluated?",
+    "options": {
+      "a": "They are disqualified and removed from the shortlist entirely",
+      "b": "Their most recent previous proposal stands as their 'Best and Final' and is evaluated as such",
+      "c": "They are given a 24-hour grace period to respond",
+      "d": "Their price is automatically increased by 10% as a penalty"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Failure to submit a revised BAFO does not disqualify the vendor. Their latest valid submission (original proposal or post-discussion revision) defaults as their final offer.",
+    "section_id": null
+  },
+  {
+    "question_number": 143,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Fact-Finding",
+    "question_text": "Prior to formal RFP negotiations, the evaluation committee meets with the top-ranked vendor solely to ask questions to understand their cost buildup and methodology, without asking for any price reductions or concessions. This phase is formally known as:",
+    "options": {
+      "a": "Debriefing",
+      "b": "Fact-finding",
+      "c": "Auctioning",
+      "d": "Arbitration"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Fact-finding is an information-gathering stage where the buyer clarifies uncertainties regarding the vendor's cost or technical proposal to prepare effectively for the actual negotiation phase.",
+    "section_id": null
+  },
+  {
+    "question_number": 144,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Team Composition",
+    "question_text": "During formal negotiations for a major government contract, which role should exclusively have the authority to make binding commitments on behalf of the agency?",
+    "options": {
+      "a": "The Lead Technical Subject Matter Expert",
+      "b": "The Lead Negotiator (typically the Procurement Officer)",
+      "c": "The highest-ranking vendor executive in the room",
+      "d": "The Legal Counsel"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Lead Negotiator, usually a warranted contracting or procurement officer, is the only team member authorized to formally commit the agency, control the flow of the negotiation, and accept concessions.",
+    "section_id": null
+  },
+  {
+    "question_number": 145,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Unethical Tactics",
+    "question_text": "During an RFP discussion phase, a buyer tells Vendor B about a highly innovative, proprietary scheduling feature proposed by Vendor A, and asks Vendor B to include a similar feature in their BAFO. This unethical violation is known as:",
+    "options": {
+      "a": "Technical Transfusion",
+      "b": "Price Analysis",
+      "c": "Value Engineering",
+      "d": "Principled Negotiation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Technical Transfusion (or leveling) occurs when government personnel disclose one vendor's technical or innovative ideas to another vendor, effectively giving away intellectual property to generate better BAFOs. It is highly unethical and illegal.",
+    "section_id": null
+  },
+  {
+    "question_number": 146,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Tactics",
+    "question_text": "A vendor makes a counteroffer that is less than favorable. The Lead Negotiator looks at the vendor but says absolutely nothing for 60 seconds, creating extreme discomfort in the room. This negotiation tactic relies on the power of:",
+    "options": {
+      "a": "Silence",
+      "b": "Anchoring",
+      "c": "The Crunch",
+      "d": "The Bogey"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Silence is a powerful tactic. People naturally hate uncomfortable silences and will often continue talking or begin bidding against themselves, offering premature concessions just to fill the quiet.",
+    "section_id": null
+  },
+  {
+    "question_number": 147,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Trade-offs",
+    "question_text": "An agency wants to secure an additional 100 hours of user training. The software vendor agrees to provide the training at no extra cost, provided the agency agrees to sign a 3-year term instead of a 1-year term. This exchange is known as a:",
+    "options": {
+      "a": "Collusive agreement",
+      "b": "Concession or Trade-off",
+      "c": "Best and Final Offer",
+      "d": "Price gouging"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A concession or trade-off occurs when one party yields on a point of interest (like term length) to gain value on another point of interest (like training hours), which is a core component of principled negotiations.",
+    "section_id": null
+  },
+  {
+    "question_number": 148,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Unethical Tactics",
+    "question_text": "Which of the following statements made by a procurement officer during an RFP negotiation represents an unethical/illegal practice known as 'Auctioning'?",
+    "options": {
+      "a": "Your proposed price exceeds our independent cost estimate by 20%.",
+      "b": "We need you to rethink your pricing on line items 4 and 5.",
+      "c": "Vendor C just offered $45,000 for this work. If you bid $44,000, the contract is yours.",
+      "d": "Our budget cannot exceed $50,000."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Auctioning occurs when a buyer reveals a competitor's exact price to another vendor to force them to beat it. In sealed proposal processes, competing prices must be kept confidential during negotiations.",
+    "section_id": null
+  },
+  {
+    "question_number": 149,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - Public Sector Constraints",
+    "question_text": "What is the most significant constraint a public procurement negotiator faces that private sector corporate negotiators generally do not face?",
+    "options": {
+      "a": "The inability to use Microsoft Excel for cost modeling",
+      "b": "Strict adherence to statutory procedures, transparency laws, and open public records requirements",
+      "c": "A complete ban on buying foreign goods",
+      "d": "The inability to use contracts lasting more than 6 months"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Public sector negotiators operate in a heavily regulated environment. They cannot use 'back room deals' because their negotiations, concessions, and final documents are subject to public records laws and scrutiny.",
+    "section_id": null
+  },
+  {
+    "question_number": 150,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Negotiation Strategies - T&Cs",
+    "question_text": "During negotiations, a vendor absolutely refuses to sign the contract unless the agency agrees to remove the standard 'Governing Law' clause that designates the agency's home state. The procurement officer should:",
+    "options": {
+      "a": "Remove the clause to expedite the award",
+      "b": "Change the governing law to the vendor's state",
+      "c": "Halt negotiations and consult with legal counsel, as statutory public entity clauses cannot typically be waived by procurement staff",
+      "d": "Ask the technical evaluation committee to vote on it"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Public entities are creations of their state/local laws. Governing Law clauses mandate that lawsuits must be handled in the agency's jurisdiction under state law. Procurement staff lack the legal authority to waive sovereignty or jurisdictional venue.",
+    "section_id": null
+  },
+  {
+    "question_number": 151,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Intent to Award",
+    "question_text": "What is the primary operational purpose of issuing a formal Notice of Intent to Award (NOI)?",
+    "options": {
+      "a": "To authorize the vendor to immediately begin work and submit invoices",
+      "b": "To publicly announce the anticipated winning vendor, which triggers the official protest window for aggrieved vendors before the final contract is signed",
+      "c": "To cancel the solicitation process entirely",
+      "d": "To officially reject all non-responsive bids"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Notice of Intent to Award provides public transparency regarding the agency's selection decision. It starts the legal clock (usually 5-10 days) allowing unsuccessful vendors to file a formal protest before the agency signs the binding contract.",
+    "section_id": null
+  },
+  {
+    "question_number": 152,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Debriefings",
+    "question_text": "The primary objective of conducting a supplier debriefing with an unsuccessful proposer is to:",
+    "options": {
+      "a": "Convince them not to file a protest",
+      "b": "Negotiate a secondary backup contract just in case the winner defaults",
+      "c": "Provide constructive feedback regarding the strengths and weaknesses of their proposal based on the evaluation rubric to help them improve future submissions",
+      "d": "Allow them to see the confidential trade secrets of the winning proposal"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A debriefing is an educational meeting. It explains to the vendor exactly how their proposal was scored against the evaluation criteria, highlighting areas where they lost points so they can be more competitive next time.",
+    "section_id": null
+  },
+  {
+    "question_number": 153,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Debriefings",
+    "question_text": "During a post-award debriefing, a losing vendor aggressively asks, 'Why did Vendor X score higher than me on the technical approach?' How should the procurement officer respond?",
+    "options": {
+      "a": "Read the winning vendor's technical proposal aloud to prove it was better",
+      "b": "Decline to compare proposals directly; reiterate that debriefings only focus on the specific strengths and weaknesses of the requesting vendor's own proposal",
+      "c": "Agree that the scoring was probably flawed but state that the decision is final",
+      "d": "Allow the vendor to read the evaluators' personal notes"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A critical rule of debriefings is that they are not a forum for point-by-point comparisons between competitors. The discussion must strictly revolve around the vendor's own proposal and why it received the scores it did.",
+    "section_id": null
+  },
+  {
+    "question_number": 154,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Protests",
+    "question_text": "What legal mechanism typically automatically pauses the final execution of a contract when a timely, formal complaint is filed by an aggrieved bidder regarding the award decision?",
+    "options": {
+      "a": "Stay of Award",
+      "b": "Force Majeure",
+      "c": "Termination for Convenience",
+      "d": "Indemnification"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A Stay of Award (or suspension of action) prevents the agency from executing the contract or proceeding with the procurement until the formal vendor protest has been thoroughly investigated and resolved.",
+    "section_id": null
+  },
+  {
+    "question_number": 155,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Protests",
+    "question_text": "In public procurement, the strict timeline for a vendor to file a formal bid protest (e.g., within 7 days) generally begins when:",
+    "options": {
+      "a": "The requisition is approved",
+      "b": "The bids are originally opened",
+      "c": "The Notice of Intent to Award is publicly posted or vendors are formally notified of the decision",
+      "d": "The final contract expires"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "While pre-bid protests (challenging specs) must be filed before the bid opens, an award protest timeline strictly starts the moment the agency formally notifies the public/vendors of who they intend to award the contract to.",
+    "section_id": null
+  },
+  {
+    "question_number": 156,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Protests",
+    "question_text": "To have 'standing' to file a formal legal bid protest against a contract award, the protesting party typically must be:",
+    "options": {
+      "a": "Any taxpayer residing within the agency's jurisdiction",
+      "b": "An actual or prospective bidder whose direct economic interest is adversely affected by the award of the contract",
+      "c": "A local news reporter covering government spending",
+      "d": "A vendor who downloaded the bid but chose not to submit a response"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Standing refers to the legal right to initiate a lawsuit or protest. In procurement, only an 'interested party' (an actual bidder who suffered potential economic harm due to a flawed award process) has standing to protest.",
+    "section_id": null
+  },
+  {
+    "question_number": 157,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Execution",
+    "question_text": "When does a contract awarded through a public procurement process become legally binding and effective?",
+    "options": {
+      "a": "When the Notice of Intent to Award is posted",
+      "b": "When the vendor shakes hands with the buyer",
+      "c": "When the written agreement is fully executed (signed) by authorized representatives of both the agency and the vendor",
+      "d": "When the first invoice is paid"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A public contract is not legally binding until all required signatures from officials with delegated contractual authority (and the vendor) have been affixed to the document.",
+    "section_id": null
+  },
+  {
+    "question_number": 158,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Bonds",
+    "question_text": "Following the formal execution of a construction contract and the receipt of the required Performance and Payment bonds from the winning vendor, what must the procurement officer do regarding the unsuccessful bidders?",
+    "options": {
+      "a": "Cash their bid bonds to fund the project contingency",
+      "b": "Return or release their Bid Bonds/Securities promptly",
+      "c": "Send them an invoice for administrative processing fees",
+      "d": "Require them to serve as backup subcontractors"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Bid Bond is held to ensure the low bidder will sign the contract. Once the winner signs and provides performance bonds, the risk is mitigated, and all other bidders' bid bonds must be legally released/returned.",
+    "section_id": null
+  },
+  {
+    "question_number": 159,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - Protests",
+    "question_text": "Which of the following scenarios forms a legally valid basis to sustain a formal vendor protest?",
+    "options": {
+      "a": "The protesting vendor feels they are simply a better company than the winner",
+      "b": "A mathematical error was made in the agency's official evaluation scoring which, if corrected, makes the protesting vendor the true highest-scoring proposer",
+      "c": "The winning vendor is located 500 miles away",
+      "d": "The protesting vendor submitted their bid late, but only by two minutes"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Protests must be based on objective violations of law, flawed procedures, biases, or material mathematical errors in applying the evaluation criteria, not simply a disagreement with the agency's subjective judgment.",
+    "section_id": null
+  },
+  {
+    "question_number": 160,
+    "subject": "CPPB Domain III: Sourcing & Supplier Selection",
+    "topic": "Post-Award Formalities - NTP",
+    "question_text": "After a large construction contract is fully signed and insurance certificates are cleared, the agency issues a document officially authorizing the contractor to mobilize, site-prep, and establishing the exact start date for the project timeline. This document is known as a:",
+    "options": {
+      "a": "Stop Work Order",
+      "b": "Change Order",
+      "c": "Notice to Proceed (NTP)",
+      "d": "Certificate of Occupancy"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Notice to Proceed (NTP) is a formal notification issued by the agency to the contractor establishing the specific date the contractor may enter the site and begin work, triggering the countdown for the contract completion time.",
+    "section_id": null
+  }
+]

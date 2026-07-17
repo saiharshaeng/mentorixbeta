@@ -1,0 +1,642 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Concepts of Equilibrium",
+        "question_text": "Which of the following statements best defines **dynamic equilibrium** in a chemical reaction?",
+        "options": {
+            "a": "The reaction has stopped completely and no products or reactants are being formed.",
+            "b": "The concentrations of reactants and products are equal.",
+            "c": "The rate of the forward reaction is equal to the rate of the reverse reaction.",
+            "d": "The rate constants of the forward and reverse reactions are equal."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "At dynamic equilibrium, the reaction continues to occur in both directions, but the rates of the forward and reverse reactions are equal ($R_{fwd} = R_{rev}$), resulting in constant concentrations.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Concepts of Equilibrium",
+        "question_text": "Consider the reversible reaction: $$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\text{NO}_2(g)$$ At equilibrium, which quantity remains constant with time?",
+        "options": {
+            "a": "Only the concentration of $\\text{N}_2\\text{O}_4$",
+            "b": "Only the concentration of $\\text{NO}_2$",
+            "c": "The concentrations of both $\\text{N}_2\\text{O}_4$ and $\\text{NO}_2$",
+            "d": "The total mass of the system changes constantly"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Once a system reaches equilibrium, the concentrations of all reactants and products remain constant over time, although they are not necessarily equal.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Concepts of Equilibrium",
+        "question_text": "Which of the following conditions is **not** necessary for a system to reach chemical equilibrium?",
+        "options": {
+            "a": "The system must be closed.",
+            "b": "The reaction must be reversible.",
+            "c": "The temperature must remain constant.",
+            "d": "The initial concentrations of reactants must be equal to the initial concentrations of products."
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Equilibrium can be approached from any starting concentrations. It is not required that initial concentrations be equal.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Concepts of Equilibrium",
+        "question_text": "Graphically, how is the state of equilibrium identified in a Concentration vs. Time plot?",
+        "options": {
+            "a": "When the reactant and product curves intersect.",
+            "b": "When the reactant and product curves become horizontal (slope = 0).",
+            "c": "When the reactant curve hits zero.",
+            "d": "When the product curve reaches its maximum theoretical yield."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "When the curves become horizontal, the concentrations are no longer changing, indicating the rates of forward and reverse reactions are equal.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Concepts of Equilibrium",
+        "question_text": "Why are radioactive isotopes often used to demonstrate the dynamic nature of chemical equilibrium?",
+        "options": {
+            "a": "They change the position of equilibrium.",
+            "b": "They stop the reverse reaction allowing observation of the forward reaction.",
+            "c": "Mixing a radioactive product into an equilibrium mixture results in radioactive reactants over time, proving the reverse reaction is occurring.",
+            "d": "They increase the rate of reaction significantly."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "If a radioactive isotope is introduced to an equilibrated system, it distributes between reactants and products, proving that the molecular interchange (forward and reverse reactions) continues despite constant macroscopic concentrations.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "Write the equilibrium constant expression ($K_c$) for the following heterogeneous reaction:\\n$$\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$$",
+        "options": {
+            "a": "$K_c = \\frac{[\\text{CaO}][\\text{CO}_2]}{[\\text{CaCO}_3]}$",
+            "b": "$K_c = [\\text{CO}_2]$",
+            "c": "$K_c = \\frac{[\\text{CaCO}_3]}{[\\text{CO}_2]}$",
+            "d": "$K_c = [\\text{CaO}][\\text{CO}_2]$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The concentrations of pure solids and pure liquids are constant and are omitted from the equilibrium expression. Thus, $K_c = [\\text{CO}_2]$.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "For the reaction $2\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\text{SO}_3(g)$, what is the relationship between $K_p$ and $K_c$?",
+        "options": {
+            "a": "$K_p = K_c(RT)$",
+            "b": "$K_p = K_c(RT)^{-1}$",
+            "c": "$K_p = K_c(RT)^{2}$",
+            "d": "$K_p = K_c$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The relationship is $K_p = K_c(RT)^{\\Delta n_g}$. Here, $\\Delta n_g = (\\text{moles product gas}) - (\\text{moles reactant gas}) = 2 - (2+1) = -1$. Therefore, $K_p = K_c(RT)^{-1}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "If the equilibrium constant for $A \\rightleftharpoons B$ is $K_1 = 2$, what is the equilibrium constant for the reaction $2B \\rightleftharpoons 2A$?",
+        "options": {
+            "a": "4",
+            "b": "0.5",
+            "c": "0.25",
+            "d": "-2"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Reversing the reaction inverts $K​$ ($1/K_1 = 1/2$). Multiplying coefficients by 2 raises the new constant to the power of 2. New $K = (1/2)^2 = 1/4 = 0.25$.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "Calculate $K_c$ for the reaction $2\\text{NO}(g) \\rightleftharpoons \\text{N}_2(g) + \\text{O}_2(g)$ given the equilibrium concentrations: $[\\text{NO}] = 0.2\\,\\text{M}$, $[\\text{N}_2] = 0.1\\,\\text{M}$, and $[\\text{O}_2] = 0.1\\,\\text{M}$.",
+        "options": {
+            "a": "0.25",
+            "b": "2.5",
+            "c": "0.5",
+            "d": "1.0"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "$$K_c = \\frac{[\\text{N}_2][\\text{O}_2]}{[\\text{NO}]^2} = \\frac{(0.1)(0.1)}{(0.2)^2} = \\frac{0.01}{0.04} = 0.25$$",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "Which statement about the value of the equilibrium constant $K​$ is true?",
+        "options": {
+            "a": "A large $K​$ ($K \\gg 1$) indicates that reactants are favored at equilibrium.",
+            "b": "A small $K​$ ($K \\ll 1$) indicates that products are favored at equilibrium.",
+            "c": "The value of $K​$ is independent of temperature.",
+            "d": "A large $K​$ ($K \\gg 1$) indicates that products are favored at equilibrium."
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "If $K​$ is very large, the numerator (products) is much larger than the denominator (reactants), meaning the equilibrium favors the products.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "For the reaction $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\text{HI}(g)$, $K_c = 50$ at a certain temperature. If the volume of the container is halved, what happens to the value of $K_c$?",
+        "options": {
+            "a": "It doubles.",
+            "b": "It halves.",
+            "c": "It remains unchanged.",
+            "d": "It increases by a factor of 4."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The equilibrium constant $K_c$ is dependent only on temperature. Changing volume or pressure shifts the equilibrium position but does not change the constant $K_c$ itself.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "Determine the units of $K_c$ for the reaction: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$ (where concentration is in mol L$^{-1}$).",
+        "options": {
+            "a": "mol L$^{-1}$",
+            "b": "L$^2$ mol$^{-2}$",
+            "c": "mol$^{-2}$ L$^2$",
+            "d": "Dimensionless"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Units = $\\frac{(\\text{mol/L})^2}{(\\text{mol/L})^1 (\\text{mol/L})^3} = \\frac{1}{(\\text{mol/L})^2} = (\\text{mol/L})^{-2} = \\text{L}^2 \\text{mol}^{-2}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "At 298 K, if $K_c = 1.0 \\times 10^{10}$ for a reaction, what can be said about the standard Gibbs free energy change $\\Delta G^\\circ$?",
+        "options": {
+            "a": "$\\Delta G^\\circ$ is large and positive.",
+            "b": "$\\Delta G^\\circ$ is zero.",
+            "c": "$\\Delta G^\\circ$ is large and negative.",
+            "d": "$\\Delta G^\\circ$ cannot be determined."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "$\\Delta G^\\circ = -RT \\ln K$. If $K​$ is very large (positive), $\\ln K$ is positive, making $\\Delta G^\\circ$ a large negative value, indicating a spontaneous forward reaction.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "Given the reaction $A(g) \\rightleftharpoons 2B(g)$. At equilibrium, the partial pressure of $A​$ is 0.5 atm and $B​$ is 2.0 atm. Calculate $K_p$.",
+        "options": {
+            "a": "4.0",
+            "b": "8.0",
+            "c": "2.0",
+            "d": "1.0"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$$K_p = \\frac{(P_B)^2}{P_A} = \\frac{(2.0)^2}{0.5} = \\frac{4.0}{0.5} = 8.0$$",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Equilibrium Constants (Kc/Kp)",
+        "question_text": "When writing the equilibrium expression for a reaction in aqueous solution involving water as a solvent (e.g., hydrolysis), the concentration of water is:",
+        "options": {
+            "a": "Included as $[H_2O] \\approx 55.5 M$.",
+            "b": "Included as $1.0 M$.",
+            "c": "Omitted or incorporated into the constant value.",
+            "d": "Squared."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "In dilute aqueous solutions, the concentration of water is effectively constant and is conventionally omitted from the equilibrium expression or incorporated into the constant (e.g., $K_w$, $K_a$).",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "The Reaction Quotient ($Q​$) differs from the Equilibrium Constant ($K​$) because:",
+        "options": {
+            "a": "$Q​$ is calculated using equilibrium concentrations only.",
+            "b": "$Q​$ is calculated using concentrations at any point in time, not just equilibrium.",
+            "c": "$Q​$ only applies to gaseous reactions.",
+            "d": "$Q​$ uses addition instead of multiplication in the expression."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "$Q​$ has the same form as $K​$ but is calculated using current concentrations/partial pressures, which may or may not be at equilibrium.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "For the reaction $A \\rightleftharpoons B$, if $Q_c = 10$ and $K_c = 5$, in which direction will the reaction proceed to reach equilibrium?",
+        "options": {
+            "a": "The reaction will proceed to the right (towards products).",
+            "b": "The reaction will proceed to the left (towards reactants).",
+            "c": "The system is already at equilibrium.",
+            "d": "The reaction will stop."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Since $Q > K$, the ratio of products to reactants is too high. The reaction must shift to the left (reactants) to decrease $Q​$ until it equals $K​$.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "Consider: $2\\text{NOCl}(g) \\rightleftharpoons 2\\text{NO}(g) + \\text{Cl}_2(g)$. If a mixture contains reactants and products such that $Q < K$, what will happen to the partial pressure of $\\text{Cl}_2$ as equilibrium is approached?",
+        "options": {
+            "a": "It will increase.",
+            "b": "It will decrease.",
+            "c": "It will remain constant.",
+            "d": "It will fluctuate randomly."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "If $Q < K$, the reaction proceeds in the forward direction to produce more products. Therefore, the partial pressure of the product $\\text{Cl}_2$ will increase.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "A reaction vessel contains a mixture where the Reaction Quotient $Q​$ is exactly equal to the Equilibrium Constant $K​$. This implies:",
+        "options": {
+            "a": "The reaction is spontaneous in the forward direction.",
+            "b": "The reaction is spontaneous in the reverse direction.",
+            "c": "The system is at equilibrium and no net change will occur.",
+            "d": "The limiting reactant has been consumed."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "When $Q = K$, the system satisfies the equilibrium condition; the rates of forward and reverse reactions are equal, and no net change occurs.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "For the reaction $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\text{HI}(g)$, $K_c = 50$. A mixture is prepared with $[\\text{H}_2] = 1M$, $[\\text{I}_2] = 1M$, and $[\\text{HI}] = 5M$. What is $Q_c$ and the direction of shift?",
+        "options": {
+            "a": "$Q_c = 5$; shifts right.",
+            "b": "$Q_c = 25$; shifts right.",
+            "c": "$Q_c = 25$; shifts left.",
+            "d": "$Q_c = 5$; shifts left."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "$$Q_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{5^2}{1 \\times 1} = 25$$. Since $K_c = 50$ and $Q_c = 25$, we have $Q < K$. The reaction shifts right (forward).",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "Which combination of parameters is required to calculate the reaction quotient $Q_p$ for a gaseous reaction?",
+        "options": {
+            "a": "Equilibrium partial pressures.",
+            "b": "Initial concentrations and temperature.",
+            "c": "Instantaneous partial pressures of all species.",
+            "d": "The value of $K_p$."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "$Q_p$ is calculated using the partial pressures of reactants and products at a specific instant in time.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "In a precipitation reaction, the reaction quotient is often called the Ion Product ($IP$). If $IP > K_{sp}$, what is observed?",
+        "options": {
+            "a": "The solution is unsaturated.",
+            "b": "Precipitate forms.",
+            "c": "The solution is at equilibrium.",
+            "d": "More solid dissolves."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "If the Ion Product ($Q​$) exceeds the Solubility Product ($K_{sp}$), the solution is supersaturated and the excess ions will precipitate out until $Q = K_{sp}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Reaction Quotient",
+        "question_text": "For an exothermic reaction, if the temperature is increased, the equilibrium constant $K​$ decreases. If the concentrations remain instantaneous unchanged immediately after heating, how does $Q​$ compare to the new $K​$?",
+        "options": {
+            "a": "$Q = K_{new}$",
+            "b": "$Q < K_{new}$",
+            "c": "$Q > K_{new}$",
+            "d": "$Q​$ becomes zero"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Instantaneous concentrations (and thus $Q​$) haven't changed yet. However, $K​$ has decreased ($K_{new} < K_{old}$). Since $Q​$ was equal to $K_{old}$, now $Q > K_{new}$. The system will shift left.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Le Chatelier's Principle states that if a stress is applied to a system at equilibrium, the system will shift to:",
+        "options": {
+            "a": "Increase the stress.",
+            "b": "Relieve or counteract the stress.",
+            "c": "Stop the reaction.",
+            "d": "Change the equilibrium constant."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Le Chatelier's Principle states that a system at equilibrium will respond to a disturbance (stress) by shifting its position in a direction that tends to counteract the disturbance.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Consider the reaction: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$ ($\\Delta H < 0$). What is the effect of **increasing the temperature**?",
+        "options": {
+            "a": "Equilibrium shifts right; $K​$ increases.",
+            "b": "Equilibrium shifts left; $K​$ decreases.",
+            "c": "Equilibrium shifts right; $K​$ decreases.",
+            "d": "Equilibrium shifts left; $K​$ stays constant."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The reaction is exothermic ($\\Delta H < 0$), so heat is a product. Adding heat (increasing T) shifts equilibrium to the left (reactants) to consume the heat, and the value of the equilibrium constant $K​$ decreases.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "For the reaction $2\\text{NO}_2(g) \\rightleftharpoons \\text{N}_2\\text{O}_4(g)$, what happens if the **pressure is increased** by reducing the volume?",
+        "options": {
+            "a": "The equilibrium shifts to the left (more moles of gas).",
+            "b": "The equilibrium shifts to the right (fewer moles of gas).",
+            "c": "No change in equilibrium position.",
+            "d": "Both forward and reverse rates decrease."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Increasing pressure favors the side with fewer moles of gas. Reactants: 2 moles. Products: 1 mole. The system shifts right ($2 \\rightarrow 1$) to reduce pressure.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "What is the effect of adding a **catalyst** to a reversible reaction at equilibrium?",
+        "options": {
+            "a": "It shifts the equilibrium to the right.",
+            "b": "It shifts the equilibrium to the left.",
+            "c": "It increases the value of $K​$.",
+            "d": "It has no effect on the equilibrium position."
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "A catalyst increases the rates of both forward and reverse reactions equally by lowering activation energy. It speeds up the attainment of equilibrium but does not change the position of equilibrium or $K​$.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "In the reaction $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, adding **Inert Gas (e.g., Helium)** at constant **volume** will:",
+        "options": {
+            "a": "Shift the equilibrium to the right.",
+            "b": "Shift the equilibrium to the left.",
+            "c": "Have no effect on the equilibrium position.",
+            "d": "Increase the partial pressure of $\\text{Cl}_2$."
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Adding an inert gas at constant volume increases total pressure but does not change the partial pressures of the reacting species. Therefore, the equilibrium position remains unchanged.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "In the reaction $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, adding **Inert Gas (e.g., Helium)** at constant **pressure** (e.g., in a piston) will:",
+        "options": {
+            "a": "Shift the equilibrium to the side with more moles of gas (Right).",
+            "b": "Shift the equilibrium to the side with fewer moles of gas (Left).",
+            "c": "Have no effect.",
+            "d": "Decrease the value of $K​$."
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "Adding inert gas at constant pressure increases volume, which decreases the partial pressures of all reacting species. The system shifts to the side with more moles of gas (the right) to restore pressure.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Consider: $\\text{CO}(g) + 2\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g)$. If **$\\text{H}_2$ is removed** from the system:",
+        "options": {
+            "a": "The reaction shifts right to consume $\\text{H}_2$.",
+            "b": "The reaction shifts left to produce more $\\text{H}_2$.",
+            "c": "The concentration of $\\text{CH}_3\\text{OH}$ increases.",
+            "d": "The equilibrium constant decreases."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Removing a reactant creates a 'hole' that the system tries to fill. The equilibrium shifts to the left (reverse direction) to produce more $\\text{H}_2$.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "For the endothermic reaction $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\text{NO}_2(g)$ ($\\Delta H > 0$), observing the mixture changes the color from colorless ($\\text{N}_2\\text{O}_4$) to brown ($\\text{NO}_2$). What happens if you place the flask in **ice water**?",
+        "options": {
+            "a": "The mixture becomes darker brown.",
+            "b": "The mixture becomes lighter/colorless.",
+            "c": "No color change occurs.",
+            "d": "A precipitate forms."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Since the reaction is endothermic (Heat + Reactant $\\rightleftharpoons$ Product), removing heat (cooling) shifts the equilibrium to the left. The concentration of $\\text{NO}_2$ (brown) decreases, and $\\text{N}_2\\text{O}_4$ (colorless) increases, making the mixture lighter.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Which of the following changes will change the value of the equilibrium constant $K​$?",
+        "options": {
+            "a": "Changing the pressure.",
+            "b": "Adding a catalyst.",
+            "c": "Changing the temperature.",
+            "d": "Adding more reactant."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The equilibrium constant $K​$ is a function of temperature only. Changes in concentration, pressure, or volume shift the position of equilibrium but do not change the numerical value of $K​$.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Given: $\\text{C}(s) + \\text{CO}_2(g) \\rightleftharpoons 2\\text{CO}(g)$. Adding more solid carbon $\\text{C}(s)$ will:",
+        "options": {
+            "a": "Shift equilibrium right.",
+            "b": "Shift equilibrium left.",
+            "c": "Have no effect on the equilibrium position.",
+            "d": "Increase $P_{\\text{CO}}$."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Solids have a constant activity of 1. Adding more solid does not change its concentration in a way that affects the equilibrium expression or position, provided some solid is present.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "In the Haber process $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$ (Exothermic), which set of conditions favors the **maximum yield** of ammonia?",
+        "options": {
+            "a": "High Temperature, High Pressure",
+            "b": "Low Temperature, Low Pressure",
+            "c": "High Temperature, Low Pressure",
+            "d": "Low Temperature, High Pressure"
+        },
+        "correct_answer": "d",
+        "difficulty": "Hard",
+        "explanation": "Exothermic: Low Temp favors products (shift right). Mole decrease ($4 \\rightarrow 2$): High Pressure favors products (shift right). Note: In industry, a moderate temp is used for rate reasons, but theoretically, low temp gives higher yield.",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "For the reaction $H_2(g) + I_2(g) \\rightleftharpoons 2HI(g)$, increasing the total pressure by decreasing volume will:",
+        "options": {
+            "a": "Shift equilibrium right.",
+            "b": "Shift equilibrium left.",
+            "c": "Have no effect on the equilibrium position.",
+            "d": "Change $K_p$."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Reactants have 2 moles of gas; Products have 2 moles of gas ($ \\Delta n_g = 0 $). Pressure changes do not favor either side when mole numbers are equal.",
+        "section_id": null
+    },
+    {
+        "question_number": 36,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Consider the solubility equilibrium: $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$. Adding NaCl to the solution will:",
+        "options": {
+            "a": "Increase the solubility of AgCl.",
+            "b": "Decrease the solubility of AgCl.",
+            "c": "Have no effect.",
+            "d": "Increase $K_{sp}$."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "This is the **Common Ion Effect**. Adding NaCl increases $[\\text{Cl}^-]$. Le Chatelier's principle dictates the system shifts left to consume excess $\\text{Cl}^-$, causing AgCl to precipitate and decreasing its solubility.",
+        "section_id": null
+    },
+    {
+        "question_number": 37,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Blood pH is maintained by the buffer system: $\\text{H}^+(aq) + \\text{HCO}_3^-(aq) \\rightleftharpoons \\text{H}_2\\text{CO}_3(aq) \\rightleftharpoons \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$. Hyperventilation (exhaling too much $\\text{CO}_2$) causes:",
+        "options": {
+            "a": "Shift left, decreasing $[\\text{H}^+]$ (Alkalosis).",
+            "b": "Shift right, increasing $[\\text{H}^+]$ (Acidosis).",
+            "c": "Shift left, increasing $[\\text{H}^+]$.",
+            "d": "No change in pH."
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "Removing $\\text{CO}_2$ (product) pulls the equilibrium to the right (towards gas). Wait, looking at the full chain: $\\text{H}^+ + \\text{HCO}_3^- \\rightarrow \\text{CO}_2$. If $\\text{CO}_2$ is lost, the reaction shifts to produce more $\\text{CO}_2$, consuming $\\text{H}^+$. Lower $\\text{H}^+$ means higher pH (Alkalosis).",
+        "section_id": null
+    },
+    {
+        "question_number": 38,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Which factor changes the **rate** at which equilibrium is achieved but not the equilibrium **concentrations**?",
+        "options": {
+            "a": "Temperature",
+            "b": "Pressure",
+            "c": "Catalyst",
+            "d": "Concentration"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "A catalyst lowers the activation energy for both forward and reverse reactions, speeding up the approach to equilibrium without altering the thermodynamic equilibrium state ($K​$).",
+        "section_id": null
+    },
+    {
+        "question_number": 39,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "In the reaction $\\text{Fe}^{3+}(aq) + \\text{SCN}^-(aq) \\rightleftharpoons [\\text{Fe(SCN)}]^{2+}(aq)$ (Deep Red). If $\\text{Fe}^{3+}$ is added:",
+        "options": {
+            "a": "The solution turns lighter.",
+            "b": "The solution turns deeper red.",
+            "c": "A precipitate forms.",
+            "d": "The equilibrium constant increases."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Adding reactant $\\text{Fe}^{3+}$ shifts the equilibrium to the right to produce more product $[\\text{Fe(SCN)}]^{2+}$, which is deep red.",
+        "section_id": null
+    },
+    {
+        "question_number": 40,
+        "subject": "Chemistry",
+        "topic": "Le Chatelier's Principle",
+        "question_text": "Consider the following reaction at equilibrium in a closed rigid container: $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$. What is the effect of adding more $\\text{CO}_2$ gas?",
+        "options": {
+            "a": "More $\\text{CaCO}_3$ decomposes.",
+            "b": "The amount of $\\text{CaCO}_3$ increases.",
+            "c": "The pressure decreases.",
+            "d": "The equilibrium constant changes."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Adding product $\\text{CO}_2$ shifts the equilibrium to the left to consume the excess gas, resulting in the formation of more solid reactant $\\text{CaCO}_3$.",
+        "section_id": null
+    }
+]

@@ -1,0 +1,722 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Mathematics",
+    "topic": "Statistics",
+    "question_text": "Cameron took 4 tests, and his scores were as follows: 100, 60, 80, and 30. Cameron took another test that was scored $x$. The mean score of the 5 tests he took is 72. What is the value of $x$?",
+    "options": {
+      "a": "54",
+      "b": "67.5",
+      "c": "68.4",
+      "d": "90"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "To find the missing score, set up the equation for the mean of 5 tests: $\\frac{100 + 60 + 80 + 30 + x}{5} = 72$. Multiplying both sides by 5 gives $270 + x = 360$. Subtracting 270 from both sides yields $x = 90$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Mathematics",
+    "topic": "Sets and Venn Diagrams",
+    "question_text": "In the Venn diagram below, circles $S$, $C$, and $P$ represent farms raising sheep, cows, and pigs, respectively. How many of the 47 farms represented in the diagram do not raise cows?\n\n<svg width='100%' viewBox='0 0 680 460' role='img' xmlns='http://www.w3.org/2000/svg' style=''><title style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'>Venn diagram with three sets S, C, and P</title><desc style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'>Three overlapping circles labeled S, C, and P with values 12, 13, 10, 2, 1, 4, and 5 in their respective regions.</desc><defs><clipPath id='clipS'><circle cx='270' cy='195' r='115'/></clipPath><clipPath id='clipC'><circle cx='410' cy='195' r='115'/></clipPath><clipPath id='clipP'><circle cx='340' cy='305' r='115'/></clipPath></defs><circle cx='270' cy='195' r='115' fill='var(--color-background-secondary)' fill-opacity='0.5' stroke='var(--color-text-secondary)' stroke-width='1.5' style='fill:rgb(38, 38, 36);stroke:rgb(194, 192, 182);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><circle cx='410' cy='195' r='115' fill='var(--color-background-secondary)' fill-opacity='0.5' stroke='var(--color-text-secondary)' stroke-width='1.5' style='fill:rgb(38, 38, 36);stroke:rgb(194, 192, 182);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><circle cx='340' cy='305' r='115' fill='var(--color-background-secondary)' fill-opacity='0.5' stroke='var(--color-text-secondary)' stroke-width='1.5' style='fill:rgb(38, 38, 36);stroke:rgb(194, 192, 182);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><text x='237' y='112' text-anchor='middle' style='font-size:18px;fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:18px;font-weight:500;text-anchor:middle;dominant-baseline:auto'>S</text><text x='443' y='112' text-anchor='middle' style='font-size:18px;fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:18px;font-weight:500;text-anchor:middle;dominant-baseline:auto'>C</text><text x='340' y='438' text-anchor='middle' style='font-size:18px;fill:rgb(250, 29, 35);stroke:none;color:rgb(20, 25, 5);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:18px;font-weight:500;text-anchor:middle;dominant-baseline:auto'>P</text><text x='202' y='200' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>12</text><text x='478' y='200' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>10</text><text x='340' y='385' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>5</text><text x='340' y='165' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>13</text><text x='265' y='295' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>2</text><text x='415' y='295' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>4</text><text x='340' y='248' text-anchor='middle' style='fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>1</text></svg>",
+    "options": {
+      "a": "15",
+      "b": "17",
+      "c": "18",
+      "d": "19"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "To find the number of farms that do not raise cows, sum the values of all the regions completely outside circle $C$. These are the farms raising only sheep (12), only pigs (5), and both sheep and pigs but not cows (2). $12 + 5 + 2 = 19$. Alternatively, total farms in $C = 13 + 10 + 1 + 4 = 28$. $47 - 28 = 19$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Marco designs a spinner wheel that has exactly 4 sections: red, blue, green, and yellow. He wants the spinner wheel to have a 25% chance of landing on each section. He spins the wheel 500 times. The results of the spins are shown in this table.\n\n| Spinner wheel section | Number of times the spinner lands in each section |\n|---|---|\n| Red | 80 |\n| Blue | 165 |\n| Green | 130 |\n| Yellow | 125 |\n\nBased on the results in this table, one of the following changes would be the best fix. Which one?",
+    "options": {
+      "a": "He should decrease the area of the red section by increasing the area of the blue section.",
+      "b": "He should increase the area of the red section by decreasing the area of the blue section.",
+      "c": "He should increase the area of the red section by decreasing the area of any of the other three sections.",
+      "d": "He should decrease the area of the blue section, and then it does not matter which section's area is increased."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Marco expects each section to land 25% of the time, which for 500 spins is $0.25 \\times 500 = 125$ times. Red only landed 80 times (too small an area), while blue landed 165 times (too large an area). To fix this, he should increase the red section's area and decrease the blue section's area.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "question_text": "In $\\triangle ABC$, $\\angle A$ and $\\angle C$ are congruent, and the measure of $\\angle B$ is $143.6^\\circ$. What is the measure of $\\angle A$?",
+    "options": {
+      "a": "$18.2^\\circ$",
+      "b": "$36.4^\\circ$",
+      "c": "$71.8^\\circ$",
+      "d": "$143.6^\\circ$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The sum of angles in a triangle is $180^\\circ$. Let the measure of $\\angle A$ and $\\angle C$ be $x$. Thus, $2x + 143.6^\\circ = 180^\\circ$. Solving for $x$: $2x = 36.4^\\circ \\Rightarrow x = 18.2^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "question_text": "Which of the following expressions is equivalent to $x^2 - x - 30$?",
+    "options": {
+      "a": "$(x + 3)(x - 10)$",
+      "b": "$(x + 6)(x - 5)$",
+      "c": "$(x - 6)(x + 5)$",
+      "d": "$(x - 15)(x - 15)$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Factoring the quadratic $x^2 - x - 30$ requires finding two numbers that multiply to $-30$ and add to $-1$. Those numbers are $-6$ and $5$. Therefore, the factored form is $(x - 6)(x + 5)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Mathematics",
+    "topic": "Matrices",
+    "question_text": "Which of the following matrices is equal to $5 \\begin{bmatrix} -4 & 2 \\\\ 0 & -5 \\end{bmatrix}$?",
+    "options": {
+      "a": "$[-20 \\quad -15]$",
+      "b": "$\\begin{bmatrix} -10 \\\\ -25 \\end{bmatrix}$",
+      "c": "$\\begin{bmatrix} 1 & 7 \\\\ 5 & 0 \\end{bmatrix}$",
+      "d": "$\\begin{bmatrix} -20 & 10 \\\\ 0 & -25 \\end{bmatrix}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "To perform scalar multiplication, multiply every element inside the matrix by 5: $5 \\times -4 = -20$, $5 \\times 2 = 10$, $5 \\times 0 = 0$, $5 \\times -5 = -25$. This gives the matrix $\\begin{bmatrix} -20 & 10 \\\\ 0 & -25 \\end{bmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Mathematics",
+    "topic": "Number Theory",
+    "question_text": "Lavonne purchased some tickets and snack vouchers for an upcoming event and gave them to the members of her work group. Each member of her work group received the same number of tickets and the same number of snack vouchers. The total number of tickets she gave to her group was 30, and the total number of snack vouchers was 75. Which of the following could be the number of members in Lavonne's work group?",
+    "options": {
+      "a": "10",
+      "b": "15",
+      "c": "25",
+      "d": "30"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The number of members must be a common divisor of both 30 and 75, as the items were divided equally. The greatest common divisor of 30 and 75 is 15. The other options are not factors of both numbers.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "question_text": "The initial speed, in miles per hour, of a certain car that skids to a stop can be estimated by multiplying the length of the skid, in feet, by 35 and then taking the square root of the product. According to this method, what is the estimated initial speed, in miles per hour, of the car when it makes a 108-foot skid?",
+    "options": {
+      "a": "$\\sqrt{143}$",
+      "b": "$7\\sqrt{105}$",
+      "c": "$6\\sqrt{105}$",
+      "d": "$210\\sqrt{3}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Calculate $\\sqrt{108 \\times 35}$. To simplify, find the prime factorizations: $108 = 36 \\times 3$ and $35 = 5 \\times 7$. Thus, $\\sqrt{108 \\times 35} = \\sqrt{36 \\times 3 \\times 35} = \\sqrt{36 \\times 105} = 6\\sqrt{105}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "question_text": "If $6y = 5x - 1$, then $x = ?$",
+    "options": {
+      "a": "$\\frac{6}{5}y - 1$",
+      "b": "$\\frac{6}{5}y + 1$",
+      "c": "$\\frac{6y - 1}{5}$",
+      "d": "$\\frac{6y + 1}{5}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "To solve for $x$, isolate it on one side: add 1 to both sides to get $6y + 1 = 5x$. Divide by 5 to get $x = \\frac{6y + 1}{5}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Mathematics",
+    "topic": "Unit Conversion",
+    "question_text": "A boat is traveling at a speed of 30 miles per hour. What is the boat's speed in feet per second?\n(Note: 1 mile = 5,280 feet)",
+    "options": {
+      "a": "20",
+      "b": "30",
+      "c": "44",
+      "d": "176"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Convert miles per hour to feet per second using dimensional analysis: $(30 \\text{ miles} / 1 \\text{ hour}) \\times (5280 \\text{ feet} / 1 \\text{ mile}) \\times (1 \\text{ hour} / 3600 \\text{ seconds}) = (30 \\times 5280) / 3600 = 44 \\text{ feet per second}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Mathematics",
+    "topic": "Functions",
+    "question_text": "An object is launched vertically at 30 meters per second from a 55-meter-tall platform. The height, $h(t)$ meters, of the object $t$ seconds after launch is modeled by $h(t) = -4.9t^2 + 30t + 55$. What will be the height, in meters, of the object 3 seconds after launch?",
+    "options": {
+      "a": "44.1",
+      "b": "100.9",
+      "c": "145",
+      "d": "189.1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Substitute $t = 3$ into the function: $h(3) = -4.9(3^2) + 30(3) + 55 = -4.9(9) + 90 + 55 = -44.1 + 145 = 100.9$ meters.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "The whole numbers 1 through 30 were each written on separate pieces of paper. Those 30 pieces of paper were put into a jar. One piece of paper will be randomly drawn from this jar. What is the probability that this piece of paper will have a prime number written on it?",
+    "options": {
+      "a": "$\\frac{1}{30}$",
+      "b": "$\\frac{1}{20}$",
+      "c": "$\\frac{1}{10}$",
+      "d": "$\\frac{10}{30}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Count the prime numbers between 1 and 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, and 29. There are 10 prime numbers. The probability is the number of primes divided by the total numbers, which is $\\frac{10}{30}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "For an angle with measure $\\alpha$ in a right triangle, $\\sin \\alpha = \\frac{5}{13}$ and $\\tan \\alpha = \\frac{5}{12}$. What is the value of $\\cos \\alpha$?",
+    "options": {
+      "a": "$\\frac{12}{13}$",
+      "b": "$\\frac{12}{\\sqrt{194}}$",
+      "c": "$\\frac{12}{\\sqrt{119}}$",
+      "d": "$\\frac{13}{12}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "In a right triangle, $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$. So, $\\frac{5}{12} = \\frac{5/13}{\\cos \\alpha}$. Rearranging to solve for $\\cos \\alpha$ gives $\\cos \\alpha = \\frac{5/13}{5/12} = \\frac{12}{13}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Mathematics",
+    "topic": "Systems of Equations",
+    "question_text": "Which of the following values, if any, is the $y$-value of the solution set to the system of equations below?\n$$2x - y = 7$$\n$$-4x + 2y = 2$$",
+    "options": {
+      "a": "2",
+      "b": "5",
+      "c": "9",
+      "d": "There is no such value for $y$."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "If we multiply the first equation by -2, we get $-4x + 2y = -14$. The second equation states $-4x + 2y = 2$. Since $-14 \\neq 2$, the system has no solution, so there is no such value for $y$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Mathematics",
+    "topic": "Polynomial Expansion",
+    "question_text": "Which of the following expressions is equivalent to $(y + 7)^3$?",
+    "options": {
+      "a": "$y^3 + 21y^2 + 147y + 343$",
+      "b": "$y^3 + 14y + 343$",
+      "c": "$y^3 + 14y + 49$",
+      "d": "$y^3 + 343$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Use the binomial theorem for expanding a cube: $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$. Using $a=y$ and $b=7$: $y^3 + 3y^2(7) + 3y(7^2) + 7^3 = y^3 + 21y^2 + 147y + 343$.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Mathematics",
+    "topic": "Ratios and Proportions",
+    "question_text": "The sum of 3 positive integers is 180, and the ratio of the integers is 5:3:2. What is the value of the smallest of the integers?",
+    "options": {
+      "a": "18",
+      "b": "36",
+      "c": "54",
+      "d": "90"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Let the parts be $5x, 3x, \\text{ and } 2x$. The sum is $5x + 3x + 2x = 10x = 180$, so $x = 18$. The smallest integer corresponds to $2x$, which is $2(18) = 36$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "question_text": "Which of the following expressions is equivalent to $(x^2 - y^2) - (6x^2 + 4xy - y^2)$?",
+    "options": {
+      "a": "$-5x^2 - 4xy$",
+      "b": "$-5x^2 + 4xy - 2y^2$",
+      "c": "$7x^2 + 4xy - 2y^2$",
+      "d": "$7x^2 + 4xy + 2y^2$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Distribute the negative sign and combine like terms: $x^2 - y^2 - 6x^2 - 4xy + y^2$. This simplifies to $(x^2 - 6x^2) - 4xy + (-y^2 + y^2) = -5x^2 - 4xy$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Mathematics",
+    "topic": "Complex Numbers",
+    "question_text": "Given $i = \\sqrt{-1}$, what is $\\sqrt{9} + \\sqrt{-16}$?",
+    "options": {
+      "a": "$7i$",
+      "b": "$i\\sqrt{7}$",
+      "c": "$3 - 4i$",
+      "d": "$3 + 4i$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Simplify the square roots: $\\sqrt{9} = 3$ and $\\sqrt{-16} = \\sqrt{16}\\sqrt{-1} = 4i$. Combining them gives $3 + 4i$.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Mathematics",
+    "topic": "Sequences",
+    "question_text": "The first 5 terms of an arithmetic sequence are 7, 21, 35, 49, and 63. Let $t_n$ represent the $n$th term of the sequence. What is the value of $t_{25}$?",
+    "options": {
+      "a": "175",
+      "b": "343",
+      "c": "357",
+      "d": "371"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The common difference $d = 21 - 7 = 14$. The $n$th term of an arithmetic sequence is $t_n = a + (n-1)d$. For $n=25$, $t_{25} = 7 + (25-1)14 = 7 + 24(14) = 7 + 336 = 343$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Mathematics",
+    "topic": "Similar Triangles",
+    "question_text": "At a certain time of day, a flagpole casts a 9.0-foot-long shadow and a nearby 4.0-foot-tall fence post casts a 2.4-foot-long shadow. Given that both the flagpole and the fence post are vertical and on level ground, what is the height, in feet, of the flagpole?",
+    "options": {
+      "a": "5.4",
+      "b": "10.6",
+      "c": "15.0",
+      "d": "15.4"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Set up a proportion using similar triangles: $\\frac{\\text{height of flagpole}}{9.0} = \\frac{4.0}{2.4}$. Therefore, $\\text{height} = \\frac{9.0 \\times 4.0}{2.4} = \\frac{36}{2.4} = 15.0$ feet.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "question_text": "In rectangle $ABCD$ shown, segments $\\overline{BE}$ and $\\overline{CE}$ partition the rectangle into 3 triangles. Given $DE = 7$ centimeters, $BE = 26$ centimeters, and $CE = 25$ centimeters, what is the length, in centimeters, of $\\overline{BC}$?\n\n<svg width='100%' viewBox='0 0 680 420' role='img' xmlns='http://www.w3.org/2000/svg' style=''><defs><mask id='imagine-text-gaps-bjq2ka' maskUnits='userSpaceOnUse'><rect x='0' y='0' width='680' height='420' fill='white'/><rect x='77.9921875' y='39' width='20' height='21' fill='black' rx='2'/><rect x='582.9921875' y='39' width='18.015625' height='21' fill='black' rx='2'/><rect x='582.578125' y='359' width='19' height='21' fill='black' rx='2'/><rect x='78.578125' y='359' width='19' height='21' fill='black' rx='2'/><rect x='69.984375' y='299' width='18.015625' height='21' fill='black' rx='2'/><rect x='343.2109375' y='180' width='23.7861328125' height='20' fill='black' rx='2'/><rect x='343.2109375' y='305' width='23.7861328125' height='20' fill='black' rx='2'/><rect x='70.203125' y='333' width='16' height='20' fill='black' rx='2'/></mask></defs><title style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'>Quadrilateral ABCD with point E on left side</title><desc style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'>Rectangle ABCD with point E on left side. EB=26, EC=25, ED=7.</desc><rect x='100' y='60' width='480' height='300' fill='none' stroke='black' stroke-width='1.5' style='fill:none;stroke:rgb(0, 0, 0);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><line x1='100' y1='310' x2='580' y2='60' stroke='black' stroke-width='1.5' mask='url(#imagine-text-gaps-bjq2ka)' style='fill:rgb(0, 0, 0);stroke:rgb(0, 0, 0);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><line x1='100' y1='310' x2='580' y2='360' stroke='black' stroke-width='1.5' style='fill:rgb(0, 0, 0);stroke:rgb(0, 0, 0);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><text x='88' y='55' text-anchor='middle' font-family='sans-serif' font-size='15' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:15px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>A</text><text x='592' y='55' text-anchor='middle' font-family='sans-serif' font-size='15' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:15px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>B</text><text x='592' y='375' text-anchor='middle' font-family='sans-serif' font-size='15' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:15px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>C</text><text x='88' y='375' text-anchor='middle' font-family='sans-serif' font-size='15' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:15px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>D</text><text x='84' y='315' text-anchor='end' font-family='sans-serif' font-size='15' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:15px;font-weight:400;text-anchor:end;dominant-baseline:auto'>E</text><text x='355' y='195' text-anchor='middle' font-family='sans-serif' font-size='14' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>26</text><text x='355' y='320' text-anchor='middle' font-family='sans-serif' font-size='14' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>25</text><text x='82' y='348' text-anchor='end' font-family='sans-serif' font-size='14' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:400;text-anchor:end;dominant-baseline:auto'>7</text></svg>",
+    "options": {
+      "a": "10",
+      "b": "15",
+      "c": "17",
+      "d": "24"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Triangle $CDE$ is a right triangle with right angle at $D$. Using the Pythagorean theorem, $CD = \\sqrt{CE^2 - DE^2} = \\sqrt{25^2 - 7^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24$. Since $ABCD$ is a rectangle, $AB = CD = 24$. In right triangle $ABE$, $AE = \\sqrt{BE^2 - AB^2} = \\sqrt{26^2 - 24^2} = \\sqrt{676 - 576} = \\sqrt{100} = 10$. The length of side $AD = AE + ED = 10 + 7 = 17$. Because opposite sides of a rectangle are equal, $BC = AD = 17$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Mathematics",
+    "topic": "Ratios and Proportions",
+    "question_text": "In a particular cleaning solution, the ratio of concentrated solution to water is 3:40. How many cups of concentrated solution should be added to 5 gallons of water to make the cleaning solution in the given ratio?\n(Note: 4 cups = 1 quart; 4 quarts = 1 gallon)",
+    "options": {
+      "a": "12",
+      "b": "6",
+      "c": "$1\\frac{1}{2}$",
+      "d": "$\\frac{3}{8}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "First, convert 5 gallons of water to cups: $5 \\text{ gallons} \\times 4 \\text{ quarts/gallon} \\times 4 \\text{ cups/quart} = 80 \\text{ cups of water}$. Let $x$ be the cups of concentrated solution. By proportion, $\\frac{x}{80} = \\frac{3}{40}$. Solving yields $x = \\frac{3 \\times 80}{40} = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Mathematics",
+    "topic": "Exponential Functions",
+    "question_text": "Let $f(t) = 7e^{3t} + 1$. Which of the following numbers is closest to the value of $f(5)$?",
+    "options": {
+      "a": "$-2 \\times 10^{-1}$",
+      "b": "$3 \\times 10^2$",
+      "c": "$2 \\times 10^7$",
+      "d": "$6 \\times 10^7$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Substitute $t = 5$: $f(5) = 7e^{15} + 1$. We know $e \\approx 2.718$. $e^{15} \\approx 3,269,017$ (or approx $3.27 \\times 10^6$). Then $7 \\times (3.27 \\times 10^6) \\approx 2.28 \\times 10^7$. The closest value is $2 \\times 10^7$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "Which of the following expresses $40^\\circ$ in radians?",
+    "options": {
+      "a": "$\\frac{2}{9\\pi}$",
+      "b": "$\\frac{2\\pi}{9}$",
+      "c": "$\\frac{9\\pi}{2}$",
+      "d": "$\\frac{7,200}{\\pi}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "To convert degrees to radians, multiply the angle in degrees by $\\frac{\\pi}{180^\\circ}$. So, $40^\\circ \\times \\frac{\\pi}{180^\\circ} = \\frac{40\\pi}{180} = \\frac{2\\pi}{9}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Mathematics",
+    "topic": "Function Transformations",
+    "question_text": "Let the function $f$ be defined as $f(x) = -9x^2$. In the standard $(x,y)$ coordinate plane, the graph of $y = f(x)$ undergoes a transformation such that the result is the graph of $y = f(x) - 4$. Under this transformation the graph of $y = f(x)$ is:",
+    "options": {
+      "a": "shifted downward 4 coordinate units.",
+      "b": "shifted left 4 coordinate units.",
+      "c": "stretched horizontally by a factor of 4.",
+      "d": "stretched vertically by a factor of 4."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Subtracting a positive constant from a function $f(x)$ (e.g., $f(x) - 4$) causes a vertical shift of the graph downwards by that constant number of units. Thus, the graph is shifted downward 4 units.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "question_text": "For all positive values of $a$, $b$, $c$, and $d$, when $\\frac{1}{2}ab^2 + c = d$, which of the following expressions is equal to $b$?",
+    "options": {
+      "a": "$\\sqrt{\\frac{a(d - c)}{2}}$",
+      "b": "$\\sqrt{\\frac{2(d - c)}{a}}$",
+      "c": "$\\sqrt{\\frac{2d - c}{a}}$",
+      "d": "$\\sqrt{\\frac{d - c}{2a}}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "To solve for $b$, isolate $b$ on one side of the equation. First, subtract $c$ from both sides: $\\frac{1}{2}ab^2 = d - c$. Next, multiply by 2 to remove the fraction: $ab^2 = 2(d - c)$. Then, divide by $a$: $b^2 = \\frac{2(d - c)}{a}$. Finally, since $b$ is positive, take the square root of both sides: $b = \\sqrt{\\frac{2(d - c)}{a}}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "On a trip, 2 sisters counted 1,430 vehicles. They divided the vehicles into categories: cars, trucks, and other. They noted the color of each as white, black, red, or other, as shown in the table. What is the probability that a randomly selected truck is black?\n\n| | White | Black | Red | Other | Total |\n|---|---|---|---|---|---|\n| Car | 118 | 62 | 97 | 197 | 474 |\n| Truck | 100 | 31 | 116 | 232 | 479 |\n| Other | 86 | 85 | 94 | 212 | 477 |\n| Total | 304 | 178 | 307 | 641 | 1,430 |",
+    "options": {
+      "a": "$\\frac{31}{178}$",
+      "b": "$\\frac{31}{479}$",
+      "c": "$\\frac{31}{1,430}$",
+      "d": "$\\frac{479}{1,430}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The condition \"a randomly selected truck\" indicates that the sample space is limited to trucks. The total number of trucks is 479. Out of these, the number of black trucks is 31. Thus, the probability is $\\frac{31}{479}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "question_text": "A regular hexagon is inscribed in a circle with diameter 18 inches, as shown. What is the perimeter, in inches, of the hexagon?\n\n<svg width='100%' viewBox='0 0 680 500' role='img' xmlns='http://www.w3.org/2000/svg' style=''><title style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'>Regular hexagon inscribed in a circle with diameter 18 in</title><desc style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'>A regular hexagon inscribed inside a circle. A horizontal diameter line is labeled 18 in.</desc><circle cx='340' cy='250' r='190' fill='none' stroke='black' stroke-width='1.5' style='fill:none;stroke:rgb(0, 0, 0);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><polygon points='340,60 504.6,155 504.6,345 340,440 175.4,345 175.4,155' fill='none' stroke='black' stroke-width='1.5' style='fill:none;stroke:rgb(0, 0, 0);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><line x1='150' y1='250' x2='530' y2='250' stroke='black' stroke-width='1.5' style='fill:rgb(0, 0, 0);stroke:rgb(0, 0, 0);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto'/><text x='340' y='242' text-anchor='middle' font-family='sans-serif' font-size='16' fill='black' style='fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:400;text-anchor:middle;dominant-baseline:auto'>18 in</text></svg>",
+    "options": {
+      "a": "54",
+      "b": "108",
+      "c": "$27\\sqrt{3}$",
+      "d": "$54\\sqrt{3}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A regular hexagon can be divided into 6 equilateral triangles where the side length of each triangle is equal to the radius of the circumscribed circle. If the diameter is 18 inches, the radius is 9 inches. Therefore, each side of the hexagon is 9 inches. The perimeter is $6 \\times 9 = 54$ inches.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Mathematics",
+    "topic": "Sequences",
+    "question_text": "Tanya earns $34,000 in her 1st year at a job. She is given a raise of the same dollar amount each year, resulting in her earning $38,080 in the 4th year at the job. What is the total of Tanya's earnings during her 4 years at the job?",
+    "options": {
+      "a": "$136,000",
+      "b": "$140,080",
+      "c": "$144,160",
+      "d": "$152,320"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "This situation models an arithmetic sequence. Let $d$ be the yearly raise. Year 1 = 34,000; Year 4 = 34,000 + 3d = 38,080. Solving for $d$ yields $3d = 4,080 \\implies d = 1,360$. The earnings are $34,000 (Year 1), $35,360 (Year 2), $36,720 (Year 3), and $38,080 (Year 4). The sum of these 4 years' earnings is $34,000 + 35,360 + 36,720 + 38,080 = 144,160. Alternatively, sum $= \\frac{4}{2} \\times (34000 + 38080) = 2 \\times 72080 = 144,160$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "In the standard $(x,y)$ coordinate plane, how many points are both 5 coordinate units from the origin and also 2 coordinate units from the line $y = 0$?",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "4"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Points 5 units from the origin lie on the circle $x^2 + y^2 = 25$. Points 2 units from the line $y = 0$ (the x-axis) lie on the horizontal lines $y = 2$ and $y = -2$. Substituting $y = 2$ or $y = -2$ into the circle's equation gives $x^2 + 4 = 25 \\implies x^2 = 21 \\implies x = \\pm\\sqrt{21}$. This yields four distinct intersection points: $(\\sqrt{21}, 2)$, $(-\\sqrt{21}, 2)$, $(\\sqrt{21}, -2)$, and $(-\\sqrt{21}, -2)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "question_text": "In $\\triangle ABC$, if the measure of $\\angle A$ is less than the measure of $\\angle B$, and the measure of $\\angle B$ is less than the measure of $\\angle C$, what is the correct ordering of the side lengths, from least to greatest?",
+    "options": {
+      "a": "$AB < BC < AC$",
+      "b": "$AB < AC < BC$",
+      "c": "$BC < AC < AB$",
+      "d": "$BC < AB < AC$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "In a triangle, the length of a side is directly related to the measure of the angle opposite it. The shortest side is opposite the smallest angle, and the longest side is opposite the largest angle. Since $\\angle A < \\angle B < \\angle C$, the sides opposite those angles must follow the same order. The side opposite $\\angle A$ is $BC$, opposite $\\angle B$ is $AC$, and opposite $\\angle C$ is $AB$. Thus, $BC < AC < AB$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "question_text": "Lajuan sells exactly 4 kinds of pies in his bakery: apple, pecan, coconut cream, and peach. Of the pies he sold on Thursday, $\\frac{1}{4}$ were apple, $\\frac{1}{2}$ were pecan, 24 were coconut cream, and 8 were peach. How many total pies did Lajuan sell on Thursday?",
+    "options": {
+      "a": "40",
+      "b": "42",
+      "c": "56",
+      "d": "128"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Let $T$ be the total number of pies. The sum of the fractions for apple and pecan pies is $\\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}$ of the total pies. Therefore, the remaining pies account for $1 - \\frac{3}{4} = \\frac{1}{4}$ of the total. The remaining pies are the coconut cream (24) and peach (8) pies, totaling 32. Thus, $\\frac{1}{4}T = 32$. Multiplying both sides by 4 gives $T = 128$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "question_text": "In a certain quadrilateral, 2 opposite angles each measure $(3x + 5)^\\circ$. The other 2 opposite angles each measure $(x + 3)^\\circ$. What is the value of $x$?",
+    "options": {
+      "a": "1",
+      "b": "9",
+      "c": "43",
+      "d": "88"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The sum of the interior angles of a quadrilateral is always $360^\\circ$. The sum of these four angles is $2(3x + 5) + 2(x + 3) = 360$. Expanding gives $6x + 10 + 2x + 6 = 360$. Combine like terms to get $8x + 16 = 360$. Subtract 16 from both sides to get $8x = 344$. Divide by 8 to get $x = 43$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Mathematics",
+    "topic": "Sequences",
+    "question_text": "The first 4 terms of a sequence are shown in the table. The sequence is defined by $a_1 = 2$ and $a_n = a_{n - 1} + (n - 1)^2$ for $n \\ge 2$. What is the sixth term, $a_6$, of this sequence?\n\n| $a_1$ | $a_2$ | $a_3$ | $a_4$ |\n|---|---|---|---|\n| 2 | 3 | 7 | 16 |",
+    "options": {
+      "a": "68",
+      "b": "57",
+      "c": "41",
+      "d": "32"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "To find $a_6$, we first need to find $a_5$. Using the recursive formula $a_n = a_{n - 1} + (n - 1)^2$, substituting $n=5$ gives $a_5 = a_4 + (5 - 1)^2 = 16 + 4^2 = 16 + 16 = 32$. Then, for $n=6$, $a_6 = a_5 + (6 - 1)^2 = 32 + 5^2 = 32 + 25 = 57$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Mathematics",
+    "topic": "Number Theory",
+    "question_text": "On the real number line, how many integers are between $-\\frac{65}{6}$ and $\\frac{75}{2}$?",
+    "options": {
+      "a": "8",
+      "b": "28",
+      "c": "48",
+      "d": "140"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "First, convert the improper fractions to mixed numbers or decimals. $-\\frac{65}{6} = -10\\frac{5}{6} \\approx -10.83$ and $\\frac{75}{2} = 37.5$. The integers strictly between these values range from -10 to 37. To find the number of integers in this range, calculate the difference between the endpoints and add 1 (since both are inclusive in the count): $37 - (-10) + 1 = 37 + 10 + 1 = 48$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "During a particular experiment, 2 events, A and B, can each occur. Events A and B are mutually exclusive during this experiment. Which of the following probabilities is 0?",
+    "options": {
+      "a": "P(A)",
+      "b": "P(B)",
+      "c": "P(A or B)",
+      "d": "P(A and B)"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "By definition, mutually exclusive events cannot occur at the same time. Therefore, the probability of both events occurring simultaneously, represented as P(A and B), is 0.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Mathematics",
+    "topic": "Polynomials",
+    "question_text": "The polynomial function defined by $p(x) = x^3 + x^2 - 8x - 12$ has $(x - 3)$ as one of its linear factors. What are all and only the zeros of $p$?",
+    "options": {
+      "a": "$-3$ and $-2$",
+      "b": "$-3$ and $2$",
+      "c": "$-2$ and $3$",
+      "d": "$2$ and $3$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Because $(x - 3)$ is a factor, 3 is a zero. Dividing $p(x)$ by $(x - 3)$ using synthetic or polynomial division yields $x^2 + 4x + 4$. Setting this quotient equal to 0, we can factor it as $(x + 2)^2 = 0$, giving a double root at $x = -2$. Therefore, the distinct zeros are -2 and 3.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Mathematics",
+    "topic": "Statistics",
+    "question_text": "Jonathan rode his bike every day for 18 days. The table shows each of the distances he rode. The table also shows the number of days he rode each of those distances.\n\n| Distance (in miles) | Number of days |\n|---|---|\n| 1 | 2 |\n| 3 | 4 |\n| 4 | 3 |\n| 5 | 6 |\n| 7 | 3 |\n\nWhat is the median daily distance, in miles, that Jonathan rode his bike for the 18 days?",
+    "options": {
+      "a": "3",
+      "b": "3.5",
+      "c": "4",
+      "d": "4.5"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "The median of 18 values is the average of the 9th and 10th values when arranged in order. Using a cumulative sum of days: 2 days (1 mile), $2+4=6$ days (up to 3 miles), $6+3=9$ days (up to 4 miles). Therefore, the 9th value is 4. The 10th value falls into the next category (5 miles), making the 10th value 5. The average of 4 and 5 is $\\frac{4+5}{2} = 4.5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Mathematics",
+    "topic": "Statistics",
+    "question_text": "A tourism organization randomly selected 100 tourists finishing their summer visit to Spain. The organization asked them how many cities they had toured in the country. The table shows the results. Based on these data, for the population of tourists that visited Spain during the summer, what is the best estimate of the mean number of cities toured?\n\n| Number of cities | 1 | 2 | 3 |\n|---|---|---|---|\n| Number of tourists | 10 | 40 | 50 |",
+    "options": {
+      "a": "0.8",
+      "b": "2",
+      "c": "2.4",
+      "d": "3"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "To estimate the mean, multiply each number of cities by the frequency (number of tourists), sum the products, and divide by the total number of tourists (100). Sum $= (1 \\times 10) + (2 \\times 40) + (3 \\times 50) = 10 + 80 + 150 = 240$. The mean is $240 / 100 = 2.4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Mathematics",
+    "topic": "Roots and Exponents",
+    "question_text": "Given the equation $\\sqrt[4]{x} = y$, where $y$ is a real number, what must be true of $x$? $x$ is:",
+    "options": {
+      "a": "an even real number.",
+      "b": "a rational number.",
+      "c": "an integer.",
+      "d": "a nonnegative real number."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The expression $\\sqrt[4]{x}$ represents the principal fourth root of $x$. For the fourth root (an even index root) of $x$ to yield a real number $y$, the radicand $x$ must be greater than or equal to 0. Thus, $x$ must be a nonnegative real number.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Mathematics",
+    "topic": "Inequalities and Optimization",
+    "question_text": "Given that $1 \\le m \\le 4$, $4 \\le n \\le 6$, and $8 \\le p \\le 10$, what is the greatest possible value for $(\\frac{m}{n})(\\frac{1}{p})$?",
+    "options": {
+      "a": "$\\frac{3}{20}$",
+      "b": "$\\frac{1}{15}$",
+      "c": "$\\frac{1}{10}$",
+      "d": "$\\frac{1}{8}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "To maximize the fraction $\\frac{m}{np}$, you must maximize the numerator $m$ and minimize the denominator $np$. The maximum value for $m$ is 4. The minimum values for $n$ and $p$ are 4 and 8, respectively. Plugging these in: $\\frac{4}{4 \\times 8} = \\frac{4}{32} = \\frac{1}{8}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Mathematics",
+    "topic": "Statistics",
+    "question_text": "Which of the following datasets has the largest standard deviation?",
+    "options": {
+      "a": "0, 0, 10, 10",
+      "b": "0, 1, 9, 10",
+      "c": "2, 3, 5, 7",
+      "d": "5, 5, 5, 5"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Standard deviation measures how spread out numbers are from their mean. A dataset with values clustered tightly around its mean has a low standard deviation (e.g., 5,5,5,5 has a standard deviation of 0). The values 0, 0, 10, 10 are distributed entirely at the extremes, as far away from their mean (5) as possible given the 0-10 range. This results in the largest spread and highest standard deviation.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Mathematics",
+    "topic": "Solid Geometry",
+    "question_text": "Michael has a cylindrical fish tank, shown, that has an inside diameter of 18 inches. When he put colored gravel in his fish tank, the water level of the tank rose 2 inches. What is the volume of the gravel in cubic inches?\n\n![Diagram showing a cylindrical fish tank. The inside diameter is labeled 18 in. There is water inside and some fish.](/usa/act/assets/fish_tank_cylinder.svg)",
+    "options": {
+      "a": "$18\\pi$",
+      "b": "$36\\pi$",
+      "c": "$162\\pi$",
+      "d": "$648\\pi$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The volume of the gravel is equal to the volume of the water it displaces. The displaced water forms a cylinder with the same diameter as the tank (18 inches, so radius $r = 9$ inches) and a height $h = 2$ inches. Using the volume formula for a cylinder $V = \\pi r^2 h$: $V = \\pi(9^2)(2) = \\pi(81)(2) = 162\\pi$ cubic inches.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Mathematics",
+    "topic": "Functions",
+    "question_text": "The table gives values of $f(x)$, $g(x)$, and $h(x)$ for all positive integers $x \\le 5$. Given $h(f(g(a))) = 1$ where $a$ is a positive integer less than or equal to 5, what is the value of $a$?\n\n| $x$ | $f(x)$ | $g(x)$ | $h(x)$ |\n|---|---|---|---|\n| 1 | 2 | 4 | 3 |\n| 2 | 1 | 5 | 1 |\n| 3 | 4 | 2 | 5 |\n| 4 | 5 | 3 | 4 |\n| 5 | 3 | 1 | 2 |",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Work from the outside function inward. We are given $h(f(g(a))) = 1$. From the table, $h(x) = 1$ when $x = 2$. Therefore, $f(g(a)) = 2$. Looking at the $f(x)$ column, $f(x) = 2$ when $x = 1$. Therefore, $g(a) = 1$. Looking at the $g(x)$ column, $g(x) = 1$ when $x = 5$. Therefore, $a = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Each time Coin C is tossed, it lands faceup or facedown. The probability of landing faceup is 3 times the probability of landing facedown. In a certain game, the player wins 1.00 dollar when Coin C lands faceup and the player wins 2.00 dollars when Coin C lands facedown. To the nearest cent, what is the expected value of each toss of Coin C in this game?",
+    "options": {
+      "a": "1.25 dollars",
+      "b": "1.33 dollars",
+      "c": "1.50 dollars",
+      "d": "1.67 dollars"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Let $P(D)$ be the probability of facedown. Then $P(U) = 3 \\cdot P(D)$. The sum of probabilities is 1, so $P(U) + P(D) = 3 \\cdot P(D) + P(D) = 4 \\cdot P(D) = 1$. This means $P(D) = 0.25$ and $P(U) = 0.75$. The expected value is calculated by multiplying the probability of each outcome by its payoff and summing the results: $E = (P(U) \\times \\$1.00) + (P(D) \\times \\$2.00) = (0.75 \\times 1) + (0.25 \\times 2) = 0.75 + 0.50 = 1.25$.",
+    "section_id": null
+  }
+]

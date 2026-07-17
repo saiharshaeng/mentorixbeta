@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Choosing a Shop Location",
+    "question_text": "Which of the following factors is most critical when choosing a physical location for a mobile phone workshop to ensure a steady stream of new business?",
+    "options": {
+      "a": "Being located directly next to a hospital.",
+      "b": "High foot traffic and storefront visibility.",
+      "c": "Choosing a secluded area to minimize commercial rent.",
+      "d": "Having an unbranded, hidden entrance for security."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A location with high foot traffic and high visibility naturally attracts more potential walk-in customers to the repair shop, which is essential for a service-oriented business.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "When sourcing repair tools for a GSM workshop, why is it highly advisable to purchase professional-grade precision screwdrivers rather than generic household mini-screwdrivers?",
+    "options": {
+      "a": "Professional screwdrivers are usually much cheaper to replace.",
+      "b": "They prevent stripping and damaging the delicate screw heads on mobile devices.",
+      "c": "They come equipped with built-in digital multimeters.",
+      "d": "They purposely increase the overall weight of the technician's toolkit."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Professional precision screwdrivers are manufactured with exact tolerances and hardened steel to prevent stripping the tiny, delicate screws found inside mobile phones, saving time and preventing irreversible device damage.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Constant Power Supply",
+    "question_text": "To protect delicate GSM flashing equipment from power interruptions during critical firmware updates, which power setup provides the most seamless transfer of constant power without any micro-delay?",
+    "options": {
+      "a": "A manually switched standby mechanical generator.",
+      "b": "An Offline Uninterruptible Power Supply (UPS).",
+      "c": "An Online Uninterruptible Power Supply (UPS).",
+      "d": "Solar panels wired directly to the flashing computer."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "An Online UPS constantly supplies power from the inverter rather than switching over only when the mains fail. This results in absolute zero transfer time during a power outage, which is critical to prevent 'bricking' a phone during a delicate firmware flash.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Recording Phone Details",
+    "question_text": "What does the standard telecommunications acronym 'IMEI' stand for in mobile phone terminology?",
+    "options": {
+      "a": "Internal Mobile Equipment Identifier",
+      "b": "International Mobile Equipment Identity",
+      "c": "Integrated Mobile Electronic Information",
+      "d": "International Machine Exchange Identification"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "IMEI stands for International Mobile Equipment Identity, which is a unique 15-digit code assigned to identify specific mobile phones on a network.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Furniture Layout",
+    "question_text": "In a well-managed mobile phone repair workshop layout, why should the customer reception desk be physically segregated from the main technical workbench area?",
+    "options": {
+      "a": "To hide the specialized repair tools from the customers to maintain a trade secret.",
+      "b": "To completely prevent customers from attempting to learn how to repair phones.",
+      "c": "To protect customers from hazardous soldering fumes and keep the repair bench free of external dust and customer-induced static discharge.",
+      "d": "Because a cluttered technical repair bench is not aesthetically pleasing to view."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Physical segregation protects visiting customers from toxic workshop fumes (like evaporated solder flux) while protecting opened client devices from dust, liquid spills, or Electro-Static Discharge (ESD) that walk-in customers might bring near the bench.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Avoiding Theft Disputes",
+    "question_text": "A customer brings in a locked flagship phone with a physically scratched-off IMEI label and requests a complete software wipe, offering triple your normal fee. According to best workshop management practices, what is the most legally protective course of action?",
+    "options": {
+      "a": "Accept the job immediately to maximize shop profit margins.",
+      "b": "Accept the job but only record the customer's first name to maintain anonymity.",
+      "c": "Request valid proof of ownership (like a purchase receipt), and decline the repair if they cannot provide it, logging the incident.",
+      "d": "Flash the phone using a generic aftermarket firmware to completely bypass IMEI network checks."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Accepting highly suspicious jobs (such as unlocking phones with wiped IMEIs or zero proof of ownership) can implicate the technician in processing stolen property. Refusing the job and logging it legally protects the business from police theft disputes.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Issuing Invoices",
+    "question_text": "What is the primary business purpose of issuing a written estimate or invoice to a customer before beginning a major GSM repair?",
+    "options": {
+      "a": "To provide permanent proof that the phone is already successfully fixed.",
+      "b": "To document the agreed-upon expected cost of parts and labor prior to rendering services.",
+      "c": "To legally transfer absolute ownership of the device to the repair technician.",
+      "d": "To act as the final receipt for payment obtained after the phone is fixed."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An initial invoice or detailed estimate explicitly outlines the expected charges for parts and labor, ensuring mutual agreement and preventing the customer from claiming the repair price was changed unexpectedly.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Determining Repair Costs",
+    "question_text": "Which of the following is considered an 'overhead cost' that must be appropriately factored into the general pricing structure for mobile phone repairs?",
+    "options": {
+      "a": "The direct wholesale cost of an OLED replacement screen for a specific client.",
+      "b": "The specific cost of an earpiece speaker requested by a single customer.",
+      "c": "Monthly commercial shop rent and utility electricity bills.",
+      "d": "The transportation fee paid to a courier to deliver one specific phone to a customer."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Overhead costs represent ongoing business expenses not directly attributable to any single specific repair job—such as rent, basic electricity, and standard administrative software. These must be spread across all repairs to ensure actual profitability.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Maximizing Profit",
+    "question_text": "To maximize profit while reducing wasted capital, a workshop manager implements a 'Just-In-Time' (JIT) parts inventory strategy. What is the primary operational risk associated with this specific method in a GSM repair business?",
+    "options": {
+      "a": "Accumulating too much obsolete stock of old phone screens.",
+      "b": "Exponentially increased physical storage and warehouse costs.",
+      "c": "Extended repair turnaround times if external parts suppliers experience shipping delays.",
+      "d": "Rapid depreciation of the technician's specialized soldering equipment."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The JIT inventory method involves ordering components strictly as they are requested by customers. While it frees up capital and reduces 'dead stock', any supply chain or courier delay immediately halts the repair, leading to angry customers waiting for their devices.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Customer Relations",
+    "question_text": "What is the most professional initial response when an agitated customer returns to your workshop claiming their newly replaced touchscreen stopped working after just one day?",
+    "options": {
+      "a": "Refuse to interact with them until they leave the store and calm down.",
+      "b": "Immediately blame the customer, insisting they must have dropped it in water.",
+      "c": "Stay calm, listen actively, and offer to perform an immediate physical inspection of the device under warranty terms.",
+      "d": "Process a full cash refund instantly without inspecting the actual device."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "In good customer relations, active listening and offering a rapid physical inspection immediately de-escalate customer tension, while ensuring the business maintains protocol to check if the fault was due to defective parts or recent customer damage.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Recording Phone Details",
+    "question_text": "Before processing an intake form for a smartphone repair, a technician must digitally verify and record the phone's unique hardware identifier. Which universal USSD code instantly displays the IMEI number on nearly all mobile phones?",
+    "options": {
+      "a": "*#123#",
+      "b": "*#06#",
+      "c": "*#0000#",
+      "d": "*124#"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Dialing *#06# on the standard phone dialer is the globally recognized universal code used to display a mobile device's IMEI and serial number on the screen.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Furniture Layout",
+    "question_text": "Which combination of integrated furniture layout and secondary equipment provides the maximum required protection against Electro-Static Discharge (ESD) when handling unshielded GSM logic boards?",
+    "options": {
+      "a": "A varnished wooden workbench situated on standard synthetic carpet, paired with a grounded wrist strap.",
+      "b": "A grounded anti-static mat securely placed on a non-conductive workbench, paired with an ESD wrist strap and an uncarpeted shop floor.",
+      "c": "A solid metal workbench, heavy insulated thick rubber gloves, and an isolated UPS power supply.",
+      "d": "A generic plastic folding table, fabric upholstered chairs, and technicians standing barefoot on a thick rubber mat."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A comprehensively ESD-safe workstation inherently requires a properly grounded anti-static workbench mat, a grounded ESD wrist strap securely connected to the technician, and an environment stripped of static-generating synthetic materials (like standard commercial carpet).",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "Which essential electronic diagnostic tool is primarily used in a GSM hardware workshop to accurately measure logic board voltage, trace current pathways, and confirm circuit continuity?",
+    "options": {
+      "a": "An industrial oscilloscope",
+      "b": "A precision soldering iron",
+      "c": "A digital multimeter",
+      "d": "Ceramic curved tweezers"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A digital multimeter is the core foundational diagnostic tool utilized by mobile repair technicians to precisely check circuit continuity, gauge operating voltage, and measure electrical resistance.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Recording Phone Details",
+    "question_text": "Detailed record-keeping is critical during device intake. What is the main business benefit of meticulously documenting the 'customer-stated fault' alongside any distinct physical scratches before the repair begins?",
+    "options": {
+      "a": "It guarantees that the shop can mathematically charge higher labor fees.",
+      "b": "It completely protects the workshop from a customer falsely claiming that a pre-existing scratch or fault was actively caused by the technician.",
+      "c": "It vastly reduces the actual amount of time required to perform micro-soldering.",
+      "d": "It formally allows the technician to legally bypass the actual logic board diagnostic phase."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Routinely documenting pre-existing operational faults and cosmetic damages at intake prevents expensive post-repair disputes over scratches or hardware issues that the customer might erroneously claim the technician created.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Determining Repair Costs",
+    "question_text": "A technician replaces a smartphone charging flex. The wholesale part costs $5.00, courier shipping is $2.00, and the actual repair takes 30 minutes. If the business values technician labor at $40.00/hour and dictates a strict 20% profit markup strictly on parts and shipping costs, what is the precise final repair quote for the customer?",
+    "options": {
+      "a": "$27.00",
+      "b": "$28.40",
+      "c": "$20.00",
+      "d": "$35.00"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Combined cost of parts & shipping = $5.00 + $2.00 = $7.00. Adding a 20% markup on $7.00 ($7.00 x 0.20) = $1.40 markup. Total part charge to customer = $8.40. For labor, 30 minutes at an hourly rate of $40.00 = $20.00. Total final quote = $20.00 labor + $8.40 parts = $28.40.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Constant Power Supply",
+    "question_text": "Why is investing in infrastructure for a highly consistent, uninterruptible power supply considered mandatory when setting up a modern mobile phone workshop?",
+    "options": {
+      "a": "Primarily to keep the front-of-house customer waiting area heavily air-conditioned.",
+      "b": "To firmly ensure that intricate soldering stations, chip programmers, and firmware flashing software operate without sudden failure, which could permanently 'brick' a phone.",
+      "c": "Solely so the technicians can reliably charge their own personal devices during long shifts.",
+      "d": "Because damaged mobile phone batteries inherently drain excessive current from a standard local power grid."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Sudden power outages or severe electrical fluctuations during delicate eMMC memory chip firmware flashing or micro-soldering tasks can catastrophically corrupt software or physically ruin motherboards.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Issuing Receipts and Invoices",
+    "question_text": "A comprehensive job intake form (job card) designed to avoid subsequent business disputes should ideally capture all of the following vital pieces of information, EXCEPT:",
+    "options": {
+      "a": "The device's unique 15-digit IMEI or manufacturer Serial Number.",
+      "b": "A detailed written assessment of pre-existing housing scratches and screen dents.",
+      "c": "The customer's personal bank routing details or ATM pin code.",
+      "d": "The customer's explicit signature legally authorizing the diagnostic process."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Banking details or financial pin codes are highly private and completely irrelevant to assessing or repairing mobile phone hardware/software issues. Requesting them creates massive liability and destroys customer trust.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "When properly sourcing a hot air rework station for intricate Surface Mount Device (SMD) repairs, which combined technical specifications must a workshop owner prioritize to guarantee logic board safety during chip extraction?",
+    "options": {
+      "a": "Procuring the highest maximum raw temperature capacity, ignoring lower limits.",
+      "b": "The total physical weight of the unit and its aesthetic color integration with the workbench.",
+      "c": "Highly precise electronic temperature control combined with fine-tuned, adjustable airflow velocity mechanisms.",
+      "d": "An internally integrated battery backup and excessive LCD screen brightness."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Precise, calibrated temperature regulation and controllable airflow velocity are mathematically critical. Excessive uncontrolled airflow will blow microscopic surrounding SMD capacitors off the logic board, while uncontrolled heat permanently scorches the delicate PCB substrates.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Choosing a Shop Location",
+    "question_text": "When actively evaluating potential commercial properties to establish a profitable GSM repair workshop, which condition would severely limit potential revenue growth?",
+    "options": {
+      "a": "Opening a shop physically inside a massive centralized technology or electronics market hub.",
+      "b": "Renting a large building in an industrial sector located far away from populated urban residential zones.",
+      "c": "Selecting a storefront with easily accessible curbside parking for visiting walk-in clients.",
+      "d": "Installing massive, highly visible illuminated signage directly on a busy main street."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Mobile phone repair is primarily a direct consumer service. Establishing the shop physically far from heavy population centers or residential communities drastically throttles customer acquisition and subsequent business.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Issuing Receipts and Invoices",
+    "question_text": "What crucial piece of written text included on a final repair receipt best shields the workshop owner from ambiguous long-term financial liability after a phone is successfully returned to a customer?",
+    "options": {
+      "a": "A legally binding, clearly demarcated 'limited warranty' period stating conditions exclusively for the specific replaced part.",
+      "b": "A generalized, friendly 'Thank You For Your Business' message in large font.",
+      "c": "The lead technician's personal home address and direct phone number.",
+      "d": "The original historical retail price of the phone when it was brand new."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A strict written warranty clause on the receipt (e.g., '30 days limited warranty on the installed LCD screen only; excludes subsequent water or drop damage') legally boundaries the repair shop's liability if the device independently fails later.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Maximizing Profit",
+    "question_text": "To systematically maximize labor profit margins in a bustling mobile workshop, management relentlessly monitors the 'First-Time Fix Rate' (FTFR). From a purely operational standpoint, what does a high FTFR fundamentally signify?",
+    "options": {
+      "a": "A high statistical percentage of completely new customers are entering the shop weekly.",
+      "b": "Technical repairs are being completed accurately on the first attempt, vastly minimizing unpaid warranty reworks and protecting core labor efficiency.",
+      "c": "Technicians are physically rushing through repairs much faster than the allotted scheduled invoice time.",
+      "d": "The shop management is artificially overcharging clients for basic initial diagnostic tasks."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The 'First-Time Fix Rate' is a critical profit metric. A high FTFR means devices are diagnosed and repaired flawlessly on the first try. Low FTFR means technicians waste expensive labor hours opening up previously fixed phones to correct mistakes for free under warranty.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "Which indispensable safety apparatus must be deployed when comprehensively setting up a daily GSM micro-soldering workspace to safeguard technician health against chemical inhalation?",
+    "options": {
+      "a": "An active HEPA/Carbon fume extractor fan.",
+      "b": "A high-powered optical magnifying glass.",
+      "c": "A heavy-duty industrial hot air gun.",
+      "d": "An automated ultrasonic motherboard cleaning bath."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "An active fume extractor directly suctions and filters out the toxic smoke and atomized chemical particles produced by continuously melting lead/tin solder and vaporized flux paste, crucial for long-term respiratory protection.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Customer Relations",
+    "question_text": "While actively dismantling a smartphone for a quoted screen repair, you discover the primary logic board is snapped, doubling the initial estimated repair cost. In managing customer relations, what is the mandatory next step?",
+    "options": {
+      "a": "Complete the logic board repair silently and forcefully present the massively inflated final bill upon pickup.",
+      "b": "Immediately halt all work, securely store the parts, and contact the client directly to explain the new damage and gain explicit authorization before proceeding.",
+      "c": "Secretly install deeply inferior aftermarket components across the board to secretly match the initial financial estimate.",
+      "d": "Immediately discard the repair ticket completely and hand the unassembled pieces back without verbal explanation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Ethical transparency is foundational to avoiding major business disputes. Seeking explicit verbal or written authorization for unexpected cost increases respects the customer's budget constraints and ensures you get paid for the extra labor.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Determining Repair Costs",
+    "question_text": "A GSM laboratory operates an ultrasonic cleaner needing highly specialized deoxidizing chemical fluid that degrades and must be entirely replaced after every 20 motherboard washes. If a single gallon of this fluid costs $50.00, what is the most accurate accounting method to recover this operational cost when pricing a customer's liquid-damage repair?",
+    "options": {
+      "a": "Financially punish the unlucky 20th customer by applying a sudden $50.00 surcharge to their final bill.",
+      "b": "Write off the chemical fluid as unrecoverable shop waste and simply charge standard diagnostic labor rates.",
+      "c": "Incorporate a mathematically calculated $2.50 consumable overhead surcharge specifically into every single water-damage estimate.",
+      "d": "Deduct the total $50.00 fluid cost directly from the junior technician's weekly payroll."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "$50.00 divided by 20 uses equates to precisely $2.50. This direct 'consumable' cost is structurally necessary for the repair and must be systematically rolled into the base cost of every water-damage quote to sustain true business profitability.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Avoiding Theft Disputes",
+    "question_text": "If an unfamiliar individual hastily enters the workshop requesting an aggressive software pattern-lock bypass and full factory data reset, why must you rigidly demand and record their government ID and proof of purchase first?",
+    "options": {
+      "a": "To secretly acquire their personal data to artificially expand the shop's marketing contact list.",
+      "b": "To deliberately slow down shop workflow to justify charging higher hourly reset rates.",
+      "c": "To completely ensure the workshop is not legally implicated in aiding the bypass of security on stolen merchandise.",
+      "d": "Because standard Android operating systems physically cannot be factory reset without scanning a digitized ID."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Bypassing passwords or screen locks on stolen devices constitutes aiding a criminal act. Stringently verifying formal ID and device ownership severely mitigates legal liability and completely deters thieves from using your shop.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Furniture Layout",
+    "question_text": "Which precise classification of localized ambient lighting is heavily recommended for a mobile phone workbench layout to physically minimize technician retinal eye strain during continuous 8-hour micro-soldering shifts?",
+    "options": {
+      "a": "Extremely dim, warm 2700K incandescent decorative lamps.",
+      "b": "Highly luminous, shadow-reducing, cool-white (5000K-6000K) overhead LED task lighting arrays.",
+      "c": "Constantly shifting, remote-controlled RGB color ambient LED strips.",
+      "d": "Purely natural ambient sunlight channeled strictly through a single localized windowpane."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Continuous micro-soldering of 0201-sized SMD components inherently demands maximum clarity. Shadow-free, cool-white LED ring lights or articulating boom lamps emit high-contrast light that ensures precise depth perception and sharp color accuracy on PCB traces without inducing fatigue.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "When actively evaluating primary components from supply vendors, what is the core business risk/reward trade-off when deciding to exclusively stock OEM (Original Equipment Manufacturer) OLED displays versus deeply discounted aftermarket 'In-Cell Copy' LCD screens?",
+    "options": {
+      "a": "Aftermarket copies inherently yield much smaller initial profit margins but provide massively superior pixel color calibration.",
+      "b": "OEM screens carry a much heavier upfront wholesale cost, risking tighter profit margins if retail prices are capped, yet they massively minimize expensive warranty returns and drastically improve store reputation.",
+      "c": "Aftermarket copies are structurally thicker and intensely complex to frame, but elite customers specifically demand them for performance.",
+      "d": "Installing an OEM screen permanently fractures the internal device firmware, whereas cheap aftermarket variants preserve warranty codes seamlessly."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "OEM screens represent high capital outlay and squeeze per-unit margin compared to cheap copies. However, high-quality OEM panels almost entirely eradicate touch-ghosting defects and failing backlights, ultimately preserving labor resources by eliminating secondary free warranty replacements while securing brand trust.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "Where is universally considered the most legally safe and professionally reliable commercial avenue to procure sophisticated IC-reballing stencils and branded micro-soldering iron tips for a premier new workshop setup?",
+    "options": {
+      "a": "Locally franchised mainstream grocery or general hardware chains.",
+      "b": "Authorized, dedicated electronics diagnostic tool distributors or reputable global B2B wholesale parts suppliers.",
+      "c": "Scavenging heavily utilized, unbranded second-hand equipment directly from street-market swap meets.",
+      "d": "Aggressively bartering tools directly from random walk-in customers who bring in shattered devices."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Acquiring technical gear from specialized, authorized wholesale distributors guarantees that you are receiving genuine tools built to microscopic tolerances, heavily decreasing the operational risk of tool-induced damage and securing valid manufacturer warranties.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Maximizing Profit",
+    "question_text": "What is a universally effective, supplementary retail strategy rapidly utilized to drastically expand total net profit margins in a GSM repair shop without mathematically raising the primary baseline labor rates?",
+    "options": {
+      "a": "Completely disabling the commercial shop's climate control HVAC system indefinitely to cut minor power usage.",
+      "b": "Actively upselling high-margin complementary lifestyle accessories such as impact-resistant cases, tempered glass screen protectors, and braided fast-chargers at the final point of sale.",
+      "c": "Covertly utilizing rejected, defective counterfeit hardware components while heavily marketing them as brand new original items.",
+      "d": "Refusing to pay junior diagnostic technicians legally mandated minimum wage frameworks."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Secondary accessory attachments (like tempered glass or cases) harbor exceptionally high profit percentage markups and demand practically zero extra technician labor time to install, instantly boosting the average customer ticket size seamlessly alongside the base repair.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Recording Phone Details",
+    "question_text": "Before formally accepting a dead device for a highly localized 'broken USB charging port replacement', the intake agent mandates testing and video-logging the front camera, rear camera, proximity sensor, and primary microphone. Which specific operational principle dictates this rigorous diagnostic action?",
+    "options": {
+      "a": "Corporate Planned Obsolescence architecture.",
+      "b": "Administrative Scope Creep.",
+      "c": "Executing comprehensive pre-repair operational diagnostics explicitly designed to defensively preclude subsequent fraudulent customer liability claims.",
+      "d": "The Pareto Principle of statistical hardware mechanics."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Running and documenting extensive functional tests prior to opening the device shields the business. It unequivocally prevents a malicious or oblivious customer from alleging that the technician \"broke the camera\" while legally disassembling the phone to merely swap a faulty charging module.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Recording Phone Details",
+    "question_text": "Within modern shop procedures, a formal Service Intake Job Card must explicitly detail granular physical observations of the client's chassis (e.g., 'deep gauge on bottom-right aluminum bezel'). Why is this procedural step paramount?",
+    "options": {
+      "a": "It strictly dictates how many raw electrical joules the shop needs to safely budget to re-flash the OS.",
+      "b": "It establishes a formally signed, mutual historical agreement on the device's exact incoming physical condition to outright paralyze subsequent legal disputes regarding aesthetic shop damage.",
+      "c": "It inherently provides the mathematical cipher required to calculate the device's internal IMEI digits.",
+      "d": "It visually proves beyond doubt to law enforcement that the phone was completely untouched by local thieves."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Strictly noting existing housing cracks or severe bezel scratches completely prevents aggressive clients from extorting the shop with false claims that pristine phones were suddenly cosmetically mangled by a reckless technician during routine service.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Constant Power Supply",
+    "question_text": "When meticulously engineering and sizing a centralized Inverter system specifically to supply uninterrupted backup power to a dense 4-bench lab containing dual microscopes, CAD computers, and an 800-watt hot air rework station, what is the single most mathematically critical electrical specification that must be calculated?",
+    "options": {
+      "a": "The combined sheer physical mass of the deep-cycle battery bank arranged in the server rack.",
+      "b": "The total aggregated continuous wattage load multiplied by the sudden peak surge capacity requirements of all connected diagnostic equipment simultaneously drawing power.",
+      "c": "The consumer brand typography emblazoned on the primary solar charge MPPT controller module.",
+      "d": "The specific tensile length and color of the extension output cables feeding the lab desks."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "An inverter architecture will catastrophically overload and dynamically shut down mid-repair if the aggregated electrical draw (combined continuous wattage + sudden motor/heat element surge peaks) exceeds the inverter's maximum rated operational output ceiling.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Customer Relations",
+    "question_text": "To guarantee complete transparency and establish immense trust, what is unequivocally the most effective, professional final procedural step when physically returning a newly fixed smartphone back to the original owner?",
+    "options": {
+      "a": "Aggressively process the financial payment transaction and swiftly dismiss them to clear the store queue.",
+      "b": "Physically invite the customer to independently execute a full operational test of all core functions on the device directly in front of the agent before exiting the premises.",
+      "c": "Aggressively package the device in shrink wrap, seal it heavily, and command them to unbox and test it much later in private.",
+      "d": "Secretly wipe all user photographs to establish absolute data privacy for the trip back home."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Forcing collaborative in-store device testing confirms immediate physical satisfaction, solidifies the technician's competence, and permanently squashes the \"it wasn't working when I left the store\" argument minutes after the client drives away.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Maximizing Profit",
+    "question_text": "Your wholesale logistics manager purchases a heavily discounted pallet of lithium replacement batteries loudly branded as 'OEM Original'. Upon deep lab load-testing, the cells experience rapid cyclical depletion and voltage sagging. Operating on core strategic business management logic, what is your most viable long-term reaction?",
+    "options": {
+      "a": "Blindly install the defective cells into daily repairs to artificially force margin retention, since the massive shipment invoice is already cleared.",
+      "b": "Instantly halt integration, systematically log the voltage discrepancies, demand an immediate aggressive supplier refund, and dynamically re-source from a rigorously vetted vendor to safeguard shop reputation.",
+      "c": "Deceptively parcel and liquidate the defective battery stock onto internet retail sites labeled as 'Perfect Genuine Replacements' to quietly recoup the total loss.",
+      "d": "Exclusively reserve the unstable batteries to act strictly as test bench models only for devices requiring rapid glass replacements."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Protecting top-tier business integrity is paramount to survival. Integrating knowingly catastrophic or volatile power cells triggers a massive wave of immediate angry customer warranty returns, totally destroying online store reviews and crippling long-term future profitability.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Determining Repair Costs",
+    "question_text": "A specialized mobile technician determines a labor cost of exactly $50.00 and logs a core replacement motherboard IC part cost of $30.00. To structurally offset aggressive building lease overheads and utilities, the shop accounting software injects a mandated baseline 15% aggregate surcharge applied against the entire raw repair total. What is the absolute final invoice figure charged to the client?",
+    "options": {
+      "a": "$80.00",
+      "b": "$85.00",
+      "c": "$92.00",
+      "d": "$100.00"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Calculated raw base cost = Labor ($50.00) + Part ($30.00) = $80.00. The established 15% structural overhead surcharge applied directly to $80.00 calculates as (0.15 x 80 = $12.00). Final cumulative invoice total = $80.00 + $12.00 = $92.00 flat.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Choosing a Shop Location",
+    "question_text": "A repair CEO executing demographic heat-map analysis identifies their newly rented workshop sits directly adjacent to a densely populated college campus. Which targeted commercial retail and service strategy strictly capitalizes on this specific neighborhood reality to yield maximized revenue?",
+    "options": {
+      "a": "Aggressively transforming the lobby strictly to service elite billionaires by executing intricate 24-karat solid-gold-plated chassis modifications.",
+      "b": "Rapidly optimizing local inventory lines to intensely push 15-minute express glass replacements, affordable budget battery swaps, and heavy sales of refurbished mid-tier laptops/phones.",
+      "c": "Completely gutting the inventory systems to singularly service antiquated rotary landline telecommunication devices.",
+      "d": "Establishing an exclusive 'ship-in only' architecture where local students endure mandatory three-week international overseas part delays."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Hyper-local demographic analysis reveals university students universally demand massive affordability combined with instant gratification for core communication devices. Heavy stocking of fast-moving commodity parts like budget screens directly captures this explosive, high-volume market segment.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "To prevent rapid degradation of specialized equipment, what is the technically correct maintenance sequence demanded to indefinitely protect the microscopic tip of a high-end soldering iron stationed within an active GSM hardware lab?",
+    "options": {
+      "a": "Vigorously scrubbing the tip using harsh industrial-grade sandpaper to shred away old burnt elements between every usage cycle.",
+      "b": "Dramatically thermally shocking the metal by violently plunging the blistering tip into a localized cup of freezing ice water after power down.",
+      "c": "Constantly applying 'tinning' via a thick sacrificial protective layer of fresh rosin-core solder, and gently purging carbon scale exclusively utilizing a soft coiled brass wire sponge.",
+      "d": "Intentionally leaving the central heating matrix permanently engaged at 450 degrees Celsius constantly through night hours to vaporize ambient moisture."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Abrasives utterly obliterate the microscopically engineered iron-plating of the tip, exposing the raw copper to instantaneous, catastrophic failure via rapid thermal oxidation. Gentle tinning constantly seals the surface against oxygen, while brass sponges extract carbon without deeply scratching the outer alloy.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Customer Relations",
+    "question_text": "A corporate client desperately deposits a heavily saltwater-damaged high-end flagship phone for recovery, but militantly refuses to surrender the critical numerical unlock passcode, vehemently citing intense \"data privacy/intellectual property\" paranoia. To ruthlessly defend shop liability while appeasing quality constraints, how must the manager navigate this?",
+    "options": {
+      "a": "Instantly and aggressively permanently reject the hardware at the counter without absolute exception.",
+      "b": "Overtly accept the job but secretly utilize specialized penetration extraction boxes to deeply bypass the passcodes against their exact stated demands.",
+      "c": "Administratively force the executive client to legally sign an aggressive intake liability waiver stating the technical workshop absolutely cannot be sued for completely untested secondary components (biometrics, telephoto arrays) discovered failing upon device return.",
+      "d": "Routinely brute-force numerical passcode variations manually until the OS permanently locks out."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Lacking passcode entry completely paralyses post-repair localized functional diagnostics (cameras, earpieces, touch matrices). Mandating a comprehensive liability waiver legally shields the technician from subsequent vicious false allegations asserting that \"the shop suddenly broke my FaceID\" when testing was impossible due to the client's own blockade.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Sourcing Repair Tools",
+    "question_text": "An automated, heavy-duty commercial Ultrasonic Cleaner machine positioned inside a primary mobile laboratory architecture is almost exclusively integrated to mechanically eliminate which incredibly specific category of intense smartphone damage?",
+    "options": {
+      "a": "Shattered or deeply pulverized micro-OLED substrate screens.",
+      "b": "Aesthetic exterior blemishes severely impacting specialized glass camera lenses.",
+      "c": "Pervasive chemical/liquid corrosion severely shorting microscopic internal logic board traces and BGA sub-layers.",
+      "d": "Hazardous internal volumetric expansion associated with aging, swollen lithium-ion power cells."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "An ultrasonic cleaner utilizes cavitation via high-frequency transducer sound waves transmitted through specialized chemical deoxidizing baths to ruthlessly shake microscopic mineral deposits, heavy corrosion, and dried syrup compounds out from under delicate SMD chips—an absolute requirement for reversing heavy motherboard liquid damage.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Furniture Layout",
+    "question_text": "When structurally engineering the operational floor plan diagram of a massively busy, high-volume GSM repair retail store, which progressive geographical layout sequencing algorithm correctly minimizes the critical risk of catastrophic physical handling errors or sudden device misplacement?",
+    "options": {
+      "a": "Direct Workbench Disassembly -> Customer Reception Hand-off -> Generic Open Safe Storage -> Initial Diagnostic Queue Floor",
+      "b": "Front-line Reception (Intake Check) -> Secured Triage Diagnostic Array -> Segregated Indexed Safe Holding Queue -> Dedicated Technician Specialized Repair Workbench",
+      "c": "Front-line Reception (Intake Check) -> Centralized Segregated Indexed Safe Storage -> Disorganized Diagnostic Array Floor -> Return to Front-line Reception -> Specialized Workbench",
+      "d": "Customer Immediate Hand-off straight onto Dedicated Workbench -> Immediate Dump into Open Segregated Safe Storage -> Sporadic Diagnostic Array -> Output Queue"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To prevent chaotic misplacement or accidental drops, flow-control theory dictates physical custody linearly moves from the customer barrier (Reception), instantly into pre-testing documentation (Diagnostic Triage), directly sealed into secured indexing bins (Safe Storage Queue), and only securely extracted when the technician formally clears their micro-Workbench space for active service.",
+    "section_id": null
+  }
+]

@@ -1,0 +1,962 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "According to the Controlled Substances Act, which schedule is designated for drugs that have a high potential for abuse, no currently accepted medical use in the United States, and a lack of accepted safety for use under medical supervision?",
+    "options": {
+      "a": "Schedule I",
+      "b": "Schedule II",
+      "c": "Schedule III",
+      "d": "Schedule IV"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Schedule I drugs (e.g., heroin, LSD, marijuana) are strictly regulated because they have no accepted medical use and a very high potential for abuse.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "What is the primary difference between a Schedule I drug and a Schedule II drug according to the federal Controlled Substances Act?",
+    "options": {
+      "a": "Schedule II drugs have a higher potential for abuse than Schedule I drugs.",
+      "b": "Schedule II drugs have a currently accepted medical use with severe restrictions, whereas Schedule I drugs have no accepted medical use.",
+      "c": "Schedule I drugs are available over the counter, while Schedule II drugs require a prescription.",
+      "d": "There is no difference; they are classified together for law enforcement purposes."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Both Schedule I and II drugs have a high potential for abuse, but Schedule II drugs (like morphine, cocaine, and methamphetamine) have accepted medical uses under severe restrictions.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Under the Controlled Substances Act, in which schedule are anabolic steroids classified?",
+    "options": {
+      "a": "Schedule I",
+      "b": "Schedule II",
+      "c": "Schedule III",
+      "d": "Schedule V"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Anabolic steroids are classified as Schedule III drugs. They have moderate to low potential for physical and psychological dependence compared to Schedule I or II.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Which class of drugs is primarily known to alter normal thoughts, perceptions, and moods?",
+    "options": {
+      "a": "Narcotics",
+      "b": "Stimulants",
+      "c": "Depressants",
+      "d": "Hallucinogens"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Hallucinogens, such as LSD and PCP, profoundly alter sensory perceptions, mood, and cognitive processes.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Cocaine is extracted from the leaves of the Erythroxylum coca plant. Based on its physiological effects on the central nervous system, how is cocaine classified?",
+    "options": {
+      "a": "Depressant",
+      "b": "Stimulant",
+      "c": "Narcotic",
+      "d": "Hallucinogen"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Cocaine is a powerful central nervous system stimulant that increases alertness, energy, and blood pressure.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "In forensic pharmacology, a 'narcotic' is strictly defined as a drug that:",
+    "options": {
+      "a": "Induces sleep and relieves pain.",
+      "b": "Stimulates the central nervous system to prevent fatigue.",
+      "c": "Enhances physical performance and muscle growth.",
+      "d": "Causes auditory and visual hallucinations."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Medically and pharmacologically, a narcotic (opiate/opioid) is an analgesic that suppresses the central nervous system to relieve pain and induce sleep.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Heroin is a highly addictive Schedule I narcotic. It is a semi-synthetic derivative created by reacting which naturally occurring opiate with acetic anhydride?",
+    "options": {
+      "a": "Codeine",
+      "b": "Thebaine",
+      "c": "Morphine",
+      "d": "Fentanyl"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Heroin (diacetylmorphine) is synthesized by the acetylation of morphine, which is extracted from the opium poppy.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Which of the following pairings represents drugs that both belong to the stimulant classification?",
+    "options": {
+      "a": "Heroin and Codeine",
+      "b": "LSD and Psilocybin",
+      "c": "Barbiturates and Alcohol",
+      "d": "Methamphetamine and Cocaine"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Both methamphetamine and cocaine increase central nervous system activity, making them stimulants.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Depressants like barbiturates and benzodiazepines largely exert their calming and sleep-inducing effects by enhancing the activity of which neurotransmitter?",
+    "options": {
+      "a": "GABA (Gamma-aminobutyric acid)",
+      "b": "Dopamine",
+      "c": "Serotonin",
+      "d": "Acetylcholine"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Depressants typically work by acting as agonists on GABA receptors, the primary inhibitory neurotransmitter in the brain, thus depressing the CNS.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Fentanyl is a synthetic opioid responsible for many overdose deaths. Approximately how much more potent is fentanyl compared to morphine?",
+    "options": {
+      "a": "2 to 5 times more potent",
+      "b": "50 to 100 times more potent",
+      "c": "1,000 times more potent",
+      "d": "It is exactly equal in potency to morphine"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Fentanyl is a synthetic narcotic analgesic estimated to be 50 to 100 times more potent than morphine.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Which schedule of drugs includes preparations containing limited quantities of certain narcotics, such as cough syrups with a low dosage of codeine, and has the lowest potential for abuse?",
+    "options": {
+      "a": "Schedule II",
+      "b": "Schedule III",
+      "c": "Schedule IV",
+      "d": "Schedule V"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Schedule V drugs have the lowest potential for abuse among the scheduled substances and generally consist of preparations containing limited quantities of certain narcotics.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "'Bath salts' are a class of designer drugs often found in forensic casework. They are pharmacologically classified primarily as:",
+    "options": {
+      "a": "Natural opiates",
+      "b": "Barbiturates",
+      "c": "Synthetic cathinones",
+      "d": "Benzodiazepines"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Bath salts contain synthetic cathinones, which are amphetamine-like stimulants that often also induce hallucinogenic effects.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "MDMA (Ecstasy) is uniquely classified because it shares pharmacological properties of both:",
+    "options": {
+      "a": "Stimulants and Hallucinogens",
+      "b": "Depressants and Narcotics",
+      "c": "Narcotics and Hallucinogens",
+      "d": "Stimulants and Depressants"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "MDMA increases alertness and energy (stimulant) while also altering sensory perception and time (hallucinogen).",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Science",
+    "topic": "Drug Classifications",
+    "question_text": "Club drugs such as GHB and Rohypnol are often implicated in drug-facilitated sexual assaults. To which drug class do these substances belong?",
+    "options": {
+      "a": "Stimulants",
+      "b": "Depressants",
+      "c": "Opiates",
+      "d": "Hallucinogens"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "GHB and Rohypnol are central nervous system depressants that can cause drowsiness, muscle relaxation, and amnesia.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Science",
+    "topic": "Forensic Toxicology",
+    "question_text": "In forensic toxicology, the interaction of two or more drugs resulting in an overall effect that is greater than the sum of their individual effects is known as:",
+    "options": {
+      "a": "Synergism",
+      "b": "Antagonism",
+      "c": "Tolerance",
+      "d": "Biotransformation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Synergism occurs when combined drugs (like alcohol and barbiturates) multiply each other's effects, often leading to lethal outcomes.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "![Arsenic symptoms on nails](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Mees%27_lines.jpg/960px-Mees%27_lines.jpg) \nA toxicologist examines a deceased victim and notices distinctive white transverse lines across the fingernails. Which heavy metal is most commonly associated with these 'Mees' lines' in cases of chronic poisoning?",
+    "options": {
+      "a": "Lead",
+      "b": "Carbon Monoxide",
+      "c": "Arsenic",
+      "d": "Cyanide"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Mees' lines are white bands on the nails indicating heavy metal toxicity, classically associated with arsenic poisoning.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "During an autopsy, a medical examiner observes that the victim exhibits a bright cherry-red skin discoloration. This classic sign points to poisoning by which lethal gas?",
+    "options": {
+      "a": "Carbon Monoxide",
+      "b": "Hydrogen Cyanide",
+      "c": "Sarin",
+      "d": "Chlorine"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Carbon monoxide binds tightly to hemoglobin to form carboxyhemoglobin, which is highly stable and gives the blood and tissues a characteristic cherry-red appearance.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Upon opening the stomach of a poisoning victim, the pathologist notices a distinct odor reminiscent of bitter almonds. Which toxin is likely responsible?",
+    "options": {
+      "a": "Strychnine",
+      "b": "Ricin",
+      "c": "Anthrax",
+      "d": "Cyanide"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A bitter almond smell is the classic, though not universally detectable, olfactory sign of hydrogen cyanide poisoning.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "At the cellular level, how does cyanide cause death?",
+    "options": {
+      "a": "By permanently binding to hemoglobin and blocking oxygen transport in the blood.",
+      "b": "By inhibiting cytochrome c oxidase in mitochondria, halting cellular respiration.",
+      "c": "By overstimulating the central nervous system, leading to lethal seizures.",
+      "d": "By dissolving the alveolar lining in the lungs, causing asphyxiation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Cyanide binds to the iron in cytochrome c oxidase (complex IV) in the electron transport chain, preventing cells from utilizing oxygen (histotoxic hypoxia).",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Chronic exposure to this heavy metal can result in neurological damage, anemia, and the appearance of a blue-black 'Burton's line' along the gums. Which metal is it?",
+    "options": {
+      "a": "Lead",
+      "b": "Mercury",
+      "c": "Arsenic",
+      "d": "Thallium"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Lead poisoning (plumbism) often presents with a blue-black line on the gingival margin known as Burton's line.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Historically, workers in the felt-hat industry suffered from severe tremors, behavioral changes, and dementia due to occupational exposure to a specific toxin, coining the phrase 'Mad as a Hatter'. What was this toxin?",
+    "options": {
+      "a": "Arsenic",
+      "b": "Lead",
+      "c": "Cyanide",
+      "d": "Mercury"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Mercury nitrate was used in the felting process, leading to chronic mercury poisoning (erethism), characterized by severe neurological symptoms.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Ricin is a highly lethal bioterrorism agent. From which natural source is ricin derived?",
+    "options": {
+      "a": "The venom of the Brazilian wandering spider",
+      "b": "The seeds of the castor oil plant (Ricinus communis)",
+      "c": "The leaves of the belladonna plant",
+      "d": "The spores of a soil bacterium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Ricin is a potent natural toxin found in the seeds (beans) of the castor oil plant.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "What is the primary mechanism of action of ricin poisoning?",
+    "options": {
+      "a": "It prevents the clotting cascade, causing internal hemorrhage.",
+      "b": "It destroys red blood cells leading to severe anemia.",
+      "c": "It inactivates ribosomes, completely halting cellular protein synthesis.",
+      "d": "It blocks acetylcholine receptors, resulting in instant paralysis."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Ricin consists of two chains; its A-chain depurinates a specific RNA base on the 28S ribosomal RNA, permanently inactivating the ribosome and stopping protein synthesis.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Anthrax has been utilized in postal bioterrorism attacks (e.g., the 2001 US attacks). What type of biological agent causes anthrax?",
+    "options": {
+      "a": "A bacterium (Bacillus anthracis)",
+      "b": "A virus (Variola major)",
+      "c": "A fungus (Claviceps purpurea)",
+      "d": "A highly toxic plant alkaloid"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Anthrax is caused by the spore-forming bacterium Bacillus anthracis.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Bacillus anthracis can enter the human body via multiple routes. Which route is generally the most lethal, often referred to as 'Woolsorter's disease'?",
+    "options": {
+      "a": "Cutaneous (skin contact)",
+      "b": "Gastrointestinal (ingestion)",
+      "c": "Inhalation (respiratory)",
+      "d": "Intravenous (injection)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Inhalational anthrax is the most deadly form, as the spores quickly travel to the lungs and lymph nodes, releasing overwhelming toxins.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Which biotoxin, produced by the bacterium Clostridium botulinum, is considered the most lethal substance known to man based on its LD50?",
+    "options": {
+      "a": "Tetrodotoxin",
+      "b": "Botulinum toxin",
+      "c": "Ricin",
+      "d": "Anthrax lethal factor"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Botulinum toxin blocks the release of the neurotransmitter acetylcholine at the neuromuscular junction, leading to flaccid paralysis. It is one of the most toxic known substances.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Carbon monoxide is dangerous because it has a significantly higher affinity for hemoglobin than oxygen does. Approximately how many times greater is this affinity?",
+    "options": {
+      "a": "20 times greater",
+      "b": "50 times greater",
+      "c": "200 to 250 times greater",
+      "d": "1000 times greater"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "CO binds to hemoglobin with an affinity 200 to 250 times stronger than oxygen, easily displacing oxygen and leading to systemic hypoxia.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "In cases of suspected heavy metal poisoning where the victim has been exposed over several months, which biological specimen is best collected to establish a timeline of exposure?",
+    "options": {
+      "a": "Blood",
+      "b": "Urine",
+      "c": "Hair",
+      "d": "Vitreous humor"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Heavy metals bioaccumulate in keratinized tissue like hair and nails. Segmental analysis of hair can establish a timeline of chronic exposure.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "Which statement correctly distinguishes between acute and chronic poisoning?",
+    "options": {
+      "a": "Acute poisoning occurs from a massive dose over a short period, while chronic poisoning results from smaller doses over a long period.",
+      "b": "Acute poisoning applies only to synthetic chemicals, whereas chronic poisoning refers to naturally occurring toxins.",
+      "c": "Acute poisoning is non-fatal, while chronic poisoning is always fatal.",
+      "d": "Acute poisoning affects only the respiratory system, while chronic poisoning targets the nervous system."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Toxicity depends on dose and exposure time. Acute is sudden, high-dose exposure; chronic is prolonged, low-dose exposure.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Science",
+    "topic": "Poisons & Toxins",
+    "question_text": "A victim dies after displaying severe, violent muscle spasms that caused their body to arch tightly backward (opisthotonos), while remaining fully conscious. What plant-derived poison is notorious for this mechanism?",
+    "options": {
+      "a": "Atropine",
+      "b": "Nicotine",
+      "c": "Aconitine",
+      "d": "Strychnine"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Strychnine acts as a competitive antagonist of glycine, an inhibitory neurotransmitter, causing severe motor nerve excitation, massive convulsions, and opisthotonos.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "When an individual consumes alcohol, absorption into the bloodstream occurs primarily across the walls of the stomach and which other organ?",
+    "options": {
+      "a": "Large Intestine",
+      "b": "Small Intestine",
+      "c": "Kidney",
+      "d": "Liver"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "About 20% of alcohol is absorbed through the stomach walls, while the remaining 80% is absorbed through the small intestine.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "The destruction of alcohol (oxidation) in the human body takes place almost entirely in which organ?",
+    "options": {
+      "a": "Kidneys",
+      "b": "Stomach",
+      "c": "Liver",
+      "d": "Brain"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Over 90% of ingested ethyl alcohol is oxidized into acetaldehyde and then to acetic acid within the liver.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "What is the primary enzyme responsible for the initial breakdown of ethanol to acetaldehyde in the metabolic pathway: $$\\text{C}_2\\text{H}_5\\text{OH} \\xrightarrow{\\text{Enzyme}} \\text{CH}_3\\text{CHO}$$ ?",
+    "options": {
+      "a": "Alcohol dehydrogenase (ADH)",
+      "b": "Cytochrome P450",
+      "c": "Catalase",
+      "d": "Monoamine oxidase"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Alcohol dehydrogenase (ADH) is the primary enzyme in the liver that oxidizes ethanol into acetaldehyde.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "Although individual variations exist, what is the widely accepted average elimination (burn-off) rate of blood alcohol concentration (BAC) per hour?",
+    "options": {
+      "a": "0.005 g/dL/hr",
+      "b": "0.015 g/dL/hr",
+      "c": "0.035 g/dL/hr",
+      "d": "0.080 g/dL/hr"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The average elimination rate of alcohol is approximately 0.015% w/v (or 0.015 g/dL) per hour.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "In the United States, the legal Blood Alcohol Concentration (BAC) limit for non-commercial drivers aged 21 and older is universally set at:",
+    "options": {
+      "a": "0.04%",
+      "b": "0.05%",
+      "c": "0.08%",
+      "d": "0.10%"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Following federal guidelines and standardization across all states, the legal limit for adult non-commercial drivers is 0.08%.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "The scientific foundation of evidential breathalyzers is Henry's Law. At normal body temperature ($34^\\circ$C for breath), what is the standard accepted ratio of alcohol in the blood to alcohol in alveolar breath?",
+    "options": {
+      "a": "1:100",
+      "b": "1000:1",
+      "c": "2100:1",
+      "d": "5000:1"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Henry's Law states that the concentration of a volatile substance in a liquid is proportional to its concentration in the vapor above it. The standard physiological partition ratio for blood:breath alcohol is 2100 to 1.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "Modern evidential breath testing instruments frequently use which technology to precisely measure alcohol molecules based on how they absorb specific wavelengths of light?",
+    "options": {
+      "a": "Ultraviolet (UV) spectrophotometry",
+      "b": "Infrared (IR) spectroscopy",
+      "c": "Nuclear Magnetic Resonance (NMR)",
+      "d": "X-ray crystallography"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Infrared (IR) spectroscopy measures the absorption of infrared light by the specific chemical bonds in ethanol (C-O and C-H), allowing quantification of alcohol in breath.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "Many portable breathalyzers (PBTs) use fuel cell technology. How does a fuel cell breathalyzer calculate the concentration of alcohol?",
+    "options": {
+      "a": "It oxidizes the alcohol on a platinum electrode, producing a measurable electrical current proportional to the alcohol content.",
+      "b": "It changes color from orange to green upon exposure to alcohol, measured by a photometer.",
+      "c": "It combusts the breath sample and measures the heat produced.",
+      "d": "It records the refraction angle of a laser beam passing through the breath sample."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "In a fuel cell, ethanol is oxidized at the anode, releasing electrons. The resulting electrical current is directly proportional to the amount of alcohol in the breath.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "When calculating an individual's theoretical BAC based on the amount of alcohol consumed, which of the following equations is typically used by forensic toxicologists?",
+    "options": {
+      "a": "The Hardy-Weinberg equation",
+      "b": "The Nernst equation",
+      "c": "The Widmark formula",
+      "d": "The Henderson-Hasselbalch equation"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Widmark formula factors in the mass of alcohol consumed, the individual's body weight, and a gender-specific distribution constant to estimate BAC.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "Which factor will most significantly slow the absorption rate of alcohol into the bloodstream?",
+    "options": {
+      "a": "Consuming alcohol with a carbonated mixer.",
+      "b": "Drinking alcohol quickly (binge drinking).",
+      "c": "Having a substantial meal in the stomach prior to drinking.",
+      "d": "The ambient temperature of the room."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Food in the stomach slows gastric emptying, thereby delaying the passage of alcohol into the small intestine where maximum absorption occurs.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "Although the liver metabolizes about 90-98% of consumed alcohol, the remaining unmetabolized alcohol is excreted completely unchanged. What are the three primary routes of excretion for this unchanged alcohol?",
+    "options": {
+      "a": "Breath, urine, and perspiration",
+      "b": "Feces, tears, and saliva",
+      "c": "Urine, feces, and bile",
+      "d": "Perspiration, tears, and exhaled carbon dioxide"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Between 2% and 10% of alcohol is excreted unchanged in the breath, urine, and sweat (perspiration). This principle allows breath and urine testing to estimate BAC.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "Following absorption, alcohol is distributed uniformly throughout the tissues of the body. Its distribution is directly proportional to the ___ content of the tissues.",
+    "options": {
+      "a": "Fat",
+      "b": "Water",
+      "c": "Protein",
+      "d": "Calcium"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Alcohol is highly hydrophilic (water-soluble). It distributes evenly in proportion to the water content of the various body tissues and fluids.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "During a roadside traffic stop, an officer performs a standardized field sobriety test known as HGN. What does HGN stand for?",
+    "options": {
+      "a": "Horizontal Gaze Nystagmus",
+      "b": "Human Gait Normalcy",
+      "c": "Hepatic Glucose Navigation",
+      "d": "Heel to Groin Neuropathy"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Horizontal Gaze Nystagmus (HGN) refers to the involuntary jerking of the eyes as they track an object horizontally. Its onset and exaggeration are strongly correlated with intoxication.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "The Walk-and-Turn test and the One-Leg Stand test are standardized field sobriety tasks. Why are these specifically designed as 'divided-attention' tasks?",
+    "options": {
+      "a": "They evaluate muscle strength in both legs independently.",
+      "b": "They test the subject's ability to divide physical mass symmetrically.",
+      "c": "They require the subject to concentrate on both mental and physical tasks simultaneously, which becomes difficult under the influence of alcohol.",
+      "d": "They divide the officer's attention to prevent subjective bias."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Divided attention tasks test the brain's ability to multitask (e.g., balancing while following complex verbal instructions), an ability that is impaired by alcohol.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Forensic Science",
+    "topic": "Alcohol Metabolism",
+    "question_text": "For an accurate breathalyzer reading, the instrument must capture 'deep lung' air. What is the anatomical term for the air sacs deep in the lungs where gas exchange occurs?",
+    "options": {
+      "a": "Bronchioles",
+      "b": "Trachea",
+      "c": "Cilia",
+      "d": "Alveoli"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The alveoli are the terminal air sacs in the lungs where oxygen and carbon dioxide—and volatile substances like alcohol—diffuse into and out of the blood.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "In forensic toxicology, what is the fundamental difference between a presumptive test and a confirmatory test?",
+    "options": {
+      "a": "A presumptive test identifies that a substance is likely present but is not specific, whereas a confirmatory test conclusively identifies the specific molecular structure.",
+      "b": "A presumptive test is only used for solid drugs, while confirmatory tests are only for bodily fluids.",
+      "c": "A presumptive test relies on heavy machinery (like mass spectrometers), whereas a confirmatory test uses simple field color changes.",
+      "d": "There is no difference; the terms are completely synonymous in legal proceedings."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Presumptive tests act as preliminary screens. Confirmatory tests (e.g., GC/MS) are specific and legally defensible proofs of exact chemical identity.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "The Marquis reagent is a common presumptive color test. If the Marquis reagent turns purple upon contact with a sample, it is a presumptive positive for which class of drugs?",
+    "options": {
+      "a": "Cocaine",
+      "b": "Marijuana",
+      "c": "Opiates (e.g., Heroin, Morphine)",
+      "d": "Amphetamines"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Marquis test turns purple in the presence of heroin and morphine, and it turns orange-brown in the presence of amphetamines and methamphetamines.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "When testing a suspected white powder for the presence of amphetamines or methamphetamines, what color will the Marquis reagent turn?",
+    "options": {
+      "a": "Purple",
+      "b": "Blue-violet",
+      "c": "Orange-brown",
+      "d": "Bright pink"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Marquis reagent typically yields an orange-brown color when reacted with amphetamines.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "The Scott test is a widely used field test that relies on cobalt thiocyanate. The multi-step chemical reaction produces a sequence of colors (blue, pink, then blue in the chloroform layer) to presumptively identify:",
+    "options": {
+      "a": "LSD",
+      "b": "Heroin",
+      "c": "Barbiturates",
+      "d": "Cocaine"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "The Scott test is a specific presumptive color test for cocaine.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "An officer submits seized plant material to the crime lab. A chemist performs the Duquenois-Levine test. The extraction of a purple color into the lower chloroform layer confirms the presumptive presence of:",
+    "options": {
+      "a": "Marijuana (THC)",
+      "b": "Peyote (Mescaline)",
+      "c": "Opium poppy",
+      "d": "Coca leaves"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The Duquenois-Levine test is the standard color test for marijuana, turning purple when THC is present.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "Which chemical reagent test is used specifically for the detection of barbiturates, turning violet-blue in their presence?",
+    "options": {
+      "a": "Ehrlich's (Van Urk) Reagent",
+      "b": "Dillie-Koppanyi Reagent",
+      "c": "Marquis Reagent",
+      "d": "Mandelin Reagent"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Dillie-Koppanyi test reacts with the barbiturate structure in an alkaline environment to produce a violet-blue complex.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "Ehrlich's reagent (Van Urk test) is primarily utilized to detect the presence of indoles. It is particularly known as a presumptive test for which hallucinogenic drug?",
+    "options": {
+      "a": "PCP",
+      "b": "Cocaine",
+      "c": "LSD",
+      "d": "Methamphetamine"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Van Urk test uses p-dimethylaminobenzaldehyde to test for indoles like LSD, which turn the solution blue-purple.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "In Gas Chromatography/Mass Spectrometry (GC/MS), the 'gold standard' for forensic drug identification, what is the explicit function of the Gas Chromatograph (GC) portion of the instrument?",
+    "options": {
+      "a": "It shatters the molecules into ions to measure their mass.",
+      "b": "It identifies the chemical structure of the substance based on light absorption.",
+      "c": "It vaporizes the sample and physically separates the components of a mixture.",
+      "d": "It amplifies the DNA profile of any trace material."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The GC portion separates the molecules of a mixture based on their volatility and interaction with the stationary phase of the column (retention time), before feeding them into the MS.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "![Mass Spectrometer Readout](https://chem.libretexts.org/@api/deki/files/16831/pentanemspec.GIF?revision=1&size=bestfit&width=367&height=226) \nFollowing separation by the GC, the Mass Spectrometer (MS) analyzes the isolated substances. How does the MS conclusively identify a specific molecule?",
+    "options": {
+      "a": "By bombarding the molecule with high-energy electrons, causing it to fragment into a unique, measurable pattern of ions (mass-to-charge ratio).",
+      "b": "By tracking the speed at which the molecule travels through a silica column.",
+      "c": "By burning the sample and analyzing the color of the emitted flame.",
+      "d": "By reacting the molecule with monoclonal antibodies and checking for agglutination."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The mass spectrometer breaks molecules into ionic fragments. This fragmentation pattern is unique to each specific substance, functioning as a 'chemical fingerprint'.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "Thin-Layer Chromatography (TLC) relies on an $R_f$ (Retention factor) value to tentatively identify drugs. How is the $R_f$ value calculated?",
+    "options": {
+      "a": "Distance the mobile phase traveled divided by the distance the sample spot traveled.",
+      "b": "Distance the sample spot traveled divided by the distance the solvent front traveled.",
+      "c": "Mass of the substance divided by the volume of the stationary phase.",
+      "d": "Time elapsed for separation divided by the column length."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The $R_f$ value is the ratio of the distance the compound moved to the distance the solvent front moved. It is a comparative physical constant for TLC.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "A forensic chemist adds a specific chemical reagent to a small quantity of a drug drop on a slide and observes it under a microscope. By examining the distinct size and shape of the solid formations, they can identify the drug. What type of test is this?",
+    "options": {
+      "a": "Immunoassay",
+      "b": "Gas Chromatography",
+      "c": "Microcrystalline test",
+      "d": "Ultraviolet Spectrophotometry"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Microcrystalline tests produce distinct crystal shapes and sizes that a chemist evaluates microscopically to identify particular drugs.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "Immunoassay testing is highly prevalent for high-volume drug screening of biological samples like urine. On what biological principle does immunoassay technology rely?",
+    "options": {
+      "a": "The capillary action of a mobile phase over a solid support.",
+      "b": "The absorption of specific wavelengths of infrared radiation.",
+      "c": "The precise binding between specific antibodies and their target drug antigens.",
+      "d": "The electrical current generated by the oxidation of target molecules."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Immunoassays use antibodies designed specifically to bind with targeted drugs or their metabolites (antigens) to produce a detectable signal (e.g., color change, fluorescence).",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "Why is an immunoassay test frequently utilized by medical examiners or forensic labs as the initial toxicological screen?",
+    "options": {
+      "a": "It can be automated to rapidly test a large number of samples for multiple drug classes simultaneously.",
+      "b": "It provides absolute, legally defensible, and 100% specific chemical structures of unknown compounds.",
+      "c": "It is the only technique capable of detecting alcohol in the blood.",
+      "d": "It completely replaces the need for confirmatory GC/MS."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Immunoassay screens are rapid, automated, and can process large volumes of biological fluids quickly, though they require a GC/MS confirmation for positive results.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "Once a blood sample is drawn from a suspect in a DUI case to measure BAC, what steps must be taken to ensure the sample is not degraded or biologically altered prior to testing?",
+    "options": {
+      "a": "Store it in a warm environment to keep enzymes active.",
+      "b": "Mix it with a strong acid to precipitate all proteins.",
+      "c": "Add an anticoagulant (like EDTA or heparin) and a preservative (like sodium fluoride), then refrigerate.",
+      "d": "Lyophilize (freeze-dry) the blood immediately upon drawing."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "To maintain BAC integrity, an anticoagulant prevents clotting, and a preservative (sodium fluoride) inhibits microbial growth that could artificially produce or destroy alcohol. Refrigeration slows any degradation.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Forensic Science",
+    "topic": "Lab Testing",
+    "question_text": "If a forensic toxicologist conducts a hair analysis and takes a 1.5 inch (approx. 3.8 cm) segment of hair close to the scalp, approximately how far back does this window of drug detection span?",
+    "options": {
+      "a": "30 days",
+      "b": "90 days",
+      "c": "1 year",
+      "d": "3 years"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Human head hair grows at an average rate of 0.5 inches (approx. 1.3 cm) per month. A 1.5-inch segment closest to the root evaluates approximately the past 90 days.",
+    "section_id": null
+  }
+]

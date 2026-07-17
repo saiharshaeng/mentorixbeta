@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "What does PCB stand for in the context of mobile phone hardware?",
+    "options": {
+      "a": "Printed Circuit Board",
+      "b": "Power Circuit Block",
+      "c": "Primary Cellular Board",
+      "d": "Polymer Component Base"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The PCB is the foundational board where all other hardware components are mounted and interconnected.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "On a mobile phone's Printed Circuit Board (PCB), what is the primary purpose of the copper tracks or traces?",
+    "options": {
+      "a": "To provide physical support to the battery.",
+      "b": "To act as the main processor for the OS.",
+      "c": "To conduct electrical signals and power between different components.",
+      "d": "To store firmware data temporarily."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": " Traces are etched onto the PCB to act as wiring, electrically connecting components like resistors, ICs, and the battery.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Modern mobile phone PCBs use a multilayer architecture. Which of the following best describes why a multilayer PCB is essential in GSM repair contexts?",
+    "options": {
+      "a": "It allows the phone to bend without breaking.",
+      "b": "It provides independent layers for signal routing, ground, and power, enabling compact designs.",
+      "c": "It prevents the software applications from accessing the firmware.",
+      "d": "It replaces the need for an internal battery by storing static charge."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": " Due to the complex block diagram (Power, Memory, RF, Audio units), multilayer PCBs are required to fit intricate routing in a tiny form factor.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Which basic hardware component is primarily designed to oppose the flow of electrical current in a mobile phone's circuit?",
+    "options": {
+      "a": "Diode",
+      "b": "Capacitor",
+      "c": "Antenna",
+      "d": "Resistor"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A resistor's main function is to restrict or oppose the flow of electrical current, helping to manage voltage levels across the board.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "If a Surface Mount Device (SMD) resistor on a PCB is marked '223', what is its expected resistance value? Note: Resistance $R$ relies on a multiplier based on the last digit ($10^x$).",
+    "options": {
+      "a": "22 ohms",
+      "b": "223 ohms",
+      "c": "22,000 ohms",
+      "d": "220,000 ohms"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A '223' SMD code means 22 followed by 3 zeros ($22 \\times 10^3$), which equals 22,000 ohms or 22k ohms.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "In a mobile phone's power management circuit, transistors are frequently utilized. Which of the following is a primary function of a transistor in this specific context?",
+    "options": {
+      "a": "To permanently store the operating system files.",
+      "b": "To capture audio from the environment.",
+      "c": "To act as an electronic switch to route power from the battery to various ICs.",
+      "d": "To transmit radio frequencies to the cellular tower."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Transistors in mobile phones primarily function as high-speed switches or amplifiers, essential for routing power within the Power unit.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Which component allows electrical current to flow easily in only one direction, providing protection against reverse polarity?",
+    "options": {
+      "a": "Diode",
+      "b": "Microphone",
+      "c": "Capacitor",
+      "d": "LCD screen"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A diode functions as a one-way valve for electrical current, commonly used to protect circuits from improper battery insertion (reverse polarity).",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Which specialized type of diode is heavily used in a mobile phone's charging section to regulate voltage and protect components from voltage spikes?",
+    "options": {
+      "a": "Light Emitting Diode (LED)",
+      "b": "Schottky Diode",
+      "c": "Zener Diode",
+      "d": "Photodiode"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Zener diodes are unique because they permit current to flow in the reverse direction when a specific voltage is reached, making them perfect for voltage regulation.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Integrated Circuits (ICs) in modern mobile phones are predominantly surface-mounted. What does the acronym BGA stand for regarding IC packaging?",
+    "options": {
+      "a": "Baseband Graphic Array",
+      "b": "Ball Grid Array",
+      "c": "Binary Gate Amplifier",
+      "d": "Battery Ground Alignment"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Most major ICs like the CPU and Memory use Ball Grid Array (BGA) packaging to save space on the PCB.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Which electronic component stores an electrical charge temporarily and is widely used for filtering in a mobile phone's circuitry?",
+    "options": {
+      "a": "Resistor",
+      "b": "Capacitor",
+      "c": "Antenna",
+      "d": "Microphone"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Capacitors store electrical energy in an electric field and are crucial for smoothing out power supply fluctuations (filtering).",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "When diagnosing a motherboard, you find a capacitor connected in parallel with the power line to the ground. What is its likely function?",
+    "options": {
+      "a": "To amplify the radio signal.",
+      "b": "To act as a decoupling capacitor, stabilizing the power supply to an IC.",
+      "c": "To convert analog audio into digital signals.",
+      "d": "To block Direct Current (DC) while passing Alternating Current (AC) between stages."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Capacitors in parallel with power lines are decoupling (or bypass) capacitors, preventing voltage drops and noise from affecting the IC.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "Within the Audio unit of a mobile phone's block diagram, which precise operation is essential for transforming the user's voice into data that the main processor can handle?\n",
+    "options": {
+      "a": "RF to IF conversion",
+      "b": "Analog-to-Digital Conversion (ADC)",
+      "c": "Digital-to-Analog Conversion (DAC)",
+      "d": "Frequency Modulation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The microphone picks up analog voice waves, which the Audio IC processes through Analog-to-Digital Conversion (ADC) for the digital Baseband.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Which component is strictly responsible for capturing acoustic sound waves and turning them into an electrical analog signal?",
+    "options": {
+      "a": "Speaker",
+      "b": "Microphone",
+      "c": "Antenna",
+      "d": "Display Screen"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The microphone acts as a transducer, converting external acoustic sound into electrical signals.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "In mobile phone architecture, how does the 'Speaker' (hands-free) differ fundamentally from the 'Earpiece' (Receiver)?",
+    "options": {
+      "a": "The speaker inputs sound, while the earpiece outputs sound.",
+      "b": "The speaker outputs high-volume audio like ringtones, while the earpiece outputs low-volume audio for private calls.",
+      "c": "The speaker connects to the RF unit, while the earpiece connects to the Power unit.",
+      "d": "The earpiece requires an ADC, while the speaker requires an antenna."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A speaker (ringer/buzzer) drives loud audio, while the earpiece (receiver) is a smaller speaker intended for the user's ear during a call.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "If a mobile phone's Power Unit IC fails completely, what is the most definitive diagnostic symptom when the device is attached to a DC power supply?",
+    "options": {
+      "a": "The phone powers on but displays 'No Service'.",
+      "b": "The device consumes absolutely zero current when the power button is pressed.",
+      "c": "The LCD shows a white screen of death.",
+      "d": "The phone boot-loops continuously at the manufacturer logo."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Power IC distributes voltage. If it is dead, pressing the power button yields zero current draw on a DC bench supply.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "What is the primary function of the battery in a mobile phone?",
+    "options": {
+      "a": "To amplify the radio signal.",
+      "b": "To provide the essential Direct Current (DC) voltage required to run the device.",
+      "c": "To store downloaded applications.",
+      "d": "To capture the user's audio input."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The battery serves as the fundamental, portable energy source, supplying DC power to the PCB and its components.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Most modern smartphone batteries are based on which specific chemical technology due to its high energy density and lightweight properties?",
+    "options": {
+      "a": "Nickel-Cadmium (NiCd)",
+      "b": "Lead-Acid",
+      "c": "Lithium-Ion (Li-ion) / Lithium-Polymer (Li-Po)",
+      "d": "Alkaline"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Li-ion and Li-Po batteries dominate the modern mobile phone industry because they pack high energy capacity without the 'memory effect'.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "Inside the Power Unit block of a GSM phone, LDOs are used extensively to supply clean voltage to sensitive sections like the RF unit. What does LDO stand for?",
+    "options": {
+      "a": "Large Diode Output",
+      "b": "Low Dropout Regulator",
+      "c": "Logic Data Output",
+      "d": "Linear Digital Oscillator"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A Low Dropout (LDO) regulator is an integrated circuit step-down DC voltage regulator crucial for outputting stable, low-noise power.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "Which component is tasked with radiating and receiving electromagnetic waves to communicate with cellular towers?",
+    "options": {
+      "a": "Antenna",
+      "b": "Microphone",
+      "c": "Capacitor",
+      "d": "Memory Unit"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The antenna bridges the internal circuitry and external free space, receiving and transmitting radio waves.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "In the Radio Frequency (RF) unit block diagram, what is the role of the Antenna Switch?",
+    "options": {
+      "a": "It converts battery voltage into radio frequencies.",
+      "b": "It isolates the audio unit from the power unit.",
+      "c": "It toggles the connection between the receiving (RX) path and the transmitting (TX) path to share the same antenna.",
+      "d": "It physically disconnects the antenna when airplane mode is activated."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The antenna switch directs incoming RF signals to the RX filters and connects the TX amplifier to the antenna without collision.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "A customer brings in a phone that has network reception but completely fails to make calls (drops immediately upon dialing). Diagnostics reveal the transmission signal is too weak. Which component in the RF Unit is most likely faulty?",
+    "options": {
+      "a": "Audio IC",
+      "b": "Power Amplifier (PA)",
+      "c": "LCD Display Driver",
+      "d": "Voltage Controlled Oscillator (VCO)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Power Amplifier (PA) module boosts the transmission (TX) signal before it hits the antenna. Failure means the phone cannot 'shout' loud enough to reach the tower.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "What does the acronym LCD stand for in mobile phone screen technology?",
+    "options": {
+      "a": "Light Control Diode",
+      "b": "Liquid Crystal Display",
+      "c": "Low Contrast Device",
+      "d": "Luminescent Cathode Display"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "LCD stands for Liquid Crystal Display, a flat-panel display technology relying on the light-modulating properties of liquid crystals.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "When comparing screen technologies, what is a fundamental operational difference between an LCD and an OLED screen in a mobile phone?",
+    "options": {
+      "a": "OLED requires a separate backlight panel, while LCD does not.",
+      "b": "LCDs are entirely software-driven, while OLEDs are entirely hardware-driven.",
+      "c": "OLED pixels emit their own light (self-illuminating), whereas LCD pixels require a backlight.",
+      "d": "LCD displays cannot show colors, while OLED displays can."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "OLED (Organic Light Emitting Diode) pixels are self-illuminating, which provides absolute blacks and removes the need for the bulky backlight assembly found in LCDs.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "When troubleshooting a completely dark LCD (though the phone is actively receiving calls), a technician suspects a backlight failure. Which hardware component in the display driver circuit is uniquely responsible for stepping up the battery voltage ($~3.7V$) to the high voltage ($>15V$) needed for the LCD backlight string?",
+    "options": {
+      "a": "Boost Inductor (Coil)",
+      "b": "Baseband Processor",
+      "c": "RF SAW Filter",
+      "d": "Real Time Clock (RTC)"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The backlight driver IC relies on an inductor (boost coil) to step up the low battery voltage to the high voltage required to light up the LCD's LED strip.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Software Components",
+    "question_text": "Android is a popular example of which kind of software component on a mobile phone?",
+    "options": {
+      "a": "Hardware driver",
+      "b": "Bootloader",
+      "c": "Operating System (OS)",
+      "d": "Third-party Application"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Android is a mobile OS that manages phone hardware and provides services for applications.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Software Components",
+    "question_text": "Which of the following best defines 'Firmware' in the context of mobile phone software?",
+    "options": {
+      "a": "A protective physical casing installed around the phone.",
+      "b": "Software permanently or semi-permanently written to the phone's read-only memory, responsible for low-level hardware control.",
+      "c": "Applications downloaded by the user from an app store.",
+      "d": "A specialized battery management integrated circuit."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Firmware serves as the critical bridge between the hardware components and higher-level software applications, often governing low-level device functions.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Software Components",
+    "question_text": "When a technician completely rewrites the firmware on a malfunctioning mobile device using a computer and specific flash tools, this process is generally termed:",
+    "options": {
+      "a": "Overclocking",
+      "b": "Jailbreaking",
+      "c": "Flashing",
+      "d": "Sideloading"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "'Flashing' refers to overwriting the flash memory module with a fresh firmware image to resolve deep software corruption.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Software Components",
+    "question_text": "User-installed software like WhatsApp or games fall under which category in the mobile phone ecosystem?",
+    "options": {
+      "a": "Operating Systems",
+      "b": "Applications",
+      "c": "Firmware",
+      "d": "Hardware Drivers"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Applications are end-user programs that run on top of the mobile Operating System.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "The Memory Unit of a phone typically contains RAM. What characteristic defines RAM (Random Access Memory)?",
+    "options": {
+      "a": "It is non-volatile; it retains data when the battery is removed.",
+      "b": "It stores the permanent firmware and IMEI number.",
+      "c": "It is volatile memory used to temporarily store data currently processed by the OS and Apps.",
+      "d": "It functions strictly as a backup storage for user photos."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "RAM is high-speed, volatile memory that loses its contents when power is lost, used exclusively for active application processing.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "In modern smartphone motherboards, the internal storage is typically an eMMC or UFS chip. What essential data is persistently stored in this IC part of the Memory Unit?",
+    "options": {
+      "a": "Temporary webpage caches only.",
+      "b": "Live cellular radio frequencies.",
+      "c": "The Bootloader, Firmware, OS, and user data.",
+      "d": "The digital-to-analog converter instructions."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Non-volatile memory chips like eMMC store the core operating files (Bootloader, Firmware, OS) and persistent user applications/data.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "What does ROM stand for in the context of a mobile phone's memory unit?",
+    "options": {
+      "a": "Random Operations Memory",
+      "b": "Read-Only Memory",
+      "c": "Radio Oscillating Module",
+      "d": "Rapid Output Machine"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "ROM stands for Read-Only Memory, which traditionally holds the core system firmware that shouldn't be altered casually.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "During a phone call, what is the logical flow of data in the block diagram starting from the user's voice?",
+    "options": {
+      "a": "Microphone -> Audio Unit (ADC) -> CPU/Baseband -> RF Unit (TX) -> Antenna",
+      "b": "Speaker -> Power Unit -> RF Unit (RX) -> Baseband",
+      "c": "Antenna -> RF Unit (RX) -> CPU/Baseband -> Audio Unit (DAC) -> Microphone",
+      "d": "Microphone -> LCD screen -> Memory Unit -> Power Unit"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Sound enters the mic, gets converted to digital by the Audio Unit, is processed by the CPU, sent to the RF Unit for modulation, and transmitted out via the Antenna.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "A smartphone's processing brain usually consists of two distinct processors (often housed in one SoC). The Application Processor runs the OS. What does the Baseband Processor do?",
+    "options": {
+      "a": "It processes all the graphics for 3D games.",
+      "b": "It manages the touchscreen inputs.",
+      "c": "It strictly handles cellular network communications and radio protocols within the RF structure.",
+      "d": "It regulates the voltage sent from the battery to the PCB."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The Baseband processor works closely with the RF Unit to manage the complex digital radio protocols required for cellular network communication.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Software Components",
+    "question_text": "iOS is an operating system exclusively developed and utilized by which technology company?",
+    "options": {
+      "a": "Samsung",
+      "b": "Google",
+      "c": "Microsoft",
+      "d": "Apple"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Apple develops and retains exclusive rights to the iOS operating system used in their mobile devices.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "Within the Radio Frequency (RF) unit, what is the specific role of a SAW (Surface Acoustic Wave) filter?",
+    "options": {
+      "a": "To visually filter colors on the OLED display.",
+      "b": "To filter out unwanted frequency bands and allow only the designated cellular frequencies to pass.",
+      "c": "To convert Direct Current into Alternating Current.",
+      "d": "To extract water and physical debris from the microphone grill."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "SAW filters are crucial in the RF path to block noise and out-of-band signals, ensuring the transceiver only processes the correct cellular frequency band.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "Which component in the RF unit generates the precise carrier frequencies required to modulate and demodulate signals?",
+    "options": {
+      "a": "Voltage Controlled Oscillator (VCO)",
+      "b": "Microphone",
+      "c": "Zener Diode",
+      "d": "Flash Memory"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The VCO (often part of a synthesizer or the main RF IC) generates the local oscillator frequencies needed to tune into specific carrier bands.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "A phone connected to a PC is immediately recognized as a COM port (e.g., 'Qualcomm HS-USB QDLoader 9008'), but the screen remains entirely black and it refuses to turn on. Based on component roles, what is the most likely diagnosis?",
+    "options": {
+      "a": "The battery is completely charged but the Power IC is physically broken.",
+      "b": "The Antenna has snapped off the motherboard.",
+      "c": "The firmware/bootloader in the Memory unit is corrupt or the eMMC has failed (bricked).",
+      "d": "The Speaker module is short-circuiting."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "When a device 'hard bricks', the low-level bootloader fails. However, the CPU can still trigger an emergency download mode (COM port) indicating a memory/firmware crash, not a Power IC failure.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Software Components",
+    "question_text": "When comparing mobile Operating Systems, a primary difference is that Android is an 'open-source' project, whereas iOS is considered:",
+    "options": {
+      "a": "A hardware driver.",
+      "b": "A completely closed-source, proprietary system.",
+      "c": "A third-party application.",
+      "d": "An open-source firmware module."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Apple's iOS is closed-source, meaning its core code is not freely available for public viewing or modification, contrasting with Android.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Structure",
+    "question_text": "Which component, closely tied to the Power Unit, relies on a quartz crystal generating exactly 32.768kHz to maintain the system clock and calendar even when the device is powered down?",
+    "options": {
+      "a": "Baseband Processor",
+      "b": "RTC (Real Time Clock) Oscillator",
+      "c": "Surface Acoustic Wave (SAW) Filter",
+      "d": "Power Amplifier (PA)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Real Time Clock (RTC) oscillator runs at a precise 32.768kHz off a tiny backup supply or battery power, ensuring the phone's time and date remain accurate.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Computer Hardware and GSM Repairs 1",
+    "topic": "Hardware Components",
+    "question_text": "A specialized resistor is often incorporated directly into the battery pack or charging circuit. Its resistance changes significantly with temperature to prevent thermal runaway. What is this component called?",
+    "options": {
+      "a": "Capacitor",
+      "b": "Inductor",
+      "c": "Thermistor",
+      "d": "Antenna Switch"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "A thermistor (thermal resistor) tracks battery temperature. If the battery overheats while charging, its resistance changes to signal the Power IC to halt charging.",
+    "section_id": null
+  }
+]

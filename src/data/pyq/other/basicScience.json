@@ -1,0 +1,962 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which of the following defines environmental pollution?",
+    "options": {
+      "a": "The planting of trees in an environment",
+      "b": "The release of harmful substances into the environment",
+      "c": "The recycling of waste materials",
+      "d": "The cleaning of drainage systems"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Pollution is the introduction of harmful materials (pollutants) into the environment.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which gas is primarily responsible for global warming?",
+    "options": {
+      "a": "Oxygen",
+      "b": "Nitrogen",
+      "c": "Carbon dioxide",
+      "d": "Hydrogen"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Carbon dioxide is a major greenhouse gas that traps heat in the atmosphere, contributing to global warming.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Water pollution can lead to the spread of which of the following diseases?",
+    "options": {
+      "a": "Malaria",
+      "b": "Cholera",
+      "c": "Measles",
+      "d": "Tuberculosis"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Cholera is a waterborne disease caused by ingesting water contaminated with bacteria.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Anything that has mass and occupies space is known as:",
+    "options": {
+      "a": "Energy",
+      "b": "Force",
+      "c": "Matter",
+      "d": "Vacuum"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Matter is defined as anything that has mass and takes up space (volume).",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which of the following is a characteristic of all living things?",
+    "options": {
+      "a": "They can fly",
+      "b": "They have green leaves",
+      "c": "They excrete waste products",
+      "d": "They possess fur"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Excretion is one of the characteristics of living things (MR NIGER D), whereas flying, having leaves, or fur are specific to only some organisms.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "The process by which a solid changes directly to a gas without passing through the liquid state is called:",
+    "options": {
+      "a": "Evaporation",
+      "b": "Condensation",
+      "c": "Sublimation",
+      "d": "Freezing"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Sublimation is the transition of a substance directly from the solid to the gas state.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which of these materials is non-biodegradable?",
+    "options": {
+      "a": "Paper",
+      "b": "Polythene bag",
+      "c": "Banana peel",
+      "d": "Wood"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Polythene (plastic) does not decompose easily by biological processes, unlike organic materials like paper, fruit peels, or wood.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "The boiling point of pure water at sea level is:",
+    "options": {
+      "a": "0°C",
+      "b": "37°C",
+      "c": "50°C",
+      "d": "100°C"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Pure water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which method is best for separating a mixture of sand and water?",
+    "options": {
+      "a": "Magnetization",
+      "b": "Filtration",
+      "c": "Evaporation",
+      "d": "Distillation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Filtration allows the liquid (water) to pass through while trapping the insoluble solid (sand).",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "In the acronym MR NIGER D representing the characteristics of living things, what does 'R' stand for?",
+    "options": {
+      "a": "Running",
+      "b": "Reading",
+      "c": "Respiration",
+      "d": "Reaction"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "R stands for Respiration (or Reproduction in some variations, but Respiration is the standard primary 'R').",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which of the following is NOT a state of matter?",
+    "options": {
+      "a": "Solid",
+      "b": "Liquid",
+      "c": "Gas",
+      "d": "Energy"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Solid, Liquid, and Gas are states of matter. Energy is not a state of matter.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "The basic unit of life in organisms is the:",
+    "options": {
+      "a": "Tissue",
+      "b": "Cell",
+      "c": "Organ",
+      "d": "System"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The cell is the fundamental structural and functional unit of all living organisms.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Plants remove carbon dioxide from the air during:",
+    "options": {
+      "a": "Respiration",
+      "b": "Excretion",
+      "c": "Photosynthesis",
+      "d": "Transpiration"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "During photosynthesis, plants take in carbon dioxide and water to produce glucose and oxygen.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which of the following is an example of an inorganic (non-living) matter found in the soil?",
+    "options": {
+      "a": "Humus",
+      "b": "Bacteria",
+      "c": "Sand particles",
+      "d": "Earthworms"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Sand particles are mineral components derived from rocks (inorganic). Humus, bacteria, and earthworms are organic or living components.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Proper disposal of refuse and sewage helps to prevent:",
+    "options": {
+      "a": "Air circulation",
+      "b": "Soil fertility",
+      "c": "Pollution",
+      "d": "Rainfall"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Waste management prevents pollution of land and water bodies.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Acid rain is primarily caused by the release of which gases?",
+    "options": {
+      "a": "Oxygen and Nitrogen",
+      "b": "Sulphur dioxide and Nitrogen oxides",
+      "c": "Carbon monoxide and Hydrogen",
+      "d": "Chlorine and Fluorine"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Sulphur dioxide ($SO_2$) and Nitrogen oxides ($NO_x$) react with water vapor to form acid rain.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "The quantity of matter contained in a body is called its:",
+    "options": {
+      "a": "Weight",
+      "b": "Volume",
+      "c": "Mass",
+      "d": "Gravity"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Mass is defined as the amount of matter in an object, whereas weight is the force of gravity on that mass.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Basic Science",
+    "topic": "The Environment",
+    "question_text": "Which of the following is a renewable natural resource?",
+    "options": {
+      "a": "Crude oil",
+      "b": "Coal",
+      "c": "Solar energy",
+      "d": "Natural gas"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Solar energy is renewable because it is naturally replenished. Fossil fuels like crude oil, coal, and natural gas are non-renewable.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "The period of rapid growth and sexual maturation in humans is called:",
+    "options": {
+      "a": "Infancy",
+      "b": "Puberty",
+      "c": "Adulthood",
+      "d": "Old age"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Puberty is the developmental stage where adolescents reach sexual maturity and become capable of reproduction.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Which of the following is a secondary sexual characteristic in males?",
+    "options": {
+      "a": "Development of breasts",
+      "b": "Menstruation",
+      "c": "Deepening of voice",
+      "d": "Widening of hips"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Deepening of the voice (due to the enlargement of the larynx) is a characteristic change in males during puberty.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "The transmission of traits from parents to offspring is known as:",
+    "options": {
+      "a": "Evolution",
+      "b": "Heredity",
+      "c": "Adaptation",
+      "d": "Respiration"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Heredity (or genetics) refers to the passing of genetic traits from parents to offspring.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "An organism's natural dwelling place is called its:",
+    "options": {
+      "a": "Community",
+      "b": "Habitat",
+      "c": "Population",
+      "d": "Ecosystem"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A habitat is the natural environment where an organism lives, grows, and thrives.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Which of these is an example of an aquatic habitat?",
+    "options": {
+      "a": "Desert",
+      "b": "Forest",
+      "c": "River",
+      "d": "Savanna"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Aquatic habitats are water-based environments, such as rivers, lakes, and oceans.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Which feature helps a fish to breathe in water?",
+    "options": {
+      "a": "Lungs",
+      "b": "Gills",
+      "c": "Fins",
+      "d": "Scales"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Fish use gills to extract dissolved oxygen from water for respiration.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Cactus plants have spines instead of leaves to:",
+    "options": {
+      "a": "Increase photosynthesis",
+      "b": "Attract insects",
+      "c": "Reduce water loss",
+      "d": "Absorb more sunlight"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Spines reduce the surface area for transpiration, helping the cactus conserve water in desert environments.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Which of the following traits is NOT genetically inherited?",
+    "options": {
+      "a": "Eye colour",
+      "b": "Blood group",
+      "c": "Scar from an injury",
+      "d": "Height"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Scars are acquired traits resulting from environmental factors or accidents, not from genetic DNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Arboreal animals are those that live primarily in:",
+    "options": {
+      "a": "Water",
+      "b": "Burrows",
+      "c": "Trees",
+      "d": "Caves"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Arboreal refers to animals (like monkeys or squirrels) that spend most of their time in trees.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "The union of a male and female gamete is called:",
+    "options": {
+      "a": "Menstruation",
+      "b": "Ovulation",
+      "c": "Fertilization",
+      "d": "Gestation"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Fertilization is the fusion of sperm (male gamete) and egg (female gamete) to form a zygote.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Which of the following is a structural adaptation of a bird for flight?",
+    "options": {
+      "a": "Heavy bones",
+      "b": "Presence of teeth",
+      "c": "Hollow bones",
+      "d": "Four legs"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Birds have hollow (pneumatic) bones to reduce weight, making flight more energy-efficient.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Basic Science",
+    "topic": "Biology & Growth",
+    "question_text": "Menstruation occurs in females as a result of:",
+    "options": {
+      "a": "The fertilization of an egg",
+      "b": "The shedding of the uterine lining",
+      "c": "The blockage of the fallopian tube",
+      "d": "The growth of the fetus"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If fertilization does not occur, the lining of the uterus breaks down and is discharged as menstruation.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "Soil erosion is best defined as:",
+    "options": {
+      "a": "The formation of soil from rocks",
+      "b": "The washing away of the topsoil",
+      "c": "The planting of crops on ridges",
+      "d": "The addition of manure to soil"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Erosion is the displacement or washing away of the upper layer of soil by agents like water or wind.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "Which of these human activities contributes most to flooding in urban areas?",
+    "options": {
+      "a": "Afforestation",
+      "b": "Dumping refuse in drainage channels",
+      "c": "Crop rotation",
+      "d": "Use of solar energy"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Blocked drainage channels prevent water flow, leading to flooding during heavy rains.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "One method of controlling soil erosion is:",
+    "options": {
+      "a": "Bush burning",
+      "b": "Overgrazing",
+      "c": "Deforestation",
+      "d": "Planting cover crops"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Cover crops protect the soil surface from the direct impact of rain and hold the soil together with their roots.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "The depletion of the Ozone layer is mainly caused by:",
+    "options": {
+      "a": "Carbon dioxide",
+      "b": "Chlorofluorocarbons (CFCs)",
+      "c": "Oxygen",
+      "d": "Nitrogen"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "CFCs are industrial chemicals that rise into the stratosphere and break down ozone molecules.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "Bush burning results in the loss of:",
+    "options": {
+      "a": "Soil erosion",
+      "b": "Wildlife and biodiversity",
+      "c": "Sunlight",
+      "d": "Sand"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Burning bushes destroys habitats, killing plants and animals or forcing them to migrate, thus reducing biodiversity.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "The Ozone layer protects living things on Earth from:",
+    "options": {
+      "a": "Excessive rainfall",
+      "b": "Meteorites",
+      "c": "Harmful ultraviolet (UV) radiation",
+      "d": "Space dust"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Ozone layer absorbs the majority of the sun's harmful ultraviolet radiation.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "Deforestation can lead to:",
+    "options": {
+      "a": "Increased rainfall",
+      "b": "Desertification",
+      "c": "Cleaner air",
+      "d": "Soil fertility"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Removing trees exposes the land to drying out and erosion, which can eventually transform fertile land into desert (desertification).",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "Which agency in Nigeria is responsible for emergency responses to hazards like flooding?",
+    "options": {
+      "a": "NRA",
+      "b": "NEMA",
+      "c": "NAFDAC",
+      "d": "EFCC"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "NEMA (National Emergency Management Agency) handles disaster management in Nigeria.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "Gully erosion is most commonly caused by:",
+    "options": {
+      "a": "Strong winds",
+      "b": "Running water",
+      "c": "Animal grazing",
+      "d": "Glaciers"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Gully erosion occurs when runoff water accumulates in narrow channels and removes soil to a considerable depth.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Basic Science",
+    "topic": "Environmental Hazards",
+    "question_text": "A major health risk associated with Ozone layer depletion is:",
+    "options": {
+      "a": "Skin cancer",
+      "b": "Malaria",
+      "c": "Typhoid",
+      "d": "Cholera"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Increased exposure to UV radiation due to ozone depletion increases the risk of skin cancer and cataracts.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "Energy is defined as:",
+    "options": {
+      "a": "The force applied to an object",
+      "b": "The ability to do work",
+      "c": "The rate of doing work",
+      "d": "The distance covered"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In physics, energy is formally defined as the capacity or ability to perform work.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "The energy possessed by a body by virtue of its position is called:",
+    "options": {
+      "a": "Kinetic energy",
+      "b": "Potential energy",
+      "c": "Heat energy",
+      "d": "Sound energy"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Potential energy (specifically gravitational potential energy) depends on the height (position) of an object.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "Which of the following energy changes occurs in an electric iron?",
+    "options": {
+      "a": "Electrical to Sound energy",
+      "b": "Heat to Electrical energy",
+      "c": "Electrical to Heat energy",
+      "d": "Mechanical to Electrical energy"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "An electric iron consumes electricity and converts it into heat to iron clothes.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "The S.I. unit of energy is the:",
+    "options": {
+      "a": "Newton",
+      "b": "Watt",
+      "c": "Joule",
+      "d": "Meter"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Joule (J) is the standard International System of Units (SI) unit for energy and work.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "Which of the following is a non-renewable source of energy?",
+    "options": {
+      "a": "Wind",
+      "b": "Solar",
+      "c": "Biomass",
+      "d": "Petroleum"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Petroleum is a fossil fuel which is finite and cannot be replenished on a human timescale.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "The formula for calculating Kinetic Energy (K.E.) is:",
+    "options": {
+      "a": "$$ mgh $$",
+      "b": "$$ \\frac{1}{2} mv^2 $$",
+      "c": "$$ ma $$",
+      "d": "$$ \\frac{1}{2} mv $$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Kinetic Energy is calculated as one-half the mass times the square of the velocity ($$ \\frac{1}{2} mv^2 $$).",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "Conduction is the method of heat transfer primarily in:",
+    "options": {
+      "a": "Solids",
+      "b": "Liquids",
+      "c": "Gases",
+      "d": "Vacuum"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Conduction requires direct contact of particles, which is most effective in solids where particles are closely packed.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "What type of energy is stored in a dry cell battery?",
+    "options": {
+      "a": "Solar energy",
+      "b": "Chemical energy",
+      "c": "Mechanical energy",
+      "d": "Light energy"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Batteries store energy in chemical bonds, which is converted to electrical energy when used.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "The primary source of energy for the Earth is the:",
+    "options": {
+      "a": "Moon",
+      "b": "Sun",
+      "c": "Ocean",
+      "d": "Volcanoes"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Sun provides solar energy, which drives Earth's climate and supports almost all life.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Basic Science",
+    "topic": "Energy",
+    "question_text": "The law of conservation of energy states that:",
+    "options": {
+      "a": "Energy can be created but not destroyed",
+      "b": "Energy can be destroyed but not created",
+      "c": "Energy can neither be created nor destroyed",
+      "d": "Energy disappears after use"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The law states that energy cannot be created or destroyed, only transformed from one form to another.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Which planet is known as the 'Red Planet'?",
+    "options": {
+      "a": "Venus",
+      "b": "Jupiter",
+      "c": "Mars",
+      "d": "Saturn"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Mars appears red due to iron oxide (rust) on its surface.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "The method used to separate crude oil into its components is called:",
+    "options": {
+      "a": "Filtration",
+      "b": "Fractional distillation",
+      "c": "Evaporation",
+      "d": "Decantation"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Fractional distillation separates crude oil components based on their different boiling points.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Which of these is a product of crude oil refining?",
+    "options": {
+      "a": "Palm oil",
+      "b": "Kerosene",
+      "c": "Groundnut oil",
+      "d": "Latex"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Kerosene is a fuel obtained from the distillation of petroleum.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "The force that pulls all objects towards the center of the Earth is:",
+    "options": {
+      "a": "Friction",
+      "b": "Magnetism",
+      "c": "Gravity",
+      "d": "Tension"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Gravity is the force of attraction that Earth exerts on objects.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Which heavenly body is a natural satellite of the Earth?",
+    "options": {
+      "a": "The Sun",
+      "b": "The Moon",
+      "c": "Mars",
+      "d": "Polaris"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Moon orbits the Earth and is its only natural satellite.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Scientific ethics implies that scientists should be:",
+    "options": {
+      "a": "Dishonest in reporting results",
+      "b": "Biased in their research",
+      "c": "Honest and objective",
+      "d": "Secretive about discoveries"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Ethics in science demands honesty, integrity, and objectivity to ensure reliable and beneficial results.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Which of the following is an example of the negative application of science?",
+    "options": {
+      "a": "Development of vaccines",
+      "b": "Production of nuclear weapons",
+      "c": "Improved agricultural tools",
+      "d": "Water purification"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "While nuclear energy has uses, the creation of weapons of mass destruction is considered a negative or harmful application of scientific knowledge.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "What is the center of the Solar System?",
+    "options": {
+      "a": "The Earth",
+      "b": "The Moon",
+      "c": "The Sun",
+      "d": "Jupiter"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Sun is the star at the center of the Solar System, around which planets orbit.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Crude oil is also known as:",
+    "options": {
+      "a": "Black gold",
+      "b": "Fool's gold",
+      "c": "Red oil",
+      "d": "Essential oil"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Crude oil is often metaphorically called 'Black Gold' due to its high economic value and dark color.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Basic Science",
+    "topic": "Science & Development",
+    "question_text": "Nigeria launched its first communication satellite, NIGCOMSAT-1, into space to improve:",
+    "options": {
+      "a": "Agriculture",
+      "b": "Telecommunications",
+      "c": "Road transport",
+      "d": "Mining"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "NIGCOMSAT-1 was launched to enhance telecommunications, internet, and broadcasting services in Nigeria.",
+    "section_id": null
+  }
+]

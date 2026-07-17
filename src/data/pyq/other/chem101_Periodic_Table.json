@@ -1,0 +1,562 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "History",
+        "question_text": "Dmitri Mendeleev is credited with the development of the first widely accepted periodic table. What was the primary property he used to arrange the elements?",
+        "options": {
+            "a": "Atomic number",
+            "b": "Atomic mass",
+            "c": "Electron configuration",
+            "d": "Number of neutrons"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Mendeleev arranged elements in order of increasing **atomic mass**. It was later, through the work of Henry Moseley, that the periodic table was reorganized by atomic number.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "History",
+        "question_text": "Which scientist modified the Periodic Law to state that the properties of elements are periodic functions of their **atomic numbers** rather than atomic masses?",
+        "options": {
+            "a": "Dmitri Mendeleev",
+            "b": "J.J. Thomson",
+            "c": "Henry Moseley",
+            "d": "Niels Bohr"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Henry Moseley's experiments with X-ray spectra showed that the atomic number (number of protons) is the fundamental property determining an element's identity, correcting Mendeleev's mass-based arrangement.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Groups and Blocks",
+        "question_text": "Elements in the **s-block** and **p-block** (excluding the noble gases) are collectively known as:",
+        "options": {
+            "a": "Transition elements",
+            "b": "Inner transition elements",
+            "c": "Representative elements",
+            "d": "Transuranium elements"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The elements in Groups 1, 2, and 13–18 (s and p blocks) are often called representative or main-group elements because their outer shells are being filled.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Groups and Blocks",
+        "question_text": "Which general electronic configuration represents the **d-block** elements (Transition Metals)?",
+        "options": {
+            "a": "$(n-1)d^{1-10} ns^{0-2}$",
+            "b": "$ns^2 np^{1-6}$",
+            "c": "$(n-2)f^{1-14} (n-1)d^{0-1} ns^2$",
+            "d": "$ns^1$ to $ns^2$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Transition metals are characterized by the filling of inner d-orbitals. The general configuration is $(n-1)d^{1-10} ns^{0-2}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Groups and Blocks",
+        "question_text": "An element has the atomic number 35. To which block and group does it belong?",
+        "options": {
+            "a": "s-block, Group 2",
+            "b": "p-block, Group 17",
+            "c": "d-block, Group 10",
+            "d": "p-block, Group 15"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Atomic number 35 corresponds to Bromine ($Br$). Its configuration ends in $4s^2 3d^{10} 4p^5$. Since the last electron enters a p-orbital, it is in the p-block. With 7 valence electrons ($s^2 p^5$), it belongs to Group 17 (Halogens).",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Groups and Blocks",
+        "question_text": "Which of the following sets of atomic numbers belongs to the **Alkali Metals** (Group 1)?",
+        "options": {
+            "a": "3, 11, 19, 37",
+            "b": "4, 12, 20, 38",
+            "c": "9, 17, 35, 53",
+            "d": "2, 10, 18, 36"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Group 1 elements are Li (3), Na (11), K (19), Rb (37), etc. Option (b) is Alkaline Earth Metals, (c) is Halogens, and (d) is Noble Gases.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Groups and Blocks",
+        "question_text": "The metalloids (semi-metals) are located along a 'staircase' line on the periodic table. Which of the following elements is a **metalloid**?",
+        "options": {
+            "a": "Aluminum ($Al$)",
+            "b": "Silicon ($Si$)",
+            "c": "Phosphorus ($P​$)",
+            "d": "Sulfur ($S​$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Silicon ($Si$) is a classic metalloid, exhibiting properties intermediate between metals and nonmetals. Aluminum is a metal; Phosphorus and Sulfur are nonmetals.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "Which of the following correctly describes the trend of atomic radius across a period (left to right) and its cause?",
+        "options": {
+            "a": "Increases due to additional electron shells",
+            "b": "Decreases due to increasing effective nuclear charge ($Z_{eff}$)",
+            "c": "Increases due to increased electron-electron repulsion",
+            "d": "Decreases due to the lanthanoid contraction"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Across a period, electrons are added to the same shell while protons are added to the nucleus. This increases the effective nuclear charge ($Z_{eff}$), pulling electrons closer and shrinking the radius.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "Arrange the following species in order of increasing radius: $Mg^{2+}$, $Na^+$, $Ne$, $F^-$.",
+        "options": {
+            "a": "$Mg^{2+} < Na^+ < Ne < F^-$",
+            "b": "$F^- < Ne < Na^+ < Mg^{2+}$",
+            "c": "$Mg^{2+} < Na^+ < F^- < Ne$",
+            "d": "$Ne < F^- < Na^+ < Mg^{2+}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "These species are **isoelectronic** (all have 10 electrons). The size is determined by the nuclear charge. $Mg$ has 12 protons, $Na$ 11, $Ne$ 10, $F​$ 9. Higher nuclear charge pulls the same number of electrons tighter. Thus, $Mg^{2+}$ is smallest and $F^-$ (with the fewest protons) is largest. (Note: $F^-$ is typically larger than $Ne$ due to lower Z).",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "Why is the radius of a cation always smaller than its neutral parent atom (e.g., $Na^+ < Na$)?",
+        "options": {
+            "a": "The cation gains neutrons",
+            "b": "The nuclear charge decreases",
+            "c": "Loss of valence electrons increases effective nuclear charge per electron and may remove a shell",
+            "d": "Electron-electron repulsion increases"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Removing an electron reduces electron-electron repulsion and, in many cases (like $Na \\to Na^+$), removes the outermost shell entirely. The remaining electrons are held more tightly by the nucleus.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "Identify the element with the largest atomic radius among the following:",
+        "options": {
+            "a": "Lithium ($Li$)",
+            "b": "Fluorine ($F​$)",
+            "c": "Potassium ($K​$)",
+            "d": "Bromine ($Br$)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Atomic radius increases down a group and decreases across a period. Potassium ($K​$) is in Period 4 (lower down than Li/F) and Group 1 (far left), making it the largest among these options.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "Which of the following correctly compares the size of the chloride ion ($Cl^-$) and the chlorine atom ($Cl$)?",
+        "options": {
+            "a": "$Cl^- < Cl$ because the ion has fewer electrons",
+            "b": "$Cl^- > Cl$ because the added electron increases repulsion",
+            "c": "$Cl^- = Cl$ because the nucleus remains the same",
+            "d": "$Cl^- < Cl$ because the effective nuclear charge increases"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Anions are formed by gaining electrons. The added electron increases electron-electron repulsion in the valence shell, causing the electron cloud to expand, making the anion larger than the neutral atom.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "The atomic radii of Zirconium ($Zr$, Period 5) and Hafnium ($Hf$, Period 6) are almost identical (160 pm vs 159 pm). This anomaly is due to:",
+        "options": {
+            "a": "Inert pair effect",
+            "b": "Lanthanoid contraction",
+            "c": "Diagonal relationship",
+            "d": "High electronegativity of Hf"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "The filling of the 4f orbitals before Hafnium results in poor shielding of the nucleus. This causes a greater than expected attraction for the outer electrons, shrinking the radius of Period 6 transition metals to match Period 5. This is called the **Lanthanoid Contraction**.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Atomic and Ionic Radii",
+        "question_text": "In the isoelectronic series $S^{2-}, Cl^-, K^+, Ca^{2+}$, which ion has the largest radius?",
+        "options": {
+            "a": "$S^{2-}$",
+            "b": "$Cl^-$",
+            "c": "$K^+$",
+            "d": "$Ca^{2+}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "In an isoelectronic series, size is inversely related to atomic number (Z). Sulfur ($Z=16$) has the fewest protons holding the 18 electrons, so $S^{2-}$ is the largest. Calcium ($Z=20$) has the most protons, making $Ca^{2+}$ the smallest.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "First Ionization Energy (IE$_1$) is best defined as:",
+        "options": {
+            "a": "Energy released when an electron is added to a gaseous atom",
+            "b": "Energy required to remove the most loosely bound electron from an isolated gaseous atom",
+            "c": "Energy required to remove an electron from a solid metal",
+            "d": "Energy required to split a molecule into atoms"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Ionization energy is specifically defined for an isolated **gaseous** atom losing an electron to form a cation. It is an endothermic process.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "Which element in Period 2 has a higher First Ionization Energy than expected due to a stable fully-filled $2s$ subshell?",
+        "options": {
+            "a": "Lithium ($Li$)",
+            "b": "Beryllium ($Be$)",
+            "c": "Boron ($B​$)",
+            "d": "Carbon ($C​$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Beryllium ($1s^2 2s^2$) has a stable, full $2s$ subshell. Boron ($1s^2 2s^2 2p^1$) has its outer electron in a $2p$ orbital, which is higher energy and penetrates less than $2s$. Thus, removing an electron from B is easier than from Be, making $IE_{Be} > IE_B$.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "Why is the first ionization energy of Oxygen ($O​$) lower than that of Nitrogen ($N​$)?",
+        "options": {
+            "a": "Oxygen has a larger atomic radius",
+            "b": "Nitrogen has a stable half-filled $2p$ subshell ($2p^3$)",
+            "c": "Oxygen has a higher effective nuclear charge",
+            "d": "Nitrogen is more electronegative"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Nitrogen has a configuration of $2p^3$ (half-filled, stable). Oxygen has $2p^4$; the 4th electron must pair up in one of the p-orbitals, causing electron-electron repulsion that makes it easier to remove compared to the stable unpaired configuration of Nitrogen.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "The successive ionization energies (in kJ/mol) for an element are: $IE_1 = 738$, $IE_2 = 1450$, $IE_3 = 7730$, $IE_4 = 10500$. To which group does this element belong?",
+        "options": {
+            "a": "Group 1",
+            "b": "Group 2",
+            "c": "Group 13",
+            "d": "Group 14"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Notice the massive jump between $IE_2$ (1450) and $IE_3$ (7730). This indicates that the core electrons are being removed after the 2nd electron. Therefore, the element has **2 valence electrons**, placing it in Group 2 ($Mg$ fits these values).",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "Which of the following elements generally has the highest First Ionization Energy in the entire periodic table?",
+        "options": {
+            "a": "Fluorine ($F​$)",
+            "b": "Francium ($Fr$)",
+            "c": "Helium ($He$)",
+            "d": "Hydrogen ($H​$)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Helium has the smallest atomic radius and a full valence shell ($1s^2$) close to the nucleus without shielding from inner shells. It holds its electrons most tightly.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "Which factor primarily causes Ionization Energy to decrease down a group?",
+        "options": {
+            "a": "Increasing nuclear charge",
+            "b": "Decreasing atomic mass",
+            "c": "Increasing shielding effect and atomic radius",
+            "d": "Increasing electronegativity"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Down a group, new electron shells are added. The outer electrons are further from the nucleus and are shielded by more inner shells, reducing the effective attraction and making removal easier.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Ionization Energy",
+        "question_text": "Consider the second ionization energy ($IE_2$). Which element would have an exceptionally high $IE_2$?",
+        "options": {
+            "a": "Magnesium ($Mg$)",
+            "b": "Sodium ($Na$)",
+            "c": "Aluminum ($Al$)",
+            "d": "Silicon ($Si$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Sodium ($Na$) is in Group 1. After losing 1 electron, it achieves the stable configuration of Neon. Removing a **second** electron breaks this stable noble gas core, requiring a tremendous amount of energy.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Electron Affinity",
+        "question_text": "Electron Affinity is defined as the energy change when:",
+        "options": {
+            "a": "An electron is removed from a gaseous atom",
+            "b": "An electron is added to a gaseous atom",
+            "c": "Two atoms bond together",
+            "d": "An atom transitions from solid to gas"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Electron Affinity is the energy change (usually release) when a neutral gaseous atom gains an electron to form an anion.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Electron Affinity",
+        "question_text": "Which element has the **most negative** (highest magnitude) Electron Affinity?",
+        "options": {
+            "a": "Fluorine ($F​$)",
+            "b": "Chlorine ($Cl$)",
+            "c": "Oxygen ($O​$)",
+            "d": "Neon ($Ne$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "While Fluorine is more electronegative, **Chlorine** has the highest electron affinity. Fluorine's very small size leads to inter-electronic repulsion when an electron is added, making it less favorable than adding one to the larger Chlorine atom.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Electron Affinity",
+        "question_text": "Why do Noble Gases (Group 18) have positive Electron Affinity values?",
+        "options": {
+            "a": "They have high effective nuclear charge",
+            "b": "They have stable, fully filled shells and must absorb energy to accept an electron",
+            "c": "They are gases at room temperature",
+            "d": "They have very low ionization energies"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Noble gases have a full valence shell ($ns^2 np^6$). Any added electron must go into a higher energy principal shell ($n+1$), which is energetically unfavorable, requiring energy input (endothermic).",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Electron Affinity",
+        "question_text": "Which group of elements generally exhibits the most exothermic (negative) electron affinities?",
+        "options": {
+            "a": "Alkali Metals (Group 1)",
+            "b": "Alkaline Earth Metals (Group 2)",
+            "c": "Halogens (Group 17)",
+            "d": "Noble Gases (Group 18)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Halogens have an $ns^2 np^5$ configuration. They are one electron short of a stable octet, so gaining an electron releases a large amount of energy.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Electronegativity",
+        "question_text": "How does Electronegativity differ from Electron Affinity?",
+        "options": {
+            "a": "Electronegativity is measured in kJ/mol; Electron Affinity is unitless",
+            "b": "Electronegativity refers to a bonded atom's ability to attract shared electrons; Electron Affinity is for isolated atoms",
+            "c": "They are synonymous terms",
+            "d": "Electronegativity decreases across a period; Electron Affinity increases"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Electron Affinity is an energy change for a single isolated atom gaining an electron. Electronegativity is a relative measure (no units, Pauling scale) of an atom's ability to pull shared electrons towards itself in a **chemical bond**.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Electronegativity",
+        "question_text": "Which element is the most electronegative on the Pauling scale?",
+        "options": {
+            "a": "Oxygen ($O​$)",
+            "b": "Chlorine ($Cl$)",
+            "c": "Fluorine ($F​$)",
+            "d": "Francium ($Fr$)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Fluorine is the most electronegative element (Pauling value ~4.0), meaning it attracts bonding electrons more strongly than any other element.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Electronegativity",
+        "question_text": "Which of the following bonds would be the most polar?",
+        "options": {
+            "a": "$H-H$",
+            "b": "$C-H$",
+            "c": "$O-F$",
+            "d": "$H-F$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Bond polarity depends on the difference in electronegativity ($\\Delta EN$). Hydrogen is \\~2.1, Fluorine is 4.0. The difference is large (~1.9). While O-F involves highly electronegative atoms, the *difference* between them (3.5 vs 4.0) is smaller than H-F.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Electronegativity",
+        "question_text": "Identify the element with the lowest electronegativity.",
+        "options": {
+            "a": "Cesium ($Cs$)",
+            "b": "Calcium ($Ca$)",
+            "c": "Fluorine ($F​$)",
+            "d": "Iron ($Fe$)"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Electronegativity decreases down a group and increases across a period. Cesium is at the bottom-left (excluding radioactive Francium), giving it the lowest ability to attract electrons (it prefers to lose them).",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Electronegativity",
+        "question_text": "General trends in the periodic table indicate that:",
+        "options": {
+            "a": "Metals have high electronegativity",
+            "b": "Nonmetals have high electronegativity",
+            "c": "Noble gases have the highest electronegativity",
+            "d": "Electronegativity is constant down a group"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Nonmetals (top right) have high electronegativities as they tend to gain electrons to fill their shells. Metals (left) have low electronegativities.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Chemical Significance",
+        "question_text": "Based on periodic trends, which Alkali Metal is expected to react most violently with water?",
+        "options": {
+            "a": "Lithium ($Li$)",
+            "b": "Sodium ($Na$)",
+            "c": "Potassium ($K​$)",
+            "d": "Cesium ($Cs$)"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Reactivity of alkali metals increases down the group because ionization energy decreases. Cesium loses its electron most easily, leading to the fastest and most explosive reaction with water.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Chemical Significance",
+        "question_text": "Conversely, for Halogens (Group 17), reactivity decreases down the group. Why is Fluorine more reactive than Iodine?",
+        "options": {
+            "a": "Fluorine has a lower electron affinity",
+            "b": "Fluorine has a much higher electronegativity and stronger oxidizing power",
+            "c": "Fluorine has a larger atomic radius",
+            "d": "Iodine is a gas while Fluorine is solid"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Halogens react by gaining electrons. Fluorine has the strongest tendency to attract electrons (electronegativity) and oxidize other substances. As size increases (down the group), this attraction weakens.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Chemical Significance",
+        "question_text": "Metallic character refers to the tendency to lose electrons. How does this trend behave in the periodic table?",
+        "options": {
+            "a": "Increases across a period, Increases down a group",
+            "b": "Decreases across a period, Increases down a group",
+            "c": "Increases across a period, Decreases down a group",
+            "d": "Decreases across a period, Decreases down a group"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Metallic character relies on low ionization energy. IE increases across a period (less metallic) and decreases down a group (more metallic). Thus, the most metallic elements are at the bottom-left.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Chemical Significance",
+        "question_text": "The nature of oxides changes across Period 3. Which of the following correctly pairs the element with the acid-base nature of its oxide?",
+        "options": {
+            "a": "$Na_2O$: Acidic",
+            "b": "$Al_2O_3$: Amphoteric",
+            "c": "$SO_3$: Basic",
+            "d": "$MgO$: Acidic"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Oxides trend from Basic (left) to Acidic (right). $Na_2O$ and $MgO$ are basic. $Al_2O_3$ is **amphoteric** (reacts with both acids and bases). $SO_3$ and $Cl_2O_7$ are acidic.",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Chemical Significance",
+        "question_text": "Which of the following is the strongest reducing agent in aqueous solution?",
+        "options": {
+            "a": "Lithium ($Li$)",
+            "b": "Sodium ($Na$)",
+            "c": "Potassium ($K​$)",
+            "d": "Magnesium ($Mg$)"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "While IE decreases down the group, standard reduction potential ($E^\\circ$) depends on sublimation, ionization, and hydration energy. Lithium has a very high **hydration energy** due to its small size, making it the strongest reducing agent in aqueous solution despite having a higher IE than Cs.",
+        "section_id": null
+    }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "What is the domain of the function $f(x) = \\frac{1}{\\sqrt{x^2 - 4}}$?",
+    "options": {
+      "a": "$x < -2$ or $x > 2$",
+      "b": "$-2 < x < 2$",
+      "c": "$x \\le -2$ or $x \\ge 2$",
+      "d": "All real numbers"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "For the function to be defined, the expression inside the square root must be strictly positive (since it's in the denominator and must avoid square roots of negative numbers). Thus, $x^2 - 4 > 0$. Factoring gives $(x-2)(x+2) > 0$. Testing intervals reveals the inequality holds for $x < -2$ or $x > 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Find the inverse function $f^{-1}(x)$ if $f(x) = 3x - 5$.",
+    "options": {
+      "a": "$\\frac{x - 5}{3}$",
+      "b": "$\\frac{x + 5}{3}$",
+      "c": "$3x + 5$",
+      "d": "$\\frac{1}{3x - 5}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Let $y = 3x - 5$. To find the inverse, swap $x$ and $y$ yielding $x = 3y - 5$. Solve for $y$: $x + 5 = 3y$, so $y = \\frac{x + 5}{3}$. Thus, $f^{-1}(x) = \\frac{x + 5}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "If $f(x) = x^2 + 1$ and $g(x) = 2x - 3$, find the composite function $f(g(x))$.",
+    "options": {
+      "a": "$2x^2 - 1$",
+      "b": "$4x^2 - 12x + 10$",
+      "c": "$4x^2 - 12x + 8$",
+      "d": "$2x^2 + 2x - 3$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "To find $f(g(x))$, substitute $g(x)$ into $f(x)$. $f(g(x)) = (2x - 3)^2 + 1$. Expanding this gives $(4x^2 - 12x + 9) + 1 = 4x^2 - 12x + 10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Given $f(x) = \\frac{x+1}{x-1}$ and $g(x) = \\frac{1}{x}$, find $(f \\circ g)^{-1}(x)$.",
+    "options": {
+      "a": "$\\frac{x+1}{x-1}$",
+      "b": "$\\frac{x-1}{x+1}$",
+      "c": "$\\frac{1-x}{1+x}$",
+      "d": "$\\frac{x}{x-1}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "First find $(f \\circ g)(x) = f(g(x)) = \\frac{\\frac{1}{x}+1}{\\frac{1}{x}-1} = \\frac{1+x}{1-x}$. To find the inverse, set $y = \\frac{1+x}{1-x}$, rewrite as $x = \\frac{1+y}{1-y}$. Then $x(1-y) = 1+y \\implies x - xy = 1 + y \\implies x - 1 = y(x+1) \\implies y = \\frac{x-1}{x+1}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "What is the domain of the function $g(x) = \\sqrt{5 - x}$?",
+    "options": {
+      "a": "$x > 5$",
+      "b": "$x \\ge 5$",
+      "c": "$x < 5$",
+      "d": "$x \\le 5$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "For a square root to be real, the radicand must be non-negative. Therefore, $5 - x \\ge 0 \\implies 5 \\ge x$, which means $x \\le 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Given $f(x) = 2x$ and $g(x) = x^2$, find the values of $x$ that satisfy the equation $f(g(x)) = g(f(x))$.",
+    "options": {
+      "a": "$x = 0, 2$",
+      "b": "$x = 0$",
+      "c": "$x = 2$",
+      "d": "$x = -2, 0$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "$f(g(x)) = f(x^2) = 2x^2$. Additionally, $g(f(x)) = g(2x) = (2x)^2 = 4x^2$. Setting them equal: $2x^2 = 4x^2 \\implies 2x^2 = 0 \\implies x^2 = 0 \\implies x = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Find the inverse function $f^{-1}(x)$ for $f(x) = \\frac{2x}{x+3}$.",
+    "options": {
+      "a": "$\\frac{3x}{x-2}$",
+      "b": "$\\frac{2x}{x-3}$",
+      "c": "$\\frac{3x}{2-x}$",
+      "d": "$\\frac{x+3}{2x}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Set $y = \\frac{2x}{x+3}$. Swap to find inverse: $x = \\frac{2y}{y+3}$. Cross-multiply: $x(y+3) = 2y \\implies xy + 3x = 2y \\implies 3x = y(2-x) \\implies y = \\frac{3x}{2-x}$. Thus, $f^{-1}(x) = \\frac{3x}{2-x}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "Find the remainder when the polynomial $P(x) = 2x^3 - x^2 + 3x - 4$ is divided by $x - 1$.",
+    "options": {
+      "a": "-1",
+      "b": "0",
+      "c": "1",
+      "d": "2"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "According to the Remainder Theorem, the remainder when $P(x)$ is divided by $(x - c)$ is $P(c)$. Substituting $x = 1$: $P(1) = 2(1)^3 - (1)^2 + 3(1) - 4 = 2 - 1 + 3 - 4 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "If $x+2$ is a factor of the polynomial $x^3 + kx^2 - 3x + 6$, find the value of $k$.",
+    "options": {
+      "a": "1",
+      "b": "-1",
+      "c": "2",
+      "d": "-2"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "By the Factor Theorem, if $x+2$ is a factor, then $P(-2) = 0$. Substituting $x = -2$: $(-2)^3 + k(-2)^2 - 3(-2) + 6 = -8 + 4k + 6 + 6 = 4k + 4$. Setting this to zero: $4k + 4 = 0 \\implies 4k = -4 \\implies k = -1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "Given that 1 is a root of the cubic equation $x^3 - 6x^2 + 11x - 6 = 0$, find the other roots.",
+    "options": {
+      "a": "-2, -3",
+      "b": "2, 3",
+      "c": "-1, 6",
+      "d": "-2, 3"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Since 1 is a root, $(x-1)$ is a factor. Performing polynomial division of $x^3 - 6x^2 + 11x - 6$ by $(x-1)$ yields a quotient of $x^2 - 5x + 6$. Factoring the quadratic gives $(x-2)(x-3)$. Setting this to zero gives the remaining roots: $x = 2$ and $x = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "Find the quotient when $x^3 - 4x^2 + 2x + 1$ is divided by $x - 3$ using synthetic or long division.",
+    "options": {
+      "a": "$x^2 - x - 1$",
+      "b": "$x^2 + x - 1$",
+      "c": "$x^2 - 7x + 23$",
+      "d": "$x^2 + x + 1$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Using synthetic division with $c = 3$ and coefficients $(1, -4, 2, 1)$: Bring down 1; multiply $1 \\times 3 = 3$; $-4 + 3 = -1$; multiply $-1 \\times 3 = -3$; $2 + (-3) = -1$; multiply $-1 \\times 3 = -3$; $1 + (-3) = -2$. The quotient is $x^2 - x - 1$ (with a remainder of -2).",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "When a polynomial $P(x)$ is divided by $x-1$, the remainder is 3. When divided by $x-2$, the remainder is 5. What is the remainder when $P(x)$ is divided by $(x-1)(x-2)$?",
+    "options": {
+      "a": "$2x - 1$",
+      "b": "$2x + 1$",
+      "c": "$x + 2$",
+      "d": "$x - 2$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The remainder of division by a quadratic $(x-1)(x-2)$ takes the linear form $R(x) = ax + b$. By the remainder theorem, $R(1) = 3$ and $R(2) = 5$. This produces a system of equations: $a + b = 3$ and $2a + b = 5$. Subtracting the first from the second gives $a = 2$. Substituting back, $2 + b = 3 \\implies b = 1$. The remainder is $2x + 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "If $x-1$ and $x+2$ are both factors of the polynomial $x^3 + ax^2 + bx - 6$, find the values of $a$ and $b$.",
+    "options": {
+      "a": "$a=4, b=1$",
+      "b": "$a=1, b=4$",
+      "c": "$a=-4, b=-1$",
+      "d": "$a=4, b=-1$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "If $(x-1)$ and $(x+2)$ are factors, then $P(1) = 0$ and $P(-2) = 0$. For $P(1): 1 + a + b - 6 = 0 \\implies a + b = 5$. For $P(-2): -8 + 4a - 2b - 6 = 0 \\implies 4a - 2b = 14 \\implies 2a - b = 7$. Adding the two equations $(a+b) + (2a-b) = 5 + 7 \\implies 3a = 12 \\implies a = 4$. Then $b = 5 - 4 = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "One root of the equation $2x^3 - x^2 - 5x - 2 = 0$ is $-1$. Determine the remaining roots.",
+    "options": {
+      "a": "$-\\frac{1}{2}, 2$",
+      "b": "$\\frac{1}{2}, -2$",
+      "c": "$\\frac{1}{2}, 2$",
+      "d": "$-\\frac{1}{2}, -2$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Since $-1$ is a root, $(x+1)$ is a factor. Dividing the polynomial $2x^3 - x^2 - 5x - 2$ by $(x+1)$ gives a quotient of $2x^2 - 3x - 2$. Setting this to zero and factoring gives $(2x+1)(x-2) = 0$, leading to the other roots $x = -\\frac{1}{2}$ and $x = 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Identify the correct form of the partial fraction decomposition for $\\frac{x+2}{(x-1)(x+3)}$.",
+    "options": {
+      "a": "$\\frac{A}{x-1} + \\frac{B}{x+3}$",
+      "b": "$\\frac{Ax+B}{x-1} + \\frac{C}{x+3}$",
+      "c": "$\\frac{A}{x-1} + \\frac{Bx+C}{x+3}$",
+      "d": "$\\frac{A}{(x-1)(x+3)}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "When resolving a proper rational function with distinct linear factors in the denominator, the partial fraction decomposition consists of a sum of fractions, each with a constant numerator and one of the linear factors as its denominator.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Resolve $\\frac{3x - 1}{(x-2)(x+1)}$ into partial fractions.",
+    "options": {
+      "a": "$\\frac{5}{3(x-2)} + \\frac{4}{3(x+1)}$",
+      "b": "$\\frac{5}{x-2} + \\frac{4}{x+1}$",
+      "c": "$\\frac{4}{3(x-2)} + \\frac{5}{3(x+1)}$",
+      "d": "$\\frac{5}{3(x-2)} - \\frac{4}{3(x+1)}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Set $\\frac{3x-1}{(x-2)(x+1)} = \\frac{A}{x-2} + \\frac{B}{x+1}$. Multiplying by the denominator gives $3x - 1 = A(x+1) + B(x-2)$. Using the cover-up method: Let $x = 2$, then $3(2)-1 = A(3) \\implies 5 = 3A \\implies A = \\frac{5}{3}$. Let $x = -1$, then $3(-1)-1 = B(-3) \\implies -4 = -3B \\implies B = \\frac{4}{3}$. Result is $\\frac{5/3}{x-2} + \\frac{4/3}{x+1}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "What is the appropriate setup for the partial fraction decomposition of $\\frac{x^2}{(x-1)(x^2+1)}$?",
+    "options": {
+      "a": "$\\frac{A}{x-1} + \\frac{B}{x^2+1}$",
+      "b": "$\\frac{A}{x-1} + \\frac{Bx+C}{x^2+1}$",
+      "c": "$\\frac{Ax+B}{x-1} + \\frac{Cx+D}{x^2+1}$",
+      "d": "$\\frac{A}{x-1} + \\frac{B}{(x^2+1)^2}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The denominator contains a linear factor $(x-1)$ and an irreducible quadratic factor $(x^2+1)$. The linear factor requires a constant numerator $A$, and the irreducible quadratic factor requires a linear numerator $Bx+C$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Decompose $\\frac{2x+3}{(x-1)^2}$ into partial fractions. What is the value of the numerator associated with the $\\frac{1}{(x-1)^2}$ term?",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "5"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The decomposition format is $\\frac{A}{x-1} + \\frac{B}{(x-1)^2}$. Setting equal numerators yields $A(x-1) + B = 2x+3$. For $x=1$, we get $A(0) + B = 2(1)+3 \\implies B = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "If $\\frac{1}{x^2 - 4} = \\frac{A}{x-2} + \\frac{B}{x+2}$, find the exact value of $A - B$.",
+    "options": {
+      "a": "0",
+      "b": "$\\frac{1}{4}$",
+      "c": "$\\frac{1}{2}$",
+      "d": "1"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Factoring the denominator, $x^2 - 4 = (x-2)(x+2)$. Multiply by the common denominator: $1 = A(x+2) + B(x-2)$. Set $x=2$ to get $1 = 4A \\implies A = \\frac{1}{4}$. Set $x=-2$ to get $1 = -4B \\implies B = -\\frac{1}{4}$. Therefore, $A - B = \\frac{1}{4} - (\\frac{-1}{4}) = \\frac{2}{4} = \\frac{1}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Express the improper fraction $\\frac{x^3}{x^2-1}$ in partial fractions.",
+    "options": {
+      "a": "$x + \\frac{1}{2(x-1)} + \\frac{1}{2(x+1)}$",
+      "b": "$1 + \\frac{x}{x^2-1}$",
+      "c": "$x + \\frac{1}{2(x-1)} - \\frac{1}{2(x+1)}$",
+      "d": "$x - \\frac{1}{x-1} + \\frac{1}{x+1}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "First, use polynomial long division: $x^3 = x(x^2 - 1) + x$. This gives $x + \\frac{x}{x^2-1}$. Next, decompose $\\frac{x}{(x-1)(x+1)} = \\frac{A}{x-1} + \\frac{B}{x+1}$. Then $x = A(x+1) + B(x-1)$. Using $x=1$ yields $A=\\frac{1}{2}$, and $x=-1$ yields $B=\\frac{1}{2}$. Combining everything provides the answer.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Solve the quadratic inequality $x^2 - 4 > 0$.",
+    "options": {
+      "a": "$x > 2$ or $x < -2$",
+      "b": "$-2 < x < 2$",
+      "c": "$x \\ge 2$ or $x \\le -2$",
+      "d": "$x > 4$ or $x < -4$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Factoring gives $(x-2)(x+2) > 0$. The critical values are $x = -2$ and $x = 2$. Testing intervals: for $x=0$, $(0)^2 - 4 > 0$ is false. The inequality holds for regions outside the roots: $x < -2$ or $x > 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Find the range of values for $x$ for which $x^2 - 5x + 6 \\le 0$.",
+    "options": {
+      "a": "$x \\le 2$ or $x \\ge 3$",
+      "b": "$2 < x < 3$",
+      "c": "$2 \\le x \\le 3$",
+      "d": "$x < 2$ or $x > 3$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Factor the quadratic into $(x-2)(x-3) \\le 0$. The critical points are $x=2$ and $x=3$. Since the parabola opens upward, the expression is less than or equal to zero between the roots (inclusive due to the $\\le$ sign). Thus, $2 \\le x \\le 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Solve the rational inequality $\\frac{x+1}{x-2} \\ge 0$.",
+    "options": {
+      "a": "$x < -1$ or $x > 2$",
+      "b": "$x \\le -1$ or $x > 2$",
+      "c": "$x \\le -1$ or $x \\ge 2$",
+      "d": "$-1 \\le x < 2$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The critical points are $x = -1$ (numerator zero) and $x = 2$ (denominator undefined). Using a number line and testing regions: $x=-2 \\implies \\frac{-1}{-4} > 0$; $x=0 \\implies \\frac{1}{-2} < 0$; $x=3 \\implies \\frac{4}{1} > 0$. The numerator can be zero, so $x=-1$ is included, but $x=2$ is excluded because the denominator cannot be zero. Solution: $x \\le -1$ or $x > 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Solve the linear inequality $3(x - 2) \\le 5x + 4$.",
+    "options": {
+      "a": "$x \\ge -5$",
+      "b": "$x \\le -5$",
+      "c": "$x \\ge 5$",
+      "d": "$x \\le 5$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Expand the left side: $3x - 6 \\le 5x + 4$. Subtract $3x$ from both sides: $-6 \\le 2x + 4$. Subtract 4 from both sides: $-10 \\le 2x$. Divide by 2 (positive number, so the sign stays): $-5 \\le x$, which is identical to $x \\ge -5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Find the set of values for which $3 - 2x - x^2 > 0$.",
+    "options": {
+      "a": "$x < -3$ or $x > 1$",
+      "b": "$-3 < x < 1$",
+      "c": "$x < -1$ or $x > 3$",
+      "d": "$-1 < x < 3$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Multiply the entire inequality by -1, which flips the inequality sign: $x^2 + 2x - 3 < 0$. Factoring this yields $(x+3)(x-1) < 0$. The critical points are $x=-3$ and $x=1$. Testing a point within the interval $(-3, 1)$, for instance $x=0$, gives $(3)(-1) = -3 < 0$, which is true. Thus, the solution is $-3 < x < 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Let $f(x) = x^2 - 1$ and $g(x) = 3x$. Evaluate the composite function $f(g(-2))$.",
+    "options": {
+      "a": "11",
+      "b": "35",
+      "c": "-35",
+      "d": "-37"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "First, find $g(-2) = 3(-2) = -6$. Then, substitute this result into $f(x)$ to find $f(g(-2)) = f(-6)$. $f(-6) = (-6)^2 - 1 = 36 - 1 = 35$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "What is the range of the rational function $f(x) = \\frac{2x-3}{x+1}$?",
+    "options": {
+      "a": "$y \\in \\mathbb{R}$",
+      "b": "$y \\in \\mathbb{R}, y \\neq -1$",
+      "c": "$y \\in \\mathbb{R}, y \\neq 2$",
+      "d": "$y \\in \\mathbb{R}, y \\neq 3$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "To find the range, determine the inverse function or find the horizontal asymptote. Set $y = \\frac{2x-3}{x+1}$. Then $y(x+1) = 2x - 3 \\implies yx + y = 2x - 3 \\implies yx - 2x = -y - 3 \\implies x(y - 2) = -y - 3 \\implies x = \\frac{-y-3}{y-2}$. For $x$ to be defined, the denominator cannot be zero. Thus, $y - 2 \\neq 0 \\implies y \\neq 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Determine the inverse of the function $f(x) = \\frac{x}{3} + 2$.",
+    "options": {
+      "a": "$f^{-1}(x) = 3x - 6$",
+      "b": "$f^{-1}(x) = 3x - 2$",
+      "c": "$f^{-1}(x) = \\frac{3}{x} - 2$",
+      "d": "$f^{-1}(x) = \\frac{x-2}{3}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Let $y = \\frac{x}{3} + 2$. Swap $x$ and $y$ to get $x = \\frac{y}{3} + 2$. Solve for $y$: $x - 2 = \\frac{y}{3}$, which gives $y = 3(x - 2) = 3x - 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Determine the domain of $f(x) = \\frac{1}{\\sqrt{4 - x^2}}$.",
+    "options": {
+      "a": "$x \\le -2$ or $x \\ge 2$",
+      "b": "$-2 < x < 2$",
+      "c": "$-2 \\le x \\le 2$",
+      "d": "$x < -2$ or $x > 2$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "For the function to be defined and real, the expression under the square root must be strictly positive since it is in the denominator. Thus, $4 - x^2 > 0 \\implies x^2 < 4$. Taking the square root gives $-2 < x < 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "If $f(x) = x + 4$ and $g(x) = 2x - 5$, find the value of $(g \\circ f)^{-1}(3)$.",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "3",
+      "d": "7"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "First find the composite function $(g \\circ f)(x) = g(f(x)) = g(x+4) = 2(x+4) - 5 = 2x + 8 - 5 = 2x + 3$. To find the inverse, let $y = 2x + 3$. Swapping gives $x = 2y + 3 \\implies y = \\frac{x-3}{2}$. Now substitute $x=3$ into the inverse function: $\\frac{3-3}{2} = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Further Mathematics",
+    "topic": "Functions",
+    "question_text": "Given a function $f(x) = x^2 + cx + d$, and knowing that $f(1) = 0$ and $f(-1) = 2$, find the value of $c$.",
+    "options": {
+      "a": "-1",
+      "b": "0",
+      "c": "1",
+      "d": "2"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "From $f(1) = 0$, we have $1^2 + c(1) + d = 0 \\implies c + d = -1$. From $f(-1) = 2$, we get $(-1)^2 + c(-1) + d = 2 \\implies 1 - c + d = 2 \\implies -c + d = 1$. Subtracting the second equation from the first gives $(c+d) - (-c+d) = -1 - 1 \\implies 2c = -2 \\implies c = -1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "The polynomial $P(x) = x^3 + px^2 + qx + 6$ has a factor of $(x-1)$ and leaves a remainder of 12 when divided by $(x-2)$. Find the value of $p$.",
+    "options": {
+      "a": "-13",
+      "b": "-6",
+      "c": "6",
+      "d": "7"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Since $(x-1)$ is a factor, $P(1) = 0 \\implies 1 + p + q + 6 = 0 \\implies p + q = -7$. Since dividing by $(x-2)$ yields a remainder of 12, $P(2) = 12 \\implies 8 + 4p + 2q + 6 = 12 \\implies 4p + 2q = -2 \\implies 2p + q = -1$. Subtract the first equation from the second: $(2p + q) - (p + q) = -1 - (-7) \\implies p = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "When $2x^3 - 5x^2 + kx - 3$ is divided by $(x-3)$, the remainder is 0. Find the value of $k$.",
+    "options": {
+      "a": "-2",
+      "b": "1",
+      "c": "2",
+      "d": "3"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Using the Factor Theorem, if the polynomial is divisible by $(x-3)$, then $P(3) = 0$. Substituting $x=3$: $2(3)^3 - 5(3)^2 + k(3) - 3 = 0$. This gives $54 - 45 + 3k - 3 = 0 \\implies 6 + 3k = 0 \\implies 3k = -6 \\implies k = -2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "If the roots of the cubic equation $x^3 - 3x^2 - 10x + 24 = 0$ are $\\alpha, \\beta, \\gamma$, find the product of the roots, $\\alpha\\beta\\gamma$.",
+    "options": {
+      "a": "-24",
+      "b": "-10",
+      "c": "10",
+      "d": "24"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "For a cubic equation $ax^3 + bx^2 + cx + d = 0$, the product of the roots is given by $-\\frac{d}{a}$. Here, $a=1$ and $d=24$. Therefore, the product of the roots $\\alpha\\beta\\gamma = -\\frac{24}{1} = -24$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "If the polynomial $P(x) = 2x^3 - 3x^2 + kx + 6$ leaves a remainder of $-4$ when divided by $(x+1)$, find $k$.",
+    "options": {
+      "a": "-5",
+      "b": "-3",
+      "c": "3",
+      "d": "5"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "According to the Remainder Theorem, $P(-1) = -4$. So, $2(-1)^3 - 3(-1)^2 + k(-1) + 6 = -4$. Evaluating gives $-2 - 3 - k + 6 = -4 \\implies 1 - k = -4 \\implies -k = -5 \\implies k = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "Find the remainder when $3x^4 - 2x^2 + x - 1$ is divided by $(x+2)$.",
+    "options": {
+      "a": "23",
+      "b": "35",
+      "c": "37",
+      "d": "45"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Using the Remainder Theorem, substitute $x = -2$ into the polynomial: $3(-2)^4 - 2(-2)^2 + (-2) - 1 = 3(16) - 2(4) - 2 - 1 = 48 - 8 - 2 - 1 = 37$.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Further Mathematics",
+    "topic": "Polynomials",
+    "question_text": "Which of the following represents the complete factorization of the cubic expression $x^3 - 7x - 6$?",
+    "options": {
+      "a": "$(x-1)(x+2)(x+3)$",
+      "b": "$(x+1)(x-2)(x-3)$",
+      "c": "$(x+1)(x+2)(x-3)$",
+      "d": "$(x-1)(x-2)(x+3)$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Testing for roots using the Factor Theorem, we find that for $x = -1$: $(-1)^3 - 7(-1) - 6 = -1 + 7 - 6 = 0$. Thus, $(x+1)$ is a factor. We can divide the polynomial by $(x+1)$ to get $x^2 - x - 6$. Factoring the quadratic part gives $(x+2)(x-3)$. Thus, the complete factorization is $(x+1)(x+2)(x-3)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "What is the correct setup for decomposing the rational expression $\\frac{5x+2}{x(x-2)^2}$ into partial fractions?",
+    "options": {
+      "a": "$\\frac{A}{x} + \\frac{B}{(x-2)^2}$",
+      "b": "$\\frac{A}{x} + \\frac{Bx+C}{(x-2)^2}$",
+      "c": "$\\frac{A}{x} + \\frac{B}{x-2} + \\frac{C}{(x-2)^2}$",
+      "d": "$\\frac{A}{x} + \\frac{B}{x-2} + \\frac{Cx+D}{(x-2)^2}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "For a denominator with a distinct linear factor $x$ and a repeated linear factor $(x-2)^2$, the partial fraction decomposition has one constant numerator over $x$ and constants over each increasing power of the repeated factor up to its multiplicity. Hence, the setup is $\\frac{A}{x} + \\frac{B}{x-2} + \\frac{C}{(x-2)^2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Given $\\frac{2x+5}{(x+1)(x+2)} = \\frac{A}{x+1} + \\frac{B}{x+2}$, find the values of $A$ and $B$.",
+    "options": {
+      "a": "$A = 1, B = 1$",
+      "b": "$A = 3, B = -1$",
+      "c": "$A = -1, B = 3$",
+      "d": "$A = 2, B = 5$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Multiply by the common denominator: $2x + 5 = A(x+2) + B(x+1)$. By substitution (cover-up method): let $x = -1$, then $2(-1) + 5 = A(-1+2) \\implies 3 = A(1) \\implies A = 3$. Let $x = -2$, then $2(-2) + 5 = B(-2+1) \\implies 1 = B(-1) \\implies B = -1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "In the partial fraction decomposition of $\\frac{3x^2+x+4}{(x-1)(x^2+1)} = \\frac{A}{x-1} + \\frac{Bx+C}{x^2+1}$, determine the polynomial $Bx+C$.",
+    "options": {
+      "a": "$x$",
+      "b": "$-x$",
+      "c": "$2x+1$",
+      "d": "$-x+2$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Multiply out to get $3x^2+x+4 = A(x^2+1) + (Bx+C)(x-1)$. Set $x=1$ to find $A$: $3(1)+1+4 = A(2) \\implies 8 = 2A \\implies A=4$. Substitute $A=4$ back: $3x^2+x+4 = 4x^2+4 + Bx^2 - Bx + Cx - C$. Equating $x^2$ coefficients: $3 = 4 + B \\implies B = -1$. Equating constant terms: $4 = 4 - C \\implies C = 0$. So, $Bx+C = -x + 0 = -x$.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Resolve the improper fraction $\\frac{x^2+2x-1}{x^2-1}$ into partial fractions.",
+    "options": {
+      "a": "$1 + \\frac{1}{x-1} + \\frac{1}{x+1}$",
+      "b": "$1 + \\frac{2}{x-1} - \\frac{1}{x+1}$",
+      "c": "$1 + \\frac{1}{x-1} - \\frac{1}{x+1}$",
+      "d": "$x + \\frac{1}{x^2-1}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Since degrees are equal, apply polynomial long division first: $\\frac{x^2+2x-1}{x^2-1} = 1 + \\frac{2x}{x^2-1}$. Next, decompose $\\frac{2x}{(x-1)(x+1)} = \\frac{A}{x-1} + \\frac{B}{x+1}$. Then $2x = A(x+1) + B(x-1)$. Setting $x=1$ gives $2=2A \\implies A=1$. Setting $x=-1$ gives $-2=-2B \\implies B=1$. The final expression is $1 + \\frac{1}{x-1} + \\frac{1}{x+1}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "If $\\frac{x-4}{(x-2)(x-3)} = \\frac{P}{x-2} + \\frac{Q}{x-3}$, what is the value of $P+Q$?",
+    "options": {
+      "a": "-1",
+      "b": "0",
+      "c": "1",
+      "d": "2"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Multiply both sides by $(x-2)(x-3)$ to obtain $x-4 = P(x-3) + Q(x-2)$. Using $x=3$, we get $3-4 = Q(1) \\implies Q = -1$. Using $x=2$, we get $2-4 = P(-1) \\implies -2 = -P \\implies P = 2$. Therefore, $P+Q = 2 + (-1) = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Determine the partial fractions for $\\frac{1}{x^2-3x+2}$.",
+    "options": {
+      "a": "$\\frac{1}{x-1} + \\frac{1}{x-2}$",
+      "b": "$\\frac{1}{x-1} - \\frac{1}{x-2}$",
+      "c": "$\\frac{1}{x-2} - \\frac{1}{x-1}$",
+      "d": "$\\frac{2}{x-2} - \\frac{1}{x-1}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Factor the denominator to get $(x-1)(x-2)$. Set up the fraction: $\\frac{1}{(x-1)(x-2)} = \\frac{A}{x-1} + \\frac{B}{x-2}$. Multiplying by the common denominator yields $1 = A(x-2) + B(x-1)$. When $x=2$, $1 = B(1) \\implies B=1$. When $x=1$, $1 = A(-1) \\implies A=-1$. So the expression is $-\\frac{1}{x-1} + \\frac{1}{x-2}$ or $\\frac{1}{x-2} - \\frac{1}{x-1}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Further Mathematics",
+    "topic": "Rational Functions",
+    "question_text": "Which of the following rational expressions is an improper fraction that must be divided before applying partial fraction decomposition?",
+    "options": {
+      "a": "$\\frac{x}{x^2+1}$",
+      "b": "$\\frac{x^2-1}{x^3+2}$",
+      "c": "$\\frac{x^2+3x+2}{x^2-4}$",
+      "d": "$\\frac{1}{x-5}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A rational function is improper if the degree of the numerator polynomial is greater than or equal to the degree of the denominator polynomial. In option c, both the numerator ($x^2+3x+2$) and the denominator ($x^2-4$) have a degree of 2.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Solve the rational inequality $\\frac{2x-1}{x+3} \\le 1$.",
+    "options": {
+      "a": "$x \\le 4$",
+      "b": "$-3 < x \\le 4$",
+      "c": "Result is $x < -3$ or $x \\ge 4$",
+      "d": "$-3 \\le x \\le 4$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Subtract 1 from both sides to compare to zero: $\\frac{2x-1}{x+3} - 1 \\le 0 \\implies \\frac{2x-1-(x+3)}{x+3} \\le 0 \\implies \\frac{x-4}{x+3} \\le 0$. The critical points are $x=4$ (makes numerator 0) and $x=-3$ (makes denominator 0). Testing regions on the number line gives valid results for $-3 < x \\le 4$. $x = -3$ cannot be included because it causes division by zero.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Find the set of values of $x$ that satisfy the quadratic inequality $x^2 - 6x + 9 \\le 0$.",
+    "options": {
+      "a": "$x < 3$",
+      "b": "$x = 3$",
+      "c": "$x \\le 3$",
+      "d": "No real solutions"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Factorizing the quadratic expression yields $(x-3)^2 \\le 0$. Since the square of a real number cannot be negative, $(x-3)^2 < 0$ has no real solutions. However, it can be equal to zero, which happens only when $x = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "The solution to a quadratic inequality is given by the regions $x < -1$ or $x > 4$. Which of the following inequalities corresponds to this solution?",
+    "options": {
+      "a": "$x^2 - 3x - 4 < 0$",
+      "b": "$x^2 + 3x - 4 > 0$",
+      "c": "$x^2 - 3x - 4 > 0$",
+      "d": "$x^2 + 5x + 4 > 0$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If the solution represents the \"outside\" regions of roots -1 and 4, the inequality takes the form $(x - (-1))(x - 4) > 0$. Expanding $(x+1)(x-4) > 0$ gives $x^2 - 4x + x - 4 > 0$, which simplifies to $x^2 - 3x - 4 > 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Solve the inequality $(x-1)^2 > 4$.",
+    "options": {
+      "a": "$-1 < x < 3$",
+      "b": "$x < -1$ or $x > 3$",
+      "c": "$x < -3$ or $x > 1$",
+      "d": "$-3 < x < 1$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Taking the square root of both sides gives $|x-1| > 2$. This breaks into two inequalities: $x - 1 < -2$ or $x - 1 > 2$. Solving these yields $x < -1$ or $x > 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "On a number line, a region is shaded to include all numbers between -2 and 5. There are solid, shaded circles drawn directly at -2 and 5. What inequality does this graph represent?",
+    "options": {
+      "a": "$-2 < x < 5$",
+      "b": "$x \\le -2$ or $x \\ge 5$",
+      "c": "$-2 \\le x < 5$",
+      "d": "$-2 \\le x \\le 5$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "The shaded region lies between the two endpoints, implying an intersection of conditions ($a < x < b$). Solid circles denote that the endpoints are included in the solution set (using $\\le$ and $\\ge$). Therefore, the inequality is $-2 \\le x \\le 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Further Mathematics",
+    "topic": "Inequalities",
+    "question_text": "Find the only integer value of $x$ that satisfies both $x^2 - x - 2 < 0$ and $2x - 1 \\ge 0$ simultaneously.",
+    "options": {
+      "a": "-1",
+      "b": "0",
+      "c": "1",
+      "d": "2"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "First, solve the quadratic inequality $x^2 - x - 2 < 0$, which factors as $(x-2)(x+1) < 0$. The solution is the interval $-1 < x < 2$. Then, solve the linear inequality $2x - 1 \\ge 0 \\implies x \\ge 0.5$. Intersecting the two conditions gives $0.5 \\le x < 2$. The only integer within this range is 1.",
+    "section_id": null
+  }
+]

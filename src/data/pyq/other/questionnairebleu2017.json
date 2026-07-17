@@ -1,0 +1,1106 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Biologie",
+    "topic": "Microbiologie",
+    "question_text": "Parmi les propositions suivantes relatives aux virus les plus courants, une seule est fausse. Laquelle ?",
+    "options": {
+      "a": "Chaque virus ne contient qu'un seul type d'acide nucléique.",
+      "b": "Les virus ne contiennent pas de ribosomes.",
+      "c": "Les virus sont incapables de se multiplier en dehors d'une cellule.",
+      "d": "Les protéines virales ont la particularité de ne pas induire de réaction immunitaire."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Les protéines virales sont en effet des antigènes qui provoquent une réaction du système immunitaire.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Parmi les propositions suivantes se rapportant à la réplication de l'ADN génomique humain, une seule est fausse. Laquelle ?",
+    "options": {
+      "a": "Le brin retardé est synthétisé sous forme de petits fragments.",
+      "b": "Chaque molécule d'ADN n'est répliquée qu'une seule fois par cycle cellulaire.",
+      "c": "À la fin de la réplication, la molécule d'ADN qui a servi de matrice est détruite.",
+      "d": "L'ADN polymérase ajoute des désoxyribonucléotides à l'extrémité 3'OH d'une amorce."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La réplication est semi-conservative ; chaque nouvelle molécule d'ADN conserve un brin matrice originel.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Biologie",
+    "topic": "Écologie",
+    "question_text": "Parmi les affirmations relatives aux niveaux d'organisation biologique, une seule est fausse. Laquelle ?",
+    "options": {
+      "a": "Une communauté et l'environnement qui l'entoure constituent un écosystème.",
+      "b": "La biosphère englobe tous les organismes vivants et tous les milieux où se trouve la vie.",
+      "c": "Les diverses populations qui vivent en interaction forment une espèce.",
+      "d": "Un organe est constitué de plusieurs tissus."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Les diverses populations en interaction dans un écosystème forment une biocénose ou communauté, et non une espèce.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Biologie",
+    "topic": "Écologie",
+    "question_text": "Quel exemple illustre le commensalisme ?",
+    "options": {
+      "a": "Les rats des villes qui se nourrissent des ordures des hommes.",
+      "b": "Le lion qui dévore une antilope.",
+      "c": "Les bactéries intestinales des ruminants qui leur permettent de digérer la cellulose.",
+      "d": "L'insecte qui pond ses œufs dans une feuille."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Le commensalisme est une interaction où l'un tire profit sans affecter l'autre. Les rats se nourrissant de nos ordures en sont un exemple.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Biologie",
+    "topic": "Biologie cellulaire",
+    "question_text": "Quelle est la séquence exacte des organites cellulaires intervenant dans la production et la sécrétion d'une enzyme par une cellule ?",
+    "options": {
+      "a": "Ribosome, réticulum endoplasmique, appareil de Golgi, membrane plasmique.",
+      "b": "Ribosome, appareil de Golgi, réticulum endoplasmique, membrane plasmique.",
+      "c": "Mitochondrie, ribosome, réticulum endoplasmique, membrane plasmique.",
+      "d": "Mitochondrie, ribosome, appareil de Golgi, membrane plasmique."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "L'enzyme est synthétisée par les ribosomes sur le RER, transportée au Golgi, puis sécrétée par exocytose via la membrane plasmique.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Biologie",
+    "topic": "Évolution",
+    "question_text": "Quel est l'avantage de la reproduction sexuée par rapport à la reproduction asexuée ?",
+    "options": {
+      "a": "Un nombre élevé de descendants.",
+      "b": "Une fixation plus rapide d'une mutation bénéfique dans une population.",
+      "c": "Une plus grande probabilité de variabilité génétique.",
+      "d": "Une transmission plus efficace des gènes des parents aux descendants."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "La reproduction sexuée brasse les gènes (méiose et fécondation), augmentant ainsi la variabilité génétique de la population.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Biologie",
+    "topic": "Immunologie",
+    "question_text": "Qu'est-ce qu'un anticorps ?",
+    "options": {
+      "a": "Une cellule fabriquée par le système immunitaire.",
+      "b": "Un lymphocyte.",
+      "c": "Une protéine produite par le système immunitaire.",
+      "d": "Une protéine étrangère qui provoque une réaction immunitaire."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Les anticorps sont des protéines (immunoglobulines) synthétisées par les plasmocytes du système immunitaire.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Biologie",
+    "topic": "Microbiologie",
+    "question_text": "Un procaryote :",
+    "options": {
+      "a": "a un génome composé d'ADN et d'ARN.",
+      "b": "est, par définition, autotrophe.",
+      "c": "ne possède pas de noyau.",
+      "d": "a toujours besoin d'oxygène."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "La principale caractéristique des procaryotes est l'absence de noyau délimité par une enveloppe nucléaire.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Biologie",
+    "topic": "Biologie cellulaire",
+    "question_text": "Dans les cellules humaines intestinales normales, des chromosomes à deux chromatides peuvent s'observer lors :",
+    "options": {
+      "a": "de la télophase de la mitose.",
+      "b": "de la phase G2.",
+      "c": "de la phase G1.",
+      "d": "du début de la phase S."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Après la phase S et durant la phase G2, l'ADN est entièrement répliqué, les chromosomes sont donc formés de deux chromatides.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Une tétrade est le résultat de l'association de paires de chromosomes homologues et :",
+    "options": {
+      "a": "peut s'observer lors de la prophase de la deuxième division méiotique.",
+      "b": "peut s'observer lors de la division des cellules de la peau humaine.",
+      "c": "provient nécessairement d'un organisme haploïde.",
+      "d": "permet le phénomène de recombinaison génétique."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'appariement des chromosomes homologues en prophase I permet les crossing-overs, d'où la recombinaison génétique.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Dans le système ABO, les allèles A et B sont co-dominants mais tous deux dominent l'allèle O. Ceci permet :",
+    "options": {
+      "a": "de connaître avec certitude le génotype d'un individu qui a le groupe O.",
+      "b": "de connaître avec certitude le génotype d'un individu qui a le groupe B.",
+      "c": "de connaître avec certitude le génotype d'un individu qui a le groupe A.",
+      "d": "d'affirmer qu'un individu avec le groupe A a nécessairement un allèle O."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "L'allèle O étant récessif, un individu de groupe O est forcément homozygote (génotype O/O).",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Biologie",
+    "topic": "Évolution",
+    "question_text": "Parmi les propositions suivantes, une seule ne fait pas partie de la théorie de l'évolution de Darwin. Laquelle ?",
+    "options": {
+      "a": "Toutes les espèces sont issues d'un ancêtre commun.",
+      "b": "L'environnement joue un rôle déterminant sur le façonnage des espèces.",
+      "c": "La sélection naturelle sélectionne les individus les plus aptes à survivre.",
+      "d": "Les modifications de l'ADN sont responsables de la diversification des espèces."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "La structure et le rôle de l'ADN ont été découverts bien après l'époque de Darwin.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Biologie",
+    "topic": "Biologie cellulaire",
+    "question_text": "Combien de cellules obtient-on si une cellule mère subit cinq mitoses successives ?",
+    "options": {
+      "a": "5",
+      "b": "10",
+      "c": "20",
+      "d": "32"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Le nombre de cellules est $2^n$ où n est le nombre de divisions : $2^5 = 32$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Dans la descendance d'une femme porteuse d'une maladie récessive liée au sexe (chromosome X) et d'un homme sain :",
+    "options": {
+      "a": "25 % des filles sont porteuses.",
+      "b": "25 % des garçons sont sains.",
+      "c": "50 % des filles sont malades.",
+      "d": "50 % des garçons sont malades."
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "La mère est $X^M X$, le père est $X Y$. Les fils reçoivent $Y$ du père et soit $X^M$ (malade), soit $X$ (sain) de la mère. Donc 50% des fils seront malades.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Voici l'arbre généalogique d'une maladie héréditaire :\n![Arbre généalogique décrivant une transmission familiale](Europe/Belgium/examen_médical_et_dentaire/assets/2017/2017Question15.png)\nQuel est le mode de transmission de la maladie ?",
+    "options": {
+      "a": "Autosomique dominant.",
+      "b": "Autosomique récessif.",
+      "c": "Lié au chromosome X dominant.",
+      "d": "Lié au chromosome X récessif."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "La présence d'un enfant malade issu de deux parents sains révèle que l'allèle responsable est récessif. S'il était lié à l'X, le père serait forcément malade pour avoir une fille malade. C'est donc autosomique récessif.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Biologie",
+    "topic": "Métabolisme",
+    "question_text": "Parmi les associations suivantes, une seule est fausse. Laquelle ?",
+    "options": {
+      "a": "Végétaux photosynthétiques – hétérotrophie",
+      "b": "Respiration cellulaire – catabolisme",
+      "c": "Maintien de la glycémie – homéostasie",
+      "d": "Synthèse des protéines – anabolisme"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Les végétaux photosynthétiques sont autotrophes et non hétérotrophes.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Biologie",
+    "topic": "Biochimie",
+    "question_text": "Parmi les propositions suivantes, une seule est exacte. Laquelle ?",
+    "options": {
+      "a": "Les molécules organiques sont toujours solubles dans l'eau.",
+      "b": "Les molécules organiques sont toujours des glucides.",
+      "c": "Les molécules organiques ne sont jamais présentes dans les végétaux.",
+      "d": "Les molécules organiques contiennent toujours un ou plusieurs atome(s) de carbone et d'hydrogène."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Une molécule organique est par définition basée sur des squelettes carbonés associés à de l'hydrogène.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Biologie",
+    "topic": "Reproduction",
+    "question_text": "Dans l'espèce humaine, la fécondation a normalement lieu dans :",
+    "options": {
+      "a": "les ovaires.",
+      "b": "les trompes utérines.",
+      "c": "l'utérus.",
+      "d": "le vagin."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "La fécondation se déroule généralement dans l'ampoule de la trompe de Fallope (trompes utérines).",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Biologie",
+    "topic": "Physiologie",
+    "question_text": "Le tableau ci-dessous présente les caractéristiques de l'axone de trois neurones :\n- Prolongement 1 : Diamètre = 10 µm, Myélinisé = non\n- Prolongement 2 : Diamètre = 50 µm, Myélinisé = non\n- Prolongement 3 : Diamètre = 10 µm, Myélinisé = oui\nLa vitesse de l'influx nerveux sera :",
+    "options": {
+      "a": "la plus élevée dans le prolongement 2.",
+      "b": "la plus élevée dans le prolongement 3.",
+      "c": "identique dans les prolongements 1 et 3.",
+      "d": "identique dans tous les prolongements."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "La myélinisation permet la conduction saltatoire, accélérant grandement la vitesse de l'influx, bien au-delà de l'effet d'une augmentation modérée de diamètre sans myéline.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Biologie",
+    "topic": "Physiologie",
+    "question_text": "Le glucagon :",
+    "options": {
+      "a": "augmente le taux de glucose sanguin en stimulant la dégradation du glycogène dans les cellules musculaires.",
+      "b": "est une hormone hypoglycémiante.",
+      "c": "est synthétisé par les cellules hépatiques.",
+      "d": "est une protéine."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Le glucagon est une hormone polypeptidique (protéine) sécrétée par le pancréas (cellules alpha).",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Mathématiques",
+    "topic": "Fonctions",
+    "question_text": "La figure suivante donne une partie de la représentation graphique d'une fonction $f$ du deuxième degré, définie sur $\\mathbb{R}$. Calculez $f(10)$.\n![Graphe d'une parabole passant par (0,1), (1,0) et (2,1)](Europe/Belgium/examen_médical_et_dentaire/assets/2017/2017Question21.png)",
+    "options": {
+      "a": "81",
+      "b": "99",
+      "c": "101",
+      "d": "121"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Le sommet est $(1, 0)$ et passe par $(0, 1)$, donc l'équation est $f(x) = (x - 1)^2$. En remplaçant x par 10 : $f(10) = 9^2 = 81$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Mathématiques",
+    "topic": "Fonctions",
+    "question_text": "Quel est le domaine de définition de la fonction $f$ définie par $f(x) = \\frac{x+3}{-2x^2+3x}$ ?",
+    "options": {
+      "a": "$\\mathbb{R}\\setminus\\{2; -3\\}$",
+      "b": "$\\mathbb{R}\\setminus\\{-2; 3\\}$",
+      "c": "$\\mathbb{R}\\setminus\\{0; \\frac{2}{3}\\} $",
+      "d": "$\\mathbb{R}\\setminus\\{0; \\frac{3}{2}\\} $"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Il faut exclure les valeurs annulant le dénominateur : $-2x^2 + 3x = x(-2x + 3) = 0 \\implies x=0$ ou $x=3/2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Mathématiques",
+    "topic": "Limites",
+    "question_text": "Que vaut la limite $\\lim_{x \\to +\\infty} \\frac{(x-2)x}{8+3x^2}$ ?",
+    "options": {
+      "a": "$-\\frac{1}{4}$",
+      "b": "0",
+      "c": "$\\frac{1}{3}$",
+      "d": "$+\\infty$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "On conserve les termes de plus haut degré : $\\frac{x^2}{3x^2} = \\frac{1}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Mathématiques",
+    "topic": "Arithmétique",
+    "question_text": "Une patiente hospitalisée en réanimation chirurgicale nécessite du Loxen IV selon la prescription suivante : 3 mg/h en solution pure, au pousse-seringue électrique. Vous disposez d'ampoules de 10 ml de Loxen IV dosées à 1 mg par ml. La seringue est à préparer avec 4 ampoules. A 8 heures ce matin, il restait 16 ml de Loxen IV dans la seringue. A quelle heure la seringue a-t-elle été posée ?",
+    "options": {
+      "a": "00h00 (minuit)",
+      "b": "00h30",
+      "c": "01h00",
+      "d": "02h00"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Volume initial = $4 \\times 10 = 40$ ml (contenant 40 mg). Volume consommé = $40 - 16 = 24$ ml, soit 24 mg. A 3 mg/h, il a fallu 8 heures. $8h00 - 8h = 00h00$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Mathématiques",
+    "topic": "Algèbre",
+    "question_text": "Parmi les propositions suivantes, laquelle est vraie ?",
+    "options": {
+      "a": "$\\forall a, b \\in \\mathbb{R}^+, \\sqrt{a+b} = \\sqrt{a} + \\sqrt{b}$",
+      "b": "$\\forall a, b \\in \\mathbb{R}^+, |a+b| = |a| + |b|$",
+      "c": "$\\forall a, b \\in \\mathbb{R}^+, a^2 + b^2 = (a+b)(a+b)$",
+      "d": "Aucune des propositions ci-dessus n'est vraie"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Pour des nombres réels positifs, l'égalité $|a+b| = |a| + |b|$ est toujours vraie, ce qui justifie B.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Mathématiques",
+    "topic": "Pourcentages",
+    "question_text": "Un commerçant propose une réduction de 40% sur les prix affichés. Quel est le prix affiché si la réduction est de 20 € ?",
+    "options": {
+      "a": "40 €",
+      "b": "50 €",
+      "c": "60 €",
+      "d": "80 €"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Soit $P$ le prix affiché. $0.40 \\times P = 20 \\implies P = 20 / 0.40 = 50$ €.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "En considérant l'illustration ci-dessous (pas à l'échelle), si $\\alpha = 60^\\circ$ et $s = 3\\text{ cm}$, que vaut $r$ ?\n<svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"10,10 50,80 50,10\" fill=\"none\" stroke=\"black\"/></svg>",
+    "options": {
+      "a": "6 cm",
+      "b": "$3\\sqrt{3}\\text{ cm}$",
+      "c": "$6\\sqrt{3}\\text{ cm}$",
+      "d": "Il n'y a pas suffisamment d'informations pour répondre à la question"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "On a un triangle rectangle. $\\tan(\\alpha) = r / s$. Ainsi, $r = s \\tan(60^\\circ) = 3 \\sqrt{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "Soit $\\alpha$ un angle dans le premier quadrant du cercle trigonométrique tel que $\\alpha > \\frac{\\pi}{4}$. Parmi les propositions suivantes, laquelle est vraie ?",
+    "options": {
+      "a": "$\\sin \\alpha < 0$",
+      "b": "$\\cos \\alpha < 0$",
+      "c": "$\\sin(2\\alpha) < 0$",
+      "d": "$\\cos(2\\alpha) < 0$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Si $\\frac{\\pi}{4} < \\alpha < \\frac{\\pi}{2}$, alors $\\frac{\\pi}{2} < 2\\alpha < \\pi$. Le cosinus dans ce deuxième quadrant est négatif : $\\cos(2\\alpha) < 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Mathématiques",
+    "topic": "Géométrie",
+    "question_text": "Quel est le périmètre d'un rectangle dont la diagonale mesure 13 cm et dont un des côtés mesure 5 cm ?",
+    "options": {
+      "a": "17 cm",
+      "b": "34 cm",
+      "c": "60 cm",
+      "d": "Il n'y a pas suffisamment d'informations pour répondre à la question"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Par le théorème de Pythagore, l'autre côté mesure $\\sqrt{13^2 - 5^2} = \\sqrt{144} = 12$ cm. Le périmètre vaut $2 \\times (5 + 12) = 34$ cm.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "Sachant que $0 < \\alpha < \\frac{\\pi}{2}$ et que $\\sin(\\alpha) = \\sin(2\\alpha)$, que vaut $\\alpha$ ?",
+    "options": {
+      "a": "0",
+      "b": "$\\frac{\\pi}{4}$",
+      "c": "$\\frac{\\pi}{3}$",
+      "d": "$\\frac{\\pi}{2}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "On sait que $\\sin(2\\alpha) = 2\\sin\\alpha\\cos\\alpha$. D'où $\\sin\\alpha = 2\\sin\\alpha\\cos\\alpha$, ce qui donne $\\cos\\alpha = 1/2$. L'angle correspondant dans l'intervalle est $\\pi/3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Mathématiques",
+    "topic": "Géométrie analytique",
+    "question_text": "Dans le plan muni d'un système d'axes orthonormé, on considère les points $A (1; 1)$ et $B (3; 2)$. Quelles est la norme (la longueur) du vecteur $3\\overrightarrow{AB}$ ?",
+    "options": {
+      "a": "$\\sqrt{5}$",
+      "b": "$3\\sqrt{5}$",
+      "c": "15",
+      "d": "18"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "$\\overrightarrow{AB} = (2, 1)$. Sa norme vaut $\\sqrt{2^2 + 1^2} = \\sqrt{5}$. La norme de $3\\overrightarrow{AB}$ vaut donc $3\\sqrt{5}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Mathématiques",
+    "topic": "Géométrie analytique",
+    "question_text": "Dans le plan muni d'un système d'axes orthonormé, on considère une droite $L$ de pente négative qui coupe l'axe des ordonnées au point $(0; 2)$. On considère également le triangle $D$ formé par $L$, l'axe des abscisses et l'axe des ordonnées. Si l'aire de $D$ vaut 6 unités d'aire, quelles sont les coordonnées du point d'intersection de $L$ avec l'axe des abscisses ?",
+    "options": {
+      "a": "$(0; -2)$",
+      "b": "$(0; 0)$",
+      "c": "$(2; 0)$",
+      "d": "$(6; 0)$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'aire du triangle rectangle est $(b \\times h)/2 = 6$. Or, la hauteur $h$ vaut 2, d'où la base $b = 6$. La droite coupe l'axe x en $x=6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Mathématiques",
+    "topic": "Vecteurs",
+    "question_text": "La figure suivante est composée de trois hexagones réguliers identiques.\n![Trois hexagones accolés](Europe/Belgium/examen_médical_et_dentaire/assets/2017/2017question33.png)\nParmi les égalités vectorielles suivantes, une seule est vraie. Laquelle ?",
+    "options": {
+      "a": "$\\overrightarrow{AD} - \\overrightarrow{IH} = \\overrightarrow{FK}$",
+      "b": "$\\overrightarrow{FD} - \\overrightarrow{FE} = \\overrightarrow{AJ}$",
+      "c": "$\\overrightarrow{AG} + \\overrightarrow{DL} = \\overrightarrow{CK}$",
+      "d": "$\\overrightarrow{BD} + \\overrightarrow{FI} = \\overrightarrow{AJ}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Identifié d'après la figure dans le document original, on remarque que l'addition des vecteurs correspond parfaitement à cette relation géométrique.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "question_text": "Pour quelle valeur de $x$ l'échantillon $\\{1,3,5,7,x\\}$ a-t-il une moyenne égale à 3 ?",
+    "options": {
+      "a": "-4",
+      "b": "-1",
+      "c": "1",
+      "d": "5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "$(1 + 3 + 5 + 7 + x) / 5 = 3 \\implies 16 + x = 15 \\implies x = -1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Physique",
+    "topic": "Cinématique",
+    "question_text": "Un mobile subit un mouvement à une dimension le long de l'axe x. On suppose qu'au temps $t = 0$, ce mobile se trouve en $x = +5\\text{ m}$. Sur le graphique, la vitesse décroît linéairement de $+3\\text{ m/s}$ à $0\\text{ m/s}$ sur 3 secondes. Parmi les propositions, laquelle est correcte quant à son accélération ?",
+    "options": {
+      "a": "Comme le mobile décélère pendant les trois premières secondes pour ensuite accélérer, l'accélération change de signe.",
+      "b": "L'accélération ne change pas de signe et vaut $-1\\text{ m/s}^2$.",
+      "c": "L'accélération ne change pas de signe et vaut $+1\\text{ m/s}^2$.",
+      "d": "L'accélération ne change pas de signe mais il manque des données pour calculer sa valeur."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Le graphique v(t) est une droite décroissante; sa pente (qui est l'accélération) est constante. $a = (0 - 3) / 3 = -1 \\text{ m/s}^2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Physique",
+    "topic": "Cinématique",
+    "question_text": "Considérons un objet qu'on lance horizontalement d'une certaine hauteur avec une vitesse v. $\\Delta t$ est le temps de vol et $\\Delta x$ la portée (sans frottements). Laquelle de ces affirmations est correcte ?",
+    "options": {
+      "a": "La portée $\\Delta x$ augmente avec le carré de la vitesse v de l'objet.",
+      "b": "La portée $\\Delta x$ est fonction de la masse de l'objet.",
+      "c": "Le temps de vol $\\Delta t$ de l'objet augmente avec la vitesse v de l'objet.",
+      "d": "Le temps de vol $\\Delta t$ de l'objet est indépendant de la vitesse v de l'objet."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Le mouvement horizontal (M.R.U.) n'influence pas le mouvement vertical de chute libre, lequel détermine le temps de vol. $\\Delta t$ ne dépend que de la hauteur initiale.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Physique",
+    "topic": "Dynamique",
+    "question_text": "Sur le dessin, la voiture descend le plan incliné à vitesse constante. Quel est le diagramme des forces (agissant sur la voiture) se rapportant à cette situation ?",
+    "options": {
+      "a": "(1) avec des forces non équilibrées",
+      "b": "(2) avec une force normale perpendiculaire, un poids vers le bas, et un frottement parallèle au plan ascendant",
+      "c": "(3)",
+      "d": "(4)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "À vitesse constante, la somme des forces est nulle. Seul le schéma 2 indique les directions exactes permettant de trouver un vecteur somme nul.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Physique",
+    "topic": "Énergie",
+    "question_text": "Deux blocs peuvent glisser sans frottement sur des plans inclinés AB et AB'. Lâchés de A sans vitesse initiale, ils arrivent en B et B' avec des vitesses $v$ et $v'$. Sachant que $OB' = 2 \\times OB$, quelle est la relation correcte entre ces deux vitesses ?",
+    "options": {
+      "a": "$v = 4v'$",
+      "b": "$v = 2v'$",
+      "c": "$v = v'$",
+      "d": "$v = v'/2$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Par conservation de l'énergie, l'énergie potentielle initiale se transforme entièrement en énergie cinétique. Étant donné que la hauteur est identique, les vitesses finales sont égales : $v = v'$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Physique",
+    "topic": "Oscillations",
+    "question_text": "Un pendule simple oscille sans frottement avec une amplitude angulaire de $10^\\circ$ et une période $T$. Si on réduit l'amplitude angulaire de moitié, que devient la nouvelle période ?",
+    "options": {
+      "a": "$T/4$",
+      "b": "$T/2$",
+      "c": "$T$",
+      "d": "$2T$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Pour les petites oscillations, la période du pendule simple est indépendante de son amplitude angulaire (isochronisme).",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Physique",
+    "topic": "Ondes",
+    "question_text": "La puissance par unité de surface (l'intensité) d'une onde sonore à une distance $R$ de la source (supposée ponctuelle) est :",
+    "options": {
+      "a": "indépendante de la distance R.",
+      "b": "proportionnelle à R.",
+      "c": "proportionnelle à $1/R$.",
+      "d": "proportionnelle à $1/R^2$."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "L'intensité d'une onde sphérique s'atténue proportionnellement à la surface d'une sphère, donc en $1/R^2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Physique",
+    "topic": "Acoustique",
+    "question_text": "La célérité du son dans l'air est de $340\\text{ m/s}$. Une note musicale a pour fondamental le « la » correspondant à 426 vibrations par seconde. Que vaut approximativement sa longueur d'onde ?",
+    "options": {
+      "a": "8 cm",
+      "b": "80 cm",
+      "c": "125 cm",
+      "d": "1448 cm"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "$\\lambda = v / f = 340 / 426 \\approx 0.798\\text{ m}$, soit environ 80 cm.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Physique",
+    "topic": "Ondes",
+    "question_text": "Une onde harmonique se propage le long d'une corde. Des schémas la montrent se déplaçant d'une distance correspondante à un quart de sa longueur d'onde (1,6 m pour une longueur d'onde de 6,4 m) en $0,2\\text{ s}$. Parmi les valeurs de la fréquence $f$ données ci-dessous, indiquez celle qui est correcte ?",
+    "options": {
+      "a": "$f = 1,25\\text{ Hz}$",
+      "b": "$f = 1,67\\text{ Hz}$",
+      "c": "$f = 2,50\\text{ Hz}$",
+      "d": "$f = 5,00\\text{ Hz}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "L'onde parcourt $\\lambda/4$ en $\\Delta t = 0.2$ s, donc la période $T$ vaut $0.8$ s. La fréquence $f = 1 / 0.8 = 1.25$ Hz.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Physique",
+    "topic": "Optique",
+    "question_text": "Si une image est virtuelle, alors :",
+    "options": {
+      "a": "elle se forme sur un écran.",
+      "b": "on peut en prendre une photographie.",
+      "c": "elle est toujours renversée.",
+      "d": "elle est toujours plus grande que l'objet."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Bien qu'on ne puisse pas recueillir une image virtuelle sur un écran, l'objectif d'un appareil photo permet de transformer les rayons incidents divergents en image réelle sur le capteur.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Physique",
+    "topic": "Optique",
+    "question_text": "Une lentille mince en verre est utilisée dans l'air. Un objet est placé sur son axe principal en un point tel que son image est renversée et de même taille. Si l'on éloigne l'objet du centre optique le long de l'axe :",
+    "options": {
+      "a": "l'image s'approche du foyer de la lentille.",
+      "b": "l'image s'éloigne du foyer de la lentille.",
+      "c": "l'image devient virtuelle alors qu'elle était réelle.",
+      "d": "l'image devient réelle alors qu'elle était virtuelle."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "L'objet était initialement à une distance $2f$. En l'éloignant vers l'infini, l'image (réelle) se rapproche du foyer image $f'$.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Physique",
+    "topic": "Optique",
+    "question_text": "En passant de l'air dans l'eau, un faisceau de lumière jaune se réfracte. Parmi les propositions, laquelle est correcte ?",
+    "options": {
+      "a": "Sa longueur d'onde et sa fréquence restent inchangées.",
+      "b": "Le produit de sa longueur d'onde par sa fréquence reste inchangé.",
+      "c": "Sa vitesse de propagation augmente.",
+      "d": "Sa longueur d'onde diminue mais sa fréquence reste inchangée."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "La fréquence est imposée par la source lumineuse et reste invariante. La vitesse diminuant (l'eau est plus réfringente), la longueur d'onde $\\lambda = v/f$ diminue également.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Physique",
+    "topic": "Électricité",
+    "question_text": "Quand deux charges électriques de signes contraires ($q_1 = +1\\text{ C}$ et $q_2 = -3\\text{ C}$) sont mises en présence, des forces $\\vec{f_1}$ et $\\vec{f_2}$ s'exercent. Quel est le schéma correspondant à ces forces ?",
+    "options": {
+      "a": "Deux forces s'attirant, de longueurs identiques (Principe des actions réciproques)",
+      "b": "Deux forces s'attirant de longueurs inégales",
+      "c": "Deux forces se repoussant",
+      "d": "Autres"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "D'après la troisième loi de Newton et la loi de Coulomb, les charges exercent des forces attractives opposées, colinéaires et de même intensité.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Physique",
+    "topic": "Électricité",
+    "question_text": "Lorsqu'une particule portant une charge électrique est soumise à un champ électrique, la force qu'elle subit de la part de celui-ci est proportionnelle à la charge et :",
+    "options": {
+      "a": "à la masse de la particule.",
+      "b": "indépendante de la masse de la particule.",
+      "c": "inversement proportionnelle à la masse de la particule.",
+      "d": "à la vitesse de la particule."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "La force électrique est régie par $\\vec{F} = q \\vec{E}$. Elle ne dépend ni de la masse, ni de la vitesse de la particule.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Physique",
+    "topic": "Électricité",
+    "question_text": "Voici cinq affirmations relatives au passage du courant dans un groupement de deux résistances mises en séries : (1) on observe une perte de courant, (2) on observe une chute de tension, (3) le courant diminue dans la seconde, (4) le courant est moindre dans la plus grande résistance, (5) la tension est partagée à parts égales. Laquelle est correcte ?",
+    "options": {
+      "a": "Toutes les affirmations sont vraies.",
+      "b": "Seule l'affirmation (2) est vraie.",
+      "c": "Seule l'affirmation (4) est fausse.",
+      "d": "Les affirmations (1), (2) et (5) sont vraies."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Dans un circuit en série, le courant est le même partout, ce qui rend fausses les autres propositions, hormis (2) puisqu'on a bien une perte de tension en passant par la charge.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Physique",
+    "topic": "Électricité",
+    "question_text": "Le schéma ci-dessous représente un circuit électrique. Si $R_1 = 2\\text{ }\\Omega$, et $R_2, R_3 = 4\\text{ }\\Omega$ disposées en parallèle, que vaut la résistance équivalente ?",
+    "options": {
+      "a": "$1\\text{ }\\Omega$",
+      "b": "$2,5\\text{ }\\Omega$",
+      "c": "$4\\text{ }\\Omega$",
+      "d": "$10\\text{ }\\Omega$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Les résistances de $4\\Omega$ en parallèle ont une équivalence de $2\\Omega$. Montée en série avec $R_1$, $R_{eq} = 2 + 2 = 4\\text{ }\\Omega$.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Chimie",
+    "topic": "Stœchiométrie",
+    "question_text": "La dose quotidienne recommandée de Zinc s'élève à 13 mg et celle de la vitamine A ($C_{20}H_{30}O$) à 1,43 mg. Parmi les propositions suivantes, laquelle correspond à ces doses quotidiennes ?",
+    "options": {
+      "a": "Zn : $2,0.10^{-1}\\text{ mol}$ et vitamine A : $5,0.10^{-3}\\text{ mol}$",
+      "b": "Zn : $2,0.10^{-4}\\text{ mol}$ et vitamine A : $5,0.10^{-6}\\text{ mol}$",
+      "c": "Zn : $5,0.10^{-3}\\text{ mol}$ et vitamine A : $2,0.10^{-1}\\text{ mol}$",
+      "d": "Zn : $5,0\\text{ mol}$ et vitamine A : $200\\text{ mol}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "$n(Zn) = 13 \\times 10^{-3} / 65.4 \\approx 2 \\times 10^{-4}\\text{ mol}$. Masse molaire Vitamine A = $20 \\times 12 + 30 \\times 1 + 16 = 286\\text{ g/mol}$. $n(\\text{VitA}) = 1.43 \\times 10^{-3} / 286 = 5 \\times 10^{-6}\\text{ mol}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Chimie",
+    "topic": "Stœchiométrie",
+    "question_text": "Dans 88 g de dioxyde de carbone, combien y a-t-il d'atomes d'oxygène ?",
+    "options": {
+      "a": "$3.10^{23}\\text{ atomes}$",
+      "b": "$6.10^{23}\\text{ atomes}$",
+      "c": "$12.10^{23}\\text{ atomes}$",
+      "d": "$24.10^{23}\\text{ atomes}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "$M(CO_2) = 44\\text{ g/mol}$. Donc on a 2 moles de $CO_2$. Or 1 molécule contient 2 atomes de O. Donc $2 \\times 2 = 4$ moles d'oxygène $= 4 \\times 6.02 \\times 10^{23} \\approx 24.10^{23}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Chimie",
+    "topic": "Solutions et Concentrations",
+    "question_text": "Une solution injectable contient 4 mg de principe actif par millilitre de solution. La dose recommandée est de 0,2 mg/kg. Quel volume de solution doit-on injecter à un adulte de 80 kg ?",
+    "options": {
+      "a": "2 mL",
+      "b": "4 mL",
+      "c": "8 mL",
+      "d": "16 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Masse totale requise = $0.2 \\times 80 = 16$ mg. Volume de solution = $16 / 4 = 4$ mL.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Chimie",
+    "topic": "Stœchiométrie",
+    "question_text": "La masse de 0,1 mol d'un acide $HXO_3$ vaut 8,45 g. Quel est l'élément inconnu X ?",
+    "options": {
+      "a": "Azote",
+      "b": "Brome",
+      "c": "Chlore",
+      "d": "Iode"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La masse molaire vaut $8.45 / 0.1 = 84.5\\text{ g/mol}$. $M(H) + M(X) + 3\\times M(O) = 84.5 \\implies 1 + X + 48 = 84.5 \\implies X = 35.5\\text{ g/mol}$, ce qui correspond au chlore (Cl).",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Chimie",
+    "topic": "Acides et Bases",
+    "question_text": "À 298 K, l'acide acétique est un électrolyte faible dans l'eau et est non dissocié dans le cyclohexane. Laquelle des propositions ci-dessous est correcte ?",
+    "options": {
+      "a": "L'acide acétique est totalement dissocié dans l'eau à 298 K.",
+      "b": "Une solution aqueuse d'acide acétique conduit très bien le courant électrique à 298 K.",
+      "c": "L'acide acétique est un électrolyte fort dans le cyclohexane.",
+      "d": "Une solution à 1% d'acide acétique dans le cyclohexane ne conduit pas le courant électrique."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Non dissocié dans le cyclohexane, l'acide acétique reste sous forme moléculaire neutre, d'où aucune conduction de courant possible.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Chimie",
+    "topic": "Stœchiométrie",
+    "question_text": "Le gaz naturel contient 10% de sulfure d'hydrogène en volume. Le volume molaire de ce gaz vaut 25 L/mol. Quelle masse de soufre se trouve dans $1.000.000\\text{ m}^3$ de gaz naturel ?",
+    "options": {
+      "a": "$136.000\\text{ g}$",
+      "b": "$128.000\\text{ kg}$",
+      "c": "$136.000.000\\text{ g}$",
+      "d": "$128.000.000\\text{ kg}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Volume de $H_2S$ = $10\\%$ de $10^9$ litres = $10^8$ L. Moles de $H_2S$ = $10^8 / 25 = 4.10^6$ mol. Masse de S = $4.10^6 \\times 32\\text{ g/mol} = 128 \\times 10^6$ g = 128,000 kg.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Chimie",
+    "topic": "Isotopes",
+    "question_text": "Le bore à l'état naturel est formé d'un mélange de deux isotopes de masses atomiques relatives égales à 10 et 11 respectivement. Que vaut l'abondance naturelle de l'isotope $^{10}B$ du bore ? (Masse atomique moyenne de $\\approx 10,8$)",
+    "options": {
+      "a": "11 %",
+      "b": "20 %",
+      "c": "80 %",
+      "d": "89 %"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "$10x + 11(1 - x) = 10.8 \\implies 11 - x = 10.8 \\implies x = 0.2$ ou $20\\%$ pour l'isotope $^{10}B$.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Chimie",
+    "topic": "Chimie Structurale",
+    "question_text": "L'hydrate de méthane est constitué de molécules de méthane entourées de molécules d'eau formant une cage. Parmi ces propositions, laquelle est fausse ?",
+    "options": {
+      "a": "L'hydrate de méthane est un mélange.",
+      "b": "Les molécules d'eau au sein de l'hydrate sont liées entre elles par de fortes liaisons hydrogène.",
+      "c": "Les molécules de méthane au sein de l'hydrate sont liées entre elles par des liaisons hydrogène.",
+      "d": "L'hydrate de méthane est solide dans les fonds marins en raison de la forte pression qui y règne."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Le méthane ($CH_4$) étant totalement apolaire sans liaisons impliquant F, O, N, il ne peut en aucun cas faire des liaisons hydrogène entre ses propres molécules.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Chimie",
+    "topic": "Structure atomique",
+    "question_text": "Combien de protons, d'électrons et de neutrons possède un ion $^{131}_{53}\\text{I}^-$ ?",
+    "options": {
+      "a": "53, 53, 78",
+      "b": "53, 54, 78",
+      "c": "78, 78, 53",
+      "d": "78, 79, 53"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Z = 53 (donc 53 protons). Anion charge -1 donc 54 électrons. Neutrons = A - Z = $131 - 53 = 78$.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Chimie",
+    "topic": "Périodicité",
+    "question_text": "En utilisant le tableau périodique, vous pouvez affirmer que le phosphore est :",
+    "options": {
+      "a": "plus électronégatif que le chlore.",
+      "b": "moins électronégatif que le bismuth.",
+      "c": "moins électronégatif que l'azote.",
+      "d": "moins électronégatif que le magnésium."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "L'électronégativité augmente vers le haut dans une période/famille. Le phosphore est en-dessous de l'azote sur la classification périodique, il est donc moins électronégatif que celui-ci.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Chimie",
+    "topic": "Composés Inorganiques",
+    "question_text": "Parmi les molécules suivantes, laquelle est un oxyde acide ?",
+    "options": {
+      "a": "$NaNO_3$",
+      "b": "$NO_2$",
+      "c": "$Na_2O$",
+      "d": "$HNO_2$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "L'oxyde $NO_2$ est un oxyde de non-métal et se dissout dans l'eau en générant une solution acide (oxyde acide).",
+    "section_id": null
+  },
+  {
+    "question_number": 61,
+    "subject": "Chimie",
+    "topic": "Composés Inorganiques",
+    "question_text": "Parmi les molécules suivantes, laquelle est un oxyde basique ?",
+    "options": {
+      "a": "$CaCO_3$",
+      "b": "$Ca(OH)_2$",
+      "c": "$CaO$",
+      "d": "$CO_2$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Le $CaO$ est l'oxyde métallique de calcium, un oxyde basique par définition.",
+    "section_id": null
+  },
+  {
+    "question_number": 62,
+    "subject": "Chimie",
+    "topic": "Oxydoréduction",
+    "question_text": "Soit la réaction non pondérée suivante : $Cu^{2+} + Al \\rightarrow Cu + Al^{3+}$. Laquelle correspond à la réaction correctement pondérée ?",
+    "options": {
+      "a": "$2\\text{ }Cu^{2+} + 3\\text{ }Al \\rightarrow 2\\text{ }Cu + 3\\text{ }Al^{3+}$",
+      "b": "$2\\text{ }Cu^{2+} + Al \\rightarrow 2\\text{ }Cu + Al^{3+}$",
+      "c": "$3\\text{ }Cu^{2+} + 2\\text{ }Al \\rightarrow 3\\text{ }Cu + 2\\text{ }Al^{3+}$",
+      "d": "$Cu^{2+} + 3\\text{ }Al \\rightarrow Cu + 3\\text{ }Al^{3+}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Pour équilibrer les électrons, on échange les coefficients 2 et 3 liés à la charge. Les masses et les charges totales des réactifs doivent correspondre à celles des produits (+6 pour chacun).",
+    "section_id": null
+  },
+  {
+    "question_number": 63,
+    "subject": "Chimie",
+    "topic": "Électrochimie",
+    "question_text": "On associe des couples $Ni^{2+}/Ni$ ($E^\\circ = -0,25\\text{V}$) et $Pb^{2+}/Pb$ ($E^\\circ = -0,13\\text{V}$) dans une pile. Laquelle des propositions est correcte ?",
+    "options": {
+      "a": "L'électrode de nickel constitue l'anode de la pile.",
+      "b": "Le plomb métallique s'oxyde en ions $Pb^{2+}$.",
+      "c": "Les électrons circulent dans le fil conducteur de l'électrode de Pb vers l'électrode de Ni.",
+      "d": "La différence de potentiel est de 0,38V."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "L'électrode ayant le potentiel le plus faible (Ni) est le siège de l'oxydation (perte d'électrons), elle forme donc l'anode. Les électrons partent de l'anode.",
+    "section_id": null
+  },
+  {
+    "question_number": 64,
+    "subject": "Chimie",
+    "topic": "Équilibre et Solubilité",
+    "question_text": "En s'appuyant sur les produits de solubilité, classez par ordre décroissant de solubilité molaire les sels suivants : $PbSO_4$ ($1,66.10^{-8}$); $MgCO_3$ ($1,00.10^{-5}$); $Fe(OH)_3$ ($2,51.10^{-39}$); $Ag_2CrO_4$ ($1,12.10^{-12}$).",
+    "options": {
+      "a": "$PbSO_4, MgCO_3, Fe(OH)_3, Ag_2CrO_4$",
+      "b": "$MgCO_3, Fe(OH)_3, Ag_2CrO_4, PbSO_4$",
+      "c": "$MgCO_3, PbSO_4, Ag_2CrO_4, Fe(OH)_3$",
+      "d": "$Fe(OH)_3, Ag_2CrO_4, PbSO_4, MgCO_3$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Calcul des solubilités molaires : $s(MgCO_3) \\approx 3.10^{-3}$, $s(PbSO_4) \\approx 1.2.10^{-4}$, $s(Ag_2CrO_4) \\approx \\sqrt[3]{1.12\\cdot 10^{-12} / 4} \\approx 6.5.10^{-5}$, $s(Fe(OH)_3) \\approx \\sqrt[4]{...} \\approx 10^{-10}$. L'ordre est bien C.",
+    "section_id": null
+  },
+  {
+    "question_number": 65,
+    "subject": "Chimie",
+    "topic": "Chimie Organique",
+    "question_text": "Voici la structure chimique d'une molécule : $CH_3-CH_2-CH(OH)-C\\equiv C-CH_2-CH_2-NH_2$. Quelles sont les différentes fonctions présentes ?",
+    "options": {
+      "a": "Alcène, amine, alcool",
+      "b": "Alcyne, amine, alcool",
+      "c": "Alcène, amide, alcool",
+      "d": "Alcyne, amide, alcool"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "La molécule comporte une triple liaison (alcyne), un hydroxyle $OH$ (alcool) et un groupe $NH_2$ (amine primaire).",
+    "section_id": null
+  },
+  {
+    "question_number": 66,
+    "subject": "Chimie",
+    "topic": "Chimie Organique",
+    "question_text": "Voici la structure chimique d'une molécule : $CH_3-CH_2-CH(Cl)-CH_2-C(=O)-CH_2-CH_2-C(=O)OH$. Quelles en sont les différentes fonctions ?",
+    "options": {
+      "a": "Halogène, aldéhyde, acide carboxylique",
+      "b": "Halogène, cétone, ester",
+      "c": "Halogène, cétone, acide carboxylique",
+      "d": "Halogène, aldéhyde, ester"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "La molécule montre un chlore (halogène), un carbonyle lié à deux carbones (cétone) et un groupe carboxyle $COOH$ (acide carboxylique).",
+    "section_id": null
+  },
+  {
+    "question_number": 67,
+    "subject": "Chimie",
+    "topic": "Équilibres chimiques",
+    "question_text": "Dans 5,00 L, on introduit 1 mole de $H_2$ et 1 mole de $I_2$. À température de travail, $K_c = 36$ pour la synthèse de HI. Que vaudra la concentration en dihydrogène à l'équilibre ?",
+    "options": {
+      "a": "0,005 mol/L",
+      "b": "0,050 mol/L",
+      "c": "0,250 mol/L",
+      "d": "1,250 mol/L"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Initiale: $[H_2] = [I_2] = 0.2\\text{ M}$. Équilibre : $(2x)^2 / (0.2-x)^2 = 36 \\implies 2x/(0.2-x) = 6 \\implies 2x = 1.2 - 6x \\implies x = 0.15$. À l'équilibre, $[H_2] = 0.2 - 0.15 = 0.050\\text{ M}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 68,
+    "subject": "Chimie",
+    "topic": "Équilibres chimiques",
+    "question_text": "La réaction $\\text{fructose} + \\text{glucose phosphate} \\rightleftharpoons \\text{saccharose phosphate}$ a $K_c = 0,05$. Quel volume pour un mélange initial de 0,15 mol chaque réactif si l'on veut obtenir 1/3 de conversion en produit ?",
+    "options": {
+      "a": "25 mL",
+      "b": "50 mL",
+      "c": "75 mL",
+      "d": "100 mL"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Moles à équilibre: 0.10 de chaque réactif, 0.05 de produit. En posant $[X]=n/V$, on a $K_c = \\frac{0.05/V}{(0.10/V)^2} = \\frac{0.05\\cdot V}{0.01} = 5V$. Si $K_c = 0.05$ alors $V = 0.01\\text{ L} = 10\\text{ mL}$. Toutefois, sur base du QCM fourni, la réponse extraite officiellement repère la proposition D.",
+    "section_id": null
+  },
+  {
+    "question_number": 69,
+    "subject": "Chimie",
+    "topic": "Cinétique et Rendement",
+    "question_text": "La réaction $C_6H_{12}O_6 \\rightarrow 2\\text{ }C_2H_5OH + 2\\text{ }CO_2$. En partant d'une mole de glucose (180g), on obtient 46,00 g d'éthanol. Quel est le rendement massique de cette réaction ?",
+    "options": {
+      "a": "23 %",
+      "b": "46 %",
+      "c": "50 %",
+      "d": "56 %"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Théoriquement 1 mole de glucose produit 2 moles d'éthanol ($2 \\times 46 = 92\\text{ g}$). On a obtenu 46g, le rendement est donc de $46/92 = 50\\%$.",
+    "section_id": null
+  }
+]

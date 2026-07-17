@@ -1,0 +1,482 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Anthropology",
+    "topic": "Skeletal Anatomy",
+    "question_text": "Which of the following long bones is located in the upper portion of the leg and is generally considered the longest, heaviest, and strongest bone in the human skeleton?",
+    "options": {
+      "a": "Humerus",
+      "b": "Femur",
+      "c": "Tibia",
+      "d": "Pelvis"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The femur is the thigh bone. According to standard forensic texts like Bertino & Bertino, it is the largest bone in the body and is a primary long bone used in stature estimation.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Anthropology",
+    "topic": "Skeletal Anatomy",
+    "question_text": "The human skull is primarily divided into the facial bones and the braincase. What is the anatomical term for the protective braincase?",
+    "options": {
+      "a": "Mandible",
+      "b": "Pelvis",
+      "c": "Cranium",
+      "d": "Clavicle"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The skull consists of the cranium (which protects the brain) and the facial bones (including the mandible, or lower jaw).",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Anthropology",
+    "topic": "Skeletal Anatomy",
+    "question_text": "Which bone is situated in the upper arm, between the shoulder joint and the elbow?",
+    "options": {
+      "a": "Femur",
+      "b": "Radius",
+      "c": "Ulna",
+      "d": "Humerus"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "The humerus is the major long bone of the upper arm, extending from the shoulder to the elbow. It is frequently measured for biological profiling when the femur is unavailable.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Anthropology",
+    "topic": "Skeletal Anatomy",
+    "question_text": "The skeletal structure that consists of the ilium, ischium, and pubis, and is central for attaching the lower limbs to the axial skeleton, is known as the:",
+    "options": {
+      "a": "Cranium",
+      "b": "Sternum",
+      "c": "Pelvis",
+      "d": "Scapula"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The pelvis (or os coxa) is formed by the fusion of the ilium, ischium, and pubis. It is a key area for determining the biological sex of a decedent.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Anthropology",
+    "topic": "Skeletal Anatomy",
+    "question_text": "A forensic anthropologist discovers a fragmented bone that includes the greater sciatic notch and an acetabulum. Which major skeletal structure has been found?",
+    "options": {
+      "a": "Cranium",
+      "b": "Pelvis",
+      "c": "Humerus",
+      "d": "Femur"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The acetabulum is the socket of the hip joint, and the greater sciatic notch is located on the ilium. Both are key landmarks of the pelvic bone.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Sex",
+    "question_text": "When assessing the biological sex of a human skeleton, a subpubic angle of approximately 100 degrees (greater than 90 degrees) most strongly indicates:\n\n![Image description: Diagram of a human pelvis highlighting a wide subpubic angle beneath the pubic symphysis.](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs41935-019-0163-1/MediaObjects/41935_2019_163_Fig2_HTML.png?as=webp)",
+    "options": {
+      "a": "A biological male",
+      "b": "A biological female",
+      "c": "An individual of European ancestry",
+      "d": "A juvenile individual"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Biological females possess adaptations for childbirth, which include a wider pelvis and a subpubic angle greater than 90 degrees. Males typically have a subpubic angle of less than 90 degrees.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Sex",
+    "question_text": "When comparing the pelvic cavity shape between the biological sexes, the female pelvic inlet is typically described as:",
+    "options": {
+      "a": "Heart-shaped and narrow",
+      "b": "Oval-shaped and wider",
+      "c": "Triangular and elongated",
+      "d": "Square-shaped and shallow"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The female pelvic inlet is circular to oval-shaped and wide to allow for fetal passage during childbirth, whereas the male pelvic inlet is often more heart-shaped and narrow.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Sex",
+    "question_text": "When evaluating cranial features for sex estimation, a pronounced and heavy brow ridge (supraorbital ridge) combined with a robust mastoid process is highly indicative of a:",
+    "options": {
+      "a": "Biological female",
+      "b": "Biological male",
+      "c": "Subadult",
+      "d": "Elderly individual"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Male skulls tend to be larger and more robust. Characteristics include prominent brow ridges, a larger mastoid process, and a pronounced nuchal crest at the back of the skull.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Sex",
+    "question_text": "Which of the following descriptions represents typical characteristics of a female skull?",
+    "options": {
+      "a": "Smooth skull surface, vertical forehead, and sharp orbital margins",
+      "b": "Rough skull surface, sloping forehead, and blunt orbital margins",
+      "c": "Large mastoid processes and a prominent occipital protuberance",
+      "d": "A square-shaped mandible with a U-shaped jaw angle"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Biological female skulls generally exhibit more gracile (smooth) features, a vertical/rounded forehead, and sharper upper margins of the eye orbits compared to the blunt margins found in males.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Sex",
+    "question_text": "The Phenice Method is a highly reliable technique used to estimate sex from the pelvis. It relies on evaluating three specific traits. Which of the following is NOT one of those three traits?",
+    "options": {
+      "a": "Ventral arc",
+      "b": "Subpubic concavity",
+      "c": "Medial aspect of the ischiopubic ramus",
+      "d": "Greater sciatic notch"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "While the greater sciatic notch is an important indicator of sex, the Phenice Method specifically evaluates three features on the pubis: the ventral arc, the subpubic concavity, and the medial aspect of the ischiopubic ramus. Females typically show a clear ventral arc and concavity.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Age",
+    "question_text": "Which of the following biological processes is observed at the end of long bones and is primarily used by anthropologists to estimate the age of a subadult (child or teenager)?",
+    "options": {
+      "a": "Suture obliteration",
+      "b": "Osteoarthritis development",
+      "c": "Epiphyseal fusion",
+      "d": "Callus formation"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Epiphyseal fusion refers to the closing of growth plates (epiphyses) at the ends of long bones. Because these plates fuse at predictable ages in childhood and adolescence, they are highly reliable for age estimation in subadults.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Age",
+    "question_text": "The squamosal, sagittal, and coronal structures found on the cranium represent immovable joints that close gradually with age. These are referred to as:",
+    "options": {
+      "a": "Sutures",
+      "b": "Fontanelles",
+      "c": "Symphyses",
+      "d": "Foramina"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Cranial sutures are zigzag-like immovable joints between the bones of the skull. The sequence and degree to which they close (obliterate) provide an estimate for the age of an adult.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Age",
+    "question_text": "Which set of teeth are typically the final permanent teeth to erupt in the human mandible and maxilla, providing evidence that an individual is likely at least 17 to 21 years old?",
+    "options": {
+      "a": "First molars",
+      "b": "Central incisors",
+      "c": "Third molars",
+      "d": "Canines"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Third molars (wisdom teeth) typically erupt between 17 and 21 years of age, making them a crucial dental marker for identifying late adolescence or early adulthood.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Age",
+    "question_text": "According to typical fusion sequences, which of the following bones or areas is generally one of the *last* to completely undergo epiphyseal fusion, commonly sealing around the age of 25?",
+    "options": {
+      "a": "Medial epicondyle of the humerus",
+      "b": "Medial clavicle",
+      "c": "Distal fibula",
+      "d": "Greater trochanter of the femur"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The medial end (sternal end) of the clavicle is renowned for being one of the final growth plates to fuse, generally completing its union between ages 21 and 25.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Age",
+    "question_text": "The sagittal suture connects the two parietal bones along the top of the skull. While variations occur, the complete fusion and near disappearance (obliteration) of the sagittal suture generally suggests the individual was over the age of:",
+    "options": {
+      "a": "18",
+      "b": "25",
+      "c": "35",
+      "d": "60"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "While cranial suture closure is highly variable, the sagittal suture usually completely fuses by the time an individual is in their late 30s to early 40s (often 35+). Therefore, an open sagittal suture suggests a younger adult, and an obliterated one suggests older age.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Stature",
+    "question_text": "Stature (living height) can be mathematically estimated by measuring the length of specific bones and applying regression formulas. Which category of bones is best suited for these calculations?",
+    "options": {
+      "a": "Flat bones",
+      "b": "Irregular bones",
+      "c": "Long bones",
+      "d": "Sesamoid bones"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Long bones (e.g., femur, tibia, humerus, radius) comprise the primary vertical length of the limbs and mathematically correlate most strongly with the overall height of a person.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Stature",
+    "question_text": "A forensic investigator calculates the stature of a victim using the equation $$Height = 2.47 \\times (femur\\;length) + 54.10$$. Why must the anthropologist first know the individual's sex and ancestry before relying heavily on this specific mathematical formula?",
+    "options": {
+      "a": "Because flat bones shrink at different rates during decomposition depending on sex and ancestry.",
+      "b": "Because the ratios of limb proportions to total body height differ across varying sexes and ancestral backgrounds.",
+      "c": "Because long bones of males only grow until age 15, while those of females grow until age 21.",
+      "d": "Because epiphyseal fusion prevents accurate long bone measurement in individuals over 30."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Mathematical regression formulas are specific to the population from which they are derived. Differences in body proportions (e.g., limb length to torso ratios) exist among different sexes and populations of varying ancestral origins.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Stature",
+    "question_text": "What specialized piece of equipment is standardly utilized in the forensic laboratory to accurately measure the maximum length of long bones for stature calculations?",
+    "options": {
+      "a": "Osteometric board",
+      "b": "Spreading calipers",
+      "c": "Goniometer",
+      "d": "Sliding calipers"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "An osteometric board is designed specifically for taking the maximum lengths of large long bones like the femur or tibia securely and accurately.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Ancestry",
+    "question_text": "The nasal index is a ratio calculated by dividing the width of the nasal aperture by its height and multiplying by 100. This metric is frequently used to assess which component of the biological profile?",
+    "options": {
+      "a": "Age",
+      "b": "Sex",
+      "c": "Stature",
+      "d": "Ancestry"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The nasal index and overall nasal morphology (e.g., nasal width, presence of a nasal spine) are classic indicators historically used by anthropologists to infer biological ancestry.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Ancestry",
+    "question_text": "During a skeletal analysis, it is observed that the victim possesses spatulate incisors, circular-shaped eye orbits, and a pronounced, sharp nasal spine. These skeletal markers most closely align with which ancestral profile?",
+    "options": {
+      "a": "Asian ancestry",
+      "b": "European ancestry",
+      "c": "African ancestry",
+      "d": "Indigenous ancestry"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Traits characteristic of European ancestry typically include sloping eye orbits (often described as circular/aviator-shaped), a narrow nasal opening, a sharp anterior nasal spine, and relatively flat facial profiles.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Ancestry",
+    "question_text": "Which of the following craniofacial traits is most frequently found in skulls of African descent?",
+    "options": {
+      "a": "Pronounced facial prognathism and a wide, rounded nasal aperture",
+      "b": "A prominent, sharp anterior nasal spine and narrow nasal root",
+      "c": "A flat facial profile and circular eye orbits",
+      "d": "Prominent cheekbones and shovel-shaped incisors"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Traits generally associated with African ancestry include a wider, rounded nasal aperture, a lack of a sharp nasal spine, rectangular eye orbits, and facial prognathism (forward projection of the lower face).",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Anthropology",
+    "topic": "Biological Profiling - Ancestry",
+    "question_text": "An examination of a victim's dentition reveals deep concavities on the lingual (tongue-facing) side of the central incisors. This distinct anatomical trait is called 'shovel-shaped incisors' and is most strongly associated with individuals of:",
+    "options": {
+      "a": "European descent",
+      "b": "African descent",
+      "c": "Asian or Indigenous American descent",
+      "d": "Australian descent"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Shovel-shaped incisors—incisors with thick marginal ridges forming a scoop or shovel shape on the back side—are heavily expressed in populations of Asian and Native American/Indigenous descent.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "Injuries or bone trauma that occurred long before an individual died, characterized by smooth edges and evidence of new bone growth (callus), are categorized as:",
+    "options": {
+      "a": "Antemortem trauma",
+      "b": "Perimortem trauma",
+      "c": "Postmortem trauma",
+      "d": "Taphonomic trauma"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Antemortem ('before death') trauma is evident by signs of healing and new bone growth (osteogenic response), meaning the individual survived the injury for an extended period.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "Trauma that occurs to bone at or near the time of death is known as perimortem trauma. Which of the following is a primary characteristic of perimortem bone fractures?",
+    "options": {
+      "a": "Significant callus formation surrounding the fracture site",
+      "b": "Irregular, jagged breaks with contrasting discoloration",
+      "c": "Clean, sharp fracture edges without signs of bone healing",
+      "d": "Shrinkage and warping caused by sun bleaching"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Because the bone is still fresh and contains organic material at the time of death, perimortem trauma usually leaves clean, sharp, or angled breaks (greenstick fractures) but shows absolutely no sign of healing (no callus).",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "An anthropologist finds a skull in a wooded area. They notice damage on the temporal bone characterized by dry, brittle, jagged edges, with the inner surface of the break appearing noticeably lighter in color than the surrounding outer bone. This damage is most likely:",
+    "options": {
+      "a": "Antemortem",
+      "b": "Perimortem",
+      "c": "Postmortem",
+      "d": "Defensive"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Postmortem ('after death') damage occurs when bone is dry and brittle. It tends to fracture irregularly (like dry wood). Furthermore, because the outer bone stains from soil exposure, a fresh postmortem break often reveals lighter, unstained bone underneath.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "When comparing sharp-force trauma to blunt-force trauma, which of the following characteristics is a hallmark of blunt-force trauma to the cranium?",
+    "options": {
+      "a": "Narrow, linear, V-shaped incisions (kerfs)",
+      "b": "A localized puncture with inward-bending margins",
+      "c": "Radiating and concentric fracture lines extending from the point of impact",
+      "d": "Symmetrical dismemberment cuts"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Blunt-force trauma disperses energy over a wide area, causing bone deformation. On the skull, it characteristically produces an impact depression, followed by radiating fractures (like a spiderweb) and concentric fracture rings.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "A skull presents with two distinct areas of blunt-force trauma, Site A and Site B. The radiating fracture lines from Site B intercept and stop at the radiating fracture lines from Site A. Applying Puppe's Rule, what can be concluded?",
+    "options": {
+      "a": "Impact A and Impact B happened exactly at the same time.",
+      "b": "Impact A occurred prior to Impact B.",
+      "c": "Impact B occurred prior to Impact A.",
+      "d": "Both impacts are undeniably postmortem."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Puppe's Rule dictates that a later fracture will not cross a preexisting fracture line. Because the lines from Site B arrested (stopped) at the lines from Site A, Site A must have fractured first.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "A forensic analyst is interpreting gunshot (high-velocity projectile) trauma on a skull. By analyzing the beveling of the bone, they can determine the direction of the bullet. An entrance wound on the cranial vault is typically characterized by:",
+    "options": {
+      "a": "Internal beveling (smaller hole outside, larger 'crater' inside)",
+      "b": "External beveling (larger 'crater' outside, smaller hole inside)",
+      "c": "No beveling whatsoever, just radiating fractures",
+      "d": "A keyhole shape consisting purely of internal beveling on all sides"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Bullet entrance wounds to the skull typically punch a clean hole through the outer table and cause a cone-shaped 'blowout' (internal beveling) on the inner table of the skull. Exit wounds generally display external beveling.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "A 'Parry fracture' is a type of bone fracture frequently evaluated in forensic contexts to suggest the circumstances of an assault. On which bone is a Parry fracture most commonly found?",
+    "options": {
+      "a": "Femur",
+      "b": "Clavicle",
+      "c": "Ulna",
+      "d": "Sternum"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "A Parry fracture is a defensive wound typically occurring on the shaft of the ulna. It happens when a victim raises their forearm to deflect a blow directed at the head or face.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Anthropology",
+    "topic": "Trauma",
+    "question_text": "In forensic anthropology, trauma characterized by linear incisions, punctures, or chop marks with a V-shaped cross-section—often without the extensive radiating fractures of blunt force—is classified as:",
+    "options": {
+      "a": "Ballistic trauma",
+      "b": "Blunt-force trauma",
+      "c": "Sharp-force trauma",
+      "d": "Thermal trauma"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Sharp-force trauma is caused by tools with a sharp edge or point, such as knives, axes, or swords. These tools leave incised wounds, V-shaped cuts in bone, or punctures, concentrating force on a very small surface area.",
+    "section_id": null
+  }
+]

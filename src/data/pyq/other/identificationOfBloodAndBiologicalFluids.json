@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "In forensic serology, what is the primary distinction between antigens and antibodies in human blood?",
+    "options": {
+      "a": "Antigens are proteins found in blood plasma, while antibodies are located on the surface of red blood cells.",
+      "b": "Antigens are located on the surface of red blood cells and stimulate immune responses, while antibodies are proteins in the blood serum that bind to specific antigens.",
+      "c": "Antigens form blood clots to stop bleeding, while antibodies prevent premature coagulation.",
+      "d": "Antigens fight off external pathogens, while antibodies identify an individual's secretor status."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Antigens are substances (usually proteins or carbohydrates) on the surface of red blood cells that determine blood type. Antibodies are immune proteins found in the plasma/serum that react specifically with foreign antigens.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "A suspect's blood sample is tested with anti-A and anti-B serums. The sample agglutinates only when mixed with anti-A serum. What is the suspect's ABO blood type?",
+    "options": {
+      "a": "Type A",
+      "b": "Type B",
+      "c": "Type AB",
+      "d": "Type O"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Agglutination with anti-A serum indicates the presence of A antigens on the red blood cells. Since it does not agglutinate with anti-B serum, B antigens are absent, meaning the blood is Type A.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "Which blood type is generally considered the universal donor in the context of forensic blood typing and transfusions?",
+    "options": {
+      "a": "Type AB+",
+      "b": "Type O+",
+      "c": "Type O-",
+      "d": "Type A-"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Type O negative (O-) blood lacks A, B, and Rh(D) antigens on the surface of red blood cells, minimizing the chance of an adverse immune reaction, making it the universal donor.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "The Rh factor in human blood is determined primarily by the presence or absence of which specific antigen?",
+    "options": {
+      "a": "H antigen",
+      "b": "D antigen",
+      "c": "K antigen",
+      "d": "M antigen"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Rh blood group system is complex, but the 'positive' or 'negative' designation specifically refers to the presence or absence of the D antigen.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "What physical process occurs during agglutination in a blood typing test?",
+    "options": {
+      "a": "Fibrinogen converts into a solid net, clotting the blood to prevent loss.",
+      "b": "Red blood cells are destroyed and burst due to hypotonic shock.",
+      "c": "Antibodies cross-link to specific antigens on red blood cells, causing them to clump together.",
+      "d": "White blood cells surround and consume foreign red blood cells."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Agglutination is the clumping of particles. In blood typing, antibodies attach to multiple red blood cells simultaneously via their surface antigens, pulling them into visible clumps.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "Which cellular component of blood is primarily utilized for DNA profiling in forensic investigations?",
+    "options": {
+      "a": "Erythrocytes (Red Blood Cells)",
+      "b": "Leukocytes (White Blood Cells)",
+      "c": "Thrombocytes (Platelets)",
+      "d": "Blood Plasma"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Mature red blood cells in mammals lack a nucleus and DNA. Leukocytes (white blood cells) contain nuclei and are the primary source of nuclear DNA in bloodstains.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "An individual whose blood type antigens are also found in their saliva, tears, and seminal fluid is known in forensic terminology as a:",
+    "options": {
+      "a": "Universal Donor",
+      "b": "Secretor",
+      "c": "Receptor",
+      "d": "Agglutinator"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A secretor is a person who secretes their blood type antigens into body fluids such as saliva, tears, and semen. About 80% of the human population are secretors.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "If a victim has Type AB blood, which antibodies would naturally be present in their blood plasma?",
+    "options": {
+      "a": "Anti-A antibodies only",
+      "b": "Anti-B antibodies only",
+      "c": "Both Anti-A and Anti-B antibodies",
+      "d": "Neither Anti-A nor Anti-B antibodies"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "A person with Type AB blood has both A and B antigens on their red blood cells. Therefore, their immune system will not produce either anti-A or anti-B antibodies; doing so would attack their own cells.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "When performing forward blood typing, if the blood agglutinates with anti-B serum and anti-D (Rh) serum, what is the reported blood type?",
+    "options": {
+      "a": "A positive",
+      "b": "B positive",
+      "c": "AB negative",
+      "d": "O positive"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Agglutination with anti-B signifies the presence of the B antigen. Agglutination with anti-D signifies the presence of the Rh factor (positive). Thus, the type is B+.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Science",
+    "topic": "Serology Basics",
+    "question_text": "In molecular biology terms, what general shape accurately describes a typical antibody (immunoglobulin) molecule?",
+    "options": {
+      "a": "T-shaped",
+      "b": "Circular (plasmid-like)",
+      "c": "Y-shaped",
+      "d": "Helical"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Antibodies are typically Y-shaped proteins. The tips of the 'Y' contain variable regions that specifically bind to the target antigens.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "Which chemical principle forms the basis of the Kastle-Meyer test for identifying the presence of blood?",
+    "options": {
+      "a": "The fluorescent excitation of hemoglobin under ultraviolet light.",
+      "b": "The peroxidase-like activity of hemoglobin catalyzing the oxidation of a reagent.",
+      "c": "The crystallization of heme molecules when heated with acetic acid.",
+      "d": "The binding of a specific anti-human antigen dye strip."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Kastle-Meyer test works because hemoglobin acts similarly to a peroxidase enzyme, breaking down hydrogen peroxide and oxidizing phenolphthalein to produce a distinct color change.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "When executing a Kastle-Meyer test on a suspected bloodstain, what color change definitively marks a positive presumptive result?",
+    "options": {
+      "a": "Yellow to Dark Green",
+      "b": "Colorless to Deep Blue",
+      "c": "Colorless to Bright Pink",
+      "d": "Pale Yellow to Violet"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "In the Kastle-Meyer test, the phenolphthalein reagent, initially colorless in its reduced form, turns a bright pink upon reacting with blood and hydrogen peroxide.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "A forensic investigator uses Hemastix at a crime scene. What active chemical ingredient is found on the tip of the Hemastix strip?",
+    "options": {
+      "a": "Phenolphthalein",
+      "b": "Tetramethylbenzidine (TMB)",
+      "c": "Luminol",
+      "d": "Sodium perborate"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Hemastix strips contain tetramethylbenzidine (TMB) and a peroxide. The presence of hemoglobin causes a rapid oxidation reaction turning the tip from yellow to dark green.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "Which of the following common substances is most likely to cause a 'false positive' in a Kastle-Meyer test due to naturally occurring plant peroxidases?",
+    "options": {
+      "a": "Apple juice",
+      "b": "Horseradish",
+      "c": "Table salt",
+      "d": "Distilled water"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Plant peroxidases found in horseradish, potatoes, and some other vegetables can catalyze the Kastle-Meyer reaction, causing a pink color change similar to blood.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "Luminol relies on which mechanism to reveal latent bloodstains at a crime scene?",
+    "options": {
+      "a": "Fluorescence activated by Alternate Light Sources (ALS).",
+      "b": "Chemiluminescence catalyzed by the iron present in hemoglobin.",
+      "c": "Precipitation of blood proteins into visible rings.",
+      "d": "Radioactive decay of biological isotopes."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Luminol reacts with the iron within hemoglobin, undergoing an oxidation reaction that releases energy in the form of a faint blue chemiluminescent glow, independent of an external light source.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "What is the primary advantage of using Bluestar reagent over traditional Luminol in crime scene investigations?",
+    "options": {
+      "a": "Bluestar distinguishes between human and animal blood instantly.",
+      "b": "Bluestar works without needing hydrogen peroxide.",
+      "c": "Bluestar produces a brighter glow that does not require total darkness to view.",
+      "d": "Bluestar fixes DNA permanently, acting as a preservative."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Bluestar is a commercial formulation similar to luminol but burns brighter and longer, making it possible to photograph and observe bloodstains without achieving total darkness.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "Which of the following outlines the correct sequence of applying reagents when performing a Kastle-Meyer test?",
+    "options": {
+      "a": "Hydrogen peroxide, then phenolphthalein, then distilled water.",
+      "b": "Distilled water, then phenolphthalein, then hydrogen peroxide.",
+      "c": "Phenolphthalein, then distilled water, then hydrogen peroxide.",
+      "d": "Hydrogen peroxide, then distilled water, then phenolphthalein."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A swab is first moistened with distilled water, rubbed on the stain, treated with phenolphthalein solution, and then exposed to hydrogen peroxide. If the color changes before the peroxide is added, the test is invalid (chemical oxidant already present).",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "Why are presumptive tests not definitive proof that a stain is human blood?",
+    "options": {
+      "a": "They react to almost all mammalian DNA.",
+      "b": "They are subject to false positives from animal blood, chemical oxidants, and certain plant enzymes.",
+      "c": "They degrade too quickly to allow for accurate color readings in a lab.",
+      "d": "They can only detect blood that is less than 24 hours old."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Presumptive tests indicate the *possible* presence of blood. They are highly sensitive but not completely specific, reacting with non-human blood and certain plant peroxidases or strong oxidizers.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "While identifying biological fluids, investigators sometimes use the Acid Phosphatase color test. Which specific fluid does this primarily presumptively identify?",
+    "options": {
+      "a": "Urine",
+      "b": "Saliva",
+      "c": "Seminal Fluid",
+      "d": "Perspiration"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Acid phosphatase is an enzyme secreted by the prostate gland into seminal fluid in concentrations roughly 400 times greater than in other body fluids, making it an excellent presumptive test target for semen.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Science",
+    "topic": "Presumptive Testing",
+    "question_text": "Which of the following is true regarding the effect of Luminol on the ability to extract DNA for subsequent analysis?",
+    "options": {
+      "a": "Luminol heavily degrades DNA, making STR analysis impossible.",
+      "b": "Luminol preserves the DNA better by freezing biological decay.",
+      "c": "Luminol does not typically interfere with the subsequent extraction and typing of DNA.",
+      "d": "Luminol reacts directly with DNA sequences, causing false profiles."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "One of the greatest benefits of luminol is that its application does not significantly compromise subsequent forensic DNA testing of the bloodstain.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Science",
+    "topic": "Confirmatory Testing",
+    "question_text": "How does the Hematrace test functionally confirm the presence of human blood?",
+    "options": {
+      "a": "It utilizes an immunochromatographic assay relying on specific antigen-antibody reactions for human hemoglobin.",
+      "b": "It heats the blood sample to exact temperatures to form species-specific hematin crystals.",
+      "c": "It identifies the exact number of human chromosomes via fluorescent dyes.",
+      "d": "It determines human origin by precipitating DNA chains in an ethanol solution."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The ABAcard HemaTrace test functions similarly to a rapid pregnancy test. It uses an immunochromatographic technique where anti-human hemoglobin antibodies react specifically with human hemoglobin.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Science",
+    "topic": "Confirmatory Testing",
+    "question_text": "Which of the following animal species is known to cause a cross-reaction (false positive) with a Hematrace test intended for human blood?",
+    "options": {
+      "a": "Domestic dog",
+      "b": "Horse",
+      "c": "Domestic ferret",
+      "d": "Bovine (Cow)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Hematrace is specific to human hemoglobin but is known to cross-react with hemoglobin from higher primates (chimpanzees, gorillas) as well as domestic ferrets and badgers.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Science",
+    "topic": "Confirmatory Testing",
+    "question_text": "The Teichmann test is a microcrystalline test used as a confirmatory test for blood. What are the visual characteristics of a positive Teichmann result under a microscope?",
+    "options": {
+      "a": "Pink feathery clusters of crystals",
+      "b": "Brown rhombic crystals of hematin",
+      "c": "Blue hexagonal crystals of hemoglobin",
+      "d": "White circular precipitate rings"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A positive Teichmann test is confirmed by observing the formation of characteristic brown, rhombic (diamond-shaped) hematin crystals when blood is heated with glacial acetic acid and a halide salt.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Science",
+    "topic": "Confirmatory Testing",
+    "question_text": "Another microcrystalline test, the Takayama test, works by forming which type of specific crystals?",
+    "options": {
+      "a": "Hematin crystals",
+      "b": "Hemoglobin crystals",
+      "c": "Hemochromogen crystals",
+      "d": "Erythrocyte crystals"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The Takayama test forms pink, feathery, or needle-like crystals called pyridine hemochromogen crystals, serving as a confirmatory test for the presence of blood.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Science",
+    "topic": "Confirmatory Testing",
+    "question_text": "Historically, before modern DNA and immunoassay tests like Hematrace, the Precipitin ring test was widely used. What was the primary purpose of this test?",
+    "options": {
+      "a": "To distinguish between male and female blood.",
+      "b": "To determine the ABO blood group from a dried stain.",
+      "c": "To determine if the blood was of human or animal origin.",
+      "d": "To test for the presence of illicit drugs inside the bloodstream."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The precipitin test utilized animal serums containing anti-human antibodies. When layered over an extract of human blood, a precipitate ring would form at the interface, differentiating human blood from that of other animals.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "In bloodstain pattern analysis, a bloodstain created from a force of roughly 5 feet per second, typical of blood dripping under the influence of gravity alone, producing droplets larger than 4 mm, is classified as:",
+    "options": {
+      "a": "High-velocity spatter",
+      "b": "Medium-velocity spatter",
+      "c": "Low-velocity spatter",
+      "d": "Arterial spurt"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Low-velocity spatter results from minimal force (e.g., dripping off a wound), moving slowly and resulting in relatively large droplet sizes (4 mm or greater in diameter).",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "Medium-velocity spatter, such as that caused by a severe beating with a blunt instrument, typically consists of droplets of what size range?",
+    "options": {
+      "a": "Less than 1 mm",
+      "b": "1 mm to 4 mm",
+      "c": "5 mm to 10 mm",
+      "d": "Greater than 10 mm"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Medium-velocity spatters are generally associated with blunt force trauma and produce droplets ranging from 1 to 4 mm in diameter.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "A fine mist of blood with drop sizes typically less than 1 millimeter is discovered at a crime scene. What type of traumatic event most likely created this pattern?",
+    "options": {
+      "a": "A deep cut from a kitchen knife dripping onto the floor",
+      "b": "A violent cough from a bloody mouth",
+      "c": "A gunshot or an explosion",
+      "d": "Blood flicking off a baseball bat swung in an arc"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "High-velocity spatter looks like a fine mist with droplets <1 mm in size, almost exclusively created by extreme force such as gunshot wounds or explosives.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "A pattern is found on a ceiling consisting of linear trails of blood droplets. The suspect struck the victim repeatedly with a pipe. What specific bloodstain pattern is this?",
+    "options": {
+      "a": "Expirated pattern",
+      "b": "Cast-off pattern",
+      "c": "Arterial gush",
+      "d": "Void pattern"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A cast-off pattern is created when blood is released or flung from a blood-bearing object (like a weapon) in motion. It often forms arcs across walls and ceilings.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "How can a forensic analyst differentiate an expirated blood pattern from regular medium or high-velocity impact spatter?",
+    "options": {
+      "a": "Expirated blood is completely black due to lack of oxygen.",
+      "b": "Expirated blood frequently contains tiny air bubbles and is lighter in color due to dilution by saliva or mucus.",
+      "c": "Expirated blood travels faster than bullet-impact spatter.",
+      "d": "Expirated blood produces strictly square-shaped stains."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Blood expelled from the mouth or nose (expirated) often contains trapped air bubbles and is typically lighter in color (pinkish) due to dilution with oral or nasal fluids.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "Which bloodstain pattern results from blood exiting the body under fluctuating pressure from a breached major blood vessel, often showing a recognizable heartbeat rhythm?",
+    "options": {
+      "a": "Cast-off pattern",
+      "b": "Transfer pattern",
+      "c": "Arterial spurt (or gush) pattern",
+      "d": "Impact spatter"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "An arterial spurt pattern is caused by blood exiting an artery under pressure. The distinctive high-low peaks reflect the pulsing pressure of a beating heart.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "A blank space is observed amidst a heavily scattered bloodstain pattern on a wall, suggesting an object blocked the spray. What is the correct term for this phenomenon?",
+    "options": {
+      "a": "Ghost stain",
+      "b": "Shadow spatter",
+      "c": "Void pattern",
+      "d": "Wipe pattern"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A void is created when an object intercepts the flight path of blood, preventing it from striking the surface behind the object.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "What is the key difference between a 'wipe' pattern and a 'swipe' pattern in forensic terminology?",
+    "options": {
+      "a": "A wipe involves cleaning products, while a swipe is accidental.",
+      "b": "A swipe is a bloody object transferring blood to a clean surface, whereas a wipe is an object moving through a pre-existing bloodstain.",
+      "c": "A wipe is circular, whereas a swipe is purely linear.",
+      "d": "They are exactly the same concept with interchangeable names."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A swipe (transfer pattern) occurs when a wet, bloody surface rubs against a clean one. A wipe occurs when a non-bloody object drags through an already existing pool or stain of wet blood.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "When analyzing the directionality of an elongated blood drop, which of the following statements is true regarding its 'tail' or 'pointed end'?",
+    "options": {
+      "a": "The tail points back toward the exact origin of the blood.",
+      "b": "The tail points in the direction that the blood drop was traveling.",
+      "c": "The tail forms uniformly regardless of the drop's flight path.",
+      "d": "The tail only appears when the blood strikes perfectly perpendicular to a surface."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "As a droplet of blood strikes a surface at an angle, the momentum causes a thinner trail or 'tail' to form in the direction it was moving, effectively pointing where the drop was going.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "The mathematical formula for calculating the angle of impact of a blood drop relies on measuring the droplet's width (W) and length (L). Which trigonometric function correctly represents this relationship?",
+    "options": {
+      "a": "$\\cos^{-1}(\\frac{L}{W})$",
+      "b": "$\\tan^{-1}(\\frac{W}{L})$",
+      "c": "$\\sin^{-1}(\\frac{W}{L})$",
+      "d": "$\\sin^{-1}(\\frac{L}{W})$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The angle of impact is mathematically determined by finding the inverse sine (arcsine) of the ratio of the droplet's width to its length. The formula is: Angle = arcsin(Width / Length).",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "A forensic analyst measures a blood droplet on the floor. It has a width of 3 mm and a length of 6 mm. What is the approximate angle of impact?",
+    "options": {
+      "a": "15 degrees",
+      "b": "30 degrees",
+      "c": "45 degrees",
+      "d": "60 degrees"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Width/Length = 3/6 = 0.5. Using the formula arcsin(0.5), the angle of impact is exactly 30 degrees.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "A circular blood drop is measured and both its width and length are exactly 5 mm. Based on these dimensions, what can be inferred about the angle of impact?",
+    "options": {
+      "a": "The blood struck the surface horizontally at 0 degrees.",
+      "b": "The blood struck the surface at an angle of roughly 45 degrees.",
+      "c": "The blood struck the surface perfectly perpendicularly at 90 degrees.",
+      "d": "The angle of impact cannot be calculated for circular drops."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A droplet measuring identically in width and length yields a ratio of 1. The arcsin(1) is 90 degrees, indicating the drop fell straight down (perpendicular) onto the surface.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "In determining the origin of a bloodstain event, investigators draw straight lines through the long axes of individual spatter stains. The 2-D point where these lines intersect on the horizontal plane is called the:",
+    "options": {
+      "a": "Area of Origin",
+      "b": "Area of Convergence",
+      "c": "Angle of Incidence",
+      "d": "Point of Dispersion"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The area of convergence is a two-dimensional plot. By extending lines through the central axes of multiple drops, the intersection points locate the relative location (x, y axes) of the blood source.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "To identify the true 3-dimensional location (Area of Origin) from which a blood event occurred, an investigator must incorporate the distance from the convergence area and which other crucial variable?",
+    "options": {
+      "a": "The angle of impact of the relevant blood stains.",
+      "b": "The total volume of blood in the stain.",
+      "c": "The ambient temperature at the time of discovery.",
+      "d": "The terminal velocity of the droplets."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The Area of Origin adds the z-axis (height). It is calculated utilizing the distance from the stain to the Area of Convergence and the angle of impact (Height = Distance $\\times \\tan(\\text{angle of impact})$).",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Forensic Science",
+    "topic": "Bloodstain Pattern Analysis (BPA)",
+    "question_text": "How does the texture of a target surface generally affect the physical appearance of a blood droplet upon impact?",
+    "options": {
+      "a": "Smooth glass creates highly irregular borders with many spines and satellite spatters.",
+      "b": "Rough, porous surfaces like concrete typically cause more edge disruption, producing more spines and satellite spatters.",
+      "c": "Porous surfaces completely absorb the blood leaving no pattern at all.",
+      "d": "Surface texture only changes the color, not the edge characteristics."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A harder, smoother surface like glass or tile typically yields a round drop with very smooth edges. A rough or porous surface like concrete or wood causes blood to break apart upon impact, forming rough edges (spines) and smaller secondary drops (satellite spatter).",
+    "section_id": null
+  }
+]

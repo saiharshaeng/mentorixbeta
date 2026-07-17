@@ -1,0 +1,242 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "Which of the following pieces of glassware is designed to contain a precise volume of liquid at a specific temperature, making it the ideal choice for preparing standard solutions?",
+        "options": {
+            "a": "Beaker",
+            "b": "Erlenmeyer Flask",
+            "c": "Volumetric Flask",
+            "d": "Graduated Cylinder"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "A **volumetric flask** is calibrated to contain a precise volume of liquid when filled to the mark, making it the standard apparatus for preparing solutions of known concentration. Beakers and Erlenmeyer flasks are for mixing/holding, and graduated cylinders are less precise.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "In a titration experiment, which apparatus is used to deliver a variable but precisely measured volume of the titrant?",
+        "options": {
+            "a": "Volumetric Pipette",
+            "b": "Buret",
+            "c": "Dropper",
+            "d": "Test Tube"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A **buret** is a long, graduated glass tube with a stopcock at the bottom, specifically designed to dispense variable precise volumes of liquid (titrant) during a titration.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "Why is an Erlenmeyer flask preferred over a beaker for the analyte solution during an acid-base titration?",
+        "options": {
+            "a": "It measures volume more accurately than a beaker.",
+            "b": "Its wide mouth allows for easier addition of the indicator.",
+            "c": "Its narrow neck and sloped sides minimize splashing while swirling.",
+            "d": "It is made of stronger glass that withstands heat better."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The conical shape (narrow neck and sloped sides) of an **Erlenmeyer flask** allows the user to swirl the solution vigorously to ensure mixing without splashing the liquid out, which is a risk with the wide mouth of a beaker.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "Which instrument would provide the most precise measurement for transferring exactly $25.00\\ \\text{mL}$ of a stock solution?",
+        "options": {
+            "a": "50 mL Beaker",
+            "b": "25 mL Volumetric Pipette",
+            "c": "25 mL Graduated Cylinder",
+            "d": "25 mL Erlenmeyer Flask"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "A **volumetric pipette** is calibrated to deliver a single, fixed volume with very high precision (often to $\\pm 0.01\\ \\text{mL}$ or better), superior to graduated cylinders or beakers.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "Which apparatus is best suited for strongly heating a small amount of solid over a Bunsen burner flame?",
+        "options": {
+            "a": "Watch glass",
+            "b": "Crucible",
+            "c": "Volumetric flask",
+            "d": "Filter paper"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A **crucible** is made of heat-resistant ceramic or metal and is designed to withstand the very high temperatures of direct flame heating, unlike watch glasses or volumetric glassware.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "When reading the volume of water in a glass graduated cylinder, how should the meniscus be observed to ensure an accurate reading?",
+        "options": {
+            "a": "Align the eye with the top of the liquid curve.",
+            "b": "Align the eye with the bottom of the curved liquid surface.",
+            "c": "Look down into the cylinder from above.",
+            "d": "Look up at the cylinder from below."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "For concave menisci (like water in glass), the correct technique is to position the eye level with the liquid surface and read the volume at the **bottom of the meniscus**.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Laboratory Apparatus and Measurements",
+        "question_text": "A student uses a buret marked in $0.1\\ \\text{mL}$ increments. Which of the following volume recordings represents the correct number of significant figures?",
+        "options": {
+            "a": "$20\\ \\text{mL}$",
+            "b": "$20.1\\ \\text{mL}$",
+            "c": "$20.15\\ \\text{mL}$",
+            "d": "$20.155\\ \\text{mL}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "When recording a measurement, you estimate one digit beyond the smallest marking. Since the buret is marked every $0.1\\ \\text{mL}$, the reading should be estimated to the hundredths place ($0.01\\ \\text{mL}$), making **$20.15\\ \\text{mL}$** the correct format.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Preparation of Solutions",
+        "question_text": "You need to prepare $250\\ \\text{mL}$ of a $2.0\\ \\text{M}$ ​$\\text{NaCl}$ solution. How many moles of $\\text{NaCl}$ are required?",
+        "options": {
+            "a": "0.125 moles",
+            "b": "0.50 moles",
+            "c": "1.25 moles",
+            "d": "500 moles"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Using the molarity formula $M = \\frac{\\text{moles}}{\\text{liters}}$:\n$$\\text{moles} = M \\times V = 2.0\\ \\text{mol/L} \\times 0.250\\ \\text{L} = 0.50\\ \\text{moles}$$",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Preparation of Solutions",
+        "question_text": "When diluting a concentrated acid to prepare a standard solution, what is the crucial safety rule?",
+        "options": {
+            "a": "Always add water to the acid.",
+            "b": "Always add the acid to the water.",
+            "c": "Heat the acid before mixing.",
+            "d": "Mix the acid and water rapidly in a sealed container."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "**Add Acid to Water (AA)**. Adding water to concentrated acid can cause the water to boil instantly due to the high heat of hydration, potentially splashing acid out. Adding acid slowly to a larger volume of water dissipates the heat safely.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Acid–Base Titration Techniques",
+        "question_text": "Before filling a buret with the titrant solution, it should be rinsed with distilled water and then rinsed with:",
+        "options": {
+            "a": "The analyte solution.",
+            "b": "A strong base.",
+            "c": "A small portion of the titrant solution.",
+            "d": "Ethanol."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Rinsing with the **titrant solution** ensures that any remaining water droplets inside the buret do not dilute the concentration of the titrant being used for the experiment.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Acid–Base Titration Techniques",
+        "question_text": "During an acid-base titration using phenolphthalein indicator, how is the endpoint visually identified?",
+        "options": {
+            "a": "When the solution turns from pink to colorless and stays colorless.",
+            "b": "When a faint pink color persists for at least 30 seconds.",
+            "c": "When the solution turns a deep, dark purple.",
+            "d": "When a precipitate forms at the bottom of the flask."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The endpoint with phenolphthalein (titrating acid with base) is reached when the first trace of a **faint pink color persists** (usually for 30 seconds) in the swirling solution. A dark purple indicates the endpoint has been overshot.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Qualitative Analysis of Ions",
+        "question_text": "In qualitative analysis, Group I cations ($\\text{Ag}^+$, $\\text{Pb}^{2+}$, $\\text{Hg}_2^{2+}$) are separated from a solution by adding which reagent?",
+        "options": {
+            "a": "Dilute $\\text{HCl}$",
+            "b": "$\\text{H}_2\\text{S}$ in acidic medium",
+            "c": "$\\text{NaOH}$",
+            "d": "$\\text{Na}_2\\text{CO}_3$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "Group I cations form insoluble chlorides. Adding **dilute $\\text{HCl}$** causes $\\text{AgCl}$, $\\text{PbCl}_2$, and $\\text{Hg}_2\\text{Cl}_2$ to precipitate, allowing them to be filtered out from other ions.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Experimental Errors and Data Analysis",
+        "question_text": "Which of the following scenarios describes a **systematic error**?",
+        "options": {
+            "a": "Reading a meniscus slightly differently each time due to eye fatigue.",
+            "b": "Spilling a small drop of solution on the benchtop.",
+            "c": "Using a balance that is improperly calibrated and always reads $0.05\\ \\text{g}$ too high.",
+            "d": "Air currents causing the balance reading to fluctuate."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "**Systematic errors** are consistent, reproducible errors in the same direction (always high or always low), often caused by faulty equipment (like an uncalibrated balance) or flawed experimental design.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Experimental Errors and Data Analysis",
+        "question_text": "Three students measure the density of pure water ($1.00\\ \\text{g/mL}$) and get the following averages:\n- Student A: $0.90\\ \\text{g/mL}$ (consistent)\n- Student B: $1.00\\ \\text{g/mL}$ (consistent)\n- Student C: $1.10\\ \\text{g/mL}$ (consistent)\n\nWhich term best describes Student A's measurements?",
+        "options": {
+            "a": "High accuracy, high precision",
+            "b": "Low accuracy, high precision",
+            "c": "High accuracy, low precision",
+            "d": "Low accuracy, low precision"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Student A's measurements are consistent (implying **high precision**) but far from the true value of $1.00\\ \\text{g/mL}$ (implying **low accuracy**).",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Laboratory Reports and Scientific Writing",
+        "question_text": "In a formal lab report, which section is the appropriate place to interpret the meaning of your results and compare them to expected values?",
+        "options": {
+            "a": "Abstract",
+            "b": "Procedure",
+            "c": "Results",
+            "d": "Discussion"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "The **Discussion** section is where you analyze the data, interpret what it means in the context of scientific principles, explain errors, and compare experimental values to theoretical or accepted values.",
+        "section_id": null
+    }
+]

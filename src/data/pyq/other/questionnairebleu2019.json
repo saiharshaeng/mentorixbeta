@@ -1,0 +1,866 @@
+[
+  {
+    "question_number": 1,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Algèbre et Modélisation",
+    "question_text": "Le métabolisme de base est la quantité journalière moyenne de calories dépensées par l’organisme en l’absence d’activité physique, dans des conditions normales de température. Il est bien connu qu’une alimentation trop riche fait grossir si, en l’absence d’efforts ou de dépense d’énergie supplémentaire, par exemple pour lutter contre le froid ambiant, les apports journaliers de calories via la nourriture et les boissons dépassent le métabolisme de base. On peut montrer qu’en cas d’alimentation trop riche, en moyenne, le gain de poids quotidien $G$ est proportionnel à la différence entre la ration alimentaire quotidienne $R$ et le métabolisme de base $M$.\nParmi les formules suivantes (où $k$ est une constante réelle strictement positive), une seule peut correspondre à cette description. Laquelle ?",
+    "options": {
+      "a": "$G = k - (M - R)$",
+      "b": "$G = kM - R$",
+      "c": "$G = k(M - R)$",
+      "d": "$G = k(R - M)$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Puisque le gain de poids $G$ est proportionnel à la différence entre la ration $R$ et le métabolisme $M$, cette différence s'écrit $(R - M)$. Ainsi, $G = k(R - M)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Algèbre",
+    "question_text": "Parmi les propositions suivantes, une seule est égale à\n$$1 + \\frac{x}{1 - \\frac{2}{2 + \\frac{1}{4x}}}$$\nen tout réel $x$ où l’expression ci-dessus est définie. Laquelle ?",
+    "options": {
+      "a": "$8x^2 + x + 1$",
+      "b": "$\\frac{1-3x}{1-4x}$",
+      "c": "$\\frac{7}{8}$",
+      "d": "$1 + \\frac{x^2}{8}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "En simplifiant la fraction : $2 + \\frac{1}{4x} = \\frac{8x+1}{4x}$. Puis $\\frac{2}{\\frac{8x+1}{4x}} = \\frac{8x}{8x+1}$. Ensuite, le dénominateur devient $1 - \\frac{8x}{8x+1} = \\frac{8x+1-8x}{8x+1} = \\frac{1}{8x+1}$. L'expression se réduit alors à $1 + \\frac{x}{\\frac{1}{8x+1}} = 1 + x(8x+1) = 8x^2 + x + 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Suites",
+    "question_text": "Je souhaite fabriquer une flûte de Pan. Cette flûte est constituée de plusieurs tubes de longueurs différentes, rangés par ordre décroissant de longueur. Le premier tube, qui est le plus long, mesure 16 cm. La longueur de chaque tube suivant est calculée à partir de celle du tube précédent de la façon suivante : la longueur de chaque tube est égale à celle du tube précédent divisée par $2^{1/12}$.\nSachant que la longueur du tube le plus court est la moitié de la longueur du tube le plus long, de combien de tubes ma flûte de Pan est-elle constituée ?",
+    "options": {
+      "a": "11",
+      "b": "12",
+      "c": "13",
+      "d": "14"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La longueur du tube de rang $N$ est donnée par la suite géométrique $L_N = L_1 / (2^{1/12})^{N-1}$. On sait que $L_N = L_1 / 2$. Ainsi, $(2^{1/12})^{N-1} = 2^1$, ce qui donne $(N-1)/12 = 1 \\Rightarrow N-1 = 12 \\Rightarrow N = 13$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Algèbre",
+    "question_text": "Parmi les expressions suivantes, une seule est égale à $\\sqrt{x^2 + 9 - 6x}$ pour tout $x$ réel où cette expression est définie. Laquelle ?",
+    "options": {
+      "a": "$3 - x$",
+      "b": "$|x| - 3$",
+      "c": "$|3 - x|$",
+      "d": "$x - 3$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "L'expression sous la racine est un carré parfait : $x^2 - 6x + 9 = (x - 3)^2$. Ainsi, $\\sqrt{(x-3)^2} = |x-3|$, ce qui est équivalent à $|3 - x|$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Algèbre et Inégalités",
+    "question_text": "Soient $a, b$ deux nombres réels non nuls tels que $0 > \\frac{1}{a} > \\frac{1}{b}$. Parmi les propositions suivantes les concernant, laquelle est nécessairement vraie ?",
+    "options": {
+      "a": "$a^2 > b^2$",
+      "b": "$b^2 < a^2$",
+      "c": "$b^2 > a^2 + 1$",
+      "d": "$b^2 < a^2 - 1$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Puisque $0 > 1/a$, alors $a < 0$. De plus, $1/a > 1/b$ implique que $b$ est plus négatif que $a$, donc $b < a < 0$. Comme les deux valeurs sont négatives, inverser la relation donne $|b| < |a|$ en distance à zéro si l'on prend l'inverse : wait, $\\frac{1}{a} > \\frac{1}{b}$ avec les deux négatifs veut dire $b > a$. Prenons par exemple $a = -2$, alors $1/a = -0.5$. $1/b$ doit être plus petit (ex: -1), donc $b = -1$. Ainsi, $b = -1$ et $a = -2$, ce qui vérifie $b > a$ (donc $b$ est plus proche de 0). Dès lors, $|b| < |a|$, donc $b^2 < a^2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Fonctions",
+    "question_text": "Considérons la fonction $f$ dont l’expression analytique est donnée par\n$$f(x) = \\arcsin \\left( \\frac{x^2}{2} - 3 \\right)$$\nQuel est le domaine de définition de $f$ ?",
+    "options": {
+      "a": "$[2, 2\\sqrt{2}]$",
+      "b": "$[-\\sqrt{5},-1] \\cup[1, \\sqrt{5}]$",
+      "c": "$[-2\\sqrt{2}, -2] \\cup[2, 2\\sqrt{2}]$",
+      "d": "$] - \\infty, -2\\sqrt{2}] \\cup [-2, 2] \\cup [2\\sqrt{2}, + \\infty[$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La fonction $\\arcsin(y)$ est définie pour $-1 \\le y \\le 1$. Donc on résout l'inéquation $-1 \\le \\frac{x^2}{2} - 3 \\le 1$. Cela donne $2 \\le \\frac{x^2}{2} \\le 4$, d'où $4 \\le x^2 \\le 8$. En extrayant la racine carrée, on obtient $2 \\le |x| \\le 2\\sqrt{2}$, ce qui donne $x \\in[-2\\sqrt{2}, -2] \\cup [2, 2\\sqrt{2}]$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Dérivées",
+    "question_text": "Considérons la fonction $f$ dont l’expression analytique est donnée par\n$$f(x) = \\ln \\left( \\frac{3x + 1}{1 - 2x} \\right)$$\nParmi les propositions suivantes, laquelle correspond à la dérivée de $f$ en tout point du domaine de dérivabilité de $f$ ?",
+    "options": {
+      "a": "$\\frac{5}{-6x^2+x+1}$",
+      "b": "$\\frac{-5x}{-6x^2+x+1}$",
+      "c": "$\\frac{1-2x}{3x+1}$",
+      "d": "$\\frac{-3(1-2x)}{2(3x+1)}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "On peut écrire $f(x) = \\ln(3x+1) - \\ln(1-2x)$. Sa dérivée est donc $f'(x) = \\frac{3}{3x+1} - \\frac{-2}{1-2x} = \\frac{3}{3x+1} + \\frac{2}{1-2x}$. En mettant au même dénominateur, cela donne $\\frac{3(1-2x) + 2(3x+1)}{(3x+1)(1-2x)} = \\frac{3 - 6x + 6x + 2}{-6x^2 + x + 1} = \\frac{5}{-6x^2+x+1}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Fonctions",
+    "question_text": "Quel est l’ensemble des nombres réels $m$ tels que la fonction réelle définie par\n$$f(x) = x^2 - (1 - m)x + m - 2$$\nadmette un minimum en un réel supérieur ou égal à $\\frac{9}{2}$ ?",
+    "options": {
+      "a": "$] - \\infty, -8]$",
+      "b": "$] - \\infty, -3]$",
+      "c": "$[8, +\\infty[$",
+      "d": "$\\emptyset$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "La fonction est une parabole ouverte vers le haut. Le minimum est atteint en son sommet dont l'abscisse est $x = -\\frac{b}{2a} = \\frac{1-m}{2}$. On veut que ce réel soit supérieur ou égal à $9/2$, soit $\\frac{1-m}{2} \\ge \\frac{9}{2}$, ce qui donne $1 - m \\ge 9 \\Rightarrow m \\le -8$.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Intégrales",
+    "question_text": "Parmi les propositions suivantes, laquelle est égale à l’intégrale\n$$\\int_{1}^{2} 3x \\sqrt{x^2 + 1} \\, dx$$",
+    "options": {
+      "a": "$3(5\\sqrt{5} - 2\\sqrt{2})$",
+      "b": "$\\frac{5\\sqrt{5}-2\\sqrt{2}}{2}$",
+      "c": "$5\\sqrt{5} - 2\\sqrt{2}$",
+      "d": "$\\frac{3}{2}(5\\sqrt{5} - 2\\sqrt{2})$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Soit le changement de variable $u = x^2+1$. Alors $du = 2x\\,dx$. On peut réécrire l'intégrale en substituant $3x\\,dx = \\frac{3}{2} du$. Les bornes deviennent $u=2$ (quand $x=1$) et $u=5$ (quand $x=2$). On a $\\int_{2}^{5} \\frac{3}{2} u^{1/2} \\, du = \\frac{3}{2} \\left[ \\frac{2}{3} u^{3/2} \\right]_2^5 = u^{3/2} \\Big|_2^5 = 5\\sqrt{5} - 2\\sqrt{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Trigonométrie",
+    "question_text": "Considérons la somme\n$$I = \\sin(\\alpha) + \\sin(2\\alpha) + \\sin(3\\alpha) + \\dots + \\sin(98\\alpha) + \\sin(99\\alpha)$$\nQuelle est la valeur de $I$ lorsque $\\alpha = \\frac{\\pi}{4}$ ?",
+    "options": {
+      "a": "$I = 1 + \\sqrt{2}$",
+      "b": "$I = 0$",
+      "c": "$I = \\frac{\\sqrt{2}}{2}$",
+      "d": "$I = \\frac{2+\\sqrt{2}}{2}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "La somme $\\sin(k\\pi/4)$ suit une période de 8 termes dont la somme s'annule sur un cycle complet. On a $99 = 8 \\times 12 + 3$, donc la somme des 99 premiers termes est équivalente à la somme des 3 premiers termes: $\\sin(\\pi/4) + \\sin(2\\pi/4) + \\sin(3\\pi/4) = \\frac{\\sqrt{2}}{2} + 1 + \\frac{\\sqrt{2}}{2} = 1 + \\sqrt{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Vecteurs",
+    "question_text": "La norme d’un vecteur $\\vec{v}$ est notée $\\|\\vec{v}\\|$ et le produit scalaire des vecteurs $\\vec{u}$ et $\\vec{v}$ est noté $\\vec{u} \\bullet \\vec{v}$.\nSoient $\\vec{u}$ et $\\vec{v}$ des vecteurs tels que $\\|\\vec{u}\\| = 3$, $\\|\\vec{v}\\| = 12$ et $\\vec{u} \\bullet \\vec{v} = 8$.\nQue vaut $\\|\\vec{u} + \\vec{v}\\|$ ?",
+    "options": {
+      "a": "13",
+      "b": "15",
+      "c": "23",
+      "d": "169"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "On sait que $\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2(\\vec{u} \\bullet \\vec{v})$. En substituant les valeurs, on trouve $3^2 + 12^2 + 2(8) = 9 + 144 + 16 = 169$. La norme de la somme est la racine de 169, soit 13.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Géométrie Analytique",
+    "question_text": "Dans le plan muni d’un repère orthonormé, on considère les droites $d_1$ d’équation $x + 5y + 9 = 0$, $d_2$ d’équation $7x - 3y = 13$ et $d_3$ d’équation $6x - 4y = 9$. Les droites $d_1$ et $d_2$ se coupent en un point P.\nParmi les propositions suivantes, laquelle correspond à une équation de la droite passant par P et perpendiculaire à $d_3$ ?",
+    "options": {
+      "a": "$2x + 3y + 4 = 0$",
+      "b": "$y + \\frac{3}{2} = -\\frac{3}{2}x + 1$",
+      "c": "$x = -\\frac{3}{2}y + 2$",
+      "d": "$3x + 2y + 1 = 0$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "L'intersection $P$ de $d_1$ et $d_2$ donne le point $P(1, -2)$. La pente de la droite $d_3$ est $6/4 = 3/2$. Une droite perpendiculaire aura donc une pente de $-2/3$. L'équation de la droite passant par $P(1, -2)$ de pente $-2/3$ est $y - (-2) = -\\frac{2}{3}(x - 1)$, ce qui donne, après avoir tout multiplié par 3, $3y + 6 = -2x + 2 \\Rightarrow 2x + 3y + 4 = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "MATHÉMATIQUES",
+    "topic": "Statistiques et Logique",
+    "question_text": "A la Faculté de médecine de l’université U, les étudiants de troisième année ont 10 examens oraux différents qu’ils doivent présenter en trois jours. Le premier jour ils doivent présenter 5 examens différents, au choix. Les autres doivent être présentés au cours du deuxième ou du troisième jour. A nouveau, les étudiants peuvent choisir de répartir librement les examens sur les deux jours, la seule contrainte étant que l’étudiant doit présenter plus d’examens le deuxième que le troisième jour et au moins 2 examens le troisième jour.\nSi Juliette a obtenu une note moyenne de 12/20 pour les examens présentés le premier jour, de 14/20 pour les examens présentés le deuxième jour et de 17/20 pour les examens présentés le troisième jour, quelle est sa note moyenne sur l’ensemble des trois jours ?",
+    "options": {
+      "a": "13,5/20",
+      "b": "13,6/20",
+      "c": "13,75/20",
+      "d": "Il n’y a pas suffisamment d’information pour répondre à la question."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Pour les 5 examens restants, la répartition entre le deuxième et troisième jour doit respecter : $N_2 > N_3$ et $N_3 \\ge 2$. La seule possibilité entière avec $N_2 + N_3 = 5$ est $N_2 = 3$ et $N_3 = 2$. Les totaux de points sont : J1 ($5 \\times 12 = 60$), J2 ($3 \\times 14 = 42$), et J3 ($2 \\times 17 = 34$). La somme des points vaut 136 sur 10 examens, soit une moyenne de 13,6/20.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "BIOLOGIE",
+    "topic": "Structure et fonction du vivant",
+    "question_text": "Le prion est une protéine qui peut devenir pathogène suite à un changement de sa structure secondaire sans modification de sa séquence en acides aminés. Lorsqu'elle est mal repliée, la protéine prion induit la conversion d’autres protéines prions bien repliées qui s'accumulent et forment des dépôts toxiques pour les cellules du tissu cérébral. Les prions de mammifères sont les agents responsables des encéphalites spongiformes transmissibles.\nQuelle est la hiérarchie correcte des éléments mentionnés dans le texte précédent ?",
+    "options": {
+      "a": "Structure primaire - structure secondaire - structure tertiaire - structure quaternaire",
+      "b": "Structure secondaire - protéine - prion - pathogène",
+      "c": "Acide aminé - structure secondaire - prion - protéine",
+      "d": "Acide aminé - peptide - structure tertiaire – pathogène"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Le texte décrit les différents niveaux d'organisation structurale de la protéine de manière implicite. La 'séquence en acides aminés' fait référence à la structure primaire, le changement de 'structure secondaire' la structure de deuxième ordre, le repliement individuel des protéines (terme 'bien repliées') implique la structure tertiaire, et leur accumulation ('s'accumulent et forment des dépôts') renvoie à la structure quaternaire (agrégats/dépôts).",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "BIOLOGIE",
+    "topic": "Respiration Cellulaire",
+    "question_text": "Lors de la respiration cellulaire aérobie d’une cellule eucaryote, les électrons qui parcourent la chaîne de transport des électrons…",
+    "options": {
+      "a": "sont finalement cédés à des molécules d’O2.",
+      "b": "proviennent de molécules d’H2O.",
+      "c": "gagnent de l’énergie qui sera utilisée pour générer un gradient de protons.",
+      "d": "transitent par l'ATP synthase."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Dans la chaîne de transport d'électrons respiratoire, le dioxygène est l'accepteur final d'électrons, permettant ainsi la formation d'eau.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "BIOLOGIE",
+    "topic": "Microbiologie",
+    "question_text": "Les bactéries…",
+    "options": {
+      "a": "sont des unicellulaires procaryotes.",
+      "b": "ont une membrane plasmique contenant du peptidoglycane.",
+      "c": "produisent du glucose par fermentation.",
+      "d": "se divisent par méiose dans des conditions environnementales défavorables."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Les bactéries sont par définition des organismes unicellulaires appartenant au domaine des procaryotes. Leur paroi, et non la membrane, contient le peptidoglycane.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "BIOLOGIE",
+    "topic": "Cytologie",
+    "question_text": "Un centrosome est…",
+    "options": {
+      "a": "le centre organisationnel des microtubules d’une cellule animale.",
+      "b": "la région centrale d’une cellule eucaryote.",
+      "c": "une région particulière des chromosomes eucaryotes.",
+      "d": "le lieu de destruction des organites obsolètes."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Le centrosome est le principal centre organisateur des microtubules (COMT) dans les cellules animales.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "BIOLOGIE",
+    "topic": "Génétique et Division Cellulaire",
+    "question_text": "Chez l’humain, le premier globule polaire contient…",
+    "options": {
+      "a": "23 paires de chromosomes homologues.",
+      "b": "deux fois plus de chromosomes que le second globule polaire.",
+      "c": "la même quantité d’ADN qu’une ovogonie en phase G1.",
+      "d": "des chromosomes formés d’une seule chromatide."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Le premier globule polaire est issu de la méiose I (n=23 chromosomes bichromatidiens), soit $23 \\times 2 = 46$ chromatides. Une ovogonie en G1 (avant réplication) possède 46 chromosomes à une chromatide (46 chromatides). La quantité d'ADN y est donc identique.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "BIOLOGIE",
+    "topic": "Structure et fonction du vivant",
+    "question_text": "Quelle fonction n’est pas attribuable à une protéine ?",
+    "options": {
+      "a": "Le transport de molécules.",
+      "b": "La catalyse de réactions biochimiques.",
+      "c": "L’immunité humorale.",
+      "d": "Le support de l’information génétique."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "L'information génétique est supportée par les acides nucléiques (ADN), pas par les protéines.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "BIOLOGIE",
+    "topic": "Génétique moléculaire",
+    "question_text": "Un codon…",
+    "options": {
+      "a": "est formé de quatre nucléotides.",
+      "b": "peut coder pour le même acide aminé qu’un autre codon.",
+      "c": "peut coder pour plusieurs types d’acides aminés.",
+      "d": "peut se lier à l’acide aminé d’un ARN de transfert."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Le code génétique est dégénéré, c'est-à-dire que plusieurs codons différents peuvent spécifier le même acide aminé.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "BIOLOGIE",
+    "topic": "Évolution",
+    "question_text": "Quelles sont les principales causes de microévolution ?",
+    "options": {
+      "a": "La dérive génétique et l’adaptation au milieu.",
+      "b": "La dérive génétique et la sélection naturelle.",
+      "c": "La sélection naturelle et l’adaptation au milieu.",
+      "d": "La sélection naturelle, la dérive génétique et l’adaptation au milieu."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "La dérive génétique et la sélection naturelle (avec le flux génique et les mutations) sont les principaux mécanismes moteurs de la microévolution. L'adaptation est une de leurs conséquences.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "BIOLOGIE",
+    "topic": "Évolution",
+    "question_text": "Quel organe n’est pas homologue à l’aile de la chauve-souris ?",
+    "options": {
+      "a": "La patte avant du cheval.",
+      "b": "L’aile de la libellule.",
+      "c": "Le bras de l’homme.",
+      "d": "La nageoire de la baleine."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Des structures sont homologues si elles dérivent d'un ancêtre commun. L'aile de la libellule a une fonction analogue mais une origine différente de celle des membres antérieurs des mammifères.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "BIOLOGIE",
+    "topic": "Écologie",
+    "question_text": "Le nombre de mésanges charbonnières présentes dans les bois chaque hiver fluctue. Cette variation est due en partie au fait que d’autres oiseaux insectivores se nourrissent des mêmes proies.\nQuelle relation entre les êtres vivants est mise en évidence dans l’exemple ci-dessus ?",
+    "options": {
+      "a": "La prédation.",
+      "b": "Le parasitisme.",
+      "c": "La compétition interspécifique.",
+      "d": "La compétition intraspécifique."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "La fluctuation est liée à l'interaction entre deux espèces d'oiseaux différentes qui se partagent une ressource commune, illustrant la compétition interspécifique.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "BIOLOGIE",
+    "topic": "Écologie",
+    "question_text": "L’azote est un élément chimique essentiel à la vie puisqu’il est présent dans les acides aminés et dans les bases azotées des acides nucléiques. Le cycle de l’azote est dominé par les transformations bactériennes.\nA partir de quel réservoir azoté les bactéries symbiotiques des nodules racinaires fixent-elles l’azote ?",
+    "options": {
+      "a": "Les acides aminés.",
+      "b": "L’atmosphère.",
+      "c": "Les engrais.",
+      "d": "Les matières en décomposition."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Les bactéries fixatrices d'azote utilisent l'azote gazeux présent dans l'atmosphère sous forme moléculaire (N2) pour former de l'ammoniaque et des nitrates assimilables.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "ÉTHIQUE",
+    "topic": "Éthique biomédicale",
+    "question_text": "Vous êtes médecin spécialiste en médecine interne et vous faites aussi de la recherche biomédicale. Vous avez découvert une nouvelle molécule aux vertus thérapeutiques potentiellement fantastiques. Vous souhaiteriez la tester dans certaines maladies.\nPour ce faire…",
+    "options": {
+      "a": "vous évitez d’ébruiter votre découverte de façon à en garder la propriété intellectuelle.",
+      "b": "vous la proposez à certains de vos patients en expliquant les bénéfices potentiels.",
+      "c": "vous continuez à soigner certains patients avec le traitement habituel tandis que d’autres recevront le nouveau traitement afin de confirmer son efficacité.",
+      "d": "vous rédigez un projet d’essai clinique que vous soumettrez à un organisme public de financement de la recherche."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'utilisation sur l'homme d'une nouvelle molécule doit obéir à des protocoles de recherche et être soumise aux instances d'éthique et de financement concernées. Agir autrement serait contraire aux normes de protection des patients.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "ÉTHIQUE",
+    "topic": "Éthique biomédicale",
+    "question_text": "Les expériences utilisant des animaux de laboratoire réalisées dans des conditions contrôlées optimalisées et en accord avec la réglementation sur le bien-être animal peuvent être défendues.\nSur le plan éthique, quelle est leur meilleure justification ?",
+    "options": {
+      "a": "Le bilan en termes de souffrance animale demeure très inférieur à celui de l’alimentation.",
+      "b": "Le nombre d’êtres humains en souffrance sur la planète est en incessante croissance.",
+      "c": "Le développement économique de l’industrie pharmaceutique est une nécessité.",
+      "d": "Dans certains cas, il n’existe aucune autre solution technique praticable."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'éthique de la recherche animale repose sur la nécessité absolue, en l'absence de toute alternative in vitro ou par des méthodes indirectes substitutives.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "ÉTHIQUE",
+    "topic": "Génétique",
+    "question_text": "Une équipe de recherche a découvert une nouvelle technique de modification du génome humain peu coûteuse et aisément praticable. Cette technique est très prometteuse pour un grand nombre de maladies héréditaires mais soulève également d’importantes questions d’ordre éthique.\nLaquelle des quatre affirmations suivantes est la plus acceptable sur le plan éthique ?",
+    "options": {
+      "a": "Comme des techniques similaires ont déjà été utilisées ailleurs, il n’est pas nécessaire de s’inquiéter.",
+      "b": "Il s’agit de démarches purement technologiques qui ne posent donc pas de questions d'ordre éthique.",
+      "c": "La société a tout intérêt à ce que diminue le nombre d’individus fragiles qui lui coûtent cher.",
+      "d": "Son utilisation doit faire l’objet d’un contrôle rigoureux afin d’éviter des dérives dommageables."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "La régulation et l'évaluation éthique des modifications du génome permettent d'éviter les actes condamnables de dérives, tels que l'eugénisme (notamment via le rejet justifié de l'option C, purement utilitariste/eugéniste).",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "ÉTHIQUE",
+    "topic": "Communication médicale",
+    "question_text": "Une dame âgée de 86 ans consulte pour des douleurs chroniques à l’abdomen. Elle est accompagnée de ses deux filles qui expliquent au médecin responsable que leur mère est très fragile psychologiquement et qu’il est préférable que les informations sur sa santé ne lui soient pas communiquées directement. Les examens révèlent que la patiente est atteinte d’un cancer du côlon essaimé. La patiente ne pose aucune question.\nQuelle est la meilleure attitude de la part du médecin spécialiste ?",
+    "options": {
+      "a": "Sachant que tout patient a le droit d’être informé de sa situation médicale, mais soucieux de minimiser les risques psychologiques, il l’adresse au médecin traitant.",
+      "b": "Il informe les filles de la patiente qui choisiront elles-mêmes l’attitude à adopter à l’égard de leur mère, vu sa fragilité psychologique.",
+      "c": "Il n’informe ni la patiente ni ses filles pour éviter une crispation du contexte psychologique totalement inutile.",
+      "d": "Il fixe un nouveau rendez-vous à la patiente en vue de l’informer en toute sérénité du résultat des examens."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Le droit du patient à l'information existe, de même que le droit de ne pas savoir, ou la considération de son extrême vulnérabilité au moment de délivrer de mauvaises nouvelles (paternalisme exceptionnel délégué). Déléguer la communication des résultats au médecin traitant, qui connaît mieux la dynamique familiale, est courant dans ce type de dilemme complexe.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "ÉTHIQUE",
+    "topic": "Éthique biomédicale",
+    "question_text": "La loi belge sur la procréation médicalement assistée (PMA) ne dit rien de l’orientation sexuelle des personnes susceptibles d’en bénéficier. Deux femmes en couple d’une trentaine d’années se présentent chez un gynécologue. Elles souhaitent recourir à une PMA pour avoir un enfant ensemble. Cependant, étant donné ses convictions personnelles, le gynécologue estime qu’il n’est pas acceptable de permettre à un couple homosexuel d’avoir accès à la PMA. Il explique ce point de vue aux deux patientes.\nEnsuite que fait-il ? Parmi les quatre possibilités exposées ci-après, identifiez la plus conforme à l’éthique.",
+    "options": {
+      "a": "Il argumente pour tenter de persuader le couple de renoncer à leur projet de PMA.",
+      "b": "Il met fin à la consultation après avoir perçu les honoraires.",
+      "c": "Il met fin à l’entretien et dit aux patientes qu’il leur offre la consultation.",
+      "d": "Il clôture la consultation et oriente le couple vers un confrère."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "La clause de conscience autorise à refuser certains actes non urgents, cependant, le médecin reste tenu par le devoir de continuité des soins ou, le cas échéant, de confier et de réorienter correctement le suivi vers un confrère de son choix sans nuire aux intérêts des patients.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "ÉTHIQUE",
+    "topic": "Bioéthique",
+    "question_text": "L’autonomie est un des principes essentiels de la bioéthique. Il y est souvent fait allusion dans les discussions et les débats.\nSelon vous, quelle est la proposition ci-après qui correspond le mieux au principe d’autonomie ?",
+    "options": {
+      "a": "L’autonomie correspond au fait qu’une personne reste indépendante vis-à-vis des décisions médicales qui la concernent.",
+      "b": "L’autonomie correspond en premier lieu au fait qu’une personne a les capacités pour se déplacer sans contrainte.",
+      "c": "L’autonomie correspond au fait qu’une personne a le droit d’être informée et peut de la sorte prendre une décision plus appropriée à propos d’un traitement ou d’une intervention.",
+      "d": "L’autonomie correspond au fait qu’une personne peut exiger un traitement même si le médecin estime qu’il ne sera pas utile ou qu’il pourrait être dangereux."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "En bioéthique, l'autonomie se fonde principalement sur la nécessité du libre choix informé, ce qui induit une participation active dans la codécision de santé tout en reconnaissant les limites professionnelles médicales.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "ÉTHIQUE",
+    "topic": "Bioéthique",
+    "question_text": "Un de vos patients refuse, pour des raisons non-médicales liées à son histoire personnelle, de prendre un traitement que vous estimez pourtant nécessaire étant donné son état.\nComment réagissez-vous ?",
+    "options": {
+      "a": "Vous intégrez le principe actif du traitement dans une préparation magistrale de manière telle que le patient ne puisse pas être informé du contenu.",
+      "b": "Vous décidez de ne plus le recevoir, la relation de confiance étant rompue.",
+      "c": "Vous tentez de lui expliquer les tenants et les aboutissants et soulignez le danger de ne pas suivre ce traitement.",
+      "d": "Vous administrez le traitement quels que soient ses choix personnels."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Cacher le produit thérapeutique (A) ou contraindre (D) enfreint le consentement. Abandonner son patient en cas de différend sans orientation constitue une faute grave. Respecter l'autonomie nécessite une explication franche et objective des conséquences du refus.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "ÉTHIQUE",
+    "topic": "Consentement",
+    "question_text": "Madame X., veuve de 83 ans, est admise dans une unité spécialisée pour les personnes présentant des troubles cognitifs au sein d’une maison de retraite. Madame X. a commencé à négliger son hygiène et a développé une irritation cutanée importante. Cependant, elle refuse d’être aidée pour sa toilette.\nQue faites-vous ?",
+    "options": {
+      "a": "Vous ordonnez de faire procéder aux soins hygiéniques même si Madame X. fait part de sa désapprobation.",
+      "b": "Vous respectez le choix de Madame X. : si elle ne souhaite pas se laver, on ne peut l’y contraindre par la force.",
+      "c": "Vous consultez la famille de Madame X. pour trouver une solution, en collaboration avec le personnel de la maison de retraite.",
+      "d": "Vous demandez à la famille de Madame X. de procéder elle-même aux soins hygiéniques."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La patiente présente des troubles cognitifs entraînant possiblement une incompétence décisionnelle, et ses décisions actuelles mettent son intégrité physique en jeu. La décision partagée avec la famille de la patiente ou des garants légaux est l'attitude respectant la bioéthique et les recommandations.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "ÉTHIQUE",
+    "topic": "Confidentialité",
+    "question_text": "Un de vos amis souhaite se lancer en politique et en fait part sur les réseaux sociaux. Il est membre d’un parti qui lui propose de se mettre sur les listes électorales. Dans le cadre de sa campagne, il demande à ses patients de poser avec lui, dans leurs lieux de vie, sur les photos destinées à la promotion de sa candidature. Il est clairement indiqué qu’il s’agit de vrais patients et non d’acteurs ou de figurants. Les visages sont aisément reconnaissables. Votre ami reçoit quelques réactions négatives sur les réseaux sociaux et vous demande conseil.\nQue lui recommandez-vous ?",
+    "options": {
+      "a": "Vous lui suggérez, afin qu’on voie bien que les patients sont d’accord, de recourir à des clips vidéos plutôt qu’à des photos.",
+      "b": "Vous lui suggérez de ne rien changer car il est normal que des patients soutiennent leur médecin. Il leur consacre beaucoup de temps. C’est une bonne façon de le remercier.",
+      "c": "Vous lui suggérez d’arrêter car le fait d’exposer des patients dans un but politique est à la fois une atteinte à la confidentialité et une instrumentalisation des patients.",
+      "d": "Vous lui suggérez de poursuivre car comme les patients sont d’accord, il n’y a pas d’atteinte à leur vie privée."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La relation patient-médecin est une asymétrie de pouvoir. L'utilisation publique ou partisane d'un statut médical pose de graves questions quant à la vie privée des soignés et viole en principe l'idée de neutralité bienveillante.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "ÉTHIQUE",
+    "topic": "Confidentialité et stigmatisation",
+    "question_text": "Dans une école secondaire, un des jeunes élèves est porteur du virus du VIH. Le personnel de la structure a été informé de la situation sans que soit révélée l’identité du jeune. Il leur est rappelé le protocole de gestion des risques en cas d’exposition au sang. Le personnel inquiet souhaite qu’on lui transmette l’identité du jeune.\nQuelle est l’attitude que le directeur devrait adopter ?",
+    "options": {
+      "a": "Il accueille l’élève.",
+      "b": "Il informe le personnel et les autres élèves de l’identité du jeune séropositif.",
+      "c": "Il tente de faire en sorte que l’école ne doive pas accueillir un élève porteur du VIH.",
+      "d": "Il informe les parents des élèves de la classe de l'identité de l’enfant séropositif."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Un statut virologique ne justifie nullement de rompre la stricte confidentialité ni de rejeter socialement (C) l'individu. Le rappel des précautions d'hygiène à caractère universel rend la dénonciation du jeune totalement superflue.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "ÉTHIQUE",
+    "topic": "Bioéthique",
+    "question_text": "Madame X., une jeune femme de 26 ans souffrant d’un handicap mental, vit en couple avec son ami de 24 ans, souffrant également d’un handicap mental. Ils font part à leur famille de leur souhait d’avoir un enfant. Le couple fait face à la résistance des familles qui craignent que les deux jeunes ne soient pas en mesure d’assumer l’éducation d’un enfant. Devant cette situation, plusieurs positions peuvent être défendues.\nDans les affirmations ci-dessous, laquelle est la plus acceptable sur le plan éthique ?",
+    "options": {
+      "a": "La société doit interdire que des personnes souffrant d’un handicap mental puissent avoir un enfant.",
+      "b": "Les parents de personnes souffrant d’un handicap mental doivent faire opérer leurs enfants afin qu’il ne puisse pas avoir d’enfants.",
+      "c": "Le désir d’enfant de personnes souffrant d’un handicap mental est légitime mais doit être accompagné.",
+      "d": "Le désir d’enfant de personnes souffrant d’un handicap mental est inacceptable sur le plan moral."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Les droits fondamentaux excluent les stérilisations coercitives (A, B) relevant d'eugénisme répressif, et reconnaissent l'humanité du désir d'enfant. L'encadrement, un soutien médico-social robuste est la solution moralement admise (C).",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "ÉTHIQUE",
+    "topic": "Communication médicale",
+    "question_text": "Madame X., patiente Alzheimer, demande régulièrement des nouvelles de son fils auprès du personnel de la maison de soins. Son fils est décédé depuis plusieurs mois et lors de l’annonce de sa mort, Madame X. avait manifesté un grand désarroi.\nPour faire face à cette situation, le personnel devrait…",
+    "options": {
+      "a": "ignorer les questions de Madame X. à propos de son fils et continuer comme si de rien n’était.",
+      "b": "veiller au bien-être de Madame X. en lui parlant de son fils de manière générale, sans évoquer son décès.",
+      "c": "laisser entendre à Madame X. que son fils va bientôt venir la voir.",
+      "d": "dire la vérité à Madame X."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Pour les malades souffrant d’atteintes neurocognitives irréversibles et sévères, dire sans cesse la vérité sur des deuils provoque un traumatisme renouvelé car les informations ne peuvent plus s’intégrer dans la mémoire. Recourir à l’empathie dite 'validation' – qui explore le lien affectif existant avec le passé en réagissant émotionnellement – est une posture considérée bienveillante.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "ÉTHIQUE",
+    "topic": "Relations professionnelles",
+    "question_text": "Vous travaillez dans une entreprise et un de vos collègues vous téléphone en vous expliquant que depuis plusieurs mois il est victime de remarques méprisantes quant à la qualité de son travail de la part de plusieurs membres de son équipe.\nQuelle est la réaction la plus éthique ?",
+    "options": {
+      "a": "Vous contactez son épouse afin qu’elle soit sensibilisée à la nécessité, pour son mari, d’être entouré dans cette situation délicate.",
+      "b": "Vous lui conseillez de prendre contact avec le service juridique de l’entreprise car il pourrait s’agir de harcèlement.",
+      "c": "Vous tentez de le réconforter en lui indiquant qu’il s’agit hélas d’une pratique fréquente dans nombre d’entreprises.",
+      "d": "Vous attirez son attention sur l’éventuelle perspective d’un changement d’entreprise."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Banaliser la situation, la fuir, ou s'ingérer à son insu dans la sphère conjugale sont incorrectes et irrespectueuses. Identifier et réorienter un trouble possible de harcèlement vers l'acteur socio-juridique compétent au sein des entreprises est la démarche préconisée.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "ÉTHIQUE",
+    "topic": "Bioéthique",
+    "question_text": "Le clonage humain permettrait de choisir et de sélectionner les caractéristiques des enfants à naître. Par conséquent, les parents pourraient choisir les attributs génétiques de leur enfant et avoir une influence sur son devenir. Devant cette perspective, diverses positions peuvent être avancées.\nParmi celles décrites ci-dessous, laquelle est la plus acceptable sur le plan éthique ?",
+    "options": {
+      "a": "Le clonage humain permettrait d’assurer un meilleur patrimoine génétique.",
+      "b": "Le clonage humain, en permettant d’éradiquer les anomalies et les handicaps liés au génome, assurerait une meilleure qualité de vie à la population.",
+      "c": "Le clonage humain a déjà démontré qu’il pouvait préserver les populations de quantité de maladies ou processus pathologiques.",
+      "d": "Le clonage humain pourrait dans cette optique déboucher sur des problèmes de surpopulation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Sélectionner des traits ou attributs (A) relève de dérives eugénistes d'amélioration, interdites moralement. En revanche, le principe d'intervenir pour cibler et neutraliser thérapeutiquement (B) des maladies graves est souvent perçu par divers groupes scientifiques comme le but de recherche le plus argumentable et légitime sur des embryons sous conditions très encadrées.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "ÉTHIQUE",
+    "topic": "Fin de vie",
+    "question_text": "Il existe un cadre légal autorisant l’acte d’euthanasie en Belgique. A l’heure actuelle, cependant, d’aucuns s’opposent à la pratique de cet acte, alors que d’autres en sont des fervents défenseurs au nom de la dignité humaine. Devant cette situation, diverses positions peuvent être avancées.\nParmi celles décrites ci-dessous, laquelle est la plus acceptable sur le plan éthique ?",
+    "options": {
+      "a": "Il est bon d’avoir rédigé des lois qui minimisent les risques pour la qualité de vie.",
+      "b": "L’euthanasie existe depuis toujours, il n’y avait pas besoin de lois pour réglementer l’acte.",
+      "c": "Quelles que soient les règles strictes qui régissent l’euthanasie, cette pratique reste un échec.",
+      "d": "L’euthanasie est un suicide assisté pour celui qui n’a pas le courage de se donner lui-même la mort."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Les débats éthiques légiférant l'euthanasie misent avant tout sur un strict protocole visant à protéger du meurtre caché, à préserver l'autonomie et limiter de possibles souffrances inapaisables, encadrant les actes par des lois protectrices transparentes et claires.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Vous recevez un de vos patients, J., 15 ans. A trois reprises, son téléphone sonne. Il s’excuse et y répond à chaque fois. Ses appels sont assez brefs (2 minutes). Après avoir raccroché la dernière fois, il vous dit que c’était un appel important. Vous n’avez rien dit les deux premières fois.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous êtes en colère !",
+      "b": "Vous semblez stressé.",
+      "c": "Pourriez-vous attendre que nous ayons fini avant de répondre au téléphone ?",
+      "d": "Maintenant que vous avez eu cet appel important, pourriez-vous couper votre téléphone ?"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Être empathique consiste avant tout à traduire en mots une émotion perçue chez l'autre sans blâmer et avec mesure.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Vous recevez un de vos patients qui vous dit : « Je me sens vraiment coupable quand je lui mens de cette manière-là. Je me dis que je suis un salaud parce qu’elle, elle est honnête avec moi. »\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Pour quelle raison avez-vous tendance à lui mentir tout le temps ?",
+      "b": "Je comprends ce que vous ressentez, ça ne doit pas être facile.",
+      "c": "N’importe qui à votre place se sentirait un salaud.",
+      "d": "Vous vous sentez coupable de lui mentir alors qu’elle est honnête."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'écoute active selon C. Rogers inclut la reformulation par l'effet miroir pour valider l'état affectif propre de la personne, ici en retranscrivant correctement l'émotion («coupable») rattachée à son cause.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Clara, votre patiente, vous annonce : « J’ai bu deux bières hier soir et je suis vraiment contente parce j’ai su m’arrêter, c’est bien la preuve que je ne suis plus alcoolique. C’est vraiment une super nouvelle hein, ça veut dire que je vais pouvoir reprendre quelques bières de temps en temps maintenant que je sais me contrôler. »\nEn tant que médecin, vous savez qu’une personne ayant souffert d’alcoolisme doit rester abstinente et qu’un verre peut faire replonger le patient. Cependant, vous savez aussi qu’il est primordial de lui témoigner votre empathie.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Je ne comprends pas bien pourquoi vous pensez cela.",
+      "b": "Attention, Clara, reprendre un verre de temps en temps va vous faire replonger.",
+      "c": "Mais qu’est-ce qui vous a fait boire ces verres alors que vous aviez arrêté ?",
+      "d": "Vous êtes satisfaite d’avoir bu de l’alcool et d’avoir pu vous arrêter sans être saoule."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Afin de ne pas briser la relation de confiance ni d'infantiliser le patient, le médecin exprime d'abord qu'il a perçu les émotions et sentiments de la personne sans juger. Les éléments de psychoéducation se donnent toujours après la validation.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Un patient vous consulte. Il vous explique que depuis deux mois, il ne dort plus bien, se réveille chaque nuit vers 4 h 30 du matin et ne parvient plus à se rendormir. Il est fatigué et commence à oublier des choses. Hier, par exemple, il devait aller chercher ses enfants à l’école et ne l’a pas fait.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous êtes complètement épuisé.",
+      "b": "Ah, oui, en effet, je comprends que vous oubliiez des choses en ayant un si mauvais sommeil !",
+      "c": "On va arranger cela.",
+      "d": "Je vais vous prescrire un somnifère et cela ira mieux."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "L'empathie doit relier l'affect (fatigue, oublis, désarroi vis-à-vis des enfants) à la cause. Valider cette chaîne redonne sens et un réconfort concret avant toute mesure technique de réparation (prescription).",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Une adolescente de 14 ans, M., vient à votre consultation avec sa mère qui s’inquiète pour sa santé. M. mange uniquement des légumes et des féculents, mais ni viande, ni poisson. Elle est devenue végétalienne. Elle a peur de grossir et ne veut pas contribuer à la maltraitance des animaux. Elle pèse 35 kg pour 1m64. Elle vous dit que si elle veut rester en bonne santé, il lui suffit de continuer à faire de la course à pied tous les jours. Vous trouvez cela aussi inquiétant mais souhaitez maintenir un bon contact avec elle.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "En fait, tu penses que tu pourras rester en bonne santé et bien dans ta peau en mangeant uniquement des légumes et en faisant du sport.",
+      "b": "En fait, tu mets ta santé en danger pour ne pas faire souffrir les animaux.",
+      "c": "Si je comprends bien, tu es anorexique.",
+      "d": "Comme ta maman, je suis très inquiet(e) pour ta santé."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Reformuler sans induire immédiatement de jugement de nature diagnostique lourde (C) ou critique permet d’asseoir un lien thérapeutique fort afin qu'un adolescent livre librement les raisons sous-jacentes avant de commencer l'investigation du risque corporel objectif.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Un enfant de 5 ans, par son comportement, empêche l’intervenant(e) de mener à bien son entretien et le rend même impossible. Son instabilité motrice est importante : il bouge, s’agite dans tous les sens, grimpe partout, entre et sort de la pièce, prend le matériel qu’il trouve et le jette. Au niveau verbal, la même agitation se retrouve : il sollicite sans cesse ses parents, leur coupe la parole, fait la liste des « gros mots » qu’il connaît, interpelle l’intervenant(e) et commente le moindre de ses propos…\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Je constate que votre enfant souffre de troubles de l’hyperactivité et de l’attention et peut-être est-il en opposition par rapport à ce rendez-vous.",
+      "b": "Depuis tout à l’heure, tu sautes partout. Tu empêches tes parents de parler. Je pense que tu veux nous dire quelque chose mais dans ces conditions, il est difficile de te comprendre.",
+      "c": "Il me semble que cet entretien est difficile pour tout le monde, je vous propose que nous nous revoyions prochainement.",
+      "d": "Voudrais-tu rester un peu tranquille car on ne s’entend pas, tu perturbes tout l’entretien en t’agitant ainsi partout et en coupant tes parents qui essaient de t’aider."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Exprimer la situation avec assertivité au moyen d'un discours qui aborde l'enfant tout en validant le sens possible du comportement perturbateur : chercher à le rejoindre plutôt qu'à simplement le sanctionner sans fin.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Un patient vous dit : « Docteur, ma femme vient de me quitter pour une autre femme. Je ne peux pas supporter cette idée. »\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous saviez qu’elle était homosexuelle ?",
+      "b": "Les personnes homosexuelles sont de plus en plus libres de vivre leurs désirs.",
+      "c": "Vous êtes abasourdi et lui en voulez.",
+      "d": "Quand elle se sera rendu compte que ce n’est que passager, elle reviendra."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Les autres options ne font que dévier du registre des affects vécus par l'intéressé. Verbaliser son ressenti présumé renforce le canal empathique.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Un monsieur de 46 ans souffre de dépendance alcoolique. Au moment où vous le rencontrez, il rentre à l'hôpital pour un sevrage de 9 jours. Il explique ne pas avoir envie d'arrêter la boisson mais qu'il veut faire plaisir à son épouse qui n'en peut plus et trouve qu'il devient impossible à vivre chaque fois qu'il boit.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous ne voyez pas l’importance d’arrêter de boire, sauf pour votre épouse.",
+      "b": "C’est votre femme qui veut que vous arrêtiez de boire.",
+      "c": "Sans une motivation personnelle profonde, un sevrage alcoolique ne marchera pas.",
+      "d": "Vous-même, auriez-vous un intérêt pour arrêter de boire ?"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Il s'agit d'une excellente reformulation non-défensive et inconditionnelle des enjeux exprimés : identifier que la volonté émane presque intégralement du besoin de préserver son couple et d'entendre que ce choix est l'ambivalence vécue à l'instant présent.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Vous travaillez dans un service d’accueil pour femmes battues. Une nouvelle arrivée vous interpelle. Elle a reçu une lettre d’amour enflammée de son mari. Elle se dit prête à lui pardonner.\n\nExtraits des échanges :\n- Patiente : Sa lettre m’a vraiment touchée. Je sens qu’il regrette vraiment ce qu’il a fait.\n- Thérapeute : Qu’a-t-il déjà fait exactement ?\n- P. : Vous savez bien, ce fameux soir où je me suis retrouvée à l’hôpital.\n- Th. : Oui, oui… Et comment s’explique-t-il ?\n- P. : Ben… il dit qu’il a pété un plomb. Il était stressé avec son boulot, les enfants… Il a craqué.\n- Th. : Le stress ne peut pas tout justifier.\n- P. : Non, je sais, mais qu’est-ce que je peux faire… (pleurs)\n- Th. : Ne vous inquiétez pas, d’autres femmes sont passées par là et s’en sont sorties.\n- P. : Mais moi je n’y crois plus.\n- Th : Qu’est-ce que vous ressentez pour l’instant ?\n- P. : Je ne sais plus trop. C’est vrai que ça a été trop loin. Je n’en peux plus. Je n’ai plus du tout envie de continuer avec lui mais d’un autre côté, seule, c’est vraiment seule ! Je ne suis pas sûre de pouvoir me débrouiller sans lui. Même financièrement, je n’ai rien ! Pourtant, je sens que c’est maintenant qu’il faut le faire.\n- Th. : …\n\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous êtes tiraillée.",
+      "b": "Je comprends.",
+      "c": "Ne retournez pas avec lui, vous savez qu’il n’arrêtera pas.",
+      "d": "Ça va aller."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Le mot 'tiraillé(e)' résume exactement et avec force empathie l'hésitation intime déchirante et complexe énoncée par la victime. Il s'agit d'empathie pure d'exploration face à des forces intérieures antagonistes.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Madame A. consulte pour la première fois et arrive en retard. Elle est essoufflée. Elle s’excuse d’emblée auprès de vous (médecin) (le fera plusieurs fois). Elle explique qu’elle a été bloquée dans un embouteillage pendant 30 min et trouve la situation injuste ; elle avait tout prévu, était partie à l’heure, mais n’avait pas votre téléphone sur elle, désolée de ne pas avoir pu prévenir du retard. Elle a énormément de choses à faire, veut toutes les faire et bien. Les autres ne comprennent pas qu’elle soit débordée tout le temps, alors qu’elle est femme au foyer. « Je ne laisse rien traîner, contrairement à beaucoup de gens », dit-elle sur le ton du mépris en regardant votre bureau.\n\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous semblez être très exigeante avec vous-même et les autres.",
+      "b": "Vous avez raison d’aimer que les choses soient bien faites.",
+      "c": "Ne vous en faites pas, je n’ai pas attendu trop longtemps et j’ai pris d’autres patients entretemps.",
+      "d": "Quand vous dites que vous trouvez la situation injuste, que voulez-vous dire ?"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Demander une clarification neutre sur le mot clé de la patiente aide à recentrer sans jugement sur les motifs de son agitation extrême ni prendre pour soi ses agressions.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "M., une patiente que vous connaissez bien, vous demande de lui rédiger un certificat d’absence au travail car elle se sent fatiguée et a besoin de vacances.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous l’examinez afin de déterminer si une maladie peut expliquer ce sentiment de fatigue.",
+      "b": "Vous prenez le temps de vous intéresser à son parcours professionnel et à ses motivations avant de prendre votre décision.",
+      "c": "Vous lui expliquez que vos valeurs vous amènent à refuser de lui octroyer son certificat en l’absence de maladie.",
+      "d": "Vous lui accordez un certificat pour qu’elle puisse se reposer et lui proposer de la revoir dans une semaine."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "L'approche la plus globale et humaine se fait d'abord sur la discussion de ses affects, de l'historique et des difficultés ressenties sur son lieu de travail avant l'objectivation strictement médicale ou éthique du bien-fondé du certificat.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Un nouveau patient, M., vous expose ses griefs envers son ancien médecin, qui a refusé de le recevoir à la suite d’un retard de dix minutes. Cependant, vous accordez vous-même beaucoup d’importance aux horaires.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous avez eu raison de changer de médecin si le vôtre ne vous convenait plus.",
+      "b": "Vous devez comprendre que la ponctualité est très importante dans notre profession.",
+      "c": "Je comprends votre colère quand il a refusé de vous ouvrir.",
+      "d": "Vous pouvez avoir confiance en moi, je vous recevrai toujours en consultation."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Il exprime de l'exaspération qui a besoin de s'entendre avant que vous lui rappeliez le cadre avec respect et diplomatie. Réfléchir ses dires ne signifie pas que le praticien souscrit ou acceptera plus tard ces retards.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Votre patiente, A., 75 ans, vous appelle très régulièrement à votre domicile privé pour des plaintes mineures. Vous la soupçonnez de se sentir seule et de recourir à des plaintes médicales pour vous faire vous déplacer à son propre domicile, ce qui vous agace légèrement.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Vous expliquez à A. qu’elle peut recourir à une aide psychologique en cas de besoin.",
+      "b": "Vous signifiez gentiment à A. que vous ne pourrez plus lui rendre visite à domicile et qu’il faudra qu’elle se rende à votre cabinet.",
+      "c": "Vous faites comme si de rien était car tous les patients ont le droit au même traitement.",
+      "d": "Vous essayez de ressentir ce qu’A. peut éprouver au quotidien en mobilisant votre imagination."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Définition de la compétence d'empathie cognitive. S'efforcer mentalement de rejoindre la souffrance existentielle perçue de manière implicite permet ensuite d'adapter un comportement évitant tant le rejet pur que l'irritation en retour.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Madame C., 50 ans, a déjà consulté plusieurs médecins pour des maux de tête. Elle craint que vous ne puissiez pas l’aider plus que vos confrères et consœurs et semble anxieuse et découragée.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "J’ai déjà rencontré des cas similaires au vôtre, je comprends ce que vous ressentez.",
+      "b": "Qu’est-ce qui est le plus difficile pour vous, dans cette situation ?",
+      "c": "Ne vous en faites pas, je vais vous aider à aller mieux.",
+      "d": "Vous allez passer des examens complémentaires et nous allons trouver la cause de vos maux de tête."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "L'utilisation prudente des questions exploratoires face aux inquiétudes chroniques de l'incompréhension permet d'établir d'authentiques balises partagées plutôt que d'opposer de fausses garanties (C ou D) ou ramener le problème au praticien seul (A).",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "EMPATHIE",
+    "topic": "Communication médicale",
+    "question_text": "Votre patiente de 15 ans vous raconte avoir été insultée par son frère à la suite d’un conflit familial. Elle semble choquée par les propos tenus et ne sait pas comment réagir.\nParmi les propositions suivantes, laquelle utiliseriez-vous pour vous exprimer de la manière la plus empathique possible ?",
+    "options": {
+      "a": "Si je vous comprends bien, vous êtes choquée par les propos tenus par votre frère et ne savez que faire.",
+      "b": "Je n’en reviens pas qu’il vous ait insultée, c’est très dur à entendre.",
+      "c": "Il faut en parler à vos parents avant que la situation ne s’envenime.",
+      "d": "Pensez-vous qu’il serait utile que votre frère consulte ?"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Excellente et puissante réappropriation sémantique et émotionnelle, fidèle aux données apportées par la jeune, qui la structure cognitivement à un moment où tout semble incohérent pour elle et sans solution d'action rapide à donner.",
+    "section_id": null
+  }
+]

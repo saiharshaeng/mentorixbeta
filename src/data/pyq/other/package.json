@@ -1,0 +1,33 @@
+{
+  "name": "online-exam-questions",
+  "version": "1.0.0",
+  "description": "[![License: Custom](https://img.shields.io/badge/License-Non--Commercial-orange.svg)](LICENSE)\r [![Examify](https://img.shields.io/badge/Used%20By-Examify-blue)](https://examoven.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "ts-node src/validate.ts",
+    "serve": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samkarya/online-exam-questions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Samkarya/online-exam-questions/issues"
+  },
+  "homepage": "https://github.com/Samkarya/online-exam-questions#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

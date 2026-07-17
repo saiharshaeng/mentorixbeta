@@ -1,0 +1,482 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Central Dogma",
+    "question_text": "According to the Central Dogma of molecular biology, which of the following represents the typical flow of genetic information?",
+    "options": {
+      "a": "Protein $\\rightarrow$ RNA $\\rightarrow$ DNA",
+      "b": "DNA $\\rightarrow$ Protein $\\rightarrow$ RNA",
+      "c": "DNA $\\rightarrow$ RNA $\\rightarrow$ Protein",
+      "d": "RNA $\\rightarrow$ DNA $\\rightarrow$ Protein"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Central Dogma describes the flow of genetic information within a biological system: DNA is transcribed into RNA, which is then translated into Protein ($DNA \\rightarrow RNA \\rightarrow Protein$).",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "In the Michaelis-Menten equation, what does the constant $K_m$ represent?",
+    "options": {
+      "a": "The maximum velocity of the reaction",
+      "b": "The substrate concentration at which the reaction velocity is half of $V_{max}$",
+      "c": "The turnover number of the enzyme",
+      "d": "The concentration of enzyme active sites"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "$K_m$ (Michaelis constant) is defined as the substrate concentration at which the reaction rate is half of the maximum velocity ($V_{max}/2$). It is an inverse measure of the enzyme's affinity for the substrate.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Protein Structure",
+    "question_text": "Which level of protein structure is primarily stabilized by hydrogen bonds between the carbonyl oxygen and the amide hydrogen of the peptide backbone?",
+    "options": {
+      "a": "Primary structure",
+      "b": "Secondary structure",
+      "c": "Tertiary structure",
+      "d": "Quaternary structure"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Secondary structures, such as $\\alpha$-helices and $\\beta$-sheets, are stabilized by hydrogen bonds formed between atoms of the polypeptide backbone (specifically the carbonyl group of one residue and the amide group of another).",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "DNA Replication",
+    "question_text": "During DNA replication, which enzyme is responsible for unwinding the DNA double helix at the replication fork?",
+    "options": {
+      "a": "DNA Polymerase",
+      "b": "DNA Ligase",
+      "c": "Primase",
+      "d": "Helicase"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "DNA Helicase is the enzyme responsible for breaking the hydrogen bonds between base pairs, thereby unwinding the DNA double helix to create the replication fork.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Monoclonal Antibodies",
+    "question_text": "In hybridoma technology for monoclonal antibody production, which agent is commonly used to fuse B-cells with myeloma cells?",
+    "options": {
+      "a": "Polyethylene glycol (PEG)",
+      "b": "Sodium dodecyl sulfate (SDS)",
+      "c": "Ethidium bromide",
+      "d": "Restriction endonuclease"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Polyethylene glycol (PEG) is a fusogen used to facilitate the fusion of plasma membranes between B-cells and myeloma cells to form hybridomas.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Protein Structure",
+    "question_text": "A mutation changes a Glutamate residue (negatively charged) to a Valine residue (hydrophobic) on the surface of a protein. How is this most likely to affect the protein structure?",
+    "options": {
+      "a": "It will increase solubility in water.",
+      "b": "It will likely cause aggregation due to the exposure of a hydrophobic patch.",
+      "c": "It will form a disulfide bridge.",
+      "d": "It will have no effect on stability."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Replacing a charged, hydrophilic residue (Glutamate) with a hydrophobic one (Valine) on the surface exposes a hydrophobic patch to the aqueous environment. This is thermodynamically unfavorable and often leads to protein aggregation (as seen in Sickle Cell Anemia hemoglobin).",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "An enzyme has a $K_m$ of 2 mM for its substrate. If the substrate concentration is 2 mM, what is the reaction velocity ($V_0$)?",
+    "options": {
+      "a": "$V_{max}$",
+      "b": "$0.75 \\ V_{max}$",
+      "c": "$0.5 \\ V_{max}$",
+      "d": "$0.1 \\ V_{max}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "By definition, $K_m$ is the substrate concentration $[S]$ at which the reaction velocity is half the maximum velocity. Since $[S] = K_m = 2\\ mM$, $V_0 = 0.5 \\ V_{max}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Central Dogma",
+    "question_text": "Which of the following modifications occurs at the 5' end of eukaryotic mRNA during processing?",
+    "options": {
+      "a": "Poly-A tail addition",
+      "b": "Splicing of exons",
+      "c": "Addition of a 7-methylguanosine cap",
+      "d": "Phosphorylation of ribose"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Eukaryotic mRNA is modified at the 5' end by the addition of a 7-methylguanosine cap (5' cap), which protects the mRNA from degradation and assists in translation initiation.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "DNA Replication",
+    "question_text": "Why are Okazaki fragments formed during DNA replication?",
+    "options": {
+      "a": "Because DNA Polymerase can only synthesize DNA in the $3' \\rightarrow 5'$ direction",
+      "b": "Because DNA Polymerase can only synthesize DNA in the $5' \\rightarrow 3'$ direction and the strands are antiparallel",
+      "c": "Because the leading strand requires multiple primers",
+      "d": "Because helicase opens the DNA in discontinuous segments"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "DNA strands are antiparallel, and DNA Polymerase can only synthesize in the $5' \\rightarrow 3'$ direction. Therefore, on the lagging strand ($3' \\rightarrow 5'$ template), synthesis must occur discontinuously away from the replication fork, creating Okazaki fragments.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Monoclonal Antibodies",
+    "question_text": "What is the specific function of the HAT (Hypoxanthine-Aminopterin-Thymidine) medium in hybridoma selection?",
+    "options": {
+      "a": "It promotes the growth of myeloma cells.",
+      "b": "It kills unfused B-cells.",
+      "c": "It allows only fused hybridoma cells to survive by blocking the de novo nucleotide synthesis pathway.",
+      "d": "It stimulates antibody production."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Aminopterin in HAT medium blocks the de novo nucleotide synthesis pathway. Myeloma cells lack the salvage pathway enzyme (HGPRT) and die. Unfused B-cells die naturally. Only hybridomas (which have HGPRT from the B-cell) can use Hypoxanthine and Thymidine via the salvage pathway to survive.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "In a Lineweaver-Burk plot, the y-intercept is equal to:",
+    "options": {
+      "a": "$-1/K_m$",
+      "b": "$1/V_{max}$",
+      "c": "$K_m/V_{max}$",
+      "d": "$V_{max}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Lineweaver-Burk equation is $\\frac{1}{V_0} = \\frac{K_m}{V_{max}}\\frac{1}{[S]} + \\frac{1}{V_{max}}$. The y-intercept (when $1/[S] = 0$) is $1/V_{max}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Protein Structure",
+    "question_text": "Which amino acid is known as a 'helix breaker' because its cyclic structure restricts the rotation of the N-C$\\alpha$ bond, disrupting the $\\alpha$-helix?",
+    "options": {
+      "a": "Alanine",
+      "b": "Glycine",
+      "c": "Proline",
+      "d": "Leucine"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Proline is an imino acid where the nitrogen is part of a rigid ring. This restricts conformational flexibility and lacks the amide hydrogen necessary for the hydrogen bonding in an $\\alpha$-helix, making it a helix breaker.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Central Dogma",
+    "question_text": "Which molecule acts as the adapter that translates the nucleotide sequence of mRNA into the amino acid sequence of a protein?",
+    "options": {
+      "a": "rRNA",
+      "b": "tRNA",
+      "c": "snRNA",
+      "d": "DNA Polymerase"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Transfer RNA (tRNA) serves as the adapter molecule. It carries a specific amino acid at one end and has an anticodon at the other that pairs with the complementary codon on the mRNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "DNA Replication",
+    "question_text": "What is the primary role of DNA Ligase in DNA replication?",
+    "options": {
+      "a": "To synthesize RNA primers",
+      "b": "To proofread the DNA sequence",
+      "c": "To join the phosphodiester backbone of Okazaki fragments",
+      "d": "To prevent DNA from re-annealing"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "DNA Ligase catalyzes the formation of a phosphodiester bond between the $3'$-OH end of one DNA fragment and the $5'$-phosphate end of another, effectively sealing nicks in the backbone, such as those between Okazaki fragments.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "A competitive inhibitor affects enzyme kinetics by:",
+    "options": {
+      "a": "Decreasing $V_{max}$ and keeping $K_m$ constant",
+      "b": "Increasing $K_m$ and keeping $V_{max}$ constant",
+      "c": "Decreasing both $V_{max}$ and $K_m$",
+      "d": "Increasing $V_{max}$ and decreasing $K_m$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Competitive inhibitors bind to the active site, competing with the substrate. This increases the apparent $K_m$ (more substrate is needed to reach $V_{max}/2$) but does not alter $V_{max}$ because high substrate concentrations can outcompete the inhibitor.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Protein Structure",
+    "question_text": "What is the Anfinsen's dogma regarding protein folding?",
+    "options": {
+      "a": "Proteins require chaperones for all folding events.",
+      "b": "Protein folding is a random process controlled by entropy.",
+      "c": "The native structure of a protein is determined solely by its amino acid sequence.",
+      "d": "Proteins fold primarily due to disulfide bonds."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Christian Anfinsen's experiments demonstrated that for small globular proteins, the native, biologically active conformation is determined solely by the protein's amino acid sequence (primary structure) under physiological conditions.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Monoclonal Antibodies",
+    "question_text": "Which of the following is a key advantage of monoclonal antibodies over polyclonal antibodies?",
+    "options": {
+      "a": "They recognize multiple epitopes on an antigen.",
+      "b": "They are produced by different B-cell clones.",
+      "c": "They possess high specificity for a single epitope.",
+      "d": "They are easier and cheaper to produce in initial stages."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Monoclonal antibodies are derived from a single clone of B-cells and therefore recognize a single, specific epitope on an antigen, providing high specificity and consistency.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Central Dogma",
+    "question_text": "If a DNA coding strand has the sequence $5'-ATG\\ CCG\\ TAA-3'$, what is the corresponding mRNA sequence?",
+    "options": {
+      "a": "$3'-TAC\\ GGC\\ ATT-5'$",
+      "b": "$5'-AUG\\ CCG\\ UAA-3'$",
+      "c": "$5'-UAC\\ GGC\\ AUU-3'$",
+      "d": "$5'-ATG\\ CCG\\ TAA-3'$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The mRNA sequence is identical to the coding (non-template) strand of DNA, except that Thymine (T) is replaced by Uracil (U). Thus, $5'-ATG\\ CCG\\ TAA-3'$ becomes $5'-AUG\\ CCG\\ UAA-3'$.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "DNA Replication",
+    "question_text": "The proofreading activity of DNA Polymerase involves which enzymatic capability?",
+    "options": {
+      "a": "$5' \\rightarrow 3'$ exonuclease activity",
+      "b": "$3' \\rightarrow 5'$ exonuclease activity",
+      "c": "Endonuclease activity",
+      "d": "Ligase activity"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "DNA Polymerases proofread by using their $3' \\rightarrow 5'$ exonuclease activity to remove an incorrectly added nucleotide at the $3'$ end before resuming synthesis.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "Calculate the catalytic efficiency of an enzyme given $k_{cat} = 200\\ s^{-1}$ and $K_m = 50\\ \\mu M$.",
+    "options": {
+      "a": "$4 \\times 10^6\\ M^{-1}s^{-1}$",
+      "b": "$4 \\times 10^4\\ M^{-1}s^{-1}$",
+      "c": "$0.25\\ M^{-1}s^{-1}$",
+      "d": "$1 \\times 10^4\\ M^{-1}s^{-1}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Catalytic efficiency is defined as $k_{cat} / K_m$. First convert units to be consistent (Molar). $K_m = 50\\ \\mu M = 50 \\times 10^{-6}\\ M = 5 \\times 10^{-5}\\ M$. \nEfficiency = $200 / (5 \\times 10^{-5}) = 40 \\times 10^5 = 4 \\times 10^6\\ M^{-1}s^{-1}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Protein Structure",
+    "question_text": "Which specific bond is responsible for forming the 'bridge' between two Cysteine residues in a tertiary protein structure?",
+    "options": {
+      "a": "Ionic bond",
+      "b": "Hydrogen bond",
+      "c": "Disulfide bond",
+      "d": "Peptide bond"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Disulfide bonds (bridges) are covalent bonds formed between the sulfur atoms of two Cysteine residues. They play a significant role in stabilizing the tertiary and quaternary structures of proteins.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Monoclonal Antibodies",
+    "question_text": "Chimeric monoclonal antibodies are distinguishable by the fact that:",
+    "options": {
+      "a": "They are 100% mouse-derived.",
+      "b": "They have mouse variable regions and human constant regions.",
+      "c": "They are 100% human-derived.",
+      "d": "They contain only the antigen-binding CDR loops from mice."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Chimeric antibodies (suffix -ximab) typically consist of variable regions (antigen-binding domains) derived from a mouse (or other source) fused to human constant regions to reduce immunogenicity.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "DNA Replication",
+    "question_text": "Which of the following proteins prevents the single-stranded DNA from re-annealing or forming secondary structures during replication?",
+    "options": {
+      "a": "Topoisomerase",
+      "b": "SSB (Single-Strand Binding) proteins",
+      "c": "Sliding clamp",
+      "d": "Primase"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Single-Strand Binding (SSB) proteins bind to the separated DNA strands near the replication fork to prevent them from re-annealing or forming hairpins, keeping the template accessible for the polymerase.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Central Dogma",
+    "question_text": "What is the function of the ribosome's P-site during translation?",
+    "options": {
+      "a": "It binds the incoming aminoacyl-tRNA.",
+      "b": "It holds the tRNA carrying the growing polypeptide chain.",
+      "c": "It is the exit site for the uncharged tRNA.",
+      "d": "It binds the mRNA cap."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The P-site (Peptidyl site) holds the tRNA that is linked to the growing polypeptide chain. The A-site binds the new aminoacyl-tRNA, and the E-site is where empty tRNAs exit.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "If an enzyme reaction follows zero-order kinetics with respect to substrate, which of the following is true?",
+    "options": {
+      "a": "The rate is directly proportional to substrate concentration.",
+      "b": "The active sites of the enzyme are saturated.",
+      "c": "The reaction rate is minimal.",
+      "d": "$K_m$ is much larger than the substrate concentration."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Zero-order kinetics occurs when $[S] \\gg K_m$. At this point, the enzyme active sites are fully saturated with substrate, and the reaction proceeds at its maximum rate ($V_{max}$), independent of further increases in $[S]$.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Protein Structure",
+    "question_text": "Which term describes the spatial arrangement of subunits in a protein consisting of more than one polypeptide chain?",
+    "options": {
+      "a": "Primary structure",
+      "b": "Secondary structure",
+      "c": "Tertiary structure",
+      "d": "Quaternary structure"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Quaternary structure refers to the assembly and spatial arrangement of multiple polypeptide subunits (e.g., hemoglobin's four subunits) into a functional protein complex.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Monoclonal Antibodies",
+    "question_text": "In the production of mAbs, myeloma cells are HGPRT defective. Why is this trait essential?",
+    "options": {
+      "a": "It prevents them from producing their own antibodies.",
+      "b": "It ensures they die in HAT medium unless fused with a B-cell.",
+      "c": "It makes them immortal.",
+      "d": "It increases the fusion efficiency."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "HGPRT deficiency means myeloma cells cannot use the salvage pathway for nucleotide synthesis. When placed in HAT medium (which blocks the main synthesis pathway), unfused myeloma cells die. Only fusions with B-cells (which provide HGPRT) survive.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "DNA Replication",
+    "question_text": "Topoisomerase (or DNA Gyrase in bacteria) helps in DNA replication by:",
+    "options": {
+      "a": "Synthesizing the primer",
+      "b": "Relieving the torsional strain (supercoiling) ahead of the replication fork",
+      "c": "Breaking hydrogen bonds between bases",
+      "d": "Proofreading the DNA"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "As Helicase unwinds the DNA, positive supercoils build up ahead of the fork. Topoisomerase relieves this torsional strain by cutting and rejoining DNA strands to relax the supercoiling.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Central Dogma",
+    "question_text": "Which enzyme is responsible for synthesizing mRNA during transcription in eukaryotes?",
+    "options": {
+      "a": "RNA Polymerase I",
+      "b": "RNA Polymerase II",
+      "c": "RNA Polymerase III",
+      "d": "DNA Polymerase III"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "In eukaryotes, RNA Polymerase II is the specific polymerase responsible for synthesizing precursors of mRNA (and most snRNA/microRNA). Pol I synthesizes rRNA, and Pol III synthesizes tRNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Biochemistry & Molecular Biology",
+    "topic": "Enzyme Kinetics",
+    "question_text": "What happens to the $V_{max}$ and $K_m$ in the presence of a non-competitive inhibitor?",
+    "options": {
+      "a": "$V_{max}$ decreases, $K_m$ remains constant",
+      "b": "$V_{max}$ remains constant, $K_m$ increases",
+      "c": "$V_{max}$ decreases, $K_m$ decreases",
+      "d": "$V_{max}$ remains constant, $K_m$ decreases"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Non-competitive inhibitors bind to an allosteric site (not the active site), removing functional enzyme from the pool. This lowers the potential maximum rate ($V_{max}$ decreases) but does not change the affinity of the remaining active sites for the substrate ($K_m$ remains constant).",
+    "section_id": null
+  }
+]

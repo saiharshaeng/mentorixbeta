@@ -1,0 +1,482 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "VSEPR Theory",
+        "question_text": "According to VSEPR theory, what is the primary factor that determines the arrangement of electron pairs around a central atom?",
+        "options": {
+            "a": "Maximizing the attraction between the nucleus and electrons.",
+            "b": "Minimizing the electrostatic repulsion between valence electron pairs.",
+            "c": "Maximizing the number of bonds formed.",
+            "d": "Minimizing the distance between bonded atoms.[[1](https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/11%3A_Liquids_and_Intermolecular_Forces/11.02%3A_Intermolecular_Forces)]"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The VSEPR model assumes that electron pairs in the valence shell of a central atom will adopt an arrangement that minimizes repulsions between these electron pairs by maximizing the distance between them.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "VSEPR Theory",
+        "question_text": "Which of the following correctly lists the order of electron-pair repulsions from greatest to least?",
+        "options": {
+            "a": "bonding pair-bonding pair > lone pair-bonding pair > lone pair-lone pair",
+            "b": "lone pair-lone pair > lone pair-bonding pair > bonding pair-bonding pair",
+            "c": "lone pair-bonding pair > bonding pair-bonding pair > lone pair-lone pair",
+            "d": "bonding pair-bonding pair > lone pair-lone pair > lone pair-bonding pair"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Lone pairs occupy more space than bonding pairs, leading to stronger repulsions.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] The order is: lone pair-lone pair > lone pair-bonding pair > bonding pair-bonding pair. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "VSEPR Theory",
+        "question_text": "In the VSEPR model, how is a double or triple bond treated when counting regions of electron density?",
+        "options": {
+            "a": "A double bond counts as 2 regions; a triple bond counts as 3 regions.",
+            "b": "Multiple bonds are not counted as regions of electron density.",
+            "c": "A single, double, or triple bond each counts as exactly one region of electron density.",
+            "d": "A double bond counts as 1 region, but a triple bond counts as 2 regions.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)]"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "We count the number of regions of electron density (lone pairs and bonds) around the central atom.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] A single, double, or triple bond counts as one region of electron density.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[4](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-4-molecular-orbital-theory)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "VSEPR Theory",
+        "question_text": "Why are the bond angles in ammonia ($NH_3$) and water ($H_2O$) slightly less than the ideal tetrahedral angle of $109.5^\\circ$?",
+        "options": {
+            "a": "The atoms are too large to fit the ideal angle.",
+            "b": "Lone pairs occupy a larger region of space than bonding pairs, compressing the bond angles.",
+            "c": "The bonds in these molecules are ionic rather than covalent.",
+            "d": "The central atoms are $sp^2$ hybridized rather than $sp^3$."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The bond angles are slightly smaller than 109.5° because the lone pair-bonding pair repulsion is greater than the bonding pair-bonding pair repulsion, taking up more space.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)][[4](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-4-molecular-orbital-theory)][[5](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_General_Chemistry_(Petrucci_et_al.)%2F10%253A_Chemical_Bonding_II_-_Valence_Bond_and_Molecular_Orbital_Theory%2F10.02%253A_VSEPR_Theory_and_Molecular_Shapes)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Predict the molecular structure of Beryllium difluoride ($BeF_2$).",
+        "options": {
+            "a": "Bent",
+            "b": "Linear",
+            "c": "Trigonal Planar",
+            "d": "Tetrahedral"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "With two bonds and no lone pairs of electrons on the central atom, the bonds are as far apart as possible (180°), adopting a linear structure.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "What is the molecular structure of Boron trichloride ($BCl_3$)?",
+        "options": {
+            "a": "Trigonal Pyramidal",
+            "b": "T-shaped",
+            "c": "Trigonal Planar",
+            "d": "Tetrahedral"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "$BCl_3$ contains three bonds and no lone pairs.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] The arrangement of three regions of high electron density gives a trigonal planar geometry.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Methane ($CH_4$) has four bonding pairs and no lone pairs. What is its molecular structure?",
+        "options": {
+            "a": "Square Planar",
+            "b": "Tetrahedral",
+            "c": "Seesaw",
+            "d": "Trigonal Pyramidal"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Methane has four bonding pairs around the central carbon atom; the electron-pair geometry is tetrahedral, as is the molecular structure. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Ammonia ($NH_3$) has a tetrahedral electron-pair geometry. What is its *molecular* structure?",
+        "options": {
+            "a": "Tetrahedral",
+            "b": "Trigonal Planar",
+            "c": "Trigonal Pyramidal",
+            "d": "Bent"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Ammonia has four electron pairs (tetrahedral geometry), but one is a lone pair.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] The molecular structure is trigonal pyramidal.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "What is the molecular structure of a water molecule ($H_2O$)?",
+        "options": {
+            "a": "Linear",
+            "b": "Bent",
+            "c": "Trigonal Pyramidal",
+            "d": "Tetrahedral"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Water has four regions of electron density (two bonds, two lone pairs).[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] The electron geometry is tetrahedral, but the molecular structure is bent.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Which molecular structure is associated with Phosphorus pentafluoride ($PF_5$)?",
+        "options": {
+            "a": "Octahedral",
+            "b": "Seesaw",
+            "c": "Trigonal Bipyramidal",
+            "d": "Pentagonal Planar"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Any molecule with five electron pairs around the central atom including no lone pairs will be trigonal bipyramidal.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] $PF_5$ is a common example.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Sulfur tetrafluoride ($SF_4$) has 5 regions of electron density, including one lone pair. What is its shape?",
+        "options": {
+            "a": "Tetrahedral",
+            "b": "Seesaw",
+            "c": "Square Planar",
+            "d": "Trigonal Pyramidal"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "With 5 regions, the electron geometry is trigonal bipyramidal. The lone pair occupies an equatorial position to minimize repulsion, resulting in a seesaw structure.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Chlorine trifluoride ($ClF_3$) has 5 electron domains (3 bonds, 2 lone pairs). What is its molecular structure?",
+        "options": {
+            "a": "Trigonal Planar",
+            "b": "Trigonal Pyramidal",
+            "c": "T-shaped",
+            "d": "Trigonal Bipyramidal"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "The stable structure puts the two lone pairs in equatorial locations of the trigonal bipyramid, giving a T-shaped molecular structure.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Xenon difluoride ($XeF_2$) has 5 regions of electron density (2 bonds, 3 lone pairs). What is its shape?",
+        "options": {
+            "a": "Linear",
+            "b": "Bent",
+            "c": "Seesaw",
+            "d": "V-shaped"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "With 3 lone pairs in the equatorial positions of a trigonal bipyramid, the remaining two bonds are axial, forming a linear structure. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Sulfur hexafluoride ($SF_6$) has six bonding pairs and no lone pairs. What is its geometry?",
+        "options": {
+            "a": "Hexagonal Planar",
+            "b": "Trigonal Bipyramidal",
+            "c": "Octahedral",
+            "d": "Square Pyramidal"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Six regions form an octahedral geometry. $SF_6$ is octahedral.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "Xenon tetrafluoride ($XeF_4$) has an octahedral electron geometry with two lone pairs. What is its molecular structure?",
+        "options": {
+            "a": "Octahedral",
+            "b": "Square Pyramidal",
+            "c": "Square Planar",
+            "d": "Seesaw"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "To minimize repulsions, the two lone pairs occupy opposite sides of the octahedron (180° apart), resulting in a square planar structure.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Shapes",
+        "question_text": "What is the molecular structure of $XeOF_4$, which has an octahedral electron-group geometry with one lone pair?",
+        "options": {
+            "a": "Square Pyramidal",
+            "b": "Square Planar",
+            "c": "Trigonal Bipyramidal",
+            "d": "Octahedral"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "An atom with five bonds and a lone pair in an octahedral geometry adopts a square pyramidal molecular structure.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity)",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Hybridization",
+        "question_text": "Which orbitals are mixed to form $sp$ hybrid orbitals?",
+        "options": {
+            "a": "One s orbital and two p orbitals",
+            "b": "One s orbital and one p orbital",
+            "c": "Two s orbitals",
+            "d": "One s orbital and three p orbitals"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "This hybridization process involves mixing of the valence s orbital with one of the valence p orbitals to yield two equivalent sp hybrid orbitals.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F7-6-molecular-structure-and-polarity)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)][[4](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-4-molecular-orbital-theory)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-2-hybrid-atomic-orbitals)",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Hybridization",
+        "question_text": "In the linear molecule $BeCl_2$, what is the hybridization of the central Beryllium atom?",
+        "options": {
+            "a": "$sp$",
+            "b": "$sp^2$",
+            "c": "$sp^3$",
+            "d": "$sp^3d$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The beryllium atom in a gaseous $BeCl_2$ molecule exhibits $sp$ hybridization, corresponding to two regions of electron density.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-2-hybrid-atomic-orbitals)",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Hybridization",
+        "question_text": "The Boron atom in $BH_3$ has a trigonal planar geometry. What is its hybridization?",
+        "options": {
+            "a": "$sp^3$",
+            "b": "$sp$",
+            "c": "$sp^2$",
+            "d": "$dsp^2$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The trigonal planar structure suggests $sp^2$ hybridization, resulting from the mixing of one s orbital and two p orbitals. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-2-hybrid-atomic-orbitals)",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Hybridization",
+        "question_text": "What hybridization is exhibited by the carbon atom in methane ($CH_4$)?",
+        "options": {
+            "a": "$sp$",
+            "b": "$sp^2$",
+            "c": "$sp^3$",
+            "d": "$sp^3d$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The carbon atom in methane exhibits $sp^3$ hybridization, forming four identical orbitals directed to the corners of a tetrahedron.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fchem.libretexts.org%2FBookshelves%2FGeneral_Chemistry%2FMap%253A_Chemistry_-_The_Central_Science_(Brown_et_al.)%2F11%253A_Liquids_and_Intermolecular_Forces%2F11.02%253A_Intermolecular_Forces)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fopenstax.org%2Fbooks%2Fchemistry-2e%2Fpages%2F8-2-hybrid-atomic-orbitals)] [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-2-hybrid-atomic-orbitals)",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Hybridization",
+        "question_text": "Phosphorus pentachloride ($PCl_5$) has five bonding pairs. Which set of hybrid orbitals is used?",
+        "options": {
+            "a": "$sp^3$",
+            "b": "$sp^3d$",
+            "c": "$sp^3d^2$",
+            "d": "$d^2sp^3$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "We use the 3s orbital, the three 3p orbitals, and one of the 3d orbitals to form the set of five $sp^3d$ hybrid orbitals. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-2-hybrid-atomic-orbitals)",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Hybridization",
+        "question_text": "Which hybridization allows Sulfur in $SF_6$ to bond to six fluorine atoms?",
+        "options": {
+            "a": "$sp^3d$",
+            "b": "$sp^3d^2$",
+            "c": "$sp^3$",
+            "d": "$sp^2$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "To bond six fluorine atoms, the 3s orbital, the three 3p orbitals, and two of the 3d orbitals form six equivalent $sp^3d^2$ hybrid orbitals. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-2-hybrid-atomic-orbitals)",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Molecular Orbital Theory",
+        "question_text": "How is Bond Order calculated in Molecular Orbital Theory?",
+        "options": {
+            "a": "(Number of bonding electrons + Number of antibonding electrons) / 2",
+            "b": "(Number of bonding electrons - Number of antibonding electrons) / 2",
+            "c": "Number of bonding electrons - Number of antibonding electrons",
+            "d": "(Number of antibonding electrons - Number of bonding electrons) / 2"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The bond order is defined as one-half the net difference between the number of bonding and antibonding electrons. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-4-molecular-orbital-theory)",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Molecular Orbital Theory",
+        "question_text": "Why is the oxygen molecule ($O_2$) paramagnetic according to MO Theory?",
+        "options": {
+            "a": "It has an odd number of electrons.",
+            "b": "It contains unpaired electrons in the $\\pi^*$ (pi antibonding) orbitals.",
+            "c": "All its electrons are paired in $\\sigma$ bonding orbitals.",
+            "d": "It has a bond order of 2.5."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "The molecular orbital diagram shows that $O_2$ has two unpaired electrons in the degenerate $\\pi^*_{2p}$ orbitals, which explains its paramagnetism. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-4-molecular-orbital-theory)",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Molecular Orbital Theory",
+        "question_text": "Why does the dihelium molecule ($He_2$) not exist in a stable form?",
+        "options": {
+            "a": "The bond order is zero.",
+            "b": "It has too many protons.",
+            "c": "The bond order is 1.",
+            "d": "It is paramagnetic."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "With two electrons in the bonding orbital and two in the antibonding orbital, the bond order is $(2-2)/2 = 0$. A bond order of zero indicates that no bond is formed. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-4-molecular-orbital-theory)",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Molecular Orbital Theory",
+        "question_text": "In MO theory, the side-by-side overlap of two $p​$ orbitals results in which type of orbital?",
+        "options": {
+            "a": "Sigma ($\\sigma$) bonding orbital only",
+            "b": "Pi ($\\pi$) bonding and Pi antibonding ($\\pi^*$) orbitals",
+            "c": "Sigma ($\\sigma^*$) antibonding orbital only",
+            "d": "Delta ($\\delta$) bonding orbital"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The side-by-side overlap of two p orbitals gives rise to a pi ($\\pi$) bonding molecular orbital and a $\\pi^*$ antibonding molecular orbital. [Source: OpenStax](https://openstax.org/books/chemistry-2e/pages/8-4-molecular-orbital-theory)",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Intermolecular Forces",
+        "question_text": "Which elements must hydrogen be bonded to for Hydrogen Bonding to occur?",
+        "options": {
+            "a": "C, H, O",
+            "b": "N, O, F",
+            "c": "Cl, Br, I",
+            "d": "S, P, N"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Hydrogen bonds form when hydrogen is covalently bonded to one of the three most electronegative elements: Nitrogen (N), Oxygen (O), or Fluorine (F). [Source: Chem LibreTexts](https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/11%3A_Liquids_and_Intermolecular_Forces/11.02%3A_Intermolecular_Forces)",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Intermolecular Forces",
+        "question_text": "Which intermolecular force is present in all molecules, regardless of polarity?",
+        "options": {
+            "a": "Dipole-Dipole interactions",
+            "b": "Hydrogen bonding",
+            "c": "London dispersion forces",
+            "d": "Ion-Dipole interactions"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "London dispersion forces (also called induced dipole-induced dipole forces) exist between all atoms and molecules. [Source: Chem LibreTexts](https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/11%3A_Liquids_and_Intermolecular_Forces/11.02%3A_Intermolecular_Forces)",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Intermolecular Forces",
+        "question_text": "Why does $n​$-pentane have a higher boiling point ($36.1^\\circ C$) than its isomer neopentane ($9.5^\\circ C$)?",
+        "options": {
+            "a": "Neopentane has stronger hydrogen bonds.",
+            "b": "$n​$-pentane is more polar than neopentane.",
+            "c": "$n​$-pentane has a larger surface area for contact, increasing London dispersion forces.",
+            "d": "Neopentane has a higher molar mass."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The linear shape of n-pentane provides a greater surface area for intermolecular contact compared to the spherical shape of neopentane, resulting in stronger London dispersion forces. [Source: Chem LibreTexts](https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/11%3A_Liquids_and_Intermolecular_Forces/11.02%3A_Intermolecular_Forces)",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Intermolecular Forces",
+        "question_text": "Which of the following compounds is expected to have the highest boiling point?",
+        "options": {
+            "a": "Acetone ($CH_3COCH_3$)",
+            "b": "2-methylpropane ($C_4H_{10}$)",
+            "c": "Propane ($C_3H_8$)",
+            "d": "Methane ($CH_4$)"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Acetone is a polar molecule with dipole-dipole interactions, which are stronger than the London dispersion forces found in the nonpolar alkanes listed (2-methylpropane, propane, methane). [Source: Chem LibreTexts](https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/11%3A_Liquids_and_Intermolecular_Forces/11.02%3A_Intermolecular_Forces)",
+        "section_id": null
+    }
+]

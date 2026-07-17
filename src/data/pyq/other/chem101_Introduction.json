@@ -1,0 +1,482 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Scope and Applications",
+        "question_text": "Chemistry is best defined as the study of __________.",
+        "options": {
+            "a": "living organisms and their environments",
+            "b": "matter, its composition, properties, and the changes it undergoes",
+            "c": "the motion of objects and the forces acting upon them",
+            "d": "rocks, minerals, and the physical history of the earth"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Chemistry is the science that deals with the materials of the universe (matter) and the changes that these materials undergo. (Source: OpenStax Chemistry 2e, Ch 1.1)",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Scope and Applications",
+        "question_text": "Which of the following represents a **macroscopic** observation?",
+        "options": {
+            "a": "A water molecule consists of two hydrogen atoms and one oxygen atom.",
+            "b": "Iron rusts when exposed to moist air, turning reddish-brown.",
+            "c": "The distance between carbon atoms in diamond is 154 pm.",
+            "d": "Electrons orbit the nucleus in specific energy levels."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Macroscopic observations are those visible to the naked eye, such as the color change of rusting iron. The other options describe the microscopic (molecular/atomic) domain.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Scope and Applications",
+        "question_text": "Chemistry is often referred to as the \"Central Science\" because __________.",
+        "options": {
+            "a": "it is the only science that uses mathematics",
+            "b": "it connects and overlaps with other sciences like biology, physics, and geology",
+            "c": "it was the first science ever discovered",
+            "d": "it deals exclusively with the center of the atom"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Chemistry is central because the principles of matter and energy are fundamental to understanding biology, physics, geology, ecology, and many other disciplines.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Branches of Chemistry",
+        "question_text": "A chemist is studying a new carbon-based compound derived from a rainforest plant that might cure cancer. Which branch of chemistry does this primarily fall under?",
+        "options": {
+            "a": "Inorganic Chemistry",
+            "b": "Physical Chemistry",
+            "c": "Organic Chemistry",
+            "d": "Analytical Chemistry"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Organic chemistry is primarily defined as the study of carbon-containing compounds, especially those relevant to living things.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Branches of Chemistry",
+        "question_text": "A forensic scientist analyzes a mysterious white powder to determine its exact chemical composition and the percentage of each element present. This is an application of __________.",
+        "options": {
+            "a": "Theoretical Chemistry",
+            "b": "Analytical Chemistry",
+            "c": "Biochemistry",
+            "d": "Physical Chemistry"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Analytical chemistry focuses on the identification (qualitative) and quantification (quantitative) of the components of matter.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Branches of Chemistry",
+        "question_text": "Which branch of chemistry focuses on the mechanism, rate, and energy transfer that occurs when matter undergoes a change?",
+        "options": {
+            "a": "Physical Chemistry",
+            "b": "Inorganic Chemistry",
+            "c": "Organic Chemistry",
+            "d": "Biochemistry"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Physical chemistry deals with the mechanism, rate, and energy transfer of chemical systems, bridging chemistry and physics.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Branches of Chemistry",
+        "question_text": "A researcher is developing a new catalyst for processing metal ores (minerals) that do not contain carbon. This field is best described as __________.",
+        "options": {
+            "a": "Biochemistry",
+            "b": "Organic Chemistry",
+            "c": "Analytical Chemistry",
+            "d": "Inorganic Chemistry"
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "Inorganic chemistry generally covers the study of compounds that do not contain carbon, such as minerals, metals, and organometallic compounds.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Scientific Method",
+        "question_text": "In the scientific method, a **hypothesis** is best described as __________.",
+        "options": {
+            "a": "a concise statement summarizing the results of many observations",
+            "b": "a tentative, testable explanation for a set of observations",
+            "c": "a widely accepted explanation supported by a vast body of evidence",
+            "d": "a rigid rule that nature never violates"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A hypothesis is a tentative explanation that acts as a starting point for further investigation and experimentation.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Scientific Method",
+        "question_text": "The statement \"Matter is neither created nor destroyed in a chemical reaction\" describes what happens in nature without explaining *why*. This is an example of a __________.",
+        "options": {
+            "a": "Scientific Theory",
+            "b": "Scientific Law",
+            "c": "Hypothesis",
+            "d": "Control Group"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "A Scientific Law summarizes a vast number of experimental observations and describes or predicts some facet of the natural world (often mathematically) but does not explain the underlying cause.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Scientific Method",
+        "question_text": "Which of the following statements distinguishes a **theory** from a **law**?",
+        "options": {
+            "a": "A law explains *why* nature behaves a certain way; a theory summarizes *what* happens.",
+            "b": "A theory is a guess; a law is a proven fact.",
+            "c": "A theory explains *why* nature behaves a certain way; a law summarizes *what* happens.",
+            "d": "Laws can be proven false, but theories cannot."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Theories are comprehensive, testable explanations of particular aspects of nature (the 'why'). Laws describe observations (the 'what'), often mathematically, without necessarily explaining the mechanism.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Scientific Method",
+        "question_text": "Which step typically follows the formulation of a hypothesis in the scientific method?",
+        "options": {
+            "a": "Formulating a law",
+            "b": "Conducting experiments to test the hypothesis",
+            "c": "Publishing results immediately",
+            "d": "Changing the data to fit the hypothesis"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Once a hypothesis is proposed, the next step is to design and perform experiments to test its validity.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "Which of the following numbers has exactly **3 significant figures**?",
+        "options": {
+            "a": "0.005",
+            "b": "505",
+            "c": "5050",
+            "d": "0.5050"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "**505** has 3 sig figs (sandwiched zero is significant).  \n- 0.005 has 1 (leading zeros never count).  \n- 5050 is ambiguous but usually treated as 3 unless a decimal is present (5050.), but 505 is definitively 3.  \n- 0.5050 has 4 (trailing zero after decimal counts).",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "What is the correct result of the following calculation, reported to the correct number of significant figures?\n$$ 12.55 + 3.2 $$",
+        "options": {
+            "a": "15.75",
+            "b": "15.7",
+            "c": "15.8",
+            "d": "16"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "When adding, limit the result to the least precise decimal place. $12.55$ (hundredths) + $3.2$ (tenths). The result must be rounded to the **tenths** place.  \n$15.75 \\rightarrow 15.8$ (round up because the next digit is 5).",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "How many significant figures are in the measurement **0.004020 meters**?",
+        "options": {
+            "a": "3",
+            "b": "4",
+            "c": "6",
+            "d": "7"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Leading zeros (0.00...) do not count. The digits '4', '0', '2' count. The trailing zero '0' counts because there is a decimal point. Total: **4** (4020).",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "The SI base unit for the **amount of substance** is the __________.",
+        "options": {
+            "a": "Gram (g)",
+            "b": "Kilogram (kg)",
+            "c": "Mole (mol)",
+            "d": "Kelvin (K)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The mole (mol) is the SI base unit defined for the amount of chemical substance. Kilogram is for mass.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "Identify the number of significant figures in the value **1.050 × 10⁴**.",
+        "options": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "In scientific notation, only the coefficient ($1.050$) is analyzed for significant figures. All digits here are significant (sandwiched zero and trailing zero after decimal). Total: **4**.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "Round the number **45.6782** to **three** significant figures.",
+        "options": {
+            "a": "45.6",
+            "b": "45.7",
+            "c": "45.68",
+            "d": "46.0"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "We keep the first three digits: 4, 5, 6. We check the next digit (7). Since $7 \\ge 5$, we round up the last kept digit. $45.6 \\rightarrow 45.7$.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "Perform the calculation and report to the correct significant figures:\n$$ \\frac{25.0}{5.0} $$",
+        "options": {
+            "a": "5",
+            "b": "5.0",
+            "c": "5.00",
+            "d": "5.000"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Division rule: The result should have the same number of sig figs as the term with the fewest sig figs.  \n$25.0$ has 3 sig figs.  \n$5.0$ has 2 sig figs.  \nResult must have **2** sig figs: **5.0**.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Units & Sig Figs",
+        "question_text": "Which of the following is an **exact number** (infinite significant figures)?",
+        "options": {
+            "a": "The mass of a paperclip (1.0 g)",
+            "b": "The distance between two cities (50 km)",
+            "c": "The number of protons in a carbon atom (6)",
+            "d": "The volume of water in a beaker (100 mL)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Counting numbers (6 protons) and defined quantities are exact and have infinite precision. Measurements (mass, distance, volume) always have uncertainty.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "Which conversion factor is suitable for converting **grams** to **kilograms**?",
+        "options": {
+            "a": "$$ \\frac{1000 \\text{ g}}{1 \\text{ kg}} $$",
+            "b": "$$ \\frac{1 \\text{ kg}}{1000 \\text{ g}} $$",
+            "c": "$$ \\frac{1 \\text{ kg}}{100 \\text{ g}} $$",
+            "d": "$$ \\frac{100 \\text{ g}}{1 \\text{ kg}} $$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "To convert grams to kilograms, grams must be in the denominator to cancel out. The relationship is $1 \\text{ kg} = 1000 \\text{ g}$. Factor: $\\frac{1 \\text{ kg}}{1000 \\text{ g}}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "Convert **250 cm** to **meters**.",
+        "options": {
+            "a": "0.25 m",
+            "b": "2.5 m",
+            "c": "25 m",
+            "d": "25000 m"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "$$ 250 \\text{ cm} \\times \\frac{1 \\text{ m}}{100 \\text{ cm}} = 2.5 \\text{ m} $$",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "The density of a substance is **2.0 g/mL**. What is the mass of **5.0 mL** of this substance?",
+        "options": {
+            "a": "2.5 g",
+            "b": "0.4 g",
+            "c": "10. g",
+            "d": "7.0 g"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Density formula: $D = \\frac{m}{V} \\Rightarrow m = D \\times V$.  \n$m = 2.0 \\text{ g/mL} \\times 5.0 \\text{ mL} = 10. \\text{ g}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "Convert a speed of **72 km/h** to **m/s**.",
+        "options": {
+            "a": "20 m/s",
+            "b": "200 m/s",
+            "c": "26 m/s",
+            "d": "12 m/s"
+        },
+        "correct_answer": "a",
+        "difficulty": "Hard",
+        "explanation": "$$ 72 \\frac{\\text{km}}{\\text{h}} \\times \\frac{1000 \\text{ m}}{1 \\text{ km}} \\times \\frac{1 \\text{ h}}{3600 \\text{ s}} = \\frac{72000}{3600} \\text{ m/s} = 20 \\text{ m/s} $$",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "How many **seconds** are in exactly **1.5 days**?",
+        "options": {
+            "a": "3,600 s",
+            "b": "86,400 s",
+            "c": "129,600 s",
+            "d": "216,000 s"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "$$ 1.5 \\text{ days} \\times \\frac{24 \\text{ h}}{1 \\text{ day}} \\times \\frac{3600 \\text{ s}}{1 \\text{ h}} = 1.5 \\times 86,400 = 129,600 \\text{ s} $$",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "A cube has a volume of **1.0 cubic meter ($m^3$)**. What is this volume in **cubic centimeters ($cm^3$)**?",
+        "options": {
+            "a": "100 $cm^3$",
+            "b": "1,000 $cm^3$",
+            "c": "10,000 $cm^3$",
+            "d": "1,000,000 $cm^3$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Hard",
+        "explanation": "Since $1 \\text{ m} = 100 \\text{ cm}$, we must cube the conversion factor:  \n$$ (1 \\text{ m})^3 = (100 \\text{ cm})^3 = 100 \\times 100 \\times 100 \\text{ cm}^3 = 1,000,000 \\text{ cm}^3 $$",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "If a car gets **30. miles per gallon**, what is this value in **miles per quart**? (1 gallon = 4 quarts)",
+        "options": {
+            "a": "7.5 miles/quart",
+            "b": "120 miles/quart",
+            "c": "34 miles/quart",
+            "d": "0.13 miles/quart"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$$ \\frac{30 \\text{ miles}}{1 \\text{ gallon}} \\times \\frac{1 \\text{ gallon}}{4 \\text{ quarts}} = \\frac{30}{4} \\text{ miles/quart} = 7.5 \\text{ miles/quart} $$",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Dimensional Analysis",
+        "question_text": "A metal object has a mass of **45.0 g** and displaces **15.0 mL** of water. What is its density?",
+        "options": {
+            "a": "0.33 g/mL",
+            "b": "3.00 g/mL",
+            "c": "30.0 g/mL",
+            "d": "675 g/mL"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$$ \\text{Density} = \\frac{\\text{Mass}}{\\text{Volume}} = \\frac{45.0 \\text{ g}}{15.0 \\text{ mL}} = 3.00 \\text{ g/mL} $$",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Lab Safety",
+        "question_text": "What is the correct procedure for mixing a concentrated acid with water?",
+        "options": {
+            "a": "Pour water into the acid quickly.",
+            "b": "Pour the acid into the water slowly.",
+            "c": "Mix them together in a closed container.",
+            "d": "Heat the acid before adding water."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Always add **Acid to Water** (AA - Add Acid). Adding water to acid can cause the water to boil instantly and splash acid due to the large amount of heat released.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Lab Safety",
+        "question_text": "Which piece of personal protective equipment (PPE) is most critical when working with liquid chemicals?",
+        "options": {
+            "a": "Open-toed sandals",
+            "b": "Contact lenses",
+            "c": "Safety goggles / Splash goggles",
+            "d": "Loose-fitting clothing"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Safety goggles are essential to protect eyes from chemical splashes. Contact lenses can trap chemicals, and sandals/loose clothing are hazards.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Lab Safety",
+        "question_text": "If you accidentally spill a chemical on your skin, what is the first thing you should generally do?",
+        "options": {
+            "a": "Neutralize it with another chemical immediately.",
+            "b": "Wipe it off with a paper towel.",
+            "c": "Flush the area with large amounts of water.",
+            "d": "Wait to see if it burns."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The immediate response to a skin spill is to flush the area with water (usually for 15 minutes) to dilute and remove the chemical.",
+        "section_id": null
+    }
+]

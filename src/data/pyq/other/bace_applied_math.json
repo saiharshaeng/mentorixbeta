@@ -1,0 +1,482 @@
+[
+  {
+    "question_number": 1,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Significant Figures",
+    "question_text": "A technician records a volume of **0.05040 L**. How many significant figures does this measurement contain?",
+    "options": {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "d": "6"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Leading zeros (0.0...) are never significant. Captive zeros (between non-zero digits, like the 0 in 504) are significant. Trailing zeros after a decimal point (the final 0) are significant to indicate precision. Therefore, the digits '5', '0', '4', '0' are significant.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Scientific Notation",
+    "question_text": "Which of the following correctly expresses the number **0.0000458** in scientific notation?",
+    "options": {
+      "a": "$4.58 \\times 10^{-4}$",
+      "b": "$4.58 \\times 10^{-5}$",
+      "c": "$45.8 \\times 10^{-6}$",
+      "d": "$4.58 \\times 10^{5}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Move the decimal point 5 places to the right to get a number between 1 and 10 ($4.58$). Since the original number was less than 1, the exponent is negative: $4.58 \\times 10^{-5}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Unit Conversions",
+    "question_text": "A protocol requires adding **450 $\\mu$L** of buffer to a tube. How many **milliliters (mL)** is this?",
+    "options": {
+      "a": "0.045 mL",
+      "b": "0.45 mL",
+      "c": "4.5 mL",
+      "d": "450,000 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "There are 1,000 microliters ($\\mu$L) in 1 milliliter (mL). To convert $\\mu$L to mL, divide by 1,000: $$ \\frac{450}{1000} = 0.45 \\text{ mL} $$",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Molarity",
+    "question_text": "Which of the following is the correct definition of **Molarity (M)**?",
+    "options": {
+      "a": "Moles of solute per kilogram of solvent",
+      "b": "Grams of solute per liter of solution",
+      "c": "Moles of solute per liter of solution",
+      "d": "Milliliters of solute per 100 mL of solution"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Molarity (M) is defined as the number of moles of solute dissolved in one liter of total solution ($mol/L$).",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Dilutions",
+    "question_text": "You are provided with a **50X** stock solution of TAE buffer. You need to prepare **1000 mL** of **1X** TAE buffer. How much stock solution and water do you need?",
+    "options": {
+      "a": "50 mL stock + 950 mL water",
+      "b": "20 mL stock + 980 mL water",
+      "c": "10 mL stock + 990 mL water",
+      "d": "100 mL stock + 900 mL water"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Use $$C_1V_1 = C_2V_2$$: $$(50X)(V_1) = (1X)(1000 \\text{ mL})$$. Solve for $V_1$: $$V_1 = \\frac{1000}{50} = 20 \\text{ mL}$$. To find the volume of water, subtract the stock volume from the total volume: $$1000 \\text{ mL} - 20 \\text{ mL} = 980 \\text{ mL}$$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Percent Solutions",
+    "question_text": "How many grams of agarose are needed to prepare **50 mL** of a **2.5% (w/v)** agarose gel?",
+    "options": {
+      "a": "0.5 g",
+      "b": "1.25 g",
+      "c": "2.5 g",
+      "d": "12.5 g"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Percent (w/v) means grams per 100 mL. A 2.5% solution means 2.5 g in 100 mL. For 50 mL (which is half of 100 mL), you need half the mass: $$2.5 \\text{ g} \\times \\frac{50 \\text{ mL}}{100 \\text{ mL}} = 1.25 \\text{ g}$$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Standard Curve Interpretation",
+    "question_text": "A standard curve for protein concentration ($x​$-axis in mg/mL) vs. absorbance ($y​$-axis) yields the equation **$y = 0.5x + 0.02$**. If an unknown sample has an absorbance of **0.52**, what is its concentration?",
+    "options": {
+      "a": "0.25 mg/mL",
+      "b": "1.0 mg/mL",
+      "c": "1.08 mg/mL",
+      "d": "2.5 mg/mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Substitute $y = 0.52$ into the equation and solve for $x​$: $$0.52 = 0.5x + 0.02$$ ​$$0.50 = 0.5x$$ ​$$x = \\frac{0.50}{0.5} = 1.0 \\text{ mg/mL}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Unit Conversions",
+    "question_text": "Which micropipette would be most accurate for measuring **150 $\\mu$L**?",
+    "options": {
+      "a": "P20 (2–20 $\\mu$L)",
+      "b": "P200 (20–200 $\\mu$L)",
+      "c": "P1000 (100–1000 $\\mu$L)",
+      "d": "P10 (0.5–10 $\\mu$L)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The P200 pipettor has a range of 20–200 $\\mu$L. 150 $\\mu$L falls squarely within this range. A P1000 could measure it, but P200 offers higher precision for this specific volume. P20 and P10 are too small.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Molarity",
+    "question_text": "The molecular weight of NaCl is **58.44 g/mol**. How much NaCl is required to make **500 mL** of a **0.5 M** solution?",
+    "options": {
+      "a": "14.61 g",
+      "b": "29.22 g",
+      "c": "58.44 g",
+      "d": "116.88 g"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "First calculate moles needed for 0.5 L (500 mL) at 0.5 M: $$\\text{Moles} = M \\times L = 0.5 \\text{ mol/L} \\times 0.5 \\text{ L} = 0.25 \\text{ moles}$$ Then convert moles to grams: $$\\text{Mass} = \\text{Moles} \\times \\text{MW} = 0.25 \\text{ mol} \\times 58.44 \\text{ g/mol} = 14.61 \\text{ g}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Significant Figures",
+    "question_text": "Perform the following calculation and report the answer with the correct number of significant figures: **$4.5 \\times 1.002$**",
+    "options": {
+      "a": "4.5",
+      "b": "4.50",
+      "c": "4.509",
+      "d": "4.51"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "In multiplication, the result must be rounded to the same number of significant figures as the factor with the fewest significant figures. $4.5$ has 2 sig figs. $1.002$ has 4 sig figs. The answer must be rounded to 2 sig figs. $$4.5 \\times 1.002 = 4.509$$, which rounds to **4.5**.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Percent Solutions",
+    "question_text": "You need to make **70% (v/v) ethanol** from a 95% stock solution. How much 95% ethanol is needed to make **200 mL** of the 70% solution?",
+    "options": {
+      "a": "133.3 mL",
+      "b": "147.4 mL",
+      "c": "150.0 mL",
+      "d": "271.4 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Use $$C_1V_1 = C_2V_2$$ where concentrations are %. $$(95\\%)(V_1) = (70\\%)(200 \\text{ mL})$$ ​$$V_1 = \\frac{70 \\times 200}{95} = \\frac{14000}{95} \\approx 147.368 \\text{ mL}$$ Rounding to one decimal place gives **147.4 mL**.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Unit Conversions",
+    "question_text": "A standard curve indicates a sample concentration of **0.5 mg/mL**. What is this concentration in **$\\mu$g/$\\mu$L**?",
+    "options": {
+      "a": "0.0005 $\\mu$g/$\\mu$L",
+      "b": "0.5 $\\mu$g/$\\mu$L",
+      "c": "500 $\\mu$g/$\\mu$L",
+      "d": "5000 $\\mu$g/$\\mu$L"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Convert both numerator and denominator: $$1 \\text{ mg} = 1000 \\text{ } \\mu\\text{g}$$ and $$1 \\text{ mL} = 1000 \\text{ } \\mu\\text{L}$$. Therefore: $$\\frac{0.5 \\text{ mg}}{1 \\text{ mL}} = \\frac{0.5 \\times 1000 \\text{ } \\mu\\text{g}}{1000 \\text{ } \\mu\\text{L}} = 0.5 \\text{ } \\mu\\text{g}/\\mu\\text{L}$$ The value remains the same.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Standard Curve Interpretation",
+    "question_text": "When creating a standard curve, what does an **$R^2$ value of 0.998** indicate?",
+    "options": {
+      "a": "The data points deviate significantly from the trend line.",
+      "b": "There is a very strong correlation between concentration and absorbance.",
+      "c": "The experiment failed and needs to be repeated.",
+      "d": "The standard curve is non-linear."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The coefficient of determination ($R^2$) ranges from 0 to 1. An $R^2$ value close to 1 (like 0.998) indicates that the regression line fits the data points very well, implying a strong correlation and reliable standard curve.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Dilutions",
+    "question_text": "What is the **dilution factor** if you add **0.1 mL** of sample to **9.9 mL** of diluent?",
+    "options": {
+      "a": "1:10",
+      "b": "1:99",
+      "c": "1:100",
+      "d": "1:1000"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Dilution Factor (DF) = Total Volume / Sample Volume. $$\\text{Total Volume} = 0.1 \\text{ mL (sample)} + 9.9 \\text{ mL (diluent)} = 10.0 \\text{ mL}$$ ​$$\\text{DF} = \\frac{10.0}{0.1} = 100$$ This corresponds to a **1:100** dilution.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Scientific Notation",
+    "question_text": "Express the sum of **$2.3 \\times 10^{-3}$** and **$1.4 \\times 10^{-4}$** in correct scientific notation.",
+    "options": {
+      "a": "$2.44 \\times 10^{-3}$",
+      "b": "$3.7 \\times 10^{-3}$",
+      "c": "$3.7 \\times 10^{-4}$",
+      "d": "$2.44 \\times 10^{-4}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "To add, exponents must be the same. Convert $1.4 \\times 10^{-4}$ to $0.14 \\times 10^{-3}$. $$2.3 \\times 10^{-3} + 0.14 \\times 10^{-3} = (2.3 + 0.14) \\times 10^{-3} = 2.44 \\times 10^{-3}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Molarity",
+    "question_text": "If you have **200 mL** of a **2 M** NaOH solution, how many **moles** of NaOH are present?",
+    "options": {
+      "a": "0.1 moles",
+      "b": "0.4 moles",
+      "c": "4.0 moles",
+      "d": "100 moles"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "First, convert volume to liters: $200 \\text{ mL} = 0.2 \\text{ L}$. Then use the formula: $$\\text{Moles} = \\text{Molarity} \\times \\text{Volume (L)}$$ ​$$\\text{Moles} = 2 \\text{ mol/L} \\times 0.2 \\text{ L} = 0.4 \\text{ moles}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Significant Figures",
+    "question_text": "Which of the following measurements is the **least precise**?",
+    "options": {
+      "a": "5.000 g",
+      "b": "5.00 g",
+      "c": "5.0 g",
+      "d": "5 g"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Precision in a single measurement is reflected by the number of decimal places or significant figures. '5 g' implies the true value is between 4.5 and 5.5. '5.000 g' implies it is between 4.9995 and 5.0005. Therefore, **5 g** is the least precise.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Dilutions",
+    "question_text": "You perform a serial dilution: Tube 1 contains pure stock. Tube 2 is a 1:10 dilution of Tube 1. Tube 3 is a 1:10 dilution of Tube 2. What is the total dilution factor of **Tube 3** relative to the stock?",
+    "options": {
+      "a": "1:10",
+      "b": "1:20",
+      "c": "1:100",
+      "d": "1:1000"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In serial dilutions, multiply the dilution factors of each step. $$\\text{DF}_{total} = \\text{DF}_1 \\times \\text{DF}_2 = 10 \\times 10 = 100$$ The ratio is **1:100**.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Unit Conversions",
+    "question_text": "A reaction requires **0.25 M** EDTA. The stock bottle says **500 mM** EDTA. Is the stock concentrated enough?",
+    "options": {
+      "a": "No, because 0.25 M is 2500 mM.",
+      "b": "Yes, because 500 mM equals 0.5 M, which is > 0.25 M.",
+      "c": "No, because mM is larger than M.",
+      "d": "Yes, because 500 is larger than 0.25."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Convert units to compare: $$500 \\text{ mM} = 500 \\times 10^{-3} \\text{ M} = 0.5 \\text{ M}$$ Since **0.5 M > 0.25 M**, the stock is concentrated enough to use for dilution.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Standard Curve Interpretation",
+    "question_text": "In a standard curve graph, the 'Blank' is used to set the absorbance to zero. What does the blank usually contain?",
+    "options": {
+      "a": "The highest concentration of the analyte",
+      "b": "Distilled water only",
+      "c": "All reagents in the buffer except the specific analyte being measured",
+      "d": "The unknown sample"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The blank corrects for background absorbance caused by the solvent, buffer, or reagents. It should contain everything present in the sample tubes *except* the substance (analyte) you are trying to measure.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Percent Solutions",
+    "question_text": "Calculate the volume of solute needed to prepare **500 mL** of a **5% (v/v)** bleach solution.",
+    "options": {
+      "a": "5 mL",
+      "b": "25 mL",
+      "c": "50 mL",
+      "d": "100 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "5% (v/v) means 5 mL of solute per 100 mL of solution. $$5 \\text{ mL solute} \\times \\frac{500 \\text{ mL solution}}{100 \\text{ mL solution}} = 25 \\text{ mL solute}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Scientific Notation",
+    "question_text": "Which of the following numbers corresponds to **$6.02 \\times 10^4$**?",
+    "options": {
+      "a": "602",
+      "b": "6,020",
+      "c": "60,200",
+      "d": "602,000"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The exponent is positive 4, so move the decimal point 4 places to the right: $6.02 \\rightarrow 60.2 \\rightarrow 602 \\rightarrow 6020 \\rightarrow 60200$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Dilutions",
+    "question_text": "You need a final concentration of **5 $\\mu$g/mL** of a drug in a cell culture plate well holding **2 mL** of media. Your stock drug concentration is **1 mg/mL**. What volume of stock do you add to the well?",
+    "options": {
+      "a": "1 $\\mu$L",
+      "b": "5 $\\mu$L",
+      "c": "10 $\\mu$L",
+      "d": "20 $\\mu$L"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "1. Convert units to match. Stock = $1 \\text{ mg/mL} = 1000 \\text{ } \\mu\\text{g/mL}$.\n2. Use $C_1V_1 = C_2V_2$: $$(1000 \\text{ } \\mu\\text{g/mL})(V_1) = (5 \\text{ } \\mu\\text{g/mL})(2 \\text{ mL})$$\n3. Solve: $$1000 V_1 = 10 \\rightarrow V_1 = 0.01 \\text{ mL}$$ 4. Convert to $\\mu$L: $$0.01 \\text{ mL} = 10 \\text{ } \\mu\\text{L}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Standard Curve Interpretation",
+    "question_text": "If a standard curve plot of Absorbance ($y​$) vs Concentration ($x​$) is linear and passes through the origin, which mathematical relationship applies?",
+    "options": {
+      "a": "Beer's Law ($A = \\epsilon lc$)",
+      "b": "Avogadro's Law",
+      "c": "Boyle's Law",
+      "d": "Henderson-Hasselbalch Equation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A linear relationship between Absorbance and Concentration (passing through zero) demonstrates Beer's Law (or the Beer-Lambert Law), where Absorbance ($A​$) is directly proportional to concentration ($c​$).",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Molarity",
+    "question_text": "What is the concentration of H$^+$ ions in a solution with a pH of 3? (Hint: $pH = -\\log[H^+]$)",
+    "options": {
+      "a": "0.3 M",
+      "b": "$1 \\times 10^{-3}$ M",
+      "c": "$3 \\times 10^{1}$ M",
+      "d": "-3 M"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Since $pH = -\\log[H^+]$, then $[H^+] = 10^{-pH}$. Therefore, $[H^+] = 10^{-3} \\text{ M}$ or $0.001 \\text{ M}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Percent Solutions",
+    "question_text": "You have a **20% (w/v)** stock solution of SDS. You want to make **400 mL** of **0.5% (w/v)** SDS. How much stock do you use?",
+    "options": {
+      "a": "10 mL",
+      "b": "20 mL",
+      "c": "40 mL",
+      "d": "80 mL"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Use $C_1V_1 = C_2V_2$ with percentages. $$(20\\%)(V_1) = (0.5\\%)(400 \\text{ mL})$$ ​$$20 V_1 = 200$$ ​$$V_1 = 10 \\text{ mL}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Unit Conversions",
+    "question_text": "A mass of **2500 ng** (nanograms) is equal to how many **mg** (milligrams)?",
+    "options": {
+      "a": "0.0025 mg",
+      "b": "0.25 mg",
+      "c": "2.5 mg",
+      "d": "25 mg"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "There are $1,000$ ng in $1 \\text{ } \\mu\\text{g}$ and $1,000 \\text{ } \\mu\\text{g}$ in $1 \\text{ mg}$. Total factor is $1,000,000$ ($10^6$). $$2500 \\text{ ng} \\div 1,000,000 = 0.0025 \\text{ mg}$$",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Dilutions",
+    "question_text": "A technician adds **50 $\\mu$L** of sample to **200 $\\mu$L** of diluent. What is the dilution factor?",
+    "options": {
+      "a": "1:4",
+      "b": "1:5",
+      "c": "1:2.5",
+      "d": "4:1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Total Volume = $50 + 200 = 250 \\text{ } \\mu\\text{L}$. Dilution Factor = $\\frac{\\text{Total Vol}}{\\text{Sample Vol}} = \\frac{250}{50} = 5$. The dilution is **1:5** (1 part sample in 5 parts total).",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Significant Figures",
+    "question_text": "Subtract **15.42** from **28.9**. Report the answer with the correct significant figures.",
+    "options": {
+      "a": "13.48",
+      "b": "13.5",
+      "c": "13.4",
+      "d": "13"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "For addition/subtraction, round to the least precise decimal place. '28.9' goes to the tenths place. '15.42' goes to the hundredths. The result must be rounded to the **tenths** place. $$28.9 - 15.42 = 13.48$$ Rounding 13.48 to the tenths place gives **13.5**.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "BACE - Applied Mathematics",
+    "topic": "Standard Curve Interpretation",
+    "question_text": "Using a standard curve equation **$y = 0.04x$** (where $y​$ is Absorbance and $x​$ is Concentration in $\\mu$g/mL), calculate the concentration of a sample that gives an Absorbance of **1.2**. (Assume the sample was diluted **1:10** before measurement).",
+    "options": {
+      "a": "3 $\\mu$g/mL",
+      "b": "30 $\\mu$g/mL",
+      "c": "300 $\\mu$g/mL",
+      "d": "480 $\\mu$g/mL"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "1. Calculate concentration of the diluted sample ($x_{dil}$): $$1.2 = 0.04(x_{dil}) \\rightarrow x_{dil} = \\frac{1.2}{0.04} = 30 \\text{ } \\mu\\text{g/mL}$$ 2. Apply the dilution factor (1:10) to find the original concentration: $$x_{final} = 30 \\times 10 = 300 \\text{ } \\mu\\text{g/mL}$$",
+    "section_id": null
+  }
+]

@@ -1,0 +1,642 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "Read the following passage and answer Questions 1–13.\n\n**The Evolution of Urban Planning**\n\nFrom the earliest grid systems of the Indus Valley Civilization to the sprawling smart cities of the 21st century, urban planning has reflected humanity’s attempt to impose order on chaos. The ruins of Mohenjo-daro and Harappa, dating back to 2600 BCE, reveal a surprising level of sophistication. These cities were laid out on a north-south grid, featuring advanced drainage systems and distinct residential and industrial zones. This suggests that early urbanisation was not organic but deliberate, driven by the need for sanitation and trade efficiency.\n\nIn contrast, the medieval cities of Europe often developed organically around a castle or cathedral, resulting in winding, narrow streets. It was not until the Renaissance that aesthetic considerations, such as symmetry and perspective, began to influence European city design. However, the true turning point was the Industrial Revolution. The rapid influx of workers into cities like London and Manchester created overcrowding and disease, forcing governments to rethink urban design purely for public health. This era gave birth to the 'Garden City' movement initiated by Ebenezer Howard in 1898, which proposed self-contained communities surrounded by \"greenbelts\"—a concept still relevant today.\n\nModern urban planning faces different challenges: sustainability and data. The concept of the 'Smart City' integrates technology to manage traffic, waste, and energy consumption. Yet, critics argue that while technological efficiency is desirable, it risks creating sterile environments that lack the cultural vibrancy of organically developed neighbourhoods. The challenge for future planners is to balance the efficiency of the grid with the soul of the community.\n\n---\n\n**Question 1:**\nAccording to the passage, what does the layout of Mohenjo-daro and Harappa suggest about early urbanisation?",
+        "options": {
+            "a": "It was a random occurrence driven by trade.",
+            "b": "It was a deliberate process focusing on sanitation and efficiency.",
+            "c": "It was primarily focused on aesthetic symmetry.",
+            "d": "It developed organically around religious structures."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The first paragraph states: 'This suggests that early urbanisation was not organic but deliberate, driven by the need for sanitation and trade efficiency.'",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhich specific feature is mentioned as being part of the Indus Valley cities?",
+        "options": {
+            "a": "Winding, narrow streets.",
+            "b": "Castles and cathedrals.",
+            "c": "A north-south grid system.",
+            "d": "Greenbelts surrounding the city."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text states: 'These cities were laid out on a north-south grid, featuring advanced drainage systems...'",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nHow did the development of medieval European cities differ from the Indus Valley cities?",
+        "options": {
+            "a": "Medieval cities were planned with strict grid systems.",
+            "b": "Medieval cities developed organically resulting in winding streets.",
+            "c": "Medieval cities prioritized industrial zones over residential ones.",
+            "d": "Medieval cities were built underground to avoid disease."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The second paragraph contrasts the two: 'In contrast, the medieval cities of Europe often developed organically... resulting in winding, narrow streets.'",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhat new element did the Renaissance bring to European city design?",
+        "options": {
+            "a": "Advanced drainage systems.",
+            "b": "Public health regulations.",
+            "c": "Aesthetic considerations like symmetry.",
+            "d": "The integration of data and technology."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text states: 'It was not until the Renaissance that aesthetic considerations, such as symmetry and perspective, began to influence European city design.'",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhat is identified as the 'true turning point' in the history of urban planning?",
+        "options": {
+            "a": "The founding of Mohenjo-daro.",
+            "b": "The Renaissance.",
+            "c": "The Industrial Revolution.",
+            "d": "The invention of the Smart City."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text explicitly states: 'However, the true turning point was the Industrial Revolution.'",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhat primary issue forced governments to rethink urban design during the Industrial Revolution?",
+        "options": {
+            "a": "The need for better trade routes.",
+            "b": "Public health concerns due to overcrowding and disease.",
+            "c": "The lack of aesthetic appeal in industrial towns.",
+            "d": "The desire to protect castles and cathedrals."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text mentions: 'The rapid influx of workers... created overcrowding and disease, forcing governments to rethink urban design purely for public health.'",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWho initiated the 'Garden City' movement?",
+        "options": {
+            "a": "Ebenezer Howard",
+            "b": "The British Government",
+            "c": "Renaissance architects",
+            "d": "Indus Valley rulers"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The text identifies the initiator: 'This era gave birth to the 'Garden City' movement initiated by Ebenezer Howard in 1898...'",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhich of the following describes a key feature of the 'Garden City' concept?",
+        "options": {
+            "a": "High-density skyscrapers.",
+            "b": "Self-contained communities surrounded by greenbelts.",
+            "c": "Strict north-south grid orientation.",
+            "d": "Total reliance on technology for waste management."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text describes it as: '...proposed self-contained communities surrounded by \"greenbelts\"...'",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhat are the main tools used by 'Smart Cities' to manage urban life?",
+        "options": {
+            "a": "Symmetry and perspective.",
+            "b": "Greenbelts and gardens.",
+            "c": "Technology and data.",
+            "d": "Castles and industrial zones."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text states: 'The concept of the 'Smart City' integrates technology to manage traffic, waste, and energy consumption.' (Data is mentioned as a challenge/tool in the opening of the paragraph).",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhat is a criticism leveled against modern 'Smart Cities'?",
+        "options": {
+            "a": "They are too crowded and prone to disease.",
+            "b": "They are inefficient in managing energy.",
+            "c": "They risk being sterile and lacking cultural vibrancy.",
+            "d": "They are too focused on aesthetic perspective."
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "The text notes: 'critics argue that... it risks creating sterile environments that lack the cultural vibrancy of organically developed neighbourhoods.'",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nAccording to the passage, what is the major challenge for future urban planners?",
+        "options": {
+            "a": "To rebuild the ancient grid systems exactly as they were.",
+            "b": "To eliminate the need for industrial zones.",
+            "c": "To balance grid efficiency with the soul of the community.",
+            "d": "To replace all organic neighbourhoods with smart technology."
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "The final sentence states: 'The challenge for future planners is to balance the efficiency of the grid with the soul of the community.'",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nThe passage suggests that the 'greenbelt' concept:",
+        "options": {
+            "a": "Is outdated and no longer used.",
+            "b": "Was invented during the Renaissance.",
+            "c": "Is still relevant in modern planning.",
+            "d": "Was originally a feature of Mohenjo-daro."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text refers to the greenbelt as: '...a concept still relevant today.'",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Urban Planning",
+        "topic": "The Evolution of Urban Planning",
+        "question_text": "(Refer to the passage provided in Question 1)\n\nWhich cities are mentioned as examples of overcrowding during the Industrial Revolution?",
+        "options": {
+            "a": "Mohenjo-daro and Harappa.",
+            "b": "London and Manchester.",
+            "c": "Paris and Rome.",
+            "d": "New York and Tokyo."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The text states: 'The rapid influx of workers into cities like London and Manchester created overcrowding...'",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "Read the following passage and answer Questions 14–26.\n\n**Bioluminescence: Nature’s Living Light**\n\nBioluminescence is the production and emission of light by a living organism. It is a form of chemiluminescence, where energy is released from a chemical reaction as light. The principal chemical involved in this process is luciferin, which reacts with oxygen in the presence of an enzyme called luciferase. While fireflies are the most famous examples on land, the phenomenon is far more common in the deep ocean, where an estimated 76% of oceanic animals are bioluminescent.\n\nThe evolutionary purposes of this \"living light\" are diverse. For many deep-sea creatures, it is a primary method of communication in the eternal darkness. The anglerfish uses a bioluminescent lure dangling from its forehead to attract unsuspecting prey. Conversely, some species of squid use ‘counter-illumination’ camouflage; they emit light from their undersides to match the brightness of the ocean surface above, effectively hiding their silhouette from predators swimming below. Others, like certain species of shrimp, vomit a cloud of glowing bioluminescent fluid to startle predators, buying time to escape—a tactic analogous to a squid’s ink cloud.\n\nScientifically, bioluminescence has revolutionized medical research. The Green Fluorescent Protein (GFP), originally isolated from the crystal jelly (*Aequorea victoria*), allows researchers to \"tag\" and track specific proteins within living cells. This has provided unprecedented insights into how cancer spreads and how nerve cells develop. Beyond medicine, bio-engineers are currently exploring the possibility of splicing bioluminescent genes into trees to create self-illuminating streetlights, potentially reducing global electricity consumption.\n\n---\n\n**Question 14:**\nAccording to the passage, which chemical is principally responsible for the production of light in bioluminescence?",
+        "options": {
+            "a": "Oxygen",
+            "b": "Luciferase",
+            "c": "Luciferin",
+            "d": "Green Fluorescent Protein"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text states: 'The principal chemical involved in this process is luciferin...'",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhat role does the enzyme 'luciferase' play in the bioluminescent process?",
+        "options": {
+            "a": "It emits the light directly.",
+            "b": "It allows luciferin to react with oxygen.",
+            "c": "It suppresses the chemical reaction.",
+            "d": "It converts light back into energy."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text explains that luciferin 'reacts with oxygen in the presence of an enzyme called luciferase.'",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhere is bioluminescence most commonly found?",
+        "options": {
+            "a": "In land-based insects like fireflies.",
+            "b": "In shallow coastal waters.",
+            "c": "In the deep ocean.",
+            "d": "In freshwater lakes."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text states: '...the phenomenon is far more common in the deep ocean, where an estimated 76% of oceanic animals are bioluminescent.'",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nHow does the anglerfish utilize bioluminescence?",
+        "options": {
+            "a": "To hide from predators.",
+            "b": "To attract prey.",
+            "c": "To communicate with other anglerfish.",
+            "d": "To illuminate the ocean floor for travel."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The text states: 'The anglerfish uses a bioluminescent lure... to attract unsuspecting prey.'",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhat is the specific purpose of 'counter-illumination' in squid?",
+        "options": {
+            "a": "To frighten attackers away.",
+            "b": "To attract mates in the darkness.",
+            "c": "To hide their silhouette from predators below.",
+            "d": "To see their prey more clearly."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text describes counter-illumination as emitting light 'to match the brightness of the ocean surface above, effectively hiding their silhouette from predators swimming below.'",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhich defense mechanism is used by certain species of shrimp?",
+        "options": {
+            "a": "Changing skin color to blend in.",
+            "b": "Releasing a cloud of glowing fluid.",
+            "c": "Releasing a cloud of dark ink.",
+            "d": "Using a glowing lure to confuse predators."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text states that shrimp 'vomit a cloud of glowing bioluminescent fluid to startle predators.'",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nThe shrimp's defense tactic is compared to which other animal behavior?",
+        "options": {
+            "a": "The firefly's flash.",
+            "b": "The anglerfish's lure.",
+            "c": "The crystal jelly's transparency.",
+            "d": "The squid's ink cloud."
+        },
+        "correct_answer": "d",
+        "difficulty": "Easy",
+        "explanation": "The text says the shrimp's tactic is 'analogous to a squid’s ink cloud.'",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhat is the source organism for the Green Fluorescent Protein (GFP)?",
+        "options": {
+            "a": "Deep-sea shrimp",
+            "b": "Crystal jelly",
+            "c": "Fireflies",
+            "d": "Anglerfish"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text notes: 'The Green Fluorescent Protein (GFP), originally isolated from the crystal jelly (*Aequorea victoria*)...'",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nHow has GFP revolutionized medical research?",
+        "options": {
+            "a": "It cures cancer by killing cells.",
+            "b": "It allows researchers to tag and track proteins in living cells.",
+            "c": "It creates artificial light for surgery.",
+            "d": "It replaces damaged nerve cells."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text states GFP 'allows researchers to \"tag\" and track specific proteins within living cells.'",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nBio-engineers are exploring the use of bioluminescent genes to:",
+        "options": {
+            "a": "Create glowing pets.",
+            "b": "Illuminate the deep ocean for exploration.",
+            "c": "Create self-illuminating trees as streetlights.",
+            "d": "Improve the taste of genetically modified food."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text mentions exploring 'splicing bioluminescent genes into trees to create self-illuminating streetlights.'",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhat is the potential environmental benefit of bioluminescent trees mentioned in the text?",
+        "options": {
+            "a": "Reducing global electricity consumption.",
+            "b": "Reducing carbon dioxide levels.",
+            "c": "Providing habitats for fireflies.",
+            "d": "Cleaning polluted air."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The text says this could potentially be 'reducing global electricity consumption.'",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nBioluminescence is described as a form of:",
+        "options": {
+            "a": "Photosynthesis.",
+            "b": "Chemiluminescence.",
+            "c": "Radioactivity.",
+            "d": "Electromagnetism."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The first paragraph states: 'It is a form of chemiluminescence...'",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Biology",
+        "topic": "Bioluminescence: Nature’s Living Light",
+        "question_text": "(Refer to the passage provided in Question 14)\n\nWhich of the following is NOT mentioned as a function of bioluminescence in the text?",
+        "options": {
+            "a": "Communication.",
+            "b": "Predation (attracting prey).",
+            "c": "Temperature regulation.",
+            "d": "Camouflage."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text mentions communication, predation (anglerfish), and camouflage (squid), but does not mention temperature regulation.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "Read the following passage and answer Questions 27–40.\n\n**The Psychology of Decision Fatigue**\n\nWe like to believe that our decisions are based on logic, rationality, and character. However, a growing body of psychological research suggests that the quality of our decisions erodes as the day wears on—a phenomenon known as 'decision fatigue'. Unlike physical fatigue, where you consciously feel tired, decision fatigue operates on a subconscious level. The more choices you make throughout the day, the harder each subsequent choice becomes for your brain.\n\nRoy Baumeister, a social psychologist, posits that willpower is like a muscle that can be depleted. In a famous study analysing over 1,100 court rulings, researchers found that prisoners were significantly more likely to be granted parole early in the morning. As the day progressed, the likelihood of a favourable ruling dropped to nearly zero, only to spike back up to 65% immediately after the judge took a lunch break. The tired brain, seeking to conserve energy, defaults to the safest, easiest option: the status quo (denying parole).\n\nThis phenomenon has significant implications for consumer behaviour and management. Supermarkets place candy at checkout lanes because, by the end of a shopping trip, shoppers’ willpower is depleted, making them more susceptible to impulse buys. Similarly, successful individuals like Steve Jobs or Barack Obama famously reduced their daily clothing options to minimise 'decision load' for trivial matters, reserving their mental energy for high-stakes choices. Recognizing decision fatigue is the first step in mitigating its effects, suggesting that critical decisions should invariably be made early in the day or immediately after a period of rest and glucose replenishment.\n\n---\n\n**Question 27:**\nAccording to the passage, what is the fundamental difference between decision fatigue and physical fatigue?",
+        "options": {
+            "a": "Physical fatigue affects the brain, while decision fatigue affects the muscles.",
+            "b": "Physical fatigue is conscious, whereas decision fatigue operates subconsciously.",
+            "c": "Decision fatigue only happens at night, while physical fatigue happens all day.",
+            "d": "There is no real difference; they feel the same."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The first paragraph states: 'Unlike physical fatigue, where you consciously feel tired, decision fatigue operates on a subconscious level.'",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhat analogy does social psychologist Roy Baumeister use to describe willpower?",
+        "options": {
+            "a": "It is like a battery that cannot be recharged.",
+            "b": "It is like a muscle that can be depleted.",
+            "c": "It is like a computer processing data.",
+            "d": "It is like a bottomless well of energy."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The text states: 'Roy Baumeister... posits that willpower is like a muscle that can be depleted.'",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nIn the study of court rulings, at what time of day were prisoners most likely to be granted parole?",
+        "options": {
+            "a": "Late in the afternoon.",
+            "b": "Just before lunch.",
+            "c": "Early in the morning.",
+            "d": "Immediately before the court closed."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text notes: 'researchers found that prisoners were significantly more likely to be granted parole early in the morning.'",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhat happened to the likelihood of a favourable ruling as the day progressed, before any breaks were taken?",
+        "options": {
+            "a": "It remained consistent at 65%.",
+            "b": "It increased slightly.",
+            "c": "It dropped to nearly zero.",
+            "d": "It fluctuated randomly."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text states: 'As the day progressed, the likelihood of a favourable ruling dropped to nearly zero...'",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhat was the immediate effect of the judge taking a lunch break?",
+        "options": {
+            "a": "The favourable ruling rate spiked back up to 65%.",
+            "b": "The judge became too tired to make decisions.",
+            "c": "The rate of parole denials increased.",
+            "d": "The court session ended for the day."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The text states the likelihood would 'spike back up to 65% immediately after the judge took a lunch break.'",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nAccording to the text, why does a tired brain default to denying parole?",
+        "options": {
+            "a": "Because the prisoners are generally guilty.",
+            "b": "Because it is the safest, easiest option (the status quo).",
+            "c": "Because the judge is hungry.",
+            "d": "Because it requires less paperwork."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The text explains: 'The tired brain, seeking to conserve energy, defaults to the safest, easiest option: the status quo (denying parole).'",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhy do supermarkets place candy at checkout lanes?",
+        "options": {
+            "a": "Because it is the coolest part of the store.",
+            "b": "To reward shoppers for finishing their shopping.",
+            "c": "Because shoppers' willpower is depleted, leading to impulse buys.",
+            "d": "Because candy is a staple food item."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text states: '...because, by the end of a shopping trip, shoppers’ willpower is depleted, making them more susceptible to impulse buys.'",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhy did individuals like Steve Jobs or Barack Obama limit their clothing options?",
+        "options": {
+            "a": "They did not care about fashion.",
+            "b": "To save money on expensive clothes.",
+            "c": "To minimise 'decision load' for trivial matters.",
+            "d": "To promote a specific brand."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The text mentions they 'reduced their daily clothing options to minimise 'decision load' for trivial matters...'",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhat biological factor is mentioned as helping to replenish mental energy?",
+        "options": {
+            "a": "Adrenaline",
+            "b": "Caffeine",
+            "c": "Glucose",
+            "d": "Oxygen"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "The final sentence suggests decisions should be made 'immediately after a period of rest and glucose replenishment.'",
+        "section_id": null
+    },
+    {
+        "question_number": 36,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nHow many court rulings were analyzed in the study mentioned?",
+        "options": {
+            "a": "Exactly 1,000",
+            "b": "Over 1,100",
+            "c": "Less than 500",
+            "d": "Over 2,000"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The text specifies: 'In a famous study analysing over 1,100 court rulings...'",
+        "section_id": null
+    },
+    {
+        "question_number": 37,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhat happens to the quality of decisions as the day wears on?",
+        "options": {
+            "a": "It improves significantly.",
+            "b": "It remains stable.",
+            "c": "It erodes.",
+            "d": "It becomes more logical."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The first paragraph states that 'the quality of our decisions erodes as the day wears on.'",
+        "section_id": null
+    },
+    {
+        "question_number": 38,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nBased on the text, what is 'decision load'?",
+        "options": {
+            "a": "The weight of the clothes one wears.",
+            "b": "The physical effort required to go shopping.",
+            "c": "The mental energy required to make choices.",
+            "d": "The burden of legal responsibility."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Contextually, 'decision load' refers to the mental burden of making choices, which Jobs/Obama minimized to reserve energy.",
+        "section_id": null
+    },
+    {
+        "question_number": 39,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nWhat is the main recommendation given in the text for mitigating decision fatigue?",
+        "options": {
+            "a": "Drink more coffee throughout the day.",
+            "b": "Make critical decisions early in the day or after a break.",
+            "c": "Avoid making any decisions at all.",
+            "d": "Exercise vigorously before making choices."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The conclusion suggests: 'critical decisions should invariably be made early in the day or immediately after a period of rest...'",
+        "section_id": null
+    },
+    {
+        "question_number": 40,
+        "subject": "Psychology",
+        "topic": "The Psychology of Decision Fatigue",
+        "question_text": "(Refer to the passage provided in Question 27)\n\nIn the context of the court rulings, what does the 'status quo' represent?",
+        "options": {
+            "a": "Granting parole.",
+            "b": "Taking a lunch break.",
+            "c": "Denying parole.",
+            "d": "Postponing the hearing."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The text explicitly defines the status quo in this context: 'the status quo (denying parole).'",
+        "section_id": null
+    }
+]

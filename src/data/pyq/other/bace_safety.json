@@ -1,0 +1,482 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Biotechnology",
+    "topic": "Hierarchy of Controls",
+    "question_text": "According to the Hierarchy of Controls, which of the following measures is considered the **least** effective method for controlling a hazard?",
+    "options": {
+      "a": "Elimination",
+      "b": "Engineering Controls",
+      "c": "Personal Protective Equipment (PPE)",
+      "d": "Administrative Controls"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Hierarchy of Controls lists PPE as the last line of defense and the least effective control measure because it relies on human behavior and does not remove the hazard itself. The order from most to least effective is: Elimination, Substitution, Engineering Controls, Administrative Controls, PPE.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Biotechnology",
+    "topic": "Hazard Communication",
+    "question_text": "On an NFPA 704 'Fire Diamond', what does the **blue** quadrant represent?",
+    "options": {
+      "a": "Flammability Hazard",
+      "b": "Instability/Reactivity Hazard",
+      "c": "Health Hazard",
+      "d": "Special Hazard"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The NFPA 704 diamond uses colors to denote hazards: Blue = Health, Red = Flammability, Yellow = Instability/Reactivity, and White = Special Hazards.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Biotechnology",
+    "topic": "Biosafety Levels",
+    "question_text": "Which Biosafety Level (BSL) is appropriate for work involving agents that pose moderate hazards to personnel and the environment, such as *Staphylococcus aureus* or *Salmonella*?",
+    "options": {
+      "a": "BSL-1",
+      "b": "BSL-2",
+      "c": "BSL-3",
+      "d": "BSL-4"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "BSL-2 is designated for agents associated with human disease that pose a moderate health hazard. BSL-1 is for non-pathogenic agents, while BSL-3 and BSL-4 are for serious or lethal agents transmitted via inhalation.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Biotechnology",
+    "topic": "SDS Reading",
+    "question_text": "A technician accidentally splashes a chemical into their eyes. Which section of the Safety Data Sheet (SDS) should be consulted immediately for treatment instructions?",
+    "options": {
+      "a": "Section 1: Identification",
+      "b": "Section 4: First-Aid Measures",
+      "c": "Section 8: Exposure Controls/Personal Protection",
+      "d": "Section 11: Toxicological Information"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Section 4 of the SDS contains First-Aid Measures, which provide initial care instructions for untrained responders attending to an individual who has been exposed to the chemical.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Biotechnology",
+    "topic": "Emergency Response",
+    "question_text": "When using a fire extinguisher, the acronym **PASS** stands for:",
+    "options": {
+      "a": "Pull, Aim, Squeeze, Sweep",
+      "b": "Push, Aim, Spray, Stop",
+      "c": "Point, Aim, Shoot, Spray",
+      "d": "Pull, Activate, Secure, Safe"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "PASS is the standard mnemonic for fire extinguisher use: \n<b>P</b>ull the pin, \n<b>A</b>im at the base of the fire,\n<b>S</b>queeze the handle, \n<b>S</b>weep from side to side.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Biotechnology",
+    "topic": "Hazard Identification",
+    "question_text": "Which GHS (Globally Harmonized System) pictogram indicates a substance is a **carcinogen**, mutagen, or reproductive toxin?",
+    "options": {
+      "a": "Skull and Crossbones",
+      "b": "Exclamation Mark",
+      "c": "Health Hazard (Silhouette of a person with a star on chest)",
+      "d": "Flame over Circle"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The 'Health Hazard' pictogram (a silhouette of a human with a white star shape on the chest) indicates chronic health hazards such as carcinogenicity, mutagenicity, respiratory sensitization, or reproductive toxicity.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Biotechnology",
+    "topic": "PPE Selection",
+    "question_text": "Which type of glove is generally recommended for handling a wide range of organic solvents, such as acetone or chloroform, when standard latex gloves would degrade rapidly?",
+    "options": {
+      "a": "Vinyl",
+      "b": "Nitrile",
+      "c": "Polyethylene",
+      "d": "Cotton"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Nitrile gloves offer superior chemical resistance to many organic solvents compared to latex or vinyl. However, for specific highly aggressive chemicals, the SDS must always be consulted to verify glove compatibility.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Biotechnology",
+    "topic": "Waste Management",
+    "question_text": "Where should a used glass slide containing a heat-fixed bacterial smear be disposed of?",
+    "options": {
+      "a": "Regular trash bin",
+      "b": "Broken glass cardboard box",
+      "c": "Sharps container (Biohazard)",
+      "d": "Chemical waste container"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Glass items contaminated with biological agents (like a bacterial smear) are considered biohazardous sharps. They must be disposed of in a rigid, puncture-resistant biohazard sharps container, not the clean broken glass box.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Biotechnology",
+    "topic": "Situational Safety",
+    "question_text": "You encounter a spill of an unknown liquid in the hallway. What is the **first** action you should take?",
+    "options": {
+      "a": "Immediately mop it up to prevent slipping.",
+      "b": "Alert others in the area, isolate the scene, and notify a supervisor.",
+      "c": "Smell the liquid to identify it.",
+      "d": "Pour bleach on it to neutralize potential pathogens."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The first priority in any unknown spill is safety and containment. You must alert others to keep them away, isolate the area, and notify a supervisor or safety officer who can properly identify the hazard before cleanup begins.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Biotechnology",
+    "topic": "Biosafety Levels",
+    "question_text": "Which of the following is a mandatory requirement for a BSL-3 laboratory but NOT for a BSL-2 laboratory?",
+    "options": {
+      "a": "A sink for handwashing.",
+      "b": "Access to an autoclave.",
+      "c": "Directional airflow (negative pressure) and filtered exhaust air.",
+      "d": "Self-closing doors with locks."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "BSL-3 laboratories require sustained directional airflow (negative pressure relative to the corridor) and HEPA-filtered exhaust air to prevent aerosol escape. BSL-2 labs generally do not require negative pressure unless specific hazards dictate it.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Biotechnology",
+    "topic": "Chemical Disposal",
+    "question_text": "A student has 50 mL of unused 10% Hydrochloric Acid (HCl). How should this be disposed of?",
+    "options": {
+      "a": "Pour it down the sink with plenty of water.",
+      "b": "Pour it into a designated acidic chemical waste container.",
+      "c": "Mix it with a base to neutralize it, then pour it into the trash.",
+      "d": "Return it to the original stock bottle."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Chemical waste should never be poured down the sink unless explicitly permitted by local regulations (which is rare for strong acids). It should be placed in a properly labeled chemical waste container. Returning chemicals to stock bottles causes contamination.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Biotechnology",
+    "topic": "Engineering Controls",
+    "question_text": "Which of the following is an example of an **Engineering Control**?",
+    "options": {
+      "a": "Wearing safety goggles.",
+      "b": "Writing a Standard Operating Procedure (SOP).",
+      "c": "Using a Fume Hood when working with volatile chemicals.",
+      "d": "Training employees on spill cleanup."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Fume Hood is a physical modification to the workplace that isolates the worker from the hazard (fumes). This classifies it as an Engineering Control. Goggles are PPE; SOPs and training are Administrative Controls.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Biotechnology",
+    "topic": "SDS Reading",
+    "question_text": "In the NFPA diamond rating system, a 'Red' rating of **4** indicates:",
+    "options": {
+      "a": "Material is non-flammable.",
+      "b": "Material will not burn under typical fire conditions.",
+      "c": "Material is a highly flammable gas or rapidly vaporizing liquid (Flash point < 73°F).",
+      "d": "Material is unstable and may detonate."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "On the NFPA flammability scale (Red), 0 is non-flammable and 4 is the highest hazard, indicating materials that vaporize completely at atmospheric pressure and normal temperature or are readily dispersed in air and burn readily (e.g., propane).",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Biotechnology",
+    "topic": "Equipment Safety",
+    "question_text": "When balancing a centrifuge, which configuration is unsafe?",
+    "options": {
+      "a": "Two tubes of equal weight placed directly opposite each other.",
+      "b": "Three tubes of equal weight placed in a triangle formation.",
+      "c": "One tube placed alone to save time.",
+      "d": "Four tubes of equal weight placed in a square formation."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A centrifuge must always be balanced. Running a single tube creates an imbalance that can damage the shaft, destroy the rotor, or cause the centrifuge to catastrophically fail/explode.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Biotechnology",
+    "topic": "Emergency Response",
+    "question_text": "If a strong acid is spilled on a lab coat and soaks through to the skin, what is the immediate recommended procedure?",
+    "options": {
+      "a": "Wipe the acid off with a paper towel and continue working.",
+      "b": "Go to the safety shower, remove the contaminated clothing, and rinse for 15 minutes.",
+      "c": "Apply a neutralizing base like baking soda directly to the skin.",
+      "d": "Wait until the end of the shift to wash the area."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Immediate decontamination is required. The victim should use the safety shower to flush the area with water for at least 15 minutes while removing the contaminated clothing. Neutralizing burns on skin is not recommended as the reaction can generate heat and worsen the injury.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Biotechnology",
+    "topic": "Biosafety Levels",
+    "question_text": "Which of the following organisms would most likely be handled in a **BSL-4** facility?",
+    "options": {
+      "a": "*E. coli* K-12 (non-pathogenic)",
+      "b": "Influenza virus",
+      "c": "*Mycobacterium tuberculosis*",
+      "d": "Ebola virus"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "BSL-4 is reserved for dangerous and exotic agents that pose a high individual risk of aerosol-transmitted laboratory infections and life-threatening disease for which there is frequently no vaccine or treatment, such as Ebola or Marburg virus.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Biotechnology",
+    "topic": "Chemical Segregation",
+    "question_text": "Which two classes of chemicals should **never** be stored together due to the risk of violent reaction?",
+    "options": {
+      "a": "Acids and Bases",
+      "b": "Acids and Salts",
+      "c": "Bases and Water",
+      "d": "Salts and Sugars"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Acids and Bases are incompatible; mixing them causes a neutralization reaction that is often exothermic (releases heat) and can cause splattering or explosion if concentrations are high. They must be stored in separate cabinets.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Biotechnology",
+    "topic": "Waste Management",
+    "question_text": "Biohazard bags are typically what color?",
+    "options": {
+      "a": "Black",
+      "b": "Clear",
+      "c": "Red",
+      "d": "Blue"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Red bags are the universal standard for biohazardous waste that requires decontamination (usually autoclaving) before disposal.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Biotechnology",
+    "topic": "OSHA Regulations",
+    "question_text": "The OSHA 'Occupational Exposure to Hazardous Chemicals in Laboratories' standard (29 CFR 1910.1450) requires every lab to develop a written:",
+    "options": {
+      "a": "Chemical Hygiene Plan (CHP)",
+      "b": "Business Continuity Plan",
+      "c": "Hazardous Waste Manifest",
+      "d": "Biosafety Manual"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "OSHA requires laboratories to have a written Chemical Hygiene Plan (CHP) which sets forth procedures, equipment, PPE, and work practices that are capable of protecting employees from the health hazards presented by hazardous chemicals.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Biotechnology",
+    "topic": "Calculations in Safety",
+    "question_text": "To prepare a 10% bleach solution for disinfecting a spill, you have 500 mL of water. How much concentrated bleach needs to be added to approximate a 1:10 dilution (1 part bleach to 9 parts water)?",
+    "options": {
+      "a": "5 mL",
+      "b": "55.5 mL",
+      "c": "50 mL",
+      "d": "100 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A 1:10 dilution means 1 part solute + 9 parts solvent = 10 parts total. \nIf 9 parts = 500 mL, then 1 part = $500 / 9 \\approx 55.5$ mL. \nAlternatively, for a total volume calculation: $V_{total} = V_{bleach} + 500$. If $V_{bleach}$ is 10% of total, $0.10 \\\\times (V_{bleach} + 500) = V_{bleach}$. This yields roughly 55.5 mL.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Biotechnology",
+    "topic": "Situational Safety",
+    "question_text": "While working in a BSL-2 lab, you accidentally prick your finger with a needle containing human blood. What is the correct order of operations?",
+    "options": {
+      "a": "Report to supervisor -> Wash wound -> Seek medical attention",
+      "b": "Wash wound with soap and water -> Report to supervisor -> Seek medical attention",
+      "c": "Squeeze the wound to bleed it out -> Bandage it -> Go home",
+      "d": "Sanitize the needle -> Finish the experiment -> Wash hands"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Immediate first aid is the priority. 1. Wash the site with soap and water immediately. 2. Notify the supervisor. 3. Seek immediate medical evaluation for potential post-exposure prophylaxis.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Biotechnology",
+    "topic": "PPE Selection",
+    "question_text": "Which of the following footwear is acceptable in a laboratory setting?",
+    "options": {
+      "a": "Sandals with socks",
+      "b": "Open-toed high heels",
+      "c": "Closed-toe, closed-heel shoes covering the entire foot",
+      "d": "Mesh running shoes"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Lab shoes must fully cover the foot to protect against spills and falling sharps. Sandals, open-toed shoes, and mesh materials (which allow liquids to soak through) are prohibited.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Biotechnology",
+    "topic": "Disinfection",
+    "question_text": "What is the minimum recommended contact time for a 10% bleach solution to effectively deactivate most vegetative bacteria and viruses on a surface?",
+    "options": {
+      "a": "30 seconds",
+      "b": "10-20 minutes",
+      "c": "1 hour",
+      "d": "24 hours"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "While bleach acts quickly, protocols (like CDC BMBL) generally recommend a contact time of at least 10 to 20 minutes (depending on the specific pathogen) to ensure complete disinfection before wiping the surface dry.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Biotechnology",
+    "topic": "Hazard Identification",
+    "question_text": "The GHS symbol consisting of a flame over a circle (oxidizer) warns that the substance:",
+    "options": {
+      "a": "Is flammable and burns easily.",
+      "b": "Releases oxygen and can intensify fires.",
+      "c": "Is explosive.",
+      "d": "Is corrosive to metals."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The 'Flame over Circle' pictogram specifically identifies Oxidizers. Oxidizers do not burn themselves but release oxygen, which can cause other materials to burn more intensely or spontaneously.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Biotechnology",
+    "topic": "SDS Reading",
+    "question_text": "A 'Flash Point' listed in Section 9 (Physical and Chemical Properties) of an SDS refers to:",
+    "options": {
+      "a": "The temperature at which a liquid freezes.",
+      "b": "The lowest temperature at which a liquid gives off enough vapor to ignite in air.",
+      "c": "The temperature at which a solid melts.",
+      "d": "The temperature at which a chemical spontaneously explodes."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Flash Point is the lowest temperature at which a liquid generates sufficient vapor to form an ignitable mixture with air near the surface of the liquid.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Biotechnology",
+    "topic": "Biosafety Cabinets",
+    "question_text": "Which class of Biological Safety Cabinet (BSC) protects the product, the personnel, and the environment?",
+    "options": {
+      "a": "Class I BSC",
+      "b": "Class II BSC",
+      "c": "Laminar Flow Hood (Horizontal)",
+      "d": "Chemical Fume Hood"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Class II BSCs use HEPA filtered airflow to protect the user (inflow), the product (downflow), and the environment (exhaust). Class I protects only the user/environment. Laminar flow hoods protect only the product. Fume hoods protect only the user from chemicals, not biologicals.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Biotechnology",
+    "topic": "Sharps Safety",
+    "question_text": "Regarding needle safety, which practice is strictly prohibited in the laboratory?",
+    "options": {
+      "a": "Disposing of needles in a sharps container.",
+      "b": "Recapping needles using two hands.",
+      "c": "Using a one-handed scoop technique if recapping is absolutely necessary.",
+      "d": "Using needle-locking syringes."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Recapping needles is a primary cause of needlestick injuries. Two-handed recapping is strictly prohibited. If recapping is unavoidable, a mechanical device or the one-handed scoop method must be used.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Biotechnology",
+    "topic": "Waste Management",
+    "question_text": "Ethidium Bromide (EtBr), a common DNA stain, is a known mutagen. How should agarose gels containing EtBr be disposed of?",
+    "options": {
+      "a": "In the regular trash.",
+      "b": "Melted down and poured in the sink.",
+      "c": "In a designated hazardous chemical solid waste container.",
+      "d": "In the biohazard autoclave bag."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "EtBr is a chemical hazard (mutagen), not a biohazard. It must go into a dedicated chemical waste container for incineration or hazardous disposal, not the regular trash or biohazard bags (unless the gel is also infectious, which is rare).",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Biotechnology",
+    "topic": "Situational Safety",
+    "question_text": "During a power outage, the chemical fume hood alarm sounds and flow stops. You are working with a volatile toxic chemical. What should you do?",
+    "options": {
+      "a": "Continue working quickly to finish.",
+      "b": "Cap the chemical container, close the sash, and alert others.",
+      "c": "Leave the sash open to ventilate the room.",
+      "d": "Turn on a fan to blow fumes away."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If ventilation fails, containment is the priority. Cap the container to stop vapor release, close the hood sash to isolate the fumes, and warn others to leave the area.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Biotechnology",
+    "topic": "Identification of Hazards",
+    "question_text": "Which color on the NFPA 704 diamond indicates 'Instability' or 'Reactivity'?",
+    "options": {
+      "a": "Red",
+      "b": "Blue",
+      "c": "Yellow",
+      "d": "White"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Yellow indicates Instability/Reactivity hazards (susceptibility to release energy). Blue is Health, Red is Flammability, White is Special.",
+    "section_id": null
+  }
+]

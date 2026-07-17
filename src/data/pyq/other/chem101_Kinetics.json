@@ -1,0 +1,402 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Rate of Chemical Reactions",
+        "question_text": "According to the definition provided in OpenStax Chemistry 2e, how is the rate of a chemical reaction generally expressed in terms of reactant or product amounts?",
+        "options": {
+            "a": "As the total mass of product produced divided by the molecular weight.",
+            "b": "As the change in the amount of a reactant or product per unit time.",
+            "c": "As the time required for the reaction to reach equilibrium.",
+            "d": "As the product of the concentrations of all reactants."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The rate of reaction is defined as the change in the amount of a reactant or product per unit time. For reactants and products in solution, their molar concentrations are used. Source: OpenStax 12.1 Chemical Reaction Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Rate of Chemical Reactions",
+        "question_text": "Consider the following balanced reaction involving ammonia:\n$$ 2NH_3(g) \\rightarrow N_2(g) + 3H_2(g) $$ \nIf the rate of decomposition of ammonia ($NH_3$) at a certain instant is $2.0 \\times 10^{-6} \\text{ M/s}$, what is the rate of production of hydrogen gas ($H_2$) at that same instant?",
+        "options": {
+            "a": "$1.0 \\times 10^{-6} \\text{ M/s}$",
+            "b": "$2.0 \\times 10^{-6} \\text{ M/s}$",
+            "c": "$3.0 \\times 10^{-6} \\text{ M/s}$",
+            "d": "$6.0 \\times 10^{-6} \\text{ M/s}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "According to the stoichiometry, 3 moles of $H_2$ are produced for every 2 moles of $NH_3$ consumed. The rate relationship is:\n$$ -\\frac{1}{2}\\frac{\\Delta[NH_3]}{\\Delta t} = \\frac{1}{3}\\frac{\\Delta[H_2]}{\\Delta t} $$\nGiven the rate of decomposition (positive value) is $2.0 \\times 10^{-6}$, the rate of $H_2$ production is $\\frac{3}{2} \\times (2.0 \\times 10^{-6}) = 3.0 \\times 10^{-6} \\text{ M/s}$. Source: OpenStax 12.1 Relative Rates of Reaction.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Rate of Chemical Reactions",
+        "question_text": "In a graph plotting the concentration of a reactant versus time, what mathematical concept represents the **instantaneous rate** of the reaction at a specific time $t​$?",
+        "options": {
+            "a": "The slope of the line connecting the initial and final concentrations.",
+            "b": "The negative of the slope of the line tangent to the curve at time $t​$.",
+            "c": "The area under the curve from time $0​$ to $t​$.",
+            "d": "The y-intercept of the curve."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The instantaneous rate at any time $t​$ is given by the negative of the slope of a straight line that is tangent to the concentration-time curve at that time. Source: OpenStax 12.1 Chemical Reaction Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Rate of Chemical Reactions",
+        "question_text": "When writing a rate expression for the consumption of a reactant, why is a negative sign conventionally added to the change in concentration term (e.g., $-\\frac{\\Delta[A]}{\\Delta t}$)?",
+        "options": {
+            "a": "To indicate that the reaction is exothermic.",
+            "b": "To make the resulting reaction rate a positive quantity, since reactant concentration decreases.",
+            "c": "To represent the activation energy barrier.",
+            "d": "To account for the reverse reaction occurring simultaneously."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Since the reactant concentration decreases as the reaction proceeds, $\\Delta[A]$ is a negative quantity. Reaction rates are, by convention, positive quantities, so the negative change is multiplied by $-1$. Source: OpenStax 12.1 Chemical Reaction Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Factors Affecting Reaction Rate",
+        "question_text": "Which of the following is **NOT** listed in OpenStax Section 12.2 as one of the five primary factors affecting the rates of chemical reactions?",
+        "options": {
+            "a": "The chemical nature of the reacting substances.",
+            "b": "The state of subdivision (surface area) of the reactants.",
+            "c": "The molar mass of the product.",
+            "d": "The temperature of the reactants."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The five factors listed are: chemical nature, state of subdivision (physical state), temperature, concentration, and the presence of a catalyst. Molar mass of the product is not a primary factor affecting rate. Source: OpenStax 12.2 Factors Affecting Reaction Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Factors Affecting Reaction Rate",
+        "question_text": "Why does iron powder react more rapidly with dilute hydrochloric acid than a solid iron nail of the same mass?",
+        "options": {
+            "a": "Iron powder has a different chemical composition than the nail.",
+            "b": "The powder has a greater total surface area exposed to the acid.",
+            "c": "The iron nail contains a protective oxide coating that the powder lacks.",
+            "d": "The activation energy for the powder is lower than for the nail."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Compared with large solid particles, the rate for smaller particles (powder) is greater because the surface area in contact with the other reactant phase is significantly greater. Source: OpenStax 12.2 The Physical States of the Reactants.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Factors Affecting Reaction Rate",
+        "question_text": "According to the general rule of thumb mentioned in the text, how does the reaction rate for many chemical processes change when the temperature is raised by $10^\\circ\\text{C}$?",
+        "options": {
+            "a": "It increases by approximately 10%.",
+            "b": "It is approximately halved.",
+            "c": "It is approximately doubled.",
+            "d": "It increases by a factor of 10."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "For many chemical processes, reaction rates are approximately doubled when the temperature is raised by $10^\\circ\\text{C}$. Source: OpenStax 12.2 Temperature of the Reactants.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Factors Affecting Reaction Rate",
+        "question_text": "Which of the following best explains why increasing the concentration of reactants usually increases the reaction rate?",
+        "options": {
+            "a": "It lowers the activation energy of the reaction.",
+            "b": "It increases the frequency of collisions between molecules.",
+            "c": "It changes the order of the reaction.",
+            "d": "It makes the reaction more exothermic."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Collision theory explains that with an increase in concentration, the chances for collisions between molecules are increased because there are more molecules per unit volume. More collisions mean a faster reaction rate. Source: OpenStax 12.5 Collision Theory (referencing 12.2 concepts).",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "Consider the following initial rate data for the reaction $A + B \\rightarrow C$:\n\n| Trial | $[A]_0$ (M) | $[B]_0$ (M) | Initial Rate (M/s) |\n| :--- | :--- | :--- | :--- |\n| 1 | 0.10 | 0.10 | $2.0 \\times 10^{-3}$ |\n| 2 | 0.20 | 0.10 | $4.0 \\times 10^{-3}$ |\n| 3 | 0.10 | 0.20 | $2.0 \\times 10^{-3}$ |\n\nWhat is the reaction order with respect to reactant **A**?",
+        "options": {
+            "a": "Zero order",
+            "b": "First order",
+            "c": "Second order",
+            "d": "Third order"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Compare Trial 1 and Trial 2. $[B]$ is constant (0.10 M). $[A]$ doubles ($0.10 \\rightarrow 0.20$). The rate doubles ($2.0 \\rightarrow 4.0$). Since rate $\\propto [A]^1$, the reaction is First order with respect to A. Source: OpenStax 12.3 Method of Initial Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "Refer to the data table in the previous question (Trials 1, 2, and 3).\n\n| Trial | $[A]_0$ (M) | $[B]_0$ (M) | Initial Rate (M/s) |\n| :--- | :--- | :--- | :--- |\n| 1 | 0.10 | 0.10 | $2.0 \\times 10^{-3}$ |\n| 3 | 0.10 | 0.20 | $2.0 \\times 10^{-3}$ |\n\nWhat is the reaction order with respect to reactant **B**?",
+        "options": {
+            "a": "Zero order",
+            "b": "First order",
+            "c": "Second order",
+            "d": "Half order"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Compare Trial 1 and Trial 3. $[A]$ is constant (0.10 M). $[B]$ doubles ($0.10 \\rightarrow 0.20$). The rate remains unchanged ($2.0 \\times 10^{-3}$). Since the rate is independent of $[B]$, the reaction is Zero order with respect to B. Source: OpenStax 12.3 Method of Initial Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "Using the data below for the reaction $2NO + O_2 \\rightarrow 2NO_2$, determine the **overall** reaction order.\n\n| Trial | $[NO]_0$ (M) | $[O_2]_0$ (M) | Initial Rate (M/s) |\n| :--- | :--- | :--- | :--- |\n| 1 | 0.010 | 0.010 | $2.5 \\times 10^{-5}$ |\n| 2 | 0.020 | 0.010 | $1.0 \\times 10^{-4}$ |\n| 3 | 0.010 | 0.020 | $5.0 \\times 10^{-5}$ |",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Step 1: Compare Trials 1 & 2 ($[O_2]$ const). $[NO]$ doubles, Rate quadruples ($2.5 \\rightarrow 10.0$). Order wrt NO = 2.\nStep 2: Compare Trials 1 & 3 ($[NO]$ const). $[O_2]$ doubles, Rate doubles ($2.5 \\rightarrow 5.0$). Order wrt $O_2$ = 1.\nOverall order = $2 + 1 = 3$. Source: OpenStax 12.3 Method of Initial Rates.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "For the reaction $X + Y \\rightarrow Z$, the rate law is determined to be $\\text{Rate} = k[X][Y]^2$. Using the data from Trial 1 below, calculate the value of the rate constant $k​$.\n\n| Trial | $[X]_0$ (M) | $[Y]_0$ (M) | Rate (M/s) |\n| :--- | :--- | :--- | :--- |\n| 1 | 0.20 | 0.10 | $4.0 \\times 10^{-4}$ |",
+        "options": {
+            "a": "$0.02 \\text{ M}^{-2}\\text{s}^{-1}$",
+            "b": "$0.20 \\text{ M}^{-2}\\text{s}^{-1}$",
+            "c": "$2.0 \\text{ M}^{-2}\\text{s}^{-1}$",
+            "d": "$200 \\text{ M}^{-2}\\text{s}^{-1}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Rearrange the rate law: $k = \\frac{\\text{Rate}}{[X][Y]^2}$.\nSubstitute values: $k = \\frac{4.0 \\times 10^{-4}}{(0.20)(0.10)^2} = \\frac{4.0 \\times 10^{-4}}{(0.20)(0.01)} = \\frac{4.0 \\times 10^{-4}}{0.002} = 0.20$. Units for 3rd order are $\\text{M}^{-2}\\text{s}^{-1}$. Source: OpenStax 12.3 Rate Laws.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "Determine the correct rate law for the reaction $A + B \\rightarrow Products$ based on the following data:\n\n| Exp | $[A]$ (M) | $[B]$ (M) | Rate (M/min) |\n| :--- | :--- | :--- | :--- |\n| 1 | 0.10 | 0.10 | 0.005 |\n| 2 | 0.30 | 0.10 | 0.045 |\n| 3 | 0.10 | 0.20 | 0.005 |",
+        "options": {
+            "a": "Rate = $k[A]$",
+            "b": "Rate = $k[A]^2$",
+            "c": "Rate = $k[A][B]$",
+            "d": "Rate = $k[A]^2[B]$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Compare 1 & 2: $[B]$ const, $[A]$ triples ($0.1 \\rightarrow 0.3$), Rate x9 ($0.005 \\rightarrow 0.045$). $3^m = 9$, so $m=2$ (Order wrt A = 2).\nCompare 1 & 3: $[A]$ const, $[B]$ doubles, Rate unchanged. Order wrt B = 0.\nRate law: Rate = $k[A]^2$. Source: OpenStax 12.3 Rate Laws.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "Consider the data below. How does the rate change when the concentration of $B​$ is doubled (holding $A​$ constant)?\n\n| Run | $[A]$ | $[B]$ | Rate |\n| :--- | :--- | :--- | :--- |\n| 1 | 1.0 | 1.0 | $R​$ |\n| 2 | 1.0 | 2.0 | $4R$ |",
+        "options": {
+            "a": "The rate remains the same.",
+            "b": "The rate doubles.",
+            "c": "The rate quadruples.",
+            "d": "The rate increases by a factor of 8."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Directly from the table: When $[A]$ is constant and $[B]$ goes from 1.0 to 2.0 (doubles), the rate goes from $R​$ to $4R$. This indicates the reaction is second order with respect to B ($2^2 = 4$). The change is a quadrupling. Source: OpenStax 12.3 Rate Laws.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "For a reaction $2A + B \\rightarrow C$, the rate law is found to be $\\text{Rate} = k[A]$. Which statement is true about the effect of changing $[B]$?",
+        "options": {
+            "a": "Doubling $[B]$ doubles the rate.",
+            "b": "Doubling $[B]$ quadruples the rate.",
+            "c": "Changing $[B]$ has no effect on the rate.",
+            "d": "The reaction cannot proceed if $[B]$ is low."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "The rate law $\\text{Rate} = k[A]$ implies that the reaction is zero order with respect to B. Therefore, the concentration of B does not appear in the rate equation, and changing it has no effect on the rate (provided B is present). Source: OpenStax 12.3 Rate Laws.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "If a reaction is determined to be **second order overall**, what are the units of the rate constant $k​$? (Assume time in seconds and concentration in mol/L).",
+        "options": {
+            "a": "$\\text{s}^{-1}$",
+            "b": "$\\text{mol L}^{-1} \\text{s}^{-1}$",
+            "c": "$\\text{L mol}^{-1} \\text{s}^{-1}$",
+            "d": "$\\text{L}^2 \\text{mol}^{-2} \\text{s}^{-1}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Rate = $k[Concentration]^2$. Units: $(\\text{M/s}) = k \\cdot (\\text{M})^2$. Thus $k = (\\text{M/s}) / \\text{M}^2 = \\text{M}^{-1}\\text{s}^{-1}$. Since $\\text{M} = \\text{mol/L}$, $M^{-1} = \\text{L/mol}$. So units are $\\text{L mol}^{-1} \\text{s}^{-1}$. Source: OpenStax 12.3 Table 12.1.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "Given the following data for $A + B + C \\rightarrow P$, determine the order with respect to **C**.\n\n| Exp | $[A]$ | $[B]$ | $[C]$ | Rate |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | 0.1 | 0.1 | 0.1 | $2.0 \\times 10^{-4}$ |\n| 2 | 0.2 | 0.1 | 0.1 | $4.0 \\times 10^{-4}$ |\n| 3 | 0.2 | 0.2 | 0.1 | $8.0 \\times 10^{-4}$ |\n| 4 | 0.2 | 0.1 | 0.2 | $1.6 \\times 10^{-3}$ |",
+        "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Compare Exp 2 and Exp 4. $[A]$ is constant (0.2), $[B]$ is constant (0.1). $[C]$ doubles ($0.1 \\rightarrow 0.2$). Rate changes from $4.0 \\times 10^{-4}$ to $1.6 \\times 10^{-3}$ (which is $16 \\times 10^{-4}$). Ratio: $16/4 = 4$. Since doubling conc quadruples rate ($2^n=4$), order is 2. Source: OpenStax 12.3 Rate Laws.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Rate Laws",
+        "question_text": "A reaction has the rate law $\\text{Rate} = k[A]^2$. If $[A]$ is $0.10 \\text{ M}$ and the rate is $5.0 \\times 10^{-3} \\text{ M/s}$, what will be the rate if $[A]$ is increased to $0.30 \\text{ M}$?",
+        "options": {
+            "a": "$1.5 \\times 10^{-2} \\text{ M/s}$",
+            "b": "$4.5 \\times 10^{-2} \\text{ M/s}$",
+            "c": "$1.5 \\times 10^{-3} \\text{ M/s}$",
+            "d": "$5.0 \\times 10^{-3} \\text{ M/s}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Tripling the concentration ($0.10 \\rightarrow 0.30$) for a second-order reaction increases the rate by a factor of $3^2 = 9$. New Rate = $9 \\times (5.0 \\times 10^{-3}) = 45 \\times 10^{-3} = 4.5 \\times 10^{-2} \\text{ M/s}$. Source: OpenStax 12.3 Rate Laws.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Activation Energy",
+        "question_text": "What term defines the minimum energy necessary to form a product during a collision between reactants?",
+        "options": {
+            "a": "Enthalpy of reaction ($\\Delta H$)",
+            "b": "Gibbs free energy ($\\Delta G$)",
+            "c": "Activation energy ($E_a$)",
+            "d": "Kinetic energy ($KE$)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The minimum energy necessary to form a product during a collision between reactants is called the activation energy ($E_a$). Source: OpenStax 12.5 Collision Theory.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Activation Energy",
+        "question_text": "The Arrhenius equation is given by $k = Ae^{-E_a/RT}$. What does the symbol **A** represent?",
+        "options": {
+            "a": "The activation energy in Joules.",
+            "b": "The frequency factor, related to collision frequency and orientation.",
+            "c": "The ideal gas constant.",
+            "d": "The reaction order."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$A​$ is a constant called the frequency factor, which is related to the frequency of collisions and the orientation of the reacting molecules. Source: OpenStax 12.5 Collision Theory.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Activation Energy",
+        "question_text": "According to collision theory, why do not all collisions between reactant molecules result in a chemical reaction?",
+        "options": {
+            "a": "The molecules may not have the correct chemical composition.",
+            "b": "Collisions must occur with proper orientation and adequate energy.",
+            "c": "The reaction is physically impossible in the gas phase.",
+            "d": "Quantum tunneling prevents the reaction."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "For a reaction to occur, the reacting species must collide in an orientation that allows contact between specific atoms AND with adequate energy to overcome the activation barrier. Source: OpenStax 12.5 Collision Theory.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Activation Energy",
+        "question_text": "When the natural logarithm of the rate constant ($\\ln k$) is plotted against the inverse of temperature ($1/T$), a straight line is obtained. What is the slope of this line?",
+        "options": {
+            "a": "$-E_a / R$",
+            "b": "$E_a$",
+            "c": "$\\ln A$",
+            "d": "$-R / E_a$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The linear form of the Arrhenius equation is $\\ln k = (-E_a/R)(1/T) + \\ln A$. A plot of $\\ln k$ versus $1/T$ is linear with a slope equal to $-E_a/R$. Source: OpenStax 12.5 Collision Theory.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Catalysis",
+        "question_text": "How does a catalyst increase the rate of a chemical reaction?",
+        "options": {
+            "a": "By increasing the temperature of the reactants.",
+            "b": "By increasing the concentration of reactants.",
+            "c": "By providing an alternative reaction mechanism with a lower activation energy.",
+            "d": "By making the reaction more exothermic (more negative $\\Delta H$)."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "A catalyst functions to accelerate reactions by providing an alternative reaction mechanism with a lower activation energy ($E_a$). It does not change $\\Delta H$. Source: OpenStax 12.7 Catalysis.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Catalysis",
+        "question_text": "Which of the following best describes a **heterogeneous** catalyst?",
+        "options": {
+            "a": "A catalyst that is in the same phase as the reactants.",
+            "b": "A catalyst that is present in a different phase (usually a solid) than the reactants.",
+            "c": "A biological catalyst made of protein.",
+            "d": "A catalyst that is consumed and then regenerated in the same phase."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "A heterogeneous catalyst is a catalyst that is present in a different phase (usually a solid) than the reactants (often gas or liquid). Source: OpenStax 12.7 Catalysis.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Catalysis",
+        "question_text": "In the context of enzyme catalysis, what does the 'lock-and-key' model suggest?",
+        "options": {
+            "a": "The enzyme is flexible and changes shape to fit the substrate.",
+            "b": "The molecular shape of the active site and substrate are complementary, fitting together perfectly.",
+            "c": "The enzyme permanently bonds to the substrate.",
+            "d": "Any substrate can fit into the enzyme's active site if it has enough energy."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The lock-and-key hypothesis suggests that the molecular shapes of the active site and substrate are complementary, fitting together like a key in a lock. (Contrast with Induced Fit). Source: OpenStax 12.7 Catalysis.",
+        "section_id": null
+    }
+]

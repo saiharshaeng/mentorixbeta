@@ -1,0 +1,1282 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "Given $A = \\{1, 2, 3, 4\\}$ and $B = \\{3, 4, 5, 6\\}$, find the intersection of the two sets, $A \\cap B$.",
+    "options": {
+      "a": "$\\{1, 2\\}$",
+      "b": "$\\{3, 4\\}$",
+      "c": "$\\{5, 6\\}$",
+      "d": "$\\{1, 2, 3, 4, 5, 6\\}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The intersection of sets $A$ and $B$, denoted by $A \\cap B$, is the set containing all elements that are common to both $A$ and $B$. Since 3 and 4 appear in both sets, $A \\cap B = \\{3, 4\\}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "If a set $P$ has exactly 5 elements, how many proper subsets does $P$ have?",
+    "options": {
+      "a": "32",
+      "b": "31",
+      "c": "10",
+      "d": "25"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The total number of subsets for a set with $n$ elements is given by $2^n$. The proper subsets include all subsets except the set itself. Therefore, the formula for the number of proper subsets is $2^n - 1$. For $n = 5$, this is $2^5 - 1 = 32 - 1 = 31$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "In a class of 40 students, 25 offer Physics and 18 offer Chemistry. If 8 students offer neither Physics nor Chemistry, how many students offer both subjects?",
+    "options": {
+      "a": "7",
+      "b": "11",
+      "c": "14",
+      "d": "18"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "<svg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg' font-family='Arial,sans-serif'><rect x='5' y='5' width='390' height='290' rx='10' fill='#f0f4ff' stroke='#333' stroke-width='2'/><text x='15' y='28' font-size='14' font-weight='bold' fill='#333'>U = 40</text><circle cx='155' cy='155' r='90' fill='#93c5fd' fill-opacity='0.5' stroke='#2563eb' stroke-width='2'/><circle cx='245' cy='155' r='90' fill='#86efac' fill-opacity='0.5' stroke='#16a34a' stroke-width='2'/><text x='100' y='145' text-anchor='middle' font-size='13' font-weight='bold' fill='#1e3a8a'>Physics</text><text x='100' y='162' text-anchor='middle' font-size='13' font-weight='bold' fill='#1e3a8a'>Only</text><text x='100' y='179' text-anchor='middle' font-size='15' font-weight='bold' fill='#1e3a8a'>14</text><text x='200' y='149' text-anchor='middle' font-size='13' font-weight='bold' fill='#374151'>Both</text><text x='200' y='166' text-anchor='middle' font-size='15' font-weight='bold' fill='#374151'>11</text><text x='300' y='145' text-anchor='middle' font-size='13' font-weight='bold' fill='#14532d'>Chemistry</text><text x='300' y='162' text-anchor='middle' font-size='13' font-weight='bold' fill='#14532d'>Only</text><text x='300' y='179' text-anchor='middle' font-size='15' font-weight='bold' fill='#14532d'>7</text><text x='355' y='275' text-anchor='middle' font-size='13' font-weight='bold' fill='#6b7280'>Neither: 8</text></svg>\nLet $U$ be the universal set, $P$ be Physics, and $C$ be Chemistry. \n$n(U) = 40$, $n(P) = 25$, $n(C) = 18$, and $n(P \\cup C)' = 8$.\nThe number of students offering at least one subject is $n(P \\cup C) = n(U) - n(P \\cup C)' = 40 - 8 = 32$.\nUsing the set formula: $n(P \\cup C) = n(P) + n(C) - n(P \\cap C)$\n$32 = 25 + 18 - n(P \\cap C) \\implies 32 = 43 - n(P \\cap C) \\implies n(P \\cap C) = 11$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "Describe the set $A = \\{x : x \\in \\mathbb{Z}, -2 \\le x < 3\\}$ in roster form.",
+    "options": {
+      "a": "$\\{-2, -1, 0, 1, 2, 3\\}$",
+      "b": "$\\{-1, 0, 1, 2\\}$",
+      "c": "$\\{-2, -1, 0, 1, 2\\}$",
+      "d": "$\\{-1, 0, 1, 2, 3\\}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The set builder notation indicates that $x$ is an integer ($\\mathbb{Z}$). The inequality $-2 \\le x < 3$ means $x$ can take the value of $-2$ but must be strictly less than $3$. The integers satisfying this condition are $-2, -1, 0, 1$, and $2$. Therefore, $A = \\{-2, -1, 0, 1, 2\\}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "By the distributive laws of set theory, which of the following is logically equivalent to $A \\cup (B \\cap C)$?",
+    "options": {
+      "a": "$(A \\cup B) \\cap C$",
+      "b": "$(A \\cap B) \\cup (A \\cap C)$",
+      "c": "$(A \\cup B) \\cap (A \\cup C)$",
+      "d": "$A \\cap (B \\cup C)$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "According to the distributive law of sets over intersection, taking the union of set $A$ with the intersection of sets $B$ and $C$ is equivalent to distributing the union operation across the intersection: $A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "Let the universal set $\\mu = \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$. If $X = \\{2, 4, 6, 8\\}$, find the complement of $X$, denoted by $X'$.",
+    "options": {
+      "a": "$\\{1, 3, 5, 7, 9\\}$",
+      "b": "$\\{1, 2, 3, 5, 7, 9\\}$",
+      "c": "$\\{2, 4, 6, 8\\}$",
+      "d": "$\\{1, 9\\}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The complement of a set $X$ contains all elements in the universal set $\\mu$ that are not present in $X$. Excluding the even numbers $\\{2, 4, 6, 8\\}$ from $\\mu$ leaves the odd numbers $\\{1, 3, 5, 7, 9\\}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "In a school, 50 students play at least one of Football (F) and Basketball (B). If 30 play Football and 25 play Basketball, find the number of students who play exactly one game: Basketball.",
+    "options": {
+      "a": "5",
+      "b": "20",
+      "c": "25",
+      "d": "30"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Since all 50 students play at least one sport, $n(F \\cup B) = 50$.\nUsing $n(F \\cup B) = n(F) + n(B) - n(F \\cap B)$:\n$50 = 30 + 25 - n(F \\cap B) \\implies n(F \\cap B) = 55 - 50 = 5$.\nThe number of students who play only Basketball is $n(B) - n(F \\cap B) = 25 - 5 = 20$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "The symmetric difference of two sets is defined as $A \\Delta B = (A \\cup B) - (A \\cap B)$. Evaluate $X \\Delta Y$ given that $X = \\{a, b, c\\}$ and $Y = \\{b, c, d\\}$.",
+    "options": {
+      "a": "$\\{b, c\\}$",
+      "b": "$\\{a, b, c, d\\}$",
+      "c": "$\\{a, d\\}$",
+      "d": "$\\{a, c\\}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "First, find the union: $X \\cup Y = \\{a, b, c, d\\}$.\nNext, find the intersection: $X \\cap Y = \\{b, c\\}$.\nThe symmetric difference represents elements in either $X$ or $Y$, but not both: $\\{a, b, c, d\\} - \\{b, c\\} = \\{a, d\\}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Simplify the radical expression $\\sqrt{72}$.",
+    "options": {
+      "a": "$6\\sqrt{2}$",
+      "b": "$2\\sqrt{6}$",
+      "c": "$36\\sqrt{2}$",
+      "d": "$9\\sqrt{8}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "To simplify $\\sqrt{72}$, identify the largest perfect square factor of $72$. Since $72 = 36 \\times 2$, we rewrite as $\\sqrt{36 \\times 2}$. This simplifies to $\\sqrt{36} \\times \\sqrt{2} = 6\\sqrt{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Expand and fully simplify the expression $(\\sqrt{3} + \\sqrt{2})^2$.",
+    "options": {
+      "a": "$5$",
+      "b": "$6$",
+      "c": "$5 + 2\\sqrt{6}$",
+      "d": "$1 + 2\\sqrt{6}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Using the algebraic identity $(a + b)^2 = a^2 + 2ab + b^2$, set $a = \\sqrt{3}$ and $b = \\sqrt{2}$.\nThe expansion gives: $(\\sqrt{3})^2 + 2(\\sqrt{3})(\\sqrt{2}) + (\\sqrt{2})^2 = 3 + 2\\sqrt{6} + 2 = 5 + 2\\sqrt{6}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Rationalize the denominator of the fraction $\\frac{3}{\\sqrt{5} - \\sqrt{2}}$.",
+    "options": {
+      "a": "$3\\sqrt{5} + 3\\sqrt{2}$",
+      "b": "$\\sqrt{5} + \\sqrt{2}$",
+      "c": "$\\frac{\\sqrt{5} - \\sqrt{2}}{3}$",
+      "d": "$\\sqrt{5} - \\sqrt{2}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To rationalize the denominator, multiply the numerator and denominator by the conjugate of the denominator, which is $(\\sqrt{5} + \\sqrt{2})$.\nDenominator: $(\\sqrt{5} - \\sqrt{2})(\\sqrt{5} + \\sqrt{2}) = 5 - 2 = 3$.\nNumerator: $3(\\sqrt{5} + \\sqrt{2})$.\nDividing yields $\\frac{3(\\sqrt{5} + \\sqrt{2})}{3} = \\sqrt{5} + \\sqrt{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Simplify $\\frac{12}{\\sqrt{3}}$ by rationalizing its denominator.",
+    "options": {
+      "a": "$4\\sqrt{3}$",
+      "b": "$12\\sqrt{3}$",
+      "c": "$3\\sqrt{12}$",
+      "d": "$36$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Multiply both the numerator and the denominator by $\\sqrt{3}$.\n$\\frac{12}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}} = \\frac{12\\sqrt{3}}{3} = 4\\sqrt{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Solve for $x$ in the equation $\\sqrt{3x - 2} = 4$.",
+    "options": {
+      "a": "$x = 2$",
+      "b": "$x = 4$",
+      "c": "$x = 6$",
+      "d": "$x = 18$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Square both sides of the equation to eliminate the square root: $(\\sqrt{3x - 2})^2 = 4^2$, which gives $3x - 2 = 16$.\nSolving for $x$: $3x = 16 + 2 = 18 \\implies x = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Simplify the expression $5\\sqrt{18} - 2\\sqrt{50}$.",
+    "options": {
+      "a": "$5\\sqrt{2}$",
+      "b": "$-5\\sqrt{2}$",
+      "c": "$3\\sqrt{-32}$",
+      "d": "$25\\sqrt{2}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Simplify each surd first: $\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$, so $5\\sqrt{18} = 15\\sqrt{2}$.\n$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$, so $2\\sqrt{50} = 10\\sqrt{2}$.\nSubtracting them: $15\\sqrt{2} - 10\\sqrt{2} = 5\\sqrt{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "If $\\frac{1}{3 - 2\\sqrt{2}} = p + q\\sqrt{2}$, where $p$ and $q$ are rational numbers, find the value of the sum $p + q$.",
+    "options": {
+      "a": "$1$",
+      "b": "$3$",
+      "c": "$5$",
+      "d": "$6$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Multiply the fraction by the conjugate of its denominator: $\\frac{3 + 2\\sqrt{2}}{(3 - 2\\sqrt{2})(3 + 2\\sqrt{2})}$.\nThe denominator becomes $3^2 - (2\\sqrt{2})^2 = 9 - 8 = 1$.\nThus, the expression simplifies to $3 + 2\\sqrt{2}$.\nEquating terms, we find $p = 3$ and $q = 2$. Therefore, $p + q = 3 + 2 = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Evaluate the product $\\sqrt{12} \\times \\sqrt{3}$.",
+    "options": {
+      "a": "$36$",
+      "b": "$6$",
+      "c": "$3\\sqrt{4}$",
+      "d": "$15$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Multiply the numbers inside the square root directly: $\\sqrt{12} \\times \\sqrt{3} = \\sqrt{12 \\times 3} = \\sqrt{36}$.\nSince $36$ is a perfect square, $\\sqrt{36} = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "An operation $\\ast$ is defined on the set of real numbers by $x \\ast y = 2x - 3y$. Evaluate $4 \\ast 1$.",
+    "options": {
+      "a": "1",
+      "b": "5",
+      "c": "8",
+      "d": "11"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Substitute $x = 4$ and $y = 1$ into the defined formula $x \\ast y = 2x - 3y$.\nWe get $2(4) - 3(1) = 8 - 3 = 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "Which of the following binary operations defined on the set of integers is NOT commutative?",
+    "options": {
+      "a": "$x \\ast y = x + y$",
+      "b": "$x \\ast y = x \\times y$",
+      "c": "$x \\ast y = x - y$",
+      "d": "$x \\ast y = x + y + xy$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "An operation $\\ast$ is commutative if $x \\ast y = y \\ast x$. For subtraction ($x \\ast y = x - y$), taking example values like $x=5$ and $y=3$ gives $5 - 3 = 2$, but $3 - 5 = -2$. Since $2 \\ne -2$, subtraction is not commutative.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "A binary operation $\\otimes$ is defined on the set of real numbers by $m \\otimes n = m + n - 2$. Find the identity element for this operation.",
+    "options": {
+      "a": "-2",
+      "b": "0",
+      "c": "1",
+      "d": "2"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "The identity element $e$ must satisfy $m \\otimes e = m$ for all $m$.\nSubstitute into the definition: $m + e - 2 = m$.\nSubtract $m$ from both sides: $e - 2 = 0 \\implies e = 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "A binary operation $\\ast$ defined on a set $S$ is said to be associative if for all elements $a, b, c \\in S$:",
+    "options": {
+      "a": "$a \\ast (b \\ast c) = (a \\ast b) \\ast c$",
+      "b": "$a \\ast b = b \\ast a$",
+      "c": "$a \\ast e = a$",
+      "d": "$a \\ast (b + c) = (a \\ast b) + (a \\ast c)$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The mathematical definition of the associative property states that rearranging the parentheses (the grouping of operations) does not change the result. This is written formally as $a \\ast (b \\ast c) = (a \\ast b) \\ast c$.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "A binary operation $\\Delta$ is defined on $\\mathbb{R}$ by $x \\Delta y = x + y + xy$. Given that the identity element is 0, find the inverse of the element 2 under this operation.",
+    "options": {
+      "a": "$2$",
+      "b": "$-\\frac{1}{2}$",
+      "c": "$-\\frac{2}{3}$",
+      "d": "$\\frac{3}{2}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Let $y$ be the inverse of $x = 2$. By definition, $x \\Delta y = e$, where $e$ is the identity element $0$.\nSo, $2 \\Delta y = 0 \\implies 2 + y + 2y = 0$.\n$2 + 3y = 0 \\implies 3y = -2 \\implies y = -\\frac{2}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "Let an operation $\\ast$ be defined on $\\mathbb{R}$ by $x \\ast y = x^2 - y$. Evaluate $(3 \\ast 2) \\ast 4$.",
+    "options": {
+      "a": "45",
+      "b": "17",
+      "c": "10",
+      "d": "5"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "First evaluate the expression inside the parentheses: $(3 \\ast 2)$. \n$3 \\ast 2 = 3^2 - 2 = 9 - 2 = 7$.\nNow evaluate the result with $4$: $7 \\ast 4$.\n$7 \\ast 4 = 7^2 - 4 = 49 - 4 = 45$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "If a binary operation $\\ast$ is defined on the set of integers, $\\mathbb{Z}$, by $a \\ast b = \\frac{a + b}{2}$, which of the following statements is true regarding closure?",
+    "options": {
+      "a": "The operation is closed because $a+b$ is always an integer.",
+      "b": "The operation is not closed because the result can be a fraction.",
+      "c": "The operation is closed because addition is a closed operation.",
+      "d": "The operation is not closed because $0$ cannot be used as a denominator."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A set is closed under an operation if performing that operation on any members of the set always produces a member of the same set. If we select $a=1$ and $b=2$ (both integers), $1 \\ast 2 = \\frac{1 + 2}{2} = 1.5$. Since $1.5$ is not an integer, the operation is not closed on $\\mathbb{Z}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "In modulo 5 arithmetic, evaluate the operation $(4 \\otimes 3) \\oplus 2$.",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "First, find the product modulo 5: $4 \\times 3 = 12$. Since $12 = 5(2) + 2$, the remainder is $2$. Hence, $4 \\otimes 3 \\equiv 2 \\pmod 5$.\nNext, perform addition modulo 5: $2 + 2 = 4$. Since $4$ is less than $5$, $4 \\equiv 4 \\pmod 5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "If an implication statement is represented as $P \\implies Q$, which of the following represents the contrapositive of this statement?",
+    "options": {
+      "a": "$Q \\implies P$",
+      "b": "$\\neg P \\implies \\neg Q$",
+      "c": "$\\neg Q \\implies \\neg P$",
+      "d": "$P \\implies \\neg Q$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The contrapositive of an implication $P \\implies Q$ is formed by negating both terms and reversing their direction. It is written as $\\neg Q \\implies \\neg P$. A conditional statement and its contrapositive are logically equivalent.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Given the premise 'If John studies hard, he will pass the exam,' and the fact 'John did not pass the exam,' what is the valid conclusion derived using logic?",
+    "options": {
+      "a": "John studied hard.",
+      "b": "John did not study hard.",
+      "c": "The exam was too difficult.",
+      "d": "John passed another exam."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "This follows the rule of inference known as Modus Tollens. If $P \\implies Q$ is true, and $Q$ is false ($\\neg Q$), then $P$ must also be false ($\\neg P$). Thus, concluding 'John did not study hard' is logically valid.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "According to the rules of truth tables, the logical conjunction statement $P \\land Q$ (P AND Q) is true if and only if:",
+    "options": {
+      "a": "Both P and Q are true.",
+      "b": "At least one of P or Q is true.",
+      "c": "Both P and Q are false.",
+      "d": "P is true and Q is false."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "In boolean logic, an AND operator (conjunction) strictly requires every component to evaluate to true for the entire compound statement to evaluate to true.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "What is the correct logical negation of the universal statement: 'All mathematicians are intelligent'?",
+    "options": {
+      "a": "No mathematicians are intelligent.",
+      "b": "All intelligent people are mathematicians.",
+      "c": "Some mathematicians are not intelligent.",
+      "d": "Some intelligent people are not mathematicians."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The statement represents a universal affirmative ($\\forall x, M(x) \\implies I(x)$). Its exact logical negation is an existential negative statement ($\\exists x, M(x) \\land \\neg I(x)$), which translates back to natural language as 'Some mathematicians are not intelligent' (or 'At least one mathematician is not intelligent').",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Given the premises: 'If it is raining, then the ground is wet' and the truth statement 'It is raining,' deducing the conclusion 'The ground is wet' demonstrates which rule of inference?",
+    "options": {
+      "a": "Modus Tollens",
+      "b": "Modus Ponens",
+      "c": "Syllogism",
+      "d": "Contradiction"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The structure 'If $P \\implies Q$, and $P$ is true, therefore $Q$ is true' is the definition of Modus Ponens, also called affirming the antecedent.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Which logical operator symbol is standardly used to represent the biconditional statement 'If and only if'?",
+    "options": {
+      "a": "$\\rightarrow$",
+      "b": "$\\leftrightarrow$",
+      "c": "$\\land$",
+      "d": "$\\lor$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The symbol $\\leftrightarrow$ signifies a two-way (bi-directional) logical relationship, meaning 'if and only if' (often abbreviated as 'iff').",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Consider the implication: 'If a shape is a square, then it is a rectangle.' What is the converse of this statement?",
+    "options": {
+      "a": "If a shape is not a square, then it is not a rectangle.",
+      "b": "If a shape is not a rectangle, then it is not a square.",
+      "c": "If a shape is a rectangle, then it is a square.",
+      "d": "A shape is a square if and only if it is a rectangle."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The converse of an implication $P \\implies Q$ is generated by reversing the direction of the implication to $Q \\implies P$. Therefore, 'If square, then rectangle' becomes 'If a shape is a rectangle, then it is a square.' Note that the converse is not necessarily factually true.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "In mathematical logic, what term defines a compound statement that always resolves to false, regardless of the individual truth values of its simple components?",
+    "options": {
+      "a": "A tautology",
+      "b": "A contradiction",
+      "c": "A contingency",
+      "d": "An implication"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A contradiction (also called an absurdity or a fallacy) is a statement that is unconditionally false under all possible assignments of truth values (e.g., $P \\land \\neg P$).",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Simplify the algebraic index expression $x^5 \\times x^{-2}$.",
+    "options": {
+      "a": "$x^{-10}$",
+      "b": "$x^3$",
+      "c": "$x^7$",
+      "d": "$x^{-7}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "According to the laws of indices, when multiplying terms with identical bases, you add the exponents: $x^a \\times x^b = x^{a+b}$. Here, $x^5 \\times x^{-2} = x^{5 + (-2)} = x^3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Evaluate the numerical expression $16^{\\frac{3}{4}}$.",
+    "options": {
+      "a": "4",
+      "b": "6",
+      "c": "8",
+      "d": "12"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Using fractional index laws $a^{\\frac{m}{n}} = (\\sqrt[n]{a})^m$: \n$16^{\\frac{3}{4}} = (16^{\\frac{1}{4}})^3$. The 4th root of $16$ is $2$, and raising this to the power of $3$ gives $2^3 = 8$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve for the value of $x$ in the given simultaneous exponential equations: $2^x \\times 2^y = 8$ and $3^{x-y} = 9$.",
+    "options": {
+      "a": "1.5",
+      "b": "2.5",
+      "c": "3.0",
+      "d": "5.0"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Rewrite equations to match common bases: \n$2^{x+y} = 2^3 \\implies x + y = 3$ \n$3^{x-y} = 3^2 \\implies x - y = 2$ \nSolving these simultaneous linear equations by addition gives $2x = 5 \\implies x = 2.5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Evaluate the base-3 logarithm: $\\log_3 27$.",
+    "options": {
+      "a": "3",
+      "b": "9",
+      "c": "24",
+      "d": "81"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The logarithm asks 'to what power must 3 be raised to yield 27?'. Because $3^3 = 27$, it follows logically that $\\log_3 27 = 3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Express the expression $2\\log_a 3 + \\log_a 5$ as a single, combined logarithm.",
+    "options": {
+      "a": "$\\log_a 11$",
+      "b": "$\\log_a 15$",
+      "c": "$\\log_a 30$",
+      "d": "$\\log_a 45$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Use the power law of logarithms to rewrite $2\\log_a 3$ as $\\log_a(3^2) = \\log_a 9$.\nNext, apply the product law of logarithms: $\\log_a 9 + \\log_a 5 = \\log_a (9 \\times 5) = \\log_a 45$.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Evaluate the value of $\\log_8 2$ using rules for logarithm base operations.",
+    "options": {
+      "a": "$\\frac{1}{4}$",
+      "b": "$\\frac{1}{3}$",
+      "c": "$3$",
+      "d": "$4$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Let $x = \\log_8 2$. Convert to exponential form: $8^x = 2$. Re-express 8 with base 2 to get $(2^3)^x = 2^1 \\implies 2^{3x} = 2^1$. Therefore, $3x = 1 \\implies x = \\frac{1}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve for the defined, real value(s) of $x$ in the equation: $\\log_{10}(x+2) + \\log_{10}(x-1) = 1$.",
+    "options": {
+      "a": "$x = 3$ only",
+      "b": "$x = -4$ only",
+      "c": "$x = 3$ and $x = -4$",
+      "d": "$x = 4$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Use product law: $\\log_{10}((x+2)(x-1)) = 1$.\nConvert to exponent form: $(x+2)(x-1) = 10^1 = 10$.\nExpand: $x^2 + x - 2 = 10 \\implies x^2 + x - 12 = 0$.\nFactorizing: $(x+4)(x-3) = 0$, giving potential roots $x = -4, x = 3$.\nHowever, logs of negative numbers are undefined in real numbers, so evaluating $x = -4$ causes $\\log_{10}(-2)$, making it invalid. Hence, $x=3$ is the sole valid solution.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve the exponential equation $4^{2x-1} = 64$.",
+    "options": {
+      "a": "$x = 1$",
+      "b": "$x = 1.5$",
+      "c": "$x = 2$",
+      "d": "$x = 2.5$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Express 64 with a base of 4: $64 = 4^3$.\nNow substitute it back: $4^{2x-1} = 4^3$.\nEquating exponents because the bases are uniform: $2x - 1 = 3 \\implies 2x = 4 \\implies x = 2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "Determine the elements of the set $A = \\{x : x^2 < 0, x \\in \\mathbb{R}\\}$.",
+    "options": {
+      "a": "$\\{0\\}$",
+      "b": "$\\{-1\\}$",
+      "c": "$\\{\\}$",
+      "d": "$\\{1, -1\\}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The set builder notation defines $A$ as containing all real numbers whose square is less than 0. Since the square of any real number is always non-negative (greater than or equal to 0), there are no real numbers that satisfy this condition. Therefore, $A$ is an empty set, denoted by $\\{\\}$ or $\\emptyset$.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "If sets $X$ and $Y$ are completely disjoint, which of the following equations must be true for the number of elements in their union, $n(X \\cup Y)$?",
+    "options": {
+      "a": "$n(X \\cup Y) = n(X) \\times n(Y)$",
+      "b": "$n(X \\cup Y) = n(X) + n(Y)$",
+      "c": "$n(X \\cup Y) = n(X \\cap Y)$",
+      "d": "$n(X \\cup Y) = n(X) - n(Y)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "For two sets to be disjoint, their intersection must be empty, meaning $n(X \\cap Y) = 0$. The general formula for union is $n(X \\cup Y) = n(X) + n(Y) - n(X \\cap Y)$. Substituting $0$ for the intersection gives $n(X \\cup Y) = n(X) + n(Y)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "In a survey of 60 students, 25 liked Mathematics, 30 liked Physics, and 20 liked Chemistry. 10 liked Mathematics and Physics, 8 liked Mathematics and Chemistry, and 12 liked Physics and Chemistry. If 5 students liked all three subjects, how many students liked NONE of these three subjects?",
+    "options": {
+      "a": "5",
+      "b": "10",
+      "c": "15",
+      "d": "20"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Let $M$, $P$, and $C$ represent Mathematics, Physics, and Chemistry respectively.\nUsing the formula: $n(M \\cup P \\cup C) = n(M) + n(P) + n(C) - n(M \\cap P) - n(M \\cap C) - n(P \\cap C) + n(M \\cap P \\cap C)$.\n$n(M \\cup P \\cup C) = 25 + 30 + 20 - 10 - 8 - 12 + 5 = 75 - 30 + 5 = 50$.\nThe number of students who liked none of the subjects is the total number of students minus those who liked at least one: $60 - 50 = 10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "Which of the following correctly represents the Commutative Law for set union?",
+    "options": {
+      "a": "$A \\cup (B \\cup C) = (A \\cup B) \\cup C$",
+      "b": "$A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$",
+      "c": "$A \\cup B = B \\cup A$",
+      "d": "$A \\cup A = A$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Commutative Law for sets states that the order in which the sets are combined does not matter. Thus, the union of $A$ and $B$ is identical to the union of $B$ and $A$, denoted algebraically as $A \\cup B = B \\cup A$.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "Let $U = \\{1, 2, 3, 4, 5, 6\\}$, $P = \\{1, 2, 3, 4\\}$ and $Q = \\{3, 4, 5\\}$. Find $(P \\cup Q)'$.",
+    "options": {
+      "a": "$\\{1, 2, 5\\}$",
+      "b": "$\\{3, 4\\}$",
+      "c": "$\\{6\\}$",
+      "d": "$\\{1, 2, 3, 4, 5\\}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "First, calculate the union of $P$ and $Q$: $P \\cup Q = \\{1, 2, 3, 4, 5\\}$.\nThe complement $(P \\cup Q)'$ contains all elements in the universal set $U$ that are not in $P \\cup Q$.\nThus, $(P \\cup Q)' = \\{1, 2, 3, 4, 5, 6\\} - \\{1, 2, 3, 4, 5\\} = \\{6\\}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "According to De Morgan's Laws in set theory, which of the following expressions is logically equivalent to $(A \\cap B)'$?",
+    "options": {
+      "a": "$A' \\cap B'$",
+      "b": "$A' \\cup B'$",
+      "c": "$A \\cup B'$",
+      "d": "$A' \\cap B$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "De Morgan's Laws dictate how complements behave over unions and intersections. The complement of an intersection equals the union of the complements. Therefore, $(A \\cap B)' = A' \\cup B'$.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "In a class of 50 students, 30 like Apples, 25 like Bananas, and 20 like Cherries. 15 students like Apples and Bananas, 10 like Bananas and Cherries, and 12 like Apples and Cherries. 5 students like all three fruits. How many students like ONLY Apples?",
+    "options": {
+      "a": "3",
+      "b": "8",
+      "c": "15",
+      "d": "30"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Let's draw a Venn diagram conceptually. Let $A$ be Apples. The total $n(A) = 30$.\nThe intersections involving Apples are:\nApples and Bananas only: $15 - 5 = 10$\nApples and Cherries only: $12 - 5 = 7$\nAll three: 5\nStudents who like ONLY Apples = $n(A)$ - ({Apples & Bananas only}) - ({Apples & Cherries only}) - ({All three}). \n$= 30 - 10 - 7 - 5 = 8$.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Sets",
+    "question_text": "If a universal set contains 40 elements, $n(A)=15$, $n(B)=20$, and $n(A \\cap B)=5$, find the number of elements in $(A \\cup B)'$.",
+    "options": {
+      "a": "5",
+      "b": "10",
+      "c": "30",
+      "d": "35"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "First find the union: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B) = 15 + 20 - 5 = 30$.\nThe complement consists of elements in the universal set not in the union:\n$n(A \\cup B)' = n(\\text{Universal}) - n(A \\cup B) = 40 - 30 = 10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Simplify the addition of surds: $\\sqrt{18} + \\sqrt{8}$.",
+    "options": {
+      "a": "$\\sqrt{26}$",
+      "b": "$5\\sqrt{2}$",
+      "c": "$4\\sqrt{2}$",
+      "d": "$6\\sqrt{4}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Break each surd down into perfect squares:\n$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$.\n$\\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$.\nNow add them as like terms: $3\\sqrt{2} + 2\\sqrt{2} = 5\\sqrt{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Simplify fully by rationalizing the denominator: $\\frac{1}{2\\sqrt{3} - \\sqrt{2}}$.",
+    "options": {
+      "a": "$\\frac{2\\sqrt{3} + \\sqrt{2}}{10}$",
+      "b": "$\\frac{2\\sqrt{3} - \\sqrt{2}}{10}$",
+      "c": "$\\frac{2\\sqrt{3} + \\sqrt{2}}{14}$",
+      "d": "$\\frac{\\sqrt{6}}{8}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Multiply the numerator and denominator by the conjugate of the denominator, $(2\\sqrt{3} + \\sqrt{2})$.\nDenominator: $(2\\sqrt{3})^2 - (\\sqrt{2})^2 = 4(3) - 2 = 12 - 2 = 10$.\nNumerator: $1(2\\sqrt{3} + \\sqrt{2}) = 2\\sqrt{3} + \\sqrt{2}$.\nResult: $\\frac{2\\sqrt{3} + \\sqrt{2}}{10}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Solve the radical equation for $x$: $\\sqrt{2x + 3} - \\sqrt{x + 1} = 1$.",
+    "options": {
+      "a": "$x = 0$ only",
+      "b": "$x = 3$ only",
+      "c": "$x = 3$ and $x = -1$",
+      "d": "$x = -1$ only"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Isolate one radical: $\\sqrt{2x + 3} = 1 + \\sqrt{x + 1}$.\nSquare both sides: $2x + 3 = 1 + 2\\sqrt{x + 1} + (x + 1)$.\nSimplify: $2x + 3 = x + 2 + 2\\sqrt{x + 1}$.\nIsolate the remaining radical: $x + 1 = 2\\sqrt{x + 1}$.\nSquare both sides again: $(x + 1)^2 = 4(x + 1) \\implies x^2 + 2x + 1 = 4x + 4 \\implies x^2 - 2x - 3 = 0$.\nFactorizing: $(x - 3)(x + 1) = 0 \\implies x = 3$ or $x = -1$.\nCheck $x=3$: $\\sqrt{9} - \\sqrt{4} = 3 - 2 = 1$ (True).\nCheck $x=-1$: $\\sqrt{1} - \\sqrt{0} = 1 - 0 = 1$ (True).",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Expand and simplify $(\\sqrt{5} - 2)^2$.",
+    "options": {
+      "a": "$1$",
+      "b": "$9 - 4\\sqrt{5}$",
+      "c": "$1 - 4\\sqrt{5}$",
+      "d": "$9 + 4\\sqrt{5}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Using $(a - b)^2 = a^2 - 2ab + b^2$, set $a = \\sqrt{5}$ and $b = 2$.\n$(\\sqrt{5})^2 - 2(\\sqrt{5})(2) + (2)^2 = 5 - 4\\sqrt{5} + 4 = 9 - 4\\sqrt{5}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "What is the conjugate of the surd expression $4 + \\sqrt{7}$?",
+    "options": {
+      "a": "$4 - \\sqrt{7}$",
+      "b": "$-4 + \\sqrt{7}$",
+      "c": "$-4 - \\sqrt{7}$",
+      "d": "$\\sqrt{7} - 4$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The conjugate of a binomial surd $a + \\sqrt{b}$ is obtained by simply changing the sign between the rational part and the surd part, yielding $a - \\sqrt{b}$. Thus, the conjugate is $4 - \\sqrt{7}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Given that $\\frac{\\sqrt{3} + 1}{\\sqrt{3} - 1} = a + b\\sqrt{3}$, find the values of the rational constants $a$ and $b$.",
+    "options": {
+      "a": "$a = 2, b = 1$",
+      "b": "$a = 1, b = 2$",
+      "c": "$a = 2, b = -1$",
+      "d": "$a = 4, b = 2$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Rationalize the denominator by multiplying by the conjugate $(\\sqrt{3} + 1)$.\nDenominator: $(\\sqrt{3})^2 - 1^2 = 3 - 1 = 2$.\nNumerator: $(\\sqrt{3} + 1)^2 = 3 + 2\\sqrt{3} + 1 = 4 + 2\\sqrt{3}$.\nExpression becomes: $\\frac{4 + 2\\sqrt{3}}{2} = 2 + 1\\sqrt{3}$.\nBy comparing with $a + b\\sqrt{3}$, we find $a = 2$ and $b = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "Evaluate the square root of the nested surd expression: $\\sqrt{14 + 6\\sqrt{5}}$.",
+    "options": {
+      "a": "$3 + \\sqrt{5}$",
+      "b": "$2 + \\sqrt{5}$",
+      "c": "$1 + 3\\sqrt{5}$",
+      "d": "$3 + 2\\sqrt{5}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Assume the square root takes the form $\\sqrt{a} + \\sqrt{b}$.\nSquaring both sides gives $14 + 6\\sqrt{5} = a + b + 2\\sqrt{ab}$.\nFirst, match the surd parts: $2\\sqrt{ab} = 6\\sqrt{5} \\implies \\sqrt{ab} = 3\\sqrt{5} = \\sqrt{45} \\implies ab = 45$.\nNext, match the rational parts: $a + b = 14$.\nWe need two numbers that multiply to 45 and add to 14. These numbers are 9 and 5.\nSo, $\\sqrt{9} + \\sqrt{5} = 3 + \\sqrt{5}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Surds",
+    "question_text": "If $x = 3 + 2\\sqrt{2}$, compute the value of $x + \\frac{1}{x}$.",
+    "options": {
+      "a": "$3$",
+      "b": "$4\\sqrt{2}$",
+      "c": "$6$",
+      "d": "$6 + 4\\sqrt{2}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "First, evaluate $\\frac{1}{x} = \\frac{1}{3 + 2\\sqrt{2}}$. Rationalize it using the conjugate $3 - 2\\sqrt{2}$.\n$\\frac{3 - 2\\sqrt{2}}{(3 + 2\\sqrt{2})(3 - 2\\sqrt{2})} = \\frac{3 - 2\\sqrt{2}}{9 - 8} = 3 - 2\\sqrt{2}$.\nNow, add $x$ and $\\frac{1}{x}$:\n$(3 + 2\\sqrt{2}) + (3 - 2\\sqrt{2}) = 3 + 3 = 6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "Evaluate the operation $a \\ast b = a^2 + b^2$ for $(-1) \\ast 3$.",
+    "options": {
+      "a": "2",
+      "b": "4",
+      "c": "8",
+      "d": "10"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Substitute $a = -1$ and $b = 3$ into the given formula: $(-1)^2 + 3^2 = 1 + 9 = 10$.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "A binary operation is defined by $x \\ast y = x + y - xy$. Given that the identity element is 0, find the inverse of 3 under this operation.",
+    "options": {
+      "a": "$\\frac{1}{3}$",
+      "b": "$\\frac{2}{3}$",
+      "c": "$\\frac{3}{2}$",
+      "d": "$-\\frac{1}{3}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Let $y$ be the inverse of $x = 3$. By the definition of inverse, $x \\ast y = e$ where $e=0$.\nSubstitute 3 and 0: $3 \\ast y = 0 \\implies 3 + y - 3y = 0$.\n$3 - 2y = 0 \\implies 2y = 3 \\implies y = \\frac{3}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "Which of the following binary operations defined on the set of real numbers $\\mathbb{R}$ is associative?",
+    "options": {
+      "a": "$x \\ast y = x - y$",
+      "b": "$x \\ast y = x + y + xy$",
+      "c": "$x \\ast y = x^y$",
+      "d": "$x \\ast y = \\frac{x}{y}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To check associativity $a \\ast (b \\ast c) = (a \\ast b) \\ast c$:\nLet's test option (b): $(a \\ast b) \\ast c = (a + b + ab) \\ast c = (a + b + ab) + c + (a + b + ab)c = a + b + c + ab + ac + bc + abc$.\n$a \\ast (b \\ast c) = a \\ast (b + c + bc) = a + (b + c + bc) + a(b + c + bc) = a + b + c + bc + ab + ac + abc$.\nBoth sides are equal, so the operation $x + y + xy$ is associative. Options a, c, and d fail standard associativity tests.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "What is the identity element $e$ under the normal mathematical operation of addition of real numbers?",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "-1",
+      "d": "undefined"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The identity element for addition is the number that leaves any real number unchanged when added to it. Since $a + 0 = 0 + a = a$ for any real number $a$, the additive identity is 0.",
+    "section_id": null
+  },
+  {
+    "question_number": 61,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "In modulo 7 arithmetic, find the multiplicative inverse of 4.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "We need to find a number $x$ such that $(4 \\times x) \\equiv 1 \\pmod 7$.\nTesting integers starting from 1:\n$4 \\times 1 = 4 \\equiv 4 \\pmod 7$\n$4 \\times 2 = 8 = 7(1) + 1 \\equiv 1 \\pmod 7$.\nThus, the inverse is 2.",
+    "section_id": null
+  },
+  {
+    "question_number": 62,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "If a binary operation $\\otimes$ is defined as $x \\otimes y = \\frac{xy}{4}$, what is the identity element for this operation?",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "4"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Let $e$ be the identity element. Then for all $x$, $x \\otimes e = x$.\nUsing the definition, $\\frac{x \\cdot e}{4} = x$.\nDivide both sides by $x$ (assuming $x \\neq 0$): $\\frac{e}{4} = 1 \\implies e = 4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 63,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "A set $S$ is said to be closed under a binary operation $\\ast$ if for all $a, b \\in S$, the result $a \\ast b$:",
+    "options": {
+      "a": "equals the identity element $e$.",
+      "b": "is also an element of the set $S$.",
+      "c": "results in an integer.",
+      "d": "equals zero."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "By mathematical definition, a set exhibits closure under an operation if applying that operation to any members of the set always produces a result that is still a member of the same set $S$.",
+    "section_id": null
+  },
+  {
+    "question_number": 64,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Binary Operations",
+    "question_text": "An operation is defined by $p \\ast q = p + q + pq$. Solve for $x$ if $2 \\ast (x \\ast 3) = 23$.",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "First, compute the inner bracket $(x \\ast 3)$: $x \\ast 3 = x + 3 + 3x = 4x + 3$.\nNow substitute this back: $2 \\ast (4x + 3) = 23$.\nApply the operation definition again: $2 + (4x + 3) + 2(4x + 3) = 23$.\n$5 + 4x + 8x + 6 = 23 \\implies 12x + 11 = 23$.\nSubtract 11 from both sides: $12x = 12 \\implies x = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 65,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "In a logical truth table, the conditional statement $P \\implies Q$ is False ONLY under which of the following conditions?",
+    "options": {
+      "a": "P is True and Q is False",
+      "b": "P is False and Q is True",
+      "c": "P is False and Q is False",
+      "d": "P is True and Q is True"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A conditional statement (implication) is considered broken or 'False' only if the premise $P$ is fulfilled (True) but the conclusion $Q$ fails to happen (False). In all other cases, it evaluates to True by default.",
+    "section_id": null
+  },
+  {
+    "question_number": 66,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "If a conditional statement is given as 'If $P$, then $Q$', how is its inverse constructed?",
+    "options": {
+      "a": "If $Q$, then $P$",
+      "b": "If not $P$, then not $Q$",
+      "c": "If not $Q$, then not $P$",
+      "d": "$P$ if and only if $Q$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The inverse of an implication $P \\implies Q$ is formed by keeping the order the same but negating both terms, which mathematically reads as $\\neg P \\implies \\neg Q$ ('If not P, then not Q').",
+    "section_id": null
+  },
+  {
+    "question_number": 67,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Which of the following propositions is logically equivalent to the implication $P \\implies Q$?",
+    "options": {
+      "a": "$\\neg P \\land Q$",
+      "b": "$\\neg P \\lor Q$",
+      "c": "$P \\lor \\neg Q$",
+      "d": "$P \\land \\neg Q$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Material implication rule states that $P \\implies Q$ means 'either P is false, or Q is true'. Thus, it translates to the disjunction $\\neg P \\lor Q$. Evaluating truth tables for both expressions will yield identical truth values for all conditions.",
+    "section_id": null
+  },
+  {
+    "question_number": 68,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Which logical symbol is strictly used to represent the word 'OR' (disjunction)?",
+    "options": {
+      "a": "$\\lor$",
+      "b": "$\\land$",
+      "c": "$\\neg$",
+      "d": "$\\iff$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The 'V-like' symbol $\\lor$ stands for the logical OR operator (disjunction). By contrast, $\\land$ is AND, $\\neg$ is NOT, and $\\iff$ is if and only if.",
+    "section_id": null
+  },
+  {
+    "question_number": 69,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "The statement $\\neg Q \\implies \\neg P$ represents which relationship to the original proposition $P \\implies Q$?",
+    "options": {
+      "a": "Contrapositive",
+      "b": "Converse",
+      "c": "Inverse",
+      "d": "Negation"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The contrapositive reverses the direction and negates both statements. So, $P \\implies Q$ becomes $\\neg Q \\implies \\neg P$. A statement is always logically equivalent to its contrapositive.",
+    "section_id": null
+  },
+  {
+    "question_number": 70,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Which of the following compound propositions represents a tautology?",
+    "options": {
+      "a": "$P \\lor \\neg P$",
+      "b": "$P \\land \\neg P$",
+      "c": "$P \\implies \\neg P$",
+      "d": "$P \\iff \\neg P$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A tautology is a statement that is unconditionally true. By the Law of Excluded Middle, a proposition must be either true or false. Thus, 'P OR not P' ($P \\lor \\neg P$) covers all possibilities and is always true.",
+    "section_id": null
+  },
+  {
+    "question_number": 71,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Consider the argument: 'If it snows, the flight will be canceled. The flight is not canceled.' What is the valid conclusion based on the rule of Modus Tollens?",
+    "options": {
+      "a": "It snowed.",
+      "b": "It did not snow.",
+      "c": "The flight was delayed.",
+      "d": "No valid conclusion."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Modus Tollens dictates that from premises $S \\implies C$ and $\\neg C$, we can validly conclude $\\neg S$. Therefore, since the flight was not canceled, it must be logically true that it did not snow.",
+    "section_id": null
+  },
+  {
+    "question_number": 72,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Logical Reasoning",
+    "question_text": "Evaluate the truth value of the complex proposition $P \\implies (P \\lor Q)$ given that $P$ is True and $Q$ is False.",
+    "options": {
+      "a": "True",
+      "b": "False",
+      "c": "Undefined",
+      "d": "Cannot be determined"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "If P is True, the disjunction $(P \\lor Q)$ evaluates to True (True OR False is True). Therefore, the implication $P \\implies (P \\lor Q)$ becomes True $\\implies$ True, which evaluates to True.",
+    "section_id": null
+  },
+  {
+    "question_number": 73,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Evaluate the expression $y^0$, assuming $y \\neq 0$.",
+    "options": {
+      "a": "$0$",
+      "b": "$1$",
+      "c": "$y$",
+      "d": "Undefined"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "According to the Zero Exponent Rule of indices, any non-zero real number raised to the power of 0 evaluates to exactly 1.",
+    "section_id": null
+  },
+  {
+    "question_number": 74,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve for valid values of $x$ in the equation: $\\log_2 x + \\log_2 (x - 2) = 3$.",
+    "options": {
+      "a": "$x = 4$ and $x = -2$",
+      "b": "$x = 2$",
+      "c": "$x = -2$",
+      "d": "$x = 4$ only"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Use the log product rule: $\\log_2 (x(x - 2)) = 3$.\nConvert from log form to index form: $x(x - 2) = 2^3 = 8$.\nExpand: $x^2 - 2x - 8 = 0$.\nFactorize: $(x - 4)(x + 2) = 0 \\implies x = 4$ or $x = -2$.\nCheck restrictions: Logarithm arguments must be positive ($x > 0$ and $x > 2$). $x = -2$ makes arguments negative (invalid). Therefore, $x = 4$ is the sole solution.",
+    "section_id": null
+  },
+  {
+    "question_number": 75,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Which formula correctly represents the Change of Base theorem for logarithms, used to change a logarithm base $a$ to base $c$?",
+    "options": {
+      "a": "$\\log_a b = \\log_c a \\times \\log_c b$",
+      "b": "$\\log_a b = \\frac{\\log_b c}{\\log_a c}$",
+      "c": "$\\log_a b = \\frac{\\log_c b}{\\log_c a}$",
+      "d": "$\\log_a b = \\log_c (b - a)$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The change of base formula allows changing logarithms to a new base $c$ via division: $\\log_a b = \\frac{\\log_c b}{\\log_c a}$. This is extremely useful for calculating arbitrary base logs using standard base 10 or $e$ calculators.",
+    "section_id": null
+  },
+  {
+    "question_number": 76,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Simplify the expression $(x^4)^3$ according to the rules of indices.",
+    "options": {
+      "a": "$x^{12}$",
+      "b": "$x^7$",
+      "c": "$x^{64}$",
+      "d": "$x^1$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The power of a power law states that $(x^m)^n = x^{m \\times n}$. Therefore, $(x^4)^3 = x^{4 \\times 3} = x^{12}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 77,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve the exponential equation $3^{2x} = 27$.",
+    "options": {
+      "a": "1",
+      "b": "1.5",
+      "c": "2",
+      "d": "3"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Rewrite $27$ in terms of base 3: $27 = 3^3$.\nSubstitute back into equation: $3^{2x} = 3^3$.\nEquating exponents gives $2x = 3$. Dividing by 2 yields $x = 1.5$.",
+    "section_id": null
+  },
+  {
+    "question_number": 78,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Find the base $x$ if $\\log_x 16 + \\log_x 4 = 3$.",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "8"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Use the logarithm addition rule to combine terms: $\\log_x(16 \\times 4) = 3 \\implies \\log_x 64 = 3$.\nRewrite in exponential form: $x^3 = 64$.\nTake the cube root: $x = \\sqrt[3]{64} = 4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 79,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve for $x$ in the equation $2^{x+1} = 16^{x-1}$.",
+    "options": {
+      "a": "$\\frac{2}{3}$",
+      "b": "$\\frac{3}{5}$",
+      "c": "$\\frac{5}{3}$",
+      "d": "$2$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "First, express base 16 using base 2: $16 = 2^4$.\nThe equation becomes: $2^{x+1} = (2^4)^{x-1} \\implies 2^{x+1} = 2^{4x-4}$.\nEquating exponents: $x + 1 = 4x - 4$.\nRearranging terms: $1 + 4 = 4x - x \\implies 5 = 3x \\implies x = \\frac{5}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 80,
+    "subject": "Further Mathematics (Elective Mathematics)",
+    "topic": "Indices & Logarithms",
+    "question_text": "Solve the quadratic-type exponential equation $2^{2x} - 5(2^x) + 4 = 0$. What is the sum of the possible values for $x$?",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "4"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Let $y = 2^x$. Note that $2^{2x} = (2^x)^2 = y^2$.\nSubstitute $y$ into the equation: $y^2 - 5y + 4 = 0$.\nFactorizing: $(y - 4)(y - 1) = 0$, giving $y = 4$ or $y = 1$.\nSubstituting back $2^x = y$:\nIf $2^x = 4$, then $x = 2$.\nIf $2^x = 1$, then $x = 0$.\nThe possible values are 2 and 0. Their sum is $2 + 0 = 2$.",
+    "section_id": null
+  }
+]

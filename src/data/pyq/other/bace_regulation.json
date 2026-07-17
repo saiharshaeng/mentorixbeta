@@ -1,0 +1,322 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "What does the acronym **cGMP** stand for in the context of the pharmaceutical and biotechnology industries?",
+    "options": {
+      "a": "Certified Good Manufacturing Practice",
+      "b": "Common Good Manufacturing Process",
+      "c": "Current Good Manufacturing Practice",
+      "d": "Clinical Good Manufacturing Protocol"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The acronym **cGMP** stands for **Current Good Manufacturing Practice**. The 'c' emphasizes that expectations are dynamic and companies must use technologies and systems that are up-to-date in order to comply with the regulations. Source: FDA.gov.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which of the following best describes the primary difference between **Quality Assurance (QA)** and **Quality Control (QC)**?",
+    "options": {
+      "a": "QA is reactive and focuses on testing products; QC is proactive and focuses on process design.",
+      "b": "QA is proactive and focuses on process prevention; QC is reactive and focuses on product identification/testing.",
+      "c": "QA is performed only by government agencies; QC is performed by the company.",
+      "d": "QA deals with financial audits; QC deals with safety inspections."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "**QA (Quality Assurance)** is process-oriented and proactive, focusing on preventing defects through SOPs, training, and audits. **QC (Quality Control)** is product-oriented and reactive, focusing on identifying defects through testing and inspection of the final product.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "According to **Good Documentation Practices (GDP)**, how should a documentation error in a manual batch record be corrected?",
+    "options": {
+      "a": "Use whiteout to cover the error and write the correct value on top.",
+      "b": "Scribble out the error completely so it is no longer legible, then write the correct value.",
+      "c": "Draw a single line through the error, write the correct value, and initial and date the correction.",
+      "d": "Erase the error using a pencil or eraser and write the new value."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "GDP requires that errors be corrected by drawing a **single line** through the incorrect entry (so the original remains legible), writing the correct information nearby, and documenting the **initials and date** of the person making the correction. Correction fluid and erasing are strictly prohibited.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "In the **ALCOA** principles for data integrity, what does the 'A' representing **Attributable** mean?",
+    "options": {
+      "a": "The data must be accurate and free of errors.",
+      "b": "The data must be available for review at any time.",
+      "c": "The identity of the person or system collecting the data must be clearly recorded.",
+      "d": "The data must be archived in a secure location."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "**Attributable** means that the data can be traced back to the individual or system that performed the action. This usually involves signatures, initials, or secure electronic logins.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which federal regulation specifically covers **Current Good Manufacturing Practice (cGMP)** for finished pharmaceuticals?",
+    "options": {
+      "a": "21 CFR Part 58",
+      "b": "21 CFR Part 211",
+      "c": "21 CFR Part 11",
+      "d": "ISO 9001"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "**21 CFR Part 211** establishes the cGMP regulations for **finished pharmaceuticals**. Part 210 covers general manufacturing, Part 58 covers GLP (nonclinical), and Part 11 covers electronic records.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "A technician completes a pH test at 2:00 PM but forgets to write it down. They record the data the next morning, dating it for the current day. Which **ALCOA** principle has been violated?",
+    "options": {
+      "a": "Legible",
+      "b": "Original",
+      "c": "Contemporaneous",
+      "d": "Attributable"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The principle of **Contemporaneous** requires that data be recorded at the time the activity occurs. Recording data the next day violates this principle and compromises data integrity.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which of the following is an example of a **Quality Control (QC)** activity?",
+    "options": {
+      "a": "Writing a Standard Operating Procedure (SOP) for equipment cleaning.",
+      "b": "Auditing a supplier to ensure they meet quality standards.",
+      "c": "Testing a sample of the final drug product for purity and potency.",
+      "d": "Training employees on proper gowning procedures."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Testing a sample for purity and potency is a reactive process of inspection/testing, which defines **Quality Control (QC)**. The other options are proactive Quality Assurance (QA) activities.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "What is the primary focus of **GLP (Good Laboratory Practice)** regulations?",
+    "options": {
+      "a": "Manufacturing processes for commercial drugs.",
+      "b": "Non-clinical laboratory safety studies supporting research applications.",
+      "c": "Clinical trials involving human subjects.",
+      "d": "Distribution and storage of finished products."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "**GLP (21 CFR Part 58)** specifically governs **non-clinical laboratory studies** (e.g., toxicology studies in animals) intended to support applications for research or marketing permits. It does not cover manufacturing (GMP) or human clinical trials (GCP).",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which statement accurately reflects the **'Rule of Documentation'** in regulated industries?",
+    "options": {
+      "a": "If it isn't written down, it didn't happen.",
+      "b": "If it is written down, it must be true.",
+      "c": "Documentation is optional if the product passes QC.",
+      "d": "Electronic records are preferred over paper in all cases."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The golden rule of documentation in GMP/GLP is: **\"If it isn't written down, it didn't happen.\"** Proper documentation is the only proof that a procedure was performed correctly.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "An auditor notices a blank space in a manual logbook where a value should have been entered. According to GDP, how should this blank space generally be handled if the step was not applicable?",
+    "options": {
+      "a": "Leave it blank to show nothing happened.",
+      "b": "Write 'N/A' (Not Applicable), draw a single line through the space, and initial/date.",
+      "c": "Tear out the page and start a new one.",
+      "d": "Use a marker to blackout the entire row."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Blank spaces in regulated records can be interpreted as missing data. GDP requires unused spaces to be crossed out with a single line, marked **'N/A'**, and initialed/dated to prevent future unauthorized additions.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "What is the purpose of a **Standard Operating Procedure (SOP)**?",
+    "options": {
+      "a": "To provide a log for recording daily temperatures.",
+      "b": "To ensure consistency by providing detailed, step-by-step instructions for a specific task.",
+      "c": "To summarize the results of a completed manufacturing batch.",
+      "d": "To list all the employees working in the facility."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "**SOPs** are written instructions describing step-by-step how to perform a routine activity. Their primary goal is to ensure **consistency** and quality in execution.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which ISO standard is a general quality management standard applicable to any organization, regardless of industry?",
+    "options": {
+      "a": "ISO 14001",
+      "b": "ISO 9001",
+      "c": "ISO 13485",
+      "d": "ISO 17025"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "**ISO 9001** is the international standard for **Quality Management Systems (QMS)** and is applicable to any organization. ISO 13485 is for medical devices, and ISO 17025 is for testing laboratories.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "In the context of data integrity, what is an **Audit Trail**?",
+    "options": {
+      "a": "A paper list of all visitors to the facility.",
+      "b": "A secure, computer-generated, time-stamped electronic record that reconstructs the course of events relating to a record.",
+      "c": "A meeting where quality issues are discussed by management.",
+      "d": "A training certificate proving an employee is qualified."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "An **Audit Trail** is a secure, chronological record (metadata) that tracks who created, modified, or deleted a record, when they did it, and why. It is critical for proving **Data Integrity** in electronic systems.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which agency is responsible for enforcing the Food, Drug, and Cosmetic Act in the United States?",
+    "options": {
+      "a": "EPA (Environmental Protection Agency)",
+      "b": "OSHA (Occupational Safety and Health Administration)",
+      "c": "FDA (Food and Drug Administration)",
+      "d": "CDC (Centers for Disease Control)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The **FDA (Food and Drug Administration)** is the regulatory body responsible for protecting public health by ensuring the safety and efficacy of human and veterinary drugs, biological products, and medical devices.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Review the following documentation entry scenario: \n> A technician writes the date as '12/05/24'. \n\nWhy might this be considered poor documentation practice in an international context?",
+    "options": {
+      "a": "It uses a slash instead of a hyphen.",
+      "b": "The format is ambiguous (could be May 12th or December 5th).",
+      "c": "The year should always be written first.",
+      "d": "It does not include the time."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The date **12/05/24** is ambiguous; in the US it is December 5th, but in Europe, it is May 12th. GDP recommends using an unambiguous format, such as **05-Dec-2024** or **DD-MMM-YYYY**.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "Which ALCOA+ principle ensures that data is accessible and readable for the entire retention period mandated by regulations?",
+    "options": {
+      "a": "Consistent",
+      "b": "Enduring",
+      "c": "Original",
+      "d": "Complete"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "**Enduring** (part of ALCOA+) means the data must be recorded on media that is preserved and remains readable for the entire required retention period, rather than on temporary media like thermal paper or sticky notes.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "The **Quality Unit** (consisting of QA and QC) has the ultimate authority to:",
+    "options": {
+      "a": "Approve or reject all procedures, specifications, and drug products.",
+      "b": "Set the price of the drug product.",
+      "c": "Manage the marketing strategy for the drug.",
+      "d": "Hire all personnel in the company."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Under cGMP (21 CFR 211.22), the **Quality Unit** has the responsibility and authority to **approve or reject** all components, drug product containers, closures, in-process materials, packaging material, labeling, and drug products.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "You are reviewing a Batch Production Record. Which of the following observations would be a **violation** of cGMP?",
+    "options": {
+      "a": "The record is written in blue or black indelible ink.",
+      "b": "A correction is made with a single line, initial, and date.",
+      "c": "Pencil was used for preliminary data entry to allow for easy changes.",
+      "d": "The operator signed the 'Performed By' section immediately after the step."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Using **pencil** is a violation of cGMP and GDP because it is not permanent and can be erased, compromising data integrity. Data must be recorded in indelible (permanent) ink.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "What is the correct definition of **'Raw Data'**?",
+    "options": {
+      "a": "Data that has been processed and summarized in a final report.",
+      "b": "Original records and documentation (paper or electronic) that are the result of original observations.",
+      "c": "Data that is considered incorrect or an outlier.",
+      "d": "Draft data that can be discarded after the final value is chosen."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "**Raw Data** refers to the original records, worksheets, or exact copies that are the result of original observations and activities. This data is necessary for the reconstruction and evaluation of the study or process.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Biotechnology",
+    "topic": "Regulation & Quality",
+    "question_text": "If a technician uses another employee's login credentials to sign off on a manufacturing step because the other employee is busy, which data integrity principle is violated?",
+    "options": {
+      "a": "Legible",
+      "b": "Attributable",
+      "c": "Original",
+      "d": "Complete"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "This violates the **Attributable** principle. The record will falsely attribute the action to the employee whose login was used, rather than the person who actually performed it. Sharing passwords is a severe compliance violation.",
+    "section_id": null
+  }
+]

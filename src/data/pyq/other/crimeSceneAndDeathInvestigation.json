@@ -1,0 +1,962 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "Which of the following is the first priority of the first responding law enforcement officer arriving at a crime scene?",
+    "options": {
+      "a": "Preserving all evidence exactly as it is found.",
+      "b": "Securing the scene and ensuring the safety of all individuals.",
+      "c": "Separating the witnesses to prevent collusion.",
+      "d": "Taking preliminary photographs of the scene."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "According to the 7 S's of Crime Scene Investigation, the first step is 'Securing the Scene.' The absolute first priority of the responding officer is to ensure the safety of all individuals and provide medical assistance if necessary, followed immediately by restricting unauthorized access.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "Why is 'Separating the Witnesses' a critical step in crime scene investigation?",
+    "options": {
+      "a": "To protect the witnesses from biological hazards at the scene.",
+      "b": "To ensure they do not contaminate physical evidence.",
+      "c": "To prevent them from working together to create a cohesive but false story.",
+      "d": "To allow investigators space to perform the crime scene sketch."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Separating witnesses prevents them from communicating with one another. This avoids collusion, where witnesses might consciously or unconsciously alter their memories to match others' accounts.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "During the 'Scanning the Scene' phase, what is the primary objective of the forensic investigators?",
+    "options": {
+      "a": "To collect fragile evidence before it is destroyed.",
+      "b": "To determine where photos should be taken and identify primary and secondary scenes.",
+      "c": "To formally interview all separated witnesses.",
+      "d": "To meticulously measure and map the entire layout of the property."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Scanning the scene involves a quick walk-through to assess the overall layout, identify the primary crime scene, determine if there are secondary scenes, and decide where initial photos should be taken.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "Which of the following describes the difference between a primary crime scene and a secondary crime scene?",
+    "options": {
+      "a": "The primary scene is outdoors; the secondary scene is indoors.",
+      "b": "The primary scene is where the crime actually occurred; the secondary scene is related to the crime but is not where it initially took place.",
+      "c": "The primary scene yields physical evidence; the secondary scene yields witness testimony.",
+      "d": "The primary scene is investigated by police; the secondary scene is investigated by the Medical Examiner."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The primary crime scene is the location where the actual offense took place (e.g., a bank robbery). A secondary scene is another location where evidence related to the crime is found (e.g., the criminals' hideout or a getaway car).",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "In the 'Seeing the Scene' phase, which standard practice is essential for crime scene photography?",
+    "options": {
+      "a": "Taking photographs solely from the perspective of the suspect.",
+      "b": "Using artistic filters to highlight hard-to-see blood patterns.",
+      "c": "Capturing close-up photos both with and without a measuring scale.",
+      "d": "Only taking photographs after the body has been removed."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "When photographing evidence, it is crucial to take an establishing shot, a mid-range shot, and close-up photos. Close-ups must be taken both with and without a ruler (measuring scale) for accurate size reference.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "When sketching a crime scene, which of the following is NOT a strictly required element on the final rough sketch?",
+    "options": {
+      "a": "A compass designating North.",
+      "b": "The location of all recovered evidence.",
+      "c": "The exact identity of the suspect.",
+      "d": "Distance measurements from two fixed points."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A crime scene sketch must include a scale, a North arrow, fixed points for triangulation measurements, and the locations of evidence. The suspect's identity is an investigative conclusion, not a required physical component of the sketch.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "An investigator is documenting a piece of evidence using the triangulation method. What does this measurement technique require?",
+    "options": {
+      "a": "Three separate cameras taking photos simultaneously.",
+      "b": "Measurements from the evidence to three random objects in the room.",
+      "c": "Measurements taken from the evidence to two immovable, fixed landmarks.",
+      "d": "Drawing a triangle directly onto the floor around the evidence."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Triangulation is a measuring technique where the distance from an object of evidence is measured to two fixed, immovable landmarks (such as the corners of a room or structural walls).",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "A team of investigators is searching a large, open grassy field for a weapon. Which search pattern would be most efficient and effective for this scenario?",
+    "options": {
+      "a": "Spiral pattern",
+      "b": "Quadrant or Zone pattern",
+      "c": "Line/Strip or Grid pattern",
+      "d": "Random walking pattern"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "For large, open areas, a Line/Strip or Grid search pattern is typically the most effective. Multiple personnel can walk parallel to one another across the field to ensure complete coverage.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "During the 'Searching for Evidence' phase, investigators choose a quadrant (zone) search pattern. What does this method involve?",
+    "options": {
+      "a": "Dividing the scene into four or more distinct sections and assigning an investigator to search each one.",
+      "b": "Walking in concentric circles starting from the center of the room outward.",
+      "c": "Lining up shoulder-to-shoulder and walking across the room.",
+      "d": "Only searching the four corners of the primary scene."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A quadrant or zone search pattern involves dividing the crime scene area into distinct geometric zones, allowing specific investigators to focus thoroughly on smaller, manageable sections. It is often used for vehicles or complex indoor scenes.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "Which fundamental principle states that whenever two objects come into contact, a mutual exchange of matter occurs, forming the basis for securing and collecting trace evidence?",
+    "options": {
+      "a": "Daubert Standard",
+      "b": "Locard's Exchange Principle",
+      "c": "Frye Standard",
+      "d": "Chain of Custody Principle"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Dr. Edmond Locard formulated Locard's Exchange Principle, asserting 'every contact leaves a trace.' This is the foundational concept for recognizing, protecting, and collecting trace evidence at a crime scene.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "What is the primary purpose of the 'pharmacist's fold' (paper bindle) when securing evidence?",
+    "options": {
+      "a": "To provide an airtight seal for arson accelerants.",
+      "b": "To safely contain trace amounts of dry evidence like hair, fibers, or powder.",
+      "c": "To dry out wet biological evidence like blood.",
+      "d": "To securely package sharp objects like knives."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A paper bindle, or pharmacist's fold, is specifically created from a clean sheet of paper to hold very small, dry trace evidence (such as hairs, fibers, or paint chips) so that it does not leak out during transport.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "Which phase of the 7 S's directly addresses the documentation of all personnel who have entered and exited the scene?",
+    "options": {
+      "a": "Sketching the scene",
+      "b": "Securing the scene",
+      "c": "Searching for evidence",
+      "d": "Seeing the scene"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "During 'Securing the scene', the responding officer maintains a security log of everyone who enters and leaves the crime scene to prevent contamination and ensure accountability.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "An investigator finishes photographing a footprint before making a plaster cast. What step in the 7 S's did the investigator just complete, and what step are they preparing for?",
+    "options": {
+      "a": "Completed: Sketching the scene; Preparing for: Searching for evidence.",
+      "b": "Completed: Seeing the scene; Preparing for: Securing evidence.",
+      "c": "Completed: Scanning the scene; Preparing for: Sketching the scene.",
+      "d": "Completed: Separating witnesses; Preparing for: Seeing the scene."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Taking photographs is part of 'Seeing the scene.' The subsequent action of making a plaster cast to collect the footprint physically is part of 'Securing evidence'.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "When initially creating a rough sketch at the crime scene, what aspect takes priority over artistic neatness or precise, scaled drawing?",
+    "options": {
+      "a": "Using computer-aided drafting (CAD) software on-site.",
+      "b": "Color-coding different types of biological evidence.",
+      "c": "Recording exact distance measurements to fixed points.",
+      "d": "Ensuring the drawing perfectly resembles the architectural blueprint."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "A rough sketch drawn at the scene does not need to be artistically perfect or drawn precisely to scale on the paper; its most critical function is to record exact, accurate numerical measurements from fixed reference points.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Science",
+    "topic": "The 7 S's of Crime Scene Investigation",
+    "question_text": "In the final step of the 7 S's (Securing and Collecting Evidence), all evidence packaging must include a document that tracks its handling. What is this document called?",
+    "options": {
+      "a": "Subpoena duces tecum",
+      "b": "Chain of custody log",
+      "c": "Search warrant application",
+      "d": "Crime scene initial report"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The 'chain of custody' is a documented, unbroken record of the transfer of evidence. It must be attached to or printed on all evidence packaging to prove the item's integrity in court.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "Investigators locate a victim's shirt soaked in fresh, wet blood. How should this evidence initially be handled and packaged to preserve it properly?",
+    "options": {
+      "a": "Place it immediately into a sealed plastic bag to prevent the blood from leaking.",
+      "b": "Allow it to air dry fully, then package it in a breathable paper bag.",
+      "c": "Place it into an airtight metal container and refrigerate it.",
+      "d": "Wash the shirt lightly to isolate only the trace blood cells, then bag it."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Wet biological evidence must never be placed in airtight plastic containers, as moisture buildup will cause mold and bacterial growth, destroying DNA. It must be air-dried and stored in breathable paper.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "Following a suspicious house fire, an investigator discovers charred debris that smells strongly of gasoline. What is the correct protocol for packaging this evidence?",
+    "options": {
+      "a": "Package it in a standard paper evidence bag to allow the debris to breathe.",
+      "b": "Place it in a plastic ziplock bag and store it at room temperature.",
+      "c": "Package it in a clean, airtight metal paint can to prevent the evaporation of volatile accelerants.",
+      "d": "Wrap it tightly in a paper bindle."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Arson debris must be stored in airtight containers, such as clean metal paint cans, to prevent volatile accelerants (like gasoline or kerosene) from evaporating before chemical analysis can occur.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "A forensic analyst is examining a piece of evidence that arrived in a sealed plastic bag. To analyze the item without breaking the chain of custody, the analyst should:",
+    "options": {
+      "a": "Rip the original evidence tape, perform the test, and tape over the tear.",
+      "b": "Cut the bag open at a different location (not through the original seal), perform the test, and reseal the new cut with a new signature.",
+      "c": "Remove the original label, replace the bag entirely with a new one, and sign the new bag.",
+      "d": "Break the original seal, and leave it unsealed when returning it to the evidence locker."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To maintain a verifiable chain of custody, the original tape seal and signature must remain intact. The analyst cuts a new opening elsewhere, accesses the evidence, and then applies a new seal with their own signature across it.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "What is the primary function of collecting a 'substrate control' at a crime scene?",
+    "options": {
+      "a": "To ensure investigators have total authority over the scene's boundaries.",
+      "b": "To collect uncontaminated surface material close to where physical evidence was found for baseline comparison.",
+      "c": "To stabilize the mood of separated witnesses during interrogation.",
+      "d": "To control the temperature and humidity of biological evidence."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A substrate control is a sample of uncontaminated surface material near where physical evidence is recovered. It is tested to ensure that the surface material itself does not interfere with chemical tests applied to the actual evidence.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "When collecting physical evidence, standard reference samples are often required. Which of the following best defines a 'standard/reference sample'?",
+    "options": {
+      "a": "A piece of unknown physical evidence found on the suspect.",
+      "b": "Physical evidence whose origin is known, such as a buccal swab from a suspect, used for comparison against crime scene evidence.",
+      "c": "A textbook definition used by lawyers in the courtroom.",
+      "d": "A standard chemical reagent used to detect the presence of blood."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Standard/reference samples are materials of known origin (like blood or DNA from a suspect or victim) that are compared against evidence of unknown origin found at the crime scene.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "A CSI needs to collect broken glass fragments from a hit-and-run scene. Which packaging method is most appropriate?",
+    "options": {
+      "a": "A paper bindle wrapped securely.",
+      "b": "A thin, transparent plastic bag.",
+      "c": "A rigid container, such as a sturdy plastic vial or cardboard box.",
+      "d": "A standard paper envelope."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Sharp objects, such as broken glass or knives, must be packaged in rigid containers (like cardboard boxes or sturdy plastic vials) to prevent them from tearing the packaging and potentially injuring the handlers.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "Which of the following describes the proper way to sign an evidence tape seal on a packaged item?",
+    "options": {
+      "a": "The signature should be placed directly on the clear portion of the evidence bag.",
+      "b": "The signature should be placed entirely on the evidence tape.",
+      "c": "The signature should be written half on the tape and half on the packaging surface.",
+      "d": "A signature is only required on the chain of custody document, not on the seal itself."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "To detect and prevent tampering, the collector must sign their name or initials across the boundary of the tape seal, so that part of the writing is on the tape and part is on the packaging material. If the tape is lifted or replaced, the signature will be broken.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "An investigator discovers dried blood on the hood of a suspect's vehicle. Since the vehicle hood cannot easily be taken to the lab, what is the best method to collect the dried blood?",
+    "options": {
+      "a": "Pour bleach on it to lift the biological signature, then wipe it with a rag.",
+      "b": "Moisten a sterile cotton swab with distilled water, swab the stain, and allow the swab to air dry before packaging.",
+      "c": "Scrape the blood forcefully with an unsterilized pocket knife directly into a plastic bag.",
+      "d": "Take a photograph of it and leave the physical blood behind, as photos are sufficient for DNA profiling."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "When blood is dried on an immovable object, investigators typically use a sterile swab slightly moistened with distilled water to collect the sample, air dry the swab, and package it in a paper envelope or bindle.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "What happens if the chain of custody log is improperly maintained or contains missing gaps in possession?",
+    "options": {
+      "a": "The evidence becomes fully admissible as primary evidence.",
+      "b": "The investigator is automatically fired but the evidence remains valid.",
+      "c": "The evidence may be challenged in court and ruled inadmissible.",
+      "d": "The forensic lab will substitute an alternative sample."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A complete and unbroken chain of custody is legally required to prove that an item has not been altered or tampered with. Missing information can lead to the evidence being excluded from the trial.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "Which type of evidence container is strictly prohibited for storing damp or wet clothing?",
+    "options": {
+      "a": "Brown paper bag",
+      "b": "Plastic bag",
+      "c": "Cardboard box",
+      "d": "Paper bindle"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Plastic bags retain moisture, leading to the rapid growth of mold and mildew on damp items, which destroys biological evidence like DNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "If a firearm is found at a crime scene, what is the most important FIRST step regarding its collection, assuming photographs have already been taken?",
+    "options": {
+      "a": "Swabbing the entire outside for DNA immediately.",
+      "b": "Checking if the firearm is loaded and making it safe to handle.",
+      "c": "Picking it up by inserting a pencil into the barrel to preserve prints.",
+      "d": "Packaging it directly into an airtight metal paint can."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Safety is paramount. Before packaging a firearm, the investigator must carefully unload the weapon to render it safe, noting the position of all ammunition (e.g., chambered round, magazine capacity) while taking care to preserve latent prints.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "Why must investigators avoid using a vacuum sweeper equipped with standard filters to collect microscopic trace evidence from a large carpet?",
+    "options": {
+      "a": "Vacuum sweepers destroy the atomic structure of fibers.",
+      "b": "It will collect an overwhelming amount of irrelevant debris, complicating analysis, unless special forensic filter traps are used.",
+      "c": "Vacuuming alters the temperature of the scene.",
+      "d": "Microscopic evidence is usually invisible under standard light, making vacuuming useless."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "While specialized forensic vacuums with micro-filters are occasionally used as a last resort, general sweeping gathers dirt, skin, pet hair, and massive amounts of background debris that makes isolating specific crime-related trace evidence extremely tedious.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "When picking up an isolated human hair at a crime scene, which instrument should the investigator use?",
+    "options": {
+      "a": "Bare hands to ensure careful handling.",
+      "b": "A standard household vacuum.",
+      "c": "Sterilized forceps or tweezers.",
+      "d": "A wide strip of lifting tape applied aggressively."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Sterilized forceps (tweezers) are standard equipment used to gently collect individual trace items, like hair or fibers, without transferring the investigator's DNA or crushing the evidence.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "A forensic investigator collects an unspent bullet casing near a victim. It is crucial that the investigator avoid:",
+    "options": {
+      "a": "Using bare hands, which could wipe away latent fingerprints or deposit their own DNA.",
+      "b": "Recording its exact location on the sketch.",
+      "c": "Putting it in an evidence log.",
+      "d": "Measuring its distance from the victim."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Handling any evidence, especially brass casings that might contain latent fingerprints or touch DNA, with bare hands will cross-contaminate the item. Gloves must be worn.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Science",
+    "topic": "Evidence Collection",
+    "question_text": "To package a white powder suspected of being a controlled substance, an investigator should primarily utilize a:",
+    "options": {
+      "a": "Breathable paper bag to let moisture out.",
+      "b": "Paper bindle enclosed within a secure plastic bag to prevent fine powders from escaping.",
+      "c": "Metal paint can designed for arson evidence.",
+      "d": "Cardboard box with nothing else."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Fine, dry powders are often first placed in a bindle (pharmacist's fold) to prevent them from leaking out of seams, and then placed in an outer sealed container, such as a plastic bag or envelope.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "Which of the following processes describes the postmortem cooling of the body to the ambient temperature?",
+    "options": {
+      "a": "Rigor mortis",
+      "b": "Algor mortis",
+      "c": "Livor mortis",
+      "d": "Pallor mortis"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Algor mortis is defined as the cooling of the body postmortem until it matches the environmental (ambient) temperature.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "A medical examiner notes a purplish discoloration on the victim's back where blood has pooled due to gravity. This physical condition is known as:",
+    "options": {
+      "a": "Algor mortis",
+      "b": "Rigor mortis",
+      "c": "Livor mortis (lividity)",
+      "d": "Putrefaction"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Livor mortis, or lividity, is the pooling of blood in the lowest parts of the body caused by gravity after the heart stops pumping.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "In a temperate climate, approximately how long after death does livor mortis typically become permanently fixed?",
+    "options": {
+      "a": "2 hours",
+      "b": "8 hours",
+      "c": "12 hours",
+      "d": "24 hours"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Lividity generally begins to show 2 hours after death and typically becomes fixed (permanent even when the skin is pressed) after about 8 hours.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "A body is discovered lying flat on its back, but lividity is present strictly on the victim's chest and stomach. What does this forensic evidence indicate?",
+    "options": {
+      "a": "The victim had internal bleeding in the chest cavity.",
+      "b": "The victim died of a sudden heart attack.",
+      "c": "The victim's body was moved from a face-down position to a face-up position after lividity became fixed.",
+      "d": "The body is less than 2 hours dead."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "If lividity does not match the body's resting position, it indicates the body was kept in a different position long enough for livor mortis to fix (typically 8+ hours) before being moved to its discovered position.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "What causes the physiological phenomenon known as rigor mortis?",
+    "options": {
+      "a": "The depletion of ATP (adenosine triphosphate) in muscle fibers, preventing muscle relaxation.",
+      "b": "The rapid coagulation of blood in the veins.",
+      "c": "Bacterial decomposition in the intestinal tract.",
+      "d": "A sharp decrease in core body temperature freezing the tissues."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Rigor mortis (stiffening of muscles) occurs because cellular respiration ceases. Calcium builds up in muscle fibers, and without the continued production of ATP to release the myosin from actin filaments, the muscles become permanently contracted until the tissue begins to decay.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "At approximately what time after death does rigor mortis generally reach its peak (maximum stiffness) across the entire body?",
+    "options": {
+      "a": "2 hours",
+      "b": "12 hours",
+      "c": "24 hours",
+      "d": "36 hours"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Under normal conditions, rigor mortis begins within 2 hours, reaches its peak or maximum stiffness at approximately 12 hours, and then gradually dissipates.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "Investigators locate a body that exhibits no rigor mortis anywhere. Based ONLY on the timeline of rigor mortis, what is the most scientifically sound conclusion?",
+    "options": {
+      "a": "The victim has been dead exactly 12 hours.",
+      "b": "The victim has either been dead for less than 2 hours or more than 36 to 48 hours.",
+      "c": "The victim died due to poisoning, which prevents rigor mortis entirely.",
+      "d": "The ambient temperature is freezing, stopping rigor."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A complete absence of rigor implies that either it hasn't started yet (less than 2 hours dead) or the muscle fibers have begun to autolyze and the rigor has fully faded away (greater than 36-48 hours dead).",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "According to general postmortem guidelines for algor mortis, approximately what is the standard rate of temperature loss per hour for the first 12 hours after death?",
+    "options": {
+      "a": "$0.7^{\\circ}F$ per hour",
+      "b": "$1.4^{\\circ}F$ per hour",
+      "c": "$2.5^{\\circ}F$ per hour",
+      "d": "$0.39^{\\circ}F$ per hour"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "In Fahrenheit, a typical human body cools at an average rate of $1.4^{\\circ}F$ ($0.78^{\\circ}C$) per hour for the first 12 hours.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "Calculate the estimated time of death using algor mortis: A victim is found with a core body temperature of $84.6^{\\circ}F$. Assuming normal body temperature is $98.6^{\\circ}F$ and the body has cooled at standard rates, how long has the person been dead?",
+    "options": {
+      "a": "8 hours",
+      "b": "10 hours",
+      "c": "12 hours",
+      "d": "14 hours"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Total temperature loss = $98.6 - 84.6 = 14.0^{\\circ}F$. Since the loss is under the first 12-hour maximum ($12 \\times 1.4 = 16.8^{\\circ}F$), we divide $14.0 / 1.4 = 10$ hours.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "Calculate the estimated time of death using algor mortis: A body's internal temperature is $78.0^{\\circ}F$. Assuming normal body temperature is $98.6^{\\circ}F$, standard cooling rates ($1.4^{\\circ}F$/hr for first 12 hrs, $0.7^{\\circ}F$/hr thereafter), how many hours ago did death occur? (Round to one decimal place).",
+    "options": {
+      "a": "12.0 hours",
+      "b": "14.5 hours",
+      "c": "17.4 hours",
+      "d": "21.6 hours"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Total loss = $98.6 - 78.0 = 20.6^{\\circ}F$. Loss in first 12 hrs = $12 \\times 1.4 = 16.8^{\\circ}F$. Remaining loss = $20.6 - 16.8 = 3.8^{\\circ}F$. Time for remaining loss at $0.7^{\\circ}F$/hr = $3.8 / 0.7 \\approx 5.4$ hours. Total PMI = $12 + 5.4 = 17.4$ hours.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "How is a deceased victim's core body temperature most accurately measured by an investigator at a crime scene?",
+    "options": {
+      "a": "Using an oral thermometer.",
+      "b": "Using a laser surface thermometer on the forehead.",
+      "c": "Taking the temperature via the rectum or liver.",
+      "d": "Placing a thermometer in the armpit."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "To obtain an accurate internal (core) body temperature for calculating algor mortis, investigators must insert a thermometer directly into the liver or rectum.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "Which combination of environmental and physiological factors would accelerate the onset and rate of rigor mortis?",
+    "options": {
+      "a": "A naked body found in an extremely cold snowbank.",
+      "b": "A heavy individual who died peacefully in their sleep.",
+      "c": "A victim who engaged in severe physical struggle in a hot environment prior to death.",
+      "d": "A person submerged in an icy river."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "High ambient temperatures and heavy exercise prior to death deplete ATP rapidly and increase body temperature, significantly accelerating the onset and completion of rigor mortis.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "In forensic entomology, which group of insects is typically the first to arrive and lay eggs on a deceased human body?",
+    "options": {
+      "a": "Blowflies (Calliphoridae)",
+      "b": "Carrion beetles (Silphidae)",
+      "c": "Hide beetles (Dermestidae)",
+      "d": "Predatory wasps"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Blowflies have an exceptionally keen sense of smell for putrescine and cadaverine and are often the first insects to arrive at a corpse, sometimes within minutes of death.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "If investigators observe 'dual lividity' on a body, what does this indicate?",
+    "options": {
+      "a": "The victim had two entirely separate causes of death.",
+      "b": "The victim was kept in one position for roughly 2-8 hours, then shifted to another position before lividity became fully permanent.",
+      "c": "The victim bled out internally and externally.",
+      "d": "The victim was frozen shortly after death."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Dual lividity (two separate patterns of pooling) occurs if a body is moved after lividity has begun to form but before it is completely fixed (i.e., between 2 and 8 hours postmortem).",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Forensic Science",
+    "topic": "Death Investigation",
+    "question_text": "What does the acronym PMI stand for in the context of forensic death investigation?",
+    "options": {
+      "a": "Primary Method of Injury",
+      "b": "Post-Mortem Interval",
+      "c": "Preliminary Manner of Investigation",
+      "d": "Point of Maximum Impact"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "PMI stands for Post-Mortem Interval, which is the estimated time that has elapsed since the person died.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "Which of the following describes the key difference between a Medical Examiner and a Coroner?",
+    "options": {
+      "a": "A coroner is always a physician, whereas a medical examiner is a politician.",
+      "b": "A medical examiner is typically an appointed forensic pathologist with a medical degree, while a coroner is often an elected official who may not have a medical background.",
+      "c": "A coroner determines the cause of death, but a medical examiner only identifies the body.",
+      "d": "There is no difference; the terms are perfectly synonymous in every US state."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A Medical Examiner is almost always an appointed physician specializing in forensic pathology. A Coroner is generally an elected county official and is not required to be an M.D. in many jurisdictions.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "Which term categorizes death into one of five legally recognized groups: Natural, Accidental, Suicidal, Homicidal, or Undetermined?",
+    "options": {
+      "a": "Cause of death",
+      "b": "Mechanism of death",
+      "c": "Manner of death",
+      "d": "Condition of death"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The 'Manner of death' is the legal or epidemiological categorization of how the death occurred. There are five manners: natural, accident, suicide, homicide, and undetermined.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "A man is shot in the chest during a robbery. The bullet punctures his heart, causing extreme blood loss. What is the 'Cause of Death'?",
+    "options": {
+      "a": "Homicide",
+      "b": "Exsanguination (massive blood loss)",
+      "c": "Gunshot wound to the chest",
+      "d": "Undetermined"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The 'Cause of Death' is the specific injury or disease that initiated the sequence of events leading to death. In this case, it is the gunshot wound. (Homicide is the manner; exsanguination is the mechanism).",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "Using the same scenario (a man shot during a robbery who bleeds to death from a punctured heart), what is the 'Mechanism of Death'?",
+    "options": {
+      "a": "Homicide",
+      "b": "Gunshot wound",
+      "c": "Exsanguination (blood loss)",
+      "d": "Robbery"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The 'Mechanism of Death' is the specific physiological or biochemical change in the body brought about by the cause of death. Massive blood loss (exsanguination) is the physiological reason the organs stopped functioning.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "What is statically the most common manner of death among all death investigations?",
+    "options": {
+      "a": "Homicide",
+      "b": "Accidental",
+      "c": "Suicide",
+      "d": "Natural"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Natural death is by far the most common manner of death, occurring as a result of aging, disease, or medical conditions.",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "During an autopsy, a pathologist observes undigested food in the stomach of the victim. What general timeline does this suggest for the post-mortem interval (time since last meal)?",
+    "options": {
+      "a": "Death occurred within zero to two hours after the last meal.",
+      "b": "Death occurred four to six hours after the last meal.",
+      "c": "Death occurred at least 12 hours after the last meal.",
+      "d": "Death occurred 24 to 48 hours after the last meal."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Under normal digestion rates, food stays in the stomach for roughly 2 hours before completely emptying into the small intestine. The presence of food in the stomach suggests the victim died shortly after eating.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "A forensic pathologist finds the stomach empty, but the small intestine is full of digested food material. Approximately how much time passed between the victim's last meal and their death?",
+    "options": {
+      "a": "0 to 2 hours",
+      "b": "4 to 6 hours",
+      "c": "12 to 14 hours",
+      "d": "24+ hours"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The stomach empties in about 2-6 hours. If the stomach is empty but food is in the small intestine, death likely occurred 4 to 6 hours (up to 12 hours) after the meal.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "A medical examiner notices tiny, pinpoint hemorrhagic blood spots in the whites of a victim's eyes and on the inner eyelids. What are these called, and what do they commonly suggest?",
+    "options": {
+      "a": "Liver spots; suggesting natural death by aging.",
+      "b": "Tardieu spots; suggesting death by gunshot wound.",
+      "c": "Petechiae (petechial hemorrhages); highly indicative of asphyxiation or strangulation.",
+      "d": "Purpura; suggesting a sudden heart attack."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Petechiae are tiny broken blood vessels, often seen in the eyes or eyelids of victims who have been strangled or asphyxiated, due to severe pressure and restriction of venous blood flow.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "What is the standard primary incision made by a pathologist during an internal autopsy to expose the thoracic and abdominal cavities?",
+    "options": {
+      "a": "T-incision",
+      "b": "I-incision",
+      "c": "Y-incision",
+      "d": "Cruciate (Cross) incision"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A Y-shaped incision is the standard protocol for the internal examination. It is made starting from both shoulders, meeting at the sternum, and continuing straight down to the pubic bone.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "Before the pathologist ever picks up a scalpel, what is the mandatory first major phase of a medical-legal autopsy?",
+    "options": {
+      "a": "Extracting the brain.",
+      "b": "A complete and thoroughly documented external examination of the body, clothing, and evidence.",
+      "c": "Interviewing the suspect.",
+      "d": "Draining the blood for toxicological testing."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The external examination is critical and must be done first. It includes photographing the body as it arrived in the body bag, searching for trace evidence on the clothing, and thoroughly examining the skin for external injuries, wounds, and tattoos.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "During an autopsy, an examiner decides to use the Rokitansky method. What does this internal examination technique involve?",
+    "options": {
+      "a": "Taking organ samples via a microscopic needle biopsy only.",
+      "b": "Removing all organs within the thoracic, cervical, and abdominal cavities together in one entire block.",
+      "c": "Removing the organs one-by-one, weighing them individually as they are detached.",
+      "d": "Leaving the organs in place and utilizing MRI imaging instead of a physical autopsy."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Rokitansky method is an evisceration technique where all the major internal organs of the trunk and neck are removed en masse (in one block) and then dissected on the table.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "A deceased individual is found with severe head trauma. The pathologist lists the mechanism of death as cerebral edema (swelling of the brain). The cause of death is blunt force trauma. If it was later proven someone intentionally struck him with a bat, what is the manner of death?",
+    "options": {
+      "a": "Accidental",
+      "b": "Natural",
+      "c": "Undetermined",
+      "d": "Homicidal"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Intentional killing by another human classifies the legal manner of death as homicide.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "At an autopsy, toxicology screening involves testing bodily fluids. Which organ is typically weighed and dissected closely because it is the primary organ for drug metabolism and detoxification?",
+    "options": {
+      "a": "Heart",
+      "b": "Lungs",
+      "c": "Liver",
+      "d": "Spleen"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The liver is critical for forensic toxicology and pathology because it filters and metabolizes toxins, poisons, and drugs.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "A victim has an empty stomach and an empty small intestine, but there is substantial waste located in the large intestine. What is the approximate Post-Mortem Interval since the victim's last meal?",
+    "options": {
+      "a": "Less than 2 hours",
+      "b": "4 hours",
+      "c": "8 hours",
+      "d": "12 or more hours"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Digested material typically leaves the small intestine and arrives in the large intestine approximately 12 or more hours after eating.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Forensic Science",
+    "topic": "Autopsy Basics",
+    "question_text": "Which of the following describes autolysis, a postmortem process identified by a forensic pathologist?",
+    "options": {
+      "a": "The destruction of cells and organs through their own intracellular enzymes.",
+      "b": "The consumption of tissue by bacterial flora from the gut.",
+      "c": "The intentional examination of organs under a microscope.",
+      "d": "The pooling of blood."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Autolysis (literally 'self-digestion') is an early stage of decomposition where the body's own intracellular enzymes break down tissues and cells.",
+    "section_id": null
+  }
+]

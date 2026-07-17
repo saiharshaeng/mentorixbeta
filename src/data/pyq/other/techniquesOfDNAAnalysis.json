@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Science",
+    "topic": "DNA Structure",
+    "question_text": "What are the three primary components that make up a single DNA nucleotide?",
+    "options": {
+      "a": "A deoxyribose sugar, a phosphate group, and a nitrogenous base",
+      "b": "A ribose sugar, a sulfate group, and a pyrimidine base",
+      "c": "An amino acid, a peptide bond, and a lipid",
+      "d": "A pair of homologous chromosomes and a mitochondrial envelope"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "According to the fundamental principles of DNA structure, a single nucleotide consists of a deoxyribose sugar molecule, a phosphate group, and a nitrogenous base. Source: DNA Structure: Nucleotides.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Science",
+    "topic": "DNA Structure",
+    "question_text": "In a double-stranded DNA molecule, which of the following represents the correct complementary base pairing rules?",
+    "options": {
+      "a": "Adenine pairs with Cytosine; Guanine pairs with Thymine",
+      "b": "Adenine pairs with Guanine; Cytosine pairs with Thymine",
+      "c": "Adenine pairs with Thymine; Cytosine pairs with Guanine",
+      "d": "Adenine pairs with Uracil; Guanine pairs with Cytosine"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Chargaff's rules state that in DNA, Adenine (A) always pairs with Thymine (T), and Cytosine (C) always pairs with Guanine (G). Source: DNA Structure: base pairing (A-T, C-G).",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Science",
+    "topic": "DNA Structure",
+    "question_text": "If a forensic scientist discovers a DNA sequence that reads 5'-A-T-G-C-C-A-3', what would the complementary strand's sequence be?",
+    "options": {
+      "a": "3'-A-T-G-C-C-A-5'",
+      "b": "3'-T-A-C-G-G-T-5'",
+      "c": "3'-U-A-C-G-G-U-5'",
+      "d": "3'-G-C-A-T-T-C-5'"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Following complementary base pairing rules, A pairs with T and C pairs with G. Thus, A-T-G-C-C-A pairs with T-A-C-G-G-T. Source: DNA Structure: base pairing.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Science",
+    "topic": "DNA Structure",
+    "question_text": "How many pairs of chromosomes are found in the nucleus of a normal human somatic cell?",
+    "options": {
+      "a": "23",
+      "b": "46",
+      "c": "22",
+      "d": "44"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Human somatic cells contain 23 pairs of chromosomes, totaling 46 chromosomes. These contain the nuclear DNA inherited from both parents. Source: DNA Structure: chromosomes.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Science",
+    "topic": "DNA Sources",
+    "question_text": "Which statement best describes the inheritance pattern of nuclear DNA compared to mitochondrial DNA?",
+    "options": {
+      "a": "Nuclear DNA is inherited solely from the mother, while mitochondrial DNA is inherited from both parents.",
+      "b": "Both nuclear and mitochondrial DNA are inherited exclusively from the mother.",
+      "c": "Nuclear DNA is inherited from both parents, whereas mitochondrial DNA is inherited maternally.",
+      "d": "Nuclear DNA is inherited from the father only, and mitochondrial DNA is inherited from the mother only."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Nuclear DNA is a combination of genetic material from both the biological mother and father. Mitochondrial DNA (mtDNA) is inherited exclusively from the mother. Source: Nuclear DNA vs. Mitochondrial DNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Science",
+    "topic": "DNA Sources",
+    "question_text": "A forensic anthropologist unearths severely degraded skeletal remains exposed to environmental elements for over 50 years. What type of DNA analysis is most likely to yield a successful profile?",
+    "options": {
+      "a": "Nuclear DNA analysis, because bone marrow preserves it perfectly.",
+      "b": "Mitochondrial DNA (mtDNA) analysis, because there are hundreds of copies of mtDNA per cell.",
+      "c": "Y-chromosome analysis, because it resists degradation better than autosomal DNA.",
+      "d": "Messenger RNA (mRNA) analysis, because RNA is more chemically stable than DNA over time."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Mitochondrial DNA is highly abundant (hundreds to thousands of copies per cell) compared to the single set of nuclear DNA per cell. It is extremely useful for degraded remains or hair shafts. Source: Mitochondrial DNA (useful for degraded remains).",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Science",
+    "topic": "DNA Sources",
+    "question_text": "A suspect drops a hair at a crime scene. Upon microscopic examination, the hair shaft is present, but the follicular tag (the root) is completely absent. Which type of DNA can be successfully recovered and analyzed from this evidence?",
+    "options": {
+      "a": "Only nuclear DNA",
+      "b": "Only mitochondrial DNA",
+      "c": "Both nuclear and mitochondrial DNA",
+      "d": "Neither, as hair shafts do not contain any genetic material"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The follicular tag contains cellular material rich in nuclear DNA. Without the root, the keratinized hair shaft primarily retains mitochondrial DNA, making mtDNA analysis the only viable option. Source: Mitochondrial DNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "What is the primary function of the Polymerase Chain Reaction (PCR) in forensic science?",
+    "options": {
+      "a": "To separate DNA fragments based on their size.",
+      "b": "To determine the exact base sequence of an entire human genome.",
+      "c": "To exponentially amplify tiny or trace amounts of specific DNA sequences for analysis.",
+      "d": "To extract DNA from the nucleus by breaking down the cellular membrane."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "PCR acts as a 'molecular photocopier' to amplify minute amounts of target DNA exponentially so that enough is available for profiling. Source: Extraction & Amplification: The steps of PCR.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "The first step of the Polymerase Chain Reaction (PCR) cycle involves heating the sample to approximately 94-95 degrees Celsius. What is the name of this step and its molecular purpose?",
+    "options": {
+      "a": "Annealing; it allows primers to bind to the DNA.",
+      "b": "Extension; it activates Taq polymerase to build the new strand.",
+      "c": "Denaturation; it breaks the hydrogen bonds separating the double-stranded DNA into single strands.",
+      "d": "Lysis; it destroys the nuclear membrane to release DNA."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Denaturation is the first step of PCR, involving high heat (typically 94-95°C) to break the hydrogen bonds between the base pairs, producing single-stranded DNA templates. Source: The steps of PCR - denaturation.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "During the second stage of a PCR cycle, the temperature is lowered to around 50-65 degrees Celsius. What crucial event happens during this 'annealing' phase?",
+    "options": {
+      "a": "The double helix reforms its original complementary structure.",
+      "b": "Short, synthesized single-stranded DNA sequences called primers bind to specific complementary target sequences on the DNA template.",
+      "c": "The DNA polymerase synthesizes a complete new strand.",
+      "d": "Nucleotides are converted into energy to drive the reaction."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "During the annealing phase, the temperature is reduced so that primers (short DNA sequences designed to target specific loci like STRs) can successfully attach to the separated DNA strands. Source: The steps of PCR - annealing.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "In the third step of PCR, known as extension, an enzyme reads the template strand and adds free nucleotides to the primer. Which specialized enzyme is utilized for this task because of its ability to withstand extreme heat?",
+    "options": {
+      "a": "Helicase",
+      "b": "Ligase",
+      "c": "Taq polymerase",
+      "d": "RNA primase"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Taq polymerase (isolated from the thermophilic bacterium Thermus aquaticus) is used in PCR's extension step because it can survive the high denaturation temperatures used repeatedly in the thermal cycling process. Source: The steps of PCR - extension.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "If a forensic analyst places a single copy of a double-stranded DNA sequence into a thermal cycler, how many copies will theoretically be present after 3 complete PCR cycles?",
+    "options": {
+      "a": "3",
+      "b": "6",
+      "c": "8",
+      "d": "12"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "PCR yields an exponential increase ($2^n$). After cycle 1: 2 copies. Cycle 2: 4 copies. Cycle 3: $2^3 = 8$ copies. Source: PCR Amplification.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "What does a forensic scientist use to carry out the cyclic temperature changes required for a Polymerase Chain Reaction?",
+    "options": {
+      "a": "A thermal cycler",
+      "b": "A gas chromatograph",
+      "c": "A capillary electrophoresis machine",
+      "d": "A vacuum desiccator"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A thermal cycler is the instrument programmed to rapidly heat and cool the DNA samples, facilitating the sequential steps of denaturation, annealing, and extension in PCR.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "Modern forensic DNA profiling relies heavily on the analysis of STRs. What does the acronym STR stand for?",
+    "options": {
+      "a": "Standard Truncated Regions",
+      "b": "Short Tandem Repeats",
+      "c": "Specific Targeted Replicas",
+      "d": "Synthesized Template Receptors"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "STR stands for Short Tandem Repeats, which are repeating sequences of 3 to 7 base pairs in the non-coding regions of DNA. Source: Analysis - STRs (Short Tandem Repeats).",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "Why have Short Tandem Repeats (STRs) largely replaced Restriction Fragment Length Polymorphisms (RFLPs) in forensic DNA analysis?",
+    "options": {
+      "a": "STRs contain the entire coding sequence for structural genes, whereas RFLPs only contain 'junk' DNA.",
+      "b": "STRs are much shorter lengths of DNA, making them far less susceptible to degradation and ideal for amplification via PCR.",
+      "c": "STR loci are found in mitochondrial DNA, while RFLPs are restricted strictly to nuclear DNA.",
+      "d": "STR analysis requires large, intact biological samples, which guarantees a pristine DNA profile."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Because STRs are short (usually under 450 base pairs long), they are less likely to break down in degraded samples compared to the long fragments required for RFLP, and they are easily amplified using PCR.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "In an STR region of DNA, individual variations arise primarily due to differences in the:",
+    "options": {
+      "a": "Number of times a short DNA sequence repeats itself.",
+      "b": "Chemical composition of the sugar-phosphate backbone.",
+      "c": "Substitution of Uracil in place of Thymine.",
+      "d": "Location of the sequence on mitochondrial instead of nuclear chromosomes."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "STR polymorphism is based on length; individuals differ in how many times the short sequence pattern repeats. For example, one person may have 8 repeats, while another has 12.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "Gel electrophoresis is a critical technique used to separate and analyze DNA fragments post-PCR. What physical property does the gel matrix utilize to separate the fragments?",
+    "options": {
+      "a": "Base pair chemistry (A-T vs C-G ratio)",
+      "b": "Magnetic resonance",
+      "c": "Size (length) of the DNA fragments",
+      "d": "Thermal conductivity of the nucleotides"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Gel electrophoresis separates DNA fragments by size. The porous gel acts as a sieve, allowing fragments to move based on their length. Source: Gel Electrophoresis (smaller fragments move faster).",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "During gel electrophoresis, DNA molecules are pushed through the gel by an electrical current. In which direction do the DNA fragments migrate, and why?",
+    "options": {
+      "a": "Toward the positive pole (anode) because DNA possesses a net negative charge.",
+      "b": "Toward the negative pole (cathode) because DNA possesses a net positive charge.",
+      "c": "Toward the positive pole (anode) because DNA relies on positive hydrogen bonds.",
+      "d": "They move in both directions randomly until the electrical current separates them."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The phosphate groups in the DNA backbone give the molecule a net negative electrical charge. Consequently, when placed in an electric field, DNA migrates toward the positively charged electrode (anode). Source: Gel Electrophoresis (DNA moves toward the positive pole).",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "In a completed gel electrophoresis run, analyzing the migration distances reveals the sizes of different fragments. Which statement accurately describes this migration?",
+    "options": {
+      "a": "Larger DNA fragments migrate faster and travel further through the gel than smaller ones.",
+      "b": "Smaller DNA fragments experience less resistance and migrate faster, traveling further through the gel.",
+      "c": "All DNA fragments migrate at the exact same speed; their final position depends on original volume.",
+      "d": "DNA fragments do not migrate unless treated with specialized radioactive isotopes."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The gel matrix acts as a molecular sieve. Smaller DNA fragments thread through the pores easier and migrate faster/further than larger, bulkier fragments. Source: Gel Electrophoresis (smaller fragments move faster).",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "What is the purpose of running a 'DNA ladder' or 'allelic ladder' alongside crime scene samples during electrophoresis?",
+    "options": {
+      "a": "To provide DNA fragments of known lengths used as standard references to determine the sizes of the unknown fragments.",
+      "b": "To ensure the electrical current remains positive throughout the entire run.",
+      "c": "To actively stain the DNA so it glows under ultraviolet light.",
+      "d": "To extract any remaining nucleases that could degrade the sample."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A DNA ladder is a mixture of standard DNA fragments with known base-pair sizes. By comparing unknown sample bands to the ladder, the scientist can calculate the size of the STR alleles.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Science",
+    "topic": "Databases",
+    "question_text": "What does the forensic acronym CODIS stand for?",
+    "options": {
+      "a": "Centralized Offender DNA Integration System",
+      "b": "Combined DNA Index System",
+      "c": "Cooperative Data and Identification System",
+      "d": "Criminal Organization DNA Information Standard"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "CODIS stands for the Combined DNA Index System, which is the national software program operated by the FBI that houses DNA profiles. Source: Databases: CODIS.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Science",
+    "topic": "Databases",
+    "question_text": "To upload a standard forensic DNA profile into the National DNA Index System (NDIS) tier of CODIS, how many core STR loci must currently be successfully analyzed?",
+    "options": {
+      "a": "13",
+      "b": "15",
+      "c": "20",
+      "d": "23"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The FBI originally required 13 core STR loci, but upgraded the standard on January 1, 2017. Currently, 20 core STR loci are required for CODIS entry. Source: Databases: CODIS (standard is currently 20).",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Science",
+    "topic": "Databases",
+    "question_text": "CODIS incorporates multiple levels of DNA indexing to share information across jurisdictions. Which tier of CODIS is managed by the FBI and connects profiles from laboratories across the entire United States?",
+    "options": {
+      "a": "LDIS (Local DNA Index System)",
+      "b": "SDIS (State DNA Index System)",
+      "c": "NDIS (National DNA Index System)",
+      "d": "IDIS (International DNA Index System)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "NDIS (National DNA Index System) is the highest tier of CODIS, connecting state (SDIS) and local (LDIS) databases to allow nationwide searching.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Science",
+    "topic": "Databases",
+    "question_text": "Which of the following describes the 'Forensic Index' found within CODIS?",
+    "options": {
+      "a": "It contains DNA profiles collected specifically from individuals convicted of serious crimes.",
+      "b": "It contains DNA profiles developed from biological evidence recovered directly from unsolved crime scenes.",
+      "c": "It contains genetic sequences of unknown, unidentified missing persons only.",
+      "d": "It holds the fingerprint and photographic records matching the DNA swabs."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "CODIS is divided into several indices. The Forensic Index contains DNA profiles derived from crime scene evidence (e.g., blood or semen left by an unknown suspect). The Offender Index contains known profiles from convicted individuals.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "When viewing an STR DNA profile, a locus shows two distinct peaks (bands) at the D3S1358 marker. What does this indicate about the individual's genotype for that specific STR?",
+    "options": {
+      "a": "The individual is homozygous at that locus, having inherited identical alleles from both parents.",
+      "b": "The individual is heterozygous at that locus, having inherited a different number of repeats from each parent.",
+      "c": "The DNA sample is highly degraded and missing data.",
+      "d": "The DNA represents mitochondrial contamination."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "If a locus displays two different peaks or bands, the individual is heterozygous, meaning they inherited a different allele (e.g., 14 repeats and 16 repeats) from each parent for that specific genetic marker.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "If a person is homozygous at a specific STR locus, what pattern will appear on their electropherogram or gel for that locus?",
+    "options": {
+      "a": "A single, taller peak or single thick band.",
+      "b": "Two peaks of completely unequal heights.",
+      "c": "A complete absence of any peaks or bands.",
+      "d": "A minimum of four distinct peaks representing the maternal and paternal lines."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Homozygous means inheriting identical alleles from both parents. During analysis, they migrate to the same spot, resulting in one single prominent band on a gel or one large peak on an electropherogram.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "Before PCR can take place, the DNA must be isolated from the cell. In the context of DNA extraction, what does the term 'lysis' refer to?",
+    "options": {
+      "a": "The chemical breakdown and rupturing of cell and nuclear membranes to release DNA.",
+      "b": "The final purification wash using alcohol.",
+      "c": "The mechanical cutting of chromosomes by restriction enzymes.",
+      "d": "The binding of primers to the single-stranded DNA template."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Cell lysis is the primary step in extraction, usually involving detergents and enzymes (like Proteinase K) to burst open the cell and its nucleus to liberate the nuclear DNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Science",
+    "topic": "DNA Sources",
+    "question_text": "In a sexual assault investigation, analysts often encounter mixtures of male and female DNA. What specific type of STR analysis is highly beneficial for isolating the male suspect's genetic profile in a mixture overwhelmed by female victim DNA?",
+    "options": {
+      "a": "Mitochondrial DNA (mtDNA) analysis",
+      "b": "Y-STR analysis",
+      "c": "RFLP restriction mapping",
+      "d": "Next Generation Sequencing of the X chromosome"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Y-STR analysis targets Short Tandem Repeats on the male-specific Y-chromosome. Female DNA does not contain a Y-chromosome and will not amplify during a Y-STR test, isolating the male profile.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "While analyzing a 20-locus STR profile for CODIS entry, one particular locus called 'Amelogenin' is always included. What does the Amelogenin gene specifically determine in a forensic context?",
+    "options": {
+      "a": "The race or ethnic background of the donor.",
+      "b": "The approximate age of the biological donor.",
+      "c": "The biological sex of the individual.",
+      "d": "The exact maternal lineage."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The Amelogenin locus is the standard sex-determining marker used in multiplex STR kits. A female profile will display XX, whereas a male profile displays XY.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "Modern forensic laboratories extract, amplify, and visualize multiple STR loci simultaneously in a single reaction tube. What is the correct scientific term for this process?",
+    "options": {
+      "a": "Capillary sequencing",
+      "b": "Southern Blotting",
+      "c": "Multiplexing",
+      "d": "Heteroplasmy"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Multiplexing is the process where PCR kits are designed to amplify 20+ STR loci simultaneously using different fluorescent dye labels, allowing massive amounts of data to be gleaned from one trace sample.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Forensic Science",
+    "topic": "DNA Structure",
+    "question_text": "Which chemical structure makes up the 'backbone' or outer side-rails of the DNA double helix?",
+    "options": {
+      "a": "Paired nitrogenous bases linked by hydrogen bonds",
+      "b": "Alternating deoxyribose sugar molecules and phosphate groups",
+      "c": "Polypeptide chains of amino acids",
+      "d": "Strands of RNA interwoven with lipids"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The DNA backbone consists of alternating deoxyribose sugar and phosphate groups, connected by phosphodiester bonds. The rungs of the ladder are the nitrogenous bases. Source: DNA Structure.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "During PCR, why are precisely designed short sequences of DNA called 'primers' so crucial?",
+    "options": {
+      "a": "They provide the fluorescent dye necessary for capillary electrophoresis.",
+      "b": "They define the boundaries of the target DNA region to be copied by binding to flanking sequences.",
+      "c": "They degrade competing non-human DNA.",
+      "d": "They assemble amino acids into proteins during transcription."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Primers are synthesized to match regions flanking the targeted STR locus. They signal Taq polymerase precisely where to start and stop copying, ensuring only the locus of interest is amplified.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "In a modern DNA laboratory, traditional gel slabs are frequently replaced by a method utilizing thin glass tubes and lasers to read fluorescently tagged DNA fragments in real-time. This technique is called:",
+    "options": {
+      "a": "Gas Chromatography-Mass Spectrometry (GC-MS)",
+      "b": "Capillary Electrophoresis (CE)",
+      "c": "Scanning Electron Microscopy (SEM)",
+      "d": "Fourier Transform Infrared Spectroscopy (FTIR)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Capillary Electrophoresis uses narrow tubes and automated laser detection to resolve the sizes of STRs much faster and more accurately than traditional slab gels.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "When generating a DNA profile, how do forensic scientists mathematically determine the random match probability—the chance that an unrelated person shares the same 20-locus profile?",
+    "options": {
+      "a": "By adding the frequencies of all the alleles present at the 20 loci.",
+      "b": "By dividing the total population by the number of alleles found.",
+      "c": "By using the product rule to multiply the frequencies of independently occurring alleles across all tested loci.",
+      "d": "By running the sample through CODIS and counting the number of false hits."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The product rule asserts that one can calculate the overall probability of a combined genetic profile by multiplying together the individual population frequencies of each allele present at independent loci.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Forensic Science",
+    "topic": "DNA Structure",
+    "question_text": "The stability of the DNA double helix relies on chemical bonds between the nitrogenous bases of opposite strands. What type of bond connects Adenine to Thymine and Cytosine to Guanine?",
+    "options": {
+      "a": "Covalent bonds",
+      "b": "Hydrogen bonds",
+      "c": "Ionic bonds",
+      "d": "Metallic bonds"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Weak hydrogen bonds link the complementary nitrogenous base pairs (2 bonds between A-T, 3 bonds between C-G). These are easily broken by heat during the denaturation step of PCR.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Forensic Science",
+    "topic": "DNA Sources",
+    "question_text": "Which statement regarding mitochondrial DNA (mtDNA) in forensics is false?",
+    "options": {
+      "a": "It is found outside the nucleus in the cell's cytoplasm.",
+      "b": "It is structured as a closed, circular loop of DNA.",
+      "c": "It is inherited maternally, meaning all siblings sharing the same biological mother have identical mtDNA.",
+      "d": "It provides a higher power of individual discrimination than analyzing the 20 nuclear STR core loci."
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Because mtDNA is inherited unchanged from the mother, it is not strictly unique to an individual (maternal relatives share it). Therefore, its discriminatory power is lower than nuclear DNA STR profiling, which can uniquely identify one individual.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Forensic Science",
+    "topic": "Extraction & Amplification",
+    "question_text": "Contamination is a major risk in DNA extraction and PCR amplification. Which of the following is NOT a standard laboratory practice to prevent contamination?",
+    "options": {
+      "a": "Using positive air pressure and separate dedicated rooms for extraction and amplification.",
+      "b": "Utilizing disposable, single-use pipette tips.",
+      "c": "Amplifying victim samples and suspect samples together in the same reaction tube to save time.",
+      "d": "Analyzing 'blank' control samples to monitor for extraneous DNA."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Victim and suspect samples must always be processed separately (in space and time) to prevent cross-contamination. Mixing them invalidates the findings.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Forensic Science",
+    "topic": "Analysis",
+    "question_text": "If a gel electrophoresis run is left running for far too long, what adverse consequence will most likely occur?",
+    "options": {
+      "a": "The gel will permanently mutate the DNA sequence into a new locus.",
+      "b": "The smaller DNA fragments will migrate completely off the end of the gel and be lost into the buffer solution.",
+      "c": "The DNA fragments will reverse their charge and migrate backward toward the negative pole.",
+      "d": "The DNA fragments will fuse back together forming one massive chromosome."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Because smaller fragments migrate the fastest toward the anode, excessive running time will push them entirely off the far edge of the gel matrix into the liquid buffer, losing the data.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Forensic Science",
+    "topic": "Databases",
+    "question_text": "When investigating a cold case, investigators check CODIS and discover an 'Offender Hit'. What does this specifically indicate?",
+    "options": {
+      "a": "A DNA profile from the crime scene matches another unsolved crime scene, showing a serial offender is at work.",
+      "b": "A DNA profile from the crime scene matches a known profile in the convicted offender index, yielding the name of a suspect.",
+      "c": "The suspect's DNA was missing the required 20 loci, so the hit is invalid.",
+      "d": "The crime lab was cited for an offense against database regulations."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "An 'Offender Hit' occurs when an unknown crime scene profile (Forensic Index) links to a profile with a known identity in the Offender Index. A 'Forensic Hit' links two separate crime scenes together without knowing the identity.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Forensic Science",
+    "topic": "Databases",
+    "question_text": "Familiar or 'familial' DNA searching is a controversial technique that leverages DNA databases. How does this technique operate?",
+    "options": {
+      "a": "It deliberately searches databases for partial matches to find close biological relatives of an unknown perpetrator.",
+      "b": "It forces family members of a victim to surrender DNA without a warrant.",
+      "c": "It identifies if an individual’s profile possesses genetic markers for specific familial diseases like hemophilia.",
+      "d": "It uses exclusively mitochondrial DNA within CODIS, disregarding nuclear loci."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Familial DNA searching deliberately looks for close but non-exact genetic matches in the offender database to generate leads toward blood relatives (like a father, brother, or son) of the actual suspect who left the scene DNA.",
+    "section_id": null
+  }
+]

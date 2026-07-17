@@ -1,0 +1,482 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Who is historically recognized as the 'Father of Forensic Toxicology' for publishing the first major scientific treatise on the detection of poisons and their effects on animals?",
+    "options": {
+      "a": "Mathieu Orfila",
+      "b": "Alphonse Bertillon",
+      "c": "Edmond Locard",
+      "d": "Francis Galton"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Mathieu Orfila published his treatise on poisons in 1814, establishing forensic toxicology as a legitimate scientific discipline.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Alphonse Bertillon developed a personal identification system in 1879 known as anthropometry. What was the primary basis of this system?",
+    "options": {
+      "a": "Analyzing and classifying fingerprint ridges",
+      "b": "Taking a series of precise body measurements",
+      "c": "Comparing dental records and bite marks",
+      "d": "Typing red blood cell antigens"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Bertillon's anthropometry relied on taking specific morphological measurements of the human body (like head length, sitting height, etc.) to identify repeat offenders.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Which scientist undertook the first definitive study of fingerprints and developed a fundamental methodology for classifying them for filing?",
+    "options": {
+      "a": "Karl Landsteiner",
+      "b": "Mathieu Orfila",
+      "c": "Francis Galton",
+      "d": "Edmond Locard"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Francis Galton conducted the first comprehensive study of fingerprints and published the landmark book 'Finger Prints' in 1892, validating their use in personal identification.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Karl Landsteiner's major contribution to the forensic sciences was the discovery of:",
+    "options": {
+      "a": "The ABO blood typing system",
+      "b": "The structure of the DNA double helix",
+      "c": "The uniqueness of friction ridges on fingers",
+      "d": "The scientific method for autopsies"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "In 1901, Karl Landsteiner discovered that human blood could be grouped into different categories (A, B, AB, and O), a foundational discovery for forensic serology.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Edmond Locard's famous Exchange Principle, a cornerstone of forensic science, asserts that:",
+    "options": {
+      "a": "Two objects cannot occupy the same physical space",
+      "b": "Every contact leaves a trace",
+      "c": "Energy can neither be created nor destroyed",
+      "d": "General acceptance dictates courtroom admissibility"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Locard's Exchange Principle states that when two objects come into contact with one another, there is a cross-transfer of materials (trace evidence).",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Before the widespread adoption of fingerprinting, Bertillonage was the standard for criminal identification. Which of the following was NOT a typical measurement recorded in Bertillon's anthropometric system?",
+    "options": {
+      "a": "Length of the left foot",
+      "b": "Breadth of the head",
+      "c": "Iris pattern scanning",
+      "d": "Length of the right ear"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Iris pattern scanning is a modern biometric method. Bertillon's system relied entirely on skeletal/physical measurements of bone structures that would not change in an adult.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "In his 1892 book *Finger Prints*, Francis Galton provided statistical proof supporting which key assertion about fingerprints?",
+    "options": {
+      "a": "They are unique to the individual and do not change over a lifetime",
+      "b": "They can determine the biological sex and age of a suspect",
+      "c": "They are heavily influenced by a person's occupation and environment",
+      "d": "They can be typed similar to ABO blood groups"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Galton demonstrated statistically the uniqueness of fingerprints and affirmed that an individual's prints remain unchanged from birth until decomposition.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "In addition to formulating the Exchange Principle, Edmond Locard established one of the world's first police crime laboratories in 1910. In which city was this laboratory located?",
+    "options": {
+      "a": "London, England",
+      "b": "Lyon, France",
+      "c": "Berlin, Germany",
+      "d": "New York City, USA"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Locard began his first primitive police laboratory in an attic room at the police department in Lyon, France, fundamentally changing how evidence was analyzed.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Prior to the advent of DNA profiling, Karl Landsteiner's discovery of blood groups was primarily useful to criminal investigators because it allowed them to:",
+    "options": {
+      "a": "Positively identify a specific individual from a single drop of blood",
+      "b": "Determine the exact time of death based on blood coagulation",
+      "c": "Exclude innocent suspects whose blood types did not match the crime scene evidence",
+      "d": "Identify the geographical origin of the suspect"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Because blood typing is class evidence (many people share the same blood type), it cannot positively identify one specific person, but it is highly effective at excluding those with non-matching types.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Science",
+    "topic": "Historical Milestones",
+    "question_text": "Mathieu Orfila's groundbreaking work in 1814 focused on toxicology. Which specific methodology did his early treatises heavily detail to establish techniques for poison detection?",
+    "options": {
+      "a": "The effects of cyanide on human hair follicles",
+      "b": "The physiological effects of poisons on animals",
+      "c": "The synthesis of synthetic venom in a laboratory",
+      "d": "The use of mass spectrometry to separate volatile chemicals"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Orfila's systematic study involved administering various poisons to animals and closely observing their physiological effects and postmortem signs, thus establishing toxicology on a scientific basis.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "The Frye Standard dictates that for novel scientific evidence or techniques to be admitted in a court of law, they must:",
+    "options": {
+      "a": "Be personally verified by the presiding judge via laboratory testing",
+      "b": "Be generally accepted by the relevant scientific community",
+      "c": "Have an established error rate of absolutely zero",
+      "d": "Be published in at least two peer-reviewed medical journals"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The 1923 Frye v. United States decision set the guideline that scientific evidence must have gained 'general acceptance' in its particular field to be admissible.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "According to the Daubert Ruling, who bears the ultimate responsibility as the 'gatekeeper' in judging the admissibility and reliability of scientific evidence?",
+    "options": {
+      "a": "The trial judge",
+      "b": "The jury",
+      "c": "The expert witness",
+      "d": "The scientific community as a whole"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "In Daubert v. Merrell Dow Pharmaceuticals (1993), the U.S. Supreme Court designated the trial judge as the 'gatekeeper' tasked with ensuring that expert testimony rests on a reliable foundation.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "Which of the following best describes the major shift in legal precedence from the Frye Standard to the Daubert Ruling?",
+    "options": {
+      "a": "Moving from strict judge evaluation to jury consensus",
+      "b": "Shifting from 'general acceptance' as the absolute rule to a more flexible standard evaluated by the trial judge",
+      "c": "Requiring all scientific tests to be performed directly in front of the jury",
+      "d": "Eliminating the need for expert witnesses during a criminal trial"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Daubert held that the rigid 'general acceptance' requirement of Frye was superseded by the Federal Rules of Evidence, offering a more flexible, multi-factor framework evaluated by the judge.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "The landmark 1923 case *Frye v. United States*, which established the general acceptance standard, involved the attempted admission of evidence from what type of device?",
+    "options": {
+      "a": "An early breathalyzer testing apparatus",
+      "b": "A systolic blood pressure deception test (polygraph)",
+      "c": "A rudimentary gas chromatograph for toxicology",
+      "d": "An early photographic superimposition technique"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "James Frye attempted to introduce the results of an early lie detector (systolic blood pressure deception test) in a murder trial, but the court rejected it because the technology was not generally accepted by scientists at the time.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "The *Daubert v. Merrell Dow Pharmaceuticals* (1993) case originally centered around a civil dispute concerning what type of issue?",
+    "options": {
+      "a": "A murdered corporate executive",
+      "b": "Fraudulent accounting software",
+      "c": "Birth defects allegedly caused by a prescription anti-nausea medication",
+      "d": "Environmental contamination of a local municipal water supply"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The Daubert case was a tort lawsuit where plaintiffs claimed the drug Bendectin caused birth defects, leading the Supreme Court to reevaluate how expert scientific testimony should be admitted.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "Under the Daubert standard, the trial judge must consider several suggested criteria when evaluating expert testimony. Which of the following is NOT explicitly one of the standard Daubert guidelines?",
+    "options": {
+      "a": "Whether the scientific theory or technique can be (and has been) tested",
+      "b": "The known or potential error rate of the technique",
+      "c": "Whether the expert witness possesses a doctoral degree in their respective field",
+      "d": "The existence and maintenance of standards controlling the technique's operation"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "While an expert's qualifications matter, possessing a doctoral degree is not explicitly mandated by the five Daubert prongs; the focus is on the validity of the methodology itself.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "How did Rule 702 of the Federal Rules of Evidence influence the Supreme Court's decision in the Daubert case?",
+    "options": {
+      "a": "It explicitly mandated the Frye standard, which the court was forced to uphold.",
+      "b": "It was ruled unconstitutional when applied to medical experts.",
+      "c": "It superseded the Frye standard, establishing that 'general acceptance' is not an absolute prerequisite for admissibility.",
+      "d": "It declared that only sworn police personnel could present forensic evidence."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The Court ruled that the enactment of the Federal Rules of Evidence, specifically Rule 702, superseded the 1923 Frye decision, removing 'general acceptance' as an absolute requirement.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "In the related case of *Kumho Tire Co., Ltd. v. Carmichael* (1999), the Supreme Court clarified the Daubert ruling by stating that the trial judge's 'gatekeeping' function applies to:",
+    "options": {
+      "a": "Only purely scientific testimony from researchers",
+      "b": "All expert testimony, including technical and other specialized knowledge",
+      "c": "Only medical and toxicological testimony regarding causes of death",
+      "d": "Only evidence presented by the prosecution in criminal cases"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Kumho Tire expanded Daubert's gatekeeping role to ensure reliability applies not just to 'scientific' testimony, but to all expert testimony (e.g., engineers, tire failure experts).",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "If a forensic scientist develops a highly accurate but completely novel method for analyzing gunshot residue that has not yet been widely published, under which legal standard is it MORE likely to be admitted into court?",
+    "options": {
+      "a": "Frye Standard",
+      "b": "Daubert Standard",
+      "c": "Bertillon Precedent",
+      "d": "Locard Rule"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Because Daubert is more flexible and relies on the judge evaluating factors like testability and error rate rather than just widespread 'general acceptance', a novel, highly accurate method is more likely to be admitted under Daubert than Frye.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Science",
+    "topic": "Legal Precedents",
+    "question_text": "While federal courts use the Daubert standard, many state courts still adhere to the Frye standard. In a jurisdiction using Frye, what primarily determines if 'junk science' is kept out of the courtroom?",
+    "options": {
+      "a": "A rigorous background check of the witness by the defense attorney",
+      "b": "The consensus and published literature of professionals in that specific scientific field",
+      "c": "The intuitive judgment of the impaneled jury during the trial",
+      "d": "A vote taken among licensed trial attorneys in the jurisdiction"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Frye standard relies heavily on 'general acceptance'—meaning the collective scientific community essentially acts as the gatekeeper through consensus, peer review, and literature.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "A forensic odontologist primarily studies which of the following to aid in criminal investigations or disaster victim identification?",
+    "options": {
+      "a": "Insect colonization on human remains",
+      "b": "Teeth and dental records",
+      "c": "Blood spatter velocity patterns",
+      "d": "The interaction of drugs in the liver"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Forensic odontology is the application of dental science to legal investigations, largely focusing on identifying remains via dental records or analyzing bite marks.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "Which forensic professional would be called to an outdoor crime scene to examine blowflies and maggots found on a corpse to estimate the post-mortem interval?",
+    "options": {
+      "a": "Forensic Toxicologist",
+      "b": "Forensic Pathologist",
+      "c": "Forensic Entomologist",
+      "d": "Forensic Anthropologist"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Forensic entomologists study insects and their relation to a criminal investigation, primarily to estimate the time since death.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "If buried human skeletal remains are discovered in the woods, which specialist is best equipped to examine the bones to determine the age, sex, stature, and ancestry of the victim?",
+    "options": {
+      "a": "Forensic Anthropologist",
+      "b": "Forensic Odontologist",
+      "c": "Forensic Toxicologist",
+      "d": "Forensic Serologist"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Forensic anthropology involves the application of physical anthropology and osteology (the study of bones) to assist in identifying skeletal remains and determining the biological profile.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "The medical examiner, an official who performs autopsies to determine the cause, mechanism, and manner of death, is typically a specialized doctor known as a:",
+    "options": {
+      "a": "Forensic Anthropologist",
+      "b": "Forensic Pathologist",
+      "c": "Forensic Entomologist",
+      "d": "Forensic Toxicologist"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Forensic pathologists are medical doctors specializing in determining causes and manners of death through autopsies and tissue analysis.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "Which forensic career focuses heavily on identifying illicit drugs, prescribed medications, and toxic poisons found in bodily fluids and organs?",
+    "options": {
+      "a": "Forensic Toxicologist",
+      "b": "Forensic Odontologist",
+      "c": "Trace Evidence Analyst",
+      "d": "Forensic Anthropologist"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Forensic toxicologists analyze biological samples (like blood, urine, or liver tissue) for the presence of toxins, drugs, and poisons to determine if they contributed to a death or crime.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "During an investigation, a forensic anthropologist examining a human skull notes prominent brow ridges, a robust mastoid process, and a broad, square chin. These features are commonly utilized to estimate the victim's:",
+    "options": {
+      "a": "Age at death",
+      "b": "Biological sex",
+      "c": "Stature and height",
+      "d": "Geographical origin"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Cranial features such as a prominent brow ridge and robust mastoid process are dimorphic traits often used by anthropologists to infer biological sex (typically pointing towards a male).",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "Aside from identifying victims of mass disasters through pre-mortem dental X-rays, forensic odontologists are frequently asked to analyze which type of pattern evidence in assault cases?",
+    "options": {
+      "a": "Fingerprint ridge detail",
+      "b": "Bite mark impressions on skin",
+      "c": "Tool marks on bone",
+      "d": "Saliva blood group types"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Bite mark analysis has traditionally been a key role of the forensic odontologist in assault and abuse cases, although its scientific validity has faced increased scrutiny under modern Daubert hearings.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "A body is found with no external signs of trauma, but several empty prescription pill bottles are nearby. The forensic pathologist conducts an autopsy and extracts post-mortem blood samples. Who directly receives and analyzes these samples to quantify the drug concentration?",
+    "options": {
+      "a": "Forensic Entomologist",
+      "b": "Forensic Anthropologist",
+      "c": "Forensic Toxicologist",
+      "d": "Forensic Odontologist"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "While the pathologist extracts the samples during the autopsy, it is the forensic toxicologist who uses analytical chemistry techniques to isolate and quantify the exact concentration of drugs in the blood.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "Forensic entomologists utilize two primary approaches to estimate the Post-Mortem Interval (PMI). One approach looks at the successional waves of insect species arriving at the corpse. What does the other primary method evaluate?",
+    "options": {
+      "a": "The decomposition rate of clothing fibers by microscopic arthropods",
+      "b": "The size, developmental stage, and age of blowfly larvae (maggots)",
+      "c": "The genetic mutation rates in adult beetles found near the body",
+      "d": "The accumulation of trace metals in insect exoskeletons"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The most accurate method for early PMI estimation (up to a few weeks) is measuring the specific developmental stages (instars) and lengths of blowfly larvae based on known temperature data.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Science",
+    "topic": "Careers",
+    "question_text": "While both analyze deceased individuals, what is the primary distinction in scope between a forensic anthropologist and a forensic pathologist?",
+    "options": {
+      "a": "Pathologists focus on soft tissues to determine cause of death; anthropologists focus on hard tissues (bones) for identification.",
+      "b": "Pathologists only examine victims of homicides; anthropologists examine victims of natural deaths.",
+      "c": "Anthropologists sign death certificates detailing manner of death; pathologists only issue advisory laboratory reports.",
+      "d": "Pathologists study insect life cycle on a fresh corpse; anthropologists reconstruct dental records."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Pathologists are medical doctors who assess fleshy bodies to pinpoint the medical cause and manner of death. Anthropologists are osteology specialists called in when remains are largely skeletonized or severely decomposed to aid in basic identification (biological profile) and trauma analysis on bone.",
+    "section_id": null
+  }
+]

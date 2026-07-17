@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "When operating a centrifuge, which of the following practices is **critical** to prevent damage to the drive shaft and potential injury?",
+    "options": {
+      "a": "Setting the timer to at least 10 minutes",
+      "b": "Ensuring the rotor is balanced by placing tubes of equal mass opposite each other",
+      "c": "Using glass tubes for speeds above 20,000 RPM",
+      "d": "Setting the temperature to 4°C for all spin cycles"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Centrifuges must be balanced to distribute the load evenly around the rotor. An unbalanced rotor can cause the centrifuge to wobble, damaging the drive shaft and potentially causing catastrophic failure. Source: Eppendorf Centrifugation Basics.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "A technician needs to autoclave 500 mL of liquid media. Which autoclave cycle parameters are appropriate to prevent the liquid from boiling over during the exhaust phase?",
+    "options": {
+      "a": "Gravity cycle with fast exhaust",
+      "b": "Vacuum cycle with fast exhaust",
+      "c": "Liquid cycle with slow exhaust",
+      "d": "Flash cycle with zero exhaust time"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The 'Liquid' cycle uses a slow exhaust (or gravity displacement with slow vent) to allow the pressure to decrease gradually. A fast exhaust would cause the superheated liquid to boil over violently due to the rapid drop in pressure.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "In a spectrophotometry experiment, what is the primary purpose of a 'blank' sample?",
+    "options": {
+      "a": "To calibrate the wavelength accuracy of the machine",
+      "b": "To measure the absorbance of the analyte of interest",
+      "c": "To increase the sensitivity of the detector",
+      "d": "To zero the absorbance reading by accounting for the solvent and reagents"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A blank contains everything in the sample except the analyte of interest. It is used to zero the instrument ($A=0$), ensuring that the measured absorbance is due solely to the analyte and not the solvent or cuvette.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Calculate the Relative Centrifugal Force (RCF) or 'g-force' if the rotor radius ($r​$) is 10 cm and the speed is 3000 RPM. Use the approximation formula: $$RCF = 1.12 \\times 10^{-5} \\times r \\times (RPM)^2$$",
+    "options": {
+      "a": "~1,008 g",
+      "b": "~3,024 g",
+      "c": "~336 g",
+      "d": "~10,080 g"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Calculation: $$RCF = 1.12 \\times 10^{-5} \\times 10 \\times (3000)^2$$ ​$$RCF = 1.12 \\times 10^{-4} \\times 9,000,000$$ ​$$RCF = 1.12 \\times 900 = 1008 \\; g$$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Which of the following describes a **Negative Control** in a PCR experiment?",
+    "options": {
+      "a": "A sample containing DNA known to have the target sequence",
+      "b": "A reaction mix with water substituted for the DNA template",
+      "c": "A sample run at a different temperature to test robustness",
+      "d": "A replicate of the experimental sample"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A negative control (often 'No Template Control' or NTC) contains reagents but no target DNA. If amplification occurs, it indicates contamination.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "You need to pipette 15 $\\mu$L of a reagent. Which pipette would provide the highest accuracy and precision?",
+    "options": {
+      "a": "P1000 (Range: 100-1000 $\\mu$L)",
+      "b": "P200 (Range: 20-200 $\\mu$L)",
+      "c": "P20 (Range: 2-20 $\\mu$L)",
+      "d": "P10 (Range: 0.5-10 $\\mu$L)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Pipettes are most accurate in the upper range of their capacity. A P20 (2-20 $\\mu$L) is ideal for 15 $\\mu$L. A P200 is less accurate at its lower limit, and a P10 cannot hold 15 $\\mu$L.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "According to legal standards for Lab Notebooks, how should an error be corrected?",
+    "options": {
+      "a": "Use white-out or correction fluid to cover the mistake completely",
+      "b": "Tear out the page and rewrite the data on a fresh page",
+      "c": "Draw a single line through the error, then initial and date the correction",
+      "d": "Scribble over the error until it is illegible"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "GLP (Good Laboratory Practice) requires that original data remain legible. Errors must be crossed out with a single line, corrected, initialed, and dated to maintain an audit trail.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "When using a light microscope with an oil immersion objective (100x), why is immersion oil required?",
+    "options": {
+      "a": "To lubricate the slide and prevent scratching the lens",
+      "b": "To match the refractive index of glass, preventing light scattering and increasing resolution",
+      "c": "To cool the objective lens during high-intensity illumination",
+      "d": "To stain the specimen for better contrast"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Immersion oil has a refractive index (~1.51) similar to glass. It bridges the gap between the slide and the lens, preventing light refraction (bending) that would occur in air, thus increasing the Numerical Aperture and resolution.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "A student measures the absorbance of a solution three times and gets: 0.45, 0.46, and 0.45. The true value is 0.80. How would you describe these results?",
+    "options": {
+      "a": "High accuracy, low precision",
+      "b": "High accuracy, high precision",
+      "c": "Low accuracy, high precision",
+      "d": "Low accuracy, low precision"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The values are very close to each other (high precision/reproducibility) but far from the true value of 0.80 (low accuracy).",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Which of the following best defines **Principal Component Analysis (PCA)**?",
+    "options": {
+      "a": "A method to sequence DNA fragments rapidly",
+      "b": "A statistical technique used to reduce the dimensionality of large datasets while preserving variance",
+      "c": "A protocol for validating autoclave sterility",
+      "d": "A calculation for determining the molarity of a solution"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "PCA is a dimensionality reduction technique that transforms a large set of variables into a smaller one (principal components) that still contains most of the information (variance) in the large set.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "What is the standard temperature and pressure typically used in an autoclave for sterilization?",
+    "options": {
+      "a": "100°C at 10 psi",
+      "b": "121°C at 15 psi",
+      "c": "150°C at 30 psi",
+      "d": "95°C at 5 psi"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Standard autoclaving parameters are 121°C (250°F) at 15 psi (pounds per square inch) for 15-20 minutes.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "In an experiment testing the effect of temperature on enzyme activity, what is the **Independent Variable**?",
+    "options": {
+      "a": "The rate of the reaction",
+      "b": "The temperature",
+      "c": "The concentration of the enzyme",
+      "d": "The pH of the buffer"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The independent variable is the one manipulated by the researcher (Temperature). The dependent variable is the response measured (Rate of reaction).",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "If a spectrophotometer reads an Absorbance ($A​$) of 1.0, what percentage of light is transmitted through the sample? (Formula: $A = -\\log_{10} T$)",
+    "options": {
+      "a": "100%",
+      "b": "50%",
+      "c": "10%",
+      "d": "1%"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Use the formula: $$1.0 = -\\log_{10} T$$ ​$$\\log_{10} T = -1$$ ​$$T = 10^{-1} = 0.1$$ Converting to percentage: $0.1 \\times 100\\% = 10\\%$. ",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "When balancing a centrifuge with an odd number of tubes (e.g., 3 tubes) in a 12-slot fixed-angle rotor, how should they be arranged?",
+    "options": {
+      "a": "Place them side-by-side in slots 1, 2, and 3",
+      "b": "Place them in slots 1, 5, and 9 to form an equilateral triangle",
+      "c": "It is impossible to balance 3 tubes; a dummy tube must be added",
+      "d": "Place two opposite each other and one in the center"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Three tubes can be balanced in a 12-slot rotor by spacing them equally apart (forming an equilateral triangle). Slots 1, 5, and 9 are equidistant (4 slots apart).",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Which statistical value represents the dispersion or spread of a dataset relative to its mean?",
+    "options": {
+      "a": "Median",
+      "b": "Mode",
+      "c": "Standard Deviation",
+      "d": "P-value"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Standard Deviation measures the amount of variation or dispersion of a set of values. The Median and Mode are measures of central tendency.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Identify the primary function of a **Laminar Flow Hood** in a tissue culture lab.",
+    "options": {
+      "a": "To protect the user from hazardous chemical fumes",
+      "b": "To provide a sterile environment for the sample using HEPA-filtered air",
+      "c": "To incubate cells at 37°C",
+      "d": "To spin down cell suspensions"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Laminar Flow Hoods blow HEPA-filtered sterile air over the workspace to protect the *sample* from contamination. They do not typically protect the user (unlike Biosafety Cabinets).",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "What is the definition of **Responsible Conduct of Research (RCR)** regarding 'Fabrication'?",
+    "options": {
+      "a": "Using another person's ideas without credit",
+      "b": "Making up data or results and recording/reporting them",
+      "c": "Manipulating research materials so the research is not accurately represented",
+      "d": "Honest error in data entry"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Fabrication is defined by the ORI as 'making up data or results'. Falsification (option c) is manipulating data, and Plagiarism (option a) is stealing ideas.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "A swinging-bucket rotor is preferred over a fixed-angle rotor for which application?",
+    "options": {
+      "a": "Pelleting nucleic acids at very high speeds",
+      "b": "Separating samples in density gradients (e.g., Ficoll)",
+      "c": "Routine microcentrifugation of 1.5 mL tubes",
+      "d": "Samples requiring refrigeration"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Swinging-bucket rotors allow tubes to swing out to a horizontal position. This is ideal for density gradient centrifugation because the gradient layers remain horizontal and are not disturbed when the rotor stops.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "When performing a t-test, a p-value of 0.03 implies:",
+    "options": {
+      "a": "There is a 3% chance the null hypothesis is true",
+      "b": "There is a 97% chance the results are due to random error",
+      "c": "The results are not statistically significant",
+      "d": "The experiment failed"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "A p-value measures the probability of observing the data (or something more extreme) assuming the null hypothesis is true. $p < 0.05$ is typically considered statistically significant, meaning we reject the null hypothesis.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Before weighing a chemical on an analytical balance, the user presses the 'Tare' button. What does this do?",
+    "options": {
+      "a": "Calibrates the balance using an internal weight",
+      "b": "Resets the display to zero, subtracting the weight of the weigh boat",
+      "c": "Turns off the draft shield static",
+      "d": "Converts the units from grams to milligrams"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Taring re-zeros the balance. It accounts for the container (weigh boat) so that only the mass of the added substance is displayed.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Which of the following is an example of **systematic error**?",
+    "options": {
+      "a": "Reading a meniscus slightly differently each time due to eye fatigue",
+      "b": "A pipetman that consistently delivers 98 $\\mu$L instead of 100 $\\mu$L",
+      "c": "Fluctuations in room temperature affecting reaction rate",
+      "d": "Spilling a small amount of sample"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Systematic error is a consistent, repeatable error associated with faulty equipment or a flawed experiment design. It shifts measurements in one direction (bias). Random error (a, c) fluctuates in both directions.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Which biological indicator is commonly used to validate the efficacy of an autoclave cycle?",
+    "options": {
+      "a": "*Escherichia coli*",
+      "b": "*Saccharomyces cerevisiae*",
+      "c": "*Geobacillus stearothermophilus* spores",
+      "d": "*Bacillus anthracis*"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "*Geobacillus stearothermophilus* spores are highly heat-resistant. If the autoclave kills these spores, it is assumed to have killed all other common pathogens.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Why are **biological replicates** important in an experiment?",
+    "options": {
+      "a": "To test the pipetting accuracy of the researcher",
+      "b": "To account for natural variation between different organisms or biological samples",
+      "c": "To ensure the instrument is calibrated correctly",
+      "d": "To use up extra reagents before they expire"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Biological replicates involve biologically distinct samples (e.g., cells from different animals). They capture biological variation, whereas technical replicates (same sample measured multiple times) capture measurement noise.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Microscope maintenance: What is the proper material to clean objective lenses?",
+    "options": {
+      "a": "Paper towels",
+      "b": "Kimwipes",
+      "c": "Lens paper",
+      "d": "Cotton swab with acetone"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Lens paper is specifically designed to be soft and non-abrasive. Paper towels and Kimwipes are too rough and can scratch the optical coating. Acetone can dissolve lens cement.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "What constitutes a **Positive Control** in an antibiotic susceptibility test?",
+    "options": {
+      "a": "Bacteria plated on media with no antibiotic",
+      "b": "Bacteria known to be resistant to the antibiotic",
+      "c": "Sterile media with no bacteria",
+      "d": "Bacteria known to be sensitive to the antibiotic treated with the antibiotic"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "A positive control ensures the test is capable of producing a positive result. In this context, using bacteria known to be sensitive ensures the antibiotic is active and the method works. (Option 'a' is a growth control, often also called a positive control for growth, but 'd' is the control for the *antibiotic's effect*).",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Which part of the spectrophotometer separates the white light into its component wavelengths?",
+    "options": {
+      "a": "Detector",
+      "b": "Cuvette",
+      "c": "Monochromator (Prism or Grating)",
+      "d": "Light Source"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The monochromator (diffraction grating or prism) disperses light into specific wavelengths and selects a narrow band to pass through the sample.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "You perform a Q-test and determine that a data point is a statistical outlier. What is the ethical way to handle this?",
+    "options": {
+      "a": "Delete it and pretend it never happened",
+      "b": "Keep it in the dataset but note it as an outlier with statistical justification",
+      "c": "Change the value to the average of the other points",
+      "d": "Repeat the experiment until that specific point matches the others"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Data should not be arbitrarily deleted. If a statistical test (like Grubbs' or Q-test) identifies an outlier, it can be excluded from analysis if noted and justified, but the original data must be preserved in the notebook.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "What is the primary risk of using a pipette tip that does not fit tightly?",
+    "options": {
+      "a": "The tip might fall off",
+      "b": "The liquid will become contaminated",
+      "c": "Air leakage will prevent accurate volume aspiration",
+      "d": "The plunger will jam"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Air displacement pipettes rely on an airtight seal. If the tip is loose, air leaks in during aspiration, resulting in less liquid being drawn up than the set volume.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Which plot type is most appropriate for determining the linearity of a standard curve?",
+    "options": {
+      "a": "Pie Chart",
+      "b": "Scatter Plot with regression line",
+      "c": "Bar Graph",
+      "d": "Histogram"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A scatter plot allows you to plot Concentration (X) vs Absorbance (Y) and fit a linear regression line ($y=mx+b$) to check linearity ($R^2$ value).",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "In the context of equipment calibration, what does 'NIST-traceable' mean?",
+    "options": {
+      "a": "The equipment was manufactured by NIST",
+      "b": "The calibration standards used can be traced back to the National Institute of Standards and Technology reference standards",
+      "c": "The equipment is government property",
+      "d": "The equipment never needs recalibration"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "NIST-traceability ensures an unbroken chain of comparisons to national standards, guaranteeing the accuracy of the measurements.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "A 'Double-Blind' study design is used to:",
+    "options": {
+      "a": "Prevent the subjects from knowing which group they are in",
+      "b": "Prevent both the subjects and the researchers from knowing group assignments, reducing bias",
+      "c": "Ensure the statistics are calculated twice",
+      "d": "Test two variables simultaneously"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Double-blind studies prevent both observer bias (researcher subconsciously influencing results) and subject bias (placebo effect).",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "When troubleshooting a pH meter that gives unstable readings, which is the most likely cause?",
+    "options": {
+      "a": "The buffer solutions are fresh",
+      "b": "The electrode junction is clogged or dried out",
+      "c": "The sample is at room temperature",
+      "d": "The beaker is made of glass"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "pH electrodes require a hydrated junction to allow ion flow. A clogged or dry junction disrupts this flow, causing drifting or unstable readings.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Using the Beer-Lambert Law ($A = \\epsilon l c$), calculate the concentration ($c​$) if Absorbance ($A​$) = 0.5, path length ($l​$) = 1 cm, and molar absorptivity ($\\epsilon$) = 5000 $\\text{M}^{-1}\\text{cm}^{-1}$.",
+    "options": {
+      "a": "$1.0 \\times 10^{-4}$ M",
+      "b": "$2.5 \\times 10^{-4}$ M",
+      "c": "$1.0 \\times 10^{-3}$ M",
+      "d": "$5.0 \\times 10^{-4}$ M"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Rearrange the formula: $$c = \\frac{A}{\\epsilon \\times l}$$ ​$$c = \\frac{0.5}{5000 \\times 1}$$ ​$$c = 0.0001 \\text{ M} = 1.0 \\times 10^{-4} \\text{ M}$$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "Which class of Biosafety Cabinet (BSC) protects the worker, the environment, and the product (sample)?",
+    "options": {
+      "a": "Class I",
+      "b": "Class II",
+      "c": "Fume Hood",
+      "d": "Clean Bench"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Class II BSCs use HEPA filtered air to protect the sample (downflow air), and inward airflow to protect the user, with filtered exhaust to protect the environment. Class I protects only the user/environment. Clean benches protect only the sample.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "Which logic error involves assuming that because two variables are correlated, one must cause the other?",
+    "options": {
+      "a": "Selection Bias",
+      "b": "Post hoc ergo propter hoc (Correlation implies Causation)",
+      "c": "Confirmation Bias",
+      "d": "Sampling Error"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "This is the 'Correlation does not imply causation' fallacy. Two variables might be correlated due to a third confounding variable, not a direct causal link.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "When autoclaving waste bags, why must the bag be loosely tied or left slightly open?",
+    "options": {
+      "a": "To allow steam to penetrate the inside of the bag",
+      "b": "To prevent the bag from melting",
+      "c": "To let the bad smell escape",
+      "d": "To allow easy addition of more waste later"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Steam sterilization requires direct contact between steam and the material. If the bag is sealed tight, air is trapped inside, preventing steam penetration and resulting in incomplete sterilization.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "In Principal Component Analysis (PCA), the First Principal Component (PC1) accounts for:",
+    "options": {
+      "a": "The least amount of variance in the data",
+      "b": "The largest possible variance in the data",
+      "c": "Only the experimental errors",
+      "d": "The correlation between the first two variables"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "PC1 is the direction in the data space that captures the maximum variance. PC2 captures the next highest variance orthogonal to PC1.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "What is the result of 'Confirmation Bias' in experimental analysis?",
+    "options": {
+      "a": "Searching for or interpreting information in a way that confirms one's preexisting hypotheses",
+      "b": "Collecting too much data",
+      "c": "Using controls that are too strict",
+      "d": "Randomly selecting samples"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Confirmation bias is the tendency to favor data that supports your belief while ignoring or discounting data that contradicts it.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "BACE",
+    "topic": "Standard Equipment",
+    "question_text": "What is the function of the condenser on a light microscope?",
+    "options": {
+      "a": "To magnify the image",
+      "b": "To focus light onto the specimen",
+      "c": "To capture the image for a camera",
+      "d": "To move the stage up and down"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The condenser is located below the stage and concentrates/focuses the light from the illuminator onto the specimen.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "BACE",
+    "topic": "Experimental Design & Data Analysis",
+    "question_text": "If a technician fails to maintain a 'Chain of Custody' for a forensic sample, what is the consequence?",
+    "options": {
+      "a": "The sample cannot be used in legal proceedings",
+      "b": "The sample will degrade faster",
+      "c": "The experiment must be done in a fume hood",
+      "d": "The results will be more accurate"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Chain of Custody is the documentation trail tracking the handling of a sample. If broken, the integrity of the sample is compromised, and it is typically inadmissible in court or legal contexts.",
+    "section_id": null
+  }
+]

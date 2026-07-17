@@ -1,0 +1,962 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "Which of the following best describes the primary purpose of aseptic technique in a biotechnology laboratory?",
+    "options": {
+      "a": "To ensure all equipment is cleaned with soap and water before use.",
+      "b": "To prevent contamination of the culture, the environment, and the researcher.",
+      "c": "To sterilize all solutions using high heat and pressure immediately after use.",
+      "d": "To increase the growth rate of the bacterial culture being studied."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Aseptic technique is a set of practices used to prevent the introduction of contamination (unwanted microbes) into samples, the sterile field, or the researcher.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "What are the standard conditions for sterilizing liquid media in an autoclave?",
+    "options": {
+      "a": "100°C at 0 psi for 60 minutes",
+      "b": "121°C at 15 psi for 15-20 minutes",
+      "c": "150°C at 30 psi for 5 minutes",
+      "d": "200°C at 10 psi for 45 minutes"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The standard autoclave cycle for sterilizing liquids is 121°C at 15 psi pressure for approximately 15 to 20 minutes.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "When working in a laminar flow hood, where should you perform your work to minimize contamination?",
+    "options": {
+      "a": "At the very front edge of the hood, closest to the user.",
+      "b": "Outside the hood, transferring items in only when necessary.",
+      "c": "At least 6 inches inside the hood, in the center of the sterile airflow.",
+      "d": "Against the back wall of the hood to avoid air turbulence."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Work should be performed at least 6 inches inside the hood to ensure that the air flow is laminar and undisturbed by the turbulence at the front opening or the back obstruction.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "Which of the following actions represents a violation of aseptic technique?",
+    "options": {
+      "a": "Flaming the mouth of a glass tube before and after transferring a sample.",
+      "b": "Placing a sterile cap face-down on the lab bench while pipetting.",
+      "c": "Holding the test tube at an angle while the cap is removed.",
+      "d": "Using a fresh, sterile pipette tip for each transfer."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Placing a sterile cap face-down on a non-sterile surface (like a lab bench) introduces contamination. Caps should be held in the hand or placed face-up if absolutely necessary, though holding is preferred.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "Identify the correct order of steps for aseptically transferring a bacterial culture from a tube to a fresh broth tube.",
+    "options": {
+      "a": "Flame loop $\\rightarrow$ Remove cap $\\rightarrow$ Flame tube lip $\\rightarrow$ Obtain sample $\\rightarrow$ Flame tube lip $\\rightarrow$ Recap",
+      "b": "Remove cap $\\rightarrow$ Flame loop $\\rightarrow$ Obtain sample $\\rightarrow$ Flame tube lip $\\rightarrow$ Recap",
+      "c": "Flame tube lip $\\rightarrow$ Flame loop $\\rightarrow$ Remove cap $\\rightarrow$ Obtain sample $\\rightarrow$ Recap",
+      "d": "Obtain sample $\\rightarrow$ Flame loop $\\rightarrow$ Flame tube lip $\\rightarrow$ Remove cap $\\rightarrow$ Recap"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The correct sequence ensures sterility at every exposure point: Sterilize the tool (loop), open the container, sterilize the air-interface (lip), perform transfer, re-sterilize the interface, and close.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "What is the function of the Bunsen burner flame during tube-to-tube transfers?",
+    "options": {
+      "a": "To heat the liquid culture to boiling point.",
+      "b": "To create an updraft that pushes airborne contaminants away from the open tube.",
+      "c": "To illuminate the workspace.",
+      "d": "To burn off excess oxygen in the tube."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Besides sterilizing loops, the flame heats the air, causing it to rise (convection). This updraft helps prevent airborne dust and microbes from falling into open containers near the flame.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "Which Personal Protective Equipment (PPE) is most essential for protecting the *sample* from contamination by the researcher's skin flora?",
+    "options": {
+      "a": "Safety goggles",
+      "b": "Gloves",
+      "c": "Closed-toe shoes",
+      "d": "Fire extinguisher"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Gloves cover the skin of the hands, which sheds skin cells and bacteria, thus protecting the sample from the researcher's flora. Goggles and shoes primarily protect the researcher.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "You observe a broth culture that was supposed to be sterile but now appears cloudy (turbid). What is the most likely conclusion?",
+    "options": {
+      "a": "The broth has evaporated.",
+      "b": "The broth is contaminated with microbial growth.",
+      "c": "The pH of the broth has spontaneously changed.",
+      "d": "The broth was over-sterilized."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Turbidity (cloudiness) in a liquid medium is a classic visual sign of microbial growth (contamination).",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "What is the correct method for sterilizing an inoculating loop in a Bunsen burner flame?",
+    "options": {
+      "a": "Pass it quickly through the yellow part of the flame once.",
+      "b": "Hold it in the blue cone of the flame until it glows red hot along the entire wire.",
+      "c": "Hold it in the flame for exactly 3 seconds, regardless of color.",
+      "d": "Dip it in ethanol and then waive it near the flame to dry."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The loop must be heated until it glows red hot to ensure all organic matter and microbes are incinerated. The blue cone is the hottest part of the flame.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "Why must you wait for the inoculating loop to cool after flaming before touching a bacterial colony?",
+    "options": {
+      "a": "The hot loop will melt the agar and ruin the plate.",
+      "b": "The hot loop will kill the bacteria you are trying to pick up.",
+      "c": "The hot loop will cause the bacteria to mutate.",
+      "d": "The hot loop will cause aerosols that contaminate the air."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Touching a live culture with a red-hot loop will instantly kill the cells (sizzle sound), resulting in no viable transfer.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "Which agent is commonly used to wipe down lab benches before and after work to reduce microbial load?",
+    "options": {
+      "a": "Distilled water",
+      "b": "70% Ethanol or Isopropanol",
+      "c": "100% Ethanol",
+      "d": "Saline solution"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "70% alcohol is more effective than 100% because the presence of water helps the alcohol penetrate the cell walls of microbes and denature proteins.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Biotechnology Skills",
+    "topic": "Aseptic Technique",
+    "question_text": "In a scenario where a pipette tip accidentally touches the lab bench, what is the correct corrective action?",
+    "options": {
+      "a": "Wipe the tip with a Kimwipe and continue.",
+      "b": "Dip the tip in ethanol and continue.",
+      "c": "Discard the tip immediately and attach a new sterile one.",
+      "d": "Flame the plastic tip briefly."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Plastic tips are disposable. Once contaminated (touched non-sterile surface), they must be discarded to maintain asepsis. They cannot be flamed (they melt) or reliably wiped.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "Which micropipette is most appropriate for measuring a volume of 150 µL?",
+    "options": {
+      "a": "P20",
+      "b": "P200",
+      "c": "P1000",
+      "d": "P10"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The P200 pipet typically covers the range of 20–200 µL. 150 µL falls perfectly within this range.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "A P20 micropipette display reads the following from top to bottom:\\n**1**\\n**2**\\n**5** (Red)\\n\\nWhat volume is set?",
+    "options": {
+      "a": "1.25 µL",
+      "b": "12.5 µL",
+      "c": "125 µL",
+      "d": "1250 µL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "On a P20, the top digit is tens, the middle is ones, and the bottom (red) is tenths. Thus, 1-2-5 represents 12.5 µL.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "A P200 micropipette display reads:\\n**0**\\n**5**\\n**0**\\n\\nWhat volume is set?",
+    "options": {
+      "a": "5.0 µL",
+      "b": "50 µL",
+      "c": "500 µL",
+      "d": "0.5 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "On a P200, the digits are Hundreds, Tens, Ones. 0-5-0 reads as 050 µL, which is 50 µL.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "A P1000 micropipette display reads:\\n**0** (Red)\\n**5**\\n**0**\\n\\nWhat volume is set?",
+    "options": {
+      "a": "50 µL",
+      "b": "500 µL",
+      "c": "5000 µL",
+      "d": "5 mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "On a P1000, the top (red) digit is Thousands (mL), the middle is Hundreds, and the bottom is Tens. 0-5-0 reads as 050 tens, or 500 µL.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "When aspirating (drawing up) liquid, you should depress the plunger to which position?",
+    "options": {
+      "a": "The first stop",
+      "b": "The second stop",
+      "c": "All the way down to the plastic body",
+      "d": "Halfway between the first and second stop"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "You push to the **first stop** to aspirate the calibrated volume. Pushing to the second stop before entering the liquid will draw up too much volume.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "What is the purpose of the 'second stop' on a micropipette?",
+    "options": {
+      "a": "To draw up the liquid accurately.",
+      "b": "To lock the volume setting.",
+      "c": "To eject the pipette tip.",
+      "d": "To purge or blow out the remaining liquid during dispensing."
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "The second stop is used only during dispensing to blow out the last drop of liquid from the tip, ensuring accurate delivery.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "Why is it important to release the plunger slowly after aspirating liquid?",
+    "options": {
+      "a": "To prevent aerosols and liquid from splashing into the pipette shaft.",
+      "b": "To heat the liquid via friction.",
+      "c": "To sterilize the tip.",
+      "d": "To ensure the second stop is engaged."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Snapping the plunger back can cause liquid to splash up into the internal shaft, contaminating the pipette and damaging the piston.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "Which pipette would be the **most accurate** choice to measure 2.5 µL?",
+    "options": {
+      "a": "P1000",
+      "b": "P200",
+      "c": "P20",
+      "d": "Serological Pipette"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A P20 (range 2–20 µL) is the correct choice. P200 and P1000 cannot accurately measure such small volumes.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "What is the lower limit of effective accuracy for a standard P200 micropipette?",
+    "options": {
+      "a": "2 µL",
+      "b": "20 µL",
+      "c": "100 µL",
+      "d": "200 µL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A P200 generally has a functional range of 20 µL to 200 µL. Below 20 µL, a P20 should be used for better accuracy.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "Which part of the pipette is disposable and must be changed between samples?",
+    "options": {
+      "a": "The plunger",
+      "b": "The shaft",
+      "c": "The tip ejector",
+      "d": "The tip"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "The plastic tip is the only disposable part that touches the liquid.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "If a P20 pipette reads **1-0-0** (Top-Middle-Bottom [red]), what is the volume?",
+    "options": {
+      "a": "1.00 µL",
+      "b": "10.0 µL",
+      "c": "100 µL",
+      "d": "0.10 µL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "P20: Top=10s (1), Middle=1s (0), Bottom=0.1s (0). Total = 10.0 µL.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Biotechnology Skills",
+    "topic": "Micropipetting",
+    "question_text": "Before using a micropipette, you should always check:",
+    "options": {
+      "a": "That the volume is set within the specified range of the pipette.",
+      "b": "That the pipette has been autoclaved.",
+      "c": "That the plunger is stuck.",
+      "d": "That the tip ejector is removed."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Adjusting a pipette outside its designated range (e.g., above 200µL on a P200) can damage the internal mechanism and lead to inaccurate measurements.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "Which formula is used to calculate the mass of solute needed for a Molar solution?",
+    "options": {
+      "a": "Mass (g) = Molarity (mol/L) $\\times$ Volume (L) $\\times$ Molecular Weight (g/mol)",
+      "b": "Mass (g) = Molarity (mol/L) / Volume (L)",
+      "c": "Mass (g) = Volume (L) / Molecular Weight (g/mol)",
+      "d": "Mass (g) = Molarity $\\times$ Volume (mL) $\\times$ 1000"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "$Mass = M \\times V \\times MW$. Molarity is moles/liter, so multiplying by Liters gives moles. Multiplying moles by g/mol gives grams.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "How many grams of NaCl (Molecular Weight = 58.44 g/mol) are required to prepare 500 mL of a 0.5 M solution?",
+    "options": {
+      "a": "58.44 g",
+      "b": "29.22 g",
+      "c": "14.61 g",
+      "d": "7.30 g"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "1. Convert Volume to L: 500 mL = 0.5 L. \n2. Calculate moles: $0.5 \\text{ mol/L} \\times 0.5 \\text{ L} = 0.25 \\text{ mol}$. \n3. Calculate mass: $0.25 \\text{ mol} \\times 58.44 \\text{ g/mol} = 14.61 \\text{ g}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "What does a 10% (w/v) solution mean?",
+    "options": {
+      "a": "10 grams of solute in 100 mL of solution.",
+      "b": "10 mL of solute in 100 mL of solvent.",
+      "c": "10 grams of solute in 1 liter of solution.",
+      "d": "10 moles of solute in 1 liter of solution."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "% w/v means grams of solute per 100 mL of total solution.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "You have a 50X stock solution of TAE buffer. You need to make 1000 mL of 1X TAE buffer. How much stock solution and water do you need?",
+    "options": {
+      "a": "20 mL stock and 980 mL water",
+      "b": "50 mL stock and 950 mL water",
+      "c": "10 mL stock and 990 mL water",
+      "d": "100 mL stock and 900 mL water"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Use $C_1V_1 = C_2V_2$. \n$(50X)(V_1) = (1X)(1000 \\text{ mL})$. \n$V_1 = 1000 / 50 = 20 \\text{ mL}$. \nWater = $1000 - 20 = 980 \\text{ mL}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "Which piece of glassware is most accurate for measuring the final volume of a solution?",
+    "options": {
+      "a": "Beaker",
+      "b": "Erlenmeyer flask",
+      "c": "Graduated cylinder",
+      "d": "Volumetric flask"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A volumetric flask is calibrated to contain a precise volume at a specific temperature, making it the most accurate for preparing solutions.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "What is the pH of a neutral solution at 25°C?",
+    "options": {
+      "a": "0",
+      "b": "1",
+      "c": "7",
+      "d": "14"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "pH 7 is neutral. <7 is acidic, >7 is basic.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "To adjust the pH of a buffer from 8.0 down to 7.4, which substance would you typically add?",
+    "options": {
+      "a": "NaOH (Base)",
+      "b": "HCl (Acid)",
+      "c": "NaCl (Salt)",
+      "d": "Distilled Water"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "To lower the pH (make it more acidic), you add an acid like HCl. Adding a base (NaOH) would raise the pH.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "Which of the following best defines a 'buffer'?",
+    "options": {
+      "a": "A solution that changes color when pH changes.",
+      "b": "A solution that resists changes in pH when small amounts of acid or base are added.",
+      "c": "A solution used to sterilize equipment.",
+      "d": "A highly concentrated salt solution."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Buffers are solutions containing a weak acid and its conjugate base that resist changes in pH.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "Calculate the volume of 10 M NaOH needed to prepare 100 mL of 0.5 M NaOH.",
+    "options": {
+      "a": "5 mL",
+      "b": "10 mL",
+      "c": "2 mL",
+      "d": "0.5 mL"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "$C_1V_1 = C_2V_2 \\rightarrow (10)(V_1) = (0.5)(100) \\rightarrow 10V_1 = 50 \\rightarrow V_1 = 5 \\text{ mL}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "When using a pH meter, what is the first step before measuring your sample?",
+    "options": {
+      "a": "Boil the electrode.",
+      "b": "Calibrate the meter using standard buffers (e.g., pH 4, 7, 10).",
+      "c": "Rinse the electrode with 100% ethanol.",
+      "d": "Dry the electrode completely with a paper towel."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Calibration ensures accuracy. Electrodes drift over time and must be calibrated with standards of known pH.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "Which unit represents 'molarity'?",
+    "options": {
+      "a": "grams / liter",
+      "b": "moles / liter",
+      "c": "moles / kilogram",
+      "d": "liters / mole"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Molarity (M) is defined as moles of solute per liter of solution.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Biotechnology Skills",
+    "topic": "Solution Preparation",
+    "question_text": "You dissolve 5 g of glucose in enough water to make 100 mL of solution. What is the percent concentration?",
+    "options": {
+      "a": "0.5%",
+      "b": "5%",
+      "c": "50%",
+      "d": "0.05%"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Percent w/v = (mass / volume) $\\times$ 100. (5 g / 100 mL) $\\times$ 100 = 5%.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "A serial dilution is performed by adding 1 mL of sample to 9 mL of diluent. What is the dilution factor for this step?",
+    "options": {
+      "a": "1:9",
+      "b": "1:10 ($10^{-1}$)",
+      "c": "1:100",
+      "d": "10:1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Total volume = 1 + 9 = 10 mL. Dilution Factor = Sample Volume / Total Volume = 1 / 10.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "If you perform three consecutive 1:10 dilutions, what is the total dilution factor?",
+    "options": {
+      "a": "1:30",
+      "b": "1:100",
+      "c": "1:1000 ($10^{-3}$)",
+      "d": "1:300"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "$DF_{total} = DF_1 \\times DF_2 \\times DF_3 = \\frac{1}{10} \\times \\frac{1}{10} \\times \\frac{1}{10} = \\frac{1}{1000}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "You count 45 colonies on a plate inoculated with 0.1 mL of a $10^{-4}$ dilution. What is the concentration of the original sample in CFU/mL?",
+    "options": {
+      "a": "4.5 $\\times 10^5$ CFU/mL",
+      "b": "4.5 $\\times 10^6$ CFU/mL",
+      "c": "4.5 $\\times 10^7$ CFU/mL",
+      "d": "45 $\\times 10^4$ CFU/mL"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "CFU/mL = Colonies / (Volume $\\times$ Dilution). \nCFU/mL = 45 / (0.1 $\\times$ $10^{-4}$) = 45 / $10^{-5}$ = 4,500,000 = $4.5 \\times 10^6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "Which plate count is considered statistically valid (countable)?",
+    "options": {
+      "a": "5 colonies",
+      "b": "250 colonies",
+      "c": "400 colonies",
+      "d": "0 colonies"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The standard countable range for petri plates is 30 to 300 colonies. 250 falls within this range.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "What does TNTC stand for in microbiology?",
+    "options": {
+      "a": "Total Number To Count",
+      "b": "Too Numerous To Count",
+      "c": "Total Nitrogen Total Carbon",
+      "d": "Time Next To Culture"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "TNTC means there are too many colonies (usually >300) to accurately count.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "You have a culture with $1 \\times 10^8$ CFU/mL. You want to obtain a plate with approximately 100 colonies. If you plate 0.1 mL, what total dilution is required?",
+    "options": {
+      "a": "$10^{-4}$",
+      "b": "$10^{-5}$",
+      "c": "$10^{-6}$",
+      "d": "$10^{-7}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "$100 = (10^8 \\times \\text{Dilution} \\times 0.1)$. \n$100 = 10^7 \\times \\text{Dilution}$. \n$\\text{Dilution} = 100 / 10^7 = 10^2 / 10^7 = 10^{-5}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "Why do we perform serial dilutions instead of a single massive dilution?",
+    "options": {
+      "a": "It saves pipette tips.",
+      "b": "It is more accurate to pipette 1 mL into 9 mL multiple times than to pipette 1 µL into 10 L once.",
+      "c": "It is faster.",
+      "d": "It requires less diluent."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Pipetting extremely small volumes (like 1 µL) or managing huge volumes (like 1000 L) introduces large errors. Serial steps use manageable, accurate volumes.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "In a 1:5 dilution, 1 part of sample is mixed with how many parts of diluent?",
+    "options": {
+      "a": "4 parts",
+      "b": "5 parts",
+      "c": "1 part",
+      "d": "9 parts"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A 1:5 dilution (1/5) means 1 part sample in a total volume of 5 parts. Diluent = Total - Sample = 5 - 1 = 4 parts.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "If you mix 100 µL of sample with 900 µL of broth, what is the dilution?",
+    "options": {
+      "a": "1:2",
+      "b": "1:9",
+      "c": "1:10",
+      "d": "1:100"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Total = 100 + 900 = 1000 µL. Dilution = 100/1000 = 1/10.",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "Which formula calculates the number of cells in the original stock from a dilution series?",
+    "options": {
+      "a": "Colonies $\\times$ Dilution Factor",
+      "b": "Colonies / (Dilution Factor $\\times$ Volume Plated)",
+      "c": "Colonies $\\times$ Volume Plated",
+      "d": "Dilution Factor / Colonies"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Original Concentration = Colonies divided by the volume plated (to get per mL) and divided by the dilution factor (to correct for dilution). Mathematically equivalent to Colonies $\\times$ Reciprocal of Dilution / Volume.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "Which diluent is most commonly used for bacterial serial dilutions to maintain cell viability?",
+    "options": {
+      "a": "Pure distilled water",
+      "b": "70% Ethanol",
+      "c": "Sterile saline or phosphate-buffered saline (PBS)",
+      "d": "10% Bleach"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "PBS or saline is isotonic and prevents osmotic shock (bursting) of the cells. Pure water can cause lysis; ethanol and bleach kill cells.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Biotechnology Skills",
+    "topic": "Serial Dilutions",
+    "question_text": "What does CFU stand for?",
+    "options": {
+      "a": "Cell Forming Unit",
+      "b": "Colony Forming Unit",
+      "c": "Countable Fungal Unit",
+      "d": "Calculated Final Unit"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "CFU stands for Colony Forming Unit, assuming each colony arises from a single viable cell or clump of cells.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "What is the primary purpose of the 'streak plate' method (e.g., T-streak or Quadrant streak)?",
+    "options": {
+      "a": "To count the exact number of bacteria in a sample.",
+      "b": "To isolate single colonies from a mixed culture.",
+      "c": "To grow a lawn of bacteria for antibiotic testing.",
+      "d": "To test for gas production."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Streaking physically dilutes the inoculum across the agar surface to separate individual cells, which grow into isolated pure colonies.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "During a quadrant streak, what must you do between streaking each quadrant?",
+    "options": {
+      "a": "Dip the loop back into the original culture.",
+      "b": "Flame (sterilize) the loop.",
+      "c": "Add more antibiotic to the plate.",
+      "d": "Rotate the plate 180 degrees."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Flaming the loop between quadrants kills the bacteria on the loop, ensuring that the next quadrant is inoculated only by the small number of cells picked up from the edge of the previous streak (dilution effect).",
+    "section_id": null
+  },
+  {
+    "question_number": 51,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "What is the correct position for incubating Petri plates?",
+    "options": {
+      "a": "Lid side up (normal orientation)",
+      "b": "Inverted (lid side down)",
+      "c": "Vertical (on their side)",
+      "d": "Open (lid removed)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Plates are incubated upside down (inverted) to prevent condensation from forming on the lid and dripping onto the agar, which would smear the colonies.",
+    "section_id": null
+  },
+  {
+    "question_number": 52,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "Which growth phase is characterized by rapid exponential cell division?",
+    "options": {
+      "a": "Lag phase",
+      "b": "Log (Exponential) phase",
+      "c": "Stationary phase",
+      "d": "Death phase"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Log phase (Logarithmic) is where the population doubles at a constant rate.",
+    "section_id": null
+  },
+  {
+    "question_number": 53,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "What is the definition of a 'pure culture'?",
+    "options": {
+      "a": "A culture containing only one species of microorganism.",
+      "b": "A culture that has been sterilized.",
+      "c": "A culture containing bacteria and fungi.",
+      "d": "A culture grown in a liquid broth."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "A pure culture contains only a single species or strain, free from contaminants.",
+    "section_id": null
+  },
+  {
+    "question_number": 54,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "Which medium is solid and provides a surface for colony formation?",
+    "options": {
+      "a": "Luria Broth (LB)",
+      "b": "Nutrient Agar",
+      "c": "Saline",
+      "d": "Ethanol"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Agar is the solidifying agent. Broth is liquid.",
+    "section_id": null
+  },
+  {
+    "question_number": 55,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "When performing a spread plate, what tool is typically used to distribute the sample?",
+    "options": {
+      "a": "Inoculating needle",
+      "b": "L-shaped spreader (glass or plastic)",
+      "c": "Forceps",
+      "d": "Toothpick"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "An L-spreader (or 'hockey stick') is used to evenly spread the liquid sample across the entire surface of the agar.",
+    "section_id": null
+  },
+  {
+    "question_number": 56,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "What visual characteristic helps distinguish different bacterial species on an agar plate?",
+    "options": {
+      "a": "Colony morphology (shape, color, size, texture)",
+      "b": "The speed of the centrifuge",
+      "c": "The type of plastic dish used",
+      "d": "The smell of the incubator"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Colony morphology involves the macroscopic characteristics (color, margin, elevation) used to identify bacteria.",
+    "section_id": null
+  },
+  {
+    "question_number": 57,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "Why is it important not to gouge the agar when streaking?",
+    "options": {
+      "a": "It releases toxic gas.",
+      "b": "It disrupts the smooth surface, making colony isolation difficult and potentially trapping bacteria.",
+      "c": "It breaks the loop.",
+      "d": "It changes the pH of the agar."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Gouging creates cracks where bacteria grow in clumps rather than isolated colonies, defeating the purpose of streaking.",
+    "section_id": null
+  },
+  {
+    "question_number": 58,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "In the T-streak method, how many times do you pick up cells from the original source?",
+    "options": {
+      "a": "Before every streak (3 times).",
+      "b": "Only once, before the first streak.",
+      "c": "Never, the loop is dipped in sterile water.",
+      "d": "Twice."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "You inoculate only the first section from the source. Subsequent sections are inoculated by pulling cells from the previous section to dilute them.",
+    "section_id": null
+  },
+  {
+    "question_number": 59,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "A culture tube with a loose cap is used to grow bacteria. Why is the cap kept loose?",
+    "options": {
+      "a": "To allow easy access for pipetting.",
+      "b": "To allow gas exchange (oxygen) for aerobic bacteria.",
+      "c": "To let contamination enter.",
+      "d": "To prevent the tube from exploding."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Aerobic bacteria require oxygen. A loose cap (or specialized vented cap) allows air in while keeping dust out.",
+    "section_id": null
+  },
+  {
+    "question_number": 60,
+    "subject": "Biotechnology Skills",
+    "topic": "Cell Culturing",
+    "question_text": "Which temperature is most common for incubating human-associated bacteria like *E. coli*?",
+    "options": {
+      "a": "25°C (Room Temp)",
+      "b": "37°C (Body Temp)",
+      "c": "4°C (Fridge)",
+      "d": "100°C (Boiling)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "37°C corresponds to human body temperature, which is the optimal growth temperature for mesophiles like *E. coli*.",
+    "section_id": null
+  }
+]

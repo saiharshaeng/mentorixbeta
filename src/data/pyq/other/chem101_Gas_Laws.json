@@ -1,0 +1,578 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Properties",
+        "question_text": "Which of the following statements best describes the compressibility of the three states of matter according to the Kinetic Molecular Theory?",
+        "options": {
+            "a": "Solids are highly compressible because their particles are far apart.",
+            "b": "Liquids are more compressible than gases because their particles can slide past one another.",
+            "c": "Gases are highly compressible because the volume of the particles is negligible compared to the total volume of the gas.",
+            "d": "Solids and liquids are equally compressible to gases due to strong intermolecular forces."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "According to the Kinetic Molecular Theory, gas particles are separated by large distances relative to their size, making them easily compressible. Solids and liquids have particles packed closely together, making them virtually incompressible.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Properties",
+        "question_text": "In the context of the Kinetic Molecular Theory, what is the relationship between the average kinetic energy of gas particles and temperature?",
+        "options": {
+            "a": "Average kinetic energy is inversely proportional to the temperature in Celsius.",
+            "b": "Average kinetic energy is directly proportional to the absolute temperature (Kelvin).",
+            "c": "Average kinetic energy is independent of temperature but depends on pressure.",
+            "d": "Average kinetic energy decreases as temperature increases due to increased collisions."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "One of the fundamental postulates of the Kinetic Molecular Theory is that the average kinetic energy of gas particles is directly proportional to the absolute temperature (in Kelvin) of the gas.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Properties",
+        "question_text": "Which state of matter is characterized by having a definite volume but no definite shape, taking the shape of the container it occupies?",
+        "options": {
+            "a": "Solid",
+            "b": "Liquid",
+            "c": "Gas",
+            "d": "Plasma"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Liquids have strong enough intermolecular forces to maintain a definite volume, but the particles have enough energy to slide past one another, allowing the liquid to flow and take the shape of its container.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Individual Gas Laws",
+        "question_text": "A sample of gas occupies a volume of $4.0\\ \\text{L}$ at a pressure of $2.0\\ \\text{atm}$. If the temperature remains constant and the volume is compressed to $1.0\\ \\text{L}$, what will be the new pressure?",
+        "options": {
+            "a": "0.5 atm",
+            "b": "2.0 atm",
+            "c": "4.0 atm",
+            "d": "8.0 atm"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Using Boyle's Law ($P_1V_1 = P_2V_2$): $$(2.0\\ \\text{atm})(4.0\\ \\text{L}) = P_2(1.0\\ \\text{L})$$ ​$$8.0 = P_2$$ ​$$P_2 = 8.0\\ \\text{atm}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Individual Gas Laws",
+        "question_text": "Charles's Law describes the relationship between volume and temperature. Which of the following graphs represents this relationship for an ideal gas?",
+        "options": {
+            "a": "A linear line passing through the origin (Volume vs. Temperature in Kelvin).",
+            "b": "A hyperbola (Volume vs. Temperature in Kelvin).",
+            "c": "A parabolic curve opening upward.",
+            "d": "A horizontal line indicating no change."
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Charles's Law states that Volume is directly proportional to Temperature in Kelvin ($V \\propto T$). Graphically, this is a straight line passing through the origin.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Individual Gas Laws",
+        "question_text": "A balloon has a volume of $2.50\\ \\text{L}$ at $25^\\circ\\text{C}$. If the balloon is placed in a freezer at $-10^\\circ\\text{C}$ (pressure constant), what is the new volume?",
+        "options": {
+            "a": "2.21 L",
+            "b": "2.83 L",
+            "c": "1.00 L",
+            "d": "-0.40 L"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "First, convert temperatures to Kelvin: $$T_1 = 25 + 273.15 = 298.15\\ \\text{K}$$ ​$$T_2 = -10 + 273.15 = 263.15\\ \\text{K}$$ Using Charles's Law ($\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$): $$V_2 = V_1 \\times \\frac{T_2}{T_1} = 2.50 \\times \\frac{263.15}{298.15} \\approx 2.21\\ \\text{L}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Individual Gas Laws",
+        "question_text": "Gay-Lussac's Law implies that if a fixed volume of gas in a rigid container is heated, the pressure will increase. Why does this occur at the molecular level?",
+        "options": {
+            "a": "The gas particles expand and take up more space.",
+            "b": "The gas particles collide with the walls more frequently and with greater force.",
+            "c": "The number of gas particles increases as temperature rises.",
+            "d": "The intermolecular forces between particles become stronger."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "As temperature increases, the average kinetic energy of the particles increases. This causes them to move faster, striking the container walls more often and with more force, resulting in higher pressure.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Individual Gas Laws",
+        "question_text": "A gas is confined in a rigid steel tank at $27^\\circ\\text{C}$ with a pressure of $3.0\\ \\text{atm}$. If the tank is heated to $127^\\circ\\text{C}$, what is the final pressure?",
+        "options": {
+            "a": "4.0 atm",
+            "b": "14.1 atm",
+            "c": "2.25 atm",
+            "d": "1.5 atm"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Use Gay-Lussac's Law ($\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$). Convert to Kelvin: $$T_1 = 300\\ \\text{K}, T_2 = 400\\ \\text{K}$$ ​$$\\frac{3.0}{300} = \\frac{P_2}{400} \\implies P_2 = 3.0 \\times \\frac{400}{300} = 4.0\\ \\text{atm}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Individual Gas Laws",
+        "question_text": "Which mathematical expression represents Boyle's Law?",
+        "options": {
+            "a": "$V \\propto T$",
+            "b": "$P \\propto V$",
+            "c": "$P_1V_1 = P_2V_2$",
+            "d": "$\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Boyle's Law states that for a fixed amount of gas at constant temperature, pressure and volume are inversely proportional, which is mathematically expressed as $PV = k$ or $P_1V_1 = P_2V_2$.",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Avogadro's Law",
+        "question_text": "According to Avogadro's Law, what happens to the volume of a flexible container if the number of moles of gas inside is doubled (at constant T and P)?",
+        "options": {
+            "a": "The volume halves.",
+            "b": "The volume doubles.",
+            "c": "The volume remains constant.",
+            "d": "The volume increases by a factor of 4."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Avogadro's Law states that volume is directly proportional to the number of moles ($V \\propto n$). Therefore, doubling the moles doubles the volume.",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Avogadro's Law",
+        "question_text": "What is the standard molar volume of an ideal gas at STP (Standard Temperature and Pressure, defined here as $0^\\circ\\text{C}$ and $1\\ \\text{atm}$)?",
+        "options": {
+            "a": "1.0 L",
+            "b": "10.5 L",
+            "c": "22.4 L",
+            "d": "24.5 L"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "At STP ($0^\\circ\\text{C}$ and $1\\ \\text{atm}$), 1 mole of an ideal gas occupies approximately $22.4\\ \\text{L}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Avogadro's Law",
+        "question_text": "Two balloons at the same temperature and pressure contain equal volumes of gas. Balloon A contains Helium (He) and Balloon B contains Argon (Ar). Which statement is true?",
+        "options": {
+            "a": "Balloon B has more atoms than Balloon A.",
+            "b": "Balloon B has a greater mass than Balloon A.",
+            "c": "Balloon A has higher kinetic energy than Balloon B.",
+            "d": "The atoms in Balloon B are moving faster than in Balloon A."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Avogadro's Law implies equal volumes contain equal numbers of moles (and atoms for monoatomic gases). Since both have the same number of moles, the one with the higher molar mass (Argon, ~40 g/mol vs Helium, ~4 g/mol) will have a greater total mass.",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "Calculate the volume occupied by $0.500\\ \\text{mol}$ of an ideal gas at $1.50\\ \\text{atm}$ and $25^\\circ\\text{C}$. (Use $R = 0.0821\\ \\text{L}\\cdot\\text{atm}/\\text{mol}\\cdot\\text{K}$)",
+        "options": {
+            "a": "8.16 L",
+            "b": "6.84 L",
+            "c": "4.08 L",
+            "d": "0.68 L"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Use $PV=nRT$. $$T = 298.15\\ \\text{K}$$. $$V = \\frac{nRT}{P} = \\frac{0.500 \\times 0.0821 \\times 298.15}{1.50} \\approx 8.16\\ \\text{L}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "Which rearrangement of the Ideal Gas Law allows you to calculate the **density** ($d​$) of a gas?",
+        "options": {
+            "a": "$d = \\frac{P}{RT}$",
+            "b": "$d = \\frac{n}{V}$",
+            "c": "$d = \\frac{PM}{\\text{RT}}$",
+            "d": "$d = \\frac{RTM}{P}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Density $d = \\frac{\\text{mass}}{V}$. Since $n = \\frac{\\text{mass}}{M}$ (molar mass), substituting into $PV=nRT$ gives $PV = \\frac{\\text{mass}}{M}RT \\implies \\frac{\\text{mass}}{V} = \\frac{PM}{RT} \\implies d = \\frac{PM}{RT}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "What is the pressure exerted by $2.0\\ \\text{mol}$ of oxygen gas in a $10.0\\ \\text{L}$ container at $300\\ \\text{K}$? ($R = 0.0821\\ \\text{L}\\cdot\\text{atm}/\\text{mol}\\cdot\\text{K}$)",
+        "options": {
+            "a": "2.46 atm",
+            "b": "4.93 atm",
+            "c": "6.00 atm",
+            "d": "49.2 atm"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$$P = \\frac{nRT}{V} = \\frac{2.0 \\times 0.0821 \\times 300}{10.0} = 4.926 \\approx 4.93\\ \\text{atm}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "An unknown gas has a density of $1.96\\ \\text{g/L}$ at STP ($0^\\circ\\text{C}, 1\\ \\text{atm}$). What is the molar mass of the gas?",
+        "options": {
+            "a": "28 g/mol",
+            "b": "44 g/mol",
+            "c": "16 g/mol",
+            "d": "32 g/mol"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "At STP, 1 mole occupies 22.4 L. Molar Mass $M = \\text{density} \\times \\text{Molar Volume} = 1.96\\ \\text{g/L} \\times 22.4\\ \\text{L/mol} \\approx 43.9\\ \\text{g/mol}$. The closest value is 44 g/mol ($\\\\text{CO}_2$).",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "If the temperature of an ideal gas is doubled and the pressure is halved, what happens to the volume?",
+        "options": {
+            "a": "It remains the same.",
+            "b": "It doubles.",
+            "c": "It quadruples.",
+            "d": "It is halved."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "From $V = \\frac{nRT}{P}$, if $T​$ becomes $2T$ and $P​$ becomes $0.5P$, then $V_{new} = \\frac{nR(2T)}{0.5P} = 4 \\times \\frac{nRT}{P}$. The volume increases by a factor of 4.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "What is the value of the Ideal Gas Constant ($R​$) when pressure is in atm, volume in liters, and temperature in Kelvin?",
+        "options": {
+            "a": "8.314",
+            "b": "0.0821",
+            "c": "62.36",
+            "d": "1.987"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The standard value for $R​$ in these units ($L\\cdot\\text{atm}/\\text{mol}\\cdot\\text{K}$) is $0.08206$, commonly rounded to $0.0821$.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "A student collects experimental data: $P=1.0\\ \\text{atm}$, $V=2.0\\ \\text{L}$, $T=300\\ \\text{K}$, mass of gas $= 2.6\\ \\text{g}$. What is the approximate molar mass of the gas?",
+        "options": {
+            "a": "16 g/mol",
+            "b": "32 g/mol",
+            "c": "64 g/mol",
+            "d": "28 g/mol"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "First, calculate moles: $n = \\frac{PV}{RT} = \\frac{1.0 \\times 2.0}{0.0821 \\times 300} \\approx 0.0812\\ \\text{mol}$. Then, Molar Mass $M = \\frac{\\text{mass}}{n} = \\frac{2.6\\ \\text{g}}{0.0812\\ \\text{mol}} \\approx 32.0\\ \\text{g/mol}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "Which variable is NOT present in the Ideal Gas Equation ($PV=nRT$)?",
+        "options": {
+            "a": "Density",
+            "b": "Pressure",
+            "c": "Moles",
+            "d": "Temperature"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "The standard form $PV=nRT$ includes Pressure, Volume, Moles ($n​$), Gas Constant, and Temperature. Density is derived from it but not an explicit variable in the primary equation.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "How many moles of gas are present in a $500\\ \\text{mL}$ flask at $27^\\circ\\text{C}$ and $760\\ \\text{mmHg}$?",
+        "options": {
+            "a": "0.020 mol",
+            "b": "0.041 mol",
+            "c": "22.4 mol",
+            "d": "1.0 mol"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "$V=0.5\\ \\text{L}$, $T=300\\ \\text{K}$, $P=1\\ \\text{atm}$ ($760\\ \\text{mmHg}$). $$n = \\frac{PV}{RT} = \\frac{1 \\times 0.5}{0.0821 \\times 300} \\approx 0.0203\\ \\text{mol}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "Which of the following assumptions is key to the definition of an \"Ideal Gas\" used in the $PV=nRT$ equation?",
+        "options": {
+            "a": "Particles have significant volume.",
+            "b": "Particles attract each other strongly.",
+            "c": "Particles have no volume and no intermolecular forces.",
+            "d": "Collisions between particles are inelastic."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "An ideal gas is theoretical; it assumes particles are point masses (zero volume) and experience no intermolecular attraction or repulsion.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "Calculate the temperature (in $^\\circ\\text{C}$) of $0.10\\ \\text{mol}$ of gas occupying $2.0\\ \\text{L}$ at $1.2\\ \\text{atm}$.",
+        "options": {
+            "a": "292 K",
+            "b": "19 °C",
+            "c": "292 °C",
+            "d": "273 °C"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$$T = \\frac{PV}{nR} = \\frac{1.2 \\times 2.0}{0.10 \\times 0.0821} \\approx 292.3\\ \\text{K}$$. Convert to Celsius: $$292.3 - 273.15 \\approx 19.15^\\circ\\text{C}$$.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Ideal Gas Equation",
+        "question_text": "A rigid tank contains gas at pressure $P​$. If you release half the moles of gas while maintaining constant temperature, what happens to the pressure?",
+        "options": {
+            "a": "It doubles.",
+            "b": "It remains the same.",
+            "c": "It is halved.",
+            "d": "It drops to zero."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Based on $PV=nRT$, Pressure is directly proportional to moles ($n​$). If $n​$ is halved (and $V, T$ constant), $P​$ is halved.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "Dalton's Law of Partial Pressures states that the total pressure of a gas mixture is equal to:",
+        "options": {
+            "a": "The product of the partial pressures of the individual gases.",
+            "b": "The sum of the partial pressures of the individual gases.",
+            "c": "The average of the partial pressures.",
+            "d": "The difference between the highest and lowest partial pressures."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Dalton's Law states $P_{\\text{total}} = P_1 + P_2 + P_3 + \\dots$, meaning the total pressure is the sum of the partial pressures.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "A mixture of gases contains $2.0\\ \\text{moles}$ of He and $6.0\\ \\text{moles}$ of Ne. If the total pressure is $4.0\\ \\text{atm}$, what is the partial pressure of He?",
+        "options": {
+            "a": "1.0 atm",
+            "b": "2.0 atm",
+            "c": "3.0 atm",
+            "d": "0.5 atm"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Total moles = $2.0 + 6.0 = 8.0\\ \\text{mol}$. Mole fraction of He ($X_{\\text{He}}$) = $2.0 / 8.0 = 0.25$. Partial Pressure $P_{\\text{He}} = X_{\\text{He}} \\times P_{\\text{total}} = 0.25 \\times 4.0\\ \\text{atm} = 1.0\\ \\text{atm}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "Which formula correctly relates the partial pressure of a gas ($P_i$) to its mole fraction ($X_i$) and the total pressure ($P_{\\text{total}}$)?",
+        "options": {
+            "a": "$P_i = \\frac{X_i}{P_{\\text{total}}}$",
+            "b": "$P_i = X_i + P_{\\text{total}}$",
+            "c": "$P_i = X_i \\times P_{\\text{total}}$",
+            "d": "$P_i = \\frac{P_{\\text{total}}}{X_i}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "The partial pressure of a specific gas component is proportional to its mole fraction in the mixture: $P_i = X_i P_{\\text{total}}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "Hydrogen gas is collected over water at $25^\\circ\\text{C}$. The total atmospheric pressure is $760\\ \\text{mmHg}$. If the vapor pressure of water at $25^\\circ\\text{C}$ is $24\\ \\text{mmHg}$, what is the partial pressure of the hydrogen gas?",
+        "options": {
+            "a": "784 mmHg",
+            "b": "760 mmHg",
+            "c": "736 mmHg",
+            "d": "24 mmHg"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "When gas is collected over water, the relation is $P_{\\text{total}} = P_{\\text{gas}} + P_{\\text{H}_2\\text{O}}$. Therefore, the hydrogen gas pressure is $760 - 24 = 736\\,\\text{mmHg}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "Air is approximately $78\\%$ Nitrogen and $21\\%$ Oxygen by mole. If atmospheric pressure is $1.0\\ \\text{atm}$, what is the partial pressure of Oxygen?",
+        "options": {
+            "a": "0.78 atm",
+            "b": "0.21 atm",
+            "c": "1.0 atm",
+            "d": "0.50 atm"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Using mole percentage as mole fraction ($0.21$): $P_{\\text{O}_2} = 0.21 \\times 1.0\\ \\text{atm} = 0.21\\ \\text{atm}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "Three gases (A, B, C) are in a tank. $P_A = 2\\ \\text{atm}$, $P_B = 5\\ \\text{atm}$, and $P_C = 3\\ \\text{atm}$. What is the mole fraction of Gas B?",
+        "options": {
+            "a": "0.20",
+            "b": "0.30",
+            "c": "0.50",
+            "d": "0.80"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Total pressure $P_{\\text{total}} = 2 + 5 + 3 = 10\\ \\text{atm}$. Mole fraction $X_B = P_B / P_{\\text{total}} = 5 / 10 = 0.50$.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "Why must the vapor pressure of water be subtracted when collecting a gas over water?",
+        "options": {
+            "a": "Water reacts with the gas to produce extra moles.",
+            "b": "Water vapor mixes with the gas, contributing to the total measured pressure.",
+            "c": "Water creates a vacuum that lowers pressure.",
+            "d": "The gas dissolves into the water completely."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The collected gas is wet; it contains water vapor that exerts its own pressure (vapor pressure). To find the pressure of the dry gas alone, Dalton's Law is used to subtract the water vapor contribution.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Partial Pressures",
+        "question_text": "A vessel contains equal masses of $\\text{O}_2$ and $\\text{CH}_4$ (Methane). Which gas has the higher partial pressure?",
+        "options": {
+            "a": "Oxygen (O₂)",
+            "b": "Methane (CH₄)",
+            "c": "They have equal partial pressures.",
+            "d": "It depends on the temperature."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Since mass is equal, calculate moles. Molar mass of $\\text{O}_2 = 32$, $\\text{CH}_4 = 16$. Moles of $\\text{CH}_4 = m/16$, Moles of $\\text{O}_2 = m/32$. Methane has twice the moles, so it has twice the partial pressure.",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Real Gases",
+        "question_text": "Under what conditions do real gases deviate most significantly from ideal behavior?",
+        "options": {
+            "a": "High temperature and low pressure.",
+            "b": "High temperature and high pressure.",
+            "c": "Low temperature and high pressure.",
+            "d": "Low temperature and low pressure."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "At low temperatures (slow moving particles) and high pressures (particles crowded together), intermolecular forces and particle volume become significant, causing deviation from the ideal model.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Real Gases",
+        "question_text": "In the Van der Waals equation $\\left(P + \\frac{n^2a}{V^2}\\right)(V - nb) = nRT$, what does the constant '$b​$' correct for?",
+        "options": {
+            "a": "The attractive forces between particles.",
+            "b": "The finite volume occupied by the gas particles themselves.",
+            "c": "The kinetic energy fluctuations.",
+            "d": "The atmospheric pressure variations."
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "The '$b​$' constant in the Van der Waals equation represents the excluded volume, correcting for the fact that real gas particles have a finite size and take up space.",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Real Gases",
+        "question_text": "What is the primary reason real gases exert less pressure than ideal gases under certain conditions?",
+        "options": {
+            "a": "Intermolecular attractive forces pull particles together, reducing the force of impact on walls.",
+            "b": "Real gas particles are softer and bounce less.",
+            "c": "Real gas particles move slower at all temperatures.",
+            "d": "Real gases chemically react with the container."
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "Intermolecular attractive forces (Van der Waals forces) pull gas particles toward one another. This retards their motion just before hitting the wall, reducing the impact force and thus the measured pressure.",
+        "section_id": null
+    },
+    {
+        "question_number": 36,
+        "subject": "Chemistry",
+        "topic": "Real Gases",
+        "question_text": "Which gas would you expect to behave most ideally at room temperature?",
+        "options": {
+            "a": "Water vapor ($H_2O$)",
+            "b": "Ammonia ($NH_3$)",
+            "c": "Helium ($He$)",
+            "d": "Carbon Dioxide ($CO_2$)"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Helium is a small, monoatomic noble gas with extremely weak intermolecular forces (London dispersion only). Therefore, it follows the assumptions of the kinetic molecular theory (ideal gas) more closely than polar or larger molecules.",
+        "section_id": null
+    }
+]

@@ -1,0 +1,722 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Mathematics",
+    "topic": "Sets and Venn Diagrams",
+    "question_text": "At a college track meet, there are 3 jumping events: high jump, long jump, and triple jump. The Venn diagram below shows the distribution of the number of athletes competing in each jumping event. How many athletes are competing in both high jump and triple jump but not long jump?\n\n<svg viewBox=\"0 0 200 200\" width=\"200\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"80\" cy=\"80\" r=\"40\" stroke=\"black\" fill=\"none\"/>\n  <circle cx=\"120\" cy=\"80\" r=\"40\" stroke=\"black\" fill=\"none\"/>\n  <circle cx=\"100\" cy=\"115\" r=\"40\" stroke=\"black\" fill=\"none\"/>\n  <text x=\"60\" y=\"75\" font-size=\"12\">5</text>\n  <text x=\"135\" y=\"75\" font-size=\"12\">7</text>\n  <text x=\"97\" y=\"135\" font-size=\"12\">2</text>\n  <text x=\"100\" y=\"70\" font-size=\"12\" text-anchor=\"middle\">9</text>\n  <text x=\"75\" y=\"105\" font-size=\"12\">3</text>\n  <text x=\"120\" y=\"105\" font-size=\"12\">6</text>\n  <text x=\"97\" y=\"95\" font-size=\"12\">1</text>\n  <text x=\"30\" y=\"30\" font-size=\"10\">high jump</text>\n  <text x=\"140\" y=\"30\" font-size=\"10\">long jump</text>\n  <text x=\"75\" y=\"170\" font-size=\"10\">triple jump</text>\n</svg>",
+    "options": {
+      "a": "3",
+      "b": "4",
+      "c": "10",
+      "d": "19"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "The region representing athletes in both high jump and triple jump but not long jump is the intersection of the 'high jump' and 'triple jump' circles that lies exclusively outside the 'long jump' circle. According to the Venn diagram, this number is 3.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Mathematics",
+    "topic": "Functions",
+    "question_text": "A function, $f$, is defined by the equation $f(x) = x^2 + 5$. What is $f(3) + 1$?",
+    "options": {
+      "a": "9",
+      "b": "11",
+      "c": "12",
+      "d": "15"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "First, evaluate $f(3)$ by substituting $x = 3$ into the function: $f(3) = (3)^2 + 5 = 9 + 5 = 14$. Then, add 1 to the result: $14 + 1 = 15$.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Mathematics",
+    "topic": "Algebraic Equations",
+    "question_text": "Given $b = 40$ and $c = -16$, $b + c$ is equal to the product of $-4$ and what number?",
+    "options": {
+      "a": "-14",
+      "b": "-6",
+      "c": "6",
+      "d": "14"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Calculate the sum $b + c$: $40 + (-16) = 24$. We want to find a number $x$ such that the product of $-4$ and $x$ is $24$. Set up the equation $-4x = 24$. Solving for $x$ gives $x = -6$.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Mathematics",
+    "topic": "Fractions and Conversions",
+    "question_text": "It takes Collin 24 minutes to walk to school in the morning. What fraction of his 24-hour day is spent walking to school in the morning?",
+    "options": {
+      "a": "$\\frac{1}{1,440}$",
+      "b": "$\\frac{1}{60}$",
+      "c": "$\\frac{1}{24}$",
+      "d": "$\\frac{1}{12}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "First, convert his 24-hour day into minutes: $24 \\text{ hours} \\times 60 \\text{ minutes/hour} = 1,440 \\text{ minutes}$. The fraction of his day spent walking is $\\frac{24}{1,440}$. Simplifying this fraction yields $\\frac{1}{60}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Mathematics",
+    "topic": "Geometry (Triangles)",
+    "question_text": "A certain triangle has interior angle measures of $(6x)^\\circ$, $(2x)^\\circ$, and $x^\\circ$. What is the value of $x$?",
+    "options": {
+      "a": "9",
+      "b": "12",
+      "c": "20",
+      "d": "57"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The sum of the interior angles of any triangle is always $180^\\circ$. Therefore, set up the equation: $6x + 2x + x = 180$. Combining like terms gives $9x = 180$, which simplifies to $x = 20$.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Mathematics",
+    "topic": "Matrices",
+    "question_text": "Which of the following matrices is equal to $6 \\begin{bmatrix} -5 & 3 \\\\ 0 & -4 \\end{bmatrix}$?",
+    "options": {
+      "a": "$\\begin{bmatrix} -30 & -6 \\end{bmatrix}$",
+      "b": "$\\begin{bmatrix} 1 & 9 \\\\ 6 & 2 \\end{bmatrix}$",
+      "c": "$\\begin{bmatrix} -\\frac{5}{6} & \\frac{1}{2} \\\\ 0 & -\\frac{2}{3} \\end{bmatrix}$",
+      "d": "$\\begin{bmatrix} -30 & 18 \\\\ 0 & -24 \\end{bmatrix}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "To multiply a matrix by a scalar (in this case, 6), you multiply every element inside the matrix by that scalar. Resulting entries: $6(-5) = -30$, $6(3) = 18$, $6(0) = 0$, and $6(-4) = -24$. This produces the matrix $\\begin{bmatrix} -30 & 18 \\\\ 0 & -24 \\end{bmatrix}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Mathematics",
+    "topic": "Geometry (Circles)",
+    "question_text": "For circle $O$ shown, $A$, $B$, $C$, and $D$ are on circle $O$; $A$ and $B$ are as far apart as possible; $C$ is halfway between $A$ and $B$ along circle $O$; and $D$ is halfway between $C$ and $B$ along circle $O$. What percent of the area enclosed by circle $O$ is enclosed by $\\overline{OC}$, $\\overline{OD}$, and minor arc $\\widehat{CD}$?\n\n<svg viewBox=\"0 0 150 150\" width=\"150\" height=\"150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"75\" cy=\"75\" r=\"50\" stroke=\"black\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"75\" cy=\"75\" r=\"2\" fill=\"black\"/>\n  <text x=\"60\" y=\"78\">O</text>\n  <circle cx=\"25\" cy=\"75\" r=\"2\" fill=\"black\"/>\n  <text x=\"10\" y=\"78\">A</text>\n  <circle cx=\"125\" cy=\"75\" r=\"2\" fill=\"black\"/>\n  <text x=\"130\" y=\"78\">B</text>\n  <circle cx=\"75\" cy=\"125\" r=\"2\" fill=\"black\"/>\n  <text x=\"71\" y=\"140\">C</text>\n  <circle cx=\"110\" cy=\"110\" r=\"2\" fill=\"black\"/>\n  <text x=\"115\" y=\"120\">D</text>\n</svg>",
+    "options": {
+      "a": "12.5%",
+      "b": "25%",
+      "c": "50%",
+      "d": "100%"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Since points $A$ and $B$ are as far apart as possible, line segment $\\overline{AB}$ is a diameter, making arc $\\widehat{AB}$ $180^\\circ$. $C$ is halfway between $A$ and $B$, meaning arc $\\widehat{CB}$ is exactly half of $180^\\circ$, or $90^\\circ$. $D$ is halfway between $C$ and $B$, making minor arc $\\widehat{CD}$ half of $90^\\circ$, or $45^\\circ$. The sector bounded by $\\overline{OC}$, $\\overline{OD}$, and $\\widehat{CD}$ covers $45^\\circ$ of the $360^\\circ$ circle. The fraction of the area is $\\frac{45}{360} = \\frac{1}{8}$, which is equal to $0.125$ or $12.5\\%$.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Mathematics",
+    "topic": "Quadratic Functions",
+    "question_text": "An object is launched vertically at 30 meters per second from a 55-meter-tall platform. The height, $h(t)$ meters, of the object $t$ seconds after launch is modeled by $h(t) = -4.9t^2 + 30t + 55$. What will be the height, in meters, of the object 3 seconds after launch?",
+    "options": {
+      "a": "44.1",
+      "b": "100.9",
+      "c": "145",
+      "d": "189.1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Substitute $t = 3$ into the function: $h(3) = -4.9(3)^2 + 30(3) + 55$. This evaluates to $-4.9(9) + 90 + 55 = -44.1 + 145 = 100.9$ meters.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Mathematics",
+    "topic": "Algebraic Factoring",
+    "question_text": "Given the function $f(x) = 4x^2 - 14x + 12$, which of the following expressions is equivalent to $f(x)$?",
+    "options": {
+      "a": "$(-2x + 4)(2x + 3)$",
+      "b": "$(2x - 4)(2x - 3)$",
+      "c": "$(2x - 4)(2x + 3)$",
+      "d": "$(2x - 3)(2x + 4)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "To find the equivalent expression, factor the given quadratic $4x^2 - 14x + 12$. You can first factor out a 2: $2(2x^2 - 7x + 6)$. The quadratic in the parentheses factors to $(2x - 3)(x - 2)$. Thus, the full expression is $2(2x - 3)(x - 2)$. Distributing the 2 into $(x - 2)$ yields $(2x - 3)(2x - 4)$. Alternatively, expanding option 'b' with FOIL gives $(2x)(2x) + (2x)(-3) + (-4)(2x) + (-4)(-3) = 4x^2 - 6x - 8x + 12 = 4x^2 - 14x + 12$.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Mathematics",
+    "topic": "Algebraic Simplification",
+    "question_text": "Which of the following is equivalent to $(6x + 3y) - (y - 2x)$?",
+    "options": {
+      "a": "$4x + 2y$",
+      "b": "$5x + y$",
+      "c": "$5x + 5y$",
+      "d": "$8x + 2y$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "Distribute the negative sign through the second parentheses: $6x + 3y - y + 2x$. Then, combine like terms for $x$: $6x + 2x = 8x$. Combine like terms for $y$: $3y - y = 2y$. The resulting simplified expression is $8x + 2y$.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Mathematics",
+    "topic": "Systems of Equations",
+    "question_text": "Bryce owns an apartment building. He charges $\\$325$ per month for each 1-bedroom apartment and $\\$410$ per month for each 2-bedroom apartment. Bryce charged a total of $\\$4,905$ in rent for 13 apartments this month. How many 1-bedroom apartments did Bryce charge for this month?",
+    "options": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Set up a system of linear equations. Let $x$ be the number of 1-bedroom apartments and $y$ be the number of 2-bedroom apartments. We have $x + y = 13$ and $325x + 410y = 4905$. Substituting $y = 13 - x$ into the second equation: $325x + 410(13 - x) = 4905$, which expands to $325x + 5330 - 410x = 4905$. Simplifying gives $-85x = -425$. Dividing by $-85$ yields $x = 5$. Therefore, there are 5 1-bedroom apartments.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Mathematics",
+    "topic": "Data and Probability",
+    "question_text": "A restaurant surveyed its customers to determine whether or not they like hamburgers and whether or not they like turkey burgers. The table shows the results of the survey.\n\n| | Like hamburgers | Do not like hamburgers | Total |\n|---|---|---|---|\n| Like turkey burgers | 97 | 39 | 136 |\n| Do not like turkey burgers | 98 | 78 | 176 |\n| Total | 195 | 117 | 312 |\n\nTo the nearest 1%, what percent of the customers who responded to the survey like hamburgers?",
+    "options": {
+      "a": "31%",
+      "b": "50%",
+      "c": "63%",
+      "d": "71%"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Find the total number of customers surveyed, which is 312. Find the total number of customers who like hamburgers by looking at the column total for 'Like hamburgers', which is 195. Divide 195 by 312: $195 / 312 = 0.625$. Multiplying by 100 to convert to a percent yields $62.5\\%$, which rounds to $63\\%$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Mathematics",
+    "topic": "Quadratic Equations",
+    "question_text": "For what value of $n$ does the quadratic equation $x^2 - 4x + n = 0$ have solutions of $x = 7$ and $x = -3$?",
+    "options": {
+      "a": "-21",
+      "b": "-4",
+      "c": "4",
+      "d": "10"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "If a quadratic equation has solutions $x = 7$ and $x = -3$, it can be written in factored form as $(x - 7)(x + 3) = 0$. Expanding this gives $x^2 + 3x - 7x - 21 = 0$, or $x^2 - 4x - 21 = 0$. Matching this to the original equation $x^2 - 4x + n = 0$, we find that $n = -21$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Mathematics",
+    "topic": "Geometry (Similar Triangles)",
+    "question_text": "The lengths of corresponding sides of 2 similar right triangles are in the ratio 4:5. The hypotenuse of the smaller triangle is 20 inches long. How many inches long is the hypotenuse of the larger triangle?",
+    "options": {
+      "a": "9",
+      "b": "20",
+      "c": "21",
+      "d": "25"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "The ratio of the corresponding sides of the two similar triangles is $4:5$. Let the hypotenuse of the larger triangle be $h$. Using proportions: $\\frac{4}{5} = \\frac{20}{h}$. Cross-multiplying gives $4h = 100$, so $h = 25$ inches.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Mathematics",
+    "topic": "Trigonometry",
+    "question_text": "What is the amplitude of the graph of function $f(x) = \\frac{1}{2}\\cos(3x + \\pi)$, shown in the standard $(x,y)$ coordinate plane?\n\n<svg viewBox=\"0 0 200 120\" width=\"200\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M10,60 Q30,10 50,60 T90,60 T130,60 T170,60\" fill=\"none\" stroke=\"black\"/>\n  <line x1=\"0\" y1=\"60\" x2=\"180\" y2=\"60\" stroke=\"black\"/>\n  <line x1=\"90\" y1=\"0\" x2=\"90\" y2=\"120\" stroke=\"black\"/>\n</svg>",
+    "options": {
+      "a": "$\\frac{1}{3}$",
+      "b": "$\\frac{1}{2}$",
+      "c": "2",
+      "d": "3"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "For a trigonometric function of the form $f(x) = A\\cos(Bx + C) + D$, the amplitude is given by $|A|$. Here, the coefficient $A$ is $\\frac{1}{2}$, so the amplitude is $\\frac{1}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Mathematics",
+    "topic": "Coordinate Geometry (Circles)",
+    "question_text": "A circle in the standard $(x,y)$ coordinate plane has its center at $(3,-4)$ and passes through $(0,0)$. Which of the following is an equation for that circle?",
+    "options": {
+      "a": "$x^2 + y^2 = 5$",
+      "b": "$(x - 3)^2 + (y + 4)^2 = 25$",
+      "c": "$(x + 3)^2 + (y - 4)^2 = 7$",
+      "d": "$(x + 3)^2 + (y - 4)^2 = 25$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The standard equation of a circle is $(x - h)^2 + (y - k)^2 = r^2$, where $(h,k)$ is the center. Since the center is $(3,-4)$, the equation takes the form $(x - 3)^2 + (y - (-4))^2 = r^2$, or $(x - 3)^2 + (y + 4)^2 = r^2$. We can find the squared radius $r^2$ by using the distance formula between the center $(3,-4)$ and a point on the circle $(0,0)$: $r^2 = (3 - 0)^2 + (-4 - 0)^2 = 9 + 16 = 25$. Therefore, the full equation is $(x - 3)^2 + (y + 4)^2 = 25$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Mathematics",
+    "topic": "Radical Expressions",
+    "question_text": "$\\sqrt{112} + \\sqrt{63} + \\sqrt{175} = ?$",
+    "options": {
+      "a": "$7\\sqrt{12}$",
+      "b": "$7\\sqrt{50}$",
+      "c": "$12\\sqrt{7}$",
+      "d": "$60\\sqrt{7}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Simplify each radical by factoring out the largest perfect square: $\\sqrt{112} = \\sqrt{16 \\times 7} = 4\\sqrt{7}$. $\\sqrt{63} = \\sqrt{9 \\times 7} = 3\\sqrt{7}$. $\\sqrt{175} = \\sqrt{25 \\times 7} = 5\\sqrt{7}$. Add the simplified terms: $4\\sqrt{7} + 3\\sqrt{7} + 5\\sqrt{7} = 12\\sqrt{7}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Mathematics",
+    "topic": "Ratios and Proportions",
+    "question_text": "The sum of 3 positive integers is 180, and the ratio of the integers is 5:3:2. What is the value of the smallest of the integers?",
+    "options": {
+      "a": "18",
+      "b": "36",
+      "c": "54",
+      "d": "90"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Let the three integers be $5x$, $3x$, and $2x$. The sum of these integers is $5x + 3x + 2x = 10x$. Since their sum is 180, set $10x = 180$, which means $x = 18$. The smallest integer corresponds to the ratio part 2, so it is $2x = 2(18) = 36$.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Jeremy reaches into a box in the closet. The box contains 10 gloves that make up 5 matching pairs. He picks 1 glove at random and puts it on. Then he picks another glove at random. What is the probability that he has picked a matching pair?",
+    "options": {
+      "a": "$\\frac{1}{9}$",
+      "b": "$\\frac{1}{5}$",
+      "c": "$\\frac{4}{9}$",
+      "d": "$\\frac{1}{2}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "When Jeremy picks the first glove, he leaves 9 gloves in the box. Because there are 5 distinct pairs, exactly 1 of the remaining 9 gloves is the match for the glove he just chose. Therefore, the probability that the second glove matches the first is 1 out of 9, or $\\frac{1}{9}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Mathematics",
+    "topic": "Number Properties (LCM)",
+    "question_text": "During an event, a store gave a free T-shirt to every 24th customer that entered the store and a free gift certificate to every 60th customer that entered the store. Given that 500 customers entered the store during the event, how many customers received both a free T-shirt and a free gift certificate?",
+    "options": {
+      "a": "2",
+      "b": "4",
+      "c": "12",
+      "d": "24"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A customer receives both if their entry number is a common multiple of 24 and 60. First, find the Least Common Multiple (LCM) of 24 and 60. The prime factorization is $24 = 2^3 \\times 3$ and $60 = 2^2 \\times 3 \\times 5$. Their LCM is $2^3 \\times 3 \\times 5 = 120$. So, every 120th customer gets both. The multiples of 120 up to 500 are 120, 240, 360, and 480. Therefore, 4 customers received both items.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Mathematics",
+    "topic": "Statistics (Expected Value)",
+    "question_text": "Cameron’s bookshelf has 3 books with a rating of 10, 5 books with a rating of 100, and 2 books with a rating of 70. There are no other books on the bookshelf. What is the expected value, to the nearest whole number, of the rating of a book randomly selected from Cameron’s bookshelf?",
+    "options": {
+      "a": "18",
+      "b": "60",
+      "c": "67",
+      "d": "85"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The expected value is the sum of each outcome multiplied by its probability, which is the same as finding the overall average of the ratings in this context. The total number of books is $3 + 5 + 2 = 10$. The total rating points sum to: $3(10) + 5(100) + 2(70) = 30 + 500 + 140 = 670$. Dividing the sum by the total number of books: $670 / 10 = 67$.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Mathematics",
+    "topic": "Sequences",
+    "question_text": "The 1st term of a certain sequence is $-10$, and the 2nd term is 1. Each subsequent term is obtained by adding the 2 immediately preceding terms. What is the 5th term of this sequence?",
+    "options": {
+      "a": "-23",
+      "b": "-17",
+      "c": "19",
+      "d": "34"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Calculate each term using the rule $a_n = a_{n-1} + a_{n-2}$.\nTerm 1: $-10$\nTerm 2: $1$\nTerm 3: $-10 + 1 = -9$\nTerm 4: $1 + (-9) = -8$\nTerm 5: $-9 + (-8) = -17$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Mathematics",
+    "topic": "Systems of Equations",
+    "question_text": "Which of the following values is the $y$-value of the solution to the given system of equations?\n$-4y - 3 = x$\n$2x - 22 = 6y$",
+    "options": {
+      "a": "$y = -2\\frac{1}{2}$",
+      "b": "$y = -2$",
+      "c": "$y = -\\frac{3}{4}$",
+      "d": "$y = 5$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Substitute $x = -4y - 3$ from the first equation into the second equation: $2(-4y - 3) - 22 = 6y$. Distribute the 2: $-8y - 6 - 22 = 6y$. Combine the constants: $-8y - 28 = 6y$. Add $8y$ to both sides: $-28 = 14y$. Divide by 14 to isolate $y$: $y = -2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Mathematics",
+    "topic": "Functions and Tables",
+    "question_text": "Some values of the function $g$ are given in the table. One of the following equations defines $g$. Which one?\n\n| $x$ | -2 | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|---|\n| $g(x)$ | 0 | -8 | -6 | 0 | 10 |",
+    "options": {
+      "a": "$g(x) = -2x - 8$",
+      "b": "$g(x) = -x - 8$",
+      "c": "$g(x) = x^2 + 2$",
+      "d": "$g(x) = 2x^2 - 8$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Test the coordinate points from the table in the given options. Using $(0, -8)$: Options a, b, and d all yield $g(0) = -8$, while c gives 2. Next, use $(2, 0)$ on the remaining candidates. For a: $g(2) = -2(2) - 8 = -12 \\neq 0$. For b: $g(2) = -2 - 8 = -10 \\neq 0$. For d: $g(2) = 2(2)^2 - 8 = 2(4) - 8 = 8 - 8 = 0$. Verifying another point $(3, 10)$ in d gives $2(3)^2 - 8 = 18 - 8 = 10$, which works.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Mathematics",
+    "topic": "Geometry (Isosceles Triangles)",
+    "question_text": "The vertex angle of an isosceles triangle is $40^\\circ$. What is the measure of a base angle?",
+    "options": {
+      "a": "$40^\\circ$",
+      "b": "$70^\\circ$",
+      "c": "$100^\\circ$",
+      "d": "$140^\\circ$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The sum of the interior angles in any triangle is $180^\\circ$. In an isosceles triangle, the two base angles are congruent. Let the measure of each base angle be $x$. The equation is $2x + 40^\\circ = 180^\\circ$. Subtract $40^\\circ$ from both sides to get $2x = 140^\\circ$. Dividing by 2 yields $x = 70^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Mathematics",
+    "topic": "Geometry (Circles and Triangles)",
+    "question_text": "Equilateral triangle $\\triangle ABC$ is inscribed in circle $O$, as shown. What is the degree measure of minor arc $\\widehat{BC}$?\n\n<svg viewBox=\"0 0 200 200\" width=\"200\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"100\" cy=\"100\" r=\"80\" stroke=\"black\" fill=\"none\" stroke-width=\"2\"/>\n  <polygon points=\"100,20 169.28,140 30.72,140\" stroke=\"black\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"100\" cy=\"100\" r=\"3\" fill=\"black\"/>\n  <text x=\"95\" y=\"115\">O</text>\n  <text x=\"95\" y=\"15\">A</text>\n  <text x=\"15\" y=\"155\">B</text>\n  <text x=\"175\" y=\"155\">C</text>\n</svg>",
+    "options": {
+      "a": "$60^\\circ$",
+      "b": "$90^\\circ$",
+      "c": "$120^\\circ$",
+      "d": "$180^\\circ$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "In an equilateral triangle, all three interior angles measure $60^\\circ$. The angle $\\angle BAC$ is an inscribed angle that intercepts minor arc $\\widehat{BC}$. The measure of an intercepted arc is twice the measure of its inscribed angle, so the measure of arc $\\widehat{BC}$ is $2 \\times 60^\\circ = 120^\\circ$. Alternatively, because the inscribed triangle is equilateral, its three vertices divide the circle into 3 equal arcs. Thus, the measure of each arc is $\\frac{360^\\circ}{3} = 120^\\circ$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Mathematics",
+    "topic": "Coordinate Geometry",
+    "question_text": "A scale model, where 1 coordinate unit represents 1 mile, is drawn in the standard $(x,y)$ coordinate plane. Angelo’s house is at $(4,-3)$, Ella’s house is at $(4,7)$, Troy’s house is at $(-2,7)$, and Yoko’s house is at $(-2,-3)$. Which of the following is closest to the area, in square miles, of the rectangle whose vertices are the real locations of the 4 houses?",
+    "options": {
+      "a": "32",
+      "b": "36",
+      "c": "60",
+      "d": "100"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The locations form a rectangle on the coordinate plane. To find the dimensions, calculate the distance between adjacent points. The length of the vertical side (from $y = 7$ to $y = -3$) is $7 - (-3) = 10$ units. The length of the horizontal side (from $x = 4$ to $x = -2$) is $4 - (-2) = 6$ units. Since 1 unit represents 1 mile, the dimensions are 10 miles and 6 miles. The area is $10 \\times 6 = 60$ square miles.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Mathematics",
+    "topic": "Function Transformations",
+    "question_text": "Let the function $f$ be defined as $f(x) = -9x^2$. In the standard $(x,y)$ coordinate plane, the graph of $y = f(x)$ undergoes a transformation such that the result is the graph of $y = f(x) - 4$. Under this transformation the graph of $y = f(x)$ is:",
+    "options": {
+      "a": "shifted downward 4 coordinate units.",
+      "b": "shifted left 4 coordinate units.",
+      "c": "stretched horizontally by a factor of 4.",
+      "d": "stretched vertically by a factor of 4."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Subtracting a positive constant outside the function definition, such as $f(x) - k$, results in a vertical shift of the graph downwards by $k$ units. Therefore, the transformation $y = f(x) - 4$ shifts the original graph downward by 4 coordinate units.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Mathematics",
+    "topic": "Right Triangle Trigonometry",
+    "question_text": "Which of the following expressions equals the height, in feet, of the tree shown?\n\n<svg viewBox=\"0 0 200 150\" width=\"200\" height=\"150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <polygon points=\"20,130 150,130 150,30\" stroke=\"black\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"70\" y=\"145\" font-size=\"14\">18 feet</text>\n  <text x=\"155\" y=\"80\" font-size=\"14\">?</text>\n  <text x=\"40\" y=\"125\" font-size=\"12\">40&#176;</text>\n  <path d=\"M40,130 A20,20 0 0,0 35,117\" stroke=\"black\" fill=\"none\"/>\n</svg>",
+    "options": {
+      "a": "$18 \\tan 40^\\circ$",
+      "b": "$18 \\sin 40^\\circ$",
+      "c": "$18 \\cos 40^\\circ$",
+      "d": "$\\frac{\\tan 40^\\circ}{18}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The diagram shows a right triangle where the angle is $40^\\circ$, the adjacent side to the angle has a length of 18 feet, and we want to find the length of the opposite side (the height, let's call it $h$). By the definition of tangent, $\\tan(40^\\circ) = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{h}{18}$. Multiplying both sides by 18 gives $h = 18 \\tan(40^\\circ)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Mathematics",
+    "topic": "Number Sense (Square Roots)",
+    "question_text": "As shown, the number line between 0 and 8 is divided into 6 segments of equal length by points A through E. Which of the following statements about $\\sqrt{8}$ is true?\n\n<svg viewBox=\"0 0 300 80\" width=\"300\" height=\"80\" xmlns=\"http://www.w3.org/2000/svg\">\n  <polygon points=\"15,40 25,35 25,45\" fill=\"black\"/>\n  <polygon points=\"285,40 275,35 275,45\" fill=\"black\"/>\n  <line x1=\"25\" y1=\"40\" x2=\"275\" y2=\"40\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"35\" x2=\"40\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"73.3\" y1=\"35\" x2=\"73.3\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"106.6\" y1=\"35\" x2=\"106.6\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"173.3\" y1=\"35\" x2=\"173.3\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"206.6\" y1=\"35\" x2=\"206.6\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <line x1=\"240\" y1=\"35\" x2=\"240\" y2=\"45\" stroke=\"black\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"60\">0</text>\n  <text x=\"69\" y=\"60\">A</text>\n  <text x=\"102\" y=\"60\">B</text>\n  <text x=\"136\" y=\"60\">C</text>\n  <text x=\"169\" y=\"60\">D</text>\n  <text x=\"202\" y=\"60\">E</text>\n  <text x=\"236\" y=\"60\">8</text>\n</svg>",
+    "options": {
+      "a": "$\\sqrt{8}$ is at C.",
+      "b": "$\\sqrt{8}$ is at D.",
+      "c": "$\\sqrt{8}$ is between A and B.",
+      "d": "$\\sqrt{8}$ is between B and C."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The distance from 0 to 8 is divided into 6 equal segments. Each segment has a length of $\\frac{8}{6} = \\frac{4}{3} \\approx 1.33$. The values of the points are: $A \\approx 1.33$, $B = 2.67$, $C = 4$, $D \\approx 5.33$, $E \\approx 6.67$. We need to estimate $\\sqrt{8}$. Since $2^2 = 4$ and $3^2 = 9$, $\\sqrt{8}$ is slightly less than 3 (approx $2.83$). This value falls between point B (2.67) and point C (4).",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "question_text": "Deon often flies his kite. He can only fly his kite on days with wind. He does not fly his kite on every day with wind. For any given day, let Event $A$ be that there is wind and let Event $B$ be that Deon flies his kite. Which of the following values can $P(A \\text{ and } B)$ be?",
+    "options": {
+      "a": "0",
+      "b": "0.5",
+      "c": "1",
+      "d": "1.5"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A probability must always be between 0 and 1, inclusive, which immediately eliminates 1.5. If Deon \"often\" flies his kite, $P(A \\text{ and } B)$ cannot be 0. Since he does not fly his kite \"every\" day with wind, the probability cannot be 1. Therefore, $P(A \\text{ and } B)$ must be strictly between 0 and 1. The only valid choice is 0.5.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Mathematics",
+    "topic": "Rational Expressions",
+    "question_text": "Whenever $\\frac{-3x^3 + 12x}{x^3 - x^2 - 6x}$ is defined, it is equivalent to:",
+    "options": {
+      "a": "-2",
+      "b": "$\\frac{1}{x + 3}$",
+      "c": "$\\frac{6 - 3x}{x + 3}$",
+      "d": "$\\frac{6 - 3x}{x - 3}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "First, factor both the numerator and the denominator. The numerator is $-3x^3 + 12x = -3x(x^2 - 4) = -3x(x - 2)(x + 2)$. The denominator is $x^3 - x^2 - 6x = x(x^2 - x - 6) = x(x - 3)(x + 2)$. The expression becomes $\\frac{-3x(x - 2)(x + 2)}{x(x - 3)(x + 2)}$. Cancel out the common terms, $x$ and $(x + 2)$, which gives $\\frac{-3(x - 2)}{x - 3}$. Distribute the $-3$ in the numerator to get $\\frac{-3x + 6}{x - 3}$, which can be rewritten as $\\frac{6 - 3x}{x - 3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Mathematics",
+    "topic": "Polynomials",
+    "question_text": "The roots of a polynomial equation are 0, 2, and $-5$. Which of the following is a factored form of the equation?",
+    "options": {
+      "a": "$(x - 2)(x + 5) = 0$",
+      "b": "$x(x - 2)(x + 5) = 0$",
+      "c": "$x(x + 2)(x - 5) = 0$",
+      "d": "$(x - 2)(x + 5) = x$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "If a polynomial has roots $r_1, r_2,$ and $r_3$, its factors include $(x - r_1)$, $(x - r_2)$, and $(x - r_3)$. Substituting the given roots 0, 2, and $-5$ gives the factors $(x - 0)$, $(x - 2)$, and $(x - (-5))$. This simplifies to $x$, $(x - 2)$, and $(x + 5)$. Setting their product to zero yields the equation $x(x - 2)(x + 5) = 0$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Mathematics",
+    "topic": "Algebraic Equations",
+    "question_text": "If $\\frac{3x - y}{x + y} = \\frac{5}{8}$, then $\\frac{x}{y} = ?$",
+    "options": {
+      "a": "$\\frac{2}{19}$",
+      "b": "$\\frac{13}{19}$",
+      "c": "$\\frac{5}{8}$",
+      "d": "$\\frac{13}{7}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Cross-multiply the original equation: $8(3x - y) = 5(x + y)$. Expand both sides: $24x - 8y = 5x + 5y$. Isolate $x$ on one side and $y$ on the other by subtracting $5x$ from both sides and adding $8y$ to both sides. This results in $19x = 13y$. To find $\\frac{x}{y}$, divide both sides by $19y$, giving $\\frac{x}{y} = \\frac{13}{19}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Mathematics",
+    "topic": "Coordinate Geometry (Lines)",
+    "question_text": "Let the slope of $3x + 2y = 5$ be $m_1$, and the slope of $6x + 4y = 7$ be $m_2$. Which of the following is true?",
+    "options": {
+      "a": "$m_1 = m_2$",
+      "b": "$m_1 = 2m_2$",
+      "c": "$2m_1 = m_2$",
+      "d": "$7m_1 = 5m_2$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Convert both equations into slope-intercept form ($y = mx + b$). For the first equation, $3x + 2y = 5$ transforms to $2y = -3x + 5$, then $y = -\\frac{3}{2}x + \\frac{5}{2}$. So $m_1 = -\\frac{3}{2}$. For the second equation, $6x + 4y = 7$ transforms to $4y = -6x + 7$, then $y = -\\frac{6}{4}x + \\frac{7}{4}$. Simplifying $-\\frac{6}{4}$ yields $y = -\\frac{3}{2}x + \\frac{7}{4}$. So $m_2 = -\\frac{3}{2}$. Because both slopes are $-\\frac{3}{2}$, $m_1 = m_2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Mathematics",
+    "topic": "Functions (Piecewise)",
+    "question_text": "The piecewise functions $f$ and $g$ are given.\n\n$f(x) = \\begin{cases} -x^2 & \\text{for } x < 0 \\\\ 1 - x & \\text{for } x \\ge 0 \\end{cases}$\n\n$g(x) = \\begin{cases} |x| + 7 & \\text{for } x \\le -1 \\\\ x - 3 & \\text{for } x > -1 \\end{cases}$\n\nWhat is the value of $f(g(-1))$?",
+    "options": {
+      "a": "-16",
+      "b": "-7",
+      "c": "-5",
+      "d": "-1"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "First, evaluate the inner function $g(-1)$. Since $-1$ falls into the condition $x \\le -1$ for the function $g$, we use the top rule: $g(-1) = |-1| + 7 = 1 + 7 = 8$. Next, evaluate the outer function with this result, $f(8)$. Since 8 falls into the condition $x \\ge 0$ for function $f$, we use the bottom rule: $f(8) = 1 - 8 = -7$.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Mathematics",
+    "topic": "Systems of Equations",
+    "question_text": "Let $f$ be defined by $f(x) = 4x + 7$. Let $g$ be defined by $g(x) = -2x^2 + 11x + 1$. The graphs of $y = f(x)$ and $y = g(x)$ intersect at one of the following $(x,y)$ points. Which one?",
+    "options": {
+      "a": "$(-2,-1)$",
+      "b": "$(1\\frac{1}{2},13)$",
+      "c": "$(2,1\\frac{1}{2})$",
+      "d": "$(13,-1)$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "To find intersection points, set the functions equal: $4x + 7 = -2x^2 + 11x + 1$. Arrange terms to one side to get a standard quadratic equation: $2x^2 - 7x + 6 = 0$. Factoring the quadratic yields $(2x - 3)(x - 2) = 0$. So, the solutions are $x = \\frac{3}{2}$ and $x = 2$. Evaluate the corresponding y-value using either original function. Using $x = \\frac{3}{2}$ (or $1\\frac{1}{2}$), evaluate $f(\\frac{3}{2}) = 4(\\frac{3}{2}) + 7 = 6 + 7 = 13$. The intersection point is $(1\\frac{1}{2}, 13)$. Substituting $x = 2$ gives $f(2) = 15$, but the point $(2, 15)$ is not among the options.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Mathematics",
+    "topic": "Statistics (Mean)",
+    "question_text": "A tourism organization randomly selected 100 tourists finishing their summer visit to Spain. The organization asked them how many cities they had toured in the country. The table shows the results. Based on these data, for the population of tourists that visited Spain during the summer, what is the best estimate of the mean number of cities toured?\n\n| Number of cities | 1 | 2 | 3 |\n|---|---|---|---|\n| Number of tourists | 10 | 40 | 50 |",
+    "options": {
+      "a": "0.8",
+      "b": "2",
+      "c": "2.4",
+      "d": "3"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "To find the mean, find the total number of cities toured by all tourists and divide by the total number of tourists. Total number of cities $= (1 \\times 10) + (2 \\times 40) + (3 \\times 50) = 10 + 80 + 150 = 240$. Divide this by the total number of tourists (100) to get the mean: $240 / 100 = 2.4$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Mathematics",
+    "topic": "Complex Numbers",
+    "question_text": "Given that $i$ is the imaginary unit, which of the following numbers is equal to $(7 + 4i)^2$?",
+    "options": {
+      "a": "33",
+      "b": "65",
+      "c": "$14 + 8i$",
+      "d": "$33 + 56i$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Expand the binomial: $(7 + 4i)^2 = (7)^2 + 2(7)(4i) + (4i)^2$. This simplifies to $49 + 56i + 16i^2$. Remember that the imaginary unit squared is $i^2 = -1$. Substitute $-1$ into the expression: $49 + 56i + 16(-1) = 49 - 16 + 56i = 33 + 56i$.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Mathematics",
+    "topic": "Number Systems",
+    "question_text": "The product of 2 complex numbers, $x$ and $y$, is a real number that is irrational. Which of the following statements cannot be true?",
+    "options": {
+      "a": "Both $x$ and $y$ are rational.",
+      "b": "Both $x$ and $y$ are imaginary.",
+      "c": "The product of $x$ and $y$ is $\\sqrt{2}$.",
+      "d": "The product of $x$ and $y$ is negative."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The product is a real, irrational number. A rational number multiplied by a rational number must result in a rational number. Consequently, if both $x$ and $y$ were rational, their product could not be irrational. The other options describe possible states (e.g., $i\\sqrt{2}$ and $-i$ are imaginary numbers with a product of $\\sqrt{2}$; product being $\\sqrt{2}$ aligns with being irrational; product being $-\\sqrt{2}$ proves it can be negative).",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Mathematics",
+    "topic": "Exponential and Logarithmic Equations",
+    "question_text": "The real solution of the equation $3e^x = 12$ is:",
+    "options": {
+      "a": "$\\ln 4$",
+      "b": "$3 \\ln 12$",
+      "c": "$4^e$",
+      "d": "$\\frac{\\ln 12}{3}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Isolate the exponential term by dividing both sides by 3: $e^x = 4$. Next, to solve for the exponent $x$, take the natural logarithm ($\\ln$) of both sides. This gives $\\ln(e^x) = \\ln(4)$, which simplifies by log rules to $x = \\ln(4)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Mathematics",
+    "topic": "Geometry (Circles)",
+    "question_text": "The figure shows $\\triangle ABC$, a right isosceles triangle, inscribed in a circle with center $O$ and radius 10 cm. What is the length, in centimeters, of arc $\\widehat{AB}$ shown as the thick curved line?\n\n<svg viewBox=\"0 0 200 200\" width=\"200\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"100\" cy=\"100\" r=\"80\" stroke=\"black\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"black\" stroke-width=\"1.5\"/>\n  <line x1=\"20\" y1=\"100\" x2=\"100\" y2=\"20\" stroke=\"black\" stroke-width=\"1.5\"/>\n  <line x1=\"100\" y1=\"20\" x2=\"180\" y2=\"100\" stroke=\"black\" stroke-width=\"1.5\"/>\n  <path d=\"M20,100 A80,80 0 0,1 100,20\" stroke=\"black\" fill=\"none\" stroke-width=\"4\"/>\n  <circle cx=\"100\" cy=\"100\" r=\"3\" fill=\"black\"/>\n  <line x1=\"100\" y1=\"100\" x2=\"156.5\" y2=\"43.5\" stroke=\"black\" stroke-dasharray=\"4\"/>\n  <text x=\"105\" y=\"115\">O</text>\n  <text x=\"10\" y=\"105\">A</text>\n  <text x=\"100\" y=\"15\">B</text>\n  <text x=\"185\" y=\"105\">C</text>\n  <text x=\"110\" y=\"70\">10 cm</text>\n</svg>",
+    "options": {
+      "a": "$20\\pi$",
+      "b": "$15\\pi$",
+      "c": "$10\\pi$",
+      "d": "$5\\pi$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Since $\\triangle ABC$ is a right inscribed triangle, its hypotenuse $AC$ must act as a diameter of the circle, making the arc $\\widehat{ABC}$ a $180^\\circ$ semicircle. Since the triangle is also isosceles, chords $AB$ and $BC$ are equal in length, meaning they intercept equal arcs. Therefore, the measure of arc $\\widehat{AB}$ is exactly half of the semicircle, which is $90^\\circ$. This represents $\\frac{1}{4}$ of the circle's full circumference. The total circumference is $C = 2\\pi r = 2\\pi(10) = 20\\pi$ cm. $\\frac{1}{4}$ of $20\\pi$ is $5\\pi$ cm.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Mathematics",
+    "topic": "Rates and Expressions",
+    "question_text": "It took Sam $x$ minutes to bike the $d$ miles from home to work. Returning home on the same route, it took Sam $y$ minutes. On the way home his average speed was 2 times his average speed on the way to work. Which of the following equations gives $y$ in terms of $x$?",
+    "options": {
+      "a": "$y = \\frac{x}{2}$",
+      "b": "$y = x - 2$",
+      "c": "$y = x + 2$",
+      "d": "$y = 2x$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Average speed is calculated as $\\frac{\\text{distance}}{\\text{time}}$. On the way to work, his speed was $\\frac{d}{x}$. Returning home, his speed was $\\frac{d}{y}$. We're given that the returning speed was 2 times the out-bound speed: $\\frac{d}{y} = 2 \\left(\\frac{d}{x}\\right)$. You can divide out $d$ from both sides, leaving $\\frac{1}{y} = \\frac{2}{x}$. Cross-multiply or take reciprocals to solve for $y$: $y = \\frac{x}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Mathematics",
+    "topic": "Conic Sections",
+    "question_text": "The hyperbolas $\\frac{x^2}{9} - \\frac{y^2}{4} = 1$ and $\\frac{y^2}{36} - \\frac{x^2}{25} = 1$ are graphed in the standard $(x,y)$ coordinate plane. Which of the following equations is an ellipse that intersects all 4 vertices of the hyperbolas?",
+    "options": {
+      "a": "$\\frac{x^2}{9} + \\frac{y^2}{36} = 1$",
+      "b": "$\\frac{x^2}{25} + \\frac{y^2}{4} = 1$",
+      "c": "$\\frac{x^2}{25} + \\frac{y^2}{9} = 1$",
+      "d": "$(x - 9)^2 + (y - 36)^2 = 1$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "To find the vertices of the first hyperbola, set $y = 0$: $\\frac{x^2}{9} = 1$, giving $x = \\pm 3$. Thus, two vertices are $(3, 0)$ and $(-3, 0)$. To find the vertices of the second hyperbola, set $x = 0$: $\\frac{y^2}{36} = 1$, giving $y = \\pm 6$. The other two vertices are $(0, 6)$ and $(0, -6)$. An ellipse with center at $(0,0)$, x-intercepts at $\\pm 3$, and y-intercepts at $\\pm 6$ follows the form $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$. Substituting $a=3$ and $b=6$ results in the equation $\\frac{x^2}{9} + \\frac{y^2}{36} = 1$.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Mathematics",
+    "topic": "Functions (Inverses)",
+    "question_text": "Given that $f(x) = \\sqrt[3]{2x - 1}$, which of the following expressions is the inverse function, $f^{-1}(x)$?",
+    "options": {
+      "a": "$\\frac{1}{\\sqrt[3]{2x - 1}}$",
+      "b": "$\\frac{\\sqrt[3]{x} + 1}{2}$",
+      "c": "$\\frac{x^3 + 1}{2}$",
+      "d": "$(2x - 1)^3$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "To find the inverse function, let $y = f(x)$, swap the $x$ and $y$ variables, and solve for $y$. Start with $x = \\sqrt[3]{2y - 1}$. Cube both sides to eliminate the radical: $x^3 = 2y - 1$. Add 1 to both sides: $x^3 + 1 = 2y$. Finally, divide by 2: $y = \\frac{x^3 + 1}{2}$. Thus, the inverse function is $f^{-1}(x) = \\frac{x^3 + 1}{2}$.",
+    "section_id": null
+  }
+]

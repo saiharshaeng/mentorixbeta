@@ -1,0 +1,802 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "In a conventional PCR reaction, what is the primary function of the step usually performed at $72^\\circ\\text{C}$?",
+    "options": {
+      "a": "Denaturation of double-stranded DNA",
+      "b": "Annealing of primers to the template",
+      "c": "Extension of the new DNA strand by Taq polymerase",
+      "d": "Inactivation of the polymerase enzyme"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "The step at $72^\\circ\\text{C}$ is the extension (or elongation) step, where Taq polymerase synthesizes the new DNA strand complementary to the DNA template. Denaturation occurs at $\\approx 95^\\circ\\text{C}$ and annealing at $\\approx 50\\text{--}65^\\circ\\text{C}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "Which of the following distinguishes Real-Time PCR (qPCR) from conventional PCR?",
+    "options": {
+      "a": "qPCR uses RNA as a starting template without reverse transcription.",
+      "b": "qPCR allows for the quantification of DNA accumulation during the exponential phase.",
+      "c": "Conventional PCR is more sensitive than qPCR for low abundance targets.",
+      "d": "qPCR requires the use of agarose gels for visualization."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "qPCR (Quantitative PCR) measures the accumulation of DNA in real-time during the exponential phase using fluorescence, allowing for quantification. Conventional PCR relies on end-point detection using gel electrophoresis.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "In a SYBR Green qPCR assay, you observe a specific melting curve with a single peak. What does this indicate?",
+    "options": {
+      "a": "Multiple non-specific products were amplified.",
+      "b": "The formation of primer-dimers occurred.",
+      "c": "A single specific amplicon was generated.",
+      "d": "The DNA template was degraded."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In melt curve analysis, a single peak indicates that a single specific DNA product (amplicon) with a specific melting temperature ($T_m$) was amplified. Multiple peaks would suggest non-specific binding or primer-dimers.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "If sample A has a Ct value of 20 and sample B has a Ct value of 23 in a qPCR experiment, what is the relative difference in starting template quantity, assuming 100% efficiency?",
+    "options": {
+      "a": "Sample A has 3 times more DNA than Sample B.",
+      "b": "Sample B has 3 times more DNA than Sample A.",
+      "c": "Sample A has 8 times more DNA than Sample B.",
+      "d": "Sample B has 8 times more DNA than Sample A."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The difference in Ct is $23 - 20 = 3$. Assuming 100% efficiency (doubling every cycle), the fold difference is $2^{\\Delta Ct} = 2^3 = 8$. Since Sample A has the lower Ct, it started with more template.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "Which component is required for Reverse Transcription PCR (RT-PCR) that is not used in standard genomic DNA PCR?",
+    "options": {
+      "a": "DNA Polymerase",
+      "b": "Reverse Transcriptase",
+      "c": "dNTPs",
+      "d": "Forward and Reverse Primers"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "RT-PCR starts with RNA. Reverse Transcriptase is the enzyme required to convert RNA into complementary DNA (cDNA) before standard PCR amplification can occur.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "When designing primers for PCR, which of the following characteristics is most desirable to prevent non-specific binding?",
+    "options": {
+      "a": "Melting temperature ($T_m$) difference of $>10^\\circ\\text{C}$ between forward and reverse primers.",
+      "b": "High GC content ($>80\\%$).",
+      "c": "Presence of complementary sequences at the 3' ends of the primer pair.",
+      "d": "Unique sequence specificity to the target region and absence of secondary structures."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Primers should be specific to the target and lack secondary structures (like hairpins). Complementary 3' ends cause primer-dimers. $T_m$ should be similar, and GC content ideally 40-60%.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "What is the role of $Mg^{2+}$ ions (usually from $MgCl_2$) in a PCR reaction mixture?",
+    "options": {
+      "a": "It acts as a cofactor for Taq polymerase activity.",
+      "b": "It prevents the denaturation of DNA.",
+      "c": "It acts as a pH buffer.",
+      "d": "It provides the energy for the reaction."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "$Mg^{2+}$ is a cofactor for DNA polymerase. It affects enzyme activity, primer annealing, and the melting temperature of the DNA.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "TaqMan probes differ from SYBR Green in qPCR because:",
+    "options": {
+      "a": "TaqMan probes bind to double-stranded DNA non-specifically.",
+      "b": "TaqMan relies on a fluorophore-quencher pair on a specific oligonucleotide probe.",
+      "c": "TaqMan does not require primers.",
+      "d": "TaqMan is only used for end-point PCR."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "SYBR Green binds any dsDNA. TaqMan uses a specific probe labeled with a fluorophore and a quencher; fluorescence is released only when the polymerase cleaves the probe during extension.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "Identify the issue in this PCR gel result: A smear is observed in the negative control lane (water only).",
+    "options": {
+      "a": "The annealing temperature was too high.",
+      "b": "The DNA template was degraded.",
+      "c": "There is contamination in the reagents.",
+      "d": "Not enough cycles were run."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The negative control should have no bands or smears. Presence of DNA in the water control indicates contamination of reagents or pipettes with foreign DNA or amplicon.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Technical Skills and Applications",
+    "topic": "PCR",
+    "question_text": "Which formula calculates the annealing temperature ($T_a$) often used as a starting point, relative to the primer melting temperature ($T_m$)?",
+    "options": {
+      "a": "$T_a = T_m + 5^\\circ\\text{C}$",
+      "b": "$T_a = T_m - 5^\\circ\\text{C}$",
+      "c": "$T_a = T_m \\times 2$",
+      "d": "$T_a = 72^\\circ\\text{C}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A common rule of thumb for starting annealing temperature is approximately $3\\text{--}5^\\circ\\text{C}$ below the lowest $T_m$ of the primer pair.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "In agarose gel electrophoresis, DNA migrates toward the positive electrode (anode) because:",
+    "options": {
+      "a": "The phosphate backbone of DNA is negatively charged.",
+      "b": "The deoxyribose sugar is positively charged.",
+      "c": "DNA is hydrophobic and moves away from the buffer.",
+      "d": "The nitrogenous bases are positively charged."
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "DNA is negatively charged at neutral pH due to the phosphate groups in its backbone, causing it to migrate toward the positive electrode.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "Which percentage of agarose gel is most appropriate for separating small DNA fragments (e.g., 50–200 bp)?",
+    "options": {
+      "a": "0.5%",
+      "b": "0.8%",
+      "c": "1.0%",
+      "d": "2.0% to 3.0%"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Higher percentage gels have smaller pore sizes, providing better resolution for smaller DNA fragments. 0.5-0.8% is used for very large fragments (>5kb).",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "What is the function of SDS (Sodium Dodecyl Sulfate) in SDS-PAGE protein electrophoresis?",
+    "options": {
+      "a": "It creates cross-links between proteins.",
+      "b": "It denatures proteins and imparts a uniform negative charge relative to mass.",
+      "c": "It stains the proteins for visualization.",
+      "d": "It acts as a buffer to maintain pH."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "SDS is an anionic detergent that denatures secondary and tertiary protein structures and coats the linear protein in negative charge, ensuring separation is based solely on molecular weight.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "When running a DNA gel, why is a 'DNA ladder' or 'marker' loaded into one lane?",
+    "options": {
+      "a": "To balance the electrical current across the gel.",
+      "b": "To act as a negative control.",
+      "c": "To provide reference bands of known molecular weights for sizing.",
+      "d": "To verify that the ethidium bromide is working."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "A DNA ladder contains fragments of known sizes (bp). By comparing sample bands to the ladder, one can estimate the size of the sample fragments.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "What is the primary difference between Native PAGE and SDS-PAGE?",
+    "options": {
+      "a": "Native PAGE separates proteins based on size, charge, and shape; SDS-PAGE based on size only.",
+      "b": "Native PAGE uses agarose; SDS-PAGE uses polyacrylamide.",
+      "c": "Native PAGE requires heating the sample; SDS-PAGE is run on ice.",
+      "d": "Native PAGE is for DNA; SDS-PAGE is for proteins."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Native PAGE maintains the protein's folded structure and intrinsic charge, so migration depends on size, charge, and shape. SDS-PAGE denatures proteins so migration depends only on mass.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "You are preparing a 1% agarose gel in 50 mL of buffer. How much agarose powder should you weigh out?",
+    "options": {
+      "a": "0.05 g",
+      "b": "0.5 g",
+      "c": "1.0 g",
+      "d": "5.0 g"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "1% means 1 g per 100 mL. For 50 mL, you need $0.5 \\times 1\\text{ g} = 0.5\\text{ g}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "Which dye is commonly added to the DNA sample loading buffer (not the gel stain) to track migration progress visually?",
+    "options": {
+      "a": "Ethidium Bromide",
+      "b": "Bromophenol Blue",
+      "c": "SYBR Safe",
+      "d": "Coomassie Blue"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Bromophenol Blue (and Xylene Cyanol) are tracking dyes added to the sample buffer. They migrate at specific rates, allowing the user to see how far the electrophoresis has progressed.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "What happens if you accidentally swap the leads (red and black) when connecting the power supply for a DNA gel?",
+    "options": {
+      "a": "The gel will melt immediately.",
+      "b": "The DNA will migrate out of the wells into the buffer tank instead of down the gel.",
+      "c": "The DNA will migrate faster than normal.",
+      "d": "The bands will be wavy and distorted."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "DNA is negatively charged and moves toward the red (positive) electrode. If leads are swapped, the wells (at the top) are near the positive electrode, so DNA runs 'backwards' out of the gel.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "In Western Blotting, which follows SDS-PAGE, what is the purpose of the 'transfer' step?",
+    "options": {
+      "a": "To move proteins from the gel onto a solid membrane (e.g., nitrocellulose).",
+      "b": "To stain the proteins with Coomassie Blue.",
+      "c": "To denature the proteins further.",
+      "d": "To wash away the SDS."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The transfer step moves the separated proteins from the fragile gel matrix onto a membrane (PVDF or Nitrocellulose) where they are accessible for antibody binding.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Technical Skills and Applications",
+    "topic": "Electrophoresis",
+    "question_text": "Why is Polyacrylamide generally preferred over Agarose for separating proteins?",
+    "options": {
+      "a": "It is non-toxic compared to agarose.",
+      "b": "It has a much smaller pore size, suitable for resolving smaller molecules like proteins.",
+      "c": "It does not require a buffer.",
+      "d": "It can be run horizontally."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Polyacrylamide forms a tighter mesh (smaller pores) than agarose, making it suitable for resolving proteins (kDa) and very small DNA fragments, whereas agarose is better for larger DNA (kb).",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "Which type of ELISA involves an antigen being bound to the plate, followed by a specific primary antibody, and then an enzyme-linked secondary antibody?",
+    "options": {
+      "a": "Sandwich ELISA",
+      "b": "Direct ELISA",
+      "c": "Indirect ELISA",
+      "d": "Competitive ELISA"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Indirect ELISA detects antibodies. The antigen is coated, the sample (primary antibody) binds, and a labeled secondary antibody detects the primary.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "In a 'Sandwich' ELISA, what is the crucial requirement for the capture and detection antibodies?",
+    "options": {
+      "a": "They must be from the same host species.",
+      "b": "They must bind to different epitopes on the antigen.",
+      "c": "They must be conjugated to the same enzyme.",
+      "d": "They must be monoclonal antibodies."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "In a Sandwich ELISA, the antigen is 'sandwiched' between two antibodies. They must bind to non-overlapping epitopes so that both can bind the antigen simultaneously.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "What is the purpose of the 'blocking' step (e.g., using BSA or non-fat milk) in an ELISA protocol?",
+    "options": {
+      "a": "To bind the antigen to the plate.",
+      "b": "To prevent non-specific binding of antibodies to the plastic well surface.",
+      "c": "To catalyze the colorimetric reaction.",
+      "d": "To wash away unbound proteins."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Blocking coats the remaining open spots on the plastic surface with neutral protein (like BSA) to prevent detection antibodies from sticking non-specifically to the plate, which would cause high background.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "Which enzyme is most commonly conjugated to secondary antibodies for colorimetric detection in ELISA?",
+    "options": {
+      "a": "Taq Polymerase",
+      "b": "Horseradish Peroxidase (HRP)",
+      "c": "Restriction Endonuclease",
+      "d": "Ligase"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Horseradish Peroxidase (HRP) and Alkaline Phosphatase (AP) are the most common enzymes used. HRP converts a substrate (like TMB) into a colored product.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "A Competitive ELISA is most useful when:",
+    "options": {
+      "a": "The antigen has only one epitope or is very small.",
+      "b": "The antigen is a large protein complex.",
+      "c": "High sensitivity for very rare antigens is needed.",
+      "d": "You want to sequence the protein."
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "Competitive ELISA is ideal for small molecules (haptens) that cannot accommodate two antibodies simultaneously (as required for Sandwich ELISA).",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "What does a high absorbance value in the wells of a direct ELISA usually indicate?",
+    "options": {
+      "a": "Low concentration of the target antigen.",
+      "b": "High concentration of the target antigen.",
+      "c": "Failure of the washing step.",
+      "d": "Degradation of the enzyme."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "In direct/indirect/sandwich ELISA, the enzyme converts substrate to color. More antigen $\\rightarrow$ more retained enzyme $\\rightarrow$ more color (higher absorbance).",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "Why is a standard curve included in a quantitative ELISA?",
+    "options": {
+      "a": "To test the pH of the buffer.",
+      "b": "To determine the concentration of unknown samples by comparison to known concentrations.",
+      "c": "To ensure the antibodies are working.",
+      "d": "To act as a negative control."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "A standard curve uses serial dilutions of a known concentration of antigen. The optical density of unknowns is interpolated on this curve to find their concentration.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "Which of the following is a potential cause for the 'Hook Effect' in ELISA?",
+    "options": {
+      "a": "Extremely low antigen concentration.",
+      "b": "Excessively high antigen concentration preventing sandwich formation.",
+      "c": "Using the wrong secondary antibody.",
+      "d": "Insufficient washing."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Hook Effect occurs when antigen concentration is so high that both capture and detection antibodies are saturated by free antigen, preventing the formation of the 'sandwich', leading to falsely low signals.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "In Lateral Flow Assays (like pregnancy tests), what acts as the positive control to ensure the test is valid?",
+    "options": {
+      "a": "The Test line (T).",
+      "b": "The Control line (C) which binds excess labeled antibody.",
+      "c": "The sample pad.",
+      "d": "The absence of any lines."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The Control (C) line contains antibodies that bind the labeled particles (e.g., gold-conjugated antibodies) regardless of antigen presence, proving that flow occurred and reagents are active.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Technical Skills and Applications",
+    "topic": "ELISA & Immunoassays",
+    "question_text": "Which reagent is used to stop the HRP enzymatic reaction, changing the color from blue to yellow before reading absorbance?",
+    "options": {
+      "a": "Sulfuric Acid ($H_2SO_4$)",
+      "b": "Bovine Serum Albumin",
+      "c": "Ethanol",
+      "d": "PBS Buffer"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Acid (like Sulfuric or Hydrochloric acid) is added to stop the HRP-TMB reaction. This denatures the enzyme and changes the chromophore's color to stable yellow (read at 450 nm).",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "What is the primary function of a restriction enzyme (endonuclease)?",
+    "options": {
+      "a": "To ligate DNA fragments together.",
+      "b": "To cleave DNA at specific palindromic sequences.",
+      "c": "To copy plasmid DNA.",
+      "d": "To transport DNA into the cell."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Restriction enzymes recognize specific sequences (usually palindromes) and cut the phosphodiester backbone of DNA at those sites.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "In a plasmid vector, what is the function of the *ori* (origin of replication) sequence?",
+    "options": {
+      "a": "It confers antibiotic resistance.",
+      "b": "It allows the plasmid to replicate independently within the host bacterium.",
+      "c": "It is the site where the gene of interest is inserted.",
+      "d": "It produces the blue color in screening."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The *ori* sequence recruits the host cell's replication machinery, allowing the plasmid to replicate autonomously.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "During 'Blue-White Screening', white colonies indicate:",
+    "options": {
+      "a": "The plasmid was not taken up by the bacteria.",
+      "b": "The vector re-circularized without an insert.",
+      "c": "The gene of interest was successfully inserted, disrupting the *lacZ* gene.",
+      "d": "The bacteria are dead."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Successful insertion disrupts the *lacZ* $\\alpha$-peptide gene. Functional *lacZ* turns X-gal blue. If disrupted (insert present), no functional $\\beta$-galactosidase is made, resulting in white colonies.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "Which enzyme is used to covalently join the phosphate backbone of the insert and the vector?",
+    "options": {
+      "a": "DNA Ligase",
+      "b": "EcoRI",
+      "c": "Taq Polymerase",
+      "d": "Alkaline Phosphatase"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "DNA Ligase forms phosphodiester bonds between the 3'-OH and 5'-phosphate ends of DNA fragments.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "Why is Alkaline Phosphatase often treated onto a linearized plasmid vector before ligation?",
+    "options": {
+      "a": "To increase ligation efficiency.",
+      "b": "To prevent the vector from self-ligating (re-circularizing).",
+      "c": "To digest the ends.",
+      "d": "To purify the DNA."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Alkaline Phosphatase removes the 5' phosphate groups from the vector. Ligase requires a 5' phosphate to close the nick. This prevents the vector from closing on itself without an insert (which provides the phosphate).",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "What does 'transformation' refer to in the context of bacterial cloning?",
+    "options": {
+      "a": "The cutting of DNA by enzymes.",
+      "b": "The uptake of foreign plasmid DNA by competent bacterial cells.",
+      "c": "The replication of DNA.",
+      "d": "The extraction of plasmid DNA."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Transformation is the process by which competent bacterial cells take up naked DNA (plasmids) from the environment.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "Which feature of a plasmid allows for the selection of only those bacteria that have taken up the plasmid?",
+    "options": {
+      "a": "Promoter Region",
+      "b": "Multiple Cloning Site (MCS)",
+      "c": "Antibiotic Resistance Gene",
+      "d": "Origin of Replication"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Bacteria without the plasmid die in the presence of the antibiotic. Only those with the plasmid (and the resistance gene) survive.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "Sticky ends generated by restriction enzymes are preferred over blunt ends for cloning because:",
+    "options": {
+      "a": "They do not require ligase.",
+      "b": "They can ligate to any other DNA fragment.",
+      "c": "They provide complementary overhangs that facilitate correct annealing and directional efficiency.",
+      "d": "They are more stable at high temperatures."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Sticky ends have complementary overhangs that transiently base-pair, stabilizing the interaction between insert and vector, making the ligation reaction much more efficient.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "To verify the orientation of an insert in a plasmid, which method is most effective?",
+    "options": {
+      "a": "Measure the concentration using spectrophotometry.",
+      "b": "Digest with restriction enzymes that cut asymmetrically within the insert and vector.",
+      "c": "Perform Blue-White screening.",
+      "d": "Run the plasmid on an SDS-PAGE gel."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Blue-White tells you if an insert is present, but not its orientation. Restriction digest mapping (or sequencing) is required to determine orientation based on expected fragment sizes.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Technical Skills and Applications",
+    "topic": "Cloning & Recombinant DNA",
+    "question_text": "What is the role of the promoter sequence located upstream of the Multiple Cloning Site (MCS) in an expression vector?",
+    "options": {
+      "a": "To initiate replication of the plasmid.",
+      "b": "To drive the transcription of the inserted gene into mRNA.",
+      "c": "To confer resistance to antibiotics.",
+      "d": "To signal the end of translation."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "In an expression vector, the promoter binds RNA polymerase to initiate transcription of the gene inserted into the MCS.",
+    "section_id": null
+  },
+  {
+    "question_number": 41,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "According to the Beer-Lambert Law ($A = \\epsilon c l$), absorbance ($A​$) is directly proportional to:",
+    "options": {
+      "a": "Wavelength and time.",
+      "b": "Concentration of the solute and path length.",
+      "c": "Temperature and viscosity.",
+      "d": "pH and buffer strength."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Beer-Lambert law states $A = \\epsilon c l$, where $c​$ is concentration and $l​$ is path length.",
+    "section_id": null
+  },
+  {
+    "question_number": 42,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "A DNA sample has an $A_{260}$ of 1.0 and an $A_{280}$ of 0.5. What is the $A_{260}/A_{280}$ ratio, and what does it indicate about purity?",
+    "options": {
+      "a": "Ratio = 0.5; Sample is contaminated with protein.",
+      "b": "Ratio = 2.0; Sample is likely pure DNA.",
+      "c": "Ratio = 2.0; Sample is contaminated with RNA.",
+      "d": "Ratio = 0.5; Sample is pure."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Ratio $= 1.0 / 0.5 = 2.0$. Pure DNA usually has a ratio of $\\approx 1.8$. A ratio of 2.0 is often seen with pure RNA or very pure DNA (depending on buffer). A ratio $<1.6$ indicates protein contamination.",
+    "section_id": null
+  },
+  {
+    "question_number": 43,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "In Size Exclusion Chromatography (SEC), which molecules elute first?",
+    "options": {
+      "a": "Small molecules, because they enter the pores of the beads.",
+      "b": "Large molecules, because they are excluded from the pores and travel the shortest path.",
+      "c": "Positively charged molecules.",
+      "d": "Hydrophobic molecules."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Large molecules cannot enter the porous beads; they flow around them (excluded) and elute first. Small molecules get trapped in the pores and elute later.",
+    "section_id": null
+  },
+  {
+    "question_number": 44,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "Which type of chromatography separates proteins based on their net charge?",
+    "options": {
+      "a": "Affinity Chromatography",
+      "b": "Gel Filtration Chromatography",
+      "c": "Ion Exchange Chromatography",
+      "d": "Thin Layer Chromatography"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Ion exchange uses charged beads (anion or cation exchange) to bind proteins of opposite charge. Elution is achieved by changing salt concentration or pH.",
+    "section_id": null
+  },
+  {
+    "question_number": 45,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "In Affinity Chromatography used for purifying His-tagged recombinant proteins, what ligand is typically immobilized on the beads?",
+    "options": {
+      "a": "Nickel ($Ni^{2+}$) or Cobalt ($Co^{2+}$)",
+      "b": "Glutathione",
+      "c": "Antibodies",
+      "d": "Silica"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Histidine tags (His-tags) have a high affinity for divalent metal ions like Nickel ($Ni^{2+}$), used in IMAC (Immobilized Metal Affinity Chromatography).",
+    "section_id": null
+  },
+  {
+    "question_number": 46,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "When quantifying protein concentration using the Bradford Assay, the shift in Coomassie Blue absorbance maximum occurs at which wavelength?",
+    "options": {
+      "a": "260 nm",
+      "b": "280 nm",
+      "c": "595 nm",
+      "d": "450 nm"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The Bradford reagent shifts from brown/red to blue upon binding protein, with a maximum absorbance at 595 nm.",
+    "section_id": null
+  },
+  {
+    "question_number": 47,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "What is the 'void volume' ($V_0$) in a chromatography column?",
+    "options": {
+      "a": "The total volume of the column bed.",
+      "b": "The volume of the mobile phase outside the beads.",
+      "c": "The volume inside the pores of the beads.",
+      "d": "The volume of the sample loaded."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The void volume is the volume of buffer required to pass through the column between the beads (interstitial space) before molecules that do not interact with the beads (excluded molecules) begin to elute.",
+    "section_id": null
+  },
+  {
+    "question_number": 48,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "In High Performance Liquid Chromatography (HPLC), what is the main factor providing higher resolution compared to traditional column chromatography?",
+    "options": {
+      "a": "Larger column diameter.",
+      "b": "Use of gravity flow.",
+      "c": "High pressure forcing solvent through very small particles.",
+      "d": "Higher temperature."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "HPLC uses pumps to force solvent at high pressure through columns packed with very fine particles, drastically increasing surface area and resolution.",
+    "section_id": null
+  },
+  {
+    "question_number": 49,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "You have a mixture of Protein A (positively charged) and Protein B (negatively charged) at pH 7. Which column would capture Protein B?",
+    "options": {
+      "a": "Cation Exchange Column (negatively charged beads)",
+      "b": "Anion Exchange Column (positively charged beads)",
+      "c": "Size Exclusion Column",
+      "d": "Hydrophobic Interaction Column"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Protein B is negatively charged (anion). It will bind to positive charges. An Anion Exchange column contains positively charged beads.",
+    "section_id": null
+  },
+  {
+    "question_number": 50,
+    "subject": "Technical Skills and Applications",
+    "topic": "Spectroscopy & Chromatography",
+    "question_text": "Which nanodrop result warns of potential phenol or guanidine contamination in a nucleic acid sample?",
+    "options": {
+      "a": "Low $A_{260}/A_{280}$ ratio (~1.5)",
+      "b": "High $A_{260}/A_{280}$ ratio (>2.2)",
+      "c": "Low $A_{260}/A_{230}$ ratio (<1.5)",
+      "d": "High concentration reading."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "The $A_{260}/A_{230}$ ratio measures contamination by organic compounds like phenol, guanidine, or carbohydrates, which absorb near 230 nm. A pure sample usually has a ratio of 2.0–2.2. Lower values indicate contamination.",
+    "section_id": null
+  }
+]

@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Biologie",
+    "topic": "Biologie cellulaire",
+    "question_text": "Parmi les propositions suivantes, quels sont les 2 organites dont les membranes respectives sont en continuité ?",
+    "options": {
+      "a": "Mitochondrie - chloroplaste.",
+      "b": "Réticulum endoplasmique lisse - appareil de Golgi.",
+      "c": "Réticulum endoplasmique rugueux - noyau.",
+      "d": "Ribosome - réticulum endoplasmique rugueux."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "La membrane externe de l'enveloppe nucléaire est en continuité directe avec la membrane du réticulum endoplasmique rugueux (RER).",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Biologie",
+    "topic": "Reproduction et division cellulaire",
+    "question_text": "Les globules polaires sont formés au cours de l’ovogenèse. Le premier globule polaire contient...",
+    "options": {
+      "a": "deux fois moins d’ADN qu’une cellule en mitose du même individu.",
+      "b": "deux fois plus de chromosomes que le second globule polaire.",
+      "c": "uniquement des chromosomes formés de 2 chromatides identiques.",
+      "d": "23 paires de chromosomes homologues."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Le premier globule polaire est issu de la première division de la méiose (méiose réductionnelle). Il est haploïde (n) avec des chromosomes à deux chromatides. Une cellule en mitose (phase G2 ou prophase/métaphase) est diploïde (2n) avec des chromosomes à deux chromatides. Le premier globule polaire contient donc deux fois moins d'ADN.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Biologie",
+    "topic": "Génétique et Biologie moléculaire",
+    "question_text": "Si le génome nucléaire d’une cellule somatique humaine en phase G1 est constitué de 30% de nucléotides de l’adénine, quel est le pourcentage de nucléotides de la guanine dans le génome nucléaire des cellules filles lorsqu’elles sont en phase G2 ?",
+    "options": {
+      "a": "15%",
+      "b": "20%",
+      "c": "30%",
+      "d": "40%"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Selon les règles d'appariement de Chargaff, A = T (soit 30% d'adénine et 30% de thymine). Il reste donc 40% pour les bases C et G. Ainsi, G = C = 20%. En phase G2, l'ADN a été répliqué (la quantité est doublée), mais les proportions des bases azotées restent exactement les mêmes.",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Des cellules sont cultivées dans un milieu contenant de l’azote 15 ($^{15}\\text{N}$) pendant plusieurs générations, puis transférées dans un milieu contenant de l’azote 14 ($^{14}\\text{N}$).\nAprès combien de générations, l’ADN extrait de la culture contiendra-t-il 6,25% d’azote 15 ?",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'expérience de Meselson et Stahl montre que la réplication de l'ADN est semi-conservative. À la génération 0, on a 100% de brins $^{15}\\text{N}$. À chaque génération dans le milieu $^{14}\\text{N}$, le nombre de brins originaux au $^{15}\\text{N}$ reste constant mais la proportion totale de cet isotope est divisée par 2. G1: 50%, G2: 25%, G3: 12,5%, G4: 6,25%.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Biologie",
+    "topic": "Génétique mendélienne",
+    "question_text": "Si le même trait d’un caractère déterminé par un gène biallélique est systématiquement observé chez les descendants masculins et féminins d’un individu mâle, on peut déduire que…",
+    "options": {
+      "a": "l’allèle concerné est récessif.",
+      "b": "l’individu mâle fondateur est hétérozygote pour ce gène.",
+      "c": "le gène concerné est porté par un autosome.",
+      "d": "les 2 allèles du gène sont codominants."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Si le père transmet le caractère à ses fils et à ses filles, le gène ne peut pas être situé sur la portion propre du chromosome X (car les fils reçoivent le chromosome Y de leur père et non son X). Il doit donc être porté par un autosome.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Biologie",
+    "topic": "Génétique",
+    "question_text": "Quel est le point commun à la transmission d’une maladie génétique récessive dont le gène causal est localisé sur un autosome ou sur le chromosome X ?",
+    "options": {
+      "a": "Deux parents sains peuvent avoir des filles malades.",
+      "b": "Les descendants de deux parents malades sont tous atteints.",
+      "c": "Les filles et les garçons du lignage sont atteints dans les mêmes proportions.",
+      "d": "Les fils d’une femme malade sont tous atteints, quel que soit le père."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Pour qu'une personne soit atteinte d'une maladie récessive, elle doit posséder uniquement l'allèle muté (homozygote pour l'allèle muté). Ainsi, deux parents malades n'ont aucun allèle sain à transmettre ; par conséquent, tous leurs descendants seront obligatoirement malades, que le gène soit sur un autosome ou sur le chromosome X.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Biologie",
+    "topic": "Biologie cellulaire",
+    "question_text": "Dans quelle(s) entité(s) peut-on observer des mitochondries ?",
+    "options": {
+      "a": "Pneumocoque, neurone, ovocyte et coronavirus.",
+      "b": "Pneumocoque, neurone et ovocyte.",
+      "c": "Neurone et ovocyte.",
+      "d": "Neurone."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Les mitochondries sont des organites propres aux cellules eucaryotes (les neurones et les ovocytes en font partie). Le pneumocoque est une bactérie (procaryote sans mitochondrie) et le coronavirus est un virus acellulaire.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Biologie",
+    "topic": "Synthèse des protéines",
+    "question_text": "Le schéma ci-dessous illustre un processus biologique ![un ribosome se déplaçant le long d'un brin d'ARN messager, associant des acides aminés portés par des ARNt pour former une chaîne polypeptidique avec un groupe terminal $NH_3^+$](https://files.transtutors.com/book/qimg/1dd2abd2-9e71-4bfb-8b17-5745cbea52fb.png).\n\nCe processus biologique…",
+    "options": {
+      "a": "illustre la transcription.",
+      "b": "se déroule dans le noyau.",
+      "c": "n’est observé que dans les cellules eucaryotes.",
+      "d": "peut se dérouler dans une mitochondrie."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Le schéma montre la traduction de l'ARN en protéine par un ribosome. Ce processus s'effectue dans le cytoplasme des cellules procaryotes et eucaryotes, ainsi qu'au sein des mitochondries et chloroplastes, car ces organites possèdent leurs propres ribosomes.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Biologie",
+    "topic": "Évolution et diversité du vivant",
+    "question_text": "Au sens biologique du terme, deux individus appartiennent à la même espèce s’ils...",
+    "options": {
+      "a": "contiennent la même information génétique.",
+      "b": "ont des traits anatomiques communs.",
+      "c": "ont une descendance fertile.",
+      "d": "subissent les mêmes pressions environnementales."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Selon le critère d'interfécondité de la définition biologique de l'espèce d'Ernst Mayr, des individus de la même espèce doivent être capables de se reproduire entre eux pour donner une descendance féconde (fertile) dans des conditions naturelles.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Biologie",
+    "topic": "Écologie",
+    "question_text": "La maladie de Lyme est causée par des bactéries du genre *Borrelia*. Elle est transmise aux humains majoritairement par des tiques porteuses de ces bactéries.\nQuelle proposition est un exemple de commensalisme entre les organismes soulignés ?",
+    "options": {
+      "a": "L’inoculation de *Borrelia* dans la peau d’un humain par une tique.",
+      "b": "La présence de *Borrelia* dans le tube digestif et les glandes salivaires de la tique.",
+      "c": "La relation entre la tique et les bactéries symbiotiques de son tube digestif.",
+      "d": "Le repas sanguin de la tique effectué sur un humain."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Le commensalisme est un type d'interaction où l'un des partenaires (ici, *Borrelia*) tire un bénéfice (un habitat, une protection et un vecteur) tandis que l'autre (la tique) n'est ni avantagé ni lésé.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Chimie",
+    "topic": "Masses volumiques",
+    "question_text": "Un récipient vide, de masse égale à $13{,}45\\text{ g}$, est placé dans une enceinte à $4\\ ^\\circ\\text{C}$ et est totalement rempli d'un certain volume d'eau. Sa masse vaut alors $21{,}45\\text{ g}$. La même expérience est répétée avec un liquide inconnu et la masse mesurée vaut $57{,}89\\text{ g}$.\n\nQue vaut la masse volumique de ce liquide inconnu ?",
+    "options": {
+      "a": "$5{,}555\\text{ mg/dm}^3$",
+      "b": "$5{,}555 \\times 10^{-3}\\text{ g/mm}^3$",
+      "c": "$5{,}555 \\times 10^{-6}\\text{ kg/cm}^3$",
+      "d": "$5{,}555\\text{ dg/cm}^3$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "La masse d'eau remplissant le récipient est de $21{,}45 - 13{,}45 = 8{,}00\\text{ g}$. Sachant que la masse volumique de l'eau à $4\\ ^\\circ\\text{C}$ est d'environ $1{,}00\\text{ g/cm}^3$, le volume du récipient est de $8{,}00\\text{ cm}^3$.\nLa masse du liquide inconnu est de $57{,}89 - 13{,}45 = 44{,}44\\text{ g}$.\nSa masse volumique est donc de $44{,}44\\text{ g} / 8{,}00\\text{ cm}^3 = 5{,}555\\text{ g/cm}^3$.\nEn convertissant en différentes unités, on a $5{,}555\\text{ g/cm}^3 = 5{,}555 \\times 10^{-3}\\text{ g/mm}^3$, ce qui correspond à l'option B.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Chimie",
+    "topic": "Stoechiométrie et mole",
+    "question_text": "Le mannitol est un édulcorant naturel présent notamment dans des algues marines avec un pouvoir sucrant plus faible que le saccharose.\n\nSa structure est reprise ci-dessous :\n![Structure du mannitol](https://upload.wikimedia.org/wikipedia/commons/1/15/D-Mannitol_structure.svg)\n\n*(À partir de cette structure hexosique typique, on déduit la formule brute $C_6H_{14}O_6$)*\n\nQuelle masse doit-on peser pour obtenir $1{,}20 \\times 10^{21}$ molécules ?",
+    "options": {
+      "a": "258 mg",
+      "b": "348 mg",
+      "c": "364 mg",
+      "d": "684 mg"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La formule du mannitol est $C_6H_{14}O_6$. Sa masse molaire est $M = 6(12) + 14(1) + 6(16) = 72 + 14 + 96 = 182\\text{ g/mol}$.\nPour $1{,}20 \\times 10^{21}$ molécules, le nombre de moles $n$ est $(1{,}20 \\times 10^{21}) / (6{,}02 \\times 10^{23}) \\approx 0{,}002\\text{ mol}$.\nLa masse correspondante est $m = n \\times M = 0{,}002 \\times 182 = 0{,}364\\text{ g}$, soit $364\\text{ mg}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Chimie",
+    "topic": "Nomenclature inorganique",
+    "question_text": "A quel oxyde métallique correspond l'hydroxyde de fer (III) ?",
+    "options": {
+      "a": "$\\text{FeO}$",
+      "b": "$\\text{FeO}_3$",
+      "c": "$\\text{Fe}_2\\text{O}_3$",
+      "d": "$\\text{Fe}_3\\text{O}_4$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "L'hydroxyde de fer (III) a pour formule $\\text{Fe(OH)}_3$. Le fer y a un nombre d'oxydation de +III (l'ion est $\\text{Fe}^{3+}$). Dans un oxyde, l'oxygène a généralement un nombre d'oxydation de -II (ion $\\text{O}^{2-}$). Pour que le composé soit électriquement neutre, il faut deux atomes de fer (+6) pour trois atomes d'oxygène (-6), ce qui donne la formule $\\text{Fe}_2\\text{O}_3$.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Chimie",
+    "topic": "Réactions d'oxydoréduction",
+    "question_text": "Soit l'équation non pondérée (non équilibrée) de la réaction d'oxydo-réduction suivante :\n\n$$\\text{PbO}_2 + \\text{Cr}^{3+} + \\text{H}_2\\text{O} \\rightleftharpoons \\text{Pb}^{2+} + \\text{Cr}_2\\text{O}_7^{2-} + \\text{H}_3\\text{O}^+$$\n\nParmi les propositions suivantes, laquelle est correcte ?",
+    "options": {
+      "a": "Le coefficient stoechiométrique de l'oxyde de plomb (IV) est 4",
+      "b": "Le coefficient stoechiométrique de l'eau est 2",
+      "c": "Le coefficient stoechiométrique de l'ion hydronium est 2",
+      "d": "Le coefficient stoechiométrique de l'ion dichromate est 3"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Déterminons les demi-équations d'oxydoréduction (en milieu acide) :\nOxydation : $2\\text{Cr}^{3+} + 21\\text{H}_2\\text{O} \\rightleftharpoons \\text{Cr}_2\\text{O}_7^{2-} + 14\\text{H}_3\\text{O}^+ + 6\\text{e}^-$\nRéduction : $\\text{PbO}_2 + 4\\text{H}_3\\text{O}^+ + 2\\text{e}^- \\rightleftharpoons \\text{Pb}^{2+} + 6\\text{H}_2\\text{O}$\nEn multipliant la réduction par 3 pour équilibrer les électrons ($6\\text{e}^-$) : $3\\text{PbO}_2 + 12\\text{H}_3\\text{O}^+ + 6\\text{e}^- \\rightleftharpoons 3\\text{Pb}^{2+} + 18\\text{H}_2\\text{O}$.\nBilan : $3\\text{PbO}_2 + 2\\text{Cr}^{3+} + 3\\text{H}_2\\text{O} \\rightleftharpoons 3\\text{Pb}^{2+} + \\text{Cr}_2\\text{O}_7^{2-} + 2\\text{H}_3\\text{O}^+$.\nLe coefficient stoechiométrique de l'ion hydronium ($\\text{H}_3\\text{O}^+$) est donc 2.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Chimie",
+    "topic": "Réactions d'oxydoréduction",
+    "question_text": "Parmi les réactions suivantes, lesquelles correspondent à des réactions d'oxydo-réduction ?\n\n1) $\\text{NaCl} + \\text{AgNO}_3 \\rightleftharpoons \\text{AgCl} + \\text{NaNO}_3$\n2) $\\text{NaHSO}_3 + \\text{Na}_2\\text{CO}_3 \\rightleftharpoons \\text{NaHCO}_3 + \\text{Na}_2\\text{SO}_3$\n3) $3\\text{CoCl}_3 + \\text{MnO}_2 + 2\\text{H}_2\\text{O} + \\text{KCl} \\rightleftharpoons 3\\text{CoCl}_2 + \\text{KMnO}_4 + 4\\text{HCl}$\n4) $2\\text{Na}_3\\text{PO}_4 + 3\\text{BaCl}_2 \\rightleftharpoons \\text{Ba}_3(\\text{PO}_4)_2 + 6\\text{NaCl}$\n5) $\\text{H}_2\\text{O}_2 + \\text{MnCl}_2 \\rightleftharpoons \\text{MnO}_2 + 2\\text{HCl}$",
+    "options": {
+      "a": "1, 4",
+      "b": "2, 3, 5",
+      "c": "3, 4",
+      "d": "3, 5"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "Une réaction d'oxydoréduction implique une modification des nombres d'oxydation de certains éléments.\n1) et 4) sont des réactions de précipitation (aucun changement d'état d'oxydation).\n2) est une réaction acido-basique (aucun changement d'état d'oxydation).\n3) Le Cobalt passe de +III à +II et le Manganèse passe de +IV à +VII, c'est une redox.\n5) Le Manganèse passe de +II à +IV (oxydation) et l'Oxygène du peroxyde passe de -I à -II (réduction), c'est une redox.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Chimie",
+    "topic": "Équilibres acido-basiques",
+    "question_text": "Soit les valeurs de pKa de quelques acides : $\\text{CH}_3\\text{COOH}$ (4,74) ; $\\text{HClO}_2$ (1,96) ; $\\text{HCN}$ (9,21) ; $\\text{H}_3\\text{PO}_4$ (2,16 ; 7,21 ; 12,32).\nParmi les équations acide-base suivantes, lesquelles sont des réactions dont l'équilibre est déplacé vers la droite ?\n\n1) $\\text{CH}_3\\text{COOH} + \\text{NaClO}_2 \\rightleftharpoons \\text{CH}_3\\text{COONa} + \\text{HClO}_2$\n2) $\\text{HCN} + \\text{Na}_2\\text{HPO}_4 \\rightleftharpoons \\text{NaCN} + \\text{NaH}_2\\text{PO}_4$\n3) $\\text{CH}_3\\text{COOH} + \\text{NaCN} \\rightleftharpoons \\text{HCN} + \\text{CH}_3\\text{COONa}$\n4) $\\text{H}_3\\text{PO}_4 + \\text{CH}_3\\text{COONa} \\rightleftharpoons \\text{NaH}_2\\text{PO}_4 + \\text{CH}_3\\text{COOH}$\n5) $\\text{HClO}_2 + \\text{Na}_3\\text{PO}_4 \\rightleftharpoons \\text{NaClO}_2 + \\text{Na}_2\\text{HPO}_4$",
+    "options": {
+      "a": "1, 2",
+      "b": "1, 2, 3, 4, 5",
+      "c": "2, 3, 4, 5",
+      "d": "3, 4, 5"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "L'équilibre acido-basique se déplace du côté de l'acide le plus faible, c'est-à-dire celui dont le pKa est le plus élevé. Il faut donc vérifier que l'acide réactif est plus fort (pKa plus petit) que l'acide produit.\n1) Acides: $\\text{CH}_3\\text{COOH}$ (4,74) vs $\\text{HClO}_2$ (1,96). $4{,}74 > 1{,}96$, l'équilibre est vers la gauche.\n2) Acides: $\\text{HCN}$ (9,21) vs $\\text{H}_2\\text{PO}_4^-$ (7,21). $9{,}21 > 7{,}21$, vers la gauche.\n3) Acides: $\\text{CH}_3\\text{COOH}$ (4,74) vs $\\text{HCN}$ (9,21). $4{,}74 < 9{,}21$, l'équilibre est vers la droite.\n4) Acides: $\\text{H}_3\\text{PO}_4$ (2,16) vs $\\text{CH}_3\\text{COOH}$ (4,74). $2{,}16 < 4{,}74$, l'équilibre est vers la droite.\n5) Acides: $\\text{HClO}_2$ (1,96) vs $\\text{HPO}_4^{2-}$ (12,32). $1{,}96 < 12{,}32$, l'équilibre est vers la droite.\nSeules les réactions 3, 4 et 5 sont déplacées vers la droite.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Chimie",
+    "topic": "Rendement de réaction",
+    "question_text": "Le carbonate de sodium peut être produit par la réaction dont voici l'équation non pondérée (non équilibrée) :\n$$\\text{NaCl} + \\text{CaCO}_3 \\rightarrow \\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2$$\nNous obtenons $13{,}25\\text{ g}$ de carbonate de sodium si nous faisons réagir $29{,}25\\text{ g}$ de $\\text{NaCl}$ et $45{,}0\\text{ g}$ de $\\text{CaCO}_3$.\nQuel est le rendement de la réaction ?",
+    "options": {
+      "a": "25,0 %",
+      "b": "27,8 %",
+      "c": "50,0 %",
+      "d": "55,6 %"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "On pondère l'équation : $2\\text{NaCl} + \\text{CaCO}_3 \\rightarrow \\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2$.\nMasses molaires utiles : $\\text{NaCl} = 23 + 35{,}5 = 58{,}5\\text{ g/mol}$ ; $\\text{CaCO}_3 = 40 + 12 + 3(16) = 100\\text{ g/mol}$ ; $\\text{Na}_2\\text{CO}_3 = 2(23) + 12 + 3(16) = 106\\text{ g/mol}$.\nQuantités introduites : $n(\\text{NaCl}) = 29{,}25 / 58{,}5 = 0{,}5\\text{ mol}$ et $n(\\text{CaCO}_3) = 45{,}0 / 100 = 0{,}45\\text{ mol}$.\nD'après la stoechiométrie, 0,5 mol de $\\text{NaCl}$ nécessitent $0{,}25\\text{ mol}$ de $\\text{CaCO}_3$. Le $\\text{NaCl}$ est donc le réactif limitant.\nLa quantité théorique de $\\text{Na}_2\\text{CO}_3$ produite sera de $0{,}25\\text{ mol}$. La masse théorique est donc $m = 0{,}25 \\times 106 = 26{,}5\\text{ g}$.\nLe rendement est le ratio de la masse obtenue expérimentalement sur la masse théorique : $13{,}25 / 26{,}5 = 0{,}5$, soit 50,0 %.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Chimie",
+    "topic": "Titrage acido-basique",
+    "question_text": "Quel volume d'hydroxyde de potassium aqueux $0{,}250\\text{ mol/L}$ est nécessaire pour neutraliser complètement $20{,}0\\text{ mL}$ de phosphate d'hydrogène aqueux $0{,}150\\text{ mol/L}$ ?",
+    "options": {
+      "a": "12,0 mL",
+      "b": "24,0 mL",
+      "c": "36,0 mL",
+      "d": "48,0 mL"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Le \"phosphate d'hydrogène\" mentionné comme base du titrage complet s'entend ici comme acide phosphorique ($\\text{H}_3\\text{PO}_4$) dans le contexte francophone des triacides. C'est un triacide, il peut libérer 3 ions $\\text{H}^+$. L'équation complète est $\\text{H}_3\\text{PO}_4 + 3\\text{KOH} \\rightarrow \\text{K}_3\\text{PO}_4 + 3\\text{H}_2\\text{O}$.\nLe nombre de moles d'acide est $n_a = C_a \\times V_a = 0{,}150\\text{ mol/L} \\times 20{,}0\\text{ mL} = 3{,}0\\text{ mmol}$.\nIl faut 3 fois plus de moles de base (KOH) : $n_b = 3 \\times 3{,}0 = 9{,}0\\text{ mmol}$.\nLe volume nécessaire est $V_b = n_b / C_b = 9{,}0\\text{ mmol} / 0{,}250\\text{ mol/L} = 36{,}0\\text{ mL} $.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Chimie",
+    "topic": "Équilibres chimiques",
+    "question_text": "L'hydrogénosulfure d'ammonium est un composé solide qui se décompose en $\\text{NH}_3$ et $\\text{H}_2\\text{S}$ gazeux selon l'équation :\n$$\\text{NH}_4\\text{HS(s)} \\rightleftharpoons \\text{NH}_3\\text{(g)} + \\text{H}_2\\text{S(g)}$$\n$12{,}75\\text{ g}$ de $\\text{NH}_4\\text{HS}$ sont introduits dans une enceinte de $2{,}00\\text{ L}$ à $25\\ ^\\circ\\text{C}$. Sachant qu'à l'équilibre 20% du sel s'est décomposé, quelle est la valeur numérique de la constante d'équilibre Kc de la réaction ?",
+    "options": {
+      "a": "$6{,}25 \\times 10^{-4}$",
+      "b": "$6{,}25 \\times 10^{-3}$",
+      "c": "$2{,}50 \\times 10^{-3}$",
+      "d": "$1{,}25 \\times 10^{-2}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "La masse molaire du $\\text{NH}_4\\text{HS}$ est $14 + 4(1) + 1 + 32 = 51\\text{ g/mol}$.\nOn introduit $n_0 = 12{,}75 / 51 = 0{,}25\\text{ mol}$.\nSi 20% se décompose, le nombre de moles décomposées est $0{,}25 \\times 0{,}20 = 0{,}05\\text{ mol}$.\nD'après la stoechiométrie, cela génère $0{,}05\\text{ mol}$ de $\\text{NH}_3$ et $0{,}05\\text{ mol}$ de $\\text{H}_2\\text{S}$.\nLes concentrations à l'équilibre dans 2,00 L sont : $[\\text{NH}_3] = [\\text{H}_2\\text{S}] = 0{,}05 / 2{,}00 = 0{,}025\\text{ mol/L}$.\nLa constante d'équilibre est $K_c = [\\text{NH}_3][\\text{H}_2\\text{S}] = (0{,}025) \\times (0{,}025) = 0{,}000625 = 6{,}25 \\times 10^{-4}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Chimie",
+    "topic": "Équilibres chimiques",
+    "question_text": "Soit l'équilibre suivant dont la constante d'équilibre est égale à $2{,}00$ :\n$$\\text{N}_2\\text{O}_4\\text{(g)} \\rightleftharpoons 2\\text{NO}_2\\text{(g)}$$\nQuelle sera la concentration à l'équilibre du dioxyde d'azote si on introduit $1{,}0\\text{ mol}$ de tétraoxyde de diazote dans une enceinte fermée de $1{,}0\\text{ L}$ ?",
+    "options": {
+      "a": "0,25 mol/L",
+      "b": "0,50 mol/L",
+      "c": "1,0 mol/L",
+      "d": "2,0 mol/L"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Initialement, on a une concentration en $\\text{N}_2\\text{O}_4$ de $1{,}0\\text{ mol/L}$.\nSi $x$ mol/L se décompose, on obtient une concentration à l'équilibre de $[\\text{N}_2\\text{O}_4] = 1{,}0 - x$ et de $[\\text{NO}_2] = 2x$.\nL'expression de la constante d'équilibre est $K_c = [\\text{NO}_2]^2 / [\\text{N}_2\\text{O}_4] = 2{,}00$.\nEn remplaçant : $(2x)^2 / (1{,}0 - x) = 2{,}00 \\Rightarrow 4x^2 = 2{,}00(1{,}0 - x) \\Rightarrow 4x^2 = 2{,}00 - 2{,}00x$.\nEn divisant par 2 et réarrangeant : $2x^2 + x - 1 = 0$.\nEn appliquant le discriminant ($\\Delta = 1^2 - 4(2)(-1) = 9$), on obtient les racines : $x = (-1 \\pm \\sqrt{9}) / 4$. La solution physique (positive) est $x = (-1 + 3) / 4 = 0{,}5\\text{ mol/L}$.\nLa concentration de dioxyde d'azote ($\\text{NO}_2$) à l'équilibre vaut $[\\text{NO}_2] = 2x = 1{,}0\\text{ mol/L}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Mathématiques",
+    "topic": "Analyse",
+    "question_text": "Étant donné la fonction $f$ définie pour tout nombre réel $x$ par\n$$f(x) = \\ln(x^2 + 3)$$\non considère la fonction $g$ définie par\n$$g(x) = f(x - 1)$$\nSur quelles parties de la droite réelle la fonction $g$ est-elle strictement décroissante ?",
+    "options": {
+      "a": "$] - \\infty, - 3 [$",
+      "b": "$] - \\infty, 1 [$",
+      "c": "$] - 3, 1 [$",
+      "d": "$] 1, + \\infty [$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "La fonction est $g(x) = \\ln((x-1)^2 + 3)$. Sa dérivée est $g'(x) = \\frac{2(x-1)}{(x-1)^2+3}$. La fonction $g$ est strictement décroissante si et seulement si sa dérivée est strictement négative, ce qui implique $2(x-1) < 0$ (car le dénominateur est toujours strictement positif). Donc $x < 1$. L'intervalle est bien $] - \\infty, 1 [ $.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "Parmi les quatre expressions suivantes, laquelle est équivalente à $\\cos^4(x) - \\sin^4(x)$ pour tout $x$ réel ?",
+    "options": {
+      "a": "$\\cos(2x)$",
+      "b": "$\\cos^2(x)$",
+      "c": "$\\cos^2(2x)$",
+      "d": "$2 \\cos^2(x)$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "On peut factoriser l'expression comme une différence de deux carrés : $\\cos^4(x) - \\sin^4(x) = (\\cos^2(x) - \\sin^2(x))(\\cos^2(x) + \\sin^2(x))$. En sachant que $\\cos^2(x) + \\sin^2(x) = 1$, il reste $\\cos^2(x) - \\sin^2(x)$, qui est l'identité trigonométrique fondamentale pour $\\cos(2x)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Mathématiques",
+    "topic": "Systèmes d'équations",
+    "question_text": "Étant donné un paramètre $\\beta$ réel, on considère le système suivant :\n$$\\begin{cases} \\beta x + \\beta y = 1 \\\\ 1 + \\beta y = 1 \\end{cases}$$\noù $x$ et $y$ sont les inconnues.\n\nParmi les propositions suivantes, laquelle est correcte ?",
+    "options": {
+      "a": "Le système admet plusieurs solutions quel que soit $\\beta$",
+      "b": "Le système admet une solution unique quel que soit $\\beta$",
+      "c": "Le système n’admet pas de solution quel que soit $\\beta$",
+      "d": "Le système n’admet pas de solution pour certaine(s) valeur(s) de $\\beta$ uniquement"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "La deuxième équation du système est $1 + \\beta y = 1 \\implies \\beta y = 0$. Si $\\beta = 0$, la première équation devient $0 \\times x + 0 = 1$, ce qui est impossible ($0 = 1$). Le système n'a donc pas de solution pour $\\beta = 0$. Si $\\beta \\neq 0$, alors $y = 0$, ce qui donne $\\beta x = 1 \\implies x = 1/\\beta$, offrant une solution unique. Par conséquent, l'absence de solution se produit uniquement pour certaine(s) valeur(s) de $\\beta$.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Mathématiques",
+    "topic": "Algèbre",
+    "question_text": "On considère l’expression $$\\sqrt{\\frac{a+b}{a-b}} + \\sqrt{\\frac{a-b}{a+b}}$$\nParmi les quatre expressions suivantes, quelle est celle qui est équivalente à celle donnée ci-dessus ?",
+    "options": {
+      "a": "$1$",
+      "b": "$\\frac{2|a|}{\\sqrt{a^2-b^2}}$",
+      "c": "$\\frac{2|b|}{\\sqrt{a^2-b^2}}$",
+      "d": "$\\sqrt{2} \\frac{\\sqrt{a^2+b^2}}{\\sqrt{a^2-b^2}}$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Mise au même dénominateur : $\\frac{\\sqrt{a+b}\\sqrt{a+b} + \\sqrt{a-b}\\sqrt{a-b}}{\\sqrt{a-b}\\sqrt{a+b}} = \\frac{(a+b) + (a-b)}{\\sqrt{a^2-b^2}} = \\frac{2a}{\\sqrt{a^2-b^2}}$. Sachant que la somme de deux racines carrées est positive, on place une valeur absolue sur le numérateur pour respecter les signes selon le domaine de définition, donnant ainsi $\\frac{2|a|}{\\sqrt{a^2-b^2}}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Mathématiques",
+    "topic": "Limites",
+    "question_text": "Que vaut l’expression $$\\lim_{x \\to -3} \\left(\\frac{x+3}{x^3+27}\\right)^{\\frac{1}{3}}$$ ?",
+    "options": {
+      "a": "$-\\frac{1}{3}$",
+      "b": "$\\frac{1}{3}$",
+      "c": "$\\frac{\\sqrt{3}}{3}$",
+      "d": "$3$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "On factorise le dénominateur (somme de cubes) : $x^3 + 27 = (x + 3)(x^2 - 3x + 9)$. La fraction à l'intérieur de la limite se simplifie : $\\frac{x+3}{(x+3)(x^2-3x+9)} = \\frac{1}{x^2-3x+9}$ (pour $x \\neq -3$). En évaluant la limite lorsque $x \\to -3$, on obtient $\\frac{1}{(-3)^2 - 3(-3) + 9} = \\frac{1}{9 + 9 + 9} = \\frac{1}{27}$. La limite finale est donc $(\\frac{1}{27})^{1/3} = \\frac{1}{3}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Mathématiques",
+    "topic": "Géométrie euclidienne",
+    "question_text": "Un triangle rectangle définit une aire de $200\\sqrt{3}\\text{ cm}^2$ et un de ses angles a une amplitude de $30^\\circ$. Quelle est la longueur (en cm) de son hypoténuse ?",
+    "options": {
+      "a": "$40$",
+      "b": "$50$",
+      "c": "$50\\sqrt{2}$",
+      "d": "$100\\sqrt{3}$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Soit $h$ la longueur de l'hypoténuse. Les deux autres côtés du triangle rectangle valent $h \\sin(30^\\circ) = \\frac{h}{2}$ et $h \\cos(30^\\circ) = h\\frac{\\sqrt{3}}{2}$. L'aire d'un triangle rectangle est $\\frac{\\text{base} \\times \\text{hauteur}}{2}$, ce qui donne : $A = \\frac{1}{2} (\\frac{h}{2}) (\\frac{h\\sqrt{3}}{2}) = \\frac{h^2\\sqrt{3}}{8}$. On sait que $A = 200\\sqrt{3}$, donc $\\frac{h^2\\sqrt{3}}{8} = 200\\sqrt{3} \\implies h^2 = 1600 \\implies h = 40$.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "question_text": "Étant donné un nombre réel $x$, on considère les deux séries statistiques suivantes :\nSérie 1 : $x - 2 ; x - 1 ; x ; x + 1 ; x + 2$\nSérie 2 : $x ; x + 1 ; x + 2 ; x + 3 ; x + 4$\nParmi les propositions suivantes concernant les deux séries, laquelle est vraie ?",
+    "options": {
+      "a": "Il est impossible de comparer les écarts-type des deux séries sans connaître $x$",
+      "b": "L’écart-type de la série 1 est identique à celui de la série 2",
+      "c": "L’écart-type de la série 1 est plus grand que celui de la série 2",
+      "d": "L’écart-type de la série 1 est plus petit que celui de la série 2"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "La série 2 est une translation (un décalage) de la série 1, avec un ajout de constante (exactement +2 pour chaque terme). L'écart-type est une mesure de dispersion autour de la moyenne ; il n'est pas affecté par une translation de toutes les données. Par conséquent, les deux séries ont le même écart-type.",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Mathématiques",
+    "topic": "Calcul intégral",
+    "question_text": "Que vaut $$\\int e^{- 2 \\ln(x)} \\ln(x) dx$$ à une constante additive près ?",
+    "options": {
+      "a": "$\\frac{1}{x^2}$",
+      "b": "$(\\ln(x))^2$",
+      "c": "$-\\frac{\\ln(x^2)}{2 x^2} - \\frac{1}{2 x^2}$",
+      "d": "$-\\frac{\\ln(x)}{x} - \\frac{1}{x}$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "En utilisant les propriétés de la fonction exponentielle et du logarithme, on peut réécrire $e^{- 2 \\ln(x)}$ comme $(e^{\\ln(x)})^{-2} = x^{-2} = \\frac{1}{x^2}$. L'intégrale devient $\\int x^{-2} \\ln(x) dx$. En utilisant l'intégration par parties avec $u = \\ln(x) \\implies du = \\frac{1}{x} dx$ et $dv = x^{-2} dx \\implies v = -x^{-1}$, on a : $uv - \\int v du = -\\frac{\\ln(x)}{x} - \\int (-x^{-2}) dx = -\\frac{\\ln(x)}{x} - x^{-1} = -\\frac{\\ln(x)}{x} - \\frac{1}{x}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Mathématiques",
+    "topic": "Trigonométrie",
+    "question_text": "On considère le cosinus et le sinus d’un angle $\\alpha \\in ]\\frac{3\\pi}{2}; \\frac{7\\pi}{4}[$ (en radians).\nLaquelle des combinaisons d’inégalités suivantes est correcte ?",
+    "options": {
+      "a": "$\\cos(\\alpha) < 0$ et $|\\sin(\\alpha)| < |\\cos(\\alpha)|$",
+      "b": "$\\cos(\\alpha) < 0$ et $|\\sin(\\alpha)| > |\\cos(\\alpha)|$",
+      "c": "$\\sin(\\alpha) < 0$ et $|\\sin(\\alpha)| < |\\cos(\\alpha)|$",
+      "d": "$\\sin(\\alpha) < 0$ et $|\\sin(\\alpha)| > |\\cos(\\alpha)|$"
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "L'angle est dans le quatrième quadrant. Donc $\\sin(\\alpha)$ est négatif ($\\sin(\\alpha) < 0$) et $\\cos(\\alpha)$ est positif (donc $\\cos(\\alpha) < 0$ est faux). De $\\frac{3\\pi}{2}$ (où le sinus est $-1$ et le cosinus est $0$) jusqu'à $\\frac{7\\pi}{4}$ (où le sinus est $-\\frac{\\sqrt{2}}{2}$ et le cosinus est $\\frac{\\sqrt{2}}{2}$), le sinus a une plus grande valeur absolue que le cosinus. Donc $|\\sin(\\alpha)| > |\\cos(\\alpha)|$ sur cet intervalle.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Mathématiques",
+    "topic": "Géométrie analytique",
+    "question_text": "Dans un plan muni d’un repère cartésien Oxy on considère la droite $d$ passant par le point $(1 ; 5)$ et parallèle à la droite passant par les points $(0 ; 240)$ et $(120 ; 0)$.\nQuelle est l’abscisse de l’intersection entre la droite $d$ et l’axe Ox ?",
+    "options": {
+      "a": "14/4",
+      "b": "9/2",
+      "c": "22/4",
+      "d": "13/2"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "La droite passant par $(0 ; 240)$ et $(120 ; 0)$ a pour pente $m = \\frac{0 - 240}{120 - 0} = -2$. Puisque $d$ y est parallèle, sa pente est également $-2$. Son équation est donnée par $y - y_1 = m(x - x_1) \\implies y - 5 = -2(x - 1) \\implies y = -2x + 7$. L'intersection avec l'axe Ox correspond à $y = 0$, donc $0 = -2x + 7 \\implies 2x = 7 \\implies x = \\frac{7}{2}$. Parmi les options, $\\frac{14}{4}$ est équivalent à $\\frac{7}{2}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Physique",
+    "topic": "Électricité",
+    "question_text": "La puissance dissipée dans le circuit suivant (constitué de 3 résistances de $12\\,\\Omega$ en parallèle, connectées en série avec une résistance R, le tout alimenté par une source de $20\\text{ V}$) est de $40\\text{ W}$.\nQue vaut la résistance R ?",
+    "options": {
+      "a": "$4\\,\\Omega$",
+      "b": "$6\\,\\Omega$",
+      "c": "$10\\,\\Omega$",
+      "d": "$12\\,\\Omega$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Les 3 résistances de $12\\,\\Omega$ en parallèle ont une résistance équivalente de $R_p = \\frac{12}{3} = 4\\,\\Omega$. La résistance totale du circuit est $R_{tot} = R_p + R = 4 + R$. La puissance dissipée est donnée par $P = \\frac{V^2}{R_{tot}}$. On a $40 = \\frac{20^2}{4 + R} \\implies 40 = \\frac{400}{4 + R} \\implies 4 + R = 10 \\implies R = 6\\,\\Omega$.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Physique",
+    "topic": "Statique",
+    "question_text": "Une masse $m$ est suspendue à un crochet par deux câbles de même longueur et formant entre eux un angle $\\alpha$ (voir schéma ci-dessous). Chaque câble peut supporter au maximum une tension de $500\\text{ N}$.\nQuelle est la valeur maximale de $m$, exprimée en kg, qui peut être suspendue aux câbles sans qu'ils ne cèdent (prendre $g = 10\\text{ m/s}^2$) ?",
+    "options": {
+      "a": "$50$",
+      "b": "$100 \\cos(\\alpha/2)$",
+      "c": "$100 \\cos(\\alpha)$",
+      "d": "$100$"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "À l'équilibre, la somme des forces verticales est nulle. La composante verticale de la tension de chaque câble est $T_y = T \\cos(\\alpha/2)$. Il y a deux câbles, donc $2 T \\cos(\\alpha/2) = m g$. Pour trouver la masse maximale, on utilise la tension maximale $T = 500\\text{ N}$. L'équation devient $2(500)\\cos(\\alpha/2) = m(10) \\implies 1000 \\cos(\\alpha/2) = 10 m \\implies m = 100 \\cos(\\alpha/2)$.",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Physique",
+    "topic": "Ondes",
+    "question_text": "La figure suivante montre une corde le long de laquelle se propage une onde sinusoïdale.\nLa corde est représentée à l’instant $t$ et un quart de seconde plus tard, à l’instant $t + 0{,}25\\text{ s}$ (l'onde s'est décalée d'un quart de longueur d'onde vers la droite).\nQue vaut la fréquence de cette onde ?",
+    "options": {
+      "a": "$0{,}25\\text{ Hz}$",
+      "b": "$0{,}50\\text{ Hz}$",
+      "c": "$1\\text{ Hz}$",
+      "d": "$2\\text{ Hz}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Le graphique montre que l'onde a avancé d'un quart de cycle (soit d'un quart de longueur d'onde $\\lambda$) pendant le laps de temps de $\\Delta t = 0{,}25\\text{ s}$. Par définition, la période $T$ est le temps nécessaire pour que l'onde avance d'une longueur d'onde complète. On a donc $\\frac{T}{4} = 0{,}25\\text{ s} \\implies T = 1\\text{ s}$. La fréquence est l'inverse de la période : $f = \\frac{1}{T} = 1\\text{ Hz}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Physique",
+    "topic": "Cinématique",
+    "question_text": "Le graphique ci-dessous montre la vitesse d’un véhicule en mouvement rectiligne en fonction du temps. La vitesse diminue linéairement de $10\\text{ m/s}$ à $t=0$ jusqu'à $0\\text{ m/s}$ à $t=10\\text{ s}$, puis continue de diminuer jusqu'à $-5\\text{ m/s}$ à $t=15\\text{ s}$.\nQuelle est la distance totale parcourue par ce véhicule entre le temps $t = 0\\text{ s}$ et le temps $t = 15\\text{ s}$ ?",
+    "options": {
+      "a": "$12{,}5\\text{ m}$",
+      "b": "$50\\text{ m}$",
+      "c": "$62{,}5\\text{ m}$",
+      "d": "$125\\text{ m}$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "La distance totale parcourue correspond à l'aire sous la courbe de la valeur absolue de la vitesse (c'est-à-dire l'aire totale des deux triangles formés avec l'axe des abscisses). Le premier triangle (de $t=0$ à $t=10$) a une base de 10 et une hauteur de 10 : $\\text{Aire}_1 = \\frac{10 \\times 10}{2} = 50\\text{ m}$. Le second triangle (de $t=10$ à $t=15$) a une base de 5 et une hauteur de 5 : $\\text{Aire}_2 = \\frac{5 \\times |-5|}{2} = 12{,}5\\text{ m}$. La distance totale est $50 + 12{,}5 = 62{,}5\\text{ m}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Physique",
+    "topic": "Énergie et travail",
+    "question_text": "Une personne de masse $m$ se trouve dans une grande roue de rayon $R$ et fait un tour complet.\nSachant que $g$ est l’accélération de pesanteur, que vaut le travail de son poids lors de ce tour ?",
+    "options": {
+      "a": "$0$",
+      "b": "$m g (2R)$",
+      "c": "$m g (2\\pi R)$",
+      "d": "$m g (4R)$"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "La force de pesanteur (le poids) est une force conservative. Le travail d'une force conservative sur une trajectoire fermée (un tour complet) est nul, car le point de départ et le point d'arrivée sont identiques ($\\Delta h = 0$).",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Physique",
+    "topic": "Optique géométrique",
+    "question_text": "Soit une lentille mince divergente. On observe que des rayons parallèles à l’axe optique divergent après passage par la lentille comme s’ils émergeaient d’un point situé $20\\text{ cm}$ avant le centre optique.\nA quel endroit doit se trouver un objet pour que son image soit droite, virtuelle et trois fois plus petite que l’objet ?",
+    "options": {
+      "a": "$13{,}3\\text{ cm}$ avant la lentille.",
+      "b": "$20\\text{ cm}$ après la lentille.",
+      "c": "$40\\text{ cm}$ avant la lentille.",
+      "d": "$40\\text{ cm}$ après la lentille."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "La lentille est divergente et le foyer image est situé à $20\\text{ cm}$ avant le centre optique, donc la distance focale $f = -20\\text{ cm}$. Le grandissement $G = 1/3$ (image droite, donc positif). On sait que $G = \\frac{p'}{p}$ (ou $-\\frac{p'}{p}$ selon la convention, utilisons la convention où $p$ est la distance objet-lentille et $p'$ est la position de l'image). L'image virtuelle se forme du même côté : $p' = -p/3$. Par la formule des lentilles $\\frac{1}{f} = \\frac{1}{p} + \\frac{1}{p'}$, on a $\\frac{1}{-20} = \\frac{1}{p} - \\frac{3}{p} = -\\frac{2}{p}$. D'où $p = 40\\text{ cm}$, ce qui signifie que l'objet doit être à $40\\text{ cm}$ avant la lentille.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Physique",
+    "topic": "Électrostatique",
+    "question_text": "Deux charges électriques ponctuelles de $+2\\,\\mu\\text{C}$ et $-6\\,\\mu\\text{C}$ sont fixes et distantes de $4\\text{ cm}$ (la charge de $+2\\,\\mu\\text{C}$ est à gauche et la charge de $-6\\,\\mu\\text{C}$ est à droite).\nOù faut-il placer une troisième charge de $-8\\,\\mu\\text{C}$, sur la ligne joignant les 2 autres charges, pour que la force résultante sur la charge de $-6\\,\\mu\\text{C}$ soit nulle ?",
+    "options": {
+      "a": "à $8\\text{ cm}$ à gauche de la charge de $-6\\,\\mu\\text{C}$.",
+      "b": "à $8\\text{ cm}$ à droite de la charge de $-6\\,\\mu\\text{C}$.",
+      "c": "à $16\\text{ cm}$ à gauche de la charge de $-6\\,\\mu\\text{C}$.",
+      "d": "à $16\\text{ cm}$ à droite de la charge de $-6\\,\\mu\\text{C}$."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "La charge de $+2\\,\\mu\\text{C}$ exerce une force d'attraction sur la charge de $-6\\,\\mu\\text{C}$ dirigée vers la gauche. Pour l'équilibrer, la charge de $-8\\,\\mu\\text{C}$ doit exercer une force de répulsion sur la charge de $-6\\,\\mu\\text{C}$ vers la droite. Elle doit donc être placée à droite de la charge de $-6\\,\\mu\\text{C}$. Soit $d$ sa distance à la charge de $-6\\,\\mu\\text{C}$. Les intensités des forces doivent être égales : $k \\frac{|+2| \\times |-6|}{4^2} = k \\frac{|-8| \\times |-6|}{d^2}$. En simplifiant : $\\frac{12}{16} = \\frac{48}{d^2} \\implies d^2 = \\frac{48 \\times 16}{12} = 4 \\times 16 = 64$. D'où $d = 8\\text{ cm}$.",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Physique",
+    "topic": "Cinématique",
+    "question_text": "Une moto démarre sur une route rectiligne et son mouvement est uniformément accéléré. Les mesures de sa vitesse ($v$) et de la distance ($x$) parcourue depuis le départ sont les suivantes :\n$v$ (m/s) : 0 | 4 | 8 | 12 | 16 | 20 | 24\n$x$ (m) : 0 | 1 | 4 | 9 | 16 | 25 | 36\n\nQuelle est la valeur de son accélération ?",
+    "options": {
+      "a": "$2\\text{ m/s}^2$",
+      "b": "$4\\text{ m/s}^2$",
+      "c": "$8\\text{ m/s}^2$",
+      "d": "$16\\text{ m/s}^2$"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Le mouvement est uniformément accéléré, la relation entre la vitesse et la distance est donnée par $v^2 = v_0^2 + 2ax$. Comme la moto démarre ($v_0 = 0$, $x_0 = 0$), la formule se réduit à $v^2 = 2ax$. Prenons par exemple le couple $v = 4\\text{ m/s}$ et $x = 1\\text{ m}$ : $4^2 = 2 \\times a \\times 1 \\implies 16 = 2a \\implies a = 8\\text{ m/s}^2$. On peut vérifier avec $v = 8$ et $x = 4$ : $8^2 = 64 = 2 \\times 8 \\times 4$. L'accélération est bien de $8\\text{ m/s}^2$.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Physique",
+    "topic": "Énergie",
+    "question_text": "Une balle de $200\\text{ grammes}$ est lancée à partir du sol, verticalement vers le haut, avec une vitesse initiale de $10\\text{ m/s}$.\nQuelle est l’affirmation correcte parmi les suivantes (prendre $g = 10\\text{ m/s}^2$ et négliger les frottements) ?",
+    "options": {
+      "a": "Lorsque la balle atteint la hauteur de $5\\text{ m}$, son énergie cinétique est de $10\\text{ J}$.",
+      "b": "Lorsque la vitesse de la balle s’annule, son énergie potentielle a augmenté de $10\\text{ J}$.",
+      "c": "La balle atteindra la hauteur maximale de $10\\text{ m}$.",
+      "d": "La balle retombera à son point de départ après une seconde."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "L'énergie mécanique initiale (et totale) est l'énergie cinétique au sol : $E_m = E_c = \\frac{1}{2}mv_0^2 = \\frac{1}{2}(0{,}2\\text{ kg})(10\\text{ m/s})^2 = 10\\text{ J}$.\nAu sommet de la trajectoire, la vitesse s'annule, donc $E_c = 0\\text{ J}$ et toute l'énergie est sous forme potentielle ($E_p = 10\\text{ J}$). L'énergie potentielle a donc augmenté de $10\\text{ J}$. \n(Vérifions les autres options : la hauteur maximale atteinte se déduit de $mgh = 10\\text{ J} \\implies 0{,}2 \\times 10 \\times h = 10 \\implies h = 5\\text{ m}$. En $h = 5\\text{ m}$, $E_c$ est nulle et non de $10\\text{ J}$. Le temps de montée est $t = v_0/g = 1\\text{ s}$, donc le temps total pour retomber est de $2\\text{ s}$).",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Physique",
+    "topic": "Optique géométrique",
+    "question_text": "Une araignée d'eau, dont le corps est noir et opaque, est posée à la surface d'une mare dont l'eau est transparente et calme. Nous supposerons que la surface de la mare prend la forme idéalisée suivante où ABC forme un triangle isocèle en creux sous le poids de l'insecte. Le fond de la mare est éclairé par la lumière du soleil dont les faisceaux sont parallèles et verticaux.\nL'ombre de l'insecte sur le fond de la mare est…",
+    "options": {
+      "a": "inexistante.",
+      "b": "de même taille que l'insecte.",
+      "c": "plus grande que l'insecte.",
+      "d": "plus petite que l'insecte."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": " La déformation creuse à la surface de l'eau, agissant comme l'interface entre l'air (indice plus faible) et l'eau (indice plus fort), se comporte comme une lentille divergente vis-à-vis des rayons solaires parallèles. Les rayons réfractés s'écartent du corps de l'araignée d'eau. La zone non éclairée au fond de la mare est donc élargie, ce qui crée une ombre plus grande que l'insecte lui-même.",
+    "section_id": null
+  }
+]

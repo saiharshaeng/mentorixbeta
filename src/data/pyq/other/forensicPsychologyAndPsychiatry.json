@@ -1,0 +1,642 @@
+[
+  {
+    "question_number": 1,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "In forensic psychiatry, what is the primary distinction between 'competency to stand trial' and the 'insanity defense'?",
+    "options": {
+      "a": "Competency refers to the defendant's mental state at the time of the crime, while insanity refers to their state during the trial.",
+      "b": "Competency refers to the defendant's mental state at the time of the trial, while insanity refers to their mental state at the time of the crime.",
+      "c": "Competency applies only to misdemeanor cases, while the insanity defense is reserved for capital crimes.",
+      "d": "Both refer to the exact same legal concept but are used in different jurisdictions."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Competency evaluates a defendant's present ability to understand the trial proceedings and assist in their defense. The insanity defense refers retroactively to the defendant's state of mind at the exact moment the crime was committed.",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "Which legal standard, often called the 'right-wrong test,' states that a defendant is legally insane if, as a result of a mental disease or defect, they did not know the nature of their act or did not know that what they were doing was wrong?",
+    "options": {
+      "a": "The Brawner Rule",
+      "b": "The Dusky Standard",
+      "c": "The M'Naghten Rule",
+      "d": "The Irresistible Impulse Test"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The M'Naghten Rule, formulated in 1843 in England, focuses on the cognitive ability to distinguish right from wrong at the time of the offense.",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "To be deemed competent to stand trial under the standard set by Dusky v. United States, a defendant must possess which of the following?",
+    "options": {
+      "a": "A high school education or equivalent understanding of legal statutes.",
+      "b": "The ability to recall the crime with absolute clarity.",
+      "c": "A completely symptom-free mental health evaluation.",
+      "d": "A rational and factual understanding of the proceedings and the ability to consult with their lawyer."
+    },
+    "correct_answer": "d",
+    "difficulty": "Medium",
+    "explanation": "The Dusky standard requires that the defendant has 'sufficient present ability to consult with his lawyer with a reasonable degree of rational understanding' and a 'rational as well as factual understanding of the proceedings against him.'",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "What does the legal concept of 'mens rea' translate to, which is typically negated in a successful insanity defense?",
+    "options": {
+      "a": "Guilty act",
+      "b": "Guilty mind",
+      "c": "Body of the crime",
+      "d": "Burden of proof"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Mens rea refers to the 'guilty mind' or criminal intent required to convict a defendant of a crime. The insanity defense argues the defendant lacked the mental capacity to form this intent.",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "Which insanity standard expands upon the M'Naghten rule by recognizing that a defendant might know an act is wrong, but due to mental illness, is completely unable to stop themselves from committing the act?",
+    "options": {
+      "a": "The Irresistible Impulse Test",
+      "b": "The Daubert Standard",
+      "c": "The Frye Standard",
+      "d": "Diminished Capacity"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "The Irresistible Impulse Test accounts for volitional impairment, stating that even if a defendant knows an act is wrong, they may be found insane if a mental disease compelled them to act.",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "A defendant claims that while he knew shooting the victim was illegal, he believed God explicitly commanded him to do it to save the world. Under the M'Naghten Rule, what is the most likely forensic psychiatric analysis?",
+    "options": {
+      "a": "He is legally sane because he knew the act was legally wrong.",
+      "b": "He may be found legally insane because a delusion destroyed his capacity to understand the moral wrongfulness of his act.",
+      "c": "He is automatically considered incompetent to stand trial.",
+      "d": "He is legally sane due to the Irresistible Impulse exception."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Under M'Naghten, if severe mental defect (delusion) causes a defendant to believe they are acting under a higher moral directive (like a command from God), they may not grasp the 'moral wrongfulness' of the act, even if they know it is illegal.",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "Statistically, the insanity defense is raised in approximately what percentage of felony cases in the United States?",
+    "options": {
+      "a": "Less than 1%",
+      "b": "Around 15%",
+      "c": "Approximately 25%",
+      "d": "More than 50%"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Contrary to popular belief fueled by media, the insanity defense is used in less than 1% of all felony criminal cases, and it is successful in only a small fraction of those.",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "In a 'Guilty but Mentally Ill' (GBMI) verdict, what happens to the defendant?",
+    "options": {
+      "a": "They are acquitted and sent home with a prescription for medication.",
+      "b": "They serve a full prison sentence but are supposed to receive psychiatric treatment while incarcerated.",
+      "c": "They are sent exclusively to a psychiatric hospital until cured, then their sentence is forgiven.",
+      "d": "Their conviction is placed on hold indefinitely until they regain sanity."
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "A GBMI verdict holds the defendant criminally responsible and assigns a standard prison sentence, but acknowledges their mental illness, stipulating they should receive treatment within the correctional facility.",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "Which test combines aspects of both M'Naghten and the Irresistible Impulse Test, stating a defendant is not responsible if they lack 'substantial capacity' to appreciate the criminality of their conduct or conform to the law?",
+    "options": {
+      "a": "Durham Rule",
+      "b": "ALI Model Penal Code Test (Brawner Rule)",
+      "c": "Dusky Standard",
+      "d": "Godinez Standard"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The American Law Institute (ALI) Model Penal Code test (often associated with US v. Brawner) requires that the defendant lacks 'substantial capacity' either to appreciate the wrongfulness of the act or to conform their conduct to the requirements of the law.",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "subject": "Forensic Science",
+    "topic": "Legal Competence",
+    "question_text": "If a defendant is found incompetent to stand trial (IST), what is the typical immediate legal consequence?",
+    "options": {
+      "a": "The charges are immediately and permanently dropped.",
+      "b": "The trial proceeds, but the defendant is not allowed to speak.",
+      "c": "The defendant is committed to a psychiatric facility for treatment in an attempt to restore competency.",
+      "d": "The defendant automatically receives an insanity acquittal."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "When a defendant is found IST, criminal proceedings are paused, and they undergo treatment (usually in a secure psychiatric hospital) to restore them to competency so the trial can resume.",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "While not official diagnoses in the DSM-5, 'psychopathy' and 'sociopathy' are commonly grouped under which official clinical diagnosis?",
+    "options": {
+      "a": "Borderline Personality Disorder (BPD)",
+      "b": "Schizophrenia Spectrum Disorder",
+      "c": "Antisocial Personality Disorder (ASPD)",
+      "d": "Narcissistic Personality Disorder (NPD)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Antisocial Personality Disorder (ASPD) is the DSM-5 diagnosis that encompasses the traits historically referred to as psychopathy and sociopathy, characterized by a pervasive pattern of disregard for the rights of others.",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "In criminological and psychological contexts, what is a primary theoretical distinction between a psychopath and a sociopath?",
+    "options": {
+      "a": "Sociopaths are born with distinct brain structures, while psychopathy is purely the result of environmental trauma.",
+      "b": "Psychopaths are believed to possess innate, biological predispositions (nature), whereas sociopaths are largely shaped by severe childhood trauma or environment (nurture).",
+      "c": "Psychopaths are capable of empathy for family members, whereas sociopaths are completely devoid of any emotional attachments.",
+      "d": "Sociopaths are legally insane, whereas psychopaths are considered legally competent."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Forensic psychologists generally consider psychopathy to have stronger biological/genetic origins (nature), while sociopathy is seen as a result of adverse environmental factors, such as abuse or poor socialization (nurture).",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "Which clinical assessment tool, developed by Dr. Robert Hare, is considered the gold standard for evaluating psychopathy in forensic populations?",
+    "options": {
+      "a": "Minnesota Multiphasic Personality Inventory (MMPI-2)",
+      "b": "Psychopathy Checklist-Revised (PCL-R)",
+      "c": "Rorschach Inkblot Test",
+      "d": "The Macdonald Triad Inventory"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "The Hare Psychopathy Checklist-Revised (PCL-R) is a 20-item inventory used worldwide to assess whether an individual exhibits psychopathic traits.",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "Which of the following is an example of a 'positive symptom' of schizophrenia that might be relevant in a forensic assessment of legal insanity?",
+    "options": {
+      "a": "Apathy and emotional flatness",
+      "b": "Lack of speech (Alogia)",
+      "c": "Command hallucinations urging the person to commit a crime",
+      "d": "Inability to experience pleasure (Anhedonia)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "In schizophrenia, 'positive symptoms' are behaviors or experiences added to the person's baseline, such as hallucinations or delusions. Negative symptoms (like anhedonia or flattened affect) represent deficits.",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "Which three childhood behaviors make up the 'Macdonald Triad,' once theorized to be warning signs for future violent or serial offending?",
+    "options": {
+      "a": "Bedwetting, animal cruelty, and fire-setting",
+      "b": "Truancy, theft, and pathological lying",
+      "c": "Arson, vandalism, and assault",
+      "d": "Animal cruelty, substance abuse, and bedwetting"
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "Formulated by psychiatrist J.M. Macdonald in 1963, the triad identifies enuresis (bedwetting past an appropriate age), cruelty to animals, and fire-setting as potential childhood predictors of later antisocial/violent behavior.",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "When assessing Antisocial Personality Disorder (ASPD), the DSM-5 requires that the individual must be at least how old to receive the formal diagnosis?",
+    "options": {
+      "a": "12 years old",
+      "b": "16 years old",
+      "c": "18 years old",
+      "d": "21 years old"
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Under DSM-5 criteria, a person cannot be diagnosed with ASPD until they are at least 18 years old, and there must be evidence of Conduct Disorder with onset before age 15.",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "A suspect exhibits highly erratic behavior, struggles to hold a steady job, forms deep but highly volatile emotional attachments to a fringe group, and commits a crime in a highly spontaneous, unplanned outburst. These traits are more classically associated with:",
+    "options": {
+      "a": "Psychopathy",
+      "b": "Sociopathy",
+      "c": "Organized Serial Murder",
+      "d": "Factitious Disorder"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Unlike psychopaths, who are often smooth, calculating, and integrated into society, sociopaths are traditionally described as more prone to agitation, erratic behavior, and impulsive crimes of opportunity.",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "What does a delusion of persecution entail for an individual with Schizophrenia?",
+    "options": {
+      "a": "The false belief that they have exceptional abilities, wealth, or fame.",
+      "b": "The false belief that external entities are conspiring against, harassing, or intending to harm them.",
+      "c": "Hearing voices that tell them they are worthless.",
+      "d": "The inability to maintain a logical train of thought."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Persecutory delusions involve a strong, false conviction that one is being targeted, followed, harmed, or conspired against. This can sometimes lead to violent pre-emptive strikes by the individual if left untreated.",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "Physiological studies on individuals with high psychopathy scores (via PCL-R) frequently show which distinctive autonomic nervous system response?",
+    "options": {
+      "a": "Hyper-reactivity to loud noises and visual stressors.",
+      "b": "An unusually high resting heart rate.",
+      "c": "Reduced physiological arousal, such as a lower resting heart rate and reduced sweat response to emotional stimuli.",
+      "d": "Extreme fluctuations in blood pressure during routine conversation."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Psychopaths tend to show under-arousal of the autonomic nervous system. This low fear conditioning and lack of physical stress response to emotional stimuli make them excellent liars and risk-takers.",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "subject": "Forensic Science",
+    "topic": "Disorders & Behavior",
+    "question_text": "A forensic psychologist notes 'glibness, superficial charm, grandiosity, and pathological lying' in a subject's evaluation. Which cluster of traits on the Hare PCL-R do these primarily reflect?",
+    "options": {
+      "a": "Factor 1: Interpersonal/Affective traits",
+      "b": "Factor 2: Social Deviance/Lifestyle traits",
+      "c": "Factor 3: Psychotic indicators",
+      "d": "Factor 4: Somatic symptoms"
+    },
+    "correct_answer": "a",
+    "difficulty": "Hard",
+    "explanation": "The Hare PCL-R is divided into Factors. Factor 1 covers interpersonal and affective deficits (charm, grandiosity, lack of empathy/remorse). Factor 2 covers chronic antisocial lifestyle (impulsivity, juvenile delinquency, irresponsibility).",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "In behavioral profiling, what is the primary difference between a criminal's Modus Operandi (MO) and their Signature?",
+    "options": {
+      "a": "The MO remains static over time, while the signature evolves as the criminal learns.",
+      "b": "The MO is what the offender must do to successfully commit the crime, while the signature is to fulfill an emotional or psychological need.",
+      "c": "The MO refers specifically to the weapon used, while the signature refers to the escape route.",
+      "d": "There is no difference; the terms are used synonymously in FBI profiling."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Modus Operandi (MO) refers to the practical methods used to execute the crime, which can evolve. A signature is a ritualistic or psychological behavior that is not strictly necessary to complete the crime but satisfies an internal need of the offender.",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "According to the FBI's classic dichotomy of serial offenders, a crime scene that shows signs of careful planning, no weapon left behind, and a targeted victim suggests which type of offender?",
+    "options": {
+      "a": "Organized",
+      "b": "Disorganized",
+      "c": "Psychotic",
+      "d": "Opportunistic"
+    },
+    "correct_answer": "a",
+    "difficulty": "Easy",
+    "explanation": "Organized offenders are typically socially competent, plan their crimes meticulously, use restraints, target specific strangers, and take steps to conceal evidence.",
+    "section_id": null
+  },
+  {
+    "question_number": 23,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "A 'disorganized' serial offender is psychologically and behaviorally most likely to exhibit which of the following traits?",
+    "options": {
+      "a": "Above-average intelligence and a skilled profession.",
+      "b": "High social functioning, often married or in a relationship.",
+      "c": "Below-average intelligence, social inadequacy, and a tendency to commit crimes near their home.",
+      "d": "A habit of stalking victims for weeks and transporting the body to a secondary site."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Disorganized offenders tend to be socially and sexually incompetent, often suffer from severe mental illness or substance abuse, live alone, and commit impulsive 'blitz' attacks near their residence or workplace.",
+    "section_id": null
+  },
+  {
+    "question_number": 24,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "What does the term 'Victimology' refer to in the context of forensic profiling?",
+    "options": {
+      "a": "The study of how law enforcement treats victims of crime.",
+      "b": "A psychological analysis of the offender's childhood trauma.",
+      "c": "The comprehensive study and assessment of the victims, their lifestyles, and why they were selected.",
+      "d": "The scientific analysis of victim DNA at a crime scene."
+    },
+    "correct_answer": "c",
+    "difficulty": "Easy",
+    "explanation": "Victimology is the thorough study of victims, including their habits, personalities, physical characteristics, and lifestyles, to determine why an offender targeted them.",
+    "section_id": null
+  },
+  {
+    "question_number": 25,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "When an offender purposely alters the crime scene prior to the arrival of police, usually to misdirect the investigation (e.g., making a murder look like a suicide), this behavior is termed:",
+    "options": {
+      "a": "Signature behavior",
+      "b": "Staging",
+      "c": "Geographic mapping",
+      "d": "Undoing"
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Staging involves deliberately altering a crime scene to mislead investigators and protect the identity of the true offender.",
+    "section_id": null
+  },
+  {
+    "question_number": 26,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "An offender takes a lock of the victim's hair to keep at his home. In psychological profiling terminology, this item—kept to remember the experience—is known as a:",
+    "options": {
+      "a": "Trophy",
+      "b": "Souvenir",
+      "c": "Signature",
+      "d": "Calling card"
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "A 'souvenir' helps the offender remember the experience, fulfilling a psychological fantasy post-crime. A 'trophy' is typically taken as a symbol of victory or conquest over the victim, though the terms are sometimes used interchangeably in general contexts, souvenirs are linked more directly to memory retention.",
+    "section_id": null
+  },
+  {
+    "question_number": 27,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "Geographic profiling primarily attempts to determine which of the following?",
+    "options": {
+      "a": "The psychological motives of the killer.",
+      "b": "The probable residence or anchor point of the offender based on the spatial pattern of the crime scenes.",
+      "c": "The terrain features of the victim's disposal site.",
+      "d": "The exact age and gender of the suspect."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Geographic profiling applies spatial analysis to the locations of a connected series of crimes to determine the most probable area where the offender lives or works (their 'anchor point').",
+    "section_id": null
+  },
+  {
+    "question_number": 28,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "If a profiler describes a victim as 'High-Risk,' what does this imply?",
+    "options": {
+      "a": "The victim's lifestyle, habits, or occupation regularly expose them to potential harm or violent offenders.",
+      "b": "The victim posed a severe physical threat to the offender.",
+      "c": "The victim is likely to retaliate against the attacker.",
+      "d": "The offender took a high risk in trying to attack them."
+    },
+    "correct_answer": "a",
+    "difficulty": "Medium",
+    "explanation": "A 'high-risk victim' has a lifestyle (such as sex work, drug dealing, or hitchhiking) that continuously exposes them to dangerous situations, making them easier targets for serial offenders.",
+    "section_id": null
+  },
+  {
+    "question_number": 29,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "An offender places the victim's body in a respectful, peaceful position, washing their face and covering them with a blanket before leaving. This behavior is recognized by profilers as:",
+    "options": {
+      "a": "Staging",
+      "b": "Undoing",
+      "c": "Trophy taking",
+      "d": "Blitz attack"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "Undoing is a psychological defense mechanism where the offender attempts to symbolically 'undo' the crime or show remorse, often implying a close pre-existing relationship with the victim.",
+    "section_id": null
+  },
+  {
+    "question_number": 30,
+    "subject": "Forensic Science",
+    "topic": "Profiling",
+    "question_text": "Which of the following would be strictly categorized as part of an offender's Signature rather than their MO?",
+    "options": {
+      "a": "Wearing a ski mask to conceal identity.",
+      "b": "Binding the victim with zip-ties to control them.",
+      "c": "Carving a specific geometric symbol into the victim's chest post-mortem.",
+      "d": "Using a stolen vehicle to transport the body."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Carving a symbol post-mortem is completely unnecessary for the commission of the murder and serves purely to fulfill a psychological ritual, making it a classic signature behavior.",
+    "section_id": null
+  },
+  {
+    "question_number": 31,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "Which of the following physiological responses is NOT traditionally measured by a standard polygraph machine?",
+    "options": {
+      "a": "Respiration rate",
+      "b": "Blood pressure/Heart rate",
+      "c": "Galvanic skin response (sweat gland activity)",
+      "d": "Electroencephalogram (EEG) brain waves"
+    },
+    "correct_answer": "d",
+    "difficulty": "Easy",
+    "explanation": "A traditional polygraph measures pneumograph (respiration), cardiovascular activity (blood pressure and heart rate), and electrodermal activity (galvanic skin response). EEG measures brain waves and is not part of a standard polygraph test.",
+    "section_id": null
+  },
+  {
+    "question_number": 32,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "In the context of psychological evaluations, what is the definition of 'malingering'?",
+    "options": {
+      "a": "A subconscious, involuntary somatization of emotional trauma into physical pain.",
+      "b": "The intentional production of false or grossly exaggerated physical or psychological symptoms, motivated by external incentives.",
+      "c": "A genuine delusional belief that one is suffering from a terminal illness.",
+      "d": "The act of diagnosing a mental illness that an individual does not actually have."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Malingering is faking or exaggerating illness specifically for external gain (such as avoiding trial, getting disability money, or obtaining drugs).",
+    "section_id": null
+  },
+  {
+    "question_number": 33,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "How does Malingering differ fundamentally from Factitious Disorder (such as Munchausen syndrome)?",
+    "options": {
+      "a": "Malingerers are usually female, while Factitious Disorder affects only males.",
+      "b": "Factitious Disorder symptoms are real, while Malingering symptoms are fake.",
+      "c": "In Factitious Disorder, the motive is assuming the 'sick role' for sympathy with no external material gain, whereas Malingering requires a clear external incentive.",
+      "d": "Factitious Disorder is a legal term, while Malingering is a psychiatric diagnosis."
+    },
+    "correct_answer": "c",
+    "difficulty": "Hard",
+    "explanation": "Both involve intentionally faking symptoms. However, factitious disorder is done to gain sympathy, attention, or comfort (the 'sick role'). Malingering has a tangible external motivation, such as avoiding prison or winning a lawsuit.",
+    "section_id": null
+  },
+  {
+    "question_number": 34,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "What is a common clinical indicator that a criminal defendant might be malingering schizophrenia?",
+    "options": {
+      "a": "They report auditory hallucinations of vague, whispering voices.",
+      "b": "They exhibit a completely flat affect and speak very little.",
+      "c": "They report continuous, extremely bizarre visual hallucinations in black-and-white, mimicking Hollywood stereotypes rather than clinical reality.",
+      "d": "They complain that their medication is causing uncomfortable side effects."
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "Malingerers often overact or rely on media portrayals of madness. They frequently report highly exaggerated, constant, and extremely visual hallucinations, which are actually rare in true schizophrenia (where auditory hallucinations are much more common).",
+    "section_id": null
+  },
+  {
+    "question_number": 35,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "Which polygraph testing format relies on establishing a physiological baseline by asking broad, slightly uncomfortable questions about past behavior (e.g., 'Have you ever lied to get out of trouble?'), and comparing that reaction to questions about the specific crime?",
+    "options": {
+      "a": "Guilty Knowledge Test (GKT)",
+      "b": "Control Question Test (CQT)",
+      "c": "Relevant-Irrelevant Test (RIT)",
+      "d": "Structured Interview of Reported Symptoms (SIRS)"
+    },
+    "correct_answer": "b",
+    "difficulty": "Hard",
+    "explanation": "The Control Question Test (CQT) compares physiological responses to relevant questions (about the crime) with control questions (about past minor misdeeds) to establish baseline arousal patterns.",
+    "section_id": null
+  },
+  {
+    "question_number": 36,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "Which forensic test is specifically designed to assess if an individual is faking psychiatric symptoms, using scales like 'Blatant Symptoms' or 'Rare Symptoms'?",
+    "options": {
+      "a": "Hare PCL-R",
+      "b": "Rorschach Inkblot",
+      "c": "Structured Interview of Reported Symptoms (SIRS)",
+      "d": "Thematic Apperception Test (TAT)"
+    },
+    "correct_answer": "c",
+    "difficulty": "Medium",
+    "explanation": "The SIRS is a specialized forensic tool used extensively to detect malingering by measuring reporting patterns, such as endorsing symptom combinations that rarely or never happen in genuine mental illness.",
+    "section_id": null
+  },
+  {
+    "question_number": 37,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "In the United States legal system, polygraph test results are generally:",
+    "options": {
+      "a": "Admissible in all state and federal courts as definitive evidence.",
+      "b": "Inadmissible in most courts because their scientific reliability has not met the standard required by Daubert or Frye rulings.",
+      "c": "Admissible only if the polygraph examiner is a sworn police officer.",
+      "d": "Mandatory for all capital murder defendants prior to trial."
+    },
+    "correct_answer": "b",
+    "difficulty": "Easy",
+    "explanation": "Most U.S. jurisdictions prohibit the admission of polygraph results as evidence because the machine is considered scientifically unreliable for conclusively detecting lies (failing the Daubert standard of scientific evidence).",
+    "section_id": null
+  },
+  {
+    "question_number": 38,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "The 'Guilty Knowledge Test' (or Concealed Information Test) in polygraphy works by:",
+    "options": {
+      "a": "Intimidating the suspect until they confess.",
+      "b": "Asking about details of the crime scene that only the true perpetrator and police would know, looking for physiological spikes of recognition.",
+      "c": "Comparing the suspect's baseline truth to standard control lies.",
+      "d": "Administering 'truth serum' (sodium pentothal) while asking questions."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "The GKT (or CIT) evaluates whether a suspect has knowledge that only the guilty party would possess, registering an autonomic response to the recognized salient detail among a list of neutral options.",
+    "section_id": null
+  },
+  {
+    "question_number": 39,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "When attempting to 'beat' a polygraph, individuals may use 'countermeasures' to artificially elevate their physiological response during control questions. Which of the following is a known physical countermeasure?",
+    "options": {
+      "a": "Meditation to lower heart rate.",
+      "b": "Biting the tongue or pressing a tack in the shoe.",
+      "c": "Staring unblinkingly at the examiner.",
+      "d": "Answering all questions with a delay of exactly three seconds."
+    },
+    "correct_answer": "b",
+    "difficulty": "Medium",
+    "explanation": "Physical countermeasures involve causing oneself mild pain (like biting the tongue or pressing on a tack) during control questions to spike the baseline blood pressure/heart rate, making the response to relevant questions look comparatively truthful.",
+    "section_id": null
+  },
+  {
+    "question_number": 40,
+    "subject": "Forensic Science",
+    "topic": "Deception",
+    "question_text": "If a criminal suspect claims amnesia for the entire period of a violent crime, a forensic psychologist investigating potential malingering would look for which red flag?",
+    "options": {
+      "a": "Amnesia typically occurs naturally with highly emotional, violent acts; so no red flags exist.",
+      "b": "Genuine amnesiacs usually score perfectly on the Test of Memory Malingering (TOMM).",
+      "c": "The suspect suddenly recovers their memory perfectly when hypnotized.",
+      "d": "The suspect claims anterograde amnesia (inability to form new memories post-crime) but shows localized amnesia limited exactly to the time frame of the crime."
+    },
+    "correct_answer": "d",
+    "difficulty": "Hard",
+    "explanation": "Malingerers often claim localized amnesia tightly surrounding the crime while maintaining perfect recall immediately before and after, or they score worse than chance on forced-choice memory tests (like the TOMM), indicating they know the correct answer but purposely pick the wrong one.",
+    "section_id": null
+  }
+]

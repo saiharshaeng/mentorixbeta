@@ -1,0 +1,354 @@
+[
+  {
+    "question_number": 1,
+    "question_text": "When $3^{333}$ is divided by 11, the remainder is",
+    "options": {
+      "a": "1",
+      "b": "10",
+      "c": "6",
+      "d": "5"
+    },
+    "correct_answer": "d",
+    "explanation": "By Fermat's Little Theorem, $3^{10} \\equiv 1 \\pmod{11}$. We can write $333 = 10 \\times 33 + 3$. Thus, $3^{333} = (3^{10})^{33} \\times 3^3 \\equiv 1^{33} \\times 27 \\equiv 27 \\pmod{11}$. The remainder of 27 divided by 11 is **5**.",
+    "topic": "Remainders",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 2,
+    "question_text": "If ${x}$ and ${y}$ satisfy the equations $|x|+x+y=15$ and $x+|y|-y=20$, then $(x-y)$ equals",
+    "options": {
+      "a": "10",
+      "b": "5",
+      "c": "20",
+      "d": "15"
+    },
+    "correct_answer": "d",
+    "explanation": "If $x<0$, $|x|+x=0$, so $y=15$. The second eq becomes $x+|15|-15=20$, so $x=20$, which contradicts $x<0$. Thus $x \\ge 0$, and $|x|=x$. The first eq becomes $2x+y=15$. If $y<0$, $|y|=-y$, so the second eq is $x-2y=20$. Solving gives $x=10, y=-5$. Then $x-y=15$. If $y \\ge 0$, the second eq is $x=20$. Then $2(20)+y=15$ gives $y=-25$, a contradiction. So $x=10, y=-5$ is the only solution. $x-y = 10 - (-5) = 15$.",
+    "topic": "Inequalities",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 3,
+    "question_text": "If ${m}$ and ${n}$ are natural numbers such that $n>1$, and $m^n = 2^{25} \\times 3^{40}$, then $m-n$ equals",
+    "options": {
+      "a": "209932",
+      "b": "209937",
+      "c": "209947",
+      "d": "209942"
+    },
+    "correct_answer": "c",
+    "explanation": "We are given $m^n = 2^{25} \\times 3^{40}$. We can write $m = 2^{25/n} \\times 3^{40/n}$. Since m is a natural number, n must be a common divisor of 25 and 40. The divisors of 25 are 1, 5, 25. The divisors of 40 are 1, 2, 4, 5, 8, 10, 20, 40. The common divisors are 1 and 5. Since $n>1$, ${n}$ must be 5. Then $m=2^5 \\times 3^8 = 32 \\times 6561 = 209952$. So $m-n = 209952 - 5 = 209947$.",
+    "topic": "Logarithms Exponents",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 4,
+    "question_text": "A function ${f}$ maps the set of natural numbers to whole numbers, such that $f(xy) = f(x)f(y)+f(x)+f(y)$ for all $x,y$ and $f(p)=1$ for every prime number ${p}$. Then, the value of $f(160000)$ is",
+    "options": {
+      "a": "1023",
+      "b": "4095",
+      "c": "2047",
+      "d": "8191"
+    },
+    "correct_answer": "b",
+    "explanation": "Let $g(x) = f(x)+1$. Then $g(xy)-1 = (g(x)-1)(g(y)-1) + (g(x)-1) + (g(y)-1) = g(x)g(y) - 1$. So, $g(xy) = g(x)g(y)$. For any prime ${p}$, $g(p)=f(p)+1=2$. $160000 = 16 \\times 10^4 = 2^4 \\times (2\\times5)^4 = 2^8 \\times 5^4$. $g(160000) = g(2^8)g(5^4) = (g(2))^8(g(5))^4 = 2^8 \\times 2^4 = 2^{12} = 4096$. So $f(160000)=g(160000)-1=4095$.",
+    "topic": "Functions",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 5,
+    "question_text": "$ABCD$ is a trapezium in which $AB$ is parallel to $CD$. The sides $AD$ and $BC$ when extended, intersect at point ${E}$. If $AB = 2 \\text{ cm}, CD = 1 \\text{ cm}$, and perimeter of $ABCD$ is 6 cm, then the perimeter, in cm, of $\\triangle AEB$ is",
+    "options": {
+      "a": "10",
+      "b": "9",
+      "c": "8",
+      "d": "7"
+    },
+    "correct_answer": "c",
+    "explanation": "Since $AB || CD$, $\\triangle EDC \\sim \\triangle EAB$. The ratio of corresponding sides is $CD/AB = 1/2$. Let $ED=x, EC=y$. Then $EA=2x, EB=2y$. So $AD=x, BC=y$. Perimeter of $ABCD = AB+BC+CD+DA = 2+y+1+x=6$, so $x+y=3$. The perimeter of $\\triangle AEB = EA+EB+AB = 2x+2y+2 = 2(x+y)+2 = 2(3)+2 = 8$.",
+    "topic": "Geometry",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 6,
+    "question_text": "Amal and Vimal together can complete a task in 150 days, while Vimal and Sunil together can complete the same task in 100 days. Amal starts working on the task and works for 75 days, then Vimal takes over and works for 135 days. Finally, Sunil takes over and completes the remaining task in 45 days. If Amal had started the task alone and worked on all days, Vimal had worked on every second day, and Sunil had worked on every third day, then the number of days required to complete the task would have been",
+    "options": {
+      "a": "135",
+      "b": "139",
+      "c": "142",
+      "d": "145"
+    },
+    "correct_answer": "b",
+    "explanation": "Let the rates of work be a, v, s. Total work = 300 units. $a+v = 2$, $v+s = 3$. From the work sequence: $75a + 135v + 45s = 300$. We can write this as $75a + 75v + 60v + 45s = 300$, so $75(a+v) + 15v + 45(v+s) - 45v = 300$. This doesn't simplify well. Try: $75a + 135v + 45s = 75(a+v) + 60v + 45s = 75(2) + 60v + 45s = 150 + 60v + 45s = 300$. $60v+45s = 150 \\implies 4v+3s=10$. With $v+s=3$, we get $v=1, s=2$. Then $a=1$. The combined rate for the new scenario on day ${k}$ is ${a}$ if $k \\pmod 2 \neq 0$ and $k \\pmod 3 \neq 0$, $a+v$ if $k \\pmod 2 = 0$ and $k \\pmod 3 \neq 0$, etc. Total rate over 6 days: $6a+3v+2s = 6(1)+3(1)+2(2) = 13$. $300/13 approx 23.07$. So $23 \\times 6 = 138$ days completes $23 \\times 13 = 299$ units. Day 139 is a day 1 type: Amal works. Rate is 1. One more unit takes 1 day. Total = 139 days.",
+    "topic": "Pipes Cisterns Work Time",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 7,
+    "question_text": "Bina incurs 19% loss when she sells a product at Rs. 4860 to Shyam, who in turn sells this product to Hari. If Bina would have sold this product to Shyam at the purchase price of Hari, she would have obtained 17% profit. Then, the profit, in rupees, made by Shyam is",
+    "options": {
+      "a": "2100",
+      "b": "2160",
+      "c": "2200",
+      "d": "2260"
+    },
+    "correct_answer": "b",
+    "explanation": "Let Bina's cost price be C. Selling price to Shyam = Rs. 4860. This is a 19% loss, so $0.81 \\times C = 4860$, which means $C = 4860/0.81 = 6000$. Let Hari's purchase price from Shyam be H. If Bina sold at H, she'd make a 17% profit. So $H = 1.17 \\times C = 1.17 \\times 6000 = 7020$. Shyam's cost price is 4860 and his selling price is 7020. Shyam's profit is $7020 - 4860 = 2160$.",
+    "topic": "Percents Profits SICI",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 8,
+    "question_text": "The sum of the infinite series $\\frac{1}{5}(\\frac{1}{5}-\\frac{1}{7})+(\\frac{1}{5})^2((\\frac{1}{5})^2-(\\frac{1}{7})^2)+(\\frac{1}{5})^3((\\frac{1}{5})^3-(\\frac{1}{7})^3)+\\cdots$ is equal to",
+    "options": {
+      "a": "$\\frac{5}{408}$",
+      "b": "$\\frac{7}{816}$",
+      "c": "$\\frac{7}{408}$",
+      "d": "$\\frac{5}{816}$"
+    },
+    "correct_answer": "a",
+    "explanation": "The series can be rewritten as $\\sum_{n=1}^{\\infty} (\\frac{1}{5})^n [(\\frac{1}{5})^n - (\\frac{1}{7})^n] = \\sum (\\frac{1}{25})^n - \\sum (\\frac{1}{35})^n$. Both are infinite geometric series. The sum of the first is $\\frac{1/25}{1-1/25} = \\frac{1/25}{24/25} = 1/24$. The sum of the second is $\\frac{1/35}{1-1/35} = \\frac{1/35}{34/35} = 1/34$. The total sum is $\\frac{1}{24} - \\frac{1}{34} = \\frac{34-24}{24 \\times 34} = \\frac{10}{816} = \\frac{5}{408}$.",
+    "topic": "Progressions",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 9,
+    "question_text": "If $a, b$ and ${c}$ are positive real numbers such that $a > 10 \\ge b \\ge c$ and $\\frac{\\log_8(a+b)}{\\log_2 c}+\\frac{\\log_{27}(a-b)}{\\log_3 c}=\\frac{2}{3}$, then the greatest possible integer value of ${a}$ is",
+    "options": {
+      "a": "12",
+      "b": "13",
+      "c": "14",
+      "d": "15"
+    },
+    "correct_answer": "c",
+    "explanation": "Using the change of base formula, $\\log_x y = \\frac{\\log_z y}{\\log_z x}$. So, $\\frac{\\log_c(a+b)/\\log_c 8}{1} + \\frac{\\log_c(a-b)/\\log_c 27}{1} = \\frac{2}{3}$. This is not quite right. It should be $\\log_c (a+b)^{1/3} + \\log_c (a-b)^{1/3} = 2/3$. So $\\log_c((a^2-b^2)^{1/3}) = 2/3$. $(a^2-b^2)^{1/3} = c^{2/3}$, so $a^2-b^2=c^2 \\implies a^2=b^2+c^2$. Since $10 \\ge b \\ge c$, the maximum value for $b^2+c^2$ is $10^2+10^2=200$. So $a^2 < 200$ (since $a>10$ and we must have $a-b>0$). $a < \\sqrt{200} \\approx 14.14$. The greatest integer value of ${a}$ is 14.",
+    "topic": "Logarithms Exponents",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 10,
+    "question_text": "A company has 40 employees. In 2022, the average bonus of the first 30 was Rs. 40000, of the last 30 was Rs. 60000, and of the first 10 and last 10 together was Rs. 50000. Next year, the average bonus of the first 10 increased by 100%, of the last 10 increased by 200% and of the remaining employees was unchanged. Then, the average bonus, in rupees, of all 40 employees in 2023 was",
+    "options": {
+      "a": "90000",
+      "b": "95000",
+      "c": "80000",
+      "d": "85000"
+    },
+    "correct_answer": "b",
+    "explanation": "Let the groups be $E_1$ (first 10), $E_2$ (middle 20), $E_3$ (last 10). Let sums be $S_1, S_2, S_3$. $S_1+S_2 = 30*40k = 1200k$. $S_2+S_3 = 30*60k=1800k$. $(S_1+S_3)/20 = 50k \\implies S_1+S_3=1000k$. Solving gives $S_1=200k, S_3=800k, S_2=1000k$. Total 2022 bonus = $S_1+S_2+S_3 = 2000k$. Average 2022 = $2000k/40=50k$. In 2023, $S'_1=2S_1=400k$, $S'_3=3S_3=2400k$, $S'_2=S_2=1000k$. New total = $400k+1000k+2400k=3800k$. Since $k=1000$, new total = 3,800,000. New average = $3800k/40 = 95k = 95000$.",
+    "topic": "Ratios Mixtures Averages",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 11,
+    "question_text": "P, Q, R and S are four towns. One can travel between P and Q along 3 direct paths, between Q and S along 4 direct paths, and between P and R along 4 direct paths. There is no direct path between P and S, while there are few direct paths between Q and R, and between R and S. One can travel from P to S either via Q, or via R, or via Q followed by R, respectively, in exactly 62 possible ways. One can also travel from Q to R either directly, or via P, or via S, in exactly 27 possible ways. Then, the number of direct paths between Q and R is",
+    "options": {
+      "a": "5",
+      "b": "7",
+      "c": "9",
+      "d": "11"
+    },
+    "correct_answer": "b",
+    "explanation": "Let number of paths be $n(X,Y)$. Given $n(P,Q)=3, n(Q,S)=4, n(P,R)=4$. Let $n(Q,R)=x, n(R,S)=y$. Total ways P to S: $n(P,Q)n(Q,S) + n(P,R)n(R,S) + n(P,Q)n(Q,R)n(R,S) = 62$. So $3(4) + 4y + 3xy = 62 \\implies 12 + 4y + 3xy = 62 \\implies 4y+3xy=50 \\implies y(4+3x)=50$. Ways Q to R: $n(Q,R) + n(Q,P)n(P,R) + n(Q,S)n(S,R) = 27$. So $x + 3(4) + 4y=27 \\implies x+4y=15 \\implies 4y=15-x$. Substitute: $(15-x)/4 \\times (4+3x) = 50$ is not right. Let's re-read. Oh, Q to S, then S to R. $n(S,R)=y$. $x + 3(4) + 4y=27$ seems right. From $y(4+3x)=50$, $y=50/(4+3x)$. Sub into the second: $x + 4(50/(4+3x)) = 15 \\implies x(4+3x)+200=15(4+3x) \\implies 3x^2+4x+200=60+45x \\implies 3x^2-41x+140=0$. Using quadratic formula, $x = (41 \\pm \\sqrt{41^2-4(3)(140)})/6 = (41 \\pm \\sqrt{1681-1680})/6 = (41 \\pm 1)/6$. So $x=42/6=7$ or $x=40/6$ (not integer). Thus $x=7$.",
+    "topic": "Combinatorics",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 12,
+    "question_text": "A fruit seller has a stock of mangoes, bananas and apples with at least one fruit of each type. At the beginning of a day, the number of mangoes make up 40% of his stock. That day, he sells half of the mangoes, 96 bananas and 40% of the apples. At the end of the day, he ends up selling 50% of the fruits. The smallest possible total number of fruits in the stock at the beginning of the day is",
+    "options": {
+      "a": "300",
+      "b": "320",
+      "c": "340",
+      "d": "360"
+    },
+    "correct_answer": "c",
+    "explanation": "Let M, B, A be the number of mangoes, bananas, apples. Total T = M+B+A. M=0.4T. Fruits sold: $0.5M + 96 + 0.4A = 0.5T$. Substitute M: $0.5(0.4T)+96+0.4A=0.5T \\implies 0.2T+96+0.4A=0.5T \\implies 96+0.4A=0.3T$. So $T = (96+0.4A)/0.3 = 320 + 4A/3$. Since T and A must be integers, A must be a multiple of 3. Also $B=T-M-A = (320+4A/3)-0.4(320+4A/3)-A = 320+4A/3 - 128-1.6A/3 - A = 192-A/3-1.6A/3=192 - 2.6A/3$. Hmm, calculation error. $B=T-M-A = T-0.4T-A = 0.6T-A$. $B=0.6(320+4A/3)-A = 192+0.8A-A=192-0.2A$. Bananas sold is 96, so $B \\ge 96$. $192-0.2A \\ge 96 \\implies 96 \\ge 0.2A \\implies A \\le 480$. We need to minimize T. T increases with A. Smallest A multiple of 3. Let's check $A=3, T=324$. $B=192-0.6=191.4$ not integer. We need $0.2A$ to be an integer. A must be a multiple of 5. Smallest multiple of 3 and 5 is 15. Let $A=15$. $T=320+4(15)/3 = 340$. $B=192-0.2(15)=189$. So total fruits = 340.",
+    "topic": "Percents Profits SICI",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 13,
+    "question_text": "If $(x+6\\sqrt{2})^{1/2} - (x-6\\sqrt{2})^{1/2} = 2\\sqrt{2}$, then ${x}$ equals",
+    "options": {
+      "a": "10",
+      "b": "11",
+      "c": "12",
+      "d": "13"
+    },
+    "correct_answer": "b",
+    "explanation": "Square both sides: $(x+6\\sqrt{2}) + (x-6\\sqrt{2}) - 2\\sqrt{(x+6\\sqrt{2})(x-6\\sqrt{2})} = (2\\sqrt{2})^2 = 8$. This simplifies to $2x - 2\\sqrt{x^2 - (6\\sqrt{2})^2} = 8$. So, $x - \\sqrt{x^2 - 72} = 4$. Rearranging gives $x-4 = \\sqrt{x^2 - 72}$. Square both sides again: $(x-4)^2 = x^2-72 \\implies x^2-8x+16=x^2-72 \\implies -8x = -88 \\implies x=11$.",
+    "topic": "Linear Quadratic",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 14,
+    "question_text": "The coordinates of the three vertices of a triangle are: (1, 2), (7, 2), and (1, 10). Then the radius of the incircle of the triangle is",
+    "options": {
+      "a": "1.5",
+      "b": "2",
+      "c": "2.5",
+      "d": "3"
+    },
+    "correct_answer": "b",
+    "explanation": "The vertices form a right-angled triangle. The side lengths are: distance between (1,2) and (7,2) is $a=6$. Distance between (1,2) and (1,10) is $b=8$. Distance between (7,2) and (1,10) is $c=\\sqrt{(7-1)^2+(2-10)^2}=\\sqrt{36+64}=\\sqrt{100}=10$. For a right-angled triangle, the inradius ${r}$ is given by the formula $r = (a+b-c)/2$. So, $r = (6+8-10)/2 = 4/2=2$.",
+    "topic": "Coordinate Geometry",
+    "difficulty": "Easy",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 15,
+    "question_text": "Anil invests Rs 22000 for 6 years in a scheme with 4% interest per annum, compounded half-yearly. Separately, Sunil invests a certain amount in the same scheme for 5 years, and then reinvests the entire amount he receives at the end of 5 years, for one year at 10% simple interest. If the amounts received by both at the end of 6 years are equal, then the initial investment, in rupees, made by Sunil is",
+    "options": {
+      "a": "20480",
+      "b": "20808",
+      "c": "20640",
+      "d": "20860"
+    },
+    "correct_answer": "b",
+    "explanation": "Anil's amount: $A = P(1+r/n)^{nt} = 22000(1+0.04/2)^{2 \\times 6} = 22000(1.02)^{12}$. Let Sunil's investment be P. Amount after 5 years = $P(1.02)^{10}$. This is then invested for 1 year at 10% SI. Final amount for Sunil = $P(1.02)^{10} \\times 1.1$. We are given $22000(1.02)^{12} = P(1.02)^{10} \\times 1.1$. So, $P = \\frac{22000(1.02)^2}{1.1} = \\frac{22000 \\times 1.0404}{1.1} = 20000 \\times 1.0404 = 20808$.",
+    "topic": "Percents Profits SICI",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 16,
+    "question_text": "The roots $\\alpha, \\beta$ of the equation $3x^2+\\lambda x-1=0$, satisfy $\\frac{1}{\\alpha^2}+\\frac{1}{\\beta^2}=15$. The value of $(\\alpha^3+\\beta^3)^2$ is",
+    "options": {
+      "a": "9",
+      "b": "16",
+      "c": "4",
+      "d": "1"
+    },
+    "correct_answer": "c",
+    "explanation": "Sum of roots $\\alpha+\\beta = -\\lambda/3$. Product of roots $\\alpha\\beta = -1/3$. The given condition is $\\frac{\\alpha^2+\\beta^2}{(\\alpha\\beta)^2}=15 \\implies \\frac{(\\alpha+\\beta)^2-2\\alpha\\beta}{(\\alpha\\beta)^2}=15$. So $\\frac{(-\\lambda/3)^2-2(-1/3)}{(-1/3)^2}=15 \\implies \\frac{\\lambda^2/9+2/3}{1/9}=15 \\implies \\lambda^2+6=15 \\implies \\lambda^2=9$, so $\\lambda = \\pm 3$. We need to find $(\\alpha^3+\\beta^3)^2 = ((\\alpha+\\beta)(\\alpha^2-\\alpha\\beta+\\beta^2))^2 = ((\\alpha+\\beta)((\\alpha+\\beta)^2-3\\alpha\\beta))^2$. Substituting the values: $((-\\lambda/3)((-\\lambda/3)^2-3(-1/3)))^2 = ((-1)(1+1))^2 = 4$ for $\\lambda=3$. The value will be the same for $\\lambda=-3$.",
+    "topic": "Linear Quadratic",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 17,
+    "question_text": "A bus starts at 9 am and follows a fixed route. One day, it traveled at 60 km/h and reached 3.5 hours late. The next day, it traveled two-thirds of its route in one-third of its total scheduled travel time, and the remaining part at 40 km/h to reach just on time. The scheduled arrival time is",
+    "options": {
+      "a": "10 : 30 pm",
+      "b": "7 : 00 pm",
+      "c": "7 : 30 pm",
+      "d": "9 : 00 pm"
+    },
+    "correct_answer": "c",
+    "explanation": "Let distance be D and scheduled time T. From day 1, $D/60 = T+3.5$. On day 2, it travels $2D/3$ in $T/3$ time, so speed is $(2D/3)/(T/3) = 2D/T$. The remaining $D/3$ is travelled at 40 km/h, taking time $(D/3)/40 = D/120$. Total time on day 2 is $T/3 + D/120 = T$. So $D/120 = 2T/3 \\implies D = 80T$. Substitute this into the first equation: $80T/60 = T+3.5 \\implies 4T/3 = T+3.5 \\implies T/3=3.5 \\implies T=10.5$ hours. Bus starts at 9 am. Scheduled arrival time is 9 am + 10.5 hours = 7:30 pm.",
+    "topic": "Speed Time Distance Races",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 18,
+    "question_text": "Three circles of equal radii touch each other externally. Two other circles, ${x}$ and ${y}$, are drawn such that both touch each of the three previous circles. If the radius of ${x}$ is more than that of ${y}$, the ratio of the radii of ${x}$ and ${y}$ is",
+    "options": {
+      "a": "$2+\\sqrt{3}:1$",
+      "b": "$4+\\sqrt{3}:1$",
+      "c": "$7+4\\sqrt{3}:1$",
+      "d": "$4+2\\sqrt{3}:1$"
+    },
+    "correct_answer": "c",
+    "explanation": "Let the radius of the three equal circles be ${r}$. Their centers form an equilateral triangle of side $2r$. The centroid of this triangle is the center of circles X and Y. The distance from a vertex to the centroid is $(2r/\\sqrt{3})$. Let the radii of X and Y be $R_X$ and $R_Y$. Circle X is the circumcircle of the gap, so its radius is $R_X = 2r/\\sqrt{3} + r$. Circle Y is in the central gap, so its radius is $R_Y = 2r/\\sqrt{3} - r$. The ratio is $\\frac{R_X}{R_Y} = \\frac{2/\\sqrt{3}+1}{2/\\sqrt{3}-1} = \\frac{2+\\sqrt{3}}{2-\\sqrt{3}} = (2+\\sqrt{3})^2 = 4+3+4\\sqrt{3} = 7+4\\sqrt{3}$. The ratio is $7+4\\sqrt{3}:1$.",
+    "topic": "Geometry",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 19,
+    "question_text": "A vessel contained a certain amount of a solution of acid and water. When 2 litres of water was added, the new solution had 50% acid. When 15 litres of acid was further added, the final solution had 80% acid. The ratio of water and acid in the original solution was",
+    "options": {
+      "a": "5 : 3",
+      "b": "4 : 5",
+      "c": "5 : 4",
+      "d": "3 : 5"
+    },
+    "correct_answer": "d",
+    "explanation": "Let the initial amount of acid be A and water be W. After adding 2L water, we have A acid and W+2 water. Total is A+W+2. Acid concentration is $A/(A+W+2) = 0.5 \\implies A=W+2$. Next, 15L acid is added. Total acid is A+15, total solution is A+W+2+15=A+W+17. Acid concentration is $(A+15)/(A+W+17)=0.8$. Substitute $W=A-2$: $(A+15)/(A+(A-2)+17)=0.8 \\implies (A+15)/(2A+15)=0.8 \\implies A+15=1.6A+12 \\implies 0.6A=3 \\implies A=5$. Then $W=A-2=3$. The original ratio of water to acid was W:A = 3:5.",
+    "topic": "Ratios Mixtures Averages",
+    "difficulty": "Easy",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 20,
+    "question_text": "All the values of ${x}$ satisfying the inequality $\\frac{1}{x+5} \\le \\frac{1}{2x-3}$ are",
+    "options": {
+      "a": "$x \\in (-5, 1.5) \\cup [8, \\infty)$",
+      "b": "$x \\in (-\\infty, -5) \\cup (1.5, 8]$",
+      "c": "$x \\in (-\\infty, -8] \\cup (1.5, \\infty)$",
+      "d": "$x \\in [-8, -5) \\cup (1.5, \\infty)$"
+    },
+    "correct_answer": "b",
+    "explanation": "We solve $\\frac{1}{x+5} - \\frac{1}{2x-3} \\le 0$. Combining fractions gives $\\frac{(2x-3) - (x+5)}{(x+5)(2x-3)} \\le 0$, which simplifies to $\\frac{x-8}{(x+5)(2x-3)} \\le 0$. The critical points are $x=-5, x=1.5, x=8$. We test the intervals: For $x>8$, all terms are positive, so fraction is positive. For $1.5 < x < 8$, the numerator is negative, denominator is positive, so fraction is negative (solution). For $-5 < x < 1.5$, numerator is negative, denominator is negative, so fraction is positive. For $x < -5$, numerator is negative, denominator is positive, so fraction is negative (solution). The solution includes the point where the numerator is zero ($x=8$) but excludes points where the denominator is zero. Thus, the solution is $(-\\infty, -5) \\cup (1.5, 8]$.",
+    "topic": "Inequalities",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 21,
+    "question_text": "If ${x}$ and ${y}$ are real numbers such that $4x^2+4y^2-4xy-6y+3=0$, then the value of $(4x+5y)$ is",
+    "options": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8"
+    },
+    "correct_answer": "c",
+    "explanation": "The equation can be rearranged into a sum of squares. $4x^2 - 4xy + y^2 + 3y^2 - 6y + 3 = 0$. This is $(2x-y)^2 + 3(y^2 - 2y + 1) = 0$. This simplifies to $(2x-y)^2 + 3(y-1)^2 = 0$. Since squares of real numbers are non-negative, for the sum to be zero, each term must be zero. So, $y-1=0 \\implies y=1$. And $2x-y=0 \\implies 2x-1=0 \\implies x=1/2$. The value of $(4x+5y)$ is $4(1/2) + 5(1) = 2+5 = 7$.",
+    "topic": "Linear Quadratic",
+    "difficulty": "Hard",
+    "subject": "Quant",
+    "section_id": null
+  },
+  {
+    "question_number": 22,
+    "question_text": "When Rajesh's age was same as the present age of Garima, the ratio of their ages was 3 : 2. When Garima's age becomes the same as the present age of Rajesh, the ratio of the ages of Rajesh and Garima will become",
+    "options": {
+      "a": "4 : 3",
+      "b": "2 : 1",
+      "c": "3 : 2",
+      "d": "5 : 4"
+    },
+    "correct_answer": "d",
+    "explanation": "Let R and G be the present ages of Rajesh and Garima. Let the difference be $d = R-G$. Some years ago, Rajesh's age was G. This was ${d}$ years ago. At that time, Garima's age was $G-d$. The ratio was $G/(G-d) = 3/2 \\implies 2G = 3G-3d \\implies G=3d$. So $R=G+d=4d$. Their present ages are in the ratio 4:3. In the future, Garima's age will be R (i.e., 4d). This will happen in ${d}$ years. At that time, Rajesh's age will be $R+d=5d$, and Garima's age will be $G+d=4d$. The new ratio will be $5d:4d$, which is 5 : 4.",
+    "topic": "Linear Quadratic",
+    "difficulty": "Medium",
+    "subject": "Quant",
+    "section_id": null
+  }
+]

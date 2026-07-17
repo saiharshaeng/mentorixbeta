@@ -1,0 +1,562 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "According to the OpenStax text, which of the following best defines **energy**?",
+        "options": {
+            "a": "The ability to cause matter to move against an opposing force or supply heat",
+            "b": "The transfer of thermal energy between two bodies at different temperatures",
+            "c": "The energy associated with the random motion of atoms and molecules",
+            "d": "The quantity of heat absorbed or released during a temperature change"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1 defines energy as 'the capacity to supply heat or do work.' Work is described as causing matter to move against an opposing force.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "A system absorbs $300\\ \\text{J}$ of heat from the surroundings and has $100\\ \\text{J}$ of work done **on** it by the surroundings. What is the change in internal energy ($\\Delta U$) of the system?",
+        "options": {
+            "a": "$+200\\ \\text{J}$",
+            "b": "$+400\\ \\text{J}$",
+            "c": "$-200\\ \\text{J}$",
+            "d": "$-400\\ \\text{J}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Using the first law of thermodynamics: $\\Delta U = q + w$. Here, heat is absorbed ($q = +300\\ \\text{J}$) and work is done *on* the system ($w = +100\\ \\text{J}$). Thus, $\\Delta U = 300 + 100 = +400\\ \\text{J}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which of the following scenarios represents a case where work ($w​$) is **negative** relative to the system?",
+        "options": {
+            "a": "The surroundings compress a gas in a cylinder.",
+            "b": "A gas expands against a piston, pushing it outward.",
+            "c": "A metal wire is rapidly bent back and forth.",
+            "d": "Air is pumped into a bicycle tire."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "According to the sign convention in OpenStax 5.3, work ($w​$) is negative if it is done **by** the system. A gas expanding pushes against the surroundings, doing work on them, so $w < 0$.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Thermal energy is distinguished from temperature in that thermal energy refers to:",
+        "options": {
+            "a": "A quantitative measure of 'hot' or 'cold'",
+            "b": "The capacity to supply heat or do work",
+            "c": "Kinetic energy associated with the random motion of atoms and molecules",
+            "d": "The transfer of energy between two bodies at different temperatures"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1 states: 'Thermal energy is kinetic energy associated with the random motion of atoms and molecules.' Temperature is a quantitative measure of hot or cold.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Why is **enthalpy** ($H​$) often more convenient for chemists to use than internal energy ($U​$)?",
+        "options": {
+            "a": "Enthalpy is conserved in all chemical reactions, whereas internal energy is not.",
+            "b": "At constant pressure, the enthalpy change ($\\Delta H$) is equal to the heat flow ($q_p$).",
+            "c": "Enthalpy does not depend on the physical state of the reactants or products.",
+            "d": "Enthalpy values are always positive, simplifying calculations."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "OpenStax 5.3 explains that for processes at constant pressure (typical for open containers), $\\Delta H = q_p$. This makes it convenient because the heat measured directly equals $\\Delta H$.",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which of the following properties is a **state function**?",
+        "options": {
+            "a": "Heat ($q​$)",
+            "b": "Work ($w​$)",
+            "c": "Enthalpy ($H​$)",
+            "d": "Distance traveled"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3 explicitly states: 'Enthalpy is also a state function... whereas heat and work are not state functions.'",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Calculate the difference between $\\Delta H$ and $\\Delta U$ ($\\Delta H - \\Delta U$) for a reaction occurring at constant temperature $T​$ involving ideal gases, where $\\Delta n$ is the change in moles of gas.",
+        "options": {
+            "a": "$P\\Delta V$",
+            "b": "$\\Delta nRT$",
+            "c": "$-P\\Delta V$",
+            "d": "Zero"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "From LibreTexts 5.3 and OpenStax 5.3, $\\Delta H = \\Delta U + \\Delta(PV)$. For ideal gases at constant temperature, $\\Delta(PV) = \\Delta(nRT) = RT\\Delta n$. Therefore, $\\Delta H - \\Delta U = \\Delta nRT$.",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Under what specific condition is the heat flow ($q​$) equal to the change in internal energy ($\\Delta U$)?",
+        "options": {
+            "a": "Constant pressure",
+            "b": "Constant volume",
+            "c": "Constant temperature",
+            "d": "Standard conditions (1 atm, 25°C)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "LibreTexts 5.3 states: 'If the reaction occurs in a closed vessel, the volume of the system is fixed... the heat flow ($q_v$) must equal $\\Delta U$.'",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which observation definitively indicates an **exothermic** reaction?",
+        "options": {
+            "a": "The system absorbs heat from the surroundings.",
+            "b": "The temperature of the surroundings decreases.",
+            "c": "The enthalpy change ($\\Delta H$) is negative.",
+            "d": "The potential energy of the products is higher than the reactants."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3 states: 'A negative value of an enthalpy change, $\\Delta H < 0$, indicates an exothermic reaction.'",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "In a potential energy diagram for an **endothermic** reaction:",
+        "options": {
+            "a": "The products are at a lower energy level than the reactants.",
+            "b": "Energy is released to the surroundings.",
+            "c": "The products are at a higher energy level than the reactants.",
+            "d": "The value of $\\Delta H$ is negative."
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "In an endothermic reaction, heat is absorbed. This means the system gains energy, placing the products at a higher potential energy level than the reactants (OpenStax 5.1/5.3).",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which process is **endothermic**?",
+        "options": {
+            "a": "Combustion of gasoline",
+            "b": "Freezing of water into ice",
+            "c": "Melting of ice into water",
+            "d": "Condensation of steam"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1 gives the example: 'A reaction or change that absorbs heat is an endothermic process... melting or vaporizing causes its temperature to increase (absorbs thermal energy).' Melting ice requires heat absorption.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "If the enthalpy change for the reaction $A \\rightarrow B$ is $\\Delta H = -50\\ \\text{kJ}$, what is the enthalpy change for the reverse reaction $B \\rightarrow A$?",
+        "options": {
+            "a": "$-50\\ \\text{kJ}$",
+            "b": "$+50\\ \\text{kJ}$",
+            "c": "$-100\\ \\text{kJ}$",
+            "d": "$0\\ \\text{kJ}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3 states: 'If the direction of a chemical equation is reversed, the arithmetic sign of its $\\Delta H$ is changed.'",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Consider the reaction: $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(l)$ with $\\Delta H = -572\\ \\text{kJ}$. Is heat absorbed or released, and how much heat is associated with the formation of **1 mole** of $\\text{H}_2\\text{O}(l)$?",
+        "options": {
+            "a": "Absorbed; $572\\ \\text{kJ}$",
+            "b": "Released; $572\\ \\text{kJ}$",
+            "c": "Absorbed; $286\\ \\text{kJ}$",
+            "d": "Released; $286\\ \\text{kJ}$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "The reaction is exothermic (negative $\\Delta H$), so heat is released. The equation produces 2 moles of water. For 1 mole, the heat is $-572 / 2 = -286\\ \\text{kJ}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which equation correctly calculates the heat ($q​$) absorbed or released by a substance during a temperature change?",
+        "options": {
+            "a": "$q = m \\times c \\times \\Delta T$",
+            "b": "$q = C \\times m$",
+            "c": "$q = m \\times \\Delta T / c$",
+            "d": "$q = c \\times \\Delta T$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1 provides the specific heat formula: $q = c \\times m \\times \\Delta T$.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "What is the specific heat of liquid water, widely used in calorimetry calculations?",
+        "options": {
+            "a": "$1.00\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$",
+            "b": "$2.09\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$",
+            "c": "$4.184\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$",
+            "d": "$8.314\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1 states: 'The specific heat of water is $4.184\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$.'",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "A $10.0\\ \\text{g}$ sample of a metal absorbs $200\\ \\text{J}$ of heat and its temperature increases by $20^{\\circ}\\text{C}$. What is the specific heat of the metal?",
+        "options": {
+            "a": "$0.5\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$",
+            "b": "$1.0\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$",
+            "c": "$2.0\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$",
+            "d": "$4.0\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Using $c = q / (m \\times \\Delta T)$: $c = 200\\ \\text{J} / (10.0\\ \\text{g} \\times 20^{\\circ}\\text{C}) = 200 / 200 = 1.0\\ \\text{J}/\\text{g}^{\\circ}\\text{C}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "In a 'coffee-cup' calorimeter, the pressure is constant. Therefore, the heat measured ($q_{solution}$) allows us to directly calculate:",
+        "options": {
+            "a": "Internal energy change ($\\Delta U$)",
+            "b": "Enthalpy change ($\\Delta H$)",
+            "c": "Entropy change ($\\Delta S$)",
+            "d": "Free energy change ($\\Delta G$)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3 states: 'If a chemical or physical process is carried out at constant pressure... then the heat flow ($q_p$) and enthalpy change ($\\Delta H$) for the process are equal.' Coffee cup calorimeters operate at atmospheric pressure.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "A bomb calorimeter is specifically designed to operate at constant:",
+        "options": {
+            "a": "Pressure",
+            "b": "Volume",
+            "c": "Temperature",
+            "d": "Enthalpy"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.2 states: 'A different type of calorimeter that operates at constant volume, colloquially known as a bomb calorimeter...'",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "When $50.0\\ \\text{mL}$ of $1.0\\ \\text{M}$ HCl and $50.0\\ \\text{mL}$ of $1.0\\ \\text{M}$ NaOH are mixed in a calorimeter, the temperature rises. If $q_{solution} = +2900\\ \\text{J}$, what is $q_{reaction}$?",
+        "options": {
+            "a": "$+2900\\ \\text{J}$",
+            "b": "$-2900\\ \\text{J}$",
+            "c": "$0\\ \\text{J}$",
+            "d": "$+5800\\ \\text{J}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "OpenStax 5.2 explains: '$q_{reaction} = -q_{solution}$.' Since the solution gained heat (temp rose), the reaction released it. $q_{reaction} = -2900\\ \\text{J}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which of the following statements about **heat capacity** ($C​$) versus **specific heat capacity** ($c​$) is true?",
+        "options": {
+            "a": "Heat capacity is an intensive property; specific heat is extensive.",
+            "b": "Heat capacity is an extensive property; specific heat is intensive.",
+            "c": "Both are intensive properties.",
+            "d": "Both are extensive properties."
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "OpenStax 5.1: 'Heat capacity... is an extensive property... Specific heat capacity... is an intensive property.'",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "A hot piece of metal ($100^{\\circ}\\text{C}$) is dropped into cold water ($25^{\\circ}\\text{C}$). Which condition represents **thermal equilibrium**?",
+        "options": {
+            "a": "The metal cools to $0^{\\circ}\\text{C}$.",
+            "b": "The water boils away.",
+            "c": "The metal and water reach the same final temperature.",
+            "d": "The metal loses all its thermal energy."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1: 'Heat flow will continue until the two substances are at the same temperature... thermal equilibrium.'",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "In a bomb calorimeter experiment, the heat capacity of the calorimeter is $10\\ \\text{kJ}/^{\\circ}\\text{C}$. If the combustion of a sample causes the temperature to rise by $5^{\\circ}\\text{C}$, how much heat was released by the reaction?",
+        "options": {
+            "a": "$2\\ \\text{kJ}$",
+            "b": "$5\\ \\text{kJ}$",
+            "c": "$15\\ \\text{kJ}$",
+            "d": "$50\\ \\text{kJ}$"
+        },
+        "correct_answer": "d",
+        "difficulty": "Medium",
+        "explanation": "Using $q = C \\times \\Delta T$: $q = 10\\ \\text{kJ}/^{\\circ}\\text{C} \\times 5^{\\circ}\\text{C} = 50\\ \\text{kJ}$. The reaction releases this heat.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Why is water an excellent substance for use in calorimeters?",
+        "options": {
+            "a": "It has a very low specific heat capacity.",
+            "b": "It has a relatively high specific heat capacity, allowing it to absorb significant heat with small temperature changes.",
+            "c": "It is a good conductor of electricity.",
+            "d": "It reacts exothermically with most metals."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.1 mentions: 'Water has a relatively high specific heat... Water is used... because of its large heat capacity.'",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Hess's Law relies on the fact that enthalpy is a **state function**. What does this imply?",
+        "options": {
+            "a": "The enthalpy change depends on the path taken.",
+            "b": "The enthalpy change depends only on the initial and final states, not the path.",
+            "c": "The enthalpy change is always zero for a cyclic process.",
+            "d": "The enthalpy change cannot be calculated for multi-step reactions."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3: 'Hess's law is valid because enthalpy is a state function: Enthalpy changes depend only on where a chemical process starts and ends, but not on the path it takes.'",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Given the following reactions:\n1) $A \\rightarrow B$ ​$\\Delta H = +30\\ \\text{kJ}$\n2) $B \\rightarrow C$ ​$\\Delta H = -10\\ \\text{kJ}$\nWhat is $\\Delta H$ for the reaction $A \\rightarrow C$?",
+        "options": {
+            "a": "$+20\\ \\text{kJ}$",
+            "b": "$+40\\ \\text{kJ}$",
+            "c": "$-20\\ \\text{kJ}$",
+            "d": "$+300\\ \\text{kJ}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "According to Hess's Law, add the $\\Delta H$ values: $30 + (-10) = +20\\ \\text{kJ}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Calculate $\\Delta H$ for $2A \\rightarrow 2B$ given that $A \\rightarrow B$ has $\\Delta H = x$.",
+        "options": {
+            "a": "$x​$",
+            "b": "$x^2$",
+            "c": "$2x$",
+            "d": "$x/2$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3: 'If we multiply or divide an equation by a number, then the enthalpy change should also be multiplied or divided by the same number.' Multiplying by 2 means $\\Delta H = 2x$.",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Given:\n$\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ ​$\\Delta H = -394\\ \\text{kJ}$\n$\\text{CO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ ​$\\Delta H = -283\\ \\text{kJ}$\nCalculate $\\Delta H$ for: $\\text{C}(s) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{CO}(g)$",
+        "options": {
+            "a": "$-677\\ \\text{kJ}$",
+            "b": "$-111\\ \\text{kJ}$",
+            "c": "$+111\\ \\text{kJ}$",
+            "d": "$+677\\ \\text{kJ}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "We need $\\text{C} \\rightarrow \\text{CO}$.\nTake eq 1: $\\text{C} + \\text{O}_2 \\rightarrow \\text{CO}_2$ ($-394$)\nReverse eq 2: $\\text{CO}_2 \\rightarrow \\text{CO} + 0.5\\text{O}_2$ ($+283$)\nSum: $\\text{C} + \\text{O}_2 \\rightarrow \\text{CO} + 0.5\\text{O}_2$\nNet: $\\text{C} + 0.5\\text{O}_2 \\rightarrow \\text{CO}$\n$\\Delta H = -394 + 283 = -111\\ \\text{kJ}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "If a reaction consists of three steps, and the $\\Delta H$ values for the steps are $-100\\ \\text{kJ}$, $+50\\ \\text{kJ}$, and $-20\\ \\text{kJ}$, what is the total $\\Delta H$ for the overall reaction?",
+        "options": {
+            "a": "$-70\\ \\text{kJ}$",
+            "b": "$-170\\ \\text{kJ}$",
+            "c": "$+70\\ \\text{kJ}$",
+            "d": "$-30\\ \\text{kJ}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Sum of steps: $-100 + 50 + (-20) = -50 + (-20) = -70\\ \\text{kJ}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "When using Hess's Law, if you reverse a chemical reaction, what happens to the sign of $\\Delta H$?",
+        "options": {
+            "a": "It remains the same.",
+            "b": "It becomes the reciprocal ($1/\\Delta H$).",
+            "c": "It changes sign (positive becomes negative, and vice versa).",
+            "d": "It is squared."
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3: 'If the direction of a chemical equation is reversed, the arithmetic sign of its $\\Delta H$ is changed.'",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Using the following data:\n$2\\text{Fe}(s) + \\frac{3}{2}\\text{O}_2(g) \\rightarrow \\text{Fe}_2\\text{O}_3(s)$ ​$\\Delta H = -824\\ \\text{kJ}$\n$3\\text{Fe}(s) + 2\\text{O}_2(g) \\rightarrow \\text{Fe}_3\\text{O}_4(s)$ ​$\\Delta H = -1118\\ \\text{kJ}$\nCalculate $\\Delta H$ for the reaction: $3\\text{Fe}_2\\text{O}_3(s) \\rightarrow 2\\text{Fe}_3\\text{O}_4(s) + \\frac{1}{2}\\text{O}_2(g)$.",
+        "options": {
+            "a": "$-294\\ \\text{kJ}$",
+            "b": "$+236\\ \\text{kJ}$",
+            "c": "$+294\\ \\text{kJ}$",
+            "d": "$-3354\\ \\text{kJ}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Target: $3\\text{Fe}_2\\text{O}_3 \\rightarrow 2\\text{Fe}_3\\text{O}_4 + 0.5\\text{O}_2$\nReverse eq 1 and multiply by 3: $3\\text{Fe}_2\\text{O}_3 \\rightarrow 6\\text{Fe} + 4.5\\text{O}_2$ ($\\Delta H = +824 \\times 3 = +2472$)\nMultiply eq 2 by 2: $6\\text{Fe} + 4\\text{O}_2 \\rightarrow 2\\text{Fe}_3\\text{O}_4$ ($\\Delta H = -1118 \\times 2 = -2236$)\nSum: $3\\text{Fe}_2\\text{O}_3 + 4\\text{O}_2 \\rightarrow 4.5\\text{O}_2 + 2\\text{Fe}_3\\text{O}_4$\nNet: $3\\text{Fe}_2\\text{O}_3 \\rightarrow 2\\text{Fe}_3\\text{O}_4 + 0.5\\text{O}_2$\n$\\Delta H = 2472 - 2236 = +236\\ \\text{kJ}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 31,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which equation applies Hess's Law using enthalpies of formation?",
+        "options": {
+            "a": "$\\Delta H = \\sum n \\Delta H_f^\\circ(\\text{reactants}) - \\sum m \\Delta H_f^\\circ(\\text{products})$",
+            "b": "$\\Delta H = \\sum n \\Delta H_f^\\circ(\\text{products}) + \\sum m \\Delta H_f^\\circ(\\text{reactants})$",
+            "c": "$\\Delta H = \\sum n \\Delta H_f^\\circ(\\text{products}) - \\sum m \\Delta H_f^\\circ(\\text{reactants})$",
+            "d": "$\\Delta H = \\sum n \\Delta H_f^\\circ(\\text{products}) \\times \\sum m \\Delta H_f^\\circ(\\text{reactants})$"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3 gives the formula: $\\Delta H_{\\text{reaction}}^\\circ = \\sum n \\times \\Delta H_f^\\circ(\\text{products}) - \\sum m \\times \\Delta H_f^\\circ(\\text{reactants})$.",
+        "section_id": null
+    },
+    {
+        "question_number": 32,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "What is the standard enthalpy of formation ($\\Delta H_f^\\circ$) of a pure element in its most stable form under standard conditions?",
+        "options": {
+            "a": "$-100\\ \\text{kJ}/\\text{mol}$",
+            "b": "$0\\ \\text{kJ}/\\text{mol}$",
+            "c": "$+100\\ \\text{kJ}/\\text{mol}$",
+            "d": "It varies depending on the element."
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "OpenStax 5.3: 'By definition, the standard enthalpy of formation of an element in its most stable form is equal to zero under standard conditions.'",
+        "section_id": null
+    },
+    {
+        "question_number": 33,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Calculate the standard enthalpy of reaction for: $2\\text{CO}(g) + \\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g)$, given $\\Delta H_f^\\circ(\\text{CO}) = -110.5\\ \\text{kJ}/\\text{mol}$ and $\\Delta H_f^\\circ(\\text{CO}_2) = -393.5\\ \\text{kJ}/\\text{mol}$.",
+        "options": {
+            "a": "$-283.0\\ \\text{kJ}$",
+            "b": "$-566.0\\ \\text{kJ}$",
+            "c": "$+566.0\\ \\text{kJ}$",
+            "d": "$-787.0\\ \\text{kJ}$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$\\Delta H = [2 \\times \\Delta H_f(\\text{CO}_2)] - [2 \\times \\Delta H_f(\\text{CO}) + 1 \\times \\Delta H_f(\\text{O}_2)]$\n$\\Delta H = [2(-393.5)] - [2(-110.5) + 0] = -787 - (-221) = -566\\ \\text{kJ}$.",
+        "section_id": null
+    },
+    {
+        "question_number": 34,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Which of the following reactions defines the standard enthalpy of formation for ethanol, $\\text{C}_2\\text{H}_5\\text{OH}(l)$?",
+        "options": {
+            "a": "$2\\text{C}(diamond) + 3\\text{H}_2(g) + 0.5\\text{O}_2(g) \\rightarrow \\text{C}_2\\text{H}_5\\text{OH}(l)$",
+            "b": "$2\\text{C}(graphite) + 3\\text{H}_2(g) + 0.5\\text{O}_2(g) \\rightarrow \\text{C}_2\\text{H}_5\\text{OH}(l)$",
+            "c": "$2\\text{C}(graphite) + 6\\text{H}(g) + \\text{O}(g) \\rightarrow \\text{C}_2\\text{H}_5\\text{OH}(l)$",
+            "d": "$\\text{C}_2\\text{H}_4(g) + \\text{H}_2\\text{O}(l) \\rightarrow \\text{C}_2\\text{H}_5\\text{OH}(l)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Hard",
+        "explanation": "Formation enthalpy must form **1 mole** of product from elements in their **standard states**. Carbon's standard state is graphite, Hydrogen is $\\text{H}_2(g)$, Oxygen is $\\text{O}_2(g)$.",
+        "section_id": null
+    },
+    {
+        "question_number": 35,
+        "subject": "Chemistry",
+        "topic": "Thermochemistry",
+        "question_text": "Calculate $\\Delta H_f^\\circ$ for $\\text{O}_3(g)$ given that $3\\text{O}_2(g) \\rightarrow 2\\text{O}_3(g)$ has $\\Delta H^\\circ = +286\\ \\text{kJ}$.",
+        "options": {
+            "a": "$+143\\ \\text{kJ}/\\text{mol}$",
+            "b": "$+286\\ \\text{kJ}/\\text{mol}$",
+            "c": "$+572\\ \\text{kJ}/\\text{mol}$",
+            "d": "$-143\\ \\text{kJ}/\\text{mol}$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "The formation reaction for ozone forms 1 mole of $\\text{O}_3$. The given reaction forms 2 moles. Divide $\\Delta H$ by 2: $286 / 2 = 143\\ \\text{kJ}/\\text{mol}$.",
+        "section_id": null
+    }
+]

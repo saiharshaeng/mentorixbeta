@@ -1,0 +1,482 @@
+[
+    {
+        "question_number": 1,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation and Reduction Concepts",
+        "question_text": "Which of the following statements best defines **oxidation** in terms of electron transfer?",
+        "options": {
+            "a": "Gain of electrons",
+            "b": "Loss of electrons",
+            "c": "Gain of protons",
+            "d": "Loss of protons"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "According to the mnemonic **OIL RIG** (Oxidation Is Loss, Reduction Is Gain), oxidation is defined as the loss of electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 2,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation and Reduction Concepts",
+        "question_text": "In a redox reaction, the species that donates electrons is known as the:",
+        "options": {
+            "a": "Oxidizing agent",
+            "b": "Reducing agent",
+            "c": "Cathode",
+            "d": "Electrolyte"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The reducing agent loses electrons (is oxidized) and thereby causes the reduction of another species. Therefore, the electron donor is the reducing agent.",
+        "section_id": null
+    },
+    {
+        "question_number": 3,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation and Reduction Concepts",
+        "question_text": "Consider the following reaction:\n$$Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s)$$\nWhich species is acting as the **oxidizing agent**?",
+        "options": {
+            "a": "Zn(s)",
+            "b": "Cu²⁺(aq)",
+            "c": "Zn²⁺(aq)",
+            "d": "Cu(s)"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "$Cu^{2+}$ gains electrons to become $Cu(s)$. Since it accepts electrons, it causes the oxidation of zinc, making $Cu^{2+}$ the oxidizing agent.",
+        "section_id": null
+    },
+    {
+        "question_number": 4,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation and Reduction Concepts",
+        "question_text": "In the reaction $2Na(s) + Cl_2(g) \\rightarrow 2NaCl(s)$, which element is oxidized?",
+        "options": {
+            "a": "Sodium (Na)",
+            "b": "Chlorine (Cl)",
+            "c": "Both Na and Cl",
+            "d": "Neither Na nor Cl"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Sodium ($Na$) starts with an oxidation number of 0 and ends with +1 in $NaCl$. An increase in oxidation number indicates oxidation.",
+        "section_id": null
+    },
+    {
+        "question_number": 5,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation and Reduction Concepts",
+        "question_text": "Which of the following processes represents a **reduction**?",
+        "options": {
+            "a": "$Fe^{2+} \\rightarrow Fe^{3+} + e^-$",
+            "b": "$Cl_2 + 2e^- \\rightarrow 2Cl^-$",
+            "c": "$Zn \\rightarrow Zn^{2+} + 2e^-$",
+            "d": "$Na \\rightarrow Na^+ + e^-$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Reduction is the gain of electrons. In option b, the chlorine molecule gains two electrons to form chloride ions ($Cl^-$).",
+        "section_id": null
+    },
+    {
+        "question_number": 6,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "What is the oxidation number of sulfur (S) in sulfuric acid, $H_2SO_4$?",
+        "options": {
+            "a": "+4",
+            "b": "+6",
+            "c": "-2",
+            "d": "0"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "In $H_2SO_4$: H is +1 (total +2), O is -2 (total -8). Let S be $x​$. \n$$2(+1) + x + 4(-2) = 0$$\n$$2 + x - 8 = 0 \\Rightarrow x = +6$$",
+        "section_id": null
+    },
+    {
+        "question_number": 7,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "Determine the oxidation state of manganese (Mn) in the permanganate ion, $MnO_4^-$.",
+        "options": {
+            "a": "+3",
+            "b": "+5",
+            "c": "+7",
+            "d": "+2"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "In $MnO_4^-$: O is -2 (total -8). The overall charge is -1. \n$$x + 4(-2) = -1$$\n$$x - 8 = -1 \\Rightarrow x = +7$$",
+        "section_id": null
+    },
+    {
+        "question_number": 8,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "What is the oxidation number of oxygen in hydrogen peroxide, $H_2O_2$?",
+        "options": {
+            "a": "-2",
+            "b": "-1",
+            "c": "0",
+            "d": "+1"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Peroxides are a major exception to the oxygen rule. In $H_2O_2$, H is +1, so: \n$$2(+1) + 2x = 0 \\Rightarrow 2x = -2 \\Rightarrow x = -1$$",
+        "section_id": null
+    },
+    {
+        "question_number": 9,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "Calculate the oxidation number of chromium (Cr) in the dichromate ion, $Cr_2O_7^{2-}$.",
+        "options": {
+            "a": "+3",
+            "b": "+6",
+            "c": "+7",
+            "d": "+12"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "In $Cr_2O_7^{2-}$: O is -2 (total -14). Overall charge is -2. \n$$2x + 7(-2) = -2$$\n$$2x - 14 = -2 \\Rightarrow 2x = +12 \\Rightarrow x = +6$$",
+        "section_id": null
+    },
+    {
+        "question_number": 10,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "What is the oxidation number of nitrogen in the ammonium ion, $NH_4^+$?",
+        "options": {
+            "a": "-3",
+            "b": "-1",
+            "c": "+3",
+            "d": "+5"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "In $NH_4^+$: H is +1 (total +4). Overall charge is +1. \n$$x + 4(+1) = +1$$\n$$x + 4 = +1 \\Rightarrow x = -3$$",
+        "section_id": null
+    },
+    {
+        "question_number": 11,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "What is the oxidation number of chlorine in elemental chlorine gas, $Cl_2$?",
+        "options": {
+            "a": "-1",
+            "b": "0",
+            "c": "+1",
+            "d": "-2"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "The oxidation number of an atom in its elemental form (uncombined with other elements) is always **0**.",
+        "section_id": null
+    },
+    {
+        "question_number": 12,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "In the compound $FeCl_3$, what is the oxidation number of iron (Fe)?",
+        "options": {
+            "a": "+2",
+            "b": "+3",
+            "c": "0",
+            "d": "-1"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "Chlorine (a halogen) usually has an oxidation number of -1. \n$$x + 3(-1) = 0 \\Rightarrow x = +3$$",
+        "section_id": null
+    },
+    {
+        "question_number": 13,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Oxidation Numbers",
+        "question_text": "Which element undergoes a change in oxidation number from +5 to +2 in the reaction:\n$$3Cu + 8HNO_3 \\rightarrow 3Cu(NO_3)_2 + 2NO + 4H_2O$$",
+        "options": {
+            "a": "Cu",
+            "b": "H",
+            "c": "N",
+            "d": "O"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "Nitrogen in $HNO_3$ is +5. In $NO$ (product), nitrogen is +2 (since O is -2). Thus, Nitrogen changes from +5 to +2.",
+        "section_id": null
+    },
+    {
+        "question_number": 14,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "When balancing the half-reaction $MnO_4^- \\rightarrow Mn^{2+}$ in **acidic** solution, how many water molecules ($H_2O$) must be added to the product side?",
+        "options": {
+            "a": "2",
+            "b": "4",
+            "c": "6",
+            "d": "8"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "To balance the 4 oxygen atoms in $MnO_4^-$, you must add **4** water molecules ($H_2O$) to the right side.",
+        "section_id": null
+    },
+    {
+        "question_number": 15,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "In the balanced half-reaction for the reduction of dichromate ($Cr_2O_7^{2-}$) to chromium(III) ($Cr^{3+}$) in acidic solution, how many electrons are transferred?",
+        "options": {
+            "a": "2",
+            "b": "3",
+            "c": "6",
+            "d": "12"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "The half reaction is:\n$$Cr_2O_7^{2-} + 14H^+ + 6e^- \\rightarrow 2Cr^{3+} + 7H_2O$$\nThe oxidation state of Cr changes from +6 to +3. Since there are 2 Cr atoms, the total change is $2 \\times 3 = 6$ electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 16,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "When balancing the reaction $SO_3^{2-} \\rightarrow SO_4^{2-}$ in **acidic** solution, what is the coefficient of $H^+$ added?",
+        "options": {
+            "a": "1 on the left",
+            "b": "2 on the right",
+            "c": "2 on the left",
+            "d": "4 on the right"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "1. Balance O by adding 1 $H_2O$ to the left: $H_2O + SO_3^{2-} \\rightarrow SO_4^{2-}$.\n2. Balance H by adding **2** $H^+$ to the right: $H_2O + SO_3^{2-} \\rightarrow SO_4^{2-} + 2H^+$.",
+        "section_id": null
+    },
+    {
+        "question_number": 17,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "What is the final balanced half-reaction for the oxidation of $Fe^{2+}$ to $Fe^{3+}$?",
+        "options": {
+            "a": "$Fe^{2+} \\rightarrow Fe^{3+} + e^-$",
+            "b": "$Fe^{2+} + e^- \\rightarrow Fe^{3+}$",
+            "c": "$Fe^{2+} \\rightarrow Fe^{3+} + 2e^-$",
+            "d": "$2Fe^{2+} \\rightarrow 2Fe^{3+} + e^-$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Mass is balanced (1 Fe each side). Charge must be balanced: +2 on left, +3 on right. Adding 1 electron ($e^-$) to the right makes the net charge +2 on both sides.",
+        "section_id": null
+    },
+    {
+        "question_number": 18,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "When balancing a redox reaction in **basic** solution, which step is performed after balancing as if it were in acidic solution?",
+        "options": {
+            "a": "Add $H^+$ to both sides equal to the number of $OH^-$ ions",
+            "b": "Add $OH^-$ to both sides equal to the number of $H^+$ ions",
+            "c": "Add $H_2O$ to neutralize the charge",
+            "d": "Multiply all coefficients by 2"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "To convert from acidic to basic, you add hydroxide ions ($OH^-$) to **both sides** equal to the number of $H^+$ ions present. The $H^+$ and $OH^-$ on one side combine to form water.",
+        "section_id": null
+    },
+    {
+        "question_number": 19,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "Identify the correct number of electrons required to balance the charge in the following half-reaction:\n$$NO_3^- + 4H^+ + \\text{? } e^- \\rightarrow NO + 2H_2O$$",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "Left side charge: $(-1) + 4(+1) = +3$.\nRight side charge: $0​$.\nTo balance, add **3** electrons to the left: $(+3) + 3(-1) = 0$.",
+        "section_id": null
+    },
+    {
+        "question_number": 20,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "Which of the following equations represents a balanced **disproportionation** reaction of hydrogen peroxide?",
+        "options": {
+            "a": "$H_2O_2 \\rightarrow H_2 + O_2$",
+            "b": "$2H_2O_2 \\rightarrow 2H_2O + O_2$",
+            "c": "$H_2O_2 + 2H^+ + 2e^- \\rightarrow 2H_2O$",
+            "d": "$H_2 + O_2 \\rightarrow H_2O_2$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "In $2H_2O_2 \\rightarrow 2H_2O + O_2$, oxygen in peroxide (-1) is both oxidized to $O_2$ (0) and reduced to $H_2O$ (-2). This is a disproportionation.",
+        "section_id": null
+    },
+    {
+        "question_number": 21,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Balancing Redox Reactions",
+        "question_text": "In the half-reaction method, why must the number of electrons lost in the oxidation half-reaction equal the number of electrons gained in the reduction half-reaction?",
+        "options": {
+            "a": "To ensure the reaction is reversible",
+            "b": "To conserve mass of oxygen atoms",
+            "c": "To conserve charge (electrons cannot be created or destroyed)",
+            "d": "To ensure the solution remains neutral"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Electrons released by the oxidation process must be consumed by the reduction process. Matter and charge conservation dictates that electrons are not created or destroyed.",
+        "section_id": null
+    },
+    {
+        "question_number": 22,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "In a galvanic (voltaic) cell, oxidation always occurs at the:",
+        "options": {
+            "a": "Anode",
+            "b": "Cathode",
+            "c": "Salt Bridge",
+            "d": "Voltmeter"
+        },
+        "correct_answer": "a",
+        "difficulty": "Easy",
+        "explanation": "Remember **An Ox** (Anode Oxidation) and **Red Cat** (Reduction Cathode). Oxidation occurs at the anode.",
+        "section_id": null
+    },
+    {
+        "question_number": 23,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "In a functioning galvanic cell connecting a Zinc electrode and a Copper electrode, which way do electrons flow in the external wire?",
+        "options": {
+            "a": "From Cathode to Anode",
+            "b": "From Copper to Zinc",
+            "c": "From Anode to Cathode",
+            "d": "Through the salt bridge"
+        },
+        "correct_answer": "c",
+        "difficulty": "Easy",
+        "explanation": "Electrons flow from the site of oxidation (Anode) to the site of reduction (Cathode) through the external circuit.",
+        "section_id": null
+    },
+    {
+        "question_number": 24,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "What is the primary function of the **salt bridge** in an electrochemical cell?",
+        "options": {
+            "a": "To transfer electrons between the solutions",
+            "b": "To provide a pathway for ions to maintain electrical neutrality",
+            "c": "To catalyze the redox reaction",
+            "d": "To increase the voltage of the cell"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The salt bridge allows ions to flow between half-cells to balance the charge build-up that would otherwise stop the electron flow. It does not conduct electrons.",
+        "section_id": null
+    },
+    {
+        "question_number": 25,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "Calculate the standard cell potential ($E^\\circ_{cell}$) for a cell constructed from the following half-reactions:\n$$Zn^{2+} + 2e^- \\rightarrow Zn \\quad (E^\\circ = -0.76\\text{ V})$$\n$$Cu^{2+} + 2e^- \\rightarrow Cu \\quad (E^\\circ = +0.34\\text{ V})$$",
+        "options": {
+            "a": "+0.42 V",
+            "b": "-0.42 V",
+            "c": "+1.10 V",
+            "d": "-1.10 V"
+        },
+        "correct_answer": "c",
+        "difficulty": "Medium",
+        "explanation": "$E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}$. Copper has the higher potential, so it is the cathode.\n$$E^\\circ_{cell} = 0.34 - (-0.76) = 1.10\\text{ V}$$",
+        "section_id": null
+    },
+    {
+        "question_number": 26,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "Which of the following correctly represents the standard cell notation for a Galvanic cell made of Zinc and Copper?",
+        "options": {
+            "a": "$Cu(s) | Cu^{2+}(aq) || Zn^{2+}(aq) | Zn(s)$",
+            "b": "$Zn(s) | Zn^{2+}(aq) || Cu^{2+}(aq) | Cu(s)$",
+            "c": "$Zn^{2+}(aq) | Zn(s) || Cu(s) | Cu^{2+}(aq)$",
+            "d": "$Zn(s) || Cu(s) | Zn^{2+}(aq) | Cu^{2+}(aq)$"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "Standard notation is **Anode | Anode Ion || Cathode Ion | Cathode**. Zinc is oxidized (Anode), Copper is reduced (Cathode).",
+        "section_id": null
+    },
+    {
+        "question_number": 27,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "Given the standard reduction potentials:\n$$Ag^+ + e^- \\rightarrow Ag \\quad E^\\circ = +0.80\\text{ V}$$\n$$Zn^{2+} + 2e^- \\rightarrow Zn \\quad E^\\circ = -0.76\\text{ V}$$\nWhat is the standard potential for the spontaneous reaction between these two couples?",
+        "options": {
+            "a": "+0.04 V",
+            "b": "+1.56 V",
+            "c": "+0.84 V",
+            "d": "-1.56 V"
+        },
+        "correct_answer": "b",
+        "difficulty": "Medium",
+        "explanation": "The spontaneous reaction involves the reduction of the higher potential species (Ag) and oxidation of the lower (Zn).\n$$E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode} = 0.80 - (-0.76) = 1.56\\text{ V}$$",
+        "section_id": null
+    },
+    {
+        "question_number": 28,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "The Standard Hydrogen Electrode (SHE) is assigned a potential of exactly:",
+        "options": {
+            "a": "1.00 V",
+            "b": "0.00 V",
+            "c": "-1.00 V",
+            "d": "0.10 V"
+        },
+        "correct_answer": "b",
+        "difficulty": "Easy",
+        "explanation": "By definition, the standard electrode potential of the standard hydrogen electrode (SHE) is exactly **0.00 V**.",
+        "section_id": null
+    },
+    {
+        "question_number": 29,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "Which condition indicates that a redox reaction is **spontaneous** under standard conditions?",
+        "options": {
+            "a": "$E^\\circ_{cell} > 0$",
+            "b": "$E^\\circ_{cell} < 0$",
+            "c": "$E^\\circ_{cell} = 0$",
+            "d": "$\\Delta G^\\circ > 0$"
+        },
+        "correct_answer": "a",
+        "difficulty": "Medium",
+        "explanation": "A positive standard cell potential ($E^\\circ_{cell} > 0$) corresponds to a negative Gibbs Free Energy ($\\Delta G^\\circ < 0$), which indicates spontaneity.",
+        "section_id": null
+    },
+    {
+        "question_number": 30,
+        "subject": "Redox Reactions and Electrochemistry",
+        "topic": "Electrochemistry and Cells",
+        "question_text": "Using the table below, which metal can spontaneously reduce $Pb^{2+}$ ions?\n\n| Half-Reaction | $E^\\circ$ (V) |\n| :--- | :--- |\n| $Mg^{2+} + 2e^- \\rightarrow Mg$ | -2.37 |\n| $Zn^{2+} + 2e^- \\rightarrow Zn$ | -0.76 |\n| $Pb^{2+} + 2e^- \\rightarrow Pb$ | -0.13 |\n| $Cu^{2+} + 2e^- \\rightarrow Cu$ | +0.34 |",
+        "options": {
+            "a": "Cu",
+            "b": "Pb",
+            "c": "Mg",
+            "d": "None of the above"
+        },
+        "correct_answer": "c",
+        "difficulty": "Hard",
+        "explanation": "For a metal to reduce $Pb^{2+}$, it must be a stronger reducing agent (have a more negative $E^\\circ$) than Pb. Magnesium ($Mg$, -2.37 V) is more negative than Lead ($Pb$, -0.13 V), so Mg can reduce $Pb^{2+}$.",
+        "section_id": null
+    }
+]
