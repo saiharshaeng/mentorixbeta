@@ -2595,20 +2595,37 @@ async function startCompPractice() {
     await window.pyqService.preloadExam(compState.examId);
   }
 
-  const chapterInstruction = chapter === 'All Chapters'
-    ? `Mix questions proportionally across all chapters of ${section}.`
-    : `Focus ALL ${count} question(s) exclusively on the chapter: "${chapter}".`;
+  let questions = [];
+  const isJEEOrNEET = exam.id === 'jee_main' || exam.id === 'neet';
 
-  let allowedTypes = '';
-  if (exam.id === 'jee_main') {
-    allowedTypes = 'Only generate: "mcq" and "numerical". Do NOT generate "msq".';
-  } else if (exam.id === 'neet') {
-    allowedTypes = 'Only generate: "mcq". Do NOT generate "msq" or "numerical".';
+  if (isJEEOrNEET) {
+    if (window.pyqService) {
+      const result = window.pyqService.getQuestions({
+        examId: compState.examId,
+        count: count,
+        subject: section,
+        chapter: chapter,
+        difficulty: diff
+      });
+      if (result && result.questions && result.questions.length > 0) {
+        questions = result.questions;
+      }
+    }
   } else {
-    allowedTypes = 'Use standard types: "mcq", "msq", and "numerical".';
-  }
+    const chapterInstruction = chapter === 'All Chapters'
+      ? `Mix questions proportionally across all chapters of ${section}.`
+      : `Focus ALL ${count} question(s) exclusively on the chapter: "${chapter}".`;
 
-  const prompt = `Generate exactly ${count} high-fidelity exam question(s) for the "${exam.name}" exam.
+    let allowedTypes = '';
+    if (exam.id === 'jee_main') {
+      allowedTypes = 'Only generate: "mcq" and "numerical". Do NOT generate "msq".';
+    } else if (exam.id === 'neet') {
+      allowedTypes = 'Only generate: "mcq". Do NOT generate "msq" or "numerical".';
+    } else {
+      allowedTypes = 'Use standard types: "mcq", "msq", and "numerical".';
+    }
+
+    const prompt = `Generate exactly ${count} high-fidelity exam question(s) for the "${exam.name}" exam.
 Subject/Section: ${section}
 ${chapterInstruction}
 Difficulty level: ${diff} (strictly enforce ${diff} difficulty for all questions)
@@ -2629,24 +2646,23 @@ Return ONLY a valid JSON object:
   ]
 }`;
 
-  let questions = [];
-
-  try {
-    const sys = "You are a professional exam paper setter. Output ONLY valid JSON, no markdown.";
-    const reply = await ai([{ role: 'user', content: prompt }], sys, count * 500 + 500, true);
-    
-    if (reply) {
-      const escapedReply = escapeJsonLatex(reply);
-      const data = JSON.parse(escapedReply);
-      if (data && data.questions && data.questions.length > 0) {
-        questions = data.questions;
+    try {
+      const sys = "You are a professional exam paper setter. Output ONLY valid JSON, no markdown.";
+      const reply = await ai([{ role: 'user', content: prompt }], sys, count * 500 + 500, true);
+      
+      if (reply) {
+        const escapedReply = escapeJsonLatex(reply);
+        const data = JSON.parse(escapedReply);
+        if (data && data.questions && data.questions.length > 0) {
+          questions = data.questions;
+        }
       }
+    } catch (err) {
+      console.warn('[Comp Exam] AI practice failed, using offline bank:', err);
     }
-  } catch (err) {
-    console.warn('[Comp Exam] AI practice failed, using offline bank:', err);
   }
 
-  // Fallback to offline bank if AI fails
+  // Fallback to offline bank if AI/PYQService fails or returns nothing
   if (questions.length === 0) {
     if (window.pyqService) {
       const result = window.pyqService.getQuestions({
