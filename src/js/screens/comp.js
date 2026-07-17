@@ -458,6 +458,16 @@ function escapeJsonLatex(str) {
   return result;
 }
 
+// Render markdown images in questions while preserving LaTeX & escaping HTML
+function renderQuestionText(text) {
+  let escaped = esc(text);
+  const mdImgRegex = /!\[(.*?)\]\((.*?)\)/g;
+  escaped = escaped.replace(mdImgRegex, (match, alt, url) => {
+    return `<img src="${url}" alt="${alt}" style="max-width:100%; height:auto; display:block; margin:12px auto; border-radius:8px; border:1px solid rgba(255,255,255,0.12);" />`;
+  });
+  return escaped;
+}
+
 // 🏁 Procedural Question Templates (satisfies realistic subject-wise & chapter-wise distribution)
 const MATHEMATICS_TEMPLATES = [
   { q: "Evaluate the definite integral: $\\int_0^{a} \\frac{x}{\\sqrt{x^2 + b^2}} dx$ where $a = {a}$ and $b = {b}$.", opts: ["$\\sqrt{{a}^2+{b}^2} - {b}$", "$\\sqrt{{a}^2+{b}^2} + {b}$", "${a}$", "$0$"], ans: [0], type: "mcq", chap: "Definite Integrals" },
@@ -739,8 +749,8 @@ function renderMistakeDiaryTab(exam) {
               ${!m.reviewed ? `<button class="btn bsm bok" style="font-size:9px;padding:2px 6px;min-height:auto" onclick="markMistakeReviewed(${m.id})">Mark Reviewed</button>` : '<span style="color:var(--okl);font-size:10px">✅</span>'}
             </div>
           </div>
-          <div style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:6px" class="katex-render-target">${esc(m.q)}</div>
-          <div style="font-size:11px;padding:7px;background:rgba(255,255,255,0.02);border-radius:6px" class="katex-render-target"><strong style="color:#fff">Solution: </strong><span style="color:var(--sub)">${esc(m.expl||'Review this concept.')}</span></div>
+          <div style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:6px" class="katex-render-target">${renderQuestionText(m.q)}</div>
+          <div style="font-size:11px;padding:7px;background:rgba(255,255,255,0.02);border-radius:6px" class="katex-render-target"><strong style="color:#fff">Solution: </strong><span style="color:var(--sub)">${renderQuestionText(m.expl||'Review this concept.')}</span></div>
         </div>`).join('')}
       </div>
     </div>
@@ -854,6 +864,7 @@ async function startPYQSession() {
   
   // Try database files first
   if (window.pyqService) {
+    await window.pyqService.preloadExam(compState.examId);
     const result = window.pyqService.getQuestions({
       examId: compState.examId,
       count: count,
@@ -1863,6 +1874,11 @@ async function startMockExamSetup() {
   const diff = compState.practiceDifficulty || 'medium';
   const subjects = exam.subjects || ['General Studies'];
 
+  // Preload exam questions dynamically
+  if (window.pyqService) {
+    await window.pyqService.preloadExam(compState.examId);
+  }
+
   let questions = [];
   let durationSeconds = 600; // default 10 minutes
 
@@ -2077,7 +2093,7 @@ function renderActiveExamUI() {
 
         <!-- Question Content -->
         <div style="font-size:15px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:20px;white-space:pre-line" class="katex-render-target">
-          ${esc(q.q)}
+          ${renderQuestionText(q.q)}
         </div>
 
         <!-- Answers -->
@@ -2100,7 +2116,7 @@ function renderActiveExamUI() {
                 <div style="width:20px;height:20px;border-radius:50%;border:1px solid ${isSelected?'var(--p)':'rgba(255,255,255,0.2)'};display:flex;align-items:center;justify-content:center;font-size:11px;background:${isSelected?'var(--p)':'transparent'};color:#fff">
                   ${String.fromCharCode(65 + oIdx)}
                 </div>
-                <div class="katex-render-target">${esc(opt)}</div>
+                <div class="katex-render-target">${renderQuestionText(opt)}</div>
               </div>
             `;
           }).join('')}
@@ -2428,7 +2444,7 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
               <span style="font-weight:700;color:var(--mut)">Question ${idx + 1}</span>
               <span class="tag ${res.isCorrect?'tok':'tred'}">${res.isCorrect?'Correct':'Incorrect'}</span>
             </div>
-            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:12px;white-space:pre-line" class="katex-render-target">${esc(res.q)}</p>
+            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:12px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}</p>
             
             <div style="font-size:12px;color:var(--sub);margin-bottom:8px">
               Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':'var(--redl)'}">${res.user !== undefined && res.user !== '' ? (res.user.join ? res.user.map(u => String.fromCharCode(65+u)).join(', ') : (isNaN(res.user) ? res.user : String.fromCharCode(65+res.user))) : 'Skipped'}</strong>
@@ -2436,7 +2452,7 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
 
             <div style="font-size:12px;color:var(--sub);background:rgba(255,255,255,0.02);padding:10px;border-radius:8px" class="katex-render-target">
               <span style="font-weight:700;color:#fff;display:block;margin-bottom:4px">Solution Details:</span>
-              ${esc(res.explanation)}
+              ${renderQuestionText(res.explanation || res.expl || '')}
             </div>
           </div>
         `).join('')}
@@ -2463,11 +2479,11 @@ function launchPracticeOverlay(q) {
       </div>
 
       <div style="font-size:14px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:16px;white-space:pre-line" class="katex-render-target">
-        ${esc(q.q)}
+        ${renderQuestionText(q.q)}
       </div>
 
       <div id="practice-hint-box" style="display:none;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:10px;font-size:12px;color:var(--goldl);margin-bottom:14px" class="katex-render-target">
-        <strong>Hint:</strong> ${esc(q.hint || 'Analyze the question parameters carefully.')}
+        <strong>Hint:</strong> ${renderQuestionText(q.hint || 'Analyze the question parameters carefully.')}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
@@ -2479,7 +2495,7 @@ function launchPracticeOverlay(q) {
         ` : (q.opts || []).map((opt, idx) => `
           <button class="btn bsm bgh w100" style="text-align:left;justify-content:flex-start;padding:12px 14px;font-size:13px;display:flex;align-items:center;gap:8px" onclick="checkPracticeAnswer(${idx}, ${JSON.stringify(q.ans)}, '${escON(q.expl || '')}')">
             <span>${String.fromCharCode(65 + idx)}.</span>
-            <span class="katex-render-target">${esc(opt)}</span>
+            <span class="katex-render-target">${renderQuestionText(opt)}</span>
           </button>
         `).join('')}
       </div>
@@ -2573,6 +2589,11 @@ async function startCompPractice() {
   const diff = compState.practiceDifficulty;
   const chapter = compState.practiceChapter || 'All Chapters';
   const count = compState.practiceCount || 5;
+
+  // Preload exam questions dynamically
+  if (window.pyqService) {
+    await window.pyqService.preloadExam(compState.examId);
+  }
 
   const chapterInstruction = chapter === 'All Chapters'
     ? `Mix questions proportionally across all chapters of ${section}.`
@@ -2697,7 +2718,7 @@ function launchMultiPracticeOverlay(questions) {
       if (isWrong) { bg = 'rgba(239,68,68,0.1)'; border = '#EF4444'; color = '#fff'; }
       return `<div onclick="${isRevealed ? '' : `mpSelectOpt(${oIdx})`}" style="padding:12px 16px;border-radius:10px;background:${bg};border:1px solid ${border};cursor:${isRevealed ? 'default' : 'pointer'};color:${color};font-size:14px;display:flex;align-items:center;gap:10px;transition:all 0.15s">
         <span style="width:22px;height:22px;border-radius:50%;border:1px solid ${border};display:flex;align-items:center;justify-content:center;font-size:11px;background:${isCorrect ? '#10B981' : isWrong ? '#EF4444' : isSelected ? 'var(--p)' : 'transparent'};color:#fff;flex-shrink:0">${String.fromCharCode(65+oIdx)}</span>
-        <span class="katex-render-target">${esc(opt)}</span>
+        <span class="katex-render-target">${renderQuestionText(opt)}</span>
         ${isCorrect ? '<span style="margin-left:auto;font-size:11px">✅</span>' : ''}
         ${isWrong ? '<span style="margin-left:auto;font-size:11px">❌</span>' : ''}
       </div>`;
@@ -2717,7 +2738,7 @@ function launchMultiPracticeOverlay(questions) {
       </div>
 
       <div style="font-size:14px;color:#fff;line-height:1.7;margin-bottom:18px;white-space:pre-line" class="katex-render-target">
-        ${esc(q.q)}
+        ${renderQuestionText(q.q)}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px" id="mp-opts">
@@ -2727,7 +2748,7 @@ function launchMultiPracticeOverlay(questions) {
       ${isRevealed ? `
         <div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:14px;margin-bottom:14px">
           <div style="font-weight:700;color:var(--okl);font-size:12px;margin-bottom:6px">SOLUTION</div>
-          <div style="font-size:13px;color:var(--sub);line-height:1.6" class="katex-render-target">${esc(q.expl || 'Standard answer.')}</div>
+          <div style="font-size:13px;color:var(--sub);line-height:1.6" class="katex-render-target">${renderQuestionText(q.expl || 'Standard answer.')}</div>
         </div>
       ` : ''}
 
@@ -2748,7 +2769,7 @@ function launchMultiPracticeOverlay(questions) {
       </div>
 
       <div id="mp-hint" style="display:none;margin-top:12px;padding:10px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;font-size:12px;color:var(--goldl)">
-        💡 ${esc(q.hint || 'Analyze the given parameters carefully and apply the relevant formula.')}
+        💡 ${renderQuestionText(q.hint || 'Analyze the given parameters carefully and apply the relevant formula.')}
       </div>
     `;
     

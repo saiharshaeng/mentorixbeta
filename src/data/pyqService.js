@@ -5,6 +5,55 @@ let masterIndex = null;
 // Determine environment
 const isNode = typeof process !== 'undefined' && process.versions && process.versions.node;
 
+function getCleanExamId(examId) {
+  if (!examId) return 'JEE_MAIN';
+  let cleanId = examId.toUpperCase().replace(/-/g, '_');
+  if (cleanId === 'JEE_ADV') cleanId = 'JEE_ADVANCED';
+  return cleanId;
+}
+
+async function preloadExam(examId) {
+  if (!masterIndex) return;
+  const cleanId = getCleanExamId(examId);
+  const examMeta = masterIndex.exams[cleanId];
+  if (!examMeta || !examMeta.files) return;
+
+  if (isNode) {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      examMeta.files.forEach(f => {
+        if (!fileCache[f]) {
+          const filePath = path.join(process.cwd(), 'src/data/pyq', f);
+          if (fs.existsSync(filePath)) {
+            fileCache[f] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          }
+        }
+      });
+    } catch (e) {
+      console.error('[pyqService] Failed to preload in Node:', e);
+    }
+  } else {
+    // Browser environment
+    try {
+      await Promise.all(
+        examMeta.files.map(async (f) => {
+          if (!fileCache[f]) {
+            try {
+              const res = await fetch('/data/pyq/' + f);
+              fileCache[f] = await res.json();
+            } catch (err) {
+              console.warn('Failed to preload file in browser:', f, err);
+            }
+          }
+        })
+      );
+    } catch (e) {
+      console.error('[pyqService] Failed to preload in Browser:', e);
+    }
+  }
+}
+
 async function init() {
   if (isNode) {
     try {
@@ -14,16 +63,7 @@ async function init() {
       if (fs.existsSync(indexPath)) {
         const data = fs.readFileSync(indexPath, 'utf8');
         masterIndex = JSON.parse(data);
-        
-        // Preload JEE Main files in Node for fast sync access
-        if (masterIndex.exams && masterIndex.exams.JEE_MAIN) {
-          masterIndex.exams.JEE_MAIN.files.forEach(f => {
-            const filePath = path.join(process.cwd(), 'src/data/pyq', f);
-            if (fs.existsSync(filePath)) {
-              fileCache[f] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            }
-          });
-        }
+        await preloadExam('JEE_MAIN');
       }
     } catch (e) {
       console.error('[pyqService] Failed to init in Node:', e);
@@ -33,20 +73,7 @@ async function init() {
     try {
       const response = await fetch('/data/pyq/master_index.json');
       masterIndex = await response.json();
-      
-      // Preload JEE Main files in browser
-      if (masterIndex.exams && masterIndex.exams.JEE_MAIN) {
-        await Promise.all(
-          masterIndex.exams.JEE_MAIN.files.map(async (f) => {
-            try {
-              const res = await fetch('/data/pyq/' + f);
-              fileCache[f] = await res.json();
-            } catch (err) {
-              console.warn('Failed to preload file:', f, err);
-            }
-          })
-        );
-      }
+      await preloadExam('JEE_MAIN');
     } catch (e) {
       console.error('[pyqService] Failed to init in Browser:', e);
     }
@@ -61,7 +88,8 @@ function getQuestions(options = {}) {
     return { questions: getOfflineFallbackQuestions(examId, subject, count) };
   }
 
-  const examMeta = masterIndex.exams[examId];
+  const cleanId = getCleanExamId(examId);
+  const examMeta = masterIndex.exams[cleanId];
   if (!examMeta || !examMeta.files || examMeta.files.length === 0) {
     return { questions: getOfflineFallbackQuestions(examId, subject, count) };
   }
@@ -71,7 +99,7 @@ function getQuestions(options = {}) {
   examMeta.files.forEach(f => {
     let fileData = fileCache[f];
     if (!fileData && isNode) {
-      // Sync lazy load in Node
+      // Sync lazy load fallback in Node
       try {
         const fs = require('fs');
         const path = require('path');
@@ -144,7 +172,7 @@ function getQuestions(options = {}) {
     filtered = pool;
   }
 
-  // Select count items (using simple slicing or repetition if pool is small)
+  // Select count items
   const selected = [];
   for (let i = 0; i < count; i++) {
     const item = filtered[i % filtered.length];
@@ -231,7 +259,7 @@ const OFFLINE_EXAM_QUESTIONS = {
 };
 
 function getOfflineFallbackQuestions(examId, subject, count) {
-  const pool = OFFLINE_EXAM_QUESTIONS[examId] || OFFLINE_EXAM_QUESTIONS.JEE_MAIN;
+  const pool = OFFLINE_EXAM_QUESTIONS[getCleanExamId(examId)] || OFFLINE_EXAM_QUESTIONS.JEE_MAIN;
   let filtered = pool;
   if (subject) {
     filtered = pool.filter(q => q.section.toLowerCase().includes(subject.toLowerCase()) || q.chap.toLowerCase().includes(subject.toLowerCase()));
@@ -250,7 +278,7 @@ function getOfflineFallbackQuestions(examId, subject, count) {
 }
 
 // Export for Node and Browser
-const pyqService = { init, getQuestions };
+const pyqService = { init, getQuestions, preloadExam };
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = pyqService;
