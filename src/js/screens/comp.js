@@ -1701,7 +1701,7 @@ function renderPracticeTab(exam) {
 
         <div>
           <label class="inp-label">DIFFICULTY</label>
-          <select class="inp" onchange="compState.practiceDifficulty=this.value">
+          <select class="inp" onchange="compState.practiceDifficulty=this.value; console.log('[Difficulty Enforcement] User selected difficulty:', this.value); saveCompState();">
             <option value="easy" ${compState.practiceDifficulty==='easy'?'selected':''}>Easy — Conceptual</option>
             <option value="medium" ${compState.practiceDifficulty==='medium'?'selected':''}>Medium — Application</option>
             <option value="hard" ${compState.practiceDifficulty==='hard'?'selected':''}>Hard — Problem Solving</option>
@@ -1874,6 +1874,8 @@ async function startMockExamSetup() {
   const diff = compState.practiceDifficulty || 'medium';
   const subjects = exam.subjects || ['General Studies'];
 
+  console.log('[Difficulty Enforcement] Passing difficulty to mock exam setup:', diff);
+
   // Preload exam questions dynamically
   if (window.pyqService) {
     await window.pyqService.preloadExam(compState.examId);
@@ -2020,6 +2022,8 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
       questions = questions.map((q, idx) => ({ ...q, id: idx + 1 }));
     }
   }
+
+  console.log('[Difficulty Enforcement] Mock questions received:', questions.length, 'questions. Difficulty requested:', diff);
 
   compState.activeExam = {
     questions,
@@ -2586,9 +2590,11 @@ async function startCompPractice() {
 
   const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
   const section = compState.practiceSubject;
-  const diff = compState.practiceDifficulty;
+  const diff = compState.practiceDifficulty || 'medium';
   const chapter = compState.practiceChapter || 'All Chapters';
   const count = compState.practiceCount || 5;
+
+  console.log('[Difficulty Enforcement] Passing difficulty to AI prompt / database lookup:', diff);
 
   // Preload exam questions dynamically
   if (window.pyqService) {
@@ -2689,6 +2695,8 @@ Return ONLY a valid JSON object:
     btn.disabled = false;
     btn.innerHTML = '🚀 Start Practice Session';
   }
+
+  console.log('[Difficulty Enforcement] Questions received:', questions.length, 'questions. Difficulty requested:', diff);
 
   launchMultiPracticeOverlay(questions);
 }
