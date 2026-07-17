@@ -200,6 +200,7 @@ if (window.location.protocol.startsWith('http')) {
 <script src="js/screens/settings.js"></script>
 <script src="js/screens/notebook.js"></script>
 <script src="js/screens/revision.js"></script>
+<script src="data/pyqService.js"></script>
 <script src="js/screens/comp.js"></script>
 <script>
 'use strict';
@@ -4488,6 +4489,9 @@ function addHydrationBar(el){
 function init(){
   async function startApp(){
     try{
+      if (window.pyqService) {
+        await window.pyqService.init();
+      }
       const s=getSession();
       if(!s){renderAuth();return;}
       await loadUserData(s.id);

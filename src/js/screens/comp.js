@@ -485,6 +485,15 @@ const GENERAL_TEMPLATES = [
 
 // Procedural Paper Generation (constructs exact number of questions)
 function generateProceduralMockQuestions(examDb, count) {
+  if (window.pyqService) {
+    const result = window.pyqService.getQuestions({
+      examId: compState.examId,
+      count: count
+    });
+    if (result && result.questions && result.questions.length > 0) {
+      return result.questions;
+    }
+  }
   const subjects = examDb.subjects || ['General Studies'];
   const questions = [];
   
@@ -840,16 +849,40 @@ async function startPYQSession() {
   const subject = compState.pyqSubject||(exam.subjects||['General'])[0];
   const year = compState.pyqYear||'2023';
   const count = compState.pyqCount||5;
-  const prompt = `Reconstruct ${count} questions from the ${exam.name} ${year} paper, subject: ${subject}. Match the exact difficulty, style, and topic distribution of the real ${year} paper. Use LaTeX for math ($formula$). Return ONLY JSON: {"questions":[{"q":"...","opts":["A","B","C","D"],"ans":[0],"type":"mcq","chap":"...","expl":"step-by-step solution"}]}`;
+  
   let questions = [];
-  try {
-    const reply = await ai([{role:'user',content:prompt}], 'You are a professional exam paper setter. Output ONLY valid JSON.', count*600+500, true);
-    if (reply) { const data = JSON.parse(escapeJsonLatex(reply)); if (data&&data.questions) questions=data.questions; }
-  } catch(e) { console.warn('[PYQ]',e); }
-  if (!questions.length) {
-    const list = OFFLINE_EXAM_QUESTIONS[compState.examId]||OFFLINE_EXAM_QUESTIONS.jee_adv||[];
-    questions = list.slice(0,count);
+  
+  // Try database files first
+  if (window.pyqService) {
+    const result = window.pyqService.getQuestions({
+      examId: compState.examId,
+      count: count,
+      subject: subject
+    });
+    if (result && result.questions && result.questions.length > 0) {
+      questions = result.questions;
+    }
   }
+
+  // Fallback to AI if no questions loaded
+  if (!questions.length) {
+    const prompt = `Reconstruct ${count} questions from the ${exam.name} ${year} paper, subject: ${subject}. Match the exact difficulty, style, and topic distribution of the real ${year} paper. Use LaTeX for math ($formula$). Return ONLY JSON: {"questions":[{"q":"...","opts":["A","B","C","D"],"ans":[0],"type":"mcq","chap":"...","expl":"step-by-step solution"}]}`;
+    try {
+      const reply = await ai([{role:'user',content:prompt}], 'You are a professional exam paper setter. Output ONLY valid JSON.', count*600+500, true);
+      if (reply) { const data = JSON.parse(escapeJsonLatex(reply)); if (data&&data.questions) questions=data.questions; }
+    } catch(e) { console.warn('[PYQ]',e); }
+  }
+
+  // Final static fallback
+  if (!questions.length) {
+    if (window.pyqService) {
+      questions = window.pyqService.getQuestions({ examId: compState.examId, count }).questions;
+    } else {
+      const list = OFFLINE_EXAM_QUESTIONS[compState.examId]||OFFLINE_EXAM_QUESTIONS.jee_adv||[];
+      questions = list.slice(0,count);
+    }
+  }
+
   if (btn) { btn.disabled=false; btn.innerHTML=`📋 Load ${year} Paper — ${subject}`; }
   if (questions.length) launchMultiPracticeOverlay(questions);
   else alert('Could not load questions. Try again.');
@@ -1827,7 +1860,7 @@ async function startMockExamSetup() {
   }
 
   const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
-  const diff = compState.practiceDifficulty;
+  const diff = compState.practiceDifficulty || 'medium';
   const subjects = exam.subjects || ['General Studies'];
 
   let questions = [];
@@ -1847,6 +1880,15 @@ async function startMockExamSetup() {
       ).join('\n');
     }
 
+    let allowedTypes = '';
+    if (exam.id === 'jee_main') {
+      allowedTypes = 'Only generate: "mcq" (single choice) and "numerical" (integer or decimal answer). Do NOT generate "msq" (multiple choice).';
+    } else if (exam.id === 'neet') {
+      allowedTypes = 'Only generate: "mcq" (single choice). Do NOT generate "msq" or "numerical".';
+    } else {
+      allowedTypes = 'Use standard exam types: "mcq" (single choice), "msq" (multiple choice, select all that apply), and "numerical" (integer/decimal).';
+    }
+
     const fullPrompt = `Generate exactly ${fullQuestionsCount} exam questions for the "${exam.name}" examination.
 Pattern: ${exam.pattern}
 Subjects: ${subjects.join(', ')}
@@ -1856,8 +1898,8 @@ ${syllabusContext || subjects.join(', ')}
 
 CRITICAL REQUIREMENTS:
 1. Distribute questions proportionally across all subjects (e.g., for JEE: 18 Math, 18 Physics, 18 Chemistry)
-2. Mix difficulty: 30% easy, 50% medium, 20% hard
-3. Include variety of types as per exam pattern (MCQ, MSQ, Numerical)
+2. Mix difficulty: 30% easy (conceptual), 50% medium (application), 20% hard (complex problem-solving)
+3. Allowed question types for ${exam.name}: ${allowedTypes}
 4. Every math expression must use LaTeX: $formula$ for inline, $$formula$$ for display
 5. Each question must have a detailed step-by-step solution in expl field
 
@@ -1899,9 +1941,19 @@ Return ONLY a valid JSON object:
   } else {
     // Diagnostic 6 Qs
     durationSeconds = 600;
+    let allowedTypes = '';
+    if (exam.id === 'jee_main') {
+      allowedTypes = 'Only generate: "mcq" and "numerical".';
+    } else if (exam.id === 'neet') {
+      allowedTypes = 'Only generate: "mcq".';
+    } else {
+      allowedTypes = 'Use standard types: "mcq", "msq", and "numerical".';
+    }
+
     const prompt = `Generate exactly 6 realistic, syllabus-matched exam questions for the "${exam.name}" exam.
 Subjects/Sections: ${subjects.join(', ')}
-Difficulty level: ${diff}
+Difficulty level: ${diff} (strictly enforce ${diff} difficulty for all questions)
+Question types: ${allowedTypes}
 
 Return ONLY a JSON object containing a "questions" array with exactly 6 questions matching this structure:
 {
@@ -1934,8 +1986,20 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
     }
 
     if (questions.length === 0) {
-      const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv;
-      questions = list.map((q, idx) => ({ ...q, id: idx + 1 }));
+      if (window.pyqService) {
+        const result = window.pyqService.getQuestions({
+          examId: compState.examId,
+          count: 6,
+          difficulty: diff
+        });
+        if (result && result.questions && result.questions.length > 0) {
+          questions = result.questions;
+        }
+      }
+      if (questions.length === 0) {
+        const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv;
+        questions = list.map((q, idx) => ({ ...q, id: idx + 1 }));
+      }
     } else {
       questions = questions.map((q, idx) => ({ ...q, id: idx + 1 }));
     }
@@ -2514,11 +2578,20 @@ async function startCompPractice() {
     ? `Mix questions proportionally across all chapters of ${section}.`
     : `Focus ALL ${count} question(s) exclusively on the chapter: "${chapter}".`;
 
+  let allowedTypes = '';
+  if (exam.id === 'jee_main') {
+    allowedTypes = 'Only generate: "mcq" and "numerical". Do NOT generate "msq".';
+  } else if (exam.id === 'neet') {
+    allowedTypes = 'Only generate: "mcq". Do NOT generate "msq" or "numerical".';
+  } else {
+    allowedTypes = 'Use standard types: "mcq", "msq", and "numerical".';
+  }
+
   const prompt = `Generate exactly ${count} high-fidelity exam question(s) for the "${exam.name}" exam.
 Subject/Section: ${section}
 ${chapterInstruction}
-Difficulty level: ${diff} (easy=conceptual, medium=application, hard=problem-solving, boss=previous-year level)
-Use real exam-style question types: mcq (single correct), msq (multiple correct), or numerical (integer/decimal answer).
+Difficulty level: ${diff} (strictly enforce ${diff} difficulty for all questions)
+Allowed question types for ${exam.name}: ${allowedTypes}
 Write ALL math using proper LaTeX: inline as $formula$ and display as $$formula$$.
 
 Return ONLY a valid JSON object:
@@ -2554,12 +2627,25 @@ Return ONLY a valid JSON object:
 
   // Fallback to offline bank if AI fails
   if (questions.length === 0) {
-    const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
-    // Repeat to fill requested count
-    while (questions.length < count) {
-      questions.push(...list);
+    if (window.pyqService) {
+      const result = window.pyqService.getQuestions({
+        examId: compState.examId,
+        count: count,
+        subject: section,
+        chapter: chapter,
+        difficulty: diff
+      });
+      if (result && result.questions && result.questions.length > 0) {
+        questions = result.questions;
+      }
     }
-    questions = questions.slice(0, count);
+    if (questions.length === 0) {
+      const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
+      while (questions.length < count) {
+        questions.push(...list);
+      }
+      questions = questions.slice(0, count);
+    }
   }
 
   if (btn) {
