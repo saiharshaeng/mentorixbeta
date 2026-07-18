@@ -250,6 +250,17 @@
     const section = item.subject || item.section || "";
     const chap = item.topic || item.chap || "";
 
+    let hasImage = item.hasImage || item.has_image || false;
+    let imagePath = item.imagePath || item.image_path || item.image || "";
+
+    if (!hasImage && qText.includes('![')) {
+      const match = qText.match(/!\[.*?\]\((.*?)\)/);
+      if (match && match[1]) {
+        hasImage = true;
+        imagePath = match[1];
+      }
+    }
+
     return {
       id: indexId,
       q: qText,
@@ -258,7 +269,9 @@
       type: type,
       expl: expl,
       section: section,
-      chap: chap
+      chap: chap,
+      hasImage: hasImage,
+      imagePath: imagePath
     };
   }
 

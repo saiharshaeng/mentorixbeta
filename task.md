@@ -13,9 +13,10 @@
 - `[x]` Step 11 — Add dynamic preloading for non-preloaded browser JSON files
 - `[x]` Step 12 — Synchronize image assets and implement Markdown image rendering
 - `[x]` Step 13 — Build Netlify-ready deployment package (deploy.zip)
-- `[/]` Step 14 — Fix mock test to follow exact paper pattern
-  - `[ ]` Create `src/data/examPatterns.js`
-  - `[ ]` Add script tag to `src/index.html`
-  - `[ ]` Update `startMockExamSetup()` in `src/js/screens/comp.js`
-  - `[ ]` Update grading scoring calculation in `src/js/screens/comp.js`
-  - `[ ]` Verify build and run local test
+- `[x]` Step 14 — Fix mock test to follow exact paper pattern
+- `[/]` Step 15 — Add image question support to comp.js and pyqService.js
+  - `[ ]` Update `normalizeQuestion` in `src/data/pyqService.js` to extract image keys
+  - `[ ]` Add `renderQuestionImage()` in `src/js/screens/comp.js`
+  - `[ ]` Update markdown rendering in `renderQuestionText()`
+  - `[ ]` Inject `renderQuestionImage()` into CBT, practice, mistake, scorecard pages
+  - `[ ]` Verify with test script and check syntax

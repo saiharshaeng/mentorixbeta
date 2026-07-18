@@ -463,10 +463,30 @@ function renderQuestionText(text) {
   let escaped = esc(text);
   const mdImgRegex = /!\[(.*?)\]\((.*?)\)/g;
   escaped = escaped.replace(mdImgRegex, (match, alt, url) => {
-    return `<img src="${url}" alt="${alt}" style="max-width:100%; height:auto; display:block; margin:12px auto; border-radius:8px; border:1px solid rgba(255,255,255,0.12);" />`;
+    let src = url;
+    if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
+      src = 'data/pyq/' + src;
+    }
+    return `<img src="${src}" alt="${alt}" onerror="if(this.src.indexOf('data/pyq/') !== -1){ this.src=this.src.replace('data/pyq/', ''); } else { this.onerror=null; this.outerHTML='<div class=&quot;image-unavailable-msg&quot; style=&quot;background:rgba(239,68,68,0.06);border:1px dashed rgba(239,68,68,0.2);color:#ef4444;padding:12px;border-radius:10px;font-size:12px;margin:12px auto;font-weight:600;text-align:center;&quot;>⚠️ [Image-based question — visual content not yet available]</div>'; }" style="max-width:100%; height:auto; display:block; margin:12px auto; border-radius:8px; border:1px solid rgba(255,255,255,0.12);" />`;
   });
   return escaped;
 }
+
+function renderQuestionImage(question) {
+  if (question && question.hasImage && question.imagePath) {
+    let src = question.imagePath;
+    if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
+      src = 'data/pyq/' + src;
+    }
+    return `
+      <div class="q-image-container" style="margin-top:12px;margin-bottom:12px;">
+        <img src="${src}" onerror="if(this.src.indexOf('data/pyq/') !== -1){ this.src=this.src.replace('data/pyq/', ''); } else { this.onerror=null; this.outerHTML='<div class=&quot;image-unavailable-msg&quot; style=&quot;background:rgba(239,68,68,0.06);border:1px dashed rgba(239,68,68,0.2);color:#ef4444;padding:12px;border-radius:10px;font-size:12px;margin:12px auto;font-weight:600;text-align:center;&quot;>⚠️ [Image-based question — visual content not yet available]</div>'; }" style="max-width:100%;max-height:350px;border-radius:10px;display:block;margin:0 auto;box-shadow:0 4px 12px rgba(0,0,0,0.15);border:1px solid var(--brd);" />
+      </div>
+    `;
+  }
+  return '';
+}
+window.renderQuestionImage = renderQuestionImage;
 
 // 🏁 Procedural Question Templates (satisfies realistic subject-wise & chapter-wise distribution)
 const MATHEMATICS_TEMPLATES = [
@@ -749,7 +769,7 @@ function renderMistakeDiaryTab(exam) {
               ${!m.reviewed ? `<button class="btn bsm bok" style="font-size:9px;padding:2px 6px;min-height:auto" onclick="markMistakeReviewed(${m.id})">Mark Reviewed</button>` : '<span style="color:var(--okl);font-size:10px">✅</span>'}
             </div>
           </div>
-          <div style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:6px" class="katex-render-target">${renderQuestionText(m.q)}</div>
+          <div style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:6px" class="katex-render-target">${renderQuestionText(m.q)}${renderQuestionImage(m)}</div>
           <div style="font-size:11px;padding:7px;background:rgba(255,255,255,0.02);border-radius:6px" class="katex-render-target"><strong style="color:#fff">Solution: </strong><span style="color:var(--sub)">${renderQuestionText(m.expl||'Review this concept.')}</span></div>
         </div>`).join('')}
       </div>
@@ -2083,6 +2103,7 @@ function renderActiveExamUI() {
         <!-- Question Content -->
         <div style="font-size:15px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:20px;white-space:pre-line" class="katex-render-target">
           ${renderQuestionText(q.q)}
+          ${renderQuestionImage(q)}
         </div>
 
         <!-- Answers -->
@@ -2296,6 +2317,8 @@ function submitMockExam() {
     
     return {
       q: q.q,
+      hasImage: q.hasImage,
+      imagePath: q.imagePath,
       user: userAns,
       correct: q.opts ? q.opts[q.ans[0]] || q.ans.map(a => q.opts[a]).join(', ') : q.ans,
       isCorrect,
@@ -2435,7 +2458,7 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
               <span style="font-weight:700;color:var(--mut)">Question ${idx + 1}</span>
               <span class="tag ${res.isCorrect?'tok':'tred'}">${res.isCorrect?'Correct':'Incorrect'}</span>
             </div>
-            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:12px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}</p>
+            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:12px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}${renderQuestionImage(res)}</p>
             
             <div style="font-size:12px;color:var(--sub);margin-bottom:8px">
               Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':'var(--redl)'}">${res.user !== undefined && res.user !== '' ? (res.user.join ? res.user.map(u => String.fromCharCode(65+u)).join(', ') : (isNaN(res.user) ? res.user : String.fromCharCode(65+res.user))) : 'Skipped'}</strong>
@@ -2471,6 +2494,7 @@ function launchPracticeOverlay(q) {
 
       <div style="font-size:14px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:16px;white-space:pre-line" class="katex-render-target">
         ${renderQuestionText(q.q)}
+        ${renderQuestionImage(q)}
       </div>
 
       <div id="practice-hint-box" style="display:none;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:10px;font-size:12px;color:var(--goldl);margin-bottom:14px" class="katex-render-target">
@@ -2750,6 +2774,7 @@ function launchMultiPracticeOverlay(questions) {
 
       <div style="font-size:14px;color:#fff;line-height:1.7;margin-bottom:18px;white-space:pre-line" class="katex-render-target">
         ${renderQuestionText(q.q)}
+        ${renderQuestionImage(q)}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px" id="mp-opts">
