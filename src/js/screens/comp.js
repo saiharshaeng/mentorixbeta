@@ -488,6 +488,37 @@ function renderQuestionImage(question) {
 }
 window.renderQuestionImage = renderQuestionImage;
 
+function getDifficultyPrompt(examId, diff) {
+  if (examId === 'jee_main' && diff === 'jee-level') {
+    return `Difficulty Guidelines for JEE Main Level:
+- Numerical questions MUST require multi-step calculation
+- MCQs must have all 4 options within 10% of each other numerically
+- At least 30% of questions should involve 2+ chapters combined (cross-chapter concepts)
+- Concept application only — zero definition questions
+- Average solve time of questions should target 2.5 minutes`;
+  }
+  if (examId === 'jee_adv' && diff === 'jee-adv-level') {
+    return `Difficulty Guidelines for JEE Advanced Level:
+- Multiple correct answer questions (msq) where 2, 3, or all 4 options can be right
+- Partial marking awareness (student must select ALL correct options for full marks)
+- Paragraph-based questions (common data, 2 questions from 1 passage)
+- Matrix match questions
+- No formula directly gives answer — always requires a derivation step
+- Average solve time of questions should target 4+ minutes
+- Intentionally designed to confuse a student who only half-knows the concept`;
+  }
+  if (examId === 'neet' && diff === 'neet-level') {
+    return `Difficulty Guidelines for NEET Level:
+- Questions must be NCERT line-by-line precise
+- Biology: exact terminology matters; wrong options = plausible NCERT terms
+- Physics: formula-based but with unit conversion traps
+- Chemistry: reaction mechanism questions, not just product identification
+- Average solve time of questions should target 60-80 seconds`;
+  }
+  return `Difficulty level: ${diff} (strictly enforce ${diff} difficulty for all questions)`;
+}
+window.getDifficultyPrompt = getDifficultyPrompt;
+
 // 🏁 Procedural Question Templates (satisfies realistic subject-wise & chapter-wise distribution)
 const MATHEMATICS_TEMPLATES = [
   { q: "Evaluate the definite integral: $\\int_0^{a} \\frac{x}{\\sqrt{x^2 + b^2}} dx$ where $a = {a}$ and $b = {b}$.", opts: ["$\\sqrt{{a}^2+{b}^2} - {b}$", "$\\sqrt{{a}^2+{b}^2} + {b}$", "${a}$", "$0$"], ans: [0], type: "mcq", chap: "Definite Integrals" },
@@ -1726,6 +1757,9 @@ function renderPracticeTab(exam) {
             <option value="medium" ${compState.practiceDifficulty==='medium'?'selected':''}>Medium — Application</option>
             <option value="hard" ${compState.practiceDifficulty==='hard'?'selected':''}>Hard — Problem Solving</option>
             <option value="boss" ${compState.practiceDifficulty==='boss'?'selected':''}>😈 Boss — Previous Year Level</option>
+            ${compState.examId === 'jee_main' ? `<option value="jee-level" ${compState.practiceDifficulty==='jee-level'?'selected':''}>🔥 JEE Main Level</option>` : ''}
+            ${compState.examId === 'jee_adv' ? `<option value="jee-adv-level" ${compState.practiceDifficulty==='jee-adv-level'?'selected':''}>💀 JEE Advanced Level</option>` : ''}
+            ${compState.examId === 'neet' ? `<option value="neet-level" ${compState.practiceDifficulty==='neet-level'?'selected':''}>🧬 NEET Level</option>` : ''}
           </select>
         </div>
       </div>
@@ -1980,7 +2014,7 @@ async function startMockExamSetup() {
 
     const prompt = `Generate exactly 6 realistic, syllabus-matched exam questions for the "${exam.name}" exam.
 Subjects/Sections: ${subjects.join(', ')}
-Difficulty level: ${diff} (strictly enforce ${diff} difficulty for all questions)
+${getDifficultyPrompt(exam.id, diff)}
 Question types: ${allowedTypes}
 
 Return ONLY a JSON object containing a "questions" array with exactly 6 questions matching this structure:
@@ -2696,7 +2730,7 @@ async function startCompPractice() {
     const prompt = `Generate exactly ${count} high-fidelity exam question(s) for the "${exam.name}" exam.
 Subject/Section: ${section}
 ${chapterInstruction}
-Difficulty level: ${diff} (strictly enforce ${diff} difficulty for all questions)
+${getDifficultyPrompt(exam.id, diff)}
 Allowed question types for ${exam.name}: ${allowedTypes}
 Write ALL math using proper LaTeX: inline as $formula$ and display as $$formula$$.
 

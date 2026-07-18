@@ -15,8 +15,4 @@
 - `[x]` Step 13 — Build Netlify-ready deployment package (deploy.zip)
 - `[x]` Step 14 — Fix mock test to follow exact paper pattern
 - `[x]` Step 15 — Add image question support to comp.js and pyqService.js
-- `[/]` Step 16 — Correct exam patterns and marking schemes
-  - `[ ]` Update `src/data/examPatterns.js`
-  - `[ ]` Update `startMockExamSetup()` in `src/js/screens/comp.js` to support subject count overrides
-  - `[ ]` Update `submitMockExam()` in `src/js/screens/comp.js` for partial marking & new schemes
-  - `[ ]` Run syntax validations and test locally
+- `[x]` Step 16 — Correct exam patterns and marking schemes

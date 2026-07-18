@@ -162,10 +162,12 @@
 
     if (difficulty) {
       const dLower = difficulty.toLowerCase();
-      filtered = filtered.filter(item => {
-        const itemDiff = (item.difficulty || "").toLowerCase();
-        return itemDiff.includes(dLower);
-      });
+      if (dLower !== 'jee-level' && dLower !== 'jee-adv-level' && dLower !== 'neet-level') {
+        filtered = filtered.filter(item => {
+          const itemDiff = (item.difficulty || "").toLowerCase();
+          return itemDiff.includes(dLower);
+        });
+      }
     }
 
     if (type) {
