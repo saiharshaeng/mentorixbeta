@@ -16,3 +16,4 @@
 - `[x]` Step 14 — Fix mock test to follow exact paper pattern
 - `[x]` Step 15 — Add image question support to comp.js and pyqService.js
 - `[x]` Step 16 — Correct exam patterns and marking schemes
+- `[x]` Step 17 — Add custom AI difficulty system guidelines and dynamic dropdown options for JEE/NEET

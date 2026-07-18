@@ -1945,58 +1945,152 @@ async function startMockExamSetup() {
       || (patterns && patterns.default) 
       || { durationMinutes: 180, subjects: ["Mathematics", "Physics", "Chemistry"], sections: [{ name: "Section A", type: "mcq", questionsPerSubject: 20, marking: { correct: 4, wrong: -1 } }, { name: "Section B", type: "numerical", questionsPerSubject: 5, marking: { correct: 4, wrong: -1 } }] };
 
-    const fullDurationMin = pattern.durationMinutes;
+    const fullDurationMin = pattern.totalTime || pattern.durationMinutes || 180;
     durationSeconds = fullDurationMin * 60;
 
-    questions = [];
-    for (const subjectName of pattern.subjects) {
-      for (const section of pattern.sections) {
-        const countNeeded = typeof section.questionsPerSubject === 'object' 
-          ? (section.questionsPerSubject[subjectName] || 0) 
-          : section.questionsPerSubject;
-
-        if (countNeeded <= 0) continue;
-
-        const sectionType = section.type;
-        const sectionMarking = section.marking;
-
-        let sectionQuestions = [];
-
-        // 1. Try to fetch from database
-        if (window.pyqService) {
-          const result = window.pyqService.getQuestions({
-            examId: compState.examId,
-            count: countNeeded,
-            subject: subjectName,
-            type: sectionType
+    let normalizedSections = [];
+    
+    if (cleanId === 'jee_main') {
+      pattern.sections.forEach(sec => {
+        const sub = sec.subject;
+        normalizedSections.push({
+          subject: sub,
+          sectionName: "Section A",
+          type: "mcq",
+          count: sec.sectionA.count,
+          marking: { correct: sec.sectionA.marksCorrect, wrong: sec.sectionA.marksWrong }
+        });
+        normalizedSections.push({
+          subject: sub,
+          sectionName: "Section B",
+          type: "numerical",
+          count: sec.sectionB.count,
+          marking: { correct: sec.sectionB.marksCorrect, wrong: sec.sectionB.marksWrong }
+        });
+      });
+    } else if (cleanId === 'jee_adv' || cleanId === 'jee_advanced') {
+      const subjects = ["Mathematics", "Physics", "Chemistry"];
+      subjects.forEach(sub => {
+        pattern.sections.forEach(sec => {
+          let type = "mcq";
+          if (sec.type === "MCQ_Multiple") type = "msq";
+          else if (sec.type === "Numerical") type = "numerical";
+          
+          normalizedSections.push({
+            subject: sub,
+            sectionName: sec.id === "section1" ? "Section 1" : sec.id === "section2" ? "Section 2" : sec.id === "section3" ? "Section 3" : "Section 4",
+            type: type,
+            count: sec.questionsPerSubject,
+            marking: {
+              correct: sec.marksAllCorrect || sec.marksCorrect,
+              wrong: sec.marksWrong,
+              partial: sec.partialMarking || false
+            }
           });
-          if (result && result.questions && result.questions.length > 0) {
-            sectionQuestions = result.questions;
-          }
+        });
+      });
+    } else if (cleanId === 'neet') {
+      pattern.sections.forEach(sec => {
+        normalizedSections.push({
+          subject: sec.subject,
+          sectionName: "Section A",
+          type: "mcq",
+          count: sec.count,
+          marking: { correct: sec.marksCorrect, wrong: sec.marksWrong }
+        });
+      });
+    } else if (cleanId === 'eamcet_eng') {
+      pattern.sections.forEach(sec => {
+        normalizedSections.push({
+          subject: sec.subject,
+          sectionName: "Section A",
+          type: "mcq",
+          count: sec.count,
+          marking: { correct: sec.marksCorrect, wrong: sec.marksWrong }
+        });
+      });
+    } else if (cleanId === 'sat') {
+      pattern.sections.forEach(sec => {
+        normalizedSections.push({
+          subject: sec.subject,
+          sectionName: "Section A",
+          type: "mcq",
+          count: sec.count,
+          marking: { correct: sec.marksCorrect, wrong: sec.marksWrong }
+        });
+      });
+    } else if (cleanId === 'cat') {
+      pattern.sections.forEach(sec => {
+        normalizedSections.push({
+          subject: sec.subject,
+          sectionName: "Section A",
+          type: "mcq",
+          count: sec.count,
+          marking: { correct: sec.marksCorrect, wrong: sec.marksWrong }
+        });
+      });
+    } else {
+      const subjects = pattern.subjects || ["General Studies"];
+      subjects.forEach(sub => {
+        pattern.sections.forEach(sec => {
+          normalizedSections.push({
+            subject: sub,
+            sectionName: sec.name || "Section A",
+            type: sec.type || "mcq",
+            count: typeof sec.questionsPerSubject === 'object' ? (sec.questionsPerSubject[sub] || 0) : sec.questionsPerSubject,
+            marking: sec.marking || { correct: 4, wrong: -1 }
+          });
+        });
+      });
+    }
+
+    questions = [];
+    for (const ns of normalizedSections) {
+      const subjectName = ns.subject;
+      const countNeeded = ns.count;
+      const sectionType = ns.type;
+      const sectionMarking = ns.marking;
+      const sectionLabel = ns.sectionName;
+
+      if (countNeeded <= 0) continue;
+
+      let sectionQuestions = [];
+
+      // 1. Try to fetch from database
+      if (window.pyqService) {
+        const result = window.pyqService.getQuestions({
+          examId: compState.examId,
+          count: countNeeded,
+          subject: subjectName,
+          type: sectionType
+        });
+        if (result && result.questions && result.questions.length > 0) {
+          sectionQuestions = result.questions;
         }
-
-        // 2. Fallback to procedural if not enough questions
-        if (sectionQuestions.length < countNeeded) {
-          const fallbackPool = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
-          let typedFallback = fallbackPool.filter(q => q.type === sectionType);
-          if (typedFallback.length === 0) typedFallback = fallbackPool;
-
-          while (sectionQuestions.length < countNeeded) {
-            const template = typedFallback[sectionQuestions.length % typedFallback.length];
-            sectionQuestions.push({ ...template });
-          }
-        }
-
-        // Slice to exact count needed and decorate with section, type, and marking scheme
-        sectionQuestions = sectionQuestions.slice(0, countNeeded).map(q => ({
-          ...q,
-          section: subjectName,
-          type: sectionType,
-          marking: sectionMarking
-        }));
-
-        questions.push(...sectionQuestions);
       }
+
+      // 2. Fallback to procedural if not enough questions
+      if (sectionQuestions.length < countNeeded) {
+        const fallbackPool = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
+        let typedFallback = fallbackPool.filter(q => q.type === sectionType);
+        if (typedFallback.length === 0) typedFallback = fallbackPool;
+
+        while (sectionQuestions.length < countNeeded) {
+          const template = typedFallback[sectionQuestions.length % typedFallback.length];
+          sectionQuestions.push({ ...template });
+        }
+      }
+
+      // Slice to exact count needed and decorate with section, type, and marking scheme
+      sectionQuestions = sectionQuestions.slice(0, countNeeded).map(q => ({
+        ...q,
+        section: subjectName,
+        type: sectionType,
+        marking: sectionMarking,
+        sectionLabel: sectionLabel
+      }));
+
+      questions.push(...sectionQuestions);
     }
 
     questions = questions.map((q, i) => ({ ...q, id: i + 1 }));
