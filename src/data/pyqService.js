@@ -223,24 +223,23 @@
     }
 
     let ans = [0];
-    if (item.correct_answer !== undefined) {
-      if (Array.isArray(item.correct_answer)) {
-        ans = item.correct_answer;
-      } else if (typeof item.correct_answer === 'number') {
-        ans = [item.correct_answer];
-      } else if (typeof item.correct_answer === 'string') {
-        const charCode = item.correct_answer.toLowerCase().charCodeAt(0);
+    const rawAns = item.correct_answer !== undefined ? item.correct_answer : (item.correct !== undefined ? item.correct : item.ans);
+    if (rawAns !== undefined) {
+      if (Array.isArray(rawAns)) {
+        ans = rawAns;
+      } else if (typeof rawAns === 'number') {
+        ans = [rawAns];
+      } else if (typeof rawAns === 'string') {
+        const charCode = rawAns.toLowerCase().charCodeAt(0);
         if (charCode >= 97 && charCode <= 122) { // a-z
           ans = [charCode - 97];
         } else {
-          const val = parseInt(item.correct_answer, 10);
+          const val = parseInt(rawAns, 10);
           if (!isNaN(val)) {
             ans = [val];
           }
         }
       }
-    } else if (item.ans !== undefined) {
-      ans = Array.isArray(item.ans) ? item.ans : [item.ans];
     }
 
     let type = item.type || "mcq";
@@ -248,9 +247,9 @@
       type = "numerical";
     }
 
-    const expl = item.explanation || item.expl || "";
+    const expl = item.explanation || item.solution || item.expl || "";
     const section = item.subject || item.section || "";
-    const chap = item.topic || item.chap || "";
+    const chap = item.chapter || item.topic || item.chap || "";
 
     let hasImage = item.hasImage || item.has_image || false;
     let imagePath = item.imagePath || item.image_path || item.image || "";
