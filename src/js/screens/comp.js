@@ -1917,7 +1917,12 @@ async function startMockExamSetup() {
     questions = [];
     for (const subjectName of pattern.subjects) {
       for (const section of pattern.sections) {
-        const countNeeded = section.questionsPerSubject;
+        const countNeeded = typeof section.questionsPerSubject === 'object' 
+          ? (section.questionsPerSubject[subjectName] || 0) 
+          : section.questionsPerSubject;
+
+        if (countNeeded <= 0) continue;
+
         const sectionType = section.type;
         const sectionMarking = section.marking;
 
@@ -2290,28 +2295,74 @@ function submitMockExam() {
     subjectStats[sub].total++;
     subjectStats[sub].time += (exam.timeSpent[idx] || 0);
 
-    if (userAns === undefined || userAns === '') {
+    if (userAns === undefined || userAns === '' || (Array.isArray(userAns) && userAns.length === 0)) {
       skipped++;
     } else {
-      if (q.type === 'msq') {
-        const sortedUser = (userAns || []).slice().sort().join(',');
-        const sortedCorrect = (q.ans || []).slice().sort().join(',');
-        isCorrect = sortedUser === sortedCorrect;
-      } else if (q.type === 'numerical') {
-        isCorrect = String(userAns).trim() === String(q.ans).trim();
+      if (q.type === 'msq' && q.marking && q.marking.partial) {
+        const userSet = new Set(userAns || []);
+        const correctSet = new Set(q.ans || []);
+        let hasWrongSelection = false;
+        userSet.forEach(opt => {
+          if (!correctSet.has(opt)) hasWrongSelection = true;
+        });
+
+        let scoreEarned = 0;
+        if (userSet.size === 0) {
+          isCorrect = false;
+          scoreEarned = 0;
+        } else if (hasWrongSelection) {
+          isCorrect = false;
+          scoreEarned = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : -2;
+        } else {
+          const correctCount = userSet.size;
+          const totalCorrect = correctSet.size;
+          if (correctCount === totalCorrect) {
+            isCorrect = true;
+            scoreEarned = (q.marking && q.marking.correct !== undefined) ? q.marking.correct : 4;
+          } else {
+            isCorrect = false;
+            if (correctCount === 3) scoreEarned = 3;
+            else if (correctCount === 2) scoreEarned = 2;
+            else if (correctCount === 1) scoreEarned = 1;
+            else scoreEarned = 0;
+          }
+        }
+
+        if (isCorrect) {
+          correct++;
+          score += scoreEarned;
+          subjectStats[sub].correct++;
+        } else {
+          if (scoreEarned < 0) {
+            incorrect++;
+            score += scoreEarned;
+          } else if (scoreEarned > 0) {
+            score += scoreEarned;
+          } else {
+            skipped++;
+          }
+        }
       } else {
-        isCorrect = userAns === q.ans[0];
-      }
-      
-      if (isCorrect) {
-        correct++;
-        const pts = (q.marking && q.marking.correct !== undefined) ? q.marking.correct : marking.correct;
-        score += pts;
-        subjectStats[sub].correct++;
-      } else {
-        incorrect++;
-        const penalty = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : marking.wrong;
-        score += penalty;
+        if (q.type === 'msq') {
+          const sortedUser = (userAns || []).slice().sort().join(',');
+          const sortedCorrect = (q.ans || []).slice().sort().join(',');
+          isCorrect = sortedUser === sortedCorrect;
+        } else if (q.type === 'numerical') {
+          isCorrect = String(userAns).trim() === String(q.ans).trim();
+        } else {
+          isCorrect = userAns === q.ans[0];
+        }
+
+        if (isCorrect) {
+          correct++;
+          const pts = (q.marking && q.marking.correct !== undefined) ? q.marking.correct : marking.correct;
+          score += pts;
+          subjectStats[sub].correct++;
+        } else {
+          incorrect++;
+          const penalty = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : marking.wrong;
+          score += penalty;
+        }
       }
     }
     

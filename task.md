@@ -14,9 +14,9 @@
 - `[x]` Step 12 — Synchronize image assets and implement Markdown image rendering
 - `[x]` Step 13 — Build Netlify-ready deployment package (deploy.zip)
 - `[x]` Step 14 — Fix mock test to follow exact paper pattern
-- `[/]` Step 15 — Add image question support to comp.js and pyqService.js
-  - `[ ]` Update `normalizeQuestion` in `src/data/pyqService.js` to extract image keys
-  - `[ ]` Add `renderQuestionImage()` in `src/js/screens/comp.js`
-  - `[ ]` Update markdown rendering in `renderQuestionText()`
-  - `[ ]` Inject `renderQuestionImage()` into CBT, practice, mistake, scorecard pages
-  - `[ ]` Verify with test script and check syntax
+- `[x]` Step 15 — Add image question support to comp.js and pyqService.js
+- `[/]` Step 16 — Correct exam patterns and marking schemes
+  - `[ ]` Update `src/data/examPatterns.js`
+  - `[ ]` Update `startMockExamSetup()` in `src/js/screens/comp.js` to support subject count overrides
+  - `[ ]` Update `submitMockExam()` in `src/js/screens/comp.js` for partial marking & new schemes
+  - `[ ]` Run syntax validations and test locally

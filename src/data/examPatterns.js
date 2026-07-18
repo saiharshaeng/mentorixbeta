@@ -15,7 +15,7 @@ const EXAM_PATTERNS = {
         name: "Section B",
         type: "numerical",
         questionsPerSubject: 5,
-        marking: { correct: 4, wrong: -1 }
+        marking: { correct: 4, wrong: 0 }
       }
     ]
   },
@@ -28,7 +28,11 @@ const EXAM_PATTERNS = {
       {
         name: "Section A",
         type: "mcq",
-        questionsPerSubject: 45, // Physics 45, Chemistry 45, Biology 90 (which is Botany 45 + Zoology 45)
+        questionsPerSubject: {
+          Physics: 45,
+          Chemistry: 45,
+          Biology: 90
+        },
         marking: { correct: 4, wrong: -1 }
       }
     ]
@@ -40,16 +44,28 @@ const EXAM_PATTERNS = {
     subjects: ["Mathematics", "Physics", "Chemistry"],
     sections: [
       {
-        name: "Section A",
+        name: "Section 1",
         type: "mcq",
-        questionsPerSubject: 10,
+        questionsPerSubject: 4,
         marking: { correct: 3, wrong: -1 }
       },
       {
-        name: "Section B",
+        name: "Section 2",
+        type: "msq",
+        questionsPerSubject: 6,
+        marking: { correct: 4, wrong: -2, partial: true }
+      },
+      {
+        name: "Section 3",
         type: "numerical",
-        questionsPerSubject: 8,
+        questionsPerSubject: 4,
         marking: { correct: 4, wrong: 0 }
+      },
+      {
+        name: "Section 4",
+        type: "mcq",
+        questionsPerSubject: 4,
+        marking: { correct: 3, wrong: -1 }
       }
     ]
   },
