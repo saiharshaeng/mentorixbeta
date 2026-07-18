@@ -1,0 +1,21 @@
+# Mentorix — Task Checklist (PYQ Integration & Pattern Compliance)
+
+- `[x]` Step 1 — Audit What Actually Exists (Legacy Workspace)
+- `[x]` Step 2 — Add Kaggle Data
+- `[x]` Step 3 — Also check other/ folder
+- `[x]` Step 4 — Rebuild master_index.json
+- `[x]` Step 5 — Verify and Test pyqService.js
+- `[x]` Step 6 — Wire pyqService.js into index.html and startApp() bootstrap
+- `[x]` Step 7 — Wire pyqService.js into comp.js (startCompPractice, Mock, and Practice)
+- `[x]` Step 8 — Fix AI difficulty enforcement and paper pattern compliance in comp.js
+- `[x]` Step 9 — Verify build/syntax and test local server
+- `[x]` Step 10 — Resolve browser global namespace conflicts (IIFE wrapper)
+- `[x]` Step 11 — Add dynamic preloading for non-preloaded browser JSON files
+- `[x]` Step 12 — Synchronize image assets and implement Markdown image rendering
+- `[x]` Step 13 — Build Netlify-ready deployment package (deploy.zip)
+- `[/]` Step 14 — Fix mock test to follow exact paper pattern
+  - `[ ]` Create `src/data/examPatterns.js`
+  - `[ ]` Add script tag to `src/index.html`
+  - `[ ]` Update `startMockExamSetup()` in `src/js/screens/comp.js`
+  - `[ ]` Update grading scoring calculation in `src/js/screens/comp.js`
+  - `[ ]` Verify build and run local test

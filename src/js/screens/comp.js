@@ -1885,76 +1885,61 @@ async function startMockExamSetup() {
   let durationSeconds = 600; // default 10 minutes
 
   if (mode === 'full') {
-    const fullQuestionsCount = exam.fullQuestions || 50;
-    const fullDurationMin = exam.duration || 120;
+    const cleanId = (compState.examId || "").toLowerCase();
+    const patterns = window.EXAM_PATTERNS || (typeof require !== 'undefined' ? require('../../data/examPatterns.js') : null);
+    const pattern = (patterns && patterns[cleanId]) 
+      || (patterns && patterns.default) 
+      || { durationMinutes: 180, subjects: ["Mathematics", "Physics", "Chemistry"], sections: [{ name: "Section A", type: "mcq", questionsPerSubject: 20, marking: { correct: 4, wrong: -1 } }, { name: "Section B", type: "numerical", questionsPerSubject: 5, marking: { correct: 4, wrong: -1 } }] };
+
+    const fullDurationMin = pattern.durationMinutes;
     durationSeconds = fullDurationMin * 60;
 
-    // Use AI to generate subject-distributed questions matching real exam pattern
-    const syllabus = DETAILED_SYLLABUS[compState.examId];
-    let syllabusContext = '';
-    if (syllabus) {
-      syllabusContext = syllabus.map(s => 
-        `${s.subject}: ${s.units.map(u => u.name).join(', ')}`
-      ).join('\n');
-    }
+    questions = [];
+    for (const subjectName of pattern.subjects) {
+      for (const section of pattern.sections) {
+        const countNeeded = section.questionsPerSubject;
+        const sectionType = section.type;
+        const sectionMarking = section.marking;
 
-    let allowedTypes = '';
-    if (exam.id === 'jee_main') {
-      allowedTypes = 'Only generate: "mcq" (single choice) and "numerical" (integer or decimal answer). Do NOT generate "msq" (multiple choice).';
-    } else if (exam.id === 'neet') {
-      allowedTypes = 'Only generate: "mcq" (single choice). Do NOT generate "msq" or "numerical".';
-    } else {
-      allowedTypes = 'Use standard exam types: "mcq" (single choice), "msq" (multiple choice, select all that apply), and "numerical" (integer/decimal).';
-    }
+        let sectionQuestions = [];
 
-    const fullPrompt = `Generate exactly ${fullQuestionsCount} exam questions for the "${exam.name}" examination.
-Pattern: ${exam.pattern}
-Subjects: ${subjects.join(', ')}
-Duration: ${fullDurationMin} minutes
-Syllabus coverage:
-${syllabusContext || subjects.join(', ')}
-
-CRITICAL REQUIREMENTS:
-1. Distribute questions proportionally across all subjects (e.g., for JEE: 18 Math, 18 Physics, 18 Chemistry)
-2. Mix difficulty: 30% easy (conceptual), 50% medium (application), 20% hard (complex problem-solving)
-3. Allowed question types for ${exam.name}: ${allowedTypes}
-4. Every math expression must use LaTeX: $formula$ for inline, $$formula$$ for display
-5. Each question must have a detailed step-by-step solution in expl field
-
-Return ONLY a valid JSON object:
-{
-  "questions": [
-    {
-      "section": "exact subject name from the list above",
-      "q": "question with $LaTeX$",
-      "opts": ["A","B","C","D"],
-      "ans": [0],
-      "type": "mcq|msq|numerical",
-      "expl": "step-by-step solution"
-    }
-  ]
-}`;
-
-    try {
-      const sys = "You are a professional exam paper setter. Output ONLY valid JSON.";
-      // Use higher token limit for full paper
-      const reply = await ai([{ role: 'user', content: fullPrompt }], sys, 8000, true);
-      if (reply) {
-        const escaped = escapeJsonLatex(reply);
-        const data = JSON.parse(escaped);
-        if (data && data.questions && data.questions.length > 0) {
-          questions = data.questions.slice(0, fullQuestionsCount);
+        // 1. Try to fetch from database
+        if (window.pyqService) {
+          const result = window.pyqService.getQuestions({
+            examId: compState.examId,
+            count: countNeeded,
+            subject: subjectName,
+            type: sectionType
+          });
+          if (result && result.questions && result.questions.length > 0) {
+            sectionQuestions = result.questions;
+          }
         }
+
+        // 2. Fallback to procedural if not enough questions
+        if (sectionQuestions.length < countNeeded) {
+          const fallbackPool = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
+          let typedFallback = fallbackPool.filter(q => q.type === sectionType);
+          if (typedFallback.length === 0) typedFallback = fallbackPool;
+
+          while (sectionQuestions.length < countNeeded) {
+            const template = typedFallback[sectionQuestions.length % typedFallback.length];
+            sectionQuestions.push({ ...template });
+          }
+        }
+
+        // Slice to exact count needed and decorate with section, type, and marking scheme
+        sectionQuestions = sectionQuestions.slice(0, countNeeded).map(q => ({
+          ...q,
+          section: subjectName,
+          type: sectionType,
+          marking: sectionMarking
+        }));
+
+        questions.push(...sectionQuestions);
       }
-    } catch(e) {
-      console.warn('[Comp] Full AI mock failed, using procedural:', e);
     }
 
-    // Fallback to procedural if AI fails
-    if (questions.length === 0) {
-      questions = generateProceduralMockQuestions(exam, fullQuestionsCount);
-    }
-    
     questions = questions.map((q, i) => ({ ...q, id: i + 1 }));
   } else {
     // Diagnostic 6 Qs
@@ -2299,11 +2284,13 @@ function submitMockExam() {
       
       if (isCorrect) {
         correct++;
-        score += marking.correct;
+        const pts = (q.marking && q.marking.correct !== undefined) ? q.marking.correct : marking.correct;
+        score += pts;
         subjectStats[sub].correct++;
       } else {
         incorrect++;
-        score += marking.wrong;
+        const penalty = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : marking.wrong;
+        score += penalty;
       }
     }
     

@@ -82,7 +82,7 @@
   }
 
   function getQuestions(options = {}) {
-    const { examId = 'JEE_MAIN', count = 5, subject, chapter, difficulty } = options;
+    const { examId = 'JEE_MAIN', count = 5, subject, chapter, difficulty, type } = options;
     
     if (!masterIndex) {
       console.warn('[pyqService] Not initialized. Returning offline fallbacks.');
@@ -165,6 +165,21 @@
       filtered = filtered.filter(item => {
         const itemDiff = (item.difficulty || "").toLowerCase();
         return itemDiff.includes(dLower);
+      });
+    }
+
+    if (type) {
+      const tLower = type.toLowerCase();
+      filtered = filtered.filter(item => {
+        let opts = item.options || item.opts || [];
+        if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
+          opts = Object.keys(item.options);
+        }
+        let itemType = item.type || "mcq";
+        if (opts.length === 0) {
+          itemType = "numerical";
+        }
+        return itemType.toLowerCase() === tLower;
       });
     }
 
