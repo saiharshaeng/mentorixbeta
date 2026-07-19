@@ -5,3 +5,14 @@ deploy/
 *.log
 .gemini/
 .system_generated/
+
+
+# Large files - not tracked by git
+Questions_Database/
+deploy.zip
+src/jee.json.zip
+src/data/pyq/processed/
+src/data/pyq/normalized/
+src/data/pyq/classified/
+*.zip
+*.pdf

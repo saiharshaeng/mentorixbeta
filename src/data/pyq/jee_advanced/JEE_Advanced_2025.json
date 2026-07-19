@@ -1,0 +1,1210 @@
+{
+  "paper": "JEE_Advanced_2025",
+  "year": 2025,
+  "shift": 1,
+  "examDate": "JEE Advanced 2025",
+  "source": "PDF",
+  "questions": [
+    {
+      "id": 1,
+      "q": "L Let ℝ denote the set of all real numbers. Let 푎 푖 ,푏 푖 ∈ℝ for 푖∈{1,2,3}. Define the functions 푓:ℝ→ℝ,푔:ℝ→ℝ, and ℎ:ℝ→ℝ by 푓 ( 푥 ) =푎 1 +10푥+ 푎 2 푥 2 +푎 3 푥 3 +푥 4 , 푔 ( 푥 ) =푏 1 +3푥+ 푏 2 푥 2 +푏 3 푥 3 +푥 4 , ℎ ( 푥 ) =푓 ( 푥+1 ) −푔 ( 푥+2 ) . If 푓 ( 푥 ) ≠푔(푥) for every 푥∈ ℝ, then the coefficient of 푥 3 in ℎ ( 푥 ) is",
+      "opts": [
+        "8",
+        "2",
+        "−4",
+        "−6"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 1,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 2,
+      "q": "Three students 푆 1 ,푆 2 , and 푆 3 are given a problem to solve. Consider the following events: 푈: At least one of 푆 1 ,푆 2 , and 푆 3 can solve the problem, 푉: 푆 1 can solve the problem, given that neither 푆 2 nor 푆 3 can solve the problem, 푊: 푆 2 can solve the problem and 푆 3 cannot solve the problem, 푇: 푆 3 can solve the problem. For any event 퐸, let 푃(퐸) denote the probability of 퐸. If 푃 ( 푈 ) = 1 2 ,푃 ( 푉 ) = 1 10 ,and 푃 ( 푊 ) = 1 12 , then 푃(푇) is equal to",
+      "opts": [
+        "13 36",
+        "1 3",
+        "19 60",
+        "1 4 JEE (Advanced) 2025 Paper 1 2/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 2,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 3,
+      "q": "Let ℝ denote the set of all real numbers. Define the function 푓:ℝ→ℝ by 푓 ( 푥 ) = { 2−2푥 2 −푥 2 sin 1 푥 if 푥≠0, 2 if 푥=0 . Then which one of the following statements is TRUE?",
+      "opts": [
+        "The function 푓 is NOT differentiable at 푥=0",
+        "There is a positive real number 훿, such that 푓 is a decreasing function on the interval (0,훿)",
+        "For any positive real number 훿, the function 푓 is NOT an increasing function on the interval ( −훿,0 )",
+        "푥=0 is a point of local minima of 푓"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 3,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 4,
+      "q": "0 Consider the matrix 푃=( 200 020 003 ) . Let the transpose of a matrix 푋 be denoted by 푋 푇 . Then the number of 3×3 invertible matrices 푄 with integer entries, such that 푄 −1 =푄 푇 and 푃푄=푄푃 , is",
+      "opts": [
+        "will get +1 mark; choosing ONLY",
+        "will get +1 mark; choosing ONLY",
+        "and",
+        "will get +1 mark; choosing no option (i.e. the question is unanswered) will get 0 marks; and choosing any other combination of options will get −2 marks."
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 4,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 5,
+      "q": "Let 퐿 1 be the line of intersection of the planes given by the equations 2푥+3푦+푧=4 and 푥+2푦+푧=5 . Let 퐿 2 be the line passing through the point 푃 ( 2,−1,3 ) and parallel to 퐿 1 . Let 푀 denote the plane given by the equation 2푥+푦−2푧=6 . Suppose that the line 퐿 2 meets the plane 푀 at the point 푄. Let 푅 be the foot of the perpendicular drawn from 푃 to the plane 푀 . Then which of the following statements is (are) TRUE?",
+      "opts": [
+        "The length of the line segment 푃푄 is 9 √ 3",
+        "The length of the line segment 푄푅 is 15",
+        "The area of Δ푃푄푅 is 3 2 √ 234",
+        "The acute angle between the line segments 푃푄 and 푃푅 is cos −1 ( 1 2 √ 3 ) JEE (Advanced) 2025 Paper 1 4/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 5,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 6,
+      "q": "Let ℕ denote the set of all natural numbers, and ℤ denote the set of all integers. Consider the functions 푓:ℕ→ℤ and 푔:ℤ→ℕ defined by 푓 ( 푛 ) = { (푛+1)/2 if 푛 is odd , (4−푛)/2 if 푛 is even , and 푔 ( 푛 ) = { 3+2푛 if 푛 ≥ 0 , −2푛 if 푛 < 0 . Define ( 푔∘푓 )( 푛 ) =푔 ( 푓 ( 푛 ) ) for all 푛∈ℕ, and ( 푓∘푔 )( 푛 ) =푓 ( 푔 ( 푛 ) ) for all 푛∈ℤ. Then which of the following statements is (are) TRUE?",
+      "opts": [
+        "푔∘푓 is NOT one-one and 푔∘푓 is NOT onto",
+        "푓∘푔 is NOT one-one but 푓∘푔 is onto",
+        "푔 is one-one and 푔 is onto",
+        "푓 is NOT one-one but 푓 is onto"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 6,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 7,
+      "q": "Let ℝ denote the set of all real numbers. Let 푧 1 =1+2푖 and 푧 2 =3푖 be two complex numbers, where 푖= √ −1 . Let 푆= { ( 푥,푦 ) ∈ℝ×ℝ∶ | 푥+푖푦−푧 1 | =2 | 푥+푖푦−푧 2 | } . Then which of the following statements is (are) TRUE?",
+      "opts": [
+        "푆 is a circle with centre (− 1 3 , 10 3 )",
+        "푆 is a circle with centre ( 1 3 , 8 3 )",
+        "푆 is a circle with radius √ 2 3",
+        "푆 is a circle with radius 2 √ 2 3 JEE (Advanced) 2025 Paper 1 5/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 7,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 8,
+      "q": "Let the set of all relations 푅 on the set { 푎,푏,푐,푑,푒,푓 } , such that 푅 is reflexive and symmetric, and 푅 contains exactly 10 elements, be denoted by 풮. Then the number of elements in 풮 is _________________.",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 8,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 9,
+      "q": "For any two points 푀 and 푁 in the 푋푌-plane, let 푀푁 ⃗⃗⃗⃗⃗⃗⃗ denote the vector from 푀 to 푁, and 0 ⃗ denote the zero vector. Let 푃,푄 and 푅 be three distinct points in the 푋푌-plane. Let 푆 be a point inside the triangle Δ푃푄푅 such that 푆푃 ⃗⃗⃗⃗ +5 푆푄 ⃗⃗⃗⃗⃗ +6 푆푅 ⃗⃗⃗⃗⃗ =0 ⃗ . Let 퐸 and 퐹 be the mid-points of the sides 푃푅 and 푄푅, respectively. Then the value of length of the line segment 퐸퐹 length of the line segment 퐸푆 is _______________.",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 9,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 10,
+      "q": "Let 푆 be the set of all seven-digit numbers that can be formed using the digits 0, 1 and 2. For example, 2210222 is in 푆, but 0210222 is NOT in 푆. Then the number of elements 푥 in 푆 such that at least one of the digits 0 and 1 appears exactly twice in 푥, is equal to ____________. SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 6/9",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 10,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 11,
+      "q": "Let 훼 and 훽 be the real numbers such that lim 푥→0 1 푥 3 ( 훼 2 ∫ 1 1−푡 2 푑푡+훽푥cos푥 푥 0 )=2 . Then the value of 훼+훽 is __________.",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 11,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 12,
+      "q": "Let ℝ denote the set of all real numbers. Let 푓:ℝ→ℝ be a function such that 푓 ( 푥 ) >0 for all 푥∈ℝ , and 푓 ( 푥+푦 ) =푓 ( 푥 ) 푓(푦) for all 푥,푦∈ℝ. Let the real numbers 푎 1 ,푎 2 ,...,푎 50 be in an arithmetic progression. If 푓 ( 푎 31 ) =64푓 ( 푎 25 ) , and ∑푓 ( 푎 푖 ) =3(2 25 +1) 50 푖=1 , then the value of ∑푓(푎 푖 ) 30 푖=6 is _________________.",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 12,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 13,
+      "q": "For all 푥>0, let 푦 1 ( 푥 ) ,푦 2 ( 푥 ) , and 푦 3 (푥) be the functions satisfying 푑푦 1 푑푥 −(sin푥) 2 푦 1 =0, 푦 1 ( 1 ) =5 , 푑푦 2 푑푥 −(cos푥) 2 푦 2 =0,푦 2 ( 1 ) = 1 3 , 푑푦 3 푑푥 −( 2−푥 3 푥 3 )푦 3 =0, 푦 3 ( 1 ) = 3 5푒 , respectively. Then lim 푥→0 + 푦 1 ( 푥 ) 푦 2 ( 푥 ) 푦 3 ( 푥 ) +2푥 푒 3푥 sin푥 is equal to ______________. JEE (Advanced) 2025 Paper 1 7/9",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 13,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 14,
+      "q": "Consider the following frequency distribution: Value 4 5 8 9 6 12 11 Frequency 5 푓 1 푓 2 2 1 1 3 Suppose that the sum of the frequencies is 19 and the median of this frequency distribution is 6. For the given frequency distribution, let 훼 denote the mean deviation about the mean, 훽 denote the mean deviation about the median, and 휎 2 denote the variance. Match each entry in List-I to the correct entry in List-II and choose the correct option. List-I List-II (P) 7푓 1 +9푓 2 is equal to (1) 146 (Q) 19훼 is equal to (2) 47 (R) 19훽 is equal to (3) 48 (S) 19휎 2 is equal to (4) 145 (5) 55",
+      "opts": [
+        "(P) ⟶ (5) (Q) ⟶ (3) (R) ⟶ (2) (S) ⟶ (4)",
+        "(P) ⟶ (5) (Q) ⟶ (2) (R) ⟶ (3) (S) ⟶ (1)",
+        "(P) ⟶ (5) (Q) ⟶ (3) (R) ⟶ (2) (S) ⟶ (1)",
+        "(P) ⟶ (3) (Q) ⟶ (2) (R) ⟶ (5) (S) ⟶ (4) SECTION 4 (Maximum Marks: 12) • This section contains THREE (03) Matching List Sets. • Each set has ONE Multiple Choice Question. • Each set has TWO lists: List-I and List-II. • List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). • FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 ONLY if the option corresponding to the correct combination is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2025 Paper 1 8/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 14,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 15,
+      "q": "Let ℝ denote the set of all real numbers. For a real number 푥, let [푥] denote the greatest integer less than or equal to 푥. Let 푛 denote a natural number. Match each entry in List-I to the correct entry in List-II and choose the correct option. List-I List-II (P) The minimum value of 푛 for which the function 푓 ( 푥 ) =[ 10푥 3 −45푥 2 +60푥+35 푛 ] is continuous on the interval [ 1,2 ] , is (1) 8 (Q) The minimum value of 푛 for which 푔 ( 푥 ) = ( 2푛 2 −13푛−15 )( 푥 3 +3푥 ) , 푥∈ℝ, is an increasing function on ℝ, is (2) 9 (R) The smallest natural number 푛 which is greater than 5, such that 푥=3 is a point of local minima of ℎ ( 푥 ) = ( 푥 2 −9 ) 푛 ( 푥 2 +2푥+3 ) , is (3) 5 (S) Number of 푥 0 ∈ℝ such that 푙 ( 푥 ) =∑(sin | 푥−푘 | +cos|푥−푘+ 1 2 |) 4 푘=0 , (4) 6 푥∈ℝ , is NOT differentiable at 푥 0 , is (5) 10",
+      "opts": [
+        "(P) ⟶ (1) (Q) ⟶ (3) (R) ⟶ (2) (S) ⟶ (5)",
+        "(P) ⟶ (2) (Q) ⟶ (1) (R) ⟶ (4) (S) ⟶ (3)",
+        "(P) ⟶ (5) (Q) ⟶ (1) (R) ⟶ (4) (S) ⟶ (3)",
+        "(P) ⟶ (2) (Q) ⟶ (3) (R) ⟶ (1) (S) ⟶ (5) JEE (Advanced) 2025 Paper 1 9/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 15,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 16,
+      "q": "Let 푤⃗⃗ =푖̂+푗̂−2푘 ̂ , and 푢⃗ and 푣 be two vectors, such that 푢⃗ ×푣 = 푤⃗⃗ and 푣 ×푤⃗⃗ =푢⃗ . Let 훼,훽,훾, and 푡 be real numbers such that 푢⃗ =훼푖̂+훽푗̂+훾푘 ̂ , −푡 훼+훽+훾=0, 훼−푡 훽+훾=0, and 훼+훽−푡 훾=0. Match each entry in List-I to the correct entry in List-II and choose the correct option. List-I List-II (P) | 푣 | 2 is equal to (1) 0 (Q) If 훼= √ 3 , then 훾 2 is equal to (2) 1 (R) If 훼= √ 3 , then (훽+훾) 2 is equal to (3) 2 (S) If 훼= √ 2 , then 푡+3 is equal to (4) 3 (5) 5",
+      "opts": [
+        ",",
+        ",",
+        "and",
+        ". ONLY ONE of these four options is the correct answer. • For each question, choose the option corresponding to the correct answer. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 If ONLY the correct option is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2025 Paper 1 2/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 16,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 1,
+      "q": "The center of a disk of radius 푟 and mass 푚 is attached to a spring of spring constant 푘, inside a ring of radius 푅>푟 as shown in the figure. The other end of the spring is attached on the periphery of the ring. Both the ring and the disk are in the same vertical plane. The disk can only roll along the inside periphery of the ring, without slipping. The spring can only be stretched or compressed along the periphery of the ring, following the Hooke’s law. In equilibrium, the disk is at the bottom of the ring. Assuming small displacement of the disc, the time period of oscillation of center of mass of the disk is written as 푇= 2휋 휔 . The correct expression for 휔 is (푔 is the acceleration due to gravity):",
+      "opts": [
+        "√ 2 3 ( 푔 푅−푟 + 푘 푚 )",
+        "√ 2푔 3 ( 푅−푟 ) + 푘 푚",
+        "√ 1 6 ( 푔 푅−푟 + 푘 푚 )",
+        "√ 1 4 ( 푔 푅−푟 + 푘 푚 )"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 1,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 2,
+      "q": "In a scattering experiment, a particle of mass 2푚 collides with another particle of mass 푚, which is initially at rest. Assuming the collision to be perfectly elastic, the maximum angular deviation 휃 of the heavier particle, as shown in the figure, in radians is:",
+      "opts": [
+        "휋",
+        "tan −1 ( 1 2 )",
+        "휋 3",
+        "휋 6 JEE (Advanced) 2025 Paper 1 3/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 2,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 3,
+      "q": "A conducting square loop initially lies in the 푋푍 plane with its lower edge hinged along the 푋-axis. Only in the region 푦≥0, there is a time dependent magnetic field pointing along the 푍-direction, 퐵 ⃗ (푡)=퐵 0 ( cos휔푡 ) 푘 ̂ , where 퐵 0 is a constant. The magnetic field is zero everywhere else. At time 푡=0, the loop starts rotating with constant angular speed 휔 about the 푋 axis in the clockwise direction as viewed from the +푋 axis (as shown in the figure). Ignoring self-inductance of the loop and gravity, which of the following plots correctly represents the induced e.m.f. ( 푉 ) in the loop as a function of time:",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 3,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 4,
+      "q": "Figure 1 shows the configuration of main scale and Vernier scale before measurement. Fig. 2 shows the configuration corresponding to the measurement of diameter 퐷 of a tube. The measured value of 퐷 is:",
+      "opts": [
+        "will get +1 mark; choosing ONLY",
+        "will get +1 mark; choosing ONLY",
+        "and",
+        "will get +1 mark; choosing no option (i.e. the question is unanswered) will get 0 marks; and choosing any other combination of options will get −2 marks. JEE (Advanced) 2025 Paper 1 5/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 4,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 5,
+      "q": ". A conducting square loop of side 퐿, mass 푀 and resistance 푅 is moving in the 푋푌 plane with its edges parallel to the 푋 and 푌 axes. The region 푦≥0 has a uniform magnetic field, 퐵 ⃗ =퐵 0 푘 ̂ . The magnetic field is zero everywhere else. At time 푡=0, the loop starts to enter the magnetic field with an initial velocity 푣 0 푗̂ m/s, as shown in the figure. Considering the quantity 퐾= 퐵 0 2 퐿 2 푅푀 in appropriate units, ignoring self-inductance of the loop and gravity, which of the following statements is/are correct:",
+      "opts": [
+        "If 푣 0 =1.5퐾퐿, the loop will stop before it enters completely inside the region of magnetic field.",
+        "When the complete loop is inside the region of magnetic field, the net force acting on the loop is zero.",
+        "If 푣 0 = 퐾퐿 10 , the loop comes to rest at 푡=( 1 퐾 )ln( 5 2 ).",
+        "If 푣 0 =3퐾퐿, the complete loop enters inside the region of magnetic field at time 푡=( 1 퐾 )ln( 3 2 )."
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 5,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 6,
+      "q": "Length, breadth and thickness of a strip having a uniform cross section are measured to be 10.5 cm, 0.05 mm, and 6.0 휇m, respectively. Which of the following option(s) give(s) the volume of the strip in cm 3 with correct significant figures:",
+      "opts": [
+        "3.2×10 −5",
+        "32.0×10 −6",
+        "3.0×10 −5",
+        "3×10 −5 JEE (Advanced) 2025 Paper 1 6/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 6,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 7,
+      "q": "Consider a system of three connected strings, 푆 1 ,푆 2 and 푆 3 with uniform linear mass densities 휇 kg/m, 4휇 kg/m and 16휇 kg/m, respectively, as shown in the figure. 푆 1 and 푆 2 are connected at the point 푃, whereas 푆 2 and 푆 3 are connected at the point 푄, and the other end of 푆 3 is connected to a wall. A wave generator O is connected to the free end of 푆 1 . The wave from the generator is represented by 푦=푦 0 cos ( 휔푡−푘푥 ) cm, where 푦 0 , 휔 and 푘 are constants of appropriate dimensions. Which of the following statements is/are correct:",
+      "opts": [
+        "When the wave reflects from 푃 for the first time, the reflected wave is represented by 푦=훼 1 y 0 cos ( 휔푡+푘푥+휋 ) cm, where 훼 1 is a positive constant.",
+        "When the wave transmits through 푃 for the first time, the transmitted wave is represented by 푦=훼 2 y 0 cos ( 휔푡−푘푥 ) cm, where 훼 2 is a positive constant.",
+        "When the wave reflects from 푄 for the first time, the reflected wave is represented by 푦=훼 3 y 0 cos ( 휔푡−푘푥+휋 ) cm, where 훼 3 is a positive constant.",
+        "When the wave transmits through 푄 for the first time, the transmitted wave is represented by 푦=훼 4 y 0 cos ( 휔푡−4푘푥 ) cm, where 훼 4 is a positive constant. JEE (Advanced) 2025 Paper 1 7/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 7,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 8,
+      "q": "A person sitting inside an elevator performs a weighing experiment with an object of mass 50 kg. Suppose that the variation of the height 푦 (in m) of the elevator, from the ground, with time 푡 (in s) is given by 푦=8 [ 1+sin( 2휋푡 푇 ) ] , where 푇=40휋 s. Taking acceleration due to gravity, 푔= 10 m/s 2 , the maximum variation of the object’s weight (in N) as observed in the experiment is ____",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 8,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 9,
+      "q": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 9,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 10,
+      "q": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is 푊 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is 푊 푆 , then the ratio 푊 0 푊 푆 is ___",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 10,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 11,
+      "q": "A solid glass sphere of refractive index 푛= √ 3 and radius 푅 contains a spherical air cavity of radius 푅 2 , as shown in the figure. A very thin glass layer is present at the point O so that the air cavity (refractive index 푛=1) remains inside the glass sphere. An unpolarized, unidirectional and monochromatic light source 푆 emits a light ray from a point inside the glass sphere towards the periphery of the glass sphere. If the light is reflected from the point O and is fully polarized, then the angle of incidence at the inner surface of the glass sphere is 휃. The value of sin휃 is ____ JEE (Advanced) 2025 Paper 1 9/13",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 11,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 12,
+      "q": "A single slit diffraction experiment is performed to determine the slit width using the equation, 푏푑 퐷 = 푚λ, where 푏 is the slit width, 퐷 the shortest distance between the slit and the screen, 푑 the distance between the 푚 th diffraction maximum and the central maximum, and λ is the wavelength. 퐷 and 푑 are measured with scales of least count of 1 cm and 1 mm, respectively. The values of λ and 푚 are known precisely to be 600 nm and 3, respectively. The absolute error (in 휇m) in the value of 푏 estimated using the diffraction maximum that occurs for 푚=3 with 푑= 5 mm and 퐷=1 m is ___",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 12,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 13,
+      "q": "Consider an electron in the 푛=3 orbit of a hydrogen-like atom with atomic number 푍. At absolute temperature 푇, a neutron having thermal energy 푘 B 푇 has the same de Broglie wavelength as that of this electron. If this temperature is given by 푇= 푍 2 ℎ 2 훼휋 2 푎 0 2 푚 N 푘 B , (where ℎ is the Planck’s constant, 푘 퐵 is the Boltzmann constant, 푚 N is the mass of the neutron and 푎 0 is the first Bohr radius of hydrogen atom) then the value of 훼 is ___ JEE (Advanced) 2025 Paper 1 10/13 SECTION 4 (Maximum Marks: 12) • This section contains THREE (03) Matching List Sets. • Each set has ONE Multiple Choice Question. • Each set has TWO lists: List-I and List-II. • List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). • FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 ONLY if the option corresponding to the correct combination is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2025 Paper 1 11/13",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 13,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 14,
+      "q": "List-I shows four configurations, each consisting of a pair of ideal electric dipoles. Each dipole has a dipole moment of magnitude 푝, oriented as marked by arrows in the figures. In all the configurations the dipoles are fixed such that they are at a distance 2푟 apart along the 푥 direction. The midpoint of the line joining the two dipoles is 푋. The possible resultant electric fields 퐸 ⃗ at 푋 are given in List-II. Choose the option that describes the correct match between the entries in List-I to those in List-II. List-I List-II (P) (1) 퐸 ⃗ = 0 (Q) (2) 퐸 ⃗ =− 푝 2휋휖 0 푟 3 푗̂ (R) (3) 퐸 ⃗ =− 푝 4휋휖 0 푟 3 (푖̂−푗̂) (S) (4) 퐸 ⃗ = 푝 4휋휖 0 푟 3 (2푖̂−푗̂) (5) 퐸 ⃗ = 푝 휋휖 0 푟 3 푖̂",
+      "opts": [
+        "P→3, Q→1, R→2, S→4",
+        "P→4, Q→5, R→3, S→1",
+        "P→2, Q→1, R→4, S→5",
+        "P→2, Q→1, R→3, S→5 JEE (Advanced) 2025 Paper 1 12/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 14,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 15,
+      "q": "A circuit with an electrical load having impedance 푍 is connected with an AC source as shown in the diagram. The source voltage varies in time as 푉 ( 푡 ) =300sin ( 400푡 ) V, where 푡 is time in s. List-I shows various options for the load. The possible currents 푖(푡) in the circuit as a function of time are given in List-II. Choose the option that describes the correct match between the entries in List-I to those in List- II. List-I List-II (P) (1) (Q) (2) (R) (3) (S) (4) (5)",
+      "opts": [
+        "P→3, Q→5, R→2, S→1",
+        "P→1, Q→5, R→2, S→3",
+        "P→3, Q→4, R→2, S→1",
+        "P→1, Q→4, R→2, S→5 JEE (Advanced) 2025 Paper 1 13/13"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 15,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 16,
+      "q": "List-I shows various functional dependencies of energy (퐸) on the atomic number (푍). Energies associated with certain phenomena are given in List-II. Choose the option that describes the correct match between the entries in List-I to those in List- II. List-I List-II (P) 퐸∝푍 2 (1) energy of characteristic x-rays (Q) 퐸∝ ( 푍−1 ) 2 (2) electrostatic part of the nuclear binding energy for stable nuclei with mass numbers in the range 30 to 170 (R) 퐸∝푍 ( 푍−1 ) (3) energy of continuous x-rays (S) 퐸 is practically independent of 푍 (4) average nuclear binding energy per nucleon for stable nuclei with mass number in the range 30 to 170 (5) energy of radiation due to electronic transitions from hydrogen-like atoms",
+      "opts": [
+        ",",
+        ",",
+        "and",
+        ". ONLY ONE of these four options is the correct answer. • For each question, choose the option corresponding to the correct answer. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 If ONLY the correct option is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases."
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 16,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 1,
+      "q": "The heating of NH 4 NO 2 at 60−70 C and NH 4 NO 3 at 200−250 C is associated with the formation of nitrogen containing compounds X and Y, respectively. X and Y, respectively, are",
+      "opts": [
+        "N 2 and N 2 O",
+        "NH 3 and NO 2",
+        "NO and N 2 O",
+        "N 2 and NH 3"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 1,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 2,
+      "q": "The correct order of the wavelength maxima of the absorption band in the ultraviolet-visible region for the given complexes is",
+      "opts": [
+        "[Co(CN) 6 ] 3− < [Co(NH 3 ) 6 ] 3+ < [Co(NH 3 ) 5 (H 2 O)] 3+ < [Co(NH 3 ) 5 (Cl)] 2+",
+        "[Co(NH 3 ) 5 (Cl)] 2+ < [Co(NH 3 ) 5 (H 2 O)] 3+ < [Co(NH 3 ) 6 ] 3+ < [Co(CN) 6 ] 3−",
+        "[Co(CN) 6 ] 3− < [Co(NH 3 ) 5 (Cl)] 2+ < [Co(NH 3 ) 5 (H 2 O)] 3+ < [Co(NH 3 ) 6 ] 3+",
+        "[Co(NH 3 ) 6 ] 3+ < [Co(CN) 6 ] 3− < [Co(NH 3 ) 5 (Cl)] 2+ < [Co(NH 3 ) 5 (H 2 O)] 3+"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 2,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 3,
+      "q": "One of the products formed from the reaction of permanganate ion with iodide ion in neutral aqueous medium is",
+      "opts": [
+        "I 2",
+        "IO 3 −",
+        "IO 4 −",
+        "IO 2 − JEE (Advanced) 2025 Paper 1 2/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 3,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 4,
+      "q": "Consider the depicted hydrogen (H) in the hydrocarbons given below. The most acidic hydrogen (H) is",
+      "opts": [
+        "will get +1 mark; choosing ONLY",
+        "will get +1 mark; choosing ONLY",
+        "and",
+        "will get +1 mark; choosing no option (i.e. the question is unanswered) will get 0 marks; and choosing any other combination of options will get −2 marks."
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 4,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 5,
+      "q": "Regarding the molecular orbital (MO) energy levels for homonuclear diatomic molecules, the INCORRECT statement(s) is(are)",
+      "opts": [
+        "Bond order of Ne 2 is zero.",
+        "The highest occupied molecular orbital (HOMO) of F 2 is σ-type.",
+        "Bond energy of O 2 + is smaller than the bond energy of O 2 .",
+        "Bond length of Li 2 is larger than the bond length of B 2 ."
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 5,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 6,
+      "q": "The pair(s) of diamagnetic ions is(are)",
+      "opts": [
+        "La 3+ , Ce 4+",
+        "Yb 2+ , Lu 3+",
+        "La 2+ , Ce 3+",
+        "Yb 3+ , Lu 2+ JEE (Advanced) 2025 Paper 1 4/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 6,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 7,
+      "q": "For the reaction sequence given below, the correct statement(s) is(are) P Q HBr Finkelstein reaction Swarts reaction R (In the options, X is any atom other than carbon and hydrogen, and it is different in P, Q and R)",
+      "opts": [
+        "C−X bond length in P, Q and R follows the order Q > R > P.",
+        "C−X bond enthalpy in P, Q and R follows the order R > P > Q.",
+        "Relative reactivity toward S N 2 reaction in P, Q and R follows the order P > R > Q.",
+        "pK a value of the conjugate acids of the leaving groups in P, Q and R follows the order R > Q > P. JEE (Advanced) 2025 Paper 1 5/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 7,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 8,
+      "q": "In an electrochemical cell, dichromate ions in aqueous acidic medium are reduced to Cr 3+ . The current (in amperes) that flows through the cell for 48.25 minutes to produce 1 mole of Cr 3+ is ______. Use: 1 Faraday =96500 C mol −1",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 8,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 9,
+      "q": "At 25 °C, the concentration of H + ions in 1.00×10 −3 M aqueous solution of a weak monobasic acid having acid dissociation constant (K a ) of 4.00 ×10 −11 is 푿×10 −7 M. The value of 푿 is ______. Use: Ionic product of water (K w ) =1.00×10 −14 at 25 °C",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 9,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 10,
+      "q": "Molar volume (V m ) of a van der Waals gas can be calculated by expressing the van der Waals equation as a cubic equation with V m as the variable. The ratio (in mol dm −3 ) of the coefficient of 푉 m 2 to the coefficient of V m for a gas having van der Waals constants a = 6.0 dm 6 atm mol −2 and b = 0.060 dm 3 mol −1 at 300 K and 300 atm is ______. Use: Universal gas constant (R) =0.082 dm 3 atm mol −1 K −1",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 10,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 11,
+      "q": "Considering ideal gas behavior, the expansion work done (in kJ) when 144 g of water is electrolyzed completely under constant pressure at 300 K is ______. Use: Universal gas constant (R) =8.3 J K −1 mol −1 ; Atomic mass (in amu): H = 1, O = 16",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 11,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 12,
+      "q": "The monomer (X) involved in the synthesis of Nylon 6,6 gives positive carbylamine test. If 10 moles of X are analyzed using Dumas method, the amount (in grams) of nitrogen gas evolved is ______. Use: Atomic mass of N (in amu) = 14 SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 6/9",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 12,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 13,
+      "q": "The reaction sequence given below is carried out with 16 moles of X. The yield of the major product in each step is given below the product in parentheses. The amount (in grams) of S produced is______. Use: Atomic mass (in amu): H = 1, C = 12, O = 16, Br = 80 JEE (Advanced) 2025 Paper 1 7/9",
+      "opts": [],
+      "ans": [
+        0
+      ],
+      "type": "numerical",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": 0,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 13,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 14,
+      "q": "The correct match of the group reagents in List-I for precipitating the metal ion given in List-II from solutions, is List-I List-II (P) Passing H 2 S in the presence of NH 4 OH (1) Cu 2+ (Q) (NH 4 ) 2 CO 3 in the presence of NH 4 OH (2) Al 3+ (R) NH 4 OH in the presence of NH 4 Cl (3) Mn 2+ (S) Passing H 2 S in the presence of dilute HCl (4) Ba 2+ (5) Mg 2+",
+      "opts": [
+        "P → 3; Q → 4; R → 2; S → 1",
+        "P → 4; Q → 2; R → 3; S → 1",
+        "P → 3; Q → 4; R → 1; S → 5",
+        "P → 5; Q → 3; R → 2; S → 4 SECTION 4 (Maximum Marks: 12) • This section contains THREE (03) Matching List Sets. • Each set has ONE Multiple Choice Question. • Each set has TWO lists: List-I and List-II. • List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). • FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 ONLY if the option corresponding to the correct combination is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2025 Paper 1 8/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 14,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 15,
+      "q": "The major products obtained from the reactions in List-II are the reactants for the named reactions mentioned in List-I. Match each entry in List-I with the appropriate entry in List-II and choose the correct option. List-I List-II (P) Stephen reaction (1) ( i ) C r O 2 C l 2 / C S 2 ( i i ) H 3 O + T o l u e n e (Q) Sandmeyer reaction (2) B e n z o i c a c i d ( i ) P C l 5 ( i i ) N H 3 ( i i i ) P 4 O 1 0 ,  (R) Hoffmann bromamide degradation reaction (3) (S) Cannizzaro reaction (4) (5) (i) (CH 3 CO) 2 O, Pyridine (ii) HNO 3 , H 2 SO 4 , 288 K (iii) aq. NaOH Aniline",
+      "opts": [
+        "P → 2; Q → 4; R → 1; S → 3",
+        "P → 2; Q → 3; R → 4; S → 1",
+        "P → 5; Q → 3; R → 4; S → 2",
+        "P → 5; Q → 4; R → 2; S → 1 JEE (Advanced) 2025 Paper 1 9/9"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 15,
+      "source": "JEE_Advanced_2025"
+    },
+    {
+      "id": 16,
+      "q": "Match the compounds in List-I with the appropriate observations in List-II and choose the correct option. List-I List-II (P) H N NH 2 O OMe O HO (1) Reaction with phenyl diazonium salt gives yellow dye. (Q) H N N H O O M e O O (2) Reaction with ninhydrin gives purple color and it also reacts with FeCl 3 to give violet color. (R) N H 3 + C l − (3) Reaction with glucose will give corresponding hydrazone. (S) (4) Lassiagne extract of the compound treated with dilute HCl followed by addition of aqueous FeCl 3 gives blood red color. (5) After complete hydrolysis, it will give ninhydrin test and it DOES NOT give positive phthalein dye test.",
+      "opts": [
+        "P → 1; Q → 5; R → 4; S → 2",
+        "P → 2; Q → 5; R → 1; S → 3",
+        "P → 5; Q → 2; R → 1; S → 4",
+        "P → 2; Q → 1; R → 5; S → 3 END OF THE QUESTION PAPER"
+      ],
+      "ans": [
+        0
+      ],
+      "type": "mcq",
+      "section": "Physics",
+      "sectionLabel": "Section A",
+      "chap": "",
+      "expl": "",
+      "difficulty": "hard",
+      "marking": {
+        "correct": 4,
+        "wrong": -1,
+        "skip": 0
+      },
+      "year": 2025,
+      "question_number": 16,
+      "source": "JEE_Advanced_2025"
+    }
+  ]
+}

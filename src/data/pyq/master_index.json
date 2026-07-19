@@ -64,7 +64,68 @@
       "type": "JEE_MAIN"
     }
   ],
-  "JEE_ADVANCED": [],
+  "JEE_ADVANCED": [
+    {
+      "file": "pyq/jee_advanced/JEE_Advanced_2020.json",
+      "year": 2020,
+      "examDate": "JEE Advanced 2020",
+      "questionCount": 55,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_ADVANCED"
+    },
+    {
+      "file": "pyq/jee_advanced/JEE_Advanced_2021.json",
+      "year": 2021,
+      "examDate": "JEE Advanced 2021",
+      "questionCount": 57,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_ADVANCED"
+    },
+    {
+      "file": "pyq/jee_advanced/JEE_Advanced_2022.json",
+      "year": 2022,
+      "examDate": "JEE Advanced 2022",
+      "questionCount": 46,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_ADVANCED"
+    },
+    {
+      "file": "pyq/jee_advanced/JEE_Advanced_2023.json",
+      "year": 2023,
+      "examDate": "JEE Advanced 2023",
+      "questionCount": 53,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_ADVANCED"
+    },
+    {
+      "file": "pyq/jee_advanced/JEE_Advanced_2024.json",
+      "year": 2024,
+      "examDate": "JEE Advanced 2024",
+      "questionCount": 54,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_ADVANCED"
+    },
+    {
+      "file": "pyq/jee_advanced/JEE_Advanced_2025.json",
+      "year": 2025,
+      "examDate": "JEE Advanced 2025",
+      "questionCount": 48,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_ADVANCED"
+    }
+  ],
   "NEET": [],
   "EAMCET": []
 }
