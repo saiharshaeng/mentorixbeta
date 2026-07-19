@@ -4954,20 +4954,703 @@ body::before {
   font-style: italic;
 }
 
-/* CBT Simulator Styles */
-.cbt-container {
-  display: grid;
-  grid-template-rows: 56px 1fr 56px;
-  grid-template-columns: 1fr 320px;
-  height: 100vh;
-  background: var(--bg);
-  overflow: hidden;
+/* ═══════════════════════════════════════════════════════════
+   NTA CBT EXAM INTERFACE — NTA JEE/NEET Style
+   Colors: Green=Answered, Red=Not-Answered, Purple=Marked, Grey=Not Visited
+═══════════════════════════════════════════════════════════ */
+
+/* Full screen exam wrap */
+.nta-exam-wrap {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  inset: 0;
   z-index: 9999;
+  background: #0d1117;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
+
+/* ── TOP BAR ── */
+.nta-topbar {
+  height: 56px;
+  background: #161b22;
+  border-bottom: 1px solid #21262d;
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+  z-index: 100;
+}
+.nta-topbar-left {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  border-right: 1px solid #21262d;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+.nta-exam-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nta-exam-logo {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.nta-exam-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e6edf3;
+  white-space: nowrap;
+}
+.nta-exam-mode {
+  font-size: 10px;
+  color: #8b949e;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Center section with subject + section tabs */
+.nta-topbar-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.nta-sub-tabs {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nta-sub-tabs::-webkit-scrollbar { display: none; }
+.nta-sub-tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b949e;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.nta-sub-tab:hover { color: #c9d1d9; }
+.nta-sub-tab.active {
+  color: #58a6ff;
+  border-bottom-color: #58a6ff;
+  background: rgba(88,166,255,0.06);
+}
+.nta-sub-count {
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 1px 6px;
+  color: #8b949e;
+}
+.nta-sub-tab.active .nta-sub-count {
+  background: rgba(88,166,255,0.15);
+  color: #58a6ff;
+}
+
+/* Section A / B tabs (within subject) */
+.nta-sec-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 12px 2px;
+}
+.nta-sec-tab {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px solid #30363d;
+  background: transparent;
+  color: #8b949e;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.15s;
+}
+.nta-sec-tab:hover { color: #c9d1d9; }
+.nta-sec-tab.active {
+  background: rgba(88,166,255,0.12);
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+/* Right: Timer + Submit */
+.nta-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  border-left: 1px solid #21262d;
+  flex-shrink: 0;
+}
+.nta-timer-wrap { text-align: center; }
+.nta-timer-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #8b949e;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.nta-timer {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  color: #e6edf3;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+  line-height: 1;
+}
+.nta-timer.warn { color: #d29922; }
+.nta-timer.danger {
+  color: #f85149;
+  animation: ntaTimerPulse 1s ease-in-out infinite;
+}
+@keyframes ntaTimerPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.nta-submit-btn {
+  padding: 8px 16px;
+  background: #da3633;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.nta-submit-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.02);
+}
+
+/* ── BODY LAYOUT ── */
+.nta-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── QUESTION PANEL (left) ── */
+.nta-q-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #21262d;
+  min-width: 0;
+  background: #0d1117;
+}
+.nta-q-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d transparent;
+}
+.nta-q-scroll::-webkit-scrollbar { width: 5px; }
+.nta-q-scroll::-webkit-scrollbar-track { background: transparent; }
+.nta-q-scroll::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+
+/* Question header */
+.nta-q-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.nta-q-num-badge {
+  background: #1f6feb;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nta-q-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.nta-q-subject-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3fb950;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nta-q-chapter {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+/* Marking scheme banner */
+.nta-mark-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+.nta-mark-correct {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3fb950;
+  background: rgba(63,185,80,0.1);
+  border: 1px solid rgba(63,185,80,0.2);
+  padding: 2px 9px;
+  border-radius: 6px;
+}
+.nta-mark-wrong {
+  font-size: 11px;
+  font-weight: 700;
+  color: #f85149;
+  background: rgba(248,81,73,0.1);
+  border: 1px solid rgba(248,81,73,0.2);
+  padding: 2px 9px;
+  border-radius: 6px;
+}
+.nta-mark-type {
+  font-size: 10px;
+  font-weight: 600;
+  color: #8b949e;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #30363d;
+  padding: 2px 9px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* Image notice */
+.nta-img-notice {
+  background: rgba(210,153,34,0.08);
+  border: 1px solid rgba(210,153,34,0.2);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  color: #d29922;
+  margin-bottom: 16px;
+}
+
+/* Question text */
+.nta-q-text {
+  font-size: 16px;
+  line-height: 1.82;
+  color: #c9d1d9;
+  margin-bottom: 28px;
+  max-width: 720px;
+  font-weight: 400;
+}
+
+/* ── OPTIONS ── */
+.nta-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 680px;
+}
+.nta-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1.5px solid #21262d;
+  background: rgba(22,27,34,0.6);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.nta-opt:hover {
+  background: rgba(88,166,255,0.05);
+  border-color: rgba(88,166,255,0.25);
+}
+.nta-opt.selected {
+  background: rgba(88,166,255,0.08);
+  border-color: #388bfd;
+}
+.nta-opt-bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #30363d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.15s;
+}
+.nta-opt-bubble.selected {
+  border-color: #388bfd;
+  background: #388bfd;
+}
+.nta-opt-letter {
+  font-size: 12px;
+  font-weight: 700;
+  color: #8b949e;
+}
+.nta-opt-bubble.selected .nta-opt-letter { color: white; }
+.nta-opt-check {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nta-opt-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #c9d1d9;
+  flex: 1;
+  padding-top: 4px;
+}
+.nta-opt.selected .nta-opt-text { color: #e6edf3; }
+
+/* Numerical input */
+.nta-numerical {
+  max-width: 380px;
+  background: rgba(22,27,34,0.6);
+  border: 1.5px solid #30363d;
+  border-radius: 12px;
+  padding: 20px;
+}
+.nta-numerical-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #8b949e;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.nta-numerical-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #0d1117;
+  border: 1.5px solid #388bfd;
+  border-radius: 8px;
+  color: #e6edf3;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.nta-numerical-input:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(88,166,255,0.1);
+}
+.nta-numerical-hint {
+  font-size: 11px;
+  color: #6e7681;
+  margin-top: 8px;
+}
+
+/* ── ACTION BAR ── */
+.nta-action-bar {
+  height: 56px;
+  background: #161b22;
+  border-top: 1px solid #21262d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+.nta-action-left { display: flex; gap: 8px; }
+.nta-action-right { display: flex; gap: 8px; }
+
+.nta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+.nta-btn-clear {
+  background: transparent;
+  border-color: #f85149;
+  color: #f85149;
+}
+.nta-btn-clear:hover {
+  background: rgba(248,81,73,0.08);
+}
+.nta-btn-mark {
+  background: transparent;
+  border-color: #a371f7;
+  color: #a371f7;
+}
+.nta-btn-mark:hover {
+  background: rgba(163,113,247,0.08);
+}
+.nta-btn-next {
+  background: #238636;
+  border-color: #238636;
+  color: white;
+}
+.nta-btn-next:hover {
+  background: #2ea043;
+  border-color: #2ea043;
+}
+
+/* ── PALETTE PANEL (right) ── */
+.nta-palette-panel {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #161b22;
+  overflow: hidden;
+}
+
+/* Candidate card at top */
+.nta-cand-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #21262d;
+}
+.nta-cand-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1f6feb, #388bfd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+.nta-cand-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e6edf3;
+}
+.nta-cand-exam {
+  font-size: 10px;
+  color: #8b949e;
+  font-weight: 500;
+}
+
+/* Status summary grid */
+.nta-pal-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #21262d;
+  border-bottom: 1px solid #21262d;
+}
+.nta-pal-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 6px;
+  background: #161b22;
+  gap: 2px;
+}
+.nta-pal-stat-num {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+.nta-pal-stat-lbl {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #6e7681;
+}
+.nta-pal-stat-answered .nta-pal-stat-num { color: #3fb950; }
+.nta-pal-stat-unanswered .nta-pal-stat-num { color: #f85149; }
+.nta-pal-stat-marked .nta-pal-stat-num { color: #a371f7; }
+.nta-pal-stat-unvisited .nta-pal-stat-num { color: #8b949e; }
+
+/* Nav label */
+.nta-pal-nav-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6e7681;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 14px 6px;
+}
+
+/* Question number palette scroll area */
+.nta-pal-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 12px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d transparent;
+}
+.nta-pal-scroll::-webkit-scrollbar { width: 4px; }
+.nta-pal-scroll::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+
+.nta-pal-group { margin-bottom: 14px; }
+.nta-pal-sub {
+  font-size: 10px;
+  font-weight: 700;
+  color: #8b949e;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding-left: 2px;
+}
+.nta-pal-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+/* Palette buttons — NTA colors */
+.nta-pal-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nta-pal-btn:hover { opacity: 0.85; transform: scale(1.05); }
+
+/* NTA Standard Status Colors */
+.nta-pal-unvisited {
+  background: #30363d;
+  color: #8b949e;
+}
+.nta-pal-unanswered {
+  background: #da3633;
+  color: white;
+}
+.nta-pal-answered {
+  background: #238636;
+  color: white;
+}
+.nta-pal-marked {
+  background: #8957e5;
+  color: white;
+}
+
+/* Current question indicator */
+.nta-pal-current {
+  outline: 2.5px solid #58a6ff;
+  outline-offset: 1px;
+  box-shadow: 0 0 8px rgba(88,166,255,0.4);
+}
+
+/* Legend */
+.nta-pal-legend {
+  border-top: 1px solid #21262d;
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.nta-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #6e7681;
+}
+.nta-leg-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Submit button in palette */
+.nta-pal-submit-btn {
+  margin: 10px 14px 14px;
+  padding: 11px;
+  width: calc(100% - 28px);
+  background: #da3633;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.15s;
+}
+.nta-pal-submit-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(218,54,51,0.3);
+}
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nta-topbar {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 56px;
+  }
+  .nta-topbar-left { min-width: unset; padding: 10px 12px; border-right: none; }
+  .nta-topbar-center { order: 3; width: 100%; border-top: 1px solid #21262d; }
+  .nta-topbar-right { padding: 8px 12px; border-left: none; margin-left: auto; }
+
+  .nta-palette-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    max-width: 320px;
+    height: 100vh;
+    z-index: 10000;
+    border-left: 1px solid #21262d;
+    box-shadow: -8px 0 32px rgba(0,0,0,0.5);
+  }
+  .nta-palette-panel.show { display: flex; }
+
+  .nta-q-scroll { padding: 16px; }
+  .nta-action-bar { padding: 0 12px; }
+  .nta-btn { padding: 7px 10px; font-size: 11px; }
+  .nta-q-text { font-size: 14px; }
+}
+
+/* Old CBT classes kept for backward compat */
+.cbt-container { display: none; }
+
+
 .cbt-topbar {
   grid-column: 1 / -1;
   background: var(--surface);

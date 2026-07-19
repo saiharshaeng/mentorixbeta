@@ -18,3 +18,4 @@
 - `[x]` Step 16 — Correct exam patterns and marking schemes
 - `[x]` Step 17 — Add custom AI difficulty system guidelines and dynamic dropdown options for JEE/NEET
 - `[x]` Step 18 — Implement verified and corrected examPatterns.js and normalizer setup
+- `[x]` Step 19 — Support alternative schema keys (correct, solution, chapter) in normalizer

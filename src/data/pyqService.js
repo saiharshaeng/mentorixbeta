@@ -1,319 +1,403 @@
+/**
+ * pyqService.js — Real PYQ Data Service for Mentorix
+ *
+ * Data format (master_index.json):
+ * {
+ *   JEE_MAIN: [ { file, year, shift, examDate, questionCount, subjects, type }, ... ],
+ *   JEE_ADVANCED: [], NEET: [], EAMCET: []
+ * }
+ *
+ * Normalized question format (after conversion):
+ * { id, q, opts[], ans[], type, section, sectionLabel, chap, expl, difficulty, marking, year }
+ */
 (function () {
-  // Cache for loaded questions
-  const fileCache = {};
-  let masterIndex = null;
+  'use strict';
 
-  // Determine environment
   const isNode = typeof process !== 'undefined' && process.versions && process.versions.node;
+  let masterIndex = null;      // loaded from master_index.json
+  const fileCache = {};        // path -> { questions: [...] }
+  let initialized = false;
 
-  function getCleanExamId(examId) {
-    if (!examId) return 'JEE_MAIN';
-    let cleanId = examId.toUpperCase().replace(/-/g, '_');
-    if (cleanId === 'JEE_ADV') cleanId = 'JEE_ADVANCED';
-    return cleanId;
-  }
-
-  async function preloadExam(examId) {
-    if (!masterIndex) return;
-    const cleanId = getCleanExamId(examId);
-    const examMeta = masterIndex.exams[cleanId];
-    if (!examMeta || !examMeta.files) return;
-
-    if (isNode) {
-      try {
-        const fs = require('fs');
-        const path = require('path');
-        examMeta.files.forEach(f => {
-          if (!fileCache[f]) {
-            const filePath = path.join(process.cwd(), 'src/data/pyq', f);
-            if (fs.existsSync(filePath)) {
-              fileCache[f] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            }
-          }
-        });
-      } catch (e) {
-        console.error('[pyqService] Failed to preload in Node:', e);
-      }
-    } else {
-      // Browser environment
-      try {
-        await Promise.all(
-          examMeta.files.map(async (f) => {
-            if (!fileCache[f]) {
-              try {
-                const res = await fetch('/data/pyq/' + f);
-                fileCache[f] = await res.json();
-              } catch (err) {
-                console.warn('Failed to preload file in browser:', f, err);
-              }
-            }
-          })
-        );
-      } catch (e) {
-        console.error('[pyqService] Failed to preload in Browser:', e);
-      }
-    }
-  }
+  /* ─────────────── INIT ─────────────── */
 
   async function init() {
-    if (isNode) {
-      try {
-        const fs = require('fs');
-        const path = require('path');
-        const indexPath = path.join(process.cwd(), 'src/data/pyq/master_index.json');
-        if (fs.existsSync(indexPath)) {
-          const data = fs.readFileSync(indexPath, 'utf8');
-          masterIndex = JSON.parse(data);
-          await preloadExam('JEE_MAIN');
-        }
-      } catch (e) {
-        console.error('[pyqService] Failed to init in Node:', e);
+    if (initialized) return;
+    try {
+      if (isNode) {
+        await initNode();
+      } else {
+        await initBrowser();
       }
-    } else {
-      // Browser environment
-      try {
-        const response = await fetch('/data/pyq/master_index.json');
-        masterIndex = await response.json();
-        await preloadExam('JEE_MAIN');
-      } catch (e) {
-        console.error('[pyqService] Failed to init in Browser:', e);
-      }
+    } catch (e) {
+      console.error('[pyqService] init failed:', e);
+    }
+    initialized = true;
+  }
+
+  async function initNode() {
+    const fs = require('fs');
+    const path = require('path');
+    const indexPath = path.join(process.cwd(), 'src/data/pyq/master_index.json');
+    if (fs.existsSync(indexPath)) {
+      masterIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+      console.log('[pyqService] Node: master_index loaded, JEE_MAIN papers:', (masterIndex.JEE_MAIN || []).length);
     }
   }
 
-  function getQuestions(options = {}) {
-    const { examId = 'JEE_MAIN', count = 5, subject, chapter, difficulty, type } = options;
-    
-    if (!masterIndex) {
-      console.warn('[pyqService] Not initialized. Returning offline fallbacks.');
-      return { questions: getOfflineFallbackQuestions(examId, subject, count) };
+  async function initBrowser() {
+    const urls = ['/data/pyq/master_index.json', '/data/master_index.json'];
+    for (const url of urls) {
+      try {
+        const r = await fetch(url);
+        if (r.ok) {
+          masterIndex = await r.json();
+          console.log('[pyqService] Browser: master_index loaded from', url, '| JEE_MAIN:', (masterIndex.JEE_MAIN || []).length, 'papers');
+          // Eagerly load all JEE_MAIN papers into cache
+          await preloadExam('JEE_MAIN');
+          return;
+        }
+      } catch (e) {
+        console.warn('[pyqService] Could not fetch', url, e.message);
+      }
     }
+    console.warn('[pyqService] No master_index loaded — offline fallbacks only');
+  }
 
-    const cleanId = getCleanExamId(examId);
-    const examMeta = masterIndex.exams[cleanId];
-    if (!examMeta || !examMeta.files || examMeta.files.length === 0) {
-      return { questions: getOfflineFallbackQuestions(examId, subject, count) };
-    }
+  /* ─────────────── PRELOAD ─────────────── */
 
-    // Collect all questions from files
-    let pool = [];
-    examMeta.files.forEach(f => {
-      let fileData = fileCache[f];
-      if (!fileData && isNode) {
-        // Sync lazy load fallback in Node
+  async function preloadExam(examId) {
+    const cleanId = normalizeExamId(examId);
+    if (!masterIndex || !masterIndex[cleanId]) return;
+    const papers = masterIndex[cleanId];
+
+    if (isNode) {
+      const fs = require('fs');
+      const path = require('path');
+      papers.forEach(paper => {
+        if (fileCache[paper.file]) return;
+        const p = path.join(process.cwd(), 'src/data', paper.file);
+        if (fs.existsSync(p)) {
+          fileCache[paper.file] = JSON.parse(fs.readFileSync(p, 'utf8'));
+        }
+      });
+    } else {
+      await Promise.all(papers.map(async paper => {
+        if (fileCache[paper.file]) return;
         try {
-          const fs = require('fs');
-          const path = require('path');
-          const filePath = path.join(process.cwd(), 'src/data/pyq', f);
-          if (fs.existsSync(filePath)) {
-            fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            fileCache[f] = fileData;
+          const r = await fetch('/data/' + paper.file);
+          if (r.ok) {
+            fileCache[paper.file] = await r.json();
+            console.log('[pyqService] Loaded:', paper.file, '->',
+              (fileCache[paper.file].questions || []).length, 'questions');
           }
         } catch (e) {
-          console.error('Failed to lazy load file:', f, e);
+          console.warn('[pyqService] Failed to load', paper.file, e.message);
         }
-      }
+      }));
+    }
+  }
 
-      if (fileData) {
-        if (Array.isArray(fileData)) {
-          pool = pool.concat(fileData);
-        } else if (fileData.questions && Array.isArray(fileData.questions)) {
-          pool = pool.concat(fileData.questions);
-        } else {
-          // Handle Kaggle format (object with subject arrays)
-          if (subject) {
-            const key = mapSubjectToKaggleKey(subject);
-            if (fileData[key] && Array.isArray(fileData[key])) {
-              pool = pool.concat(fileData[key]);
-            }
-          } else {
-            // Concat all subjects if no subject filter
-            Object.values(fileData).forEach(arr => {
-              if (Array.isArray(arr)) {
-                pool = pool.concat(arr);
-              }
-            });
-          }
-        }
-      }
-    });
+  /* ─────────────── GET QUESTIONS ─────────────── */
+
+  /**
+   * getQuestions({ examId, count, subject, chapter, difficulty, type, paperYear, paperIndex })
+   *
+   * Returns { questions: [...normalized] }
+   *
+   * For MOCK TEST: count=75, returns full paper's questions
+   * For PRACTICE: count=5-20, returns filtered random set
+   */
+  function getQuestions(options) {
+    options = options || {};
+    const examId = options.examId || 'JEE_MAIN';
+    const count = options.count || 75;
+    const subject = options.subject || null;
+    const chapter = options.chapter || null;
+    const difficulty = options.difficulty || null;
+    const qType = options.type || null;
+    const paperYear = options.paperYear || null;
+    const paperIndex = options.paperIndex !== undefined ? options.paperIndex : null;
+
+    const cleanId = normalizeExamId(examId);
+
+    // ── COLLECT QUESTION POOL ──
+    let pool = collectPool(cleanId, paperIndex);
 
     if (pool.length === 0) {
-      return { questions: getOfflineFallbackQuestions(examId, subject, count) };
+      console.warn('[pyqService] No real questions loaded — using offline fallback.');
+      return { questions: getOfflineFallback(cleanId, subject, count) };
     }
 
-    // Apply filters
+    // ── FILTER ──
     let filtered = pool;
+
     if (subject) {
-      const sLower = subject.toLowerCase();
-      filtered = filtered.filter(item => {
-        const itemSub = (item.subject || item.section || "").toLowerCase();
-        return itemSub.includes(sLower);
+      const sl = subject.toLowerCase();
+      filtered = filtered.filter(q => {
+        const s = (q.section || '').toLowerCase();
+        return s.includes(sl) || sl.includes(s);
       });
+      if (filtered.length === 0) filtered = pool; // relax
     }
 
     if (chapter) {
-      const cLower = chapter.toLowerCase();
-      filtered = filtered.filter(item => {
-        const itemChap = (item.topic || item.chap || "").toLowerCase();
-        return itemChap.includes(cLower);
-      });
+      const cl = chapter.toLowerCase();
+      const byChap = filtered.filter(q => (q.chap || '').toLowerCase().includes(cl));
+      if (byChap.length > 0) filtered = byChap;
     }
 
-    if (difficulty) {
-      const dLower = difficulty.toLowerCase();
-      if (dLower !== 'jee-level' && dLower !== 'jee-adv-level' && dLower !== 'neet-level') {
-        filtered = filtered.filter(item => {
-          const itemDiff = (item.difficulty || "").toLowerCase();
-          return itemDiff.includes(dLower);
-        });
+    if (difficulty && difficulty !== 'jee-level' && difficulty !== 'neet-level' && difficulty !== 'jee-adv-level') {
+      const dl = difficulty.toLowerCase();
+      const byDiff = filtered.filter(q => (q.difficulty || '').toLowerCase() === dl);
+      if (byDiff.length > 0) filtered = byDiff;
+    }
+
+    if (qType) {
+      const tl = qType.toLowerCase();
+      const byType = filtered.filter(q => (q.type || 'mcq').toLowerCase() === tl);
+      if (byType.length > 0) filtered = byType;
+    }
+
+    // ── FOR FULL MOCK: return structured 75-question paper ──
+    if (count >= 60 && !subject && !chapter) {
+      // Return up to 75 real questions, maintaining subject distribution
+      const result = buildFullMockPaper(cleanId, paperIndex);
+      if (result.length > 0) {
+        return { questions: result };
       }
     }
 
-    if (type) {
-      const tLower = type.toLowerCase();
-      filtered = filtered.filter(item => {
-        let opts = item.options || item.opts || [];
-        if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
-          opts = Object.keys(item.options);
-        }
-        let itemType = item.type || "mcq";
-        if (opts.length === 0) {
-          itemType = "numerical";
-        }
-        return itemType.toLowerCase() === tLower;
-      });
-    }
-
-    // Fallback if filters are too strict
-    if (filtered.length === 0) {
-      filtered = pool;
-    }
-
-    // Select count items
+    // ── SHUFFLE AND SELECT ──
+    const shuffled = shuffleArray([...filtered]);
     const selected = [];
     for (let i = 0; i < count; i++) {
-      const item = filtered[i % filtered.length];
-      selected.push(normalizeQuestion(item, i + 1));
+      if (shuffled.length === 0) break;
+      selected.push(shuffled[i % shuffled.length]);
     }
 
     return { questions: selected };
   }
 
-  function mapSubjectToKaggleKey(sub) {
-    const s = sub.toLowerCase();
-    if (s.includes('biolog')) return 'biolog';
-    if (s.includes('chem')) return 'chemistri';
-    if (s.includes('math')) return 'math';
-    if (s.includes('phys')) return 'physic';
-    return s;
-  }
+  /**
+   * Build a proper full 75-question mock paper in JEE Main format:
+   * Math: Q1-25, Physics: Q26-50, Chemistry: Q51-75
+   * Within each: Q1-20 = Section A (MCQ +4/-1), Q21-25 = Section B (Numerical +4/0)
+   */
+  function buildFullMockPaper(cleanId, paperIdx) {
+    const papers = masterIndex && masterIndex[cleanId];
+    if (!papers || papers.length === 0) return [];
 
-  function normalizeQuestion(item, indexId) {
-    const qText = item.question_text || item.question || item.body || item.q || "";
-    
-    let opts = [];
-    if (Array.isArray(item.options)) {
-      opts = item.options;
-    } else if (item.options && typeof item.options === 'object') {
-      const keys = Object.keys(item.options).sort();
-      opts = keys.map(k => item.options[k]);
-    } else if (item.opts) {
-      opts = item.opts;
+    // Pick a specific paper or random one
+    let paperMeta;
+    if (paperIdx !== null && paperIdx !== undefined && papers[paperIdx]) {
+      paperMeta = papers[paperIdx];
+    } else {
+      paperMeta = papers[Math.floor(Math.random() * papers.length)];
     }
 
+    let fileData = fileCache[paperMeta.file];
+    if (!fileData && isNode) {
+      try {
+        const fs = require('fs');
+        const path = require('path');
+        const p = path.join(process.cwd(), 'src/data', paperMeta.file);
+        if (fs.existsSync(p)) {
+          fileData = JSON.parse(fs.readFileSync(p, 'utf8'));
+          fileCache[paperMeta.file] = fileData;
+        }
+      } catch (e) { /* ignore */ }
+    }
+
+    if (!fileData) return [];
+    const qs = fileData.questions || (Array.isArray(fileData) ? fileData : []);
+    if (qs.length === 0) return [];
+
+    // Ensure proper marking scheme on every question
+    return qs.map((q, i) => {
+      const normalized = ensureNormalized(q, i + 1, paperMeta.year);
+      return normalized;
+    });
+  }
+
+  function collectPool(cleanId, paperIdx) {
+    if (!masterIndex || !masterIndex[cleanId]) return [];
+    const papers = masterIndex[cleanId];
+    let pool = [];
+
+    const papersToLoad = (paperIdx !== null && papers[paperIdx]) ? [papers[paperIdx]] : papers;
+
+    papersToLoad.forEach(paper => {
+      let fileData = fileCache[paper.file];
+      if (!fileData && isNode) {
+        try {
+          const fs = require('fs');
+          const path = require('path');
+          const p = path.join(process.cwd(), 'src/data', paper.file);
+          if (fs.existsSync(p)) {
+            fileData = JSON.parse(fs.readFileSync(p, 'utf8'));
+            fileCache[paper.file] = fileData;
+          }
+        } catch (e) { /* ignore */ }
+      }
+
+      if (fileData) {
+        const qs = fileData.questions || (Array.isArray(fileData) ? fileData : []);
+        qs.forEach((q, i) => pool.push(ensureNormalized(q, pool.length + i + 1, paper.year)));
+      }
+    });
+
+    return pool;
+  }
+
+  /* ─────────────── NORMALIZE ─────────────── */
+
+  /**
+   * Ensure question is in normalized format.
+   * Our converted files already have the normalized format but handle both old and new.
+   */
+  function ensureNormalized(q, idxFallback, year) {
+    // Already normalized (has opts array and ans array)
+    if (Array.isArray(q.opts) && Array.isArray(q.ans) && q.q) {
+      // Just ensure marking is set
+      if (!q.marking) {
+        const sectionLabel = q.sectionLabel || 'Section A';
+        const isNumerical = q.type === 'numerical';
+        q.marking = isNumerical
+          ? { correct: 4, wrong: 0, skip: 0 }
+          : { correct: 4, wrong: -1, skip: 0 };
+      }
+      return q;
+    }
+
+    // Raw format (from original JSON before conversion)
+    const qText = q.question_text || q.question || q.q || '';
+
+    // Options: {a:'', b:'', c:'', d:''} -> ['', '', '', '']
+    let opts = [];
+    if (Array.isArray(q.options)) {
+      opts = q.options;
+    } else if (q.options && typeof q.options === 'object') {
+      opts = ['a','b','c','d'].map(k => q.options[k] || '').filter(v => v !== '');
+    } else if (Array.isArray(q.opts)) {
+      opts = q.opts;
+    }
+
+    // Answer: letter -> index
     let ans = [0];
-    const rawAns = item.correct_answer !== undefined ? item.correct_answer : (item.correct !== undefined ? item.correct : item.ans);
-    if (rawAns !== undefined) {
+    const rawAns = q.correct_answer !== undefined ? q.correct_answer : (q.correct !== undefined ? q.correct : q.ans);
+    if (rawAns !== undefined && rawAns !== null) {
       if (Array.isArray(rawAns)) {
-        ans = rawAns;
+        ans = rawAns.map(a => typeof a === 'string' ? (a.toLowerCase().charCodeAt(0) - 97) : a);
       } else if (typeof rawAns === 'number') {
         ans = [rawAns];
       } else if (typeof rawAns === 'string') {
-        const charCode = rawAns.toLowerCase().charCodeAt(0);
-        if (charCode >= 97 && charCode <= 122) { // a-z
-          ans = [charCode - 97];
+        const code = rawAns.toLowerCase().trim().charCodeAt(0);
+        if (code >= 97 && code <= 100) { // a-d
+          ans = [code - 97];
         } else {
-          const val = parseInt(rawAns, 10);
-          if (!isNaN(val)) {
-            ans = [val];
-          }
+          const num = parseFloat(rawAns);
+          if (!isNaN(num)) ans = [num];
         }
       }
     }
 
-    let type = item.type || "mcq";
-    if (opts.length === 0) {
-      type = "numerical";
-    }
-
-    const expl = item.explanation || item.solution || item.expl || "";
-    const section = item.subject || item.section || "";
-    const chap = item.chapter || item.topic || item.chap || "";
-
-    let hasImage = item.hasImage || item.has_image || false;
-    let imagePath = item.imagePath || item.image_path || item.image || "";
-
-    if (!hasImage && qText.includes('![')) {
-      const match = qText.match(/!\[.*?\]\((.*?)\)/);
-      if (match && match[1]) {
-        hasImage = true;
-        imagePath = match[1];
-      }
-    }
+    const type = opts.length > 0 ? (q.type || 'mcq') : 'numerical';
+    const section = q.subject || q.section || 'General';
+    const localNum = q.question_number ? (q.question_number % 25 || 25) : 1;
+    const sectionLabel = localNum <= 20 ? 'Section A' : 'Section B';
+    const isNumerical = type === 'numerical';
 
     return {
-      id: indexId,
+      id: q.id || idxFallback,
       q: qText,
       opts: opts,
       ans: ans,
-      type: type,
-      expl: expl,
+      type: isNumerical ? 'numerical' : (opts.length > 1 ? 'mcq' : 'mcq'),
       section: section,
-      chap: chap,
-      hasImage: hasImage,
-      imagePath: imagePath
+      sectionLabel: sectionLabel,
+      chap: q.topic || q.chap || q.chapter || '',
+      expl: q.explanation || q.expl || q.solution || '',
+      difficulty: q.difficulty || 'medium',
+      marking: isNumerical
+        ? { correct: 4, wrong: 0, skip: 0 }
+        : { correct: 4, wrong: -1, skip: 0 },
+      year: q.year || year || null,
+      question_number: q.question_number || idxFallback
     };
   }
 
-  // Fallback static questions (matching legacy comp.js)
-  const PYQ_OFFLINE_FALLBACK_QUESTIONS = {
-    JEE_MAIN: [
-      { section: "Mathematics", chap: "Definite Integration", q: "Find the value of the integral: $\\int_0^{\\pi} e^{\\cos x} \\sin x \\, dx$.", opts: ["$e - e^{-1}$", "$e + e^{-1}$", "$e$", "$e^{-1}$"], ans: [0], type: "mcq", expl: "Let $u = \\cos x \\Rightarrow du = -\\sin x \\, dx$. Limits: $x=0 \\Rightarrow u=1$, $x=\\pi \\Rightarrow u=-1$. The integral becomes $\\int_{-1}^1 e^u \\, du = [e^u]_{-1}^1 = e - e^{-1}$." },
-      { section: "Mathematics", chap: "Matrices & Determinants", q: "If $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, find $A^{10}$.", opts: ["$\\begin{pmatrix} 1 & 20 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 10 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 10 & 20 \\\\ 0 & 10 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 2^{10} \\\\ 0 & 1 \\end{pmatrix}$"], ans: [0], type: "mcq", expl: "By induction, $A^n = \\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix}$. For $n=10$, $A^{10} = \\begin{pmatrix} 1 & 20 \\\\ 0 & 1 \\end{pmatrix}$." },
-      { section: "Physics", chap: "Current Electricity", q: "Three resistors of resistance $2\\Omega, 3\\Omega,$ and $6\\Omega$ are connected in parallel. Find the equivalent resistance.", opts: ["$1 \\Omega$", "$2 \\Omega$", "$6 \\Omega$", "$11 \\Omega$"], ans: [0], type: "mcq", expl: "$1/R_{eq} = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1 \\Rightarrow R_{eq} = 1\\Omega$." },
-      { section: "Physics", chap: "Laws of Motion", q: "A block of mass $5\\text{ kg}$ is pulled along a friction-free horizontal surface by a force of $20\\text{ N}$. Find the acceleration of the block.", opts: ["$4 \\text{ m/s}^2$", "$2 \\text{ m/s}^2$", "$10 \\text{ m/s}^2$", "$0.25 \\text{ m/s}^2$"], ans: [0], type: "mcq", expl: "$a = F/m = 20\\text{ N} / 5\\text{ kg} = 4\\text{ m/s}^2$." },
-      { section: "Chemistry", chap: "Chemical Kinetics", q: "A first-order reaction has a rate constant $k = 6.93 \\times 10^{-3}\\text{ s}^{-1}$. Find its half-life.", opts: ["$100 \\text{ s}$", "$10 \\text{ s}$", "$69.3 \\text{ s}$", "$0.693 \\text{ s}$"], ans: [0], type: "mcq", expl: "$t_{1/2} = 0.693 / k = 0.693 / (6.93 \\times 10^{-3}) = 100\\text{ s}$." },
-      { section: "Chemistry", chap: "Coordination Compounds", q: "What is the coordination number of cobalt in $[Co(en)_3]^{3+}$?", opts: ["$6$", "$3$", "$4$", "$8$"], ans: [0], type: "mcq", expl: "Ethylenediamine (en) is a bidentate ligand. Three bidentate ligands occupy $3 \\times 2 = 6$ coordination sites." }
-    ]
-  };
+  /* ─────────────── UTILITIES ─────────────── */
 
-  function getOfflineFallbackQuestions(examId, subject, count) {
-    const pool = PYQ_OFFLINE_FALLBACK_QUESTIONS[getCleanExamId(examId)] || PYQ_OFFLINE_FALLBACK_QUESTIONS.JEE_MAIN;
-    let filtered = pool;
-    if (subject) {
-      filtered = pool.filter(q => q.section.toLowerCase().includes(subject.toLowerCase()) || q.chap.toLowerCase().includes(subject.toLowerCase()));
-      if (filtered.length === 0) filtered = pool;
+  function normalizeExamId(examId) {
+    if (!examId) return 'JEE_MAIN';
+    return examId.toUpperCase().replace(/-/g, '_').replace('JEE_ADV', 'JEE_ADVANCED');
+  }
+
+  function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    const results = [];
-    for (let i = 0; i < count; i++) {
-      const qObj = filtered[i % filtered.length];
-      results.push({
-        ...qObj,
-        id: i + 1,
-        section: subject || qObj.section
-      });
-    }
-    return results;
+    return arr;
   }
 
   function hasData(examId) {
-    const cleanId = getCleanExamId(examId);
-    return !!(masterIndex && masterIndex.exams && masterIndex.exams[cleanId]);
+    const id = normalizeExamId(examId);
+    return !!(masterIndex && masterIndex[id] && masterIndex[id].length > 0);
   }
 
-  // Export for Node and Browser
-  const pyqService = { init, getQuestions, preloadExam, hasData };
+  function getPapers(examId) {
+    const id = normalizeExamId(examId);
+    return (masterIndex && masterIndex[id]) || [];
+  }
+
+  /* ─────────────── OFFLINE FALLBACK ─────────────── */
+
+  const OFFLINE_FALLBACK = {
+    JEE_MAIN: [
+      { id:1, section:'Mathematics', sectionLabel:'Section A', chap:'Definite Integration', q:'Find $\\int_0^{\\pi} e^{\\cos x} \\sin x \\, dx$.', opts:['$e - e^{-1}$','$e + e^{-1}$','$e$','$e^{-1}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Let $u=\\cos x$, $du=-\\sin x\\,dx$. Bounds flip. $\\int_{-1}^1 e^u du = e-e^{-1}$.' },
+      { id:2, section:'Mathematics', sectionLabel:'Section A', chap:'Matrices', q:'If $A=\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}$, find $A^{10}$.', opts:['$\\begin{pmatrix}1&20\\\\0&1\\end{pmatrix}$','$\\begin{pmatrix}1&10\\\\0&1\\end{pmatrix}$','$\\begin{pmatrix}10&20\\\\0&10\\end{pmatrix}$','$\\begin{pmatrix}1&2^{10}\\\\0&1\\end{pmatrix}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'By induction $A^n=\\begin{pmatrix}1&2n\\\\0&1\\end{pmatrix}$.' },
+      { id:3, section:'Physics', sectionLabel:'Section A', chap:'Current Electricity', q:'Three resistors $2\\Omega, 3\\Omega, 6\\Omega$ in parallel. Equivalent resistance:', opts:['$1\\Omega$','$2\\Omega$','$6\\Omega$','$11\\Omega$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$1/R = 1/2+1/3+1/6 = 1$.' },
+      { id:4, section:'Physics', sectionLabel:'Section A', chap:'Laws of Motion', q:'Block $5$ kg, force $20$ N on frictionless surface. Acceleration:', opts:['$4\\text{ ms}^{-2}$','$2\\text{ ms}^{-2}$','$10\\text{ ms}^{-2}$','$0.25\\text{ ms}^{-2}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$a=F/m=20/5=4\\text{ ms}^{-2}$.' },
+      { id:5, section:'Chemistry', sectionLabel:'Section A', chap:'Chemical Kinetics', q:'First-order reaction, $k=6.93\\times10^{-3}\\text{ s}^{-1}$. Half-life:', opts:['$100$ s','$10$ s','$69.3$ s','$0.693$ s'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$t_{1/2}=0.693/k=100$ s.' },
+      { id:6, section:'Chemistry', sectionLabel:'Section A', chap:'Coordination Compounds', q:'Coordination number of Co in $[Co(en)_3]^{3+}$?', opts:['$6$','$3$','$4$','$8$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'en is bidentate; 3 en = 6 bonds.' }
+    ],
+    NEET: [
+      { id:1, section:'Biology', sectionLabel:'Section A', chap:'Cell Biology', q:"Which organelle is the 'powerhouse of the cell'?", opts:['Mitochondria','Ribosome','Nucleus','Golgi apparatus'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Mitochondria produce ATP.' },
+      { id:2, section:'Biology', sectionLabel:'Section A', chap:'Genetics', q:'Plant AaBb selfed. Fraction of offspring AaBB?', opts:['1/8','1/4','1/16','3/16'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'P(Aa)=1/2, P(BB)=1/4 → 1/8.' },
+      { id:3, section:'Physics', sectionLabel:'Section A', chap:'Optics', q:'Convex lens $f=20$ cm, object at $30$ cm. Image distance?', opts:['60 cm','30 cm','20 cm','15 cm'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Lens formula: 1/v-1/(-30)=1/20 → v=60 cm.' },
+      { id:4, section:'Chemistry', sectionLabel:'Section A', chap:'Biomolecules', q:'Which is a reducing sugar?', opts:['Glucose','Sucrose','Starch','Cellulose'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Glucose has free aldehyde group.' },
+      { id:5, section:'Biology', sectionLabel:'Section A', chap:'Human Physiology', q:'Where does protein digestion primarily begin?', opts:['Stomach','Mouth','Small intestine','Large intestine'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Pepsin in stomach.' }
+    ],
+    JEE_ADVANCED: [
+      { id:1, section:'Mathematics', sectionLabel:'Section 1', chap:'Complex Numbers', q:'If $|z-25i|\\leq 15$, max value of $|iz+3-16i|$?', opts:['35','25','20','40'], ans:[0], type:'mcq', marking:{correct:3,wrong:-1,skip:0}, expl:'Max = distance + radius = 20+15=35.' },
+      { id:2, section:'Physics', sectionLabel:'Section 1', chap:'Mechanics', q:'Centripetal acceleration of mass $m$ at radius $r$, speed $v$?', opts:['$v^2/r$','$v/r$','$vr$','$v^2r$'], ans:[0], type:'mcq', marking:{correct:3,wrong:-1,skip:0}, expl:'$a_c=v^2/r$.' },
+      { id:3, section:'Chemistry', sectionLabel:'Section 1', chap:'Electrochemistry', q:'$E^\\circ(Cu^{2+}/Cu)=+0.34$ V, $E^\\circ(Zn^{2+}/Zn)=-0.76$ V. EMF of Daniell cell?', opts:['1.10 V','0.42 V','0.34 V','0.76 V'], ans:[0], type:'mcq', marking:{correct:3,wrong:-1,skip:0}, expl:'$E_{cell}=0.34-(-0.76)=1.10$ V.' },
+      { id:4, section:'Mathematics', sectionLabel:'Section 3', chap:'Calculus', q:'$\\lim_{x\\to 0}\\frac{\\sin x - x}{x^3}$?', opts:['$-1/6$','$1/6$','$0$','$-1/3$'], ans:[0], type:'mcq', marking:{correct:4,wrong:0,skip:0}, expl:'Taylor: $(\\sin x-x)/x^3 \\to -1/6$.' }
+    ],
+    EAMCET: [
+      { id:1, section:'Mathematics', sectionLabel:'Section A', chap:'Limits', q:'$\\lim_{x\\to 0}\\frac{\\sin 3x}{x}$?', opts:['3','1','0','$\\infty$'], ans:[0], type:'mcq', marking:{correct:1,wrong:0,skip:0}, expl:'$\\lim_{x\\to0}\\frac{\\sin ax}{x}=a$.' },
+      { id:2, section:'Physics', sectionLabel:'Section A', chap:'Kinematics', q:'Body projected at $30°$ with speed $40$ ms$^{-1}$. Max height ($g=10$)?', opts:['20 m','40 m','80 m','10 m'], ans:[0], type:'mcq', marking:{correct:1,wrong:0,skip:0}, expl:'$H=v^2\\sin^2\\theta/(2g)=(1600\\times0.25)/20=20$ m.' }
+    ]
+  };
+
+  function getOfflineFallback(cleanId, subject, count) {
+    let pool = OFFLINE_FALLBACK[cleanId] || OFFLINE_FALLBACK.JEE_MAIN;
+    if (subject) {
+      const sl = subject.toLowerCase();
+      const filtered = pool.filter(q => (q.section||'').toLowerCase().includes(sl));
+      if (filtered.length > 0) pool = filtered;
+    }
+    const result = [];
+    for (let i = 0; i < count; i++) {
+      result.push({ ...pool[i % pool.length], id: i + 1 });
+    }
+    return result;
+  }
+
+  /* ─────────────── EXPORT ─────────────── */
+
+  const pyqService = { init, getQuestions, preloadExam, hasData, getPapers };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = pyqService;

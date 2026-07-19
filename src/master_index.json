@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-07-15",
+  "exams": {
+    "JEE_MAIN": {
+      "name": "JEE Main",
+      "available": true,
+      "files": [
+        "jee_main/jeeMain_2024_jan_s1.json",
+        "jee_main/jeeMain_2024_jan_s2.json",
+        "jee_main/jeeMain_2023_jan_s1.json"
+      ],
+      "subjects": ["Physics", "Chemistry", "Mathematics"],
+      "totalQuestions": 0
+    },
+    "NEET": {
+      "name": "NEET UG",
+      "available": true,
+      "files": [
+        "neet/neet_2024.json",
+        "neet/neet_2023.json"
+      ],
+      "subjects": ["Physics", "Chemistry", "Biology"],
+      "totalQuestions": 0
+    },
+    "JEE_ADVANCED": {
+      "name": "JEE Advanced",
+      "available": false,
+      "files": [],
+      "subjects": ["Physics", "Chemistry", "Mathematics"],
+      "totalQuestions": 0,
+      "comingSoon": true
+    },
+    "EAMCET": {
+      "name": "EAMCET",
+      "available": false,
+      "files": [],
+      "subjects": ["Physics", "Chemistry", "Mathematics"],
+      "totalQuestions": 0,
+      "comingSoon": true
+    }
+  }
+}

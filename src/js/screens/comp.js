@@ -438,7 +438,19 @@ const WORLD_EXAMS = [
 ];
 
 // Helper to escape LaTeX characters from double-unescaping issues
+function stripMarkdownFences(str) {
+  if (!str) return str;
+  // Strip ```json ... ``` or ``` ... ``` wrappers the AI sometimes adds
+  return str
+    .replace(/^```(?:json)?\s*/i, '')
+    .replace(/\s*```\s*$/i, '')
+    .trim();
+}
+
 function escapeJsonLatex(str) {
+  // First strip any markdown code fences from the AI response
+  str = stripMarkdownFences(str);
+
   let result = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '\\') {
@@ -2240,7 +2252,34 @@ async function startMockExamSetup() {
       });
     }
 
-    questions = [];
+    // ═══════════════════════════════════════════
+    // FAST PATH: Use a complete real PYQ paper
+    // ═══════════════════════════════════════════
+    const hasPyqData = window.pyqService && window.pyqService.hasData(compState.examId);
+    if (hasPyqData) {
+      // Pick a random paper index so each test feels different
+      const papers = window.pyqService.getPapers(compState.examId);
+      const paperIdx = Math.floor(Math.random() * papers.length);
+      const result = window.pyqService.getQuestions({
+        examId: compState.examId,
+        count: 75
+      });
+
+      if (result && result.questions && result.questions.length >= 6) {
+        questions = result.questions.map((q, i) => ({
+          ...q,
+          id: i + 1,
+          // Ensure marking is correct per section
+          marking: q.marking || (q.type === 'numerical' ? { correct: 4, wrong: 0 } : { correct: 4, wrong: -1 })
+        }));
+        console.log('[Mock] Using real PYQ paper:', papers[paperIdx] && papers[paperIdx].examDate, '| Questions:', questions.length);
+      }
+    }
+
+    // ═══════════════════════════════════════════
+    // FALLBACK: Assemble section-by-section
+    // ═══════════════════════════════════════════
+    if (questions.length === 0) {
     for (const ns of normalizedSections) {
       const subjectName = ns.subject;
       const countNeeded = ns.count;
@@ -2290,6 +2329,7 @@ async function startMockExamSetup() {
     }
 
     questions = questions.map((q, i) => ({ ...q, id: i + 1 }));
+    } // end fallback
   } else {
     // Diagnostic 6 Qs
     durationSeconds = 600;
@@ -2459,204 +2499,281 @@ function renderActiveExamUI() {
   if (!exam) return '';
 
   const q = exam.questions[exam.currentIndex];
+  if (!q) return '';
+
   const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
-  const sections = examDb.subjects || ['General'];
-  
-  const m = Math.floor(exam.timeLeft / 60);
-  const s = exam.timeLeft % 60;
-  const timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-  
-  // Timer styling
-  let timerStyle = 'color: #fff;';
-  let timerClass = '';
-  if (exam.timeLeft < 600) {
-    timerStyle = 'color: var(--red);';
-    timerClass = 'timer-pulsing';
-  } else if (exam.timeLeft < 1800) {
-    timerStyle = 'color: var(--warn);';
+
+  // --- TIMER ---
+  const totalSec = exam.timeLeft || 0;
+  const hh = Math.floor(totalSec / 3600);
+  const mm = Math.floor((totalSec % 3600) / 60);
+  const ss = totalSec % 60;
+  const timeStr = `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;
+  let timerCls = '';
+  if (totalSec < 600) timerCls = 'danger';
+  else if (totalSec < 1800) timerCls = 'warn';
+
+  // --- QUESTION META ---
+  const qNum = exam.currentIndex + 1;
+  const qTotal = exam.questions.length;
+  const qType = (q.type || 'mcq').toUpperCase();
+  const markCorrect = (q.marking && q.marking.correct !== undefined) ? q.marking.correct : 4;
+  const markWrong = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : -1;
+  const markWrongDisplay = q.type === 'numerical' ? 0 : markWrong;
+  const sectionLabel = q.sectionLabel || 'Section A';
+
+  // --- SUBJECT TABS ---
+  // Get unique subjects from questions
+  const subjectsInExam = [...new Set(exam.questions.map(q => q.section || 'General'))];
+  const currentSubject = q.section || 'General';
+
+  const subjectTabsHTML = subjectsInExam.map(sub => {
+    const isActive = sub === currentSubject;
+    const answeredInSub = exam.questions
+      .map((q2, i) => ({ q: q2, i }))
+      .filter(item => (item.q.section || 'General') === sub && exam.status[item.i] === 'answered')
+      .length;
+    const totalInSub = exam.questions.filter(q2 => (q2.section || 'General') === sub).length;
+    return `<button class="nta-sub-tab${isActive ? ' active' : ''}" onclick="switchMockSection('${sub}')">
+      ${sub}
+      <span class="nta-sub-count">${answeredInSub}/${totalInSub}</span>
+    </button>`;
+  }).join('');
+
+  // --- SECTION TABS (A/B within a subject) ---
+  const sectionsInSub = [...new Set(
+    exam.questions
+      .filter(q2 => (q2.section || 'General') === currentSubject)
+      .map(q2 => q2.sectionLabel || 'Section A')
+  )];
+  const sectionTabsHTML = sectionsInSub.length > 1 ? sectionsInSub.map(sec => {
+    const isActive = sectionLabel === sec;
+    const targetIdx = exam.questions.findIndex(
+      q2 => (q2.section || 'General') === currentSubject && (q2.sectionLabel || 'Section A') === sec
+    );
+    return `<button class="nta-sec-tab${isActive ? ' active' : ''}" onclick="navigateExam(${targetIdx >= 0 ? targetIdx : 0})">
+      ${sec}
+    </button>`;
+  }).join('') : '';
+
+  // --- QUESTION PALETTE ---
+  const paletteHTML = subjectsInExam.map(sub => {
+    const qs = exam.questions
+      .map((q2, i) => ({ q: q2, i }))
+      .filter(item => (item.q.section || 'General') === sub);
+    if (!qs.length) return '';
+
+    return `<div class="nta-pal-group">
+      <div class="nta-pal-sub">${sub}</div>
+      <div class="nta-pal-grid">
+        ${qs.map(({ q: q2, i }) => {
+          const status = exam.status[i] || 'unvisited';
+          const isCurrent = exam.currentIndex === i;
+          const statusMap = {
+            'unvisited': 'nta-pal-unvisited',
+            'unanswered': 'nta-pal-unanswered',
+            'answered': 'nta-pal-answered',
+            'marked': 'nta-pal-marked'
+          };
+          const cls = `nta-pal-btn ${statusMap[status] || 'nta-pal-unvisited'}${isCurrent ? ' nta-pal-current' : ''}`;
+          return `<button class="${cls}" data-q-index="${i}" onclick="navigateExam(${i})">${i + 1}</button>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }).join('');
+
+  // --- MARKING SCHEME BANNER ---
+  const markBanner = `<div class="nta-mark-banner">
+    <span class="nta-mark-correct">✓ +${markCorrect}</span>
+    <span class="nta-mark-wrong">${q.type === 'numerical' ? '✗ 0 (No penalty)' : `✗ ${markWrongDisplay}`}</span>
+    <span class="nta-mark-type">${qType === 'MSQ' ? 'Multiple Select' : qType === 'NUMERICAL' ? 'Numerical' : 'Single Correct'}</span>
+  </div>`;
+
+  // --- OPTIONS / NUMERICAL INPUT ---
+  let answerArea = '';
+  if (q.type === 'numerical') {
+    answerArea = `
+      <div class="nta-numerical">
+        <div class="nta-numerical-label">Enter exact numerical answer:</div>
+        <input
+          type="number"
+          step="any"
+          id="numerical-ans-input"
+          class="nta-numerical-input"
+          placeholder="e.g.  12,  −3.5,  0.25"
+          value="${exam.answers[exam.currentIndex] !== undefined ? exam.answers[exam.currentIndex] : ''}"
+          oninput="saveNumericalAnswer(this.value)"
+        >
+        <div class="nta-numerical-hint">Use decimal point for non-integer answers. Negative sign allowed.</div>
+      </div>`;
+  } else {
+    answerArea = `<div class="nta-options">
+      ${(q.opts || []).map((opt, oIdx) => {
+        let isSelected = false;
+        if (q.type === 'msq') {
+          isSelected = (exam.answers[exam.currentIndex] || []).includes(oIdx);
+        } else {
+          isSelected = exam.answers[exam.currentIndex] === oIdx;
+        }
+        const inputType = q.type === 'msq' ? 'checkbox' : 'radio';
+        return `<div class="nta-opt${isSelected ? ' selected' : ''}" onclick="selectMockOption(${oIdx}, '${q.type}')">
+          <div class="nta-opt-bubble${isSelected ? ' selected' : ''}">
+            <span class="nta-opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+            ${isSelected ? '<div class="nta-opt-check"></div>' : ''}
+          </div>
+          <div class="nta-opt-text katex-render-target">${renderQuestionText(opt)}</div>
+        </div>`;
+      }).join('')}
+    </div>`;
   }
 
-  // Group questions by subject
-  const groupedQuestions = {};
-  exam.questions.forEach((question, idx) => {
-    const sub = question.section || 'General';
-    if (!groupedQuestions[sub]) groupedQuestions[sub] = [];
-    groupedQuestions[sub].push({ q: question, idx });
+  // --- ANSWERED / TOTAL SUMMARY ---
+  let answeredCount = 0, markedCount = 0, notVisited = 0;
+  exam.questions.forEach((_, i) => {
+    const st = exam.status[i] || 'unvisited';
+    if (st === 'answered') answeredCount++;
+    else if (st === 'marked') markedCount++;
+    else if (st === 'unvisited') notVisited++;
   });
 
-  // Render subject tabs
-  const subjectTabsHTML = sections.map(sec => {
-    const isActive = q.section === sec;
-    return `
-      <button class="cbt-tab ${isActive ? 'active' : ''}" onclick="switchMockSection('${sec}')">
-        ${sec}
-      </button>
-    `;
-  }).join('');
-
-  // Find current active subject's sections
-  const activeSubQuestions = groupedQuestions[q.section] || [];
-  const sectionsInActiveSub = [...new Set(activeSubQuestions.map(item => item.q.sectionLabel || 'Section A'))];
-  
-  const sectionFilterHTML = sectionsInActiveSub.length > 1 ? `
-    <div class="cbt-sec-tabs">
-      ${sectionsInActiveSub.map(secLabel => {
-        const isCurrentSec = q.sectionLabel === secLabel;
-        const targetItem = activeSubQuestions.find(item => item.q.sectionLabel === secLabel);
-        const targetIdx = targetItem ? targetItem.idx : 0;
-        return `
-          <button class="cbt-sec-tab ${isCurrentSec ? 'active' : ''}" onclick="navigateExam(${targetIdx})">
-            ${secLabel}
-          </button>
-        `;
-      }).join('')}
-    </div>
-  ` : '';
-
-  // Render palette items grouped by subject
-  const paletteHTML = sections.map(sec => {
-    const questionsInSec = groupedQuestions[sec] || [];
-    if (questionsInSec.length === 0) return '';
-    
-    return `
-      <div class="cbt-palette-group">
-        <div class="cbt-palette-group-title">${sec}</div>
-        <div class="cbt-palette-grid">
-          ${questionsInSec.map(item => {
-            const idx = item.idx;
-            const status = exam.status[idx] || 'unvisited';
-            let statusClass = 'unvisited';
-            if (status === 'unanswered') statusClass = 'unanswered';
-            if (status === 'answered') statusClass = 'answered';
-            if (status === 'marked') statusClass = 'marked';
-            
-            const isCurrent = exam.currentIndex === idx;
-            const currentClass = isCurrent ? 'current' : '';
-            
-            return `
-              <button class="cbt-palette-btn ${statusClass} ${currentClass}" data-q-index="${idx}" onclick="navigateExam(${idx})">
-                ${idx + 1}
-              </button>
-            `;
-          }).join('')}
-        </div>
-      </div>
-    `;
-  }).join('');
-
   return `
-    <div class="cbt-container" id="cbt-question-panel">
-      <!-- TOP BAR -->
-      <div class="cbt-topbar">
-        <div class="cbt-topbar-left">
-          <div class="cbt-subject-tabs">
-            ${subjectTabsHTML}
+  <div class="nta-exam-wrap" id="cbt-question-panel">
+
+    <!-- ═══ TOP BAR ═══ -->
+    <div class="nta-topbar">
+      <div class="nta-topbar-left">
+        <div class="nta-exam-brand">
+          <span class="nta-exam-logo">🎯</span>
+          <div>
+            <div class="nta-exam-name">${esc(examDb.name || 'Mock Exam')}</div>
+            <div class="nta-exam-mode">${exam.mode === 'full' ? 'Full Length Test' : 'Diagnostic Test'}</div>
           </div>
-          ${sectionFilterHTML}
-        </div>
-        <div class="cbt-topbar-right">
-          <div class="cbt-timer-clock ${timerClass}" id="exam-timer-text" style="${timerStyle}">
-            ${timeStr}
-          </div>
-          <button class="cbt-submit-btn" onclick="confirmSubmitMockExam()">
-            🏁 Submit
-          </button>
         </div>
       </div>
 
-      <!-- CONTENT BODY -->
-      <div class="cbt-body">
-        <!-- LEFT: QUESTION AREA -->
-        <div class="cbt-question-panel">
-          <div class="cbt-question-card">
-            <!-- Question header: Number, Type, Marking scheme -->
-            <div class="cbt-q-header">
-              <div class="cbt-q-num">Question ${exam.currentIndex + 1}</div>
-              <div class="cbt-q-meta">
-                <span class="tag tp" style="text-transform: uppercase; font-weight:700">${q.type}</span>
-                <span style="font-size:11px;color:var(--mut)">
-                  Correct: <strong style="color:var(--okl)">+${(q.marking && q.marking.correct) || 4}</strong> · 
-                  Wrong: <strong style="color:var(--redl)">${(q.marking && q.marking.wrong) || -1}</strong>
-                </span>
-              </div>
-            </div>
-
-            <!-- Question Text -->
-            <div class="cbt-q-text katex-render-target">
-              ${renderQuestionText(q.q)}
-              ${renderQuestionImage(q)}
-            </div>
-
-            <!-- Options / Answer inputs -->
-            <div class="cbt-opts">
-              ${q.type === 'numerical' ? `
-                <div class="cbt-numerical-box">
-                  <div class="cbt-numerical-label">Enter Exact Numerical Value</div>
-                  <input type="text" id="numerical-ans-input" class="cbt-numerical-input" placeholder="e.g. 15, -0.5, or 4" value="${exam.answers[exam.currentIndex] || ''}" oninput="saveNumericalAnswer(this.value)">
-                </div>
-              ` : q.opts.map((opt, oIdx) => {
-                let isSelected = false;
-                if (q.type === 'msq') {
-                  isSelected = (exam.answers[exam.currentIndex] || []).includes(oIdx);
-                } else {
-                  isSelected = exam.answers[exam.currentIndex] === oIdx;
-                }
-
-                return `
-                  <div class="cbt-option ${isSelected ? 'selected' : ''}" onclick="selectMockOption(${oIdx}, '${q.type}')">
-                    <div class="cbt-option-letter">${String.fromCharCode(65 + oIdx)}</div>
-                    <div class="cbt-option-text katex-render-target">${renderQuestionText(opt)}</div>
-                  </div>
-                `;
-              }).join('')}
-            </div>
-          </div>
-
-          <!-- Bottom controls bar -->
-          <div class="cbt-controls">
-            <button class="cbt-btn cbt-btn-sec" onclick="clearActiveExamAnswer()">
-              🧹 Clear Response
-            </button>
-            <div style="display:flex;gap:10px">
-              <button class="cbt-btn cbt-btn-warn" onclick="markMockForReview()">
-                🔖 Mark for Review
-              </button>
-              <button class="cbt-btn cbt-btn-pri" onclick="saveAndNextMock()">
-                Save & Next →
-              </button>
-            </div>
-          </div>
+      <div class="nta-topbar-center">
+        <!-- Subject tabs -->
+        <div class="nta-sub-tabs" id="nta-sub-tabs-row">
+          ${subjectTabsHTML}
         </div>
+        ${sectionTabsHTML ? `<div class="nta-sec-tabs">${sectionTabsHTML}</div>` : ''}
+      </div>
 
-        <!-- RIGHT: SIDE PANEL (PALETTE) -->
-        <div class="cbt-sidebar">
-          <div style="flex:1;overflow-y:auto;padding-bottom:20px">
-            ${paletteHTML}
-          </div>
-
-          <!-- Palette legends -->
-          <div class="cbt-legends">
-            <div class="cbt-legend-item">
-              <span class="cbt-legend-dot answered"></span>
-              <span>Answered</span>
-            </div>
-            <div class="cbt-legend-item">
-              <span class="cbt-legend-dot unanswered"></span>
-              <span>Unanswered</span>
-            </div>
-            <div class="cbt-legend-item">
-              <span class="cbt-legend-dot marked"></span>
-              <span>Marked</span>
-            </div>
-            <div class="cbt-legend-item">
-              <span class="cbt-legend-dot unvisited"></span>
-              <span>Unvisited</span>
-            </div>
-          </div>
+      <div class="nta-topbar-right">
+        <div class="nta-timer-wrap">
+          <div class="nta-timer-label">Time Left</div>
+          <div class="nta-timer ${timerCls}" id="exam-timer-text">${timeStr}</div>
         </div>
+        <button class="nta-submit-btn" onclick="confirmSubmitMockExam()">Submit Paper</button>
       </div>
     </div>
-  `;
+
+    <!-- ═══ BODY ═══ -->
+    <div class="nta-body">
+
+      <!-- LEFT: QUESTION PANEL -->
+      <div class="nta-q-panel">
+        <div class="nta-q-scroll">
+
+          <!-- Question header -->
+          <div class="nta-q-header">
+            <div class="nta-q-num-badge">Q.${qNum}</div>
+            <div class="nta-q-info">
+              <span class="nta-q-subject-tag">${esc(currentSubject)}</span>
+              ${q.chap ? `<span class="nta-q-chapter">· ${esc(q.chap)}</span>` : ''}
+            </div>
+            ${markBanner}
+          </div>
+
+          <!-- Question image notice if applicable -->
+          ${q.hasImage ? `<div class="nta-img-notice">⚠️ This question has a diagram. Visual content shown below.</div>` : ''}
+
+          <!-- Question text -->
+          <div class="nta-q-text katex-render-target">
+            ${renderQuestionText(q.q)}
+          </div>
+          ${renderQuestionImage(q)}
+
+          <!-- Answer area -->
+          ${answerArea}
+
+        </div>
+
+        <!-- ACTION BAR at bottom of question panel -->
+        <div class="nta-action-bar">
+          <div class="nta-action-left">
+            <button class="nta-btn nta-btn-clear" onclick="clearActiveExamAnswer()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+              Clear Response
+            </button>
+          </div>
+          <div class="nta-action-right">
+            <button class="nta-btn nta-btn-mark" onclick="markMockForReview()">
+              🔖 Mark for Review &amp; Next
+            </button>
+            <button class="nta-btn nta-btn-next" onclick="saveAndNextMock()">
+              Save &amp; Next →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: PALETTE PANEL -->
+      <div class="nta-palette-panel" id="nta-palette">
+
+        <!-- Candidate info -->
+        <div class="nta-cand-card">
+          <div class="nta-cand-avatar">${(D && D.profile && D.profile.name ? D.profile.name[0] : 'S').toUpperCase()}</div>
+          <div class="nta-cand-info">
+            <div class="nta-cand-name">${esc((D && D.profile && D.profile.name) || 'Student')}</div>
+            <div class="nta-cand-exam">${esc(examDb.name || 'Mock Exam')}</div>
+          </div>
+        </div>
+
+        <!-- Summary counts -->
+        <div class="nta-pal-summary">
+          <div class="nta-pal-stat nta-pal-stat-answered">
+            <span class="nta-pal-stat-num">${answeredCount}</span>
+            <span class="nta-pal-stat-lbl">Answered</span>
+          </div>
+          <div class="nta-pal-stat nta-pal-stat-unanswered">
+            <span class="nta-pal-stat-num">${exam.questions.length - answeredCount - markedCount}</span>
+            <span class="nta-pal-stat-lbl">Not Answered</span>
+          </div>
+          <div class="nta-pal-stat nta-pal-stat-marked">
+            <span class="nta-pal-stat-num">${markedCount}</span>
+            <span class="nta-pal-stat-lbl">Marked</span>
+          </div>
+          <div class="nta-pal-stat nta-pal-stat-unvisited">
+            <span class="nta-pal-stat-num">${notVisited}</span>
+            <span class="nta-pal-stat-lbl">Not Visited</span>
+          </div>
+        </div>
+
+        <!-- Question nav label -->
+        <div class="nta-pal-nav-label">Choose a Question</div>
+
+        <!-- Question palette -->
+        <div class="nta-pal-scroll">
+          ${paletteHTML}
+        </div>
+
+        <!-- Legend -->
+        <div class="nta-pal-legend">
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-answered"></span>Answered</div>
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unanswered"></span>Not Answered</div>
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-marked"></span>Marked for Review</div>
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unvisited"></span>Not Visited</div>
+        </div>
+
+        <!-- Palette submit button -->
+        <button class="nta-pal-submit-btn" onclick="confirmSubmitMockExam()">
+          🏁 Submit Test
+        </button>
+      </div>
+
+    </div>
+  </div>`;
 }
 
 function switchMockSection(sec) {
@@ -2849,12 +2966,15 @@ function submitMockExam() {
       } else {
         if (q.type === 'msq') {
           const sortedUser = (userAns || []).slice().sort().join(',');
-          const sortedCorrect = (q.ans || []).slice().sort().join(',');
+          const ansArr2 = Array.isArray(q.ans) ? q.ans : (q.ans !== undefined ? [q.ans] : [0]);
+    const sortedCorrect = ansArr2.slice().sort().join(',');
           isCorrect = sortedUser === sortedCorrect;
         } else if (q.type === 'numerical') {
-          isCorrect = String(userAns).trim() === String(q.ans).trim();
+          const correctAns = Array.isArray(q.ans) ? q.ans[0] : q.ans;
+          isCorrect = String(userAns).trim() === String(correctAns).trim();
         } else {
-          isCorrect = userAns === q.ans[0];
+          const correctIdx = Array.isArray(q.ans) ? q.ans[0] : q.ans;
+          isCorrect = userAns === correctIdx;
         }
 
         if (isCorrect) {
@@ -2875,7 +2995,13 @@ function submitMockExam() {
       hasImage: q.hasImage,
       imagePath: q.imagePath,
       user: userAns,
-      correct: q.opts ? q.opts[q.ans[0]] || q.ans.map(a => q.opts[a]).join(', ') : q.ans,
+      correct: (() => {
+        const ansArr = Array.isArray(q.ans) ? q.ans : (q.ans !== undefined ? [q.ans] : [0]);
+        if (q.opts && q.opts.length > 0) {
+          return ansArr.map(a => q.opts[a] || '').filter(Boolean).join(' / ') || q.opts[ansArr[0]] || String(ansArr[0]);
+        }
+        return ansArr.join(', ');
+      })(),
       isCorrect,
       explanation: q.expl || 'Self-explanatory standard answer.'
     };
