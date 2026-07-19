@@ -307,13 +307,19 @@
     return results;
   }
 
+  function hasData(examId) {
+    const cleanId = getCleanExamId(examId);
+    return !!(masterIndex && masterIndex.exams && masterIndex.exams[cleanId]);
+  }
+
   // Export for Node and Browser
-  const pyqService = { init, getQuestions, preloadExam };
+  const pyqService = { init, getQuestions, preloadExam, hasData };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = pyqService;
   }
   if (typeof window !== 'undefined') {
     window.pyqService = pyqService;
+    window.PYQService = pyqService;
   }
 })();

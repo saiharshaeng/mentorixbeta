@@ -14,7 +14,10 @@
 
 /** Mentorix Cloudflare Worker proxy — routes to Groq without exposing keys */
 const GROQ  = 'https://mentorix-ai-proxy.mentorix.workers.dev/';
-const MODEL = 'llama-3.3-70b-versatile';
+const MODEL_CHAT = 'llama-3.3-70b-versatile';
+const MODEL_VISION = 'llama-3.2-11b-vision-preview'; 
+const MODEL_REASON = 'qwen-qwq-32b';
+const MODEL = MODEL_CHAT;
 
 /* ── COURSE LIMITS ──────────────────────────────────────────── */
 
@@ -98,6 +101,9 @@ const EDU_BOARDS = ['CBSE', 'ICSE', 'State Board', 'Cambridge', 'IB', 'IGCSE', '
 
 /* ── EXPORTS ────────────────────────────────────────────────── */
 window.GROQ             = GROQ;
+window.MODEL_CHAT       = MODEL_CHAT;
+window.MODEL_VISION     = MODEL_VISION;
+window.MODEL_REASON     = MODEL_REASON;
 window.MODEL            = MODEL;
 window.MAX_COURSES      = MAX_COURSES;
 window.BADGES           = BADGES;

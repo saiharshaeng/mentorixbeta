@@ -4,7 +4,7 @@
  * AI features (Groq proxy) won't work offline — that's expected and shown via the offline banner.
  */
 
-const CACHE_NAME = 'mentorix-v42';
+const CACHE_NAME = 'mentorix-v45';
 
 // Files to cache on install — the core app shell
 const CORE_ASSETS = [
@@ -13,6 +13,15 @@ const CORE_ASSETS = [
   './index.css',
   './manifest.json',
   './logo.png',
+  './lib/katex.min.css',
+  './lib/katex.min.js',
+  './lib/auto-render.min.js',
+  './lib/gsap.min.js',
+  './lib/anime.min.js',
+  './lib/chart.umd.min.js',
+  './data/examPatterns.js',
+  './data/jeeData.js',
+  './data/pyqService.js',
   './js/helpers.js',
   './js/constants.js',
   './js/storage.js',
@@ -62,8 +71,8 @@ self.addEventListener('fetch', e => {
   const url = e.request.url;
 
   // Never cache AI proxy calls — these must always go to network
-  if (url.includes('mentorix-proxy') || url.includes('groq.com') ||
-      url.includes('googleapis') || url.includes('cloudflare')) {
+  if (url.includes('mentorix-proxy') || url.includes('mentorix-ai-proxy') || url.includes('groq.com') ||
+      url.includes('googleapis') || url.includes('cloudflare') || url.includes('workers.dev')) {
     return; // let browser handle normally
   }
 

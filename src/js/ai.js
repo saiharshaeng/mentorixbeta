@@ -18,13 +18,14 @@
  * If no key, tries proxy. If both fail/missing, prompts user for a custom key.
  * Falls back to Mock AI only if key entry is skipped.
  */
-async function ai(msgs, sys, mt = 2000, json = false) {
+async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT || MODEL, useVision = false) {
   if (window.addTerminalLog) {
-    window.addTerminalLog(`AI dispatching request to ${MODEL}...`);
+    window.addTerminalLog(`AI dispatching request to ${model}...`);
   }
   const allMsgs = sys ? [{ role: 'system', content: sys }, ...msgs] : msgs;
-  const body = { model: MODEL, messages: allMsgs, max_tokens: mt, temperature: 0.7 };
+  const body = { model: model, messages: allMsgs, max_tokens: mt, temperature: 0.7 };
   if (json) body.response_format = { type: 'json_object' };
+  if (useVision) body.useVision = true;
 
   const forceMock = localStorage.getItem('mx3_use_mock') === 'true';
   if (forceMock) {
@@ -37,7 +38,6 @@ async function ai(msgs, sys, mt = 2000, json = false) {
   const delay = ms => new Promise(res => setTimeout(res, ms));
 
   // 1. Try Cloudflare Worker proxy first
-  let proxySuccess = false;
   let reply = null;
 
   if (GROQ) {
@@ -65,10 +65,18 @@ async function ai(msgs, sys, mt = 2000, json = false) {
 
       if (r.ok) {
         const data = await r.json();
-        reply = data?.choices?.[0]?.message?.content || '';
-        proxySuccess = true;
-        if (window.addTerminalLog) {
-          window.addTerminalLog(`AI proxy response resolved successfully.`);
+        // Check if proxy returned an API error body (e.g. invalid_api_key)
+        // even though HTTP status was 200
+        if (data?.error) {
+          console.warn('[Mentorix] Proxy returned API error:', data.error.message);
+        } else {
+          reply = data?.choices?.[0]?.message?.content || '';
+          if (reply) {
+            if (window.addTerminalLog) {
+              window.addTerminalLog(`AI proxy response resolved successfully.`);
+            }
+            return reply;
+          }
         }
       } else {
         console.warn('[Mentorix] Proxy returned error status:', r.status);
@@ -78,14 +86,44 @@ async function ai(msgs, sys, mt = 2000, json = false) {
     }
   }
 
-  if (proxySuccess) {
-    return reply;
+  // 2. Proxy failed or returned error — try direct Groq API with stored key
+  const directKey = localStorage.getItem('mx3_groq_key');
+  if (directKey) {
+    try {
+      if (window.addTerminalLog) {
+        window.addTerminalLog(`Proxy unavailable. Trying direct Groq API...`);
+      }
+      // Build a Groq-compatible body (strip useVision flag not understood by Groq)
+      const groqBody = { model: 'llama-3.3-70b-versatile', messages: allMsgs, max_tokens: mt, temperature: 0.7 };
+      if (json) groqBody.response_format = { type: 'json_object' };
+      const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${directKey}`
+        },
+        body: JSON.stringify(groqBody)
+      });
+      const data = await r.json();
+      if (data?.choices?.[0]?.message?.content) {
+        reply = data.choices[0].message.content;
+        if (window.addTerminalLog) {
+          window.addTerminalLog(`Direct Groq API response resolved successfully.`);
+        }
+        return reply;
+      } else {
+        console.warn('[Mentorix] Direct Groq API error:', data?.error?.message);
+      }
+    } catch (e) {
+      console.warn('[Mentorix] Direct Groq API call failed:', e);
+    }
   }
 
-  // 3. Both failed
-  console.error('[Mentorix] Cloudflare Worker proxy connection failed.');
+  // 3. Both failed — surface clear message to user
+  console.error('[Mentorix] All AI routes failed. Proxy error + no direct key set.');
+  console.info('[Mentorix] To enable AI: run this in the browser console:\n  localStorage.setItem("mx3_groq_key", "YOUR_GROQ_KEY_HERE")');
   if (window.toast) {
-    window.toast('⚠️ AI service is temporarily busy. Please try again shortly.', 'err');
+    window.toast('⚠️ AI service unavailable. Check console for setup instructions.', 'err');
   }
   return null;
 }
@@ -305,3 +343,196 @@ Would you like me to build a personalized study course, generate a mock test, or
 
 /* ── EXPORTS ────────────────────────────────────────────────── */
 window.ai = ai;
+
+const TIO_SYSTEM_PROMPT = `You are Tio — the AI mentor inside Mentorix, a free learning platform built for students who cannot afford tutors or coaching.
+
+PERSONALITY:
+Warm, smart, direct. Like a brilliant older sibling who genuinely cares. Never robotic. Never formal. Never say "Certainly!" or "Great question!" or "Of course!" — these feel fake.
+
+HOW YOU TEACH:
+For any concept explanation:
+1. Start with one real-world hook or analogy
+2. State the core idea in 1-2 sentences  
+3. Show a worked example step by step
+4. Point out the most common mistake
+5. End with: "Does that make sense?" or "Want to try one?"
+
+For wrong answers:
+Never say "Wrong" — say "Almost!" or "Close — here's the tricky part..."
+Show exactly where the logic broke. Then explain the correct path.
+
+MATH FORMATTING:
+Always use LaTeX for math expressions.
+Inline math: $expression$
+Display math: $$expression$$
+Example: The quadratic formula is $$x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$
+
+EXAM AWARENESS:
+JEE Main (2025): 75 questions, 180 minutes
+Section A: 20 MCQs per subject, +4/-1 marks
+Section B: 5 Numerical per subject, +4/0 marks
+NEET (2025): 180 questions compulsory, 3 hours, +4/-1
+
+RESPONSE LENGTH:
+Short questions: 2-4 sentences max
+Concept explanations: use numbered steps
+Full solutions: show every step clearly
+Never write walls of text.`;
+
+function buildAIContext(profileId) {
+  let profile = (globalThis.D && globalThis.D.profile) || {};
+  if (!profile.id || profile.id !== profileId) {
+    try {
+      profile = JSON.parse(
+        localStorage.getItem(`mx3_${profileId}_profile`)
+        || '{}'
+      );
+    } catch(e) {
+      profile = {};
+    }
+  }
+  
+  let recentMistakes = [];
+  try {
+    recentMistakes = JSON.parse(
+      localStorage.getItem(
+        `mx3_${profileId}_mistakes`
+      ) || '[]'
+    ).slice(-10);
+  } catch(e) {
+    recentMistakes = [];
+  }
+  
+  let weakSpots = {};
+  try {
+    weakSpots = JSON.parse(
+      localStorage.getItem(
+        `mx3_${profileId}_weakspots`
+      ) || '{}'
+    );
+  } catch(e) {
+    weakSpots = {};
+  }
+  
+  const topWeakSpots = Object.entries(weakSpots)
+    .sort((a,b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([topic]) => topic);
+  
+  return {
+    ...profile,
+    weakSpots: topWeakSpots,
+    recentMistakes,
+    streak: (globalThis.D && globalThis.D.streak) || profile.streak || 0,
+    level: (globalThis.D && typeof globalThis.lv === 'function' && globalThis.lv(globalThis.D.xp)) || profile.level || 1
+  };
+}
+
+async function callTio(msgs, profileId, mt = 1500, model = window.MODEL_CHAT || MODEL) {
+  const context = buildAIContext(profileId);
+  const systemPrompt = typeof TIO_SYSTEM_PROMPT === 'function' ? TIO_SYSTEM_PROMPT(context) : TIO_SYSTEM_PROMPT;
+  
+  let messagesArray = msgs;
+  if (typeof msgs === 'string') {
+    messagesArray = [{ role: 'user', content: msgs }];
+  }
+  
+  return ai(messagesArray, systemPrompt, mt, false, model);
+}
+
+function recordMistake(profileId, question, userAnswer) {
+  if (!profileId) return;
+  const key = `mx3_${profileId}_mistakes`;
+  let existing = [];
+  try {
+    existing = JSON.parse(
+      localStorage.getItem(key) || '[]'
+    );
+  } catch(e) {
+    existing = [];
+  }
+  
+  existing.push({
+    questionId: question.id,
+    subject: question.subject,
+    chapter: question.chapter || question.classifiedChapter || 'General',
+    topic: question.topic || 'General',
+    questionText: (question.question || question.q || '').substring(0, 100),
+    correctAnswer: question.correct_answer || question.correct || '',
+    userAnswer,
+    timestamp: Date.now()
+  });
+  
+  const trimmed = existing.slice(-100);
+  localStorage.setItem(key, JSON.stringify(trimmed));
+  
+  updateWeakSpot(profileId, question.chapter || question.classifiedChapter || 'General');
+}
+
+function updateWeakSpot(profileId, chapter) {
+  if (!profileId || !chapter) return;
+  const key = `mx3_${profileId}_weakspots`;
+  let spots = {};
+  try {
+    spots = JSON.parse(
+      localStorage.getItem(key) || '{}'
+    );
+  } catch(e) {
+    spots = {};
+  }
+  spots[chapter] = (spots[chapter] || 0) + 1;
+  localStorage.setItem(key, JSON.stringify(spots));
+}
+
+window.TIO_SYSTEM_PROMPT = TIO_SYSTEM_PROMPT;
+window.buildAIContext = buildAIContext;
+window.callTio = callTio;
+window.recordMistake = recordMistake;
+window.updateWeakSpot = updateWeakSpot;
+
+async function askTioWithImage(imageBase64, question, profileId) {
+  const proxyUrl = window.GROQ || (typeof GROQ !== 'undefined' ? GROQ : 'https://mentorix-ai-proxy.mentorix.workers.dev/');
+  const context = buildAIContext(profileId);
+  const systemPrompt = typeof TIO_SYSTEM_PROMPT === 'function' ? TIO_SYSTEM_PROMPT(context) : 'You are Tio, the exceptionally empathetic, curious, and funny AI Learning Mentor at Mentorix.';
+  
+  // Clean up base64 prefix if present
+  let cleanBase64 = imageBase64;
+  if (imageBase64.includes(',')) {
+    cleanBase64 = imageBase64.split(',')[1];
+  }
+
+  const response = await fetch(proxyUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      useVision: true,  // ← this triggers Gemini Vision
+      messages: [
+        {
+          role: 'system',
+          content: systemPrompt
+        },
+        {
+          role: 'user',
+          content: [
+            {
+              type: 'image_url',
+              image_url: { 
+                url: `data:image/jpeg;base64,${cleanBase64}` 
+              }
+            },
+            {
+              type: 'text',
+              text: question || 'Please solve this question and explain the solution step by step.'
+            }
+          ]
+        }
+      ],
+      max_tokens: 1500
+    })
+  });
+  
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content || '';
+}
+
+window.askTioWithImage = askTioWithImage;

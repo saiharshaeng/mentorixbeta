@@ -815,7 +815,12 @@ function renderTab(){
       ${!LS.sub ? `<button class="btn bpri bfull mt4" onclick="subQuiz()" ${ans2 < total ? 'disabled' : ''}>Submit Assessment</button>` : ''}
     `;
   }
-  renderMath(c);
+  setTimeout(() => {
+    const el = document.getElementById('tcon');
+    if (el && window.renderMath) {
+      window.renderMath(el);
+    }
+  }, 50);
 }
 
 function submitSectionCheck(oidx) {
@@ -921,6 +926,38 @@ function subQuiz(){
   const sc=(l?.quiz||[]).filter((q,i)=>LS.ans[i]===q.a).length;
   LS.score=sc;
   LS.masteryPct=Math.round((sc/total)*100);
+
+  // 1. Saves completion to localStorage key: mx3_${profileId}_progress
+  if (typeof getSession === 'function') {
+    const session = getSession();
+    if (session && session.id) {
+      const progressKey = `mx3_${session.id}_progress`;
+      try {
+        const progress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+        progress[LS.topic] = {
+          completed: true,
+          completedAt: new Date().toISOString(),
+          score: LS.score,
+          masteryPct: LS.masteryPct
+        };
+        localStorage.setItem(progressKey, JSON.stringify(progress));
+      } catch (err) {
+        console.error('[Mentorix] Failed to save progress to localStorage', err);
+      }
+      
+      // Log lesson progress exactly as requested
+      console.log('[SAVE] Saving lesson progress:', {
+        profileId: session.id,
+        topicId: LS.topic,
+        completed: true
+      });
+    }
+  }
+
+  // 3. Adds topic to revision queue & 4. Updates the course node state via addTopic
+  if (typeof addTopic === 'function') {
+    addTopic(LS.topic);
+  }
 
   // Detect weak areas from wrong answers
   LS.weakAreas=(l?.quiz||[]).filter((q,i)=>LS.ans[i]!==q.a).map(q=>q.concept||q.q.slice(0,30)).filter(Boolean);
@@ -1041,15 +1078,22 @@ Output ONLY: {"title":"Re-explaining: ${weakList.slice(0,30)}","steps":[{"n":"Si
     const raw=await ai([{role:'user',content:p}],sys,1500,true);
     const data=pJSON(raw);
     if(!data?.steps)throw new Error('No data');
-    if(el)el.innerHTML=`
-      <div class="tio-inline mb14">
-        <div class="nxav">✨</div>
-        <div><div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO — REINFORCEMENT</div>
-        <div style="color:#C4B5FD;font-size:13px">Let me re-explain the tricky parts differently! 💡</div></div>
-      </div>
-      ${(data.steps||[]).map((s,i)=>`<div class="dstep mb8"><div class="dstep-num">${i+1}</div><div><div style="color:var(--txt);font-weight:600;font-size:14px;margin-bottom:3px">${esc(s.n||'')}</div><div style="color:#94A3B8;font-size:13px;line-height:1.65">${esc(s.c||'')}</div></div></div>`).join('')}
-      ${data.practice?`<div class="card mt12"><p style="color:var(--txt);font-weight:600;margin-bottom:10px">🎯 Try again: ${esc(data.practice.q||'')}</p>${(data.practice.o||[]).map((opt,oi)=>`<div class="qopt${LS.ans['r']===oi?' sel':''}" onclick="LS.ans['r']=${oi};this.parentElement.querySelectorAll('.qopt').forEach((x,xi)=>{x.className='qopt'+(xi===${data.practice.a}?' cor':LS.ans['r']===xi?' wrg':'')});addXP(10)"><span class="qltr">${['A','B','C','D'][oi]}</span>${esc(opt)}</div>`).join('')}<div class="expl mt8" style="display:none" id="repr-expl">💡 ${esc(data.practice.e||'')}</div></div>`:''}
-      <button class="btn bpri bsm mt12" onclick="go('learn','${escON((LS.lesson?.next||[])[0]||LS.topic)}')">Continue Learning →</button>`;
+    if(el) {
+      el.innerHTML=`
+        <div class="tio-inline mb14">
+          <div class="nxav">✨</div>
+          <div><div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO — REINFORCEMENT</div>
+          <div style="color:#C4B5FD;font-size:13px">Let me re-explain the tricky parts differently! 💡</div></div>
+        </div>
+        ${(data.steps||[]).map((s,i)=>`<div class="dstep mb8"><div class="dstep-num">${i+1}</div><div><div style="color:var(--txt);font-weight:600;font-size:14px;margin-bottom:3px">${esc(s.n||'')}</div><div style="color:#94A3B8;font-size:13px;line-height:1.65">${esc(s.c||'')}</div></div></div>`).join('')}
+        ${data.practice?`<div class="card mt12"><p style="color:var(--txt);font-weight:600;margin-bottom:10px">🎯 Try again: ${esc(data.practice.q||'')}</p>${(data.practice.o||[]).map((opt,oi)=>`<div class="qopt${LS.ans['r']===oi?' sel':''}" onclick="LS.ans['r']=${oi};this.parentElement.querySelectorAll('.qopt').forEach((x,xi)=>{x.className='qopt'+(xi===${data.practice.a}?' cor':LS.ans['r']===xi?' wrg':'')});addXP(10)"><span class="qltr">${['A','B','C','D'][oi]}</span>${esc(opt)}</div>`).join('')}<div class="expl mt8" style="display:none" id="repr-expl">💡 ${esc(data.practice.e||'')}</div></div>`:''}
+        <button class="btn bpri bsm mt12" onclick="go('learn','${escON((LS.lesson?.next||[])[0]||LS.topic)}')">Continue Learning →</button>`;
+      requestAnimationFrame(() => {
+        if (window.renderMath) {
+          window.renderMath(el);
+        }
+      });
+    }
   }catch(e){
     if(el)el.innerHTML=`<p style="color:var(--redl);font-size:13px">Reinforcement failed. <button class="btn bsm bpri" onclick="startReinforcement()">Retry</button></p>`;
   }finally{

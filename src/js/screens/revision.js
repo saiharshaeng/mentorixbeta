@@ -248,6 +248,12 @@ function renderFlashcardUI(cards,el){
       <button class="btn ${idx===cards.length-1?'bok':'bpri'} bsm" onclick="${idx===cards.length-1?`startRevision('${escON(RV.topic)}','quiz')`:`RV.flashIdx=${idx+1};RV.flipped=false;renderFlashcardUI(null,null)`}">${idx===cards.length-1?'🎯 Take Quiz':'Next →'}</button>
     </div>
     <div style="text-align:center;margin-top:14px"><button class="btn bsec bsm" onclick="startRevision('${escON(RV.topic)}','quiz')">Skip to Quiz →</button></div>`;
+  setTimeout(() => {
+    const el = document.getElementById('rev-content');
+    if (el && window.renderMath) {
+      window.renderMath(el);
+    }
+  }, 50);
 }
 
 async function doRevQuiz(){
@@ -327,6 +333,12 @@ function renderRevQuizUI(el){
         <button class="btn bgh bsm" onclick="RV.mode=null;rRevision()">← All Topics</button>
       </div>`;
   }
+  setTimeout(() => {
+    const el = document.getElementById('rev-content');
+    if (el && window.renderMath) {
+      window.renderMath(el);
+    }
+  }, 50);
 }
 function submitRevQuiz(){
   RV.quizSub=true;

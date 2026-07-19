@@ -1045,12 +1045,103 @@ const OFFLINE_EXAM_QUESTIONS = {
 };
 
 function triggerMath() {
-  setTimeout(() => {
-    if (typeof renderMath === 'function') {
-      renderMath();
-    }
-  }, 800);
+  requestAnimationFrame(() => {
+    const container = document.getElementById('cbt-question-panel') || document.getElementById('main') || document.body;
+    _doRenderMath(container);
+  });
 }
+
+// Internal math renderer — does NOT call window.renderMath to avoid infinite recursion.
+// window.renderMath (index.html) and this function are BOTH in global scope so they
+// are the same object. Always call _doRenderMath directly inside comp.js.
+function _doRenderMath(containerEl) {
+  if (!containerEl) return;
+
+  // Method 1: KaTeX auto-render
+  if (typeof renderMathInElement !== 'undefined') {
+    try {
+      renderMathInElement(containerEl, {
+        delimiters: [
+          {left:'$$',right:'$$',display:true},
+          {left:'$',right:'$',display:false},
+          {left:'\\(',right:'\\)',display:false},
+          {left:'\\[',right:'\\]',display:true}
+        ],
+        throwOnError: false,
+        errorColor: '#ef4444',
+        strict: false
+      });
+    } catch(e) {
+      console.warn('[MATH] KaTeX error:', e.message);
+    }
+    return;
+  }
+
+  // Method 2: MathJax fallback
+  if (window.MathJax?.typesetPromise) {
+    MathJax.typesetPromise([containerEl])
+      .catch(e => console.warn('[MATH]', e));
+    return;
+  }
+
+  // Method 3: Manual $ replacement — last resort so text is still readable
+  containerEl.querySelectorAll(
+    '.q-text, .opt-text, .q-solution-text, .cbt-q-text, .cbt-opt-val, .cbt-solution-text, .katex-render-target'
+  ).forEach(el => {
+    el.innerHTML = el.innerHTML
+      .replace(/\$\$([^$]+)\$\$/g,
+        '<em style="font-style:italic;color:var(--pl)">$1</em>')
+      .replace(/\$([^$\n]+)\$/g,
+        '<em style="font-style:italic">$1</em>');
+  });
+}
+
+// Keep renderMath as the public name — delegates to _doRenderMath
+function renderMath(containerEl) {
+  if (!containerEl) {
+    containerEl = document.getElementById('cbt-question-panel') || document.getElementById('main') || document.body;
+  }
+  _doRenderMath(containerEl);
+}
+
+function toggleCBTFullscreen(enable) {
+  const elementsToHide = [
+    document.getElementById('sb'),
+    document.getElementById('mob-nav'),
+    document.getElementById('tio-widget-container'),
+    document.getElementById('fnbtn'),
+    document.getElementById('timer-fab'),
+    document.getElementById('notif-bell'),
+    document.getElementById('eli5-badge')
+  ];
+  
+  const mainEl = document.getElementById('main');
+
+  if (enable) {
+    elementsToHide.forEach(el => {
+      if (el) el.style.display = 'none';
+    });
+    if (mainEl) {
+      mainEl.classList.add('cbt-fullscreen-active');
+      mainEl.style.marginLeft = '0';
+      mainEl.style.width = '100vw';
+      mainEl.style.maxWidth = '100vw';
+      mainEl.style.padding = '0';
+    }
+  } else {
+    elementsToHide.forEach(el => {
+      if (el) el.style.display = '';
+    });
+    if (mainEl) {
+      mainEl.classList.remove('cbt-fullscreen-active');
+      mainEl.style.marginLeft = '';
+      mainEl.style.width = '';
+      mainEl.style.maxWidth = '';
+      mainEl.style.padding = '';
+    }
+  }
+}
+window.toggleCBTFullscreen = toggleCBTFullscreen;
 
 // 🏁 Router Render Entry
 function rComp() {
@@ -1059,6 +1150,26 @@ function rComp() {
   if (!D.compExam.configured) {
     renderOnboardingWizard();
     return;
+  }
+
+  if (compState.activeExam && compState.activeExam.instructionsRead) {
+    toggleCBTFullscreen(true);
+    const main = document.getElementById('main');
+    if (main) {
+      main.innerHTML = renderActiveExamUI();
+      setTimeout(() => {
+        const el = document.getElementById('main');
+        if (el && window.renderMath) {
+          window.renderMath(el);
+        }
+      }, 50);
+      const container = document.getElementById('cbt-question-panel');
+      if (container) renderMath(container);
+      triggerMath();
+      return;
+    }
+  } else {
+    toggleCBTFullscreen(false);
   }
 
   const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
@@ -1080,41 +1191,28 @@ function rComp() {
   if (!main) return;
 
   main.innerHTML = `
-    <div class="sw scr" style="padding-top:16px">
-      <!-- Hub Banner -->
-      <div class="card cglow mb20" style="padding:22px;position:relative;overflow:hidden;border:1px solid rgba(139,92,246,0.25);">
-        <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(139,92,246,0.3) 0%,transparent 70%);filter:blur(20px);z-index:0"></div>
+    <div class="comp-hub-wrap">
+      <!-- HEADER BAND -->
+      <div class="comp-hub-header">
+        <div class="comp-hub-badge">🏆 AI COMPETITIVE EXAM SUITE</div>
+        <div class="comp-hub-title">${esc(exam.name)} Training Desk</div>
+        <div class="comp-hub-sub">Syllabus Pattern: ${esc(exam.pattern)} · Goal Score: <strong>${compState.targetScore}</strong></div>
         
-        <div class="between" style="gap:16px;flex-wrap:wrap;position:relative;z-index:1">
-          <div>
-            <div class="h3" style="color:var(--pl);margin:0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase">🏆 AI COMPETITIVE EXAM SUITE</div>
-            <div class="h1" style="color:#fff;margin:4px 0 6px 0;font-size:26px;display:flex;align-items:center;gap:10px">
-              <span>${esc(exam.name)} Training Desk</span>
-              <span class="tag tp" style="font-size:11px;font-weight:700">${esc(exam.country)}</span>
-            </div>
-            <p class="sub" style="margin:0;max-width:550px">Syllabus Pattern: ${esc(exam.pattern)} · Goal Score: <strong>${compState.targetScore}</strong></p>
-          </div>
-
-          <button class="btn bsm bgh" onclick="reconfigureCompPlan()" style="display:flex;align-items:center;gap:6px">
-            ⚙️ Reconfigure Plan
-          </button>
+        <!-- Tab Row -->
+        <div class="comp-tab-row">
+          <div class="comp-tab ${(!compState.currentTab||compState.currentTab==='hub')?'active':''}" onclick="setCompTab('hub')">🏠 Dashboard</div>
+          <div class="comp-tab ${compState.currentTab==='syllabus'?'active':''}" onclick="setCompTab('syllabus')">📚 Syllabus & Weightage</div>
+          <div class="comp-tab ${compState.currentTab==='practice'?'active':''}" onclick="setCompTab('practice')">🎯 Practice Rooms</div>
+          <div class="comp-tab ${compState.currentTab==='mock'?'active':''}" onclick="setCompTab('mock')">⏱️ CBT Mock Tests</div>
+          <div class="comp-tab ${compState.currentTab==='diary'?'active':''}" onclick="setCompTab('diary')">📓 Mistake Diary</div>
+          <div class="comp-tab ${compState.currentTab==='analytics'?'active':''}" onclick="setCompTab('analytics')">📈 Analytics & Predictor</div>
+          <div class="comp-tab ${compState.currentTab==='important'?'active':''}" onclick="setCompTab('important')">👑 High Priority</div>
+          <div class="comp-tab ${compState.currentTab==='strategy'?'active':''}" onclick="setCompTab('strategy')">💡 Strategy Hub</div>
         </div>
       </div>
 
-      <!-- Navigation Tabs -->
-      <div style="display:flex;gap:6px;margin-bottom:20px;overflow-x:auto;padding-bottom:6px">
-        <button class="btn bsm ${(!compState.currentTab||compState.currentTab==='hub')?'bpri':'bgh'}" onclick="setCompTab('hub')">🏠 Dashboard</button>
-        <button class="btn bsm ${compState.currentTab==='syllabus'?'bpri':'bgh'}" onclick="setCompTab('syllabus')">📚 Syllabus & Weightage</button>
-        <button class="btn bsm ${compState.currentTab==='practice'?'bpri':'bgh'}" onclick="setCompTab('practice')">🎯 Practice Rooms</button>
-        <button class="btn bsm ${compState.currentTab==='mock'?'bpri':'bgh'}" onclick="setCompTab('mock')">⏱️ CBT Mock Tests</button>
-        <button class="btn bsm ${compState.currentTab==='diary'?'bpri':'bgh'}" onclick="setCompTab('diary')">📓 Mistake Diary</button>
-        <button class="btn bsm ${compState.currentTab==='analytics'?'bpri':'bgh'}" onclick="setCompTab('analytics')">📈 Analytics & Predictor</button>
-        <button class="btn bsm ${compState.currentTab==='important'?'bpri':'bgh'}" onclick="setCompTab('important')">👑 High Priority Chapters</button>
-        <button class="btn bsm ${compState.currentTab==='strategy'?'bpri':'bgh'}" onclick="setCompTab('strategy')">💡 Strategy Hub</button>
-      </div>
-
       <!-- Tab Content -->
-      <div class="reveal-step shown">
+      <div class="comp-hub-body reveal-step shown">
         ${tabContent}
       </div>
     </div>
@@ -1341,6 +1439,24 @@ function startChapterPractice(subj, chap) {
 window.startChapterPractice = startChapterPractice;
 
 // 1. Render Hub Tab (Dashboard)
+function setMockModeRadio(mode) {
+  ['diagnostic', 'sectional', 'full'].forEach(m => {
+    const row = document.getElementById(`row-mode-${m}`);
+    const radio = document.getElementById(`radio-mode-${m}`);
+    const dot = row ? row.querySelector('.comp-mode-radio-dot') : null;
+    if (m === mode) {
+      if (row) row.classList.add('selected');
+      if (radio) radio.checked = true;
+      if (dot) dot.style.display = 'block';
+    } else {
+      if (row) row.classList.remove('selected');
+      if (radio) radio.checked = false;
+      if (dot) dot.style.display = 'none';
+    }
+  });
+}
+window.setMockModeRadio = setMockModeRadio;
+
 function renderHubTab(exam) {
   const stats = (D.compExam && D.compExam.chapterStats) || {};
   const history = (D.compExam && D.compExam.sessionHistory) || [];
@@ -1371,173 +1487,231 @@ function renderHubTab(exam) {
   // 3. Mock Exams Taken
   const mocksTaken = history.filter(h => h.type === 'mock').length;
 
-  // 4. Avg Time per Question
-  let totalSecs = 0;
-  let timedQuestions = 0;
-  history.forEach(h => {
-    if (h.timeSpent && h.questionsSolved) {
-      totalSecs += h.timeSpent;
-      timedQuestions += h.questionsSolved;
-    }
-  });
-  const avgTime = timedQuestions > 0 ? Math.round(totalSecs / timedQuestions) : 52; // default 52s
-
-  // 5. Overall Prep Score
-  const prepPct = Math.round((syllabusCompletionPct * 0.4) + (accuracy * 0.6));
-
-  // 6. Estimated Rank & Score
-  let estRank = 'Not Calibrated';
-  let rankColor = 'var(--mut)';
-  if (questionsSolved > 0) {
-    if (accuracy >= 85) { estRank = 'AIR Top 500 🌟'; rankColor = 'var(--okl)'; }
-    else if (accuracy >= 70) { estRank = 'AIR Top 2,000 📈'; rankColor = 'var(--cl)'; }
-    else if (accuracy >= 55) { estRank = 'AIR Top 10,000 ⚡'; rankColor = '#F59E0B'; }
-    else { estRank = 'AIR Top 50,000 ⚠️'; rankColor = '#EF4444'; }
-  }
-  const estScore = questionsSolved > 0 ? Math.round(exam.maxScore * (accuracy / 100)) : 0;
-
-  // 7. Strengths & Weaknesses
-  const subjAccuracies = {};
-  const subjCounts = {};
+  // 4. Weakest Chapter
+  let weakestChapter = 'None';
+  let minChapAcc = 101;
   Object.keys(stats).forEach(k => {
-    const parts = k.split('::');
-    if (parts.length === 2) {
-      const sub = parts[0];
-      if (!subjAccuracies[sub]) { subjAccuracies[sub] = 0; subjCounts[sub] = 0; }
-      subjAccuracies[sub] += stats[k].correct;
-      subjCounts[sub] += stats[k].total;
+    if (stats[k] && stats[k].total >= 3) {
+      const acc = stats[k].correct / stats[k].total;
+      if (acc < minChapAcc) {
+        minChapAcc = acc;
+        weakestChapter = k.split('::')[1] || k;
+      }
     }
   });
-  let weakestSubj = 'Not Enough Data';
-  let strongestSubj = 'Not Enough Data';
-  let minAcc = 101, maxAcc = -1;
-  Object.keys(subjAccuracies).forEach(sub => {
-    const acc = subjCounts[sub] > 0 ? (subjAccuracies[sub] / subjCounts[sub]) : 0;
-    if (acc < minAcc && subjCounts[sub] >= 5) { minAcc = acc; weakestSubj = sub; }
-    if (acc > maxAcc && subjCounts[sub] >= 5) { maxAcc = acc; strongestSubj = sub; }
+  if (weakestChapter === 'None') weakestChapter = 'Not Enough Data';
+
+  // 5. Syllabus progress calculation by subject
+  const physicsChapters = detailed.find(s => s.subject === 'Physics')?.units.reduce((acc, u) => acc + u.chapters.length, 0) || 5;
+  const chemChapters = detailed.find(s => s.subject === 'Chemistry')?.units.reduce((acc, u) => acc + u.chapters.length, 0) || 5;
+  const mathChapters = detailed.find(s => s.subject === 'Mathematics')?.units.reduce((acc, u) => acc + u.chapters.length, 0) || 5;
+
+  let physPracticed = 0, chemPracticed = 0, mathPracticed = 0;
+  Object.keys(stats).forEach(k => {
+    if (stats[k] && stats[k].total > 0) {
+      if (k.startsWith('Physics')) physPracticed++;
+      else if (k.startsWith('Chemistry')) chemPracticed++;
+      else if (k.startsWith('Mathematics')) mathPracticed++;
+    }
   });
+
+  const physPct = Math.min(100, Math.round((physPracticed / physicsChapters) * 100));
+  const chemPct = Math.min(100, Math.round((chemPracticed / chemChapters) * 100));
+  const mathPct = Math.min(100, Math.round((mathPracticed / mathChapters) * 100));
+
+  // 6. Streak Calculations
+  const daysOfWeek = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  const todayIdx = (new Date().getDay() + 6) % 7; // Monday is 0, Sunday is 6
+  const streakDaysHTML = daysOfWeek.map((day, idx) => {
+    let statusClass = 'streak-empty';
+    if (idx === todayIdx) {
+      statusClass = 'streak-today';
+    } else if (idx < todayIdx) {
+      statusClass = (D.streak > (todayIdx - idx)) ? 'streak-done' : 'streak-empty';
+    }
+    return `<div class="comp-streak-day ${statusClass}">${day}</div>`;
+  }).join('');
 
   return `
-    ${renderCountdownBanner(exam)}
-
-    <!-- 📊 Personalized Stats Dashboard -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:20px">
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Prep Percentage</div>
-        <div style="font-size:24px;font-weight:800;color:var(--pl)">${prepPct}%</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">Target: ${compState.targetScore} points</div>
+    <!-- EXAM SELECTOR ROW -->
+    <div class="comp-exam-row mb20">
+      <div class="comp-exam-card ${compState.examId === 'jee_main' ? 'active' : ''}" onclick="toast('JEE Main is your active focus! 🎯')">
+        <span class="comp-exam-dot"></span>
+        <span>JEE Main</span>
+        <span class="comp-avail-tag tag-live">LIVE</span>
       </div>
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Syllabus Covered</div>
-        <div style="font-size:24px;font-weight:800;color:var(--cl)">${syllabusCompletionPct}%</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">${practicedChapters} of ${totalChapters} chapters</div>
+      <div class="comp-exam-card" onclick="toast('JEE Advanced Prep Hub coming soon! 🚀')">
+        <span class="comp-exam-dot" style="background:var(--mut)"></span>
+        <span>JEE Advanced</span>
+        <span class="comp-avail-tag tag-soon">SOON</span>
       </div>
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Solve Accuracy</div>
-        <div style="font-size:24px;font-weight:800;color:var(--okl)">${accuracy}%</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">${questionsSolved} total solved</div>
+      <div class="comp-exam-card" onclick="toast('NEET Prep Hub coming soon! 🩺')">
+        <span class="comp-exam-dot" style="background:var(--mut)"></span>
+        <span>NEET</span>
+        <span class="comp-avail-tag tag-soon">SOON</span>
       </div>
-      <div class="card" style="padding:16px;text-align:center">
-        <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">Avg Time / Q</div>
-        <div style="font-size:24px;font-weight:800;color:#F59E0B">${avgTime}s</div>
-        <div style="font-size:11px;color:var(--mut);margin-top:4px">Target pace: &lt; 90s</div>
+      <div class="comp-exam-card" onclick="toast('EAMCET Prep Hub coming soon! 🎓')">
+        <span class="comp-exam-dot" style="background:var(--mut)"></span>
+        <span>EAMCET</span>
+        <span class="comp-avail-tag tag-soon">SOON</span>
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:3fr 2fr;gap:20px;margin-bottom:20px" class="grid-1-mob">
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <!-- 🎯 Prediction Card -->
-        <div class="card" style="padding:18px;background:linear-gradient(135deg,rgba(139,92,246,0.04),rgba(6,182,212,0.02))">
-          <div class="h2 mb10" style="color:#fff">🔮 AI Rank & Score Predictor</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-            <div style="border-right:1px solid var(--brd);padding-right:10px">
-              <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase">Estimated Rank</div>
-              <div style="font-size:20px;font-weight:800;color:${rankColor};margin-top:4px">${estRank}</div>
-              <div style="font-size:11px;color:var(--mut);margin-top:4px">Goal target: ${esc(compState.targetRank || 'AIR 1000')}</div>
-            </div>
-            <div>
-              <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase">Estimated Score</div>
-              <div style="font-size:20px;font-weight:800;color:#fff;margin-top:4px">${estScore} / ${exam.maxScore}</div>
-              <div style="font-size:11px;color:var(--mut);margin-top:4px">Goal target: ${compState.targetScore}</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 🧠 Tio Briefing -->
-        <div class="card" style="padding:18px;background:rgba(139,92,246,0.03);border-color:rgba(139,92,246,0.2)">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-            <div style="width:28px;height:28px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;font-size:14px">🤖</div>
-            <div style="font-size:12px;font-weight:700;color:var(--pl);letter-spacing:0.5px">TIO'S PRE-EXAM BRIEFING</div>
-          </div>
-          <div style="font-size:13px;color:#fff;line-height:1.5;padding-left:38px">
-            ${getTioBriefing(exam)}
-          </div>
-        </div>
+    <!-- STATS ROW -->
+    <div class="comp-stats-row mb20">
+      <div class="comp-stat">
+        <div class="comp-stat-label">Questions Practiced</div>
+        <div class="comp-stat-val" style="color:var(--pl)">${questionsSolved}</div>
+        <div class="comp-stat-sub">Target: 1,000+ solved</div>
       </div>
-
-      <!-- Subject Balance Card -->
-      <div class="card" style="padding:18px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div class="h2 mb10" style="color:#fff">📚 Subject Diagnostics</div>
-          <div class="between mb6" style="font-size:12px">
-            <span style="color:var(--mut)">Strongest subject:</span>
-            <span style="color:var(--okl);font-weight:700">${strongestSubj}</span>
-          </div>
-          <div class="between mb12" style="font-size:12px">
-            <span style="color:var(--mut)">Weakest subject:</span>
-            <span style="color:#EF4444;font-weight:700">${weakestSubj}</span>
-          </div>
-        </div>
-
-        <div style="background:rgba(255,255,255,0.02);border-radius:8px;padding:10px;font-size:11px;color:var(--sub);line-height:1.4">
-          💡 <strong>Tip:</strong> Spend 60% of your daily study time (${compState.dailyHours || 4} hours) practicing the weakest subject to raise overall cut-off probability.
-        </div>
+      <div class="comp-stat">
+        <div class="comp-stat-label">Accuracy %</div>
+        <div class="comp-stat-val" style="color:var(--cl)">${accuracy}%</div>
+        <div class="comp-stat-sub">Avg across all chapters</div>
+      </div>
+      <div class="comp-stat">
+        <div class="comp-stat-label">Mocks Completed</div>
+        <div class="comp-stat-val" style="color:var(--ok)">${mocksTaken}</div>
+        <div class="comp-stat-sub">Full CBT simulators</div>
+      </div>
+      <div class="comp-stat">
+        <div class="comp-stat-label">Weakest Chapter</div>
+        <div class="comp-stat-val" style="font-size: 14px; color: var(--red); line-height: 1.6; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${weakestChapter}">${weakestChapter}</div>
+        <div class="comp-stat-sub">Focus area priority</div>
       </div>
     </div>
 
-    <!-- 🗺️ Main Examination Hub Actions -->
-    <div class="h2 mb12" style="color:#fff">🛠️ Competitive Exam Action Grid</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('syllabus')">
-        <div style="font-size:26px;margin-bottom:8px">📋</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Official Syllabus Board</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Examine official chapters, weightage heatmap, and marking schemes.</p>
+    <!-- TWO COLUMN LAYOUT -->
+    <div class="comp-two-col">
+      <!-- LEFT: CBT EXAM ROOM CARD -->
+      <div>
+        <div class="comp-modes-card">
+          <div class="comp-modes-head">
+            <div class="comp-modes-title">🖥️ CBT Exam Room</div>
+            <div class="comp-modes-sub">Select a test profile and launch the official CBT exam simulator</div>
+          </div>
+
+          <!-- Diagnostic Test -->
+          <div class="comp-mode-row selected" id="row-mode-diagnostic" onclick="setMockModeRadio('diagnostic')">
+            <div class="comp-mode-icon mode-icon-diag">⚡</div>
+            <div class="comp-mode-info">
+              <div class="comp-mode-name">Diagnostic Test</div>
+              <div class="comp-mode-desc">A quick test to calibrate your initial performance indicators</div>
+              <div class="comp-mode-chips">
+                <span class="comp-mode-chip">6 Questions</span>
+                <span class="comp-mode-chip">10 Minutes</span>
+                <span class="comp-mode-chip">All Subjects</span>
+              </div>
+            </div>
+            <input type="radio" name="mock-mode-select" value="diagnostic" id="radio-mode-diagnostic" style="display:none" checked>
+            <div class="comp-mode-radio"><div class="comp-mode-radio-dot"></div></div>
+          </div>
+
+          <!-- Sectional Practice -->
+          <div class="comp-mode-row" id="row-mode-sectional" onclick="setMockModeRadio('sectional')">
+            <div class="comp-mode-icon mode-icon-sect">🎯</div>
+            <div class="comp-mode-info">
+              <div class="comp-mode-name">Sectional Practice</div>
+              <div class="comp-mode-desc">Drill deeply into a single selected subject area</div>
+              <div class="comp-mode-chips">
+                <span class="comp-mode-chip">15 Questions</span>
+                <span class="comp-mode-chip">45 Minutes</span>
+                <span class="comp-mode-chip">One Subject</span>
+              </div>
+            </div>
+            <input type="radio" name="mock-mode-select" value="sectional" id="radio-mode-sectional" style="display:none">
+            <div class="comp-mode-radio"><div class="comp-mode-radio-dot" style="display:none"></div></div>
+          </div>
+
+          <!-- Full Exam Simulation -->
+          <div class="comp-mode-row" id="row-mode-full" onclick="setMockModeRadio('full')">
+            <div class="comp-mode-icon mode-icon-full">🏆</div>
+            <div class="comp-mode-info">
+              <div class="comp-mode-name">Full Exam Simulation</div>
+              <div class="comp-mode-desc">Replicate a real three-hour exam environment with official scoring</div>
+              <div class="comp-mode-chips">
+                <span class="comp-mode-chip">75 Questions</span>
+                <span class="comp-mode-chip">180 Minutes</span>
+                <span class="comp-mode-chip">+4/-1 Marking</span>
+              </div>
+            </div>
+            <input type="radio" name="mock-mode-select" value="full" id="radio-mode-full" style="display:none">
+            <div class="comp-mode-radio"><div class="comp-mode-radio-dot" style="display:none"></div></div>
+          </div>
+
+          <!-- Launch Button -->
+          <button class="comp-launch-btn" id="launch-mock-btn" onclick="startMockExamSetup()">
+            🚀 Launch Exam
+          </button>
+        </div>
       </div>
 
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('practice')">
-        <div style="font-size:26px;margin-bottom:8px">🎯</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Chapter & Topic Practice</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Configure custom practice rooms by difficulty, quantity, and PYQs.</p>
-      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="comp-right-panel">
+        <!-- Card A — Syllabus Coverage -->
+        <div class="comp-panel-card">
+          <div class="comp-panel-title">📊 Syllabus Coverage</div>
+          
+          <div class="comp-subj-row">
+            <div class="comp-subj-header">
+              <span class="comp-subj-name">Physics</span>
+              <span class="comp-subj-pct">${physPct}%</span>
+            </div>
+            <div class="comp-prog-bar"><div class="comp-prog-fill prog-physics" style="width:${physPct}%"></div></div>
+          </div>
 
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('mock')">
-        <div style="font-size:26px;margin-bottom:8px">⏱️</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">CBT Exam Room</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Simulate strict time-restricted mock papers under actual exam patterns.</p>
-      </div>
+          <div class="comp-subj-row">
+            <div class="comp-subj-header">
+              <span class="comp-subj-name">Chemistry</span>
+              <span class="comp-subj-pct">${chemPct}%</span>
+            </div>
+            <div class="comp-prog-bar"><div class="comp-prog-fill prog-chem" style="width:${chemPct}%"></div></div>
+          </div>
 
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('diary')">
-        <div style="font-size:26px;margin-bottom:8px">📓</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Mistake Diary</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Review and categorize wrong answers to eliminate conceptual holes.</p>
-      </div>
+          <div class="comp-subj-row">
+            <div class="comp-subj-header">
+              <span class="comp-subj-name">Mathematics</span>
+              <span class="comp-subj-pct">${mathPct}%</span>
+            </div>
+            <div class="comp-prog-bar"><div class="comp-prog-fill prog-maths" style="width:${mathPct}%"></div></div>
+          </div>
+          
+          <div style="font-size:11px;color:var(--mut);margin-top:14px;text-align:center">Practice to unlock your heatmap</div>
+        </div>
 
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('analytics')">
-        <div style="font-size:26px;margin-bottom:8px">📈</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Performance Analytics</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Inspect speed-accuracy trade-offs and negative mark diagnostics.</p>
-      </div>
+        <!-- Card B — Quick Practice -->
+        <div class="comp-panel-card">
+          <div class="comp-panel-title">⚡ Quick Practice</div>
+          <div class="comp-qa-grid">
+            <button class="comp-qa-btn" onclick="compState.practiceSubject='Physics';setCompTab('practice')">
+              <span class="comp-qa-icon">🔬</span>
+              <span class="comp-qa-label">Physics PYQs</span>
+            </button>
+            <button class="comp-qa-btn" onclick="compState.practiceSubject='Chemistry';setCompTab('practice')">
+              <span class="comp-qa-icon">⚗️</span>
+              <span class="comp-qa-label">Chem PYQs</span>
+            </button>
+            <button class="comp-qa-btn" onclick="compState.practiceSubject='Mathematics';setCompTab('practice')">
+              <span class="comp-qa-icon">📐</span>
+              <span class="comp-qa-label">Maths PYQs</span>
+            </button>
+            <button class="comp-qa-btn" onclick="setCompTab('diary')">
+              <span class="comp-qa-icon">📓</span>
+              <span class="comp-qa-label">Mistake Diary</span>
+            </button>
+          </div>
+        </div>
 
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('important')">
-        <div style="font-size:26px;margin-bottom:8px">👑</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">High Priority ROI Chapters</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Audit top-scoring chapters that appear most in recent historical exams.</p>
-      </div>
-
-      <div class="card card-lift cglow" style="padding:16px;cursor:pointer;border-color:rgba(139,92,246,0.15)" onclick="setCompTab('strategy')">
-        <div style="font-size:26px;margin-bottom:8px">💡</div>
-        <div class="h3" style="color:#fff;margin-bottom:4px">Topper Attempt Strategies</div>
-        <p style="font-size:11px;color:var(--mut);margin:0;line-height:1.4">Implement scientific exam attempt methods to minimize negative marks.</p>
+        <!-- Card C — Practice Streak -->
+        <div class="comp-panel-card">
+          <div class="comp-panel-title">🔥 Practice Streak</div>
+          <div class="comp-streak-row">
+            <div class="comp-streak-days">
+              ${streakDaysHTML}
+            </div>
+            <div style="font-size:13px;font-weight:700;color:var(--pl)">${D.streak} Days</div>
+          </div>
+        </div>
       </div>
     </div>
   `;
@@ -1908,8 +2082,30 @@ function beginMockExamAfterInstructions() {
     return;
   }
   
+  // Close sidebar when exam starts
+  const sidebar = document.querySelector(
+    '.sidebar, #sidebar, .nav-sidebar, ' +
+    '[class*="sidebar"], [class*="side-nav"]'
+  );
+  const mainNav = document.querySelector(
+    'nav, .navbar, #navbar, .top-nav, ' +
+    '[class*="top-bar"]'
+  );
+  if (sidebar) {
+    sidebar.dataset.hiddenForExam = 
+      sidebar.style.display || '';
+    sidebar.style.display = 'none';
+  }
+  if (mainNav) {
+    mainNav.dataset.hiddenForExam = 
+      mainNav.style.display || '';
+    mainNav.style.display = 'none';
+  }
+  document.body.style.overflow = 'hidden';
+
   compState.activeExam.instructionsRead = true;
   compState.activeExam.lastEntryTime = Date.now();
+  startExamTimer(compState.activeExam.timeLeft);
   rComp();
 }
 
@@ -2179,29 +2375,83 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
   // Visited first question
   compState.activeExam.status[0] = 'unanswered';
 
-  // Timer countdown
-  compState.activeExam.timerInterval = setInterval(() => {
-    if (compState.activeExam && compState.activeExam.instructionsRead) {
-      compState.activeExam.timeLeft--;
-      if (compState.activeExam.timeLeft <= 0) {
-        submitMockExam();
-      } else {
-        updateExamTimerDisplay();
-      }
-    }
-  }, 1000);
+  // Timer countdown will start after instructions are read
+  compState.activeExam.timerInterval = null;
 
   rComp();
 }
 
-function updateExamTimerDisplay() {
-  const el = document.getElementById('exam-timer-text');
-  if (el && compState.activeExam) {
-    const m = Math.floor(compState.activeExam.timeLeft / 60);
-    const s = compState.activeExam.timeLeft % 60;
-    el.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+let examTimerInterval = null;
+let examSecondsLeft = 10800; // 3 hours
+
+function startExamTimer(totalSeconds) {
+  examSecondsLeft = totalSeconds || 10800;
+  if (compState.activeExam) {
+    compState.activeExam.timeLeft = examSecondsLeft;
+  }
+  clearInterval(examTimerInterval);
+  
+  updateTimerDisplay();
+  
+  examTimerInterval = setInterval(() => {
+    examSecondsLeft--;
+    if (compState.activeExam) {
+      compState.activeExam.timeLeft = examSecondsLeft;
+    }
+    
+    if (examSecondsLeft <= 0) {
+      clearInterval(examTimerInterval);
+      submitMockExam();
+      return;
+    }
+    
+    updateTimerDisplay();
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const h = Math.floor(examSecondsLeft / 3600);
+  const m = Math.floor(
+    (examSecondsLeft % 3600) / 60
+  );
+  const s = examSecondsLeft % 60;
+  
+  const timeStr = 
+    String(h).padStart(2,'0') + ':' +
+    String(m).padStart(2,'0') + ':' +
+    String(s).padStart(2,'0');
+  
+  const timerEl = document.getElementById(
+    'cbt-timer'
+  ) || document.getElementById(
+    'exam-timer-text'
+  ) || document.querySelector(
+    '[class*="timer"], [class*="clock"]'
+  );
+  
+  if (timerEl) {
+    timerEl.textContent = timeStr;
+    
+    // Color changes
+    timerEl.style.color = '';
+    if (examSecondsLeft < 600) {
+      // Under 10 min — red + pulse
+      timerEl.style.color = '#ef4444';
+      timerEl.style.animation = 
+        'pulse 1s ease-in-out infinite';
+    } else if (examSecondsLeft < 1800) {
+      // Under 30 min — amber
+      timerEl.style.color = '#f59e0b';
+      timerEl.style.animation = '';
+    } else {
+      timerEl.style.animation = '';
+    }
   }
 }
+
+// Export for access
+window.startExamTimer = startExamTimer;
+window.updateTimerDisplay = updateTimerDisplay;
 
 // CBT Simulator UI
 function renderActiveExamUI() {
@@ -2215,117 +2465,195 @@ function renderActiveExamUI() {
   const m = Math.floor(exam.timeLeft / 60);
   const s = exam.timeLeft % 60;
   const timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-  const isTimeCritical = exam.timeLeft < 120;
+  
+  // Timer styling
+  let timerStyle = 'color: #fff;';
+  let timerClass = '';
+  if (exam.timeLeft < 600) {
+    timerStyle = 'color: var(--red);';
+    timerClass = 'timer-pulsing';
+  } else if (exam.timeLeft < 1800) {
+    timerStyle = 'color: var(--warn);';
+  }
+
+  // Group questions by subject
+  const groupedQuestions = {};
+  exam.questions.forEach((question, idx) => {
+    const sub = question.section || 'General';
+    if (!groupedQuestions[sub]) groupedQuestions[sub] = [];
+    groupedQuestions[sub].push({ q: question, idx });
+  });
+
+  // Render subject tabs
+  const subjectTabsHTML = sections.map(sec => {
+    const isActive = q.section === sec;
+    return `
+      <button class="cbt-tab ${isActive ? 'active' : ''}" onclick="switchMockSection('${sec}')">
+        ${sec}
+      </button>
+    `;
+  }).join('');
+
+  // Find current active subject's sections
+  const activeSubQuestions = groupedQuestions[q.section] || [];
+  const sectionsInActiveSub = [...new Set(activeSubQuestions.map(item => item.q.sectionLabel || 'Section A'))];
+  
+  const sectionFilterHTML = sectionsInActiveSub.length > 1 ? `
+    <div class="cbt-sec-tabs">
+      ${sectionsInActiveSub.map(secLabel => {
+        const isCurrentSec = q.sectionLabel === secLabel;
+        const targetItem = activeSubQuestions.find(item => item.q.sectionLabel === secLabel);
+        const targetIdx = targetItem ? targetItem.idx : 0;
+        return `
+          <button class="cbt-sec-tab ${isCurrentSec ? 'active' : ''}" onclick="navigateExam(${targetIdx})">
+            ${secLabel}
+          </button>
+        `;
+      }).join('')}
+    </div>
+  ` : '';
+
+  // Render palette items grouped by subject
+  const paletteHTML = sections.map(sec => {
+    const questionsInSec = groupedQuestions[sec] || [];
+    if (questionsInSec.length === 0) return '';
+    
+    return `
+      <div class="cbt-palette-group">
+        <div class="cbt-palette-group-title">${sec}</div>
+        <div class="cbt-palette-grid">
+          ${questionsInSec.map(item => {
+            const idx = item.idx;
+            const status = exam.status[idx] || 'unvisited';
+            let statusClass = 'unvisited';
+            if (status === 'unanswered') statusClass = 'unanswered';
+            if (status === 'answered') statusClass = 'answered';
+            if (status === 'marked') statusClass = 'marked';
+            
+            const isCurrent = exam.currentIndex === idx;
+            const currentClass = isCurrent ? 'current' : '';
+            
+            return `
+              <button class="cbt-palette-btn ${statusClass} ${currentClass}" data-q-index="${idx}" onclick="navigateExam(${idx})">
+                ${idx + 1}
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
 
   return `
-    <div style="display:grid;grid-template-columns:3fr 1fr;gap:20px">
-      <!-- Left: Active Question -->
-      <div class="card cglow" style="padding:22px;border-color:rgba(139,92,246,0.3)">
-        <!-- Section Tabs -->
-        <div style="display:flex;gap:6px;margin-bottom:18px;border-bottom:1px solid var(--brd);padding-bottom:10px;overflow-x:auto">
-          ${sections.map(sec => {
-            const isCurrentSec = q.section === sec;
-            return `
-              <span class="tag ${isCurrentSec?'tp':'tgray'}" style="cursor:pointer;font-weight:700;font-size:12px;padding:6px 12px;white-space:nowrap" onclick="switchMockSection('${sec}')">
-                ${sec}
-              </span>
-            `;
-          }).join('')}
-        </div>
-
-        <!-- Question Content -->
-        <div style="font-size:15px;color:#fff;font-weight:500;line-height:1.6;margin-bottom:20px;white-space:pre-line" class="katex-render-target">
-          ${renderQuestionText(q.q)}
-          ${renderQuestionImage(q)}
-        </div>
-
-        <!-- Answers -->
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
-          ${q.type === 'numerical' ? `
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <span style="font-size:11px;color:var(--mut);font-weight:700">ENTER EXACT NUMERICAL ANSWER:</span>
-              <input type="text" id="numerical-ans-input" class="inp" placeholder="e.g. -1/6 or 4" value="${exam.answers[exam.currentIndex] || ''}" oninput="saveNumericalAnswer(this.value)">
-            </div>
-          ` : q.opts.map((opt, oIdx) => {
-            let isSelected = false;
-            if (q.type === 'msq') {
-              isSelected = (exam.answers[exam.currentIndex] || []).includes(oIdx);
-            } else {
-              isSelected = exam.answers[exam.currentIndex] === oIdx;
-            }
-
-            return `
-              <div class="qopt${isSelected?' on':''}" onclick="selectMockOption(${oIdx}, '${q.type}')" style="padding:14px 18px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid ${isSelected?'var(--p)':'var(--brd)'};cursor:pointer;color:${isSelected?'#fff':'var(--sub)'};font-size:14px;display:flex;align-items:center;gap:12px">
-                <div style="width:20px;height:20px;border-radius:50%;border:1px solid ${isSelected?'var(--p)':'rgba(255,255,255,0.2)'};display:flex;align-items:center;justify-content:center;font-size:11px;background:${isSelected?'var(--p)':'transparent'};color:#fff">
-                  ${String.fromCharCode(65 + oIdx)}
-                </div>
-                <div class="katex-render-target">${renderQuestionText(opt)}</div>
-              </div>
-            `;
-          }).join('')}
-        </div>
-
-        <!-- Controls -->
-        <div class="between" style="border-top:1px solid var(--brd);padding-top:18px">
-          <button class="btn bsec" onclick="clearActiveExamAnswer()">Clear Response</button>
-          <div style="display:flex;gap:8px">
-            <button class="btn bgh" onclick="markMockForReview()">Mark for Review & Next</button>
-            <button class="btn bpri" onclick="saveAndNextMock()">Save & Next</button>
+    <div class="cbt-container" id="cbt-question-panel">
+      <!-- TOP BAR -->
+      <div class="cbt-topbar">
+        <div class="cbt-topbar-left">
+          <div class="cbt-subject-tabs">
+            ${subjectTabsHTML}
           </div>
+          ${sectionFilterHTML}
+        </div>
+        <div class="cbt-topbar-right">
+          <div class="cbt-timer-clock ${timerClass}" id="exam-timer-text" style="${timerStyle}">
+            ${timeStr}
+          </div>
+          <button class="cbt-submit-btn" onclick="confirmSubmitMockExam()">
+            🏁 Submit
+          </button>
         </div>
       </div>
 
-      <!-- Right Panel: Grid & Timer -->
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <div class="card" style="padding:16px;text-align:center;border-color:${isTimeCritical?'#EF4444':'var(--brd)'}">
-          <span style="font-size:11px;font-weight:700;color:var(--mut);letter-spacing:0.5px">TIME REMAINING</span>
-          <div id="exam-timer-text" style="font-size:28px;font-family:monospace;font-weight:800;color:${isTimeCritical?'#EF4444':'#fff'};margin-top:6px">
-            ${timeStr}
+      <!-- CONTENT BODY -->
+      <div class="cbt-body">
+        <!-- LEFT: QUESTION AREA -->
+        <div class="cbt-question-panel">
+          <div class="cbt-question-card">
+            <!-- Question header: Number, Type, Marking scheme -->
+            <div class="cbt-q-header">
+              <div class="cbt-q-num">Question ${exam.currentIndex + 1}</div>
+              <div class="cbt-q-meta">
+                <span class="tag tp" style="text-transform: uppercase; font-weight:700">${q.type}</span>
+                <span style="font-size:11px;color:var(--mut)">
+                  Correct: <strong style="color:var(--okl)">+${(q.marking && q.marking.correct) || 4}</strong> · 
+                  Wrong: <strong style="color:var(--redl)">${(q.marking && q.marking.wrong) || -1}</strong>
+                </span>
+              </div>
+            </div>
+
+            <!-- Question Text -->
+            <div class="cbt-q-text katex-render-target">
+              ${renderQuestionText(q.q)}
+              ${renderQuestionImage(q)}
+            </div>
+
+            <!-- Options / Answer inputs -->
+            <div class="cbt-opts">
+              ${q.type === 'numerical' ? `
+                <div class="cbt-numerical-box">
+                  <div class="cbt-numerical-label">Enter Exact Numerical Value</div>
+                  <input type="text" id="numerical-ans-input" class="cbt-numerical-input" placeholder="e.g. 15, -0.5, or 4" value="${exam.answers[exam.currentIndex] || ''}" oninput="saveNumericalAnswer(this.value)">
+                </div>
+              ` : q.opts.map((opt, oIdx) => {
+                let isSelected = false;
+                if (q.type === 'msq') {
+                  isSelected = (exam.answers[exam.currentIndex] || []).includes(oIdx);
+                } else {
+                  isSelected = exam.answers[exam.currentIndex] === oIdx;
+                }
+
+                return `
+                  <div class="cbt-option ${isSelected ? 'selected' : ''}" onclick="selectMockOption(${oIdx}, '${q.type}')">
+                    <div class="cbt-option-letter">${String.fromCharCode(65 + oIdx)}</div>
+                    <div class="cbt-option-text katex-render-target">${renderQuestionText(opt)}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+
+          <!-- Bottom controls bar -->
+          <div class="cbt-controls">
+            <button class="cbt-btn cbt-btn-sec" onclick="clearActiveExamAnswer()">
+              🧹 Clear Response
+            </button>
+            <div style="display:flex;gap:10px">
+              <button class="cbt-btn cbt-btn-warn" onclick="markMockForReview()">
+                🔖 Mark for Review
+              </button>
+              <button class="cbt-btn cbt-btn-pri" onclick="saveAndNextMock()">
+                Save & Next →
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Scrollable Grid Panel -->
-        <div class="card" style="padding:16px">
-          <span style="font-size:11px;font-weight:700;color:var(--mut);letter-spacing:0.5px;display:block;margin-bottom:12px">QUESTION PALETTE</span>
-          
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-height:220px;overflow-y:auto;padding-right:4px;margin-bottom:14px">
-            ${exam.questions.map((_, idx) => {
-              const status = exam.status[idx] || 'unvisited';
-              let btnClass = 'bgh';
-              if (status === 'unanswered') btnClass = 'btn-red';
-              if (status === 'answered') btnClass = 'bok';
-              if (status === 'marked') btnClass = 'btn-gold';
-              
-              const isCurrent = exam.currentIndex === idx;
-              const borderStyle = isCurrent ? 'border: 2px solid var(--p) !important;' : '';
-
-              return `
-                <button class="btn bsm ${btnClass}" style="min-height:34px;${borderStyle}" onclick="navigateExam(${idx})">
-                  ${idx + 1}
-                </button>
-              `;
-            }).join('')}
+        <!-- RIGHT: SIDE PANEL (PALETTE) -->
+        <div class="cbt-sidebar">
+          <div style="flex:1;overflow-y:auto;padding-bottom:20px">
+            ${paletteHTML}
           </div>
 
-          <div style="font-size:10px;color:var(--mut);display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px dashed var(--brd);padding-top:10px">
-            <div style="display:flex;align-items:center;gap:4px">
-              <span style="width:10px;height:10px;background:rgba(255,255,255,0.06);border-radius:2px;display:inline-block"></span> Unvisited
+          <!-- Palette legends -->
+          <div class="cbt-legends">
+            <div class="cbt-legend-item">
+              <span class="cbt-legend-dot answered"></span>
+              <span>Answered</span>
             </div>
-            <div style="display:flex;align-items:center;gap:4px">
-              <span style="width:10px;height:10px;background:#EF4444;border-radius:2px;display:inline-block"></span> Unanswered
+            <div class="cbt-legend-item">
+              <span class="cbt-legend-dot unanswered"></span>
+              <span>Unanswered</span>
             </div>
-            <div style="display:flex;align-items:center;gap:4px">
-              <span style="width:10px;height:10px;background:#10B981;border-radius:2px;display:inline-block"></span> Answered
+            <div class="cbt-legend-item">
+              <span class="cbt-legend-dot marked"></span>
+              <span>Marked</span>
             </div>
-            <div style="display:flex;align-items:center;gap:4px">
-              <span style="width:10px;height:10px;background:#F59E0B;border-radius:2px;display:inline-block"></span> Marked
+            <div class="cbt-legend-item">
+              <span class="cbt-legend-dot unvisited"></span>
+              <span>Unvisited</span>
             </div>
           </div>
         </div>
-
-        <button class="btn bpri w100" style="padding:12px;font-weight:700;background:#EF4444" onclick="confirmSubmitMockExam()">
-          🏁 Submit Examination
-        </button>
       </div>
     </div>
   `;
@@ -2386,6 +2714,54 @@ function confirmSubmitMockExam() {
     submitMockExam();
   }
 }
+
+function calculateJEEScore(answers, questions) {
+  let score = 0;
+  let correct = 0;
+  let wrong = 0;
+  let skipped = 0;
+  
+  questions.forEach(q => {
+    const userAns = answers[q.id];
+    
+    if (!userAns) {
+      skipped++;
+      return;
+    }
+    
+    const isCorrect = String(userAns).toLowerCase()
+      .trim() === String(q.correct).toLowerCase()
+      .trim();
+    
+    if (isCorrect) {
+      correct++;
+      score += 4; // Always +4 for correct
+    } else {
+      wrong++;
+      // -1 for MCQ, 0 for Numerical
+      if (q.type === 'Numerical' || 
+          q.section === 'B') {
+        score += 0;
+      } else {
+        score -= 1;
+      }
+    }
+  });
+  
+  return {
+    score,
+    correct,
+    wrong, 
+    skipped,
+    total: questions.length,
+    maxScore: questions.length * 4,
+    percentage: (
+      (score / (questions.length * 4)) * 100
+    ).toFixed(1)
+  };
+}
+
+window.calculateJEEScore = calculateJEEScore;
 
 function submitMockExam() {
   const exam = compState.activeExam;
@@ -2488,7 +2864,7 @@ function submitMockExam() {
           subjectStats[sub].correct++;
         } else {
           incorrect++;
-          const penalty = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : marking.wrong;
+          const penalty = q.type === 'numerical' ? 0 : ((q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : marking.wrong);
           score += penalty;
         }
       }
@@ -2575,6 +2951,26 @@ function submitMockExam() {
   }
 
   compState.activeExam = null;
+
+  // Restore sidebar when exam ends
+  const sidebar = document.querySelector(
+    '.sidebar, #sidebar, .nav-sidebar, ' +
+    '[class*="sidebar"], [class*="side-nav"]'
+  );
+  const mainNav = document.querySelector(
+    'nav, .navbar, #navbar, .top-nav, ' +
+    '[class*="top-bar"]'
+  );
+  if (sidebar) {
+    sidebar.style.display = 
+      sidebar.dataset.hiddenForExam || '';
+  }
+  if (mainNav) {
+    mainNav.style.display = 
+      mainNav.dataset.hiddenForExam || '';
+  }
+  document.body.style.overflow = '';
+
   renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML);
 }
 
@@ -2596,6 +2992,7 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
   const main = document.getElementById('main');
   if (!main) return;
 
+  toggleCBTFullscreen(false);
   const targetScore = compState.targetScore;
   const isTargetAchieved = score >= targetScore;
   
@@ -2989,6 +3386,12 @@ function launchMultiPracticeOverlay(questions) {
     `;
     
     triggerMath();
+    setTimeout(() => {
+      const el = document.getElementById('mp-content');
+      if (el && window.renderMath) {
+        window.renderMath(el);
+      }
+    }, 50);
   }
 
   window.mpSelectOpt = function(oIdx) {
@@ -3045,6 +3448,12 @@ function launchMultiPracticeOverlay(questions) {
         </div>
       </div>
     `;
+    setTimeout(() => {
+      const el = document.getElementById('mp-content');
+      if (el && window.renderMath) {
+        window.renderMath(el);
+      }
+    }, 50);
   };
 
   const wrap = document.createElement('div');
@@ -3101,12 +3510,28 @@ function selectMockOption(oIdx, type) {
     }
     if (current.length === 0) {
       delete exam.answers[exam.currentIndex];
+      exam.status[exam.currentIndex] = 'unanswered';
     } else {
       exam.answers[exam.currentIndex] = current;
+      exam.status[exam.currentIndex] = 'answered';
     }
   } else {
     exam.answers[exam.currentIndex] = oIdx;
+    exam.status[exam.currentIndex] = 'answered';
   }
+
+  // Update palette button state
+  const currentQuestionIndex = exam.currentIndex;
+  const palBtn = document.querySelector(
+    `[data-q-index="${currentQuestionIndex}"]`
+  );
+  if (palBtn) {
+    palBtn.classList.remove(
+      'visited', 'marked', 'current'
+    );
+    palBtn.classList.add('answered');
+  }
+
   rComp();
 }
 
@@ -3115,8 +3540,22 @@ function saveNumericalAnswer(val) {
   if (!exam) return;
   if (val.trim() === '') {
     delete exam.answers[exam.currentIndex];
+    exam.status[exam.currentIndex] = 'unanswered';
   } else {
     exam.answers[exam.currentIndex] = val.trim();
+    exam.status[exam.currentIndex] = 'answered';
+  }
+
+  // Update palette button state
+  const currentQuestionIndex = exam.currentIndex;
+  const palBtn = document.querySelector(
+    `[data-q-index="${currentQuestionIndex}"]`
+  );
+  if (palBtn) {
+    palBtn.classList.remove(
+      'visited', 'marked', 'current'
+    );
+    palBtn.classList.add('answered');
   }
 }
 
@@ -3125,6 +3564,19 @@ function clearActiveExamAnswer() {
   if (!exam) return;
   delete exam.answers[exam.currentIndex];
   exam.status[exam.currentIndex] = 'unanswered';
+
+  // Update palette button state
+  const currentQuestionIndex = exam.currentIndex;
+  const palBtn = document.querySelector(
+    `[data-q-index="${currentQuestionIndex}"]`
+  );
+  if (palBtn) {
+    palBtn.classList.remove(
+      'answered', 'marked'
+    );
+    palBtn.classList.add('unanswered', 'current');
+  }
+
   const numInput = document.getElementById('numerical-ans-input');
   if (numInput) numInput.value = '';
   rComp();
