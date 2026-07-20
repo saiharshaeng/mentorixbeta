@@ -439,18 +439,41 @@ const WORLD_EXAMS = [
 
 // Helper to escape LaTeX characters from double-unescaping issues
 function stripMarkdownFences(str) {
-  if (!str) return str;
-  // Strip ```json ... ``` or ``` ... ``` wrappers the AI sometimes adds
-  return str
-    .replace(/^```(?:json)?\s*/i, '')
-    .replace(/\s*```\s*$/i, '')
-    .trim();
+  if (!str) return '';
+  str = str.trim();
+  // Strip ```json ... ``` or ``` ... ``` wrappers anywhere in response
+  const codeBlockMatch = str.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+  if (codeBlockMatch && codeBlockMatch[1]) {
+    str = codeBlockMatch[1].trim();
+  } else {
+    str = str.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+  }
+  // Extract outermost JSON object or array if extra text remains
+  const firstBrace = str.indexOf('{');
+  const firstBracket = str.indexOf('[');
+  let startIdx = -1;
+  if (firstBrace !== -1 && firstBracket !== -1) {
+    startIdx = Math.min(firstBrace, firstBracket);
+  } else if (firstBrace !== -1) {
+    startIdx = firstBrace;
+  } else if (firstBracket !== -1) {
+    startIdx = firstBracket;
+  }
+
+  if (startIdx > -1) {
+    const lastBrace = str.lastIndexOf('}');
+    const lastBracket = str.lastIndexOf(']');
+    const endIdx = Math.max(lastBrace, lastBracket);
+    if (endIdx > startIdx) {
+      str = str.substring(startIdx, endIdx + 1);
+    }
+  }
+
+  return str.trim();
 }
 
 function escapeJsonLatex(str) {
-  // First strip any markdown code fences from the AI response
   str = stripMarkdownFences(str);
-
   let result = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '\\') {
@@ -458,7 +481,7 @@ function escapeJsonLatex(str) {
       if (next === '\\') {
         result += '\\\\';
         i++; // skip second backslash
-      } else if (next === '"' || next === 'n' || next === '/' || next === 'r' || next === 'b') {
+      } else if (next === '"' || next === 'n' || next === '/' || next === 'r' || next === 'b' || next === 't' || next === 'u') {
         result += '\\';
       } else {
         result += '\\\\';
@@ -469,6 +492,28 @@ function escapeJsonLatex(str) {
   }
   return result;
 }
+
+function parseAiJsonSafely(reply) {
+  if (!reply) return null;
+  if (typeof pJSON === 'function') {
+    const res = pJSON(reply);
+    if (res) return res;
+  }
+  try {
+    const cleaned = stripMarkdownFences(reply);
+    const escaped = escapeJsonLatex(cleaned);
+    return JSON.parse(escaped);
+  } catch (e) {
+    try {
+      const cleaned = stripMarkdownFences(reply);
+      return JSON.parse(cleaned);
+    } catch (e2) {
+      console.warn('[AI JSON Parse] Parse failed:', e2);
+      return null;
+    }
+  }
+}
+
 
 // Render markdown images in questions while preserving LaTeX & escaping HTML
 function renderQuestionText(text) {
@@ -943,7 +988,7 @@ async function startPYQSession() {
     const prompt = `Reconstruct ${count} questions from the ${exam.name} ${year} paper, subject: ${subject}. Match the exact difficulty, style, and topic distribution of the real ${year} paper. Use LaTeX for math ($formula$). Return ONLY JSON: {"questions":[{"q":"...","opts":["A","B","C","D"],"ans":[0],"type":"mcq","chap":"...","expl":"step-by-step solution"}]}`;
     try {
       const reply = await ai([{role:'user',content:prompt}], 'You are a professional exam paper setter. Output ONLY valid JSON.', count*600+500, true);
-      if (reply) { const data = JSON.parse(escapeJsonLatex(reply)); if (data&&data.questions) questions=data.questions; }
+      if (reply) { const data = parseAiJsonSafely(reply); if (data&&data.questions) questions=data.questions; }
     } catch(e) { console.warn('[PYQ]',e); }
   }
 
@@ -2366,9 +2411,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
       const reply = await ai([{ role: 'user', content: prompt }], sys, 2000, true);
       
       if (reply) {
-        // Escaping backslashes before JSON parse to protect LaTeX symbols
-        const escapedReply = escapeJsonLatex(reply);
-        const data = JSON.parse(escapedReply);
+        const data = parseAiJsonSafely(reply);
         if (data && data.questions && data.questions.length > 0) {
           questions = data.questions;
         }
@@ -3370,8 +3413,7 @@ Return ONLY a valid JSON object:
       const reply = await ai([{ role: 'user', content: prompt }], sys, count * 500 + 500, true);
       
       if (reply) {
-        const escapedReply = escapeJsonLatex(reply);
-        const data = JSON.parse(escapedReply);
+        const data = parseAiJsonSafely(reply);
         if (data && data.questions && data.questions.length > 0) {
           questions = data.questions;
         }

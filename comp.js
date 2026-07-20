@@ -210,16 +210,47 @@ const WORLD_EXAMS = [
   { id: 'cfa_l1', name: 'CFA Level 1', country: 'USA / International', cat: 'Finance', maxScore: 100, duration: 270, subjects: ['Ethical Standards', 'Quantitative', 'Economics', 'Financial Reporting'], pattern: 'MCQs only (No negative marks)', fullQuestions: 180 }
 ];
 
-// Helper to escape LaTeX characters from double-unescaping issues
+function stripMarkdownFences(str) {
+  if (!str) return '';
+  str = str.trim();
+  const codeBlockMatch = str.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+  if (codeBlockMatch && codeBlockMatch[1]) {
+    str = codeBlockMatch[1].trim();
+  } else {
+    str = str.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+  }
+  const firstBrace = str.indexOf('{');
+  const firstBracket = str.indexOf('[');
+  let startIdx = -1;
+  if (firstBrace !== -1 && firstBracket !== -1) {
+    startIdx = Math.min(firstBrace, firstBracket);
+  } else if (firstBrace !== -1) {
+    startIdx = firstBrace;
+  } else if (firstBracket !== -1) {
+    startIdx = firstBracket;
+  }
+
+  if (startIdx > -1) {
+    const lastBrace = str.lastIndexOf('}');
+    const lastBracket = str.lastIndexOf(']');
+    const endIdx = Math.max(lastBrace, lastBracket);
+    if (endIdx > startIdx) {
+      str = str.substring(startIdx, endIdx + 1);
+    }
+  }
+  return str.trim();
+}
+
 function escapeJsonLatex(str) {
+  str = stripMarkdownFences(str);
   let result = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '\\') {
       const next = str[i + 1];
       if (next === '\\') {
         result += '\\\\';
-        i++; // skip second backslash
-      } else if (next === '"' || next === 'n' || next === '/' || next === 'r' || next === 'b') {
+        i++;
+      } else if (next === '"' || next === 'n' || next === '/' || next === 'r' || next === 'b' || next === 't' || next === 'u') {
         result += '\\';
       } else {
         result += '\\\\';
@@ -229,6 +260,27 @@ function escapeJsonLatex(str) {
     }
   }
   return result;
+}
+
+function parseAiJsonSafely(reply) {
+  if (!reply) return null;
+  if (typeof pJSON === 'function') {
+    const res = pJSON(reply);
+    if (res) return res;
+  }
+  try {
+    const cleaned = stripMarkdownFences(reply);
+    const escaped = escapeJsonLatex(cleaned);
+    return JSON.parse(escaped);
+  } catch (e) {
+    try {
+      const cleaned = stripMarkdownFences(reply);
+      return JSON.parse(cleaned);
+    } catch (e2) {
+      console.warn('[AI JSON Parse] Parse failed:', e2);
+      return null;
+    }
+  }
 }
 
 // 🏁 Procedural Question Templates (satisfies realistic subject-wise & chapter-wise distribution)
@@ -1108,8 +1160,7 @@ Return ONLY a valid JSON object:
       // Use higher token limit for full paper
       const reply = await ai([{ role: 'user', content: fullPrompt }], sys, 8000, true);
       if (reply) {
-        const escaped = escapeJsonLatex(reply);
-        const data = JSON.parse(escaped);
+        const data = parseAiJsonSafely(reply);
         if (data && data.questions && data.questions.length > 0) {
           questions = data.questions.slice(0, fullQuestionsCount);
         }
@@ -1150,9 +1201,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
       const reply = await ai([{ role: 'user', content: prompt }], sys, 2000, true);
       
       if (reply) {
-        // Escaping backslashes before JSON parse to protect LaTeX symbols
-        const escapedReply = escapeJsonLatex(reply);
-        const data = JSON.parse(escapedReply);
+        const data = parseAiJsonSafely(reply);
         if (data && data.questions && data.questions.length > 0) {
           questions = data.questions;
         }
@@ -1668,8 +1717,7 @@ Return ONLY a valid JSON object:
     const reply = await ai([{ role: 'user', content: prompt }], sys, count * 500 + 500, true);
     
     if (reply) {
-      const escapedReply = escapeJsonLatex(reply);
-      const data = JSON.parse(escapedReply);
+      const data = parseAiJsonSafely(reply);
       if (data && data.questions && data.questions.length > 0) {
         questions = data.questions;
       }
