@@ -546,6 +546,13 @@ function renderQuestionImage(question) {
 window.renderQuestionImage = renderQuestionImage;
 
 function getDifficultyPrompt(examId, diff) {
+  console.log('[DEBUG] Difficulty in prompt:', diff);
+  if (diff === 'hard') {
+    return `Difficulty Guidelines: HARD / PROBLEM SOLVING. Questions must involve multi-step problem solving, non-trivial algebraic or conceptual manipulation, and distractor options that target common misconceptions. Set "difficulty": "hard".`;
+  }
+  if (diff === 'boss') {
+    return `Difficulty Guidelines: BOSS LEVEL / ADVANCED COMPETITIVE. Questions must be high-difficulty, multi-concept, requiring deep problem solving. Set "difficulty": "boss".`;
+  }
   if (examId === 'jee_main' && diff === 'jee-level') {
     return `Difficulty Guidelines for JEE Main Level:
 - Numerical questions MUST require multi-step calculation

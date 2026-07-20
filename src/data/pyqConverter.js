@@ -43,7 +43,8 @@ files.forEach(file => {
     shiftStr = shiftNum === '1' ? 'Morning' : 'Afternoon';
   }
 
-  rawData.forEach((q, idx) => {
+  const questionsList = Array.isArray(rawData) ? rawData : (rawData.questions || []);
+  questionsList.forEach((q, idx) => {
     try {
       const subject = q.subject || "Mathematics";
       const qNum = q.question_number || (idx + 1);
@@ -54,26 +55,40 @@ files.forEach(file => {
       let section = "A";
       let type = "MCQ";
       let negativeMarks = -1;
-      let options = q.options || null;
-      let correct = q.correct_answer || q.correct || q.ans || "a";
+      let optsRaw = q.options || q.opts;
+      let options = null;
+      if (Array.isArray(optsRaw)) {
+        options = {
+          a: String(optsRaw[0] !== undefined ? optsRaw[0] : ""),
+          b: String(optsRaw[1] !== undefined ? optsRaw[1] : ""),
+          c: String(optsRaw[2] !== undefined ? optsRaw[2] : ""),
+          d: String(optsRaw[3] !== undefined ? optsRaw[3] : "")
+        };
+      } else if (optsRaw && typeof optsRaw === 'object') {
+        options = optsRaw;
+      }
+      let rawAns = q.correct_answer || q.correct || q.ans;
+      if (Array.isArray(rawAns)) rawAns = rawAns[0];
+      let correct = String(rawAns !== undefined && rawAns !== null ? rawAns : "a").trim();
 
       const subIdx = idx % 25; // 0 to 24
-      if (subIdx >= 20) {
+      if (subIdx >= 20 || q.type === 'numerical') {
         section = "B";
         type = "Numerical";
         negativeMarks = 0;
 
-        // For numerical, correct answer is the value of the option key
-        const key = (correct || "a").toLowerCase().trim();
-        if (options && options[key] !== undefined) {
+        const key = correct.toLowerCase();
+        if (options && typeof options === 'object' && options[key] !== undefined) {
           correct = String(options[key]).trim();
-        } else {
-          correct = String(correct).trim();
         }
         options = null;
       } else {
-        // Section A MCQ: correct answer should be lowercase letter
-        correct = (correct || "a").toLowerCase().trim();
+        // Section A MCQ: map 1, 2, 3, 4 to a, b, c, d if numeric, or keep letter
+        if (correct === '1') correct = 'a';
+        else if (correct === '2') correct = 'b';
+        else if (correct === '3') correct = 'c';
+        else if (correct === '4') correct = 'd';
+        else correct = correct.toLowerCase();
       }
 
       // Generate structured ID: e.g., jee_main_2025_jan_22_m_ma_q1
@@ -96,7 +111,7 @@ files.forEach(file => {
         section,
         type,
         difficulty: q.difficulty || "medium",
-        question: q.question_text || q.question || "",
+        question: q.question_text || q.question || q.q || "",
         options,
         correct,
         solution: q.explanation || q.solution || "",

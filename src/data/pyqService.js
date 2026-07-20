@@ -423,9 +423,44 @@
     return result;
   }
 
+  function getMockPaper(profileId, examId) {
+    const cleanId = normalizeExamId(examId);
+    const result = buildFullMockPaper(cleanId);
+    return {
+      id: `mock_${cleanId}_${Date.now()}`,
+      examId: cleanId,
+      questions: result
+    };
+  }
+
+  function getChapters(examId, subject) {
+    return [
+      "Sets, Relations and Functions",
+      "Complex Numbers and Quadratic Equations",
+      "Matrices and Determinants",
+      "Sequences and Series",
+      "Binomial Theorem",
+      "Differential Equations",
+      "Coordinate Geometry - Straight Lines",
+      "Coordinate Geometry - Conics",
+      "3D Geometry",
+      "Integral Calculus",
+      "Electric Charges and Fields",
+      "Current Electricity",
+      "Ray Optics",
+      "Modern Physics",
+      "Thermodynamics (Chemistry)",
+      "Coordination Compounds",
+      "Electrochemistry",
+      "Chemical Kinetics",
+      "Organic Chemistry - Basic Principles",
+      "Aldehydes, Ketones and Carboxylic Acids"
+    ];
+  }
+
   /* ─────────────── EXPORT ─────────────── */
 
-  const pyqService = { init, getQuestions, preloadExam, hasData, getPapers };
+  const pyqService = { init, getQuestions, buildFullMockPaper, getMockPaper, getChapters, preloadExam, hasData, getPapers };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = pyqService;
