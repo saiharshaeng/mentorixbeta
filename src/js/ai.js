@@ -41,48 +41,45 @@ async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT 
   let reply = null;
 
   if (GROQ) {
-    try {
-      if (window.addTerminalLog) {
-        window.addTerminalLog(`Attempting proxy call to Cloudflare Worker...`);
-      }
-      let r = await fetch(GROQ, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      });
-
-      if (r.status === 429) {
-        if (window.toast) {
-          window.toast('⚠️ AI is busy. Retrying in 2 seconds...', 'warn');
+    let retries = 2;
+    while (retries >= 0) {
+      try {
+        if (window.addTerminalLog) {
+          window.addTerminalLog(`Attempting proxy call to Cloudflare Worker...`);
         }
-        await delay(2000);
-        r = await fetch(GROQ, {
+        let r = await fetch(GROQ, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body)
         });
-      }
 
-      if (r.ok) {
-        const data = await r.json();
-        // Check if proxy returned an API error body (e.g. invalid_api_key)
-        // even though HTTP status was 200
-        if (data?.error) {
-          console.warn('[Mentorix] Proxy returned API error:', data.error.message);
-        } else {
-          reply = data?.choices?.[0]?.message?.content || '';
-          if (reply) {
-            if (window.addTerminalLog) {
-              window.addTerminalLog(`AI proxy response resolved successfully.`);
-            }
-            return reply;
-          }
+        if ((r.status === 429 || r.status === 503) && retries > 0) {
+          retries--;
+          await delay(1500);
+          continue;
         }
-      } else {
-        console.warn('[Mentorix] Proxy returned error status:', r.status);
+
+        if (r.ok) {
+          const data = await r.json();
+          if (data?.error) {
+            console.warn('[Mentorix] Proxy API warning:', data.error.message);
+          } else {
+            reply = data?.choices?.[0]?.message?.content || '';
+            if (reply) {
+              if (window.addTerminalLog) {
+                window.addTerminalLog(`AI proxy response resolved successfully.`);
+              }
+              return reply;
+            }
+          }
+        } else {
+          console.warn('[Mentorix] Proxy HTTP status:', r.status);
+        }
+        break; // break retry loop if not a retryable error or if ok
+      } catch (e) {
+        console.warn('[Mentorix] Cloudflare Worker proxy connection error:', e.message);
+        break;
       }
-    } catch (e) {
-      console.warn('[Mentorix] Cloudflare Worker proxy connection failed:', e);
     }
   }
 
@@ -93,7 +90,6 @@ async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT 
       if (window.addTerminalLog) {
         window.addTerminalLog(`Proxy unavailable. Trying direct Groq API...`);
       }
-      // Build a Groq-compatible body (strip useVision flag not understood by Groq)
       const groqBody = { model: 'llama-3.3-70b-versatile', messages: allMsgs, max_tokens: mt, temperature: 0.7 };
       if (json) groqBody.response_format = { type: 'json_object' };
       const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -111,20 +107,17 @@ async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT 
           window.addTerminalLog(`Direct Groq API response resolved successfully.`);
         }
         return reply;
-      } else {
-        console.warn('[Mentorix] Direct Groq API error:', data?.error?.message);
       }
     } catch (e) {
       console.warn('[Mentorix] Direct Groq API call failed:', e);
     }
   }
 
-  // 3. Both failed — surface clear message to user
-  console.error('[Mentorix] All AI routes failed. Proxy error + no direct key set.');
-  console.info('[Mentorix] To enable AI: run this in the browser console:\n  localStorage.setItem("mx3_groq_key", "YOUR_GROQ_KEY_HERE")');
-  if (window.toast) {
-    window.toast('⚠️ AI service unavailable. Check console for setup instructions.', 'err');
+  // 3. Fallback to local mock generator if active or available
+  if (typeof generateMockAIResponse === 'function') {
+    return generateMockAIResponse(msgs, sys, mt, json);
   }
+
   return null;
 }
 

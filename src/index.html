@@ -3565,12 +3565,23 @@ function showForbiddenWarning(topic){
 ═══════════════════════════════════════════════════════ */
 const MxAudio=(function(){
   let ctx=null;
+  function resumeCtx() {
+    if (ctx && ctx.state === 'suspended') {
+      ctx.resume().catch(function(){});
+    }
+  }
+  if (typeof window !== 'undefined') {
+    ['click', 'pointerdown', 'keydown', 'touchstart'].forEach(function(evt) {
+      window.addEventListener(evt, resumeCtx, { passive: true, once: true });
+    });
+  }
   function getCtx(){
     if(!ctx){try{ctx=new(window.AudioContext||window.webkitAudioContext)();}catch(e){}}
     return ctx;
   }
   function tone(freq,type,vol,dur,delay=0){
-    const c=getCtx();if(!c)return;
+    const c=getCtx();
+    if(!c || c.state === 'suspended') return;
     try{
       const osc=c.createOscillator();
       const gain=c.createGain();
