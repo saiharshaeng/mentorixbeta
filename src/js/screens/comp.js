@@ -2307,7 +2307,8 @@ async function startMockExamSetup() {
       const paperIdx = Math.floor(Math.random() * papers.length);
       const result = window.pyqService.getQuestions({
         examId: compState.examId,
-        count: 75
+        count: 75,
+        paperIndex: paperIdx
       });
 
       if (result && result.questions && result.questions.length >= 6) {
