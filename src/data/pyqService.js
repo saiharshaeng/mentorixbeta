@@ -69,28 +69,17 @@
       return;
     }
 
-    const origin = (typeof window !== 'undefined' && window.location.origin) || '';
-    const urls = [
-      (origin ? origin : '') + '/data/pyq/master_index.json',
-      '/data/pyq/master_index.json',
-      './data/pyq/master_index.json',
-      'data/pyq/master_index.json'
-    ];
-
-    for (const url of urls) {
-      try {
-        const r = await fetch(url, { cache: 'no-store' });
-        if (r.ok) {
-          const loaded = await r.json();
-          if (loaded && (loaded.JEE_MAIN || loaded.JEE_ADVANCED)) {
-            masterIndex = loaded;
-            console.log('[pyqService] ✅ master_index loaded from', url);
-          }
-          break;
+    try {
+      const r = await fetch('/data/pyq/master_index.json', { cache: 'no-store' });
+      if (r.ok) {
+        const loaded = await r.json();
+        if (loaded && (loaded.JEE_MAIN || loaded.JEE_ADVANCED)) {
+          masterIndex = loaded;
+          console.log('[pyqService] ✅ master_index loaded from /data/pyq/master_index.json');
         }
-      } catch (e) {
-        console.warn('[pyqService] Could not fetch', url, e.message);
       }
+    } catch (e) {
+      console.warn('[pyqService] Could not fetch /data/pyq/master_index.json:', e.message);
     }
 
     await preloadExam('JEE_MAIN');
@@ -103,7 +92,6 @@
     const cleanId = normalizeExamId(examId);
     if (!masterIndex || !masterIndex[cleanId]) return;
     const papers = masterIndex[cleanId];
-    const origin = (typeof window !== 'undefined' && window.location.origin) || '';
 
     if (isNode) {
       const fs = require('fs');
@@ -118,23 +106,16 @@
     } else {
       await Promise.all(papers.map(async paper => {
         if (fileCache[paper.file]) return;
-        const tryUrls = [
-          (origin ? origin : '') + '/data/' + paper.file,
-          '/data/' + paper.file,
-          './data/' + paper.file,
-          'data/' + paper.file
-        ];
-
-        for (const u of tryUrls) {
-          try {
-            const r = await fetch(u, { cache: 'no-store' });
-            if (r.ok) {
-              fileCache[paper.file] = await r.json();
-              console.log('[pyqService] ✅ Loaded:', paper.file, '→',
-                (fileCache[paper.file].questions || []).length, 'questions');
-              break;
-            }
-          } catch (e) { /* ignore */ }
+        try {
+          const url = '/data/' + paper.file;
+          const r = await fetch(url, { cache: 'no-store' });
+          if (r.ok) {
+            fileCache[paper.file] = await r.json();
+            console.log('[pyqService] ✅ Loaded paper:', url, '→',
+              (fileCache[paper.file].questions || []).length, 'questions');
+          }
+        } catch (e) {
+          console.warn('[pyqService] Failed to load /data/' + paper.file, e.message);
         }
       }));
     }
