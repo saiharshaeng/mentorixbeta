@@ -45,24 +45,38 @@
   }
 
   async function initBrowser() {
-    const urls = ['/data/pyq/master_index.json', '/data/master_index.json'];
+    // GUARD: file:// protocol cannot fetch — must use http://localhost:8080
+    if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
+      console.error('[pyqService] ❌ Running as file:// — PYQ requires http://localhost:8080\n' +
+        'Run: node src/server.js  then open  http://localhost:8080');
+      return;
+    }
+
+    // Use absolute URLs so they always resolve to the server, not the filesystem
+    const origin = (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:8080';
+    const urls = [
+      origin + '/data/pyq/master_index.json',
+      origin + '/data/master_index.json',
+    ];
+
     for (const url of urls) {
       try {
-        const r = await fetch(url);
+        const r = await fetch(url, { cache: 'no-store' });
         if (r.ok) {
           masterIndex = await r.json();
-          console.log('[pyqService] Browser: master_index loaded from', url, '| JEE_MAIN:', (masterIndex.JEE_MAIN || []).length, 'papers');
+          console.log('[pyqService] ✅ master_index loaded from', url,
+            '| JEE_MAIN:', (masterIndex.JEE_MAIN || []).length, 'papers',
+            '| JEE_ADV:', (masterIndex.JEE_ADVANCED || []).length, 'papers');
           // Eagerly load all real papers into cache
           await preloadExam('JEE_MAIN');
           await preloadExam('JEE_ADVANCED');
           return;
-
         }
       } catch (e) {
         console.warn('[pyqService] Could not fetch', url, e.message);
       }
     }
-    console.warn('[pyqService] No master_index loaded — offline fallbacks only');
+    console.error('[pyqService] ❌ No master_index loaded — is the server running on http://localhost:8080?');
   }
 
   /* ─────────────── PRELOAD ─────────────── */
@@ -71,6 +85,7 @@
     const cleanId = normalizeExamId(examId);
     if (!masterIndex || !masterIndex[cleanId]) return;
     const papers = masterIndex[cleanId];
+    const origin = (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:8080';
 
     if (isNode) {
       const fs = require('fs');
@@ -86,10 +101,10 @@
       await Promise.all(papers.map(async paper => {
         if (fileCache[paper.file]) return;
         try {
-          const r = await fetch('/data/' + paper.file);
+          const r = await fetch(origin + '/data/' + paper.file, { cache: 'no-store' });
           if (r.ok) {
             fileCache[paper.file] = await r.json();
-            console.log('[pyqService] Loaded:', paper.file, '->',
+            console.log('[pyqService] ✅ Loaded:', paper.file, '→',
               (fileCache[paper.file].questions || []).length, 'questions');
           }
         } catch (e) {
@@ -98,6 +113,7 @@
       }));
     }
   }
+
 
   /* ─────────────── GET QUESTIONS ─────────────── */
 

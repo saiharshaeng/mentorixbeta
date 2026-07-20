@@ -17,6 +17,37 @@ window.splashSkip = window.splashSkip || function(){
   var ls = document.getElementById('loading-screen');
   if(ls){ls.style.transition='opacity .5s';ls.style.opacity='0';setTimeout(function(){try{ls.remove();}catch(e){}},520);}
 };
+
+// ═══════════════════════════════════════════════════════════
+// NUCLEAR CACHE CLEAR — runs immediately, before anything else
+// Kills old service workers and caches so PYQ data is always fresh
+// ═══════════════════════════════════════════════════════════
+(function clearStaleCache() {
+  if (!window.location.protocol.startsWith('http')) return;
+  const CURRENT_SW_VERSION = 'v47';
+  // Unregister old service workers
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(regs) {
+      regs.forEach(function(reg) {
+        if (reg.active && reg.active.scriptURL && !reg.active.scriptURL.includes('sw.js')) {
+          reg.unregister();
+        }
+      });
+    });
+  }
+  // Delete all old caches
+  if ('caches' in window) {
+    caches.keys().then(function(keys) {
+      keys.forEach(function(key) {
+        if (!key.includes(CURRENT_SW_VERSION)) {
+          console.log('[Boot] Deleting stale cache:', key);
+          caches.delete(key);
+        }
+      });
+    });
+  }
+})();
+
 // Register Service Worker & Manifest only on HTTP/HTTPS to prevent CORS errors on file:// protocol
 if (window.location.protocol.startsWith('http')) {
   if('serviceWorker' in navigator){
@@ -32,22 +63,12 @@ if (window.location.protocol.startsWith('http')) {
       });
     });
   }
-  // Nuke stale PYQ data from old caches on startup
-  if ('caches' in window) {
-    caches.keys().then(keys => {
-      keys.forEach(key => {
-        if (!key.includes('v47')) {
-          console.log('[Cache] Deleting old cache:', key);
-          caches.delete(key);
-        }
-      });
-    });
-  }
   const link = document.createElement('link');
   link.rel = 'manifest';
   link.href = 'manifest.json';
   document.head.appendChild(link);
 }
+
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
