@@ -530,18 +530,47 @@ function renderQuestionText(text) {
 }
 
 function renderQuestionImage(question) {
-  if (question && question.hasImage && question.imagePath) {
+  if (!question || !question.hasImage) return '';
+  
+  if (question.imagePath) {
     let src = question.imagePath;
     if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
       src = 'data/pyq/' + src;
     }
     return `
-      <div class="q-image-container" style="margin-top:12px;margin-bottom:12px;">
-        <img src="${src}" onerror="if(this.src.indexOf('data/pyq/') !== -1){ this.src=this.src.replace('data/pyq/', ''); } else { this.onerror=null; this.outerHTML='<div class=&quot;image-unavailable-msg&quot; style=&quot;background:rgba(239,68,68,0.06);border:1px dashed rgba(239,68,68,0.2);color:#ef4444;padding:12px;border-radius:10px;font-size:12px;margin:12px auto;font-weight:600;text-align:center;&quot;>⚠️ [Image-based question — visual content not yet available]</div>'; }" style="max-width:100%;max-height:350px;border-radius:10px;display:block;margin:0 auto;box-shadow:0 4px 12px rgba(0,0,0,0.15);border:1px solid var(--brd);" />
+      <div class="q-image-container">
+        <img 
+          src="${src}" 
+          alt="Question diagram"
+          class="q-image"
+          onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';"
+          onload="this.style.display='block'"
+        />
+        <div class="q-image-fallback q-image-text" style="display:none">
+          <span>📊</span>
+          <p>${question.imageDescription || 'Diagram for this question'}</p>
+          <p class="q-image-note">Visual content — refer to official paper for diagram</p>
+        </div>
       </div>
     `;
   }
-  return '';
+  
+  if (question.imageDescription) {
+    return `
+      <div class="q-image-container q-image-text">
+        <span>📊</span>
+        <p>${question.imageDescription}</p>
+        <p class="q-image-note">Visual content — refer to official paper for diagram</p>
+      </div>
+    `;
+  }
+  
+  return `
+    <div class="q-image-container q-image-text">
+      <span>📊</span>
+      <p class="q-image-note">This question contains a diagram. Refer to official paper.</p>
+    </div>
+  `;
 }
 window.renderQuestionImage = renderQuestionImage;
 
@@ -1133,7 +1162,8 @@ function _doRenderMath(containerEl) {
         ],
         throwOnError: false,
         errorColor: '#ef4444',
-        strict: false
+        strict: false,
+        trust: true
       });
     } catch(e) {
       console.warn('[MATH] KaTeX error:', e.message);

@@ -10,7 +10,89 @@
  *   GROQ, MODEL — from constants.js
  */
 
-'use strict';
+const TIO_SYSTEM_PROMPT = (profile) => `
+You are Tio — the AI mentor inside Mentorix,
+a free learning platform built for students
+who have no access to tutors or coaching.
+
+YOUR PERSONALITY:
+You are warm, smart, encouraging, and direct.
+You speak like a brilliant older sibling.
+Never robotic. Never formal. Never preachy.
+You celebrate wins. You acknowledge struggle.
+You never judge. You never compare students.
+You make hard things feel achievable.
+
+YOUR STUDENT RIGHT NOW:
+Name: ${profile?.name || 'the student'}
+Grade/Class: ${profile?.grade || 'not specified'}
+Board: ${profile?.board || 'not specified'}
+Target Exam: ${profile?.targetExam || 'not specified'}
+Current streak: ${profile?.streak || 0} days
+XP Level: ${profile?.level || 1}
+Weak areas: ${profile?.weakSpots?.join(', ') || 'not yet identified'}
+
+HOW YOU TEACH:
+When explaining a concept:
+1. Start with a real-world hook or analogy
+2. Give the core idea in 1-2 sentences
+3. Show a worked example (step by step)
+4. Point out the most common mistake
+5. Give a memory trick if possible
+6. Ask if they understood or want another angle
+
+When a student gets something wrong:
+- Never say "Wrong" or "Incorrect"
+- Say: "Almost!" or "Close — here's the tricky part"
+- Explain exactly WHERE they went wrong
+- Show the correct approach
+- Ask them to try a similar one
+
+EXAM AWARENESS:
+If student is preparing for JEE Main:
+- Questions test application, not memory
+- Section B is numerical (no options)
+- Negative marking: -1 for MCQ, 0 for numerical
+
+RESPONSE STYLE:
+- Keep responses concise unless detailed explanation is needed
+- Use LaTeX for math: $x^2$ or $$\\frac{a}{b}$$
+- End with a quick check: "Does that make sense?" or "Want to try one?"
+`;
+
+function buildAIContext(profileId) {
+  const profile = (window.D && window.D.profile) || JSON.parse(localStorage.getItem(`mx3_${profileId}_profile`) || '{}');
+  const recentMistakes = JSON.parse(localStorage.getItem(`mx3_${profileId}_mistakes`) || '[]').slice(-10);
+  const weakSpots = JSON.parse(localStorage.getItem(`mx3_${profileId}_weakspots`) || '{}');
+  const topWeakSpots = Object.entries(weakSpots).sort((a,b) => b[1] - a[1]).slice(0, 5).map(([topic]) => topic);
+  return { ...profile, weakSpots: topWeakSpots, recentMistakes };
+}
+
+function recordMistake(profileId, question, userAnswer) {
+  const key = `mx3_${profileId}_mistakes`;
+  const existing = JSON.parse(localStorage.getItem(key) || '[]');
+  existing.push({
+    questionId: question.id,
+    subject: question.subject,
+    chapter: question.chapter || question.chap,
+    topic: question.topic,
+    questionText: (question.question || question.q || '').substring(0, 100),
+    correctAnswer: question.correct || question.ans,
+    userAnswer,
+    timestamp: Date.now()
+  });
+  localStorage.setItem(key, JSON.stringify(existing.slice(-100)));
+  if (question.chapter || question.chap) {
+    updateWeakSpot(profileId, question.chapter || question.chap);
+  }
+}
+
+function updateWeakSpot(profileId, chapter) {
+  const key = `mx3_${profileId}_weakspots`;
+  const spots = JSON.parse(localStorage.getItem(key) || '{}');
+  spots[chapter] = (spots[chapter] || 0) + 1;
+  localStorage.setItem(key, JSON.stringify(spots));
+}
 
 /**
  * Send a chat completion request to the Groq AI.
@@ -321,41 +403,10 @@ Would you like me to build a personalized study course, generate a mock test, or
 
 /* ── EXPORTS ────────────────────────────────────────────────── */
 window.ai = ai;
-
-const TIO_SYSTEM_PROMPT = `You are Tio — the AI mentor inside Mentorix, a free learning platform built for students who cannot afford tutors or coaching.
-
-PERSONALITY:
-Warm, smart, direct. Like a brilliant older sibling who genuinely cares. Never robotic. Never formal. Never say "Certainly!" or "Great question!" or "Of course!" — these feel fake.
-
-HOW YOU TEACH:
-For any concept explanation:
-1. Start with one real-world hook or analogy
-2. State the core idea in 1-2 sentences  
-3. Show a worked example step by step
-4. Point out the most common mistake
-5. End with: "Does that make sense?" or "Want to try one?"
-
-For wrong answers:
-Never say "Wrong" — say "Almost!" or "Close — here's the tricky part..."
-Show exactly where the logic broke. Then explain the correct path.
-
-MATH FORMATTING:
-Always use LaTeX for math expressions.
-Inline math: $expression$
-Display math: $$expression$$
-Example: The quadratic formula is $$x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$
-
-EXAM AWARENESS:
-JEE Main (2025): 75 questions, 180 minutes
-Section A: 20 MCQs per subject, +4/-1 marks
-Section B: 5 Numerical per subject, +4/0 marks
-NEET (2025): 180 questions compulsory, 3 hours, +4/-1
-
-RESPONSE LENGTH:
-Short questions: 2-4 sentences max
-Concept explanations: use numbered steps
-Full solutions: show every step clearly
-Never write walls of text.`;
+window.callTio = callTio;
+window.buildAIContext = buildAIContext;
+window.recordMistake = recordMistake;
+window.updateWeakSpot = updateWeakSpot;
 
 function buildAIContext(profileId) {
   let profile = (globalThis.D && globalThis.D.profile) || {};
