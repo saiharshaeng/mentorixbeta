@@ -3195,28 +3195,57 @@ function addTopicToRevision(topic) {
   if (typeof saveAll === 'function') saveAll();
 }
 
+function estimateJEEPercentileAndRank(score) {
+  const s = Math.max(0, Math.min(300, score));
+  let percentile = 0;
+  let rank = 1000000;
+
+  if (s >= 280) { percentile = 99.98; rank = Math.round(150 + (300 - s) * 20); }
+  else if (s >= 250) { percentile = 99.85; rank = Math.round(500 + (280 - s) * 40); }
+  else if (s >= 220) { percentile = 99.50; rank = Math.round(2000 + (250 - s) * 150); }
+  else if (s >= 190) { percentile = 99.00; rank = Math.round(10000 + (220 - s) * 400); }
+  else if (s >= 160) { percentile = 97.80; rank = Math.round(25000 + (190 - s) * 700); }
+  else if (s >= 130) { percentile = 95.50; rank = Math.round(50000 + (160 - s) * 1200); }
+  else if (s >= 100) { percentile = 90.00; rank = Math.round(100000 + (130 - s) * 2500); }
+  else if (s >= 70)  { percentile = 80.00; rank = Math.round(220000 + (100 - s) * 4000); }
+  else if (s >= 40)  { percentile = 60.00; rank = Math.round(450000 + (70 - s) * 7000); }
+  else { percentile = Math.max(10, (s / 40) * 50); rank = Math.round(800000 + (40 - s) * 10000); }
+
+  return {
+    percentile: Number(percentile).toFixed(2),
+    rank: rank.toLocaleString('en-IN')
+  };
+}
+window.estimateJEEPercentileAndRank = estimateJEEPercentileAndRank;
+
 function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML) {
   const main = document.getElementById('main');
   if (!main) return;
 
   toggleCBTFullscreen(false);
-  const targetScore = compState.targetScore;
+  const targetScore = compState.targetScore || 180;
   const isTargetAchieved = score >= targetScore;
-  
+
+  const est = estimateJEEPercentileAndRank(score);
+
   main.innerHTML = `
     <div class="sw scr" style="padding-top:16px">
       <div class="card cglow mb20" style="padding:26px;text-align:center;border-color:${isTargetAchieved?'rgba(16,185,129,0.3)':'rgba(139,92,246,0.3)'};background:${isTargetAchieved?'rgba(16,185,129,0.03)':'rgba(139,92,246,0.03)'}">
         <div style="font-size:54px;margin-bottom:12px">${isTargetAchieved?'🏆':'📊'}</div>
-        <div class="h1" style="color:#fff;margin-bottom:8px">Mock Scorecard</div>
+        <div class="h1" style="color:#fff;margin-bottom:8px">Mock Exam Performance Scorecard</div>
         
-        <div class="between" style="max-width:400px;margin:0 auto 24px;gap:20px">
+        <div class="between" style="max-width:560px;margin:0 auto 20px;gap:16px">
           <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
-            <span style="font-size:11px;font-weight:700;color:var(--mut)">YOUR SCORE</span>
-            <div class="h1" style="color:#fff;margin:8px 0 0 0;font-size:36px">${Math.round(score * 100) / 100}</div>
+            <span style="font-size:11px;font-weight:700;color:var(--mut)">FINAL SCORE</span>
+            <div class="h1" style="color:var(--c);margin:8px 0 0 0;font-size:36px">${Math.round(score * 100) / 100} <span style="font-size:16px;color:var(--mut)">/ 300</span></div>
           </div>
           <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
-            <span style="font-size:11px;font-weight:700;color:var(--mut)">TARGET SCORE</span>
-            <div class="h1" style="color:#fff;margin:8px 0 0 0;font-size:36px">${targetScore}</div>
+            <span style="font-size:11px;font-weight:700;color:var(--mut)">PREDICTED PERCENTILE</span>
+            <div class="h1" style="color:var(--pl);margin:8px 0 0 0;font-size:36px">${est.percentile}%</div>
+          </div>
+          <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
+            <span style="font-size:11px;font-weight:700;color:var(--mut)">ESTIMATED AIR</span>
+            <div class="h1" style="color:var(--okl);margin:8px 0 0 0;font-size:32px">~${est.rank}</div>
           </div>
         </div>
 
@@ -3227,7 +3256,9 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
           <div>⚡ XP: <strong style="color:var(--pl)">+${xpEarned}</strong></div>
         </div>
 
-        <button class="btn bpri" style="padding:10px 24px" onclick="rComp()">Back to Hub</button>
+        <div style="display:flex;justify-content:center;gap:12px">
+          <button class="btn bpri" style="padding:10px 24px" onclick="rComp()">📋 Back to Hub</button>
+        </div>
       </div>
 
       ${mistakeAnalysisHTML || ''}
