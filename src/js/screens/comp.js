@@ -37,6 +37,7 @@ let compState = {
   activeExam: null,
   examDate: null,
 };
+window.compState = compState;
 
 // Detailed syllabus database for major exams (subject -> unit -> chapters)
 const DETAILED_SYLLABUS = {
@@ -2092,18 +2093,18 @@ function renderMockTab(exam) {
         
         <div style="display:flex;flex-direction:column;gap:10px">
           <label style="display:flex;align-items:start;gap:10px;cursor:pointer">
-            <input type="radio" name="mock-mode-select" value="diagnostic" checked style="margin-top:4px;accent-color:var(--p)">
+            <input type="radio" name="mock-mode-select" value="full" checked style="margin-top:4px;accent-color:var(--p)">
             <div>
-              <div style="color:#fff;font-weight:600;font-size:13px">⚡ Diagnostic Test (6 Questions · 10 Mins)</div>
-              <div style="font-size:11px;color:var(--mut)">Fast, high-fidelity AI-curated paper across all subjects. Ideal for quick check.</div>
+              <div style="color:#fff;font-weight:600;font-size:13px">🏆 Full NTA CBT Exam Simulation (Exact ${fullQuestionsCount} Qs · ${fullDurationMin} Mins / 3 Hours)</div>
+              <div style="font-size:11px;color:var(--mut)">Realistic NTA CBT simulator matching exact 75 questions (25 Physics, 25 Chemistry, 25 Maths), section weights, and 3-hour duration.</div>
             </div>
           </label>
-          
+
           <label style="display:flex;align-items:start;gap:10px;cursor:pointer;margin-top:6px">
-            <input type="radio" name="mock-mode-select" value="full" style="margin-top:4px;accent-color:var(--p)">
+            <input type="radio" name="mock-mode-select" value="diagnostic" style="margin-top:4px;accent-color:var(--p)">
             <div>
-              <div style="color:#fff;font-weight:600;font-size:13px">🏆 Full Exam Simulation (Exact ${fullQuestionsCount} Qs · ${fullDurationMin} Mins)</div>
-              <div style="font-size:11px;color:var(--mut)">Realistic CBT simulator matching the exact questions count, section weights, and exam duration.</div>
+              <div style="color:#fff;font-weight:600;font-size:13px">⚡ Quick Diagnostic Check (6 Questions · 10 Mins)</div>
+              <div style="font-size:11px;color:var(--mut)">Fast paper for a quick check.</div>
             </div>
           </label>
         </div>
