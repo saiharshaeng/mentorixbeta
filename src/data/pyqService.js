@@ -14,7 +14,25 @@
   'use strict';
 
   const isNode = typeof process !== 'undefined' && process.versions && process.versions.node;
-  let masterIndex = null;      // loaded from master_index.json
+  const EMBEDDED_MASTER_INDEX = {
+    "JEE_MAIN": [
+      { "file": "pyq/jee_main/jeeMain_2025_22Jan_shift1.json", "year": 2025, "shift": 1, "examDate": "2025 22Jan shift1", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" },
+      { "file": "pyq/jee_main/jeeMain_2025_22Jan_shift2.json", "year": 2025, "shift": 2, "examDate": "2025 22Jan shift2", "questionCount": 75, "subjects": ["Mathematics"], "type": "JEE_MAIN" },
+      { "file": "pyq/jee_main/jeeMain_2026_02April_shift1.json", "year": 2026, "shift": 1, "examDate": "2026 02April shift1", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" },
+      { "file": "pyq/jee_main/jeeMain_2026_02April_shift2.json", "year": 2026, "shift": 2, "examDate": "2026 02April shift2", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" },
+      { "file": "pyq/jee_main/jeeMain_2026_04April_shift1.json", "year": 2026, "shift": 1, "examDate": "2026 04April shift1", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" }
+    ],
+    "JEE_ADVANCED": [
+      { "file": "pyq/jee_advanced/JEE_Advanced_2020.json", "year": 2020, "examDate": "JEE Advanced 2020", "questionCount": 55, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
+      { "file": "pyq/jee_advanced/JEE_Advanced_2021.json", "year": 2021, "examDate": "JEE Advanced 2021", "questionCount": 57, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
+      { "file": "pyq/jee_advanced/JEE_Advanced_2022.json", "year": 2022, "examDate": "JEE Advanced 2022", "questionCount": 46, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
+      { "file": "pyq/jee_advanced/JEE_Advanced_2023.json", "year": 2023, "examDate": "JEE Advanced 2023", "questionCount": 53, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
+      { "file": "pyq/jee_advanced/JEE_Advanced_2024.json", "year": 2024, "examDate": "JEE Advanced 2024", "questionCount": 54, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
+      { "file": "pyq/jee_advanced/JEE_Advanced_2025.json", "year": 2025, "examDate": "JEE Advanced 2025", "questionCount": 48, "subjects": ["Physics"], "type": "JEE_ADVANCED" }
+    ]
+  };
+
+  let masterIndex = EMBEDDED_MASTER_INDEX; // Default to embedded index immediately
   const fileCache = {};        // path -> { questions: [...] }
   let initialized = false;
 
@@ -45,38 +63,38 @@
   }
 
   async function initBrowser() {
-    // GUARD: file:// protocol cannot fetch — must use http://localhost:8080
     if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
       console.error('[pyqService] ❌ Running as file:// — PYQ requires http://localhost:8080\n' +
         'Run: node src/server.js  then open  http://localhost:8080');
       return;
     }
 
-    // Use absolute URLs so they always resolve to the server, not the filesystem
-    const origin = (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:8080';
+    const origin = (typeof window !== 'undefined' && window.location.origin) || '';
     const urls = [
-      origin + '/data/pyq/master_index.json',
-      origin + '/data/master_index.json',
+      (origin ? origin : '') + '/data/pyq/master_index.json',
+      '/data/pyq/master_index.json',
+      './data/pyq/master_index.json',
+      'data/pyq/master_index.json'
     ];
 
     for (const url of urls) {
       try {
         const r = await fetch(url, { cache: 'no-store' });
         if (r.ok) {
-          masterIndex = await r.json();
-          console.log('[pyqService] ✅ master_index loaded from', url,
-            '| JEE_MAIN:', (masterIndex.JEE_MAIN || []).length, 'papers',
-            '| JEE_ADV:', (masterIndex.JEE_ADVANCED || []).length, 'papers');
-          // Eagerly load all real papers into cache
-          await preloadExam('JEE_MAIN');
-          await preloadExam('JEE_ADVANCED');
-          return;
+          const loaded = await r.json();
+          if (loaded && (loaded.JEE_MAIN || loaded.JEE_ADVANCED)) {
+            masterIndex = loaded;
+            console.log('[pyqService] ✅ master_index loaded from', url);
+          }
+          break;
         }
       } catch (e) {
         console.warn('[pyqService] Could not fetch', url, e.message);
       }
     }
-    console.error('[pyqService] ❌ No master_index loaded — is the server running on http://localhost:8080?');
+
+    await preloadExam('JEE_MAIN');
+    await preloadExam('JEE_ADVANCED');
   }
 
   /* ─────────────── PRELOAD ─────────────── */
@@ -85,7 +103,7 @@
     const cleanId = normalizeExamId(examId);
     if (!masterIndex || !masterIndex[cleanId]) return;
     const papers = masterIndex[cleanId];
-    const origin = (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:8080';
+    const origin = (typeof window !== 'undefined' && window.location.origin) || '';
 
     if (isNode) {
       const fs = require('fs');
@@ -100,15 +118,23 @@
     } else {
       await Promise.all(papers.map(async paper => {
         if (fileCache[paper.file]) return;
-        try {
-          const r = await fetch(origin + '/data/' + paper.file, { cache: 'no-store' });
-          if (r.ok) {
-            fileCache[paper.file] = await r.json();
-            console.log('[pyqService] ✅ Loaded:', paper.file, '→',
-              (fileCache[paper.file].questions || []).length, 'questions');
-          }
-        } catch (e) {
-          console.warn('[pyqService] Failed to load', paper.file, e.message);
+        const tryUrls = [
+          (origin ? origin : '') + '/data/' + paper.file,
+          '/data/' + paper.file,
+          './data/' + paper.file,
+          'data/' + paper.file
+        ];
+
+        for (const u of tryUrls) {
+          try {
+            const r = await fetch(u, { cache: 'no-store' });
+            if (r.ok) {
+              fileCache[paper.file] = await r.json();
+              console.log('[pyqService] ✅ Loaded:', paper.file, '→',
+                (fileCache[paper.file].questions || []).length, 'questions');
+              break;
+            }
+          } catch (e) { /* ignore */ }
         }
       }));
     }
@@ -348,7 +374,10 @@
 
   function normalizeExamId(examId) {
     if (!examId) return 'JEE_MAIN';
-    return examId.toUpperCase().replace(/-/g, '_').replace('JEE_ADV', 'JEE_ADVANCED');
+    const id = String(examId).toUpperCase().replace(/-/g, '_');
+    if (id.includes('JEE') && (id.includes('ADV') || id.includes('ADVANCED'))) return 'JEE_ADVANCED';
+    if (id.includes('JEE')) return 'JEE_MAIN';
+    return id;
   }
 
   function shuffleArray(arr) {
