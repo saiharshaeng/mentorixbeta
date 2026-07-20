@@ -52,9 +52,11 @@
         if (r.ok) {
           masterIndex = await r.json();
           console.log('[pyqService] Browser: master_index loaded from', url, '| JEE_MAIN:', (masterIndex.JEE_MAIN || []).length, 'papers');
-          // Eagerly load all JEE_MAIN papers into cache
+          // Eagerly load all real papers into cache
           await preloadExam('JEE_MAIN');
+          await preloadExam('JEE_ADVANCED');
           return;
+
         }
       } catch (e) {
         console.warn('[pyqService] Could not fetch', url, e.message);
