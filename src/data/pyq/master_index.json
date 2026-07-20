@@ -69,7 +69,7 @@
       "file": "pyq/jee_main/jee_physics_bank.json",
       "year": 2024,
       "examDate": "Physics Question Bank",
-      "questionCount": 5000,
+      "questionCount": 5310,
       "subjects": [
         "Physics"
       ],
@@ -79,7 +79,7 @@
       "file": "pyq/jee_main/jee_chemistry_bank.json",
       "year": 2024,
       "examDate": "Chemistry Question Bank",
-      "questionCount": 5000,
+      "questionCount": 5501,
       "subjects": [
         "Chemistry"
       ],
@@ -89,7 +89,7 @@
       "file": "pyq/jee_main/jee_maths_bank.json",
       "year": 2024,
       "examDate": "Mathematics Question Bank",
-      "questionCount": 5000,
+      "questionCount": 5456,
       "subjects": [
         "Mathematics"
       ],
@@ -170,5 +170,17 @@
       "type": "NEET"
     }
   ],
-  "EAMCET": []
+  "EAMCET": [],
+  "OTHER": [
+    {
+      "file": "pyq/other/general_aptitude_bank.json",
+      "year": 2024,
+      "examDate": "General Aptitude & Reasoning",
+      "questionCount": 5068,
+      "subjects": [
+        "General Aptitude"
+      ],
+      "type": "OTHER"
+    }
+  ]
 }

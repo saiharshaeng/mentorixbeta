@@ -212,10 +212,12 @@
     const papers = masterIndex && masterIndex[cleanId];
     if (!papers || papers.length === 0) return [];
 
-    // Pick a specific paper or random one
+    const shiftPapers = papers.filter(p => p.questionCount === 75 || p.file.includes('shift') || p.file.includes('complete'));
     let paperMeta;
     if (paperIdx !== null && paperIdx !== undefined && papers[paperIdx]) {
       paperMeta = papers[paperIdx];
+    } else if (shiftPapers.length > 0) {
+      paperMeta = shiftPapers[Math.floor(Math.random() * shiftPapers.length)];
     } else {
       paperMeta = papers[Math.floor(Math.random() * papers.length)];
     }
@@ -237,11 +239,9 @@
     const qs = fileData.questions || (Array.isArray(fileData) ? fileData : []);
     if (qs.length === 0) return [];
 
-    // Ensure proper marking scheme on every question
-    return qs.map((q, i) => {
-      const normalized = ensureNormalized(q, i + 1, paperMeta.year);
-      return normalized;
-    });
+    const selectedQs = qs.length > 75 ? shuffleArray([...qs]).slice(0, 75) : qs;
+
+    return selectedQs.map((q, i) => ensureNormalized(q, i + 1, paperMeta.year));
   }
 
   function collectPool(cleanId, paperIdx) {

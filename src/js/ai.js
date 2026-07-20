@@ -101,11 +101,24 @@ function updateWeakSpot(profileId, chapter) {
  * Falls back to Mock AI only if key entry is skipped.
  */
 async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT || MODEL, useVision = false) {
+  // Local Interceptor for simple greetings & platform questions (0 AI Tokens)
+  const lastUserMsg = [...msgs].reverse().find(m => m.role === 'user')?.content?.trim()?.toLowerCase() || '';
+  if (lastUserMsg && lastUserMsg.length < 30) {
+    if (['hi', 'hello', 'hey', 'namaste', 'good morning', 'good evening', 'hi tio', 'hello tio', 'hey tio'].includes(lastUserMsg)) {
+      return "Hey there! I'm Tio, your AI mentor on Mentorix. How can I help you with your studies today?";
+    }
+    if (['who are you', 'what is mentorix', 'what is tio', 'help'].includes(lastUserMsg)) {
+      return "I'm Tio, your AI mentor! Mentorix is a free platform built for students. I can explain complex topics, review your mistakes, or guide you through your JEE/NEET prep!";
+    }
+  }
+
+  const effectiveMaxTokens = (lastUserMsg.length < 50 && mt > 300) ? 300 : Math.min(mt, 1000);
+
   if (window.addTerminalLog) {
     window.addTerminalLog(`AI dispatching request to ${model}...`);
   }
   const allMsgs = sys ? [{ role: 'system', content: sys }, ...msgs] : msgs;
-  const body = { model: model, messages: allMsgs, max_tokens: mt, temperature: 0.7 };
+  const body = { model: model, messages: allMsgs, max_tokens: effectiveMaxTokens, temperature: 0.7 };
   if (json) body.response_format = { type: 'json_object' };
   if (useVision) body.useVision = true;
 
