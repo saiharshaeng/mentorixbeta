@@ -20,7 +20,9 @@
       "examDate": "2025 22Jan shift2",
       "questionCount": 75,
       "subjects": [
-        "Mathematics"
+        "Mathematics",
+        "Physics",
+        "Chemistry"
       ],
       "type": "JEE_MAIN"
     },
@@ -60,6 +62,36 @@
         "Mathematics",
         "Physics",
         "Chemistry"
+      ],
+      "type": "JEE_MAIN"
+    },
+    {
+      "file": "pyq/jee_main/jee_physics_bank.json",
+      "year": 2024,
+      "examDate": "Physics Question Bank",
+      "questionCount": 5000,
+      "subjects": [
+        "Physics"
+      ],
+      "type": "JEE_MAIN"
+    },
+    {
+      "file": "pyq/jee_main/jee_chemistry_bank.json",
+      "year": 2024,
+      "examDate": "Chemistry Question Bank",
+      "questionCount": 5000,
+      "subjects": [
+        "Chemistry"
+      ],
+      "type": "JEE_MAIN"
+    },
+    {
+      "file": "pyq/jee_main/jee_maths_bank.json",
+      "year": 2024,
+      "examDate": "Mathematics Question Bank",
+      "questionCount": 5000,
+      "subjects": [
+        "Mathematics"
       ],
       "type": "JEE_MAIN"
     }
@@ -126,6 +158,17 @@
       "type": "JEE_ADVANCED"
     }
   ],
-  "NEET": [],
+  "NEET": [
+    {
+      "file": "pyq/neet/neet_biology_bank.json",
+      "year": 2024,
+      "examDate": "NEET Biology Question Bank",
+      "questionCount": 5000,
+      "subjects": [
+        "Biology"
+      ],
+      "type": "NEET"
+    }
+  ],
   "EAMCET": []
 }
