@@ -1,52 +1,20 @@
 /**
- * sw.js — Mentorix Service Worker
- * Provides offline caching so the app works without internet.
- * AI features (Groq proxy) won't work offline — that's expected and shown via the offline banner.
+ * sw.js — Mentorix Service Worker v47
+ * NETWORK-FIRST for JS/CSS/JSON so code changes always reach users.
+ * PYQ data files always bypass cache (never stale).
  */
 
-const CACHE_NAME = 'mentorix-v46';
+const CACHE_NAME = 'mentorix-v47';
 
-// Files to cache on install — the core app shell
+// Files to pre-cache on install (only truly static: html, images, manifest)
 const CORE_ASSETS = [
   './',
   './index.html',
-  './index.css',
-  './manifest.json',
   './logo.png',
-  './lib/katex.min.css',
-  './lib/katex.min.js',
-  './lib/auto-render.min.js',
-  './lib/gsap.min.js',
-  './lib/anime.min.js',
-  './lib/chart.umd.min.js',
-  './data/examPatterns.js',
-  './data/jeeData.js',
-  './data/pyqService.js',
-  './js/helpers.js',
-  './js/constants.js',
-  './js/storage.js',
-  './js/router.js',
-  './js/ai.js',
-  './js/auth.js',
-  './js/xp.js',
-  './js/screens/dashboard.js',
-  './js/screens/courses.js',
-  './js/screens/learn.js',
-  './js/screens/mentor.js',
-  './js/screens/revision.js',
-  './js/screens/recovery.js',
-  './js/screens/notebook.js',
-  './js/screens/tests.js',
-  './js/screens/doubt.js',
-  './js/screens/progress.js',
-  './js/screens/settings.js',
-  './js/screens/explore.js',
-  './js/screens/careers.js',
-  './js/screens/roadmap.js',
-  './js/screens/comp.js',
+  './manifest.json',
 ];
 
-// Install: cache all core assets
+// Install
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
@@ -55,29 +23,40 @@ self.addEventListener('install', e => {
   );
 });
 
-// Activate: delete old caches
+// Activate: nuke ALL old caches
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys()
       .then(keys => Promise.all(
-        keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
+        keys.filter(k => k !== CACHE_NAME).map(k => {
+          console.log('[SW] Deleting old cache:', k);
+          return caches.delete(k);
+        })
       ))
       .then(() => self.clients.claim())
   );
 });
 
-// Fetch: network-first for HTML/navigation, cache-first for static assets
 self.addEventListener('fetch', e => {
   const url = e.request.url;
 
-  // Never cache AI proxy calls — these must always go to network
-  if (url.includes('mentorix-proxy') || url.includes('mentorix-ai-proxy') || url.includes('groq.com') ||
-      url.includes('googleapis') || url.includes('cloudflare') || url.includes('workers.dev')) {
-    return; // let browser handle normally
+  // AI proxy — never cache, let browser handle
+  if (url.includes('mentorix-proxy') || url.includes('groq.com') ||
+      url.includes('googleapis') || url.includes('cloudflare') ||
+      url.includes('workers.dev')) {
+    return;
   }
 
-  // Navigation requests (HTML pages): NETWORK-FIRST
-  // This ensures updated index.html is always served fresh
+  // PYQ data files — ALWAYS network, never cache (data changes frequently)
+  if (url.includes('/data/pyq/') || url.includes('pyqService') ||
+      url.includes('master_index')) {
+    e.respondWith(
+      fetch(e.request).catch(() => caches.match(e.request))
+    );
+    return;
+  }
+
+  // Navigation (HTML) — network-first
   if (e.request.mode === 'navigate') {
     e.respondWith(
       fetch(e.request)
@@ -93,15 +72,30 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // Static assets (JS, CSS, images): CACHE-FIRST
+  // JS / CSS / JSON — NETWORK-FIRST (so updates always reach browser)
+  if (url.match(/\.(js|css|json)$/)) {
+    e.respondWith(
+      fetch(e.request)
+        .then(response => {
+          if (response.ok && e.request.method === 'GET') {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(e.request))
+    );
+    return;
+  }
+
+  // Everything else (images, fonts) — cache-first
   e.respondWith(
     caches.match(e.request)
       .then(cached => {
         if (cached) return cached;
         return fetch(e.request)
           .then(response => {
-            if (response.ok && e.request.method === 'GET' &&
-                url.startsWith(self.location.origin)) {
+            if (response.ok && e.request.method === 'GET') {
               const clone = response.clone();
               caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
             }
@@ -110,3 +104,6 @@ self.addEventListener('fetch', e => {
       })
   );
 });
+
+
+// Files to cache on install — the core app shell
