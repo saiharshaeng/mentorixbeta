@@ -3407,113 +3407,54 @@ function checkPracticeNumericalAnswer(correctAns, expl) {
   triggerMath();
 }
 
+function startChapterPractice(subject, chapter) {
+  compState.practiceSubject = subject;
+  compState.practiceChapter = chapter;
+  compState.currentTab = 'practice';
+  startCompPractice();
+}
+window.startChapterPractice = startChapterPractice;
+
 async function startCompPractice() {
   const btn = document.getElementById('start-practice-btn');
   if (btn) {
     btn.disabled = true;
-    btn.innerHTML = '✨ Generating questions...';
+    btn.innerHTML = '⌛ Loading practice questions...';
   }
 
   const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
-  const section = compState.practiceSubject;
+  const section = compState.practiceSubject || (exam.subjects ? exam.subjects[0] : 'Mathematics');
   const diff = compState.practiceDifficulty || 'medium';
   const chapter = compState.practiceChapter || 'All Chapters';
   const count = compState.practiceCount || 5;
 
-  console.log('[Difficulty Enforcement] Passing difficulty to AI prompt / database lookup:', diff);
-
-  // Preload exam questions dynamically
   if (window.pyqService) {
     await window.pyqService.preloadExam(compState.examId);
   }
 
   let questions = [];
-  const isJEEOrNEET = exam.id === 'jee_main' || exam.id === 'neet';
 
-  if (isJEEOrNEET) {
-    if (window.pyqService) {
-      const result = window.pyqService.getQuestions({
-        examId: compState.examId,
-        count: count,
-        subject: section,
-        chapter: chapter,
-        difficulty: diff
-      });
-      if (result && result.questions && result.questions.length > 0) {
-        questions = result.questions;
-      }
-    }
-  } else {
-    const chapterInstruction = chapter === 'All Chapters'
-      ? `Mix questions proportionally across all chapters of ${section}.`
-      : `Focus ALL ${count} question(s) exclusively on the chapter: "${chapter}".`;
-
-    let allowedTypes = '';
-    if (exam.id === 'jee_main') {
-      allowedTypes = 'Only generate: "mcq" and "numerical". Do NOT generate "msq".';
-    } else if (exam.id === 'neet') {
-      allowedTypes = 'Only generate: "mcq". Do NOT generate "msq" or "numerical".';
-    } else {
-      allowedTypes = 'Use standard types: "mcq", "msq", and "numerical".';
-    }
-
-    const prompt = `Generate exactly ${count} high-fidelity exam question(s) for the "${exam.name}" exam.
-Subject/Section: ${section}
-${chapterInstruction}
-${getDifficultyPrompt(exam.id, diff)}
-Allowed question types for ${exam.name}: ${allowedTypes}
-Write ALL math using proper LaTeX: inline as $formula$ and display as $$formula$$.
-
-Return ONLY a valid JSON object:
-{
-  "questions": [
-    {
-      "q": "Question text with $LaTeX$ math",
-      "opts": ["A", "B", "C", "D"],
-      "ans": [0],
-      "type": "mcq",
-      "hint": "Key concept hint",
-      "expl": "Full step-by-step solution"
-    }
-  ]
-}`;
-
-    try {
-      const sys = "You are a professional exam paper setter. Output ONLY valid JSON, no markdown.";
-      const reply = await ai([{ role: 'user', content: prompt }], sys, count * 500 + 500, true);
-      
-      if (reply) {
-        const data = parseAiJsonSafely(reply);
-        if (data && data.questions && data.questions.length > 0) {
-          questions = data.questions;
-        }
-      }
-    } catch (err) {
-      console.warn('[Comp Exam] AI practice failed, using offline bank:', err);
+  // 1. Primary: Pull from local pyqService database (0 AI tokens)
+  if (window.pyqService) {
+    const result = window.pyqService.getQuestions({
+      examId: compState.examId,
+      count: count,
+      subject: section,
+      chapter: chapter,
+      difficulty: diff
+    });
+    if (result && result.questions && result.questions.length > 0) {
+      questions = result.questions;
     }
   }
 
-  // Fallback to offline bank if AI/PYQService fails or returns nothing
+  // 2. Secondary fallback: Pull from offline dataset banks (0 AI tokens)
   if (questions.length === 0) {
-    if (window.pyqService) {
-      const result = window.pyqService.getQuestions({
-        examId: compState.examId,
-        count: count,
-        subject: section,
-        chapter: chapter,
-        difficulty: diff
-      });
-      if (result && result.questions && result.questions.length > 0) {
-        questions = result.questions;
-      }
+    const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
+    while (questions.length < count) {
+      questions.push(...list);
     }
-    if (questions.length === 0) {
-      const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
-      while (questions.length < count) {
-        questions.push(...list);
-      }
-      questions = questions.slice(0, count);
-    }
+    questions = questions.slice(0, count);
   }
 
   if (btn) {
@@ -3521,10 +3462,9 @@ Return ONLY a valid JSON object:
     btn.innerHTML = '🚀 Start Practice Session';
   }
 
-  console.log('[Difficulty Enforcement] Questions received:', questions.length, 'questions. Difficulty requested:', diff);
-
-  launchMultiPracticeOverlay(questions);
+  renderMultiPracticeOverlay(questions, `${exam.name} — ${section} (${chapter})`);
 }
+window.startCompPractice = startCompPractice;
 
 
 // ═══════════════════════════════════════════════════════════
