@@ -275,6 +275,7 @@
    * Math: Q1-25 (20 MCQ + 5 Num), Physics: Q26-50 (20 MCQ + 5 Num), Chemistry: Q51-75 (20 MCQ + 5 Num)
    */
   function buildFullMockPaper(cleanId, paperIdx) {
+    cleanId = normalizeExamId(cleanId);
     let pool = collectPool(cleanId, paperIdx);
     if (pool.length === 0) return [];
 

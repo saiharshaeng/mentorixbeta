@@ -2241,10 +2241,10 @@ function beginMockExamAfterInstructions() {
 }
 
 // ⏱️ CBT Mock Setup
-async function startMockExamSetup() {
+async function startMockExamSetup(forcedMode) {
   const btn = document.getElementById('launch-mock-btn');
   const checkedRadio = document.querySelector('input[name="mock-mode-select"]:checked');
-  const mode = checkedRadio ? checkedRadio.value : 'diagnostic';
+  const mode = forcedMode || (checkedRadio ? checkedRadio.value : 'full');
 
   if (btn) {
     btn.disabled = true;
@@ -2374,25 +2374,19 @@ async function startMockExamSetup() {
     // ═══════════════════════════════════════════
     // FAST PATH: Use a complete real PYQ paper
     // ═══════════════════════════════════════════
-    const hasPyqData = window.pyqService && window.pyqService.hasData(compState.examId);
-    if (hasPyqData) {
-      // Pick a random paper index so each test feels different
-      const papers = window.pyqService.getPapers(compState.examId);
-      const paperIdx = Math.floor(Math.random() * papers.length);
+    if (window.pyqService) {
       const result = window.pyqService.getQuestions({
         examId: compState.examId,
-        count: 75,
-        paperIndex: paperIdx
+        count: 75
       });
 
-      if (result && result.questions && result.questions.length >= 6) {
+      if (result && result.questions && result.questions.length > 0) {
         questions = result.questions.map((q, i) => ({
           ...q,
           id: i + 1,
-          // Ensure marking is correct per section
           marking: q.marking || (q.type === 'numerical' ? { correct: 4, wrong: 0 } : { correct: 4, wrong: -1 })
         }));
-        console.log('[Mock] Using real PYQ paper:', papers[paperIdx] && papers[paperIdx].examDate, '| Questions:', questions.length);
+        console.log('[Mock] Loaded 75-question full NTA exam paper:', questions.length, 'questions');
       }
     }
 
@@ -3196,7 +3190,7 @@ function submitMockExam() {
 
   compState.activeExam = null;
 
-  // Restore sidebar when exam ends
+  // Restore sidebar safely
   const sidebar = document.querySelector(
     '.sidebar, #sidebar, .nav-sidebar, ' +
     '[class*="sidebar"], [class*="side-nav"]'
@@ -3205,15 +3199,15 @@ function submitMockExam() {
     'nav, .navbar, #navbar, .top-nav, ' +
     '[class*="top-bar"]'
   );
-  if (sidebar) {
+  if (sidebar && sidebar.dataset) {
     sidebar.style.display = 
       sidebar.dataset.hiddenForExam || '';
   }
-  if (mainNav) {
+  if (mainNav && mainNav.dataset) {
     mainNav.style.display = 
       mainNav.dataset.hiddenForExam || '';
   }
-  document.body.style.overflow = '';
+  if (document.body) document.body.style.overflow = '';
 
   renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML);
 }
