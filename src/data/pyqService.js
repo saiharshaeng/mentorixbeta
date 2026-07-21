@@ -1,526 +1,327 @@
 /**
- * pyqService.js — Real PYQ Data Service for Mentorix
+ * pyqService.js — Real PYQ Data Service for Mentorix (v54 CLEAN REWRITE)
  *
- * Data format (master_index.json):
- * {
- *   JEE_MAIN: [ { file, year, shift, examDate, questionCount, subjects, type }, ... ],
- *   JEE_ADVANCED: [], NEET: [], EAMCET: []
- * }
+ * DESIGN PRINCIPLE:
+ *   - Full Mock (count ≥ 60): serve ONE intact 75-Q NTA shift paper, never shuffle or merge
+ *   - Practice (count < 60): serve filtered/random questions from the pool
+ *   - NEVER use jee_classified.js for full mock papers (it is corrupted for Paper 2)
  *
- * Normalized question format (after conversion):
- * { id, q, opts[], ans[], type, section, sectionLabel, chap, expl, difficulty, marking, year }
+ * Normalized question format:
+ *   { id, q, opts[], ans[], type, section, sectionLabel, chap, expl, difficulty, marking, year }
  */
 (function () {
   'use strict';
 
   const isNode = typeof process !== 'undefined' && process.versions && process.versions.node;
-  const EMBEDDED_MASTER_INDEX = {
-    "JEE_MAIN": [
-      { "file": "pyq/jee_main/jeeMain_2025_22Jan_shift1.json", "year": 2025, "shift": 1, "examDate": "2025 22Jan shift1", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" },
-      { "file": "pyq/jee_main/jeeMain_2025_22Jan_shift2.json", "year": 2025, "shift": 2, "examDate": "2025 22Jan shift2", "questionCount": 75, "subjects": ["Mathematics"], "type": "JEE_MAIN" },
-      { "file": "pyq/jee_main/jeeMain_2026_02April_shift1.json", "year": 2026, "shift": 1, "examDate": "2026 02April shift1", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" },
-      { "file": "pyq/jee_main/jeeMain_2026_02April_shift2.json", "year": 2026, "shift": 2, "examDate": "2026 02April shift2", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" },
-      { "file": "pyq/jee_main/jeeMain_2026_04April_shift1.json", "year": 2026, "shift": 1, "examDate": "2026 04April shift1", "questionCount": 75, "subjects": ["Mathematics","Physics","Chemistry"], "type": "JEE_MAIN" }
-    ],
-    "JEE_ADVANCED": [
-      { "file": "pyq/jee_advanced/JEE_Advanced_2020.json", "year": 2020, "examDate": "JEE Advanced 2020", "questionCount": 55, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
-      { "file": "pyq/jee_advanced/JEE_Advanced_2021.json", "year": 2021, "examDate": "JEE Advanced 2021", "questionCount": 57, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
-      { "file": "pyq/jee_advanced/JEE_Advanced_2022.json", "year": 2022, "examDate": "JEE Advanced 2022", "questionCount": 46, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
-      { "file": "pyq/jee_advanced/JEE_Advanced_2023.json", "year": 2023, "examDate": "JEE Advanced 2023", "questionCount": 53, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
-      { "file": "pyq/jee_advanced/JEE_Advanced_2024.json", "year": 2024, "examDate": "JEE Advanced 2024", "questionCount": 54, "subjects": ["Physics"], "type": "JEE_ADVANCED" },
-      { "file": "pyq/jee_advanced/JEE_Advanced_2025.json", "year": 2025, "examDate": "JEE Advanced 2025", "questionCount": 48, "subjects": ["Physics"], "type": "JEE_ADVANCED" }
-    ]
-  };
 
-  let masterIndex = EMBEDDED_MASTER_INDEX; // Default to embedded index immediately
-  const fileCache = {};        // path -> { questions: [...] }
+  // ── CANONICAL PAPER REGISTRY ──────────────────────────────────────────────
+  // Only these pristine, validated 75-Q NTA shift papers are used for full mocks.
+  // DO NOT add jee_classified.js entries here.
+  const JEE_MAIN_PAPERS = [
+    { file: 'pyq/jee_main/jeeMain_2025_22Jan_shift1.json', year: 2025, shift: 1, examDate: 'JEE Main 2025 — Jan 22 Shift 1 (Morning)' },
+    { file: 'pyq/jee_main/jeeMain_2025_22Jan_shift2.json', year: 2025, shift: 2, examDate: 'JEE Main 2025 — Jan 22 Shift 2 (Afternoon)' },
+    { file: 'pyq/jee_main/jeeMain_2026_02April_shift1.json', year: 2026, shift: 1, examDate: 'JEE Main 2026 — Apr 02 Shift 1 (Morning)' },
+    { file: 'pyq/jee_main/jeeMain_2026_02April_shift2.json', year: 2026, shift: 2, examDate: 'JEE Main 2026 — Apr 02 Shift 2 (Afternoon)' },
+    { file: 'pyq/jee_main/jeeMain_2026_04April_shift1.json', year: 2026, shift: 1, examDate: 'JEE Main 2026 — Apr 04 Shift 1 (Morning)' }
+  ];
+
+  const JEE_ADVANCED_PAPERS = [
+    { file: 'pyq/jee_advanced/JEE_Advanced_2020.json', year: 2020, examDate: 'JEE Advanced 2020' },
+    { file: 'pyq/jee_advanced/JEE_Advanced_2021.json', year: 2021, examDate: 'JEE Advanced 2021' },
+    { file: 'pyq/jee_advanced/JEE_Advanced_2022.json', year: 2022, examDate: 'JEE Advanced 2022' },
+    { file: 'pyq/jee_advanced/JEE_Advanced_2023.json', year: 2023, examDate: 'JEE Advanced 2023' },
+    { file: 'pyq/jee_advanced/JEE_Advanced_2024.json', year: 2024, examDate: 'JEE Advanced 2024' },
+    { file: 'pyq/jee_advanced/JEE_Advanced_2025.json', year: 2025, examDate: 'JEE Advanced 2025' }
+  ];
+
+  // Rotation tracker: cycle through papers so each session is a different real paper
+  const _lastPaperIdx = {};
+
+  const fileCache = {};   // file key → { questions: [...] }
   let initialized = false;
 
-  /* ─────────────── INIT ─────────────── */
+  // ── INIT ──────────────────────────────────────────────────────────────────
 
   async function init() {
     if (initialized) return;
-    try {
-      if (isNode) {
-        await initNode();
-      } else {
-        await initBrowser();
-      }
-    } catch (e) {
-      console.error('[pyqService] init failed:', e);
-    }
     initialized = true;
+    if (isNode) {
+      _preloadAllNode();
+    } else {
+      await _preloadAllBrowser();
+    }
   }
 
-  async function initNode() {
+  function _preloadAllNode() {
     const fs = require('fs');
     const path = require('path');
-    const indexPath = path.join(process.cwd(), 'src/data/pyq/master_index.json');
-    if (fs.existsSync(indexPath)) {
-      masterIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-      console.log('[pyqService] Node: master_index loaded, JEE_MAIN papers:', (masterIndex.JEE_MAIN || []).length);
-    }
-  }
-
-  function injectWindowGlobals() {
-    if (typeof window !== 'undefined' && window.JEE_CLASSIFIED_QUESTIONS && window.JEE_CLASSIFIED_QUESTIONS.length > 0) {
-      const questions = window.JEE_CLASSIFIED_QUESTIONS;
-      
-      const normalized = questions.map((q, i) => {
-        const opts = Array.isArray(q.options) ? q.options : 
-          (q.options && typeof q.options === 'object') ? [q.options.a, q.options.b, q.options.c, q.options.d].filter(Boolean) : (q.opts || []);
-        
-        let ansIdx = [0];
-        if (q.ans !== undefined) {
-          ansIdx = Array.isArray(q.ans) ? q.ans : [q.ans];
-        } else if (q.correct !== undefined) {
-          const cCode = String(q.correct).toLowerCase().trim();
-          if (cCode === 'a') ansIdx = [0];
-          else if (cCode === 'b') ansIdx = [1];
-          else if (cCode === 'c') ansIdx = [2];
-          else if (cCode === 'd') ansIdx = [3];
-          else ansIdx = [0];
-        }
-
-        const isNum = (q.type || '').toLowerCase() === 'numerical';
-
-        return {
-          id: q.id || ('jee_cls_' + i),
-          q: q.question || q.q || '',
-          opts: opts,
-          ans: ansIdx,
-          type: isNum ? 'numerical' : 'mcq',
-          section: q.subject || q.section || (i % 75 < 25 ? 'Mathematics' : i % 75 < 50 ? 'Physics' : 'Chemistry'),
-          sectionLabel: (i % 25 < 20) ? 'Section A' : 'Section B',
-          chap: q.classifiedChapter || q.chapter || q.chap || 'General Concepts',
-          expl: q.solution || q.explanation || q.expl || '',
-          difficulty: q.difficulty || 'medium',
-          year: q.year || 2025,
-          examDate: q.date ? (q.date + ' ' + (q.shift || '')) : 'JEE Main 2025',
-          marking: isNum ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 },
-          source: 'PYQ (NTA Real Paper)'
-        };
-      }).filter(q => q.q && q.q.length > 5);
-
-      // Group into 75-question shift papers
-      const paperCount = Math.floor(normalized.length / 75);
-      if (!masterIndex) masterIndex = { JEE_MAIN: [], JEE_ADVANCED: [], NEET: [], EAMCET: [] };
-      if (!masterIndex.JEE_MAIN) masterIndex.JEE_MAIN = [];
-
-      for (let p = 0; p < paperCount; p++) {
-        const paperQs = normalized.slice(p * 75, (p + 1) * 75);
-        const paperKey = `__classified_paper_${p}__`;
-        const shiftLabel = paperQs[0]?.examDate || `JEE Main 2025 Shift ${p + 1}`;
-        fileCache[paperKey] = { questions: paperQs };
-        
-        // Add if not already present
-        if (!masterIndex.JEE_MAIN.some(m => m.file === paperKey)) {
-          masterIndex.JEE_MAIN.unshift({
-            file: paperKey,
-            year: paperQs[0]?.year || 2025,
-            shift: p + 1,
-            examDate: shiftLabel,
-            questionCount: 75,
-            subjects: ["Mathematics", "Physics", "Chemistry"],
-            type: "JEE_MAIN"
-          });
-        }
-      }
-      
-      console.log('[pyqService] ✅ Injected', paperCount, 'full 75-question real NTA PYQ papers from window global');
-    }
-    
-    if (typeof window !== 'undefined' && window.NEET_CLASSIFIED_QUESTIONS && window.NEET_CLASSIFIED_QUESTIONS.length > 0) {
-      const normalized = window.NEET_CLASSIFIED_QUESTIONS.map((q, i) => ({
-        id: q.id || ('neet_cls_' + i),
-        q: q.question || q.q || '',
-        opts: q.options || q.opts || [],
-        ans: q.correctAnswer !== undefined ? [q.correctAnswer] : (q.ans || []),
-        type: 'mcq',
-        section: q.subject || 'Biology',
-        sectionLabel: 'Section A',
-        chap: q.classifiedChapter || q.chapter || 'General',
-        expl: q.solution || q.expl || '',
-        difficulty: q.difficulty || 'medium',
-        year: q.year || 2024,
-        marking: { correct: 4, wrong: -1 },
-        source: 'PYQ'
-      })).filter(q => q.q && q.q.length > 5);
-
-      fileCache['__neet_classified__'] = { questions: normalized };
-      if (masterIndex && !masterIndex.NEET) masterIndex.NEET = [];
-      if (masterIndex) masterIndex.NEET.push({ file: '__neet_classified__', year: 2025, questionCount: normalized.length });
-      console.log('[pyqService] ✅ Injected', normalized.length, 'NEET classified questions');
-    }
-  }
-
-  async function initBrowser() {
-    if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
-      console.error('[pyqService] ❌ Running as file:// — PYQ requires http://localhost:8080\n' +
-        'Run: node src/server.js  then open  http://localhost:8080');
-      injectWindowGlobals();
-      return;
-    }
-
-    try {
-      const r = await fetch('data/pyq/master_index.json', { cache: 'no-store' });
-      if (r.ok) {
-        const loaded = await r.json();
-        if (loaded && (loaded.JEE_MAIN || loaded.JEE_ADVANCED)) {
-          masterIndex = loaded;
-          console.log('[pyqService] ✅ master_index loaded from data/pyq/master_index.json');
-        }
-      }
-    } catch (e) {
-      console.warn('[pyqService] Could not fetch data/pyq/master_index.json:', e.message);
-    }
-
-    if (!masterIndex || Object.keys(fileCache).length === 0) {
-      injectWindowGlobals();
-    }
-
-    await preloadExam('JEE_MAIN');
-    await preloadExam('JEE_ADVANCED');
-  }
-
-  /* ─────────────── PRELOAD ─────────────── */
-
-  async function preloadExam(examId) {
-    const cleanId = normalizeExamId(examId);
-    if (!masterIndex || !masterIndex[cleanId]) return;
-    const papers = masterIndex[cleanId];
-
-    if (isNode) {
-      const fs = require('fs');
-      const path = require('path');
-      papers.forEach(paper => {
-        if (fileCache[paper.file]) return;
-        const p = path.join(process.cwd(), 'src/data', paper.file);
-        if (fs.existsSync(p)) {
-          fileCache[paper.file] = JSON.parse(fs.readFileSync(p, 'utf8'));
-        }
-      });
-    } else {
-      await Promise.all(papers.map(async paper => {
-        if (fileCache[paper.file]) return;
+    const allPapers = [...JEE_MAIN_PAPERS, ...JEE_ADVANCED_PAPERS];
+    allPapers.forEach(paper => {
+      if (fileCache[paper.file]) return;
+      const p = path.join(process.cwd(), 'src/data', paper.file);
+      if (fs.existsSync(p)) {
         try {
-          const url = 'data/' + paper.file;
-          const r = await fetch(url, { cache: 'no-store' });
-          if (r.ok) {
-            fileCache[paper.file] = await r.json();
-            console.log('[pyqService] ✅ Loaded paper:', url, '→',
-              (fileCache[paper.file].questions || []).length, 'questions');
-          }
+          fileCache[paper.file] = JSON.parse(fs.readFileSync(p, 'utf8'));
+          console.log('[pyqService] ✅ Loaded:', paper.examDate, '→', (fileCache[paper.file].questions || []).length, 'Qs');
         } catch (e) {
-          console.warn('[pyqService] Failed to load /data/' + paper.file, e.message);
+          console.error('[pyqService] ❌ Failed to parse:', paper.file, e.message);
         }
-      }));
-    }
+      }
+    });
   }
 
+  async function _preloadAllBrowser() {
+    const allPapers = [...JEE_MAIN_PAPERS, ...JEE_ADVANCED_PAPERS];
+    await Promise.all(allPapers.map(async paper => {
+      if (fileCache[paper.file]) return;
+      try {
+        const url = 'data/' + paper.file;
+        const r = await fetch(url, { cache: 'no-store' });
+        if (r.ok) {
+          fileCache[paper.file] = await r.json();
+          console.log('[pyqService] ✅ Loaded:', paper.examDate, '→',
+            (fileCache[paper.file].questions || []).length, 'Qs');
+        } else {
+          console.warn('[pyqService] ⚠️ HTTP', r.status, 'for', url);
+        }
+      } catch (e) {
+        console.warn('[pyqService] ⚠️ Could not fetch:', paper.file, e.message);
+      }
+    }));
+  }
 
-  /* ─────────────── GET QUESTIONS ─────────────── */
+  // Also expose preloadExam for backwards compat
+  async function preloadExam(examId) {
+    await init();
+  }
+
+  // ── CORE: GET A SINGLE INTACT PAPER ──────────────────────────────────────
 
   /**
-   * getQuestions({ examId, count, subject, chapter, difficulty, type, paperYear, paperIndex })
+   * Returns one intact 75-question paper from the canonical registry.
+   * Rotates through papers so you don't get the same one twice in a row.
+   * @param {string} examId - 'JEE_MAIN' | 'JEE_ADVANCED' | 'NEET' | etc.
+   * @param {number|null} paperIndex - specific paper index, or null for rotation
+   * @returns {Array} questions array (already normalized)
+   */
+  function _getIntactPaper(examId, paperIndex) {
+    const id = normalizeExamId(examId);
+    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+
+    if (!papers || papers.length === 0) return null;
+
+    // Determine which paper to use
+    let idx;
+    if (paperIndex !== null && paperIndex !== undefined && paperIndex >= 0 && paperIndex < papers.length) {
+      idx = paperIndex;
+    } else {
+      // Rotate: pick next paper that hasn't been used recently
+      const last = _lastPaperIdx[id] !== undefined ? _lastPaperIdx[id] : -1;
+      idx = (last + 1) % papers.length;
+    }
+    _lastPaperIdx[id] = idx;
+
+    const paper = papers[idx];
+    let data = fileCache[paper.file];
+
+    // Node-side lazy load if not cached yet
+    if (!data && isNode) {
+      try {
+        const fs = require('fs');
+        const path = require('path');
+        const p = path.join(process.cwd(), 'src/data', paper.file);
+        if (fs.existsSync(p)) {
+          data = JSON.parse(fs.readFileSync(p, 'utf8'));
+          fileCache[paper.file] = data;
+        }
+      } catch (e) {
+        console.error('[pyqService] ❌ Lazy load failed:', paper.file, e.message);
+      }
+    }
+
+    if (!data) {
+      console.warn('[pyqService] ⚠️ Paper not yet loaded:', paper.file, '— trying next paper');
+      // Try the next paper
+      for (let i = 1; i < papers.length; i++) {
+        const alt = papers[(idx + i) % papers.length];
+        const altData = fileCache[alt.file];
+        if (altData) {
+          const altQs = altData.questions || (Array.isArray(altData) ? altData : []);
+          if (altQs.length >= 45) {
+            console.log('[pyqService] 🔄 Falling back to:', alt.examDate);
+            return _normalizePaper(altQs, alt);
+          }
+        }
+      }
+      return null;
+    }
+
+    const rawQs = data.questions || (Array.isArray(data) ? data : []);
+    if (rawQs.length < 45) {
+      console.warn('[pyqService] ⚠️ Paper too short:', paper.file, rawQs.length, 'Qs');
+      return null;
+    }
+
+    console.log(`[pyqService] ✅ Serving intact PYQ: "${paper.examDate}" — ${rawQs.length} questions`);
+    return _normalizePaper(rawQs, paper);
+  }
+
+  /**
+   * Normalizes an array of raw questions from a known-good NTA JSON file.
+   * The NTA JSON files already have the correct format, we just ensure consistency.
+   */
+  function _normalizePaper(rawQs, paper) {
+    return rawQs.map((q, i) => {
+      // These files already have opts[], ans[], type, section, sectionLabel, marking
+      // But let's ensure everything is correct
+      const opts = Array.isArray(q.opts) ? q.opts :
+        (Array.isArray(q.options) ? q.options :
+        (q.options && typeof q.options === 'object') ?
+          ['a', 'b', 'c', 'd'].map(k => q.options[k] || '').filter(v => v) :
+          []);
+
+      let ans = q.ans;
+      if (!Array.isArray(ans)) {
+        if (typeof ans === 'number') ans = [ans];
+        else if (typeof ans === 'string') {
+          const code = ans.toLowerCase().trim().charCodeAt(0);
+          ans = (code >= 97 && code <= 100) ? [code - 97] : [parseFloat(ans) || 0];
+        } else ans = [0];
+      }
+
+      const type = (q.type || 'mcq').toLowerCase();
+      const isNum = type === 'numerical';
+
+      const section = q.section || (i < 25 ? 'Mathematics' : i < 50 ? 'Physics' : 'Chemistry');
+      const sectionLabel = q.sectionLabel || ((i % 25) < 20 ? 'Section A' : 'Section B');
+
+      return {
+        id: i + 1,
+        q: q.q || q.question || '',
+        opts: opts,
+        ans: ans,
+        type: isNum ? 'numerical' : 'mcq',
+        section: section,
+        sectionLabel: sectionLabel,
+        chap: q.chap || q.chapter || q.topic || '',
+        expl: q.expl || q.explanation || q.solution || '',
+        difficulty: q.difficulty || 'medium',
+        year: q.year || paper.year,
+        examDate: paper.examDate,
+        paperFile: paper.file,
+        marking: isNum
+          ? { correct: 4, wrong: 0, skip: 0 }
+          : { correct: 4, wrong: -1, skip: 0 },
+        source: 'PYQ (NTA Official)'
+      };
+    });
+  }
+
+  // ── MAIN API: getQuestions ─────────────────────────────────────────────────
+
+  /**
+   * getQuestions({ examId, count, subject, chapter, difficulty, type, paperIndex })
    *
-   * Returns { questions: [...normalized] }
-   *
-   * For MOCK TEST: count=75, returns full paper's questions
-   * For PRACTICE: count=5-20, returns filtered random set
+   * For Full Mock (count ≥ 60, no subject filter): returns ONE intact 75-Q paper.
+   * For Practice (count < 60 or subject filter): returns random questions from pool.
    */
   function getQuestions(options) {
     options = options || {};
-    const examId = options.examId || 'JEE_MAIN';
-    const count = options.count || 75;
-    const subject = options.subject || null;
-    const chapter = options.chapter || null;
+    const examId     = options.examId     || 'JEE_MAIN';
+    const count      = options.count      || 75;
+    const subject    = options.subject    || null;
+    const chapter    = options.chapter    || null;
     const difficulty = options.difficulty || null;
-    const qType = options.type || null;
-    const paperYear = options.paperYear || null;
+    const qType      = options.type       || null;
     const paperIndex = options.paperIndex !== undefined ? options.paperIndex : null;
 
-    const cleanId = normalizeExamId(examId);
-
-    // ── COLLECT QUESTION POOL ──
-    let pool = collectPool(cleanId, paperIndex);
-
-    if (pool.length === 0) {
-      console.warn('[pyqService] No real questions loaded — using offline fallback.');
-      return { questions: getOfflineFallback(cleanId, subject, count) };
+    // ── FULL MOCK: serve one intact paper ─────────────────────────────────
+    if (count >= 60 && !subject && !chapter) {
+      const qs = _getIntactPaper(examId, paperIndex);
+      if (qs && qs.length >= 45) {
+        return { questions: qs };
+      }
+      console.warn('[pyqService] ⚠️ Intact paper not available — using offline fallback');
+      return { questions: getOfflineFallback(normalizeExamId(examId), null, count) };
     }
 
-    // ── FILTER ──
+    // ── PRACTICE: collect pool, filter, sample ────────────────────────────
+    const id = normalizeExamId(examId);
+    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+    let pool = [];
+
+    papers.forEach(paper => {
+      const data = fileCache[paper.file];
+      if (!data) return;
+      const rawQs = data.questions || (Array.isArray(data) ? data : []);
+      rawQs.forEach((q, i) => pool.push(_normalizePaper([q], { ...paper })[0]));
+    });
+
+    if (pool.length === 0) {
+      return { questions: getOfflineFallback(id, subject, count) };
+    }
+
     let filtered = pool;
 
     if (subject) {
       const sl = subject.toLowerCase();
-      filtered = filtered.filter(q => {
-        const s = (q.section || '').toLowerCase();
-        return s.includes(sl) || sl.includes(s);
-      });
-      if (filtered.length === 0) filtered = pool; // relax
+      const bySubj = filtered.filter(q => (q.section || '').toLowerCase().includes(sl));
+      if (bySubj.length > 0) filtered = bySubj;
     }
-
     if (chapter) {
       const cl = chapter.toLowerCase();
       const byChap = filtered.filter(q => (q.chap || '').toLowerCase().includes(cl));
       if (byChap.length > 0) filtered = byChap;
     }
-
-    if (difficulty && difficulty !== 'jee-level' && difficulty !== 'neet-level' && difficulty !== 'jee-adv-level') {
+    if (difficulty && !['jee-level', 'neet-level', 'jee-adv-level'].includes(difficulty)) {
       const dl = difficulty.toLowerCase();
       const byDiff = filtered.filter(q => (q.difficulty || '').toLowerCase() === dl);
       if (byDiff.length > 0) filtered = byDiff;
     }
-
     if (qType) {
       const tl = qType.toLowerCase();
       const byType = filtered.filter(q => (q.type || 'mcq').toLowerCase() === tl);
       if (byType.length > 0) filtered = byType;
     }
 
-    // ── FOR FULL MOCK: return structured 75-question paper ──
-    if (count >= 60 && !subject && !chapter) {
-      // Return up to 75 real questions, maintaining subject distribution
-      const result = buildFullMockPaper(cleanId, paperIndex);
-      if (result.length > 0) {
-        return { questions: result };
-      }
-    }
-
-    // ── SHUFFLE AND SELECT ──
+    // Shuffle and select without repetition
     const shuffled = shuffleArray([...filtered]);
-    const selected = [];
-    for (let i = 0; i < count; i++) {
-      if (shuffled.length === 0) break;
-      selected.push(shuffled[i % shuffled.length]);
+    const selected = shuffled.slice(0, count);
+    // If not enough, cycle (but mark as repeated)
+    while (selected.length < count && shuffled.length > 0) {
+      selected.push({ ...shuffled[selected.length % shuffled.length], _repeated: true });
     }
 
-    return { questions: selected };
+    return { questions: selected.map((q, i) => ({ ...q, id: i + 1 })) };
   }
 
-  /**
-   * Build a proper full 75-question mock paper in JEE Main format:
-   * Math: Q1-25 (20 MCQ + 5 Num), Physics: Q26-50 (20 MCQ + 5 Num), Chemistry: Q51-75 (20 MCQ + 5 Num)
-   */
-  function buildFullMockPaper(cleanId, paperIdx) {
-    cleanId = normalizeExamId(cleanId);
-    
-    // 1. FAST PATH: Check if we have complete intact real PYQ papers in masterIndex
-    const papers = masterIndex && masterIndex[cleanId] ? masterIndex[cleanId] : [];
-    
-    if (papers.length > 0) {
-      const targetIdx = (paperIdx !== null && paperIdx !== undefined && paperIdx >= 0 && paperIdx < papers.length)
-        ? paperIdx
-        : Math.floor(Math.random() * papers.length);
-      
-      const targetPaper = papers[targetIdx];
-      let fileData = fileCache[targetPaper.file];
-      
-      if (!fileData && isNode) {
-        try {
-          const fs = require('fs');
-          const path = require('path');
-          const p = path.join(process.cwd(), 'src/data', targetPaper.file);
-          if (fs.existsSync(p)) {
-            fileData = JSON.parse(fs.readFileSync(p, 'utf8'));
-            fileCache[targetPaper.file] = fileData;
-          }
-        } catch (e) {}
-      }
+  // ── buildFullMockPaper (backwards compat wrapper) ─────────────────────────
 
-      if (fileData) {
-        const rawQs = fileData.questions || (Array.isArray(fileData) ? fileData : []);
-        if (rawQs.length >= 45) { // Complete paper found!
-          console.log(`[pyqService] ✅ Serving intact real PYQ paper: ${targetPaper.examDate || targetPaper.file} (${rawQs.length} Qs)`);
-          return rawQs.map((q, i) => {
-            const isNum = (q.type || '').toLowerCase() === 'numerical';
-            const secName = q.section || (i < 25 ? 'Mathematics' : i < 50 ? 'Physics' : 'Chemistry');
-            const secLbl = q.sectionLabel || ((i % 25 < 20) ? 'Section A' : 'Section B');
-            return {
-              ...ensureNormalized(q, i + 1, targetPaper.year || 2025),
-              id: i + 1,
-              section: secName,
-              sectionLabel: secLbl,
-              examDate: targetPaper.examDate || 'JEE Main Real Paper',
-              marking: isNum ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 }
-            };
-          });
-        }
-      }
-    }
-
-    // 2. FALLBACK: Collect pool across papers if single intact paper not found
-    let pool = collectPool(cleanId, paperIdx);
-    if (pool.length === 0) return [];
-
-    // Separate pool by subject: Mathematics, Physics, Chemistry
-    const mathPool = pool.filter(q => (q.section || '').toLowerCase().includes('math'));
-    const phyPool = pool.filter(q => (q.section || '').toLowerCase().includes('phys'));
-    const chemPool = pool.filter(q => (q.section || '').toLowerCase().includes('chem'));
-
-    const fallbackPool = [...pool];
-
-    const buildSubjectBlock = (subjPool, sectionName, startIdx) => {
-      const source = subjPool.length >= 25 ? subjPool : fallbackPool;
-      let mcqs = source.filter(q => (q.type || 'mcq').toLowerCase() !== 'numerical');
-      let nums = source.filter(q => (q.type || 'mcq').toLowerCase() === 'numerical');
-
-      let selectedMcqs = shuffleArray([...mcqs]).slice(0, 20);
-      let selectedNums = shuffleArray([...nums]).slice(0, 5);
-
-      while (selectedMcqs.length < 20 && source.length > 0) {
-        selectedMcqs.push(source[Math.floor(Math.random() * source.length)]);
-      }
-      while (selectedNums.length < 5 && source.length > 0) {
-        selectedNums.push(source[Math.floor(Math.random() * source.length)]);
-      }
-
-      const block20MCQ = selectedMcqs.slice(0, 20).map((q, i) => {
-        const norm = ensureNormalized(q, startIdx + i, q.year || 2025);
-        return {
-          ...norm,
-          section: sectionName,
-          sectionLabel: 'Section A (MCQ)',
-          type: 'mcq'
-        };
-      });
-
-      const block5Num = selectedNums.slice(0, 5).map((q, i) => {
-        const norm = ensureNormalized(q, startIdx + 20 + i, q.year || 2025);
-        return {
-          ...norm,
-          section: sectionName,
-          sectionLabel: 'Section B (Numerical)',
-          type: 'numerical'
-        };
-      });
-
-      return [...block20MCQ, ...block5Num];
-    };
-
-    const math25 = buildSubjectBlock(mathPool, 'Mathematics', 1);
-    const phy25  = buildSubjectBlock(phyPool, 'Physics', 26);
-    const chem25 = buildSubjectBlock(chemPool, 'Chemistry', 51);
-
-    return [...math25, ...phy25, ...chem25];
+  function buildFullMockPaper(examId, paperIdx) {
+    const qs = _getIntactPaper(examId || 'JEE_MAIN', paperIdx);
+    return qs || [];
   }
 
-  function collectPool(cleanId, paperIdx) {
-    if (!masterIndex || !masterIndex[cleanId]) return [];
-    const papers = masterIndex[cleanId];
-    let pool = [];
+  // ── getMockPaper ──────────────────────────────────────────────────────────
 
-    const papersToLoad = (paperIdx !== null && papers[paperIdx]) ? [papers[paperIdx]] : papers;
-
-    papersToLoad.forEach(paper => {
-      let fileData = fileCache[paper.file];
-      if (!fileData && isNode) {
-        try {
-          const fs = require('fs');
-          const path = require('path');
-          const p = path.join(process.cwd(), 'src/data', paper.file);
-          if (fs.existsSync(p)) {
-            fileData = JSON.parse(fs.readFileSync(p, 'utf8'));
-            fileCache[paper.file] = fileData;
-          }
-        } catch (e) { /* ignore */ }
-      }
-
-      if (fileData) {
-        const qs = fileData.questions || (Array.isArray(fileData) ? fileData : []);
-        qs.forEach((q, i) => pool.push(ensureNormalized(q, pool.length + i + 1, paper.year)));
-      }
-    });
-
-    return pool;
-  }
-
-  /* ─────────────── NORMALIZE ─────────────── */
-
-  /**
-   * Ensure question is in normalized format.
-   * Our converted files already have the normalized format but handle both old and new.
-   */
-  function ensureNormalized(q, idxFallback, year) {
-    // Already normalized (has opts array and ans array)
-    if (Array.isArray(q.opts) && Array.isArray(q.ans) && q.q) {
-      // Just ensure marking is set
-      if (!q.marking) {
-        const sectionLabel = q.sectionLabel || 'Section A';
-        const isNumerical = q.type === 'numerical';
-        q.marking = isNumerical
-          ? { correct: 4, wrong: 0, skip: 0 }
-          : { correct: 4, wrong: -1, skip: 0 };
-      }
-      return q;
-    }
-
-    // Raw format (from original JSON before conversion)
-    const qText = q.question_text || q.question || q.q || '';
-
-    // Options: {a:'', b:'', c:'', d:''} -> ['', '', '', '']
-    let opts = [];
-    if (Array.isArray(q.options)) {
-      opts = q.options;
-    } else if (q.options && typeof q.options === 'object') {
-      opts = ['a','b','c','d'].map(k => q.options[k] || '').filter(v => v !== '');
-    } else if (Array.isArray(q.opts)) {
-      opts = q.opts;
-    }
-
-    // Answer: letter -> index
-    let ans = [0];
-    const rawAns = q.correct_answer !== undefined ? q.correct_answer : (q.correct !== undefined ? q.correct : q.ans);
-    if (rawAns !== undefined && rawAns !== null) {
-      if (Array.isArray(rawAns)) {
-        ans = rawAns.map(a => typeof a === 'string' ? (a.toLowerCase().charCodeAt(0) - 97) : a);
-      } else if (typeof rawAns === 'number') {
-        ans = [rawAns];
-      } else if (typeof rawAns === 'string') {
-        const code = rawAns.toLowerCase().trim().charCodeAt(0);
-        if (code >= 97 && code <= 100) { // a-d
-          ans = [code - 97];
-        } else {
-          const num = parseFloat(rawAns);
-          if (!isNaN(num)) ans = [num];
-        }
-      }
-    }
-
-    const type = opts.length > 0 ? (q.type || 'mcq') : 'numerical';
-    const section = q.subject || q.section || 'General';
-    const localNum = q.question_number ? (q.question_number % 25 || 25) : 1;
-    const sectionLabel = localNum <= 20 ? 'Section A' : 'Section B';
-    const isNumerical = type === 'numerical';
-
+  function getMockPaper(profileId, examId) {
+    const id = normalizeExamId(examId);
+    const qs = _getIntactPaper(id, null);
     return {
-      id: q.id || idxFallback,
-      q: qText,
-      opts: opts,
-      ans: ans,
-      type: isNumerical ? 'numerical' : (opts.length > 1 ? 'mcq' : 'mcq'),
-      section: section,
-      sectionLabel: sectionLabel,
-      chap: q.topic || q.chap || q.chapter || '',
-      expl: q.explanation || q.expl || q.solution || '',
-      difficulty: q.difficulty || 'medium',
-      marking: isNumerical
-        ? { correct: 4, wrong: 0, skip: 0 }
-        : { correct: 4, wrong: -1, skip: 0 },
-      year: q.year || year || null,
-      question_number: q.question_number || idxFallback
+      id: `mock_${id}_${Date.now()}`,
+      examId: id,
+      questions: qs || []
     };
   }
 
-  /* ─────────────── UTILITIES ─────────────── */
+  // ── UTILITIES ─────────────────────────────────────────────────────────────
 
   function normalizeExamId(examId) {
     if (!examId) return 'JEE_MAIN';
-    const id = String(examId).toUpperCase().replace(/-/g, '_');
+    const id = String(examId).toUpperCase().replace(/-/g, '_').replace(/\s+/g, '_');
     if (id.includes('JEE') && (id.includes('ADV') || id.includes('ADVANCED'))) return 'JEE_ADVANCED';
     if (id.includes('JEE')) return 'JEE_MAIN';
+    if (id.includes('NEET')) return 'NEET';
     return id;
   }
 
@@ -534,41 +335,38 @@
 
   function hasData(examId) {
     const id = normalizeExamId(examId);
-    return !!(masterIndex && masterIndex[id] && masterIndex[id].length > 0);
+    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+    return papers.some(p => !!fileCache[p.file]);
   }
 
   function getPapers(examId) {
     const id = normalizeExamId(examId);
-    return (masterIndex && masterIndex[id]) || [];
+    return id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
   }
 
-  /* ─────────────── OFFLINE FALLBACK ─────────────── */
+  function getChapters(examId, subject) {
+    return [
+      'Sets, Relations and Functions', 'Complex Numbers and Quadratic Equations',
+      'Matrices and Determinants', 'Sequences and Series', 'Binomial Theorem',
+      'Differential Equations', 'Coordinate Geometry', '3D Geometry',
+      'Integral Calculus', 'Differential Calculus', 'Probability & Statistics',
+      'Electric Charges and Fields', 'Current Electricity', 'Ray Optics',
+      'Modern Physics', 'Thermodynamics', 'Mechanics', 'Wave Motion',
+      'Coordination Compounds', 'Electrochemistry', 'Chemical Kinetics',
+      'Organic Chemistry', 'Aldehydes, Ketones and Carboxylic Acids'
+    ];
+  }
+
+  // ── OFFLINE FALLBACK ──────────────────────────────────────────────────────
 
   const OFFLINE_FALLBACK = {
     JEE_MAIN: [
-      { id:1, section:'Mathematics', sectionLabel:'Section A', chap:'Definite Integration', q:'Find $\\int_0^{\\pi} e^{\\cos x} \\sin x \\, dx$.', opts:['$e - e^{-1}$','$e + e^{-1}$','$e$','$e^{-1}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Let $u=\\cos x$, $du=-\\sin x\\,dx$. Bounds flip. $\\int_{-1}^1 e^u du = e-e^{-1}$.' },
+      { id:1, section:'Mathematics', sectionLabel:'Section A', chap:'Definite Integration', q:'Find $\\int_0^{\\pi} e^{\\cos x} \\sin x \\, dx$.', opts:['$e - e^{-1}$','$e + e^{-1}$','$e$','$e^{-1}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Let $u=\\cos x$, $du=-\\sin x\\,dx$. $\\int_{-1}^1 e^u du = e-e^{-1}$.' },
       { id:2, section:'Mathematics', sectionLabel:'Section A', chap:'Matrices', q:'If $A=\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}$, find $A^{10}$.', opts:['$\\begin{pmatrix}1&20\\\\0&1\\end{pmatrix}$','$\\begin{pmatrix}1&10\\\\0&1\\end{pmatrix}$','$\\begin{pmatrix}10&20\\\\0&10\\end{pmatrix}$','$\\begin{pmatrix}1&2^{10}\\\\0&1\\end{pmatrix}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'By induction $A^n=\\begin{pmatrix}1&2n\\\\0&1\\end{pmatrix}$.' },
       { id:3, section:'Physics', sectionLabel:'Section A', chap:'Current Electricity', q:'Three resistors $2\\Omega, 3\\Omega, 6\\Omega$ in parallel. Equivalent resistance:', opts:['$1\\Omega$','$2\\Omega$','$6\\Omega$','$11\\Omega$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$1/R = 1/2+1/3+1/6 = 1$.' },
-      { id:4, section:'Physics', sectionLabel:'Section A', chap:'Laws of Motion', q:'Block $5$ kg, force $20$ N on frictionless surface. Acceleration:', opts:['$4\\text{ ms}^{-2}$','$2\\text{ ms}^{-2}$','$10\\text{ ms}^{-2}$','$0.25\\text{ ms}^{-2}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$a=F/m=20/5=4\\text{ ms}^{-2}$.' },
-      { id:5, section:'Chemistry', sectionLabel:'Section A', chap:'Chemical Kinetics', q:'First-order reaction, $k=6.93\\times10^{-3}\\text{ s}^{-1}$. Half-life:', opts:['$100$ s','$10$ s','$69.3$ s','$0.693$ s'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$t_{1/2}=0.693/k=100$ s.' },
+      { id:4, section:'Physics', sectionLabel:'Section A', chap:'Laws of Motion', q:'Block 5 kg, force 20 N on frictionless surface. Acceleration:', opts:['$4$ ms$^{-2}$','$2$ ms$^{-2}$','$10$ ms$^{-2}$','$0.25$ ms$^{-2}$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$a=F/m=20/5=4$ ms$^{-2}$.' },
+      { id:5, section:'Chemistry', sectionLabel:'Section A', chap:'Chemical Kinetics', q:'First-order reaction, $k=6.93\\times10^{-3}$ s$^{-1}$. Half-life:', opts:['$100$ s','$10$ s','$69.3$ s','$0.693$ s'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'$t_{1/2}=0.693/k=100$ s.' },
       { id:6, section:'Chemistry', sectionLabel:'Section A', chap:'Coordination Compounds', q:'Coordination number of Co in $[Co(en)_3]^{3+}$?', opts:['$6$','$3$','$4$','$8$'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'en is bidentate; 3 en = 6 bonds.' }
-    ],
-    NEET: [
-      { id:1, section:'Biology', sectionLabel:'Section A', chap:'Cell Biology', q:"Which organelle is the 'powerhouse of the cell'?", opts:['Mitochondria','Ribosome','Nucleus','Golgi apparatus'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Mitochondria produce ATP.' },
-      { id:2, section:'Biology', sectionLabel:'Section A', chap:'Genetics', q:'Plant AaBb selfed. Fraction of offspring AaBB?', opts:['1/8','1/4','1/16','3/16'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'P(Aa)=1/2, P(BB)=1/4 → 1/8.' },
-      { id:3, section:'Physics', sectionLabel:'Section A', chap:'Optics', q:'Convex lens $f=20$ cm, object at $30$ cm. Image distance?', opts:['60 cm','30 cm','20 cm','15 cm'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Lens formula: 1/v-1/(-30)=1/20 → v=60 cm.' },
-      { id:4, section:'Chemistry', sectionLabel:'Section A', chap:'Biomolecules', q:'Which is a reducing sugar?', opts:['Glucose','Sucrose','Starch','Cellulose'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Glucose has free aldehyde group.' },
-      { id:5, section:'Biology', sectionLabel:'Section A', chap:'Human Physiology', q:'Where does protein digestion primarily begin?', opts:['Stomach','Mouth','Small intestine','Large intestine'], ans:[0], type:'mcq', marking:{correct:4,wrong:-1,skip:0}, expl:'Pepsin in stomach.' }
-    ],
-    JEE_ADVANCED: [
-      { id:1, section:'Mathematics', sectionLabel:'Section 1', chap:'Complex Numbers', q:'If $|z-25i|\\leq 15$, max value of $|iz+3-16i|$?', opts:['35','25','20','40'], ans:[0], type:'mcq', marking:{correct:3,wrong:-1,skip:0}, expl:'Max = distance + radius = 20+15=35.' },
-      { id:2, section:'Physics', sectionLabel:'Section 1', chap:'Mechanics', q:'Centripetal acceleration of mass $m$ at radius $r$, speed $v$?', opts:['$v^2/r$','$v/r$','$vr$','$v^2r$'], ans:[0], type:'mcq', marking:{correct:3,wrong:-1,skip:0}, expl:'$a_c=v^2/r$.' },
-      { id:3, section:'Chemistry', sectionLabel:'Section 1', chap:'Electrochemistry', q:'$E^\\circ(Cu^{2+}/Cu)=+0.34$ V, $E^\\circ(Zn^{2+}/Zn)=-0.76$ V. EMF of Daniell cell?', opts:['1.10 V','0.42 V','0.34 V','0.76 V'], ans:[0], type:'mcq', marking:{correct:3,wrong:-1,skip:0}, expl:'$E_{cell}=0.34-(-0.76)=1.10$ V.' },
-      { id:4, section:'Mathematics', sectionLabel:'Section 3', chap:'Calculus', q:'$\\lim_{x\\to 0}\\frac{\\sin x - x}{x^3}$?', opts:['$-1/6$','$1/6$','$0$','$-1/3$'], ans:[0], type:'mcq', marking:{correct:4,wrong:0,skip:0}, expl:'Taylor: $(\\sin x-x)/x^3 \\to -1/6$.' }
-    ],
-    EAMCET: [
-      { id:1, section:'Mathematics', sectionLabel:'Section A', chap:'Limits', q:'$\\lim_{x\\to 0}\\frac{\\sin 3x}{x}$?', opts:['3','1','0','$\\infty$'], ans:[0], type:'mcq', marking:{correct:1,wrong:0,skip:0}, expl:'$\\lim_{x\\to0}\\frac{\\sin ax}{x}=a$.' },
-      { id:2, section:'Physics', sectionLabel:'Section A', chap:'Kinematics', q:'Body projected at $30°$ with speed $40$ ms$^{-1}$. Max height ($g=10$)?', opts:['20 m','40 m','80 m','10 m'], ans:[0], type:'mcq', marking:{correct:1,wrong:0,skip:0}, expl:'$H=v^2\\sin^2\\theta/(2g)=(1600\\times0.25)/20=20$ m.' }
     ]
   };
 
@@ -586,44 +384,18 @@
     return result;
   }
 
-  function getMockPaper(profileId, examId) {
-    const cleanId = normalizeExamId(examId);
-    const result = buildFullMockPaper(cleanId);
-    return {
-      id: `mock_${cleanId}_${Date.now()}`,
-      examId: cleanId,
-      questions: result
-    };
-  }
+  // ── EXPORT ────────────────────────────────────────────────────────────────
 
-  function getChapters(examId, subject) {
-    return [
-      "Sets, Relations and Functions",
-      "Complex Numbers and Quadratic Equations",
-      "Matrices and Determinants",
-      "Sequences and Series",
-      "Binomial Theorem",
-      "Differential Equations",
-      "Coordinate Geometry - Straight Lines",
-      "Coordinate Geometry - Conics",
-      "3D Geometry",
-      "Integral Calculus",
-      "Electric Charges and Fields",
-      "Current Electricity",
-      "Ray Optics",
-      "Modern Physics",
-      "Thermodynamics (Chemistry)",
-      "Coordination Compounds",
-      "Electrochemistry",
-      "Chemical Kinetics",
-      "Organic Chemistry - Basic Principles",
-      "Aldehydes, Ketones and Carboxylic Acids"
-    ];
-  }
-
-  /* ─────────────── EXPORT ─────────────── */
-
-  const pyqService = { init, getQuestions, buildFullMockPaper, getMockPaper, getChapters, preloadExam, hasData, getPapers };
+  const pyqService = {
+    init,
+    getQuestions,
+    buildFullMockPaper,
+    getMockPaper,
+    getChapters,
+    preloadExam,
+    hasData,
+    getPapers
+  };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = pyqService;

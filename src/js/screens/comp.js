@@ -2371,125 +2371,68 @@ async function startMockExamSetup(forcedMode) {
       });
     }
 
-    // ═══════════════════════════════════════════
-    // FAST PATH: Use a complete real PYQ paper
-    // ═══════════════════════════════════════════
+    // ════════════════════════════════════════════════════════════════
+    // REAL PYQ PAPER: Always serve one complete, intact NTA shift paper
+    // pyqService now handles rotation and validation internally.
+    // ════════════════════════════════════════════════════════════════
     if (window.pyqService) {
       const result = window.pyqService.getQuestions({
         examId: compState.examId,
         count: 75
       });
 
-      if (result && result.questions && result.questions.length > 0) {
+      if (result && result.questions && result.questions.length >= 45) {
         questions = result.questions.map((q, i) => ({
           ...q,
           id: i + 1,
-          marking: q.marking || (q.type === 'numerical' ? { correct: 4, wrong: 0 } : { correct: 4, wrong: -1 })
+          marking: q.marking || (q.type === 'numerical' ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 })
         }));
-        console.log('[Mock] Loaded 75-question full NTA exam paper:', questions.length, 'questions');
+        console.log(`[Mock] ✅ Serving real PYQ paper: "${questions[0]?.examDate || 'NTA Paper'}" — ${questions.length} questions`);
       }
     }
 
-    // Direct fallback to window.JEE_CLASSIFIED_QUESTIONS if pyqService returned no questions
-    if ((!questions || questions.length === 0) && window.JEE_CLASSIFIED_QUESTIONS && window.JEE_CLASSIFIED_QUESTIONS.length > 0) {
-      const paperIdx = Math.floor(Math.random() * 5);
-      const paperQs = window.JEE_CLASSIFIED_QUESTIONS.slice(paperIdx * 75, (paperIdx + 1) * 75);
-      const sourcePaper = paperQs.length >= 75 ? paperQs : window.JEE_CLASSIFIED_QUESTIONS.slice(0, 75);
-
-      questions = sourcePaper.map((q, i) => {
-        const opts = Array.isArray(q.options) ? q.options : 
-          (q.options && typeof q.options === 'object') ? [q.options.a, q.options.b, q.options.c, q.options.d].filter(Boolean) : (q.opts || []);
-        
-        let ansIdx = [0];
-        if (q.ans !== undefined) {
-          ansIdx = Array.isArray(q.ans) ? q.ans : [q.ans];
-        } else if (q.correct !== undefined) {
-          const cCode = String(q.correct).toLowerCase().trim();
-          if (cCode === 'a') ansIdx = [0];
-          else if (cCode === 'b') ansIdx = [1];
-          else if (cCode === 'c') ansIdx = [2];
-          else if (cCode === 'd') ansIdx = [3];
-          else ansIdx = [0];
-        }
-
-        const isNum = (q.type || '').toLowerCase() === 'numerical';
-        const secName = q.subject || q.section || (i < 25 ? 'Mathematics' : i < 50 ? 'Physics' : 'Chemistry');
-        const secLbl = (i % 25 < 20) ? 'Section A' : 'Section B';
-
-        return {
-          id: i + 1,
-          q: q.question || q.q || '',
-          opts: opts,
-          ans: ansIdx,
-          type: isNum ? 'numerical' : 'mcq',
-          section: secName,
-          sectionLabel: secLbl,
-          chap: q.classifiedChapter || q.chapter || '',
-          expl: q.solution || q.explanation || '',
-          difficulty: q.difficulty || 'medium',
-          year: q.year || 2025,
-          examDate: q.date ? (q.date + ' ' + (q.shift || '')) : 'JEE Main Real Paper',
-          marking: isNum ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 },
-          source: 'PYQ (NTA Real Paper)'
-        };
-      });
-      console.log('[Mock] Direct Fallback: Loaded 75-question real NTA paper from JEE_CLASSIFIED_QUESTIONS:', questions.length);
-    }
-
-    // ═══════════════════════════════════════════
-    // FALLBACK: Assemble section-by-section
-    // ═══════════════════════════════════════════
+    // ════════════════════════════════════════════════════════════════
+    // FALLBACK: Section-by-section assembly only if pyqService failed
+    // (e.g. network issue loading the JSON files)
+    // ════════════════════════════════════════════════════════════════
     if (questions.length === 0) {
-    for (const ns of normalizedSections) {
-      const subjectName = ns.subject;
-      const countNeeded = ns.count;
-      const sectionType = ns.type;
-      const sectionMarking = ns.marking;
-      const sectionLabel = ns.sectionName;
+      console.warn('[Mock] ⚠️ pyqService returned no questions — using offline procedural fallback');
+      for (const ns of normalizedSections) {
+        if ((ns.count || 0) <= 0) continue;
 
-      if (countNeeded <= 0) continue;
-
-      let sectionQuestions = [];
-
-      // 1. Try to fetch from database
-      if (window.pyqService) {
-        const result = window.pyqService.getQuestions({
-          examId: compState.examId,
-          count: countNeeded,
-          subject: subjectName,
-          type: sectionType
-        });
-        if (result && result.questions && result.questions.length > 0) {
-          sectionQuestions = result.questions;
+        let sectionQuestions = [];
+        if (window.pyqService) {
+          const result = window.pyqService.getQuestions({
+            examId: compState.examId,
+            count: ns.count,
+            subject: ns.subject,
+            type: ns.type
+          });
+          if (result && result.questions && result.questions.length > 0) {
+            sectionQuestions = result.questions;
+          }
         }
-      }
 
-      // 2. Fallback to procedural if not enough questions
-      if (sectionQuestions.length < countNeeded) {
-        const fallbackPool = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
-        let typedFallback = fallbackPool.filter(q => q.type === sectionType);
-        if (typedFallback.length === 0) typedFallback = fallbackPool;
-
-        while (sectionQuestions.length < countNeeded) {
-          const template = typedFallback[sectionQuestions.length % typedFallback.length];
-          sectionQuestions.push({ ...template });
+        // Hard fallback if still empty
+        if (sectionQuestions.length < ns.count) {
+          const pool = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
+          let typed = pool.filter(q => q.type === ns.type);
+          if (typed.length === 0) typed = pool;
+          while (sectionQuestions.length < ns.count) {
+            sectionQuestions.push({ ...typed[sectionQuestions.length % typed.length] });
+          }
         }
+
+        questions.push(...sectionQuestions.slice(0, ns.count).map(q => ({
+          ...q,
+          section: ns.subject,
+          type: ns.type,
+          marking: ns.marking,
+          sectionLabel: ns.sectionName
+        })));
       }
-
-      // Slice to exact count needed and decorate with section, type, and marking scheme
-      sectionQuestions = sectionQuestions.slice(0, countNeeded).map(q => ({
-        ...q,
-        section: subjectName,
-        type: sectionType,
-        marking: sectionMarking,
-        sectionLabel: sectionLabel
-      }));
-
-      questions.push(...sectionQuestions);
+      questions = questions.map((q, i) => ({ ...q, id: i + 1 }));
     }
-
-    questions = questions.map((q, i) => ({ ...q, id: i + 1 }));
-    } // end fallback
   } else {
     // Diagnostic 6 Qs
     durationSeconds = 600;
