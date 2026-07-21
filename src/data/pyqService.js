@@ -272,43 +272,62 @@
 
   /**
    * Build a proper full 75-question mock paper in JEE Main format:
-   * Math: Q1-25, Physics: Q26-50, Chemistry: Q51-75
-   * Within each: Q1-20 = Section A (MCQ +4/-1), Q21-25 = Section B (Numerical +4/0)
+   * Math: Q1-25 (20 MCQ + 5 Num), Physics: Q26-50 (20 MCQ + 5 Num), Chemistry: Q51-75 (20 MCQ + 5 Num)
    */
   function buildFullMockPaper(cleanId, paperIdx) {
-    const papers = masterIndex && masterIndex[cleanId];
-    if (!papers || papers.length === 0) return [];
+    let pool = collectPool(cleanId, paperIdx);
+    if (pool.length === 0) return [];
 
-    const shiftPapers = papers.filter(p => p.questionCount === 75 || p.file.includes('shift') || p.file.includes('complete'));
-    let paperMeta;
-    if (paperIdx !== null && paperIdx !== undefined && papers[paperIdx]) {
-      paperMeta = papers[paperIdx];
-    } else if (shiftPapers.length > 0) {
-      paperMeta = shiftPapers[Math.floor(Math.random() * shiftPapers.length)];
-    } else {
-      paperMeta = papers[Math.floor(Math.random() * papers.length)];
-    }
+    // Separate pool by subject: Mathematics, Physics, Chemistry
+    const mathPool = pool.filter(q => (q.section || '').toLowerCase().includes('math'));
+    const phyPool = pool.filter(q => (q.section || '').toLowerCase().includes('phys'));
+    const chemPool = pool.filter(q => (q.section || '').toLowerCase().includes('chem'));
 
-    let fileData = fileCache[paperMeta.file];
-    if (!fileData && isNode) {
-      try {
-        const fs = require('fs');
-        const path = require('path');
-        const p = path.join(process.cwd(), 'src/data', paperMeta.file);
-        if (fs.existsSync(p)) {
-          fileData = JSON.parse(fs.readFileSync(p, 'utf8'));
-          fileCache[paperMeta.file] = fileData;
-        }
-      } catch (e) { /* ignore */ }
-    }
+    const fallbackPool = [...pool];
 
-    if (!fileData) return [];
-    const qs = fileData.questions || (Array.isArray(fileData) ? fileData : []);
-    if (qs.length === 0) return [];
+    const buildSubjectBlock = (subjPool, sectionName, startIdx) => {
+      const source = subjPool.length >= 25 ? subjPool : fallbackPool;
+      let mcqs = source.filter(q => (q.type || 'mcq').toLowerCase() !== 'numerical');
+      let nums = source.filter(q => (q.type || 'mcq').toLowerCase() === 'numerical');
 
-    const selectedQs = qs.length > 75 ? shuffleArray([...qs]).slice(0, 75) : qs;
+      let selectedMcqs = shuffleArray([...mcqs]).slice(0, 20);
+      let selectedNums = shuffleArray([...nums]).slice(0, 5);
 
-    return selectedQs.map((q, i) => ensureNormalized(q, i + 1, paperMeta.year));
+      while (selectedMcqs.length < 20 && source.length > 0) {
+        selectedMcqs.push(source[Math.floor(Math.random() * source.length)]);
+      }
+      while (selectedNums.length < 5 && source.length > 0) {
+        selectedNums.push(source[Math.floor(Math.random() * source.length)]);
+      }
+
+      const block20MCQ = selectedMcqs.slice(0, 20).map((q, i) => {
+        const norm = ensureNormalized(q, startIdx + i, q.year || 2025);
+        return {
+          ...norm,
+          section: sectionName,
+          sectionLabel: 'Section A (MCQ)',
+          type: 'mcq'
+        };
+      });
+
+      const block5Num = selectedNums.slice(0, 5).map((q, i) => {
+        const norm = ensureNormalized(q, startIdx + 20 + i, q.year || 2025);
+        return {
+          ...norm,
+          section: sectionName,
+          sectionLabel: 'Section B (Numerical)',
+          type: 'numerical'
+        };
+      });
+
+      return [...block20MCQ, ...block5Num];
+    };
+
+    const math25 = buildSubjectBlock(mathPool, 'Mathematics', 1);
+    const phy25  = buildSubjectBlock(phyPool, 'Physics', 26);
+    const chem25 = buildSubjectBlock(chemPool, 'Chemistry', 51);
+
+    return [...math25, ...phy25, ...chem25];
   }
 
   function collectPool(cleanId, paperIdx) {

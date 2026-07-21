@@ -3906,3 +3906,19 @@ function renderStrategyTab(exam) {
   `;
 }
 
+// Global Exports for CBT in-exam buttons & functions
+if (typeof window !== 'undefined') {
+  window.startMockExamSetup = startMockExamSetup;
+  window.beginMockExamAfterInstructions = beginMockExamAfterInstructions;
+  window.navigateExam = navigateExam;
+  window.selectMockOption = selectMockOption;
+  window.saveNumericalAnswer = saveNumericalAnswer;
+  window.clearActiveExamAnswer = clearActiveExamAnswer;
+  window.markMockForReview = markMockForReview;
+  window.saveAndNextMock = saveAndNextMock;
+  window.switchMockSection = switchMockSection;
+  window.confirmSubmitMockExam = confirmSubmitMockExam;
+  window.submitMockExam = submitMockExam;
+  window.renderActiveExamUI = renderActiveExamUI;
+}
+
