@@ -62,10 +62,73 @@
     }
   }
 
+  function injectWindowGlobals() {
+    if (typeof window !== 'undefined' && window.JEE_CLASSIFIED_QUESTIONS && window.JEE_CLASSIFIED_QUESTIONS.length > 0) {
+      const questions = window.JEE_CLASSIFIED_QUESTIONS;
+      
+      const normalized = questions.map((q, i) => ({
+        id: q.id || ('jee_cls_' + i),
+        q: q.question || q.q || '',
+        opts: q.options || q.opts || [],
+        ans: q.correctAnswer !== undefined ? [q.correctAnswer] : (q.ans || []),
+        type: (q.type || 'MCQ').toLowerCase() === 'mcq' ? 'mcq' : 
+              (q.type || '').toLowerCase() === 'numerical' ? 'numerical' : 'mcq',
+        section: q.subject || q.section || 'Mathematics',
+        sectionLabel: 'Section A',
+        chap: q.classifiedChapter || q.chapter || q.chap || 'General',
+        expl: q.solution || q.explanation || q.expl || '',
+        difficulty: q.difficulty || 'medium',
+        year: q.year || 2024,
+        marking: { correct: 4, wrong: -1 },
+        source: 'PYQ'
+      })).filter(q => q.q && q.q.length > 5);
+
+      fileCache['__classified__'] = { questions: normalized };
+      
+      if (!masterIndex) {
+        masterIndex = {
+          JEE_MAIN: [{ file: '__classified__', year: 2025, questionCount: normalized.length }],
+          JEE_ADVANCED: [],
+          NEET: [],
+          EAMCET: []
+        };
+      } else {
+        if (!masterIndex.JEE_MAIN) masterIndex.JEE_MAIN = [];
+        masterIndex.JEE_MAIN.push({ file: '__classified__', year: 2025, questionCount: normalized.length });
+      }
+      
+      console.log('[pyqService] ✅ Injected', normalized.length, 'classified questions from window global');
+    }
+    
+    if (typeof window !== 'undefined' && window.NEET_CLASSIFIED_QUESTIONS && window.NEET_CLASSIFIED_QUESTIONS.length > 0) {
+      const normalized = window.NEET_CLASSIFIED_QUESTIONS.map((q, i) => ({
+        id: q.id || ('neet_cls_' + i),
+        q: q.question || q.q || '',
+        opts: q.options || q.opts || [],
+        ans: q.correctAnswer !== undefined ? [q.correctAnswer] : (q.ans || []),
+        type: 'mcq',
+        section: q.subject || 'Biology',
+        sectionLabel: 'Section A',
+        chap: q.classifiedChapter || q.chapter || 'General',
+        expl: q.solution || q.expl || '',
+        difficulty: q.difficulty || 'medium',
+        year: q.year || 2024,
+        marking: { correct: 4, wrong: -1 },
+        source: 'PYQ'
+      })).filter(q => q.q && q.q.length > 5);
+
+      fileCache['__neet_classified__'] = { questions: normalized };
+      if (masterIndex && !masterIndex.NEET) masterIndex.NEET = [];
+      if (masterIndex) masterIndex.NEET.push({ file: '__neet_classified__', year: 2025, questionCount: normalized.length });
+      console.log('[pyqService] ✅ Injected', normalized.length, 'NEET classified questions');
+    }
+  }
+
   async function initBrowser() {
     if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
       console.error('[pyqService] ❌ Running as file:// — PYQ requires http://localhost:8080\n' +
         'Run: node src/server.js  then open  http://localhost:8080');
+      injectWindowGlobals();
       return;
     }
 
@@ -80,6 +143,10 @@
       }
     } catch (e) {
       console.warn('[pyqService] Could not fetch /data/pyq/master_index.json:', e.message);
+    }
+
+    if (!masterIndex || Object.keys(fileCache).length === 0) {
+      injectWindowGlobals();
     }
 
     await preloadExam('JEE_MAIN');

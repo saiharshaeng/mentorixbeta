@@ -1024,7 +1024,7 @@ async function startPYQSession() {
   if (!questions.length) {
     const prompt = `Reconstruct ${count} questions from the ${exam.name} ${year} paper, subject: ${subject}. Match the exact difficulty, style, and topic distribution of the real ${year} paper. Use LaTeX for math ($formula$). Return ONLY JSON: {"questions":[{"q":"...","opts":["A","B","C","D"],"ans":[0],"type":"mcq","chap":"...","expl":"step-by-step solution"}]}`;
     try {
-      const reply = await ai([{role:'user',content:prompt}], 'You are a professional exam paper setter. Output ONLY valid JSON.', count*600+500, true);
+      const reply = await ai([{role:'user',content:prompt}], 'You are a professional exam paper setter. Output ONLY valid JSON.', count*300+300, true);
       if (reply) { const data = parseAiJsonSafely(reply); if (data&&data.questions) questions=data.questions; }
     } catch(e) { console.warn('[PYQ]',e); }
   }
@@ -1063,6 +1063,29 @@ function renderRankPredictor(exam) {
   else{band='Below cutoff — Intensive practice needed';color='#EF4444';}
   return `<div class="card" style="padding:14px"><div style="font-size:10px;font-weight:700;color:var(--mut);margin-bottom:6px;text-transform:uppercase">🏆 Rank Predictor</div><div style="font-size:18px;font-weight:800;color:${color};margin-bottom:3px">${band}</div><div style="font-size:11px;color:var(--mut)">Last mock: ${last.score||0}/${max} (${Math.round(pct)}%)</div></div>`;
 }
+
+
+// ─── QUESTION CACHE (reduces AI token usage) ─────────────
+const _qCache = {};
+function getCachedQ(key) { return _qCache[key] || null; }
+function setCachedQ(key, data) { 
+  _qCache[key] = data; 
+  // Also persist to sessionStorage for tab refresh
+  try { sessionStorage.setItem('mx3_qcache_' + key, JSON.stringify(data)); } catch(e) {}
+}
+function loadCacheFromSession() {
+  try {
+    for (let i = 0; i < sessionStorage.length; i++) {
+      const k = sessionStorage.key(i);
+      if (k && k.startsWith('mx3_qcache_')) {
+        const key = k.replace('mx3_qcache_', '');
+        _qCache[key] = JSON.parse(sessionStorage.getItem(k));
+      }
+    }
+  } catch(e) {}
+}
+loadCacheFromSession();
+// ─────────────────────────────────────────────────────────
 
 function initCompState() {
   if (!D.compExam) {
@@ -2447,7 +2470,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
 
     try {
       const sys = "You are a professional examiner. Output valid JSON.";
-      const reply = await ai([{ role: 'user', content: prompt }], sys, 2000, true);
+      const reply = await ai([{ role: 'user', content: prompt }], sys, 1200, true);
       
       if (reply) {
         const data = parseAiJsonSafely(reply);

@@ -7037,410 +7037,321 @@ body::before {
   }
 }
 
-/* Question Image Container Styles */
-.q-image-container {
-  margin: 16px 0;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  overflow: hidden;
+
+/* ═══════════════════════════════════════════════
+   MOBILE FIX — Complete responsive overhaul
+   Targets: 375px phones + tablets
+═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── SIDEBAR → BOTTOM NAV ── */
+  .sidebar, #sidebar {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 60px !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 0 8px !important;
+    border-top: 1px solid var(--brd) !important;
+    border-right: none !important;
+    z-index: 1000 !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide text labels in sidebar on mobile, show only icons */
+  .sidebar .nav-label, .sidebar .nav-text,
+  .sidebar span:not(.nav-icon):not(.badge) {
+    display: none !important;
+  }
+
+  .sidebar .nav-item, .sidebar a, .sidebar button {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4px 8px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+  }
+
+  /* Push main content above bottom nav */
+  #main, .main-content, main {
+    padding-bottom: 70px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    border-radius: 12px !important;
+    padding: 14px !important;
+  }
+
+  /* ── COURSE MAP ── */
+  .course-map, .courses-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* ── LEARN SCREEN ── */
+  .learn-wrap, .lesson-container {
+    flex-direction: column !important;
+    padding: 12px 10px !important;
+  }
+
+  .learn-content {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ── REVISION FLASHCARDS ── */
+  .flashcard, .flip-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 200px !important;
+    font-size: 15px !important;
+  }
+
+  /* ── DASHBOARD ── */
+  .dashboard-grid, .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .dashboard-grid .full-width {
+    grid-column: span 2 !important;
+  }
+
+  /* ── COMPETITIVE EXAMS TABS ── */
+  .comp-tabs, .tab-row {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 4px !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+  }
+
+  .comp-tabs::-webkit-scrollbar { display: none !important; }
+
+  .comp-tab, .btn.bsm {
+    flex-shrink: 0 !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    white-space: nowrap !important;
+  }
+
+  /* ── COMP EXAM LAYOUT ── */
+  .comp-layout, .comp-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .comp-right-panel {
+    display: none !important;
+  }
+
+  /* ── NTA CBT EXAM ON MOBILE ── */
+  .nta-exam-wrap {
+    flex-direction: column !important;
+  }
+
+  .nta-topbar {
+    height: auto !important;
+    flex-direction: column !important;
+    padding: 8px 12px !important;
+    gap: 6px !important;
+  }
+
+  .nta-topbar-left {
+    min-width: unset !important;
+    border-right: none !important;
+    border-bottom: 1px solid #21262d !important;
+    padding: 6px 0 !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .nta-topbar-center {
+    width: 100% !important;
+  }
+
+  .nta-sub-tabs {
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+  }
+
+  .nta-sub-tab {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .nta-topbar-right {
+    width: 100% !important;
+    justify-content: space-between !important;
+    padding: 6px 0 !important;
+    border-left: none !important;
+    border-top: 1px solid #21262d !important;
+  }
+
+  .nta-body {
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+
+  .nta-sidebar {
+    width: 100% !important;
+    height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid #21262d !important;
+    overflow: visible !important;
+  }
+
+  /* Question palette: horizontal scroll on mobile */
+  .nta-pal-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    max-height: 100px !important;
+    overflow-y: auto !important;
+    padding: 6px !important;
+  }
+
+  .nta-pal-btn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 11px !important;
+  }
+
+  .nta-content-area {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    padding: 12px !important;
+  }
+
+  .nta-q-text {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .nta-opt {
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+  }
+
+  .nta-bottom-bar {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    padding: 10px 12px !important;
+    gap: 8px !important;
+  }
+
+  .nta-bottom-bar .btn {
+    flex: 1 !important;
+    min-width: 120px !important;
+    font-size: 12px !important;
+  }
+
+  /* ── MODALS ── */
+  .modal-box {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin: 10px !important;
+    padding: 16px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* ── INPUTS ── */
+  .inp, input, select, textarea {
+    font-size: 16px !important; /* prevents iOS zoom */
+    min-height: 44px !important;
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    min-height: 44px !important;
+    font-size: 13px !important;
+  }
+
+  /* ── GRIDS ── */
+  .grid-2, .two-col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-3, .three-col {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .h1 { font-size: 20px !important; }
+  .h2 { font-size: 17px !important; }
+  .h3 { font-size: 15px !important; }
+
+  /* ── TIMETABLE / STATS ── */
+  .between {
+    gap: 8px !important;
+  }
+
+  /* ── HIDE DESKTOP-ONLY ELEMENTS ── */
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
 }
 
-.q-image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+@media (max-width: 480px) {
+  /* Extra small phones */
+  .dashboard-grid, .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .comp-tab, .btn.bsm {
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+  }
+
+  .nta-topbar {
+    padding: 6px 10px !important;
+  }
 }
 
-.q-image-text {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+/* ═══════════════════════════════════════════════
+   TOKEN REDUCTION — Tio chat optimizations
+═══════════════════════════════════════════════ */
+
+/* Rate limit message styling */
+.tio-rate-limit {
   text-align: center;
-  color: var(--sub);
-  font-size: 14px;
-}
-
-.q-image-text span {
-  font-size: 32px;
-}
-
-.q-image-note {
-  font-size: 12px;
-  color: var(--mut);
-  font-style: italic;
-}
-
-/* CBT Exam Layout */
-.cbt-container {
-  display: grid;
-  grid-template-rows: 56px 1fr 56px;
-  grid-template-columns: 1fr 320px;
-  height: 100vh;
-  background: var(--bg);
-  overflow: hidden;
-}
-
-.cbt-topbar {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--brd);
-  z-index: 10;
-}
-
-.cbt-timer {
-  font-size: 22px;
-  font-weight: 700;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text);
-  letter-spacing: 2px;
-  transition: color 0.3s;
-}
-
-.cbt-timer.warning {
-  color: var(--warn);
-}
-
-.cbt-timer.danger {
-  color: var(--red);
-  animation: pulse 1s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
-
-.cbt-question-panel {
-  grid-row: 2;
-  grid-column: 1;
-  overflow-y: auto;
-  padding: 28px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cbt-q-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.cbt-q-number {
-  background: var(--p);
-  color: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.cbt-q-meta {
-  font-size: 12px;
-  color: var(--sub);
-  letter-spacing: 0.5px;
-}
-
-.cbt-q-text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text);
-  font-family: Inter, sans-serif;
-}
-
-.cbt-options {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.cbt-option {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.03);
-  border: 1.5px solid var(--brd);
+  padding: 16px;
+  background: rgba(245,158,11,0.06);
+  border: 1px solid rgba(245,158,11,0.2);
   border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  user-select: none;
-}
-
-.cbt-option:hover {
-  background: rgba(139,92,246,0.08);
-  border-color: rgba(139,92,246,0.3);
-}
-
-.cbt-option.selected {
-  background: rgba(139,92,246,0.15);
-  border-color: var(--p);
-}
-
-.cbt-option.correct {
-  background: rgba(16,185,129,0.15);
-  border-color: var(--ok);
-}
-
-.cbt-option.wrong {
-  background: rgba(239,68,68,0.12);
-  border-color: var(--red);
-}
-
-.cbt-option-label {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--brd);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
   font-size: 13px;
-  color: var(--sub);
-  flex-shrink: 0;
-  transition: all 0.15s;
+  color: #fbbf24;
+  margin: 8px 0;
 }
 
-.cbt-option.selected .cbt-option-label {
-  background: var(--p);
-  color: white;
+.tio-rate-limit-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
 }
 
-.cbt-option-text {
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--text);
-  padding-top: 3px;
-}
-
-.cbt-numerical {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.cbt-numerical-label {
-  font-size: 13px;
-  color: var(--sub);
-}
-
-.cbt-numerical-input {
-  width: 180px;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.04);
-  border: 1.5px solid var(--brd);
-  border-radius: 12px;
-  color: var(--text);
-  font-size: 20px;
-  font-family: 'JetBrains Mono', monospace;
-  text-align: center;
-  outline: none;
-  transition: border-color 0.15s;
-}
-
-.cbt-numerical-input:focus {
-  border-color: var(--p);
-  box-shadow: 0 0 0 3px rgba(139,92,246,0.15);
-}
-
-.cbt-numerical-input::-webkit-inner-spin-button {
-  display: none;
-}
-
-.cbt-palette {
-  grid-row: 2;
-  grid-column: 2;
-  background: var(--surface);
-  border-left: 1px solid var(--brd);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.cbt-palette-tabs {
-  display: flex;
-  border-bottom: 1px solid var(--brd);
-}
-
-.cbt-palette-tab {
-  flex: 1;
-  padding: 10px 4px;
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-  color: var(--mut);
-  border-bottom: 2px solid transparent;
-  transition: all 0.15s;
-}
-
-.cbt-palette-tab.active {
-  color: var(--p);
-  border-bottom-color: var(--p);
-}
-
-.cbt-palette-grid {
-  flex: 1;
-  overflow-y: auto;
-  padding: 14px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
-  align-content: start;
-}
-
-.cbt-palette-btn {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 6px;
-  border: 1.5px solid var(--brd);
-  background: transparent;
-  color: var(--sub);
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.1s;
-  display: flex;
+/* Cached response indicator */
+.tio-cached-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-}
-
-.cbt-palette-btn.answered {
-  background: var(--ok);
-  border-color: var(--ok);
-  color: white;
-}
-
-.cbt-palette-btn.marked {
-  background: var(--p);
-  border-color: var(--p);
-  color: white;
-}
-
-.cbt-palette-btn.visited {
-  border-color: var(--sub);
-  color: var(--text);
-}
-
-.cbt-palette-btn.current {
-  border-color: var(--c);
-  box-shadow: 0 0 0 2px rgba(6,182,212,0.3);
-}
-
-.cbt-palette-legend {
-  padding: 12px 14px;
-  border-top: 1px solid var(--brd);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.cbt-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  color: var(--sub);
-}
-
-.cbt-legend-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  flex-shrink: 0;
-}
-
-.cbt-bottombar {
-  grid-column: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  background: var(--surface);
-  border-top: 1px solid var(--brd);
-  gap: 8px;
-}
-
-.cbt-nav-btn {
-  padding: 9px 18px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s;
-  border: 1.5px solid var(--brd);
-  background: transparent;
-  color: var(--text);
-}
-
-.cbt-nav-btn:hover {
-  background: rgba(255,255,255,0.05);
-}
-
-.cbt-nav-btn.primary {
-  background: var(--p);
-  border-color: var(--p);
-  color: white;
-}
-
-.cbt-nav-btn.mark {
-  background: rgba(139,92,246,0.12);
-  border-color: rgba(139,92,246,0.3);
-  color: var(--pl);
-}
-
-.cbt-nav-btn.clear {
-  color: var(--mut);
-}
-
-.cbt-section-label {
-  grid-column: 1 / -1;
+  gap: 4px;
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
   color: var(--mut);
-  text-transform: uppercase;
-  padding: 4px 0 2px;
-}
-
-.cbt-solution {
-  margin-top: 20px;
-  padding: 20px;
-  background: rgba(16,185,129,0.06);
-  border: 1px solid rgba(16,185,129,0.2);
-  border-radius: 12px;
-  display: none;
-}
-
-.cbt-solution.visible {
-  display: block;
-}
-
-.cbt-solution-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--ok);
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.cbt-solution-text {
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--sub);
+  padding: 2px 6px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  margin-top: 4px;
 }
 
