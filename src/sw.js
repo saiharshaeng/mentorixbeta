@@ -1,10 +1,10 @@
 /**
- * sw.js — Mentorix Service Worker v50
+ * sw.js — Mentorix Service Worker v51
  * NETWORK-FIRST for JS/CSS/JSON so code changes always reach users.
  * PYQ data files always bypass cache (never stale).
  */
 
-const CACHE_NAME = 'mentorix-v50';
+const CACHE_NAME = 'mentorix-v51';
 
 // Files to pre-cache on install (only truly static: html, images, manifest)
 const CORE_ASSETS = [

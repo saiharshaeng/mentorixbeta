@@ -6,6 +6,55 @@
 
 let activeCourseId = null;
 
+function getCourseTitle(c) {
+  if (!c) return 'General Course';
+  let title = (c.title || c.subject || c.name || c.courseName || c.subjectName || '').trim();
+  if (title && title.toLowerCase() !== 'course') return title;
+
+  if (c.units && c.units.length > 0) {
+    for (const unit of c.units) {
+      const uTitle = (unit.title || unit.name || '').trim();
+      if (uTitle) {
+        const cleaned = uTitle.replace(/^Unit\s*\d+\s*:\s*/i, '').trim();
+        if (cleaned && cleaned.toLowerCase() !== 'unit') return cleaned;
+      }
+      if (unit.chapters && unit.chapters.length > 0) {
+        for (const chap of unit.chapters) {
+          const chTitle = (chap.title || chap.name || '').trim();
+          if (chTitle) return chTitle;
+        }
+      }
+    }
+  }
+
+  if (c.id) {
+    const idLower = String(c.id).toLowerCase();
+    if (idLower.includes('math')) return 'Mathematics';
+    if (idLower.includes('phys')) return 'Physics';
+    if (idLower.includes('chem')) return 'Chemistry';
+    if (idLower.includes('bio')) return 'Biology';
+    if (idLower.includes('eng')) return 'English';
+    if (idLower.includes('sci')) return 'Science';
+  }
+
+  return 'General Course';
+}
+
+function getCoursePill(c) {
+  if (!c) return 'Course';
+  if (c.subject && c.subject.trim() && c.subject.toLowerCase() !== 'course') {
+    return c.subject.trim();
+  }
+  if (c.board || c.level) {
+    return (c.board || c.level).trim();
+  }
+  const title = getCourseTitle(c);
+  if (title && title !== 'General Course') {
+    return title.split(' ')[0];
+  }
+  return 'Course';
+}
+
 function rCourses(){
   if (!D.courses || D.courses.length === 0) {
     document.getElementById('main').innerHTML = `
@@ -23,6 +72,23 @@ function rCourses(){
     `;
     return;
   }
+
+  // Auto-heal missing title/subject in pre-existing user courses in localStorage
+  let stateModified = false;
+  (D.courses || []).forEach((c) => {
+    const healedTitle = getCourseTitle(c);
+    if (!c.subject || !c.subject.trim() || c.subject.toLowerCase() === 'course') {
+      c.subject = healedTitle;
+      stateModified = true;
+    }
+    if (!c.title || !c.title.trim() || c.title.toLowerCase() === 'course') {
+      c.title = c.subject || healedTitle;
+      stateModified = true;
+    }
+  });
+  if (stateModified && typeof saveNow === 'function') {
+    saveNow();
+  }
   
   if (!activeCourseId) {
     activeCourseId = D.lastCourseId || D.courses[0].id;
@@ -32,7 +98,7 @@ function rCourses(){
   
   const courseTabs = D.courses.map(c => `
     <div class="tb${c.id === currentCourse.id ? ' on' : ''}" onclick="activeCourseId='${c.id}'; D.lastCourseId='${c.id}'; saveNow(); rCourses()">
-      ${esc(c.subject)}
+      ${esc(c.subject || getCourseTitle(c))}
     </div>
   `).join('') + (D.courses.length < MAX_COURSES ? `
     <div class="tb" style="border:1px dashed var(--brd);color:var(--mut)" onclick="generateAndSaveCourses()" title="Add another course (${D.courses.length}/${MAX_COURSES})">
@@ -143,8 +209,8 @@ function rCourses(){
     const doneTop = (c.units||[]).reduce((u,un)=>u+(un.chapters||[]).reduce((ch,ch2)=>ch+(ch2.topics||[]).filter(t=>t.status==='Completed'||t.status==='Mastered').length,0),0);
     const pct2 = totTop>0?Math.round(doneTop/totTop*100):0;
     const col = COURSE_COLORS[idx % COURSE_COLORS.length];
-    const displayTitle = c.title || c.subject || c.name || 'Course';
-    const pillText = c.subject && c.title && c.title !== c.subject ? c.subject : (c.board || c.level || 'Course');
+    const displayTitle = getCourseTitle(c);
+    const pillText = getCoursePill(c);
     return `
       <div class="course-card-color ${col}" onclick="activeCourseId='${c.id}';rCourses()" role="button" tabindex="0" aria-label="${esc(displayTitle)} - ${pct2}% complete">
         <div class="course-cat-pill">${esc(pillText)}</div>
