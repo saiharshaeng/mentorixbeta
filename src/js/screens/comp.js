@@ -19,6 +19,17 @@
 
 'use strict';
 
+function esc(str) {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+window.esc = window.esc || esc;
+
 // State Management
 let compState = {
   examId: '',
@@ -1203,15 +1214,17 @@ function _doRenderMath(containerEl) {
   }
 
   // Method 3: Manual $ replacement — last resort so text is still readable
-  containerEl.querySelectorAll(
-    '.q-text, .opt-text, .q-solution-text, .cbt-q-text, .cbt-opt-val, .cbt-solution-text, .katex-render-target'
-  ).forEach(el => {
-    el.innerHTML = el.innerHTML
-      .replace(/\$\$([^$]+)\$\$/g,
-        '<em style="font-style:italic;color:var(--pl)">$1</em>')
-      .replace(/\$([^$\n]+)\$/g,
-        '<em style="font-style:italic">$1</em>');
-  });
+  if (containerEl && containerEl.querySelectorAll) {
+    containerEl.querySelectorAll(
+      '.q-text, .opt-text, .q-solution-text, .cbt-q-text, .cbt-opt-val, .cbt-solution-text, .katex-render-target'
+    ).forEach(el => {
+      el.innerHTML = el.innerHTML
+        .replace(/\$\$([^$]+)\$\$/g,
+          '<em style="font-style:italic;color:var(--pl)">$1</em>')
+        .replace(/\$([^$\n]+)\$/g,
+          '<em style="font-style:italic">$1</em>');
+    });
+  }
 }
 
 // Keep renderMath as the public name — delegates to _doRenderMath
