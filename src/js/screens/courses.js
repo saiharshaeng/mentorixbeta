@@ -143,10 +143,12 @@ function rCourses(){
     const doneTop = (c.units||[]).reduce((u,un)=>u+(un.chapters||[]).reduce((ch,ch2)=>ch+(ch2.topics||[]).filter(t=>t.status==='Completed'||t.status==='Mastered').length,0),0);
     const pct2 = totTop>0?Math.round(doneTop/totTop*100):0;
     const col = COURSE_COLORS[idx % COURSE_COLORS.length];
+    const displayTitle = c.title || c.subject || c.name || 'Course';
+    const pillText = c.subject && c.title && c.title !== c.subject ? c.subject : (c.board || c.level || 'Course');
     return `
-      <div class="course-card-color ${col}" onclick="activeCourseId='${c.id}';rCourses()" role="button" tabindex="0" aria-label="${esc(c.subject)} - ${pct2}% complete">
-        <div class="course-cat-pill">${esc(c.board||c.level||'Course')}</div>
-        <div class="cc-title">${esc(c.subject)}</div>
+      <div class="course-card-color ${col}" onclick="activeCourseId='${c.id}';rCourses()" role="button" tabindex="0" aria-label="${esc(displayTitle)} - ${pct2}% complete">
+        <div class="course-cat-pill">${esc(pillText)}</div>
+        <h3 class="cc-title">${esc(displayTitle)}</h3>
         <div class="cc-progress-row">
           <span>Progress</span>
           <span>${doneTop}/${totTop} topics</span>
@@ -157,8 +159,8 @@ function rCourses(){
             ${c.id===activeCourseId?'Viewing ✓':'Open →'}
           </button>
           <div style="display:flex;align-items:center;gap:8px">
-            <span style="color:rgba(255,255,255,.7);font-size:var(--fs-xs)">${pct2}%</span>
-            <button onclick="event.stopPropagation();removeCourse('${c.id}')" style="background:rgba(0,0,0,.2);border:none;border-radius:6px;color:rgba(255,255,255,.6);font-size:11px;padding:3px 7px;cursor:pointer;line-height:1" title="Remove course">✕</button>
+            <span style="color:rgba(255,255,255,.9);font-size:var(--fs-xs);font-weight:700">${pct2}%</span>
+            <button onclick="event.stopPropagation();removeCourse('${c.id}')" style="background:rgba(0,0,0,.25);border:none;border-radius:6px;color:rgba(255,255,255,.8);font-size:11px;padding:3px 7px;cursor:pointer;line-height:1" title="Remove course">✕</button>
           </div>
         </div>
       </div>`;

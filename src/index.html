@@ -56,7 +56,7 @@ window.splashSkip = window.splashSkip || function(){
 // ═══════════════════════════════════════════════════════════
 (function clearStaleCache() {
   if (!window.location.protocol.startsWith('http')) return;
-  const CURRENT_SW_VERSION = 'v48';
+  const CURRENT_SW_VERSION = 'v49';
   // Unregister old service workers
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
