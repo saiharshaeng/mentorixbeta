@@ -148,7 +148,7 @@ function rCourses(){
     return `
       <div class="course-card-color ${col}" onclick="activeCourseId='${c.id}';rCourses()" role="button" tabindex="0" aria-label="${esc(displayTitle)} - ${pct2}% complete">
         <div class="course-cat-pill">${esc(pillText)}</div>
-        <h3 class="cc-title">${esc(displayTitle)}</h3>
+        <h3 class="cc-title" style="font-size:22px!important;font-weight:800!important;color:#ffffff!important;margin:10px 0 14px 0!important;display:block!important;visibility:visible!important;opacity:1!important;line-height:1.25!important;letter-spacing:-0.3px!important;text-shadow:0 2px 6px rgba(0,0,0,0.3)!important;word-break:break-word!important">${esc(displayTitle)}</h3>
         <div class="cc-progress-row">
           <span>Progress</span>
           <span>${doneTop}/${totTop} topics</span>
