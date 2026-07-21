@@ -13,6 +13,6 @@ deploy.zip
 src/jee.json.zip
 src/data/pyq/processed/
 src/data/pyq/normalized/
-src/data/pyq/classified/
+!src/data/pyq/classified/jee_classified.js
 *.zip
 *.pdf

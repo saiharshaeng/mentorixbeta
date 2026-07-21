@@ -133,16 +133,16 @@
     }
 
     try {
-      const r = await fetch('/data/pyq/master_index.json', { cache: 'no-store' });
+      const r = await fetch('data/pyq/master_index.json', { cache: 'no-store' });
       if (r.ok) {
         const loaded = await r.json();
         if (loaded && (loaded.JEE_MAIN || loaded.JEE_ADVANCED)) {
           masterIndex = loaded;
-          console.log('[pyqService] ✅ master_index loaded from /data/pyq/master_index.json');
+          console.log('[pyqService] ✅ master_index loaded from data/pyq/master_index.json');
         }
       }
     } catch (e) {
-      console.warn('[pyqService] Could not fetch /data/pyq/master_index.json:', e.message);
+      console.warn('[pyqService] Could not fetch data/pyq/master_index.json:', e.message);
     }
 
     if (!masterIndex || Object.keys(fileCache).length === 0) {
@@ -174,7 +174,7 @@
       await Promise.all(papers.map(async paper => {
         if (fileCache[paper.file]) return;
         try {
-          const url = '/data/' + paper.file;
+          const url = 'data/' + paper.file;
           const r = await fetch(url, { cache: 'no-store' });
           if (r.ok) {
             fileCache[paper.file] = await r.json();
