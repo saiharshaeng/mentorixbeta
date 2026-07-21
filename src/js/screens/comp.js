@@ -2390,6 +2390,52 @@ async function startMockExamSetup(forcedMode) {
       }
     }
 
+    // Direct fallback to window.JEE_CLASSIFIED_QUESTIONS if pyqService returned no questions
+    if ((!questions || questions.length === 0) && window.JEE_CLASSIFIED_QUESTIONS && window.JEE_CLASSIFIED_QUESTIONS.length > 0) {
+      const paperIdx = Math.floor(Math.random() * 5);
+      const paperQs = window.JEE_CLASSIFIED_QUESTIONS.slice(paperIdx * 75, (paperIdx + 1) * 75);
+      const sourcePaper = paperQs.length >= 75 ? paperQs : window.JEE_CLASSIFIED_QUESTIONS.slice(0, 75);
+
+      questions = sourcePaper.map((q, i) => {
+        const opts = Array.isArray(q.options) ? q.options : 
+          (q.options && typeof q.options === 'object') ? [q.options.a, q.options.b, q.options.c, q.options.d].filter(Boolean) : (q.opts || []);
+        
+        let ansIdx = [0];
+        if (q.ans !== undefined) {
+          ansIdx = Array.isArray(q.ans) ? q.ans : [q.ans];
+        } else if (q.correct !== undefined) {
+          const cCode = String(q.correct).toLowerCase().trim();
+          if (cCode === 'a') ansIdx = [0];
+          else if (cCode === 'b') ansIdx = [1];
+          else if (cCode === 'c') ansIdx = [2];
+          else if (cCode === 'd') ansIdx = [3];
+          else ansIdx = [0];
+        }
+
+        const isNum = (q.type || '').toLowerCase() === 'numerical';
+        const secName = q.subject || q.section || (i < 25 ? 'Mathematics' : i < 50 ? 'Physics' : 'Chemistry');
+        const secLbl = (i % 25 < 20) ? 'Section A' : 'Section B';
+
+        return {
+          id: i + 1,
+          q: q.question || q.q || '',
+          opts: opts,
+          ans: ansIdx,
+          type: isNum ? 'numerical' : 'mcq',
+          section: secName,
+          sectionLabel: secLbl,
+          chap: q.classifiedChapter || q.chapter || '',
+          expl: q.solution || q.explanation || '',
+          difficulty: q.difficulty || 'medium',
+          year: q.year || 2025,
+          examDate: q.date ? (q.date + ' ' + (q.shift || '')) : 'JEE Main Real Paper',
+          marking: isNum ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 },
+          source: 'PYQ (NTA Real Paper)'
+        };
+      });
+      console.log('[Mock] Direct Fallback: Loaded 75-question real NTA paper from JEE_CLASSIFIED_QUESTIONS:', questions.length);
+    }
+
     // ═══════════════════════════════════════════
     // FALLBACK: Assemble section-by-section
     // ═══════════════════════════════════════════

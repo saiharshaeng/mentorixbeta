@@ -64,36 +64,6 @@
         "Chemistry"
       ],
       "type": "JEE_MAIN"
-    },
-    {
-      "file": "pyq/jee_main/jee_physics_bank.json",
-      "year": 2024,
-      "examDate": "Physics Question Bank",
-      "questionCount": 5310,
-      "subjects": [
-        "Physics"
-      ],
-      "type": "JEE_MAIN"
-    },
-    {
-      "file": "pyq/jee_main/jee_chemistry_bank.json",
-      "year": 2024,
-      "examDate": "Chemistry Question Bank",
-      "questionCount": 5501,
-      "subjects": [
-        "Chemistry"
-      ],
-      "type": "JEE_MAIN"
-    },
-    {
-      "file": "pyq/jee_main/jee_maths_bank.json",
-      "year": 2024,
-      "examDate": "Mathematics Question Bank",
-      "questionCount": 5456,
-      "subjects": [
-        "Mathematics"
-      ],
-      "type": "JEE_MAIN"
     }
   ],
   "JEE_ADVANCED": [
@@ -103,7 +73,9 @@
       "examDate": "JEE Advanced 2020",
       "questionCount": 55,
       "subjects": [
-        "Physics"
+        "Physics",
+        "Chemistry",
+        "Mathematics"
       ],
       "type": "JEE_ADVANCED"
     },
@@ -113,7 +85,9 @@
       "examDate": "JEE Advanced 2021",
       "questionCount": 57,
       "subjects": [
-        "Physics"
+        "Physics",
+        "Chemistry",
+        "Mathematics"
       ],
       "type": "JEE_ADVANCED"
     },
@@ -123,7 +97,9 @@
       "examDate": "JEE Advanced 2022",
       "questionCount": 46,
       "subjects": [
-        "Physics"
+        "Physics",
+        "Chemistry",
+        "Mathematics"
       ],
       "type": "JEE_ADVANCED"
     },
@@ -133,7 +109,9 @@
       "examDate": "JEE Advanced 2023",
       "questionCount": 53,
       "subjects": [
-        "Physics"
+        "Physics",
+        "Chemistry",
+        "Mathematics"
       ],
       "type": "JEE_ADVANCED"
     },
@@ -143,7 +121,9 @@
       "examDate": "JEE Advanced 2024",
       "questionCount": 54,
       "subjects": [
-        "Physics"
+        "Physics",
+        "Chemistry",
+        "Mathematics"
       ],
       "type": "JEE_ADVANCED"
     },
@@ -153,34 +133,14 @@
       "examDate": "JEE Advanced 2025",
       "questionCount": 48,
       "subjects": [
-        "Physics"
+        "Physics",
+        "Chemistry",
+        "Mathematics"
       ],
       "type": "JEE_ADVANCED"
     }
   ],
-  "NEET": [
-    {
-      "file": "pyq/neet/neet_biology_bank.json",
-      "year": 2024,
-      "examDate": "NEET Biology Question Bank",
-      "questionCount": 5000,
-      "subjects": [
-        "Biology"
-      ],
-      "type": "NEET"
-    }
-  ],
+  "NEET": [],
   "EAMCET": [],
-  "OTHER": [
-    {
-      "file": "pyq/other/general_aptitude_bank.json",
-      "year": 2024,
-      "examDate": "General Aptitude & Reasoning",
-      "questionCount": 5068,
-      "subjects": [
-        "General Aptitude"
-      ],
-      "type": "OTHER"
-    }
-  ]
+  "OTHER": []
 }
