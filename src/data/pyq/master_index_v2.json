@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-18T12:50:59.347Z",
-  "totalFiles": 143,
+  "generatedAt": "2026-07-20T15:40:15.869Z",
+  "totalFiles": 154,
   "files": [
     {
       "path": "src\\data\\pyq\\classified\\jee_classified.json",
@@ -26,7 +26,7 @@
           "c": "526",
           "d": "784"
         },
-        "correct": "d",
+        "correct": "c",
         "solution": "",
         "marks": 4,
         "negativeMarks": -1,
@@ -73,35 +73,332 @@
       ]
     },
     {
+      "path": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2020.json",
+      "absolutePath": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2020.json",
+      "questionCount": 55,
+      "firstQuestion": {
+        "id": 1,
+        "q": "A football of radius R is kept on a hole of radius r ( 푟<푅 ) made on a plank kept horizontally. One end of the plank is now lifted so that it gets tilted making an angle 휃 from the horizontal as shown in the figure below. The maximum value of 휃 so that the football does not start rolling down the plank satisfies (figure is schematic and not drawn to scale)",
+        "opts": [
+          "sin휃= 푟 푅",
+          "tan휃= 푟 푅",
+          "sin휃= 푟 2푅",
+          "cos휃= 푟 2푅"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Physics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "hard",
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2020,
+        "question_number": 1,
+        "source": "JEE_Advanced_2020"
+      },
+      "fields": [
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
+        "difficulty",
+        "marking",
+        "year",
+        "question_number",
+        "source"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2021.json",
+      "absolutePath": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2021.json",
+      "questionCount": 57,
+      "firstQuestion": {
+        "id": 1,
+        "q": "The smallest division on the main scale of a Vernier calipers is 0.1 cm. Ten divisions of the Vernier scale correspond to nine divisions of the main scale. The figure below on the left shows the reading of this calipers with no gap between its two jaws. The figure on the right shows the reading with a solid sphere held between the jaws. The correct diameter of the sphere is",
+        "opts": [
+          "3.07 cm",
+          "3.11 cm",
+          "3.15 cm",
+          "3.17 cm"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Physics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "hard",
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2021,
+        "question_number": 1,
+        "source": "JEE_Advanced_2021"
+      },
+      "fields": [
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
+        "difficulty",
+        "marking",
+        "year",
+        "question_number",
+        "source"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2022.json",
+      "absolutePath": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2022.json",
+      "questionCount": 46,
+      "firstQuestion": {
+        "id": 1,
+        "q": "Considering only the principal values of the inverse trigonometric functions, the value of 3 2 cos −1 √ 2 2 + π 2 + 1 4 sin −1 2 √ 2 π 2 + π 2 + tan −1 √ 2 π is __________ .",
+        "opts": [],
+        "ans": [
+          0
+        ],
+        "type": "numerical",
+        "section": "Physics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "hard",
+        "marking": {
+          "correct": 4,
+          "wrong": 0,
+          "skip": 0
+        },
+        "year": 2022,
+        "question_number": 1,
+        "source": "JEE_Advanced_2022"
+      },
+      "fields": [
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
+        "difficulty",
+        "marking",
+        "year",
+        "question_number",
+        "source"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2023.json",
+      "absolutePath": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2023.json",
+      "questionCount": 53,
+      "firstQuestion": {
+        "id": 1,
+        "q": "Le t (0,1) (1,2) (3,4)S and {0,1, 2,3}T. Then which of the following statements is(are) true?",
+        "opts": [
+          "There are infinitely many functions from S to T",
+          "There are infinitely many strictly increasing functions from S to T",
+          "Th e number of continuous functions from S to Tis at most 120",
+          "Every continuous function from S to T is differentiable Mathematics JEE (Advanced) 2023 Paper 1 2/10"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Physics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "hard",
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2023,
+        "question_number": 1,
+        "source": "JEE_Advanced_2023"
+      },
+      "fields": [
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
+        "difficulty",
+        "marking",
+        "year",
+        "question_number",
+        "source"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2024.json",
+      "absolutePath": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2024.json",
+      "questionCount": 54,
+      "firstQuestion": {
+        "id": 1,
+        "q": "Let () fx be a continuously differentiable function on the interval (0, )  such that (1) 2 f = and 1010 99 ()() lim1 tx tfx xft tx → − = − for each 0. x  Then, for all 0,x ()fx is equal to",
+        "opts": [
+          "10 319 1111 x x −",
+          "10 913 1111 x x +",
+          "10 931 1111 x x − +",
+          "10 139 1111 x x +"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Physics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "hard",
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2024,
+        "question_number": 1,
+        "source": "JEE_Advanced_2024"
+      },
+      "fields": [
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
+        "difficulty",
+        "marking",
+        "year",
+        "question_number",
+        "source"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2025.json",
+      "absolutePath": "src\\data\\pyq\\jee_advanced\\JEE_Advanced_2025.json",
+      "questionCount": 48,
+      "firstQuestion": {
+        "id": 1,
+        "q": "L Let ℝ denote the set of all real numbers. Let 푎 푖 ,푏 푖 ∈ℝ for 푖∈{1,2,3}. Define the functions 푓:ℝ→ℝ,푔:ℝ→ℝ, and ℎ:ℝ→ℝ by 푓 ( 푥 ) =푎 1 +10푥+ 푎 2 푥 2 +푎 3 푥 3 +푥 4 , 푔 ( 푥 ) =푏 1 +3푥+ 푏 2 푥 2 +푏 3 푥 3 +푥 4 , ℎ ( 푥 ) =푓 ( 푥+1 ) −푔 ( 푥+2 ) . If 푓 ( 푥 ) ≠푔(푥) for every 푥∈ ℝ, then the coefficient of 푥 3 in ℎ ( 푥 ) is",
+        "opts": [
+          "8",
+          "2",
+          "−4",
+          "−6"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Physics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "hard",
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2025,
+        "question_number": 1,
+        "source": "JEE_Advanced_2025"
+      },
+      "fields": [
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
+        "difficulty",
+        "marking",
+        "year",
+        "question_number",
+        "source"
+      ]
+    },
+    {
       "path": "src\\data\\pyq\\jee_main\\jeeMain_2025_22Jan_shift1.json",
       "absolutePath": "src\\data\\pyq\\jee_main\\jeeMain_2025_22Jan_shift1.json",
       "questionCount": 75,
       "firstQuestion": {
-        "question_number": 1,
-        "subject": "Mathematics",
-        "question_text": "Let $a_1, a_2, a_3, \\dots$ be a G.P. of increasing positive terms. If $a_1 a_5 = 28$ and $a_2 + a_4 = 29$, then $a_6$ is equal to:",
-        "options": {
-          "a": "628",
-          "b": "812",
-          "c": "526",
-          "d": "784"
+        "id": 1,
+        "q": "Let $a_1, a_2, a_3, \\dots$ be a G.P. of increasing positive terms. If $a_1 a_5 = 28$ and $a_2 + a_4 = 29$, then $a_6$ is equal to:",
+        "opts": [
+          "628",
+          "812",
+          "526",
+          "784"
+        ],
+        "ans": [
+          3
+        ],
+        "type": "mcq",
+        "section": "Mathematics",
+        "sectionLabel": "Section A",
+        "chap": "",
+        "expl": "",
+        "difficulty": "medium",
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
         },
-        "correct_answer": "d",
-        "topic": null,
-        "explanation": null,
-        "difficulty": "",
-        "section_id": null
+        "year": 2025,
+        "question_number": 1
       },
       "fields": [
-        "question_number",
-        "subject",
-        "question_text",
-        "options",
-        "correct_answer",
-        "topic",
-        "explanation",
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
         "difficulty",
-        "section_id"
+        "marking",
+        "year",
+        "question_number"
       ]
     },
     {
@@ -109,31 +406,45 @@
       "absolutePath": "src\\data\\pyq\\jee_main\\jeeMain_2025_22Jan_shift2.json",
       "questionCount": 75,
       "firstQuestion": {
-        "question_number": 1,
-        "question_text": "Let $\\alpha, \\beta, \\gamma$ and $\\delta$ be the coefficients of $x^7, x^6, x^5$ and x respectively in the expansion of $(x+\\sqrt{x^3-1})^5 + (x-\\sqrt{x^3-1})^5$, x > 1. If u and v satisfy the equations $\\alpha u + \\beta v = 18$, $\\gamma u + \\delta v = 20$, then u + v equals :",
-        "options": {
-          "a": "5",
-          "b": "4",
-          "c": "3",
-          "d": "8"
-        },
-        "correct_answer": "a",
-        "explanation": "",
-        "topic": "Binomial Theorem",
+        "id": 1,
+        "q": "Let $\\alpha, \\beta, \\gamma$ and $\\delta$ be the coefficients of $x^7, x^6, x^5$ and x respectively in the expansion of $(x+\\sqrt{x^3-1})^5 + (x-\\sqrt{x^3-1})^5$, x > 1. If u and v satisfy the equations $\\alpha u + \\beta v = 18$, $\\gamma u + \\delta v = 20$, then u + v equals :",
+        "opts": [
+          "5",
+          "4",
+          "3",
+          "8"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Mathematics",
+        "sectionLabel": "Section A",
+        "chap": "Binomial Theorem",
+        "expl": "",
         "difficulty": "Medium",
-        "subject": null,
-        "section_id": null
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2025,
+        "question_number": 1
       },
       "fields": [
-        "question_number",
-        "question_text",
-        "options",
-        "correct_answer",
-        "explanation",
-        "topic",
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
         "difficulty",
-        "subject",
-        "section_id"
+        "marking",
+        "year",
+        "question_number"
       ]
     },
     {
@@ -141,31 +452,45 @@
       "absolutePath": "src\\data\\pyq\\jee_main\\jeeMain_2026_02April_shift1.json",
       "questionCount": 75,
       "firstQuestion": {
-        "question_number": 1,
-        "subject": "Mathematics",
-        "topic": "Quadratic Equations",
-        "question_text": "Let $\\alpha, \\alpha + 2, \\alpha \\in \\mathbb{Z}$, be the roots of the quadratic equation $x(x + 2) + (x + 1)(x + 3) + (x + 2)(x + 4) + \\dots + (x + n - 1)(x + n + 1) = 4n$ for some $n \\in \\mathbb{N}$. Then $n + \\alpha$ is equal to :",
-        "options": {
-          "a": "0",
-          "b": "1",
-          "c": "2",
-          "d": "3"
-        },
-        "correct_answer": "c",
+        "id": 1,
+        "q": "Let $\\alpha, \\alpha + 2, \\alpha \\in \\mathbb{Z}$, be the roots of the quadratic equation $x(x + 2) + (x + 1)(x + 3) + (x + 2)(x + 4) + \\dots + (x + n - 1)(x + n + 1) = 4n$ for some $n \\in \\mathbb{N}$. Then $n + \\alpha$ is equal to :",
+        "opts": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "ans": [
+          2
+        ],
+        "type": "mcq",
+        "section": "Mathematics",
+        "sectionLabel": "Section A",
+        "chap": "Quadratic Equations",
+        "expl": "The given equation is $\\sum_{k=0}^{n-1} (x+k)(x+k+2) = 4n$.\n\n$\\sum_{k=0}^{n-1} (x^2 + 2kx + 2x + k^2 + 2k) = 4n$\n$n x^2 + 2x \\frac{(n-1)n}{2} + 2x n + \\sum_{k=0}^{n-1} k(k + 2) = 4n$\nThis simplifies to:\n$n x^2 + n(n+1)x + \\frac{(n-1)n(2n-1)}{6} + \\frac{2(n-1)n}{2} - 4n = 0$\nDivide by $n$: $x^2 + (n+1)x + \\frac{(n-1)(2n-1)}{6} + (n-1) - 4 = 0$\nSum of roots = $2\\alpha + 2 = -(n+1) \\implies 2\\alpha = -(n+3)$. Since $\\alpha$ is an integer, $n$ must be an odd integer.\nProduct of roots = $\\alpha(\\alpha+2) = \\frac{2n^2 - 3n + 1 + 6n - 30}{6} = \\frac{2n^2 + 3n - 29}{6}$\nFrom $n = -2\\alpha - 3$, $(n+3)/2 = -\\alpha$. Then $\\alpha(\\alpha+2) = \\frac{-(n+3)}{2} \\cdot \\frac{-(n-1)}{2} = \\frac{n^2+2n-3}{4}$.\nEquating the two expressions for the product:\n$\\frac{n^2+2n-3}{4} = \\frac{2n^2+3n-29}{6}$\n$3n^2 + 6n - 9 = 4n^2 + 6n - 58 \\implies n^2 = 49 \\implies n = 7$ (since $n \\in \\mathbb{N}$).\nThen $2\\alpha = -10 \\implies \\alpha = -5$.\nSo $n + \\alpha = 7 - 5 = 2$.",
         "difficulty": "Medium",
-        "explanation": "The given equation is $\\sum_{k=0}^{n-1} (x+k)(x+k+2) = 4n$.\n\n$\\sum_{k=0}^{n-1} (x^2 + 2kx + 2x + k^2 + 2k) = 4n$\n$n x^2 + 2x \\frac{(n-1)n}{2} + 2x n + \\sum_{k=0}^{n-1} k(k + 2) = 4n$\nThis simplifies to:\n$n x^2 + n(n+1)x + \\frac{(n-1)n(2n-1)}{6} + \\frac{2(n-1)n}{2} - 4n = 0$\nDivide by $n$: $x^2 + (n+1)x + \\frac{(n-1)(2n-1)}{6} + (n-1) - 4 = 0$\nSum of roots = $2\\alpha + 2 = -(n+1) \\implies 2\\alpha = -(n+3)$. Since $\\alpha$ is an integer, $n$ must be an odd integer.\nProduct of roots = $\\alpha(\\alpha+2) = \\frac{2n^2 - 3n + 1 + 6n - 30}{6} = \\frac{2n^2 + 3n - 29}{6}$\nFrom $n = -2\\alpha - 3$, $(n+3)/2 = -\\alpha$. Then $\\alpha(\\alpha+2) = \\frac{-(n+3)}{2} \\cdot \\frac{-(n-1)}{2} = \\frac{n^2+2n-3}{4}$.\nEquating the two expressions for the product:\n$\\frac{n^2+2n-3}{4} = \\frac{2n^2+3n-29}{6}$\n$3n^2 + 6n - 9 = 4n^2 + 6n - 58 \\implies n^2 = 49 \\implies n = 7$ (since $n \\in \\mathbb{N}$).\nThen $2\\alpha = -10 \\implies \\alpha = -5$.\nSo $n + \\alpha = 7 - 5 = 2$.",
-        "section_id": null
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2026,
+        "question_number": 1
       },
       "fields": [
-        "question_number",
-        "subject",
-        "topic",
-        "question_text",
-        "options",
-        "correct_answer",
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
         "difficulty",
-        "explanation",
-        "section_id"
+        "marking",
+        "year",
+        "question_number"
       ]
     },
     {
@@ -173,31 +498,45 @@
       "absolutePath": "src\\data\\pyq\\jee_main\\jeeMain_2026_02April_shift2.json",
       "questionCount": 75,
       "firstQuestion": {
-        "question_number": 1,
-        "subject": "Mathematics",
-        "topic": "Quadratic Equations",
-        "question_text": "Let $\\alpha, \\beta$ be the roots of the equation $x^2 - 3x + r = 0$, and $\\frac{\\alpha}{2}, 2\\beta$ be the roots of the equation $x^2 + 3x + r = 0$. If the roots of the equation $x^2 + 6x = m$ are $2\\alpha + \\beta + 2r$ and $\\alpha - 2\\beta - \\frac{r}{2}$, then $m$ is equal to:",
-        "options": {
-          "a": "$-135$",
-          "b": "$-567$",
-          "c": "$135$",
-          "d": "$567$"
-        },
-        "correct_answer": "d",
+        "id": 1,
+        "q": "Let $\\alpha, \\beta$ be the roots of the equation $x^2 - 3x + r = 0$, and $\\frac{\\alpha}{2}, 2\\beta$ be the roots of the equation $x^2 + 3x + r = 0$. If the roots of the equation $x^2 + 6x = m$ are $2\\alpha + \\beta + 2r$ and $\\alpha - 2\\beta - \\frac{r}{2}$, then $m$ is equal to:",
+        "opts": [
+          "$-135$",
+          "$-567$",
+          "$135$",
+          "$567$"
+        ],
+        "ans": [
+          3
+        ],
+        "type": "mcq",
+        "section": "Mathematics",
+        "sectionLabel": "Section A",
+        "chap": "Quadratic Equations",
+        "expl": "Let $\\alpha, \\beta$ be roots of $x^2 - 3x + r = 0 \\implies \\alpha + \\beta = 3$ and $\\alpha\\beta = r$.\nAlso, $\\frac{\\alpha}{2}, 2\\beta$ are roots of $x^2 + 3x + r = 0 \\implies \\frac{\\alpha}{2} + 2\\beta = -3$ and $(\\frac{\\alpha}{2})(2\\beta) = r \\implies \\alpha\\beta = r$, which is consistent.\nSolving the linear equations $\\alpha + \\beta = 3$ and $\\alpha + 4\\beta = -6$, we get $3\\beta = -9 \\implies \\beta = -3$, and $\\alpha = 6$. Then $r = -18$.\nThe given roots of $x^2 + 6x - m = 0$ are $r_1 = 2\\alpha + \\beta + 2r = 12 - 3 - 36 = -27$ and $r_2 = \\alpha - 2\\beta - \\frac{r}{2} = 6 + 6 + 9 = 21$.\nNotice that $r_1 + r_2 = -6$, matching the sum of roots. The product of roots is $-m = (-27)(21) = -567$, giving $m = 567$.",
         "difficulty": "Medium",
-        "explanation": "Let $\\alpha, \\beta$ be roots of $x^2 - 3x + r = 0 \\implies \\alpha + \\beta = 3$ and $\\alpha\\beta = r$.\nAlso, $\\frac{\\alpha}{2}, 2\\beta$ are roots of $x^2 + 3x + r = 0 \\implies \\frac{\\alpha}{2} + 2\\beta = -3$ and $(\\frac{\\alpha}{2})(2\\beta) = r \\implies \\alpha\\beta = r$, which is consistent.\nSolving the linear equations $\\alpha + \\beta = 3$ and $\\alpha + 4\\beta = -6$, we get $3\\beta = -9 \\implies \\beta = -3$, and $\\alpha = 6$. Then $r = -18$.\nThe given roots of $x^2 + 6x - m = 0$ are $r_1 = 2\\alpha + \\beta + 2r = 12 - 3 - 36 = -27$ and $r_2 = \\alpha - 2\\beta - \\frac{r}{2} = 6 + 6 + 9 = 21$.\nNotice that $r_1 + r_2 = -6$, matching the sum of roots. The product of roots is $-m = (-27)(21) = -567$, giving $m = 567$.",
-        "section_id": null
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2026,
+        "question_number": 1
       },
       "fields": [
-        "question_number",
-        "subject",
-        "topic",
-        "question_text",
-        "options",
-        "correct_answer",
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
         "difficulty",
-        "explanation",
-        "section_id"
+        "marking",
+        "year",
+        "question_number"
       ]
     },
     {
@@ -205,36 +544,57 @@
       "absolutePath": "src\\data\\pyq\\jee_main\\jeeMain_2026_04April_shift1.json",
       "questionCount": 75,
       "firstQuestion": {
-        "question_number": 1,
-        "subject": "Mathematics",
-        "topic": "Functions",
-        "question_text": "Let $[\\cdot]$ denote the greatest integer function. If the domain of the function $f(x) = \\cos^{-1} \\left( \\frac{4x + 2[x]}{3} \\right)$ is $[\\alpha, \\beta]$, then $12(\\alpha + \\beta)$ is equal to:",
-        "options": {
-          "a": "$6$",
-          "b": "$8$",
-          "c": "$9$",
-          "d": "$4$"
-        },
-        "correct_answer": "a",
+        "id": 1,
+        "q": "Let $[\\cdot]$ denote the greatest integer function. If the domain of the function $f(x) = \\cos^{-1} \\left( \\frac{4x + 2[x]}{3} \\right)$ is $[\\alpha, \\beta]$, then $12(\\alpha + \\beta)$ is equal to:",
+        "opts": [
+          "$6$",
+          "$8$",
+          "$9$",
+          "$4$"
+        ],
+        "ans": [
+          0
+        ],
+        "type": "mcq",
+        "section": "Mathematics",
+        "sectionLabel": "Section A",
+        "chap": "Functions",
+        "expl": "The domain of $\\cos^{-1}(y)$ is $-1 \\le y \\le 1$.\nSo, $-1 \\le \\frac{4x + 2[x]}{3} \\le 1 \\implies -3 \\le 4x + 2[x] \\le 3$.\nLet $x = I + f$, where $I = [x]$ and $f = \\{x\\}$ is the fractional part, so $0 \\le f < 1$.\nThen, $4x + 2[x] = 4(I + f) + 2I = 6I + 4f$.\nTherefore, $-3 \\le 6I + 4f \\le 3$.\nFor $I = 0$: $-3 \\le 4f \\le 3 \\implies 0 \\le f \\le \\frac{3}{4}$. So $x \\in \\left[0, \\frac{3}{4}\\right]$.\nFor $I = -1$: $-3 \\le -6 + 4f \\le 3 \\implies 3 \\le 4f \\le 9 \\implies \\frac{3}{4} \\le f < 1$. So $x \\in \\left[-\\frac{1}{4}, 0\\right)$.\nFor any other integer $I$, no such $f \\in [0, 1)$ satisfies the inequality.\nTaking the union gives the domain $x \\in \\left[-\\frac{1}{4}, \\frac{3}{4}\\right]$.\nThus, $\\alpha = -\\frac{1}{4}$ and $\\beta = \\frac{3}{4}$.\n$12(\\alpha + \\beta) = 12 \\left( -\\frac{1}{4} + \\frac{3}{4} \\right) = 12 \\left( \\frac{1}{2} \\right) = 6$.",
         "difficulty": "Medium",
-        "explanation": "The domain of $\\cos^{-1}(y)$ is $-1 \\le y \\le 1$.\nSo, $-1 \\le \\frac{4x + 2[x]}{3} \\le 1 \\implies -3 \\le 4x + 2[x] \\le 3$.\nLet $x = I + f$, where $I = [x]$ and $f = \\{x\\}$ is the fractional part, so $0 \\le f < 1$.\nThen, $4x + 2[x] = 4(I + f) + 2I = 6I + 4f$.\nTherefore, $-3 \\le 6I + 4f \\le 3$.\nFor $I = 0$: $-3 \\le 4f \\le 3 \\implies 0 \\le f \\le \\frac{3}{4}$. So $x \\in \\left[0, \\frac{3}{4}\\right]$.\nFor $I = -1$: $-3 \\le -6 + 4f \\le 3 \\implies 3 \\le 4f \\le 9 \\implies \\frac{3}{4} \\le f < 1$. So $x \\in \\left[-\\frac{1}{4}, 0\\right)$.\nFor any other integer $I$, no such $f \\in [0, 1)$ satisfies the inequality.\nTaking the union gives the domain $x \\in \\left[-\\frac{1}{4}, \\frac{3}{4}\\right]$.\nThus, $\\alpha = -\\frac{1}{4}$ and $\\beta = \\frac{3}{4}$.\n$12(\\alpha + \\beta) = 12 \\left( -\\frac{1}{4} + \\frac{3}{4} \\right) = 12 \\left( \\frac{1}{2} \\right) = 6$.",
-        "section_id": null
+        "marking": {
+          "correct": 4,
+          "wrong": -1,
+          "skip": 0
+        },
+        "year": 2026,
+        "question_number": 1
       },
       "fields": [
-        "question_number",
-        "subject",
-        "topic",
-        "question_text",
-        "options",
-        "correct_answer",
+        "id",
+        "q",
+        "opts",
+        "ans",
+        "type",
+        "section",
+        "sectionLabel",
+        "chap",
+        "expl",
         "difficulty",
-        "explanation",
-        "section_id"
+        "marking",
+        "year",
+        "question_number"
       ]
     },
     {
       "path": "src\\data\\pyq\\master_index.json",
       "absolutePath": "src\\data\\pyq\\master_index.json",
+      "questionCount": 0,
+      "firstQuestion": null,
+      "fields": []
+    },
+    {
+      "path": "src\\data\\pyq\\master_index_v2.json",
+      "absolutePath": "src\\data\\pyq\\master_index_v2.json",
       "questionCount": 0,
       "firstQuestion": null,
       "fields": []
@@ -263,7 +623,7 @@
           "c": "526",
           "d": "784"
         },
-        "correct": "d",
+        "correct": "c",
         "solution": "",
         "marks": 4,
         "negativeMarks": -1,
@@ -2343,8 +2703,8 @@
       "absolutePath": "src\\data\\pyq\\other\\examen_medical_et_dentaire.json",
       "questionCount": 4,
       "firstQuestion": {
-        "id": "examen_medical_et_dentaire_2017",
-        "category": "examen_medical_et_dentaire",
+        "id": "examen_médical_et_dentaire_2017",
+        "category": "examen_médical_et_dentaire",
         "year": "2017",
         "session": "septembre",
         "date": "2017-09-08",
@@ -2353,7 +2713,7 @@
         "title": "Examen d'entrée et d'accès en sciences médicales et en sciences dentaires - Questionnaire bleu 2017",
         "short_description": "Questions et corrigés du questionnaire bleu de l'examen d'entrée du 8 septembre 2017 - Partie 1 : Connaissance et compréhension des matières scientifiques",
         "description": "### Examen d'entrée et d'accès en sciences médicales et en sciences dentaires\n\nQuestions et corrigés du questionnaire bleu de l'examen d'entrée du 8 septembre 2017\n\n**Partie 1 - Connaissance et compréhension des matières scientifiques**",
-        "path": "Europe/Belgium/examen_medical_et_dentaire/questionnairebleu2017.json",
+        "path": "Europe/Belgium/examen_médical_et_dentaire/questionnairebleu2017.json",
         "isOfficial": true,
         "seo_title": "Examen d'entrée Sciences Médicales et Dentaires 2017 - Questionnaire Bleu",
         "seo_description": "Accédez gratuitement aux questions et corrigés complets du questionnaire bleu de l'examen d'entrée en sciences médicales et dentaires de Belgique, session 2017."
@@ -4532,6 +4892,217 @@
         "seo_title",
         "seo_description"
       ]
+    },
+    {
+      "path": "src\\data\\pyq\\processed\\jee_main_1784396213243.json",
+      "absolutePath": "src\\data\\pyq\\processed\\jee_main_1784396213243.json",
+      "questionCount": 374,
+      "firstQuestion": {
+        "id": "JEE_MAIN_2025_january_mat_q1",
+        "exam": "JEE_MAIN",
+        "year": 2025,
+        "session": "January",
+        "date": null,
+        "shift": null,
+        "subject": "Mathematics",
+        "chapter": "Sequences and Series",
+        "topic": null,
+        "section": "A",
+        "type": "MCQ",
+        "difficulty": "medium",
+        "question": "Let $a_1, a_2, a_3, \\dots$ be a G.P. of increasing positive terms. If $a_1 a_5 = 28$ and $a_2 + a_4 = 29$, then $a_6$ is equal to:",
+        "options": {
+          "a": "628",
+          "b": "812",
+          "c": "526",
+          "d": "784"
+        },
+        "correct": "d",
+        "solution": "",
+        "marks": 4,
+        "negativeMarks": -1,
+        "hasImage": false,
+        "imagePath": null,
+        "imageDescription": null,
+        "conceptTested": null,
+        "commonMistake": "Calculation errors",
+        "estimatedTime": 120,
+        "classifiedChapter": "Sequences and Series",
+        "classificationConfidence": "low",
+        "sourceFile": "jee_classified.json"
+      },
+      "fields": [
+        "id",
+        "exam",
+        "year",
+        "session",
+        "date",
+        "shift",
+        "subject",
+        "chapter",
+        "topic",
+        "section",
+        "type",
+        "difficulty",
+        "question",
+        "options",
+        "correct",
+        "solution",
+        "marks",
+        "negativeMarks",
+        "hasImage",
+        "imagePath",
+        "imageDescription",
+        "conceptTested",
+        "commonMistake",
+        "estimatedTime",
+        "classifiedChapter",
+        "classificationConfidence",
+        "sourceFile"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\processed\\jee_main_complete.json",
+      "absolutePath": "src\\data\\pyq\\processed\\jee_main_complete.json",
+      "questionCount": 374,
+      "firstQuestion": {
+        "id": "jee_main_2025_jan_22_m_ma_q1",
+        "exam": "JEE_MAIN",
+        "year": 2025,
+        "session": "January",
+        "date": "22 Jan 2025",
+        "shift": "Morning",
+        "subject": "Mathematics",
+        "chapter": "Sequences and Series",
+        "topic": null,
+        "section": "A",
+        "type": "MCQ",
+        "difficulty": "medium",
+        "question": "Let $a_1, a_2, a_3, \\dots$ be a G.P. of increasing positive terms. If $a_1 a_5 = 28$ and $a_2 + a_4 = 29$, then $a_6$ is equal to:",
+        "options": {
+          "a": "628",
+          "b": "812",
+          "c": "526",
+          "d": "784"
+        },
+        "correct": "d",
+        "solution": "",
+        "marks": 4,
+        "negativeMarks": -1,
+        "hasImage": false,
+        "imagePath": null,
+        "imageDescription": null,
+        "conceptTested": null,
+        "commonMistake": null,
+        "estimatedTime": 120,
+        "classifiedChapter": "Sequences and Series",
+        "classificationConfidence": "low",
+        "sourceFile": "src\\data\\pyq\\classified\\jee_classified.json"
+      },
+      "fields": [
+        "id",
+        "exam",
+        "year",
+        "session",
+        "date",
+        "shift",
+        "subject",
+        "chapter",
+        "topic",
+        "section",
+        "type",
+        "difficulty",
+        "question",
+        "options",
+        "correct",
+        "solution",
+        "marks",
+        "negativeMarks",
+        "hasImage",
+        "imagePath",
+        "imageDescription",
+        "conceptTested",
+        "commonMistake",
+        "estimatedTime",
+        "classifiedChapter",
+        "classificationConfidence",
+        "sourceFile"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\processed\\jee_pyq_papers.json",
+      "absolutePath": "src\\data\\pyq\\processed\\jee_pyq_papers.json",
+      "questionCount": 374,
+      "firstQuestion": {
+        "id": "JEE_MAIN_2025_january_mat_q1",
+        "exam": "JEE_MAIN",
+        "year": 2025,
+        "session": "January",
+        "date": null,
+        "shift": null,
+        "subject": "Mathematics",
+        "chapter": "Sequences and Series",
+        "topic": null,
+        "section": "A",
+        "type": "MCQ",
+        "difficulty": "medium",
+        "question": "Let $a_1, a_2, a_3, \\dots$ be a G.P. of increasing positive terms. If $a_1 a_5 = 28$ and $a_2 + a_4 = 29$, then $a_6$ is equal to:",
+        "options": {
+          "a": "628",
+          "b": "812",
+          "c": "526",
+          "d": "784"
+        },
+        "correct": "d",
+        "solution": "",
+        "marks": 4,
+        "negativeMarks": -1,
+        "hasImage": false,
+        "imagePath": null,
+        "imageDescription": null,
+        "conceptTested": null,
+        "commonMistake": "Calculation errors",
+        "estimatedTime": 120,
+        "classifiedChapter": "Sequences and Series",
+        "classificationConfidence": "low",
+        "sourceFile": "jee_classified.json"
+      },
+      "fields": [
+        "id",
+        "exam",
+        "year",
+        "session",
+        "date",
+        "shift",
+        "subject",
+        "chapter",
+        "topic",
+        "section",
+        "type",
+        "difficulty",
+        "question",
+        "options",
+        "correct",
+        "solution",
+        "marks",
+        "negativeMarks",
+        "hasImage",
+        "imagePath",
+        "imageDescription",
+        "conceptTested",
+        "commonMistake",
+        "estimatedTime",
+        "classifiedChapter",
+        "classificationConfidence",
+        "sourceFile"
+      ]
+    },
+    {
+      "path": "src\\data\\pyq\\processed\\jee_question_bank.json",
+      "absolutePath": "src\\data\\pyq\\processed\\jee_question_bank.json",
+      "questionCount": 0,
+      "firstQuestion": null,
+      "fields": []
     }
   ]
 }

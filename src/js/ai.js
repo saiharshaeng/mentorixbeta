@@ -60,39 +60,7 @@ RESPONSE STYLE:
 - End with a quick check: "Does that make sense?" or "Want to try one?"
 `;
 
-function buildAIContext(profileId) {
-  const profile = (window.D && window.D.profile) || JSON.parse(localStorage.getItem(`mx3_${profileId}_profile`) || '{}');
-  const recentMistakes = JSON.parse(localStorage.getItem(`mx3_${profileId}_mistakes`) || '[]').slice(-10);
-  const weakSpots = JSON.parse(localStorage.getItem(`mx3_${profileId}_weakspots`) || '{}');
-  const topWeakSpots = Object.entries(weakSpots).sort((a,b) => b[1] - a[1]).slice(0, 5).map(([topic]) => topic);
-  return { ...profile, weakSpots: topWeakSpots, recentMistakes };
-}
 
-function recordMistake(profileId, question, userAnswer) {
-  const key = `mx3_${profileId}_mistakes`;
-  const existing = JSON.parse(localStorage.getItem(key) || '[]');
-  existing.push({
-    questionId: question.id,
-    subject: question.subject,
-    chapter: question.chapter || question.chap,
-    topic: question.topic,
-    questionText: (question.question || question.q || '').substring(0, 100),
-    correctAnswer: question.correct || question.ans,
-    userAnswer,
-    timestamp: Date.now()
-  });
-  localStorage.setItem(key, JSON.stringify(existing.slice(-100)));
-  if (question.chapter || question.chap) {
-    updateWeakSpot(profileId, question.chapter || question.chap);
-  }
-}
-
-function updateWeakSpot(profileId, chapter) {
-  const key = `mx3_${profileId}_weakspots`;
-  const spots = JSON.parse(localStorage.getItem(key) || '{}');
-  spots[chapter] = (spots[chapter] || 0) + 1;
-  localStorage.setItem(key, JSON.stringify(spots));
-}
 
 /**
  * Send a chat completion request to the Groq AI.
@@ -435,12 +403,7 @@ Would you like me to build a personalized study course, generate a mock test, or
   });
 }
 
-/* ── EXPORTS ────────────────────────────────────────────────── */
-window.ai = ai;
-window.callTio = callTio;
-window.buildAIContext = buildAIContext;
-window.recordMistake = recordMistake;
-window.updateWeakSpot = updateWeakSpot;
+
 
 function buildAIContext(profileId) {
   let profile = (globalThis.D && globalThis.D.profile) || {};
@@ -547,6 +510,7 @@ function updateWeakSpot(profileId, chapter) {
   localStorage.setItem(key, JSON.stringify(spots));
 }
 
+window.ai = ai;
 window.TIO_SYSTEM_PROMPT = TIO_SYSTEM_PROMPT;
 window.buildAIContext = buildAIContext;
 window.callTio = callTio;

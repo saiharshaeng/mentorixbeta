@@ -81,13 +81,16 @@
           // Handle correct answer
           let ans = [];
           if (typeof q.correct === 'string') {
-            const idx = ['a','b','c','d'].indexOf(q.correct.toLowerCase());
+            const idx = ['a','b','c','d'].indexOf(q.correct.toLowerCase().trim());
             if (idx >= 0) ans = [idx];
+          } else if (typeof q.correct === 'number') {
+            ans = [q.correct];
           } else if (Array.isArray(q.ans)) {
             ans = q.ans;
           } else if (typeof q.correctAnswer === 'number') {
             ans = [q.correctAnswer];
           }
+          if (ans.length === 0) ans = [0];
 
           return {
             id: q.id || (bank.key + '_' + i),
@@ -102,11 +105,11 @@
             expl: q.solution || q.explanation || q.expl || '',
             difficulty: q.difficulty || 'medium',
             year: q.year || 2024,
-            marking: { correct: q.marks || 4, wrong: q.negativeMarks || -1 },
+            marking: { correct: q.marks || 4, wrong: q.negativeMarks || -1, skip: 0 },
             source: 'PYQ',
             exam: bank.exam
           };
-        }).filter(q => q.q && q.q.length > 5);
+        }).filter(q => q.q && q.q.length > 5 && q.opts.length >= 2);
 
         fileCache[bank.key] = { questions: normalized };
         totalLoaded += normalized.length;
@@ -203,20 +206,45 @@
         try {
           const raw = JSON.parse(fs.readFileSync(fullP, 'utf8'));
           const qs = Array.isArray(raw) ? raw : (raw.questions || []);
-          const norm = qs.map((q, i) => ({
-            id: q.id || (b.key + '_' + i),
-            q: q.question || q.q || '',
-            opts: Array.isArray(q.options) ? q.options : (Array.isArray(q.opts) ? q.opts : []),
-            ans: (typeof q.correct === 'number') ? [q.correct] : (Array.isArray(q.ans) ? q.ans : [0]),
-            type: (q.type || 'mcq').toLowerCase(),
-            section: b.subj || q.subject || 'Mathematics',
-            sectionLabel: 'Section A',
-            chap: q.chapter || q.chap || 'General',
-            expl: q.solution || q.explanation || q.expl || '',
-            difficulty: q.difficulty || 'medium',
-            year: q.year || 2024,
-            marking: { correct: 4, wrong: -1, skip: 0 }
-          })).filter(q => q.q && q.q.length > 5);
+          const norm = qs.map((q, i) => {
+            // Handle options: could be array OR {a,b,c,d} object
+            let opts = [];
+            if (Array.isArray(q.options)) {
+              opts = q.options;
+            } else if (q.options && typeof q.options === 'object') {
+              opts = [q.options.a || '', q.options.b || '', q.options.c || '', q.options.d || ''];
+            } else if (Array.isArray(q.opts)) {
+              opts = q.opts;
+            }
+
+            // Handle correct answer: could be number, string ('a','b','c','d'), or array
+            let ans = [0];
+            if (typeof q.correct === 'string') {
+              const idx = ['a', 'b', 'c', 'd'].indexOf(q.correct.toLowerCase().trim());
+              if (idx >= 0) ans = [idx];
+            } else if (typeof q.correct === 'number') {
+              ans = [q.correct];
+            } else if (Array.isArray(q.ans)) {
+              ans = q.ans;
+            } else if (typeof q.correctAnswer === 'number') {
+              ans = [q.correctAnswer];
+            }
+
+            return {
+              id: q.id || (b.key + '_' + i),
+              q: q.question || q.q || '',
+              opts,
+              ans,
+              type: (q.type || 'mcq').toLowerCase(),
+              section: b.subj || q.subject || 'Mathematics',
+              sectionLabel: 'Section A',
+              chap: q.chapter || q.classifiedChapter || q.chap || 'General',
+              expl: q.solution || q.explanation || q.expl || '',
+              difficulty: q.difficulty || 'medium',
+              year: q.year || 2024,
+              marking: { correct: q.marks || 4, wrong: q.negativeMarks || -1, skip: 0 }
+            };
+          }).filter(q => q.q && q.q.length > 5 && q.opts.length >= 2);
 
           fileCache[b.key] = { questions: norm };
           console.log('[pyqService] ✅ Loaded bank (Node):', b.key, '→', norm.length, 'Qs');
