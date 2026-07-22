@@ -4,7 +4,7 @@
  * PYQ data files always bypass cache (never stale).
  */
 
-const CACHE_NAME = 'mentorix-v61';
+const CACHE_NAME = 'mentorix-v62';
 
 // Files to pre-cache on install (only truly static: html, images, manifest)
 const CORE_ASSETS = [
@@ -61,7 +61,7 @@ self.addEventListener('fetch', e => {
     e.respondWith(
       fetch(e.request)
         .then(response => {
-          if (response.ok) {
+          if (response.ok && e.request.url.startsWith('http')) {
             const clone = response.clone();
             caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
           }
@@ -77,7 +77,7 @@ self.addEventListener('fetch', e => {
     e.respondWith(
       fetch(e.request)
         .then(response => {
-          if (response.ok && e.request.method === 'GET') {
+          if (response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
             const clone = response.clone();
             caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
           }
@@ -95,7 +95,7 @@ self.addEventListener('fetch', e => {
         if (cached) return cached;
         return fetch(e.request)
           .then(response => {
-            if (response.ok && e.request.method === 'GET') {
+            if (response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
               const clone = response.clone();
               caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
             }

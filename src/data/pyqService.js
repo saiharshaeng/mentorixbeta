@@ -38,6 +38,7 @@
   const _lastPaperIdx = {};
 
   const fileCache = {};   // file key → { questions: [...] }
+  let masterIndex = null;
   let initialized = false;
 
   // ── INIT ──────────────────────────────────────────────────────────────────
