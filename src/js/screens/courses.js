@@ -375,6 +375,32 @@ function resolveMergeConflict(choice){
   toast('🎓 Courses updated!', 'ok2');
 }
 
+async function generateAutoCoursesAsync(profile, onProgress) {
+  const subjects = (profile?.subjects && profile.subjects.length > 0)
+    ? profile.subjects
+    : ['Mathematics', 'Physics', 'Chemistry'];
+
+  const board = profile?.board || 'CBSE';
+  const grade = profile?.grade || 'Class 11';
+  const stream = profile?.stream || '';
+
+  const out = [];
+  for (let i = 0; i < subjects.length; i++) {
+    const subj = subjects[i];
+    if (typeof onProgress === 'function') onProgress(i, subjects.length, subj);
+
+    let courseObj = null;
+    if (window.CurriculumEngine) {
+      courseObj = window.CurriculumEngine.getSyllabus({ board, grade, subject: subj, stream });
+    }
+    if (courseObj) {
+      out.push(courseObj);
+    }
+  }
+
+  return out;
+}
+
 // Lightweight in-place setup modal: Board -> Grade -> Stream (11/12 only) -> Subjects.
 // Used whenever we don't have enough profile info to build a real course
 // (guests who skipped onboarding, or older profiles saved before subjects existed).
@@ -734,6 +760,7 @@ window.closeChapterCompletionOverlay = closeChapterCompletionOverlay;
 window.removeCourse = removeCourse;
 window.rCourses = rCourses;
 window.generateAndSaveCourses = generateAndSaveCourses;
+window.generateAutoCoursesAsync = generateAutoCoursesAsync;
 window.openCourseSetupModal = openCourseSetupModal;
 window.closeCourseSetupModal = closeCourseSetupModal;
 window.renderCourseSetupModal = renderCourseSetupModal;
