@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-22T13:30:19.256Z",
-  "totalFiles": 160,
-  "totalQuestions": 31225,
+  "generatedAt": "2026-07-22T13:35:01.885Z",
+  "totalFiles": 161,
+  "totalQuestions": 33819,
   "files": [
     {
       "file": "pyq/classified/jee_classified.json",
@@ -630,6 +630,10 @@
     {
       "file": "pyq/pdf_extracted/JEE_Advanced_2025.json",
       "count": 49
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_PYQ_2.json",
+      "count": 2594
     },
     {
       "file": "pyq/processed/jee_main_1784396213243.json",
