@@ -429,8 +429,8 @@ const DETAILED_SYLLABUS = {
 
 // 100 Top Global Exams Whitelist
 const WORLD_EXAMS = [
-  { id: 'jee_adv', name: 'JEE Advanced', country: 'India', cat: 'Engineering', maxScore: 360, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ, MSQ & Numerical with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'jee_adv' }, isMajor: true, fullQuestions: 54 },
   { id: 'jee_main', name: 'JEE Main', country: 'India', cat: 'Engineering', maxScore: 300, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ & Numerical with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'jee_main' }, isMajor: true, fullQuestions: 75 },
+  { id: 'jee_adv', name: 'JEE Advanced', country: 'India', cat: 'Engineering', maxScore: 360, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ, MSQ & Numerical with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'jee_adv' }, isMajor: true, fullQuestions: 54 },
   { id: 'neet', name: 'NEET UG', country: 'India', cat: 'Medical', maxScore: 720, duration: 200, subjects: ['Biology', 'Physics', 'Chemistry'], pattern: 'Single correct MCQs with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'neet' }, isMajor: true, fullQuestions: 180 },
   { id: 'sat', name: 'Digital SAT', country: 'USA / International', cat: 'Undergrad', maxScore: 1600, duration: 134, subjects: ['Reading & Writing', 'Mathematics'], pattern: 'MCQs & Student Response (No negative marks)', marking: { correct: 10, wrong: 0, type: 'sat' }, isMajor: true, fullQuestions: 98 },
   { id: 'gre', name: 'GRE General', country: 'USA / International', cat: 'Grad School', maxScore: 340, duration: 118, subjects: ['Verbal Reasoning', 'Quantitative Reasoning'], pattern: 'MCQ & Multiple-Select (No negative marks)', marking: { correct: 1, wrong: 0, type: 'gre' }, isMajor: true, fullQuestions: 54 },
@@ -2394,7 +2394,8 @@ async function startMockExamSetup(forcedMode) {
       const targetCount = pattern.totalQuestions || 75;
       const result = window.pyqService.getQuestions({
         examId: compState.examId,
-        count: targetCount
+        count: targetCount,
+        isFullMock: true
       });
 
       if (result && result.questions && result.questions.length >= 45) {

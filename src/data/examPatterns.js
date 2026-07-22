@@ -55,6 +55,7 @@ const EXAM_PATTERNS = {
     patternYear: "2025",
     totalTime: 180,
     totalMarks: 180,
+    totalQuestions: 54,
     papers: 2,
     combinedMarks: 360,
     instructions: [

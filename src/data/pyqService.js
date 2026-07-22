@@ -422,8 +422,8 @@
     const qType      = options.type       || null;
     const paperIndex = options.paperIndex !== undefined ? options.paperIndex : null;
 
-    // ── FULL MOCK: serve one intact paper ─────────────────────────────────
-    if (count >= 60 && !subject && !chapter) {
+    // ── FULL MOCK: serve complete intact / multi-subject paper ──────────────
+    if ((count >= 45 || options.isFullMock) && !subject && !chapter) {
       if (id === 'NEET') {
         const bioQs  = shuffleArray([...(fileCache['neet_bio']?.questions || [])]);
         const physQs = shuffleArray([...(fileCache['jee_main_phys']?.questions || [])]);
@@ -431,13 +431,40 @@
 
         if (bioQs.length >= 90 && physQs.length >= 45 && chemQs.length >= 45) {
           const neetPaper = [
-            ...physQs.slice(0, 45).map(q => ({ ...q, section: 'Physics', sectionLabel: 'Section A' })),
-            ...chemQs.slice(0, 45).map(q => ({ ...q, section: 'Chemistry', sectionLabel: 'Section A' })),
-            ...bioQs.slice(0, 45).map(q => ({ ...q, section: 'Botany', sectionLabel: 'Section A' })),
-            ...bioQs.slice(45, 90).map(q => ({ ...q, section: 'Zoology', sectionLabel: 'Section A' }))
+            ...physQs.slice(0, 45).map(q => ({ ...q, section: 'Physics', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' })),
+            ...chemQs.slice(0, 45).map(q => ({ ...q, section: 'Chemistry', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' })),
+            ...bioQs.slice(0, 45).map(q => ({ ...q, section: 'Botany', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' })),
+            ...bioQs.slice(45, 90).map(q => ({ ...q, section: 'Zoology', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' }))
           ];
           console.log('[pyqService] ✅ Serving full NEET paper — 180 questions (Physics: 45, Chem: 45, Botany: 45, Zoology: 45)');
           return { questions: neetPaper.map((q, i) => ({ ...q, id: i + 1, marking: { correct: 4, wrong: -1, skip: 0 } })) };
+        }
+      }
+
+      if (id === 'JEE_ADVANCED') {
+        const mathPool = shuffleArray([...(fileCache['jee_main_math']?.questions || [])]);
+        const physPool = shuffleArray([...(fileCache['jee_main_phys']?.questions || [])]);
+        const chemPool = shuffleArray([...(fileCache['jee_main_chem']?.questions || [])]);
+
+        if (mathPool.length >= 18 && physPool.length >= 18 && chemPool.length >= 18) {
+          const formatAdvSub = (pool, subName) => {
+            const mcqs = pool.filter(q => q.type === 'mcq').slice(0, 12);
+            const nums = pool.filter(q => q.type === 'numerical' || q.type === 'mcq').slice(12, 18);
+            
+            const sec1 = mcqs.slice(0, 6).map(q => ({ ...q, section: subName, sectionLabel: 'Section 1', marking: { correct: 3, wrong: -1, skip: 0 }, examDate: 'JEE Advanced PYQ', source: 'JEE Advanced PYQ' }));
+            const sec2 = mcqs.slice(6, 12).map(q => ({ ...q, section: subName, type: 'msq', sectionLabel: 'Section 2', marking: { correct: 4, wrong: -2, skip: 0 }, examDate: 'JEE Advanced PYQ', source: 'JEE Advanced PYQ' }));
+            const sec3 = nums.map(q => ({ ...q, section: subName, type: 'numerical', sectionLabel: 'Section 3', marking: { correct: 4, wrong: 0, skip: 0 }, examDate: 'JEE Advanced PYQ', source: 'JEE Advanced PYQ' }));
+            
+            return [...sec1, ...sec2, ...sec3];
+          };
+
+          const advPaper = [
+            ...formatAdvSub(mathPool, 'Mathematics'),
+            ...formatAdvSub(physPool, 'Physics'),
+            ...formatAdvSub(chemPool, 'Chemistry')
+          ];
+          console.log('[pyqService] ✅ Serving full 3-subject JEE Advanced paper — 54 questions (18 Math, 18 Phys, 18 Chem)');
+          return { questions: advPaper.map((q, i) => ({ ...q, id: i + 1 })) };
         }
       }
 
