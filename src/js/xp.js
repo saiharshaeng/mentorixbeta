@@ -63,7 +63,11 @@ function awardBadge(id) {
 function addTopic(t, courseId) {
   if (!D.topics.includes(t)) {
     D.topics.push(t);
-    completeCourseTopic(t, courseId || activeCourseId || undefined);
+    const fn = (typeof completeCourseTopic === 'function') ? completeCourseTopic : (typeof window !== 'undefined' ? window.completeCourseTopic : null);
+    if (typeof fn === 'function') {
+      const actId = courseId || (typeof activeCourseId !== 'undefined' ? activeCourseId : (typeof window !== 'undefined' ? window.activeCourseId : undefined));
+      fn(t, actId);
+    }
     saveAll();
     if (D.topics.length === 1) awardBadge('Quick Learner');
     if (D.topics.length >= 10) awardBadge('Knowledge Seeker');

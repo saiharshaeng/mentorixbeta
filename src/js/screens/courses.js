@@ -116,6 +116,9 @@ function rCourses(){
   }
   
   const currentCourse = D.courses.find(c => c.id === activeCourseId) || D.courses[0];
+  if (window.CourseProgressionEngine) {
+    window.CourseProgressionEngine.initCourseState(currentCourse);
+  }
   
   const courseTabs = D.courses.map(c => `
     <div class="tb${c.id === currentCourse.id ? ' on' : ''}" onclick="activeCourseId='${c.id}'; D.lastCourseId='${c.id}'; saveNow(); rCourses()">
@@ -534,6 +537,9 @@ function getAllCourseTopicsFlat() {
 
 function completeCourseTopic(topicName, courseId) {
   if (!D.courses) return;
+  if (window.CourseProgressionEngine) {
+    window.CourseProgressionEngine.completeTopic({ courseId, topicTitle: topicName });
+  }
   let changed = false;
   const targetCourses = courseId
     ? D.courses.filter(c => c.id === courseId)
