@@ -2391,9 +2391,10 @@ async function startMockExamSetup(forcedMode) {
     // pyqService now handles rotation and validation internally.
     // ════════════════════════════════════════════════════════════════
     if (window.pyqService) {
+      const targetCount = pattern.totalQuestions || 75;
       const result = window.pyqService.getQuestions({
         examId: compState.examId,
-        count: 75
+        count: targetCount
       });
 
       if (result && result.questions && result.questions.length >= 45) {

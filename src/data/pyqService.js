@@ -52,6 +52,7 @@
     const banks = [
       { key: 'jee_main_chem',  url: origin + '/data/pyq/jee_main/jee_chemistry_bank.json',  exam: 'JEE_MAIN',     subject: 'Chemistry' },
       { key: 'jee_main_math',  url: origin + '/data/pyq/jee_main/jee_maths_bank.json',       exam: 'JEE_MAIN',     subject: 'Mathematics' },
+      { key: 'jee_main_phys',  url: origin + '/data/pyq/jee_main/jee_physics_bank.json',     exam: 'JEE_MAIN',     subject: 'Physics' },
       { key: 'neet_bio',       url: origin + '/data/pyq/neet/neet_biology_bank.json',         exam: 'NEET',         subject: 'Biology' },
       { key: 'jee_classified', url: origin + '/data/pyq/classified/jee_classified.json',      exam: 'JEE_MAIN',     subject: null },
       { key: 'jee_complete',   url: origin + '/data/pyq/processed/jee_main_complete.json',    exam: 'JEE_MAIN',     subject: null },
@@ -182,6 +183,45 @@
           console.log('[pyqService] ✅ Loaded:', paper.examDate, '→', (fileCache[paper.file].questions || []).length, 'Qs');
         } catch (e) {
           console.error('[pyqService] ❌ Failed to parse:', paper.file, e.message);
+        }
+      }
+    });
+
+    const bankFiles = [
+      { key: 'jee_main_chem',  p: 'src/data/pyq/jee_main/jee_chemistry_bank.json', subj: 'Chemistry' },
+      { key: 'jee_main_math',  p: 'src/data/pyq/jee_main/jee_maths_bank.json',     subj: 'Mathematics' },
+      { key: 'jee_main_phys',  p: 'src/data/pyq/jee_main/jee_physics_bank.json',   subj: 'Physics' },
+      { key: 'neet_bio',       p: 'src/data/pyq/neet/neet_biology_bank.json',       subj: 'Biology' },
+      { key: 'jee_classified', p: 'src/data/pyq/classified/jee_classified.json',    subj: null },
+      { key: 'jee_complete',   p: 'src/data/pyq/processed/jee_main_complete.json',  subj: null }
+    ];
+
+    bankFiles.forEach(b => {
+      if (fileCache[b.key]) return;
+      const fullP = path.join(process.cwd(), b.p);
+      if (fs.existsSync(fullP)) {
+        try {
+          const raw = JSON.parse(fs.readFileSync(fullP, 'utf8'));
+          const qs = Array.isArray(raw) ? raw : (raw.questions || []);
+          const norm = qs.map((q, i) => ({
+            id: q.id || (b.key + '_' + i),
+            q: q.question || q.q || '',
+            opts: Array.isArray(q.options) ? q.options : (Array.isArray(q.opts) ? q.opts : []),
+            ans: (typeof q.correct === 'number') ? [q.correct] : (Array.isArray(q.ans) ? q.ans : [0]),
+            type: (q.type || 'mcq').toLowerCase(),
+            section: b.subj || q.subject || 'Mathematics',
+            sectionLabel: 'Section A',
+            chap: q.chapter || q.chap || 'General',
+            expl: q.solution || q.explanation || q.expl || '',
+            difficulty: q.difficulty || 'medium',
+            year: q.year || 2024,
+            marking: { correct: 4, wrong: -1, skip: 0 }
+          })).filter(q => q.q && q.q.length > 5);
+
+          fileCache[b.key] = { questions: norm };
+          console.log('[pyqService] ✅ Loaded bank (Node):', b.key, '→', norm.length, 'Qs');
+        } catch(e) {
+          console.error('[pyqService] ❌ Failed to parse bank in Node:', b.p, e.message);
         }
       }
     });
@@ -346,7 +386,8 @@
   function getQuestions(options) {
     options = options || {};
     const examId     = options.examId     || 'JEE_MAIN';
-    const count      = options.count      || 75;
+    const id         = normalizeExamId(examId);
+    const count      = options.count      || (id === 'NEET' ? 180 : 75);
     const subject    = options.subject    || null;
     const chapter    = options.chapter    || null;
     const difficulty = options.difficulty || null;
@@ -355,16 +396,32 @@
 
     // ── FULL MOCK: serve one intact paper ─────────────────────────────────
     if (count >= 60 && !subject && !chapter) {
+      if (id === 'NEET') {
+        const bioQs  = shuffleArray([...(fileCache['neet_bio']?.questions || [])]);
+        const physQs = shuffleArray([...(fileCache['jee_main_phys']?.questions || [])]);
+        const chemQs = shuffleArray([...(fileCache['jee_main_chem']?.questions || [])]);
+
+        if (bioQs.length >= 90 && physQs.length >= 45 && chemQs.length >= 45) {
+          const neetPaper = [
+            ...physQs.slice(0, 45).map(q => ({ ...q, section: 'Physics', sectionLabel: 'Section A' })),
+            ...chemQs.slice(0, 45).map(q => ({ ...q, section: 'Chemistry', sectionLabel: 'Section A' })),
+            ...bioQs.slice(0, 45).map(q => ({ ...q, section: 'Botany', sectionLabel: 'Section A' })),
+            ...bioQs.slice(45, 90).map(q => ({ ...q, section: 'Zoology', sectionLabel: 'Section A' }))
+          ];
+          console.log('[pyqService] ✅ Serving full NEET paper — 180 questions (Physics: 45, Chem: 45, Botany: 45, Zoology: 45)');
+          return { questions: neetPaper.map((q, i) => ({ ...q, id: i + 1, marking: { correct: 4, wrong: -1, skip: 0 } })) };
+        }
+      }
+
       const qs = _getIntactPaper(examId, paperIndex);
       if (qs && qs.length >= 45) {
         return { questions: qs };
       }
       console.warn('[pyqService] ⚠️ Intact paper not available — using offline fallback');
-      return { questions: getOfflineFallback(normalizeExamId(examId), null, count) };
+      return { questions: getOfflineFallback(id, null, count) };
     }
 
     // ── PRACTICE: collect pool, filter, sample ────────────────────────────
-    const id = normalizeExamId(examId);
     const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
     let pool = [];
 
@@ -373,6 +430,14 @@
       if (!data) return;
       const rawQs = data.questions || (Array.isArray(data) ? data : []);
       pool.push(..._normalizePaper(rawQs, { ...paper }));
+    });
+
+    // Include all loaded bank files from fileCache
+    Object.keys(fileCache).forEach(key => {
+      const data = fileCache[key];
+      if (!data || !data.questions || !Array.isArray(data.questions)) return;
+      if (papers.some(p => p.file === key)) return; // skip shift files already added
+      pool.push(...data.questions);
     });
 
     if (pool.length === 0) {
