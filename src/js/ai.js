@@ -100,7 +100,25 @@ function updateWeakSpot(profileId, chapter) {
  * If no key, tries proxy. If both fail/missing, prompts user for a custom key.
  * Falls back to Mock AI only if key entry is skipped.
  */
-async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT || MODEL, useVision = false) {
+
+// ── SESSION RATE LIMITER ────────────────────────────────────
+const _aiCallCount = { count: 0, resetAt: Date.now() + 3600000 };
+function checkRateLimit() {
+  if (Date.now() > _aiCallCount.resetAt) {
+    _aiCallCount.count = 0;
+    _aiCallCount.resetAt = Date.now() + 3600000;
+  }
+  _aiCallCount.count++;
+  // Allow 50 AI calls per hour per session
+  if (_aiCallCount.count > 50) {
+    console.warn('[Mentorix] Session rate limit reached');
+    return false;
+  }
+  return true;
+}
+// ────────────────────────────────────────────────────────────
+
+async function ai(msgs, sys, mt = 1000, json = false, model = window.MODEL_CHAT || MODEL, useVision = false) {
   // Local Interceptor for simple greetings & platform questions (0 AI Tokens)
   const lastUserMsg = [...msgs].reverse().find(m => m.role === 'user')?.content?.trim()?.toLowerCase() || '';
   if (lastUserMsg && lastUserMsg.length < 30) {
@@ -112,7 +130,10 @@ async function ai(msgs, sys, mt = 2000, json = false, model = window.MODEL_CHAT 
     }
   }
 
-  const effectiveMaxTokens = (lastUserMsg.length < 50 && mt > 300) ? 300 : Math.min(mt, 1000);
+  const effectiveMaxTokens = (lastUserMsg.length < 50 && mt > 300) ? 300 : Math.min(mt, 800);
+  if (!checkRateLimit()) {
+    return "Tio needs a short break — you've been super active! Try again in a few minutes. 😊";
+  }
 
   if (window.addTerminalLog) {
     window.addTerminalLog(`AI dispatching request to ${model}...`);

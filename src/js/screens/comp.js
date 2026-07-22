@@ -527,18 +527,33 @@ function parseAiJsonSafely(reply) {
 }
 
 
-// Render markdown images in questions while preserving LaTeX & escaping HTML
+// Render question text — preserves LaTeX ($...$, $$...$$, \(...\), \[...\])
+// IMPORTANT: Do NOT call esc() on this — it would break KaTeX delimiters.
+// Only strip actual dangerous HTML tags to prevent XSS.
 function renderQuestionText(text) {
-  let escaped = esc(text);
-  const mdImgRegex = /!\[(.*?)\]\((.*?)\)/g;
-  escaped = escaped.replace(mdImgRegex, (match, alt, url) => {
+  if (!text) return '';
+  let s = String(text);
+
+  // 1. Strip dangerous tags only (script, iframe, etc.) — keep $ \ intact
+  s = s.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+       .replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, '')
+       .replace(/on\w+\s*=/gi, '');
+
+  // 2. Handle markdown images ![alt](url) → <img>
+  s = s.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, url) => {
     let src = url;
     if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
       src = 'data/pyq/' + src;
     }
-    return `<img src="${src}" alt="${alt}" onerror="if(this.src.indexOf('data/pyq/') !== -1){ this.src=this.src.replace('data/pyq/', ''); } else { this.onerror=null; this.outerHTML='<div class=&quot;image-unavailable-msg&quot; style=&quot;background:rgba(239,68,68,0.06);border:1px dashed rgba(239,68,68,0.2);color:#ef4444;padding:12px;border-radius:10px;font-size:12px;margin:12px auto;font-weight:600;text-align:center;&quot;>⚠️ [Image-based question — visual content not yet available]</div>'; }" style="max-width:100%; height:auto; display:block; margin:12px auto; border-radius:8px; border:1px solid rgba(255,255,255,0.12);" />`;
+    const safeAlt = alt.replace(/"/g, '&quot;');
+    return `<img src="${src}" alt="${safeAlt}" onerror="this.style.display='none'" style="max-width:100%;height:auto;display:block;margin:12px auto;border-radius:8px;border:1px solid rgba(255,255,255,0.12);" />`;
   });
-  return escaped;
+
+  // 3. Convert **bold** and *italic* markdown
+  s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+       .replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+  return s;
 }
 
 function renderQuestionImage(question) {
@@ -2604,7 +2619,7 @@ function renderActiveExamUI() {
 
   const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
 
-  // --- TIMER ---
+  // ── TIMER ──────────────────────────────────────────────────────────────
   const totalSec = exam.timeLeft || 0;
   const hh = Math.floor(totalSec / 3600);
   const mm = Math.floor((totalSec % 3600) / 60);
@@ -2614,85 +2629,110 @@ function renderActiveExamUI() {
   if (totalSec < 600) timerCls = 'danger';
   else if (totalSec < 1800) timerCls = 'warn';
 
-  // --- QUESTION META ---
+  // ── CURRENT QUESTION META ──────────────────────────────────────────────
   const qNum = exam.currentIndex + 1;
   const qTotal = exam.questions.length;
   const qType = (q.type || 'mcq').toUpperCase();
   const markCorrect = (q.marking && q.marking.correct !== undefined) ? q.marking.correct : 4;
-  const markWrong = (q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : -1;
+  const markWrong   = (q.marking && q.marking.wrong   !== undefined) ? q.marking.wrong   : -1;
   const markWrongDisplay = q.type === 'numerical' ? 0 : markWrong;
-  const sectionLabel = q.sectionLabel || 'Section A';
-
-  // --- SUBJECT TABS ---
-  // Get unique subjects from questions
-  const subjectsInExam = [...new Set(exam.questions.map(q => q.section || 'General'))];
   const currentSubject = q.section || 'General';
+  const currentSecLabel = q.sectionLabel || 'Section A';
 
+  // ── SUBJECTS (canonical order for JEE Main: M, P, C) ─────────────────
+  // Preserve the original order questions appear in the paper
+  const subjectsInExam = [];
+  exam.questions.forEach(q2 => {
+    const s = q2.section || 'General';
+    if (!subjectsInExam.includes(s)) subjectsInExam.push(s);
+  });
+
+  // ── SUBJECT TABS ───────────────────────────────────────────────────────
   const subjectTabsHTML = subjectsInExam.map(sub => {
     const isActive = sub === currentSubject;
-    const answeredInSub = exam.questions
-      .map((q2, i) => ({ q: q2, i }))
-      .filter(item => (item.q.section || 'General') === sub && exam.status[item.i] === 'answered')
-      .length;
-    const totalInSub = exam.questions.filter(q2 => (q2.section || 'General') === sub).length;
-    return `<button class="nta-sub-tab${isActive ? ' active' : ''}" onclick="switchMockSection('${sub}')">
+    const qsInSub = exam.questions.map((q2, i) => ({ q: q2, i })).filter(x => (x.q.section||'General') === sub);
+    const answeredInSub = qsInSub.filter(x => exam.status[x.i] === 'answered').length;
+    const totalInSub = qsInSub.length;
+    const subColor = sub === 'Mathematics' ? '#f0883e' : sub === 'Physics' ? '#58a6ff' : sub === 'Chemistry' ? '#3fb950' : '#a371f7';
+    return `<button class="nta-sub-tab${isActive ? ' active' : ''}" onclick="switchMockSection('${sub}')" style="${isActive ? `border-bottom-color:${subColor};color:${subColor};` : ''}">
       ${sub}
-      <span class="nta-sub-count">${answeredInSub}/${totalInSub}</span>
+      <span class="nta-sub-count" style="${isActive ? `background:rgba(255,255,255,0.1);color:${subColor};` : ''}">${answeredInSub}/${totalInSub}</span>
     </button>`;
   }).join('');
 
-  // --- SECTION TABS (A/B within a subject) ---
-  const sectionsInSub = [...new Set(
-    exam.questions
-      .filter(q2 => (q2.section || 'General') === currentSubject)
-      .map(q2 => q2.sectionLabel || 'Section A')
-  )];
+  // ── SECTION A/B TABS ──────────────────────────────────────────────────
+  const sectionsInSub = [];
+  exam.questions
+    .filter(q2 => (q2.section||'General') === currentSubject)
+    .forEach(q2 => {
+      const sl = q2.sectionLabel || 'Section A';
+      if (!sectionsInSub.includes(sl)) sectionsInSub.push(sl);
+    });
   const sectionTabsHTML = sectionsInSub.length > 1 ? sectionsInSub.map(sec => {
-    const isActive = sectionLabel === sec;
+    const isActive = currentSecLabel === sec;
     const targetIdx = exam.questions.findIndex(
-      q2 => (q2.section || 'General') === currentSubject && (q2.sectionLabel || 'Section A') === sec
+      q2 => (q2.section||'General') === currentSubject && (q2.sectionLabel||'Section A') === sec
     );
-    return `<button class="nta-sec-tab${isActive ? ' active' : ''}" onclick="navigateExam(${targetIdx >= 0 ? targetIdx : 0})">
-      ${sec}
-    </button>`;
+    return `<button class="nta-sec-tab${isActive ? ' active' : ''}" onclick="navigateExam(${targetIdx >= 0 ? targetIdx : 0})">${sec}</button>`;
   }).join('') : '';
 
-  // --- QUESTION PALETTE ---
+  // ── PALETTE ────────────────────────────────────────────────────────────
+  // Build palette grouped by subject AND section (A/B)
   const paletteHTML = subjectsInExam.map(sub => {
-    const qs = exam.questions
-      .map((q2, i) => ({ q: q2, i }))
-      .filter(item => (item.q.section || 'General') === sub);
-    if (!qs.length) return '';
+    const allSubQs = exam.questions.map((q2, i) => ({ q: q2, i })).filter(x => (x.q.section||'General') === sub);
+    if (!allSubQs.length) return '';
 
-    return `<div class="nta-pal-group">
-      <div class="nta-pal-sub">${sub}</div>
-      <div class="nta-pal-grid">
-        ${qs.map(({ q: q2, i }) => {
-          const status = exam.status[i] || 'unvisited';
-          const isCurrent = exam.currentIndex === i;
-          const statusMap = {
-            'unvisited': 'nta-pal-unvisited',
-            'unanswered': 'nta-pal-unanswered',
-            'answered': 'nta-pal-answered',
-            'marked': 'nta-pal-marked'
-          };
-          const cls = `nta-pal-btn ${statusMap[status] || 'nta-pal-unvisited'}${isCurrent ? ' nta-pal-current' : ''}`;
-          return `<button class="${cls}" data-q-index="${i}" onclick="navigateExam(${i})">${i + 1}</button>`;
-        }).join('')}
-      </div>
+    // Group into Section A and Section B
+    const secGroups = {};
+    allSubQs.forEach(({ q: q2, i }) => {
+      const sl = q2.sectionLabel || 'Section A';
+      if (!secGroups[sl]) secGroups[sl] = [];
+      secGroups[sl].push({ q: q2, i });
+    });
+
+    const subColor = sub === 'Mathematics' ? '#f0883e' : sub === 'Physics' ? '#58a6ff' : sub === 'Chemistry' ? '#3fb950' : '#a371f7';
+    const subActive = sub === currentSubject;
+
+    let secGroupsHTML = Object.entries(secGroups).map(([secLabel, items]) => {
+      const isNumSec = secLabel.toLowerCase().includes('b') || items.some(x => x.q.type === 'numerical');
+      const secTypeTag = isNumSec ? '<span class="nta-pal-sec-type nta-pal-sec-num">NUM</span>' : '<span class="nta-pal-sec-type nta-pal-sec-mcq">MCQ</span>';
+      const btnHTML = items.map(({ q: q2, i }) => {
+        const status = exam.status[i] || 'unvisited';
+        const isCurrent = exam.currentIndex === i;
+        const statusMap = {
+          'unvisited': 'nta-pal-unvisited',
+          'unanswered': 'nta-pal-unanswered',
+          'answered': 'nta-pal-answered',
+          'marked': 'nta-pal-marked'
+        };
+        const cls = `nta-pal-btn ${statusMap[status] || 'nta-pal-unvisited'}${isCurrent ? ' nta-pal-current' : ''}`;
+        return `<button class="${cls}" data-q-index="${i}" onclick="navigateExam(${i})">${i + 1}</button>`;
+      }).join('');
+      return `
+        <div class="nta-pal-sec-row">
+          <span class="nta-pal-sec-label">${secLabel}</span>
+          ${secTypeTag}
+        </div>
+        <div class="nta-pal-grid">${btnHTML}</div>`;
+    }).join('');
+
+    return `<div class="nta-pal-group${subActive ? ' nta-pal-group-active' : ''}">
+      <div class="nta-pal-sub" style="color:${subColor};border-left:3px solid ${subColor};padding-left:8px;">${sub.toUpperCase()}</div>
+      ${secGroupsHTML}
     </div>`;
   }).join('');
 
-  // --- MARKING SCHEME BANNER ---
+  // ── MARKING SCHEME BADGE ───────────────────────────────────────────────
   const markBanner = `<div class="nta-mark-banner">
     <span class="nta-mark-correct">✓ +${markCorrect}</span>
-    <span class="nta-mark-wrong">${q.type === 'numerical' ? '✗ 0 (No penalty)' : `✗ ${markWrongDisplay}`}</span>
-    <span class="nta-mark-type">${qType === 'MSQ' ? 'Multiple Select' : qType === 'NUMERICAL' ? 'Numerical' : 'Single Correct'}</span>
+    <span class="nta-mark-wrong">${q.type === 'numerical' ? '✗ 0 (No neg.)' : `✗ ${markWrongDisplay}`}</span>
+    <span class="nta-mark-type">${qType === 'MSQ' ? 'Multi-Select' : qType === 'NUMERICAL' ? 'Numerical' : 'Single Correct'}</span>
   </div>`;
 
-  // --- OPTIONS / NUMERICAL INPUT ---
+  // ── ANSWER AREA ───────────────────────────────────────────────────────
   let answerArea = '';
   if (q.type === 'numerical') {
+    const savedNum = exam.answers[exam.currentIndex];
     answerArea = `
       <div class="nta-numerical">
         <div class="nta-numerical-label">Enter exact numerical answer:</div>
@@ -2701,26 +2741,25 @@ function renderActiveExamUI() {
           step="any"
           id="numerical-ans-input"
           class="nta-numerical-input"
-          placeholder="e.g.  12,  −3.5,  0.25"
-          value="${exam.answers[exam.currentIndex] !== undefined ? exam.answers[exam.currentIndex] : ''}"
+          placeholder="e.g. 12, −3.5, 0.25"
+          value="${savedNum !== undefined ? savedNum : ''}"
           oninput="saveNumericalAnswer(this.value)"
         >
-        <div class="nta-numerical-hint">Use decimal point for non-integer answers. Negative sign allowed.</div>
+        <div class="nta-numerical-hint">Decimal point and negative sign allowed. No negative marking.</div>
       </div>`;
   } else {
+    const savedIdx = exam.answers[exam.currentIndex];
     answerArea = `<div class="nta-options">
       ${(q.opts || []).map((opt, oIdx) => {
         let isSelected = false;
         if (q.type === 'msq') {
-          isSelected = (exam.answers[exam.currentIndex] || []).includes(oIdx);
+          isSelected = (Array.isArray(savedIdx) ? savedIdx : []).includes(oIdx);
         } else {
-          isSelected = exam.answers[exam.currentIndex] === oIdx;
+          isSelected = savedIdx === oIdx;
         }
-        const inputType = q.type === 'msq' ? 'checkbox' : 'radio';
         return `<div class="nta-opt${isSelected ? ' selected' : ''}" onclick="selectMockOption(${oIdx}, '${q.type}')">
           <div class="nta-opt-bubble${isSelected ? ' selected' : ''}">
             <span class="nta-opt-letter">${String.fromCharCode(65 + oIdx)}</span>
-            ${isSelected ? '<div class="nta-opt-check"></div>' : ''}
           </div>
           <div class="nta-opt-text katex-render-target">${renderQuestionText(opt)}</div>
         </div>`;
@@ -2728,7 +2767,7 @@ function renderActiveExamUI() {
     </div>`;
   }
 
-  // --- ANSWERED / TOTAL SUMMARY ---
+  // ── SUMMARY COUNTS ────────────────────────────────────────────────────
   let answeredCount = 0, markedCount = 0, notVisited = 0;
   exam.questions.forEach((_, i) => {
     const st = exam.status[i] || 'unvisited';
@@ -2737,26 +2776,30 @@ function renderActiveExamUI() {
     else if (st === 'unvisited') notVisited++;
   });
 
+  // ── PREV/NEXT visibility ──────────────────────────────────────────────
+  const hasPrev = exam.currentIndex > 0;
+  const hasNext = exam.currentIndex < exam.questions.length - 1;
+
+  // ── PAPER IDENTITY ────────────────────────────────────────────────────
+  const paperLabel = q.examDate || (exam.questions[0] && exam.questions[0].examDate) || examDb.name || 'Mock Exam';
+
   return `
   <div class="nta-exam-wrap" id="cbt-question-panel">
 
-    <!-- ═══ TOP BAR ═══ -->
+    <!-- ══ TOP BAR ══ -->
     <div class="nta-topbar">
       <div class="nta-topbar-left">
         <div class="nta-exam-brand">
           <span class="nta-exam-logo">🎯</span>
           <div>
             <div class="nta-exam-name">${esc(examDb.name || 'Mock Exam')}</div>
-            <div class="nta-exam-mode">${exam.mode === 'full' ? 'Full Length Test' : 'Diagnostic Test'}</div>
+            <div class="nta-exam-mode" style="max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(paperLabel)}">${esc(paperLabel)}</div>
           </div>
         </div>
       </div>
 
       <div class="nta-topbar-center">
-        <!-- Subject tabs -->
-        <div class="nta-sub-tabs" id="nta-sub-tabs-row">
-          ${subjectTabsHTML}
-        </div>
+        <div class="nta-sub-tabs" id="nta-sub-tabs-row">${subjectTabsHTML}</div>
         ${sectionTabsHTML ? `<div class="nta-sec-tabs">${sectionTabsHTML}</div>` : ''}
       </div>
 
@@ -2765,34 +2808,39 @@ function renderActiveExamUI() {
           <div class="nta-timer-label">Time Left</div>
           <div class="nta-timer ${timerCls}" id="exam-timer-text">${timeStr}</div>
         </div>
-        <button class="nta-submit-btn" onclick="confirmSubmitMockExam()">Submit Paper</button>
+        <button class="nta-submit-btn" onclick="confirmSubmitMockExam()">Submit</button>
       </div>
     </div>
 
-    <!-- ═══ BODY ═══ -->
+    <!-- ══ BODY ══ -->
     <div class="nta-body">
 
       <!-- LEFT: QUESTION PANEL -->
       <div class="nta-q-panel">
-        <div class="nta-q-scroll">
+        <div class="nta-q-scroll" id="nta-q-scroll">
+
+          <!-- Section boundary notice -->
+          <div class="nta-section-banner" style="background:${currentSubject === 'Mathematics' ? 'rgba(240,136,62,0.07)' : currentSubject === 'Physics' ? 'rgba(88,166,255,0.07)' : 'rgba(63,185,80,0.07)'};border-left:3px solid ${currentSubject === 'Mathematics' ? '#f0883e' : currentSubject === 'Physics' ? '#58a6ff' : '#3fb950'};">
+            <span class="nta-section-banner-sub" style="color:${currentSubject === 'Mathematics' ? '#f0883e' : currentSubject === 'Physics' ? '#58a6ff' : '#3fb950'}">${currentSubject}</span>
+            <span class="nta-section-banner-divider">·</span>
+            <span class="nta-section-banner-sec">${currentSecLabel}</span>
+            <span class="nta-section-banner-divider">·</span>
+            <span class="nta-section-banner-info">${q.type === 'numerical' ? '🔢 Numerical — No negative marking' : '⭕ Single Correct — −1 for wrong'}</span>
+          </div>
 
           <!-- Question header -->
           <div class="nta-q-header">
             <div class="nta-q-num-badge">Q.${qNum}</div>
             <div class="nta-q-info">
-              <span class="nta-q-subject-tag">${esc(currentSubject)}</span>
+              <span class="nta-q-subject-tag" style="color:${currentSubject === 'Mathematics' ? '#f0883e' : currentSubject === 'Physics' ? '#58a6ff' : '#3fb950'}">${esc(currentSubject)}</span>
               ${q.chap ? `<span class="nta-q-chapter">· ${esc(q.chap)}</span>` : ''}
+              ${q.year ? `<span class="nta-q-chapter">· ${q.year}</span>` : ''}
             </div>
             ${markBanner}
           </div>
 
-          <!-- Question image notice if applicable -->
-          ${q.hasImage ? `<div class="nta-img-notice">⚠️ This question has a diagram. Visual content shown below.</div>` : ''}
-
           <!-- Question text -->
-          <div class="nta-q-text katex-render-target">
-            ${renderQuestionText(q.q)}
-          </div>
+          <div class="nta-q-text katex-render-target">${renderQuestionText(q.q)}</div>
           ${renderQuestionImage(q)}
 
           <!-- Answer area -->
@@ -2800,21 +2848,18 @@ function renderActiveExamUI() {
 
         </div>
 
-        <!-- ACTION BAR at bottom of question panel -->
+        <!-- ACTION BAR -->
         <div class="nta-action-bar">
           <div class="nta-action-left">
+            ${hasPrev ? `<button class="nta-btn nta-btn-prev" onclick="navigateExam(${exam.currentIndex - 1})">← Prev</button>` : '<span></span>'}
             <button class="nta-btn nta-btn-clear" onclick="clearActiveExamAnswer()">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
-              Clear Response
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+              Clear
             </button>
           </div>
           <div class="nta-action-right">
-            <button class="nta-btn nta-btn-mark" onclick="markMockForReview()">
-              🔖 Mark for Review &amp; Next
-            </button>
-            <button class="nta-btn nta-btn-next" onclick="saveAndNextMock()">
-              Save &amp; Next →
-            </button>
+            <button class="nta-btn nta-btn-mark" onclick="markMockForReview()">🔖 Mark &amp; Next</button>
+            <button class="nta-btn nta-btn-next" onclick="saveAndNextMock()">${hasNext ? 'Save &amp; Next →' : '✅ Save &amp; Review'}</button>
           </div>
         </div>
       </div>
@@ -2822,24 +2867,24 @@ function renderActiveExamUI() {
       <!-- RIGHT: PALETTE PANEL -->
       <div class="nta-palette-panel" id="nta-palette">
 
-        <!-- Candidate info -->
+        <!-- Candidate card -->
         <div class="nta-cand-card">
           <div class="nta-cand-avatar">${(D && D.profile && D.profile.name ? D.profile.name[0] : 'S').toUpperCase()}</div>
           <div class="nta-cand-info">
             <div class="nta-cand-name">${esc((D && D.profile && D.profile.name) || 'Student')}</div>
-            <div class="nta-cand-exam">${esc(examDb.name || 'Mock Exam')}</div>
+            <div class="nta-cand-exam">JEE Main Mock Test</div>
           </div>
         </div>
 
-        <!-- Summary counts -->
+        <!-- Summary grid -->
         <div class="nta-pal-summary">
           <div class="nta-pal-stat nta-pal-stat-answered">
             <span class="nta-pal-stat-num">${answeredCount}</span>
             <span class="nta-pal-stat-lbl">Answered</span>
           </div>
           <div class="nta-pal-stat nta-pal-stat-unanswered">
-            <span class="nta-pal-stat-num">${exam.questions.length - answeredCount - markedCount}</span>
-            <span class="nta-pal-stat-lbl">Not Answered</span>
+            <span class="nta-pal-stat-num">${exam.questions.length - answeredCount - markedCount - notVisited}</span>
+            <span class="nta-pal-stat-lbl">Not Ans.</span>
           </div>
           <div class="nta-pal-stat nta-pal-stat-marked">
             <span class="nta-pal-stat-num">${markedCount}</span>
@@ -2851,26 +2896,19 @@ function renderActiveExamUI() {
           </div>
         </div>
 
-        <!-- Question nav label -->
-        <div class="nta-pal-nav-label">Choose a Question</div>
-
-        <!-- Question palette -->
-        <div class="nta-pal-scroll">
-          ${paletteHTML}
-        </div>
+        <!-- Palette nav -->
+        <div class="nta-pal-nav-label">Question Palette</div>
+        <div class="nta-pal-scroll">${paletteHTML}</div>
 
         <!-- Legend -->
         <div class="nta-pal-legend">
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-answered"></span>Answered</div>
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unanswered"></span>Not Answered</div>
-          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-marked"></span>Marked for Review</div>
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-marked"></span>Marked</div>
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unvisited"></span>Not Visited</div>
         </div>
 
-        <!-- Palette submit button -->
-        <button class="nta-pal-submit-btn" onclick="confirmSubmitMockExam()">
-          🏁 Submit Test
-        </button>
+        <button class="nta-pal-submit-btn" onclick="confirmSubmitMockExam()">🏁 Submit Test</button>
       </div>
 
     </div>

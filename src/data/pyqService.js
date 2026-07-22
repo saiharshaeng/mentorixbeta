@@ -42,8 +42,124 @@
 
   // ── INIT ──────────────────────────────────────────────────────────────────
 
+
+  // ── BANK FILE WIRING ──────────────────────────────────────
+  // The actual question banks are at different paths than JEE_MAIN_PAPERS expects.
+  // This function loads them directly and injects into fileCache.
+  async function loadBankFiles() {
+    const origin = (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:8080';
+    
+    const banks = [
+      { key: 'jee_main_chem',  url: origin + '/data/pyq/jee_main/jee_chemistry_bank.json',  exam: 'JEE_MAIN',     subject: 'Chemistry' },
+      { key: 'jee_main_math',  url: origin + '/data/pyq/jee_main/jee_maths_bank.json',       exam: 'JEE_MAIN',     subject: 'Mathematics' },
+      { key: 'neet_bio',       url: origin + '/data/pyq/neet/neet_biology_bank.json',         exam: 'NEET',         subject: 'Biology' },
+      { key: 'jee_classified', url: origin + '/data/pyq/classified/jee_classified.json',      exam: 'JEE_MAIN',     subject: null },
+      { key: 'jee_complete',   url: origin + '/data/pyq/processed/jee_main_complete.json',    exam: 'JEE_MAIN',     subject: null },
+    ];
+
+    let totalLoaded = 0;
+    for (const bank of banks) {
+      try {
+        const r = await fetch(bank.url, { cache: 'no-store' });
+        if (!r.ok) continue;
+        const raw = await r.json();
+        if (!Array.isArray(raw) || raw.length === 0) continue;
+
+        // Normalize to pyqService format
+        const normalized = raw.map((q, i) => {
+          // Handle options object {a,b,c,d} or array
+          let opts = [];
+          if (Array.isArray(q.options)) {
+            opts = q.options;
+          } else if (q.options && typeof q.options === 'object') {
+            opts = [q.options.a||'', q.options.b||'', q.options.c||'', q.options.d||''];
+          } else if (Array.isArray(q.opts)) {
+            opts = q.opts;
+          }
+
+          // Handle correct answer
+          let ans = [];
+          if (typeof q.correct === 'string') {
+            const idx = ['a','b','c','d'].indexOf(q.correct.toLowerCase());
+            if (idx >= 0) ans = [idx];
+          } else if (Array.isArray(q.ans)) {
+            ans = q.ans;
+          } else if (typeof q.correctAnswer === 'number') {
+            ans = [q.correctAnswer];
+          }
+
+          return {
+            id: q.id || (bank.key + '_' + i),
+            q: q.question || q.q || '',
+            opts,
+            ans,
+            type: (q.type || 'MCQ').toLowerCase() === 'mcq' ? 'mcq' : 
+                  (q.type || '').toLowerCase() === 'numerical' ? 'numerical' : 'mcq',
+            section: bank.subject || q.subject || 'Mathematics',
+            sectionLabel: 'Section A',
+            chap: q.chapter || q.classifiedChapter || q.chap || 'General',
+            expl: q.solution || q.explanation || q.expl || '',
+            difficulty: q.difficulty || 'medium',
+            year: q.year || 2024,
+            marking: { correct: q.marks || 4, wrong: q.negativeMarks || -1 },
+            source: 'PYQ',
+            exam: bank.exam
+          };
+        }).filter(q => q.q && q.q.length > 5);
+
+        fileCache[bank.key] = { questions: normalized };
+        totalLoaded += normalized.length;
+        console.log('[pyqService] ✅ Loaded bank:', bank.key, '|', normalized.length, 'questions');
+      } catch(e) {
+        console.warn('[pyqService] Failed to load bank:', bank.key, e.message);
+      }
+    }
+
+    // Also wire window.JEE_CLASSIFIED_QUESTIONS if script was loaded
+    if (typeof window !== 'undefined' && window.JEE_CLASSIFIED_QUESTIONS && window.JEE_CLASSIFIED_QUESTIONS.length > 0) {
+      const wq = window.JEE_CLASSIFIED_QUESTIONS;
+      const normalized = wq.map((q, i) => ({
+        id: q.id || ('jee_cls_' + i),
+        q: q.question || q.q || '',
+        opts: Array.isArray(q.options) ? q.options : 
+              (q.options ? [q.options.a||'', q.options.b||'', q.options.c||'', q.options.d||''] : (q.opts || [])),
+        ans: q.correctAnswer !== undefined ? [q.correctAnswer] : (q.ans || []),
+        type: 'mcq',
+        section: q.subject || 'Mathematics',
+        sectionLabel: 'Section A',
+        chap: q.classifiedChapter || q.chapter || 'General',
+        expl: q.solution || q.expl || '',
+        difficulty: q.difficulty || 'medium',
+        year: q.year || 2024,
+        marking: { correct: 4, wrong: -1 },
+        source: 'PYQ',
+        exam: 'JEE_MAIN'
+      })).filter(q => q.q && q.q.length > 5);
+
+      if (!fileCache['jee_classified']) {
+        fileCache['jee_window'] = { questions: normalized };
+        totalLoaded += normalized.length;
+        console.log('[pyqService] ✅ Injected window.JEE_CLASSIFIED_QUESTIONS:', normalized.length);
+      }
+    }
+
+    if (totalLoaded > 0 && !masterIndex) {
+      masterIndex = {
+        JEE_MAIN: Object.keys(fileCache).filter(k => k.includes('jee')).map(k => ({ file: k, year: 2024, questionCount: fileCache[k].questions.length })),
+        NEET: Object.keys(fileCache).filter(k => k.includes('neet')).map(k => ({ file: k, year: 2024, questionCount: fileCache[k].questions.length })),
+        JEE_ADVANCED: [],
+        EAMCET: []
+      };
+    }
+
+    console.log('[pyqService] Total questions loaded:', totalLoaded);
+    return totalLoaded;
+  }
+
   async function init() {
     if (initialized) return;
+    // Load actual bank files
+    await loadBankFiles();
     initialized = true;
     if (isNode) {
       _preloadAllNode();
@@ -334,6 +450,20 @@
   }
 
   function hasData(examId) {
+    const id = normalizeExamId(examId);
+    // Check bank files
+    const examLower = (examId || '').toLowerCase();
+    const hasBankFile = Object.keys(fileCache).some(k => {
+      return (examLower.includes('jee') && (k.includes('jee') || k.includes('classified'))) ||
+             (examLower.includes('neet') && k.includes('neet')) ||
+             Object.keys(fileCache).length > 0;
+    });
+    if (hasBankFile && Object.keys(fileCache).length > 0) return true;
+    // Fall back to original logic
+    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+    return papers.some(p => !!fileCache[p.file]);
+  }
+  function _hasData_orig(examId) {
     const id = normalizeExamId(examId);
     const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
     return papers.some(p => !!fileCache[p.file]);
