@@ -2917,8 +2917,9 @@ function renderActiveExamUI() {
 
 function switchMockSection(sec) {
   const exam = compState.activeExam;
-  if (!exam) return;
-  const targetIdx = exam.questions.findIndex(q => q.section === sec);
+  if (!exam || !sec) return;
+  const secLower = String(sec).toLowerCase().trim();
+  const targetIdx = exam.questions.findIndex(q => (q.section || '').toLowerCase().trim() === secLower);
   if (targetIdx !== -1) {
     navigateExam(targetIdx);
   }

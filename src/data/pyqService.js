@@ -372,7 +372,7 @@
       const data = fileCache[paper.file];
       if (!data) return;
       const rawQs = data.questions || (Array.isArray(data) ? data : []);
-      rawQs.forEach((q, i) => pool.push(_normalizePaper([q], { ...paper })[0]));
+      pool.push(..._normalizePaper(rawQs, { ...paper }));
     });
 
     if (pool.length === 0) {
