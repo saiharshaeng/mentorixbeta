@@ -158,13 +158,14 @@
 
   async function init() {
     if (initialized) return;
-    // Load actual bank files
-    await loadBankFiles();
     initialized = true;
     if (isNode) {
       _preloadAllNode();
     } else {
+      // First preload the 11 intact shift paper files (~300KB total) so full mocks work instantly
       await _preloadAllBrowser();
+      // Load larger bank files in background without blocking
+      loadBankFiles().catch(e => console.warn('[pyqService] Background bank load notice:', e.message));
     }
   }
 
@@ -187,11 +188,12 @@
   }
 
   async function _preloadAllBrowser() {
+    const origin = (typeof window !== 'undefined' && window.location.origin) ? window.location.origin : '';
     const allPapers = [...JEE_MAIN_PAPERS, ...JEE_ADVANCED_PAPERS];
     await Promise.all(allPapers.map(async paper => {
       if (fileCache[paper.file]) return;
       try {
-        const url = 'data/' + paper.file;
+        const url = origin + '/data/' + paper.file;
         const r = await fetch(url, { cache: 'no-store' });
         if (r.ok) {
           fileCache[paper.file] = await r.json();
@@ -533,5 +535,7 @@
   if (typeof window !== 'undefined') {
     window.pyqService = pyqService;
     window.PYQService = pyqService;
+    // Auto-preload paper JSONs immediately upon script load in browser
+    pyqService.init().catch(e => console.warn('[pyqService] Auto-init error:', e));
   }
 })();
