@@ -235,8 +235,8 @@ function rDash(){
             ${sessToday>0?`<span style="font-size:var(--fs-sm);color:var(--mut)">${sessToday} session${sessToday>1?'s':''} today</span>`:''}
           </div>
           <div class="dash-hero-cta">
-            <button class="btn bpri" style="padding:13px 28px;font-size:15px;border-radius:14px" onclick="${hasCont?`go('learn','${escON(contTopic)}')`:`go('courses')`}">
-              ${hasCont?`Continue Learning →`:`Start Learning →`}
+            <button class="btn bpri" style="padding:13px 28px;font-size:15px;border-radius:14px" onclick="go('courses')">
+              ${hasCont?`Continue Course →`:`Start Course →`}
             </button>
             ${hasCont?`<span style="font-size:var(--fs-xs);color:var(--mut);margin-left:14px">${esc(contChapterTitle)}</span>`:''}
           </div>
@@ -279,10 +279,10 @@ function rDash(){
         <!-- ══ STUDY CONSOLE ══ -->
         <div class="dash-zone-label s2">Study console</div>
         <div class="dash-study-console s2">
-          <!-- Continue Learning -->
+          <!-- Continue Course -->
           <div class="sc-card main-card card-lift">
             <div>
-              <div class="sc-card-tag">CONTINUE LEARNING</div>
+              <div class="sc-card-tag">CONTINUE COURSE</div>
               <div class="sc-card-title">${esc(contChapterTitle)}</div>
               <div class="sc-card-sub">${esc(contCourseTitle)}</div>
             </div>
@@ -294,8 +294,8 @@ function rDash(){
                 </div>
                 <div class="pw" style="height:6px"><div class="pf pf-course" style="width:${contProgress}%"></div></div>
               </div>
-              <button class="btn bpri w100 mt12" onclick="${hasCont?`go('learn','${escON(contTopic)}')`:`go('courses')`}">
-                ${hasCont?'Continue →':'View Courses →'}
+              <button class="btn bpri w100 mt12" onclick="go('courses')">
+                ${hasCont?'Continue Course →':'View Courses →'}
               </button>
             </div>
           </div>

@@ -719,6 +719,7 @@ function removeCourse(courseId) {
 
 window.activeCourseId = activeCourseId;
 window.getContinueLearningChapter = getContinueLearningChapter;
+window.getContinueCourseChapter = getContinueLearningChapter;
 window.getAllCourseTopicsFlat = getAllCourseTopicsFlat;
 window.completeCourseTopic = completeCourseTopic;
 window.skipToTopic = skipToTopic;

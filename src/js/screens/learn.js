@@ -31,6 +31,11 @@ function saveCheckpoint() {
 function rLearn(){
   const t=D._param||'';
   D._param='';
+  if (!t && (!LS || !LS.topic) && (!D.memory || !D.memory.activeLesson)) {
+    // Phase 1.1 Architecture: Base learn requests route to the primary Courses system
+    go('courses');
+    return;
+  }
   if(!LS){
     if(D.memory && D.memory.activeLesson){
       LS=Object.assign({}, D.memory.activeLesson);

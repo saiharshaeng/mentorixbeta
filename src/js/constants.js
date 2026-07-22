@@ -27,14 +27,14 @@ const MAX_COURSES = 10;
 
 const BADGES = [
   {id:'First Step',      ic:'👣', d:'Completed onboarding'},
-  {id:'Quick Learner',   ic:'📖', d:'Completed first lesson'},
+  {id:'Quick Learner',   ic:'📖', d:'Completed first course topic'},
   {id:'Curious Mind',    ic:'🔍', d:'Explored 3 categories'},
   {id:'Quiz Hero',       ic:'🧠', d:'Perfect score on a quiz'},
   {id:'Champion',        ic:'🏆', d:'Scored 7+ on a test'},
   {id:'Perfect Score',   ic:'💯', d:'All 8 correct on a test'},
   {id:'Career Seeker',   ic:'🚀', d:'Generated career roadmap'},
   {id:'Roadmap Pro',     ic:'🗺️', d:'Generated 3+ career roadmaps'},
-  {id:'Knowledge Seeker',ic:'📚', d:'Learned 10+ topics'},
+  {id:'Knowledge Seeker',ic:'📚', d:'Completed 10+ course topics'},
   {id:'Streak 7',        ic:'🔥', d:'7-day learning streak'},
   {id:'Streak 30',       ic:'💎', d:'30-day learning streak'},
 ];
@@ -90,7 +90,7 @@ const SCREEN_TITLES = {
   progress: 'Analytics',
   mentor:   'Tio AI Mentor',
   settings: 'Settings',
-  learn:    'Lesson',
+  learn:    'Course Workspace',
   comp:     'Competitive Exams',
 };
 
