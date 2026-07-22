@@ -664,50 +664,19 @@ const GENERAL_TEMPLATES = [
   { q: "Which of the following Articles of the Constitution of India deals with the power of Parliament to amend the Constitution and procedure thereof?", opts: ["Article 356", "Article 360", "Article 368", "Article 370"], ans: [2], type: "mcq", chap: "Indian Polity & Governance" }
 ];
 
-// Procedural Paper Generation (constructs exact number of questions)
+// PYQ Paper Generation (constructs exact paper from real PYQ database)
 function generateProceduralMockQuestions(examDb, count) {
   if (window.pyqService) {
     const result = window.pyqService.getQuestions({
       examId: compState.examId,
-      count: count
+      count: count,
+      isFullMock: count >= 45
     });
     if (result && result.questions && result.questions.length > 0) {
       return result.questions;
     }
   }
-  const subjects = examDb.subjects || ['General Studies'];
-  const questions = [];
-  
-  for (let i = 0; i < count; i++) {
-    const section = subjects[i % subjects.length];
-    let qObj = null;
-
-    // Pick a template matching the subject
-    if (section === 'Mathematics') {
-      const temp = MATHEMATICS_TEMPLATES[i % MATHEMATICS_TEMPLATES.length];
-      qObj = instTemp(temp, { a: 2, b: 3, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
-    } else if (section === 'Physics') {
-      const temp = PHYSICS_TEMPLATES[i % PHYSICS_TEMPLATES.length];
-      qObj = instTemp(temp, { a: 2, b: 3, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
-    } else if (section === 'Chemistry') {
-      const temp = CHEMISTRY_TEMPLATES[i % CHEMISTRY_TEMPLATES.length];
-      qObj = instTemp(temp, { a: 2, b: 3, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
-    } else if (section === 'Biology') {
-      const temp = BIOLOGY_TEMPLATES[i % BIOLOGY_TEMPLATES.length];
-      qObj = instTemp(temp, { a: 2, b: 3, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
-    } else {
-      const temp = GENERAL_TEMPLATES[i % GENERAL_TEMPLATES.length];
-      qObj = instTemp(temp, { a: 2, b: 3, V: 100, F: 10, mu: 0.5, m: 2, k: 0.05, f_static: 5, t_half: 13.86 });
-    }
-
-    questions.push({
-      ...qObj,
-      id: i + 1,
-      section
-    });
-  }
-
-  return questions;
+  return [];
 }
 
 // Instantiate template values
@@ -2430,14 +2399,9 @@ async function startMockExamSetup(forcedMode) {
           }
         }
 
-        // Hard fallback if still empty
-        if (sectionQuestions.length < ns.count) {
-          const pool = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.jee_adv || OFFLINE_EXAM_QUESTIONS.default;
-          let typed = pool.filter(q => q.type === ns.type);
-          if (typed.length === 0) typed = pool;
-          while (sectionQuestions.length < ns.count) {
-            sectionQuestions.push({ ...typed[sectionQuestions.length % typed.length] });
-          }
+        // Hard fallback if still empty: pull from real PYQ bank
+        if (sectionQuestions.length < ns.count && window.pyqService && window.pyqService.getOfflineFallback) {
+          sectionQuestions = window.pyqService.getOfflineFallback(compState.examId, ns.subject, ns.count);
         }
 
         questions.push(...sectionQuestions.slice(0, ns.count).map(q => ({
