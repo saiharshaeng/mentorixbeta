@@ -1,0 +1,1452 @@
+
+--- Page 1 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 1/9 
+ 
+ 
+SECTION 1 (Maximum Marks: 12) 
+ 
+• This section contains FOUR (04) questions. 
+• Each question has FOUR options (A), (B), (C) and (D). ONLY ONE of these four options is the correct 
+answer. 
+• For each question, choose the option corresponding to the correct answer. 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks           :  +3 If ONLY the correct option is chosen; 
+      Zero Marks :    0 If none of the options is chosen (i.e. the question is unanswered); 
+      Negative Marks  :  −1   In all other cases. 
+ 
+   
+ 
+Q.1  L Let ℝ denote the set of all real numbers. Let 𝑎𝑖, 𝑏𝑖 ∈ ℝ for 𝑖 ∈ {1, 2, 3}.  
+Define the functions 𝑓: ℝ → ℝ, 𝑔: ℝ → ℝ, and  ℎ: ℝ → ℝ by 
+ 
+𝑓(𝑥) = 𝑎1 + 10𝑥 +  𝑎2𝑥2 + 𝑎3𝑥3 + 𝑥4, 
+𝑔(𝑥) = 𝑏1 + 3𝑥 + 𝑏2𝑥2 + 𝑏3𝑥3 + 𝑥4,    
+ℎ(𝑥) = 𝑓(𝑥 + 1) − 𝑔(𝑥 + 2).                   
+ 
+If 𝑓(𝑥) ≠ 𝑔(𝑥) for every 𝑥 ∈ ℝ, then the coefficient of 𝑥3 in ℎ(𝑥) is 
+(A) 8  
+(B) 2  
+(C) −4  
+(D) −6  
+ 
+ 
+   
+Q.2   Three students 𝑆1, 𝑆2, and 𝑆3 are given a problem to solve. Consider the following events: 
+    
+𝑈:   At least one of 𝑆1, 𝑆2, and 𝑆3 can solve the problem, 
+𝑉:   𝑆1 can solve the problem, given that neither 𝑆2 nor 𝑆3 can solve the problem, 
+𝑊:  𝑆2 can solve the problem and 𝑆3 cannot solve the problem, 
+𝑇:   𝑆3 can solve the problem.  
+ 
+For any event 𝐸, let 𝑃(𝐸) denote the probability of 𝐸. If 
+ 
+𝑃(𝑈) = 1
+2 , 𝑃(𝑉) = 1
+10  , and    𝑃(𝑊) = 1
+12 , 
+ 
+then 𝑃(𝑇) is equal to 
+(A) 13
+36 (B) 1
+3 (C) 19
+60 (D) 1
+4 
+ 
+ 
+ 
+
+--- Page 2 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 2/9 
+ 
+Q.3   Let ℝ denote the set of all real numbers. Define the function 𝑓: ℝ → ℝ by  
+ 
+𝑓(𝑥) = {2 − 2𝑥2 − 𝑥2 sin 1
+𝑥      if   𝑥 ≠ 0,
+              2                        if   𝑥 = 0 .
+ 
+ 
+ 
+Then which one of the following statements is TRUE? 
+(A) The function 𝑓 is NOT differentiable at 𝑥 = 0 
+(B) There is a positive real number 𝛿, such that 𝑓 is a decreasing function on the interval (0, 𝛿) 
+(C) For any positive real number 𝛿, the function 𝑓 is NOT an increasing function on the interval 
+(−𝛿, 0) 
+(D) 𝑥 = 0 is a point of local minima of 𝑓 
+ 
+ 
+ 
+Q.4  0 Consider the matrix 
+𝑃 = ( 
+2 0 0
+0 2 0
+0 0 3
+) .  
+ 
+Let the transpose of a matrix 𝑋 be denoted by 𝑋𝑇. Then the number of 3 × 3 invertible matrices 𝑄 
+with integer entries, such that 
+ 
+𝑄−1 = 𝑄𝑇   and   𝑃𝑄 = 𝑄𝑃 , 
+is  
+(A)  32 (B) 8 (C) 16 (D) 24 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 3 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 3/9 
+ SECTION 2 (Maximum Marks: 12) 
+ 
+ 
+• This section contains THREE (03) questions.  
+• Each question has FOUR options (A), (B), (C) and (D). ONE OR MORE THAN ONE of these four 
+option(s) is(are) correct answer(s). 
+• For each question, choose the option(s) corresponding to (all) the correct answer(s). 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 ONLY if (all) the correct option(s) is(are) chosen; 
+Partial Marks     :   +3  If all the four options are correct but ONLY three options are chosen; 
+Partial Marks     :   +2  If three or more options are correct but ONLY two options are chosen, both of 
+which are correct; 
+Partial Marks     :    +1  If two or more options are correct but ONLY one option is chosen and it is a 
+correct option; 
+Zero Marks :      0 If none of the options is chosen (i.e. the question is unanswered); 
+Negative Marks :   −2 In all other cases. 
+• For example, in a question, if (A), (B) and (D) are the ONLY three options corresponding to correct 
+answers, then  
+choosing ONLY (A), (B) and (D) will get +4 marks;  
+choosing ONLY (A) and (B) will get +2 marks;  
+choosing ONLY (A) and (D) will get +2 marks; 
+choosing ONLY (B) and (D) will get +2 marks; 
+choosing ONLY (A) will get +1 mark; 
+choosing ONLY (B) will get +1 mark; 
+choosing ONLY (D) will get +1 mark;  
+choosing no option (i.e. the question is unanswered) will get 0 marks; and  
+       choosing any other combination of options will get −2 marks. 
+ 
+ 
+Q.5   Let 𝐿1 be the line of intersection of the planes given by the equations 
+ 
+2𝑥 + 3𝑦 + 𝑧 = 4   and  𝑥 + 2𝑦 + 𝑧 = 5 . 
+ 
+Let 𝐿2 be the line passing through the point 𝑃(2, −1, 3) and parallel to 𝐿1. Let 𝑀 denote the plane 
+given by the equation 
+ 
+2𝑥 + 𝑦 − 2𝑧 = 6 . 
+ 
+Suppose that the line 𝐿2 meets the plane 𝑀 at the point 𝑄.  Let 𝑅 be the foot of the perpendicular 
+drawn from 𝑃 to the plane 𝑀 . 
+  
+Then which of the following statements is (are) TRUE? 
+(A) The length of the line segment 𝑃𝑄 is 9√3 
+(B) The length of the line segment 𝑄𝑅 is 15 
+(C) The area of  Δ𝑃𝑄𝑅 is  
+3
+2 √234 
+(D) The acute angle between the line segments 𝑃𝑄 and 𝑃𝑅 is  cos−1 ( 
+1
+2√3 ) 
+ 
+ 
+ 
+
+--- Page 4 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 4/9 
+ 
+Q.6   Let ℕ denote the set of all natural numbers, and ℤ denote the set of all integers. Consider the 
+functions 𝑓: ℕ → ℤ  and  𝑔: ℤ → ℕ  defined by 
+ 
+𝑓(𝑛) = {
+(𝑛 + 1)/2      if 𝑛 is odd ,
+(4 − 𝑛)/2      if 𝑛 is even ,
+ 
+and 
+ 
+𝑔(𝑛) = {
+3 + 2𝑛    if   𝑛 ≥ 0 ,
+−2𝑛         if  𝑛 < 0 .
+  
+ 
+Define (𝑔 ∘ 𝑓)(𝑛) = 𝑔(𝑓(𝑛)) for all 𝑛 ∈ ℕ, and (𝑓 ∘ 𝑔)(𝑛) = 𝑓(𝑔(𝑛)) for all 𝑛 ∈ ℤ. 
+ 
+Then which of the following statements is (are) TRUE? 
+(A) 𝑔 ∘ 𝑓 is NOT one-one and 𝑔 ∘ 𝑓 is NOT onto 
+(B) 𝑓 ∘ 𝑔 is NOT one-one but 𝑓 ∘ 𝑔 is onto 
+(C) 𝑔 is one-one and 𝑔 is onto 
+(D) 𝑓 is NOT one-one but 𝑓 is onto  
+ 
+ 
+ 
+Q.7   Let ℝ denote the set of all real numbers. Let 𝑧1 = 1 + 2𝑖 and 𝑧2 = 3𝑖 be two complex numbers, 
+where 𝑖 = √−1 . Let 
+ 
+𝑆 = {(𝑥, 𝑦) ∈ ℝ × ℝ ∶  |𝑥 + 𝑖𝑦 − 𝑧1| = 2|𝑥 + 𝑖𝑦 − 𝑧2| }. 
+ 
+Then which of the following statements is (are) TRUE? 
+ 
+(A) 𝑆 is a circle with centre  (−
+1
+3 ,
+10
+3 ) 
+(B) 𝑆 is a circle with centre  (
+1
+3 ,
+8
+3) 
+(C) 𝑆 is a circle with radius  √2
+3  
+(D) 𝑆 is a circle with radius  
+2√2
+3  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+--- Page 5 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 5/9 
+ 
+ 
+ 
+Q.8   Let the set of all relations 𝑅 on the set {𝑎, 𝑏, 𝑐, 𝑑, 𝑒, 𝑓}, such that 𝑅 is reflexive and symmetric, and 
+𝑅 contains exactly 10 elements, be denoted by 𝒮.  
+ 
+Then the number of elements in 𝒮 is _________________. 
+ 
+ 
+Q.9   For any two points 𝑀 and 𝑁 in the 𝑋𝑌-plane, let 𝑀𝑁⃗⃗⃗⃗⃗⃗⃗  denote the vector from 𝑀 to 𝑁, and 0⃗  denote 
+the zero vector. Let 𝑃, 𝑄 and 𝑅 be three distinct points in the 𝑋𝑌-plane. Let 𝑆 be a point inside the 
+triangle Δ𝑃𝑄𝑅 such that  
+ 
+𝑆𝑃⃗⃗⃗⃗  + 5 𝑆𝑄⃗⃗⃗⃗⃗ + 6 𝑆𝑅⃗⃗⃗⃗⃗ = 0⃗ . 
+ 
+Let 𝐸 and 𝐹 be the mid-points of the sides 𝑃𝑅 and 𝑄𝑅, respectively. Then the value of  
+ 
+length of the line segment  𝐸𝐹
+length of the line segment  𝐸𝑆 
+ 
+is _______________. 
+ 
+ 
+ 
+ 
+Q.10   Let 𝑆 be the set of all seven-digit numbers that can be formed using the digits 0, 1 and 2. For 
+example, 2210222 is in 𝑆, but 0210222 is NOT in 𝑆.  
+Then the number of elements 𝑥 in 𝑆 such that at least one of the digits 0 and 1 appears exactly 
+twice in 𝑥, is equal to ____________. 
+ 
+ 
+ 
+SECTION 3 (Maximum Marks: 24) 
+ 
+ 
+• This section contains SIX (06) questions. 
+• The answer to each question is a NUMERICAL VALUE. 
+• For each question, enter the correct numerical value of the answer using the mouse and the on-
+screen virtual numeric keypad in the place designated to enter the answer.  
+• If the numerical value has more than two decimal places, truncate/round-off the value to TWO 
+decimal places.  
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 If ONLY the correct numerical value is entered in the designated place; 
+       Zero Marks        :   0      In all other cases. 
+ 
+
+--- Page 6 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 6/9 
+Q.11   Let 𝛼 and  𝛽 be the real numbers such that 
+ 
+lim
+𝑥→0
+ 1
+𝑥3 (𝛼
+2 ∫ 1
+1 − 𝑡2 𝑑𝑡 + 𝛽𝑥 cos 𝑥 
+𝑥
+0
+) = 2 . 
+ 
+ 
+Then the value of 𝛼 + 𝛽 is __________. 
+ 
+ 
+Q.12   Let ℝ denote the set of all real numbers. Let 𝑓: ℝ → ℝ  be a function such that 𝑓(𝑥) > 0 for all  
+𝑥 ∈ ℝ , and 𝑓(𝑥 + 𝑦) = 𝑓(𝑥)𝑓(𝑦) for all 𝑥, 𝑦 ∈ ℝ.  
+ 
+Let the real numbers 𝑎1, 𝑎2, … , 𝑎50 be in an arithmetic progression. If 𝑓(𝑎31) = 64𝑓(𝑎25), and  
+ 
+∑ 𝑓(𝑎𝑖) = 3(225 + 1)
+50
+𝑖=1
+ , 
+then the value of 
+∑ 𝑓(𝑎𝑖)
+30
+𝑖=6
+ 
+is _________________. 
+ 
+ 
+Q.13   For all 𝑥 > 0, let  𝑦1(𝑥), 𝑦2(𝑥), and 𝑦3(𝑥) be the functions satisfying  
+ 
+𝑑𝑦1
+𝑑𝑥 − (sin 𝑥)2 𝑦1 = 0,    𝑦1(1) = 5 ,
+𝑑𝑦2
+𝑑𝑥 − (cos 𝑥)2 𝑦2 = 0, 𝑦2(1) =
+1
+3 ,
+𝑑𝑦3
+𝑑𝑥 − (
+2−𝑥3
+𝑥3 ) 𝑦3 = 0,     𝑦3(1) =
+3
+5𝑒 ,
+ 
+ 
+respectively. Then 
+lim
+𝑥→0+
+𝑦1(𝑥)𝑦2(𝑥)𝑦3(𝑥) + 2𝑥
+𝑒3𝑥 sin 𝑥   
+ 
+is equal to ______________. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 7 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 7/9 
+ 
+ 
+ 
+ 
+ 
+ 
+Q.14   Consider the following frequency distribution:  
+ 
+    Value 4 5 8 9 6 12 11 
+ Frequency 5 𝑓1 𝑓2 2 1 1 3 
+   
+Suppose that the sum of the frequencies is 19 and the median of this frequency distribution is 6. 
+ 
+For the given frequency distribution, let 𝛼 denote the mean deviation about the mean, 𝛽 denote 
+the mean deviation about the median, and 𝜎2 denote the variance. 
+ 
+Match each entry in List-I to the correct entry in List-II and choose the correct option. 
+ 
+ 
+         List-I    List-II 
+ 
+(P) 7𝑓1 + 9𝑓2 is equal to  
+ 
+(1) 146 
+(Q) 19𝛼  is equal to (2) 47 
+ 
+ 
+(R) 19𝛽  is equal to 
+(3) 48 
+ 
+(S) 19𝜎2 is equal to  
+(4) 145 
+ (5) 55 
+  
+ 
+ 
+(A) (P) ⟶ (5)     (Q) ⟶ (3)     (R) ⟶ (2)     (S) ⟶ (4)       
+(B) (P) ⟶ (5)     (Q) ⟶ (2)     (R) ⟶ (3)     (S) ⟶ (1)       
+(C) (P) ⟶ (5)     (Q) ⟶ (3)     (R) ⟶ (2)     (S) ⟶ (1)       
+(D) (P) ⟶ (3)     (Q) ⟶ (2)     (R) ⟶ (5)     (S) ⟶ (4)       
+ 
+ 
+SECTION 4 (Maximum Marks: 12) 
+ 
+• This section contains THREE (03) Matching List Sets. 
+• Each set has ONE Multiple Choice Question. 
+• Each set has TWO lists: List-I and List-II. 
+• List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). 
+• FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of 
+these four options satisfies the condition asked in the Multiple Choice Question. 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 ONLY if the option corresponding to the correct combination is chosen; 
+Zero Marks :     0   If none of the options is chosen (i.e. the question is unanswered);  
+Negative Marks :   −1  In all other cases. 
+ 
+
+--- Page 8 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 8/9 
+ 
+Q.15   Let ℝ denote the set of all real numbers. For a real number 𝑥, let [𝑥] denote the greatest integer 
+less than or equal to 𝑥. Let  𝑛 denote a natural number. 
+ 
+Match each entry in List-I to the correct entry in List-II and choose the correct option. 
+ 
+                   List-I                    List-II  
+ 
+(P) The minimum value of 𝑛 for which the        
+      function 
+𝑓(𝑥) = [10𝑥3 − 45𝑥2 + 60𝑥 + 35
+𝑛 ] 
+      is continuous on the interval [1, 2], is 
+(1)    8 
+ 
+(Q) The minimum value of 𝑛 for which 
+𝑔(𝑥) = (2𝑛2 − 13𝑛 − 15)(𝑥3 + 3𝑥),  
+       𝑥 ∈ ℝ, is an increasing function on ℝ, is 
+   
+(2)    9  
+(R) The smallest natural number 𝑛 which is    
+      greater than 5, such that 𝑥 = 3 is a point of    
+      local minima of 
+ℎ(𝑥) = (𝑥2 − 9)𝑛(𝑥2 + 2𝑥 + 3), 
+      is 
+ 
+(3)    5 
+(S) Number of 𝑥0 ∈ ℝ such that  
+𝑙(𝑥) = ∑ (sin|𝑥 − 𝑘| + cos |𝑥 − 𝑘 + 1
+2|)
+4
+𝑘=0
+, 
+(4)    6 
+    𝑥 ∈ ℝ ,  is NOT differentiable at 𝑥0,  is  (5)  10 
+   
+(A) (P) ⟶ (1)     (Q) ⟶ (3)     (R) ⟶ (2)     (S) ⟶ (5)       
+(B) (P) ⟶ (2)     (Q) ⟶ (1)     (R) ⟶ (4)     (S) ⟶ (3)       
+(C) (P) ⟶ (5)     (Q) ⟶ (1)     (R) ⟶ (4)     (S) ⟶ (3)       
+(D) (P) ⟶ (2)     (Q) ⟶ (3)     (R) ⟶ (1)     (S) ⟶ (5)       
+ 
+ 
+
+--- Page 9 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 9/9 
+Q.16   Let 𝑤⃗⃗ = 𝑖̂ + 𝑗̂ − 2𝑘̂, and 𝑢⃗  and 𝑣  be two vectors, such that 𝑢⃗ × 𝑣 =  𝑤⃗⃗  and 𝑣 × 𝑤⃗⃗ = 𝑢⃗ .  Let 
+𝛼, 𝛽, 𝛾, and 𝑡 be real numbers such that  
+ 
+𝑢⃗ = 𝛼𝑖̂ + 𝛽𝑗̂ + 𝛾𝑘̂ ,   − 𝑡 𝛼 + 𝛽 + 𝛾 = 0,    𝛼 − 𝑡 𝛽 + 𝛾 = 0,    and 𝛼 + 𝛽 − 𝑡 𝛾 = 0.   
+ 
+Match each entry in List-I to the correct entry in List-II and choose the correct option. 
+ 
+       List-I    List-II 
+ 
+(P) |𝑣 |2 is equal to  
+ 
+(1) 0 
+(Q) If 𝛼 = √3 , then 𝛾2 is equal to (2) 1 
+ 
+ 
+(R) If 𝛼 = √3 , then (𝛽 + 𝛾)2 is equal to 
+(3) 2 
+ 
+(S) If 𝛼 = √2 , then 𝑡 + 3 is equal to 
+(4) 3 
+ 
+ (5) 5 
+  
+ 
+ 
+(A) (P) ⟶ (2)     (Q) ⟶ (1)     (R) ⟶ (4)     (S) ⟶ (5)       
+(B) (P) ⟶ (2)     (Q) ⟶ (4)     (R) ⟶ (3)     (S) ⟶ (5)       
+(C) (P) ⟶ (2)     (Q) ⟶ (1)     (R) ⟶ (4)     (S) ⟶ (3)       
+(D) (P) ⟶ (5)     (Q) ⟶ (4)     (R) ⟶ (1)     (S) ⟶ (3)       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+END OF THE QUESTION PAPER 
+
+--- Page 10 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 1/13 
+ 
+ 
+ 
+SECTION 1 (Maximum Marks: 12) 
+ 
+• This section contains FOUR (04) questions. 
+• Each question has FOUR options (A), (B), (C) and (D). ONLY ONE of these four options is the correct 
+answer. 
+• For each question, choose the option corresponding to the correct answer. 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks           :  +3 If ONLY the correct option is chosen; 
+      Zero Marks :    0 If none of the options is chosen (i.e. the question is unanswered); 
+      Negative Marks  :  −1   In all other cases. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 11 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 2/13 
+Q.1   The center of a disk of radius 𝑟  and mass 𝑚 is attached to a spring of spring constant 𝑘, inside a ring 
+of radius 𝑅 > 𝑟 as shown in the figure. The other end of the spring is attached on the periphery of the 
+ring. Both the ring and the disk are in the same vertical plane. The disk can only roll along the inside 
+periphery of the ring, without slipping. The spring can only b e stretched or compressed  along the 
+periphery of the ring, following the Hooke’s law. In equilibrium, the disk is at the bottom of the ring. 
+Assuming small displacement of the disc, the time period of oscillation of center of mass of the disk 
+is written as 𝑇 =
+2𝜋
+𝜔 . The correct expression for 𝜔 is (𝑔 is the acceleration due to gravity): 
+ 
+ 
+(A) 
+√2
+3 ( 𝑔
+𝑅 − 𝑟 + 𝑘
+𝑚)  
+(B) 
+√ 2𝑔
+3(𝑅 − 𝑟) + 𝑘
+𝑚 
+(C) 
+√1
+6 ( 𝑔
+𝑅 − 𝑟 + 𝑘
+𝑚)  
+(D) 
+√1
+4 ( 𝑔
+𝑅 − 𝑟 + 𝑘
+𝑚) 
+ 
+ 
+ 
+Q.2   In a scattering experiment, a particle of mass 2𝑚 collides with another particle of mass 𝑚, which is 
+initially at rest. Assuming the collision to be perfectly elastic, the maximum angular deviation 𝜃 of 
+the heavier particle, as shown in the figure, in radians is: 
+ 
+(A) 𝜋 (B) tan−1 (1
+2) (C) 𝜋
+3 (D) 𝜋
+6 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- Page 12 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 3/13 
+Q.3   A conducting square loop initially lies in the 𝑋𝑍 plane with its lower edge hinged along the 𝑋-axis. 
+Only in the region 𝑦 ≥ 0, there is a time dependent magnetic field pointing along the 𝑍-direction, 
+𝐵⃗ (𝑡) = 𝐵0(cos 𝜔𝑡)𝑘̂, where 𝐵0 is a constant . The magnetic field is zero everywhere else. At time         
+𝑡 = 0, t he loop starts rotating with constant angular speed 𝜔 about the 𝑋 axis in the clockwise 
+direction as viewed from the +𝑋 axis (as shown in the figure). Ignoring self-inductance of the loop 
+and gravity, which of the following plots correctly represents the induced e.m.f. (𝑉) in the loop as a 
+function of time: 
+ 
+(A) 
+ 
+(B) 
+ 
+(C) 
+ 
+(D) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Q.4   Figure 1 shows the configuration of main scale and Vernier scale before measurement. Fig. 2 shows 
+the configuration corresponding to the measurement of diameter 𝐷 of a tube. The measured value of 
+𝐷 is: 
+ 
+(A) 0.12 cm 
+(B) 0.11 cm 
+(C) 0.13 cm 
+(D) 0.14 cm 
+ 
+ 
+
+
+--- Page 13 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 4/13 
+ 
+ 
+ 
+SECTION 2 (Maximum Marks: 12) 
+ 
+• This section contains THREE (03) questions.  
+• Each question has FOUR options (A), (B), (C) and (D). ONE OR MORE THAN ONE of these four 
+option(s) is(are) correct answer(s). 
+• For each question, choose the option(s) corresponding to (all) the correct answer(s). 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 ONLY if (all) the correct option(s) is(are) chosen; 
+Partial Marks     :   +3  If all the four options are correct but ONLY three options are chosen; 
+Partial Marks     :   +2  If three or more options are correct but ONLY two options are chosen, both of 
+which are correct; 
+Partial Marks     :    +1  If two or more options are correct but ONLY one option is chosen and it is a 
+correct option; 
+Zero Marks :      0 If none of the options is chosen (i.e. the question is unanswered); 
+Negative Marks :   −2 In all other cases. 
+• For example, in a question, if (A), (B) and (D) are the ONLY three options corresponding to correct 
+answers, then  
+choosing ONLY (A), (B) and (D) will get +4 marks;  
+choosing ONLY (A) and (B) will get +2 marks;  
+choosing ONLY (A) and (D) will get +2 marks; 
+choosing ONLY (B) and (D) will get +2 marks; 
+choosing ONLY (A) will get +1 mark; 
+choosing ONLY (B) will get +1 mark; 
+choosing ONLY (D) will get +1 mark;  
+choosing no option (i.e. the question is unanswered) will get 0 marks; and  
+       choosing any other combination of options will get −2 marks. 
+ 
+ 
+
+--- Page 14 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 5/13 
+Q.5  . A conducting square loop of side 𝐿, mass 𝑀 and resistance 𝑅 is moving in the 𝑋𝑌 plane with its edges 
+parallel to the 𝑋 and 𝑌 axes. The region 𝑦 ≥ 0 has a uniform magnetic field, 𝐵⃗ = 𝐵0𝑘̂. The magnetic 
+field is zero everywhere else. At time  𝑡 = 0, the loop starts to enter the magnetic field with an initial 
+velocity 𝑣0𝑗̂ m/s, as shown in the figure . Considering the quantity 𝐾 =
+𝐵02𝐿2
+𝑅𝑀  in appropriate unit s, 
+ignoring self-inductance of the loop and gravity, which of the following statements is/are correct: 
+ 
+(A) If 𝑣0 = 1.5𝐾𝐿, the loop will stop before it enters completely inside the region of magnetic 
+field. 
+(B) When the complete loop is inside the region of magnetic field, the net force acting on the loop 
+is zero. 
+(C) If 𝑣0 =
+𝐾𝐿
+10, the loop comes to rest at 𝑡 = (
+1
+𝐾) ln (
+5
+2). 
+(D) If 𝑣0 = 3𝐾𝐿, the  complete loop enters inside the region  of magnetic field  at time                          
+𝑡 = (
+1
+𝐾) ln (
+3
+2). 
+ 
+ 
+ 
+ 
+Q.6   Length, breadth and thickness of a strip having a uniform cross section are measured to be 10.5 cm, 
+0.05 mm, and 6.0 𝜇m, respectively. Which of the following option(s) give(s) the volume of the strip 
+in cm3 with correct significant figures: 
+(A) 3.2 × 10−5 (B) 32.0 × 10−6 (C) 3.0 × 10−5 (D) 3 × 10−5 
+ 
+
+
+--- Page 15 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 6/13 
+Q.7   Consider a system of three connected strings, 𝑆1, 𝑆2  and 𝑆3 with uniform linear mass densities 𝜇 
+kg/m, 4𝜇 kg/m and 16𝜇 kg/m, respectively, as shown in the figure. 𝑆1 and 𝑆2 are connected at the 
+point 𝑃, whereas 𝑆2 and 𝑆3 are connected at the point 𝑄, and the other end of 𝑆3 is connected to a 
+wall. A wave generator  O is connected to the free end of 𝑆1. The wave from th e generator is 
+represented by 𝑦 = 𝑦0 cos(𝜔𝑡 − 𝑘𝑥) cm, where 𝑦0, 𝜔 and 𝑘 are constants of appropriate dimensions. 
+Which of the following statements is/are correct: 
+ 
+ 
+(A) When the wave r eflects from  𝑃 for the first time , the reflected wave  is represented by   
+𝑦 = 𝛼1y0 cos(𝜔𝑡 + 𝑘𝑥 + 𝜋) cm, where 𝛼1 is a positive constant. 
+(B) When the wave transmits through 𝑃 for the first time, the transmitted wave is represented by                      
+𝑦 = 𝛼2y0 cos(𝜔𝑡 − 𝑘𝑥) cm, where 𝛼2 is a positive constant. 
+(C) When the wave reflects from  𝑄 for the first time , the reflected wave is represented by                           
+𝑦 = 𝛼3y0 cos(𝜔𝑡 − 𝑘𝑥 + 𝜋) cm, where 𝛼3 is a positive constant. 
+(D) When the wave transmits through 𝑄 for the first time, the transmitted wave is represented by                     
+𝑦 = 𝛼4y0 cos(𝜔𝑡 − 4𝑘𝑥) cm, where 𝛼4 is a positive constant. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- Page 16 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 7/13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Q.8   A person sitting inside a n elevator performs a weighing experiment with an object of mass 50 kg. 
+Suppose that the variation of the height 𝑦 (in m) of the elevator, from the ground, with time 𝑡 (in s) 
+is given by  𝑦 = 8 [1 + sin (
+2𝜋𝑡
+𝑇 )], where 𝑇 = 40𝜋 s. Taking acceleration due to gravity,  𝑔 =  10 
+m/s2, the maximum variation of the object’s weight (in N) as observed in the experiment is ____ 
+ 
+ 
+ 
+ 
+ 
+Q.9   A cube of unit volume contains 35 × 107 photons of frequency 1015 Hz. If the energy of all the 
+photons is viewed as the average energy being contained in the electromagnetic waves within the 
+same volume, then the amplitude of the magnetic  field is 𝛼 × 10−9 T. Taking permeability of free 
+space 𝜇0 = 4𝜋 × 10−7 Tm/A, Planck’s constant ℎ = 6 × 10−34Js and 𝜋 =
+22
+7 , the value of 𝛼 is____ 
+   
+ 
+ 
+ 
+ 
+ SECTION 3 (Maximum Marks: 24) 
+ 
+• This section contains SIX (06) questions. 
+• The answer to each question is a NUMERICAL VALUE. 
+• For each question, enter the correct numerical value of the answer using the mouse and the on-
+screen virtual numeric keypad in the place designated to enter the answer.  
+• If the numerical value has more than two decimal places, truncate/round-off the value to TWO 
+decimal places.  
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 If ONLY the correct numerical value is entered in the designated place; 
+       Zero Marks        :   0      In all other cases. 
+ 
+
+--- Page 17 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 8/13 
+Q.10   Two identical plates P and Q, radiating as perfect black bodies, are kept  in vacuum  at constant  
+absolute temperatures TP and TQ, respectively, with TQ < TP, as shown in Fig. 1. The radiated power 
+transferred per unit area from P to Q is 𝑊0. Subsequently, two more plates, identical to P and Q, are 
+introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between 
+adjacent plates. If the power transferred per unit area  in the direction from  P to Q (Fig. 2) in the 
+steady state is 𝑊𝑆, then the ratio 
+𝑊0
+𝑊𝑆
+ is ___ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Q.11   A solid glass sphere of refractive index 𝑛 = √3 and radius 𝑅 contains a spherical air cavity of radius 
+𝑅
+2, as shown in the figure. A  very thin glass layer is present at the point O so that the air cavity 
+(refractive index 𝑛 = 1) remains inside the glass sphere.  An unpolarized , unidirectional and 
+monochromatic light source 𝑆 emits a light ray from a point inside the glass sphere  towards the 
+periphery of the glass sphere. If the light is reflected from the point O and is fully polarized, then the 
+angle of incidence at the inner surface of the glass sphere is 𝜃. The value of sin 𝜃 is ____  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- Page 18 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 9/13 
+Q.12   A single slit diffraction experiment is performed to determine the slit width using the equation, 
+𝑏𝑑
+𝐷 =
+𝑚λ, where 𝑏 is the slit width, 𝐷 the shortest distance between the slit and the screen, 𝑑 the distance 
+between the 𝑚th diffraction maximum and the central maximum, and λ is the wavelength. 𝐷 and 𝑑 
+are measured with scales of least count of 1 cm and 1 mm, respectively. The values of λ and 𝑚 are 
+known precisely to be 600 nm and 3, respectively. The absolute error  (in 𝜇m) in the value of 𝑏 
+estimated using the diffraction maximum that occurs for 𝑚 = 3 with 𝑑 =  5 mm and 𝐷 = 1 m is ___ 
+ 
+ 
+ 
+ 
+ 
+Q.13   Consider an electron in the 𝑛 = 3 orbit of a hydrogen-like atom with atomic number 𝑍. At absolute 
+temperature 𝑇, a neutron having thermal energy 𝑘B𝑇 has the same de Broglie wavelength as that of 
+this electron. If this temperature is given by 𝑇 =
+𝑍2ℎ2
+𝛼𝜋2𝑎02𝑚N𝑘B
+ , (where ℎ is the Planck’s constant, 𝑘𝐵 
+is the Boltzmann constant, 𝑚N is the mass of the neutron and 𝑎0 is the first Bohr radius of hydrogen 
+atom) then the value of 𝛼 is ___ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+--- Page 19 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 10/13 
+ 
+ 
+ 
+ 
+  
+ 
+SECTION 4 (Maximum Marks: 12) 
+ 
+• This section contains THREE (03) Matching List Sets. 
+• Each set has ONE Multiple Choice Question. 
+• Each set has TWO lists: List-I and List-II. 
+• List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). 
+• FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of 
+these four options satisfies the condition asked in the Multiple Choice Question. 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 ONLY if the option corresponding to the correct combination is chosen; 
+Zero Marks :     0   If none of the options is chosen (i.e. the question is unanswered);  
+Negative Marks :   −1  In all other cases. 
+ 
+
+--- Page 20 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 11/13 
+ 
+ 
+Q.14   List-I shows four configurations, each consisting of a pair of ideal electric dipoles. Each dipole has 
+a dipole moment  of magnitude  𝑝, oriented as marked by arrows in the figures . In all the 
+configurations the dipoles are fixed such that they are at a distance 2𝑟 apart along the 𝑥 direction. 
+The midpoint of the line joining the two dipoles  is 𝑋. The possible resultant electric fields 𝐸⃗  at 𝑋 
+are given in List-II. 
+ 
+Choose the option that describes the correct match between the entries in List-I to those in List-II. 
+ 
+List-I List-II 
+ 
+(P)  
+  
+(1)  𝐸⃗ =  0 
+(Q)  (2)  𝐸⃗ = −
+𝑝
+2𝜋𝜖0𝑟3 𝑗̂  
+(R)  (3) 𝐸⃗ = −
+𝑝
+4𝜋𝜖0𝑟3 (𝑖̂ − 𝑗̂) 
+(S)  (4) 𝐸⃗ =
+𝑝
+4𝜋𝜖0𝑟3 (2𝑖̂ − 𝑗̂) 
+ (5) 𝐸⃗ =
+𝑝
+𝜋𝜖0𝑟3 𝑖̂ 
+  
+ 
+ 
+(A) P→3, Q→1, R→2, S→4 
+(B) P→4, Q→5, R→3, S→1 
+(C) P→2, Q→1, R→4, S→5  
+(D) P→2, Q→1, R→3, S→5 
+ 
+ 
+ 
+ 
+
+
+--- Page 21 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 12/13 
+Q.15   A circuit with an electrical load having impedance 𝑍 is connected with an AC source as shown in 
+the diagram. The source voltage varies in time as 𝑉(𝑡) = 300 sin(400𝑡) V, where 𝑡 is time in s.  
+List-I shows various options for the load.  The possible currents 𝑖(𝑡) in the circuit as a function of 
+time are given in List-II. 
+ 
+ 
+Choose the option that describes the correct match between the entries in List-I to those in List-
+II. 
+ 
+ 
+List-I List-II 
+ 
+(P)       
+ 
+(1)  
+(Q)     
+ 
+(2)  
+(R)  
+ 
+ 
+(3)  
+(S)  (4)  
+ (5)  
+  
+ 
+ 
+(A) P→3, Q→5, R→2, S→1 
+(B) P→1, Q→5, R→2, S→3 
+(C) P→3, Q→4, R→2, S→1 
+(D) P→1, Q→4, R→2, S→5 
+
+
+--- Page 22 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 13/13 
+ 
+ 
+ 
+Q.16   List-I shows various functional dependencies of energy (𝐸) on the atomic number (𝑍). Energies 
+associated with certain phenomena are given in List-II. 
+ 
+Choose the option that describes the correct match between the entries in List-I to those in List-
+II. 
+ 
+ 
+List-I List-II 
+ 
+(P) 𝐸 ∝ 𝑍2 (1) energy of characteristic x-rays 
+ 
+ 
+(Q) 𝐸 ∝ (𝑍 − 1)2 
+(2) electrostatic part of the nuclear binding 
+energy for stable nuclei with mass numbers in 
+the range 30 to 170 
+ 
+ 
+(R) 𝐸 ∝ 𝑍(𝑍 − 1) 
+(3) energy of continuous x-rays 
+ 
+(S) 𝐸 is practically independent of 𝑍 
+(4) average nuclear binding energy per nucleon 
+for stable nuclei with mass number in the range 
+30 to 170 
+ 
+ (5) energy of radiation due to electronic 
+transitions from hydrogen-like atoms 
+  
+ 
+ 
+(A) P→4, Q→3, R→1, S→2 
+(B) P→5, Q→2, R→1, S→4 
+(C) P→5, Q→1, R→2, S→4 
+(D) P→3, Q→2, R→1, S→5 
+ 
+ 
+ 
+ 
+END OF THE QUESTION PAPER 
+
+--- Page 23 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 1/9 
+ 
+SECTION 1 (Maximum Marks: 12) 
+ 
+• This section contains FOUR (04) questions. 
+• Each question has FOUR options (A), (B), (C) and (D). ONLY ONE of these four options is the correct 
+answer. 
+• For each question, choose the option corresponding to the correct answer. 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks           :  +3 If ONLY the correct option is chosen; 
+      Zero Marks :    0 If none of the options is chosen (i.e. the question is unanswered); 
+      Negative Marks  :  −1   In all other cases. 
+ 
+ 
+ 
+Q.1   The heating of NH4NO2 at 60−70 C and NH4NO3 at 200−250 C is associated with the formation 
+of nitrogen containing compounds X and Y, respectively. X and Y, respectively, are 
+(A) N2 and N2O  
+(B) NH3 and NO2 
+(C) NO and N2O 
+(D) N2 and NH3 
+ 
+ 
+ 
+Q.2   The correct order of the wavelength maxima of the absorption band in the ultraviolet-visible region 
+for the given complexes is 
+(A) [Co(CN)6]3− < [Co(NH3)6]3+ < [Co(NH3)5(H2O)]3+ < [Co(NH3)5(Cl)]2+ 
+(B) [Co(NH3)5(Cl)]2+ < [Co(NH3)5(H2O)]3+ < [Co(NH3)6]3+ < [Co(CN)6]3− 
+(C) [Co(CN)6]3− < [Co(NH3)5(Cl)]2+ < [Co(NH3)5(H2O)]3+ < [Co(NH3)6]3+ 
+(D) [Co(NH3)6]3+ < [Co(CN)6]3− < [Co(NH3)5(Cl)]2+ < [Co(NH3)5(H2O)]3+ 
+ 
+ 
+ 
+Q.3   One of the products formed from the reaction of permanganate ion with iodide ion in neutral 
+aqueous medium is 
+(A) I2 (B) IO3− (C) IO4− (D) IO2− 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 24 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 2/9 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Q.4   Consider the depicted hydrogen (H) in the hydrocarbons given below. The most acidic hydrogen 
+(H) is 
+(A) 
+H
+ 
+(B) 
+H
+ 
+(C) 
+H
+ 
+(D) 
+H
+ 
+
+--- Page 25 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 3/9 
+ SECTION 2 (Maximum Marks: 12) 
+ 
+• This section contains THREE (03) questions.  
+• Each question has FOUR options (A), (B), (C) and (D). ONE OR MORE THAN ONE of these four 
+option(s) is(are) correct answer(s). 
+• For each question, choose the option(s) corresponding to (all) the correct answer(s). 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 ONLY if (all) the correct option(s) is(are) chosen; 
+Partial Marks     :   +3  If all the four options are correct but ONLY three options are chosen; 
+Partial Marks     :   +2  If three or more options are correct but ONLY two options are chosen, both of 
+which are correct; 
+Partial Marks     :    +1  If two or more options are correct but ONLY one option is chosen and it is a 
+correct option; 
+Zero Marks :      0 If none of the options is chosen (i.e. the question is unanswered); 
+Negative Marks :   −2 In all other cases. 
+• For example, in a question, if (A), (B) and (D) are the ONLY three options corresponding to correct 
+answers, then  
+choosing ONLY (A), (B) and (D) will get +4 marks;  
+choosing ONLY (A) and (B) will get +2 marks;  
+choosing ONLY (A) and (D) will get +2 marks; 
+choosing ONLY (B) and (D) will get +2 marks; 
+choosing ONLY (A) will get +1 mark; 
+choosing ONLY (B) will get +1 mark; 
+choosing ONLY (D) will get +1 mark;  
+choosing no option (i.e. the question is unanswered) will get 0 marks; and  
+       choosing any other combination of options will get −2 marks. 
+ 
+ 
+Q.5   Regarding the molecular orbital (MO) energy level s for homonuclear diatomic molecules,  the 
+INCORRECT statement(s) is(are) 
+(A) Bond order of Ne2 is zero. 
+(B) The highest occupied molecular orbital (HOMO) of F2 is σ-type. 
+(C) Bond energy of O2
++ is smaller than the bond energy of O2. 
+(D) Bond length of Li2 is larger than the bond length of B2. 
+ 
+ 
+Q.6   The pair(s) of diamagnetic ions is(are) 
+(A) La3+, Ce4+ 
+(B) Yb2+, Lu3+ 
+(C) La2+, Ce3+ 
+(D) Yb3+, Lu2+ 
+ 
+ 
+ 
+
+--- Page 26 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 4/9 
+Q.7   For the reaction sequence given below, the correct statement(s) is(are) 
+ 
+P Q
+HBr Finkelstein reaction
+Swarts reaction
+R
+ 
+ 
+(In the options, X is any atom other than carbon and hydrogen, and it is different in P, Q and R) 
+(A) C−X bond length in P, Q and R follows the order Q > R > P.   
+(B) C−X bond enthalpy in P, Q and R follows the order R > P > Q.  
+(C) Relative reactivity toward SN2 reaction in P, Q and R follows the order P > R > Q. 
+(D) pKa value of the conjugate acids of the leaving groups in P, Q and R follows the order  
+R > Q > P. 
+ 
+ 
+ 
+ 
+ 
+  
+
+--- Page 27 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 5/9 
+ 
+Q.8   In an electrochemical cell, dichromate ions in aqueous acidic medium are reduced to Cr3+. The current 
+(in amperes) that flows through the cell for 48.25 minutes to produce 1 mole of Cr3+ is ______. 
+ 
+Use: 1 Faraday = 96500 C mol−1 
+ 
+ 
+Q.9   At 25 ℃, the concentration of H+ ions in 1.00 × 10−3 M aqueous solution of a weak monobasic acid 
+having acid dissociation constant (Ka) of 4.00 × 10−11 is 𝑿 × 10−7 M. The value of 𝑿 is ______. 
+ 
+Use: Ionic product of water (Kw) = 1.00 × 10−14 at 25 ℃ 
+ 
+ 
+Q.10   Molar volume (Vm) of a van der Waals gas can be calculated by expressing the van der Waals equation 
+as a cubic equation with  Vm as the variable. The ratio (in mol dm−3) of the coefficient of 𝑉m2 to the 
+coefficient of Vm for a gas having van der Waals c onstants a = 6.0 dm6 atm mol−2 and b = 0.060 
+dm3 mol−1 at 300 K and 300 atm is ______. 
+ 
+Use: Universal gas constant (R) = 0.082 dm3 atm mol−1 K−1 
+ 
+ 
+Q.11   Considering ideal gas behavior, the expansion work done (in kJ) when 144 g of water is electrolyzed 
+completely under constant pressure at 300 K is ______.  
+ 
+Use: Universal gas constant (R) = 8.3 J K−1 mol−1; Atomic mass (in amu): H = 1, O = 16 
+ 
+ 
+ 
+Q.12   The monomer (X) involved in the synthesis of Nylon 6,6 gives positive carbylamine test. If 10 
+moles of X are analyzed using Dumas method, the amount (in grams) of nitrogen gas evolved is 
+______. 
+ 
+Use: Atomic mass of N (in amu) = 14 
+ 
+ SECTION 3 (Maximum Marks: 24) 
+ 
+• This section contains SIX (06) questions. 
+• The answer to each question is a NUMERICAL VALUE. 
+• For each question, enter the correct numerical value of the answer using the mouse and the on-
+screen virtual numeric keypad in the place designated to enter the answer.  
+• If the numerical value has more than two decimal places, truncate/round-off the value to TWO 
+decimal places.  
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 If ONLY the correct numerical value is entered in the designated place; 
+       Zero Marks        :   0      In all other cases. 
+ 
+
+--- Page 28 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 6/9 
+ 
+Q.13   The reaction sequence given below is carried out with 16 moles of X. The yield of the major 
+product in each step is given below the product in parentheses. The amount (in grams) of S 
+produced is______. 
+ 
+ 
+ 
+Use: Atomic mass (in amu): H = 1, C = 12, O = 16, Br = 80 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 29 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 7/9 
+ 
+Q.14   The correct match of the group reagents in List-I for precipitating the metal ion given in List-II 
+from solutions, is 
+ 
+ 
+List-I List-II 
+ 
+(P) Passing H2S in the presence of NH4OH (1) Cu2+ 
+(Q) (NH4)2CO3 in the presence of NH4OH (2) Al3+ 
+(R) NH4OH in the presence of NH4Cl (3) Mn2+ 
+(S) Passing H2S in the presence of dilute HCl (4) Ba2+ 
+ (5) Mg2+ 
+  
+ 
+ 
+(A) P → 3; Q → 4; R → 2; S → 1 
+(B) P → 4; Q → 2; R → 3; S → 1 
+(C) P → 3; Q → 4; R → 1; S → 5 
+(D) P → 5; Q → 3; R → 2; S → 4 
+ 
+  
+SECTION 4 (Maximum Marks: 12) 
+ 
+• This section contains THREE (03) Matching List Sets. 
+• Each set has ONE Multiple Choice Question. 
+• Each set has TWO lists: List-I and List-II. 
+• List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). 
+• FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of 
+these four options satisfies the condition asked in the Multiple Choice Question. 
+• Answer to each question will be evaluated according to the following marking scheme: 
+Full Marks :  +4 ONLY if the option corresponding to the correct combination is chosen; 
+Zero Marks :     0   If none of the options is chosen (i.e. the question is unanswered);  
+Negative Marks :   −1  In all other cases. 
+ 
+
+--- Page 30 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 8/9 
+ 
+ 
+Q.15   The major products obtained from the reactions in List-II are the reactants for the named reactions 
+mentioned in List-I. Match each entry in List-I with the appropriate entry in List-II and choose the 
+correct option.  
+ 
+ 
+List-I List-II 
+ 
+(P) Stephen reaction (1)  
+(i) CrO2Cl2/CS2  
+(ii) H3O+
+Toluene
+ 
+ 
+(Q) Sandmeyer reaction (2)  
+Benzoic acid
+(i) PCl5  
+(ii) NH3
+(iii) P4O10, 
+ 
+ 
+(R) Hoffmann bromamide degradation reaction (3)  
+ 
+ 
+ 
+(S) Cannizzaro reaction (4)  
+ 
+ 
+ 
+ (5) 
+ 
+(i) (CH3CO)2O, Pyridine
+(ii) HNO3, H2SO4, 288 K
+(iii) aq. NaOHAniline  
+  
+ 
+ 
+(A) P → 2; Q → 4; R → 1; S → 3 
+(B) P → 2; Q → 3; R → 4; S → 1 
+(C) P → 5; Q → 3; R → 4; S → 2 
+(D) P → 5; Q → 4; R → 2; S → 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 31 ---
+JEE (Advanced) 2025                                 Paper 1 
+ 9/9 
+Q.16   Match the compounds in List-I with the appropriate observations in List-II and choose the correct 
+option.  
+ 
+ 
+List-I List-II 
+ 
+(P)   
+H
+N
+NH2
+O
+OMe
+O
+HO
+ 
+ 
+ 
+(1) Reaction with phenyl diazonium salt gives 
+yellow dye.  
+(Q) 
+ 
+H
+N
+NH
+O
+OMe
+OO   
+ 
+ 
+ 
+(2) Reaction with ninhydrin gives purple color 
+and it also reacts with FeCl3 to give violet 
+color. 
+(R)  
+NH3
++Cl−
+ 
+ 
+ 
+ 
+(3) Reaction with glucose will give 
+corresponding hydrazone. 
+(S) 
+ 
+  
+(4) Lassiagne extract of the compound treated 
+with dilute HCl followed by addition of 
+aqueous FeCl3 gives blood red color. 
+ 
+ 
+ 
+ (5) After complete hydrolysis, it will give 
+ninhydrin test and it DOES NOT give positive 
+phthalein dye test. 
+   
+ 
+ 
+(A) P → 1;  Q → 5;  R → 4; S → 2 
+(B) P → 2;  Q → 5;  R → 1; S → 3 
+(C) P → 5;  Q → 2;  R → 1; S → 4 
+(D) P → 2;  Q → 1;  R → 5; S → 3 
+ 
+END OF THE QUESTION PAPER 

@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-07-22T13:25:44.854Z",
-  "totalFiles": 21,
-  "totalQuestions": 23555,
+  "generatedAt": "2026-07-22T13:30:19.256Z",
+  "totalFiles": 160,
+  "totalQuestions": 31225,
   "files": [
     {
       "file": "pyq/classified/jee_classified.json",
-      "count": 300
+      "count": 375
     },
     {
       "file": "pyq/jee_advanced/JEE_Advanced_2020.json",
-      "count": 33
+      "count": 55
     },
     {
       "file": "pyq/jee_advanced/JEE_Advanced_2021.json",
-      "count": 32
+      "count": 57
     },
     {
       "file": "pyq/jee_advanced/JEE_Advanced_2022.json",
-      "count": 25
+      "count": 46
     },
     {
       "file": "pyq/jee_advanced/JEE_Advanced_2023.json",
-      "count": 33
+      "count": 53
     },
     {
       "file": "pyq/jee_advanced/JEE_Advanced_2024.json",
-      "count": 32
+      "count": 54
     },
     {
       "file": "pyq/jee_advanced/JEE_Advanced_2025.json",
-      "count": 29
+      "count": 48
     },
     {
       "file": "pyq/jee_main/jeeMain_2025_22Jan_shift1.json",
@@ -61,7 +61,7 @@
     },
     {
       "file": "pyq/jee_main/jee_physics_bank.json",
-      "count": 287
+      "count": 436
     },
     {
       "file": "pyq/neet/neet_biology_bank.json",
@@ -69,23 +69,579 @@
     },
     {
       "file": "pyq/normalized/jee_main_normalized.json",
-      "count": 300
+      "count": 375
+    },
+    {
+      "file": "pyq/other/act.json",
+      "count": 3
+    },
+    {
+      "file": "pyq/other/algebraicProcesses.json",
+      "count": 54
+    },
+    {
+      "file": "pyq/other/aturanBaru.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/bace.json",
+      "count": 7
+    },
+    {
+      "file": "pyq/other/bace_applied_math.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/bace_biochem.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/bace_biotech_skills.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/bace_equipment_design.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/bace_regulation.json",
+      "count": 20
+    },
+    {
+      "file": "pyq/other/bace_safety.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/bace_tech_skills.json",
+      "count": 50
+    },
+    {
+      "file": "pyq/other/basicScience.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/basicTechnology&ComputerScience.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/bece.json",
+      "count": 19
+    },
+    {
+      "file": "pyq/other/berpikirCerdasBergerakTaktis.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/blog-index.json",
+      "count": 18
+    },
+    {
+      "file": "pyq/other/calculus.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/carbohydratesProteinsFats.json",
+      "count": 36
+    },
+    {
+      "file": "pyq/other/cat.json",
+      "count": 7
+    },
+    {
+      "file": "pyq/other/cat_2021_slot1_completePaper.json",
+      "count": 66
+    },
+    {
+      "file": "pyq/other/cat_2022_slot1_completePaper.json",
+      "count": 66
+    },
+    {
+      "file": "pyq/other/cat_2023_slot1_completePaper.json",
+      "count": 66
+    },
+    {
+      "file": "pyq/other/cat_2024_slot1_completePaper.json",
+      "count": 68
+    },
+    {
+      "file": "pyq/other/cat_2024_slot1_quant.json",
+      "count": 22
+    },
+    {
+      "file": "pyq/other/cat_2024_slot2_quant.json",
+      "count": 22
+    },
+    {
+      "file": "pyq/other/cat_2024_slot3_quant.json",
+      "count": 22
+    },
+    {
+      "file": "pyq/other/CCA_Arts0.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/CCA_Arts1.json",
+      "count": 70
+    },
+    {
+      "file": "pyq/other/CCA_Crafts0.json",
+      "count": 90
+    },
+    {
+      "file": "pyq/other/CCA_Crafts1.json",
+      "count": 61
+    },
+    {
+      "file": "pyq/other/channelMarketingInformationPricing.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/chem101_Acids_Bases.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/chem101_Atomic_Theory.json",
+      "count": 35
+    },
+    {
+      "file": "pyq/other/chem101_Bonding_Geometry.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/chem101_Bonding_Ionic_Covalent.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/chem101_Buffers_Titrations.json",
+      "count": 25
+    },
+    {
+      "file": "pyq/other/chem101_Electronic_Structure.json",
+      "count": 35
+    },
+    {
+      "file": "pyq/other/chem101_Equilibrium.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/chem101_Gas_Laws.json",
+      "count": 36
+    },
+    {
+      "file": "pyq/other/chem101_Introduction.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/chem101_Kinetics.json",
+      "count": 25
+    },
+    {
+      "file": "pyq/other/chem101_Lab_Chemistry.json",
+      "count": 15
+    },
+    {
+      "file": "pyq/other/chem101_Periodic_Table.json",
+      "count": 35
+    },
+    {
+      "file": "pyq/other/chem101_Redox_Electrochemistry.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/chem101_Stoichiometry.json",
+      "count": 50
+    },
+    {
+      "file": "pyq/other/chem101_Thermochemistry.json",
+      "count": 35
+    },
+    {
+      "file": "pyq/other/chemistry.json",
+      "count": 15
+    },
+    {
+      "file": "pyq/other/combinatoricsMatrices.json",
+      "count": 50
+    },
+    {
+      "file": "pyq/other/componentsOfMobilePhone.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/ContractDevelopmentAndAdministration.json",
+      "count": 150
+    },
+    {
+      "file": "pyq/other/coreAlgebraLogic.json",
+      "count": 80
+    },
+    {
+      "file": "pyq/other/cppb.json",
+      "count": 6
+    },
+    {
+      "file": "pyq/other/crimeSceneAndDeathInvestigation.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/demo.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/other/demo_exam_examify.json",
+      "count": 10
+    },
+    {
+      "file": "pyq/other/dietaryEpidemiology.json",
+      "count": 36
+    },
+    {
+      "file": "pyq/other/eksplorasiGerak.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/eksplorasiGerak4.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/englishComprehension.json",
+      "count": 50
+    },
+    {
+      "file": "pyq/other/englishGrammer.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/englishVocabulary.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/english_practice_test1.json",
+      "count": 50
+    },
+    {
+      "file": "pyq/other/examen_medical_et_dentaire.json",
+      "count": 4
+    },
+    {
+      "file": "pyq/other/fbla-intro-marketing.json",
+      "count": 4
+    },
+    {
+      "file": "pyq/other/forensicAnthropology.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/forensicEntomology.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/forensicHistoryAndCareers.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/forensicPsychologyAndPsychiatry.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/forensicToxicologyAndPharmacology.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/functionsPolynomials.json",
+      "count": 50
     },
     {
       "file": "pyq/other/general_aptitude_bank.json",
       "count": 5068
     },
     {
+      "file": "pyq/other/geometry&measurement.json",
+      "count": 72
+    },
+    {
+      "file": "pyq/other/geometryTrigonometry.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/hosa-forensic-science.json",
+      "count": 8
+    },
+    {
+      "file": "pyq/other/hosa-nutrition.json",
+      "count": 6
+    },
+    {
+      "file": "pyq/other/identificationOfBloodAndBiologicalFluids.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/ielts.json",
+      "count": 4
+    },
+    {
+      "file": "pyq/other/ielts_grammar_0.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/ielts_listening_0.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/ielts_reading_0.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/ielts_vocabulary_0.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/internetConcepts.json",
+      "count": 30
+    },
+    {
+      "file": "pyq/other/introductionToGSM.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/LeadershipAndInfluence.json",
+      "count": 130
+    },
+    {
+      "file": "pyq/other/lso-paralegal.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/other/maintenanceAndRepair.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/marketingFundamentals.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/maths_practice_test1.json",
+      "count": 45
+    },
+    {
+      "file": "pyq/other/maths_practice_test2.json",
+      "count": 45
+    },
+    {
+      "file": "pyq/other/medicalNutritionTherapy.json",
+      "count": 48
+    },
+    {
+      "file": "pyq/other/menjadiSehatdanAktif.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/mtel.json",
+      "count": 2
+    },
+    {
+      "file": "pyq/other/mtel_physical_ed_22_practice.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/mtel_physical_ed_22_unofficial_examify.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/nimcet.json",
+      "count": 3
+    },
+    {
+      "file": "pyq/other/nimcet_2022.json",
+      "count": 120
+    },
+    {
+      "file": "pyq/other/nimcet_2023.json",
+      "count": 120
+    },
+    {
+      "file": "pyq/other/nimcet_2024.json",
+      "count": 120
+    },
+    {
+      "file": "pyq/other/numericalLiteracy.json",
+      "count": 66
+    },
+    {
+      "file": "pyq/other/nutritionalPhysiology.json",
+      "count": 48
+    },
+    {
+      "file": "pyq/other/nutritionThroughtheLifeSpan.json",
+      "count": 36
+    },
+    {
+      "file": "pyq/other/paralegal_ethics_practice_test1.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/physicalEducation.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/pjok-kelas-5.json",
+      "count": 5
+    },
+    {
+      "file": "pyq/other/PreSolicitationPlanning.json",
+      "count": 170
+    },
+    {
+      "file": "pyq/other/ProcurementBusinessPrinciples.json",
+      "count": 120
+    },
+    {
+      "file": "pyq/other/productServiceManagement.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/PVS_Agriculture0.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/PVS_Agriculture1.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/PVS_HomeEconomics0.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/PVS_HomeEconomincs1.json",
+      "count": 130
+    },
+    {
+      "file": "pyq/other/questionnairebleu2017.json",
+      "count": 69
+    },
+    {
+      "file": "pyq/other/questionnairebleu2019.json",
+      "count": 54
+    },
+    {
+      "file": "pyq/other/questionnairebleu2022.json",
+      "count": 58
+    },
+    {
+      "file": "pyq/other/questionnaireJaune2024.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/RegulatoryAndCompliance.json",
+      "count": 120
+    },
+    {
+      "file": "pyq/other/RRB-NTPC_2025_05June_shift1.json",
+      "count": 100
+    },
+    {
+      "file": "pyq/other/rrb.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/other/search-index.json",
+      "count": 114
+    },
+    {
+      "file": "pyq/other/sellingPromotion.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/settingUpShop.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/SourcingAndSupplierSelection.json",
+      "count": 160
+    },
+    {
+      "file": "pyq/other/spokenEnglishOral.json",
+      "count": 60
+    },
+    {
+      "file": "pyq/other/statistics&probability.json",
+      "count": 48
+    },
+    {
+      "file": "pyq/other/statisticsProbability.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/techniquesOfDNAAnalysis.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/troubleshooting.json",
+      "count": 40
+    },
+    {
+      "file": "pyq/other/vectorsMechanics.json",
+      "count": 50
+    },
+    {
+      "file": "pyq/other/vitamins&Minerals.json",
+      "count": 36
+    },
+    {
+      "file": "pyq/other/wassce.json",
+      "count": 13
+    },
+    {
+      "file": "pyq/pdf_extracted/JEEMAIN_PAPER_10.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/pdf_extracted/JEEMAIN_PAPER_11.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/pdf_extracted/JEEMAIN_PAPER_12.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/pdf_extracted/JEEMAIN_PAPER_13.json",
+      "count": 1
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_Advanced_2020.json",
+      "count": 56
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_Advanced_2021.json",
+      "count": 56
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_Advanced_2022.json",
+      "count": 48
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_Advanced_2023.json",
+      "count": 52
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_Advanced_2024.json",
+      "count": 52
+    },
+    {
+      "file": "pyq/pdf_extracted/JEE_Advanced_2025.json",
+      "count": 49
+    },
+    {
       "file": "pyq/processed/jee_main_1784396213243.json",
-      "count": 299
+      "count": 374
     },
     {
       "file": "pyq/processed/jee_main_complete.json",
-      "count": 486
+      "count": 685
     },
     {
       "file": "pyq/processed/jee_pyq_papers.json",
-      "count": 299
+      "count": 374
     }
   ]
 }
