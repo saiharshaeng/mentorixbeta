@@ -2784,6 +2784,7 @@ function renderActiveExamUI() {
 
   // ── PAPER IDENTITY ────────────────────────────────────────────────────
   const paperLabel = q.examDate || (exam.questions[0] && exam.questions[0].examDate) || examDb.name || 'Mock Exam';
+  const isRealPyq = q.source === 'PYQ' || q.source === 'JEE Main PYQ' || q.source === 'JEE Advanced PYQ' || q.source === 'NEET PYQ' || (exam.questions[0] && exam.questions[0].source);
 
   return `
   <div class="nta-exam-wrap" id="cbt-question-panel">
@@ -2794,8 +2795,8 @@ function renderActiveExamUI() {
         <div class="nta-exam-brand">
           <span class="nta-exam-logo">🎯</span>
           <div>
-            <div class="nta-exam-name">${esc(examDb.name || 'Mock Exam')}</div>
-            <div class="nta-exam-mode" style="max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(paperLabel)}">${esc(paperLabel)}</div>
+            <div class="nta-exam-name">${esc(examDb.name || 'Mock Exam')} <span style="background:${isRealPyq ? 'rgba(16,185,129,0.2)' : 'rgba(139,92,246,0.2)'};color:${isRealPyq ? '#10B981' : '#A78BFA'};font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;font-weight:700;">${isRealPyq ? 'REAL PYQ PAPER' : 'CHAPTER TEST'} (${qTotal} Qs)</span></div>
+            <div class="nta-exam-mode" style="max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(paperLabel)}">${esc(paperLabel)}</div>
           </div>
         </div>
       </div>
