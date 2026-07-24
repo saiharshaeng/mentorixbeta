@@ -3097,10 +3097,40 @@ function submitMockExam() {
     addXP(xpEarned);
   }
 
+  const evalRep = {
+    evaluationId: 'eval_' + Date.now(),
+    attemptId: 'att_' + Date.now(),
+    sessionId: `sess_${Date.now()}`,
+    exam: compState.examId,
+    totalQuestions: exam.questions.length,
+    correctCount: correct,
+    incorrectCount: incorrect,
+    unattemptedCount: skipped,
+    totalScore: score,
+    accuracyPct: Math.round((correct / (exam.questions.length || 1)) * 100),
+    itemEvaluations: results.map((r, idx) => ({
+      questionIndex: idx,
+      topic: exam.questions[idx]?.section || 'General',
+      userAnswer: exam.answers[idx],
+      correctAnswer: exam.questions[idx]?.ans,
+      status: r.isCorrect ? 'correct' : (exam.answers[idx] !== undefined && exam.answers[idx] !== '' ? 'incorrect' : 'unattempted')
+    }))
+  };
+  const attPkg = {
+    attemptId: evalRep.attemptId,
+    sessionId: evalRep.sessionId,
+    exam: compState.examId,
+    questions: exam.questions,
+    responses: exam.answers,
+    timeSpentSeconds: exam.timeSpent.reduce((a, b) => a + b, 0)
+  };
+  window._lastEvalReport = evalRep;
+  window._lastAttemptPkg = attPkg;
+
   if (window.CompEventBus) {
-    window.CompEventBus.publish('AttemptSubmitted', { examId: compState.examId, score, correct, incorrect, unattempted: skipped });
-    window.CompEventBus.publish('EvaluationCompleted', { examId: compState.examId, score, accuracyPct: Math.round((correct / (exam.questions.length || 1)) * 100) });
-    window.CompEventBus.publish('ProfileUpdated', { profileId: window.D?.profile?.id || 'guest', lastExam: examDb.name || 'Mock CBT', latestScore: score, latestAccuracy: Math.round((correct / (exam.questions.length || 1)) * 100) });
+    window.CompEventBus.publish('AttemptSubmitted', attPkg);
+    window.CompEventBus.publish('EvaluationCompleted', evalRep);
+    window.CompEventBus.publish('ProfileUpdated', { profileId: window.D?.profile?.id || 'guest', lastExam: examDb.name || 'Mock CBT', latestScore: score, latestAccuracy: evalRep.accuracyPct });
   }
 
     if (!D.compExam) D.compExam = { chapterStats: {}, sessionHistory: [] };
@@ -3256,7 +3286,8 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
         </div>
 
         <div style="display:flex;justify-content:center;gap:12px">
-          <button class="btn bpri" style="padding:10px 24px" onclick="rComp()">📋 Back to Hub</button>
+          <button class="btn bpri" style="padding:10px 24px" onclick="if(window.QRAReviewEngine && window._lastEvalReport && window._lastAttemptPkg) { window.QRAReviewEngine.openReview(window._lastEvalReport, window._lastAttemptPkg); } else { toast('Review data loaded below', 'info'); }">🔍 Open QRA Review Experience</button>
+          <button class="btn bgh" style="padding:10px 24px" onclick="rComp()">📋 Back to Hub</button>
         </div>
       </div>
 
