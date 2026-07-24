@@ -919,21 +919,32 @@ function rComp() {
     return;
   }
 
-  if (compState.activeExam && compState.activeExam.instructionsRead) {
-    toggleCBTFullscreen(true);
-    const main = document.getElementById('main');
-    if (main) {
-      main.innerHTML = renderActiveExamUI();
-      setTimeout(() => {
-        const el = document.getElementById('main');
-        if (el && window.renderMath) {
-          window.renderMath(el);
-        }
-      }, 50);
-      const container = document.getElementById('cbt-question-panel');
-      if (container) renderMath(container);
-      triggerMath();
-      return;
+  if (compState.activeExam) {
+    if (!compState.activeExam.instructionsRead) {
+      toggleCBTFullscreen(false);
+      const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+      const main = document.getElementById('main');
+      if (main) {
+        main.innerHTML = renderMockInstructions(exam);
+        triggerMath();
+        return;
+      }
+    } else {
+      toggleCBTFullscreen(true);
+      const main = document.getElementById('main');
+      if (main) {
+        main.innerHTML = renderActiveExamUI();
+        setTimeout(() => {
+          const el = document.getElementById('main');
+          if (el && window.renderMath) {
+            window.renderMath(el);
+          }
+        }, 50);
+        const container = document.getElementById('cbt-question-panel');
+        if (container) renderMath(container);
+        triggerMath();
+        return;
+      }
     }
   } else {
     toggleCBTFullscreen(false);
@@ -2151,6 +2162,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
 
   // Timer countdown will start after instructions are read
   compState.activeExam.timerInterval = null;
+  compState.currentTab = 'mock';
 
   rComp();
 }
