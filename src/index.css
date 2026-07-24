@@ -207,6 +207,53 @@
   line-height: var(--lh-body, 1.7);
 }
 
+/* Touch Target & Fluid Usability Rules (Phase 17) */
+.uds-btn, .btn, button, input[type="button"], input[type="submit"] {
+  min-height: 44px;
+}
+
+/* Low-Power Hardware Performance Mode Overrides */
+[data-hardware-tier="low"] *, [data-hardware-tier="low"] ::before, [data-hardware-tier="low"] ::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  transition: opacity 0.1s linear !important;
+}
+[data-hardware-tier="low"] .card, [data-hardware-tier="low"] .uds-card {
+  background: rgba(18, 18, 26, 0.96) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Card-Based Table Representation for Mobile Viewports */
+@media (max-width: 768px) {
+  .uds-table-responsive table,
+  .uds-table-responsive thead,
+  .uds-table-responsive tbody,
+  .uds-table-responsive th,
+  .uds-table-responsive td,
+  .uds-table-responsive tr {
+    display: block !important;
+  }
+  .uds-table-responsive thead tr {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  .uds-table-responsive tr {
+    margin-bottom: 12px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--brd, rgba(255,255,255,0.08)) !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+  }
+  .uds-table-responsive td {
+    border: none !important;
+    position: relative !important;
+    padding-left: 50% !important;
+    text-align: right !important;
+  }
+}
+
 /* Reduced Motion Fallback */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

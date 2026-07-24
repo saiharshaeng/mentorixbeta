@@ -264,11 +264,34 @@ function initKeyboardShortcuts() {
   });
 }
 
+/* ── ORIENTATION & VIEWPORT STATE PRESERVATION ──────────────── */
+
+function initOrientationPreservation() {
+  const preserveState = () => {
+    const main = document.getElementById('main');
+    if (main && window.D) {
+      if (!window.D._navContext) window.D._navContext = {};
+      window.D._navContext[D.screen] = {
+        scrollTop: main.scrollTop || 0,
+        timestamp: Date.now()
+      };
+    }
+  };
+
+  if (typeof window.addEventListener === 'function') {
+    window.addEventListener('orientationchange', preserveState);
+    window.addEventListener('resize', () => {
+      if (window.detectDeviceHardwareTier) window.detectDeviceHardwareTier();
+    });
+  }
+}
+
 /* ── INITIALISE ─────────────────────────────────────────────── */
 
 initPopstate();
 initSwipe();
 initKeyboardShortcuts();
+initOrientationPreservation();
 
 /* ── EXPORTS ────────────────────────────────────────────────── */
 window.go        = go;

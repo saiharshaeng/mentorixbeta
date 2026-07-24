@@ -504,6 +504,60 @@ function openGlobalSearch() {
   modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
 }
 
+/* ── ADAPTIVE HARDWARE TIER ENGINE ────────────────────────── */
+
+function detectDeviceHardwareTier() {
+  let tier = 'high';
+  const nav = typeof navigator !== 'undefined' ? navigator : {};
+  const mem = nav.deviceMemory || 8;
+  const cores = nav.hardwareConcurrency || 8;
+  const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || (nav.maxTouchPoints && nav.maxTouchPoints > 0));
+  const conn = nav.connection || nav.mozConnection || nav.webkitConnection;
+
+  if (mem <= 4 || cores <= 4 || (conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === '3g'))) {
+    tier = 'low';
+  } else if (mem <= 6 || cores <= 6) {
+    tier = 'medium';
+  }
+
+  if (document.body && typeof document.body.setAttribute === 'function') {
+    document.body.setAttribute('data-hardware-tier', tier);
+    document.body.setAttribute('data-is-touch', isTouch ? 'true' : 'false');
+  }
+  return tier;
+}
+
+/* ── NETWORK RESILIENCE & OFFLINE QUEUE ───────────────────── */
+
+function initNetworkResilience() {
+  const handleOffline = () => {
+    if (typeof toast === 'function') {
+      toast('📡 Offline Mode — Progress saved locally on device');
+    }
+    if (document.body && typeof document.body.classList === 'object' && document.body.classList.add) {
+      document.body.classList.add('is-offline');
+    }
+  };
+
+  const handleOnline = () => {
+    if (typeof toast === 'function') {
+      toast('⚡ Back online — Syncing queue...');
+    }
+    if (document.body && typeof document.body.classList === 'object' && document.body.classList.remove) {
+      document.body.classList.remove('is-offline');
+    }
+  };
+
+  if (typeof window.addEventListener === 'function') {
+    window.addEventListener('offline', handleOffline);
+    window.addEventListener('online', handleOnline);
+  }
+}
+
+// Auto-run hardware tier & network resilience on script load
+detectDeviceHardwareTier();
+initNetworkResilience();
+
 /* ── EXPORTS ────────────────────────────────────────────────── */
 // Exposed as globals so the non-module monolith scripts can call them unchanged.
 // When the full ESM migration is complete these become named exports.
@@ -528,3 +582,5 @@ window.renderUDSErrorBox = renderUDSErrorBox;
 window.renderUDSSkeleton = renderUDSSkeleton;
 window.renderBreadcrumb  = renderBreadcrumb;
 window.openGlobalSearch  = openGlobalSearch;
+window.detectDeviceHardwareTier = detectDeviceHardwareTier;
+window.initNetworkResilience    = initNetworkResilience;
