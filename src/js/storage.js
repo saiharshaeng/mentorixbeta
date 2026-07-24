@@ -143,6 +143,32 @@ async function loadUserData(uid) {
   });
 
   await Promise.all(migrations);
+
+  // Deep Integration with PSDE Engine
+  if (window.PSDE) {
+    try {
+      const psdeStudent = await window.PSDE.LoadStudent(uid);
+      if (!psdeStudent) {
+        await window.PSDE.CreateStudent({ studentId: uid, name: D.profile?.name || 'Aspirant', email: D.profile?.email || `${uid}@student.mentorix.ai` });
+      }
+      const history = await window.PSDE.LoadAcademicHistory(uid);
+      if (history && history.length > 0) {
+        D.academicHistory = history;
+      }
+      const achievements = await window.PSDE.LoadAchievements(uid);
+      if (achievements) {
+        D.xp = achievements.xp || D.xp;
+        D.level = achievements.level || D.level;
+        D.badges = achievements.badges || D.badges;
+      }
+      const tioMem = await window.PSDE.LoadTioMemoryRefs(uid);
+      if (tioMem) {
+        D.tioMemoryRefs = tioMem;
+      }
+    } catch (err) {
+      console.warn('[PSDE] Integration load warning:', err);
+    }
+  }
 }
 
 /**
@@ -158,6 +184,24 @@ async function saveUserData() {
     await Promise.all(saves);
   } catch (e) {
     console.error('[Mentorix] Failed to save user data to IndexedDB:', e);
+  }
+
+  // Deep Integration with PSDE Engine
+  if (window.PSDE) {
+    try {
+      await window.PSDE.SaveAchievements({
+        xp: D.xp || 0,
+        level: D.level || 1,
+        badges: D.badges || [],
+        milestones: D.milestones || []
+      }, s.id);
+      await window.PSDE.SavePreference({
+        theme: D.settings?.theme || 'dark',
+        learningStyle: D.settings?.learningStyle || 'visual'
+      }, s.id);
+    } catch (err) {
+      console.warn('[PSDE] Integration save warning:', err);
+    }
   }
 }
 

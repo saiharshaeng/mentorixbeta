@@ -3056,18 +3056,58 @@ function submitMockExam() {
     addXP(xpEarned);
   }
 
-  if (typeof D !== 'undefined') {
     if (!D.compExam) D.compExam = { chapterStats: {}, sessionHistory: [] };
     if (!D.compExam.sessionHistory) D.compExam.sessionHistory = [];
-    D.compExam.sessionHistory.push({
+    const sessionRec = {
+      sessionId: `sess_${Date.now()}`,
       type: 'mock',
+      sessionType: 'MOCK',
       date: new Date().toISOString(),
       score: Math.max(0, Math.round(score)),
+      totalMarks: Math.max(0, Math.round(score)),
       total: exam.questions.length,
-      correct: correct
-    });
+      correct: correct,
+      accuracy: Math.round((correct / (exam.questions.length || 1)) * 100)
+    };
+    D.compExam.sessionHistory.push(sessionRec);
     if (typeof saveAll === 'function') saveAll();
-  }
+
+    // Call PSDE Persistent Academic Storage Engine
+    if (window.PSDE) {
+      const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
+      window.PSDE.SaveSession(sessionRec);
+      window.PSDE.SaveAttempt({
+        attemptId: `att_${Date.now()}`,
+        sessionId: sessionRec.sessionId,
+        studentId: studentId,
+        questionIds: exam.questions.map(q => q.id || q.q),
+        answers: exam.answers,
+        timeSpent: exam.timeSpent,
+        evaluation: { score, correct, incorrect, skipped },
+        statistics: { subjectStats },
+        version: '2.0.0'
+      });
+      window.PSDE.SaveProgress({
+        totalQuestions: exam.questions.length,
+        accuracy: sessionRec.accuracy,
+        totalMarks: sessionRec.totalMarks,
+        level: D.level || 1,
+        masteryOverall: sessionRec.accuracy
+      }, studentId);
+
+      // Record Mistakes in Mistake Archive
+      results.forEach((r, qIdx) => {
+        if (!r.isCorrect) {
+          const qObj = exam.questions[qIdx];
+          window.PSDE.RecordMistake({
+            questionId: qObj.id || `q_${qIdx}_${Date.now()}`,
+            concept: qObj.section || 'General Concept',
+            reason: 'CONCEPTUAL_GAP',
+            studentId: studentId
+          });
+        }
+      });
+    }
 
   compState.activeExam = null;
 
