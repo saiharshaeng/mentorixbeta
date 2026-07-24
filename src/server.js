@@ -24,18 +24,18 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  // Decode URL and strip query parameters
-  const rawUrl = req.url.split('?')[0];
-  const decodedUrl = decodeURIComponent(rawUrl);
+  // Parse URL to strip query parameters (e.g. ?v=80)
+  const parsedUrl = new URL(req.url, 'http://localhost:8080');
+  const decodedPathname = decodeURIComponent(parsedUrl.pathname);
 
-  // Favicon fallback handler
-  if (decodedUrl === '/favicon.ico') {
+  // Favicon fallback handler to prevent Chrome console 404 errors
+  if (decodedPathname === '/favicon.ico') {
     res.writeHead(200, { 'Content-Type': 'image/x-icon' });
     res.end();
     return;
   }
 
-  let filePath = path.join(root, decodedUrl === '/' ? 'index.html' : decodedUrl);
+  let filePath = path.join(root, decodedPathname === '/' ? 'index.html' : decodedPathname);
 
   // Normalize paths to prevent directory traversal attacks
   const normalizedRoot = path.normalize(root).toLowerCase();
@@ -53,8 +53,25 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        res.statusCode = 404;
-        res.end('404 Not Found');
+        // SPA Fallback: If no file extension (route path like /mentor), serve index.html with 200 OK
+        if (!ext) {
+          fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
+            if (!indexErr) {
+              res.writeHead(200, {
+                'Content-Type': 'text/html',
+                'Access-Control-Allow-Origin': '*',
+                'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
+              });
+              res.end(indexContent, 'utf-8');
+            } else {
+              res.statusCode = 404;
+              res.end('404 Not Found');
+            }
+          });
+        } else {
+          res.statusCode = 404;
+          res.end('404 Not Found');
+        }
       } else {
         res.statusCode = 500;
         res.end(`Server Error: ${err.code}`);
@@ -63,6 +80,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, {
         'Content-Type': contentType,
         'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
       });
       res.end(content, 'utf-8');
     }

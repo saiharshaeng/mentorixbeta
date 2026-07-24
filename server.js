@@ -52,8 +52,25 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        res.statusCode = 404;
-        res.end('404 Not Found');
+        // SPA Fallback: If no file extension (route path like /mentor), serve index.html with 200 OK
+        if (!ext) {
+          fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
+            if (!indexErr) {
+              res.writeHead(200, {
+                'Content-Type': 'text/html',
+                'Access-Control-Allow-Origin': '*',
+                'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
+              });
+              res.end(indexContent, 'utf-8');
+            } else {
+              res.statusCode = 404;
+              res.end('404 Not Found');
+            }
+          });
+        } else {
+          res.statusCode = 404;
+          res.end('404 Not Found');
+        }
       } else {
         res.statusCode = 500;
         res.end(`Server Error: ${err.code}`);
