@@ -17,9 +17,10 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  // Decode URL to handle spaces and special chars
-  const decodedUrl = decodeURIComponent(req.url);
-  let filePath = path.join(root, decodedUrl === '/' ? 'index.html' : decodedUrl);
+  // Parse URL to strip query parameters (e.g. ?v=65)
+  const parsedUrl = new URL(req.url, 'http://localhost');
+  const decodedPathname = decodeURIComponent(parsedUrl.pathname);
+  let filePath = path.join(root, decodedPathname === '/' ? 'index.html' : decodedPathname);
   
   // Normalize paths to check directory traversal
   const normalizedRoot = path.normalize(root).toLowerCase();
