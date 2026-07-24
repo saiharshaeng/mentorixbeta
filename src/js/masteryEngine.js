@@ -212,6 +212,14 @@
       return breakdown;
     },
 
+    getMostCommonErrorType() {
+      const breakdown = this.getMistakeBreakdown();
+      const entries = Object.entries(breakdown);
+      if (entries.length === 0) return { type: 'None', pct: 0 };
+      entries.sort((a, b) => b[1] - a[1]);
+      return { type: entries[0][0], pct: entries[0][1] };
+    },
+
     getAIContext(activeTopicTitle) {
       if (!activeTopicTitle) return '';
       const topicLower = activeTopicTitle.trim().toLowerCase();

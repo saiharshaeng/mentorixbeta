@@ -90,7 +90,7 @@ function rRecovery(){
   const completedCount = D.topics.length;
   const totalWeak = activeWeakSpots.length;
   const improvementRate = (completedCount + totalWeak) > 0 ? Math.round((completedCount / (completedCount + totalWeak)) * 100) : 100;
-  const topError = window.MasteryEngine ? window.MasteryEngine.getMostCommonErrorType() : { type: 'None', pct: 0 };
+  const topError = (window.MasteryEngine && typeof window.MasteryEngine.getMostCommonErrorType === 'function') ? window.MasteryEngine.getMostCommonErrorType() : { type: 'None', pct: 0 };
 
   document.getElementById('main').innerHTML = `
     <div class="sw scr page-enter">
