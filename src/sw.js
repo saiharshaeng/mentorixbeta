@@ -4,7 +4,7 @@
  * PYQ data files always bypass cache (never stale).
  */
 
-const CACHE_NAME = 'mentorix-v73';
+const CACHE_NAME = 'mentorix-v74';
 
 // Files to pre-cache on install (only truly static: html, images, manifest)
 const CORE_ASSETS = [
@@ -47,11 +47,15 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // PYQ data files — ALWAYS network, never cache (data changes frequently)
+  // PYQ data files — ALWAYS network, fallback to cache or 404 response
   if (url.includes('/data/pyq/') || url.includes('pyqService') ||
       url.includes('master_index')) {
     e.respondWith(
-      fetch(e.request).catch(() => caches.match(e.request))
+      fetch(e.request)
+        .catch(async () => {
+          const cached = await caches.match(e.request);
+          return cached || new Response('Not Found', { status: 404, statusText: 'Not Found' });
+        })
     );
     return;
   }
@@ -67,7 +71,10 @@ self.addEventListener('fetch', e => {
           }
           return response;
         })
-        .catch(() => caches.match('./index.html'))
+        .catch(async () => {
+          const cached = await caches.match('./index.html');
+          return cached || new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
+        })
     );
     return;
   }
@@ -83,7 +90,10 @@ self.addEventListener('fetch', e => {
           }
           return response;
         })
-        .catch(() => caches.match(e.request))
+        .catch(async () => {
+          const cached = await caches.match(e.request);
+          return cached || new Response('Not Found', { status: 404, statusText: 'Not Found' });
+        })
     );
     return;
   }
@@ -100,7 +110,8 @@ self.addEventListener('fetch', e => {
               caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
             }
             return response;
-          });
+          })
+          .catch(() => new Response('Not Found', { status: 404, statusText: 'Not Found' }));
       })
   );
 });
