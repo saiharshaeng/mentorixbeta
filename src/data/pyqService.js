@@ -55,6 +55,10 @@
       { key: 'jee_main_math',  url: origin + '/data/pyq/jee_main/jee_maths_bank.json',       exam: 'JEE_MAIN',     subject: 'Mathematics' },
       { key: 'jee_main_phys',  url: origin + '/data/pyq/jee_main/jee_physics_bank.json',     exam: 'JEE_MAIN',     subject: 'Physics' },
       { key: 'neet_bio',       url: origin + '/data/pyq/neet/neet_biology_bank.json',         exam: 'NEET',         subject: 'Biology' },
+      { key: 'eamcet_bank',    url: origin + '/data/pyq/eamcet/eamcet_bank.json',             exam: 'TS_EAMCET',    subject: null },
+      { key: 'gate_cs_bank',   url: origin + '/data/pyq/gate/gate_cs_bank.json',               exam: 'GATE_CS',      subject: null },
+      { key: 'sat_bank',       url: origin + '/data/pyq/sat/sat_bank.json',                   exam: 'DIGITAL_SAT',  subject: null },
+      { key: 'upsc_bank',      url: origin + '/data/pyq/upsc/upsc_bank.json',                 exam: 'UPSC_CSE',     subject: null },
       { key: 'jee_classified', url: origin + '/data/pyq/classified/jee_classified.json',      exam: 'JEE_MAIN',     subject: null },
       { key: 'jee_complete',   url: origin + '/data/pyq/processed/jee_main_complete.json',    exam: 'JEE_MAIN',     subject: null },
     ];

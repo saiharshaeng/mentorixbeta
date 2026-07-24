@@ -1,0 +1,53 @@
+[
+  {
+    "id": "GATE_CS_001",
+    "q": "Consider a hash table of size 7 with hash function $h(k) = k \\bmod 7$. Using linear probing, insert keys 10, 24, 42, 17, 31 into the table. What is the index of key 31?",
+    "opts": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Computer Science & IT",
+    "chap": "Data Structures & Algorithms",
+    "expl": "$10 \\bmod 7 = 3$, $24 \\bmod 7 = 3 \\to$ probes to index 4. $42 \\bmod 7 = 0$. $17 \\bmod 7 = 3 \\to$ probes to 5. $31 \\bmod 7 = 3 \\to$ probes 3, 4, 5 $\\to$ lands at index 6.",
+    "difficulty": "medium",
+    "year": 2024
+  },
+  {
+    "id": "GATE_CS_002",
+    "q": "Which of the following scheduling algorithms is non-preemptive?",
+    "opts": [
+      "First-Come First-Served (FCFS)",
+      "Round Robin (RR)",
+      "Shortest Remaining Time First (SRTF)",
+      "Preemptive Priority Scheduling"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Computer Science & IT",
+    "chap": "Operating Systems",
+    "expl": "FCFS processes requests strictly in arrival order until completion without preemption.",
+    "difficulty": "easy",
+    "year": 2024
+  },
+  {
+    "id": "GATE_CS_003",
+    "q": "The worst-case time complexity of QuickSort on an array of $n$ elements is:",
+    "opts": [
+      "$\\mathcal{O}(n^2)$",
+      "$\\mathcal{O}(n \\log n)$",
+      "$\\mathcal{O}(n)$",
+      "$\\mathcal{O}(\\log n)$"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Computer Science & IT",
+    "chap": "Algorithms",
+    "expl": "Worst case occurs when the pivot chosen is always the smallest or largest element (e.g. already sorted array), yielding $T(n) = T(n-1) + \\mathcal{O}(n) = \\mathcal{O}(n^2)$.",
+    "difficulty": "easy",
+    "year": 2023
+  }
+]

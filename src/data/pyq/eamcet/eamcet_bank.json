@@ -1,0 +1,87 @@
+[
+  {
+    "id": "EAMCET_PHY_001",
+    "q": "The dimensional formula of magnetic permeability $\\mu_0$ is:",
+    "opts": [
+      "$[M^1 L^1 T^{-2} A^{-2}]$",
+      "$[M^1 L^2 T^{-2} A^{-1}]$",
+      "$[M^1 L^1 T^{-1} A^{-2}]$",
+      "$[M^0 L^1 T^{-2} A^{-1}]$"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Physics",
+    "chap": "Units and Measurements",
+    "expl": "Force per unit length between parallel wires is $F/L = (\\mu_0 I_1 I_2)/(2\\pi d)$. Therefore $[\\mu_0] = [F]/[I^2] = [M L T^{-2}] / [A^2] = [M L T^{-2} A^{-2}]$.",
+    "difficulty": "medium",
+    "year": 2024
+  },
+  {
+    "id": "EAMCET_MATH_001",
+    "q": "If $\\alpha, \\beta$ are the roots of $x^2 - 6x + 8 = 0$, then the quadratic equation whose roots are $\\alpha^2, \\beta^2$ is:",
+    "opts": [
+      "$x^2 - 20x + 64 = 0$",
+      "$x^2 - 12x + 64 = 0$",
+      "$x^2 - 20x + 16 = 0$",
+      "$x^2 + 20x + 64 = 0$"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Mathematics",
+    "chap": "Quadratic Equations",
+    "expl": "Roots are $\\alpha = 2, \\beta = 4$. Their squares are $\\alpha^2 = 4, \\beta^2 = 16$. Sum of new roots $= 20$, product $= 64$. Equation: $x^2 - 20x + 64 = 0$.",
+    "difficulty": "easy",
+    "year": 2024
+  },
+  {
+    "id": "EAMCET_CHEM_001",
+    "q": "Which of the following compounds exhibits optical isomerism?",
+    "opts": [
+      "2-Chlorobutane",
+      "1-Chlorobutane",
+      "2-Chloropropane",
+      "Propanoic acid"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Chemistry",
+    "chap": "Organic Chemistry",
+    "expl": "2-Chlorobutane has a chiral carbon atom (C2 is bonded to -H, -Cl, -CH3, -CH2CH3).",
+    "difficulty": "easy",
+    "year": 2024
+  },
+  {
+    "id": "EAMCET_PHY_002",
+    "q": "A particle moves along a circular path of radius $R$ with constant angular speed $\\omega$. Its linear acceleration is:",
+    "opts": [
+      "$\\omega^2 R$ directed towards the center",
+      "$\\omega^2 R$ directed away from center",
+      "$\\omega R^2$ along the tangent",
+      "Zero"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Physics",
+    "chap": "Motion in a Plane",
+    "expl": "For uniform circular motion, centripetal acceleration $a_c = \\omega^2 R$ directed radially inward towards the center.",
+    "difficulty": "easy",
+    "year": 2023
+  },
+  {
+    "id": "EAMCET_MATH_002",
+    "q": "The value of $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$ is:",
+    "opts": [
+      "5",
+      "1",
+      "0",
+      "1/5"
+    ],
+    "ans": [0],
+    "type": "mcq",
+    "subject": "Mathematics",
+    "chap": "Limits and Continuity",
+    "expl": "Using standard limit $\\lim_{\\theta \\to 0} \\frac{\\sin k\\theta}{\\theta} = k$, here $k=5$, so the limit is 5.",
+    "difficulty": "easy",
+    "year": 2023
+  }
+]
