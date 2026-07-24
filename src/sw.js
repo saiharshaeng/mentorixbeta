@@ -1,120 +1,121 @@
 /**
- * sw.js — Mentorix Service Worker v55
- * NETWORK-FIRST for JS/CSS/JSON so code changes always reach users.
- * PYQ data files always bypass cache (never stale).
+ * sw.js — Mentorix Service Worker v75
+ * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-v74';
+const CACHE_NAME = 'mentorix-v75';
 
-// Files to pre-cache on install (only truly static: html, images, manifest)
 const CORE_ASSETS = [
   './',
   './index.html',
   './logo.png',
-  './manifest.json',
+  './manifest.json'
 ];
 
-// Install
-self.addEventListener('install', e => {
+self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(CORE_ASSETS))
-      .then(() => self.skipWaiting())
+      .then(function(cache) { return cache.addAll(CORE_ASSETS); })
+      .then(function() { return self.skipWaiting(); })
   );
 });
 
-// Activate: nuke ALL old caches
-self.addEventListener('activate', e => {
+self.addEventListener('activate', function(e) {
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(
-        keys.filter(k => k !== CACHE_NAME).map(k => {
-          console.log('[SW] Deleting old cache:', k);
-          return caches.delete(k);
-        })
-      ))
-      .then(() => self.clients.claim())
+      .then(function(keys) {
+        return Promise.all(
+          keys.filter(function(k) { return k !== CACHE_NAME; }).map(function(k) {
+            console.log('[SW] Deleting old cache:', k);
+            return caches.delete(k);
+          })
+        );
+      })
+      .then(function() { return self.clients.claim(); })
   );
 });
 
-self.addEventListener('fetch', e => {
+self.addEventListener('fetch', function(e) {
   const url = e.request.url;
 
-  // AI proxy — never cache, let browser handle
+  // External APIs — bypass Service Worker
   if (url.includes('mentorix-proxy') || url.includes('groq.com') ||
       url.includes('googleapis') || url.includes('cloudflare') ||
       url.includes('workers.dev')) {
     return;
   }
 
-  // PYQ data files — ALWAYS network, fallback to cache or 404 response
-  if (url.includes('/data/pyq/') || url.includes('pyqService') ||
-      url.includes('master_index')) {
+  // PYQ data files — Network-First with Cache / JSON Fallback
+  if (url.includes('/data/pyq/') || url.includes('pyqService') || url.includes('master_index')) {
     e.respondWith(
-      fetch(e.request)
-        .catch(async () => {
-          const cached = await caches.match(e.request);
-          return cached || new Response('Not Found', { status: 404, statusText: 'Not Found' });
-        })
+      fetch(e.request).catch(function() {
+        return caches.match(e.request).then(function(cached) {
+          return cached || new Response('{"status":"offline"}', {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' }
+          });
+        });
+      })
     );
     return;
   }
 
-  // Navigation (HTML) — network-first
+  // Navigation (HTML) — Network-First with index.html Fallback
   if (e.request.mode === 'navigate') {
     e.respondWith(
       fetch(e.request)
-        .then(response => {
-          if (response.ok && e.request.url.startsWith('http')) {
+        .then(function(response) {
+          if (response && response.ok && e.request.url.startsWith('http')) {
             const clone = response.clone();
-            caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
+            caches.open(CACHE_NAME).then(function(c) { c.put(e.request, clone); });
           }
           return response;
         })
-        .catch(async () => {
-          const cached = await caches.match('./index.html');
-          return cached || new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
+        .catch(function() {
+          return caches.match('./index.html').then(function(cached) {
+            return cached || new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
+          });
         })
     );
     return;
   }
 
-  // JS / CSS / JSON — NETWORK-FIRST (so updates always reach browser)
+  // JS / CSS / JSON — Network-First with Cache / JS Fallback
   if (url.match(/\.(js|css|json)$/)) {
     e.respondWith(
       fetch(e.request)
-        .then(response => {
-          if (response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
+        .then(function(response) {
+          if (response && response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
             const clone = response.clone();
-            caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
+            caches.open(CACHE_NAME).then(function(c) { c.put(e.request, clone); });
           }
           return response;
         })
-        .catch(async () => {
-          const cached = await caches.match(e.request);
-          return cached || new Response('Not Found', { status: 404, statusText: 'Not Found' });
+        .catch(function() {
+          return caches.match(e.request).then(function(cached) {
+            return cached || new Response('/* Offline fallback */', {
+              status: 200,
+              headers: { 'Content-Type': 'text/javascript' }
+            });
+          });
         })
     );
     return;
   }
 
-  // Everything else (images, fonts) — cache-first
+  // Everything else — Cache-First with Network Fallback
   e.respondWith(
-    caches.match(e.request)
-      .then(cached => {
-        if (cached) return cached;
-        return fetch(e.request)
-          .then(response => {
-            if (response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
-              const clone = response.clone();
-              caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
-            }
-            return response;
-          })
-          .catch(() => new Response('Not Found', { status: 404, statusText: 'Not Found' }));
-      })
+    caches.match(e.request).then(function(cached) {
+      if (cached) return cached;
+      return fetch(e.request).then(function(response) {
+        if (response && response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then(function(c) { c.put(e.request, clone); });
+        }
+        return response;
+      });
+    }).catch(function() {
+      return new Response('', { status: 404, statusText: 'Not Found' });
+    })
   );
 });
-
-
-// Files to cache on install — the core app shell
