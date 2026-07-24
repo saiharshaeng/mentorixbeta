@@ -2143,6 +2143,15 @@ async function startMockExamSetup(forcedMode) {
   const diff = compState.practiceDifficulty || 'medium';
   const subjects = exam.subjects || ['General Studies'];
 
+  if (window.CompOrchestrator) {
+    window.CompOrchestrator.selectPaper({
+      id: 'mb_' + Date.now(),
+      exam: compState.examId,
+      paperId: compState.selectedPaperId || null,
+      type: 'mock'
+    });
+  }
+
   console.log('[Difficulty Enforcement] Passing difficulty to mock exam setup:', diff);
 
   // Preload exam questions dynamically
@@ -3416,6 +3425,16 @@ async function startCompPractice() {
   const diff = compState.practiceDifficulty || 'medium';
   const chapter = compState.practiceChapter || 'All Chapters';
   const count = compState.practiceCount || 5;
+
+  if (window.CompOrchestrator) {
+    window.CompOrchestrator.startPractice({
+      exam: compState.examId,
+      subject: section,
+      chapter: chapter,
+      difficulty: diff,
+      count: count
+    });
+  }
 
   if (window.pyqService) {
     await window.pyqService.preloadExam(compState.examId);
