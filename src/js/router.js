@@ -68,6 +68,7 @@ function go(scr, param) {
   // Preserve navigation context & cross-device session snapshot
   if (window.UAESEngine) window.UAESEngine.saveSessionSnapshot();
   if (window.UASCAEngine) window.UASCAEngine.onNavigate(scr);
+  if (window.ASLAEngine) window.ASLAEngine.onNavigate(scr);
   if (!window.D._navContext) window.D._navContext = {};
   if (D.screen && document.getElementById('main')) {
     window.D._navContext[D.screen] = {
@@ -243,15 +244,48 @@ function initSwipe() {
  *   Alt + P → Progress    Alt + S → Settings   Alt + E → Explore
  *   / → open global search
  */
+let gSequencePending = false;
+let gSequenceTimer = null;
+
 function initKeyboardShortcuts() {
   document.addEventListener('keydown', e => {
     // Skip when typing in inputs
     if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
 
+    // ? -> Show shortcuts / command palette help
+    if (e.key === '?') {
+      e.preventDefault();
+      if (window.CommandPalette) window.CommandPalette.open();
+      return;
+    }
+
+    // Esc -> Close top overlay
+    if (e.key === 'Escape') {
+      if (window.OverlayManager) window.OverlayManager.dismissTopOverlay();
+      return;
+    }
+
+    // g sequence navigation: g d -> dashboard, g l -> learning, g e -> exams
+    if (e.key === 'g' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      gSequencePending = true;
+      clearTimeout(gSequenceTimer);
+      gSequenceTimer = setTimeout(() => { gSequencePending = false; }, 1000);
+      return;
+    }
+
+    if (gSequencePending) {
+      gSequencePending = false;
+      clearTimeout(gSequenceTimer);
+      if (e.key === 'd') { go('dash'); return; }
+      if (e.key === 'l') { go('courses'); return; }
+      if (e.key === 'e') { go('comp'); return; }
+    }
+
     // Global search
     if (e.key === '/' && !e.altKey && !e.ctrlKey && !e.metaKey) {
       e.preventDefault();
-      if (typeof openGlobalSearch === 'function') openGlobalSearch();
+      if (window.CommandPalette) window.CommandPalette.open();
+      else if (typeof openGlobalSearch === 'function') openGlobalSearch();
       return;
     }
 
@@ -261,8 +295,10 @@ function initKeyboardShortcuts() {
       r: 'revision', t: 'tests', p: 'progress', s: 'settings',
       e: 'explore'
     };
-    const target = map[e.key.toLowerCase()];
-    if (target) { e.preventDefault(); go(target); }
+    if (map[e.key.toLowerCase()]) {
+      e.preventDefault();
+      go(map[e.key.toLowerCase()]);
+    }
   });
 }
 
