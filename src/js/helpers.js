@@ -100,6 +100,20 @@ const xpP = xp => Math.round((xpR(xp) / 500) * 100);
 
 window._katexCache = window._katexCache || new Map();
 
+function cleanMathDelimiters(str) {
+  if (!str || typeof str !== 'string') return str;
+  return str
+    .replace(/\\\s+\(/g, '\\(')
+    .replace(/\\\s+\)/g, '\\)')
+    .replace(/\\\s+\[/g, '\\[')
+    .replace(/\\\s+\]/g, '\\]')
+    .replace(/\\left(?![a-zA-Z\s|([{.<>])/g, '\\left(')
+    .replace(/\\right(?![a-zA-Z\s|)]}>.])/g, '\\right)')
+    .replace(/\\right\\\s*\)/g, '\\right)')
+    .replace(/\\text\s*\{\s*\(\s*/g, '\\text{(');
+}
+window.cleanMathDelimiters = cleanMathDelimiters;
+
 /**
  * Renders KaTeX math in `el` (or document.body if omitted).
  * Caches expressions & defers via requestAnimationFrame to avoid main-thread blocking.
@@ -116,12 +130,16 @@ function renderMath(el) {
   const runRender = () => {
     if (typeof window.renderMathInElement === 'function') {
       try {
+        if (target.innerHTML && (target.innerHTML.includes('\\ (') || target.innerHTML.includes('\\ )') || target.innerHTML.includes('\\left'))) {
+          target.innerHTML = cleanMathDelimiters(target.innerHTML);
+        }
         window.renderMathInElement(target, {
           delimiters: [
             { left: '$$', right: '$$', display: true },
             { left: '$',  right: '$',  display: false },
             { left: '\\(', right: '\\)', display: false },
-            { left: '\\[', right: '\\]', display: true }
+            { left: '\\[', right: '\\]', display: true },
+            { left: '\\ (', right: '\\ )', display: false }
           ],
           throwOnError: false
         });
