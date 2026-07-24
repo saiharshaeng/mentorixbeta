@@ -1,5 +1,5 @@
 /**
- * sie/mistakeClusterer.js — Mistake Clusterer for Mentorix SIE
+ * sie/mistakeClusterer.js — Context-Aware Mistake Clusterer for Mentorix SIE
  */
 (function() {
   'use strict';
@@ -21,15 +21,33 @@
         if (q.status === 'INCORRECT') {
           profile.mistakes.totalMistakes++;
 
-          const conceptKey = (q.subject || 'General') + '::' + (q.chapter || 'General') + '::' + (q.concept || 'General');
+          const subj = q.subject || 'General';
+          const chap = q.chapter || 'General';
+          const topic = q.topic || 'General';
+          const subtopic = q.subtopic || topic;
+          const concept = q.concept || 'General Concept';
+
+          const conceptKey = `${subj}::${chap}::${topic}::${concept}`;
+
+          // Determine Reason: CARELESS vs CONCEPTUAL_GAP vs TIME_CONSTRAINT
+          let reason = 'CONCEPTUAL_GAP';
+          const time = q.timeSpentSeconds || 0;
+          if (time < 30) {
+            reason = 'CARELESS'; // Rushed and made mistake
+          } else if (q.timeConstraintRushed || time > 150) {
+            reason = 'TIME_CONSTRAINT'; // Time pressure or hesitation
+          }
 
           if (!clusters[conceptKey]) {
             clusters[conceptKey] = {
               conceptKey: conceptKey,
-              subject: q.subject || 'General',
-              chapter: q.chapter || 'General',
-              topic: q.topic || 'General',
-              concept: q.concept || 'General',
+              subject: subj,
+              chapter: chap,
+              topic: topic,
+              subtopic: subtopic,
+              concept: concept,
+              reason: reason,
+              reasonsBreakdown: { CARELESS: 0, CONCEPTUAL_GAP: 0, TIME_CONSTRAINT: 0 },
               frequency: 0,
               severity: 'Minor',
               questions: [],
@@ -41,7 +59,14 @@
 
           const cluster = clusters[conceptKey];
           cluster.frequency++;
+          cluster.reasonsBreakdown[reason]++;
           cluster.lastOccurred = timestamp;
+
+          // Dominant reason
+          const maxR = Object.keys(cluster.reasonsBreakdown).reduce((a, b) =>
+            cluster.reasonsBreakdown[a] > cluster.reasonsBreakdown[b] ? a : b
+          );
+          cluster.reason = maxR;
 
           // Severity calculation
           if (cluster.frequency >= 5) {
@@ -57,7 +82,8 @@
             questionId: q.questionId,
             selectedAnswer: q.studentAnswer,
             officialAnswer: q.officialAnswer,
-            timeSpentSeconds: q.timeSpentSeconds || 0,
+            timeSpentSeconds: time,
+            reason: reason,
             timestamp: timestamp
           });
         }

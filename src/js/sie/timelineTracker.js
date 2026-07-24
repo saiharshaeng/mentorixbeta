@@ -1,5 +1,5 @@
 /**
- * sie/timelineTracker.js — Progress Timeline Tracker for Mentorix SIE
+ * sie/timelineTracker.js — Topic Improvement Timeline & Growth Tracker for Mentorix SIE
  */
 (function() {
   'use strict';
@@ -14,7 +14,7 @@
 
       const timestamp = evaluationReport.evaluatedAt || new Date().toISOString();
 
-      // Record macro session entry
+      // 1. Record macro session entry
       profile.timeline.history.push({
         sessionId: evaluationReport.sessionId,
         evaluatedAt: timestamp,
@@ -24,39 +24,66 @@
         attemptRate: evaluationReport.sessionSummary.attemptRate
       });
 
-      // Update topic trends
+      // 2. Update topic-level improvement trends
       if (Array.isArray(evaluationReport.questionResults)) {
         evaluationReport.questionResults.forEach(q => {
-          const topicKey = (q.subject || 'General') + '::' + (q.topic || 'General');
+          const topicKey = `${q.subject || 'General'}::${q.topic || 'General'}`;
+
           if (!profile.timeline.topicTrends[topicKey]) {
             profile.timeline.topicTrends[topicKey] = {
               topic: q.topic || 'General',
-              attempts: 0,
+              attemptsCount: 0,
               correctCount: 0,
-              history: [],
-              trend: 'Stable'
+              firstAttemptAccuracy: null,
+              lastAttemptAccuracy: 0,
+              bestAttemptAccuracy: 0,
+              trend: 'Stable',
+              confidence: 'Low',
+              growth: 0,
+              history: []
             };
           }
 
           const tt = profile.timeline.topicTrends[topicKey];
-          tt.attempts++;
+          tt.attemptsCount++;
           if (q.status === 'CORRECT') tt.correctCount++;
 
-          const acc = Math.round((tt.correctCount / tt.attempts) * 100);
-          tt.history.push({ timestamp, accuracy: acc, isCorrect: q.status === 'CORRECT' });
+          const currentAccuracy = Math.round((tt.correctCount / tt.attemptsCount) * 100);
+
+          if (tt.firstAttemptAccuracy === null) {
+            tt.firstAttemptAccuracy = q.status === 'CORRECT' ? 100 : 0;
+          }
+
+          tt.lastAttemptAccuracy = currentAccuracy;
+          if (currentAccuracy > tt.bestAttemptAccuracy) {
+            tt.bestAttemptAccuracy = currentAccuracy;
+          }
+
+          tt.growth = tt.bestAttemptAccuracy - tt.firstAttemptAccuracy;
+
+          tt.history.push({ timestamp, accuracy: currentAccuracy, isCorrect: q.status === 'CORRECT' });
 
           // Determine trend (Improving / Declining / Stable)
           if (tt.history.length >= 3) {
             const recent = tt.history.slice(-3);
-            const firstOfRecent = recent[0].isCorrect ? 1 : 0;
-            const lastOfRecent = recent[2].isCorrect ? 1 : 0;
-            if (lastOfRecent > firstOfRecent) {
+            const firstAcc = recent[0].accuracy;
+            const lastAcc = recent[2].accuracy;
+            if (lastAcc > firstAcc) {
               tt.trend = 'Improving';
-            } else if (lastOfRecent < firstOfRecent) {
+            } else if (lastAcc < firstAcc) {
               tt.trend = 'Declining';
             } else {
               tt.trend = 'Stable';
             }
+          }
+
+          // Determine confidence level for this topic
+          if (tt.attemptsCount >= 5 && tt.lastAttemptAccuracy >= 75) {
+            tt.confidence = 'High';
+          } else if (tt.attemptsCount >= 3 && tt.lastAttemptAccuracy >= 50) {
+            tt.confidence = 'Medium';
+          } else {
+            tt.confidence = 'Low';
           }
         });
       }

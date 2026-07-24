@@ -1,7 +1,7 @@
 /**
  * sie/profileManager.js — Student Profile Manager for Mentorix SIE
  *
- * Manages the root StudentAcademicProfile state and localStorage persistence.
+ * Manages the full, comprehensive StudentAcademicProfile object and localStorage persistence.
  */
 (function() {
   'use strict';
@@ -23,10 +23,20 @@
       },
       timeBehavior: {
         rushingIncidents: 0,
+        rushedSubjects: {}, // e.g. { Physics: 3 }
         prolongedIncidents: 0,
+        prolongedSubjects: {}, // e.g. { Chemistry: 4 }
+        lengthyQuestionsSkipped: 0,
+        answerChangesCount: 0,
         averageTimePerQuestion: 0,
         totalTimeSpentSeconds: 0,
-        timePerSubject: { Physics: 0, Chemistry: 0, Mathematics: 0 }
+        timePerSubject: { Physics: 0, Chemistry: 0, Mathematics: 0 },
+        timeOfDayPerformance: {
+          morning: { sessions: 0, correct: 0, attempted: 0, accuracy: 0 },   // 6 AM - 12 PM
+          afternoon: { sessions: 0, correct: 0, attempted: 0, accuracy: 0 }, // 12 PM - 5 PM
+          evening: { sessions: 0, correct: 0, attempted: 0, accuracy: 0 },   // 5 PM - 10 PM
+          night: { sessions: 0, correct: 0, attempted: 0, accuracy: 0 }      // 10 PM - 6 AM
+        }
       },
       mistakes: {
         clusters: {},
@@ -34,12 +44,14 @@
       },
       timeline: {
         history: [],
-        topicTrends: {}
+        topicTrends: {} // topic -> { firstAttempt, lastAttempt, bestAttempt, trend, confidence, growth }
       },
       memory: {
         strongestChapters: [],
         weakestChapters: [],
         mostPracticedTopic: null,
+        averageStudyDurationMinutes: 0,
+        preferredDifficulty: 'Medium',
         preferredSessionLengthMinutes: 30,
         improvementVelocity: 0
       },

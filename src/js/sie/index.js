@@ -6,7 +6,7 @@
 
   const SIE = {
     /**
-     * Ingests a completed EvaluationReport and updates the Student Academic Profile across all sub-systems.
+     * Converts raw evaluation data into structured academic knowledge and updates the Student Academic Profile.
      */
     UpdateStudentProfile(evaluationReport) {
       if (!evaluationReport || !evaluationReport.sessionSummary) {
@@ -25,19 +25,19 @@
         );
       }
 
-      // 2. Update Mastery Estimations
+      // 2. Update Mastery & Confidence Estimations
       window.MasteryEstimator.updateMasteryFromReport(profile, evaluationReport);
 
-      // 3. Analyze Time Behavior
+      // 3. Analyze Time & Timing Intelligence
       window.TimeBehaviorAnalyzer.analyzeTiming(profile, evaluationReport);
 
-      // 4. Cluster Mistakes
+      // 4. Cluster Mistakes with context
       window.MistakeClusterer.clusterMistakes(profile, evaluationReport);
 
-      // 5. Track Progress Timeline
+      // 5. Track Progress Timeline & Topic Growth
       window.TimelineTracker.recordSessionTimeline(profile, evaluationReport);
 
-      // 6. Update Student Memory
+      // 6. Update Academic Memory
       window.StudentMemory.updateAcademicMemory(profile);
 
       // 7. Persist updated profile
