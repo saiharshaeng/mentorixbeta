@@ -3,7 +3,7 @@
  * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-v75';
+const CACHE_NAME = 'mentorix-v76';
 
 const CORE_ASSETS = [
   './',
@@ -45,14 +45,14 @@ self.addEventListener('fetch', function(e) {
     return;
   }
 
-  // PYQ data files — Network-First with Cache / JSON Fallback
+  // PYQ data files — Network-First with Cache / JS Fallback
   if (url.includes('/data/pyq/') || url.includes('pyqService') || url.includes('master_index')) {
     e.respondWith(
       fetch(e.request).catch(function() {
         return caches.match(e.request).then(function(cached) {
-          return cached || new Response('{"status":"offline"}', {
+          return cached || new Response('/* Offline fallback */', {
             status: 200,
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'text/javascript' }
           });
         });
       })

@@ -1,26 +1,40 @@
 /**
  * qiacp/index.js — Public API Facade for Question Ingestion & Academic Classification Pipeline (QIACP)
+ * Dual-environment safe (Node.js & Browser support)
  */
 
 'use strict';
 
-const pdfIngestion = require('./pdfIngestion').pdfIngestion || require('./pdfIngestion');
-const ocrEngine = require('./ocrEngine').ocrEngine || require('./ocrEngine');
-const textCleanup = require('./textCleanup').textCleanup || require('./textCleanup');
-const pageSegmentation = require('./pageSegmentation').pageSegmentation || require('./pageSegmentation');
-const questionDetector = require('./questionDetector').questionDetector || require('./questionDetector');
-const optionDetector = require('./optionDetector').optionDetector || require('./optionDetector');
-const answerExtractor = require('./answerExtractor').answerExtractor || require('./answerExtractor');
-const solutionExtractor = require('./solutionExtractor').solutionExtractor || require('./solutionExtractor');
-const imageExtractor = require('./imageExtractor').imageExtractor || require('./imageExtractor');
-const equationCleanup = require('./equationCleanup').equationCleanup || require('./equationCleanup');
-const katexNormalizer = require('./katexNormalizer').katexNormalizer || require('./katexNormalizer');
-const academicClassifier = require('./academicClassifier').academicClassifier || require('./academicClassifier');
-const metadataGenerator = require('./metadataGenerator').metadataGenerator || require('./metadataGenerator');
-const validator = require('./validator').validator || require('./validator');
-const duplicateDetector = require('./duplicateDetector').duplicateDetector || require('./duplicateDetector');
-const jsonPackageGenerator = require('./jsonPackageGenerator').jsonPackageGenerator || require('./jsonPackageGenerator');
-const qiacpPipeline = require('./qiacpPipeline').qiacpPipeline || require('./qiacpPipeline');
+function req(modPath) {
+  const name = modPath.replace('./', '').replace('.js', '');
+  if (typeof require !== 'undefined') {
+    try {
+      const m = require(modPath);
+      return m.default || m[name] || m;
+    } catch (e) {
+      return {};
+    }
+  }
+  return typeof window !== 'undefined' ? (window[name] || {}) : {};
+}
+
+const pdfIngestion = req('./pdfIngestion');
+const ocrEngine = req('./ocrEngine');
+const textCleanup = req('./textCleanup');
+const pageSegmentation = req('./pageSegmentation');
+const questionDetector = req('./questionDetector');
+const optionDetector = req('./optionDetector');
+const answerExtractor = req('./answerExtractor');
+const solutionExtractor = req('./solutionExtractor');
+const imageExtractor = req('./imageExtractor');
+const equationCleanup = req('./equationCleanup');
+const katexNormalizer = req('./katexNormalizer');
+const academicClassifier = req('./academicClassifier');
+const metadataGenerator = req('./metadataGenerator');
+const validator = req('./validator');
+const duplicateDetector = req('./duplicateDetector');
+const jsonPackageGenerator = req('./jsonPackageGenerator');
+const qiacpPipeline = req('./qiacpPipeline');
 
 const QI = {
   pdfIngestion,
@@ -43,19 +57,26 @@ const QI = {
 };
 
 async function IngestPaperPackage(rawPaperInput, options = {}) {
-  return await qiacpPipeline.executePipeline(rawPaperInput, options);
+  if (qiacpPipeline && typeof qiacpPipeline.executePipeline === 'function') {
+    return await qiacpPipeline.executePipeline(rawPaperInput, options);
+  }
+  return { status: 'skipped', message: 'QIACP Pipeline not active' };
 }
 
-module.exports = {
+const exportedApi = {
   ...QI,
   IngestPaperPackage,
-  VERIFICATION_STATUS: validator.VERIFICATION_STATUS || {
+  VERIFICATION_STATUS: (validator && validator.VERIFICATION_STATUS) || {
     OFFICIALLY_VERIFIED: 'Officially Verified',
     VERIFIED_REPOSITORY: 'Verified Repository',
     PENDING_REVIEW: 'Pending Review'
   }
 };
 
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = exportedApi;
+}
+
 if (typeof window !== 'undefined') {
-  window.QIACP = module.exports;
+  window.QIACP = exportedApi;
 }
