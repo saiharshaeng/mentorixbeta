@@ -3774,9 +3774,6 @@ body[data-screen="learn"] .cglow {
   0% { transform: translateY(0) rotate(-5deg); }
   100% { transform: translateY(-5px) rotate(5deg); }
 }
-/* dup removed */
-  100% { opacity: 0.9; transform: scale(1.2); }
-}
 @keyframes unlockPulse {
   0%, 100% { box-shadow: 0 0 0 rgba(16, 185, 129, 0); }
   50% { box-shadow: 0 0 12px rgba(16, 185, 129, 0.2); }
@@ -3987,7 +3984,6 @@ code,pre,.diag-card{
   background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.3) 50%,transparent 100%);
   background-size:200%;animation:xpBarShine 1.8s ease 1s forwards;
 }
-/* dup removed */100%{background-position:100%}}
 
 /* â”€â”€ MODAL UPGRADE â”€â”€ */
 .modal-box{
@@ -4903,8 +4899,7 @@ body::before {
   .rev-card{width:100%!important}
 }
 
-/* ── DASHBOARD HERO — tighten spacing ── */
-@media(max-width:480px){
+/* ── NTA PALETTE STYLES ── */
 .nta-pal-group { margin-bottom: 14px; }
 .nta-pal-grid {
   display: grid;
