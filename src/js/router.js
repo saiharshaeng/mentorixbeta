@@ -92,6 +92,7 @@ function go(scr, param) {
       requestAnimationFrame(() => {
         const h = main.querySelector('h1,h2,[data-focus-first]');
         if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+        if (window.TioOrchestrator) window.TioOrchestrator.updateState();
       });
     }, 90);
   } else {
