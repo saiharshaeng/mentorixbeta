@@ -65,7 +65,8 @@ function go(scr, param) {
     window.onScreenUnmount = null;
   }
 
-  // Preserve navigation context for current screen
+  // Preserve navigation context & cross-device session snapshot
+  if (window.UAESEngine) window.UAESEngine.saveSessionSnapshot();
   if (!window.D._navContext) window.D._navContext = {};
   if (D.screen && document.getElementById('main')) {
     window.D._navContext[D.screen] = {
