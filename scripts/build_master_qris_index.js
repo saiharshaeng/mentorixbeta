@@ -27,13 +27,19 @@ const QIACP = qiacpModule.QIACP || qiacpModule;
 const pyqDir = path.resolve(__dirname, '../src/data/pyq');
 const outputFile = path.resolve(__dirname, '../src/data/pyq/qris_master_repository.json');
 
-function getAllJsonFiles(dir, fileList = []) {
+function getAllDatasetFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
     const full = path.join(dir, file);
     if (fs.statSync(full).isDirectory()) {
-      getAllJsonFiles(full, fileList);
-    } else if (file.endsWith('.json') && !file.includes('qris_master_repository') && !file.includes('package')) {
+      getAllDatasetFiles(full, fileList);
+    } else if ((file.endsWith('.json') || file.endsWith('.js')) && 
+               !file.includes('qris_master_repository') && 
+               !file.includes('package') && 
+               !file.includes('index') &&
+               !file.includes('pyqService') &&
+               !file.includes('pyqConverter') &&
+               !file.includes('examPatterns')) {
       fileList.push(full);
     }
   }
@@ -118,8 +124,8 @@ function normalizeRawQuestion(raw, sourceFile, idx) {
 
 async function runMasterBuild() {
   console.log('🚀 BUILDING MASTER QRIS QUESTION REPOSITORY INDEX...');
-  const files = getAllJsonFiles(pyqDir);
-  console.log(`Found ${files.length} JSON dataset files.`);
+  const files = getAllDatasetFiles(pyqDir);
+  console.log(`Found ${files.length} dataset files (JSON/JS).`);
 
   const masterQuestions = [];
   const stemSet = new Set();
@@ -128,9 +134,23 @@ async function runMasterBuild() {
 
   for (const file of files) {
     try {
-      const content = fs.readFileSync(file, 'utf8');
-      const data = JSON.parse(content);
-      const items = Array.isArray(data) ? data : (data.questions || []);
+      let items = [];
+      if (file.endsWith('.json')) {
+        const content = fs.readFileSync(file, 'utf8');
+        const data = JSON.parse(content);
+        items = Array.isArray(data) ? data : (data.questions || []);
+      } else if (file.endsWith('.js')) {
+        global.window = global;
+        global.window.JEE_CLASSIFIED_QUESTIONS = undefined;
+        try {
+          const mod = require(file);
+          if (Array.isArray(mod)) items = mod;
+          else if (mod && Array.isArray(mod.questions)) items = mod.questions;
+          else if (global.window.JEE_CLASSIFIED_QUESTIONS) items = global.window.JEE_CLASSIFIED_QUESTIONS;
+        } catch(err) {
+          // Ignore non-export JS
+        }
+      }
 
       totalRawCount += items.length;
 
