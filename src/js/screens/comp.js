@@ -3088,6 +3088,12 @@ function submitMockExam() {
     addXP(xpEarned);
   }
 
+  if (window.CompEventBus) {
+    window.CompEventBus.publish('AttemptSubmitted', { examId: compState.examId, score, correct, incorrect, unattempted: skipped });
+    window.CompEventBus.publish('EvaluationCompleted', { examId: compState.examId, score, accuracyPct: Math.round((correct / (exam.questions.length || 1)) * 100) });
+    window.CompEventBus.publish('ProfileUpdated', { profileId: window.D?.profile?.id || 'guest', lastExam: examDb.name || 'Mock CBT', latestScore: score, latestAccuracy: Math.round((correct / (exam.questions.length || 1)) * 100) });
+  }
+
     if (!D.compExam) D.compExam = { chapterStats: {}, sessionHistory: [] };
     if (!D.compExam.sessionHistory) D.compExam.sessionHistory = [];
     const sessionRec = {
@@ -3600,6 +3606,11 @@ function launchMultiPracticeOverlay(questions) {
 
     if (typeof recordPracticeSessionForRank === 'function') {
       recordPracticeSessionForRank(score, total);
+    }
+
+    if (window.CompEventBus) {
+      window.CompEventBus.publish('EvaluationCompleted', { type: 'practice', score, totalQuestions: total, accuracyPct: pct });
+      window.CompEventBus.publish('ProfileUpdated', { profileId: window.D?.profile?.id || 'guest', lastExam: 'Practice Session', latestScore: score, latestAccuracy: pct });
     }
     document.getElementById('mp-content').innerHTML = `
       <div style="text-align:center;padding:20px 0">

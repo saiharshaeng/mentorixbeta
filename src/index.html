@@ -433,6 +433,7 @@ console.log('[KaTeX] System ready');
 <script src="js/sessionEngine.js?v=66"></script>
 <script src="js/questionDeliveryEngine.js?v=66"></script>
 <script src="js/evaluationEngine.js?v=66"></script>
+<script src="js/services/compOrchestrator.js?v=66"></script>
 <script src="js/screens/comp.js?v=66"></script>
 <script>
 'use strict';
@@ -4752,6 +4753,13 @@ function init(){
     try{
       if (window.pyqService) {
         await window.pyqService.init();
+      }
+      if (window.CompEventBus) {
+        window.CompEventBus.subscribe('ProfileUpdated', (profile) => {
+          if (window.D && window.D.screen === 'dash' && typeof window.rDash === 'function') {
+            window.rDash();
+          }
+        });
       }
       const s=getSession();
       if(!s){renderAuth();return;}
