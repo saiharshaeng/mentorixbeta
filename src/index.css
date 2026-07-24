@@ -9051,6 +9051,71 @@ html, body {
   box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* 📱 SPECIALIZED MOBILE & TABLET RESPONSIVE DEPLOYMENT BREAKPOINTS           */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Tablet Viewport Optimization (768px - 1024px) */
+@media (max-width: 1024px) {
+  .comp-two-col {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .comp-right-panel {
+    margin-bottom: 70px !important;
+  }
+}
+
+/* Mobile Viewport Optimization (< 768px) */
+@media (max-width: 768px) {
+  .comp-hub-header {
+    padding: 16px 14px;
+    border-radius: 16px;
+  }
+  .comp-hub-title {
+    font-size: 20px !important;
+  }
+  .comp-segmented-tabs {
+    gap: 4px;
+    padding: 4px;
+    border-radius: 12px;
+  }
+  .comp-tab-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+  .comp-stats-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  .comp-stat-card {
+    padding: 16px 14px;
+  }
+  .stat-val-large {
+    font-size: 24px;
+  }
+  .comp-modes-card {
+    padding: 18px 14px;
+  }
+  .comp-mode-row {
+    padding: 14px 12px;
+    flex-wrap: wrap;
+  }
+  .comp-launch-btn {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+}
+
+/* Small Smartphone Viewport (< 480px) */
+@media (max-width: 480px) {
+  .comp-stats-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
 
 
