@@ -324,9 +324,18 @@ function initBackButton(){
   // Handled by router popstate listeners
 }
 
+function animKeyPress(el) {
+  if (!el) return;
+  el.style.transform = 'scale(0.95)';
+  setTimeout(() => {
+    el.style.transform = 'scale(1)';
+  }, 100);
+}
+
 /* ── EXPORTS ────────────────────────────────────────────────── */
 // Exposed as globals so the non-module monolith scripts can call them unchanged.
 // When the full ESM migration is complete these become named exports.
+window.animKeyPress     = animKeyPress;
 window.esc              = esc;
 window.lv               = lv;
 window.xpR              = xpR;
