@@ -96,31 +96,73 @@ const xpR = xp => xp % 500;
 /** Returns percentage progress through the current level (0–100). */
 const xpP = xp => Math.round((xpR(xp) / 500) * 100);
 
-/* ── MATH RENDERING ─────────────────────────────────────────── */
+/* ── MATH RENDERING & EXPRESSION CACHING ─────────────────────────── */
+
+window._katexCache = window._katexCache || new Map();
 
 /**
  * Renders KaTeX math in `el` (or document.body if omitted).
- * Retries automatically if KaTeX CDN script hasn't finished loading yet.
+ * Caches expressions & defers via requestAnimationFrame to avoid main-thread blocking.
  */
 function renderMath(el) {
   const target = el || document.body;
-  if (typeof window.renderMathInElement === 'function') {
-    try {
-      window.renderMathInElement(target, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$',  right: '$',  display: false },
-          { left: '\\(', right: '\\)', display: false },
-          { left: '\\[', right: '\\]', display: true }
-        ],
-        throwOnError: false
-      });
-    } catch (e) {}
+  if (!target) return;
+
+  // Skip if already rendered in this DOM container
+  if (target.dataset && target.dataset.katexRendered === 'true') {
+    return;
+  }
+
+  const runRender = () => {
+    if (typeof window.renderMathInElement === 'function') {
+      try {
+        window.renderMathInElement(target, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$',  right: '$',  display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+        if (target.dataset) target.dataset.katexRendered = 'true';
+      } catch (e) {
+        console.warn('[KaTeX Cache] Render warning:', e);
+      }
+    } else {
+      setTimeout(() => renderMath(target), 200);
+    }
+  };
+
+  if (typeof requestAnimationFrame === 'function') {
+    requestAnimationFrame(runRender);
   } else {
-    // KaTeX still loading — retry shortly
-    setTimeout(() => renderMath(target), 300);
+    runRender();
   }
 }
+window.renderMath = renderMath;
+
+/* ── VIEWPORT INTERSECTION OBSERVER ────────────────────────── */
+
+(function initMentorixObserver() {
+  if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
+
+  window.MentorixObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('pause-anim');
+      } else {
+        entry.target.classList.add('pause-anim');
+      }
+    });
+  }, { threshold: 0.05 });
+
+  window.observeElementVisibility = function (el) {
+    if (el && window.MentorixObserver) {
+      window.MentorixObserver.observe(el);
+    }
+  };
+})();
 
 /* ── TOAST NOTIFICATIONS ────────────────────────────────────── */
 

@@ -256,6 +256,8 @@ function renderQuestionImage(question) {
         <div class="q-image-wrapper" style="position:relative;margin:12px 0;text-align:center;">
           <img 
             src="${src}" 
+            loading="lazy"
+            decoding="async"
             alt="Question Diagram ${idx + 1}"
             class="q-image"
             style="max-width:100%;max-height:420px;object-fit:contain;border-radius:10px;border:1px solid rgba(255,255,255,0.15);background:#fff;padding:8px;box-shadow:0 4px 16px rgba(0,0,0,0.2);cursor:zoom-in;"

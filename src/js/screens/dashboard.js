@@ -488,8 +488,21 @@ function rDash(){
   if (typeof updateTimerDisplay === 'function') updateTimerDisplay();
   if (typeof initDashboardPhysics === 'function') initDashboardPhysics();
   
-  // Telemetry stream scroll removed
-  
+  // Register unmount cleanup for dashboard physics & observers
+  window.onScreenUnmount = function () {
+    if (window._dashPhysicsAnimId) {
+      cancelAnimationFrame(window._dashPhysicsAnimId);
+      window._dashPhysicsAnimId = null;
+    }
+  };
+
+  // Observe card visibility for off-screen animation pausing
+  if (typeof window.observeElementVisibility === 'function') {
+    document.querySelectorAll('.dash-hero-zone, .card-lift').forEach(el => {
+      window.observeElementVisibility(el);
+    });
+  }
+
   // Sync timer toggle button label
   const btn = document.getElementById('timer-toggle-btn');
   if (btn) btn.textContent = window.SprintTimerState.running ? '⏸️ Pause' : '▶️ Start';

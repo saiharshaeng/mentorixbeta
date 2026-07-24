@@ -41,6 +41,16 @@ const SCREEN_MAP = {
 /* ── MAIN ROUTING FUNCTION ──────────────────────────────────── */
 
 function go(scr, param) {
+  // Execute unmount lifecycle cleanup for previous screen
+  if (typeof window.onScreenUnmount === 'function') {
+    try {
+      window.onScreenUnmount();
+    } catch (e) {
+      console.warn('[Router Unmount] Error during screen cleanup:', e);
+    }
+    window.onScreenUnmount = null;
+  }
+
   // Stop any active lesson sub-cycle
   const learnSub = document.getElementById('learn-sub');
   if (learnSub && learnSub._cycleStop) learnSub._cycleStop();

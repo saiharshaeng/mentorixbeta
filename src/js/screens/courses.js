@@ -422,6 +422,15 @@ function rCourses(){
       </div>
     </div>
   `;
+
+  // Attach visibility observer to pause off-screen node animations
+  if (typeof window.observeElementVisibility === 'function') {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.world-node, .world-biome-banner').forEach(el => {
+        window.observeElementVisibility(el);
+      });
+    });
+  }
 }
 
 function getContinueLearningChapter() {

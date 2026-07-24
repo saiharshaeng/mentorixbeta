@@ -216,7 +216,7 @@
       let imageHTML = '';
       if (q.hasImage || q.imagePath || q.img) {
         const imgSrc = q.imagePath || q.img;
-        imageHTML = `<div style="margin:14px 0"><img src="${esc(imgSrc)}" style="max-width:100%;max-height:300px;border-radius:10px;border:1px solid var(--brd,rgba(255,255,255,0.1))" alt="Question Diagram" /></div>`;
+        imageHTML = `<div style="margin:14px 0"><img src="${esc(imgSrc)}" loading="lazy" decoding="async" style="max-width:100%;max-height:300px;border-radius:10px;border:1px solid var(--brd,rgba(255,255,255,0.1))" alt="Question Diagram" /></div>`;
       }
 
       container.innerHTML = `
