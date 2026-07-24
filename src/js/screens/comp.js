@@ -3145,6 +3145,9 @@ function submitMockExam() {
     window.CompEventBus.publish('ProfileUpdated', { profileId: window.D?.profile?.id || 'guest', lastExam: examDb.name || 'Mock CBT', latestScore: score, latestAccuracy: evalRep.accuracyPct });
   }
 
+  // Clear crash recovery checkpoint upon formal exam submission (maintains academic integrity)
+  if (window.UASCAEngine) window.UASCAEngine.clearCBTCheckpoint();
+
     if (!D.compExam) D.compExam = { chapterStats: {}, sessionHistory: [] };
     if (!D.compExam.sessionHistory) D.compExam.sessionHistory = [];
     const sessionRec = {

@@ -67,6 +67,7 @@ function go(scr, param) {
 
   // Preserve navigation context & cross-device session snapshot
   if (window.UAESEngine) window.UAESEngine.saveSessionSnapshot();
+  if (window.UASCAEngine) window.UASCAEngine.onNavigate(scr);
   if (!window.D._navContext) window.D._navContext = {};
   if (D.screen && document.getElementById('main')) {
     window.D._navContext[D.screen] = {
