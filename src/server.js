@@ -24,8 +24,17 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  // Decode URL to handle spaces and special chars
-  const decodedUrl = decodeURIComponent(req.url);
+  // Decode URL and strip query parameters
+  const rawUrl = req.url.split('?')[0];
+  const decodedUrl = decodeURIComponent(rawUrl);
+
+  // Favicon fallback handler
+  if (decodedUrl === '/favicon.ico') {
+    res.writeHead(200, { 'Content-Type': 'image/x-icon' });
+    res.end();
+    return;
+  }
+
   let filePath = path.join(root, decodedUrl === '/' ? 'index.html' : decodedUrl);
 
   // Normalize paths to prevent directory traversal attacks
@@ -61,6 +70,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`✅ Mentorix server running at http://localhost:${port}/`);
-  console.log(`   Serving: ${root}`);
+  console.log(`Server running at http://localhost:${port}/`);
 });

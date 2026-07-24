@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const port = 8080;
-const root = 'C:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src';
+// Dynamic root path resolving to the src/ directory
+const root = path.join(__dirname, 'src');
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -13,19 +14,32 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.gif': 'image/gif',
-  '.svg': 'image/svg+xml'
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.webmanifest': 'application/manifest+json',
 };
 
 const server = http.createServer((req, res) => {
-  // Parse URL to strip query parameters (e.g. ?v=65)
-  const parsedUrl = new URL(req.url, 'http://localhost');
+  // Parse URL to strip query parameters (e.g. ?v=80)
+  const parsedUrl = new URL(req.url, 'http://localhost:8080');
   const decodedPathname = decodeURIComponent(parsedUrl.pathname);
+
+  // Favicon fallback handler to prevent Chrome console 404 errors
+  if (decodedPathname === '/favicon.ico') {
+    res.writeHead(200, { 'Content-Type': 'image/x-icon' });
+    res.end();
+    return;
+  }
+
   let filePath = path.join(root, decodedPathname === '/' ? 'index.html' : decodedPathname);
-  
+
   // Normalize paths to check directory traversal
   const normalizedRoot = path.normalize(root).toLowerCase();
   const normalizedFilePath = path.normalize(filePath).toLowerCase();
-  
+
   if (!normalizedFilePath.startsWith(normalizedRoot)) {
     res.statusCode = 403;
     res.end('Forbidden');
@@ -45,9 +59,9 @@ const server = http.createServer((req, res) => {
         res.end(`Server Error: ${err.code}`);
       }
     } else {
-      res.writeHead(200, { 
+      res.writeHead(200, {
         'Content-Type': contentType,
-        'Access-Control-Allow-Origin': '*', // Enable CORS for testing
+        'Access-Control-Allow-Origin': '*',
         'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
       });
       res.end(content, 'utf-8');
