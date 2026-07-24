@@ -17,6 +17,10 @@
 
 'use strict';
 
+if (typeof window !== 'undefined' && window.LS === undefined) {
+  window.LS = null;
+}
+
 /* ── INDEXEDDB LOW-LEVEL UTILITIES ───────────────────────────── */
 
 const DB_NAME = 'mentorix_db';
