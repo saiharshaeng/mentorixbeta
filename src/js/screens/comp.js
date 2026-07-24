@@ -1706,6 +1706,184 @@ function renderImportantChaptersTab(exam) {
   `;
 }
 
+// 3. Render Analytics & NTA Rank Predictor Tab
+function renderAnalyticsTab(exam) {
+  const stats = (D.compExam && D.compExam.chapterStats) || {};
+  const history = (D.compExam && D.compExam.sessionHistory) || [];
+  
+  let totalQs = 0;
+  let totalCorrect = 0;
+  Object.keys(stats).forEach(k => {
+    if (stats[k]) {
+      totalQs += (stats[k].total || 0);
+      totalCorrect += (stats[k].correct || 0);
+    }
+  });
+  const avgAccuracy = totalQs > 0 ? Math.round((totalCorrect / totalQs) * 100) : 0;
+  
+  const mockHistory = history.filter(h => h.type === 'mock');
+  const latestMock = mockHistory.length > 0 ? mockHistory[mockHistory.length - 1] : null;
+  const estimatedScore = latestMock ? latestMock.score : Math.round((avgAccuracy / 100) * 300);
+  
+  const est = estimateJEEPercentileAndRank(estimatedScore);
+  const targetScore = compState.targetScore || 240;
+  const targetGap = Math.max(0, targetScore - estimatedScore);
+  const targetEst = estimateJEEPercentileAndRank(targetScore);
+  
+  let physQs = 0, physCorr = 0;
+  let chemQs = 0, chemCorr = 0;
+  let mathQs = 0, mathCorr = 0;
+  
+  Object.keys(stats).forEach(k => {
+    if (stats[k] && stats[k].total > 0) {
+      if (k.startsWith('Physics')) { physQs += stats[k].total; physCorr += stats[k].correct; }
+      else if (k.startsWith('Chemistry')) { chemQs += stats[k].total; chemCorr += stats[k].correct; }
+      else if (k.startsWith('Mathematics')) { mathQs += stats[k].total; mathCorr += stats[k].correct; }
+    }
+  });
+  
+  const physAcc = physQs > 0 ? Math.round((physCorr / physQs) * 100) : 0;
+  const chemAcc = chemQs > 0 ? Math.round((chemCorr / chemQs) * 100) : 0;
+  const mathAcc = mathQs > 0 ? Math.round((mathCorr / mathQs) * 100) : 0;
+  
+  const weakChapters = [];
+  Object.keys(stats).forEach(k => {
+    if (stats[k] && stats[k].total >= 2) {
+      const acc = Math.round((stats[k].correct / stats[k].total) * 100);
+      if (acc < 70) {
+        const parts = k.split('::');
+        weakChapters.push({ subject: parts[0] || 'Physics', chapter: parts[1] || k, acc, total: stats[k].total });
+      }
+    }
+  });
+  weakChapters.sort((a, b) => a.acc - b.acc);
+  const topWeak = weakChapters.slice(0, 3);
+  
+  const weakHTML = topWeak.length > 0 ? topWeak.map(w => `
+    <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px" class="flex-col-mob">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff">${esc(w.chapter)}</div>
+        <div style="font-size:11px;color:var(--mut)">${esc(w.subject)} · Accuracy: <strong style="color:#EF4444">${w.acc}%</strong> (${w.total} Qs attempted)</div>
+      </div>
+      <button class="btn bsm bpri mt6-mob" onclick="startChapterPractice('${esc(w.subject)}', '${esc(w.chapter)}')">🎯 Practice Now</button>
+    </div>
+  `).join('') : `
+    <div style="padding:16px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.2);border-radius:12px;font-size:13px;color:var(--okl);text-align:center">
+      🎉 Great job! No critical weak spots detected (>70% accuracy across all practiced chapters).
+    </div>
+  `;
+
+  return `
+    <div class="sw scr" style="padding-top:16px">
+      
+      <!-- HERO RANK PREDICTOR CARD -->
+      <div class="card cglow mb20" style="padding:24px;border-color:rgba(139,92,246,0.3);background:linear-gradient(135deg, rgba(139,92,246,0.08), rgba(6,182,212,0.04))">
+        <div class="between mb12">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:22px">🏆</span>
+            <div>
+              <div style="font-size:18px;font-weight:800;color:#fff">NTA All India Rank Predictor</div>
+              <div style="font-size:12px;color:var(--mut)">Real-time percentile & AIR estimation based on NTA scoring statistical curves</div>
+            </div>
+          </div>
+          <span class="tag tp" style="font-size:11px">Auto-Updated Live</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:14px;margin:16px 0">
+          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:16px;text-align:center">
+            <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase">ESTIMATED AIR RANK</div>
+            <div style="font-size:32px;font-weight:900;color:#A78BFA;margin:6px 0">~${est.rank}</div>
+            <div style="font-size:11px;color:var(--sub)">Target: ${esc(compState.targetRank || 'AIR 1,000')}</div>
+          </div>
+
+          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(6,182,212,0.25);border-radius:14px;padding:16px;text-align:center">
+            <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase">PREDICTED PERCENTILE</div>
+            <div style="font-size:32px;font-weight:900;color:#38BDF8;margin:6px 0">${est.percentile}%</div>
+            <div style="font-size:11px;color:var(--sub)">Target: ${targetEst.percentile}%</div>
+          </div>
+
+          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(16,185,129,0.25);border-radius:14px;padding:16px;text-align:center">
+            <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase">BENCHMARK SCORE</div>
+            <div style="font-size:32px;font-weight:900;color:#34D399;margin:6px 0">${Math.round(estimatedScore)} <span style="font-size:16px;color:var(--mut)">/ 300</span></div>
+            <div style="font-size:11px;color:var(--sub)">${targetGap > 0 ? `+${targetGap} pts to reach Goal` : '🎯 Target Achieved!'}</div>
+          </div>
+        </div>
+
+        <div style="font-size:12px;color:var(--sub);background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:8px;display:flex;align-items:center;justify-content:space-between" class="flex-col-mob">
+          <span>⚡ Rank is recalculated automatically after <strong>every Mock Exam</strong> or <strong>every 2 Practice Tests</strong>.</span>
+          <span style="color:var(--pl);font-weight:600">Sessions Analyzed: ${history.length}</span>
+        </div>
+      </div>
+
+      <!-- SUBJECT ACCURACY HEATMAP -->
+      <div class="card mb20" style="padding:20px;border-color:rgba(6,182,212,0.18)">
+        <div class="h2 mb14" style="color:#fff">📊 Subject Mastery & Accuracy Breakdown</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div>
+            <div class="between mb4" style="font-size:13px">
+              <span style="color:#fff;font-weight:700">⚡ Physics Mastery</span>
+              <span style="color:#38BDF8;font-weight:700">${physAcc}% (${physCorr}/${physQs} Qs)</span>
+            </div>
+            <div class="comp-prog-bar"><div class="comp-prog-fill prog-bar-fill-cyan" style="width:${physAcc}%"></div></div>
+          </div>
+
+          <div>
+            <div class="between mb4" style="font-size:13px">
+              <span style="color:#fff;font-weight:700">🧪 Chemistry Mastery</span>
+              <span style="color:#F472B6;font-weight:700">${chemAcc}% (${chemCorr}/${chemQs} Qs)</span>
+            </div>
+            <div class="comp-prog-bar"><div class="comp-prog-fill prog-bar-fill-pink" style="width:${chemAcc}%"></div></div>
+          </div>
+
+          <div>
+            <div class="between mb4" style="font-size:13px">
+              <span style="color:#fff;font-weight:700">📐 Mathematics Mastery</span>
+              <span style="color:#C084FC;font-weight:700">${mathAcc}% (${mathCorr}/${mathQs} Qs)</span>
+            </div>
+            <div class="comp-prog-bar"><div class="comp-prog-fill prog-bar-fill-purple" style="width:${mathAcc}%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI WEAK SPOT REMEDIATION -->
+      <div class="card mb20" style="padding:20px;border-color:rgba(239,68,68,0.18)">
+        <div class="h2 mb6" style="color:#fff">⚠️ Weak Area Focus List</div>
+        <p class="sub mb16">Targeting these weak chapters will give you the maximum rank improvement in your next mock exam.</p>
+        ${weakHTML}
+      </div>
+
+    </div>
+  `;
+}
+window.renderAnalyticsTab = renderAnalyticsTab;
+
+function recordPracticeSessionForRank(score, total) {
+  if (!D.compExam) D.compExam = { chapterStats: {}, sessionHistory: [] };
+  if (!D.compExam.sessionHistory) D.compExam.sessionHistory = [];
+
+  const practiceCount = (D.compExam.practiceCount || 0) + 1;
+  D.compExam.practiceCount = practiceCount;
+
+  D.compExam.sessionHistory.push({
+    type: 'practice',
+    date: new Date().toISOString(),
+    score: Math.round((score / total) * 300),
+    total,
+    correct: score
+  });
+
+  if (typeof saveAll === 'function') saveAll();
+
+  if (practiceCount % 2 === 0) {
+    const avgScore = Math.round((score / total) * 300);
+    const est = estimateJEEPercentileAndRank(avgScore);
+    if (typeof toast === 'function') {
+      toast(`🏆 Rank Updated! Predicted AIR: ~${est.rank} (${est.percentile}% percentile) based on your practice performance!`);
+    }
+  }
+}
+window.recordPracticeSessionForRank = recordPracticeSessionForRank;
+
 // 4. Render Practice Tab
 function renderPracticeTab(exam) {
   const subjects = exam.subjects || ['General Studies'];
@@ -2878,6 +3056,19 @@ function submitMockExam() {
     addXP(xpEarned);
   }
 
+  if (typeof D !== 'undefined') {
+    if (!D.compExam) D.compExam = { chapterStats: {}, sessionHistory: [] };
+    if (!D.compExam.sessionHistory) D.compExam.sessionHistory = [];
+    D.compExam.sessionHistory.push({
+      type: 'mock',
+      date: new Date().toISOString(),
+      score: Math.max(0, Math.round(score)),
+      total: exam.questions.length,
+      correct: correct
+    });
+    if (typeof saveAll === 'function') saveAll();
+  }
+
   compState.activeExam = null;
 
   // Restore sidebar safely
@@ -3334,6 +3525,10 @@ function launchMultiPracticeOverlay(questions) {
     const total = sessionState.questions.length;
     const score = sessionState.score;
     const pct = Math.round((score / total) * 100);
+
+    if (typeof recordPracticeSessionForRank === 'function') {
+      recordPracticeSessionForRank(score, total);
+    }
     document.getElementById('mp-content').innerHTML = `
       <div style="text-align:center;padding:20px 0">
         <div style="font-size:48px;margin-bottom:12px">${pct >= 80 ? '🏆' : pct >= 50 ? '📈' : '📚'}</div>
