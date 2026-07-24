@@ -35,6 +35,7 @@ const SCREEN_MAP = {
   mentor:   () => typeof rMentor   === 'function' && rMentor(),
   learn:    () => typeof rLearn    === 'function' && rLearn(),
   comp:     () => typeof rComp     === 'function' && rComp(),
+  qiacp:    () => (typeof renderQIACP === 'function' ? renderQIACP() : (typeof window.renderQIACP === 'function' && window.renderQIACP())),
 };
 
 /* ── MAIN ROUTING FUNCTION ──────────────────────────────────── */

@@ -651,6 +651,36 @@
     return result;
   }
 
+  function importPackage(pkg) {
+    if (!pkg || !pkg.questions || !Array.isArray(pkg.questions)) {
+      throw new Error('[pyqService] Invalid package payload format');
+    }
+    if (!fileCache['qiacp_imported']) {
+      fileCache['qiacp_imported'] = { questions: [] };
+    }
+    const normalized = pkg.questions.map(q => ({
+      id: q.id || q.globalQuestionId,
+      globalQuestionId: q.globalQuestionId,
+      q: q.stem,
+      opts: q.options || [],
+      ans: Array.isArray(q.correctAnswer) ? q.correctAnswer : [q.correctAnswer || 0],
+      type: q.type || 'MCQ_SINGLE',
+      section: q.academicClassification?.subject || 'Physics',
+      chap: q.academicClassification?.chapter || 'General',
+      topic: q.academicClassification?.topic || 'General',
+      expl: q.solution || '',
+      verificationStatus: q.verificationStatus || 'Officially Verified',
+      isVerifiedForPractice: q.isVerifiedForPractice !== false,
+      hasImages: q.hasImages,
+      images: q.images || [],
+      year: q.academicClassification?.pyqMetadata?.examYear || 2025
+    }));
+
+    fileCache['qiacp_imported'].questions.push(...normalized);
+    console.log('[pyqService] ✅ Ingested QIACP Package:', normalized.length, 'questions added to QRIS Repository');
+    return { success: true, count: normalized.length };
+  }
+
   // ── EXPORT ────────────────────────────────────────────────────────────────
 
   const pyqService = {
@@ -661,7 +691,8 @@
     getChapters,
     preloadExam,
     hasData,
-    getPapers
+    getPapers,
+    importPackage
   };
 
   if (typeof module !== 'undefined' && module.exports) {
