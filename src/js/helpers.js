@@ -525,6 +525,17 @@ function openGlobalSearch() {
 /* ── ADAPTIVE HARDWARE TIER ENGINE ────────────────────────── */
 
 function detectDeviceHardwareTier() {
+  if (window.DeviceManager && typeof window.DeviceManager.getProfile === 'function') {
+    const profile = window.DeviceManager.getProfile();
+    const tier = (profile.performanceTier || 'High').toLowerCase();
+    if (document.body && typeof document.body.setAttribute === 'function') {
+      document.body.setAttribute('data-hardware-tier', tier);
+      document.body.setAttribute('data-is-touch', profile.inputMethods?.touch ? 'true' : 'false');
+      document.body.setAttribute('data-device-class', (profile.deviceClass || 'Desktop').toLowerCase());
+    }
+    return tier;
+  }
+
   let tier = 'high';
   const nav = typeof navigator !== 'undefined' ? navigator : {};
   const mem = nav.deviceMemory || 8;

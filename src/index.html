@@ -405,6 +405,18 @@ console.log('[KaTeX] System ready');
   <button class="pwa-close-btn" onclick="document.getElementById('pwa-banner').classList.remove('show')">✖</button>
 </div>
 
+<!-- Universal Device Intelligence & Capability Detection System (UDICDS) -->
+<script src="js/device/deviceProfile.js?v=80"></script>
+<script src="js/device/deviceDetector.js?v=80"></script>
+<script src="js/device/capabilityAnalyzer.js?v=80"></script>
+<script src="js/device/browserDetector.js?v=80"></script>
+<script src="js/device/performanceProfiler.js?v=80"></script>
+<script src="js/device/networkMonitor.js?v=80"></script>
+<script src="js/device/accessibilityDetector.js?v=80"></script>
+<script src="js/device/deviceEvents.js?v=80"></script>
+<script src="js/device/deviceManager.js?v=80"></script>
+<script src="js/device/index.js?v=80"></script>
+
 <script src="js/helpers.js?v=80"></script>
 <script src="js/constants.js?v=80"></script>
 <script src="js/storage.js?v=80"></script>
@@ -4774,6 +4786,7 @@ function init(){
           }
         });
       }
+      if (window.DeviceManager) window.DeviceManager.init();
       if (window.ASLAEngine) window.ASLAEngine.init();
       if (window.UDFIAEngine) window.UDFIAEngine.init();
       if (window.DevMode) window.DevMode.init();
