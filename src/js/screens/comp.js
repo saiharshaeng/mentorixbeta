@@ -971,21 +971,28 @@ function rComp() {
   main.innerHTML = `
     <div class="comp-hub-wrap">
       <!-- HEADER BAND -->
-      <div class="comp-hub-header">
-        <div class="comp-hub-badge">🏆 AI COMPETITIVE EXAM SUITE</div>
-        <div class="comp-hub-title">${esc(exam.name)} Training Desk</div>
-        <div class="comp-hub-sub">Syllabus Pattern: ${esc(exam.pattern)} · Goal Score: <strong>${compState.targetScore}</strong></div>
+      <div class="comp-hub-header mb16">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:12px;">
+          <div>
+            <div class="comp-hub-badge mb6">🏆 AI COMPETITIVE EXAM SUITE</div>
+            <div class="comp-hub-title" style="font-size:24px;font-weight:800;letter-spacing:-0.5px;color:#fff;">${esc(exam.name)} Training Desk</div>
+            <div class="comp-hub-sub" style="font-size:12px;color:var(--mut);">Pattern: <strong>${esc(exam.pattern)}</strong> · Target Score: <span class="tag tp" style="font-size:11px;font-weight:700;">${compState.targetScore} / ${exam.maxScore || 300}</span></div>
+          </div>
+          <button class="btn bsm bgh" style="border-radius:12px;padding:8px 14px;font-size:12px;font-weight:600;" onclick="reconfigureCompPlan()">
+            ⚙️ Reconfigure Target
+          </button>
+        </div>
         
-        <!-- Tab Row -->
-        <div class="comp-tab-row">
-          <div class="comp-tab ${(!compState.currentTab||compState.currentTab==='hub')?'active':''}" onclick="setCompTab('hub')">🏠 Dashboard</div>
-          <div class="comp-tab ${compState.currentTab==='syllabus'?'active':''}" onclick="setCompTab('syllabus')">📚 Syllabus & Weightage</div>
-          <div class="comp-tab ${compState.currentTab==='practice'?'active':''}" onclick="setCompTab('practice')">🎯 Practice Rooms</div>
-          <div class="comp-tab ${compState.currentTab==='mock'?'active':''}" onclick="setCompTab('mock')">⏱️ CBT Mock Tests</div>
-          <div class="comp-tab ${compState.currentTab==='diary'?'active':''}" onclick="setCompTab('diary')">📓 Mistake Diary</div>
-          <div class="comp-tab ${compState.currentTab==='analytics'?'active':''}" onclick="setCompTab('analytics')">📈 Analytics & Predictor</div>
-          <div class="comp-tab ${compState.currentTab==='important'?'active':''}" onclick="setCompTab('important')">👑 High Priority</div>
-          <div class="comp-tab ${compState.currentTab==='strategy'?'active':''}" onclick="setCompTab('strategy')">💡 Strategy Hub</div>
+        <!-- Segmented Tab Navigation Track -->
+        <div class="comp-segmented-tabs">
+          <button class="comp-tab-btn ${(!compState.currentTab||compState.currentTab==='hub')?'active':''}" onclick="setCompTab('hub')">🏠 Dashboard</button>
+          <button class="comp-tab-btn ${compState.currentTab==='syllabus'?'active':''}" onclick="setCompTab('syllabus')">📚 Syllabus & Weightage</button>
+          <button class="comp-tab-btn ${compState.currentTab==='practice'?'active':''}" onclick="setCompTab('practice')">🎯 Practice Rooms</button>
+          <button class="comp-tab-btn ${compState.currentTab==='mock'?'active':''}" onclick="setCompTab('mock')">⏱️ CBT Mock Tests</button>
+          <button class="comp-tab-btn ${compState.currentTab==='diary'?'active':''}" onclick="setCompTab('diary')">📓 Mistake Diary</button>
+          <button class="comp-tab-btn ${compState.currentTab==='analytics'?'active':''}" onclick="setCompTab('analytics')">📈 Analytics & Predictor</button>
+          <button class="comp-tab-btn ${compState.currentTab==='important'?'active':''}" onclick="setCompTab('important')">👑 High Priority</button>
+          <button class="comp-tab-btn ${compState.currentTab==='strategy'?'active':''}" onclick="setCompTab('strategy')">💡 Strategy Hub</button>
         </div>
       </div>
 
@@ -1335,27 +1342,51 @@ function renderHubTab(exam) {
       </div>
     </div>
 
-    <!-- STATS ROW -->
-    <div class="comp-stats-row mb20">
-      <div class="comp-stat">
-        <div class="comp-stat-label">Questions Practiced</div>
-        <div class="comp-stat-val" style="color:var(--pl)">${questionsSolved}</div>
-        <div class="comp-stat-sub">Target: 1,000+ solved</div>
+    <!-- STATS ROW WITH GLOW HALOS -->
+    <div class="comp-stats-row mb24" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
+      <!-- Card 1: Solved -->
+      <div class="comp-stat-card stat-glow-purple">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1px;">Questions Practiced</span>
+          <div class="stat-icon-badge stat-icon-purple">🎯</div>
+        </div>
+        <div class="stat-val-large">${questionsSolved.toLocaleString()}</div>
+        <div style="font-size:11px;color:var(--sub);display:flex;align-items:center;justify-content:space-between;">
+          <span>Target: 1,000+ solved</span>
+          <span style="color:#a78bfa;font-weight:600;">${Math.min(100, Math.round((questionsSolved/1000)*100))}%</span>
+        </div>
       </div>
-      <div class="comp-stat">
-        <div class="comp-stat-label">Accuracy %</div>
-        <div class="comp-stat-val" style="color:var(--cl)">${accuracy}%</div>
-        <div class="comp-stat-sub">Avg across all chapters</div>
+
+      <!-- Card 2: Accuracy -->
+      <div class="comp-stat-card stat-glow-cyan">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1px;">Accuracy Rate</span>
+          <div class="stat-icon-badge stat-icon-cyan">📈</div>
+        </div>
+        <div class="stat-val-large" style="color:${accuracy>=75?'#34d399':accuracy>=50?'#38bdf8':'#f87171'};">${accuracy}%</div>
+        <div style="font-size:11px;color:var(--sub);">Overall performance metric</div>
       </div>
-      <div class="comp-stat">
-        <div class="comp-stat-label">Mocks Completed</div>
-        <div class="comp-stat-val" style="color:var(--ok)">${mocksTaken}</div>
-        <div class="comp-stat-sub">Full CBT simulators</div>
+
+      <!-- Card 3: Mocks Completed -->
+      <div class="comp-stat-card stat-glow-emerald">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1px;">Mocks Taken</span>
+          <div class="stat-icon-badge stat-icon-emerald">🏆</div>
+        </div>
+        <div class="stat-val-large">${mocksTaken}</div>
+        <div style="font-size:11px;color:var(--sub);">Full NTA CBT Simulators</div>
       </div>
-      <div class="comp-stat">
-        <div class="comp-stat-label">Weakest Chapter</div>
-        <div class="comp-stat-val" style="font-size: 14px; color: var(--red); line-height: 1.6; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${weakestChapter}">${weakestChapter}</div>
-        <div class="comp-stat-sub">Focus area priority</div>
+
+      <!-- Card 4: Weakest Chapter -->
+      <div class="comp-stat-card stat-glow-rose">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1px;">Focus Area</span>
+          <div class="stat-icon-badge stat-icon-rose">⚠️</div>
+        </div>
+        <div class="stat-val-large" style="font-size:15px;font-weight:700;color:#f43f5e;line-height:1.4;margin:12px 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${weakestChapter}">
+          ${weakestChapter}
+        </div>
+        <div style="font-size:11px;color:var(--sub);">Priority revision chapter</div>
       </div>
     </div>
 

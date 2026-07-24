@@ -47,7 +47,8 @@ const server = http.createServer((req, res) => {
     } else {
       res.writeHead(200, { 
         'Content-Type': contentType,
-        'Access-Control-Allow-Origin': '*' // Enable CORS for testing
+        'Access-Control-Allow-Origin': '*', // Enable CORS for testing
+        'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
       });
       res.end(content, 'utf-8');
     }
