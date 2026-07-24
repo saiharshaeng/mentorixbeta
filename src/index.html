@@ -162,13 +162,15 @@ if (window.location.protocol.startsWith('http')) {
   if('serviceWorker' in navigator){
     window.addEventListener('load', function(){
       navigator.serviceWorker.register('sw.js').then(reg => {
-        // Force check for updates on every page load
-        reg.update();
-        // When new SW activates, reload the page so users always get fresh code
+        if (reg && typeof reg.update === 'function') {
+          reg.update().catch(function(){});
+        }
         navigator.serviceWorker.addEventListener('controllerchange', function() {
           console.log('[SW] New service worker activated — reloading for fresh code');
           window.location.reload();
         });
+      }).catch(function(err) {
+        console.warn('[SW] Service worker registration bypassed cleanly:', err ? err.message : 'Offline');
       });
     });
   }
