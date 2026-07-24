@@ -209,45 +209,77 @@ function renderQuestionText(text) {
 }
 
 function renderQuestionImage(question) {
-  if (!question || !question.hasImage) return '';
-  
-  if (question.imagePath) {
-    let src = question.imagePath;
-    if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
-      src = 'data/pyq/' + src;
-    }
+  if (!question) return '';
+
+  // Detect any image or diagram indicators
+  const hasAnyImg = !!(
+    question.hasImage || 
+    question.hasImages || 
+    question.imagePath || 
+    question.image || 
+    (Array.isArray(question.images) && question.images.length > 0) || 
+    question.diagramUrl || 
+    question.svgDiagram || 
+    question.img
+  );
+
+  if (!hasAnyImg) return '';
+
+  // 1. Inline SVG Diagram Support
+  if (question.svgDiagram) {
     return `
-      <div class="q-image-container">
-        <img 
-          src="${src}" 
-          alt="Question diagram"
-          class="q-image"
-          onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';"
-          onload="this.style.display='block'"
-        />
-        <div class="q-image-fallback q-image-text" style="display:none">
-          <span>📊</span>
-          <p>${question.imageDescription || 'Diagram for this question'}</p>
-          <p class="q-image-note">Visual content — refer to official paper for diagram</p>
+      <div class="q-image-container q-svg-container" style="margin:16px 0;padding:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(139,92,246,0.3);border-radius:12px;text-align:center;max-width:100%;overflow-x:auto;">
+        <div class="q-image-label" style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">📐 Question Diagram</div>
+        <div class="q-svg-content" style="display:inline-block;max-width:100%;">${question.svgDiagram}</div>
+        ${question.imageDescription ? `<p class="q-image-note" style="font-size:12px;color:var(--sub);margin-top:8px;">${esc(question.imageDescription)}</p>` : ''}
+      </div>
+    `;
+  }
+
+  // 2. Extract image URL list
+  const imgList = [];
+  if (Array.isArray(question.images)) {
+    question.images.forEach(img => { if (img) imgList.push(String(img)); });
+  }
+  if (question.imagePath) imgList.push(String(question.imagePath));
+  if (question.image && !imgList.includes(String(question.image))) imgList.push(String(question.image));
+  if (question.diagramUrl && !imgList.includes(String(question.diagramUrl))) imgList.push(String(question.diagramUrl));
+  if (question.img && !imgList.includes(String(question.img))) imgList.push(String(question.img));
+
+  if (imgList.length > 0) {
+    const renderedImgs = imgList.map((rawSrc, idx) => {
+      let src = rawSrc;
+      if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
+        src = 'data/pyq/' + src;
+      }
+      return `
+        <div class="q-image-wrapper" style="position:relative;margin:12px 0;text-align:center;">
+          <img 
+            src="${src}" 
+            alt="Question Diagram ${idx + 1}"
+            class="q-image"
+            style="max-width:100%;max-height:420px;object-fit:contain;border-radius:10px;border:1px solid rgba(255,255,255,0.15);background:#fff;padding:8px;box-shadow:0 4px 16px rgba(0,0,0,0.2);cursor:zoom-in;"
+            onclick="window.open('${src}', '_blank')"
+            onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';"
+          />
+          <div class="q-image-fallback q-image-text" style="display:none;background:rgba(139,92,246,0.06);border:1px dashed rgba(139,92,246,0.3);border-radius:10px;padding:16px;margin:10px 0;text-align:center;align-items:center;justify-content:center;flex-direction:column;">
+            <span style="font-size:24px;">📐</span>
+            <p style="font-size:13px;font-weight:600;color:#fff;margin:6px 0 2px;">${esc(question.imageDescription || 'Diagram for Question')}</p>
+            <p class="q-image-note" style="font-size:11px;color:var(--mut);">Diagram reference #${idx+1} · Refer to official NTA examination paper</p>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }).join('');
+
+    return `<div class="q-image-container">${renderedImgs}</div>`;
   }
-  
-  if (question.imageDescription) {
-    return `
-      <div class="q-image-container q-image-text">
-        <span>📊</span>
-        <p>${question.imageDescription}</p>
-        <p class="q-image-note">Visual content — refer to official paper for diagram</p>
-      </div>
-    `;
-  }
-  
+
+  // 3. Diagram reference card fallback
   return `
-    <div class="q-image-container q-image-text">
-      <span>📊</span>
-      <p class="q-image-note">This question contains a diagram. Refer to official paper.</p>
+    <div class="q-image-container q-image-text" style="background:rgba(139,92,246,0.06);border:1px dashed rgba(139,92,246,0.3);border-radius:10px;padding:16px;margin:14px 0;text-align:center;">
+      <span style="font-size:24px;">📐</span>
+      <p style="font-size:13px;font-weight:600;color:#fff;margin:6px 0 2px;">${esc(question.imageDescription || 'Question Contains Official Diagram / Figure')}</p>
+      <p class="q-image-note" style="font-size:11px;color:var(--mut);">Visual schematic included in official NTA question paper</p>
     </div>
   `;
 }
