@@ -3387,19 +3387,49 @@ function selectMockOption(oIdx, type) {
     exam.status[exam.currentIndex] = 'answered';
   }
 
-  // Update palette button state
+  // Micro-update DOM directly for instantaneous 0ms response
   const currentQuestionIndex = exam.currentIndex;
-  const palBtn = document.querySelector(
-    `[data-q-index="${currentQuestionIndex}"]`
-  );
-  if (palBtn) {
-    palBtn.classList.remove(
-      'visited', 'marked', 'current'
-    );
-    palBtn.classList.add('answered');
-  }
+  const options = document.querySelectorAll('.nta-opt');
+  if (options && options.length > 0) {
+    options.forEach((optEl, i) => {
+      const bubble = optEl.querySelector('.nta-opt-bubble');
+      let isSel = false;
+      if (type === 'msq') {
+        const curAns = exam.answers[currentQuestionIndex] || [];
+        isSel = Array.isArray(curAns) && curAns.includes(i);
+      } else {
+        isSel = exam.answers[currentQuestionIndex] === i;
+      }
+      if (isSel) {
+        optEl.classList.add('selected');
+        if (bubble) bubble.classList.add('selected');
+      } else {
+        optEl.classList.remove('selected');
+        if (bubble) bubble.classList.remove('selected');
+      }
+    });
 
-  rComp();
+    // Update palette button state instantly
+    const palBtn = document.querySelector(`[data-q-index="${currentQuestionIndex}"]`);
+    if (palBtn) {
+      palBtn.className = `nta-pal-btn nta-pal-${exam.status[currentQuestionIndex] || 'unvisited'} nta-pal-current`;
+    }
+
+    // Update summary stat counter numbers in right sidebar
+    let answeredCount = 0, markedCount = 0, notVisited = 0;
+    exam.questions.forEach((_, i) => {
+      const st = exam.status[i] || 'unvisited';
+      if (st === 'answered') answeredCount++;
+      else if (st === 'marked') markedCount++;
+      else if (st === 'unvisited') notVisited++;
+    });
+    const ansEl = document.querySelector('.nta-pal-stat-answered .nta-pal-stat-num');
+    const unansEl = document.querySelector('.nta-pal-stat-unanswered .nta-pal-stat-num');
+    if (ansEl) ansEl.textContent = answeredCount;
+    if (unansEl) unansEl.textContent = (exam.questions.length - answeredCount - markedCount - notVisited);
+  } else {
+    rComp();
+  }
 }
 
 function saveNumericalAnswer(val) {

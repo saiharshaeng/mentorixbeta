@@ -57,7 +57,7 @@ window.splashSkip = window.splashSkip || function(){
 // ═══════════════════════════════════════════════════════════
 (function clearStaleCache() {
   if (!window.location.protocol.startsWith('http')) return;
-  const CURRENT_SW_VERSION = 'v68';
+  const CURRENT_SW_VERSION = 'v69';
   // Unregister old service workers
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
@@ -144,22 +144,38 @@ function initKaTeX() {
 // every dynamic HTML insertion
 window.renderMath = function(container) {
   if (!container) return;
-  if (typeof renderMathInElement !== 'function') {
-    console.warn('[KaTeX] not loaded yet');
-    return;
-  }
+  if (typeof renderMathInElement !== 'function') return;
   try {
-    renderMathInElement(container, {
-      delimiters: [
-        {left:'$$',right:'$$',display:true},
-        {left:'$',right:'$',display:false},
-        {left:'\\(',right:'\\)',display:false},
-        {left:'\\[',right:'\\]',display:true}
-      ],
-      throwOnError: false,
-      errorColor: '#ef4444',
-      strict: false
-    });
+    const targets = container.querySelectorAll 
+      ? container.querySelectorAll('.katex-render-target') 
+      : [];
+    if (targets && targets.length > 0) {
+      targets.forEach(el => {
+        renderMathInElement(el, {
+          delimiters: [
+            {left:'$$',right:'$$',display:true},
+            {left:'$',right:'$',display:false},
+            {left:'\\(',right:'\\)',display:false},
+            {left:'\\[',right:'\\]',display:true}
+          ],
+          throwOnError: false,
+          errorColor: '#ef4444',
+          strict: false
+        });
+      });
+    } else {
+      renderMathInElement(container, {
+        delimiters: [
+          {left:'$$',right:'$$',display:true},
+          {left:'$',right:'$',display:false},
+          {left:'\\(',right:'\\)',display:false},
+          {left:'\\[',right:'\\]',display:true}
+        ],
+        throwOnError: false,
+        errorColor: '#ef4444',
+        strict: false
+      });
+    }
   } catch(e) {
     console.warn('[KaTeX] render error:', e.message);
   }
