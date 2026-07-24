@@ -441,6 +441,8 @@ console.log('[KaTeX] System ready');
 <script src="js/services/uaesEngine.js?v=80"></script>
 <script src="js/services/uascaEngine.js?v=80"></script>
 <script src="js/services/aslaEngine.js?v=80"></script>
+<script src="js/services/udfiaEngine.js?v=80"></script>
+<script src="js/services/devMode.js?v=80"></script>
 <script src="js/services/overlayManager.js?v=80"></script>
 <script src="js/services/commandPalette.js?v=80"></script>
 <script src="js/screens/qraReviewEngine.js?v=80"></script>
@@ -4773,6 +4775,8 @@ function init(){
         });
       }
       if (window.ASLAEngine) window.ASLAEngine.init();
+      if (window.UDFIAEngine) window.UDFIAEngine.init();
+      if (window.DevMode) window.DevMode.init();
       if (window.OverlayManager) window.OverlayManager.init();
       if (window.CommandPalette) window.CommandPalette.init();
       const s=getSession();

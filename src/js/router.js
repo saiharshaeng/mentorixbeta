@@ -69,6 +69,7 @@ function go(scr, param) {
   if (window.UAESEngine) window.UAESEngine.saveSessionSnapshot();
   if (window.UASCAEngine) window.UASCAEngine.onNavigate(scr);
   if (window.ASLAEngine) window.ASLAEngine.onNavigate(scr);
+  if (window.UDFIAEngine) window.UDFIAEngine.publish('Interface.NavigationChanged', { screen: scr, param });
   if (!window.D._navContext) window.D._navContext = {};
   if (D.screen && document.getElementById('main')) {
     window.D._navContext[D.screen] = {
