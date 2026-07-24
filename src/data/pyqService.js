@@ -51,6 +51,7 @@
     const origin = (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:8080';
     
     const banks = [
+      { key: 'qris_master',    url: origin + '/data/pyq/qris_master_repository.json',         exam: 'QRIS_MASTER',  subject: null },
       { key: 'jee_main_chem',  url: origin + '/data/pyq/jee_main/jee_chemistry_bank.json',  exam: 'JEE_MAIN',     subject: 'Chemistry' },
       { key: 'jee_main_math',  url: origin + '/data/pyq/jee_main/jee_maths_bank.json',       exam: 'JEE_MAIN',     subject: 'Mathematics' },
       { key: 'jee_main_phys',  url: origin + '/data/pyq/jee_main/jee_physics_bank.json',     exam: 'JEE_MAIN',     subject: 'Physics' },
@@ -99,7 +100,7 @@
 
           return {
             id: q.id || (bank.key + '_' + i),
-            q: q.question || q.q || '',
+            q: q.stem || q.question || q.q || '',
             opts,
             ans,
             type: (q.type || 'MCQ').toLowerCase() === 'mcq' ? 'mcq' : 
@@ -196,6 +197,7 @@
     });
 
     const bankFiles = [
+      { key: 'qris_master',    p: 'src/data/pyq/qris_master_repository.json',       subj: null },
       { key: 'jee_main_chem',  p: 'src/data/pyq/jee_main/jee_chemistry_bank.json', subj: 'Chemistry' },
       { key: 'jee_main_math',  p: 'src/data/pyq/jee_main/jee_maths_bank.json',     subj: 'Mathematics' },
       { key: 'jee_main_phys',  p: 'src/data/pyq/jee_main/jee_physics_bank.json',   subj: 'Physics' },
@@ -237,7 +239,7 @@
 
             return {
               id: q.id || (b.key + '_' + i),
-              q: q.question || q.q || '',
+              q: q.stem || q.question || q.q || '',
               opts,
               ans,
               type: (q.type || 'mcq').toLowerCase(),
