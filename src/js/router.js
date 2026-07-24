@@ -65,6 +65,11 @@ function go(scr, param) {
     window.onScreenUnmount = null;
   }
 
+  // UNIA Navigation Engine Integration
+  if (window.NavigationEngine && typeof window.NavigationEngine.navigate === 'function') {
+    window.NavigationEngine.navigate(scr, param);
+  }
+
   // Preserve navigation context & cross-device session snapshot
   if (window.UAESEngine) window.UAESEngine.saveSessionSnapshot();
   if (window.UASCAEngine) window.UASCAEngine.onNavigate(scr);

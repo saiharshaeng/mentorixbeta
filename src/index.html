@@ -431,6 +431,17 @@ console.log('[KaTeX] System ready');
 <script src="js/layouts/foldable/foldableLayout.js?v=80"></script>
 <script src="js/layout/index.js?v=80"></script>
 
+<!-- Universal Navigation & Interaction Architecture (UNIA) -->
+<script src="js/navigation/navigationRegistry.js?v=80"></script>
+<script src="js/navigation/historyManager.js?v=80"></script>
+<script src="js/navigation/deepLinkResolver.js?v=80"></script>
+<script src="js/navigation/breadcrumbManager.js?v=80"></script>
+<script src="js/navigation/focusModeManager.js?v=80"></script>
+<script src="js/navigation/routeGuards.js?v=80"></script>
+<script src="js/navigation/navigationManager.js?v=80"></script>
+<script src="js/navigation/navigationEngine.js?v=80"></script>
+<script src="js/navigation/index.js?v=80"></script>
+
 <script src="js/helpers.js?v=80"></script>
 <script src="js/constants.js?v=80"></script>
 <script src="js/storage.js?v=80"></script>
@@ -4802,6 +4813,7 @@ function init(){
       }
       if (window.DeviceManager) window.DeviceManager.init();
       if (window.LayoutEngine) window.LayoutEngine.init();
+      if (window.NavigationEngine) window.NavigationEngine.init();
       if (window.ASLAEngine) window.ASLAEngine.init();
       if (window.UDFIAEngine) window.UDFIAEngine.init();
       if (window.DevMode) window.DevMode.init();
