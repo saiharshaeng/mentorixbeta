@@ -57,7 +57,7 @@ window.splashSkip = window.splashSkip || function(){
 // ═══════════════════════════════════════════════════════════
 (function clearStaleCache() {
   if (!window.location.protocol.startsWith('http')) return;
-  const CURRENT_SW_VERSION = 'v69';
+  const CURRENT_SW_VERSION = 'v70';
   // Unregister old service workers
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
@@ -2402,14 +2402,16 @@ function toggleCursor(on){
     for(let i=0;i<N;i++)particles.push(mkParticle(true));
 
     let loopRunning = true;
+    const isMobile = 'ontouchstart' in window || window.innerWidth < 768;
     function loop(){
-      if(!animActive || D.settings?.animLevel==='none'){
+      if(!animActive || D.settings?.animLevel==='none' || (isMobile && document.body.dataset.screen === 'comp')){
         loopRunning = false;
         return;
       }
       loopRunning = true;
       ctx.clearRect(0,0,W,H);
-      for(let i=0;i<particles.length;i++){
+      const activeCount = isMobile ? Math.min(12, particles.length) : particles.length;
+      for(let i=0;i<activeCount;i++){
         const p=particles[i];
         p.pulse+=0.018;
         p.vx+=(mouseX-p.x)/W*0.04*p.z;
@@ -2424,7 +2426,7 @@ function toggleCursor(on){
         const radius=(p.r*(Math.sin(p.pulse)*0.12+0.88));
         ctx.save();
         ctx.globalAlpha=Math.max(0,Math.min(1,p.alpha));
-        ctx.shadowColor=p.col;ctx.shadowBlur=radius*5;
+        ctx.shadowColor=p.col;ctx.shadowBlur=isMobile ? 0 : radius*4;
         ctx.fillStyle=p.col;
         ctx.beginPath();ctx.arc(p.x,p.y,radius,0,6.283);ctx.fill();
         ctx.restore();

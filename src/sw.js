@@ -4,7 +4,7 @@
  * PYQ data files always bypass cache (never stale).
  */
 
-const CACHE_NAME = 'mentorix-v69';
+const CACHE_NAME = 'mentorix-v70';
 
 // Files to pre-cache on install (only truly static: html, images, manifest)
 const CORE_ASSETS = [

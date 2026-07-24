@@ -8480,6 +8480,141 @@ body::before {
   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.5);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS & HARDWARE ACCELERATION OPTIMIZATIONS
+   ═══════════════════════════════════════════════════════════ */
+.nta-opt, 
+.nta-pal-btn, 
+.comp-launch-btn, 
+.comp-exam-card,
+.nta-act-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+  .nta-exam-wrap {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .nta-topbar {
+    padding: 8px 12px;
+    gap: 8px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .nta-title {
+    font-size: 13px;
+  }
+
+  .nta-sub-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 8px;
+    gap: 4px;
+  }
+
+  .nta-sub-tab {
+    padding: 6px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nta-body {
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nta-q-panel {
+    width: 100%;
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nta-q-scroll {
+    padding: 14px;
+    max-height: 50vh;
+  }
+
+  .nta-q-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .nta-opt {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .nta-opt-bubble {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .nta-opt-text {
+    font-size: 13px;
+  }
+
+  .nta-palette-panel {
+    width: 100%;
+    border-left: none;
+    max-height: 280px;
+  }
+
+  .nta-pal-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .nta-pal-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .nta-action-bar {
+    padding: 8px 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .nta-act-btn {
+    flex: 1 1 45%;
+    padding: 9px 8px;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .comp-two-col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .comp-stats-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .comp-exam-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .comp-qa-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
 
 
 
