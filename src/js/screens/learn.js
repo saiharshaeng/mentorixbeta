@@ -420,9 +420,10 @@ Output ONLY this JSON format:
     saveCheckpoint();
     renderLesson();
   }catch(e){
-    LS.lesson = null;
+    console.warn('[LearnEngine] AI lesson fallback triggered:', e.message);
+    LS.lesson = generateFallbackLesson(topic);
     LS.loading = false;
-    LS.err = e.message || 'Verification error occurred.';
+    LS.err = '';
     saveCheckpoint();
     renderLesson();
   }
@@ -510,6 +511,10 @@ function rLError(){
 
 function renderLesson() {
   const a=document.getElementById('larea');if(!a)return;
+  if (!LS.lesson) {
+    const topic = LS.topic || 'General Lesson';
+    LS.lesson = generateFallbackLesson(topic);
+  }
   const l=LS.lesson;
   const stage = LS.activeStage || 1;
 
