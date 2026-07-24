@@ -53,9 +53,30 @@
 
     init() {
       if (this.initialized) return;
+      this.setupLenisScroll();
       this.setupGlobalScrollRestoration();
       this.initialized = true;
-      console.log('[ASLA Engine] Universal Application Shell initialized.');
+      console.log('[ASLA Engine] Universal Application Shell initialized with Lenis smooth scroll.');
+    }
+
+    setupLenisScroll() {
+      if (typeof window.Lenis !== 'undefined') {
+        try {
+          this.lenis = new window.Lenis({
+            duration: 0.8,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            smoothTouch: false
+          });
+          const raf = (time) => {
+            if (this.lenis) this.lenis.raf(time);
+            requestAnimationFrame(raf);
+          };
+          requestAnimationFrame(raf);
+        } catch(e) {
+          console.warn('[ASLA Lenis] Smooth scroll fallback:', e.message);
+        }
+      }
     }
 
     /**
