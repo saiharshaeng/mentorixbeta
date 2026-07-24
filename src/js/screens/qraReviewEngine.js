@@ -5,9 +5,9 @@
  * Responsibilities:
  * - Question review & answer comparison (Student vs Correct)
  * - Official explanation rendering & KaTeX math pre-rendering
- * - Time spent, difficulty, chapter, and exam source metadata display
+ * - Time spent display (⏱️ Time Spent: Xs), difficulty, chapter, and exam source metadata
  * - Action controls: Bookmark (🔖), Retry Later (🔄), Report Issue (🚩), Ask Tio (✨)
- * - Student reflection tagging (Reason missed: Concept, Calculation, Misread, Time, Silly)
+ * - Student reflection tagging & Event Bus Mistake Classification
  * - Zero score recalculations, zero attempt history mutation
  */
 
@@ -43,8 +43,7 @@
         questions,
         currentIndex: 0,
         total: questions.length,
-        reflections: {},
-        filter: 'all' // 'all', 'incorrect', 'correct', 'skipped', 'bookmarked'
+        filter: 'all' // 'all', 'incorrect', 'correct', 'skipped'
       };
 
       this.renderOverlay();
@@ -198,6 +197,7 @@
 
       const userAns = evalItem.userAnswer !== undefined ? evalItem.userAnswer : (att.responses ? att.responses[idx] : undefined);
       const status = evalItem.status || 'unattempted';
+      const timeSpentSec = (att.timeSpent || att.timeSpentSeconds || {})[idx] || (typeof att.timeSpentSeconds === 'number' ? Math.round(att.timeSpentSeconds / activeReviewState.total) : 45);
 
       // Metadata formats
       const isBookmarked = !!(D.memory?.bookmarks && D.memory.bookmarks[q.id || `q_${idx}`]);
@@ -225,6 +225,7 @@
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--brd,rgba(255,255,255,0.08))">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
               ${statusBadge}
+              <span class="tag" style="background:rgba(255,255,255,0.05);color:var(--sub,#94a3b8);font-size:11px">⏱️ Time Spent: ${timeSpentSec}s</span>
               <span class="tag" style="background:rgba(255,255,255,0.05);color:var(--sub,#94a3b8);font-size:11px">📍 ${esc(examSource)}</span>
               <span class="tag" style="background:rgba(139,92,246,0.1);color:var(--pl,#a78bfa);font-size:11px">📚 ${esc(chapter)}</span>
               <span class="tag" style="background:rgba(6,182,212,0.1);color:var(--cl,#22d3ee);font-size:11px">⚡ ${esc(difficulty)}</span>
@@ -277,13 +278,13 @@
             </div>
           </div>
 
-          <!-- Reflection Box for Incorrect Questions -->
+          <!-- Student Reflection Box for Incorrect Questions -->
           ${status === 'incorrect' ? `
             <div style="margin-top:20px;padding:14px;background:rgba(239,68,68,0.05);border:1px dashed rgba(239,68,68,0.3);border-radius:12px">
               <div style="font-size:12px;font-weight:700;color:var(--redl,#ef4444);margin-bottom:8px">🤔 STUDENT REFLECTION — What caused this mistake?</div>
               <div style="display:flex;gap:8px;flex-wrap:wrap">
                 ${['Didn\'t know concept', 'Calculation mistake', 'Misread question', 'Time pressure', 'Silly mistake'].map(reason => `
-                  <button class="btn bsm ${reflection === reason ? 'bpri' : 'bgh'}" onclick="QRAReviewEngine.saveReflection('${q.id || `q_${idx}`}', '${reason}')" style="font-size:11px;padding:4px 10px">
+                  <button class="btn bsm ${reflection === reason ? 'bpri' : 'bgh'}" onclick="QRAReviewEngine.saveReflection('${q.id || `q_${idx}`}', '${reason}', '${escON(chapter)}') " style="font-size:11px;padding:4px 10px">
                     ${reflection === reason ? '✓ ' + reason : reason}
                   </button>
                 `).join('')}
@@ -419,9 +420,9 @@
     },
 
     /**
-     * Save Student Reflection Tag
+     * Save Student Reflection Tag & Publish Event to Event Bus
      */
-    saveReflection(qId, reason) {
+    saveReflection(qId, reason, topic) {
       if (!window.D) return;
       if (!D.memory) D.memory = {};
       if (!D.memory.reflections) D.memory.reflections = {};
@@ -429,6 +430,17 @@
       D.memory.reflections[qId] = reason;
       if (typeof window.saveAll === 'function') window.saveAll();
       if (typeof toast === 'function') toast(`Reflection saved: "${reason}"`, 'ok2');
+
+      // Publish event to Event Bus for Student Intelligence Engine
+      if (window.CompEventBus) {
+        window.CompEventBus.publish('MistakeClassified', {
+          questionId: qId,
+          reason,
+          topic: topic || 'General',
+          exam: activeReviewState?.evaluationReport?.exam || 'Practice'
+        });
+      }
+
       this.renderQuestionCard();
     },
 

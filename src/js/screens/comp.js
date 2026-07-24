@@ -1977,6 +1977,16 @@ function renderPracticeTab(exam) {
         </div>
       </div>
 
+      <!-- Targeted Practice Queue Modes -->
+      <div style="margin-bottom:20px;padding:14px;background:rgba(255,255,255,0.02);border:1px solid var(--brd,rgba(255,255,255,0.08));border-radius:12px">
+        <div style="font-size:11px;font-weight:700;color:var(--mut,#475569);letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px">TARGETED RETRY & WEAK SPOT MODES</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn bgh bsm" onclick="startFilterPractice('bookmarks')" style="font-size:12px">🔖 Practice Bookmarks (${Object.keys(D.memory?.bookmarks || {}).length})</button>
+          <button class="btn bgh bsm" onclick="startFilterPractice('retry')" style="font-size:12px">🔄 Practice Retry Queue (${(D.memory?.retryQueue || []).length})</button>
+          <button class="btn bgh bsm" onclick="startFilterPractice('mistakes')" style="font-size:12px">⚠️ Practice Previous Mistakes (${(D.memory?.weakSpots || []).length})</button>
+        </div>
+      </div>
+
       <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.2);border-radius:10px;padding:14px;margin-bottom:20px;font-size:12px;color:var(--sub)">
         <strong style="color:#fff">📋 Practice Session:</strong> ${compState.practiceCount} question${compState.practiceCount>1?'s':''} · 
         ${compState.practiceSubject} · 
@@ -3442,7 +3452,56 @@ function startChapterPractice(subject, chapter) {
   compState.currentTab = 'practice';
   startCompPractice();
 }
-window.startChapterPractice = startChapterPractice;
+async function startFilterPractice(filterType) {
+  let questions = [];
+  const count = compState.practiceCount || 5;
+
+  if (filterType === 'bookmarks') {
+    const bookmarkedIds = Object.keys(D.memory?.bookmarks || {});
+    if (!bookmarkedIds.length) {
+      if (typeof toast === 'function') toast('No bookmarked questions yet', 'info');
+      return;
+    }
+    if (window.pyqService) {
+      questions = (window.pyqService.getQuestions({ count: 50, examId: compState.examId })?.questions || []).filter(q => bookmarkedIds.includes(q.id));
+    }
+  } else if (filterType === 'retry') {
+    const retryIds = D.memory?.retryQueue || [];
+    if (!retryIds.length) {
+      if (typeof toast === 'function') toast('No questions in Retry Queue', 'info');
+      return;
+    }
+    if (window.pyqService) {
+      questions = (window.pyqService.getQuestions({ count: 50, examId: compState.examId })?.questions || []).filter(q => retryIds.includes(q.id));
+    }
+  } else if (filterType === 'mistakes') {
+    const weakTopics = (D.memory?.weakSpots || []).map(w => w.topic).filter(Boolean);
+    if (!weakTopics.length) {
+      if (typeof toast === 'function') toast('No previous mistakes logged', 'info');
+      return;
+    }
+    if (window.pyqService) {
+      questions = (window.pyqService.getQuestions({ count: 50, examId: compState.examId })?.questions || []).filter(q => weakTopics.includes(q.chapter || q.topic));
+    }
+  }
+
+  if (questions.length === 0) {
+    const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.default;
+    questions = list.slice(0, count);
+  }
+
+  if (window.CompOrchestrator) {
+    window.CompOrchestrator.startPractice({
+      exam: compState.examId,
+      subject: filterType.toUpperCase(),
+      chapter: filterType,
+      count: questions.length
+    });
+  }
+
+  renderMultiPracticeOverlay(questions, `${compState.examId.toUpperCase()} — ${filterType.toUpperCase()} Practice`);
+}
+window.startFilterPractice = startFilterPractice;
 
 async function startCompPractice() {
   const btn = document.getElementById('start-practice-btn');
