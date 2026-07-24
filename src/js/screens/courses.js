@@ -583,6 +583,10 @@ function removeCourse(courseId) {
    ────────────────────────────────────────────────────────────────────────── */
 let csm = { board: '', grade: '', stream: '', subjects: [] };
 
+function generateAndSaveCourses() {
+  openCourseSetupModal();
+}
+
 function openCourseSetupModal(){
   csm = {
     board: D.profile?.board || '',
