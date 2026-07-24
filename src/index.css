@@ -9098,7 +9098,7 @@ html, body {
 .comp-segmented-tabs {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   background: rgba(15, 20, 36, 0.65);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
@@ -9106,7 +9106,11 @@ html, body {
   border-radius: 16px;
   padding: 6px;
   margin-bottom: 24px;
+  max-width: 100%;
+  width: 100%;
   overflow-x: auto;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
   scrollbar-width: none;
 }
 .comp-segmented-tabs::-webkit-scrollbar {
@@ -9126,6 +9130,7 @@ html, body {
   border: 1px solid transparent;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -9920,17 +9925,48 @@ html, body {
 .mx-dev-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   z-index: 999999;
-  display: none;
+  display: none !important;
   align-items: center;
   justify-content: center;
   padding: 40px;
 }
 
 .mx-dev-overlay.mx-dev-active {
-  display: flex;
+  display: flex !important;
+}
+
+/* Simple Mode Floating Pill Styling */
+.eli5-active, #eli5-badge {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99990;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.15);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c4b5fd;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.eli5-active:hover, #eli5-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 0 25px rgba(139, 92, 246, 0.25);
+}
+
+.eli5-active[style*="display: none"], #eli5-badge[style*="display: none"] {
+  display: none !important;
 }
 
 .mx-dev-card {

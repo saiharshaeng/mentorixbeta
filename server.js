@@ -27,10 +27,10 @@ const server = http.createServer((req, res) => {
   const parsedUrl = new URL(req.url, 'http://localhost:8080');
   const decodedPathname = decodeURIComponent(parsedUrl.pathname);
 
-  // Favicon fallback handler to prevent Chrome console 404 errors
-  if (decodedPathname === '/favicon.ico') {
-    res.writeHead(200, { 'Content-Type': 'image/x-icon' });
-    res.end();
+  // Favicon & Source Map fallback handler to prevent Chrome console 404 errors
+  if (decodedPathname === '/favicon.ico' || decodedPathname.endsWith('.map') || decodedPathname.includes('.ts-')) {
+    res.writeHead(200, { 'Content-Type': decodedPathname.endsWith('.map') ? 'application/json' : 'text/javascript' });
+    res.end(decodedPathname.endsWith('.map') ? '{}' : '/* extension stub */');
     return;
   }
 
