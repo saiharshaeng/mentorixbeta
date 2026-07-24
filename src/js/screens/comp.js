@@ -3486,7 +3486,7 @@ async function startFilterPractice(filterType) {
   }
 
   if (questions.length === 0) {
-    const list = OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.default;
+    const list = (typeof OFFLINE_EXAM_QUESTIONS !== 'undefined' ? (OFFLINE_EXAM_QUESTIONS[compState.examId] || OFFLINE_EXAM_QUESTIONS.default) : null) || [];
     questions = list.slice(0, count);
   }
 
@@ -3499,7 +3499,7 @@ async function startFilterPractice(filterType) {
     });
   }
 
-  renderMultiPracticeOverlay(questions, `${compState.examId.toUpperCase()} — ${filterType.toUpperCase()} Practice`);
+  launchMultiPracticeOverlay(questions);
 }
 window.startFilterPractice = startFilterPractice;
 
@@ -3560,7 +3560,7 @@ async function startCompPractice() {
     btn.innerHTML = '🚀 Start Practice Session';
   }
 
-  renderMultiPracticeOverlay(questions, `${exam.name} — ${section} (${chapter})`);
+  launchMultiPracticeOverlay(questions);
 }
 window.startCompPractice = startCompPractice;
 
@@ -3584,6 +3584,11 @@ function launchMultiPracticeOverlay(questions) {
 
   function renderQuestion() {
     const q = sessionState.questions[sessionState.current];
+    if (!q) {
+      const container = document.getElementById('mp-question-container');
+      if (container) container.innerHTML = '<div style="padding:20px;text-align:center;color:var(--mut)">No question data available.</div>';
+      return;
+    }
     const idx = sessionState.current;
     const total = sessionState.questions.length;
     const isRevealed = sessionState.revealed[idx];

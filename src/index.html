@@ -3006,12 +3006,12 @@ function renderKnowledgeGraph(containerId, centerTopic, relatedTopics){
 
   // Build nodes
   const cx=W/2, cy=H/2;
-  const nodes=[{label:centerTopic,x:cx,y:cy,r:42,type:'center',learned:D.topics.includes(centerTopic)}];
+  const nodes=[{label:centerTopic,x:cx,y:cy,r:42,type:'center',learned:(D.topics||[]).includes(centerTopic)}];
   const count=relatedTopics.length;
   relatedTopics.forEach((t,i)=>{
     const angle=(i/count)*Math.PI*2 - Math.PI/2;
     const dist=100+Math.random()*20;
-    nodes.push({label:t,x:cx+Math.cos(angle)*dist,y:cy+Math.sin(angle)*dist,r:28,type:D.topics.includes(t)?'learned':'related',learned:D.topics.includes(t)});
+    nodes.push({label:t,x:cx+Math.cos(angle)*dist,y:cy+Math.sin(angle)*dist,r:28,type:(D.topics||[]).includes(t)?'learned':'related',learned:(D.topics||[]).includes(t)});
   });
 
   function draw(){

@@ -144,9 +144,9 @@ function rDash(){
   const p=D.profile,lv2=lv(D.xp),pct=xpP(D.xp),xpr=xpR(D.xp);
   const ch=DC[new Date().getDay()%DC.length];
   const name=(p?.name||'there').split(' ')[0];
-  const recent=D.topics.slice(-6);
+  const recent=(D.topics||[]).slice(-6);
   const quick=(p?.ints||p?.subjects||[]).slice(0,5); // ints is a legacy field; fall through to subjects
-  const sessToday=TM?.sessionsToday||0;
+  const sessToday=(typeof TM !== 'undefined' ? TM : (window.TM || null))?.sessionsToday||0;
 
   // Retrieve Continue Learning data
   const cont = getContinueLearningChapter();
@@ -184,8 +184,8 @@ function rDash(){
   const urgentRev=revQueue.filter(q=>q.priority==='high').slice(0,3);
 
   // SVG Circular Backlog calculations
-  const totalBacklog = Math.max(30, D.topics.length + 10);
-  const backlogPct = Math.round((D.topics.length / totalBacklog) * 100);
+  const totalBacklog = Math.max(30, (D.topics || []).length + 10);
+  const backlogPct = Math.round(((D.topics || []).length / totalBacklog) * 100);
   const backlogOffset = 125.6 * (1 - backlogPct / 100); // 2 * PI * r = 2 * 3.14159 * 20 = 125.6
 
   document.getElementById('main').innerHTML=`
@@ -255,7 +255,7 @@ function rDash(){
             <div class="sc card-lift" onclick="go('progress')" style="cursor:pointer" role="button" tabindex="0" aria-label="${D.xp} XP"><span class="sc-icon" aria-hidden="true">⚡</span><div class="sn count-in" style="color:var(--pl)">${D.xp}</div><div class="sl">XP</div></div>
             <div class="sc card-lift" onclick="go('progress')" style="cursor:pointer" role="button" tabindex="0" aria-label="Level ${lv2}"><span class="sc-icon" aria-hidden="true">🏆</span><div class="sn count-in" style="color:var(--goldl)">${lv2}</div><div class="sl">LEVEL</div></div>
             <div class="sc card-lift" role="button" tabindex="0" aria-label="${D.streak} day streak"><span class="sc-icon" aria-hidden="true">🔥</span><div class="sn count-in ${D.streak>=7?'streak-high':''}" style="color:#FCA5A5">${D.streak}</div><div class="sl">STREAK</div></div>
-            <div class="sc card-lift" onclick="go('notebook')" style="cursor:pointer" role="button" tabindex="0" aria-label="${D.topics.length} topics learned"><span class="sc-icon" aria-hidden="true">📚</span><div class="sn count-in" style="color:var(--okl)">${D.topics.length}</div><div class="sl">TOPICS</div></div>
+            <div class="sc card-lift" onclick="go('notebook')" style="cursor:pointer" role="button" tabindex="0" aria-label="${(D.topics || []).length} topics learned"><span class="sc-icon" aria-hidden="true">📚</span><div class="sn count-in" style="color:var(--okl)">${(D.topics || []).length}</div><div class="sl">TOPICS</div></div>
             <div class="sc card-lift" onclick="toggleSprintTimer()" style="cursor:pointer" role="button" tabindex="0" aria-label="${sessToday} study sessions today"><span class="sc-icon" aria-hidden="true">⏱️</span><div class="sn count-in" style="color:var(--cl)">${sessToday}</div><div class="sl">SESSIONS</div></div>
           </div>
 
@@ -389,7 +389,7 @@ function rDash(){
           </div>
 
           <!-- Recent + Badges -->
-          <div style="display:grid;grid-template-columns:${recent.length&&D.badges.length?'1fr 1fr':'1fr'};gap:var(--sp-4);margin-bottom:var(--sp-4)">
+          <div style="display:grid;grid-template-columns:${recent.length&&(D.badges||[]).length?'1fr 1fr':'1fr'};gap:var(--sp-4);margin-bottom:var(--sp-4)">
             ${recent.length?`
             <div class="card card-lift">
               <div class="h3" style="margin-bottom:var(--sp-3)"><span aria-hidden="true">📚</span> Recently Learned</div>
@@ -401,11 +401,11 @@ function rDash(){
               <p style="color:var(--mut);margin-bottom:14px;font-size:var(--fs-md)">Learn your first topic!</p>
               <button class="btn bpri bsm" onclick="go('learn')">Start Learning</button>
             </div>`}
-            ${D.badges.length?`
+            ${(D.badges||[]).length?`
             <div class="card cgold card-lift">
               <div class="h3" style="margin-bottom:var(--sp-3)"><span aria-hidden="true">🏆</span> Badges Earned</div>
               <div style="display:flex;flex-wrap:wrap;gap:7px">
-                ${D.badges.slice(-6).map(b=>{const bd=BADGES.find(x=>x.id===b);return `<div style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:7px 13px;color:var(--goldl);font-size:var(--fs-xs);font-weight:600"><span aria-hidden="true">${bd?.ic||'🏆'}</span> ${b}</div>`;}).join('')}
+                ${(D.badges||[]).slice(-6).map(b=>{const bd=BADGES.find(x=>x.id===b);return `<div style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:7px 13px;color:var(--goldl);font-size:var(--fs-xs);font-weight:600"><span aria-hidden="true">${bd?.ic||'🏆'}</span> ${b}</div>`;}).join('')}
               </div>
             </div>`:''}
           </div>
@@ -451,7 +451,7 @@ function rDash(){
         <div class="card" style="padding:20px">
           <div class="between mb12">
             <div class="sc-card-tag" style="color: var(--okl)">📚 Syllabus Coverage</div>
-            <span class="tag tp" style="font-family:var(--f-num); font-size:10px">${D.topics.length} / ${totalBacklog} topics</span>
+            <span class="tag tp" style="font-family:var(--f-num); font-size:10px">${(D.topics || []).length} / ${totalBacklog} topics</span>
           </div>
           <div style="display:flex; align-items:center; gap:16px">
             <div class="circle-progress-container">
@@ -484,9 +484,9 @@ function rDash(){
     </div>
   </div>`;
 
-  initStatCounters();
-  updateTimerDisplay();
-  initDashboardPhysics();
+  if (typeof initStatCounters === 'function') initStatCounters();
+  if (typeof updateTimerDisplay === 'function') updateTimerDisplay();
+  if (typeof initDashboardPhysics === 'function') initDashboardPhysics();
   
   // Telemetry stream scroll removed
   

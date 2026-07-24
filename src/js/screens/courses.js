@@ -196,7 +196,7 @@ function rCourses(){
       topics.forEach(t => {
         totalCourseTopics++;
         const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
-        const isDone = D.topics.includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
+        const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
         if (isDone) {
           completedCourseTopics++;
         }
@@ -233,7 +233,7 @@ function rCourses(){
 
           (sub.topics || []).forEach((t, ti) => {
             const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
-            const isDone = D.topics.includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
+            const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
             const isUnlocked = isChapterUnlocked && (isDone || (typeof t === 'object' ? t.status === 'Unlocked' : true) || (si === 0 && ti === 0));
             const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (isUnlocked && !isDone);
             const posClass = PATH_POSITIONS[globalNodeIdx % PATH_POSITIONS.length];
@@ -277,7 +277,7 @@ function rCourses(){
       } else {
         (chapter.topics || []).forEach((t, ti) => {
           const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
-          const isDone = D.topics.includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
+          const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
           const isUnlocked = isChapterUnlocked && (isDone || (typeof t === 'object' ? t.status === 'Unlocked' : true) || ti === 0);
           const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (isUnlocked && !isDone);
           const posClass = PATH_POSITIONS[globalNodeIdx % PATH_POSITIONS.length];
@@ -434,7 +434,7 @@ function getContinueLearningChapter() {
     if (pos && pos.topicTitle) {
       const completedTopicsCount = (pos.chapter?.topics || []).filter(t => {
         const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
-        return D.topics.includes(tTitle);
+        return (D.topics || []).includes(tTitle);
       }).length;
       const progress = (pos.chapter?.topics || []).length > 0 ? Math.round((completedTopicsCount / pos.chapter.topics.length) * 100) : 0;
       

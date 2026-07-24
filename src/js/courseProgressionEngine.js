@@ -62,7 +62,7 @@
           const topics = chap.topics || [];
           topics.forEach(t => {
             const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
-            if (window.D.topics.includes(tTitle) && !state.completedTopics.includes(tTitle)) {
+            if ((window.D?.topics || []).includes(tTitle) && !state.completedTopics.includes(tTitle)) {
               state.completedTopics.push(tTitle);
             }
           });

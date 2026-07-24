@@ -61,6 +61,7 @@ function awardBadge(id) {
 }
 
 function addTopic(t, courseId) {
+  if (!D.topics) D.topics = [];
   if (!D.topics.includes(t)) {
     D.topics.push(t);
     const fn = (typeof completeCourseTopic === 'function') ? completeCourseTopic : (typeof window !== 'undefined' ? window.completeCourseTopic : null);
