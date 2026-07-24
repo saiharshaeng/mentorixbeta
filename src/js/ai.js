@@ -135,30 +135,45 @@ async function ai(msgs, sys, mt = 1000, json = false, model = window.MODEL_CHAT 
   let reply = null;
 
   if (GROQ) {
-    try {
-      if (window.addTerminalLog) {
-        window.addTerminalLog(`Attempting proxy call to Cloudflare Worker...`);
-      }
-      let r = await fetch(GROQ, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      });
-
-      if (r.ok) {
-        const data = await r.json();
-        if (data && !data.error) {
-          reply = data?.choices?.[0]?.message?.content || '';
-          if (reply) {
-            if (window.addTerminalLog) {
-              window.addTerminalLog(`AI proxy response resolved successfully.`);
-            }
-            return reply;
-          }
+    let retries = 2;
+    while (retries >= 0) {
+      try {
+        if (window.addTerminalLog) {
+          window.addTerminalLog(`Attempting proxy call to Cloudflare Worker (Retries remaining: ${retries})...`);
         }
+        let r = await fetch(GROQ, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+
+        if ((r.status === 429 || r.status === 503) && retries > 0) {
+          retries--;
+          await delay(1500);
+          continue;
+        }
+
+        if (r.ok) {
+          const data = await r.json();
+          if (data && !data.error) {
+            reply = data?.choices?.[0]?.message?.content || '';
+            if (reply) {
+              if (window.addTerminalLog) {
+                window.addTerminalLog(`AI proxy response resolved successfully.`);
+              }
+              return reply;
+            }
+          } else if (data?.error) {
+            console.warn('[Mentorix] Proxy API warning:', data.error.message);
+          }
+        } else {
+          console.warn('[Mentorix] Proxy HTTP status:', r.status);
+        }
+        break; // Break retry loop if not a retryable error or if ok
+      } catch (e) {
+        console.warn('[Mentorix] Cloudflare Worker proxy connection error:', e.message);
+        break;
       }
-    } catch (e) {
-      /* Silent fallback */
     }
   }
 
