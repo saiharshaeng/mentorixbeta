@@ -38,6 +38,20 @@ const SCREEN_MAP = {
   qiacp:    () => (typeof renderQIACP === 'function' ? renderQIACP() : (typeof window.renderQIACP === 'function' && window.renderQIACP())),
 };
 
+/* ── CANONICAL IA ROUTE REGISTRY ────────────────────────────── */
+
+const CANONICAL_ROUTES = {
+  'dash': '/dash',
+  'courses': '/courses',
+  'comp': '/comp',
+  'mentor': '/mentor',
+  'settings': '/profile',
+  'notebook': '/notebook',
+  'revision': '/revision',
+  'progress': '/progress',
+  'explore': '/explore'
+};
+
 /* ── MAIN ROUTING FUNCTION ──────────────────────────────────── */
 
 function go(scr, param) {
@@ -51,6 +65,15 @@ function go(scr, param) {
     window.onScreenUnmount = null;
   }
 
+  // Preserve navigation context for current screen
+  if (!window.D._navContext) window.D._navContext = {};
+  if (D.screen && document.getElementById('main')) {
+    window.D._navContext[D.screen] = {
+      scrollTop: document.getElementById('main').scrollTop || 0,
+      timestamp: Date.now()
+    };
+  }
+
   // Stop any active lesson sub-cycle
   const learnSub = document.getElementById('learn-sub');
   if (learnSub && learnSub._cycleStop) learnSub._cycleStop();
@@ -58,6 +81,13 @@ function go(scr, param) {
   D.screen = scr;
   if (param !== undefined) D._param = param;
   document.body.setAttribute('data-screen', scr);
+
+  // Sync hash deep-link URL
+  const routePath = CANONICAL_ROUTES[scr] || `/${scr}`;
+  const hashTarget = `#${routePath}${param ? '/' + encodeURIComponent(param) : ''}`;
+  if (window.location.hash !== hashTarget && window.history?.replaceState) {
+    window.history.replaceState({ screen: scr, param }, '', hashTarget);
+  }
 
   // Close mobile drawer if open
   if (typeof closeMobDrawer === 'function') closeMobDrawer();
@@ -74,8 +104,15 @@ function go(scr, param) {
 
     setTimeout(() => {
       renderScr();
-      // Scroll to top on navigation
-      main.scrollTop = 0;
+
+      // Restore scroll position if present in nav context
+      const prevContext = window.D._navContext[scr];
+      if (prevContext && prevContext.scrollTop) {
+        main.scrollTop = prevContext.scrollTop;
+      } else {
+        main.scrollTop = 0;
+      }
+
       // Enter: spring slide down
       main.style.transition = 'opacity 240ms var(--ease-smooth), transform 240ms var(--spring-settle,cubic-bezier(.34,1.3,.64,1))';
       main.style.opacity    = '1';
@@ -97,11 +134,6 @@ function go(scr, param) {
     }, 90);
   } else {
     renderScr();
-  }
-
-  // Push browser history state (omit dash to keep back-button clean)
-  if (window.history?.pushState && scr !== 'dash') {
-    window.history.pushState({ screen: scr }, '');
   }
 }
 

@@ -401,6 +401,109 @@ function renderUDSSkeleton(heightPx = 40, widthPct = 100) {
   return `<div class="uds-skeleton" style="height:${heightPx}px;width:${widthPct}%"></div>`;
 }
 
+/* ── CANONICAL BREADCRUMB ENGINE ───────────────────────────── */
+
+/**
+ * Render 1-line canonical breadcrumbs.
+ * @param {Array<{label: string, screen?: string, param?: string}>} segments
+ */
+function renderBreadcrumb(segments = []) {
+  if (!segments.length) return '';
+  return `
+    <nav class="uds-breadcrumb" aria-label="Breadcrumb" style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--sub,#94a3b8);margin-bottom:14px;flex-wrap:wrap">
+      ${segments.map((seg, idx) => {
+        const isLast = idx === segments.length - 1;
+        if (isLast || !seg.screen) {
+          return `<span style="color:#fff;font-weight:700">${esc(seg.label)}</span>`;
+        }
+        return `
+          <button onclick="go('${seg.screen}'${seg.param ? `, '${escON(seg.param)}'` : ''})" style="background:none;border:none;color:var(--sub,#94a3b8);padding:0;font-size:12px;cursor:pointer;text-decoration:underline">
+            ${esc(seg.label)}
+          </button>
+          <span style="color:var(--mut,#475569)">›</span>
+        `;
+      }).join('')}
+    </nav>
+  `;
+}
+
+/* ── UNIFIED GLOBAL SEARCH ENGINE ──────────────────────────── */
+
+function openGlobalSearch() {
+  const old = document.getElementById('global-search-modal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'global-search-modal';
+  modal.className = 'confirm-modal-bg';
+  modal.style.zIndex = '100010';
+  modal.innerHTML = `
+    <div class="confirm-modal uds-card" style="max-width:560px;width:90%;text-align:left;padding:20px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div style="font-weight:700;font-size:14px;color:#fff">🔍 Global Search (Mentorix IA)</div>
+        <span style="font-size:11px;color:var(--sub);background:rgba(255,255,255,0.05);padding:2px 8px;border-radius:4px">ESC to close</span>
+      </div>
+      <input type="text" id="global-search-input" class="inp" placeholder="Search courses, competitive exams, chapters, tools..." style="margin-bottom:14px" autofocus />
+      <div id="global-search-results" style="max-height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:8px"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const inp = document.getElementById('global-search-input');
+  const resultsContainer = document.getElementById('global-search-results');
+
+  const executeSearch = (q) => {
+    const query = q.toLowerCase().trim();
+    if (!query) {
+      resultsContainer.innerHTML = '<div style="font-size:12px;color:var(--sub);padding:12px;text-align:center">Type to search features, courses, and exams...</div>';
+      return;
+    }
+
+    const matches = [];
+
+    // Search App Screens
+    const screens = [
+      { label: '🏠 Dashboard (Home)', screen: 'dash', category: 'Screen' },
+      { label: '📖 Courses & Learning Paths', screen: 'courses', category: 'Screen' },
+      { label: '🎯 Competitive Exams Hub', screen: 'comp', category: 'Screen' },
+      { label: '🤖 Tio AI Operating Center', screen: 'mentor', category: 'Screen' },
+      { label: '👤 Profile & Settings', screen: 'settings', category: 'Screen' },
+      { label: '🔄 Spaced Repetition Flashcards', screen: 'revision', category: 'Screen' },
+      { label: '📊 XP Progress & Analytics', screen: 'progress', category: 'Screen' }
+    ];
+
+    screens.forEach(s => {
+      if (s.label.toLowerCase().includes(query)) matches.push(s);
+    });
+
+    // Search Exam Registry
+    if (window.WORLD_EXAMS) {
+      window.WORLD_EXAMS.forEach(e => {
+        if (e.name.toLowerCase().includes(query) || e.id.toLowerCase().includes(query)) {
+          matches.push({ label: `🎯 ${e.name} (${e.type})`, screen: 'comp', param: e.id, category: 'Exam' });
+        }
+      });
+    }
+
+    if (!matches.length) {
+      resultsContainer.innerHTML = '<div style="font-size:12px;color:var(--sub);padding:12px;text-align:center">No results found. Try "JEE", "Courses", or "Practice".</div>';
+      return;
+    }
+
+    resultsContainer.innerHTML = matches.map(m => `
+      <div onclick="document.getElementById('global-search-modal').remove(); go('${m.screen}'${m.param ? `, '${escON(m.param)}'` : ''})" style="padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--brd);border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background .15s">
+        <span style="font-size:13px;color:#fff;font-weight:600">${esc(m.label)}</span>
+        <span class="tag" style="font-size:10px;background:rgba(139,92,246,0.1);color:var(--pl)">${esc(m.category)}</span>
+      </div>
+    `).join('');
+  };
+
+  inp.oninput = (e) => executeSearch(e.target.value);
+  executeSearch('');
+
+  modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+}
+
 /* ── EXPORTS ────────────────────────────────────────────────── */
 // Exposed as globals so the non-module monolith scripts can call them unchanged.
 // When the full ESM migration is complete these become named exports.
@@ -423,3 +526,5 @@ window.initBackButton   = initBackButton;
 window.renderUDSEmptyState = renderUDSEmptyState;
 window.renderUDSErrorBox = renderUDSErrorBox;
 window.renderUDSSkeleton = renderUDSSkeleton;
+window.renderBreadcrumb  = renderBreadcrumb;
+window.openGlobalSearch  = openGlobalSearch;
