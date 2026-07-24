@@ -98,58 +98,90 @@ function renderAuth() {
 }
 
 function showAddProfileForm() {
-  const avatars = ['🧠', '🚀', '🧬', '📐', '🎨', '🌟', '📚', '⚡'];
+  const mascots = window.CloudSyncEngine ? window.CloudSyncEngine.MASCOT_PRESETS : [
+    { id: 'robot_coder', label: '👨‍💻 Coder Robot', emoji: '🤖' },
+    { id: 'boy_astronaut', label: '👨‍🚀 Astronaut Boy', emoji: '👦' },
+    { id: 'girl_scientist', label: '👩‍🔬 Scientist Girl', emoji: '👧' }
+  ];
+
   const formHTML = `
-    <div class="h3 mb12" style="color:var(--pl)">Create Profile</div>
-    <div class="auth-inp-wrap">
-      <input class="auth-inp" id="p-name" type="text" placeholder="Profile Name" maxlength="20">
+    <div class="h3 mb12" style="color:var(--pl)">Create Cloud Profile</div>
+    
+    <div class="auth-inp-wrap mb10">
+      <input class="auth-inp" id="p-username" type="text" placeholder="Unique @username (e.g. @harsha)" maxlength="20">
     </div>
+
+    <div class="auth-inp-wrap mb12">
+      <input class="auth-inp" id="p-name" type="text" placeholder="Display Name (e.g. Harsha)" maxlength="30">
+    </div>
+
     <div class="mb12">
-      <label class="inp-label" style="margin-bottom:6px;display:block">CHOOSE AVATAR</label>
-      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap" id="avatar-grid">
-        ${avatars.map((av, i) => `
-          <button class="btn bgh ${i===0?'bpri':''}" style="font-size:24px;padding:8px;width:44px;height:44px;display:flex;align-items:center;justify-content:center" onclick="selectAvatar(this, '${av}')">${av}</button>
+      <label class="inp-label" style="margin-bottom:6px;display:block;color:var(--pl);font-weight:700">CHOOSE MASCOT AVATAR</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px" id="avatar-grid">
+        ${mascots.map((m, i) => `
+          <button class="btn bgh ${i===0?'bpri':''}" style="font-size:12px;padding:8px;display:flex;align-items:center;gap:6px;justify-content:flex-start" onclick="selectMascot(this, '${m.id}', '${m.emoji}')">
+            <span style="font-size:18px">${m.emoji}</span>
+            <span>${esc(m.label)}</span>
+          </button>
         `).join('')}
       </div>
     </div>
+
     <div class="auth-err" id="p-err"></div>
-    <button class="auth-btn auth-btn-pri" id="p-btn" onclick="createProfileSubmit()">Create Profile</button>
+    <button class="auth-btn auth-btn-pri" id="p-btn" onclick="createProfileSubmit()">Create Cloud Profile</button>
     <div style="text-align:center;margin-top:12px"><a onclick="renderAuth()" style="color:var(--mut);font-size:12px;cursor:pointer">← Back to Profiles</a></div>
   `;
   document.getElementById('auth-form').innerHTML = formHTML;
-  window._selectedAvatar = avatars[0];
+  window._selectedMascot = mascots[0];
 }
 
-function selectAvatar(btn, av) {
+function selectMascot(btn, id, emoji) {
   document.querySelectorAll('#avatar-grid button').forEach(b => b.classList.remove('bpri'));
   btn.classList.add('bpri');
-  window._selectedAvatar = av;
+  window._selectedMascot = { id, emoji };
 }
 
 function createProfileSubmit() {
-  const name = (document.getElementById('p-name')?.value || '').trim();
-  if (!name) {
-    showAuthErr('p-err', 'Please enter a profile name');
-    return;
+  const rawUsername = (document.getElementById('p-username')?.value || '').trim();
+  const name = (document.getElementById('p-name')?.value || rawUsername).trim();
+
+  if (window.CloudSyncEngine) {
+    const valRes = window.CloudSyncEngine.validateUsername(rawUsername);
+    if (!valRes.valid) {
+      showAuthErr('p-err', valRes.error);
+      return;
+    }
   }
+
   const profiles = getProfiles();
-  if (profiles.some(p => p.name.toLowerCase() === name.toLowerCase())) {
-    showAuthErr('p-err', 'Profile name already exists');
+  if (profiles.some(p => (p.username || '').toLowerCase() === rawUsername.toLowerCase())) {
+    showAuthErr('p-err', 'Username already taken. Please pick another.');
     return;
   }
-  if (profiles.length >= 4) {
-    showAuthErr('p-err', 'Maximum of 4 profiles allowed');
+  if (profiles.length >= 6) {
+    showAuthErr('p-err', 'Maximum of 6 profile slots reached.');
     return;
   }
+
   const id = 'profile_' + (profiles.length + 1);
+  const mascot = window._selectedMascot || { id: 'robot_coder', emoji: '🤖' };
+
   const newProfile = {
     id: id,
+    username: rawUsername.startsWith('@') ? rawUsername : `@${rawUsername}`,
     name: name,
-    avatar: window._selectedAvatar || '🧠',
+    avatar: mascot.emoji,
+    avatarId: mascot.id,
     createdAt: new Date().toISOString()
   };
+
   profiles.push(newProfile);
   saveProfiles(profiles);
+
+  if (window.CloudSyncEngine) {
+    window.CloudSyncEngine.migrateLocalData(id);
+  }
+
   selectProfile(id);
 }
 

@@ -95,11 +95,42 @@ function go(scr, param) {
 
 /* ── SCREEN RENDERER ────────────────────────────────────────── */
 
+const GATED_SCREENS = ['courses', 'careers', 'tests', 'revision', 'progress', 'roadmap'];
+
+function renderPoliteOnboardingPrompt() {
+  const main = document.getElementById('main');
+  if (!main) return;
+  main.innerHTML = `
+    <div class="sw scr page-enter" style="max-width:580px;margin:50px auto;text-align:center">
+      <div style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);border-radius:24px;padding:40px 28px;box-shadow:0 12px 40px rgba(0,0,0,0.4)">
+        <div style="font-size:56px;margin-bottom:16px">🎯</div>
+        <div class="h1" style="color:#fff;margin-bottom:10px;font-size:28px">Let's Personalize Your Mentorix</div>
+        <p class="sub" style="font-size:14px;line-height:1.65;margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto">
+          We need to understand your grade, board, and learning goals first so Mentorix can personalize your courses, quizzes, and career paths for you.
+        </p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn bpri blg" onclick="if(typeof renderOB==='function')renderOB()" style="padding:14px 28px;font-size:15px;border-radius:14px;box-shadow:0 8px 24px rgba(139,92,246,0.4)">
+            🚀 Personalize My Profile (60s)
+          </button>
+          <button class="btn bgh blg" onclick="go('explore')" style="padding:14px 20px;font-size:14px;border-radius:14px">
+            ← Explore Public Content
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 /**
  * Calls the correct render function for D.screen.
  * Falls back to rDash if the screen is unknown.
  */
 function renderScr() {
+  if (GATED_SCREENS.includes(D.screen) && window.ProfileEngine && !window.ProfileEngine.isPersonalized()) {
+    renderPoliteOnboardingPrompt();
+    return;
+  }
+
   const fn = SCREEN_MAP[D.screen];
   if (fn) {
     fn();

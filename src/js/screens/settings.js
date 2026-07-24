@@ -48,10 +48,10 @@ function rSettings(){
       <div class="h3 mb12" style="color:var(--pl)">📚 Learning Preferences</div>
       <div class="card">
         <div class="set-row">
-          <div><div style="color:var(--txt);font-size:14px;font-weight:500">Experience Mode</div><div style="color:var(--mut);font-size:12px">How the platform looks and feels</div></div>
-          <select class="inp" style="width:160px;padding:7px 10px" onchange="setMode(this.value)">
-            <option value="general" ${D.profile?.mode==='general'?'selected':''}>🎯 General</option>
-            <option value="creative" ${D.profile?.mode!=='general'?'selected':''}>🎮 Creative</option>
+          <div><div style="color:var(--txt);font-size:14px;font-weight:500">Learning Experience Mode</div><div style="color:var(--mut);font-size:12px">Choose your preferred visual & learning theme</div></div>
+          <select class="inp" style="width:160px;padding:7px 10px" onchange="setExperienceMode(this.value)">
+            <option value="gamified" ${(!D.profile?.experienceMode || D.profile?.experienceMode==='gamified')?'selected':''}>🎮 Gamified</option>
+            <option value="professional" ${D.profile?.experienceMode==='professional'?'selected':''}>🎓 Professional</option>
           </select>
         </div>
         <div class="set-row">
@@ -361,10 +361,22 @@ function toggleMockAI(checked) {
   }
 }
 
+function setExperienceMode(mode) {
+  if (window.ProfileEngine) {
+    window.ProfileEngine.updateProfile({ experienceMode: mode });
+  } else {
+    if (!D.profile) D.profile = {};
+    D.profile.experienceMode = mode;
+    saveNow();
+  }
+  if (window.toast) window.toast(`Experience Mode updated to ${mode === 'gamified' ? '🎮 Gamified' : '🎓 Professional'}!`, 'ok2');
+}
+
 // Global window exports to maintain compatibility with other screens and inline event handlers
 window.rSettings = rSettings;
 window.setPersonality = setPersonality;
 window.setMode = setMode;
+window.setExperienceMode = setExperienceMode;
 window.editName = editName;
 window.resetAll = resetAll;
 window.toggleCursor = toggleCursor;

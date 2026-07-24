@@ -1,14 +1,14 @@
 /**
- * exam_specs.js — Official Exam Specifications for Mentorix CBT
- * Source: Official exam bodies + verified 2025-2026 data
- * Last updated: July 2026
- * 
- * USAGE: window.EXAM_SPECS[examId] gives full exam config
- * Used by: comp.js for mock exam generation, syllabus display, weightage
+ * exam_specs.js — Authoritative Exam Specifications for Competitive Exam Engine (CEE)
+ * Source: Official NTA, IIT, NMC, and BITS bodies + verified 2025-2026 data.
+ *
+ * This file serves as the deterministic registry for competitive exam schemas.
+ * It contains the official syllabus hierarchical mappings (Exam -> Subject -> Unit -> Chapter -> Topic).
  */
 
-const EXAM_SPECS = {
+'use strict';
 
+const EXAM_SPECS = {
   // ════════════════════════════════════════════
   // JEE MAIN
   // ════════════════════════════════════════════
@@ -17,131 +17,69 @@ const EXAM_SPECS = {
     name: 'JEE Main',
     fullName: 'Joint Entrance Examination (Main)',
     body: 'National Testing Agency (NTA)',
-    mode: 'CBT (Computer Based Test)',
-    duration: 180, // minutes
-    totalMarks: 300,
-    totalQuestions: 75, // 25 per subject
-    negativeMarking: true,
-    papers: ['Paper 1 (B.Tech/B.E.)'],
-    marking: {
-      correct: 4,
-      incorrect: -1,
-      unattempted: 0
-    },
+    durationMinutes: 180,
+    totalQuestions: 75,
+    maxScore: 300,
+    markingScheme: { correct: 4, wrong: -1, numericalWrong: 0 },
+    subjects: ['Mathematics', 'Physics', 'Chemistry'],
     sections: [
-      {
-        subject: 'Physics',
-        questions: 25,
-        marks: 100,
-        types: [
-          { type: 'MCQ (Single Correct)', count: 20, marking: { correct: 4, incorrect: -1 } },
-          { type: 'Numerical Value', count: 5, marking: { correct: 4, incorrect: 0 } }
-        ]
-      },
-      {
-        subject: 'Chemistry',
-        questions: 25,
-        marks: 100,
-        types: [
-          { type: 'MCQ (Single Correct)', count: 20, marking: { correct: 4, incorrect: -1 } },
-          { type: 'Numerical Value', count: 5, marking: { correct: 4, incorrect: 0 } }
-        ]
-      },
-      {
-        subject: 'Mathematics',
-        questions: 25,
-        marks: 100,
-        types: [
-          { type: 'MCQ (Single Correct)', count: 20, marking: { correct: 4, incorrect: -1 } },
-          { type: 'Numerical Value', count: 5, marking: { correct: 4, incorrect: 0 } }
-        ]
-      }
+      { name: 'Section A (MCQ)', count: 20, correct: 4, wrong: -1 },
+      { name: 'Section B (Numerical)', count: 5, correct: 4, wrong: 0 }
     ],
     syllabus: {
-      Physics: {
-        highWeightage: ['Current Electricity', 'Electrostatics', 'Optics', 'Modern Physics', 'Mechanics', 'Thermodynamics'],
-        chapters: [
-          { name: 'Units and Dimensions', class: 11, weight: 3 },
-          { name: 'Kinematics', class: 11, weight: 4 },
-          { name: 'Laws of Motion', class: 11, weight: 5 },
-          { name: 'Work, Energy and Power', class: 11, weight: 4 },
-          { name: 'Rotational Motion', class: 11, weight: 4 },
-          { name: 'Gravitation', class: 11, weight: 3 },
-          { name: 'Properties of Matter', class: 11, weight: 3 },
-          { name: 'Thermodynamics', class: 11, weight: 5 },
-          { name: 'Waves and Oscillations', class: 11, weight: 4 },
-          { name: 'Electrostatics', class: 12, weight: 7 },
-          { name: 'Current Electricity', class: 12, weight: 8 },
-          { name: 'Magnetic Effects of Current', class: 12, weight: 5 },
-          { name: 'Electromagnetic Induction', class: 12, weight: 5 },
-          { name: 'Optics', class: 12, weight: 7 },
-          { name: 'Modern Physics', class: 12, weight: 6 },
-          { name: 'Semiconductors', class: 12, weight: 5 },
-          { name: 'Communication Systems', class: 12, weight: 2 }
-        ]
-      },
-      Chemistry: {
-        highWeightage: ['Organic Chemistry', 'Chemical Bonding', 'Equilibrium', 'Electrochemistry'],
-        chapters: [
-          { name: 'Atomic Structure', class: 11, weight: 4 },
-          { name: 'Chemical Bonding', class: 11, weight: 6 },
-          { name: 'States of Matter', class: 11, weight: 3 },
-          { name: 'Thermodynamics', class: 11, weight: 4 },
-          { name: 'Equilibrium', class: 11, weight: 5 },
-          { name: 'Redox Reactions', class: 11, weight: 3 },
-          { name: 'Hydrogen', class: 11, weight: 2 },
-          { name: 's-Block Elements', class: 11, weight: 3 },
-          { name: 'p-Block Elements', class: 11, weight: 4 },
-          { name: 'Organic Chemistry Basics', class: 11, weight: 5 },
-          { name: 'Hydrocarbons', class: 11, weight: 4 },
-          { name: 'Solid State', class: 12, weight: 4 },
-          { name: 'Solutions', class: 12, weight: 4 },
-          { name: 'Electrochemistry', class: 12, weight: 5 },
-          { name: 'Chemical Kinetics', class: 12, weight: 4 },
-          { name: 'Surface Chemistry', class: 12, weight: 3 },
-          { name: 'd and f Block Elements', class: 12, weight: 4 },
-          { name: 'Coordination Compounds', class: 12, weight: 5 },
-          { name: 'Haloalkanes and Haloarenes', class: 12, weight: 4 },
-          { name: 'Alcohols, Phenols, Ethers', class: 12, weight: 4 },
-          { name: 'Aldehydes, Ketones, Carboxylic Acids', class: 12, weight: 5 },
-          { name: 'Amines', class: 12, weight: 4 },
-          { name: 'Biomolecules and Polymers', class: 12, weight: 3 }
-        ]
-      },
-      Mathematics: {
-        highWeightage: ['Calculus', 'Coordinate Geometry', 'Algebra', 'Trigonometry'],
-        chapters: [
-          { name: 'Sets, Relations and Functions', class: 11, weight: 3 },
-          { name: 'Complex Numbers', class: 11, weight: 4 },
-          { name: 'Quadratic Equations', class: 11, weight: 3 },
-          { name: 'Sequences and Series', class: 11, weight: 4 },
-          { name: 'Straight Lines', class: 11, weight: 4 },
-          { name: 'Circles', class: 11, weight: 4 },
-          { name: 'Conic Sections', class: 11, weight: 5 },
-          { name: 'Binomial Theorem', class: 11, weight: 3 },
-          { name: 'Permutations and Combinations', class: 11, weight: 4 },
-          { name: 'Trigonometry', class: 11, weight: 5 },
-          { name: 'Limits and Continuity', class: 11, weight: 4 },
-          { name: 'Differentiation', class: 12, weight: 6 },
-          { name: 'Application of Derivatives', class: 12, weight: 5 },
-          { name: 'Integrals', class: 12, weight: 7 },
-          { name: 'Application of Integrals', class: 12, weight: 4 },
-          { name: 'Differential Equations', class: 12, weight: 4 },
-          { name: 'Vectors', class: 12, weight: 4 },
-          { name: '3D Geometry', class: 12, weight: 5 },
-          { name: 'Matrices and Determinants', class: 12, weight: 5 },
-          { name: 'Probability', class: 12, weight: 5 },
-          { name: 'Statistics', class: 12, weight: 3 }
-        ]
-      }
-    },
-    tips: [
-      'NCERT is mandatory — especially for Chemistry',
-      'Focus on Class 12 topics (higher weightage than Class 11)',
-      'Numerical questions in Section B have no negative marking',
-      'Speed matters — 3 minutes per question maximum',
-      'Revise formulas daily — the exam tests application not memorization'
-    ]
+      Mathematics: [
+        {
+          unit: 'Algebra',
+          chapters: [
+            { name: 'Complex Numbers', weight: 4, topics: ['Algebra of Complex Numbers', 'Polar and Euler Form', 'De Moivre Theorem', 'Roots of Unity'] },
+            { name: 'Quadratic Equations', weight: 3, topics: ['Nature of Roots', 'Common Roots', 'Location of Roots', 'Quadratic Inequalities'] },
+            { name: 'Sequences and Series', weight: 4, topics: ['Arithmetic Progression', 'Geometric Progression', 'Arithmetico-Geometric Progression', 'Special Series'] },
+            { name: 'Matrices and Determinants', weight: 5, topics: ['Types of Matrices', 'Properties of Determinants', 'Adjoint and Inverse', 'System of Linear Equations'] }
+          ]
+        },
+        {
+          unit: 'Calculus',
+          chapters: [
+            { name: 'Limits and Continuity', weight: 4, topics: ['Evaluation of Limits', 'L\'Hopital\'s Rule', 'Continuity and Differentiability'] },
+            { name: 'Differentiation', weight: 5, topics: ['First Principles', 'Chain Rule', 'Implicit and Parametric Differentiation', 'Higher Order Derivatives'] },
+            { name: 'Integrals', weight: 7, topics: ['Indefinite Integration', 'Definite Integration Properties', 'Leibniz Rule', 'Area Under Curves'] }
+          ]
+        }
+      ],
+      Physics: [
+        {
+          unit: 'Mechanics',
+          chapters: [
+            { name: 'Kinematics', weight: 4, topics: ['Motion in a Straight Line', 'Motion in a Plane', 'Projectiles', 'Relative Velocity'] },
+            { name: 'Laws of Motion', weight: 5, topics: ['Newton\'s Laws', 'Friction', 'Circular Motion Dynamics'] },
+            { name: 'Rotational Motion', weight: 4, topics: ['Moment of Inertia', 'Torque and Angular Momentum', 'Rolling Motion'] }
+          ]
+        },
+        {
+          unit: 'Electrodynamics',
+          chapters: [
+            { name: 'Electrostatics', weight: 7, topics: ['Coulomb\'s Law', 'Electric Field and Potential', 'Gauss\'s Law', 'Capacitance'] },
+            { name: 'Current Electricity', weight: 8, topics: ['Ohm\'s Law', 'Kirchhoff\'s Laws', 'Potentiometer and Meter Bridge', 'Heating Effects'] }
+          ]
+        }
+      ],
+      Chemistry: [
+        {
+          unit: 'Physical Chemistry',
+          chapters: [
+            { name: 'Atomic Structure', weight: 4, topics: ['Bohr Model', 'Quantum Numbers', 'Electronic Configuration'] },
+            { name: 'Chemical Bonding', weight: 6, topics: ['Ionic and Covalent Bonding', 'VSEPR Theory', 'Hybridization', 'Molecular Orbital Theory'] }
+          ]
+        },
+        {
+          unit: 'Organic Chemistry',
+          chapters: [
+            { name: 'Organic Chemistry Basics', weight: 5, topics: ['IUPAC Nomenclature', 'Isomerism', 'Inductive and Resonance Effects', 'Electrophiles and Nucleophiles'] },
+            { name: 'Hydrocarbons', weight: 4, topics: ['Alkanes', 'Alkenes', 'Alkynes', 'Aromatic Hydrocarbons'] }
+          ]
+        }
+      ]
+    }
   },
 
   // ════════════════════════════════════════════
@@ -152,51 +90,50 @@ const EXAM_SPECS = {
     name: 'JEE Advanced',
     fullName: 'Joint Entrance Examination (Advanced)',
     body: 'Indian Institutes of Technology (IITs)',
-    mode: 'CBT (Computer Based Test)',
-    duration: 360, // total: 3 hrs Paper 1 + 3 hrs Paper 2
-    totalMarks: 360, // 180 per paper
-    totalQuestions: 102, // 51 per paper
-    negativeMarking: true,
-    papers: ['Paper 1 (3 hours)', 'Paper 2 (3 hours)'],
-    marking: {
-      note: 'Marking scheme varies by section and year. Full, partial, and zero marks possible.'
-    },
+    durationMinutes: 360, // Two papers, 180 min each
+    totalQuestions: 54, // Per paper average
+    maxScore: 360,
+    markingScheme: { correct: 4, wrong: -2, partialMarking: true },
+    subjects: ['Mathematics', 'Physics', 'Chemistry'],
     sections: [
-      {
-        paper: 'Paper 1',
-        subject: 'Physics',
-        totalQuestions: 17,
-        totalMarks: 60,
-        subsections: [
-          { type: 'MCQ Single Correct', count: 4, marks: 12, perQ: { correct: 3, incorrect: -1, unattempted: 0 } },
-          { type: 'MCQ Multiple Correct', count: 3, marks: 12, perQ: { correct: 4, partial: true, incorrect: -2, unattempted: 0 } },
-          { type: 'Paragraph/Linked MCQ', count: 6, marks: 24, perQ: { correct: 4, incorrect: -2, unattempted: 0 } },
-          { type: 'Integer Type (0-9)', count: 4, marks: 12, perQ: { correct: 3, incorrect: 0, unattempted: 0 } }
-        ]
-      },
-      {
-        paper: 'Paper 1',
-        subject: 'Chemistry',
-        totalQuestions: 17,
-        totalMarks: 60,
-        note: 'Same structure as Physics'
-      },
-      {
-        paper: 'Paper 1',
-        subject: 'Mathematics',
-        totalQuestions: 17,
-        totalMarks: 60,
-        note: 'Same structure as Physics'
-      }
+      { name: 'Single Correct MCQ', count: 4, correct: 3, wrong: -1 },
+      { name: 'Multiple Correct MCQ', count: 3, correct: 4, wrong: -2, partial: true },
+      { name: 'Numerical Answer', count: 6, correct: 4, wrong: 0 },
+      { name: 'Paragraph/Matching List', count: 4, correct: 3, wrong: -1 }
     ],
-    keyFacts: [
-      'Pattern CHANGES every year — no fixed structure guaranteed',
-      'Multiple correct MCQs: partial marks possible, heavy negative for wrong',
-      'Integer type questions: NO negative marking',
-      'Requires conceptual depth + problem solving, not rote learning',
-      'Both papers compulsory — missing one = disqualification',
-      'Only top ~2.5 lakh JEE Main qualifiers can appear'
-    ]
+    syllabus: {
+      Mathematics: [
+        {
+          unit: 'Calculus',
+          chapters: [
+            { name: 'Limits, Continuity & Differentiability', weight: 8, topics: ['Limits', 'Continuity', 'Differentiability', 'Mean Value Theorems'] },
+            { name: 'Application of Derivatives (Max/Min)', weight: 9, topics: ['Monotonicity', 'Maxes and Mins', 'Tangents and Normals'] }
+          ]
+        },
+        {
+          unit: 'Algebra & Matrices',
+          chapters: [
+            { name: 'Determinants & Matrices', weight: 8, topics: ['Matrix Multiplication', 'Adjoint and Transpose', 'Cramer\'s Rule'] }
+          ]
+        }
+      ],
+      Physics: [
+        {
+          unit: 'Classical Mechanics',
+          chapters: [
+            { name: 'Rotational Dynamics', weight: 9, topics: ['Rigid Body Rotation', 'Angular Impulse', 'Combined Translation and Rotation'] }
+          ]
+        }
+      ],
+      Chemistry: [
+        {
+          unit: 'Physical Chemistry',
+          chapters: [
+            { name: 'Chemical Equilibrium', weight: 6, topics: ['Le Chatelier\'s Principle', 'Solubility Product', 'Acid-Base Buffers'] }
+          ]
+        }
+      ]
+    }
   },
 
   // ════════════════════════════════════════════
@@ -207,67 +144,105 @@ const EXAM_SPECS = {
     name: 'NEET UG',
     fullName: 'National Eligibility cum Entrance Test (UG)',
     body: 'National Testing Agency (NTA)',
-    mode: 'Pen & Paper (OMR) / CBT Simulation',
-    duration: 200, // 3 hours 20 minutes
-    totalMarks: 720,
-    totalQuestions: 180, // attempt all
-    negativeMarking: true,
-    papers: ['Single Paper'],
-    marking: {
-      correct: 4,
-      incorrect: -1,
-      unattempted: 0
-    },
+    durationMinutes: 200,
+    totalQuestions: 180,
+    maxScore: 720,
+    markingScheme: { correct: 4, wrong: -1 },
+    subjects: ['Physics', 'Chemistry', 'Biology (Botany & Zoology)'],
     sections: [
-      { subject: 'Botany', questions: 45, marks: 180 },
-      { subject: 'Zoology', questions: 45, marks: 180 },
-      { subject: 'Physics', questions: 45, marks: 180 },
-      { subject: 'Chemistry', questions: 45, marks: 180 }
+      { name: 'Section A (MCQ)', count: 35, correct: 4, wrong: -1 },
+      { name: 'Section B (MCQ)', count: 15, correct: 4, wrong: -1 } // Student attempts 10 out of 15
     ],
     syllabus: {
-      Biology: {
-        highWeightage: ['Genetics and Evolution', 'Human Physiology', 'Plant Physiology', 'Cell Biology', 'Ecology'],
-        chapters: [
-          { name: 'The Living World', class: 11, weight: 2 },
-          { name: 'Biological Classification', class: 11, weight: 3 },
-          { name: 'Plant Kingdom', class: 11, weight: 4 },
-          { name: 'Animal Kingdom', class: 11, weight: 4 },
-          { name: 'Morphology of Flowering Plants', class: 11, weight: 4 },
-          { name: 'Anatomy of Flowering Plants', class: 11, weight: 3 },
-          { name: 'Structural Organisation in Animals', class: 11, weight: 3 },
-          { name: 'Cell: The Unit of Life', class: 11, weight: 5 },
-          { name: 'Biomolecules', class: 11, weight: 4 },
-          { name: 'Cell Cycle and Cell Division', class: 11, weight: 4 },
-          { name: 'Transport in Plants', class: 11, weight: 2 },
-          { name: 'Mineral Nutrition', class: 11, weight: 2 },
-          { name: 'Photosynthesis in Higher Plants', class: 11, weight: 4 },
-          { name: 'Respiration in Plants', class: 11, weight: 3 },
-          { name: 'Plant Growth and Development', class: 11, weight: 3 },
-          { name: 'Digestion and Absorption', class: 11, weight: 3 },
-          { name: 'Breathing and Exchange of Gases', class: 11, weight: 3 },
-          { name: 'Body Fluids and Circulation', class: 11, weight: 4 },
-          { name: 'Excretory Products and Elimination', class: 11, weight: 3 },
-          { name: 'Locomotion and Movement', class: 11, weight: 3 },
-          { name: 'Neural Control and Coordination', class: 11, weight: 4 },
-          { name: 'Chemical Coordination and Integration', class: 11, weight: 4 },
-          { name: 'Reproduction in Organisms', class: 12, weight: 2 },
-          { name: 'Sexual Reproduction in Flowering Plants', class: 12, weight: 5 },
-          { name: 'Human Reproduction', class: 12, weight: 5 },
-          { name: 'Reproductive Health', class: 12, weight: 3 },
-          { name: 'Principles of Inheritance and Variation', class: 12, weight: 7 },
-          { name: 'Molecular Basis of Inheritance', class: 12, weight: 8 },
-          { name: 'Evolution', class: 12, weight: 4 },
-          { name: 'Human Health and Disease', class: 12, weight: 4 },
-          { name: 'Strategies for Enhancement in Food Production', class: 12, weight: 2 },
-          { name: 'Microbes in Human Welfare', class: 12, weight: 3 },
-          { name: 'Biotechnology: Principles and Processes', class: 12, weight: 5 },
-          { name: 'Biotechnology and its Applications', class: 12, weight: 4 },
-          { name: 'Organisms and Populations', class: 12, weight: 4 },
-          { name: 'Ecosystem', class: 12, weight: 3 },
-          { name: 'Biodiversity and Conservation', class: 12, weight: 3 },
-          { name: 'Environmental Issues', class: 12, weight: 3 }
-        ]
-      }
+      'Biology (Botany & Zoology)': [
+        {
+          unit: 'Genetics and Evolution',
+          chapters: [
+            { name: 'Principles of Inheritance and Variation', weight: 7, topics: ['Mendelian Inheritance', 'Sex Determination', 'Genetic Disorders'] },
+            { name: 'Molecular Basis of Inheritance', weight: 8, topics: ['DNA Replication', 'Transcription', 'Translation', 'Gene Regulation'] }
+          ]
+        }
+      ],
+      Physics: [
+        {
+          unit: 'Mechanics',
+          chapters: [
+            { name: 'Laws of Motion', weight: 5, topics: ['Newton\'s Laws', 'Friction', 'Circular Motion Dynamics'] }
+          ]
+        }
+      ],
+      Chemistry: [
+        {
+          unit: 'Organic Chemistry',
+          chapters: [
+            { name: 'Hydrocarbons', weight: 5, topics: ['Alkanes', 'Alkenes', 'Alkynes', 'Aromatic Rings'] }
+          ]
+        }
+      ]
+    }
+  },
+
+  // ════════════════════════════════════════════
+  // BITSAT
+  // ════════════════════════════════════════════
+  bitSat: {
+    id: 'bitSat',
+    name: 'BITSAT',
+    fullName: 'BITS Admission Test',
+    body: 'BITS Pilani',
+    durationMinutes: 180,
+    totalQuestions: 130,
+    maxScore: 390,
+    markingScheme: { correct: 3, wrong: -1 },
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'English Proficiency', 'Logical Reasoning'],
+    sections: [
+      { name: 'Physics', count: 30, correct: 3, wrong: -1 },
+      { name: 'Chemistry', count: 30, correct: 3, wrong: -1 },
+      { name: 'English Proficiency', count: 10, correct: 3, wrong: -1 },
+      { name: 'Logical Reasoning', count: 20, correct: 3, wrong: -1 },
+      { name: 'Mathematics', count: 40, correct: 3, wrong: -1 }
+    ],
+    syllabus: {
+      Mathematics: [
+        {
+          unit: 'Algebra',
+          chapters: [
+            { name: 'Complex Numbers', weight: 4, topics: ['Basic Algebra', 'De Moivre Theorem', 'Geometry of Complex Numbers'] }
+          ]
+        }
+      ],
+      Physics: [
+        {
+          unit: 'Mechanics',
+          chapters: [
+            { name: 'Kinematics', weight: 4, topics: ['Projectiles', 'Relative Velocity', 'Uniform Circular Motion'] }
+          ]
+        }
+      ],
+      Chemistry: [
+        {
+          unit: 'Physical Chemistry',
+          chapters: [
+            { name: 'Atomic Structure', weight: 5, topics: ['Bohr Theory', 'Wave-particle Duality', 'Quantum Numbers'] }
+          ]
+        }
+      ],
+      'English Proficiency': [
+        {
+          unit: 'English Grammar',
+          chapters: [
+            { name: 'Grammar and Vocabulary', weight: 5, topics: ['Synonyms', 'Antonyms', 'Sentence Correction', 'Prepositions'] }
+          ]
+        }
+      ],
+      'Logical Reasoning': [
+        {
+          unit: 'Reasoning',
+          chapters: [
+            { name: 'Logical and Verbal Reasoning', weight: 10, topics: ['Analogy', 'Series Completion', 'Coding-Decoding', 'Logical Deductions'] }
+          ]
+        }
+      ]
     }
   }
 };

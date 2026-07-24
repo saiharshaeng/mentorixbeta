@@ -1,6 +1,6 @@
 /**
  * courseProgressionEngine.js — Mentorix Course Progression Engine
- * Architectural Foundation for Phase 1.2
+ * Redesigned from first principles: Course -> Units -> Chapters -> Subchapters -> Micro Topics
  *
  * Owns: Course state model, current position calculation, progress persistence,
  *       topic/checkpoint/boss test completions, chapter unlocks, resume state,
@@ -15,9 +15,6 @@
 
   const STORAGE_KEY_PREFIX = 'mx3_course_state_';
 
-  /**
-   * Generates a clean, serializable CourseState object for a course.
-   */
   function initCourseState(course) {
     if (!course || !course.id) return null;
 
@@ -41,9 +38,9 @@
         chapterIdx: 0,
         subchapterIdx: 0,
         topicIdx: 0,
-        chapterId: 'chap_0_0',
-        subchapterId: 'sub_0_0_0',
-        topicId: 'top_0_0_0_0',
+        chapterId: '',
+        subchapterId: '',
+        topicId: '',
         topicTitle: ''
       },
       progressPct: 0,
@@ -57,7 +54,22 @@
       timeSpentSeconds: 0
     };
 
-    // Calculate initial position if not set
+    // Auto-migrate completed topics from legacy format if needed
+    if (state.completedTopics.length === 0 && window.D.topics && window.D.topics.length > 0) {
+      // Find all topics belonging to this course and add them to completedTopics
+      (course.units || []).forEach(unit => {
+        (unit.chapters || []).forEach(chap => {
+          const topics = chap.topics || [];
+          topics.forEach(t => {
+            const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
+            if (window.D.topics.includes(tTitle) && !state.completedTopics.includes(tTitle)) {
+              state.completedTopics.push(tTitle);
+            }
+          });
+        });
+      });
+    }
+
     const pos = _computeCurrentPosition(course, state);
     state.currentPosition = pos;
     state.progressPct = _computeProgressPct(course, state);
@@ -68,9 +80,6 @@
     return state;
   }
 
-  /**
-   * Retrieves the state object for a given course ID.
-   */
   function getCourseState(courseId) {
     if (!courseId) return getActiveCourseState();
     if (!window.D) window.D = {};
@@ -94,18 +103,12 @@
     return null;
   }
 
-  /**
-   * Retrieves the active course state based on D.lastCourseId or activeCourseId.
-   */
   function getActiveCourseState() {
     const activeId = window.D?.lastCourseId || window.activeCourseId || window.D?.courses?.[0]?.id;
     if (!activeId) return null;
     return getCourseState(activeId);
   }
 
-  /**
-   * Computes the current position (unit, chapter, subchapter, topic) within a course.
-   */
   function getCurrentPosition(courseId) {
     const state = getCourseState(courseId);
     const course = (window.D?.courses || []).find(c => c.id === (courseId || state?.courseId));
@@ -133,11 +136,8 @@
     };
   }
 
-  /**
-   * Marks a topic as completed, unlocks the next topic/subchapter/chapter, and saves state.
-   */
   function completeTopic(params) {
-    const { courseId, topicTitle, chapterIdx = 0, topicIdx = 0, score = 100 } = params || {};
+    const { courseId, topicTitle, score = 100 } = params || {};
     const state = getCourseState(courseId);
     const course = (window.D?.courses || []).find(c => c.id === (courseId || state?.courseId));
 
@@ -149,47 +149,105 @@
       state.completedTopics.push(targetTitle);
     }
 
-    // Also sync with global D.topics array for backward compatibility
     if (targetTitle && window.D && Array.isArray(window.D.topics)) {
       if (!window.D.topics.includes(targetTitle)) {
         window.D.topics.push(targetTitle);
       }
     }
 
-    // Update course structure topic statuses
     let topicFound = false;
     (course.units || []).forEach((unit, ui) => {
       (unit.chapters || []).forEach((chap, ci) => {
-        (chap.topics || []).forEach((top, ti) => {
-          const tName = typeof top === 'string' ? top : (top.title || top.name || '');
-          if (tName.trim().toLowerCase() === targetTitle.toLowerCase()) {
-            if (typeof top === 'object') top.status = 'Completed';
-            topicFound = true;
-            // Unlock next topic in chapter
-            if (chap.topics[ti + 1] && typeof chap.topics[ti + 1] === 'object') {
-              if (chap.topics[ti + 1].status === 'Locked') {
-                chap.topics[ti + 1].status = 'Unlocked';
+        const subchapters = chap.subchapters || [];
+        
+        if (subchapters.length > 0) {
+          subchapters.forEach((sub, si) => {
+            (sub.topics || []).forEach((top, ti) => {
+              const tName = typeof top === 'string' ? top : (top.title || top.name || '');
+              if (tName.trim().toLowerCase() === targetTitle.toLowerCase()) {
+                if (typeof top === 'object') {
+                  top.status = 'Completed';
+                  if (score === 100) top.perfection = 'Perfected';
+                  else if (score >= 80) top.perfection = 'Mastered';
+                  else top.perfection = 'Completed';
+                }
+                topicFound = true;
+                
+                // Unlock next topic in subchapter
+                if (sub.topics[ti + 1] && typeof sub.topics[ti + 1] === 'object') {
+                  if (sub.topics[ti + 1].status === 'Locked') {
+                    sub.topics[ti + 1].status = 'Unlocked';
+                  }
+                }
+                // Or unlock first topic in next subchapter
+                else if (subchapters[si + 1] && subchapters[si + 1].topics && subchapters[si + 1].topics[0] && typeof subchapters[si + 1].topics[0] === 'object') {
+                  if (subchapters[si + 1].topics[0].status === 'Locked') {
+                    subchapters[si + 1].topics[0].status = 'Unlocked';
+                  }
+                }
+              }
+            });
+          });
+        } else {
+          // Flat topics fallback
+          (chap.topics || []).forEach((top, ti) => {
+            const tName = typeof top === 'string' ? top : (top.title || top.name || '');
+            if (tName.trim().toLowerCase() === targetTitle.toLowerCase()) {
+              if (typeof top === 'object') {
+                top.status = 'Completed';
+                if (score === 100) top.perfection = 'Perfected';
+                else if (score >= 80) top.perfection = 'Mastered';
+                else top.perfection = 'Completed';
+              }
+              topicFound = true;
+              if (chap.topics[ti + 1] && typeof chap.topics[ti + 1] === 'object') {
+                if (chap.topics[ti + 1].status === 'Locked') {
+                  chap.topics[ti + 1].status = 'Unlocked';
+                }
               }
             }
-          }
-        });
+          });
+        }
 
-        // Check if chapter is fully completed
         const allCompleted = (chap.topics || []).every(t => {
           const tName = typeof t === 'string' ? t : (t.title || t.name || '');
           return state.completedTopics.includes(tName.trim()) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
         });
 
+        let chapterJustCompleted = false;
+        let completedChapterTitle = '';
+        let nextChapterTitle = '';
+
         if (allCompleted && !chap.completed) {
           chap.completed = true;
           const chapId = chap.id || `chap_${ui}_${ci}`;
           state.chapterCompletion[chapId] = { completed: true, completedAt: new Date().toISOString() };
+          chapterJustCompleted = true;
+          completedChapterTitle = chap.title || '';
           
           if (!state.unlockedChapters.includes(ci + 1)) {
             state.unlockedChapters.push(ci + 1);
           }
           if (unit.chapters[ci + 1]) {
             unit.chapters[ci + 1].locked = false;
+            nextChapterTitle = unit.chapters[ci + 1].title || '';
+            const nextChap = unit.chapters[ci + 1];
+            const nextTopics = nextChap.subchapters && nextChap.subchapters[0] ? nextChap.subchapters[0].topics : nextChap.topics;
+            if (nextTopics && nextTopics[0] && typeof nextTopics[0] === 'object') {
+              nextTopics[0].status = 'Unlocked';
+            }
+          } else {
+            // Check next unit first chapter
+            const nextUnit = course.units[ui + 1];
+            if (nextUnit && nextUnit.chapters && nextUnit.chapters[0]) {
+              nextUnit.chapters[0].locked = false;
+              nextChapterTitle = nextUnit.chapters[0].title || '';
+              const nextChap = nextUnit.chapters[0];
+              const nextTopics = nextChap.subchapters && nextChap.subchapters[0] ? nextChap.subchapters[0].topics : nextChap.topics;
+              if (nextTopics && nextTopics[0] && typeof nextTopics[0] === 'object') {
+                nextTopics[0].status = 'Unlocked';
+              }
+            }
           }
         }
       });
@@ -205,13 +263,13 @@
     return {
       success: true,
       progressPct: state.progressPct,
-      nextPosition: state.currentPosition
+      nextPosition: state.currentPosition,
+      chapterCompleted: chapterJustCompleted,
+      completedChapterTitle: completedChapterTitle,
+      nextChapterTitle: nextChapterTitle
     };
   }
 
-  /**
-   * Records Checkpoint status (passed/failed, score).
-   */
   function completeCheckpoint(params) {
     const { courseId, checkpointId, score = 100 } = params || {};
     const state = getCourseState(courseId);
@@ -232,9 +290,6 @@
     return state.checkpointStatus[chkId];
   }
 
-  /**
-   * Records Boss Test status (passed/failed, score).
-   */
   function completeBossTest(params) {
     const { courseId, bossTestId, score = 100 } = params || {};
     const state = getCourseState(courseId);
@@ -255,9 +310,6 @@
     return state.bossTestStatus[btId];
   }
 
-  /**
-   * Restores exact saved course state and returns current topic object.
-   */
   function resumeCourse(courseId) {
     const activeId = courseId || window.D?.lastCourseId || window.activeCourseId || window.D?.courses?.[0]?.id;
     if (!activeId) return null;
@@ -273,9 +325,6 @@
     return pos;
   }
 
-  /**
-   * Exports a clean, serializable JSON payload formatted for future SQL database synchronization.
-   */
   function exportStateForSQL(courseId) {
     const state = getCourseState(courseId);
     if (!state) return null;
@@ -293,37 +342,67 @@
     if (!course || !course.units) {
       return {
         unitIdx: 0, chapterIdx: 0, subchapterIdx: 0, topicIdx: 0,
-        chapterId: 'chap_0_0', subchapterId: 'sub_0_0_0', topicId: 'top_0_0_0_0',
+        chapterId: '', subchapterId: '', topicId: '',
         chapter: null, subchapter: null, topic: null, topicTitle: ''
       };
     }
-
     const completed = state?.completedTopics || [];
 
     for (let ui = 0; ui < course.units.length; ui++) {
       const unit = course.units[ui];
       for (let ci = 0; ci < (unit.chapters || []).length; ci++) {
         const chap = unit.chapters[ci];
-        const topics = chap.topics || [];
-
-        for (let ti = 0; ti < topics.length; ti++) {
-          const t = topics[ti];
-          const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
-
-          if (!completed.includes(tTitle.trim()) && typeof t === 'object' && t.status !== 'Completed' && t.status !== 'Mastered') {
-            return {
-              unitIdx: ui,
-              chapterIdx: ci,
-              subchapterIdx: 0,
-              topicIdx: ti,
-              chapterId: chap.id || `chap_${ui}_${ci}`,
-              subchapterId: `sub_${ui}_${ci}_0`,
-              topicId: t.id || `top_${ui}_${ci}_${ti}`,
-              chapter: chap,
-              subchapter: { title: chap.title + ' — Part 1' },
-              topic: typeof t === 'object' ? t : { title: tTitle },
-              topicTitle: tTitle.trim()
-            };
+        const subchapters = chap.subchapters || [];
+        
+        if (subchapters.length > 0) {
+          for (let si = 0; si < subchapters.length; si++) {
+            const sub = subchapters[si];
+            const topics = sub.topics || [];
+            for (let ti = 0; ti < topics.length; ti++) {
+              const t = topics[ti];
+              const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
+              const isDone = completed.includes(tTitle.trim()) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
+              
+              if (!isDone) {
+                return {
+                  unitIdx: ui,
+                  chapterIdx: ci,
+                  subchapterIdx: si,
+                  topicIdx: ti,
+                  chapterId: chap.id || `chap_${ui}_${ci}`,
+                  subchapterId: sub.id || `sub_${ui}_${ci}_${si}`,
+                  topicId: (typeof t === 'object' && t.id) ? t.id : `top_${ui}_${ci}_${si}_${ti}`,
+                  chapter: chap,
+                  subchapter: sub,
+                  topic: typeof t === 'object' ? t : { title: tTitle.trim() },
+                  topicTitle: tTitle.trim()
+                };
+              }
+            }
+          }
+        } else {
+          // Flat topics fallback
+          const topics = chap.topics || [];
+          for (let ti = 0; ti < topics.length; ti++) {
+            const t = topics[ti];
+            const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
+            const isDone = completed.includes(tTitle.trim()) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
+            
+            if (!isDone) {
+              return {
+                unitIdx: ui,
+                chapterIdx: ci,
+                subchapterIdx: 0,
+                topicIdx: ti,
+                chapterId: chap.id || `chap_${ui}_${ci}`,
+                subchapterId: `sub_${ui}_${ci}_0`,
+                topicId: (typeof t === 'object' && t.id) ? t.id : `top_${ui}_${ci}_${ti}`,
+                chapter: chap,
+                subchapter: { title: chap.title },
+                topic: typeof t === 'object' ? t : { title: tTitle.trim() },
+                topicTitle: tTitle.trim()
+              };
+            }
           }
         }
       }
@@ -332,19 +411,21 @@
     // Fallback: if all completed, return last topic
     const lastUnit = course.units[course.units.length - 1];
     const lastChap = lastUnit?.chapters?.[(lastUnit?.chapters?.length || 1) - 1];
-    const lastTopic = lastChap?.topics?.[(lastChap?.topics?.length || 1) - 1];
+    const lastSub = lastChap?.subchapters?.[(lastChap?.subchapters?.length || 1) - 1];
+    const lastTopics = lastSub ? (lastSub.topics || []) : (lastChap?.topics || []);
+    const lastTopic = lastTopics[lastTopics.length - 1];
     const lastTitle = typeof lastTopic === 'string' ? lastTopic : (lastTopic?.title || lastTopic?.name || '');
 
     return {
       unitIdx: Math.max(0, course.units.length - 1),
       chapterIdx: Math.max(0, (lastUnit?.chapters?.length || 1) - 1),
-      subchapterIdx: 0,
-      topicIdx: Math.max(0, (lastChap?.topics?.length || 1) - 1),
+      subchapterIdx: lastChap?.subchapters ? Math.max(0, lastChap.subchapters.length - 1) : 0,
+      topicIdx: Math.max(0, lastTopics.length - 1),
       chapterId: lastChap?.id || 'chap_last',
-      subchapterId: 'sub_last',
+      subchapterId: lastSub?.id || 'sub_last',
       topicId: lastTopic?.id || 'top_last',
       chapter: lastChap,
-      subchapter: { title: lastChap?.title || 'Course Final' },
+      subchapter: lastSub || { title: lastChap?.title || 'Course Final' },
       topic: typeof lastTopic === 'object' ? lastTopic : { title: lastTitle },
       topicTitle: lastTitle.trim()
     };
@@ -358,7 +439,8 @@
 
     (course.units || []).forEach(u => {
       (u.chapters || []).forEach(c => {
-        (c.topics || []).forEach(t => {
+        const topics = c.topics || [];
+        topics.forEach(t => {
           total++;
           const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
           if (completed.includes(tTitle.trim()) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'))) {
@@ -388,8 +470,6 @@
     } catch(e) {}
     return null;
   }
-
-  // ── EXPORTS ──────────────────────────────────────────────────────────────
 
   const CourseProgressionEngine = {
     initCourseState,

@@ -1,228 +1,160 @@
 /**
- * screens/mentor.js — Mentorix Mentor Screen
- * // Deps: D, ai, pCtx, toast, esc, saveAll, go, isTopicForbidden
+ * screens/mentor.js — Mentorix Tio Central Operating Dashboard
+ * Phase 2.3 Redesign
  */
+
 'use strict';
 
-let mentorBusy=false;
-function rMentor(){
-  document.getElementById('main').innerHTML=`
-  <div style="height:calc(100vh - 40px);display:flex;flex-direction:column;padding:18px 26px 0;max-width:820px" class="scr">
-    <div class="mb12" style="flex-shrink:0">
-      <div class="h1">✨ Tio — AI Mentor</div>
-      <p style="color:var(--mut);font-size:13px">Your personal AI guide — ask anything, explore ideas, get unstuck</p>
-    </div>
-    <div id="cmsgs" style="flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:13px;padding-bottom:14px"></div>
-    <div id="cqp" style="flex-shrink:0;padding-bottom:8px"></div>
+let mentorBusy = false;
 
-    <!-- Image Attachment Preview Bar -->
-    <div id="cimg-preview-bar" style="display:none;align-items:center;gap:12px;padding:8px 12px;background:rgba(255,255,255,0.04);border:1px solid var(--brd);border-radius:8px;margin-bottom:8px;font-size:12px;color:#fff">
-      <img id="cimg-preview-img" style="height:32px;width:32px;object-fit:cover;border-radius:4px">
-      <span id="cimg-preview-name" style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></span>
-      <button onclick="clearAttachedImage()" style="background:transparent;border:none;color:var(--red);cursor:pointer;font-size:14px;font-weight:bold">✕</button>
-    </div>
+function rMentor() {
+  const main = document.getElementById('main');
+  if (!main) return;
 
-    <div style="display:flex;gap:9px;padding-bottom:18px;flex-shrink:0">
-      <input class="inp" id="cinp" placeholder="Ask me anything… (Enter to send)" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMsg();}">
-      <button class="voice-btn" id="voice-btn" onclick="toggleVoiceInput()" title="Voice input">🎙️</button>
-
-      <!-- Local Image Input & Toggle -->
-      <input type="file" id="cimg-file" accept="image/*" style="display:none" onchange="handleImageSelect(event)">
-      <button class="voice-btn" id="cimg-btn" onclick="document.getElementById('cimg-file').click()" title="Attach image" style="font-size:16px">📎</button>
-
-      <button class="btn bpri" id="csend" onclick="sendMsg()">Send →</button>
-    </div>
-  </div>`;
-  renderMsgs();renderQP();scrollChat();
-}
-function renderMsgs(){
-  const c=document.getElementById('cmsgs');if(!c)return;
-  c.innerHTML=D.chatMsgs.map(m=>`
-    <div class="msg${m.r==='user'?' muser':''}">
-      ${m.r==='ai'?`<div class="mav" style="background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-weight:800;font-size:11px">M</div>`:''}
-      <div class="mbbl ${m.r==='ai'?'mai':'mme'}">${m.r==='ai'?sanitizeHTML(m.c):esc(m.c)}</div>
-      ${m.r==='user'?`<div class="mav" style="background:linear-gradient(135deg,var(--pk),var(--pkl));color:#fff">${(D.profile?.name||'U')[0].toUpperCase()}</div>`:''}
-    </div>`).join('');
-  if(mentorBusy)c.innerHTML+=`<div class="msg"><div class="mav" style="background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-size:11px">M</div><div class="mbbl mai"><div style="display:flex;align-items:center;gap:8px"><span style="color:#C4B5FD;font-size:12px">Tio is thinking…</span><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div></div></div></div>`;
-  scrollChat();
-  if (typeof renderMath === 'function') {
-    renderMath(c);
-  }
-}
-function renderQP(){
-  const el=document.getElementById('cqp');if(!el)return;
-  if(D.chatMsgs.length>2){el.innerHTML='';return;}
-  const qp=['Explain quantum physics simply','Help me understand calculus','What career suits me?','Give me a study plan','How does machine learning work?','Solve a math problem for me'];
-  el.innerHTML=`<div style="display:flex;flex-wrap:wrap;gap:6px">${qp.map(p=>`<div class="chip" style="font-size:12px;padding:5px 11px" onclick="quickSend('${escON(p)}')">${esc(p)}</div>`).join('')}</div>`;
-}
-function quickSend(t){const i=document.getElementById('cinp');if(i)i.value=t;sendMsg();}
-function scrollChat(){const c=document.getElementById('cmsgs');if(c)setTimeout(()=>{c.scrollTop=c.scrollHeight;},50);}
-// Variable to store the attached image base64 data URL
-let attachedImageDataUrl = null;
-
-function handleImageSelect(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  const r = new FileReader();
-  r.onload = () => {
-    attachedImageDataUrl = r.result;
-    const bar = document.getElementById('cimg-preview-bar');
-    const img = document.getElementById('cimg-preview-img');
-    const name = document.getElementById('cimg-preview-name');
-    if (bar && img && name) {
-      img.src = r.result;
-      name.textContent = file.name;
-      bar.style.display = 'flex';
-    }
+  const briefing = window.TioEngine ? window.TioEngine.generateDailyBriefing() : {
+    greeting: 'Welcome back! 🌟',
+    summary: 'Ready to continue your learning journey?',
+    recommendedActions: []
   };
-  r.readAsDataURL(file);
-}
-window.handleImageSelect = handleImageSelect;
 
-function clearAttachedImage() {
-  attachedImageDataUrl = null;
-  const fileInput = document.getElementById('cimg-file');
-  if (fileInput) fileInput.value = '';
-  const bar = document.getElementById('cimg-preview-bar');
-  if (bar) bar.style.display = 'none';
-}
-window.clearAttachedImage = clearAttachedImage;
+  const profile = window.ProfileEngine ? window.ProfileEngine.getProfile() : (D.profile || {});
+  const weakSpotsCount = (D.memory?.weakSpots || []).filter(w => !w.solved).length;
 
-function buildTioSystemPrompt() {
-  const profile = D.profile || {};
-  const goals = D.goals || [];
-  const weakSpots = D.weakSpots || {};
-  
-  let weakSpotsText = 'None reported yet';
-  if (Object.keys(weakSpots).length > 0) {
-    weakSpotsText = Object.entries(weakSpots)
-      .map(([subject, topics]) => `- ${subject}: ${topics.join(', ')}`)
-      .join('\n');
+  main.innerHTML = `
+    <div class="sw scr page-enter" style="max-width:960px;margin:0 auto;padding-bottom:30px">
+      
+      <!-- TIO DAILY BRIEFING BANNER -->
+      <div class="card scr mb20" style="padding:28px 24px;background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(6,182,212,0.08));border:1px solid rgba(139,92,246,0.3)">
+        <div class="between mb12">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:40px">🤖</span>
+            <div>
+              <div class="h2" style="color:#fff;margin-bottom:2px">${esc(briefing.greeting)}</div>
+              <div style="color:var(--pl);font-size:13px;font-weight:600">Tio — Central Operating Intelligence</div>
+            </div>
+          </div>
+          <span class="tag tgold" style="font-size:12px;padding:6px 12px">🔥 ${D.streak || 0} Day Streak</span>
+        </div>
+        <p style="color:var(--sub);font-size:14px;line-height:1.6;margin-bottom:20px">${esc(briefing.summary)}</p>
+
+        <!-- 3-STEP TODAY'S RECOMMENDED ACTIONS -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          ${(briefing.recommendedActions || []).map(act => `
+            <div class="card hover-glow" onclick="${act.action}" style="cursor:pointer;padding:14px;background:rgba(13,11,31,0.7);border:1px solid rgba(255,255,255,0.08);margin:0">
+              <div style="font-size:24px;margin-bottom:6px">${act.icon}</div>
+              <div style="color:#fff;font-weight:700;font-size:13px;margin-bottom:4px">${esc(act.label)}</div>
+              <div style="color:var(--sub);font-size:11px;line-height:1.4">${esc(act.desc)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- ACTIVE CONTEXT BAR -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+        <span class="tag tp" style="font-size:12px;padding:6px 12px">📚 Course: ${esc(D.activeCourseId || 'Physics & Math')}</span>
+        <span class="tag tc" style="font-size:12px;padding:6px 12px">🎯 Target: ${esc(profile.targetExams?.[0] || 'JEE Main')}</span>
+        <span class="tag ${weakSpotsCount > 0 ? 'tgold' : 'tok'}" style="font-size:12px;padding:6px 12px">💡 Focus Weak Spots: ${weakSpotsCount}</span>
+        <span class="tag tp" style="font-size:12px;padding:6px 12px">🎨 Theme: ${esc(profile.experienceMode || 'gamified')}</span>
+      </div>
+
+      <!-- SMART COMMAND QUICK ACTIONS -->
+      <div class="card mb20" style="padding:16px 20px;background:rgba(13,11,31,0.85);border:1px solid rgba(255,255,255,0.08)">
+        <div style="color:var(--pl);font-weight:700;font-size:12px;text-transform:uppercase;margin-bottom:10px">⚡ Smart Commands (Click to route)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, continue my Physics course.')">📖 Continue Course</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start a JEE mock.')">🎯 Start CBT Mock Test</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show today\'s weak topics.')">🛡️ Review Mistakes</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, open career roadmap.')">🚀 Career Roadmap</button>
+        </div>
+      </div>
+
+      <!-- TIO CONVERSATION HUB -->
+      <div class="card" style="padding:20px;background:rgba(13,11,31,0.9);border:1px solid rgba(139,92,246,0.3)">
+        <div class="h3 mb12" style="color:var(--pl)">💬 Ask Tio Anything</div>
+        <div id="cmsgs" style="height:320px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding-bottom:14px"></div>
+
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <input class="inp" id="cinp" placeholder="Ask Tio or give a command (e.g. 'continue physics', 'start mock')..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMsg();}">
+          <button class="btn bpri" id="csend" onclick="sendMsg()" style="padding:0 24px">Send →</button>
+        </div>
+      </div>
+
+    </div>
+  `;
+
+  renderMsgs();
+}
+
+function sendQuickCommand(cmd) {
+  const input = document.getElementById('cinp');
+  if (input) input.value = cmd;
+  sendMsg();
+}
+
+function renderMsgs() {
+  const container = document.getElementById('cmsgs');
+  if (!container) return;
+
+  container.innerHTML = (D.chatMsgs || []).map(m => `
+    <div class="msg${m.r === 'user' ? ' muser' : ''}">
+      ${m.r === 'ai' ? `<div class="mav" style="background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-weight:800;font-size:11px">T</div>` : ''}
+      <div class="mbbl ${m.r === 'ai' ? 'mai' : 'mme'}">${m.r === 'ai' ? sanitizeHTML(m.c) : esc(m.c)}</div>
+      ${m.r === 'user' ? `<div class="mav" style="background:linear-gradient(135deg,var(--pk),var(--pkl));color:#fff">${(D.profile?.name || 'U')[0].toUpperCase()}</div>` : ''}
+    </div>
+  `).join('');
+
+  if (mentorBusy) {
+    container.innerHTML += `<div class="msg"><div class="mav" style="background:linear-gradient(135deg,var(--p),var(--c));color:#fff;font-size:11px">T</div><div class="mbbl mai"><div style="display:flex;align-items:center;gap:8px"><span style="color:#C4B5FD;font-size:12px">Tio is analyzing context…</span></div></div></div>`;
   }
 
-  return `You are Tio, the exceptionally empathetic, curious, and funny AI Learning Mentor at Mentorix. 
-Your personality traits:
-- Warm, encouraging, and emotionally intelligent.
-- Playful, witty, and slightly funny when explaining hard concepts.
-- NEVER sound robotic, clinical, or overly formal.
-- Absolutely NEVER say "I am an AI", "I am a language model", or refer to yourself as a robot. Act as a true supportive human mentor.
-
-Student Context:
-- Name: ${profile.name || 'Student'}
-- Grade / Stream: ${profile.grade || '11th'} (${profile.stream || 'Science'})
-- Board: ${profile.board || 'CBSE'}
-- Subjects / Focus Area: ${(profile.subjects || []).join(', ') || 'General Science & Mathematics'}
-- Weak Spots:\n${weakSpotsText}
-- Learning Goals: ${goals.join(', ') || 'Perform well in upcoming competitive exams'}
-- Current Active Course: ${D.activeCourseId || 'None'}
-
-Running Memory from previous sessions:
-${D.tioMemory || 'No prior session memories recorded yet.'}
-
-Use this memory to maintain continuity across sessions. Be helpful, teach step-by-step, explain with intuitive real-world analogies, and guide the student towards finding solutions themselves rather than just giving the answer.`;
+  container.scrollTop = container.scrollHeight;
+  if (typeof renderMath === 'function') renderMath(container);
 }
-window.buildTioSystemPrompt = buildTioSystemPrompt;
 
-async function updateTioMemory(userMessage, aiReply) {
-  const systemPrompt = `You are a memory update assistant.
-Analyze the user's message and the AI's reply.
-Update the existing memory summary by adding any newly learned facts about the user (e.g. their specific doubts, current struggles, topics they just learned, preferences, hobbies, or mood).
-Keep the final summary concise, under 500 characters.
-Return ONLY the updated summary. No conversational filler, no markdown.`;
-  
-  const prompt = `Current Memory Summary:\n${D.tioMemory || 'No prior facts.'}\n\nLatest Exchange:\nStudent: "${userMessage}"\nTio: "${aiReply}"\n\nUpdated Memory Summary:`;
-  
+async function sendMsg() {
+  const input = document.getElementById('cinp');
+  const text = (input?.value || '').trim();
+  if (!text || mentorBusy) return;
+
+  if (input) input.value = '';
+
+  // Check if this is a platform routing command first
+  if (window.TioEngine) {
+    const routeRes = window.TioEngine.parseAndRoute(text);
+    if (routeRes.routed) {
+      if (window.toast) window.toast(routeRes.message, 'ok2');
+      return;
+    }
+  }
+
+  if (!D.chatMsgs) D.chatMsgs = [];
+  D.chatMsgs.push({ r: 'user', c: text });
+  if (D.chatMsgs.length > 100) D.chatMsgs = D.chatMsgs.slice(-100);
+  if (typeof saveAll === 'function') saveAll();
+
+  mentorBusy = true;
+  renderMsgs();
+
   try {
-    const updated = await ai([{ role: 'user', content: prompt }], systemPrompt, 150, false, window.MODEL_CHAT);
-    if (updated && updated.trim()) {
-      D.tioMemory = updated.trim().substring(0, 500);
-      saveAll();
-    }
-  } catch (e) {
-    console.warn('[Mentorix] Failed to update Tio Memory:', e);
-  }
-}
-window.updateTioMemory = updateTioMemory;
-
-async function sendMsg(){
-  const i=document.getElementById('cinp');const t=(i?.value||'').trim();
-  if(!t||mentorBusy)return;
-  if(isTopicForbidden(t)){
-    toast('⚠️ That topic isn\'t available for your age group.','err');
-    if(i)i.value='';return;
-  }
-  if(i)i.value='';
-  
-  // Construct user message payload
-  let userContent = t;
-  if (attachedImageDataUrl) {
-    userContent = [
-      { type: 'text', text: t },
-      { type: 'image_url', image_url: { url: attachedImageDataUrl } }
-    ];
-  }
-
-  D.chatMsgs.push({r:'user',c:t}); // store plain text for display simplicity
-  if(D.chatMsgs.length>200) D.chatMsgs = D.chatMsgs.slice(-200);
-  saveAll();
-  
-  mentorBusy=true;renderMsgs();
-  const btn=document.getElementById('csend');if(btn){btn.disabled=true;btn.textContent='…';}
-  const qp=document.getElementById('cqp');if(qp)qp.innerHTML='';
-
-  // Save the attached image state and clear UI preview immediately
-  const hasImage = !!attachedImageDataUrl;
-  clearAttachedImage();
-
-  try{
-    const isHardMath = t.includes('$') || 
-                       /\\(int|sum|frac|sqrt|alpha|beta|gamma|theta|pi|log|lim|sin|cos|tan)/i.test(t) ||
-                       /[∫∑√±≠≈≤≥∞θπλ]/i.test(t) ||
-                       /\d+\^[-+]?\d+/i.test(t);
-
-    let selectedModel = window.MODEL_CHAT;
-    if (hasImage) {
-      selectedModel = window.MODEL_VISION;
-    } else if (isHardMath) {
-      selectedModel = window.MODEL_REASON;
-    }
-
-    const messagesHistory = D.chatMsgs.slice(-8).map(m=>({
-      role: m.r==='ai'?'assistant':'user',
+    const systemPrompt = window.TioEngine ? window.TioEngine.getSystemContextPayload() : 'You are Tio, AI mentor.';
+    const messagesHistory = D.chatMsgs.slice(-6).map(m => ({
+      role: m.r === 'ai' ? 'assistant' : 'user',
       content: m.c
     }));
 
-    // If an image was attached, include the image structure in the last user message
-    if (hasImage && messagesHistory.length > 0) {
-      const lastMsg = messagesHistory[messagesHistory.length - 1];
-      if (lastMsg.role === 'user') {
-        lastMsg.content = userContent;
-      }
-    }
+    const reply = await ai(messagesHistory, systemPrompt, 1200, false, window.MODEL_CHAT);
+    const cleanReply = reply || 'I am here with you! What would you like to explore next? 🌟';
 
-    // Call Tio with rich prompt
-    const systemPrompt = buildTioSystemPrompt();
-    const reply = await ai(messagesHistory, systemPrompt, 1500, false, selectedModel, hasImage);
-    
-    const cleanReply = reply || 'Sorry, I hit a snag! Please try again. 🙏';
-    D.chatMsgs.push({r:'ai',c:cleanReply});
-    saveAll();
-
-    // Trigger memory update in background
-    if (reply) {
-      updateTioMemory(t, reply);
-    }
-  }catch(e){
-    D.chatMsgs.push({r:'ai',c:'Sorry, I hit a snag! Please try again. 🙏'});
+    D.chatMsgs.push({ r: 'ai', c: cleanReply });
+    if (typeof saveAll === 'function') saveAll();
+  } catch (e) {
+    D.chatMsgs.push({ r: 'ai', c: 'Sorry, I ran into a small hiccup! Try asking me again.' });
   }
-  mentorBusy=false;renderMsgs();
-  if(btn){btn.disabled=false;btn.textContent='Send →';}
+
+  mentorBusy = false;
+  renderMsgs();
 }
 
-/* ───────────────────────────────────────────
-   EXPLORE
-─────────────────────────────────────────── */
-/* CATS → constants.js */
-
 window.rMentor = rMentor;
+window.sendQuickCommand = sendQuickCommand;
 window.sendMsg = sendMsg;

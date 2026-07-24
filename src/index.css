@@ -7148,3 +7148,597 @@ body::before {
   text-align: center;
   margin: 8px 0;
 }
+
+/* ───────────────────────────────────────────
+   PHASE 1.6 — LIVING LEARNING WORLD MAP STYLES
+   ─────────────────────────────────────────── */
+.world-map-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.world-header-banner {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.25), rgba(139, 92, 246, 0.15), rgba(219, 39, 119, 0.12));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: var(--r-modal);
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.world-header-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.world-avatar-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.world-avatar-card:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+.avatar-companion-anim {
+  display: inline-block;
+  font-size: 22px;
+  animation: avatarBounce 2s infinite ease-in-out;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes avatarBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.05); }
+}
+
+.world-landmark-card {
+  background: rgba(13, 11, 31, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: var(--r-modal);
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.world-landmark-card.active-chapter {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 12px 48px rgba(139, 92, 246, 0.15);
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.1), rgba(13, 11, 31, 0.9));
+}
+
+.world-landmark-card.completed-chapter {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.05), rgba(13, 11, 31, 0.9));
+}
+
+.world-landmark-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+}
+
+/* Winding Path Layout */
+.world-path-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.world-node-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.world-node-row.pos-center { transform: translateX(0); }
+.world-node-row.pos-left { transform: translateX(-65px); }
+.world-node-row.pos-right { transform: translateX(65px); }
+.world-node-row.pos-far-left { transform: translateX(-110px); }
+.world-node-row.pos-far-right { transform: translateX(110px); }
+
+@media (max-width: 640px) {
+  .world-node-row.pos-left { transform: translateX(-35px); }
+  .world-node-row.pos-right { transform: translateX(35px); }
+  .world-node-row.pos-far-left { transform: translateX(-60px); }
+  .world-node-row.pos-far-right { transform: translateX(60px); }
+}
+
+.world-node-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.world-node {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 3px solid var(--brd);
+  background: var(--surf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.world-node:hover {
+  transform: scale(1.12);
+}
+
+.world-node:focus-visible {
+  outline: 3px solid var(--pl);
+  outline-offset: 4px;
+}
+
+/* Node State Themes */
+.world-node.node-locked {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--mut);
+  opacity: 0.6;
+}
+
+.world-node.node-unlocked {
+  background: linear-gradient(135deg, var(--p), var(--pp));
+  border-color: var(--pl);
+  color: #fff;
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.4);
+  animation: pulseNodeGlow 2.5s infinite ease-in-out;
+}
+
+.world-node.node-active {
+  background: linear-gradient(135deg, var(--c), var(--p));
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 32px rgba(219, 39, 119, 0.6), 0 0 16px rgba(255, 255, 255, 0.8);
+  transform: scale(1.15);
+}
+
+.world-node.node-completed {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.15));
+  border-color: var(--okl);
+  color: var(--okl);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
+}
+
+.world-node.node-boss {
+  width: 80px;
+  height: 80px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  border-color: var(--goldl);
+  font-size: 32px;
+  box-shadow: 0 0 32px rgba(245, 158, 11, 0.4);
+}
+
+@keyframes pulseNodeGlow {
+  0%, 100% { box-shadow: 0 0 16px rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 32px rgba(139, 92, 246, 0.7); }
+}
+
+.node-avatar-companion {
+  position: absolute;
+  top: -34px;
+  font-size: 26px;
+  z-index: 10;
+  animation: avatarBounce 1.8s infinite ease-in-out;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6));
+}
+
+.node-stars-badge {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  top: -10px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 9999px;
+  padding: 1px 6px;
+  font-size: 10px;
+  color: var(--goldl);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.node-title-pill {
+  margin-top: 8px;
+  background: rgba(12, 12, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--txt);
+  max-width: 180px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Path Connectors between nodes */
+.path-line-connector {
+  position: absolute;
+  top: 70px;
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.4), rgba(255, 255, 255, 0.08));
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.path-line-connector.connector-completed {
+  background: linear-gradient(180deg, var(--okl), rgba(16, 185, 129, 0.3));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-companion-anim, .node-avatar-companion {
+    animation: none !important;
+  }
+  .world-node {
+    transition: none !important;
+  }
+}
+
+/* Tio Floating Character Animations */
+.floating-idle {
+  animation: tioFloat 3.2s ease-in-out infinite;
+}
+.tio-shadow {
+  animation: tioShadow 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+.no-motion {
+  animation: none !important;
+}
+
+@keyframes tioFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+@keyframes tioShadow {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(0.85); opacity: 0.18; }
+}
+
+/* Mobile Competitive Exam Tabs & Responsive Fixes */
+@media (max-width: 768px) {
+  .comp-tabs, [class*="tab-row"] {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+    scrollbar-width: none !important;
+  }
+  .comp-tab, .tab-btn {
+    flex-shrink: 0 !important;
+  }
+  .comp-right-panel { display: none !important; }
+  #main { padding-bottom: 70px !important; }
+  .sidebar {
+    position: fixed !important;
+    bottom: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 60px !important;
+    flex-direction: row !important;
+    border-top: 1px solid var(--brd) !important;
+    border-right: none !important;
+    z-index: 999 !important;
+  }
+}
+
+/* S-Curve Themed Biomes & Avatar Animations */
+.avatar-companion-anim {
+  animation: avatarJump 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@keyframes avatarJump {
+  0% { transform: translateY(-40px) scale(0.6); opacity: 0; }
+  50% { transform: translateY(-5px) scale(1.1); }
+  70% { transform: translateY(-10px) scale(0.9); }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.world-subchapter-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--brd);
+  border-radius: 20px;
+}
+
+.node-perfected {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4) !important;
+  color: #f59e0b !important;
+}
+
+.node-mastered {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3) !important;
+  color: #10b981 !important;
+}
+
+/* Biome Theme styling variables */
+.biome-math {
+  --p: #f0883e;
+}
+.biome-physics {
+  --p: #58a6ff;
+}
+.biome-chemistry {
+  --p: #3fb950;
+}
+.biome-biology {
+  --p: #a371f7;
+}
+.biome-cosmic {
+  --p: #c084fc;
+}
+
+/* Flashcard flippable animation */
+.flashcard-inner {
+  transform-style: preserve-3d;
+}
+.flashcard-widget.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+/* --- LIVING WORLD MAP ROADMAP STYLING --- */
+.world-map-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px 8px;
+}
+
+.world-landmark-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--brd);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.world-landmark-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--p), transparent);
+}
+
+.world-landmark-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid var(--p);
+  padding-left: 14px;
+  margin-bottom: 24px;
+}
+
+.world-path-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+  gap: 16px;
+}
+
+/* Winding Road Line Effect using pseudo elements */
+.world-path-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 10px,
+    var(--brd) 10px,
+    var(--brd) 20px
+  );
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.world-node-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Alignment positions for S-Curve winding path */
+.pos-center {
+  justify-content: center;
+}
+.pos-left {
+  justify-content: center;
+  transform: translateX(-40px);
+}
+.pos-far-left {
+  justify-content: center;
+  transform: translateX(-80px);
+}
+.pos-right {
+  justify-content: center;
+  transform: translateX(40px);
+}
+.pos-far-right {
+  justify-content: center;
+  transform: translateX(80px);
+}
+
+.world-node-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.world-node {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid var(--brd);
+  background: rgba(30, 41, 59, 0.85);
+  color: var(--mut);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 0;
+}
+
+.world-node:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(255,255,255,0.12);
+}
+
+/* Node States colors & glows */
+.node-completed {
+  border-color: var(--ok) !important;
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: var(--okl) !important;
+}
+
+.node-active {
+  border-color: var(--p) !important;
+  background: rgba(139, 92, 246, 0.25) !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5) !important;
+  animation: activeNodePulse 2s infinite alternate;
+}
+
+@keyframes activeNodePulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(139, 92, 246, 0.4); }
+  100% { transform: scale(1.08); box-shadow: 0 0 22px rgba(139, 92, 246, 0.7); }
+}
+
+.node-unlocked {
+  border-color: #f59e0b !important;
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: var(--goldl) !important;
+}
+
+.node-locked {
+  border-color: var(--brd) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+  cursor: not-allowed;
+}
+
+.node-boss {
+  width: 68px;
+  height: 68px;
+  border-width: 4px;
+}
+
+.node-title-pill {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid var(--brd);
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--sub);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* Companion Avatar representation above node */
+.node-avatar-companion {
+  position: absolute;
+  top: -32px;
+  font-size: 28px;
+  z-index: 10;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.6));
+}
+
+/* Header world banner styled by biome */
+.world-header-banner {
+  border: 1px solid var(--brd);
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.world-avatar-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.world-avatar-card:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.2);
+}
+
+
+
+
+

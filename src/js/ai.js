@@ -10,7 +10,7 @@
  *   GROQ, MODEL — from constants.js
  */
 
-const TIO_SYSTEM_PROMPT = (profile) => `
+const TIO_SYSTEM_PROMPT = (profile, activeTopicTitle = '') => `
 You are Tio — the AI mentor inside Mentorix,
 a free learning platform built for students
 who have no access to tutors or coaching.
@@ -30,7 +30,10 @@ Board: ${profile?.board || 'not specified'}
 Target Exam: ${profile?.targetExam || 'not specified'}
 Current streak: ${profile?.streak || 0} days
 XP Level: ${profile?.level || 1}
-Weak areas: ${profile?.weakSpots?.join(', ') || 'not yet identified'}
+Weak areas: ${profile?.weakSpots?.map(w => w.concept || w.topic || w).join(', ') || 'not yet identified'}
+
+${(window.CurriculumEngine && activeTopicTitle) ? window.CurriculumEngine.getTopicContextForAI(activeTopicTitle) : ''}
+${(window.MasteryEngine && activeTopicTitle) ? window.MasteryEngine.getAIContext(activeTopicTitle) : ''}
 
 HOW YOU TEACH:
 You guide students through their structured courses (Courses -> Chapters -> Subchapters -> Topics -> Exercises -> Checkpoints -> Boss Tests) rather than generating standalone isolated lessons.

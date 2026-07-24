@@ -1,5 +1,5 @@
 /**
- * screens/learn.js — Mentorix Learn Screen
+ * screens/learn.js — Mentorix Learn Screen (6-Stage Sequential Redesign)
  * // Deps: D, LS, ai, pJSON, pCtx, toast, esc, saveAll, go, addXP, addTopic, renderMath, haptic, isTopicForbidden
  */
 'use strict';
@@ -22,72 +22,170 @@ function saveCheckpoint() {
       priorKnowledge: LS.priorKnowledge,
       depth: LS.depth,
       goal: LS.goal,
-      lesson: LS.lesson
+      lesson: LS.lesson,
+      activeStage: LS.activeStage || 1,
+      checkAttempts: LS.checkAttempts || {}
     };
     saveAll();
   }
 }
 
+function findCourseTopicContext(topicTitle) {
+  if (!topicTitle || !window.D?.courses) return null;
+  const target = topicTitle.trim().toLowerCase();
+  for (const course of window.D.courses) {
+    for (let ui = 0; ui < (course.units || []).length; ui++) {
+      const unit = course.units[ui];
+      for (let ci = 0; ci < (unit.chapters || []).length; ci++) {
+        const chap = unit.chapters[ci];
+        
+        // Support nested subchapters
+        if (chap.subchapters && chap.subchapters.length > 0) {
+          for (let si = 0; si < chap.subchapters.length; si++) {
+            const sub = chap.subchapters[si];
+            for (let ti = 0; ti < (sub.topics || []).length; ti++) {
+              const t = sub.topics[ti];
+              const tTitle = typeof t === 'string' ? t : (t?.title || t?.name || '');
+              if (tTitle.trim().toLowerCase() === target) {
+                return {
+                  course,
+                  subject: course.subject || course.title || 'Course',
+                  unit,
+                  unitTitle: unit.title || `Unit ${ui + 1}`,
+                  unitIdx: ui,
+                  chapter: chap,
+                  chapterTitle: chap.title || `Chapter ${ci + 1}`,
+                  chapterIdx: ci,
+                  subchapter: sub,
+                  subchapterTitle: sub.title || `Subchapter ${si + 1}`,
+                  subchapterIdx: si,
+                  topic: t,
+                  topicIdx: ti,
+                  topicTitle: tTitle.trim()
+                };
+              }
+            }
+          }
+        } else {
+          // Flat topics fallback
+          for (let ti = 0; ti < (chap.topics || []).length; ti++) {
+            const t = chap.topics[ti];
+            const tTitle = typeof t === 'string' ? t : (t?.title || t?.name || '');
+            if (tTitle.trim().toLowerCase() === target) {
+              return {
+                course,
+                subject: course.subject || course.title || 'Course',
+                unit,
+                unitTitle: unit.title || `Unit ${ui + 1}`,
+                unitIdx: ui,
+                chapter: chap,
+                chapterTitle: chap.title || `Chapter ${ci + 1}`,
+                chapterIdx: ci,
+                topic: t,
+                topicIdx: ti,
+                topicTitle: tTitle.trim()
+              };
+            }
+          }
+        }
+      }
+    }
+  }
+  return null;
+}
+window.findCourseTopicContext = findCourseTopicContext;
+
 function rLearn(){
-  const t=D._param||'';
+  let t=D._param||'';
   D._param='';
+
+  let activePos = null;
+  if (window.CourseProgressionEngine && D.courses && D.courses.length > 0) {
+    activePos = window.CourseProgressionEngine.getCurrentPosition();
+  }
+
+  if (!t && activePos && activePos.topicTitle) {
+    t = activePos.topicTitle;
+  }
+
   if (!t && (!LS || !LS.topic) && (!D.memory || !D.memory.activeLesson)) {
-    // Phase 1.1 Architecture: Base learn requests route to the primary Courses system
-    go('courses');
+    if (typeof openCourseSetupModal === 'function') {
+      openCourseSetupModal();
+    } else {
+      go('courses');
+    }
     return;
   }
+
   if(!LS){
     if(D.memory && D.memory.activeLesson){
       LS=Object.assign({}, D.memory.activeLesson);
     }else{
-      LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:'',
+      LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:t,
           diagDone:false,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
           score:0,weakAreas:[],masteryPct:0,reinforcing:false,reLesson:null,
-          activeSectionIdx:0,sectionAnswers:{}};
+          activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{}};
     }
   }
+
   if(t&&t!==LS.topic){
     LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:t,
         diagDone:false,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
         score:0,weakAreas:[],masteryPct:0,reinforcing:false,reLesson:null,
-        activeSectionIdx:0,sectionAnswers:{}};
+        activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{}};
     if(D.memory){
       delete D.memory.activeLesson;
       saveAll();
     }
   }
+
+  const topicToDisplay = LS.topic || t || activePos?.topicTitle || 'Active Concept';
+  const topicCtx = findCourseTopicContext(topicToDisplay) || activePos;
+
+  const activeSubject = topicCtx?.subject || topicCtx?.course?.subject || (D.courses && D.courses[0]?.subject) || 'Course';
+  const activeUnitTitle = topicCtx?.unitTitle || (topicCtx?.unit ? topicCtx.unit.title : '');
+  const activeChapterTitle = topicCtx?.chapterTitle || (topicCtx?.chapter ? topicCtx.chapter.title : '');
+
+  const breadcrumbHTML = (topicCtx || activeSubject) ? `
+    <div class="course-breadcrumb-bar mb16" style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.22);border-radius:14px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mut)">
+        <span style="color:var(--pl);font-weight:700">🎓 ${esc(activeSubject)}</span>
+        ${activeUnitTitle ? `<span style="color:var(--mut)">›</span><span style="color:var(--sub)">${esc(activeUnitTitle)}</span>` : ''}
+        ${activeChapterTitle ? `<span style="color:var(--mut)">›</span><span style="color:var(--sub)">${esc(activeChapterTitle)}</span>` : ''}
+        <span style="color:var(--mut)">›</span>
+        <span style="color:#fff;font-weight:700">${esc(topicToDisplay)}</span>
+      </div>
+      <button class="btn bsm bsec" onclick="go('courses')" style="padding:4px 12px;font-size:11px;border-radius:8px">Syllabus Journey Map</button>
+    </div>
+  ` : '';
+
   document.getElementById('main').innerHTML=`
   <div class="sw scr" id="learn-main">
-    <div class="h1" id="learn-h1">📚 Learn Anything</div>
-    <p class="sub" id="learn-sub">Type any topic in the universe — I'll build your personalized lesson</p>
-    <div style="display:flex;gap:9px;margin-bottom:16px">
-      <input class="inp" id="ltop" placeholder="e.g., Quantum Physics, Machine Learning..." value="${esc(LS.topic||t)}" onkeydown="if(event.key==='Enter')doLesson()">
-      <button class="btn bpri" id="lbtn" onclick="doLesson()">🔍 Learn</button>
+    ${breadcrumbHTML}
+    <div class="h1" id="learn-h1">📚 Active Learning Studio</div>
+    <p class="sub" id="learn-sub">Tio AI Adaptive Syllabus Pacing for ${esc(activeSubject)}</p>
+    
+    <div style="display:none;gap:9px;margin-bottom:16px">
+      <input class="inp" id="ltop" placeholder="e.g., Quantum Physics, Machine Learning..." value="${esc(LS.topic||t)}">
     </div>
-    <div id="lsugg" style="margin-bottom:22px">
-      ${D.topics.length?`<div style="margin-bottom:14px">
-        <p style="color:var(--mut);font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:9px">CONTINUE LEARNING</p>
-        <div style="display:flex;flex-wrap:wrap;gap:7px">${D.topics.slice(-8).reverse().map(t=>{return `<div class="chip" onclick="setLearnTopic('${escON(t)}');doLesson()" style="background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:var(--okl)">✓ ${esc(t)}</div>`}).join('')}</div>
-      </div>`:''}
-      <p style="color:var(--mut);font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:9px">POPULAR TOPICS</p>
-      <div style="display:flex;flex-wrap:wrap;gap:7px">${PTOPICS.map(t=>`<div class="chip" onclick="setLearnTopic('${escON(t)}')">${t}</div>`).join('')}</div>
-    </div>
+    
     <div id="larea"></div>
   </div>`;
   
-  if(LS.lesson)renderLesson();
-  else if(LS.loading)rLLoading();
-  else if(LS.err)rLError();
+  if(LS.lesson) renderLesson();
+  else if(LS.loading) rLLoading();
+  else if(LS.err) rLError();
   
-  if(t&&!LS.lesson&&!LS.loading&&!LS.diagDone)setTimeout(showDiagnostic,80);
-  else if(t&&!LS.lesson&&!LS.loading&&LS.diagDone)setTimeout(doLesson,80);
+  if(t&&!LS.lesson&&!LS.loading&&!LS.diagDone) setTimeout(showDiagnostic,80);
+  else if(t&&!LS.lesson&&!LS.loading&&LS.diagDone) setTimeout(doLesson,80);
 }
 
-function setLearnTopic(t){const i=document.getElementById('ltop');if(i)i.value=t;LS.topic=t;}
+function setLearnTopic(t){
+  LS.topic=t;
+}
 
 function showDiagnostic(){
   const a=document.getElementById('larea');if(!a)return;
-  const s=document.getElementById('lsugg');if(s)s.style.display='none';
   
   if (!LS.priorKnowledge) LS.priorKnowledge = '1';
   if (!LS.depth) LS.depth = '2';
@@ -123,27 +221,18 @@ function showDiagnostic(){
           </button>
         `).join('')}
       </div>
-      <div style="text-align:center;font-size:12px;color:var(--sub);margin-top:6px;font-weight:600">
-        ${[
-          'Completely New to this topic',
-          'Have some basic conceptual understanding',
-          'Intermediate — comfortable with the basics',
-          'Advanced — know the core details well',
-          'Just Revising for quick reinforcement'
-        ][parseInt(LS.priorKnowledge) - 1]}
-      </div>
     </div>
 
     <!-- Question 2 -->
     <div class="mb16">
-      <div class="h3 mb8" style="color:var(--pl)">2. How deeply do you want to learn this?</div>
+      <div class="h3 mb8" style="color:var(--pl)">2. What study depth do you prefer?</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
         ${[
-          ['1', '🔍', 'Overview', 'Quick Overview'],
-          ['2', '🏫', 'School', 'School Level'],
-          ['3', '🎯', 'Exam', 'Exam Level'],
-          ['4', '📖', 'Deep', 'Deep Understanding'],
-          ['5', '🚀', 'Expert', 'Expert Exploration']
+          ['1', '🚀', 'ELI5', 'Explain Like I\'m 5'],
+          ['2', '📝', 'Concept', 'Core Concepts'],
+          ['3', '📐', 'Standard', 'Standard syllabus depth'],
+          ['4', '🔬', 'Deep', 'Advanced details'],
+          ['5', '🧠', 'Expert', 'Mathematical derivations']
         ].map(([val, emoji, shortlbl, fulllbl]) => `
           <button class="btn bgh diag-opt-btn ${LS.depth === val ? 'bpri' : ''}" 
             onclick="LS.depth='${val}';showDiagnostic()" 
@@ -154,28 +243,16 @@ function showDiagnostic(){
           </button>
         `).join('')}
       </div>
-      <div style="text-align:center;font-size:12px;color:var(--sub);margin-top:6px;font-weight:600">
-        ${[
-          'Quick Overview & summary of core points',
-          'School Level standard curriculum depth',
-          'Exam Level study — focus on typical exam formats',
-          'Deep Understanding — conceptual mechanisms',
-          'Expert Exploration — advanced extensions & edge cases'
-        ][parseInt(LS.depth) - 1]}
-      </div>
     </div>
 
     <!-- Question 3 -->
-    <div class="mb20">
+    <div class="mb16">
       <div class="h3 mb8" style="color:var(--pl)">3. What is your primary learning goal?</div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
         ${[
-          ['1', '🏆', 'Pass Exam', 'Pass Exam'],
-          ['2', '🎓', 'Mastery', 'Master Concept'],
-          ['3', '🛠️', 'Problems', 'Solve Problems'],
-          ['4', '⚡', 'Competitive', 'Competitive Exams'],
-          ['5', '🤔', 'Curiosity', 'Curiosity'],
-          ['6', '💼', 'Career', 'Career Development']
+          ['1', '📝', 'School Exams', 'Pass school exams'],
+          ['2', '🎯', 'Mastery', 'Conceptual mastery'],
+          ['4', '⚡', 'Competitive', 'Competitive Exams (JEE/NEET)']
         ].map(([val, emoji, shortlbl, fulllbl]) => `
           <button class="btn bgh diag-opt-btn ${LS.goal === val ? 'bpri' : ''}" 
             onclick="LS.goal='${val}';showDiagnostic()" 
@@ -185,16 +262,6 @@ function showDiagnostic(){
             <span>${shortlbl}</span>
           </button>
         `).join('')}
-      </div>
-      <div style="text-align:center;font-size:12px;color:var(--sub);margin-top:8px;font-weight:600">
-        Goal: ${[
-          'Prepare to pass exams successfully',
-          'Master the concept thoroughly',
-          'Solve practical/numerical problems',
-          'Excel in competitive exams (Olympiad, JEE, SAT)',
-          'Satisfy personal curiosity',
-          'Build professional career competency'
-        ][parseInt(LS.goal) - 1]}
       </div>
     </div>
 
@@ -208,7 +275,7 @@ function showDiagnostic(){
 function startFromDiag(){
   const pk = parseInt(LS.priorKnowledge);
   const dp = parseInt(LS.depth);
-  const combined = pk + dp; // 2 to 10
+  const combined = pk + dp;
   if (combined <= 4) {
     LS.diagLevel = 'beginner';
   } else if (combined <= 7) {
@@ -221,162 +288,141 @@ function startFromDiag(){
 }
 
 async function doLesson(){
-  const i=document.getElementById('ltop');
-  const topic=(i?.value||LS.topic||'').trim();
+  const topic=(LS.topic||'').trim();
   if(!topic)return;
   if(isTopicForbidden(topic)){showForbiddenWarning(topic);return;}
-  LS.topic=topic;LS.lesson=null;LS.loading=true;LS.ans={};LS.sub=false;LS.err='';LS.weakAreas=[];
+  
+  LS.topic=topic;
+  LS.lesson=null;
+  LS.loading=true;
+  LS.ans={};
+  LS.sub=false;
+  LS.err='';
+  LS.weakAreas=[];
   LS.activeSectionIdx=0;
   LS.sectionAnswers={};
+  LS.activeStage=1;
+  LS.checkAttempts={};
+  
   D._param=topic;
   rLLoading();
+  
   try{
     checkStreak();
 
-    // Auto default levels to match profile grade if diagnostic was skipped or never set
     if (!LS.diagDone) {
       const grade = D.profile?.grade || 'Grade 10';
-      if (grade === 'Grade 11' || grade === 'Grade 12' || grade.includes('Undergraduate') || grade.includes('Postgraduate')) {
+      if (grade === 'Grade 11' || grade === 'Grade 12' || grade.includes('Undergraduate')) {
         LS.diagLevel = 'advanced';
-        LS.goal = '4';  // Competitive/JEE/Olympiad
-        LS.depth = '5'; // Expert
-      } else if (grade === 'Grade 8' || grade === 'Grade 9' || grade === 'Grade 10') {
+        LS.goal = '4';
+        LS.depth = '5';
+      } else {
         LS.diagLevel = 'intermediate';
         LS.goal = '2';
         LS.depth = '3';
-      } else {
-        LS.diagLevel = 'beginner';
-        LS.goal = '1';
-        LS.depth = '2';
       }
     }
 
-    // Force absolute maximum level if Boss Mode is enabled in settings
-    if (D.settings?.bossMode) {
-      LS.diagLevel = 'advanced';
-      LS.goal = '4';
-      LS.depth = '5';
+    const curCtx = window.CurriculumEngine ? window.CurriculumEngine.getTopicContextForAI(topic) : null;
+    if (!curCtx) {
+      throw new Error(`Verified curriculum for topic "${topic}" is not available in the database. Out-of-syllabus content generation is blocked.`);
     }
-
-    const prevScore=D.memory?.scores?.[topic];
-    const weakCtx=D.memory?.weakSpots?.filter(w => w.topic === topic && !w.solved).map(w => w.concept).join(', ')||'';
     const levelHint=LS.diagLevel==='beginner'?'Explain simply with analogies and basic examples':
-                    LS.diagLevel==='advanced'?'Go deep — include technical details, complex examples, edge cases':
+                    LS.diagLevel==='advanced'?'Go deep — include technical details, complex examples, equations':
                     'Balance depth with clarity';
     const goalHint=LS.goal==='1'?'Focus on passing exams and standard definitions':
                    LS.goal==='4'?'Target competitive exam standards (Olympiad, JEE, Advanced problem solving)':
                    'Focus on conceptual mastery and practical applications';
-    const memCtx=prevScore?`Student previously scored ${prevScore}% on this. `:'';
-    const weakCtxHint=weakCtx?`Previously struggled with: ${weakCtx}. Focus extra attention there. `:'';
-
-    const bossModeCtx = D.settings?.bossMode ? 
-      "BOSS MODE ACTIVE: The student is an elite ranker. The content, explanations, and quiz questions MUST be of extreme difficulty, testing deep analytical skills, college-level math/derivation/formulas, complex chemical mechanisms, and out-of-the-box conceptual problem solving. Avoid basic definitions or simplifications entirely. Make it exceptionally hard." : "";
 
     const sys=`You are Mentorix AI tutor. IMPORTANT: Output ONLY a raw JSON object. No markdown, no backticks, no explanation. Start with { end with }.
-Student context: ${pCtx()}. Teaching level: ${LS.diagLevel}.
-ADAPT TO GRADE LEVEL: The explanation level, formulas, rigor, and technical depth MUST match a student in ${D.profile?.grade || 'Grade 10'} (approximate age ${D.profile?.age || D.profile?.ageNum || '15'}). If the student is in Grade 11, 12, or higher, you MUST teach the actual curriculum content, present official theorems, derive or show formulas, and solve actual grade-level problems (e.g., CBSE Class 12 standard if the board is CBSE). Do NOT explain advanced grade topics using trivial, childish analogies or primary school language. Teach it with the appropriate academic terminology, equations, and mathematical rigor. ${levelHint}. Goal: ${goalHint}. ${memCtx}${weakCtxHint} ${getELI5Hint()} ${bossModeCtx}
-CRITICAL — MATCH THE SUBJECT'S REAL FORMAT: If this topic is mathematical, scientific, or quantitative (e.g. algebra, physics, chemistry, calculus, statistics), you MUST include actual equations, formulas, and step-by-step worked numerical examples using real numbers — not prose descriptions of what a formula does. Write all equations in LaTeX wrapped in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$ — this will be rendered as proper math notation. Show the formula, then substitute real values, then solve. Treat this like a textbook problem, not literature. If the topic is Chemistry, you MUST output chemical equations and formulas using mhchem syntax inside LaTeX, e.g. $\\ce{CO2 + H2O -> H2CO3}$ or $\\ce{2H2 + O2 -> 2H2O}$. Use $\\ce{...}$ for chemical formulas, reactions, names, and compounds so they render in a beautiful, professional textbook chemistry font. If the topic is non-quantitative (history, literature, civics), prose explanation is appropriate.`;
-    const prompt=`Create an adaptive lesson about "${topic.replace(/"/g,"'")}" structured into exactly 9 parts.
-Output ONLY this JSON (content fields should be 2-4 sentences for non-quantitative topics; for quantitative topics, include the actual formula/equation and at least one fully worked numerical example with real numbers, even if this makes the content longer):
+ADAPT TO GRADE LEVEL: The explanation level, formulas, rigor, and technical depth MUST match a student in ${D.profile?.grade || 'Grade 10'}. Teach with the appropriate academic terminology, equations, and mathematical rigor. ${levelHint}. Goal: ${goalHint}.
+CRITICAL — MATH & CHEMISTRY LAUNCH RULES: If the topic involves math or physics, wrap all equations in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$. For Chemistry compounds, use $\\ce{CO2}$ formatting. Always show equations and step-by-step worked solutions.`;
+
+    const prompt=`Create a curriculum-driven micro learning lesson about "${topic.replace(/"/g,"'")}" matching the following curriculum boundary:
+${curCtx}
+
+Output ONLY this JSON format:
 {
   "topic": "${topic.replace(/"/g,"'")}",
-  "emoji": "1 emoji",
-  "tagline": "engaging short tagline",
-  "sections": [
+  "hook": "1-sentence highly engaging, real-world connection question.",
+  "explanation": "Clear, precise explanation structured in 3 to 5 paragraphs matching learning objectives.",
+  "examples": [
     {
-      "id": "intro",
-      "title": "1. Introduction",
-      "content": "Vivid conceptual introduction.",
-      "check": {"q": "Concept check question?","o": ["A","B","C","D"],"a": 0,"e": "Brief reason","concept": "Introduction"}
+      "q": "Worked Example 1 question statement.",
+      "s": "Step-by-step solution showing values substitution."
     },
     {
-      "id": "objectives",
-      "title": "2. Learning Objectives",
-      "content": "What the learner will master in this topic.",
-      "check": {"q": "Objective check question?","o": ["A","B","C","D"],"a": 1,"e": "Brief reason","concept": "Objectives"}
-    },
-    {
-      "id": "prereqs",
-      "title": "3. Prerequisites",
-      "content": "Basic foundational requirements.",
-      "check": {"q": "Prerequisite check question?","o": ["A","B","C","D"],"a": 2,"e": "Brief reason","concept": "Prerequisites"}
-    },
-    {
-      "id": "theory",
-      "title": "4. Core Theory",
-      "content": "For quantitative topics: state the actual formula/equation using proper notation, then explain each variable. For non-quantitative topics: the central laws or conceptual theory.",
-      "check": {"q": "Deep conceptual or equation-based question?","o": ["A","B","C","D"],"a": 3,"e": "Brief reason","concept": "Core Theory"}
-    },
-    {
-      "id": "examples",
-      "title": "5. Concept Examples",
-      "content": "For quantitative topics: at least one fully worked numerical example — show the formula, substitute real numbers, compute the final answer step by step. For non-quantitative topics: specific real-world applications.",
-      "check": {"q": "Apply concept to a new scenario?","o": ["A","B","C","D"],"a": 0,"e": "Brief reason","concept": "Worked Examples"}
-    },
-    {
-      "id": "visual",
-      "title": "6. Visual Explanation",
-      "content": "Paint a clear mental image or state a physical system analogy.",
-      "check": {"q": "Analogy check question?","o": ["A","B","C","D"],"a": 1,"e": "Brief reason","concept": "Visual Metaphor"}
-    },
-    {
-      "id": "mistakes",
-      "title": "7. Common Mistakes",
-      "content": "Key misconceptions or common errors that students make.",
-      "check": {"q": "Spot the common misconception?","o": ["A","B","C","D"],"a": 2,"e": "Brief reason","concept": "Common Pitfalls"}
-    },
-    {
-      "id": "applications",
-      "title": "8. Real Life Applications",
-      "content": "Specific real-world impact or industrial uses.",
-      "check": {"q": "Real-world application check question?","o": ["A","B","C","D"],"a": 3,"e": "Brief reason","concept": "Real Life Connection"}
-    },
-    {
-      "id": "summary",
-      "title": "9. Quick Summary",
-      "content": "Key takeaways and summary.",
-      "check": {"q": "Summary review question?","o": ["A","B","C","D"],"a": 0,"e": "Brief reason","concept": "Summary Review"}
+      "q": "Worked Example 2 question statement.",
+      "s": "Step-by-step solution showing values substitution."
     }
   ],
-  "notes": {
-    "summary": "Full summary notes.",
-    "formulas": ["Key rule or equation 1", "Key rule or equation 2"],
-    "facts": ["Surprising fact 1", "Surprising fact 2"],
-    "mistakes": ["Pitfall to avoid 1", "Pitfall to avoid 2"],
-    "checklist": ["Verify equation bounds", "Check unit conversions"]
-  },
-  "quiz": [
-    {"q": "Reasoning question?","o": ["A","B","C","D"],"a": 0,"e": "reason","level": 3,"concept": "Reasoning"},
-    {"q": "Multi-step problem?","o": ["A","B","C","D"],"a": 1,"e": "reason","level": 4,"concept": "Multi-Step"},
-    {"q": "Cross-topic integration?","o": ["A","B","C","D"],"a": 2,"e": "reason","level": 5,"concept": "Integration"},
-    {"q": "Case study analysis?","o": ["A","B","C","D"],"a": 3,"e": "reason","level": 6,"concept": "Case Study"},
-    {"q": "Olympiad / Deep reasoning question?","o": ["A","B","C","D"],"a": 0,"e": "reason","level": 7,"concept": "Olympiad"}
+  "checks": [
+    {
+      "q": "Concept check question 1 (multiple choice)?",
+      "o": ["Option A","Option B","Option C","Option D"],
+      "a": 0,
+      "e": "Clear reason explaining why option A is correct.",
+      "concept": "Core Concept Check"
+    },
+    {
+      "q": "Concept check question 2?",
+      "o": ["Option A","Option B","Option C","Option D"],
+      "a": 1,
+      "e": "Reason explaining correct choice.",
+      "concept": "Application Check"
+    },
+    {
+      "q": "Concept check question 3?",
+      "o": ["Option A","Option B","Option C","Option D"],
+      "a": 2,
+      "e": "Reason explaining correct choice.",
+      "concept": "Boundary Check"
+    }
+  ],
+  "summary": [
+    "Key takeaway point 1",
+    "Key takeaway point 2",
+    "Key takeaway point 3",
+    "Key takeaway point 4",
+    "Key takeaway point 5"
+  ],
+  "flashcards": [
+    {"q": "Front Question 1?", "a": "Back Answer 1"},
+    {"q": "Front Question 2?", "a": "Back Answer 2"},
+    {"q": "Front Question 3?", "a": "Back Answer 3"},
+    {"q": "Front Question 4?", "a": "Back Answer 4"}
   ]
 }`;
 
-    const raw=await ai([{role:'user',content:prompt}],sys,4000,true);
-    const lesson=pJSON(raw);
-    if(!lesson?.topic || !lesson.sections || lesson.sections.length === 0) {
-      throw new Error('Invalid JSON format from AI');
+    let raw = null;
+    try {
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('AI timeout')), 15000)
+      );
+      raw = await Promise.race([
+        ai([{role:'user',content:prompt}],sys,3800,true),
+        timeoutPromise
+      ]);
+    } catch (err) {
+      throw new Error('AI lesson request timed out. Please try again.');
+    }
+
+    let lesson = raw ? pJSON(raw) : null;
+    if(!lesson?.topic || !lesson.explanation || !lesson.checks || lesson.checks.length < 3) {
+      throw new Error('Could not parse curriculum-aligned lesson data from tutor.');
     }
     
     LS.lesson=lesson;
     LS.loading=false;
     LS.err='';
     
-    addXP(50,'Lesson Build');
-    saveToNotebook(topic, true);
+    addXP(10,'Mission Started');
     saveCheckpoint();
-    
     renderLesson();
   }catch(e){
-    if (window.toast) {
-      window.toast('⚠️ AI service temporarily unavailable — showing a standard fallback lesson.', 'warn');
-    }
-    LS.lesson = generateFallbackLesson(topic);
+    LS.lesson = null;
     LS.loading = false;
-    LS.err = '';
-    saveToNotebook(topic, true);
+    LS.err = e.message || 'Verification error occurred.';
     saveCheckpoint();
     renderLesson();
   }
@@ -385,554 +431,462 @@ Output ONLY this JSON (content fields should be 2-4 sentences for non-quantitati
 function generateFallbackLesson(topic) {
   return {
     "topic": topic,
-    "emoji": "📚",
-    "tagline": `Adaptive Study on ${topic}`,
-    "sections": [
+    "hook": `Have you ever wondered how we can describe or predict the behavior of "${topic}" in real life?`,
+    "explanation": `The concept of "${topic}" is a fundamental pillar of study. It describes a system governed by standard inputs, boundaries, and logical equations. In normal conditions, all variables behave predictably according to physical or mathematical rules. By mapping these relations, we can analyze the state of the system at any given point and design optimal control parameters.`,
+    "examples": [
       {
-        "id": "intro",
-        "title": "1. Introduction",
-        "content": `Welcome to the adaptive study course on ${topic}. This module explores the foundations, mathematical or physical principles, and applications of ${topic}.`,
-        "check": {"q": `What is the primary focus of this study on ${topic}?`,"o": ["Understanding the fundamentals","Avoiding the topic","Memorizing facts blindly","None of the above"],"a": 0,"e": "Understanding fundamentals is the first step in mastery.","concept": "Introduction"}
+        "q": `What happens when we apply basic proportional relations to ${topic}?`,
+        "s": `We express the output as a function of the input: $y = k \\cdot x$. By substituting the given parameters, we can calculate the final response step-by-step.`
       },
       {
-        "id": "objectives",
-        "title": "2. Learning Objectives",
-        "content": `By the end of this course, you will understand the basic mechanics, state the key formulas/rules, apply the theories to standard problems, and evaluate real-world scenarios relating to ${topic}.`,
-        "check": {"q": "What will you be able to do after mastering this topic?","o": ["Explain basic definitions","Apply rules to solve problems","Identify common mistakes","All of the above"],"a": 3,"e": "All levels of learning (definition, application, mistakes) are targeted.","concept": "Objectives"}
-      },
-      {
-        "id": "prereqs",
-        "title": "3. Prerequisites",
-        "content": `Before diving deep, ensure you are comfortable with basic scientific reasoning, introductory concepts, and logical algebra corresponding to Grade 10 curriculum.`,
-        "check": {"q": "What level of mathematical/reasoning skills is recommended here?","o": ["Postgraduate level","Grade 10 standard reasoning","No reasoning required","None of the above"],"a": 1,"e": "Grade 10 standard reasoning is the target baseline.","concept": "Prerequisites"}
-      },
-      {
-        "id": "theory",
-        "title": "4. Core Theory",
-        "content": `The core theory of ${topic} states that the system behaves according to standard parameters under normal conditions. All variables are inter-dependent and follow deterministic physical or logical laws.`,
-        "check": {"q": `How do system parameters behave according to the core theory of ${topic}?`,"o": ["Randomly and unpredictably","According to standard parameters and physical/logical laws","Parameters do not exist","None of the above"],"a": 1,"e": "Determinism and logical laws govern physical systems.","concept": "Core Theory"}
-      },
-      {
-        "id": "examples",
-        "title": "5. Concept Examples",
-        "content": `For instance, observe a physical representation of ${topic} where changing input leads to a corresponding change in output. This is similar to standard proportional relations.`,
-        "check": {"q": "What is the relationship between inputs and outputs in the proportional example?","o": ["Output changes proportionally to input","Output remains zero","Input decreases as output increases","None of the above"],"a": 0,"e": "Proportional changes highlight direct relationships in system examples.","concept": "Examples"}
-      },
-      {
-        "id": "visual",
-        "title": "6. Visual Explanation",
-        "content": `Imagine the system as a flowing stream: any constriction in the channel restricts flow and increases pressure. This visual metaphor helps represent the relationships.`,
-        "check": {"q": "What does a constriction represent in the visual metaphor of the stream?","o": ["An increase in flow","A restriction of flow and increase in pressure","Nothing","None of the above"],"a": 1,"e": "Constrictions limit flow and raise pressure locally.","concept": "Visual Analogy"}
-      },
-      {
-        "id": "mistakes",
-        "title": "7. Common Mistakes",
-        "content": `A typical misconception is that the relationship holds under all extreme conditions without limit. In reality, physical constraints always establish boundaries.`,
-        "check": {"q": "What is a common mistake when studying physical relationships?","o": ["Assuming they have no physical bounds","Checking units","Drawing diagrams","None of the above"],"a": 0,"e": "Physical systems always have boundary limits.","concept": "Common Mistakes"}
-      },
-      {
-        "id": "applications",
-        "title": "8. Real Life Applications",
-        "content": `${topic} is widely applied in modern technology, household appliances, and industrial safety systems to ensure efficiency and control.`,
-        "check": {"q": "Where is this concept applied in daily life?","o": ["Only in space stations","Modern technology and household safety appliances","It is not applied anywhere","None of the above"],"a": 1,"e": "Household appliances use these core control loops.","concept": "Real Life Applications"}
-      },
-      {
-        "id": "summary",
-        "title": "9. Quick Summary",
-        "content": `In summary, ${topic} forms a critical pillar of study. Pacing yourself, analyzing the core theory, and avoiding boundary misconceptions ensures solid mastery.`,
-        "check": {"q": "What is recommended to ensure solid mastery of this topic?","o": ["Pacing yourself and analyzing core theory","Memorizing answers","Skipping checks","None of the above"],"a": 0,"e": "Pacing and active theory analysis builds long-term recall.","concept": "Summary"}
+        "q": `Evaluate the system boundaries for a standard scenario in ${topic}.`,
+        "s": `Identify the initial constraints, substitute them into the boundary equations, and solve for the equilibrium values.`
       }
     ],
-    "notes": {
-      "summary": `Personalized adaptive summary notes for ${topic}.`,
-      "formulas": [`Core Equation of ${topic}`],
-      "facts": ["It is a central pillar of Grade 10 curricula."],
-      "mistakes": ["Neglecting system boundaries."],
-      "checklist": ["Check units and variables"]
-    },
-    "quiz": [
-      {"q": `Analyse a standard system featuring ${topic}. Which aspect dictates its initial state?`,"o": ["Boundary conditions","System color","Ambient room size","None of the above"],"a": 0,"e": "Boundary conditions determine starting parameter values.","level": 3,"concept": "Boundary Analysis"},
-      {"q": `If parameter A increases while system constraints remain fixed, what happens to parameter B?`,"o": ["It remains unchanged","It changes according to system equations to balance the constraint","It disappears","None of the above"],"a": 1,"e": "Conservation and physical equations require balancing.","level": 4,"concept": "Balanced Constraints"},
-      {"q": `Which concept explains an unexpected fluctuation in this system?`,"o": ["Transient responses","Static state","Ohm's Law","None of the above"],"a": 0,"e": "Transient responses govern systems during change.","level": 5,"concept": "Transient Behavior"},
-      {"q": `In a case study of a failed industrial loop, the error was tracked to scale bounds. What was the cause?`,"o": ["Miscalculating boundary conditions","Incorrect color choice","Standard operation","None of the above"],"a": 0,"e": "Boundary violations cause system instability.","level": 6,"concept": "Case Study"},
-      {"q": `In competitive Olympiad thinking, how does entropy change in an active system of this type?`,"o": ["It increases in accordance with the Second Law","It drops to absolute zero","It remains constant forever","None of the above"],"a": 0,"e": "Active systems produce entropy during energy transfer.","level": 7,"concept": "Olympiad Level Entropy"}
+    "checks": [
+      {
+        "q": `What is the primary objective of analyzing ${topic}?`,
+        "o": ["To understand core system properties", "To ignore boundaries", "To make random assumptions", "None of the above"],
+        "a": 0,
+        "e": "Analyzing the topic establishes the core principles and relationships of the system.",
+        "concept": "Fundamental Principles"
+      },
+      {
+        "q": `How do variables behave under standard laws?`,
+        "o": ["Completely randomly", "Predictably according to logical equations", "They disappear", "None of the above"],
+        "a": 1,
+        "e": "Physical and mathematical systems follow deterministic governing equations.",
+        "concept": "System Variables"
+      },
+      {
+        "q": `What determines the initial state of a system?`,
+        "o": ["System color", "Boundary and starting conditions", "Ambient noise", "None of the above"],
+        "a": 1,
+        "e": "Starting parameters are dictated by boundary values.",
+        "concept": "Boundary Conditions"
+      }
+    ],
+    "summary": [
+      `Mastering the foundational definitions of ${topic} is key.`,
+      `Always check physical boundaries and initial conditions.`,
+      `Formulas represent mathematical relationships between parameters.`,
+      `Worked examples show how to substitute real numbers step-by-step.`,
+      `Silently tracking mistakes allows for targeted revision later.`
+    ],
+    "flashcards": [
+      { "q": `What defines "${topic}"?`, "a": `A structured conceptual module matching syllabus standards.` },
+      { "q": `Why are boundaries important?`, "a": `They establish the limits and initial state of system equations.` },
+      { "q": `How do we solve standard problems?`, "a": `State the equation, substitute known values, and compute sequentially.` },
+      { "q": `What is the best way to revise?`, "a": `Use flashcards and review logged weak spots from the mistake diary.` }
     ]
   };
 }
 
 function rLLoading(){
   const a=document.getElementById('larea');if(!a)return;
-  const s=document.getElementById('lsugg');if(s)s.style.display='none';
-  const b=document.getElementById('lbtn');if(b){b.disabled=true;b.textContent='⏳ Generating...';}
-  const levelMsg={beginner:'Starting from the fundamentals...',intermediate:'Building on your existing knowledge...',advanced:'Going deep — advanced concepts loading...'}[LS.diagLevel]||'';
-  const goalMsg={basics:'Keeping it clear and practical',exam:'Focusing on exam-relevant patterns',deep:'Full conceptual depth incoming'}[LS.goal]||'';
-  const steps=['Analyzing topic structure','Building your lesson','Crafting examples','Preparing quiz'];
   a.innerHTML=`
   <div class="card" style="text-align:center;padding:48px 32px">
     <div class="tio-inline mb16" style="justify-content:center;background:rgba(139,92,246,.08);border-color:rgba(139,92,246,.2);padding:14px;border-radius:12px;display:flex;align-items:center;gap:12px">
-      <div class="nxav" style="font-size:20px">✨</div>
+      <div class="nxav" style="font-size:24px">✨</div>
       <div style="text-align:left">
         <div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:3px">TIO IS THINKING</div>
-        <div style="color:#C4B5FD;font-size:13px">Building your <strong style="color:var(--txt)">${LS.diagLevel||'personalised'}</strong> lesson on <em style="color:var(--txt)">"${esc(LS.topic)}"</em>${levelMsg?'<br><span style="font-size:11px;color:var(--mut)">'+levelMsg+'</span>':''}</div>
+        <div style="color:#C4B5FD;font-size:13px">Building your micro learning path on <em style="color:var(--txt)">"${esc(LS.topic)}"</em></div>
       </div>
     </div>
     <div class="think-wave" style="justify-content:center;margin-bottom:16px"><span></span><span></span><span></span><span></span><span></span></div>
-    <div style="display:flex;flex-direction:column;gap:8px;max-width:280px;margin:0 auto">
-      ${steps.map((s,i)=>`<div style="display:flex;align-items:center;gap:10px;animation:scIn .3s ${i*.12}s both">
-        <div style="width:20px;height:20px;border-radius:50%;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-          <div style="width:6px;height:6px;border-radius:50%;background:var(--p);animation:db .6s ${i*.15}s ease-in-out infinite"></div>
-        </div>
-        <span style="color:var(--mut);font-size:13px">${s}</span>
-      </div>`).join('')}
-    </div>
-    ${goalMsg?`<p style="color:var(--mut);font-size:12px;margin-top:16px">${goalMsg}</p>`:''}
+    <p style="color:var(--mut);font-size:12px">Assembling syllabus modules... Estimating study time (8 mins)</p>
   </div>`;
 }
 
 function rLError(){
   const a=document.getElementById('larea');if(!a)return;
-  const b=document.getElementById('lbtn');if(b){b.disabled=false;b.textContent='🔍 Learn';}
-  const err=LS.err||'';
-  let title='Something went wrong';
-  let msg=err;
-  let icon='😢';
-  if(err.toLowerCase().includes('connection')||err.toLowerCase().includes('network')||err.toLowerCase().includes('internet')){
-    title='Connection issue';
-    msg='Please check your internet and try again.';
-    icon='📶';
-  } else if(err.toLowerCase().includes('too many')||err.toLowerCase().includes('rate')||err.toLowerCase().includes('429')){
-    title='Too many requests';
-    msg='Please wait a moment and try again.';
-    icon='⏳';
-  }
   a.innerHTML=`<div class="card cred" style="text-align:center;padding:38px">
-    <div style="font-size:44px;margin-bottom:12px">${icon}</div>
-    <p style="color:var(--redl);font-weight:600;margin-bottom:7px">${title}</p>
-    <p style="color:var(--mut);font-size:13px;margin-bottom:18px;line-height:1.6">${esc(msg)}</p>
-    <button class="btn bpri" onclick="doLesson()">Try Again</button>
+    <div style="font-size:44px;margin-bottom:12px">⚠️</div>
+    <p style="color:var(--redl);font-weight:600;margin-bottom:7px">Lesson Generation Blocked</p>
+    <p style="color:var(--mut);font-size:13px;margin-bottom:18px;line-height:1.6">${esc(LS.err || 'Connection issue occurred while generating lesson.')}</p>
+    <button class="btn bpri" onclick="doLesson()">Retry Mission</button>
   </div>`;
 }
 
-function renderLesson(){
+function renderLesson() {
   const a=document.getElementById('larea');if(!a)return;
-  const b=document.getElementById('lbtn');if(b){b.disabled=false;b.textContent='🔍 Learn';}
-  const s=document.getElementById('lsugg');if(s)s.style.display='none';
   const l=LS.lesson;
-  const lvlBadge={'beginner':'<span class="tag tok">🌱 Beginner</span>','intermediate':'<span class="tag tc">⚡ Intermediate</span>','advanced':'<span class="tag tgold">🔥 Advanced</span>'}[l.level || LS.diagLevel]||'';
-  
-  const steps=[
-    {id:'overview',ic:'📖',lbl:'Study'},
-    {id:'notes',ic:'📝',lbl:'Notebook'},
-    {id:'quiz',ic:'🎯',lbl:'Assessment'},
+  const stage = LS.activeStage || 1;
+
+  const stageTitles = [
+    'Hook Connection',
+    'Core Concept Explanation',
+    'Worked Examples',
+    'Interactive Checks',
+    'Core Principles Summary',
+    'Interactive Flashcards'
   ];
-  const stepIdx=steps.findIndex(s=>s.id===LS.tab);
-  const progPct=Math.round(((stepIdx+1)/steps.length)*100);
-  
-  a.innerHTML=`
-    <div class="lhero scr">
-      <div style="display:flex;align-items:center;gap:16px">
-        <div style="font-size:58px;line-height:1">${l.emoji||'📚'}</div>
-        <div style="flex:1">
-          <div class="h2 mb4">${esc(l.topic)}</div>
-          <p style="color:#C4B5FD;font-size:14px;margin-bottom:9px">${esc(l.tagline||'')}</p>
-          <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-            ${lvlBadge}
-            <span class="tag tok">✓ Lesson Active</span>
-            <button class="btn bsm bgh" onclick="goBackToChapter()" style="padding:3px 10px;font-size:11px">📁 Syllabus Map</button>
-            <button class="btn bsm" style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:var(--okl);padding:3px 10px;font-size:11px" onclick="readLesson()" title="Read lesson aloud">🔊 Read</button>
-            <button class="btn bsm" style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:var(--cl);padding:3px 10px;font-size:11px" onclick="toggleFocusMode(true)" title="Distraction-free focus mode">🧘 Focus</button>
+
+  const pct = Math.round((stage / 6) * 100);
+
+  a.innerHTML = `
+    <div class="lhero scr" style="padding:16px 20px;margin-bottom:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Active Mission · 8 Mins Est.</div>
+          <div class="h2" style="margin:2px 0 0">${esc(l.topic)}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:11px;color:var(--mut);font-weight:700">STAGE ${stage} OF 6</div>
+          <div style="font-size:13px;color:var(--txt);font-weight:700">${stageTitles[stage - 1]}</div>
+        </div>
+      </div>
+      <div style="margin-top:14px">
+        <div class="pw" style="height:6px;background:rgba(255,255,255,0.05);border-radius:3px">
+          <div class="pf" style="width:${pct}%;background:linear-gradient(90deg, var(--p), var(--c))"></div>
+        </div>
+      </div>
+    </div>
+    <div id="stage-card-wrap"></div>
+  `;
+
+  renderStageContent();
+}
+
+function renderStageContent() {
+  const c = document.getElementById('stage-card-wrap');
+  const l = LS.lesson;
+  if (!c || !l) return;
+  const stage = LS.activeStage || 1;
+
+  let html = '';
+
+  if (stage === 1) {
+    // ── STAGE 1: HOOK ──
+    html = `
+      <div class="card cglow" style="border:1px solid rgba(139,92,246,0.2);padding:24px;text-align:center">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;text-align:left;background:rgba(255,255,255,0.02);padding:12px;border-radius:12px">
+          <div style="font-size:32px">🤖</div>
+          <div>
+            <div style="color:var(--pl);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase">TIO'S HOOK</div>
+            <div style="color:var(--sub);font-size:13px">Let's start today's learning mission with a quick puzzle!</div>
           </div>
         </div>
-      </div>
-      <!-- Lesson progress stepper -->
-      <div style="margin-top:16px">
-        <div class="between mb6"><span style="color:var(--mut);font-size:11px;font-weight:700;letter-spacing:.5px">LESSON PROGRESS</span><span style="color:var(--pl);font-size:11px;font-weight:700">${progPct}%</span></div>
-        <div class="pw" style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px"><div class="pf" style="width:${progPct}%;background:linear-gradient(90deg, var(--p), var(--c))"></div></div>
-        <div class="lesson-stepper mt8" style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
-          ${steps.map((s,i)=>`
-            <div class="lsb-wrap" style="text-align:center">
-              <div class="lsb ${i<stepIdx?'done':i===stepIdx?'active':'todo'}" onclick="switchTab('${s.id}')" title="${s.lbl}" style="margin:0 auto">${i<stepIdx?'✓':(i+1)}</div>
-              <div class="lsb-lbl" style="font-size:11px;margin-top:4px;color:${i===stepIdx?'#fff':'var(--mut)'}">${s.lbl}</div>
-            </div>
-            ${i<steps.length-1?`<div class="lsb-line${i<stepIdx?' done':''}" style="flex:1;height:2px;background:rgba(255,255,255,0.06)"></div>`:''}`).join('')}
+        
+        <div style="font-size:18px;color:#fff;font-weight:700;line-height:1.6;margin:16px 0 24px;font-style:italic">
+          "${esc(l.hook)}"
         </div>
-      </div>
-    </div>
-    <div class="tabs" style="margin-bottom:12px">
-      <div class="tb${LS.tab==='overview'?' on':''}" onclick="switchTab('overview')">📖 Study Wizard</div>
-      <div class="tb${LS.tab==='notes'?' on':''}" onclick="switchTab('notes')">📝 Notebook</div>
-      <div class="tb${LS.tab==='quiz'?' on':''}" onclick="switchTab('quiz')">🎯 Assessment</div>
-    </div>
-    <div id="tcon"></div>`;
-  renderTab();
-}
 
-function switchTab(t){
-  LS.tab=t;
-  saveCheckpoint();
-  renderLesson();
-}
-
-function renderTab(){
-  const c=document.getElementById('tcon'),l=LS.lesson;
-  if(!c||!l)return;
-
-  if(LS.tab==='overview'){
-    const _secs = l.sections || [];
-    const activeIdx = Math.min(LS.activeSectionIdx || 0, Math.max(_secs.length - 1, 0));
-    const currentSec = _secs[activeIdx];
-    if (!currentSec) return;
-
-    const totalSecs = (l.sections || []).length;
-    const isLast = activeIdx === totalSecs - 1;
-    const checkState = LS.sectionAnswers[currentSec.id] || { answered: false, correct: false, selected: -1, attempts: 0, showReflection: false };
-
-    let sectionsProgressHTML = `
-      <div class="sections-indicator mb12" style="display:flex;gap:4px">
-        ${(l.sections || []).map((sec, idx) => {
-          const isSecCompleted = LS.sectionAnswers[sec.id]?.correct;
-          const isSecActive = idx === activeIdx;
-          const bg = isSecCompleted ? 'var(--ok)' : isSecActive ? 'var(--p)' : 'rgba(255,255,255,0.06)';
-          return `<div style="flex:1;height:4px;background:${bg};border-radius:2px;transition:all 0.3s"></div>`;
-        }).join('')}
+        <button class="btn bpri blg w100" onclick="advanceStage(2)">
+          🚀 Start Conceptual Lesson →
+        </button>
       </div>
     `;
+  } else if (stage === 2) {
+    // ── STAGE 2: EXPLAIN ──
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">📖 Core Explanation</h3>
+        <div class="explain-text-box style-body" style="font-size:14.5px;line-height:1.75;color:#E2E8F0;display:flex;flex-direction:column;gap:12px">
+          ${l.explanation.split('\n').filter(p=>p.trim()).map(p=>`<p class="katex-render-target">${p}</p>`).join('')}
+        </div>
+        
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(1)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(3)">Next: Worked Examples →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 3) {
+    // ── STAGE 3: EXAMPLE ──
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">📐 Worked Solutions</h3>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          ${(l.examples || []).map((ex, idx) => `
+            <div style="background:rgba(255,255,255,0.02);border:1px solid var(--brd);border-radius:12px;padding:16px">
+              <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:8px">Example ${idx + 1}</div>
+              <div style="color:#fff;font-weight:700;font-size:14px;margin-bottom:10px" class="katex-render-target">${esc(ex.q)}</div>
+              <div style="color:var(--sub);font-size:13px;line-height:1.65;border-top:1px dashed var(--brd);padding-top:10px" class="katex-render-target">
+                <strong style="color:var(--pl)">Step-by-step Solution:</strong><br>${ex.s}
+              </div>
+            </div>
+          `).join('')}
+        </div>
 
-    let checkCardHTML = '';
-    const check = currentSec.check;
-    if (check) {
-      if (!checkState.answered) {
-        checkCardHTML = `
-          <div class="card mt12 cglow" style="border:1px solid rgba(139,92,246,0.3)">
-            <h3 class="h3 mb8" style="color:var(--pl)">🧠 Active Learning Check</h3>
-            <p style="color:var(--txt);font-size:14px;margin-bottom:12px">${esc(check.q)}</p>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              ${check.o.map((opt, oidx) => `
-                <div class="qopt" onclick="submitSectionCheck(${oidx})">
-                  <span class="qltr">${String.fromCharCode(65 + oidx)}</span>
-                  <span>${esc(opt)}</span>
-                </div>
-              `).join('')}
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(2)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(4)">Next: Test Your Concept →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 4) {
+    // ── STAGE 4: CHECK ──
+    if (!LS.questionStartTime) {
+      LS.questionStartTime = Date.now();
+    }
+
+    let incorrectCount = 0;
+    const checksCount = (l.checks || []).length || 3;
+    for (let i = 0; i < checksCount; i++) {
+      const attempt = LS.checkAttempts[i];
+      if (attempt && attempt.answered && !attempt.correct) incorrectCount++;
+    }
+
+    let diagnosticHTML = '';
+    if (incorrectCount >= 2 && window.CurriculumEngine) {
+      const mistakeHistory = {};
+      if (window.D && window.D.memory && Array.isArray(window.D.memory.weakSpots)) {
+        window.D.memory.weakSpots.forEach(s => {
+          const key = String(s.topic || '').trim().toLowerCase();
+          mistakeHistory[key] = (mistakeHistory[key] || 0) + 1;
+        });
+      }
+      const weakness = window.CurriculumEngine.findRootWeakness(LS.topic, window.D?.topics || [], mistakeHistory);
+      if (weakness) {
+        diagnosticHTML = `
+          <div class="card s2" style="border-left:4px solid var(--red);border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);padding:14px 18px;margin-top:20px;text-align:left">
+            <div style="color:var(--redl);font-weight:700;font-size:var(--fs-sm);margin-bottom:4px">
+              🕵️ Tio's Diagnostic Insight: Foundational Gap Detected!
             </div>
-          </div>
-        `;
-      } else if (!checkState.correct) {
-        checkCardHTML = `
-          <div class="card mt12 cred" style="border:1px solid var(--red)">
-            <h3 class="h3 mb8" style="color:var(--redl)">⚠️ Incorrect Answer</h3>
-            <p style="color:#CBD5E1;font-size:14px;margin-bottom:12px">Don't worry! Reflection makes us better. Why do you think you made this mistake?</p>
-            <div style="display:grid;grid-template-columns:1fr;gap:6px">
-              ${[
-                ['Knowledge Gap', 'I didn\'t know this concept well enough'],
-                ['Careless Error', 'I rushed or misread the question/options'],
-                ['Application Error', 'I understood the theory but couldn\'t apply it'],
-                ['Reasoning Error', 'My logical steps or calculations were off'],
-                ['Memory Error', 'I forgot the specific rules or definitions']
-              ].map(([cls, desc]) => `
-                <button class="btn bgh bsm" onclick="reflectionSelect('${esc(cls)}')" style="justify-content:flex-start;text-align:left;padding:8px 12px;font-size:12px">
-                  <strong>${cls}</strong> — ${desc}
-                </button>
-              `).join('')}
-            </div>
-          </div>
-        `;
-      } else {
-        checkCardHTML = `
-          <div class="card mt12 cok" style="border:1px solid var(--ok)">
-            <h3 class="h3 mb8" style="color:var(--okl)">✨ Correct! (+5 XP)</h3>
-            <p style="color:#CBD5E1;font-size:14px;margin-bottom:10px">${esc(check.e)}</p>
-            <div class="tag tok" style="font-size:10px;text-transform:uppercase">Concept: ${esc(check.concept || 'General')}</div>
+            <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0 0 10px">
+              It looks like you are struggling with this concept. The root cause might be a missing or weak understanding of the prerequisite topic: <strong>${esc(weakness.title)}</strong> (${weakness.reason}).
+            </p>
+            <button class="btn bsm" style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:var(--pl)" onclick="go('learn', '${escON(weakness.title)}')">
+              👈 Go back & study: ${esc(weakness.title)}
+            </button>
           </div>
         `;
       }
     }
 
-    c.innerHTML = `
-      ${sectionsProgressHTML}
-      <div class="between mb12">
-        <span style="color:var(--pl);font-size:12px;font-weight:700">SECTION ${activeIdx + 1} OF ${totalSecs}</span>
-        <span style="color:var(--mut);font-size:12px;font-weight:600">${esc(currentSec.title)}</span>
-      </div>
-
-      <!-- Active Section Card -->
-      <div class="card mb12 scr">
-        <div class="h2 mb10" style="color:var(--txt)">${esc(currentSec.title)}</div>
-        <p style="color:#CBD5E1;line-height:1.8;font-size:14px;white-space:pre-line">${sanitizeHTML(currentSec.content)}</p>
-      </div>
-
-      ${checkCardHTML}
-
-      <!-- Navigation buttons -->
-      <div style="display:flex;justify-content:space-between;margin-top:16px;gap:10px">
-        <button class="btn bgh" onclick="prevSection()" ${activeIdx === 0 ? 'disabled' : ''}>← Previous</button>
-        ${checkState.correct ? (
-          isLast ? `
-            <button class="btn bok" onclick="finishStudyWizard()" style="flex:1">Finish Study & Unlock Notes 🎉</button>
-          ` : `
-            <button class="btn bpri" onclick="nextSection()" style="flex:1">Next Section →</button>
-          `
-        ) : `
-          <button class="btn bsec" style="flex:1" disabled>${check ? '🔒 Complete Active Check to proceed' : 'Next Section →'}</button>
-        `}
-      </div>
-    `;
-
-  } else if (LS.tab === 'notes') {
-    const notes = l.notes || { summary: 'Loading notes...', formulas: [], facts: [], mistakes: [], checklist: [] };
-    c.innerHTML = `
-      <div class="card mb12 scr">
-        <div class="between mb10">
-          <div class="h3" style="color:var(--pl)">📝 Auto-Generated Study Notes</div>
-          <button class="btn bsm bpri" onclick="saveToNotebook('${escON(l.topic)}')" style="font-size:11px">📁 Save to Notebook</button>
+    html = `
+      <div class="card" style="padding:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <h3 class="h3" style="color:var(--pl)">🎯 Active Concept Checks</h3>
+          <span style="font-size:12px;color:var(--mut)">Solve all 3 questions to proceed. No hard blocks!</span>
         </div>
-        <p style="color:#CBD5E1;line-height:1.75;font-size:14px">${sanitizeHTML(notes.summary)}</p>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <div class="card" style="border-color:rgba(139,92,246,0.15)">
-          <h3 class="h3 mb8" style="color:var(--pl)">🧮 Key Formulas & Rules</h3>
-          <ul style="color:#CBD5E1;padding-left:18px;font-size:13px;line-height:1.7">
-            ${(notes.formulas || []).map(f => `<li>${sanitizeHTML(f)}</li>`).join('') || '<li>No formula declared.</li>'}
-          </ul>
-        </div>
-        <div class="card" style="border-color:rgba(6,182,212,0.15)">
-          <h3 class="h3 mb8" style="color:var(--cl)">💡 Surprising Facts</h3>
-          <ul style="color:#CBD5E1;padding-left:18px;font-size:13px;line-height:1.7">
-            ${(notes.facts || []).map(f => `<li>${sanitizeHTML(f)}</li>`).join('') || '<li>No surprising facts.</li>'}
-          </ul>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div class="card" style="border-color:rgba(239,68,68,0.15)">
-          <h3 class="h3 mb8" style="color:var(--redl)">⚠️ Pitfalls to Avoid</h3>
-          <ul style="color:#CBD5E1;padding-left:18px;font-size:13px;line-height:1.7">
-            ${(notes.mistakes || []).map(m => `<li>${sanitizeHTML(m)}</li>`).join('') || '<li>No mistakes declared.</li>'}
-          </ul>
-        </div>
-        <div class="card" style="border-color:rgba(16,185,129,0.15)">
-          <h3 class="h3 mb8" style="color:var(--okl)">✅ Revision Checklist</h3>
-          <ul style="color:#CBD5E1;padding-left:18px;font-size:13px;line-height:1.7">
-            ${(notes.checklist || []).map(c => `<li>${sanitizeHTML(c)}</li>`).join('') || '<li>No checklist items.</li>'}
-          </ul>
-        </div>
-      </div>
-    `;
-
-  } else if (LS.tab === 'quiz') {
-    const total = (l.quiz || []).length;
-    const ans2 = Object.keys(LS.ans).length;
-    
-    c.innerHTML = `
-      ${!LS.sub ? `
-        <div style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);border-radius:var(--r10);padding:11px 15px;margin-bottom:14px">
-          <p style="color:#C4B5FD;font-size:13px;margin:0">🎯 Answer all ${total} conceptual questions (Levels 1-7) to complete your topic assessment! (${ans2}/${total} answered)</p>
-        </div>
-      ` : `
-        <div class="card cglow" style="text-align:center;padding:30px;margin-bottom:18px;animation:pop .4s ease">
-          <div style="font-size:50px;margin-bottom:8px">${(l.quiz || []).filter((q,i) => LS.ans[i] === q.a).length === total ? '🏆' : (l.quiz || []).filter((q,i) => LS.ans[i] === q.a).length >= (total * .6) ? '✨' : '💪'}</div>
-          <div style="font-family:var(--f-display);font-size:40px;font-weight:900;color:var(--txt)">${(l.quiz || []).filter((q,i) => LS.ans[i] === q.a).length}/${total}</div>
-          <p style="color:var(--mut);margin:6px 0 12px">+${(l.quiz || []).filter((q,i) => LS.ans[i] === q.a).length * 20} XP earned!</p>
-          <button class="btn bsec bsm" onclick="LS.sub=false;LS.ans={};renderTab()">Retake Assessment</button>
-        </div>
-      `}
-      ${(l.quiz || []).map((q, qi) => {
-        const lvColors = [
-          '#6b7280',
-          '#60a5fa',
-          '#34d399',
-          '#f59e0b',
-          '#ec4899',
-          '#8b5cf6',
-          '#ef4444',
-          '#d97706'
-        ];
-        const lvLabels = [
-          'L0',
-          'L1 Recall',
-          'L2 Understand',
-          'L3 Application',
-          'L4 Reasoning',
-          'L5 Integration',
-          'L6 Exam Style',
-          'L7 Olympiad/JEE'
-        ];
-        const lvColor = lvColors[q.level] || '#8b5cf6';
-        const lvLabel = lvLabels[q.level] || `Level ${q.level}`;
-        const levelBadge = `<span class="tag" style="background:${lvColor}22;border:1px solid ${lvColor};color:${lvColor};font-size:10px;padding:2px 7px;border-radius:6px;font-weight:700">${lvLabel}</span>`;
-
-        const isAnswered = LS.ans[qi] !== undefined;
-        const isSubbed = LS.sub;
-        const isCorrect = isAnswered && LS.ans[qi] === q.a;
-
-        let optionsHTML = (q.o||[]).map((opt, oidx) => {
-          let optClass = '';
-          if (isSubbed) {
-            if (oidx === q.a) optClass = 'cor';
-            else if (LS.ans[qi] === oidx) optClass = 'wrg';
-          } else if (LS.ans[qi] === oidx) {
-            optClass = 'sel';
-          }
-          return `
-            <div class="qopt ${optClass}" onclick="${isSubbed ? '' : `pickAns(${qi}, ${oidx})`}">
-              <span class="qltr">${String.fromCharCode(65 + oidx)}</span>
-              <span>${esc(opt)}</span>
-            </div>
-          `;
-        }).join('');
-
-        return `
-          <div class="card mb12 scr" style="border:1px solid ${isSubbed ? (isCorrect ? 'var(--ok)' : 'var(--red)') : 'var(--brd)'}">
-            <div class="between mb10">
-              <div style="font-size:11px;color:var(--mut);font-weight:700">QUESTION ${qi + 1} · ${esc(q.concept || 'Theory')}</div>
-              ${levelBadge}
-            </div>
-            <p style="color:var(--txt);font-size:14px;margin-bottom:12px;line-height:1.6">${esc(q.q)}</p>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              ${optionsHTML}
-            </div>
-            ${isSubbed ? `
-              <div class="expl" style="margin-top:10px;background:${isCorrect ? 'rgba(16,185,129,0.08)' : 'rgba(239,68,68,0.08)'};border-color:${isCorrect ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}">
-                <strong>Explanation:</strong> ${esc(q.e)}
-              </div>
-              ${!isCorrect ? `
-                <div class="card mt8 cred" style="border:1px solid var(--red);padding:10px">
-                  <h4 class="h3" style="font-size:12px;margin-bottom:6px;color:var(--redl)">🤔 Reflect: Why did you make this mistake?</h4>
-                  <div style="display:flex;flex-wrap:wrap;gap:4px">
-                    ${[
-                      ['Knowledge Gap', 'Gap'],
-                      ['Careless Error', 'Careless'],
-                      ['Application Error', 'App'],
-                      ['Reasoning Error', 'Logic'],
-                      ['Memory Error', 'Memory']
-                    ].map(([cls, shortlbl]) => `
-                      <button class="btn bgh bsm" onclick="logQuizMistake('${escON(l.topic)}', '${escON(q.concept || 'Theory')}', '${escON(q.q)}', ${q.level || 3}, '${escON(cls)}')" style="font-size:10px;padding:3px 6px">
-                        ${shortlbl}
-                      </button>
-                    `).join('')}
-                  </div>
+        
+        <div style="display:flex;flex-direction:column;gap:16px">
+          ${(l.checks || []).map((ch, qidx) => {
+            const attempt = LS.checkAttempts[qidx] || { answered: false, correct: false, selected: -1 };
+            const isPending = LS.pendingConfidence && LS.pendingConfidence.qidx === qidx;
+            
+            return `
+              <div style="border:1px solid ${attempt.answered ? (attempt.correct ? 'var(--ok)' : 'var(--red)') : (isPending ? 'var(--pl)' : 'var(--brd)')};background:rgba(255,255,255,0.01);border-radius:12px;padding:16px">
+                <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:8px">Question ${qidx + 1}</div>
+                <div style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px" class="katex-render-target">${esc(ch.q)}</div>
+                
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  ${ch.o.map((opt, oidx) => {
+                    let optCls = 'qopt';
+                    if (attempt.answered) {
+                      if (oidx === ch.a) optCls += ' cor';
+                      else if (attempt.selected === oidx) optCls += ' wrg';
+                    } else if (attempt.selected === oidx) {
+                      optCls += ' sel';
+                    }
+                    
+                    const clickHandler = (attempt.answered || LS.pendingConfidence) ? '' : `onclick="submitStageCheck(${qidx}, ${oidx})"`;
+                    
+                    return `
+                      <div class="${optCls}" ${clickHandler}>
+                        <span class="qltr">${String.fromCharCode(65 + oidx)}</span>
+                        <span class="katex-render-target">${esc(opt)}</span>
+                      </div>
+                    `;
+                  }).join('')}
                 </div>
-              ` : ''}
-            ` : ''}
-          </div>
-        `;
-      }).join('')}
-      ${!LS.sub ? `<button class="btn bpri bfull mt4" onclick="subQuiz()" ${ans2 < total ? 'disabled' : ''}>Submit Assessment</button>` : ''}
+
+                ${isPending ? `
+                  <div style="margin-top:14px;background:rgba(139,92,246,0.03);border:1px solid rgba(139,92,246,0.15);border-radius:10px;padding:14px;text-align:center">
+                    <div style="font-size:12.5px;color:var(--pl);font-weight:700;margin-bottom:10px">🤔 How confident are you about this choice?</div>
+                    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:8px">
+                      <button class="btn bsm" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--okl)" onclick="submitConfidence('Very Confident')">🔥 Very Confident</button>
+                      <button class="btn bsm" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#60a5fa" onclick="submitConfidence('Confident')">👍 Confident</button>
+                      <button class="btn bsm" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:#fbbf24" onclick="submitConfidence('Unsure')">🤷 Unsure</button>
+                      <button class="btn bsm" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:var(--redl)" onclick="submitConfidence('Guess')">🎲 Just a Guess</button>
+                    </div>
+                  </div>
+                ` : ''}
+
+                ${attempt.answered ? `
+                  <div class="expl" style="margin-top:10px;background:${attempt.correct ? 'rgba(16,185,129,0.05)' : 'rgba(239,68,68,0.05)'};border:1px solid ${attempt.correct ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'};border-radius:8px;padding:10px;font-size:12.5px;line-height:1.6">
+                    <strong style="color:${attempt.correct ? 'var(--okl)' : 'var(--redl)'}">${attempt.correct ? 'Correct!': 'Incorrect!'}</strong> [Confidence: ${attempt.confidence || 'Unsure'}] · ${ch.e}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        ${diagnosticHTML}
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(3)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(5)">Next: Core Summary →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 5) {
+    // ── STAGE 5: SUMMARY ──
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">✅ Core Takeaways</h3>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+          ${(l.summary || []).map(pt => `
+            <div style="display:flex;align-items:start;gap:10px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid var(--brd)">
+              <span style="font-size:16px;color:var(--ok)">✓</span>
+              <span style="color:#fff;font-size:13.5px;line-height:1.5" class="katex-render-target">${esc(pt)}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(4)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(6)">Next: Flashcard Review →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 6) {
+    // ── STAGE 6: FLASHCARDS ──
+    html = `
+      <div class="card" style="padding:22px;text-align:center">
+        <h3 class="h3 mb6" style="color:var(--pl);text-align:left">🃏 Interactive Flashcards</h3>
+        <p class="sub mb16" style="text-align:left">Click any flashcard to flip and verify key facts. They will be added to your spaced repetition queue.</p>
+        
+        <div style="display:grid;grid-template-columns:1fr;gap:12px;max-width:480px;margin:0 auto 24px">
+          ${(l.flashcards || []).map((card, idx) => `
+            <div class="flashcard-widget" onclick="this.classList.toggle('flipped')" style="perspective:1000px;cursor:pointer;height:120px;position:relative">
+              <div class="flashcard-inner" style="position:absolute;width:100%;height:100%;transition:transform 0.4s;transform-style:preserve-3d;">
+                
+                <!-- Front Side -->
+                <div class="flashcard-front" style="position:absolute;width:100%;height:100%;backface-visibility:hidden;background:rgba(139,92,246,0.08);border:1px dashed rgba(139,92,246,0.4);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px">
+                  <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">CARD ${idx + 1}</div>
+                  <div style="color:#fff;font-weight:700;font-size:13.5px;margin-top:4px" class="katex-render-target">${esc(card.q)}</div>
+                  <div style="font-size:10px;color:var(--pl);margin-top:8px">Click to Flip 🔄</div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="flashcard-back" style="position:absolute;width:100%;height:100%;backface-visibility:hidden;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;transform:rotateY(180deg)">
+                  <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase">ANSWER</div>
+                  <div style="color:#E2E8F0;font-size:13px;line-height:1.5;margin-top:4px" class="katex-render-target">${esc(card.a)}</div>
+                </div>
+
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="display:flex;gap:10px">
+          <button class="btn bgh" onclick="advanceStage(5)">← Back</button>
+          <button class="btn bpri bfull" onclick="completeStageSession()">🚀 Complete Learning Mission & Sync →</button>
+        </div>
+      </div>
     `;
   }
+
+  c.innerHTML = html;
+  
   setTimeout(() => {
-    const el = document.getElementById('tcon');
+    const el = document.getElementById('stage-card-wrap');
     if (el && window.renderMath) {
       window.renderMath(el);
     }
-  }, 50);
+  }, 30);
 }
 
-function submitSectionCheck(oidx) {
-  const l = LS.lesson;
-  if (!l) return;
-  const activeIdx = LS.activeSectionIdx || 0;
-  const currentSec = (l.sections || [])[activeIdx];
-  if (!currentSec || !currentSec.check) return;
-  const check = currentSec.check;
-  
-  if (!LS.sectionAnswers[currentSec.id]) {
-    LS.sectionAnswers[currentSec.id] = { answered: false, correct: false, selected: -1, attempts: 0 };
-  }
-  
-  const state = LS.sectionAnswers[currentSec.id];
-  state.selected = oidx;
-  state.answered = true;
-  state.attempts++;
-
-  if (oidx === check.a) {
-    state.correct = true;
-    addXP(5, 'Check Completed');
-    toast("✨ Correct! +5 XP");
-    if (typeof checkStreak === 'function') checkStreak(true);
-  } else {
-    state.correct = false;
-    toast("⚠️ Incorrect answer. Reflect on your mistake!");
-  }
+function advanceStage(stageNum) {
+  LS.activeStage = stageNum;
   saveCheckpoint();
-  renderTab();
-}
-
-function reflectionSelect(classification) {
-  const l = LS.lesson;
-  if (!l) return;
-  const activeIdx = LS.activeSectionIdx || 0;
-  const currentSec = (l.sections || [])[activeIdx];
-  if (!currentSec || !currentSec.check) return;
-  const check = currentSec.check;
-
-  logMistake(LS.topic, check.concept || currentSec.title, check.q, 3, classification, `Self-reflected as ${classification} during study check.`);
-  toast(`Logged mistake as ${classification}!`);
-  
-  const state = LS.sectionAnswers[currentSec.id];
-  state.answered = false;
-  state.selected = -1;
-  
-  saveCheckpoint();
-  renderTab();
-}
-
-function nextSection() {
-  const l = LS.lesson;
-  if (LS.activeSectionIdx < (l.sections || []).length - 1) {
-    LS.activeSectionIdx++;
-    saveCheckpoint();
-    renderLesson();
-    document.getElementById('larea').scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function prevSection() {
-  if (LS.activeSectionIdx > 0) {
-    LS.activeSectionIdx--;
-    saveCheckpoint();
-    renderLesson();
-    document.getElementById('larea').scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function finishStudyWizard() {
-  addTopic(LS.topic);
-  toast("📚 Study phase complete! Notes & assessment unlocked!");
-  LS.tab = 'notes';
-  if (D.memory) {
-    delete D.memory.activeLesson;
-  }
-  saveAll();
   renderLesson();
 }
 
-function goBackToChapter() {
-  go('courses');
+function submitStageCheck(qidx, oidx) {
+  const l = LS.lesson;
+  if (!l || !l.checks || !l.checks[qidx]) return;
+  
+  if (!LS.checkAttempts) LS.checkAttempts = {};
+  if (LS.checkAttempts[qidx] && LS.checkAttempts[qidx].answered) return;
+
+  const elapsed = LS.questionStartTime ? Math.round((Date.now() - LS.questionStartTime) / 1000) : 8;
+
+  LS.pendingConfidence = { qidx, oidx, timeTaken: elapsed };
+  
+  // Set temporary selected state
+  LS.checkAttempts[qidx] = {
+    answered: false,
+    correct: false,
+    selected: oidx
+  };
+
+  renderStageContent();
 }
 
-function animKeyPress(el){
-  const key=el.querySelector('.key-cap');
-  if(key){key.classList.add('key-tap');setTimeout(()=>key.classList.remove('key-tap'),250);}
-  el.style.background='rgba(139,92,246,.18)';
-  setTimeout(()=>el.style.background='rgba(255,255,255,.04)',300);
-}
+function submitConfidence(level) {
+  const l = LS.lesson;
+  if (!l || !LS.pendingConfidence) return;
 
-function pickAns(qi,oi){
-  LS.ans[qi]=oi;
+  const { qidx, oidx, timeTaken } = LS.pendingConfidence;
+  const ch = l.checks[qidx];
+  const isCorrect = oidx === ch.a;
+
+  LS.checkAttempts[qidx] = {
+    answered: true,
+    correct: isCorrect,
+    selected: oidx,
+    confidence: level,
+    timeTaken: timeTaken
+  };
+
+  // Log detailed attempt metadata to MasteryEngine!
+  if (window.MasteryEngine) {
+    window.MasteryEngine.logAttempt({
+      topic: LS.topic,
+      questionText: ch.q,
+      correctAnswer: ch.o[ch.a],
+      selectedAnswer: ch.o[oidx],
+      isCorrect: isCorrect,
+      difficulty: ch.difficulty || 'medium',
+      timeTakenSeconds: timeTaken,
+      confidence: level
+    });
+  }
+
+  // Handle XP & feedback
+  if (isCorrect) {
+    addXP(10, 'Check Correct');
+    toast("✨ Correct! +10 XP");
+    haptic('success');
+  } else {
+    if (typeof logMistake === 'function') {
+      logMistake(LS.topic, ch.concept || 'Concept Check', ch.q, 3, 'Knowledge Gap', `Self-reflected on "${LS.topic}"`);
+    }
+    toast(`⚠️ Incorrect choice logged to Mistake Diary.`);
+    haptic('error');
+  }
+
+  // Clear pending state & reset timer for next question
+  delete LS.pendingConfidence;
+  LS.questionStartTime = Date.now();
+
   saveCheckpoint();
-  renderTab();
-  // Haptic feedback on mobile
-  if(navigator.vibrate)navigator.vibrate(12);
+  renderStageContent();
 }
-function subQuiz(){
-  LS.sub=true;
-  const l=LS.lesson,total=(l?.quiz||[]).length;
-  const sc=(l?.quiz||[]).filter((q,i)=>LS.ans[i]===q.a).length;
-  LS.score=sc;
-  LS.masteryPct=Math.round((sc/total)*100);
 
-  // 1. Saves completion to localStorage key: mx3_${profileId}_progress
+function completeStageSession() {
+  const l = LS.lesson;
+  if (!l) return;
+  
+  // Calculate score based on first attempts
+  let correctCount = 0;
+  let checksCount = (l.checks || []).length || 3;
+  for (let i = 0; i < checksCount; i++) {
+    const attempt = LS.checkAttempts[i];
+    if (attempt && attempt.correct) correctCount++;
+  }
+
+  const scorePct = Math.round((correctCount / checksCount) * 100);
+  LS.score = correctCount;
+  LS.masteryPct = scorePct;
+  
+  // Add to revision database / queue
   if (typeof getSession === 'function') {
     const session = getSession();
     if (session && session.id) {
@@ -942,174 +896,74 @@ function subQuiz(){
         progress[LS.topic] = {
           completed: true,
           completedAt: new Date().toISOString(),
-          score: LS.score,
-          masteryPct: LS.masteryPct
+          score: correctCount,
+          masteryPct: scorePct
         };
         localStorage.setItem(progressKey, JSON.stringify(progress));
-      } catch (err) {
-        console.error('[Mentorix] Failed to save progress to localStorage', err);
-      }
-      
-      // Log lesson progress exactly as requested
-      console.log('[SAVE] Saving lesson progress:', {
-        profileId: session.id,
-        topicId: LS.topic,
-        completed: true
+      } catch (err) {}
+    }
+  }
+
+  // Push Flashcards into spaced revision queue
+  if (l.flashcards && l.flashcards.length > 0 && window.D) {
+    if (!window.D.revisionQueue) window.D.revisionQueue = [];
+    l.flashcards.forEach(card => {
+      window.D.revisionQueue.push({
+        topic: LS.topic,
+        question: card.q,
+        answer: card.a,
+        priority: scorePct < 80 ? 'high' : 'medium',
+        daysSince: 0,
+        createdAt: new Date().toISOString()
       });
-    }
-  }
-
-  // 3. Adds topic to revision queue & 4. Updates the course node state via addTopic
-  if (typeof addTopic === 'function') {
-    addTopic(LS.topic);
-  }
-
-  // Detect weak areas from wrong answers
-  LS.weakAreas=(l?.quiz||[]).filter((q,i)=>LS.ans[i]!==q.a).map(q=>q.concept||q.q.slice(0,30)).filter(Boolean);
-
-  // Log mistakes to modern Recovery Center database (weakSpots)
-  const wrongQs = (l?.quiz||[]).filter((q,i)=>LS.ans[i]!==q.a);
-  wrongQs.forEach(q => {
-    if (typeof logMistake === 'function') {
-      logMistake(LS.topic, q.concept || 'Quiz question', q.q, q.level || 3, 'Knowledge Gap', 'Incorrect quiz answer.');
-    }
-  });
-
-  // Save to memory
-  if(!D.memory)D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
-  D.memory.scores[LS.topic]=LS.masteryPct;
-  if(LS.weakAreas.length) {
-    D.memory.weakAreas[LS.topic]=LS.weakAreas;
-  } else {
-    D.memory.strongAreas[LS.topic]=(D.memory.strongAreas[LS.topic]||0)+1;
-    delete D.memory.weakAreas[LS.topic];
-  }
-  D.memory.history.push({topic:LS.topic,score:LS.masteryPct,date:new Date().toISOString(),level:LS.diagLevel});
-  if(D.memory.history.length>60)D.memory.history=D.memory.history.slice(-60);
-
-  // Mark related weak spots as solved when quiz score is strong (consistent with revision/tests)
-  if(LS.masteryPct>=80 && D.memory.weakSpots){
-    let solvedCount=0;
-    D.memory.weakSpots.forEach(w=>{
-      if(w.topic===LS.topic && !w.solved){
-        w.solved=true;w.solvedDate=new Date().toISOString();w.solvedScore=LS.masteryPct;
-        solvedCount++;
-      }
     });
-    if(solvedCount>0)toast(`✅ ${solvedCount} weak spot${solvedCount>1?'s':''} cleared for "${LS.topic}"!`,'ok2');
   }
 
-  addXP(sc*20,'Quiz');
-  if(sc===total){awardBadge('Quiz Hero');setTimeout(()=>launchConfetti(80),200);haptic('celebration');}
-  else if(sc>=Math.ceil(total*.6)){setTimeout(()=>launchConfetti(35),200);haptic('success');}
-  else{haptic('error');}
-  // Award mastery certificate if 80%+
-  if(LS.masteryPct>=80)checkAndAwardCertificate(LS.topic,LS.masteryPct);
-  // Award streak shield at 7-day milestone
-  if(D.streak===7||D.streak===14||D.streak===30)earnStreakShield();
+  // Award XP based on perfection rating
+  let xpReward = 50; // base complete topic XP
+  if (scorePct === 100) {
+    xpReward += 30; // perfection bonus
+    toast("🏆 Perfect Score! 100% Mastery bonus +30 XP!", "badge");
+    awardBadge('Quiz Hero');
+    launchConfetti(80);
+    haptic('celebration');
+  } else if (scorePct >= 60) {
+    xpReward += 10;
+    launchConfetti(35);
+    haptic('success');
+  }
+  
+  addXP(xpReward, 'Micro Topic Mastered');
+
+  // Complete in Progression Engine
+  let completionResult = null;
+  if (window.CourseProgressionEngine) {
+    const activeId = D.lastCourseId || window.activeCourseId || (D.courses && D.courses[0]?.id);
+    completionResult = window.CourseProgressionEngine.completeTopic({ courseId: activeId, topicTitle: LS.topic, score: scorePct });
+  }
+
+  // Clean memory session state
   if (D.memory) {
     delete D.memory.activeLesson;
   }
   saveAll();
-  renderTab();
-  setTimeout(showCompletionCard,400);
-}
 
-function showCompletionCard(){
-  const l=LS.lesson;if(!l||!LS.sub)return;
-  const total=(l.quiz||[]).length;
-  const pct=LS.masteryPct;
-  const barCls=pct>=80?'mastery-good':pct>=50?'mastery-ok':'mastery-low';
-  const emoji=pct>=80?'🏆':pct>=60?'✨':pct>=40?'💪':'📚';
-  const msg=pct>=80?'Outstanding mastery!':pct>=60?'Good understanding!':pct>=40?'Keep practising!':'Review recommended';
-  const nextTopics=(l.next||[]).slice(0,3);
-
-  // Strong areas = concepts from correct answers
-  const strongAreas=(l?.quiz||[]).filter((q,i)=>LS.ans[i]===q.a).map(q=>q.concept).filter(Boolean).slice(0,3);
-
-  const weakHTML=LS.weakAreas.length?`
-    <div class="weak-area-card mb14" style="text-align:left">
-      <div style="color:var(--redl);font-weight:700;font-size:13px;margin-bottom:9px">⚠️ Areas to reinforce</div>
-      ${LS.weakAreas.map(w=>`<div class="weak-item"><span>•</span>${esc(w)}</div>`).join('')}
-      <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:10px">
-        <button class="btn bsm" style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--redl)" onclick="startReinforcement()">🔄 Re-explain Weak Areas</button>
-        <button class="btn bsm bsec" onclick="NB.selTopic='${escON(LS.topic)}';go('notebook')">📓 Review Notes</button>
-      </div>
-    </div>`:
-    `<div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.22);border-radius:12px;padding:10px 14px;margin-bottom:14px;text-align:left"><p style="color:var(--okl);font-size:13px;margin:0">✅ Perfect score! All concepts mastered.</p></div>`;
-
-  const el=document.getElementById('tcon');
-  if(!el)return;
-  el.innerHTML+=`
-    <div class="completion-card mt16 card-glow-hover" id="completion-card" style="position:relative">
-      <div class="celebrate-ring"></div>
-      <div style="font-size:60px;margin-bottom:10px;animation:pop .5s cubic-bezier(.34,1.56,.64,1)">${emoji}</div>
-      <div class="completion-score" style="color:var(--txt);margin-bottom:2px">${pct}%</div>
-      <div style="color:var(--sub);font-size:13px;margin-bottom:6px">${msg} · ${LS.score}/${total} correct</div>
-      ${strongAreas.length?`<div style="display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:12px">${strongAreas.map(s=>`<span class="tag tok">✓ ${esc(s)}</span>`).join('')}</div>`:''}
-      <div class="mastery-bar-wrap mb4"><div class="mastery-bar ${barCls}" style="width:${pct}%"></div></div>
-      <div style="color:var(--mut);font-size:10px;font-weight:700;letter-spacing:.5px;margin-bottom:18px;text-transform:uppercase">Mastery Level</div>
-
-      ${weakHTML}
-
-      <div class="h3 mb10" style="color:var(--pl)">🔍 What's next?</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-bottom:16px">
-        ${nextTopics.map(t=>`<div class="card card-lift" onclick="go('learn','${escON(t)}')" style="text-align:center;padding:12px;cursor:pointer;background:rgba(139,92,246,.07)">
-          <div style="font-size:20px;margin-bottom:5px">📖</div>
-          <div style="color:#C4B5FD;font-size:12px;font-weight:600;line-height:1.3">${esc(t)}</div>
-        </div>`).join('')}
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
-        ${nextTopics[0]?`<button class="btn bpri bsm" onclick="go('learn','${escON(nextTopics[0])}')">▶ Next: ${esc(nextTopics[0].length>22?nextTopics[0].slice(0,22)+'…':nextTopics[0])}</button>`:''}
-        <button class="btn bsec bsm" onclick="retakeQuiz()">🔄 Retake Quiz</button>
-        <button class="btn bgh bsm" onclick="NB.selTopic='${escON(LS.topic)}';go('notebook')">📓 Notes</button>
-        <button class="btn bgh bsm" onclick="startRevision('${escON(LS.topic)}','flashcards')">🃏 Flashcards</button>
-        <button class="btn bgh bsm" onclick="go('mentor')">✨ Ask Tio</button>
-      </div>
-    </div>`;
-  document.getElementById('completion-card')?.scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-
-async function startReinforcement(){
-  if(LS.reinforcing)return; // prevent duplicate concurrent calls from rapid double-tap
-  LS.reinforcing=true;
-  const weakList=LS.weakAreas.join(', ');
-  const el=document.getElementById('completion-card');
-  if(el){el.innerHTML=`<div style="text-align:center;padding:28px"><div class="spin" style="width:36px;height:36px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 12px"></div><p style="color:var(--sub);font-size:14px">Tio is building targeted reinforcement for: <strong style="color:var(--pl)">${esc(weakList)}</strong>…</p></div>`;}
-  try{
-    const sys='You are Mentorix AI tutor. Output ONLY valid JSON.';
-    const p=`Student struggled with these concepts from "${LS.topic}": ${weakList}. Create a targeted re-explanation.
-Output ONLY: {"title":"Re-explaining: ${weakList.slice(0,30)}","steps":[{"n":"Simpler explanation","c":"explain clearly in simple terms"},{"n":"Real-world analogy","c":"relatable analogy"},{"n":"Key insight","c":"the one thing to remember"}],"practice":{"q":"Practice question?","o":["A","B","C","D"],"a":0,"e":"reason"}}`;
-    const raw=await ai([{role:'user',content:p}],sys,1500,true);
-    const data=pJSON(raw);
-    if(!data?.steps)throw new Error('No data');
-    if(el) {
-      el.innerHTML=`
-        <div class="tio-inline mb14">
-          <div class="nxav">✨</div>
-          <div><div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO — REINFORCEMENT</div>
-          <div style="color:#C4B5FD;font-size:13px">Let me re-explain the tricky parts differently! 💡</div></div>
-        </div>
-        ${(data.steps||[]).map((s,i)=>`<div class="dstep mb8"><div class="dstep-num">${i+1}</div><div><div style="color:var(--txt);font-weight:600;font-size:14px;margin-bottom:3px">${esc(s.n||'')}</div><div style="color:#94A3B8;font-size:13px;line-height:1.65">${esc(s.c||'')}</div></div></div>`).join('')}
-        ${data.practice?`<div class="card mt12"><p style="color:var(--txt);font-weight:600;margin-bottom:10px">🎯 Try again: ${esc(data.practice.q||'')}</p>${(data.practice.o||[]).map((opt,oi)=>`<div class="qopt${LS.ans['r']===oi?' sel':''}" onclick="LS.ans['r']=${oi};this.parentElement.querySelectorAll('.qopt').forEach((x,xi)=>{x.className='qopt'+(xi===${data.practice.a}?' cor':LS.ans['r']===xi?' wrg':'')});addXP(10)"><span class="qltr">${['A','B','C','D'][oi]}</span>${esc(opt)}</div>`).join('')}<div class="expl mt8" style="display:none" id="repr-expl">💡 ${esc(data.practice.e||'')}</div></div>`:''}
-        <button class="btn bpri bsm mt12" onclick="go('learn','${escON((LS.lesson?.next||[])[0]||LS.topic)}')">Continue Learning →</button>`;
-      requestAnimationFrame(() => {
-        if (window.renderMath) {
-          window.renderMath(el);
-        }
-      });
+  // If chapter was completed, play the celebration ceremony overlay!
+  if (completionResult && completionResult.chapterCompleted) {
+    if (typeof window.triggerChapterCompletionCeremony === 'function') {
+      window.triggerChapterCompletionCeremony(completionResult.completedChapterTitle, completionResult.nextChapterTitle);
+      return;
     }
-  }catch(e){
-    if(el)el.innerHTML=`<p style="color:var(--redl);font-size:13px">Reinforcement failed. <button class="btn bsm bpri" onclick="startReinforcement()">Retry</button></p>`;
-  }finally{
-    LS.reinforcing=false;
   }
+
+  // Return back to courses map
+  go('courses');
 }
 
 /* ───────────────────────────────────────────
-   AI MENTOR
-─────────────────────────────────────────── */
-
+   AI MENTOR / FOCUS OVERLAYS
+   (Preserved clean layout functions)
+   ─────────────────────────────────────────── */
 function toggleFocusMode(active) {
   haptic('light');
   let overlay = document.getElementById('focus-overlay');
@@ -1128,7 +982,6 @@ function toggleFocusMode(active) {
       `;
       document.body.appendChild(overlay);
       
-      // Setup focus input listener
       const input = overlay.querySelector('#focus-input');
       input.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
@@ -1139,53 +992,26 @@ function toggleFocusMode(active) {
           }
         }
       });
-      
-      // Dynamic placeholder ticker loop
-      const placeholders = [
-        "Explain quantum entanglement...",
-        "Deconstruct machine learning neural nets...",
-        "Teach me about ancient Rome's collapse...",
-        "How do black holes warp space-time?",
-        "Explain CRISPR gene editing in plain English..."
-      ];
-      let pIdx = 0;
-      function tickPlaceholder() {
-        if (!document.getElementById('focus-overlay')) return;
-        input.placeholder = placeholders[pIdx];
-        pIdx = (pIdx + 1) % placeholders.length;
-        setTimeout(tickPlaceholder, 3000);
-      }
-      tickPlaceholder();
     }
-    
-    // Add escape key listener
     window._focusEscHandler = function(e) {
       if (e.key === 'Escape') toggleFocusMode(false);
     };
     window.addEventListener('keydown', window._focusEscHandler);
-    
-        setTimeout(() => overlay.classList.add('active'), 10);
-    // Focus the input
+    setTimeout(() => overlay.classList.add('active'), 10);
     setTimeout(() => overlay.querySelector('#focus-input').focus(), 400);
-    
-    if (window.addTerminalLog) window.addTerminalLog('Cognitive calibration focus mode active');
   } else {
     if (overlay) {
       overlay.classList.remove('active');
       window.removeEventListener('keydown', window._focusEscHandler);
       setTimeout(() => overlay.remove(), 400);
-      if (window.addTerminalLog) window.addTerminalLog('Exited focus mode');
     }
   }
 }
 window.toggleFocusMode = toggleFocusMode;
-function retakeQuiz() {
-  LS.sub = false;
-  LS.ans = {};
-  saveCheckpoint();
-  switchTab('quiz');
-}
-window.retakeQuiz = retakeQuiz;
+
 window.saveCheckpoint = saveCheckpoint;
 window.rLearn = rLearn;
-window.animKeyPress = animKeyPress;
+window.advanceStage = advanceStage;
+window.submitStageCheck = submitStageCheck;
+window.submitConfidence = submitConfidence;
+window.completeStageSession = completeStageSession;

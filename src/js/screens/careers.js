@@ -1,336 +1,375 @@
 /**
- * screens/careers.js — Mentorix Careers Screen
- * // Deps: D, ai, pJSON, pCtx, toast, esc, go
- *
- * Flow: Intake form → Discover careers → Select career → Get roadmap
+ * screens/careers.js — Mentorix Personalized Career Exploration Screen
+ * Phase 2.1 Complete Redesign
  */
+
 'use strict';
 
-/* ─── State ─── */
 let CS = {
-  step: 'intake',   // 'intake' | 'loading' | 'list' | 'roadmap-loading' | 'roadmap'
+  step: 'discovery-prompt', // 'discovery-prompt' | 'discovery-flow' | 'list' | 'detail' | 'roadmap'
+  discoveryStep: 1,
   intake: {
+    favSubjects: [],
+    dislikedSubjects: [],
     interests: '',
-    knowledge: '',
-    goal: '',
-    timeframe: ''
+    workStyle: 'Hybrid / Team & Independent',
+    goalPriority: 'high-paying'
   },
-  careers: null,
-  sel: null,
-  rm: null,
-  rmLoading: false
+  selectedCareerId: null
 };
 
-/* ─── Entry point ─── */
 function rCareers() {
-  document.getElementById('main').innerHTML = `
-  <div class="sw scr">
-    <div class="h1">🚀 Career Explorer</div>
-    <p class="sub">Tell Tio about yourself — then discover careers built around <em>you</em>, not generic lists</p>
-    <div id="ccon"></div>
-  </div>`;
-  // Reset to intake if no careers loaded
-  if (!CS.careers) CS.step = 'intake';
+  const main = document.getElementById('main');
+  if (!main) return;
+
+  main.innerHTML = `
+    <div class="sw scr page-enter">
+      <div class="between mb16">
+        <div>
+          <div class="h1">🚀 Career Discovery & Path Finder</div>
+          <p class="sub">Personalized guidance based on your academic strengths, passions, and life goals.</p>
+        </div>
+        ${window.CareerEngine && window.CareerEngine.hasCompletedDiscovery() ? `
+          <button class="btn bsec bsm" onclick="startNewDiscovery()">🔄 Re-take Discovery</button>
+        ` : ''}
+      </div>
+      <div id="career-content"></div>
+    </div>
+  `;
+
+  if (window.CareerEngine && window.CareerEngine.hasCompletedDiscovery()) {
+    CS.step = 'list';
+  } else {
+    CS.step = 'discovery-prompt';
+  }
+
   renderCareerContent();
 }
 
-/* ─── Main render dispatcher ─── */
 function renderCareerContent() {
-  const el = document.getElementById('ccon');
-  if (!el) return;
+  const container = document.getElementById('career-content');
+  if (!container) return;
 
   switch (CS.step) {
-    case 'intake':      renderCareerIntake(); break;
-    case 'loading':     renderCareerLoading(); break;
-    case 'list':        renderCareerCards(); break;
-    case 'roadmap-loading': renderRoadmapLoading(); break;
-    case 'roadmap':     renderRoadmap(); break;
-    default:            renderCareerIntake();
+    case 'discovery-prompt':
+      renderDiscoveryPrompt(container);
+      break;
+    case 'discovery-flow':
+      renderDiscoveryFlow(container);
+      break;
+    case 'list':
+      renderCareerList(container);
+      break;
+    case 'detail':
+      renderCareerDetail(container);
+      break;
+    case 'roadmap':
+      renderCareerRoadmap(container);
+      break;
+    default:
+      renderDiscoveryPrompt(container);
   }
 }
 
-/* ─── STEP 1: Intake Form ─── */
-function renderCareerIntake() {
-  const el = document.getElementById('ccon');
-  if (!el) return;
-
-  const ci = CS.intake;
-
-  const goalOptions = [
-    { val: 'high-paying',  label: '💰 High-paying career', desc: 'Maximize earning potential' },
-    { val: 'passion',      label: '❤️ Follow my passion',  desc: 'Do what I love daily' },
-    { val: 'stable',       label: '🏗️ Job stability',      desc: 'Secure, long-term employment' },
-    { val: 'impact',       label: '🌍 Make an impact',     desc: 'Meaningful work that matters' },
-    { val: 'creative',     label: '🎨 Creative freedom',   desc: 'Innovate and express myself' },
-    { val: 'balance',      label: '⚖️ Work-life balance',  desc: 'Great pay without burnout' }
-  ];
-
-  const timeOptions = [
-    '6 months – 1 year (fast track)',
-    '1–2 years (focused)',
-    '2–4 years (degree route)',
-    '4+ years (long game)'
-  ];
-
-  el.innerHTML = `
-    <div class="card" style="padding:28px 24px">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
-        <div style="font-size:40px">🤔</div>
-        <div>
-          <div class="h3" style="color:var(--pl)">Tell Tio About Yourself</div>
-          <div style="color:var(--mut);font-size:13px">The more you share, the better your career matches</div>
-        </div>
-      </div>
-
-      <!-- Interests -->
-      <div class="inp-wrap" style="margin-bottom:18px">
-        <label class="inp-label">WHAT ARE YOUR INTERESTS OR STRENGTHS? *</label>
-        <textarea class="inp" id="ci-interests" rows="3"
-          placeholder="e.g. I love coding, maths puzzles, and building things. I'm also into psychology and understanding people..."
-          style="resize:vertical;min-height:80px"
-          oninput="CS.intake.interests=this.value;updateCareerBtn()">${esc(ci.interests)}</textarea>
-        <div style="color:var(--mut);font-size:11px;margin-top:4px">Be specific — mention subjects, hobbies, skills, things that excite you</div>
-      </div>
-
-      <!-- Knowledge -->
-      <div class="inp-wrap" style="margin-bottom:18px">
-        <label class="inp-label">WHAT DO YOU ALREADY KNOW? *</label>
-        <textarea class="inp" id="ci-knowledge" rows="3"
-          placeholder="e.g. I know Python basics, have studied Physics up to Grade 12, can do HTML/CSS. No formal experience yet..."
-          style="resize:vertical;min-height:80px"
-          oninput="CS.intake.knowledge=this.value;updateCareerBtn()">${esc(ci.knowledge)}</textarea>
-        <div style="color:var(--mut);font-size:11px;margin-top:4px">Include subjects, self-taught skills, certifications, projects — anything relevant</div>
-      </div>
-
-      <!-- Goal -->
-      <div style="margin-bottom:18px">
-        <label class="inp-label">WHAT MATTERS MOST TO YOU IN A CAREER? *</label>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px">
-          ${goalOptions.map(g => `
-            <button class="obtn${ci.goal === g.val ? ' on' : ''}"
-              onclick="CS.intake.goal='${g.val}';document.querySelectorAll('[data-cgoal]').forEach(x=>x.classList.remove('on'));this.classList.add('on');updateCareerBtn()"
-              data-cgoal="1"
-              style="text-align:left;padding:10px 12px;min-height:56px">
-              <div style="font-weight:600;font-size:13px">${g.label}</div>
-              <div style="font-size:11px;opacity:0.75;margin-top:2px">${g.desc}</div>
-            </button>`).join('')}
-        </div>
-      </div>
-
-      <!-- Timeframe -->
-      <div class="inp-wrap" style="margin-bottom:24px">
-        <label class="inp-label">HOW LONG ARE YOU WILLING TO INVEST IN PREPARATION? *</label>
-        <select class="inp" id="ci-timeframe" onchange="CS.intake.timeframe=this.value;updateCareerBtn()">
-          <option value="">-- Select timeframe --</option>
-          ${timeOptions.map(t => `<option value="${t}" ${ci.timeframe===t?'selected':''}>${t}</option>`).join('')}
-        </select>
-      </div>
-
-      <button class="btn bpri blg" id="career-discover-btn"
-        ${(!ci.interests.trim() || !ci.knowledge.trim() || !ci.goal || !ci.timeframe) ? 'disabled' : ''}
-        onclick="discoverCareers()"
-        style="width:100%;padding:14px;font-size:15px;font-weight:700">
-        ✨ Find My Perfect Careers →
+function renderDiscoveryPrompt(container) {
+  container.innerHTML = `
+    <div class="card scr" style="max-width:640px;margin:30px auto;text-align:center;padding:44px 32px;background:rgba(13,11,31,0.85);border:1px solid rgba(139,92,246,0.3)">
+      <div style="font-size:56px;margin-bottom:16px">🎯</div>
+      <h2 class="h2" style="color:#fff;margin-bottom:12px;font-size:24px">Mentorix Never Guesses — We Understand First</h2>
+      <p class="sub" style="font-size:14px;line-height:1.65;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto">
+        We'd like to understand your interests, academic strengths, and long-term lifestyle goals before recommending careers. Complete your 2-minute Career Discovery session with Tio.
+      </p>
+      <button class="btn bpri blg" onclick="startNewDiscovery()" style="padding:15px 32px;font-size:16px;border-radius:14px;box-shadow:0 8px 24px rgba(139,92,246,0.4)">
+        🚀 Start 2-Min Career Discovery →
       </button>
-    </div>`;
+    </div>
+  `;
 }
 
-function updateCareerBtn() {
-  const btn = document.getElementById('career-discover-btn');
-  if (!btn) return;
-  const ci = CS.intake;
-  btn.disabled = !ci.interests.trim() || !ci.knowledge.trim() || !ci.goal || !ci.timeframe;
-}
-
-/* ─── STEP 2: Loading ─── */
-function renderCareerLoading() {
-  const el = document.getElementById('ccon');
-  if (!el) return;
-  el.innerHTML = `
-    <div class="card" style="text-align:center;padding:56px 36px">
-      <div class="spin" style="width:52px;height:52px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 20px"></div>
-      <div class="h3 mb8" style="color:var(--pl)">Tio is analysing your profile…</div>
-      <p style="color:var(--sub);max-width:320px;margin:0 auto;line-height:1.7">Cross-referencing your interests, knowledge, and goals to find careers that are genuinely right for <strong>you</strong></p>
-    </div>`;
-}
-
-/* ─── STEP 3: Career Cards ─── */
-async function discoverCareers() {
-  CS.step = 'loading';
+function startNewDiscovery() {
+  CS.step = 'discovery-flow';
+  CS.discoveryStep = 1;
   renderCareerContent();
+}
 
-  try {
-    const ci = CS.intake;
-    const sys = 'You are an expert career counselor. Output ONLY a valid JSON object with no markdown, no extra text.';
-    const p = `You are helping a student discover ideal careers.
+function renderDiscoveryFlow(container) {
+  const step = CS.discoveryStep;
 
-Student Profile:
-- Interests & Strengths: "${ci.interests}"
-- Current Knowledge: "${ci.knowledge}"
-- Career Goal Priority: "${ci.goal}"
-- Time Willing to Invest: "${ci.timeframe}"
-- Academic Background: ${pCtx()}
+  if (step === 1) {
+    container.innerHTML = `
+      <div class="card scr" style="max-width:600px;margin:20px auto;padding:32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <div style="font-size:36px">🤖</div>
+          <div>
+            <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
+            <div style="color:var(--sub);font-size:12px">Step 1 of 3: Academic Preferences</div>
+          </div>
+        </div>
 
-Suggest 6 ideal, SPECIFIC career paths that genuinely match this student's profile (not generic). For each career, consider their current knowledge as a starting advantage.
+        <p style="color:#fff;font-size:15px;line-height:1.5;margin-bottom:20px">
+          "Which subjects do you enjoy most in school right now?"
+        </p>
 
-Output ONLY this JSON: {"careers":[{"title":"","emoji":"","tagline":"short catchy phrase","desc":"2 sentences explaining why this fits THEM specifically","skills":["s1","s2","s3"],"salary":"realistic range","growth":"High/Medium/Low","match":95,"why":"1 sentence — the specific reason this matches their profile","startWith":"First concrete step they can take NOW given their knowledge"}]}`;
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:24px">
+          ${['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Economics', 'English', 'Social Studies'].map(s => {
+            const isSel = CS.intake.favSubjects.includes(s);
+            return `
+              <button class="obtn${isSel ? ' on' : ''}" onclick="toggleFavSubject('${s}', this)">
+                ${isSel ? '✅ ' : '+ '}${s}
+              </button>
+            `;
+          }).join('')}
+        </div>
 
-    const raw = await ai([{ role: 'user', content: p }], sys, 3000, true);
-    const data = pJSON(raw);
-    if (!data?.careers) throw new Error('No careers data');
+        <div style="display:flex;justify-content:flex-end">
+          <button class="btn bpri" ${CS.intake.favSubjects.length === 0 ? 'disabled' : ''} onclick="CS.discoveryStep=2;renderCareerContent()">
+            Next Step →
+          </button>
+        </div>
+      </div>
+    `;
+  } else if (step === 2) {
+    container.innerHTML = `
+      <div class="card scr" style="max-width:600px;margin:20px auto;padding:32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <div style="font-size:36px">💡</div>
+          <div>
+            <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
+            <div style="color:var(--sub);font-size:12px">Step 2 of 3: Passions & Skills</div>
+          </div>
+        </div>
 
-    CS.careers = data;
-    CS.step = 'list';
-    addXP(20, 'Career discovery');
-    renderCareerContent();
-  } catch (e) {
-    CS.step = 'intake';
-    renderCareerContent();
-    if (window.toast) toast('Could not load careers — check your connection and try again.', 'err');
+        <div class="inp-wrap" style="margin-bottom:20px">
+          <label class="inp-label">WHAT ACTIVITIES OR HOBBIES EXCITE YOU MOST? *</label>
+          <textarea class="inp" id="cd-interests" rows="3" placeholder="e.g., Coding apps, solving puzzles, digital design, helping friends with science..."
+            oninput="CS.intake.interests=this.value;document.getElementById('cd-step2-btn').disabled=!this.value.trim()">${esc(CS.intake.interests)}</textarea>
+        </div>
+
+        <div style="display:flex;justify-content:space-between">
+          <button class="btn bgh" onclick="CS.discoveryStep=1;renderCareerContent()">← Back</button>
+          <button class="btn bpri" id="cd-step2-btn" ${!CS.intake.interests.trim() ? 'disabled' : ''} onclick="CS.discoveryStep=3;renderCareerContent()">
+            Next Step →
+          </button>
+        </div>
+      </div>
+    `;
+  } else if (step === 3) {
+    const goals = [
+      { id: 'high-paying', label: '💰 High Earning Potential', desc: 'Maximize income and financial growth' },
+      { id: 'impact', label: '🌍 Societal Impact', desc: 'Solve real-world problems and help people' },
+      { id: 'creative', label: '🎨 Creative Expression', desc: 'Innovate, design, and express ideas' },
+      { id: 'stability', label: '🛡️ Job Security & Balance', desc: 'Stable environment with work-life balance' }
+    ];
+
+    container.innerHTML = `
+      <div class="card scr" style="max-width:600px;margin:20px auto;padding:32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <div style="font-size:36px">🌟</div>
+          <div>
+            <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
+            <div style="color:var(--sub);font-size:12px">Step 3 of 3: Life Goals & Priorities</div>
+          </div>
+        </div>
+
+        <p style="color:#fff;font-size:14px;margin-bottom:14px;font-weight:600">WHAT MATTERS MOST TO YOU IN A CAREER?</p>
+        <div style="display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px">
+          ${goals.map(g => `
+            <button class="obtn${CS.intake.goalPriority === g.id ? ' on' : ''}" onclick="CS.intake.goalPriority='${g.id}';renderCareerContent()" style="text-align:left;padding:12px 16px">
+              <div style="font-weight:700;font-size:14px">${g.label}</div>
+              <div style="font-size:11px;color:var(--sub);margin-top:2px">${g.desc}</div>
+            </button>
+          `).join('')}
+        </div>
+
+        <div style="display:flex;justify-content:space-between">
+          <button class="btn bgh" onclick="CS.discoveryStep=2;renderCareerContent()">← Back</button>
+          <button class="btn bpri blg" onclick="finishDiscovery()" style="padding:12px 24px">
+            ✨ Generate My Personalized Careers →
+          </button>
+        </div>
+      </div>
+    `;
   }
 }
 
-function renderCareerCards() {
-  const el = document.getElementById('ccon');
-  if (!el) return;
+function toggleFavSubject(subj) {
+  if (CS.intake.favSubjects.includes(subj)) {
+    CS.intake.favSubjects = CS.intake.favSubjects.filter(x => x !== subj);
+  } else {
+    CS.intake.favSubjects.push(subj);
+  }
+  renderCareerContent();
+}
 
-  el.innerHTML = `
-    <div class="between mb16">
-      <div class="h2">Your Top Matches</div>
-      <div style="display:flex;gap:8px">
-        <button class="btn bgh bsm" onclick="CS.step='intake';renderCareerContent()">✏️ Edit Profile</button>
-        <button class="btn bsec bsm" onclick="CS.careers=null;discoverCareers()">Refresh ↻</button>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:13px">
-      ${(CS.careers?.careers || []).map((c, i) => `
-        <div class="cc s${(i % 4) + 1}" onclick="getRM(${i})" style="cursor:pointer;transition:transform .2s,box-shadow .2s" onmouseenter="this.style.transform='translateY(-2px)'" onmouseleave="this.style.transform=''">
+function finishDiscovery() {
+  if (window.CareerEngine) {
+    window.CareerEngine.saveDiscoveryProfile(CS.intake);
+  }
+  CS.step = 'list';
+  if (window.toast) window.toast('🎉 Career Discovery Complete! Generating personalized recommendations...', 'ok2');
+  renderCareerContent();
+}
+
+function renderCareerList(container) {
+  const recommendations = window.CareerEngine ? window.CareerEngine.getRecommendations() : [];
+
+  container.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:10px">
+      ${recommendations.map(c => `
+        <div class="card scr hover-glow" onclick="viewCareerDetail('${c.id}')" style="cursor:pointer;background:rgba(13,11,31,0.85);border:1px solid rgba(255,255,255,0.08);padding:20px;transition:transform 0.2s">
           <div class="between mb10">
-            <span style="font-size:38px">${c.emoji || '💼'}</span>
-            <span class="tag tgold">${c.match || 90}% match</span>
+            <span style="font-size:36px">${c.emoji}</span>
+            <span class="tag tgold" style="font-weight:700;font-size:12px;padding:4px 10px">${c.matchPct}% Compatibility</span>
           </div>
-          <div class="h3 mb4">${esc(c.title || '')}</div>
-          <p style="color:#C4B5FD;font-size:12px;margin-bottom:7px">${esc(c.tagline || '')}</p>
-          <p style="color:var(--mut);font-size:13px;line-height:1.55;margin-bottom:8px">${esc(c.desc || '')}</p>
-          ${c.why ? `<div style="background:rgba(139,92,246,.1);border-left:2px solid var(--p);border-radius:0 8px 8px 0;padding:6px 10px;margin-bottom:9px"><p style="color:#C4B5FD;font-size:11px;margin:0;font-style:italic">💡 ${esc(c.why)}</p></div>` : ''}
-          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:9px">${(c.skills || []).slice(0, 3).map(s => `<span class="tag tp">${esc(s)}</span>`).join('')}</div>
-          <div class="between">
-            <span style="color:var(--okl);font-size:12px">💰 ${esc(c.salary || '')}</span>
-            <span style="color:var(--cl);font-size:12px">📈 ${esc(c.growth || '')} Growth</span>
+          <div class="h3" style="color:#fff;margin-bottom:4px">${esc(c.title)}</div>
+          <div style="font-size:12px;color:var(--pl);font-weight:600;margin-bottom:8px">${esc(c.category)}</div>
+          <p style="color:var(--sub);font-size:12px;line-height:1.5;margin-bottom:12px">${esc(c.tagline)}</p>
+
+          <!-- Transparent Recommendation Reason -->
+          <div style="background:rgba(139,92,246,0.1);border-left:3px solid var(--p);border-radius:0 8px 8px 0;padding:8px 12px;margin-bottom:14px">
+            <p style="color:var(--pl);font-size:11px;margin:0;font-style:italic">
+              💡 ${esc(c.transparentWhy)}
+            </p>
           </div>
-          <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.07);color:var(--sub);font-size:11px">
-            🚀 Tap to get your personalised roadmap
+
+          <div class="between" style="border-top:1px solid rgba(255,255,255,0.06);padding-top:10px;font-size:11px">
+            <span style="color:var(--okl)">💰 ${esc(c.salary)}</span>
+            <span style="color:var(--cl)">📈 ${esc(c.growth)} Growth</span>
           </div>
-        </div>`).join('')}
-    </div>`;
-}
-
-/* ─── STEP 4: Roadmap ─── */
-function renderRoadmapLoading() {
-  const el = document.getElementById('ccon');
-  if (!el) return;
-  el.innerHTML = `
-    <button class="btn bgh bsm mb14" onclick="CS.step='list';CS.rm=null;renderCareerContent()">← Back</button>
-    <div class="card" style="text-align:center;padding:46px">
-      <div class="spin" style="width:42px;height:42px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 14px"></div>
-      <p style="color:var(--sub)">Building your personalised roadmap for ${esc(CS.sel?.title || '')}…</p>
-    </div>`;
-}
-
-async function getRM(idx) {
-  const c = (CS.careers?.careers || [])[idx];
-  if (!c) return;
-
-  CS.sel = c;
-  CS.step = 'roadmap-loading';
-  CS.rm = null;
-  renderCareerContent();
-
-  try {
-    const ci = CS.intake;
-    const sys = 'You are a career advisor. Output ONLY a valid JSON object with no markdown.';
-    const p = `Create a highly personalised career roadmap for "${c.title}" for this specific student.
-
-Student Profile:
-- Interests: "${ci.interests}"
-- Current Knowledge: "${ci.knowledge}"
-- Goal Priority: "${ci.goal}"
-- Timeframe: "${ci.timeframe}"
-- Academic Background: ${pCtx()}
-
-The roadmap MUST account for what they already know — don't make them restart from zero. Build on their existing knowledge as advantages.
-
-Output ONLY: {"steps":[{"phase":"","dur":"","desc":"1 sentence tailored to their background","topics":["t1","t2","t3"],"ms":"milestone","leverages":"what existing knowledge from their profile helps here"}],"total":"X years","tips":["tip1 — specific to their interests","tip2","tip3"],"firstAction":"Most important thing to do THIS WEEK based on their current knowledge"}. Use exactly 5 steps.`;
-
-    const raw = await ai([{ role: 'user', content: p }], sys, 3000, true);
-    const data = pJSON(raw);
-    if (!data?.steps) throw new Error('No roadmap data');
-
-    CS.rm = data;
-    CS.step = 'roadmap';
-    awardBadge('Career Seeker');
-    addXP(30, 'Career roadmap');
-    renderCareerContent();
-  } catch (e) {
-    CS.step = 'list';
-    CS.sel = null;
-    CS.rm = null;
-    renderCareerContent();
-    if (window.toast) toast('Could not load roadmap — try again.', 'err');
-  }
-}
-
-function renderRoadmap() {
-  const el = document.getElementById('ccon'), c = CS.sel, rm = CS.rm;
-  if (!el || !c || !rm) return;
-
-  el.innerHTML = `
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-      <button class="btn bgh bsm" onclick="CS.step='list';CS.rm=null;renderCareerContent()">← Back</button>
-      <span style="font-size:26px">${c.emoji || '💼'}</span>
-      <div class="h2">${esc(c.title)} Roadmap</div>
+        </div>
+      `).join('')}
     </div>
+  `;
+}
 
-    ${rm.firstAction ? `
-    <div class="card cgold mb16" style="padding:14px 18px">
-      <div style="display:flex;align-items:flex-start;gap:12px">
-        <span style="font-size:24px;flex-shrink:0">⚡</span>
-        <div>
-          <div style="color:var(--goldl);font-weight:700;font-size:13px;margin-bottom:4px">Do This First — This Week</div>
-          <div style="color:#D97706;font-size:13px;line-height:1.6">${esc(rm.firstAction)}</div>
+function viewCareerDetail(id) {
+  CS.selectedCareerId = id;
+  CS.step = 'detail';
+  renderCareerContent();
+}
+
+function renderCareerDetail(container) {
+  const c = window.CareerEngine ? window.CareerEngine.CAREER_DATABASE.find(x => x.id === CS.selectedCareerId) : null;
+  if (!c) {
+    CS.step = 'list';
+    renderCareerContent();
+    return;
+  }
+
+  container.innerHTML = `
+    <button class="btn bgh bsm mb16" onclick="CS.step='list';renderCareerContent()">← Back to Recommended Careers</button>
+    <div class="card scr" style="padding:28px;background:rgba(13,11,31,0.9);border:1px solid rgba(139,92,246,0.3)">
+      <div class="between mb16">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="font-size:48px">${c.emoji}</span>
+          <div>
+            <div class="h2" style="color:#fff;margin-bottom:2px">${esc(c.title)}</div>
+            <div style="font-size:13px;color:var(--pl);font-weight:700">${esc(c.category)}</div>
+          </div>
+        </div>
+        <button class="btn bpri" onclick="CS.step='roadmap';renderCareerContent()">🗺️ View My Personalized Roadmap →</button>
+      </div>
+
+      <p style="color:var(--sub);font-size:14px;line-height:1.6;margin-bottom:20px">${esc(c.desc)}</p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px">
+        <div class="sc cglow">
+          <div class="sl">Salary Range</div>
+          <div class="sn" style="font-size:16px;color:var(--okl);margin-top:4px">${esc(c.salary)}</div>
+        </div>
+        <div class="sc cglow">
+          <div class="sl">Future Demand</div>
+          <div class="sn" style="font-size:16px;color:var(--cl);margin-top:4px">${esc(c.growth)}</div>
+        </div>
+        <div class="sc cgold">
+          <div class="sl">Entry Difficulty</div>
+          <div class="sn" style="font-size:16px;color:var(--goldl);margin-top:4px">${esc(c.difficulty)}</div>
         </div>
       </div>
-    </div>` : ''}
 
-    ${rm.total ? `<div class="card cteal mb18" style="padding:11px 17px"><p style="color:var(--cl);font-size:14px;margin:0">⏱️ Estimated total time: <strong style="color:#fff">${esc(rm.total)}</strong></p></div>` : ''}
-
-    ${(rm.steps || []).map((s, i) => `
-      <div class="rm">
-        <div style="display:flex;flex-direction:column;align-items:center">
-          <div class="rmc">${i + 1}</div>
-          ${i < (rm.steps.length - 1) ? `<div class="rml"></div>` : ''}
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+        <div>
+          <h3 class="h3 mb10" style="color:var(--pl)">🎓 Required Degrees & Programs</h3>
+          <ul style="color:var(--sub);font-size:13px;padding-left:18px;line-height:1.7">
+            ${c.requiredDegrees.map(d => `<li>${esc(d)}</li>`).join('')}
+          </ul>
         </div>
-        <div class="card scr s${i + 1}" style="flex:1;margin-bottom:0">
-          <div class="between mb8">
-            <div class="h3" style="color:var(--pl)">${esc(s.phase || '')}</div>
-            <span class="tag tc">${esc(s.dur || '')}</span>
+        <div>
+          <h3 class="h3 mb10" style="color:var(--pl)">📝 Key Entrance Exams</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${c.requiredExams.map(e => `<span class="tag tp" style="font-size:12px;padding:4px 10px">${esc(e)}</span>`).join('')}
           </div>
-          <p style="color:#94A3B8;font-size:13px;line-height:1.65;margin-bottom:9px">${esc(s.desc || '')}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:9px">${(s.topics || []).map(t => `<span class="tag tp">${esc(t)}</span>`).join('')}</div>
-          ${s.leverages ? `<div style="background:rgba(6,182,212,.08);border-left:2px solid var(--c);border-radius:0 8px 8px 0;padding:6px 10px;margin-bottom:9px"><p style="color:var(--cl);font-size:11px;margin:0">🔗 Leverages: ${esc(s.leverages)}</p></div>` : ''}
-          <div style="background:rgba(16,185,129,.08);border-radius:7px;padding:7px 11px"><p style="color:#86EFAC;font-size:12px;margin:0">🎯 ${esc(s.ms || '')}</p></div>
         </div>
-      </div>`).join('')}
+      </div>
 
-    ${rm.tips?.length ? `
-    <div class="card cgold mt8">
-      <div class="h3" style="color:var(--goldl);margin-bottom:11px">💡 Personalised Tips</div>
-      ${rm.tips.map(t => `<div style="display:flex;gap:9px;margin-bottom:7px"><span style="color:var(--gold)">→</span><span style="color:#D97706;font-size:13px">${esc(t)}</span></div>`).join('')}
-    </div>` : ''}`;
+      <h3 class="h3 mb10" style="color:var(--pl)">⚡ Core Responsibilities</h3>
+      <ul style="color:var(--sub);font-size:13px;padding-left:18px;line-height:1.7;margin-bottom:20px">
+        ${c.duties.map(d => `<li>${esc(d)}</li>`).join('')}
+      </ul>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:16px">
+          <h4 class="h3 mb8" style="color:var(--okl);font-size:14px">✅ Advantages & Pros</h4>
+          <ul style="color:var(--sub);font-size:12px;padding-left:16px;line-height:1.6">
+            ${c.pros.map(p => `<li>${esc(p)}</li>`).join('')}
+          </ul>
+        </div>
+        <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:16px">
+          <h4 class="h3 mb8" style="color:var(--redl);font-size:14px">⚠️ Challenges & Realities</h4>
+          <ul style="color:var(--sub);font-size:12px;padding-left:16px;line-height:1.6">
+            ${c.challenges.map(ch => `<li>${esc(ch)}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
-/* ─── Exports ─── */
+function renderCareerRoadmap(container) {
+  const rm = window.CareerEngine ? window.CareerEngine.generateRoadmap(CS.selectedCareerId) : null;
+  if (!rm) {
+    CS.step = 'list';
+    renderCareerContent();
+    return;
+  }
+
+  container.innerHTML = `
+    <button class="btn bgh bsm mb16" onclick="CS.step='detail';renderCareerContent()">← Back to Career Overview</button>
+    <div class="card scr" style="padding:28px;background:rgba(13,11,31,0.9);border:1px solid rgba(139,92,246,0.3)">
+      <div class="between mb16">
+        <div>
+          <div class="h2" style="color:#fff;margin-bottom:2px">${esc(rm.title)}</div>
+          <div style="color:var(--sub);font-size:13px">Personalized roadmap based on your current grade & goals.</div>
+        </div>
+        <span class="tag tc" style="font-size:13px;padding:6px 12px">Estimated: ${esc(rm.totalDuration)}</span>
+      </div>
+
+      <!-- Do This First Alert -->
+      <div style="background:rgba(217,119,6,0.12);border:1px solid rgba(217,119,6,0.3);border-radius:12px;padding:14px 18px;margin-bottom:24px">
+        <div style="color:var(--goldl);font-weight:700;font-size:13px;margin-bottom:4px">⚡ Action for This Week</div>
+        <div style="color:#FDE68A;font-size:13px;line-height:1.5">${esc(rm.firstAction)}</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px">
+        ${rm.steps.map((s, i) => `
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px">
+            <div class="between mb8">
+              <div class="h3" style="color:var(--pl);font-size:15px">${i+1}. ${esc(s.phase)}</div>
+              <span class="tag tp" style="font-size:11px">${esc(s.dur)}</span>
+            </div>
+            <p style="color:var(--sub);font-size:13px;line-height:1.5;margin-bottom:10px">${esc(s.desc)}</p>
+            <div style="background:rgba(16,185,129,0.08);border-radius:8px;padding:8px 12px;font-size:12px;color:#86EFAC">
+              🎯 <strong>Milestone:</strong> ${esc(s.milestone)}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 window.rCareers = rCareers;
-window.updateCareerBtn = updateCareerBtn;
-window.discoverCareers = discoverCareers;
-window.getRM = getRM;
+window.startNewDiscovery = startNewDiscovery;
+window.toggleFavSubject = toggleFavSubject;
+window.finishDiscovery = finishDiscovery;
+window.viewCareerDetail = viewCareerDetail;

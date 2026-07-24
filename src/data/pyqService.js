@@ -586,12 +586,6 @@
     const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
     return papers.some(p => !!fileCache[p.file]);
   }
-  function _hasData_orig(examId) {
-    const id = normalizeExamId(examId);
-    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
-    return papers.some(p => !!fileCache[p.file]);
-  }
-
   function getPapers(examId) {
     const id = normalizeExamId(examId);
     return id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;

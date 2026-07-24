@@ -235,10 +235,16 @@ function rDash(){
             ${sessToday>0?`<span style="font-size:var(--fs-sm);color:var(--mut)">${sessToday} session${sessToday>1?'s':''} today</span>`:''}
           </div>
           <div class="dash-hero-cta">
-            <button class="btn bpri" style="padding:13px 28px;font-size:15px;border-radius:14px" onclick="go('courses')">
-              ${hasCont?`Continue Course →`:`Start Course →`}
-            </button>
-            ${hasCont?`<span style="font-size:var(--fs-xs);color:var(--mut);margin-left:14px">${esc(contChapterTitle)}</span>`:''}
+            ${hasCont ? `
+              <button class="btn bpri" style="padding:13px 28px;font-size:15px;border-radius:14px;box-shadow:0 8px 24px rgba(139,92,246,0.3)" onclick="go('learn', '${escON(contTopic)}')">
+                🚀 Resume Learning: ${esc(contTopic)} →
+              </button>
+              <div style="font-size:11px;color:var(--sub);margin-top:6.5px">Est. 8 Mins · Chapter: ${esc(contChapterTitle)}</div>
+            ` : `
+              <button class="btn bpri" style="padding:13px 28px;font-size:15px;border-radius:14px" onclick="go('courses')">
+                Start Learning Paths →
+              </button>
+            `}
           </div>
         </div>
 
@@ -280,11 +286,11 @@ function rDash(){
         <div class="dash-zone-label s2">Study console</div>
         <div class="dash-study-console s2">
           <!-- Continue Course -->
-          <div class="sc-card main-card card-lift">
+          <div class="sc-card main-card card-lift" style="cursor:pointer" onclick="${hasCont ? `go('learn', '${escON(contTopic)}')` : `go('courses')`}">
             <div>
-              <div class="sc-card-tag">CONTINUE COURSE</div>
-              <div class="sc-card-title">${esc(contChapterTitle)}</div>
-              <div class="sc-card-sub">${esc(contCourseTitle)}</div>
+              <div class="sc-card-tag">CONTINUE LEARNING</div>
+              <div class="sc-card-title">${hasCont ? esc(contTopic) : 'Select a course path'}</div>
+              <div class="sc-card-sub">${hasCont ? `Chapter: ${esc(contChapterTitle)}` : esc(contCourseTitle)}</div>
             </div>
             <div>
               <div class="sc-progress-wrap">
@@ -294,8 +300,8 @@ function rDash(){
                 </div>
                 <div class="pw" style="height:6px"><div class="pf pf-course" style="width:${contProgress}%"></div></div>
               </div>
-              <button class="btn bpri w100 mt12" onclick="go('courses')">
-                ${hasCont?'Continue Course →':'View Courses →'}
+              <button class="btn bpri w100 mt12" onclick="event.stopPropagation(); ${hasCont ? `go('learn', '${escON(contTopic)}')` : `go('courses')`}">
+                ${hasCont?'Resume Mission →':'View Courses →'}
               </button>
             </div>
           </div>
