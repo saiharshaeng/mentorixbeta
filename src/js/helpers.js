@@ -374,6 +374,33 @@ function animKeyPress(el) {
   }, 100);
 }
 
+/* ── UDS COMPONENT HELPER GENERATORS ───────────────────────────── */
+
+function renderUDSEmptyState(icon, title, desc, actionBtnHTML = '') {
+  return `
+    <div class="uds-empty-state">
+      <div class="uds-empty-icon" aria-hidden="true">${icon || '✨'}</div>
+      <div class="uds-empty-title">${esc(title || 'No data yet')}</div>
+      <div class="uds-empty-desc">${esc(desc || 'Start an activity to populate this section.')}</div>
+      ${actionBtnHTML ? `<div style="margin-top:8px">${actionBtnHTML}</div>` : ''}
+    </div>
+  `;
+}
+
+function renderUDSErrorBox(title, body, actionBtnHTML = '') {
+  return `
+    <div class="uds-error-box">
+      <div class="uds-error-title">⚠️ ${esc(title || 'Action could not be completed')}</div>
+      <div class="uds-error-body">${esc(body || 'An unexpected state occurred. Please retry or check your network.')}</div>
+      ${actionBtnHTML ? `<div style="margin-top:8px">${actionBtnHTML}</div>` : ''}
+    </div>
+  `;
+}
+
+function renderUDSSkeleton(heightPx = 40, widthPct = 100) {
+  return `<div class="uds-skeleton" style="height:${heightPx}px;width:${widthPct}%"></div>`;
+}
+
 /* ── EXPORTS ────────────────────────────────────────────────── */
 // Exposed as globals so the non-module monolith scripts can call them unchanged.
 // When the full ESM migration is complete these become named exports.
@@ -393,3 +420,6 @@ window.isTopicForbidden = isTopicForbidden;
 window.initNetworkDetection = initNetworkDetection;
 window.initSwipeGestures = initSwipeGestures;
 window.initBackButton   = initBackButton;
+window.renderUDSEmptyState = renderUDSEmptyState;
+window.renderUDSErrorBox = renderUDSErrorBox;
+window.renderUDSSkeleton = renderUDSSkeleton;

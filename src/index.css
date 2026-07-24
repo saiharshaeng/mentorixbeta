@@ -47,6 +47,29 @@
   --r-modal:22px;
   --r10:10px;--r12:12px;--r14:14px;--r18:18px;--r20:20px;--r24:22px;
 
+  /* ── UNIVERSAL DESIGN SYSTEM (UDS) INTENT TOKENS ── */
+  --uds-cyan: #06B6D4;
+  --uds-cyan-bg: rgba(6, 182, 212, 0.12);
+  --uds-green: #10B981;
+  --uds-green-bg: rgba(16, 185, 129, 0.12);
+  --uds-gold: #F59E0B;
+  --uds-gold-bg: rgba(245, 158, 11, 0.12);
+  --uds-red: #EF4444;
+  --uds-red-bg: rgba(239, 68, 68, 0.12);
+  --uds-purple: #8B5CF6;
+  --uds-purple-bg: rgba(139, 92, 246, 0.12);
+
+  --uds-bg-dark: #0A0A0F;
+  --uds-surface: #12121A;
+  --uds-surface-glass: rgba(18, 18, 26, 0.75);
+  --uds-border: rgba(255, 255, 255, 0.08);
+
+  /* ── UDS MOTION BUDGET TOKENS ── */
+  --uds-motion-hover: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  --uds-motion-btn: 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  --uds-motion-nav: 250ms cubic-bezier(0.34, 1.3, 0.64, 1);
+  --uds-motion-modal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+
   /* â”€â”€ SPRING MOTION PRESETS â”€â”€ */
   --spring-nav:cubic-bezier(0.34,1.56,0.64,1);
   --spring-expand:cubic-bezier(0.25,1.25,0.5,1);
@@ -54,6 +77,145 @@
   --spring-bounce:cubic-bezier(0.34,1.8,0.64,1);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   UNIVERSAL DESIGN SYSTEM (UDS) REUSABLE COMPONENT RULES
+   ═══════════════════════════════════════════════════════════ */
+
+/* UDS Card */
+.uds-card {
+  background: var(--uds-surface-glass);
+  border: 1px solid var(--uds-border);
+  border-radius: var(--r-card, 20px);
+  padding: var(--sp-6, 24px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform var(--uds-motion-hover), border-color var(--uds-motion-hover), box-shadow var(--uds-motion-hover);
+}
+.uds-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* UDS Buttons */
+.uds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2, 8px);
+  min-height: 44px;
+  padding: 10px 20px;
+  font-family: var(--f-display, 'Manrope', sans-serif);
+  font-weight: 700;
+  font-size: var(--fs-sm, 13px);
+  border-radius: var(--r-pill, 9999px);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform var(--uds-motion-btn), background-color var(--uds-motion-btn), opacity var(--uds-motion-btn);
+}
+.uds-btn:active {
+  transform: scale(0.96);
+}
+.uds-btn-primary {
+  background: linear-gradient(135deg, var(--uds-cyan), var(--uds-purple));
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.25);
+}
+.uds-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--uds-border);
+  color: #FFFFFF;
+}
+.uds-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.uds-btn-ghost {
+  background: transparent;
+  color: var(--sub, #94A3B8);
+}
+.uds-btn-ghost:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--uds-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* UDS Empty State */
+.uds-empty-state {
+  padding: var(--sp-10, 40px);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed var(--uds-border);
+  border-radius: var(--r-card, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3, 12px);
+}
+.uds-empty-icon {
+  font-size: 40px;
+}
+.uds-empty-title {
+  font-size: var(--fs-md, 15px);
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.uds-empty-desc {
+  font-size: var(--fs-sm, 13px);
+  color: var(--sub, #94A3B8);
+  max-width: 360px;
+  line-height: var(--lh-body, 1.7);
+}
+
+/* UDS Skeleton Loader */
+.uds-skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 200% 100%;
+  animation: udsSkeletonShimmer 1.5s infinite;
+  border-radius: var(--r10, 10px);
+}
+@keyframes udsSkeletonShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* UDS Error Box */
+.uds-error-box {
+  padding: var(--sp-4, 16px);
+  background: var(--uds-red-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--r12, 12px);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 8px);
+}
+.uds-error-title {
+  font-size: var(--fs-sm, 13px);
+  font-weight: 700;
+  color: var(--uds-red);
+}
+.uds-error-body {
+  font-size: var(--fs-xs, 11px);
+  color: var(--sub, #94A3B8);
+  line-height: var(--lh-body, 1.7);
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    MENTORIX PREMIUM DESIGN OVERHAUL CUSTOM STYLES

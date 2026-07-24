@@ -191,6 +191,14 @@
 
       const idx = activeReviewState.currentIndex;
       const q = activeReviewState.questions[idx];
+      if (!q) {
+        if (typeof renderUDSEmptyState === 'function') {
+          container.innerHTML = renderUDSEmptyState('🔍', 'No questions match this filter', 'Select a different status filter pill above to continue your review.');
+        } else {
+          container.innerHTML = '<div style="padding:24px;text-align:center;color:var(--sub)">No questions match this filter.</div>';
+        }
+        return;
+      }
       const ev = activeReviewState.evaluationReport;
       const att = activeReviewState.attemptPackage;
       const evalItem = (ev.itemEvaluations || [])[idx] || {};
