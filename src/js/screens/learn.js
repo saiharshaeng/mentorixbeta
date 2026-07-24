@@ -858,9 +858,43 @@ function submitConfidence(level) {
     if (typeof logMistake === 'function') {
       logMistake(LS.topic, ch.concept || 'Concept Check', ch.q, 3, 'Knowledge Gap', `Self-reflected on "${LS.topic}"`);
     }
-    toast(`⚠️ Incorrect choice logged to Mistake Diary.`);
-    haptic('error');
   }
+
+  // Hook PSDE Storage Engine for Learning Session
+  if (window.PSDE) {
+    const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
+    const sessRec = {
+      sessionId: `sess_learn_${Date.now()}`,
+      topic: LS.topic,
+      sessionType: 'LEARNING',
+      date: new Date().toISOString(),
+      score: isCorrect ? 10 : 0,
+      totalMarks: 10,
+      accuracy: isCorrect ? 100 : 0
+    };
+    window.PSDE.SaveSession(sessRec);
+    window.PSDE.SaveAttempt({
+      attemptId: `att_learn_${Date.now()}`,
+      sessionId: sessRec.sessionId,
+      studentId: studentId,
+      questionIds: [ch.q],
+      answers: [oidx],
+      timeSpent: [timeTaken],
+      evaluation: { isCorrect, confidence: level },
+      statistics: { topic: LS.topic },
+      version: '2.0.0'
+    });
+    if (!isCorrect) {
+      window.PSDE.RecordMistake({
+        questionId: `q_learn_${Date.now()}`,
+        concept: ch.concept || LS.topic,
+        reason: 'CONCEPTUAL_GAP',
+        studentId: studentId
+      });
+    }
+  }
+  toast(`⚠️ Incorrect choice logged to Mistake Diary.`);
+  haptic('error');
 
   // Clear pending state & reset timer for next question
   delete LS.pendingConfidence;

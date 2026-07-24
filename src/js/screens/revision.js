@@ -366,8 +366,60 @@ function submitRevQuiz(){
   }
 
   // Cap history at 60 entries to prevent unbounded growth
-  D.memory.history.push({topic:RV.topic, score:pct, date:new Date().toISOString(), type:'revision'});
+  const revSessRec = {
+    sessionId: `sess_rev_${Date.now()}`,
+    topic: RV.topic,
+    score: pct,
+    totalMarks: pct,
+    date: new Date().toISOString(),
+    type: 'revision',
+    sessionType: 'REVISION',
+    correct: sc,
+    total: total,
+    accuracy: pct
+  };
+  D.memory.history.push(revSessRec);
   if(D.memory.history.length > 60) D.memory.history = D.memory.history.slice(-60);
+
+  // Hook PSDE Storage Engine
+  if (window.PSDE) {
+    const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
+    window.PSDE.SaveSession(revSessRec);
+    window.PSDE.SaveAttempt({
+      attemptId: `att_rev_${Date.now()}`,
+      sessionId: revSessRec.sessionId,
+      studentId: studentId,
+      questionIds: qs.map((q, i) => q.id || `q_rev_${i}`),
+      answers: RV.quizAns,
+      timeSpent: [10],
+      evaluation: { score: pct, correct: sc, incorrect: total - sc, total },
+      statistics: { topic: RV.topic, accuracy: pct },
+      version: '2.0.0'
+    });
+    window.PSDE.SaveProgress({
+      totalQuestions: total,
+      accuracy: pct,
+      totalMarks: pct,
+      level: D.level || 1,
+      masteryOverall: pct
+    }, studentId);
+
+    // Record or resolve mistakes in PSDE Archive
+    qs.forEach((q, i) => {
+      const isCorrect = RV.quizAns[i] === q.a;
+      const qId = q.id || `q_rev_${i}_${Date.now()}`;
+      if (isCorrect) {
+        window.PSDE.MarkMistakeResolved(qId, studentId);
+      } else {
+        window.PSDE.RecordMistake({
+          questionId: qId,
+          concept: q.concept || RV.topic,
+          reason: 'REVISION_RECURRENCE',
+          studentId: studentId
+        });
+      }
+    });
+  }
 
   // KEY FIX: Mark existing weak spots for this topic as solved when score >= 80% (revision)
   // or on a per-concept level if they are undergoing targeted recovery

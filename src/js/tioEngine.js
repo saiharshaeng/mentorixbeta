@@ -120,6 +120,11 @@ HOW YOU GUIDE:
   function saveMemoryFact(fact) {
     if (!window.D) window.D = {};
     window.D.tioMemory = (window.D.tioMemory ? window.D.tioMemory + '; ' : '') + fact;
+    if (window.PSDE) {
+      const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
+      const key = fact.toLowerCase().includes('weak') ? 'Physics Weak' : fact.toLowerCase().includes('improved') ? 'Organic Improved' : 'Study Fact';
+      window.PSDE.SaveTioMemoryRef(key, fact, studentId);
+    }
     if (typeof window.saveAll === 'function') window.saveAll();
   }
 

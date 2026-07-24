@@ -92,7 +92,7 @@ function rSettings(){
         </div>
         <div class="set-row">
           <div><div style="color:var(--txt);font-size:14px;font-weight:500">Quiz Difficulty</div><div style="color:var(--mut);font-size:12px">Default difficulty for tests</div></div>
-          <select class="inp" style="width:120px;padding:7px 10px" onchange="D.settings.difficulty=this.value;saveAll()">
+          <select class="inp" style="width:120px;padding:7px 10px" onchange="D.settings.difficulty=this.value;saveAll();if(window.PSDE){window.PSDE.SavePreference({preferredDifficulty:this.value});}">
             ${['easy','medium','hard'].map(d=>`<option value="${d}" ${D.settings.difficulty===d?'selected':''}>${d[0].toUpperCase()+d.slice(1)}</option>`).join('')}
           </select>
         </div>
@@ -102,7 +102,7 @@ function rSettings(){
             <div style="color:var(--mut);font-size:12px;max-width:320px">Enforces ultra-hard, Olympiad/IIT-JEE rank-breaker level conceptual problems for all generated assessments and lessons.</div>
           </div>
           <label class="toggle">
-            <input type="checkbox" id="boss-mode-chk" ${D.settings?.bossMode?'checked':''} onchange="D.settings.bossMode=this.checked;saveAll();toast(this.checked?'😈 Boss Mode Activated! Expect extreme rigor.':'Boss Mode deactivated.','ok2')">
+            <input type="checkbox" id="boss-mode-chk" ${D.settings?.bossMode?'checked':''} onchange="D.settings.bossMode=this.checked;saveAll();if(window.PSDE){window.PSDE.SavePreference({bossMode:this.checked});};toast(this.checked?'😈 Boss Mode Activated! Expect extreme rigor.':'Boss Mode deactivated.','ok2')">
             <span class="tslider"></span>
           </label>
         </div>

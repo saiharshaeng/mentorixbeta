@@ -575,18 +575,61 @@ function subTest() {
   // Save history
   if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
   D.memory.scores[TS.topic] = pct;
-  D.memory.history = [...(D.memory.history || []).slice(-50), {
+  const sessRec = {
+    sessionId: `sess_test_${Date.now()}`,
     topic: TS.topic,
     score: pct,
+    totalMarks: pct,
     date: new Date().toISOString(),
     type: 'test',
-    mode: TS.assessmentType
-  }];
+    sessionType: 'PRACTICE',
+    mode: TS.assessmentType,
+    correct: sc,
+    total: total,
+    accuracy: pct
+  };
+  D.memory.history = [...(D.memory.history || []).slice(-50), sessRec];
 
   addXP(sc * 15, 'Assessment');
   if (sc >= 5) awardBadge('Champion');
   if (pct >= 85) {
     if (typeof launchConfetti === 'function') setTimeout(() => launchConfetti(50), 100);
+  }
+
+  // Hook PSDE Storage Engine
+  if (window.PSDE) {
+    const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
+    window.PSDE.SaveSession(sessRec);
+    window.PSDE.SaveAttempt({
+      attemptId: `att_${Date.now()}`,
+      sessionId: sessRec.sessionId,
+      studentId: studentId,
+      questionIds: qs.map((q, i) => q.id || `q_test_${i}`),
+      answers: TS.ans,
+      timeSpent: [15],
+      evaluation: { score: pct, correct: sc, incorrect: total - sc, total },
+      statistics: { topic: TS.topic, accuracy: pct },
+      version: '2.0.0'
+    });
+    window.PSDE.SaveProgress({
+      totalQuestions: total,
+      accuracy: pct,
+      totalMarks: pct,
+      level: D.level || 1,
+      masteryOverall: pct
+    }, studentId);
+
+    // Record Mistakes in Mistake Archive
+    qs.forEach((q, i) => {
+      if (TS.ans[i] !== q.a) {
+        window.PSDE.RecordMistake({
+          questionId: q.id || `q_test_${i}_${Date.now()}`,
+          concept: TS.topic,
+          reason: 'CONCEPTUAL_GAP',
+          studentId: studentId
+        });
+      }
+    });
   }
   
   if (typeof saveAll === 'function') saveAll();
