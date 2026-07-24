@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MENTORIX Official Instagram Post - 2,000 Learners</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bodoni+Moda:ital,wght@0,400;0,700;1,700;1,900&family=Poiret+One&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Playwright+ID:wght@400&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "obsidian": "#08080c",
+                        "electric-cyan": "#00fbfb",
+                        "neon-purple": "#8f0193",
+                        "warm-gold": "#ffe16d",
+                        "surface-dim": "#111116",
+                        "on-surface": "#e2e2e2"
+                    },
+                    "fontFamily": {
+                        "bodoni": ["Bodoni Moda", "serif"],
+                        "poiret": ["Poiret One", "cursive"],
+                        "playfair": ["Playfair Display", "serif"],
+                        "noto": ["Noto Serif", "serif"],
+                        "playwright": ["Playwright ID", "cursive"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 0;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .controls-bar {
+            margin-bottom: 24px;
+            display: flex;
+            gap: 16px;
+            z-index: 100;
+        }
+
+        .btn-png {
+            background: linear-gradient(135deg, #00fbfb, #8f0193);
+            color: #ffffff;
+            font-weight: 800;
+            padding: 16px 36px;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0 0 35px rgba(0, 251, 251, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-png:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(0, 251, 251, 0.8);
+        }
+        
+        .instagram-canvas {
+            width: 1080px;
+            height: 1350px;
+            position: relative;
+            overflow: hidden;
+            background-color: #08080c;
+            box-shadow: 0 0 120px rgba(0,0,0,0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 85px 60px;
+            box-sizing: border-box;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 225, 109, 0.3);
+            border-radius: 44px;
+            width: 84%;
+            padding: 70px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .stardust {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.35;
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1350px); }
+        }
+
+        .glow-number {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(0, 251, 251, 0.5);
+        }
+
+        .glow-gold {
+            text-shadow: 0 0 20px rgba(255, 225, 109, 0.6);
+        }
+
+        .math-symbol {
+            position: absolute;
+            font-family: 'Bodoni Moda', serif;
+            color: rgba(255, 255, 255, 0.06);
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+<!-- 1-Click PNG Download Bar -->
+<div class="controls-bar">
+    <button class="btn-png" onclick="downloadPNG()">📸 Download 1080x1350 PNG Image</button>
+</div>
+
+<!-- Instagram Milestone Graphic Canvas (Exact 1080x1350 Sizing) -->
+<div class="instagram-canvas bg-obsidian" id="instagram-post">
+
+<!-- Full-bleed WebGL background shader -->
+<div class="absolute inset-0 w-full h-full opacity-65" style="display:block;">
+<canvas id="shader-canvas" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas');
+
+  function syncSize() {
+    canvas.width = 1080;
+    canvas.height = 1350;
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+float hash(vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec3 color = vec3(0.003, 0.003, 0.012);
+    
+    // Electric Cyan Glow
+    float cyanGlow = 1.0 - length(uv - vec2(0.2, 0.2)) * 1.4;
+    color += vec3(0.0, 0.98, 0.98) * max(0.0, cyanGlow) * 0.14;
+    
+    // Neon Purple Glow
+    float purpleGlow = 1.0 - length(uv - vec2(0.8, 0.8)) * 1.4;
+    color += vec3(0.56, 0.0, 0.57) * max(0.0, purpleGlow) * 0.20;
+
+    // Warm Gold Glow
+    float goldGlow = 1.0 - length(uv - vec2(0.88, 0.12)) * 1.9;
+    color += vec3(1.0, 0.88, 0.42) * max(0.0, goldGlow) * 0.09;
+    
+    for(int i = 0; i < 45; i++) {
+        float t = u_time * 0.1 + float(i) * 123.456;
+        vec2 pos = vec2(hash(vec2(float(i), 1.0)), hash(vec2(float(i), 2.0)));
+        pos.x += sin(t + pos.y * 6.28) * 0.1;
+        pos.y += cos(t + pos.x * 6.28) * 0.1;
+        
+        float dist = length(uv - pos);
+        float size = 0.0016 * (1.0 + sin(t * 5.0) * 0.5);
+        color += vec3(0.95, 0.95, 1.0) * smoothstep(size, 0.0, dist) * 0.55;
+    }
+    
+    color += (hash(uv + u_time * 0.01) - 0.5) * 0.02;
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+
+  function render(t) {
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+
+<!-- Dynamic Particles / Stardust -->
+<div class="absolute inset-0 pointer-events-none" id="particle-container"></div>
+
+<!-- Floating Decorative Math Symbols -->
+<div class="math-symbol text-[130px] top-36 left-16 rotate-12">Σ</div>
+<div class="math-symbol text-[90px] bottom-56 right-16 -rotate-12">∫</div>
+<div class="math-symbol text-[70px] top-1/2 left-8 rotate-45">π</div>
+<div class="math-symbol text-[110px] top-1/4 right-28 rotate-6">Δ</div>
+
+<!-- Top Branding Section with Official Mentorix Logo -->
+<div class="z-20 w-full flex flex-col items-center gap-4">
+  <img src="logo.png" class="w-32 h-32 object-contain filter drop-shadow-[0_0_30px_rgba(0,251,251,0.7)]" alt="Mentorix Logo" onerror="this.onerror=null;this.src='../logo.png';"/>
+  <h2 class="font-playfair italic text-on-surface text-2xl tracking-[0.25em] font-light">Mentorix — Beta</h2>
+</div>
+
+<!-- Centerpiece Content -->
+<div class="z-20 w-full flex flex-col items-center">
+  <!-- Glassmorphic Card -->
+  <div class="glass-card">
+    <h1 class="font-bodoni italic text-[180px] leading-none glow-number mb-2 text-white font-black">2,000+</h1>
+    <p class="font-poiret text-3xl tracking-[0.38em] text-cyan-200 text-center font-bold">LEARNERS REACHED</p>
+    <p class="font-poiret text-2xl tracking-[0.25em] text-warm-gold font-bold mt-4 text-center glow-gold">&amp; STILL COUNTING...</p>
+    <!-- Inner Bloom Effect Element -->
+    <div class="absolute -bottom-10 w-44 h-2 bg-electric-cyan/40 blur-xl"></div>
+  </div>
+
+  <!-- Caption below card -->
+  <div class="mt-14 text-center px-10">
+    <p class="font-playfair text-4xl leading-relaxed text-slate-100 font-light">
+      2,000 minds. 2,000 dreams. <br/> 2,000 lives touched. <span class="text-electric-cyan">💙</span>
+    </p>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<div class="z-20 w-full flex flex-col items-center gap-10">
+  <!-- Quote -->
+  <p class="font-playfair italic text-2xl text-slate-300 tracking-wider opacity-80 text-center max-w-xl">
+    "This isn’t the finish line. This is just step one."
+  </p>
+  <!-- Date Pill -->
+  <div class="bg-white/5 backdrop-blur-md border border-white/15 rounded-full px-12 py-4">
+    <span class="font-poiret text-xl tracking-[0.3em] text-warm-gold font-bold">JULY 2026</span>
+  </div>
+</div>
+
+<!-- Decorative Light Leaks -->
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-neon-purple/15 blur-[150px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-electric-cyan/15 blur-[150px] rounded-full pointer-events-none"></div>
+</div>
+
+<script>
+    // Stardust particle generator
+    const container = document.getElementById('particle-container');
+    const particleCount = 65;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'stardust';
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const size = Math.random() * 3 + 1;
+        const delay = Math.random() * 20;
+        const duration = 14 + Math.random() * 16;
+        const opacity = 0.15 + Math.random() * 0.45;
+
+        particle.style.left = `${x}%`;
+        particle.style.top = `${y}%`;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.opacity = opacity;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.animationDelay = `-${delay}s`;
+
+        container.appendChild(particle);
+    }
+
+    // 1-Click PNG Download Function
+    function downloadPNG() {
+        const el = document.getElementById('instagram-post');
+        html2canvas(el, {
+            scale: 2,
+            useCORS: true,
+            allowTaint: true,
+            backgroundColor: '#08080c'
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'mentorix_2k_learners_instagram_post.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    }
+</script>
+</body>
+</html>
