@@ -56,6 +56,23 @@
       init();
     },
 
+    initTopicMastery(topic) {
+      if (!topic) return { level: 'Improving', dimensions: { conceptUnderstanding: 3, problemSolving: 2, speed: 2, confidence: 3, retention: 2, examReadiness: 2 } };
+      const m = (profile.conceptMastery && profile.conceptMastery[topic]) || 50;
+      const stars = Math.min(5, Math.max(1, Math.round(m / 20)));
+      return {
+        level: m >= 80 ? 'Mastered' : m >= 50 ? 'Improving' : 'Needs Practice',
+        dimensions: {
+          conceptUnderstanding: stars,
+          problemSolving: Math.max(1, Math.min(5, stars - 1)),
+          speed: Math.max(1, Math.min(5, stars)),
+          confidence: Math.max(1, Math.min(5, stars)),
+          retention: Math.max(1, Math.min(5, stars)),
+          examReadiness: Math.max(1, Math.min(5, stars - 1))
+        }
+      };
+    },
+
     logAttempt({ topic, questionText, correctAnswer, selectedAnswer, isCorrect, difficulty, timeTakenSeconds, confidence, errorType = 'Conceptual misunderstanding' }) {
       profile.totalAttempts++;
       if (isCorrect) {

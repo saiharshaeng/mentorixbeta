@@ -20,7 +20,9 @@ function rRecovery(){
   
   if (entries.length > 0) {
     recoverySessionsHTML = entries.map(([topic, list]) => {
-      const masteryState = window.MasteryEngine ? window.MasteryEngine.initTopicMastery(topic) : null;
+      const masteryState = (window.MasteryEngine && typeof window.MasteryEngine.initTopicMastery === 'function') 
+        ? window.MasteryEngine.initTopicMastery(topic) 
+        : null;
       const dims = masteryState?.dimensions || { conceptUnderstanding: 3, problemSolving: 2, speed: 2, confidence: 3, retention: 2, examReadiness: 2 };
       const levelLabel = masteryState?.level || 'Improving';
 
