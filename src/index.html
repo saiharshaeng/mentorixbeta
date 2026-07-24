@@ -442,6 +442,23 @@ console.log('[KaTeX] System ready');
 <script src="js/navigation/navigationEngine.js?v=80"></script>
 <script src="js/navigation/index.js?v=80"></script>
 
+<!-- Universal Rendering & Component Adaptation Engine (URCAE) -->
+<script src="js/component/responsiveTokens.js?v=80"></script>
+<script src="js/component/accessibilityProfiles.js?v=80"></script>
+<script src="js/component/componentProfiles.js?v=80"></script>
+<script src="js/component/adaptationRegistry.js?v=80"></script>
+<script src="js/component/componentAdapter.js?v=80"></script>
+<script src="js/component/index.js?v=80"></script>
+
+<!-- Adaptive Reusable UI Components -->
+<script src="components/Button/adaptiveButton.js?v=80"></script>
+<script src="components/Card/adaptiveCard.js?v=80"></script>
+<script src="components/Table/adaptiveTable.js?v=80"></script>
+<script src="components/Dialog/adaptiveDialog.js?v=80"></script>
+<script src="components/Input/adaptiveInput.js?v=80"></script>
+<script src="components/Chart/adaptiveChart.js?v=80"></script>
+<script src="components/KaTeX/adaptiveKaTeX.js?v=80"></script>
+
 <script src="js/helpers.js?v=80"></script>
 <script src="js/constants.js?v=80"></script>
 <script src="js/storage.js?v=80"></script>
@@ -4814,6 +4831,7 @@ function init(){
       if (window.DeviceManager) window.DeviceManager.init();
       if (window.LayoutEngine) window.LayoutEngine.init();
       if (window.NavigationEngine) window.NavigationEngine.init();
+      if (window.ComponentAdapter) window.ComponentAdapter.init();
       if (window.ASLAEngine) window.ASLAEngine.init();
       if (window.UDFIAEngine) window.UDFIAEngine.init();
       if (window.DevMode) window.DevMode.init();
