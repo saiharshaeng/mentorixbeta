@@ -417,6 +417,15 @@ console.log('[KaTeX] System ready');
 <script src="js/device/deviceManager.js?v=80"></script>
 <script src="js/device/index.js?v=80"></script>
 
+<!-- Universal Adaptive Layout Engine (UALE) -->
+<script src="js/layout/layoutTokens.js?v=80"></script>
+<script src="js/layout/safeAreaManager.js?v=80"></script>
+<script src="js/layout/orientationManager.js?v=80"></script>
+<script src="js/layout/layoutResolver.js?v=80"></script>
+<script src="js/layout/layoutRegistry.js?v=80"></script>
+<script src="js/layout/layoutEngine.js?v=80"></script>
+<script src="js/layout/index.js?v=80"></script>
+
 <script src="js/helpers.js?v=80"></script>
 <script src="js/constants.js?v=80"></script>
 <script src="js/storage.js?v=80"></script>
@@ -4787,6 +4796,7 @@ function init(){
         });
       }
       if (window.DeviceManager) window.DeviceManager.init();
+      if (window.LayoutEngine) window.LayoutEngine.init();
       if (window.ASLAEngine) window.ASLAEngine.init();
       if (window.UDFIAEngine) window.UDFIAEngine.init();
       if (window.DevMode) window.DevMode.init();
