@@ -10114,6 +10114,175 @@ html, body {
   color: #64748b;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   MOBILE PHASE M1.1 — UNIVERSAL MOBILE FOUNDATION & INTERACTION STANDARDS (UMFIS)
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* Safe Area Insets */
+  --m-safe-top: env(safe-area-inset-top, 0px);
+  --m-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --m-safe-left: env(safe-area-inset-left, 0px);
+  --m-safe-right: env(safe-area-inset-right, 0px);
+
+  /* 5-Tier Spacing Scale */
+  --m-space-xs: 8px;
+  --m-space-sm: 12px;
+  --m-space-md: 16px;
+  --m-space-lg: 24px;
+  --m-space-xl: 32px;
+  --m-gutter: 16px;
+
+  /* Touch Target Sizing (Min 48px, Preferred 52-56px) */
+  --m-touch-min: 48px;
+  --m-touch-pref: 52px;
+  --m-touch-fab: 56px;
+
+  /* Typography Scale for 30-45 cm Reading Distance */
+  --m-font-caption: 11px;
+  --m-font-body-sm: 13px;
+  --m-font-body: 15px;
+  --m-font-body-lg: 16px;
+  --m-font-title-sm: 18px;
+  --m-font-title-md: 22px;
+  --m-font-title-lg: 26px;
+  --m-lh-reading: 1.65;
+  --m-max-reading-width: 68ch;
+}
+
+/* Safe Area Utility Classes */
+.mob-safe-top {
+  padding-top: var(--m-safe-top, 0px) !important;
+}
+.mob-safe-bottom {
+  padding-bottom: var(--m-safe-bottom, 0px) !important;
+}
+.mob-safe-insets {
+  padding-top: var(--m-safe-top, 0px) !important;
+  padding-bottom: var(--m-safe-bottom, 0px) !important;
+  padding-left: var(--m-safe-left, 0px) !important;
+  padding-right: var(--m-safe-right, 0px) !important;
+}
+
+/* Standardized Mobile Header System */
+.mob-standard-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: rgba(10, 15, 30, 0.95);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: var(--m-safe-top, 0px);
+}
+
+.mob-header-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile-Specific Layout Overrides */
+@media (max-width: 768px), body[data-layout-family="Mobile"] {
+  /* Enforce min 48x48dp touch targets on all interactive elements on mobile */
+  button, 
+  .btn, 
+  a.btn, 
+  [role="button"], 
+  .mob-touch-target, 
+  input[type="checkbox"], 
+  input[type="radio"] {
+    min-width: var(--m-touch-min) !important;
+    min-height: var(--m-touch-min) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Primary action buttons prefer 52px height */
+  .btn.bpri, 
+  .btn.bsec, 
+  .btn.bok, 
+  .mob-primary-action {
+    min-height: var(--m-touch-pref) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+  }
+
+  /* Form inputs: min 16px font size to prevent iOS/Android browser auto-zoom */
+  input[type="text"], 
+  input[type="number"], 
+  input[type="password"], 
+  input[type="email"], 
+  input[type="search"], 
+  textarea, 
+  select {
+    font-size: 16px !important;
+    min-height: 48px !important;
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Thumb Reach Zone & Lower-Half Action Layout */
+  .mob-thumb-zone, 
+  .mob-bottom-actions {
+    position: fixed;
+    bottom: calc(16px + var(--m-safe-bottom, 0px));
+    left: 16px;
+    right: 16px;
+    z-index: 9000;
+    display: flex;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.92);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Study Comfort Standard — Long-session screens (>10 mins: lessons, quizzes, CBT, reviews) */
+.study-comfort-active .katex-render-target,
+.study-comfort-active .lesson-content,
+.study-comfort-active .reading-body,
+.study-comfort-active .q-text,
+.study-comfort-active p.sub {
+  line-height: var(--m-lh-reading, 1.65) !important;
+  max-width: var(--m-max-reading-width, 68ch) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  letter-spacing: 0.01em !important;
+}
+
+.study-comfort-active .ambient-shape,
+.study-comfort-active .orb,
+.study-comfort-active .bg-glow {
+  opacity: 0.12 !important;
+  animation: none !important;
+}
+
+.study-comfort-active .card {
+  padding: var(--m-space-lg, 24px) !important;
+  margin-bottom: var(--m-space-md, 16px) !important;
+}
+
+
 
 
 
