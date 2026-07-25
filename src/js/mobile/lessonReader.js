@@ -36,11 +36,16 @@
       const meta = lessonData.meta || {};
       const sections = lessonData.sections || [];
 
+      // Check for saved resume state
+      const savedState = window.LessonResumeManager ? window.LessonResumeManager.getSavedState(topic) : null;
+      const isReturning = !!savedState;
+      const lastStudiedText = isReturning ? `Last studied: ${new Date(savedState.timestamp || Date.now()).toLocaleDateString()}` : 'New Mission';
+
       // Initialize progress tracker
       if (window.LessonProgressTracker) {
         window.LessonProgressTracker.init(sections.map((s, i) => ({
           title: s.title || `Section ${i + 1}`,
-          status: i === 0 ? 'active' : 'upcoming'
+          status: i === (savedState?.activeSectionIdx || 0) ? 'active' : (i < (savedState?.activeSectionIdx || 0) ? 'completed' : 'upcoming')
         })));
       }
 
@@ -52,18 +57,23 @@
       const estimatedMins = meta.estimatedMins || 25;
       const difficulty = meta.difficulty || 'Intermediate';
       const chapterTitle = meta.chapterTitle || 'Core Chapter';
+      const chapterProgress = meta.chapterProgress || 'Chapter 3 of 12';
 
       const headerHTML = `
         <div class="m-lesson-header mb20" style="background: rgba(18, 18, 26, 0.7); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 20px; text-align: left;">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-            <span style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #a78bfa; text-transform: uppercase;">📘 ${chapterTitle}</span>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+            <span style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #a78bfa; text-transform: uppercase;">📘 ${chapterTitle} • ${chapterProgress}</span>
             <span style="font-size: 11px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); color: #c4b5fd; padding: 2px 8px; border-radius: 999px;">${difficulty}</span>
           </div>
           <h1 style="font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.3; font-family: 'DM Serif Display', serif;">${topic}</h1>
-          <div style="display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--sub); margin-top: 12px;">
-            <span>⏱️ ${estimatedMins} mins study</span>
-            <span>📑 ${sections.length || 1} sections</span>
-            <span>⚡ Lightweight Checkpoints</span>
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);">
+            <div style="font-size: 12px; color: var(--sub); display: flex; align-items: center; gap: 12px;">
+              <span>⏱️ ${estimatedMins} mins study</span>
+              <span>🕒 ${lastStudiedText}</span>
+            </div>
+            <button type="button" class="btn bsm bprim" onclick="window.LessonProgressTracker && window.LessonProgressTracker.jumpToSection(${savedState?.activeSectionIdx || 0})" style="padding: 6px 14px; font-size: 12px; font-weight: 600; border-radius: 10px;">
+              ${isReturning ? '▶ Resume Session' : '🚀 Start Session'}
+            </button>
           </div>
         </div>
       `;
@@ -85,7 +95,6 @@
           `;
         }).join('');
       } else {
-        // Fallback for flat lesson text
         blocksHTML = `
           <div class="m-lesson-flat-content" style="font-size: 15px; line-height: 1.7; color: #e2e8f0;">
             ${lessonData.content || lessonData.summary || 'Content loading...'}

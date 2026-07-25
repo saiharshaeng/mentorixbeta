@@ -115,13 +115,26 @@
           return `
             <div class="m-block-summary mb24" style="background: rgba(18, 18, 26, 0.9); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 16px; padding: 22px; text-align: center;">
               <div style="font-size: 28px; margin-bottom: 8px;">🎉</div>
-              <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px;">Section Complete</h3>
-              <p style="font-size: 13px; color: var(--sub); margin-bottom: 16px;">You have mastered the core concepts of this section.</p>
-              ${block.nextTitle ? `
-                <button type="button" class="btn bprim" onclick="window.LessonProgressTracker && window.LessonProgressTracker.nextSection()" style="width: 100%; padding: 12px; font-size: 14px; font-weight: 600; border-radius: 12px;">
-                  Continue to ${block.nextTitle} →
+              <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px;">Lesson Complete</h3>
+              <p style="font-size: 13px; color: var(--sub); margin-bottom: 16px;">You have mastered all core concepts and checkpoints for this mission.</p>
+              
+              <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 14px; margin-bottom: 18px; text-align: left; font-size: 12px; color: #cbd5e1;">
+                <div style="font-weight: 700; color: #c4b5fd; margin-bottom: 6px;">📝 What Was Covered:</div>
+                <ul style="margin: 0; padding-left: 18px; line-height: 1.6;">
+                  <li>Core theoretical definitions & mathematical relations</li>
+                  <li>Step-by-step worked solutions</li>
+                  <li>Interactive checkpoint validation</li>
+                </ul>
+              </div>
+
+              <div style="display: flex; gap: 10px;">
+                <button type="button" class="btn bprim" onclick="window.go && window.go('courses')" style="flex: 1; padding: 12px; font-size: 13px; font-weight: 600; border-radius: 12px;">
+                  Continue to Next Topic →
                 </button>
-              ` : ''}
+                <button type="button" class="btn bsec" onclick="window.go && window.go('comp')" style="padding: 12px; font-size: 13px; font-weight: 600; border-radius: 12px;">
+                  Practice Questions
+                </button>
+              </div>
             </div>
           `;
 

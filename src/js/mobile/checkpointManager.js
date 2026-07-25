@@ -3,6 +3,7 @@
  * Mobile Phase L1 (Lesson Reader & Study Session Experience)
  *
  * Lightweight inline questions inserted between lesson sections to verify understanding.
+ * Supports 4 Question Types: MCQ, Numerical Input, True/False (boolean), and Prediction.
  * Immediate feedback, zero heavy exam overhead, non-intrusive.
  */
 
@@ -30,8 +31,13 @@
 
       let optionsHTML = '';
 
-      if (type === 'mcq' || type === 'boolean') {
-        const list = type === 'boolean' ? ['True', 'False'] : options;
+      if (type === 'mcq' || type === 'boolean' || type === 'prediction') {
+        let list = options;
+        if (type === 'boolean') list = ['True', 'False'];
+        if (type === 'prediction' && (!options || options.length === 0)) {
+          list = ['Increase', 'Decrease', 'Remain Constant'];
+        }
+
         optionsHTML = `
           <div class="m-checkpoint-options" style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px;">
             ${list.map((opt, i) => {
@@ -48,8 +54,8 @@
               }
 
               return `
-                <button type="button" onclick="window.CheckpointManager && window.CheckpointManager.evaluateAnswer('${id}', ${i}, ${checkpointData.correct}) " style="padding: 12px 14px; border-radius: 10px; font-size: 13px; font-weight: 500; text-align: left; transition: all 0.2s ease; cursor: pointer; ${btnClass}">
-                  ${type === 'boolean' ? opt : `${String.fromCharCode(65 + i)}. ${opt}`}
+                <button type="button" onclick="window.CheckpointManager && window.CheckpointManager.evaluateAnswer('${id}', ${i}, ${checkpointData.correct || 0}) " style="padding: 12px 14px; border-radius: 10px; font-size: 13px; font-weight: 500; text-align: left; transition: all 0.2s ease; cursor: pointer; ${btnClass}">
+                  ${type === 'boolean' || type === 'prediction' ? opt : `${String.fromCharCode(65 + i)}. ${opt}`}
                 </button>
               `;
             }).join('')}
@@ -71,10 +77,12 @@
         </div>
       ` : '';
 
+      const labelText = type === 'prediction' ? '🔮 Prediction Check' : (type === 'numerical' ? '🔢 Numerical Check' : '⚡ Mini Checkpoint');
+
       return `
         <div id="cp-card-${id}" class="m-checkpoint-card mb20" style="background: rgba(139, 92, 246, 0.06); border: 1px solid rgba(139, 92, 246, 0.25); border-radius: 14px; padding: 18px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-            <span style="font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--pl); text-transform: uppercase;">⚡ Mini Checkpoint</span>
+            <span style="font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--pl); text-transform: uppercase;">${labelText}</span>
             <span style="font-size: 11px; color: var(--mut);">Quick Check</span>
           </div>
           <div style="font-size: 14px; font-weight: 600; color: var(--txt); line-height: 1.5;">${question}</div>
@@ -92,7 +100,6 @@
         window.CompEventBus.publish('Checkpoint.Answered', { id, selectedIdx, isCorrect });
       }
 
-      // Re-render checkpoint card
       const card = document.getElementById(`cp-card-${id}`);
       if (card && card.parentNode) {
         const parent = card.parentNode;
