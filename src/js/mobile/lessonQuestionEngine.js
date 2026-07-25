@@ -6,6 +6,7 @@
  * - Progressive difficulty: Easy -> Easy-Medium -> Medium -> Application -> Challenge
  * - Zero timers, zero countdowns, zero exam palettes
  * - Auto-records mistake metadata via LessonMistakeTracker
+ * - Tracks "Streak of Understanding" (Concepts Mastered vs Concepts Needing Practice)
  * - Restores question state across reloads
  */
 
@@ -17,6 +18,7 @@
     constructor() {
       this.questionStates = {}; // qId -> { selected, selectedArray, inputText, submitted, isCorrect }
       this.activeQuestions = {}; // qId -> qData
+      this.currentStreak = 0;
     }
 
     registerQuestion(qData) {
@@ -78,24 +80,73 @@
       state.submitted = true;
       state.isCorrect = isCorrect;
 
-      // If incorrect, record mistake metadata silently
-      if (!isCorrect && window.LessonMistakeTracker) {
-        const hintLevel = window.LessonHintManager ? window.LessonHintManager.getHintUsage(qId) : 0;
-        window.LessonMistakeTracker.recordMistake(qData, { selected: state.selected, inputText: state.inputText }, new Array(hintLevel));
+      if (isCorrect) {
+        this.currentStreak++;
+      } else {
+        this.currentStreak = 0;
+        // Record mistake metadata automatically
+        if (typeof window !== 'undefined' && window.LessonMistakeTracker) {
+          const hintLevel = window.LessonHintManager ? window.LessonHintManager.getHintUsage(qId) : 0;
+          window.LessonMistakeTracker.recordMistake(qData, { selected: state.selected, inputText: state.inputText }, new Array(hintLevel));
+        }
       }
 
-      if (window.CompEventBus) {
-        window.CompEventBus.publish('InLessonQuestion.Submitted', { qId, isCorrect });
+      if (typeof window !== 'undefined' && window.CompEventBus) {
+        window.CompEventBus.publish('InLessonQuestion.Submitted', { qId, isCorrect, streak: this.currentStreak });
       }
 
       this.reRenderCard(qId);
+    }
+
+    getStreakOfUnderstanding() {
+      const mastered = [];
+      const needPractice = [];
+
+      Object.keys(this.questionStates).forEach(qId => {
+        const st = this.questionStates[qId];
+        const q = this.activeQuestions[qId];
+        if (st && st.submitted && q) {
+          const concept = q.concept || q.topic || 'Core Concept';
+          if (st.isCorrect) {
+            if (!mastered.includes(concept)) mastered.push(concept);
+          } else {
+            if (!needPractice.includes(concept)) needPractice.push(concept);
+          }
+        }
+      });
+
+      return {
+        mastered,
+        needPractice,
+        streakCount: this.currentStreak
+      };
+    }
+
+    renderStreakCardHTML() {
+      const streak = this.getStreakOfUnderstanding();
+      return `
+        <div class="m-streak-card mb16" style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.25); border-radius: 12px; padding: 14px; text-align: left;">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #c4b5fd; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
+            <span>🔥 STREAK OF UNDERSTANDING</span>
+            <span>${streak.streakCount} Concept Streak</span>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px;">
+            <div style="flex: 1; min-width: 130px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding: 8px 10px; border-radius: 6px; color: #34d399;">
+              <strong>🟢 Mastered:</strong> ${streak.mastered.length > 0 ? streak.mastered.join(', ') : 'None yet'}
+            </div>
+            <div style="flex: 1; min-width: 130px; background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 8px 10px; border-radius: 6px; color: #f87171;">
+              <strong>🟡 Needs Practice:</strong> ${streak.needPractice.length > 0 ? streak.needPractice.join(', ') : 'All clear!'}
+            </div>
+          </div>
+        </div>
+      `;
     }
 
     reRenderCard(qId) {
       const qData = this.activeQuestions[qId];
       const state = this.questionStates[qId];
       const card = document.getElementById(`q-card-${qId}`);
-      if (card && card.parentNode && window.LessonQuestionRenderer) {
+      if (card && card.parentNode && typeof window !== 'undefined' && window.LessonQuestionRenderer) {
         const parent = card.parentNode;
         const temp = document.createElement('div');
         temp.innerHTML = window.LessonQuestionRenderer.renderQuestion(qData, state);

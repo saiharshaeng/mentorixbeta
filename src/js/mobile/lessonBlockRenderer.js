@@ -9,7 +9,7 @@
  * 4. Worked Example
  * 5. Key Takeaway
  * 6. Mini Checkpoint / Practice Question
- * 7. Summary & Next Steps
+ * 7. Summary & Next Steps (with Streak of Understanding)
  */
 
 'use strict';
@@ -128,12 +128,15 @@
           `;
 
         case 'summary':
+          const streakCardHTML = lqe && typeof lqe.renderStreakCardHTML === 'function' ? lqe.renderStreakCardHTML() : '';
           return `
             <div class="m-block-summary mb24" style="background: rgba(18, 18, 26, 0.9); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 16px; padding: 22px; text-align: center;">
               <div style="font-size: 28px; margin-bottom: 8px;">🎉</div>
               <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px;">Lesson Complete</h3>
               <p style="font-size: 13px; color: var(--sub); margin-bottom: 16px;">You have mastered all core concepts and checkpoints for this mission.</p>
               
+              ${streakCardHTML}
+
               <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 14px; margin-bottom: 18px; text-align: left; font-size: 12px; color: #cbd5e1;">
                 <div style="font-weight: 700; color: #c4b5fd; margin-bottom: 6px;">📝 What Was Covered:</div>
                 <ul style="margin: 0; padding-left: 18px; line-height: 1.6;">
