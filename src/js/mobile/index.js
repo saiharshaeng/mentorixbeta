@@ -1,6 +1,6 @@
 /**
  * index.js — Mobile Subsystem Entry Point
- * Mobile Phase M1.1 (UMFIS) & M1.2 (UMNGA)
+ * Mobile Phase M1.1 (UMFIS) & M1.2 (MSAVS)
  */
 
 'use strict';
@@ -20,6 +20,12 @@
     BottomSheetManager: exports.BottomSheetManager,
     ThumbFABManager: exports.ThumbFABManager,
     PullToRefreshManager: exports.PullToRefreshManager,
+    ViewportManager: exports.ViewportManager,
+    KeyboardViewport: exports.KeyboardViewport,
+    ScrollRestoration: exports.ScrollRestoration,
+    ScreenLifecycle: exports.ScreenLifecycle,
+    ScreenTemplates: exports.ScreenTemplates,
+    ScreenManager: exports.ScreenManager,
     MobileStandards: exports.MobileStandards
   };
 

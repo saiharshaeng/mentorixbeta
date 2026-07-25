@@ -29,6 +29,8 @@
       if (window.BottomSheetManager) window.BottomSheetManager.init();
       if (window.ThumbFABManager) window.ThumbFABManager.init();
       if (window.PullToRefreshManager) window.PullToRefreshManager.init();
+      if (window.ViewportManager) window.ViewportManager.init();
+      if (window.ScreenManager) window.ScreenManager.init();
 
       this.injectMobileStandardVariables();
       this.subscribeToNavigation();
