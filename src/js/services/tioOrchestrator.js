@@ -291,6 +291,152 @@
     }
   };
 
+  /* ── FLOATING TIO AI ASSISTANT OVERLAY ENGINE ──────────────── */
+
+  function openTioFloat(initialPrompt = '') {
+    let modal = document.getElementById('tio-float');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'tio-float';
+      modal.className = 'm-tio-float-modal';
+      modal.style.cssText = `
+        position: fixed;
+        bottom: 84px;
+        right: 24px;
+        width: 360px;
+        max-width: calc(100vw - 32px);
+        height: 480px;
+        max-height: calc(100vh - 120px);
+        z-index: 10000;
+        background: rgba(13, 11, 31, 0.95);
+        border: 1px solid rgba(139, 92, 246, 0.35);
+        border-radius: 20px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(16px);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        animation: mSlideUpTio 0.25s cubic-bezier(0.34, 1.3, 0.64, 1) forwards;
+      `;
+
+      modal.innerHTML = `
+        <div style="padding: 14px 16px; background: rgba(18, 18, 26, 0.9); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--uds-purple, #8b5cf6), var(--uds-cyan, #06b6d4)); display: flex; align-items: center; justify-content: center; font-size: 16px;">🤖</div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; color: #fff;">Tio AI Mentor</div>
+              <div style="font-size: 10px; color: var(--sub, #94a3b8);">Active Context Preserved</div>
+            </div>
+          </div>
+          <button onclick="document.getElementById('tio-float').style.display='none'" style="background: none; border: none; color: var(--sub, #94a3b8); font-size: 18px; cursor: pointer; padding: 4px;">✕</button>
+        </div>
+
+        <div id="tio-float-msgs" style="flex: 1; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; gap: 8px; align-items: flex-start;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--uds-purple, #8b5cf6); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">T</div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 10px 12px; border-radius: 12px; font-size: 12px; color: #fff; line-height: 1.5; max-width: 85%;">
+              Hey! I'm Tio, your AI study buddy. Ask me anything about your current lesson or question! 🌟
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 12px; background: rgba(18, 18, 26, 0.95); border-top: 1px solid rgba(255,255,255,0.08); display: flex; gap: 8px;">
+          <input id="tio-float-inp" placeholder="Ask Tio..." style="flex: 1; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 8px 12px; color: #fff; font-size: 12px; outline: none;" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendTioFloatMsg();}">
+          <button onclick="sendTioFloatMsg()" style="background: linear-gradient(135deg, var(--uds-purple, #8b5cf6), var(--uds-cyan, #06b6d4)); border: none; border-radius: 10px; padding: 0 14px; color: #fff; font-weight: 700; font-size: 12px; cursor: pointer;">Send</button>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+    }
+
+    modal.style.display = 'flex';
+    modal.style.opacity = '1';
+
+    if (initialPrompt) {
+      const inp = document.getElementById('tio-float-inp');
+      if (inp) {
+        inp.value = initialPrompt;
+        sendTioFloatMsg();
+      }
+    }
+  }
+
+  async function sendTioFloatMsg() {
+    const inp = document.getElementById('tio-float-inp');
+    const msgsContainer = document.getElementById('tio-float-msgs');
+    if (!inp || !msgsContainer) return;
+
+    const text = inp.value.trim();
+    if (!text) return;
+
+    inp.value = '';
+
+    // Append User Message
+    const userDiv = document.createElement('div');
+    userDiv.style.cssText = 'display: flex; gap: 8px; justify-content: flex-end; align-items: flex-start;';
+    userDiv.innerHTML = `
+      <div style="background: linear-gradient(135deg, var(--uds-purple, #8b5cf6), #6d28d9); padding: 10px 12px; border-radius: 12px; font-size: 12px; color: #fff; line-height: 1.5; max-width: 85%;">
+        ${window.esc ? window.esc(text) : text}
+      </div>
+    `;
+    msgsContainer.appendChild(userDiv);
+
+    // Append Typing Indicator
+    const typingDiv = document.createElement('div');
+    typingDiv.id = 'tio-float-typing';
+    typingDiv.style.cssText = 'display: flex; gap: 8px; align-items: flex-start;';
+    typingDiv.innerHTML = `
+      <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--uds-purple, #8b5cf6); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">T</div>
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 10px 12px; border-radius: 12px; font-size: 12px; color: var(--sub, #94a3b8);">
+        Tio is thinking... 💭
+      </div>
+    `;
+    msgsContainer.appendChild(typingDiv);
+    msgsContainer.scrollTop = msgsContainer.scrollHeight;
+
+    // Get Active Session Context from Phase L5 SessionContextManager
+    let sessionContext = '';
+    if (window.SessionContextManager && typeof window.SessionContextManager.getSessionContextForTio === 'function') {
+      sessionContext = window.SessionContextManager.getSessionContextForTio();
+    }
+
+    const sysPrompt = `You are Tio, a supportive AI tutor. ${sessionContext ? 'ACTIVE CONTEXT: ' + sessionContext : ''}`;
+
+    let replyText = 'I am right here with you! Let us solve this step by step. 🌟';
+    try {
+      if (typeof window.ai === 'function') {
+        const aiRes = await window.ai([{ role: 'user', content: text }], sysPrompt, 600);
+        if (aiRes) replyText = aiRes;
+      }
+    } catch (e) {
+      console.warn('[TioFloat] AI call warning:', e);
+    }
+
+    const typ = document.getElementById('tio-float-typing');
+    if (typ) typ.remove();
+
+    // Append Tio Reply
+    const replyDiv = document.createElement('div');
+    replyDiv.style.cssText = 'display: flex; gap: 8px; align-items: flex-start;';
+    replyDiv.innerHTML = `
+      <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--uds-purple, #8b5cf6); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">T</div>
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 10px 12px; border-radius: 12px; font-size: 12px; color: #fff; line-height: 1.5; max-width: 85%;">
+        ${window.sanitizeHTML ? window.sanitizeHTML(replyText) : replyText}
+      </div>
+    `;
+    msgsContainer.appendChild(replyDiv);
+    msgsContainer.scrollTop = msgsContainer.scrollHeight;
+
+    if (typeof window.renderMath === 'function') {
+      window.renderMath(replyDiv);
+    }
+  }
+
+  function askTioAboutConcept(conceptTitle = '', contextText = '') {
+    const prompt = conceptTitle ? `Can you explain the concept of "${conceptTitle}"? ${contextText}` : 'Help me understand this lesson.';
+    openTioFloat(prompt);
+  }
+
   /* ── EXPORTS TO WINDOW ────────────────────────────────────── */
   window.StudentProfileAPI = StudentProfileAPI;
   window.AcademicAPI = AcademicAPI;
@@ -299,6 +445,9 @@
   window.LearningAPI = LearningAPI;
   window.SettingsAPI = SettingsAPI;
   window.TioOrchestrator = TioOrchestrator;
+  window.openTioFloat = openTioFloat;
+  window.sendTioFloatMsg = sendTioFloatMsg;
+  window.askTioAboutConcept = askTioAboutConcept;
 
   // Auto-initialize on load
   if (document.readyState === 'loading') {
