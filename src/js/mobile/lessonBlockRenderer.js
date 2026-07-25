@@ -1,6 +1,6 @@
 /**
  * lessonBlockRenderer.js — Mobile Lesson Learning Block Renderer
- * Mobile Phase L1 & L2 (Lesson Reader & In-Lesson Question Solving Experience)
+ * Mobile Phase L1 - L4 (Lesson Reader, In-Lesson Questions, Review & Learning Flow)
  *
  * Decomposes lessons into structured learning blocks:
  * 1. Learning Objective
@@ -9,7 +9,7 @@
  * 4. Worked Example
  * 5. Key Takeaway
  * 6. Mini Checkpoint / Practice Question
- * 7. Summary & Next Steps (with Streak of Understanding)
+ * 7. Summary & Next Steps (with LessonCompletionManager integration)
  */
 
 'use strict';
@@ -37,6 +37,7 @@
       const cm = typeof window !== 'undefined' ? window.CheckpointManager : null;
       const lqr = typeof window !== 'undefined' ? window.LessonQuestionRenderer : null;
       const lqe = typeof window !== 'undefined' ? window.LessonQuestionEngine : null;
+      const lcm = typeof window !== 'undefined' ? window.LessonCompletionManager : null;
 
       switch (type) {
         case 'objective':
@@ -128,6 +129,10 @@
           `;
 
         case 'summary':
+          if (lcm && typeof lcm.renderCompletionSummary === 'function') {
+            return lcm.renderCompletionSummary(block.topic || '');
+          }
+
           const streakCardHTML = lqe && typeof lqe.renderStreakCardHTML === 'function' ? lqe.renderStreakCardHTML() : '';
           return `
             <div class="m-block-summary mb24" style="background: rgba(18, 18, 26, 0.9); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 16px; padding: 22px; text-align: center;">
