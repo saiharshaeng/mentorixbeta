@@ -10375,6 +10375,21 @@ html, body {
   to { opacity: 1; transform: scale(1); }
 }
 
+/* Phase L5 Study Workspace & Context Preservation Styles */
+@keyframes slideInWorkspace {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.m-workspace-overlay {
+  transition: transform 0.3s ease;
+}
+
+.m-workspace-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+
 
 
 

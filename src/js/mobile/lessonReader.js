@@ -1,9 +1,10 @@
 /**
  * lessonReader.js — Universal Mobile Lesson Reader Orchestrator
- * Mobile Phase L1 (Lesson Reader & Study Session Experience)
+ * Mobile Phase L1 - L5 (Lesson Reader, Questions, Solutions, Flow & Study Workspace)
  *
  * Coordinates structured learning blocks, section progress, focus mode,
- * KaTeX pre-rendering, media viewing, mini-checkpoints, and session continuity.
+ * KaTeX pre-rendering, media viewing, mini-checkpoints, session continuity,
+ * and the Study Desk Workspace.
  */
 
 'use strict';
@@ -22,7 +23,7 @@
       if (window.MediaViewer) window.MediaViewer.init();
 
       this.initialized = true;
-      console.log('[Phase L1 LessonReader] Universal Mobile Lesson Reader active.');
+      console.log('[Phase L1-L5 LessonReader] Universal Mobile Lesson Reader active.');
     }
 
     /**
@@ -49,9 +50,12 @@
         })));
       }
 
-      // Start session
+      // Start session & workspace
       if (window.LessonSessionManager) {
         window.LessonSessionManager.startSession(topic);
+      }
+      if (window.SessionContextManager) {
+        window.SessionContextManager.initSession(topic, meta.chapterTitle || '', meta.unitTitle || '');
       }
 
       const estimatedMins = meta.estimatedMins || 25;
@@ -59,11 +63,17 @@
       const chapterTitle = meta.chapterTitle || 'Core Chapter';
       const chapterProgress = meta.chapterProgress || 'Chapter 3 of 12';
 
+      const swm = typeof window !== 'undefined' ? window.StudyWorkspaceManager : null;
+      const deskBtnHTML = swm && typeof swm.renderWorkspaceToggleButton === 'function' ? swm.renderWorkspaceToggleButton() : '';
+
       const headerHTML = `
         <div class="m-lesson-header mb20" style="background: rgba(18, 18, 26, 0.7); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 20px; text-align: left;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
             <span style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #a78bfa; text-transform: uppercase;">📘 ${chapterTitle} • ${chapterProgress}</span>
-            <span style="font-size: 11px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); color: #c4b5fd; padding: 2px 8px; border-radius: 999px;">${difficulty}</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              ${deskBtnHTML}
+              <span style="font-size: 11px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); color: #c4b5fd; padding: 2px 8px; border-radius: 999px;">${difficulty}</span>
+            </div>
           </div>
           <h1 style="font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.3; font-family: 'DM Serif Display', serif;">${topic}</h1>
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);">
@@ -78,50 +88,50 @@
         </div>
       `;
 
-      const progressPillsHTML = window.LessonProgressTracker ? window.LessonProgressTracker.renderProgressPills() : '';
+      const progressHTML = window.LessonProgressTracker ? window.LessonProgressTracker.renderProgressHeader() : '';
 
-      let blocksHTML = '';
-      if (sections.length > 0) {
-        blocksHTML = sections.map((sec, secIdx) => {
-          const contentHTML = window.LessonBlockRenderer ? window.LessonBlockRenderer.renderBlocks(sec.blocks || [], secIdx) : '';
-          return `
-            <div id="sec-block-${secIdx}" class="m-lesson-section-block mb24">
-              <h2 style="font-size: 18px; font-weight: 700; color: #c4b5fd; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid rgba(139, 92, 246, 0.2); display: flex; align-items: center; justify-content: space-between;">
-                <span>${sec.title || `Section ${secIdx + 1}`}</span>
-                <span style="font-size: 11px; font-weight: 500; color: var(--mut);">Part ${secIdx + 1} of ${sections.length}</span>
-              </h2>
-              ${contentHTML}
+      const blocksContainerHTML = `
+        <div id="m-lesson-blocks-container" class="m-lesson-blocks-container" style="display: flex; flex-direction: column; gap: 16px;">
+          ${sections.map((section, sIdx) => `
+            <div id="sec-block-${sIdx}" class="m-section-block" style="${sIdx === (savedState?.activeSectionIdx || 0) ? 'display: block;' : 'display: none;'}">
+              <h2 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 14px; border-left: 3px solid #8b5cf6; padding-left: 10px;">${section.title || `Section ${sIdx + 1}`}</h2>
+              ${window.LessonBlockRenderer ? window.LessonBlockRenderer.renderBlocks(section.blocks || [], sIdx) : ''}
             </div>
-          `;
-        }).join('');
-      } else {
-        blocksHTML = `
-          <div class="m-lesson-flat-content" style="font-size: 15px; line-height: 1.7; color: #e2e8f0;">
-            ${lessonData.content || lessonData.summary || 'Content loading...'}
-          </div>
-        `;
+          `).join('')}
+        </div>
+      `;
+
+      const fullHTML = `
+        <div class="m-lesson-reader-wrap" style="padding: 16px; max-width: 720px; margin: 0 auto;">
+          ${headerHTML}
+          ${progressHTML}
+          ${blocksContainerHTML}
+        </div>
+      `;
+
+      if (containerElement) {
+        containerElement.innerHTML = fullHTML;
+        this.postRenderEnhancements();
       }
 
-      const target = containerElement || document.getElementById('larea');
-      if (target) {
-        target.innerHTML = `
-          <div class="m-lesson-reader-container m-study-comfort" style="max-width: 68ch; margin: 0 auto; padding-bottom: 60px;">
-            ${headerHTML}
-            ${progressPillsHTML}
-            <div id="m-lesson-blocks-container">
-              ${blocksHTML}
-            </div>
-          </div>
-        `;
+      return fullHTML;
+    }
 
-        // Pre-render KaTeX math equations
-        if (window.MediaViewer) {
-          window.MediaViewer.preRenderKaTeX(target);
-        }
-
-        // Check for state resume
-        if (window.LessonResumeManager) {
-          window.LessonResumeManager.restoreState(topic);
+    postRenderEnhancements() {
+      // Pre-render KaTeX math equations
+      if (typeof window.renderMathInElement === 'function') {
+        try {
+          window.renderMathInElement(document.body, {
+            delimiters: [
+              { left: '$$', right: '$$', display: true },
+              { left: '$', right: '$', display: false },
+              { left: '\\(', right: '\\)', display: false },
+              { left: '\\[', right: '\\]', display: true }
+            ],
+            throwOnError: false
+          });
+        } catch (e) {
+          console.warn('[LessonReader] KaTeX pre-render warning:', e);
         }
       }
     }
