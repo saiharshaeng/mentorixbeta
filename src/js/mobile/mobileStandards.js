@@ -24,6 +24,11 @@
         window.StudyComfortStandard.init();
         window.StudyComfortStandard.injectComfortCSS();
       }
+      if (window.MobileNavEngine) window.MobileNavEngine.init();
+      if (window.GestureManager) window.GestureManager.init();
+      if (window.BottomSheetManager) window.BottomSheetManager.init();
+      if (window.ThumbFABManager) window.ThumbFABManager.init();
+      if (window.PullToRefreshManager) window.PullToRefreshManager.init();
 
       this.injectMobileStandardVariables();
       this.subscribeToNavigation();
