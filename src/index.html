@@ -459,6 +459,17 @@ console.log('[KaTeX] System ready');
 <script src="components/Chart/adaptiveChart.js?v=80"></script>
 <script src="components/KaTeX/adaptiveKaTeX.js?v=80"></script>
 
+<!-- Mobile Phase M1.1 — Universal Mobile Foundation & Interaction Standards (UMFIS) -->
+<script src="js/mobile/mobileSpacingTokens.js?v=80"></script>
+<script src="js/mobile/mobileTypographyScale.js?v=80"></script>
+<script src="js/mobile/touchStandards.js?v=80"></script>
+<script src="js/mobile/safeAreaManager.js?v=80"></script>
+<script src="js/mobile/keyboardInteractionManager.js?v=80"></script>
+<script src="js/mobile/mobileInteractionProfiles.js?v=80"></script>
+<script src="js/mobile/studyComfortStandard.js?v=80"></script>
+<script src="js/mobile/mobileStandards.js?v=80"></script>
+<script src="js/mobile/index.js?v=80"></script>
+
 <script src="js/helpers.js?v=80"></script>
 <script src="js/constants.js?v=80"></script>
 <script src="js/storage.js?v=80"></script>
@@ -4832,6 +4843,7 @@ function init(){
       if (window.LayoutEngine) window.LayoutEngine.init();
       if (window.NavigationEngine) window.NavigationEngine.init();
       if (window.ComponentAdapter) window.ComponentAdapter.init();
+      if (window.MobileStandards) window.MobileStandards.init();
       if (window.ASLAEngine) window.ASLAEngine.init();
       if (window.UDFIAEngine) window.UDFIAEngine.init();
       if (window.DevMode) window.DevMode.init();
