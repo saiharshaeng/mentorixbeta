@@ -9087,6 +9087,7 @@ html, body {
   .btn:active, .mn-item:active, .qopt:active {
     transform: scale(0.96) !important;
     transition: transform 0.08s ease !important;
+  }
 }
 
 /* ───────────────────────────────────────────

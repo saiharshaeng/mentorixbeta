@@ -3,7 +3,7 @@
  * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-v76';
+const CACHE_NAME = 'mentorix-v81';
 
 const CORE_ASSETS = [
   './',
