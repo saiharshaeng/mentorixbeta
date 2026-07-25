@@ -1,15 +1,9 @@
 /**
  * lessonQuestionRenderer.js — Educational Question Format Renderer
- * Mobile Phase L2 (In-Lesson Question Solving Experience)
+ * Mobile Phase L2 & L3 (In-Lesson Question Solving & Solution Review Experience)
  *
- * Renders 7 educational question formats for learning-first practice:
- * 1. Single Correct MCQ
- * 2. Multiple Correct Options
- * 3. Numerical Answer
- * 4. Fill in the Blank
- * 5. Match the Following
- * 6. Assertion–Reason
- * 7. Diagram-based Questions
+ * Renders 7 educational question formats for learning-first practice
+ * and integrates the Four-Layer Solution Review Card after submission.
  */
 
 'use strict';
@@ -30,12 +24,20 @@
       const isCorrect = savedState && savedState.isCorrect;
 
       const hm = typeof window !== 'undefined' ? window.LessonHintManager : null;
+      const sr = typeof window !== 'undefined' ? window.SolutionRenderer : null;
       const er = typeof window !== 'undefined' ? window.LessonExplanationRenderer : null;
       const mv = typeof window !== 'undefined' ? window.MediaViewer : null;
 
-      const hintsHTML = hm && typeof hm.renderHintControl === 'function' ? hm.renderHintControl(id, qData.hints || {}) : '';
-      const explanationHTML = isSubmitted && er && typeof er.renderExplanation === 'function' ? 
-        er.renderExplanation(qData.explanationData || { reasoning: qData.explanation }, isCorrect, id) : '';
+      const hintsHTML = !isSubmitted && hm && typeof hm.renderHintControl === 'function' ? hm.renderHintControl(id, qData.hints || {}) : '';
+      
+      let explanationHTML = '';
+      if (isSubmitted) {
+        if (sr && typeof sr.renderFourLayerSolution === 'function') {
+          explanationHTML = sr.renderFourLayerSolution(qData, savedState);
+        } else if (er && typeof er.renderExplanation === 'function') {
+          explanationHTML = er.renderExplanation(qData.explanationData || { reasoning: qData.explanation }, isCorrect, id);
+        }
+      }
 
       let optionsHTML = '';
 

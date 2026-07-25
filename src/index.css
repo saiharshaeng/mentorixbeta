@@ -10332,6 +10332,25 @@ html, body {
   transform: scale(0.97);
 }
 
+/* Phase L3 Intelligent Solution Review & Reflection Styles */
+.m-solution-card {
+  animation: slideUpSolution 0.3s ease forwards;
+}
+
+@keyframes slideUpSolution {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.m-reflection-card button:active {
+  transform: scale(0.96);
+}
+
+.m-key-insight-banner {
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.15);
+}
+
+
 
 
 
