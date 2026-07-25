@@ -10389,6 +10389,25 @@ html, body {
   transform: scale(0.95);
 }
 
+/* Phase L6 Study Session Wrap-up & Daily Learning Closure Styles */
+.m-wrapup-screen {
+  animation: fadeInWrapup 0.35s ease forwards;
+}
+
+@keyframes fadeInWrapup {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.m-wrapup-section {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.m-reassurance-banner {
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.15);
+}
+
+
 
 
 
