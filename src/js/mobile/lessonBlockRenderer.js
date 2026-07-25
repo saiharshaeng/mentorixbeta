@@ -1,6 +1,6 @@
 /**
  * lessonBlockRenderer.js — Mobile Lesson Learning Block Renderer
- * Mobile Phase L1 (Lesson Reader & Study Session Experience)
+ * Mobile Phase L1 & L2 (Lesson Reader & In-Lesson Question Solving Experience)
  *
  * Decomposes lessons into structured learning blocks:
  * 1. Learning Objective
@@ -8,7 +8,7 @@
  * 3. Visual / Diagram
  * 4. Worked Example
  * 5. Key Takeaway
- * 6. Mini Checkpoint
+ * 6. Mini Checkpoint / Practice Question
  * 7. Summary & Next Steps
  */
 
@@ -35,6 +35,8 @@
       const type = block.type || 'explanation';
       const mv = typeof window !== 'undefined' ? window.MediaViewer : null;
       const cm = typeof window !== 'undefined' ? window.CheckpointManager : null;
+      const lqr = typeof window !== 'undefined' ? window.LessonQuestionRenderer : null;
+      const lqe = typeof window !== 'undefined' ? window.LessonQuestionEngine : null;
 
       switch (type) {
         case 'objective':
@@ -101,6 +103,20 @@
             </div>
           `;
 
+        case 'practice_question':
+        case 'question':
+          const qData = block.question || block;
+          if (lqe && typeof lqe.registerQuestion === 'function') {
+            lqe.registerQuestion(qData);
+          }
+          if (lqr && typeof lqr.renderQuestion === 'function') {
+            return lqr.renderQuestion(qData, lqe ? lqe.questionStates[qData.id] : null);
+          }
+          if (cm && typeof cm.renderCheckpoint === 'function') {
+            return cm.renderCheckpoint(qData, sectionIdx);
+          }
+          return '';
+
         case 'checkpoint':
           if (cm && typeof cm.renderCheckpoint === 'function') {
             return cm.renderCheckpoint(block.checkpoint || block, sectionIdx);
@@ -123,7 +139,7 @@
                 <ul style="margin: 0; padding-left: 18px; line-height: 1.6;">
                   <li>Core theoretical definitions & mathematical relations</li>
                   <li>Step-by-step worked solutions</li>
-                  <li>Interactive checkpoint validation</li>
+                  <li>Interactive checkpoint & practice question validation</li>
                 </ul>
               </div>
 
