@@ -521,6 +521,7 @@ console.log('[KaTeX] System ready');
 <script src="js/services/devMode.js?v=80"></script>
 <script src="js/services/overlayManager.js?v=80"></script>
 <script src="js/services/commandPalette.js?v=80"></script>
+<script src="js/services/milestoneCelebration.js?v=80"></script>
 <script src="js/screens/qraReviewEngine.js?v=80"></script>
 <script src="js/screens/comp.js?v=80"></script>
 <script>
@@ -4538,8 +4539,9 @@ function addHydrationBar(el){
     return;
   }
 
-  // 2. Star Field
-  if (stars && window.anime) {
+  function runExistingSplashTimeline() {
+    // 2. Star Field
+    if (stars && window.anime) {
     const isMobile = window.innerWidth < 768;
     const starCount = isMobile ? 45 : 80;
     const starElements = [];
@@ -4831,6 +4833,13 @@ function addHydrationBar(el){
     }, '-=0.2');
   } else {
     setTimeout(cleanupAndRemove, 3500);
+    }
+  }
+
+  if (window.MilestoneCelebration) {
+    window.MilestoneCelebration.play(runExistingSplashTimeline);
+  } else {
+    runExistingSplashTimeline();
   }
 })();
 
