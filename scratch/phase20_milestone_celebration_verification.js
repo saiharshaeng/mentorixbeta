@@ -37,7 +37,7 @@ assert(COMMUNITY_STATS.learners === 2150, 'COMMUNITY_STATS.learners equals 2150'
 assert(COMMUNITY_STATS.suffix === '+', 'COMMUNITY_STATS.suffix equals "+"');
 assert(COMMUNITY_STATS.label === 'LEARNERS REACHED', 'COMMUNITY_STATS.label equals "LEARNERS REACHED"');
 assert(COMMUNITY_STATS.subtitle === 'Still counting...', 'COMMUNITY_STATS.subtitle equals "Still counting..."');
-assert(COMMUNITY_STATS.thankYou.includes('Thank you for believing in Mentorix.'), 'COMMUNITY_STATS.thankYou has thank-you message');
+assert(COMMUNITY_STATS.thankYou.includes('Thank you for your support and belief in us.'), 'COMMUNITY_STATS.thankYou has thank-you message');
 assert(COMMUNITY_STATS.enabled === true, 'COMMUNITY_STATS.enabled flag exists and defaults to true');
 assert(Object.isFrozen(COMMUNITY_STATS), 'COMMUNITY_STATS is frozen/immutable');
 

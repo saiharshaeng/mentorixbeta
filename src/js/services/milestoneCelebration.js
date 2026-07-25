@@ -16,9 +16,10 @@
     suffix: '+',
     label: 'LEARNERS REACHED',
     subtitle: 'Still counting...',
-    thankYou: 'Thank you for believing in Mentorix. 💜',
-    durationMs: 900,           // 0.9 seconds for counter animation
-    celebrationDurationMs: 900 // 0.9 seconds for particle fade
+    thankYou: 'Thank you for your support and belief in us. 💜',
+    durationMs: 1200,          // 1.2 seconds for counter animation
+    celebrationDurationMs: 1000, // 1.0 seconds for particle bloom
+    holdDurationMs: 2000       // Hold for 2 full seconds after counter is fully visible
   });
 
   function formatNumber(num) {
@@ -65,7 +66,7 @@
         color: #ffffff;
         text-align: center;
         opacity: 1;
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.6s ease-out;
         font-family: Inter, system-ui, -apple-system, sans-serif;
       `;
 
@@ -113,14 +114,16 @@
       if (prefersReducedMotion) {
         setTimeout(() => {
           this.fadeOut(overlay, done);
-        }, 700);
+        }, this.config.holdDurationMs || 2000);
         return;
       }
 
-      // Animate Counter & Particles
+      // Animate Counter -> Particles -> Hold for 2 seconds -> Fade out
       this.animateCounter(document.getElementById('mx-milestone-num'), () => {
         this.triggerParticleCelebration(canvas, () => {
-          this.fadeOut(overlay, done);
+          setTimeout(() => {
+            this.fadeOut(overlay, done);
+          }, this.config.holdDurationMs || 2000);
         });
       });
     }
@@ -228,7 +231,7 @@
       setTimeout(() => {
         if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
         if (typeof callback === 'function') callback();
-      }, 500);
+      }, 600);
     }
   }
 
