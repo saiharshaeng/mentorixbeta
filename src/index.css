@@ -10282,6 +10282,35 @@ html, body {
   margin-bottom: var(--m-space-md, 16px) !important;
 }
 
+/* Phase L1 Mobile Lesson Reader & Focus Mode Styles */
+.m-focus-mode .course-breadcrumb-bar,
+.m-focus-mode #learn-h1,
+.m-focus-mode #learn-sub,
+.m-focus-mode .m-layer-bottom {
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+}
+
+.m-focus-mode .m-focus-mode:hover,
+.m-focus-mode .course-breadcrumb-bar:hover,
+.m-focus-mode .m-layer-bottom:hover {
+  opacity: 1;
+}
+
+.m-katex-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 4px 0;
+  scrollbar-width: thin;
+}
+
+.m-study-comfort {
+  max-width: 68ch;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+
 
 
 

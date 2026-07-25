@@ -509,6 +509,62 @@ function rLError(){
   </div>`;
 }
 
+function convertLessonToStructuredSections(lesson) {
+  if (!lesson) return [];
+  const topic = lesson.topic || 'Lesson';
+  return [
+    {
+      title: '1. Objective & Overview',
+      blocks: [
+        { type: 'objective', content: lesson.hook || `Master the core principles of ${topic}.` },
+        { type: 'explanation', title: 'Foundational Principles', content: lesson.explanation || '' }
+      ]
+    },
+    {
+      title: '2. Core Concept Explanation',
+      blocks: [
+        { type: 'explanation', title: 'Deep Analysis', content: lesson.explanation || '' },
+        { type: 'takeaway', text: `Key insight: Focus on foundational boundary conditions for ${topic}.` }
+      ]
+    },
+    {
+      title: '3. Worked Examples',
+      blocks: (lesson.examples || []).map((ex, i) => ({
+        type: 'worked_example',
+        problem: `Example ${i + 1}: ${ex.q || ''}`,
+        solution: ex.s || ''
+      }))
+    },
+    {
+      title: '4. Mini Checkpoint',
+      blocks: (lesson.checks || []).map((chk, i) => ({
+        type: 'checkpoint',
+        checkpoint: {
+          id: `cp-${i}`,
+          type: 'mcq',
+          question: chk.q || 'Check Question',
+          options: chk.o || [],
+          correct: chk.a || 0,
+          explanation: chk.e || ''
+        }
+      }))
+    },
+    {
+      title: '5. Summary & Key Takeaways',
+      blocks: [
+        {
+          type: 'takeaway',
+          text: (lesson.summary || []).join(' • ')
+        },
+        {
+          type: 'summary',
+          nextTitle: 'Next Concept'
+        }
+      ]
+    }
+  ];
+}
+
 function renderLesson() {
   const a=document.getElementById('larea');if(!a)return;
   if (!LS.lesson) {
@@ -516,6 +572,23 @@ function renderLesson() {
     LS.lesson = generateFallbackLesson(topic);
   }
   const l=LS.lesson;
+
+  // Integrate Phase L1 Universal Mobile Lesson Reader
+  if (window.LessonReader) {
+    const structuredSections = convertLessonToStructuredSections(l);
+    window.LessonReader.renderMobileLesson({
+      topic: l.topic,
+      meta: {
+        estimatedMins: 25,
+        difficulty: 'Intermediate',
+        chapterTitle: (LS.topicContext && LS.topicContext.chapterTitle) || 'Active Chapter'
+      },
+      sections: structuredSections,
+      content: l.explanation
+    }, a);
+    return;
+  }
+
   const stage = LS.activeStage || 1;
 
   const stageTitles = [
