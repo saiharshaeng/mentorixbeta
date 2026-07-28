@@ -20,7 +20,6 @@
       if (this.initialized) return;
       this.attachGlobalListeners();
       this.initialized = true;
-      console.log('[Phase L1 MediaViewer] Mobile Media Viewer Engine active.');
     }
 
     attachGlobalListeners() {

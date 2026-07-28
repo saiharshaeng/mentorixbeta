@@ -36,7 +36,6 @@
       this.subscribeToNavigation();
 
       this.initialized = true;
-      console.log('[UMFIS MobileStandards] Centralized Mobile Standards Engine active.');
     }
 
     injectMobileStandardVariables() {

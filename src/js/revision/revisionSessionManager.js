@@ -22,7 +22,6 @@
         startedAt: Date.now(),
         results: []
       };
-      console.log(`🧠 [RevisionSessionManager] Started revision session with ${units.length} units.`);
       return this.activeSession;
     }
 
@@ -61,7 +60,6 @@
 
     endRevisionSession() {
       if (this.activeSession) {
-        console.log(`[RevisionSessionManager] Completed revision session ${this.activeSession.sessionId}`);
         const summary = { ...this.activeSession };
         this.activeSession = null;
         return summary;

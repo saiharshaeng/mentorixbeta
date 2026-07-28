@@ -72,7 +72,6 @@
     init() {
       if (this.initialized) return;
       this.initialized = true;
-      console.log(`[UDFIA Engine] Universal Data Flow Engine initialized (${API_VERSION}).`);
     }
 
     /**

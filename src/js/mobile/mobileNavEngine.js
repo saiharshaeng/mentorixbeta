@@ -25,7 +25,6 @@
     init() {
       if (typeof window === 'undefined' || !window.document) return;
       this.subscribeToNavigation();
-      console.log('[UMNGA MobileNavEngine] Mobile Navigation Engine initialized.');
     }
 
     subscribeToNavigation() {

@@ -39,7 +39,6 @@
         window.CompEventBus.publish('ReviewQueue.Added', entry);
       }
 
-      console.log(`[ReviewQueueManager] Scheduled ${qId} (${entry.concept}) for spaced review.`);
       return entry;
     }
 

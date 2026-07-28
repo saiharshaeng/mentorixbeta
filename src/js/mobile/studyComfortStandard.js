@@ -22,7 +22,6 @@
 
     init() {
       if (typeof window === 'undefined') return;
-      console.log('[UMFIS StudyComfortStandard] Study Comfort Standard initialized.');
     }
 
     /**

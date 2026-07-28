@@ -23,7 +23,6 @@
 
       this.updateViewportMetrics();
       this.bindListeners();
-      console.log('[MSAVS ViewportManager] Dynamic Viewport Manager initialized.');
     }
 
     bindListeners() {

@@ -80,7 +80,6 @@
         }, 150);
       }
 
-      console.log(`[LessonResumeManager] Resumed lesson state for: ${state.topic} at section ${state.activeSectionIdx}`);
       return true;
     }
   }

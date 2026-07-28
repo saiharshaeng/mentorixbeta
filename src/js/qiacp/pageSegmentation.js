@@ -8,7 +8,6 @@
 (function(exports) {
 
   function segmentPage(cleanupResult) {
-    console.log('[QIACP Stage 4] Segmenting paper into structural sections...');
     const text = cleanupResult.sanitizedText || '';
 
     const sections = [];

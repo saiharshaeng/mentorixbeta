@@ -5149,6 +5149,10 @@ body::before {
   background: #8957e5;
   color: white;
 }
+.nta-pal-answered-marked {
+  background: #1d4ed8;
+  color: white;
+}
 
 /* Current question indicator */
 .nta-pal-current {

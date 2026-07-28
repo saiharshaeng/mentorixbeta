@@ -56,7 +56,6 @@
       this.setupLenisScroll();
       this.setupGlobalScrollRestoration();
       this.initialized = true;
-      console.log('[ASLA Engine] Universal Application Shell initialized with Lenis smooth scroll.');
     }
 
     setupLenisScroll() {

@@ -29,7 +29,6 @@
       if (Hist) Hist.pushContext({ screen: 'dash', param: null });
 
       this.initialized = true;
-      console.log('[UNIA NavigationEngine] Universal Navigation & Interaction Architecture initialized.');
       return true;
     }
 

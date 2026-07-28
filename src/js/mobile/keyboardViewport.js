@@ -19,7 +19,6 @@
     init() {
       if (typeof window === 'undefined' || !window.document) return;
       this.bindViewportListeners();
-      console.log('[MSAVS KeyboardViewport] Keyboard Viewport Engine initialized.');
     }
 
     bindViewportListeners() {

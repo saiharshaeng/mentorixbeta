@@ -51,7 +51,6 @@
           return null;
         }
 
-        console.log('[StatePersistence] Restored interrupted session from storage.');
         return parsed.session;
       } catch (e) {
         console.warn('[StatePersistence] Failed to restore session:', e);

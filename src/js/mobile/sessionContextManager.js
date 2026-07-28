@@ -45,7 +45,6 @@
       this.context.chapter = chapter;
       this.context.unit = unit;
       this.context.startTime = Date.now();
-      console.log(`[SessionContextManager] Session initialized for: ${lessonTitle}`);
     }
 
     addConcept(conceptName = '') {

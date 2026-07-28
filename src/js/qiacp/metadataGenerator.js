@@ -12,7 +12,6 @@
   const PARSER_VERSION = '1.0.0-qiacp';
 
   function generateMetadata(classifiedResult, options = {}) {
-    console.log('[QIACP Stage 13] Generating question identifiers & traceability metadata...');
     
     const batchId = options.batchId || `batch_${Date.now()}`;
     const paperId = options.paperId || `paper_${options.examYear || 2025}_${options.examId || 'jee_main'}`;

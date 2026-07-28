@@ -69,7 +69,6 @@
 
     try {
       localStorage.setItem(`mx3_cloud_sync_${userId}`, JSON.stringify(cloudPayload));
-      console.log('[Mentorix CloudSync] Local data migrated successfully to Cloud Sync payload!');
     } catch (e) {
       console.warn('[Mentorix CloudSync] Migration failed:', e);
     }

@@ -20,7 +20,6 @@
     }
 
     loadLayer1Critical(tasks = []) {
-      console.log('[ModuleLoader] Loading Layer 1 Critical resources...');
       tasks.forEach(fn => {
         if (typeof fn === 'function') fn();
       });
@@ -28,7 +27,6 @@
 
     loadLayer2Important(tasks = []) {
       setTimeout(() => {
-        console.log('[ModuleLoader] Loading Layer 2 Important resources...');
         tasks.forEach(fn => {
           if (typeof fn === 'function') fn();
         });
@@ -41,7 +39,6 @@
         tasks.forEach(fn => itm.scheduleTask(fn, 'background'));
       } else {
         setTimeout(() => {
-          console.log('[ModuleLoader] Loading Layer 3 Background resources...');
           tasks.forEach(fn => { if (typeof fn === 'function') fn(); });
         }, 2000);
       }

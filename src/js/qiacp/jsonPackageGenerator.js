@@ -11,7 +11,6 @@
   const PACKAGE_SCHEMA_VERSION = '2.0.0-qiacp-canonical';
 
   function generateJSONPackage(dedupResult, options = {}) {
-    console.log('[QIACP Stage 16] Generating canonical standardized import package JSON...');
 
     const validQuestions = dedupResult.parsedQuestions || [];
     const reviewQueue = (dedupResult.parsedQuestions || []).filter(q => q.flaggedForReview)

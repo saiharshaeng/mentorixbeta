@@ -18,7 +18,6 @@
     init() {
       if (typeof window === 'undefined') return;
       this.subscribeToNavigation();
-      console.log('[MSAVS ScrollRestoration] Automatic Scroll & State Restoration Engine initialized.');
     }
 
     subscribeToNavigation() {

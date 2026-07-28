@@ -41,7 +41,6 @@
         stage: initialStage,
         timestamp: Date.now()
       });
-      console.log(`[LifecycleManager] Registered ${componentId} at stage: ${initialStage}`);
     }
 
     transitionTo(componentId, newStage) {
@@ -55,7 +54,6 @@
         const oldStage = comp.stage;
         comp.stage = newStage;
         comp.timestamp = Date.now();
-        console.log(`[LifecycleManager] ${componentId}: ${oldStage} -> ${newStage}`);
 
         if (newStage === 'DESTROYED') {
           const mm = typeof window !== 'undefined' ? window.MemoryManager : null;

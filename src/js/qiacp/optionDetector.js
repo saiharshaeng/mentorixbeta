@@ -9,7 +9,6 @@
 (function(exports) {
 
   function detectOptions(questionResult) {
-    console.log('[QIACP Stage 6] Extracting question options and answer choices...');
     const parsedQuestions = (questionResult.rawQuestions || []).map(qObj => {
       const block = qObj.rawBlock;
       let questionType = 'MCQ_SINGLE';

@@ -27,7 +27,6 @@
     init() {
       if (typeof window === 'undefined') return;
       this.bindInterruptionListeners();
-      console.log('[MSAVS ScreenLifecycle] Screen Lifecycle Controller initialized.');
     }
 
     bindInterruptionListeners() {
@@ -43,14 +42,12 @@
     suspendActiveScreen() {
       if (this.currentState === LifecycleStates.HYDRATED) {
         this.currentState = LifecycleStates.SUSPENDED;
-        console.log(`[MSAVS ScreenLifecycle] Suspended screen ${this.currentScreen}`);
       }
     }
 
     resumeActiveScreen() {
       if (this.currentState === LifecycleStates.SUSPENDED) {
         this.currentState = LifecycleStates.HYDRATED;
-        console.log(`[MSAVS ScreenLifecycle] Resumed screen ${this.currentScreen}`);
       }
     }
   }

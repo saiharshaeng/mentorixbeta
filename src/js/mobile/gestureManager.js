@@ -21,7 +21,6 @@
     init() {
       if (typeof window === 'undefined' || !window.document) return;
       this.bindTouchEvents();
-      console.log('[UMNGA GestureManager] Touch Gesture Manager initialized.');
     }
 
     bindTouchEvents() {
@@ -47,7 +46,6 @@
 
       // Edge-back swipe (Swipe right starting near left screen edge)
       if (startX <= this.maxEdgeThreshold && diffX >= this.minSwipeDistance && diffY < 50) {
-        console.log('[UMNGA GestureManager] Edge-back swipe detected.');
         if (window.NavigationEngine) {
           window.NavigationEngine.back();
         } else if (window.history) {

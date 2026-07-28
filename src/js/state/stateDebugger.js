@@ -12,10 +12,9 @@
 
   class StateDebugger {
     constructor() {
-      this.enabled = typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development';
-      if (typeof window !== 'undefined' && window.location && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
-        this.enabled = true;
-      }
+      // Console output is disabled in production.
+      // Event timeline recording is retained for internal inspection tools.
+      this.enabled = false;
       this.eventTimeline = [];
     }
 
@@ -23,14 +22,12 @@
       if (!this.enabled) return;
       const logEntry = { type: 'event', name: eventName, payload, timestamp: Date.now() };
       this.eventTimeline.push(logEntry);
-      console.log(`📡 [StateDebugger] Event published: "${eventName}"`, payload);
     }
 
     logStateUpdate(domain, newState, source) {
       if (!this.enabled) return;
       const logEntry = { type: 'state_update', domain, source, timestamp: Date.now() };
       this.eventTimeline.push(logEntry);
-      console.log(`⚙️ [StateDebugger] State update on domain "${domain}" from source "${source || 'Unknown'}"`);
     }
   }
 

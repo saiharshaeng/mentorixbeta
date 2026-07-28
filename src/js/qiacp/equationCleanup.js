@@ -8,7 +8,6 @@
 (function(exports) {
 
   function cleanupEquations(imageResult) {
-    console.log('[QIACP Stage 10] Cleaning math expressions and raw LaTeX strings...');
     const questionsWithCleanMath = (imageResult.parsedQuestions || []).map(qObj => {
       let qText = qObj.questionText || '';
       let opts = (qObj.options || []).slice();

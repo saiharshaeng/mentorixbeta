@@ -23,7 +23,6 @@
       if (!this.enabled) return;
       const log = { type: 'mount', component: componentName, duration: durationMs, timestamp: Date.now() };
       this.logs.push(log);
-      console.log(`⚡ [PerfLogger] Mounted ${componentName} in ${durationMs.toFixed(2)}ms`);
     }
 
     logRender(componentName, durationMs) {

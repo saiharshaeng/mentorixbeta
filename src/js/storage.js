@@ -135,7 +135,6 @@ async function loadUserData(uid) {
             await idbSet(`${uid}_${k}`, localVal);
             // Clean up localStorage to free space
             localStorage.removeItem(localKey);
-            console.log(`[Mentorix] Migrated ${k} to IndexedDB for user ${uid}`);
           } catch (err) {
             console.error(`[Mentorix] Failed to parse localStorage value for key ${localKey}`, err);
           }

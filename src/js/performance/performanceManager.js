@@ -23,7 +23,6 @@
       if (this.initialized) return;
 
       this.initialized = true;
-      console.log('[PerformanceManager] Mentorix Performance Core & Rendering Engine Active.');
     }
 
     initVisibilityListener() {
@@ -40,7 +39,6 @@
 
     suspendBackgroundOperations() {
       this.isBackground = true;
-      console.log('🌙 [PerformanceManager] Application entered background. Suspending non-essential operations...');
 
       const abm = typeof window !== 'undefined' ? window.AnimationBudgetManager : null;
       if (abm) abm.activeAnimationsCount = 0;
@@ -48,7 +46,6 @@
 
     resumeForegroundOperations() {
       this.isBackground = false;
-      console.log('☀️ [PerformanceManager] Application resumed in foreground.');
     }
   }
 

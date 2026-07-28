@@ -23,7 +23,6 @@
   }
 
   function filterDuplicates(validationResult, existingQuestionHashes = new Set()) {
-    console.log('[QIACP Stage 15] Checking for duplicate questions against repository index...');
 
     const seenHashes = new Set(existingQuestionHashes);
     const uniqueQuestions = [];

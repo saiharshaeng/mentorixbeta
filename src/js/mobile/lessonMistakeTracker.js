@@ -51,7 +51,6 @@
         window.CompEventBus.publish('Mistake.Recorded', mistakeEntry);
       }
 
-      console.log(`[LessonMistakeTracker] Mistake captured for ${qId} (${concept}). Type: ${mistakeType}`);
       return mistakeEntry;
     }
 

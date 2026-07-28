@@ -26,7 +26,6 @@
       if (this.initialized) return;
 
       this.initialized = true;
-      console.log('[StateManager] Universal State & Update Architecture active.');
 
       // Restore interrupted session automatically if available
       let sp = typeof window !== 'undefined' ? window.StatePersistence : null;

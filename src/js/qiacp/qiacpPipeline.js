@@ -8,9 +8,6 @@
 (function(exports) {
 
   async function executePipeline(pdfInput, options = {}) {
-    console.log('═══════════════════════════════════════════════════════════════════');
-    console.log('  STARTING QIACP CONTENT INGESTION & ACADEMIC CLASSIFICATION      ');
-    console.log('═══════════════════════════════════════════════════════════════════');
 
     const QI = (typeof window !== 'undefined' && window.QIACP) ? window.QIACP : exports;
 
@@ -62,9 +59,6 @@
     // Stage 16: Standardized JSON Import Package Generation
     const stage16 = (QI.jsonPackageGenerator || exports.jsonPackageGenerator).generateJSONPackage(stage15, options);
 
-    console.log('===================================================================');
-    console.log(`  QIACP PIPELINE COMPLETE: ${stage16.packagePayload.packageHeader.totalValid} Valid Questions Package Created`);
-    console.log('===================================================================');
 
     return stage16;
   }

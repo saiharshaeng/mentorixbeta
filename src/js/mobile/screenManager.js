@@ -27,7 +27,6 @@
 
       this.subscribeToNavigation();
       this.initialized = true;
-      console.log('[MSAVS ScreenManager] Universal Mobile Screen Manager Engine active.');
     }
 
     subscribeToNavigation() {

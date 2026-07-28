@@ -34,7 +34,6 @@
       if (token) {
         token.cancelled = true;
         this.activeTokens.delete(screenName);
-        console.log(`[RenderCancellationManager] Cancelled obsolete renders for: ${screenName}`);
       }
     }
 

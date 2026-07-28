@@ -94,8 +94,10 @@ function go(scr, param) {
   // Sync hash deep-link URL
   const routePath = CANONICAL_ROUTES[scr] || `/${scr}`;
   const hashTarget = `#${routePath}${param ? '/' + encodeURIComponent(param) : ''}`;
-  if (window.location.hash !== hashTarget && window.history?.replaceState) {
-    window.history.replaceState({ screen: scr, param }, '', hashTarget);
+  if (window.history?.pushState) {
+    if (window.location.hash !== hashTarget) {
+      window.history.pushState({ screen: scr, param }, '', hashTarget);
+    }
   }
 
   // Close mobile drawer if open

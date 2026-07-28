@@ -24,7 +24,6 @@
         startTime: Date.now(),
         data: { ...sessionData }
       };
-      console.log(`[SessionStateManager] Started ${sessionType} session.`);
     }
 
     updateSessionData(updatePayload) {
@@ -41,7 +40,6 @@
 
     endSession() {
       if (this.activeSession) {
-        console.log(`[SessionStateManager] Ended ${this.activeSession.type} session.`);
         this.activeSession = null;
       }
     }

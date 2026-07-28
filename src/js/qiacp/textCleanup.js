@@ -8,7 +8,6 @@
 (function(exports) {
 
   function cleanupText(ocrResult) {
-    console.log('[QIACP Stage 3] Cleaning raw paper text...');
     let text = ocrResult.cleanedText || ocrResult.rawText || '';
 
     // Strip watermarks and recurring header/footer patterns

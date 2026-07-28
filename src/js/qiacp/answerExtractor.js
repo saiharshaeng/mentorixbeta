@@ -8,7 +8,6 @@
 (function(exports) {
 
   function extractAnswers(optionResult) {
-    console.log('[QIACP Stage 7] Extracting answer keys...');
     const questionsWithAnswers = (optionResult.parsedQuestions || []).map(qObj => {
       const block = qObj.rawBlock;
       let correctAnswer = null;

@@ -20,7 +20,6 @@
       if (typeof window === 'undefined' || !window.document) return;
       this.setupFocusListeners();
       this.setupViewportListeners();
-      console.log('[UMFIS KeyboardManager] Keyboard interaction manager initialized.');
     }
 
     setupFocusListeners() {

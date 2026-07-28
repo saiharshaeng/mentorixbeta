@@ -19,9 +19,7 @@
 
     init() {
       if (this.initialized) return;
-
       this.initialized = true;
-      console.log('[RenderPipeline] Universal Rendering Pipeline active.');
     }
 
     renderComponent(componentId, renderFn, targetElement, options = {}) {

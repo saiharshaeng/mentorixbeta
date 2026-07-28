@@ -8,10 +8,8 @@
 (function(exports) {
 
   async function processOCR(ingestionResult, options = {}) {
-    console.log('[QIACP Stage 2] Evaluating OCR requirements...');
 
     if (!ingestionResult.isScanned && !options.forceOCR) {
-      console.log('[QIACP Stage 2] OCR bypassed: Native text layer present.');
       return {
         ...ingestionResult,
         ocrProcessed: false,
@@ -20,7 +18,6 @@
       };
     }
 
-    console.log('[QIACP Stage 2] Executing OCR optical recognition engine...');
     // Preprocess & perform layout OCR extraction
     let ocrText = ingestionResult.rawText;
     

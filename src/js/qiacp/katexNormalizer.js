@@ -9,7 +9,6 @@
 (function(exports) {
 
   function normalizeKaTeX(eqResult) {
-    console.log('[QIACP Stage 11] Normalizing math to KaTeX & verifying compilation...');
     const questionsWithKaTeX = (eqResult.parsedQuestions || []).map(qObj => {
       let katexValid = true;
       let katexError = null;
@@ -33,12 +32,10 @@
 
       if (!testMathCompilation(qObj.questionText) || !testMathCompilation(qObj.solutionText)) {
         katexValid = false;
-        console.log('[KaTeX Check Failed Stem/Sol]:', katexError);
       }
       (qObj.options || []).forEach(opt => {
         if (!testMathCompilation(opt)) {
           katexValid = false;
-          console.log('[KaTeX Check Failed Opt]:', katexError, 'Opt:', opt);
         }
       });
 

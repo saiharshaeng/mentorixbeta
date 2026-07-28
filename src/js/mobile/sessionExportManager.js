@@ -52,7 +52,6 @@
         });
       }
 
-      console.log(`[SessionExportManager] Exported session data for: ${sessionSummary.topicTitle || 'Active Session'}`);
     }
   }
 

@@ -8,7 +8,6 @@
 (function(exports) {
 
   async function ingestPDF(pdfInput, options = {}) {
-    console.log('[QIACP Stage 1] Ingesting PDF file/buffer...');
     
     let rawText = '';
     let pageCount = 1;

@@ -23,7 +23,6 @@
       if (window.MediaViewer) window.MediaViewer.init();
 
       this.initialized = true;
-      console.log('[Phase L1-L5 LessonReader] Universal Mobile Lesson Reader active.');
     }
 
     /**

@@ -33,7 +33,6 @@
       this.setupDOMContainer();
       this.setupGlobalKeybindings();
       this.initialized = true;
-      console.log('[Command Palette] Universal Cmd/Ctrl + K palette initialized.');
     }
 
     getCommandRegistry() {

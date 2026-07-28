@@ -19,7 +19,6 @@
 
     init() {
       if (typeof window === 'undefined' || !window.document) return;
-      console.log('[UMNGA PullToRefreshManager] Pull to Refresh Manager initialized.');
     }
   }
 

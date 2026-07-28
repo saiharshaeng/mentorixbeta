@@ -8,7 +8,6 @@
 (function(exports) {
 
   function detectQuestions(segmentResult) {
-    console.log('[QIACP Stage 5] Detecting question boundaries...');
     const sections = segmentResult.sections || [{ contentStr: segmentResult.sanitizedText }];
     const rawQuestions = [];
 

@@ -8,7 +8,6 @@
 (function(exports) {
 
   function extractSolutions(answerResult) {
-    console.log('[QIACP Stage 8] Extracting solutions and step-by-step explanations...');
     const questionsWithSolutions = (answerResult.parsedQuestions || []).map(qObj => {
       const block = qObj.rawBlock;
       let solutionText = '';

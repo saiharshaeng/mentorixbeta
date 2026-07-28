@@ -10,7 +10,6 @@
 (function(exports) {
 
   function classifyAcademic(katexResult, options = {}) {
-    console.log('[QIACP Stage 12] Classifying questions using Academic Registry (EXAM_SPECS)...');
     
     const specs = (typeof window !== 'undefined' && window.EXAM_SPECS) ? window.EXAM_SPECS : {};
     const defaultExamId = options.examId || 'jee_main';

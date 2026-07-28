@@ -25,7 +25,6 @@
       if (this.initialized) return;
 
       this.initialized = true;
-      console.log('🧠 [RevisionEngine] Revision Intelligence Engine active.');
 
       // Subscribe to Learning & Practice events via EventBus
       let eb = typeof window !== 'undefined' ? window.EventBus : null;

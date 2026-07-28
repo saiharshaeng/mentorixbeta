@@ -9,7 +9,6 @@
 (function(exports) {
 
   function extractImages(solutionResult) {
-    console.log('[QIACP Stage 9] Identifying and linking inline diagrams/figures...');
     const questionsWithImages = (solutionResult.parsedQuestions || []).map((qObj, idx) => {
       const block = qObj.rawBlock;
       const images = [];

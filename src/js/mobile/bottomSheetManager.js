@@ -17,7 +17,6 @@
 
     init() {
       if (typeof window === 'undefined' || !window.document) return;
-      console.log('[UMNGA BottomSheetManager] Bottom Sheet Manager initialized.');
     }
 
     /**

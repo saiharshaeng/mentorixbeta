@@ -22,7 +22,6 @@
         window.addEventListener('resize', () => this.updateInsets());
         window.addEventListener('orientationchange', () => this.updateInsets());
       }
-      console.log('[UMFIS SafeAreaManager] Safe area insets active:', this.insets);
     }
 
     updateInsets() {

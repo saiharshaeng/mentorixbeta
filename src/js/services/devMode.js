@@ -30,7 +30,6 @@
       this.setupDOMContainer();
       this.setupGlobalKeybindings();
       this.initialized = true;
-      console.log('[Developer Mode] Local Inspector Engine initialized (Ctrl+Shift+D).');
     }
 
     setupDOMContainer() {

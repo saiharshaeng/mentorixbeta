@@ -19,7 +19,6 @@
     init() {
       if (typeof window === 'undefined' || !window.document) return;
       this.setupScrollListener();
-      console.log('[UMNGA ThumbFABManager] Thumb FAB Manager initialized.');
     }
 
     setupScrollListener() {

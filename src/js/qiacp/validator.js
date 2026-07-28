@@ -18,7 +18,6 @@
   };
 
   function validatePackage(metadataResult, options = {}) {
-    console.log('[QIACP Stage 14] Validating question package & tagging verification status...');
 
     const validatedQuestions = (metadataResult.parsedQuestions || []).map(qObj => {
       const validationChecks = {

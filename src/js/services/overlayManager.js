@@ -33,7 +33,6 @@
       this.setupToastContainer();
       this.setupEscKeyDismissal();
       this.initialized = true;
-      console.log('[Overlay Manager] Universal overlay & toast architecture initialized.');
     }
 
     setupToastContainer() {

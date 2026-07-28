@@ -41,7 +41,6 @@
         } catch (e) {}
       });
       this.listeners = [];
-      console.log('[EventLifecycleManager] Detached all managed event listeners.');
     }
   }
 

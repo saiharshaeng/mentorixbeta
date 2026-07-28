@@ -288,7 +288,6 @@ function renderQuestionImage(question) {
 window.renderQuestionImage = renderQuestionImage;
 
 function getDifficultyPrompt(examId, diff) {
-  console.log('[DEBUG] Difficulty in prompt:', diff);
   if (diff === 'hard') {
     return `Difficulty Guidelines: HARD / PROBLEM SOLVING. Questions must involve multi-step problem solving, non-trivial algebraic or conceptual manipulation, and distractor options that target common misconceptions. Set "difficulty": "hard".`;
   }
@@ -722,7 +721,7 @@ async function startPYQSession() {
 
   if (btn) { btn.disabled=false; btn.innerHTML=`📋 Load ${year} Paper — ${subject}`; }
   if (questions.length) launchMultiPracticeOverlay(questions);
-  else alert('Could not load questions. Try again.');
+  else toast('Could not load questions. Please try again or select a different year.', 'error');
 }
 window.startPYQSession = startPYQSession;
 
@@ -1947,7 +1946,7 @@ function renderPracticeTab(exam) {
 
         <div>
           <label class="inp-label">DIFFICULTY</label>
-          <select class="inp" onchange="compState.practiceDifficulty=this.value; console.log('[Difficulty Enforcement] User selected difficulty:', this.value); saveCompState();">
+          <select class="inp" onchange="compState.practiceDifficulty=this.value; saveCompState();">
             <option value="easy" ${compState.practiceDifficulty==='easy'?'selected':''}>Easy — Conceptual</option>
             <option value="medium" ${compState.practiceDifficulty==='medium'?'selected':''}>Medium — Application</option>
             <option value="hard" ${compState.practiceDifficulty==='hard'?'selected':''}>Hard — Problem Solving</option>
@@ -2075,10 +2074,11 @@ function renderMockInstructions(exam) {
         <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px">
           <strong style="color:#fff">2. CBT Color Scheme & Symbols:</strong>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px">
-            <div><span class="btn bsm bgh" style="min-height:auto;padding:2px 8px;font-size:10px">1</span> Not Visited</div>
-            <div><span class="btn bsm" style="min-height:auto;padding:2px 8px;font-size:10px;background:#EF4444;color:#fff">1</span> Visited but Unanswered</div>
-            <div><span class="btn bsm" style="min-height:auto;padding:2px 8px;font-size:10px;background:#10B981;color:#fff">1</span> Saved & Answered</div>
-            <div><span class="btn bsm" style="min-height:auto;padding:2px 8px;font-size:10px;background:#F59E0B;color:#fff">1</span> Marked for Review</div>
+            <div><span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:4px;font-size:11px;font-weight:700;color:#fff;margin-right:6px">1</span>Not Visited</div>
+            <div><span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:#EF4444;border-radius:4px;font-size:11px;font-weight:700;color:#fff;margin-right:6px">1</span>Visited, Unanswered</div>
+            <div><span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:#10B981;border-radius:4px;font-size:11px;font-weight:700;color:#fff;margin-right:6px">1</span>Saved & Answered</div>
+            <div><span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:#9333EA;border-radius:4px;font-size:11px;font-weight:700;color:#fff;margin-right:6px">1</span>Marked for Review</div>
+            <div><span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:#3B82F6;border-radius:4px;font-size:11px;font-weight:700;color:#fff;margin-right:6px">1</span>Answered + Marked</div>
           </div>
         </div>
 
@@ -2109,7 +2109,7 @@ function cancelMockExamSetup() {
 function beginMockExamAfterInstructions() {
   const check = document.getElementById('instructions-agree-check');
   if (!check || !check.checked) {
-    alert('Please check the box to confirm you have read the instructions.');
+    toast('Please confirm you have read the instructions before starting.');
     return;
   }
   
@@ -2164,7 +2164,6 @@ async function startMockExamSetup(forcedMode) {
     });
   }
 
-  console.log('[Difficulty Enforcement] Passing difficulty to mock exam setup:', diff);
 
   // Preload exam questions dynamically
   if (window.pyqService) {
@@ -2298,7 +2297,6 @@ async function startMockExamSetup(forcedMode) {
           id: i + 1,
           marking: q.marking || (q.type === 'numerical' ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 })
         }));
-        console.log(`[Mock] ✅ Serving real PYQ paper: "${questions[0]?.examDate || 'NTA Paper'}" — ${questions.length} questions`);
       }
     }
 
@@ -2404,7 +2402,6 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
     }
   }
 
-  console.log('[Difficulty Enforcement] Mock questions received:', questions.length, 'questions. Difficulty requested:', diff);
 
   compState.activeExam = {
     questions,
@@ -2416,6 +2413,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
     instructionsRead: false,
     mode,
     timeSpent: questions.map(() => 0),
+    confidence: {},
     lastEntryTime: null
   };
 
@@ -2595,7 +2593,8 @@ function renderActiveExamUI() {
           'unvisited': 'nta-pal-unvisited',
           'unanswered': 'nta-pal-unanswered',
           'answered': 'nta-pal-answered',
-          'marked': 'nta-pal-marked'
+          'marked': 'nta-pal-marked',
+          'answered_marked': 'nta-pal-answered-marked'
         };
         const cls = `nta-pal-btn ${statusMap[status] || 'nta-pal-unvisited'}${isCurrent ? ' nta-pal-current' : ''}`;
         return `<button class="${cls}" data-q-index="${i}" onclick="navigateExam(${i})">${i + 1}</button>`;
@@ -2660,10 +2659,11 @@ function renderActiveExamUI() {
   }
 
   // ── SUMMARY COUNTS ────────────────────────────────────────────────────
-  let answeredCount = 0, markedCount = 0, notVisited = 0;
+  let answeredCount = 0, markedCount = 0, notVisited = 0, answeredMarkedCount = 0;
   exam.questions.forEach((_, i) => {
     const st = exam.status[i] || 'unvisited';
     if (st === 'answered') answeredCount++;
+    else if (st === 'answered_marked') { answeredCount++; answeredMarkedCount++; }
     else if (st === 'marked') markedCount++;
     else if (st === 'unvisited') notVisited++;
   });
@@ -2741,6 +2741,14 @@ function renderActiveExamUI() {
 
         </div>
 
+          <!-- CONFIDENCE COLLECTION (non-blocking) -->
+          <div class="nta-confidence-row" id="nta-confidence-row" style="display:flex;align-items:center;gap:8px;padding:10px 0;margin-top:8px;border-top:1px solid rgba(255,255,255,0.05);flex-wrap:wrap">
+            <span style="font-size:11px;color:var(--mut);font-weight:600;flex-shrink:0">Confidence:</span>
+            <button class="nta-conf-btn ${(exam.confidence && exam.confidence[exam.currentIndex]) === 'very_confident' ? 'active' : ''}" onclick="setExamConfidence('very_confident')" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid rgba(16,185,129,0.3);background:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'very_confident' ? 'rgba(16,185,129,0.2)' : 'transparent'};color:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'very_confident' ? '#10B981' : 'var(--mut)'};cursor:pointer;transition:all 0.2s">🟢 Sure</button>
+            <button class="nta-conf-btn ${(exam.confidence && exam.confidence[exam.currentIndex]) === 'somewhat_confident' ? 'active' : ''}" onclick="setExamConfidence('somewhat_confident')" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid rgba(245,158,11,0.3);background:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'somewhat_confident' ? 'rgba(245,158,11,0.15)' : 'transparent'};color:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'somewhat_confident' ? '#F59E0B' : 'var(--mut)'};cursor:pointer;transition:all 0.2s">🟡 Maybe</button>
+            <button class="nta-conf-btn ${(exam.confidence && exam.confidence[exam.currentIndex]) === 'guessing' ? 'active' : ''}" onclick="setExamConfidence('guessing')" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid rgba(239,68,68,0.3);background:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'guessing' ? 'rgba(239,68,68,0.12)' : 'transparent'};color:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'guessing' ? '#EF4444' : 'var(--mut)'};cursor:pointer;transition:all 0.2s">🔴 Guessing</button>
+          </div>
+
         <!-- ACTION BAR -->
         <div class="nta-action-bar">
           <div class="nta-action-left">
@@ -2793,11 +2801,11 @@ function renderActiveExamUI() {
         <div class="nta-pal-nav-label">Question Palette</div>
         <div class="nta-pal-scroll">${paletteHTML}</div>
 
-        <!-- Legend -->
         <div class="nta-pal-legend">
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-answered"></span>Answered</div>
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unanswered"></span>Not Answered</div>
-          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-marked"></span>Marked</div>
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-marked"></span>Marked for Review</div>
+          <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-answered-marked"></span>Ans. + Marked</div>
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unvisited"></span>Not Visited</div>
         </div>
 
@@ -2821,7 +2829,10 @@ function switchMockSection(sec) {
 function markMockForReview() {
   const exam = compState.activeExam;
   if (!exam) return;
-  exam.status[exam.currentIndex] = 'marked';
+  const hasAnswer = exam.answers[exam.currentIndex] !== undefined && 
+                    exam.answers[exam.currentIndex] !== '' &&
+                    !(Array.isArray(exam.answers[exam.currentIndex]) && exam.answers[exam.currentIndex].length === 0);
+  exam.status[exam.currentIndex] = hasAnswer ? 'answered_marked' : 'marked';
   
   if (exam.currentIndex < exam.questions.length - 1) {
     navigateExam(exam.currentIndex + 1);
@@ -2848,6 +2859,33 @@ function saveAndNextMock() {
   }
 }
 
+function setExamConfidence(level) {
+  const exam = compState.activeExam;
+  if (!exam) return;
+  if (!exam.confidence) exam.confidence = {};
+  exam.confidence[exam.currentIndex] = level;
+  // Re-render only the confidence row to avoid flicker
+  const row = document.getElementById('nta-confidence-row');
+  if (row) {
+    const conf = exam.confidence[exam.currentIndex];
+    row.querySelectorAll('.nta-conf-btn').forEach(btn => {
+      const btnLevel = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+      const isActive = btnLevel === conf;
+      if (btnLevel === 'very_confident') {
+        btn.style.background = isActive ? 'rgba(16,185,129,0.2)' : 'transparent';
+        btn.style.color = isActive ? '#10B981' : 'var(--mut)';
+      } else if (btnLevel === 'somewhat_confident') {
+        btn.style.background = isActive ? 'rgba(245,158,11,0.15)' : 'transparent';
+        btn.style.color = isActive ? '#F59E0B' : 'var(--mut)';
+      } else {
+        btn.style.background = isActive ? 'rgba(239,68,68,0.12)' : 'transparent';
+        btn.style.color = isActive ? '#EF4444' : 'var(--mut)';
+      }
+    });
+  }
+}
+window.setExamConfidence = setExamConfidence;
+
 function confirmSubmitMockExam() {
   const exam = compState.activeExam;
   if (!exam) return;
@@ -2855,7 +2893,7 @@ function confirmSubmitMockExam() {
   const total = exam.questions.length;
   let answered = 0;
   for (let i = 0; i < total; i++) {
-    if (exam.status[i] === 'answered') answered++;
+    if (exam.status[i] === 'answered' || exam.status[i] === 'answered_marked') answered++;
   }
   const unanswered = total - answered;
 
@@ -3201,6 +3239,10 @@ function submitMockExam() {
       });
     }
 
+  // Save confidence data before clearing activeExam
+  const examConfidence = exam.confidence || {};
+  const examTimeSpent = exam.timeSpent || [];
+  compState.lastExamConfidence = examConfidence;
   compState.activeExam = null;
 
   // Restore sidebar safely
@@ -3222,7 +3264,7 @@ function submitMockExam() {
   }
   if (document.body) document.body.style.overflow = '';
 
-  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML);
+  renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML, subjectStats, marking, examTimeSpent);
 }
 
 function addTopicToRevision(topic) {
@@ -3262,7 +3304,7 @@ function estimateJEEPercentileAndRank(score) {
 }
 window.estimateJEEPercentileAndRank = estimateJEEPercentileAndRank;
 
-function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML) {
+function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarned, mistakeAnalysisHTML, timeAnalyticsHTML, subjectStats, marking, examTimeSpent) {
   const main = document.getElementById('main');
   if (!main) return;
 
@@ -3309,31 +3351,168 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
       ${mistakeAnalysisHTML || ''}
       ${timeAnalyticsHTML || ''}
 
+      <!-- SUBJECT BREAKDOWN -->
+      <div class="card mb20" style="padding:20px;border-color:rgba(139,92,246,0.2)">
+        <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:14px">📊 Subject-wise Performance</div>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.08)">
+                <th style="text-align:left;padding:8px;color:var(--mut);font-weight:700">Subject</th>
+                <th style="text-align:center;padding:8px;color:var(--mut);font-weight:700">Attempted</th>
+                <th style="text-align:center;padding:8px;color:var(--okl);font-weight:700">Correct</th>
+                <th style="text-align:center;padding:8px;color:var(--redl);font-weight:700">Wrong</th>
+                <th style="text-align:center;padding:8px;color:var(--mut);font-weight:700">Accuracy</th>
+                <th style="text-align:right;padding:8px;color:var(--pl);font-weight:700">Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${Object.entries(subjectStats).map(([sub, st]) => {
+                const attempted = st.total - (st.skipped || 0);
+                const wrong = (attempted - st.correct);
+                const subScore = st.correct * (marking.correct || 4) + wrong * (marking.wrong || -1);
+                const acc = attempted > 0 ? Math.round((st.correct / attempted) * 100) : 0;
+                const accColor = acc >= 70 ? '#10B981' : acc >= 50 ? '#F59E0B' : '#EF4444';
+                return `<tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                  <td style="padding:10px 8px;color:#fff;font-weight:600">${esc(sub)}</td>
+                  <td style="text-align:center;padding:10px 8px;color:var(--sub)">${attempted}/${st.total}</td>
+                  <td style="text-align:center;padding:10px 8px;color:var(--okl);font-weight:700">${st.correct}</td>
+                  <td style="text-align:center;padding:10px 8px;color:var(--redl);font-weight:700">${wrong}</td>
+                  <td style="text-align:center;padding:10px 8px">
+                    <span style="color:${accColor};font-weight:700">${acc}%</span>
+                  </td>
+                  <td style="text-align:right;padding:10px 8px;font-weight:700;color:${subScore >= 0 ? 'var(--okl)' : 'var(--redl)'}">${subScore > 0 ? '+' : ''}${subScore}</td>
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TIME QUADRANT -->
+      <div class="card mb20" style="padding:20px;border-color:rgba(6,182,212,0.2)">
+        <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:14px">⏱️ Performance Pattern Analysis</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          ${(() => {
+            let fastCorrect = 0, slowCorrect = 0, fastWrong = 0, slowWrong = 0;
+            const expectedTime = 144; // 180min / 75 questions = 144s
+            results.forEach((res, idx) => {
+              const t = (examTimeSpent && examTimeSpent[idx]) || 0;
+              if (res.isCorrect && t < expectedTime) fastCorrect++;
+              else if (res.isCorrect && t >= expectedTime) slowCorrect++;
+              else if (!res.isCorrect && res.user !== undefined && res.user !== '' && t < expectedTime) fastWrong++;
+              else if (!res.isCorrect && res.user !== undefined && res.user !== '') slowWrong++;
+            });
+            return [
+              { icon: '✅', label: 'Fast + Correct', count: fastCorrect, color: '#10B981', desc: 'Strong mastery' },
+              { icon: '🧠', label: 'Slow + Correct', count: slowCorrect, color: '#F59E0B', desc: 'Deep thinking' },
+              { icon: '⚡', label: 'Fast + Wrong', count: fastWrong, color: '#EF4444', desc: 'Careless/rushed' },
+              { icon: '😓', label: 'Slow + Wrong', count: slowWrong, color: '#7C3AED', desc: 'Concept gaps' }
+            ].map(q => `<div class="card" style="padding:14px;border-color:${q.color}33;text-align:center">
+              <div style="font-size:24px;margin-bottom:4px">${q.icon}</div>
+              <div style="font-size:22px;font-weight:800;color:${q.color}">${q.count}</div>
+              <div style="font-size:11px;font-weight:700;color:#fff;margin:2px 0">${q.label}</div>
+              <div style="font-size:10px;color:var(--mut)">${q.desc}</div>
+            </div>`).join('');
+          })()}
+        </div>
+      </div>
+
+      <!-- CONFIDENCE CALIBRATION -->
+      ${(() => {
+        const confData = (compState.lastExamConfidence || {});
+        const totalConf = Object.keys(confData).length;
+        if (!totalConf) return '';
+        let overconfident = 0, underconfident = 0, wellCalibrated = 0;
+        results.forEach((res, idx) => {
+          const conf = confData[idx];
+          if (!conf) return;
+          if (conf === 'very_confident' && !res.isCorrect) overconfident++;
+          else if (conf === 'guessing' && res.isCorrect) underconfident++;
+          else wellCalibrated++;
+        });
+        return `<div class="card mb20" style="padding:20px;border-color:rgba(139,92,246,0.2)">
+          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:14px">🎯 Confidence Calibration</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:130px;padding:12px;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:10px;text-align:center">
+              <div style="font-size:22px;font-weight:800;color:#EF4444">${overconfident}</div>
+              <div style="font-size:11px;color:#fff;font-weight:600">Overconfident</div>
+              <div style="font-size:10px;color:var(--mut)">Sure but wrong</div>
+            </div>
+            <div style="flex:1;min-width:130px;padding:12px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:10px;text-align:center">
+              <div style="font-size:22px;font-weight:800;color:#F59E0B">${underconfident}</div>
+              <div style="font-size:11px;color:#fff;font-weight:600">Underconfident</div>
+              <div style="font-size:10px;color:var(--mut)">Guessing but right</div>
+            </div>
+            <div style="flex:1;min-width:130px;padding:12px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:10px;text-align:center">
+              <div style="font-size:22px;font-weight:800;color:#10B981">${wellCalibrated}</div>
+              <div style="font-size:11px;color:#fff;font-weight:600">Well Calibrated</div>
+              <div style="font-size:10px;color:var(--mut)">Accurate self-assessment</div>
+            </div>
+          </div>
+        </div>`;
+      })()}
+
       <div class="h2 mb14" style="color:#fff">Review Questions & Explanations</div>
       <div style="display:flex;flex-direction:column;gap:12px">
-        ${results.map((res, idx) => `
+        ${results.map((res, idx) => {
+          // Mistake classification for wrong answers
+          let mistakeTag = '';
+          let interventionNote = '';
+          if (!res.isCorrect && res.user !== undefined && res.user !== '') {
+            const timeMs = ((examTimeSpent && examTimeSpent[idx]) || 0) * 1000;
+            const conf = (compState.lastExamConfidence || {})[idx] || 'somewhat_confident';
+            const mistakeType = (window.MistakeClassifier && window.MistakeClassifier.classify)
+              ? window.MistakeClassifier.classify({}, res.user, timeMs, conf, 0)
+              : (timeMs < 15000 ? 'careless' : 'concept_error');
+            const mistakeLabel = (window.MistakeClassifier && window.MistakeClassifier.getLabel)
+              ? window.MistakeClassifier.getLabel(mistakeType)
+              : '🧠 Concept Gap';
+            const intervention = (window.MistakeClassifier && window.MistakeClassifier.getIntervention)
+              ? window.MistakeClassifier.getIntervention(mistakeType)
+              : 'Revisit this topic';
+            mistakeTag = `<span style="font-size:10px;padding:3px 8px;border-radius:12px;background:rgba(239,68,68,0.12);color:#F87171;border:1px solid rgba(239,68,68,0.2);font-weight:700;margin-left:8px">${mistakeLabel}</span>`;
+            interventionNote = `<div style="font-size:11px;color:var(--mut);margin-top:8px;padding:8px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.15);border-radius:8px">💡 ${esc(intervention)}</div>`;
+          }
+          return `
           <div class="card" style="padding:16px;border:1px solid ${res.isCorrect?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}">
             <div class="between mb8" style="font-size:12px">
-              <span style="font-weight:700;color:var(--mut)">Question ${idx + 1}</span>
-              <span class="tag ${res.isCorrect?'tok':'tred'}">${res.isCorrect?'Correct':'Incorrect'}</span>
+              <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+                <span style="font-weight:700;color:var(--mut)">Q${idx + 1}</span>
+                <span class="tag ${res.isCorrect?'tok':'tred'}">${res.isCorrect?'✓ Correct':'✗ Wrong'}</span>
+                ${mistakeTag}
+              </div>
+              ${!res.isCorrect ? `<button onclick="addToRevisionFromReview('${esc(res.q || '').substring(0,40)}')" style="font-size:10px;padding:3px 10px;border-radius:12px;background:rgba(139,92,246,0.12);color:#A78BFA;border:1px solid rgba(139,92,246,0.3);cursor:pointer;font-weight:700">+ Add to Revision</button>` : ''}
             </div>
-            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:12px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}${renderQuestionImage(res)}</p>
+            <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:10px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}${renderQuestionImage(res)}</p>
             
-            <div style="font-size:12px;color:var(--sub);margin-bottom:8px">
-              Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':'var(--redl)'}">${res.user !== undefined && res.user !== '' ? (res.user.join ? res.user.map(u => String.fromCharCode(65+u)).join(', ') : (isNaN(res.user) ? res.user : String.fromCharCode(65+res.user))) : 'Skipped'}</strong>
+            <div style="display:flex;gap:16px;font-size:12px;margin-bottom:10px;flex-wrap:wrap">
+              <div>Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':'var(--redl)'}">${res.user !== undefined && res.user !== '' ? (res.user.join ? res.user.map(u => String.fromCharCode(65+u)).join(', ') : (isNaN(res.user) ? res.user : String.fromCharCode(65+res.user))) : 'Skipped'}</strong></div>
+              <div>Correct: <strong style="color:var(--okl)">${res.correct || '—'}</strong></div>
             </div>
 
             <div style="font-size:12px;color:var(--sub);background:rgba(255,255,255,0.02);padding:10px;border-radius:8px" class="katex-render-target">
-              <span style="font-weight:700;color:#fff;display:block;margin-bottom:4px">Solution Details:</span>
-              ${renderQuestionText(res.explanation || res.expl || '')}
+              <span style="font-weight:700;color:#fff;display:block;margin-bottom:4px">📖 Worked Solution:</span>
+              ${renderQuestionText(res.explanation || res.expl || 'No solution available.')}
             </div>
-          </div>
-        `).join('')}
+            ${interventionNote}
+          </div>`;
+        }).join('')}
       </div>
     </div>
   `;
   triggerMath();
 }
+
+// 📚 Add a question topic to revision queue from review screen
+function addToRevisionFromReview(questionSnippet) {
+  const topic = (questionSnippet || '').trim() || 'Exam Question';
+  addTopicToRevision(topic);
+  if (typeof toast === 'function') {
+    toast('✅ Added to your Revision Queue — review it in Spaced Repetition!', 'success');
+  }
+}
+window.addToRevisionFromReview = addToRevisionFromReview;
 
 // 🎯 Practice Overlay
 function launchPracticeOverlay(q) {
@@ -3356,9 +3535,7 @@ function launchPracticeOverlay(q) {
         ${renderQuestionImage(q)}
       </div>
 
-      <div id="practice-hint-box" style="display:none;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:10px;font-size:12px;color:var(--goldl);margin-bottom:14px" class="katex-render-target">
-        <strong>Hint:</strong> ${renderQuestionText(q.hint || 'Analyze the question parameters carefully.')}
-      </div>
+      <div id="practice-hints-container" style="margin-bottom:14px"></div>
 
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
         ${q.type === 'numerical' ? `
@@ -3379,7 +3556,7 @@ function launchPracticeOverlay(q) {
       ` : ''}
 
       <div class="between">
-        <button class="btn bgh bsm" onclick="document.getElementById('practice-hint-box').style.display='block'">💡 Need a Hint?</button>
+        <button class="btn bgh bsm" id="practice-hint-btn" onclick="revealNextHint()" style="font-size:12px">💡 Hint (Level 1/5)</button>
         <div id="practice-result-text" style="font-size:13px;font-weight:700"></div>
       </div>
 
@@ -3389,6 +3566,7 @@ function launchPracticeOverlay(q) {
     </div>
   `;
   document.body.appendChild(wrap);
+  initPracticeHints(q);
   triggerMath();
 }
 
@@ -3396,6 +3574,80 @@ function closePracticeOverlay() {
   const el = document.getElementById('practice-modal');
   if (el) el.remove();
 }
+
+// ── 5-Level Progressive Hint System ──────────────────────────────────
+let _practiceHintLevel = 0;
+let _practiceHints = [];
+
+function initPracticeHints(q) {
+  _practiceHintLevel = 0;
+  // Build 5 hints from available data
+  if (Array.isArray(q.hints) && q.hints.length > 0) {
+    // Question already has an explicit hints array
+    _practiceHints = q.hints.slice(0, 5);
+    // Pad to 5 if shorter
+    while (_practiceHints.length < 5) {
+      _practiceHints.push(q.expl || q.hint || 'Review the full solution carefully.');
+    }
+  } else {
+    // Auto-generate from single hint + expl
+    const basicHint = q.hint || 'Think carefully about the core concept being tested.';
+    const expl = q.expl || 'Work through the problem step by step.';
+    _practiceHints = [
+      basicHint,                                                            // L1: Direction
+      'Key concept: ' + (q.chap || q.chapter || 'core topic'),            // L2: Concept
+      'Apply the relevant formula or law for this type of problem.',       // L3: Formula
+      'Start by identifying what is given and what is asked. Then set up the equation.', // L4: Step
+      expl                                                                  // L5: Solution
+    ];
+  }
+}
+
+function revealNextHint() {
+  const container = document.getElementById('practice-hints-container');
+  const btn = document.getElementById('practice-hint-btn');
+  if (!container) return;
+
+  if (_practiceHintLevel >= _practiceHints.length) return;
+
+  const hint = _practiceHints[_practiceHintLevel];
+  const level = _practiceHintLevel + 1;
+  const levelNames = ['Direction', 'Concept', 'Formula', 'First Step', 'Full Solution'];
+  const levelColors = [
+    'rgba(6,182,212,0.12)',    // cyan
+    'rgba(139,92,246,0.12)',   // purple
+    'rgba(245,158,11,0.12)',   // amber
+    'rgba(249,115,22,0.12)',   // orange
+    'rgba(16,185,129,0.12)'   // green
+  ];
+  const borderColors = [
+    'rgba(6,182,212,0.3)',
+    'rgba(139,92,246,0.3)',
+    'rgba(245,158,11,0.3)',
+    'rgba(249,115,22,0.3)',
+    'rgba(16,185,129,0.3)'
+  ];
+  const textColors = ['#67E8F9','#C4B5FD','#FCD34D','#FDBA74','#6EE7B7'];
+
+  const hintDiv = document.createElement('div');
+  hintDiv.style.cssText = `background:${levelColors[_practiceHintLevel]};border:1px solid ${borderColors[_practiceHintLevel]};border-radius:10px;padding:10px 12px;font-size:12px;margin-bottom:8px;animation:fadeIn 0.3s ease`;
+  hintDiv.innerHTML = `
+    <div style="font-size:10px;font-weight:700;color:${textColors[_practiceHintLevel]};letter-spacing:0.5px;margin-bottom:4px">HINT ${level}/5 — ${levelNames[_practiceHintLevel].toUpperCase()}</div>
+    <div style="color:#e2e8f0;line-height:1.5" class="katex-render-target">${renderQuestionText ? renderQuestionText(hint) : hint}</div>
+  `;
+  container.appendChild(hintDiv);
+  if (typeof triggerMath === 'function') triggerMath();
+
+  _practiceHintLevel++;
+
+  if (_practiceHintLevel >= _practiceHints.length) {
+    if (btn) { btn.disabled = true; btn.textContent = '✅ Full Solution Revealed'; btn.style.opacity = '0.5'; }
+  } else {
+    if (btn) btn.textContent = `💡 Hint (Level ${_practiceHintLevel + 1}/5)`;
+  }
+}
+window.revealNextHint = revealNextHint;
+window.initPracticeHints = initPracticeHints;
 
 function checkPracticeAnswer(idx, correctAnswers, expl) {
   const resultText = document.getElementById('practice-result-text');

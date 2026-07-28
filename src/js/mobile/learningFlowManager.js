@@ -30,7 +30,6 @@
       }
 
       this.initialized = true;
-      console.log('[Phase L4 LearningFlowManager] Intelligent Learning Flow & Momentum Engine active.');
     }
 
     /**

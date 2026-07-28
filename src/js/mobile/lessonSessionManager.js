@@ -36,7 +36,6 @@
         }
       }, 1000);
 
-      console.log(`[LessonSessionManager] Study session started for lesson: ${this.activeSessionId}`);
     }
 
     enableFocusMode() {
@@ -53,7 +52,6 @@
         window.CompEventBus.publish('Session.FocusModeChanged', { active: true });
       }
 
-      console.log('[LessonSessionManager] Focus Mode automatically engaged for deep study session.');
     }
 
     disableFocusMode() {
@@ -90,7 +88,6 @@
       this.stopTicker();
       this.disableFocusMode();
       const elapsedMinutes = Math.round((Date.now() - (this.startTime || Date.now())) / 60000);
-      console.log(`[LessonSessionManager] Study session ended. Total study time: ${elapsedMinutes} mins.`);
       return {
         sessionId: this.activeSessionId,
         elapsedMinutes,

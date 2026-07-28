@@ -23,7 +23,6 @@
     }
 
     releaseScreenResources(screenName) {
-      console.log(`[MemoryManager] Releasing UI resources for screen: ${screenName}`);
 
       // 1. Detach all managed event listeners
       const elm = typeof window !== 'undefined' ? window.EventLifecycleManager : null;

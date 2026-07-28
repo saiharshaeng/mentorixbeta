@@ -43,7 +43,6 @@
       }
 
       this.saveSession();
-      console.log(`[SessionMomentumManager] Study session started for: ${topicTitle}`);
     }
 
     saveSession() {
