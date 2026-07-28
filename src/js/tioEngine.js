@@ -257,6 +257,15 @@
       if (p.includes('career roadmap') || p.includes('career exploration') || p.includes('show careers')) {
         return { isDeterministic: true, intent: 'NAVIGATE_CAREERS' };
       }
+      if (p.includes('explain active topic') || p.includes('explain topic') || p.includes('explain concept') || p.includes('explain physics')) {
+        return { isDeterministic: true, intent: 'EXPLAIN_CONCEPT' };
+      }
+      if (p.includes('key formulas') || p.includes('formula sheet') || p.includes('show formulas') || p.includes('formulas and units')) {
+        return { isDeterministic: true, intent: 'FORMULA_SHEET' };
+      }
+      if (p.includes('micro quiz') || p.includes('quick quiz') || p.includes('5-q micro test') || p.includes('5 question quiz')) {
+        return { isDeterministic: true, intent: 'MICRO_QUIZ' };
+      }
 
       // Default: Generative intent (concept explanation, mentorship, etc.)
       return { isDeterministic: false, intent: 'GENERATIVE_TEACHING' };
@@ -301,8 +310,26 @@
         if (typeof window.go === 'function') window.go('careers');
         return { handled: true, response: "Opening Personalized Career Discovery & Roadmaps!" };
       }
-
-      return { handled: false };
+      if (intent === 'EXPLAIN_CONCEPT') {
+        const topic = window.D?.memory?.activeTopic || 'Electric Charge & Fields';
+        return {
+          handled: true,
+          response: `📖 **Active Topic Overview: ${topic}**\n\n- **Core Idea**: Master definitions, physical intuition, and vector relationships step-by-step.\n- **NCERT Focus**: Focus on boundary conditions, vector components, and standard numerical substitutions.\n\nReady to dive deeper? Click below to launch your full interactive lesson:\n\n<button class="btn bpri bsm mt10" onclick="go('learn', '${topic}')">🚀 Launch Full Interactive Lesson</button>`
+        };
+      }
+      if (intent === 'FORMULA_SHEET') {
+        return {
+          handled: true,
+          response: `📐 **Essential JEE NCERT Formula Sheet**:\n\n1. **Electrostatics**: $F = \\frac{1}{4\\pi\\epsilon_0}\\frac{|q_1 q_2|}{r^2}$ | $\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{\\text{encl}}}{\\epsilon_0}$\n2. **Mechanics**: $F_{\\text{net}} = m a$ | $W_{\\text{net}} = \\Delta K = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$\n3. **Calculus**: $\\frac{d}{dx}(x^n) = n x^{n-1}$ | $\\int u dv = uv - \\int v du$\n4. **Thermodynamics**: $Q = \\Delta U + W$ | $\\eta = 1 - \\frac{T_C}{T_H}$\n\n<button class="btn bpri bsm mt10" onclick="go('comp')">🎯 Practice Questions On These Formulas</button>`
+        };
+      }
+      if (intent === 'MICRO_QUIZ') {
+        if (typeof window.go === 'function') window.go('comp');
+        return {
+          handled: true,
+          response: `⏱️ **5-Question Micro Quiz Ready!**\n\nTesting your speed, accuracy, and confidence under timed exam conditions.\n\n<button class="btn bpri bsm mt10" onclick="go('comp')">🚀 Start 5-Q Micro Test Now</button>`
+        };
+      }
     }
   };
 

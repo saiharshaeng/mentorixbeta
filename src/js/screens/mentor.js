@@ -59,11 +59,13 @@ function rMentor() {
 
       <!-- SMART COMMAND QUICK ACTIONS -->
       <div class="card mb20" style="padding:16px 20px;background:rgba(13,11,31,0.85);border:1px solid rgba(255,255,255,0.08)">
-        <div style="color:var(--pl);font-weight:700;font-size:12px;text-transform:uppercase;margin-bottom:10px">⚡ Smart Commands (Click to route)</div>
+        <div style="color:var(--pl);font-weight:700;font-size:12px;text-transform:uppercase;margin-bottom:10px">⚡ One-Tap Study Actions (Click to ask Tio)</div>
         <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, continue my Physics course.')">📖 Continue Course</button>
-          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start a JEE mock.')">🎯 Start CBT Mock Test</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, explain active topic.')">📖 Explain Concept</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show key formulas.')">📐 Key Formulas & Units</button>
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show today\'s weak topics.')">🛡️ Review Mistakes</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start 5-q micro test.')">🎯 5-Q Micro Test</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start a JEE mock.')">⚡ CBT Mock Test</button>
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, open career roadmap.')">🚀 Career Roadmap</button>
         </div>
       </div>
