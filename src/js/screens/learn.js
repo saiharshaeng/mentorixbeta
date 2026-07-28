@@ -427,7 +427,6 @@ Output ONLY this JSON format (all fields required):
     saveCheckpoint();
     renderLesson();
   }catch(e){
-    console.warn('[LearnEngine] AI lesson fallback triggered:', e.message);
     LS.lesson = generateFallbackLesson(topic);
     LS.loading = false;
     LS.err = '';

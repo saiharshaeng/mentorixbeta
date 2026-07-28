@@ -163,15 +163,10 @@ async function ai(msgs, sys, mt = 1000, json = false, model = window.MODEL_CHAT 
               }
               return reply;
             }
-          } else if (data?.error) {
-            console.warn('[Mentorix] Proxy API warning:', data.error.message);
           }
-        } else {
-          console.warn('[Mentorix] Proxy HTTP status:', r.status);
         }
         break; // Break retry loop if not a retryable error or if ok
       } catch (e) {
-        console.warn('[Mentorix] Cloudflare Worker proxy connection error:', e.message);
         break;
       }
     }
