@@ -122,7 +122,7 @@ function rLearn(){
       LS=Object.assign({}, D.memory.activeLesson);
     }else{
       LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:t,
-          diagDone:false,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
+          diagDone:true,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
           score:0,weakAreas:[],masteryPct:0,reinforcing:false,reLesson:null,
           activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{}};
     }
@@ -130,7 +130,7 @@ function rLearn(){
 
   if(t&&t!==LS.topic){
     LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:t,
-        diagDone:false,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
+        diagDone:true,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
         score:0,weakAreas:[],masteryPct:0,reinforcing:false,reLesson:null,
         activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{}};
     if(D.memory){
