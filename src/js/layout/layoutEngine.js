@@ -44,7 +44,6 @@
       this.applyDeviceProfile(initialProfile);
 
       this.initialized = true;
-      console.log('[UALE LayoutEngine] Universal Adaptive Layout Engine initialized.', this.currentFamily);
       return this.currentFamily;
     }
 
@@ -91,7 +90,6 @@
     }
 
     onOrientationChanged(newOrientation) {
-      console.log('[UALE LayoutEngine] State-preserved orientation adaptation:', newOrientation);
       const profile = window.DeviceManager ? window.DeviceManager.getProfile() : null;
       this.applyDeviceProfile(profile);
     }

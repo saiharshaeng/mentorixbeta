@@ -49,7 +49,6 @@
 
       // 4. Token-conscious AI Gate Check
       if (type === 'ai_response' && request.deterministicFallback) {
-        console.log(`[ResourceManager] Returning deterministic data for AI request ${id}`);
         return request.deterministicFallback;
       }
 

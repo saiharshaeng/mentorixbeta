@@ -23,7 +23,6 @@
         return true; // Already loaded
       }
 
-      console.log(`📦 [FeatureLoader] Dynamically loading feature bundle: "${bundleName}"...`);
       this.loadedBundles.add(bundleName);
       return true;
     }
@@ -33,7 +32,6 @@
         return true; // Already loaded
       }
 
-      console.log(`⚡ [FeatureLoader] Loading heavy library on demand: "${libName}"...`);
       this.loadedHeavyLibs.add(libName);
       return true;
     }

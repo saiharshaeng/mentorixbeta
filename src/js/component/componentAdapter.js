@@ -30,7 +30,6 @@
       }
 
       this.initialized = true;
-      console.log('[URCAE ComponentAdapter] Universal Component Adaptation Engine initialized.');
       return true;
     }
 
@@ -69,7 +68,6 @@
     }
 
     onLayoutFamilyChanged(newFamily) {
-      console.log('[URCAE ComponentAdapter] Adapting active UI components to new layout family:', newFamily);
       if (typeof document === 'undefined') return;
 
       const adaptiveElements = document.querySelectorAll('[data-adaptive-component]');

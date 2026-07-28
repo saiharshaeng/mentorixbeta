@@ -31,7 +31,6 @@
       this.refreshProfile();
       this.setupRuntimeListeners();
       this.initialized = true;
-      console.log('[UDICDS DeviceManager] Single Source of Truth Device Intelligence initialized.', this.currentProfile);
       return this.currentProfile;
     }
 

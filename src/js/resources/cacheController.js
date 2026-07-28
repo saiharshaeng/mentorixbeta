@@ -46,7 +46,6 @@
 
     clear() {
       this.memoryCache.clear();
-      console.log('[CacheController] Cleared in-memory cache.');
     }
   }
 

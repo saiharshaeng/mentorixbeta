@@ -19,12 +19,9 @@
       if (rt && typeof rt.updateState === 'function') {
         rt.updateState(id, 'RELEASED');
       }
-
-      console.log(`[ResourceCleanup] Released resource: ${id}`);
     }
 
     release3DScene(sceneId) {
-      console.log(`[ResourceCleanup] Destroyed 3D scene: ${sceneId}`);
       this.releaseResource(sceneId);
     }
   }

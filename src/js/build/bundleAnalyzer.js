@@ -24,10 +24,6 @@
       const bundles = br ? br.getAllBundles() : ['core'];
       const loaded = fl ? Array.from(fl.loadedBundles) : ['core'];
 
-      console.log('=== MENTORIX BUNDLE COMPOSITION REPORT ===');
-      console.log(`Available Bundles: ${bundles.join(', ')}`);
-      console.log(`Currently Loaded:  ${loaded.join(', ')}`);
-      console.log('==========================================');
 
       return {
         totalBundles: bundles.length,
