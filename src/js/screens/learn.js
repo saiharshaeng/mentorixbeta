@@ -404,19 +404,19 @@ Output ONLY this JSON format (all fields required):
     let raw = null;
     try {
       const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('AI timeout')), 15000)
+        setTimeout(() => reject(new Error('AI Tutor server timed out (15s)')), 15000)
       );
       raw = await Promise.race([
         ai([{role:'user',content:prompt}],sys,3800,true),
         timeoutPromise
       ]);
     } catch (err) {
-      throw new Error('AI lesson request timed out. Please try again.');
+      throw new Error('AI Tutor request timed out. Please click retry to generate your live lesson.');
     }
 
     let lesson = raw ? pJSON(raw) : null;
     if(!lesson?.topic || !lesson.explanation || !lesson.checks || lesson.checks.length < 3) {
-      throw new Error('Could not parse curriculum-aligned lesson data from tutor.');
+      throw new Error('Could not parse curriculum-aligned online lesson data from AI tutor.');
     }
     
     LS.lesson=lesson;
@@ -427,11 +427,9 @@ Output ONLY this JSON format (all fields required):
     saveCheckpoint();
     renderLesson();
   }catch(e){
-    LS.lesson = generateFallbackLesson(topic);
     LS.loading = false;
-    LS.err = '';
-    saveCheckpoint();
-    renderLesson();
+    LS.err = e.message || 'Online AI Tutor service is temporarily busy. Click below to retry.';
+    rLError();
   }
 }
 
@@ -645,11 +643,13 @@ function rLLoading(){
 
 function rLError(){
   const a=document.getElementById('larea');if(!a)return;
-  a.innerHTML=`<div class="card cred" style="text-align:center;padding:38px">
-    <div style="font-size:44px;margin-bottom:12px">š ï¸</div>
-    <p style="color:var(--redl);font-weight:600;margin-bottom:7px">Lesson Generation Blocked</p>
-    <p style="color:var(--mut);font-size:13px;margin-bottom:18px;line-height:1.6">${esc(LS.err || 'Connection issue occurred while generating lesson.')}</p>
-    <button class="btn bpri" onclick="doLesson()">Retry Mission</button>
+  a.innerHTML=`<div class="card cred" style="text-align:center;padding:38px;max-width:560px;margin:20px auto">
+    <div style="font-size:44px;margin-bottom:12px">📡</div>
+    <p style="color:var(--redl);font-weight:700;font-size:18px;margin-bottom:7px">AI Tutor Connection Needed</p>
+    <p style="color:var(--sub);font-size:13px;margin-bottom:20px;line-height:1.6">${esc(LS.err || 'The AI Tutor server was busy or unreachable. Click retry to generate your live online lesson.')}</p>
+    <button class="btn bpri blg" onclick="doLesson()" style="padding:12px 24px;font-size:14px">
+      🚀 Retry Live AI Lesson Request
+    </button>
   </div>`;
 }
 
