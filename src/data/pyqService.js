@@ -60,14 +60,15 @@
       { key: 'jee_phys_fixed',    url: origin + '/data/pyq/fixed/jee_physics_bank_fixed.json',    exam: 'JEE_MAIN',  subject: 'Physics' },
       { key: 'jee_comp_fixed',    url: origin + '/data/pyq/fixed/jee_main_complete_fixed.json',   exam: 'JEE_MAIN',  subject: null },
       { key: 'jee_cls_fixed',     url: origin + '/data/pyq/fixed/jee_classified_fixed.json',      exam: 'JEE_MAIN',  subject: null },
-      // quarantined: AI-generated or corrupt — never serve
-      { key: 'jee_main_chem',  url: origin + '/data/pyq/jee_main/jee_chemistry_bank.json',  exam: 'JEE_MAIN',  subject: 'Chemistry',   quarantined: true },
-      { key: 'jee_main_math',  url: origin + '/data/pyq/jee_main/jee_maths_bank.json',      exam: 'JEE_MAIN',  subject: 'Mathematics', quarantined: true },
-      { key: 'neet_bio',       url: origin + '/data/pyq/neet/neet_biology_bank.json',        exam: 'NEET',       subject: 'Biology',     quarantined: true },
-      { key: 'eamcet_bank',    url: origin + '/data/pyq/eamcet/eamcet_bank.json',            exam: 'TS_EAMCET', subject: null,          quarantined: true },
-      { key: 'gate_cs_bank',   url: origin + '/data/pyq/gate/gate_cs_bank.json',              exam: 'GATE_CS',   subject: null,          quarantined: true },
-      { key: 'sat_bank',       url: origin + '/data/pyq/sat/sat_bank.json',                  exam: 'DIGITAL_SAT', subject: null,        quarantined: true },
-      { key: 'upsc_bank',      url: origin + '/data/pyq/upsc/upsc_bank.json',                exam: 'UPSC_CSE',  subject: null,          quarantined: true },
+      { key: 'jee_m2025_fixed',   url: origin + '/data/pyq/fixed/jee_main_2025_fixed.json',       exam: 'JEE_MAIN',  subject: null },
+      { key: 'jee_m2026_fixed',   url: origin + '/data/pyq/fixed/jee_main_2026_fixed.json',       exam: 'JEE_MAIN',  subject: null },
+      { key: 'jee_adv2020_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2020_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2021_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2021_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2022_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2022_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2023_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2023_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2024_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2024_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_pdf_ingested',  url: origin + '/data/pyq/fixed/jee_pdf_advanced_ingested.json', exam: 'JEE_MAIN', subject: null }
     ];
 
     let totalLoaded = 0;

@@ -23,19 +23,48 @@
                     questions = window.OFFLINE_EXAM_QUESTIONS ? (window.OFFLINE_EXAM_QUESTIONS[examId] || []) : [];
                 }
 
-                // difficulty filter
+                // 1. Filter by difficulty if specified
                 if (difficulty && Array.isArray(difficulty) && difficulty.length > 0) {
                     questions = questions.filter(q => difficulty.includes(q.difficulty));
                 }
 
-                // deduplication
-                const solvedIds = window.D && window.D.compExam && window.D.compExam.solvedIds ? window.D.compExam.solvedIds : [];
-                questions = questions.filter(q => !solvedIds.includes(q.id));
+                // 2. Strict text & ID deduplication
+                const solvedIds = (window.D && window.D.compExam && window.D.compExam.solvedIds) ? window.D.compExam.solvedIds : [];
+                const seenTexts = new Set();
+                let pool = [];
 
-                // limit count
-                if (count && questions.length > count) {
-                    questions = questions.slice(0, count);
+                questions.forEach(q => {
+                  const qText = String(q.q || q.question || '').trim().toLowerCase();
+                  if (!solvedIds.includes(q.id) && qText.length > 5 && !seenTexts.has(qText)) {
+                    seenTexts.add(qText);
+                    pool.push(q);
+                  }
+                });
+
+                // Fallback to all questions if candidate pool is too small
+                if (pool.length < (count || 5)) {
+                  const fallbackSeen = new Set();
+                  pool = [];
+                  questions.forEach(q => {
+                    const qText = String(q.q || q.question || '').trim().toLowerCase();
+                    if (qText.length > 5 && !fallbackSeen.has(qText)) {
+                      fallbackSeen.add(qText);
+                      pool.push(q);
+                    }
+                  });
                 }
+
+                // 3. Fisher-Yates Random Shuffle so every session serves unique questions
+                for (let i = pool.length - 1; i > 0; i--) {
+                  const j = Math.floor(Math.random() * (i + 1));
+                  [pool[i], pool[j]] = [pool[j], pool[i]];
+                }
+
+                // 4. Limit to requested count
+                if (count && pool.length > count) {
+                  pool = pool.slice(0, count);
+                }
+                questions = pool;
 
                 // Sort by difficulty progression: easy -> medium -> hard (assuming numeric or specific strings)
                 const diffMap = { 'easy': 1, 'medium': 2, 'hard': 3 };
