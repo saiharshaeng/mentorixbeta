@@ -141,10 +141,11 @@ function rNotebook(){
     <div style="display:grid;grid-template-columns:${selNote?'260px 1fr':'1fr'};gap:16px;align-items:start">
       <!-- Left: notes list -->
       <div>
-        <!-- Subject filter pills -->
-        ${subjects.length>0?`<div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px">
+        <!-- Subject filter pills & Bookmarks tab -->
+        ${subjects.length>0||(D.memory?.bookmarks||[]).length>0?`<div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px">
           <div class="nb-subj-pill font-poiret${NB.selSubj==='all'?' on':''}" onclick="NB.selSubj='all';rNotebook()">All (${allTopics.length})</div>
           ${subjects.map(s=>`<div class="nb-subj-pill font-poiret${NB.selSubj===s?' on':''}" onclick="NB.selSubj='${escON(s)}';rNotebook()">${esc(s)}</div>`).join('')}
+          <div class="nb-subj-pill font-poiret${NB.selSubj==='bookmarks'?' on':''}" style="border-color:rgba(245,158,11,0.3);color:var(--goldl)" onclick="NB.selSubj='bookmarks';rNotebook()">🔖 Bookmarks (${(D.memory?.bookmarks||[]).length})</div>
         </div>`:''}
 
         ${filtered.length===0?`<div class="nb-empty mx-glass-card"><div style="font-size:48px;margin-bottom:12px">📓</div><p style="margin-bottom:10px">No notes yet!</p><p style="font-size:12px">Study a topic and click <strong>"Save Notes"</strong>, or generate notes above.</p></div>`

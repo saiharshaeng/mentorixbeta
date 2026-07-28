@@ -2860,6 +2860,32 @@ function markMockForReview() {
   }
 }
 
+function bookmarkQuestion(qId) {
+  if (!D.memory) D.memory = { bookmarks: [] };
+  if (!D.memory.bookmarks) D.memory.bookmarks = [];
+  const exam = compState.activeExam;
+  const currentQ = exam ? exam.questions[exam.currentIndex] : null;
+  const targetId = qId || (currentQ ? currentQ.id : ('q_' + Date.now()));
+  const exists = D.memory.bookmarks.some(b => b.id === targetId || b.question === targetId);
+  if (!exists && currentQ) {
+    D.memory.bookmarks.push({
+      id: targetId,
+      question: currentQ.question,
+      options: currentQ.options,
+      correct: currentQ.correct || currentQ.answer,
+      subject: currentQ.subject || 'General',
+      chapter: currentQ.chapter || 'PYQ Practice',
+      solution: currentQ.solution || currentQ.explanation,
+      savedAt: Date.now()
+    });
+    if (typeof saveNow === 'function') saveNow();
+    if (typeof toast === 'function') toast('🔖 Question saved to Bookmarked PYQs in Notebook!', 'ok2');
+  } else if (exists) {
+    if (typeof toast === 'function') toast('🔖 Bookmark already saved in Notebook!', 'ok2');
+  }
+}
+window.bookmarkQuestion = bookmarkQuestion;
+
 function saveAndNextMock() {
   const exam = compState.activeExam;
   if (!exam) return;
