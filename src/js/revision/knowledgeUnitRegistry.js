@@ -17,11 +17,19 @@
 (function(exports) {
 
   const UNIT_TYPES = Object.freeze({
+    DEFINITION: 'definition',
+    FORMULA: 'formula',
+    LAW: 'law',
     CONCEPT: 'concept',
-    THEOREM: 'theorem',
+    DIAGRAM: 'diagram',
     PROCESS: 'process',
-    REASONING_PATTERN: 'reasoning_pattern',
-    PROBLEM_TECHNIQUE: 'problem_technique'
+    EXCEPTION: 'exception',
+    COMMON_MISTAKE: 'common_mistake',
+    REAL_WORLD_APP: 'real_world_app',
+    // Backward compatibility aliases
+    THEOREM: 'law',
+    REASONING_PATTERN: 'concept',
+    PROBLEM_TECHNIQUE: 'process'
   });
 
   class KnowledgeUnitRegistry {
@@ -52,6 +60,19 @@
 
     getAllUnits() {
       return Array.from(this.units.values());
+    }
+
+    /**
+     * Resolves granular student understanding for a specific Knowledge Unit (Section 29)
+     */
+    getUnitMasteryState(unitId) {
+      if (typeof window === 'undefined' || !window.D) return { status: 'unlearned', icon: '❌', score: 0 };
+      const memory = window.D.memory || {};
+      const score = (memory.scores && memory.scores[unitId]) || 0;
+
+      if (score >= 80) return { status: 'mastered', icon: '✅', score };
+      if (score >= 40) return { status: 'review_needed', icon: '⚠️', score };
+      return { status: 'unlearned', icon: '❌', score };
     }
   }
 
