@@ -79,26 +79,10 @@ const DETAILED_SYLLABUS = new Proxy({}, {
     });
   }
 });
-// 100 Top Global Exams Whitelist
+// Active Exams: JEE Main and JEE Advanced
 const WORLD_EXAMS = [
   { id: 'jee_main', name: 'JEE Main', country: 'India', cat: 'Engineering', maxScore: 300, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ & Numerical with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'jee_main' }, isMajor: true, fullQuestions: 75 },
-  { id: 'jee_adv', name: 'JEE Advanced', country: 'India', cat: 'Engineering', maxScore: 360, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ, MSQ & Numerical with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'jee_adv' }, isMajor: true, fullQuestions: 54 },
-  { id: 'neet', name: 'NEET UG', country: 'India', cat: 'Medical', maxScore: 720, duration: 200, subjects: ['Biology', 'Physics', 'Chemistry'], pattern: 'Single correct MCQs with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'neet' }, isMajor: true, fullQuestions: 180 },
-  { id: 'sat', name: 'Digital SAT', country: 'USA / International', cat: 'Undergrad', maxScore: 1600, duration: 134, subjects: ['Reading & Writing', 'Mathematics'], pattern: 'MCQs & Student Response (No negative marks)', marking: { correct: 10, wrong: 0, type: 'sat' }, isMajor: true, fullQuestions: 98 },
-  { id: 'gre', name: 'GRE General', country: 'USA / International', cat: 'Grad School', maxScore: 340, duration: 118, subjects: ['Verbal Reasoning', 'Quantitative Reasoning'], pattern: 'MCQ & Multiple-Select (No negative marks)', marking: { correct: 1, wrong: 0, type: 'gre' }, isMajor: true, fullQuestions: 54 },
-  { id: 'gmat', name: 'GMAT Focus', country: 'USA / International', cat: 'Business', maxScore: 805, duration: 135, subjects: ['Quantitative', 'Verbal', 'Data Insights'], pattern: 'Computer-Adaptive MCQs (No negative marks)', marking: { correct: 10, wrong: 0, type: 'gmat' }, isMajor: true, fullQuestions: 64 },
-  { id: 'eamcet', name: 'EAMCET (Engineering)', country: 'India', cat: 'Engineering', maxScore: 160, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'Single correct MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'eamcet' }, isMajor: true, fullQuestions: 160 },
-  { id: 'lsat', name: 'LSAT', country: 'USA / Canada', cat: 'Law', maxScore: 180, duration: 175, subjects: ['Logical Reasoning', 'Reading Comprehension'], pattern: 'Logic & reading MCQs (No negative marks)', marking: { correct: 1, wrong: 0, type: 'lsat' }, isMajor: true, fullQuestions: 100 },
-  { id: 'upsc', name: 'UPSC CSE (Prelims)', country: 'India', cat: 'Civil Services', maxScore: 200, duration: 120, subjects: ['General Studies I', 'CSAT (Aptitude)'], pattern: 'Single correct MCQs with +2/-0.66 marks', marking: { correct: 2, wrong: -0.66, type: 'upsc' }, isMajor: true, fullQuestions: 100 },
-  { id: 'ielts', name: 'IELTS Academic', country: 'UK / International', cat: 'Language', maxScore: 9, duration: 165, subjects: ['Listening', 'Reading', 'Writing', 'Speaking'], pattern: 'Listening, reading & grammar (No negative marks)', marking: { correct: 0.25, wrong: 0, type: 'ielts' }, isMajor: true, fullQuestions: 40 },
-
-  // Remaining 90 Top Global Exams
-  { id: 'act', name: 'ACT', country: 'USA', cat: 'Undergrad', maxScore: 36, duration: 175, subjects: ['English', 'Math', 'Reading', 'Science'], pattern: 'MCQs (No negative marks)', fullQuestions: 215 },
-  { id: 'gate', name: 'GATE', country: 'India', cat: 'Engineering Postgrad', maxScore: 100, duration: 180, subjects: ['Engineering Math', 'Aptitude', 'Core Engineering'], pattern: 'MCQ & Numerical with +1/+2 and negative marks', fullQuestions: 65 },
-  { id: 'cat', name: 'CAT (IIMs)', country: 'India', cat: 'Business', maxScore: 198, duration: 120, subjects: ['VARC', 'DILR', 'Quantitative'], pattern: 'MCQ & TITA with +3/-1 marks', fullQuestions: 66 },
-  { id: 'gaokao', name: 'Gaokao', country: 'China', cat: 'Undergrad', maxScore: 750, duration: 540, subjects: ['Chinese', 'Mathematics', 'Foreign Language', 'Comprehensive Subject'], pattern: 'MCQ & Subjective (No negative marks)', fullQuestions: 120 },
-  { id: 'toefl', name: 'TOEFL iBT', country: 'USA / International', cat: 'Language', maxScore: 120, duration: 120, subjects: ['Reading', 'Listening', 'Speaking', 'Writing'], pattern: 'Language proficiency scale', fullQuestions: 80 },
-  { id: 'cfa_l1', name: 'CFA Level 1', country: 'USA / International', cat: 'Finance', maxScore: 100, duration: 270, subjects: ['Ethical Standards', 'Quantitative', 'Economics', 'Financial Reporting'], pattern: 'MCQs only (No negative marks)', fullQuestions: 180 }
+  { id: 'jee_adv', name: 'JEE Advanced', country: 'India', cat: 'Engineering', maxScore: 360, duration: 180, subjects: ['Mathematics', 'Physics', 'Chemistry'], pattern: 'MCQ, MSQ & Numerical with +4/-1 marks', marking: { correct: 4, wrong: -1, type: 'jee_adv' }, isMajor: true, fullQuestions: 54 }
 ];
 
 // Helper to escape LaTeX characters from double-unescaping issues
