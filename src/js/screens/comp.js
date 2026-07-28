@@ -912,7 +912,8 @@ function toggleCBTFullscreen(enable) {
     document.getElementById('fnbtn'),
     document.getElementById('timer-fab'),
     document.getElementById('notif-bell'),
-    document.getElementById('eli5-badge')
+    document.getElementById('eli5-badge'),
+    document.getElementById('xpfloat')
   ];
   
   const mainEl = document.getElementById('main');
@@ -1217,6 +1218,23 @@ function selectObExam(id) {
   renderOnboardingWizard();
 }
 
+function selectCompExam(id) {
+  if (id !== 'jee_main' && id !== 'jee_adv') {
+    toast('Only JEE Main and JEE Advanced are currently available. Other exams are coming soon!', 'warn');
+    return;
+  }
+  compState.examId = id;
+  if (typeof D !== 'undefined' && D) {
+    if (!D.compExam) D.compExam = {};
+    D.compExam.examId = id;
+  }
+  if (typeof saveAll === 'function') saveAll();
+  const label = id === 'jee_main' ? 'JEE Main' : 'JEE Advanced';
+  toast(`Switched active focus to ${label}! 🎯`, 'ok2');
+  rComp();
+}
+window.selectCompExam = selectCompExam;
+
 function filterExams(query) {
   compState.searchQuery = query;
   renderOnboardingWizard();
@@ -1351,24 +1369,33 @@ function renderHubTab(exam) {
   }).join('');
 
   return `
+    <!-- EXAM NOTICE BANNER -->
+    <div class="card mb16" style="padding:12px 16px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.22);border-radius:12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#C4B5FD">
+        <span style="font-size:16px">🎯</span>
+        <span><strong>Active Launch Focus:</strong> JEE Main & JEE Advanced are fully live. All other exams are marked coming soon.</span>
+      </div>
+      <span class="tag tp" style="font-size:10px">v1.0 Launch</span>
+    </div>
+
     <!-- EXAM SELECTOR ROW -->
     <div class="comp-exam-row mb20">
-      <div class="comp-exam-card ${compState.examId === 'jee_main' ? 'active' : ''}" onclick="toast('JEE Main is your active focus! 🎯')">
+      <div class="comp-exam-card ${compState.examId === 'jee_main' ? 'active' : ''}" onclick="selectCompExam('jee_main')">
         <span class="comp-exam-dot"></span>
         <span>JEE Main</span>
         <span class="comp-avail-tag tag-live">LIVE</span>
       </div>
-      <div class="comp-exam-card" onclick="toast('JEE Advanced Prep Hub coming soon! 🚀')">
-        <span class="comp-exam-dot" style="background:var(--mut)"></span>
+      <div class="comp-exam-card ${compState.examId === 'jee_adv' ? 'active' : ''}" onclick="selectCompExam('jee_adv')">
+        <span class="comp-exam-dot" style="background:${compState.examId === 'jee_adv' ? 'var(--p)' : 'var(--mut)'}"></span>
         <span>JEE Advanced</span>
-        <span class="comp-avail-tag tag-soon">SOON</span>
+        <span class="comp-avail-tag tag-live">LIVE</span>
       </div>
-      <div class="comp-exam-card" onclick="toast('NEET Prep Hub coming soon! 🩺')">
+      <div class="comp-exam-card" onclick="selectCompExam('neet')">
         <span class="comp-exam-dot" style="background:var(--mut)"></span>
         <span>NEET</span>
         <span class="comp-avail-tag tag-soon">SOON</span>
       </div>
-      <div class="comp-exam-card" onclick="toast('EAMCET Prep Hub coming soon! 🎓')">
+      <div class="comp-exam-card" onclick="selectCompExam('eamcet')">
         <span class="comp-exam-dot" style="background:var(--mut)"></span>
         <span>EAMCET</span>
         <span class="comp-avail-tag tag-soon">SOON</span>
@@ -2504,9 +2531,13 @@ function renderActiveExamUI() {
   const exam = compState.activeExam;
   if (!exam) return '';
 
-  // Section 47: Exam isolation — Hide Tio companion during active mock exam
+  // Section 47: Exam isolation — Hide Tio companion, XP float, and timer FAB during active mock exam
   const tioWidget = document.getElementById('tio-widget-container');
   if (tioWidget) tioWidget.style.display = 'none';
+  ['fnbtn', 'timer-fab', 'xpfloat', 'eli5-badge', 'notif-bell'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
 
   const q = exam.questions[exam.currentIndex];
   if (!q) return '';

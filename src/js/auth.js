@@ -145,6 +145,11 @@ function createProfileSubmit() {
   const rawUsername = (document.getElementById('p-username')?.value || '').trim();
   const name = (document.getElementById('p-name')?.value || rawUsername).trim();
 
+  if (!rawUsername) {
+    showAuthErr('p-err', 'Username is mandatory. Please enter a unique @username.');
+    return;
+  }
+
   if (window.CloudSyncEngine) {
     const valRes = window.CloudSyncEngine.validateUsername(rawUsername);
     if (!valRes.valid) {

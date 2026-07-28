@@ -4942,13 +4942,25 @@ body.theme-emerald .ni.active {
 .pwa-install-btn { background:rgba(255,255,255,.2) !important;color:#fff !important;border:1px solid rgba(255,255,255,.3) !important;font-size:12px !important;flex-shrink:0 !important; }
 .pwa-close-btn { background:none !important;border:none !important;color:rgba(255,255,255,.5) !important;cursor:pointer !important;font-size:16px !important;padding:4px !important;flex-shrink:0 !important; }
 
-/* Disable horizontal scroll globally and enforce vertical scroll on main content area */
-html, body, #app, #main, .scr {
-  overflow-x: hidden !important;
+/* Enforce single scrollbar architecture — no double scrollbars, no cut-off buttons */
+html, body {
+  height: 100%;
+  overflow: hidden !important;
+}
+#app {
+  height: 100vh;
+  overflow: hidden;
 }
 #main {
+  height: 100vh;
   overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: 100px !important;
+  box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
+}
+.sw, .scr {
+  overflow-y: visible !important;
 }
 
 /* Cream Theme Variable Defs (Soothing light green/mint palette) */

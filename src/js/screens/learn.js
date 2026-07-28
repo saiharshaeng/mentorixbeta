@@ -1,5 +1,5 @@
 /**
- * screens/learn.js â€” Mentorix Learn Screen (6-Stage Sequential Redesign)
+ * screens/learn.js — Mentorix Learn Screen (6-Stage Sequential Redesign)
  * // Deps: D, LS, ai, pJSON, pCtx, toast, esc, saveAll, go, addXP, addTopic, renderMath, haptic, isTopicForbidden
  */
 'use strict';
@@ -149,10 +149,10 @@ function rLearn(){
   const breadcrumbHTML = (topicCtx || activeSubject) ? `
     <div class="course-breadcrumb-bar mb16" style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.22);border-radius:14px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
       <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mut)">
-        <span style="color:var(--pl);font-weight:700">ðŸŽ“ ${esc(activeSubject)}</span>
-        ${activeUnitTitle ? `<span style="color:var(--mut)">â€º</span><span style="color:var(--sub)">${esc(activeUnitTitle)}</span>` : ''}
-        ${activeChapterTitle ? `<span style="color:var(--mut)">â€º</span><span style="color:var(--sub)">${esc(activeChapterTitle)}</span>` : ''}
-        <span style="color:var(--mut)">â€º</span>
+        <span style="color:var(--pl);font-weight:700">🎓 ${esc(activeSubject)}</span>
+        ${activeUnitTitle ? `<span style="color:var(--mut)">›</span><span style="color:var(--sub)">${esc(activeUnitTitle)}</span>` : ''}
+        ${activeChapterTitle ? `<span style="color:var(--mut)">›</span><span style="color:var(--sub)">${esc(activeChapterTitle)}</span>` : ''}
+        <span style="color:var(--mut)">›</span>
         <span style="color:#fff;font-weight:700">${esc(topicToDisplay)}</span>
       </div>
       <button class="btn bsm bsec" onclick="go('courses')" style="padding:4px 12px;font-size:11px;border-radius:8px">Syllabus Journey Map</button>
@@ -162,7 +162,7 @@ function rLearn(){
   document.getElementById('main').innerHTML=`
   <div class="sw scr" id="learn-main">
     ${breadcrumbHTML}
-    <div class="h1" id="learn-h1">ðŸ“š Active Learning Studio</div>
+    <div class="h1" id="learn-h1">📚 Active Learning Studio</div>
     <p class="sub" id="learn-sub">Tio AI Adaptive Syllabus Pacing for ${esc(activeSubject)}</p>
     
     <div style="display:none;gap:9px;margin-bottom:16px">
@@ -194,10 +194,10 @@ function showDiagnostic(){
   a.innerHTML=`
   <div class="diag-card scr card" style="padding:24px">
     <div class="tio-inline mb16" style="display:flex;align-items:center;gap:12px;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);border-radius:12px;padding:12px">
-      <div class="nxav" style="font-size:20px">âœ¨</div>
+      <div class="nxav" style="font-size:20px">✨¨</div>
       <div>
-        <div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO â€” ADAPTIVE LEARNING SURVEY</div>
-        <div style="color:#C4B5FD;font-size:13px;line-height:1.6">Before I build your adaptive syllabus on <strong style="color:var(--txt)">"${esc(LS.topic)}"</strong> â€” 3 details to optimize pacing, depth, and checks for you.</div>
+        <div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO — ADAPTIVE LEARNING SURVEY</div>
+        <div style="color:#C4B5FD;font-size:13px;line-height:1.6">Before I build your adaptive syllabus on <strong style="color:var(--txt)">"${esc(LS.topic)}"</strong> — 3 details to optimize pacing, depth, and checks for you.</div>
       </div>
     </div>
 
@@ -206,11 +206,11 @@ function showDiagnostic(){
       <div class="h3 mb8" style="color:var(--pl)">1. What is your prior knowledge about this topic?</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
         ${[
-          ['1', 'ðŸ†•', 'New', 'Completely New'],
-          ['2', 'ðŸ“–', 'Basic', 'Basic Understanding'],
-          ['3', 'âš¡', 'Interm', 'Intermediate'],
-          ['4', 'ðŸŽ“', 'Adv', 'Advanced'],
-          ['5', 'ðŸ”„', 'Revise', 'Just Revising']
+          ['1', '🆕', 'New', 'Completely New'],
+          ['2', '📖', 'Basic', 'Basic Understanding'],
+          ['3', '⚡', 'Interm', 'Intermediate'],
+          ['4', '🎓', 'Adv', 'Advanced'],
+          ['5', '🔄', 'Revise', 'Just Revising']
         ].map(([val, emoji, shortlbl, fulllbl]) => `
           <button class="btn bgh diag-opt-btn ${LS.priorKnowledge === val ? 'bpri' : ''}" 
             onclick="LS.priorKnowledge='${val}';showDiagnostic()" 
@@ -228,11 +228,11 @@ function showDiagnostic(){
       <div class="h3 mb8" style="color:var(--pl)">2. What study depth do you prefer?</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
         ${[
-          ['1', 'ðŸš€', 'ELI5', 'Explain Like I\'m 5'],
-          ['2', 'ðŸ“', 'Concept', 'Core Concepts'],
-          ['3', 'ðŸ“', 'Standard', 'Standard syllabus depth'],
-          ['4', 'ðŸ”¬', 'Deep', 'Advanced details'],
-          ['5', 'ðŸ§ ', 'Expert', 'Mathematical derivations']
+          ['1', '🚀', 'ELI5', 'Explain Like I\'m 5'],
+          ['2', '“', 'Concept', 'Core Concepts'],
+          ['3', '“', 'Standard', 'Standard syllabus depth'],
+          ['4', '🔬', 'Deep', 'Advanced details'],
+          ['5', '🧠', 'Expert', 'Mathematical derivations']
         ].map(([val, emoji, shortlbl, fulllbl]) => `
           <button class="btn bgh diag-opt-btn ${LS.depth === val ? 'bpri' : ''}" 
             onclick="LS.depth='${val}';showDiagnostic()" 
@@ -250,9 +250,9 @@ function showDiagnostic(){
       <div class="h3 mb8" style="color:var(--pl)">3. What is your primary learning goal?</div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
         ${[
-          ['1', 'ðŸ“', 'School Exams', 'Pass school exams'],
-          ['2', 'ðŸŽ¯', 'Mastery', 'Conceptual mastery'],
-          ['4', 'âš¡', 'Competitive', 'Competitive Exams (JEE/NEET)']
+          ['1', '“', 'School Exams', 'Pass school exams'],
+          ['2', '🎯', 'Mastery', 'Conceptual mastery'],
+          ['4', '⚡', 'Competitive', 'Competitive Exams (JEE/NEET)']
         ].map(([val, emoji, shortlbl, fulllbl]) => `
           <button class="btn bgh diag-opt-btn ${LS.goal === val ? 'bpri' : ''}" 
             onclick="LS.goal='${val}';showDiagnostic()" 
@@ -266,8 +266,8 @@ function showDiagnostic(){
     </div>
 
     <div style="display:flex;gap:9px">
-      <button class="btn bpri bfull" onclick="startFromDiag()">ðŸš€ Build My Personalised Lesson</button>
-      <button class="btn bgh bsm" style="white-space:nowrap" onclick="LS.diagDone=true;doLesson()">Skip â†’</button>
+      <button class="btn bpri bfull" onclick="startFromDiag()">🚀 Build My Personalised Lesson</button>
+      <button class="btn bgh bsm" style="white-space:nowrap" onclick="LS.diagDone=true;doLesson()">Skip →</button>
     </div>
   </div>`;
 }
@@ -328,7 +328,7 @@ async function doLesson(){
       throw new Error(`Verified curriculum for topic "${topic}" is not available in the database. Out-of-syllabus content generation is blocked.`);
     }
     const levelHint=LS.diagLevel==='beginner'?'Explain simply with analogies and basic examples':
-                    LS.diagLevel==='advanced'?'Go deep â€” include technical details, complex examples, equations':
+                    LS.diagLevel==='advanced'?'Go deep — include technical details, complex examples, equations':
                     'Balance depth with clarity';
     const goalHint=LS.goal==='1'?'Focus on passing exams and standard definitions':
                    LS.goal==='4'?'Target competitive exam standards (Olympiad, JEE, Advanced problem solving)':
@@ -336,7 +336,7 @@ async function doLesson(){
 
     const sys=`You are Mentorix AI tutor. IMPORTANT: Output ONLY a raw JSON object. No markdown, no backticks, no explanation. Start with { end with }.
 ADAPT TO GRADE LEVEL: The explanation level, formulas, rigor, and technical depth MUST match a student in ${D.profile?.grade || 'Grade 10'}. Teach with the appropriate academic terminology, equations, and mathematical rigor. ${levelHint}. Goal: ${goalHint}.
-CRITICAL â€” MATH & CHEMISTRY LAUNCH RULES: If the topic involves math or physics, wrap all equations in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$. For Chemistry compounds, use $\\ce{CO2}$ formatting. Always show equations and step-by-step worked solutions.`;
+CRITICAL — MATH & CHEMISTRY LAUNCH RULES: If the topic involves math or physics, wrap all equations in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$. For Chemistry compounds, use $\\ce{CO2}$ formatting. Always show equations and step-by-step worked solutions.`;
 
     const prompt=`Create a curriculum-driven micro learning lesson about "${topic.replace(/"/g,"'")}" matching the following curriculum boundary:
 ${curCtx}
@@ -445,7 +445,7 @@ function generateFallbackLesson(topic) {
     "exam_insight": `In competitive examinations, questions on "${topic}" typically test your ability to apply core principles to unfamiliar scenarios. Watch for multi-step problems that combine this concept with prerequisite knowledge. Always verify boundary conditions and units before substituting values.`,
     "explanation": `The concept of "${topic}" is a fundamental pillar of study. It describes a system governed by standard inputs, boundaries, and logical equations. In normal conditions, all variables behave predictably according to physical or mathematical rules. By mapping these relations, we can analyze the state of the system at any given point and design optimal control parameters.`,
     "misconceptions": [
-      `Many students confuse the definition of "${topic}" with a related but distinct concept â€” always verify the precise conditions before applying any formula.`,
+      `Many students confuse the definition of "${topic}" with a related but distinct concept — always verify the precise conditions before applying any formula.`,
       `A common mistake is skipping boundary condition checks, which leads to incorrect answers even when the method is right.`
     ],
     "examples": [
@@ -502,7 +502,7 @@ function rLLoading(){
   a.innerHTML=`
   <div class="card" style="text-align:center;padding:48px 32px">
     <div class="tio-inline mb16" style="justify-content:center;background:rgba(139,92,246,.08);border-color:rgba(139,92,246,.2);padding:14px;border-radius:12px;display:flex;align-items:center;gap:12px">
-      <div class="nxav" style="font-size:24px">âœ¨</div>
+      <div class="nxav" style="font-size:24px">✨¨</div>
       <div style="text-align:left">
         <div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:3px">TIO IS THINKING</div>
         <div style="color:#C4B5FD;font-size:13px">Building your micro learning path on <em style="color:var(--txt)">"${esc(LS.topic)}"</em></div>
@@ -516,7 +516,7 @@ function rLLoading(){
 function rLError(){
   const a=document.getElementById('larea');if(!a)return;
   a.innerHTML=`<div class="card cred" style="text-align:center;padding:38px">
-    <div style="font-size:44px;margin-bottom:12px">âš ï¸</div>
+    <div style="font-size:44px;margin-bottom:12px">š ï¸</div>
     <p style="color:var(--redl);font-weight:600;margin-bottom:7px">Lesson Generation Blocked</p>
     <p style="color:var(--mut);font-size:13px;margin-bottom:18px;line-height:1.6">${esc(LS.err || 'Connection issue occurred while generating lesson.')}</p>
     <button class="btn bpri" onclick="doLesson()">Retry Mission</button>
@@ -568,7 +568,7 @@ function convertLessonToStructuredSections(lesson) {
       blocks: [
         {
           type: 'takeaway',
-          text: (lesson.summary || []).join(' â€¢ ')
+          text: (lesson.summary || []).join(' €¢ ')
         },
         {
           type: 'summary',
@@ -692,28 +692,28 @@ function renderStageContent() {
       </div>
     `;
   } else if (stage === 2) {
-    // â”€â”€ STAGE 2: EXPLANATION (3 LAYERS) â”€â”€
+    // ”€”€ STAGE 2: EXPLANATION (3 LAYERS) ”€”€
     const hasLayers = !!(l.intuition || l.technical || l.exam_insight);
     html = `
       <div class="card" style="padding:22px">
-        <h3 class="h3 mb14" style="color:var(--pl)">ðŸ“– Understanding ${esc(l.topic)}</h3>
+        <h3 class="h3 mb14" style="color:var(--pl)">📖 Understanding ${esc(l.topic)}</h3>
 
         ${hasLayers ? `
           <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-              <span style="font-size:16px">ðŸ’¡</span>
+              <span style="font-size:16px">💡</span>
               <div>
-                <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 1 â€” INTUITION</div>
-                <div style="font-size:11px;color:var(--mut)">The mental picture â€” before any formulas</div>
+                <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 1 — INTUITION</div>
+                <div style="font-size:11px;color:var(--mut)">The mental picture — before any formulas</div>
               </div>
             </div>
             <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.intuition || ''}</div>
           </div>
           <div style="background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-              <span style="font-size:16px">ðŸ“</span>
+              <span style="font-size:16px">“</span>
               <div>
-                <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 2 â€” TECHNICAL</div>
+                <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 2 — TECHNICAL</div>
                 <div style="font-size:11px;color:var(--mut)">Definitions, terminology and relationships</div>
               </div>
             </div>
@@ -722,9 +722,9 @@ function renderStageContent() {
           ${l.exam_insight ? `
           <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-              <span style="font-size:16px">ðŸŽ¯</span>
+              <span style="font-size:16px">🎯</span>
               <div>
-                <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 3 â€” EXAM THINKING</div>
+                <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 3 — EXAM THINKING</div>
                 <div style="font-size:11px;color:var(--mut)">How this appears in JEE / NEET / competitive exams</div>
               </div>
             </div>
@@ -737,16 +737,16 @@ function renderStageContent() {
         `}
 
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(1)">â† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(3)">Next: Worked Examples â†’</button>
+          <button class="btn bgh" onclick="advanceStage(1)">† Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(3)">Next: Worked Examples →</button>
         </div>
       </div>
     `;
   } else if (stage === 3) {
-    // â”€â”€ STAGE 3: WORKED EXAMPLES + MISCONCEPTIONS â”€â”€
+    // ”€”€ STAGE 3: WORKED EXAMPLES + MISCONCEPTIONS ”€”€
     html = `
       <div class="card" style="padding:22px">
-        <h3 class="h3 mb14" style="color:var(--pl)">ðŸ“ Worked Solutions</h3>
+        <h3 class="h3 mb14" style="color:var(--pl)">“ Worked Solutions</h3>
         <div style="display:flex;flex-direction:column;gap:20px">
           ${(l.examples || []).map((ex, idx) => `
             <div style="background:rgba(255,255,255,0.02);border:1px solid var(--brd);border-radius:14px;overflow:hidden">
@@ -755,9 +755,9 @@ function renderStageContent() {
                 <div style="color:#fff;font-weight:700;font-size:14px;line-height:1.6" class="katex-render-target">${esc(ex.q)}</div>
               </div>
               <div style="padding:12px 16px;background:rgba(139,92,246,0.03)">
-                <button onclick="(function(btn){var sol=btn.nextElementSibling;var open=sol.style.display!=='none';sol.style.display=open?'none':'block';btn.textContent=open?'Reveal Step-by-Step Solution â†“':'Hide Solution â†‘';})(this)"
+                <button onclick="(function(btn){var sol=btn.nextElementSibling;var open=sol.style.display!=='none';sol.style.display=open?'none':'block';btn.textContent=open?'Reveal Step-by-Step Solution †“':'Hide Solution †‘';})(this)"
                   style="background:none;border:none;color:var(--pl);font-size:12px;font-weight:700;cursor:pointer;padding:0;text-align:left;width:100%">
-                  Reveal Step-by-Step Solution â†“
+                  Reveal Step-by-Step Solution †“
                 </button>
                 <div style="display:none;margin-top:12px;color:var(--sub);font-size:13px;line-height:1.7;padding-top:12px;border-top:1px dashed rgba(255,255,255,0.06)" class="katex-render-target">
                   ${ex.s}
@@ -770,16 +770,16 @@ function renderStageContent() {
         ${(l.misconceptions && l.misconceptions.length > 0) ? `
         <div style="margin-top:20px;background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:16px">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-            <span style="font-size:16px">âš ï¸</span>
+            <span style="font-size:16px">š ï¸</span>
             <div>
               <div style="font-size:10px;color:var(--redl);font-weight:700;letter-spacing:1px;text-transform:uppercase">COMMON MISTAKES</div>
-              <div style="font-size:11px;color:var(--mut)">Watch out â€” students often get these wrong</div>
+              <div style="font-size:11px;color:var(--mut)">Watch out — students often get these wrong</div>
             </div>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px">
             ${(l.misconceptions || []).map(m => `
               <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#E2E8F0;line-height:1.55">
-                <span style="color:var(--redl);font-weight:700;flex-shrink:0">âœ—</span>
+                <span style="color:var(--redl);font-weight:700;flex-shrink:0">✨—</span>
                 <span class="katex-render-target">${esc(m)}</span>
               </div>
             `).join('')}
@@ -787,13 +787,13 @@ function renderStageContent() {
         </div>` : ''}
 
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(2)">â† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(4)">Next: Test Your Understanding â†’</button>
+          <button class="btn bgh" onclick="advanceStage(2)">† Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(4)">Next: Test Your Understanding →</button>
         </div>
       </div>
     `;
   } else if (stage === 4) {
-    // â”€â”€ STAGE 4: CHECKS â”€â”€
+    // ”€”€ STAGE 4: CHECKS ”€”€
     if (!LS.questionStartTime) {
       LS.questionStartTime = Date.now();
     }
@@ -819,13 +819,13 @@ function renderStageContent() {
         diagnosticHTML = `
           <div class="card s2" style="border-left:4px solid var(--red);border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);padding:14px 18px;margin-top:20px;text-align:left">
             <div style="color:var(--redl);font-weight:700;font-size:var(--fs-sm);margin-bottom:4px">
-              ðŸ•µï¸ Tio's Diagnostic Insight: Foundational Gap Detected!
+              •µï¸ Tio's Diagnostic Insight: Foundational Gap Detected!
             </div>
             <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0 0 10px">
               It looks like you are struggling with this concept. The root cause might be a missing or weak understanding of the prerequisite topic: <strong>${esc(weakness.title)}</strong> (${weakness.reason}).
             </p>
             <button class="btn bsm" style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:var(--pl)" onclick="go('learn', '${escON(weakness.title)}')">
-              ðŸ‘ˆ Go back &amp; study: ${esc(weakness.title)}
+              👈 Go back &amp; study: ${esc(weakness.title)}
             </button>
           </div>
         `;
@@ -835,7 +835,7 @@ function renderStageContent() {
     html = `
       <div class="card" style="padding:22px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-          <h3 class="h3" style="color:var(--pl)">ðŸŽ¯ Active Concept Checks</h3>
+          <h3 class="h3" style="color:var(--pl)">🎯 Active Concept Checks</h3>
           <span style="font-size:12px;color:var(--mut)">Solve all ${checksCount} questions to proceed.</span>
         </div>
         
@@ -870,12 +870,12 @@ function renderStageContent() {
 
                 ${isPending ? `
                   <div style="margin-top:14px;background:rgba(139,92,246,0.03);border:1px solid rgba(139,92,246,0.15);border-radius:10px;padding:14px;text-align:center">
-                    <div style="font-size:12.5px;color:var(--pl);font-weight:700;margin-bottom:10px">ðŸ¤” How confident are you about this choice?</div>
+                    <div style="font-size:12.5px;color:var(--pl);font-weight:700;margin-bottom:10px">🤔 How confident are you about this choice?</div>
                     <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:8px">
-                      <button class="btn bsm" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--okl)" onclick="submitConfidence('Very Confident')">ðŸ”¥ Very Confident</button>
-                      <button class="btn bsm" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#60a5fa" onclick="submitConfidence('Confident')">ðŸ‘ Confident</button>
-                      <button class="btn bsm" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:#fbbf24" onclick="submitConfidence('Unsure')">ðŸ¤· Unsure</button>
-                      <button class="btn bsm" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:var(--redl)" onclick="submitConfidence('Guess')">ðŸŽ² Just a Guess</button>
+                      <button class="btn bsm" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--okl)" onclick="submitConfidence('Very Confident')">🔥 Very Confident</button>
+                      <button class="btn bsm" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#60a5fa" onclick="submitConfidence('Confident')">‘ Confident</button>
+                      <button class="btn bsm" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:#fbbf24" onclick="submitConfidence('Unsure')">🤷 Unsure</button>
+                      <button class="btn bsm" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:var(--redl)" onclick="submitConfidence('Guess')">🎲 Just a Guess</button>
                     </div>
                   </div>
                 ` : ''}
@@ -893,13 +893,13 @@ function renderStageContent() {
         ${diagnosticHTML}
 
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(3)">â† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(5)">Next: Reflect &amp; Connect â†’</button>
+          <button class="btn bgh" onclick="advanceStage(3)">† Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(5)">Next: Reflect &amp; Connect →</button>
         </div>
       </div>
     `;
   } else if (stage === 5) {
-    // â”€â”€ STAGE 5: REFLECTION â”€â”€
+    // ”€”€ STAGE 5: REFLECTION ”€”€
     if (!LS.reflections) LS.reflections = {};
     const topicCtx5 = findCourseTopicContext(l.topic);
     const chTitle5 = topicCtx5?.chapterTitle || topicCtx5?.subchapterTitle || '';
@@ -907,12 +907,12 @@ function renderStageContent() {
       <div class="card" style="padding:22px">
         ${(topicCtx5 && chTitle5) ? `
         <div style="background:rgba(139,92,246,0.05);border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:12px 14px;margin-bottom:18px">
-          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">ðŸ”— KNOWLEDGE MAP</div>
-          <div style="font-size:12px;color:var(--sub)">ðŸ“š ${esc(chTitle5)} â†’ <strong style="color:var(--txt)">${esc(l.topic)}</strong></div>
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">🔗 KNOWLEDGE MAP</div>
+          <div style="font-size:12px;color:var(--sub)">📚 ${esc(chTitle5)} → <strong style="color:var(--txt)">${esc(l.topic)}</strong></div>
         </div>` : ''}
 
-        <h3 class="h3 mb6" style="color:var(--pl)">ðŸ’­ Reflect on Your Learning</h3>
-        <p style="color:var(--mut);font-size:12.5px;margin-bottom:18px;line-height:1.6">Not graded. Take a moment to consolidate â€” this sharpens long-term memory.</p>
+        <h3 class="h3 mb6" style="color:var(--pl)">💭 Reflect on Your Learning</h3>
+        <p style="color:var(--mut);font-size:12.5px;margin-bottom:18px;line-height:1.6">Not graded. Take a moment to consolidate — this sharpens long-term memory.</p>
 
         <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:22px">
           <div>
@@ -930,25 +930,25 @@ function renderStageContent() {
         </div>
 
         <div style="display:flex;gap:10px">
-          <button class="btn bgh" onclick="advanceStage(4)">â† Back</button>
-          <button class="btn bgh bfull" style="color:var(--mut)" onclick="saveReflections();advanceStage(6)">Skip â†’</button>
-          <button class="btn bpri bfull" onclick="saveReflections();advanceStage(6)">Save &amp; Continue â†’</button>
+          <button class="btn bgh" onclick="advanceStage(4)">† Back</button>
+          <button class="btn bgh bfull" style="color:var(--mut)" onclick="saveReflections();advanceStage(6)">Skip →</button>
+          <button class="btn bpri bfull" onclick="saveReflections();advanceStage(6)">Save &amp; Continue →</button>
         </div>
       </div>
     `;
   } else if (stage === 6) {
-    // â”€â”€ STAGE 6: CONFIDENCE SELF-RATING â”€â”€
+    // ”€”€ STAGE 6: CONFIDENCE SELF-RATING ”€”€
     const currentConf = LS.confidenceRating || 0;
     const confOpts = [
-      { val: 1, emoji: 'ðŸ˜Ÿ', label: 'Lost', desc: 'I barely understood any of this', bg: 'rgba(239,68,68,0.08)', brd: 'rgba(239,68,68,0.3)', col: 'var(--redl)' },
-      { val: 2, emoji: 'ðŸ˜•', label: 'Shaky', desc: 'I got the basics but many gaps remain', bg: 'rgba(245,158,11,0.08)', brd: 'rgba(245,158,11,0.3)', col: 'var(--goldl)' },
-      { val: 3, emoji: 'ðŸ™‚', label: 'Getting There', desc: 'I understand most of it', bg: 'rgba(59,130,246,0.08)', brd: 'rgba(59,130,246,0.3)', col: '#60a5fa' },
-      { val: 4, emoji: 'ðŸ˜Š', label: 'Confident', desc: 'I could solve most questions on this', bg: 'rgba(16,185,129,0.08)', brd: 'rgba(16,185,129,0.3)', col: 'var(--okl)' },
-      { val: 5, emoji: 'ðŸ”¥', label: 'Mastered', desc: 'I could explain this to someone else', bg: 'rgba(139,92,246,0.1)', brd: 'rgba(139,92,246,0.35)', col: 'var(--pl)' }
+      { val: 1, emoji: '😟', label: 'Lost', desc: 'I barely understood any of this', bg: 'rgba(239,68,68,0.08)', brd: 'rgba(239,68,68,0.3)', col: 'var(--redl)' },
+      { val: 2, emoji: '😕', label: 'Shaky', desc: 'I got the basics but many gaps remain', bg: 'rgba(245,158,11,0.08)', brd: 'rgba(245,158,11,0.3)', col: 'var(--goldl)' },
+      { val: 3, emoji: '🙂', label: 'Getting There', desc: 'I understand most of it', bg: 'rgba(59,130,246,0.08)', brd: 'rgba(59,130,246,0.3)', col: '#60a5fa' },
+      { val: 4, emoji: '😊', label: 'Confident', desc: 'I could solve most questions on this', bg: 'rgba(16,185,129,0.08)', brd: 'rgba(16,185,129,0.3)', col: 'var(--okl)' },
+      { val: 5, emoji: '🔥', label: 'Mastered', desc: 'I could explain this to someone else', bg: 'rgba(139,92,246,0.1)', brd: 'rgba(139,92,246,0.35)', col: 'var(--pl)' }
     ];
     html = `
       <div class="card" style="padding:22px;text-align:center">
-        <div style="font-size:40px;margin-bottom:10px">ðŸŽ¯</div>
+        <div style="font-size:40px;margin-bottom:10px">🎯</div>
         <h3 class="h3 mb6" style="color:var(--pl)">How Confident Do You Feel?</h3>
         <p style="color:var(--mut);font-size:12.5px;margin-bottom:22px">Rate your understanding of <strong style="color:var(--txt)">${esc(l.topic)}</strong> right now.</p>
         
@@ -961,43 +961,43 @@ function renderStageContent() {
                 <div style="font-weight:700;color:${currentConf===opt.val ? opt.col : 'var(--txt)'};font-size:14px">${opt.label}</div>
                 <div style="font-size:11.5px;color:var(--mut);margin-top:2px">${opt.desc}</div>
               </div>
-              ${currentConf===opt.val ? `<span style="color:${opt.col};font-size:18px;font-weight:700">âœ“</span>` : ''}
+              ${currentConf===opt.val ? `<span style="color:${opt.col};font-size:18px;font-weight:700">✨“</span>` : ''}
             </div>
           `).join('')}
         </div>
 
         <div style="display:flex;gap:10px">
-          <button class="btn bgh" onclick="advanceStage(5)">â† Back</button>
-          <button class="btn bpri bfull" onclick="if(!LS.confidenceRating)LS.confidenceRating=3;saveCheckpoint();advanceStage(7)">${currentConf ? 'Continue â†’' : 'Skip (Neutral) â†’'}</button>
+          <button class="btn bgh" onclick="advanceStage(5)">† Back</button>
+          <button class="btn bpri bfull" onclick="if(!LS.confidenceRating)LS.confidenceRating=3;saveCheckpoint();advanceStage(7)">${currentConf ? 'Continue →' : 'Skip (Neutral) →'}</button>
         </div>
       </div>
     `;
   } else if (stage === 7) {
-    // â”€â”€ STAGE 7: SUMMARY â”€â”€
+    // ”€”€ STAGE 7: SUMMARY ”€”€
     html = `
       <div class="card" style="padding:22px">
-        <h3 class="h3 mb14" style="color:var(--pl)">âœ… Core Takeaways</h3>
+        <h3 class="h3 mb14" style="color:var(--pl)">✨… Core Takeaways</h3>
         
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
           ${(l.summary || []).map(pt => `
             <div style="display:flex;align-items:start;gap:10px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid var(--brd)">
-              <span style="font-size:16px;color:var(--ok)">âœ“</span>
+              <span style="font-size:16px;color:var(--ok)">✨“</span>
               <span style="color:#fff;font-size:13.5px;line-height:1.5" class="katex-render-target">${esc(pt)}</span>
             </div>
           `).join('')}
         </div>
 
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(6)">â† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(8)">Next: Revision Hooks â†’</button>
+          <button class="btn bgh" onclick="advanceStage(6)">† Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(8)">Next: Revision Hooks →</button>
         </div>
       </div>
     `;
   } else if (stage === 8) {
-    // â”€â”€ STAGE 8: FLASHCARDS (REVISION HOOKS) â”€â”€
+    // ”€”€ STAGE 8: FLASHCARDS (REVISION HOOKS) ”€”€
     html = `
       <div class="card" style="padding:22px;text-align:center">
-        <h3 class="h3 mb6" style="color:var(--pl);text-align:left">ðŸƒ Revision Hooks</h3>
+        <h3 class="h3 mb6" style="color:var(--pl);text-align:left">ƒ Revision Hooks</h3>
         <p class="sub mb16" style="text-align:left">These are added to your spaced repetition queue. Flip each card to verify key facts.</p>
         
         <div style="display:grid;grid-template-columns:1fr;gap:12px;max-width:480px;margin:0 auto 24px">
@@ -1007,7 +1007,7 @@ function renderStageContent() {
                 <div class="flashcard-front" style="position:absolute;width:100%;height:100%;backface-visibility:hidden;background:rgba(139,92,246,0.08);border:1px dashed rgba(139,92,246,0.4);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px">
                   <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">CARD ${idx + 1}</div>
                   <div style="color:#fff;font-weight:700;font-size:13.5px;margin-top:4px" class="katex-render-target">${esc(card.q)}</div>
-                  <div style="font-size:10px;color:var(--pl);margin-top:8px">Click to Flip ðŸ”„</div>
+                  <div style="font-size:10px;color:var(--pl);margin-top:8px">Click to Flip 🔄</div>
                 </div>
                 <div class="flashcard-back" style="position:absolute;width:100%;height:100%;backface-visibility:hidden;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;transform:rotateY(180deg)">
                   <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase">ANSWER</div>
@@ -1019,8 +1019,8 @@ function renderStageContent() {
         </div>
 
         <div style="display:flex;gap:10px">
-          <button class="btn bgh" onclick="advanceStage(7)">â† Back</button>
-          <button class="btn bpri bfull" onclick="completeStageSession()">ðŸš€ Complete Learning Mission &amp; Sync â†’</button>
+          <button class="btn bgh" onclick="advanceStage(7)">† Back</button>
+          <button class="btn bpri bfull" onclick="completeStageSession()">🚀 Complete Learning Mission &amp; Sync →</button>
         </div>
       </div>
     `;
@@ -1096,7 +1096,7 @@ function submitConfidence(level) {
   // Handle XP & feedback
   if (isCorrect) {
     addXP(10, 'Check Correct');
-    toast("âœ¨ Correct! +10 XP");
+    toast("✨¨ Correct! +10 XP");
     haptic('success');
   } else {
     if (typeof logMistake === 'function') {
@@ -1139,7 +1139,7 @@ function submitConfidence(level) {
   }
 
   if (!isCorrect) {
-    toast(`âš ï¸ Incorrect choice logged to Mistake Diary.`);
+    toast(`š ï¸ Incorrect choice logged to Mistake Diary.`);
     haptic('error');
   }
 
@@ -1181,7 +1181,7 @@ function completeStageSession() {
           masteryPct: scorePct
         };
         localStorage.setItem(progressKey, JSON.stringify(progress));
-      } catch (err) { console.warn('[LearnEngine] Progress save warning â€” localStorage quota or access error:', err); }
+      } catch (err) { console.warn('[LearnEngine] Progress save warning — localStorage quota or access error:', err); }
     }
   }
 
@@ -1206,7 +1206,7 @@ function completeStageSession() {
   let xpReward = 50; // base complete topic XP
   if (scorePct === 100) {
     xpReward += 30; // perfection bonus
-    toast("ðŸ† Perfect Score! 100% Mastery bonus +30 XP!", "badge");
+    toast("† Perfect Score! 100% Mastery bonus +30 XP!", "badge");
     awardBadge('Quiz Hero');
     launchConfetti(80);
     haptic('celebration');
@@ -1239,12 +1239,12 @@ function completeStageSession() {
     }
   }
 
-  // â”€â”€ MLOS Completion Screen â”€â”€
+  // ”€”€ MLOS Completion Screen ”€”€
   // Show what was learned and what comes next before navigating away.
   const topicCompleted = LS.topic;
   const finalConf = LS.confidenceRating || 3;
   const confLabels = ['', 'Lost', 'Shaky', 'Getting There', 'Confident', 'Mastered'];
-  const confEmojis = ['', 'ðŸ˜Ÿ', 'ðŸ˜•', 'ðŸ™‚', 'ðŸ˜Š', 'ðŸ”¥'];
+  const confEmojis = ['', '😟', '😕', '🙂', '😊', '🔥'];
   let nextTopicName = '';
   try {
     if (window.CourseProgressionEngine) {
@@ -1257,7 +1257,7 @@ function completeStageSession() {
   if (larea) {
     larea.innerHTML = `
       <div class="card" style="padding:28px;text-align:center">
-        <div style="font-size:48px;margin-bottom:10px">âœ…</div>
+        <div style="font-size:48px;margin-bottom:10px">✨…</div>
         <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">MISSION COMPLETE</div>
         <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:22px">${esc(topicCompleted)}</div>
         
@@ -1273,7 +1273,7 @@ function completeStageSession() {
         </div>
 
         <div style="background:rgba(255,255,255,0.03);border:1px solid var(--brd);border-radius:12px;padding:14px;margin-bottom:14px;text-align:left">
-          <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">ðŸ“… REVISION SCHEDULED</div>
+          <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">📅 REVISION SCHEDULED</div>
           <div style="font-size:12.5px;color:var(--sub);line-height:1.6">Key concepts added to your spaced repetition queue. Mentorix will remind you at the right moment.</div>
         </div>
 
@@ -1283,7 +1283,7 @@ function completeStageSession() {
           <div style="font-size:14px;color:#fff;font-weight:700">${esc(nextTopicName)}</div>
         </div>` : ''}
 
-        <button class="btn bpri w100" id="comp-continue-btn" style="padding:14px" onclick="clearInterval(window._compNavTimer);go('courses')">Continue Learning Journey â†’</button>
+        <button class="btn bpri w100" id="comp-continue-btn" style="padding:14px" onclick="clearInterval(window._compNavTimer);go('courses')">Continue Learning Journey →</button>
         <div style="font-size:11px;color:var(--mut);margin-top:10px">Returning to your course map in <span id="comp-nav-count">4</span>s</div>
       </div>
     `;
@@ -1303,10 +1303,10 @@ function completeStageSession() {
   }
 }
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€
    AI MENTOR / FOCUS OVERLAYS
    (Preserved clean layout functions)
-   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+   ”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€”€ */
 function toggleFocusMode(active) {
   haptic('light');
   let overlay = document.getElementById('focus-overlay');
@@ -1316,7 +1316,7 @@ function toggleFocusMode(active) {
       overlay.id = 'focus-overlay';
       overlay.className = 'focus-mode-overlay';
       overlay.innerHTML = `
-        <button class="focus-minimize-btn" onclick="toggleFocusMode(false)">Esc / Minimize âœ–</button>
+        <button class="focus-minimize-btn" onclick="toggleFocusMode(false)">Esc / Minimize ✨–</button>
         <div class="focus-terminal-container">
           <div class="focus-mode-label">Cognitive Calibration Center</div>
           <input type="text" class="focus-terminal-input" id="focus-input" placeholder="What topic do we explore next?" />

@@ -73,7 +73,6 @@
     let totalLoaded = 0;
     for (const bank of banks) {
       if (bank.quarantined) {
-        console.warn('[pyqService] QUARANTINED bank skipped (corrupt answer distribution):', bank.key);
         continue;
       }
       try {
@@ -182,7 +181,7 @@
       // First preload the 11 intact shift paper files (~300KB total) so full mocks work instantly
       await _preloadAllBrowser();
       // Load larger bank files in background without blocking
-      loadBankFiles().catch(e => console.warn('[pyqService] Background bank load notice:', e.message));
+      loadBankFiles().catch(() => {});
     }
   }
 

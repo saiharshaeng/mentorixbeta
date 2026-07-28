@@ -400,16 +400,21 @@ function generateMockAIResponse(msgs, sys, mt, json) {
   }
 
   // 6. INTENT: Chat / Mentor response (Tio)
-  if (sys && sys.includes('Tio')) {
+  if (sys && (sys.includes('Tio') || sys.includes('mentor'))) {
+    const lower = userMsg.toLowerCase().trim();
+    if (lower === 'hi' || lower === 'hello' || lower === 'hey') {
+      return "Hello! I'm Tio, your AI learning mentor. What topic or exam preparation would you like to focus on today? 🚀";
+    }
+    if (lower === 'idk' || lower.includes("don't know") || lower.includes("dont know")) {
+      return "No worries at all! That's what I'm here for. We can start by reviewing your JEE syllabus, taking a quick diagnostic mock, or building a practice session in Physics or Chemistry. What sounds best to you? 🎯";
+    }
+    if (lower.includes('thank')) {
+      return "You're very welcome! Keep up the great work. Let me know whenever you need help with a problem or topic! 🌟";
+    }
     const topic = userMsg.replace(/[?.]/g, '').trim();
-    return `That is an excellent question! **${topic}** is a core concept in competitive science and engineering. 
+    return `Great question about **${topic}**! In JEE preparation, mastering ${topic} involves understanding both core theoretical principles and applying them to problem solving under timed conditions.
 
-We can describe its system behavior using the standard relation:
-$$ y = f(x) + \\epsilon $$
-
-Where $f(x)$ is the ideal response and $\\epsilon$ represents the environmental noise or losses. In competitive exams like JEE, you will often find problems that stress-test your knowledge of how this relation behaves under non-linear boundary limits.
-
-Would you like me to build a personalized study course, generate a mock test, or summarize some key notes on this for your notebook? Let me know! 🚀`;
+Would you like me to guide you through a step-by-step lesson, start a targeted practice session, or highlight key revision points? Let's tackle it together! 🚀`;
   }
 
   // Default: return a structured lesson JSON to prevent crash in learn.js

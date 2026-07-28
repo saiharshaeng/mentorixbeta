@@ -391,8 +391,6 @@ console.log('[KaTeX] System ready');
   <span id="voice-reading-label">Reading…</span>
   <span class="voice-reading-stop">✖ Stop</span>
 </div>
-<!-- Floating Tio button -->
-<button class="float-tio" id="fnbtn" onclick="openTioFloat()" title="Ask Tio">✨<div class="float-tio-badge">!</div></button>
 <!-- Pomodoro timer FAB + widget -->
 <div class="timer-fab" id="timer-fab" onclick="toggleTimerWidget()" title="Study Timer">⏱️</div>
 <div class="timer-widget" id="timer-widget">
@@ -417,8 +415,6 @@ console.log('[KaTeX] System ready');
 </div>
 <!-- Notification bell -->
 <div class="notif-bell" id="notif-bell" onclick="requestNotifPerms()" title="Enable revision reminders">🔔<div class="notif-dot" id="notif-dot"></div></div>
-<!-- ELI5 / Simple Mode badge - only visible in app, not on auth/onboarding -->
-<div class="eli5-active" id="eli5-badge" onclick="toggleELI5()" style="display:none" title="Simple Mode ON — tap to toggle">🧒 Simple Mode ON · tap to off</div>
 <!-- PWA install banner -->
 <div class="pwa-banner" id="pwa-banner">
   <span class="pwa-icon">📱</span>
@@ -926,7 +922,7 @@ function renderOBS() {
 
   // STEP 3 — GRADE (Academic Only)
   if (ob.step === 3) {
-    const grades = [...Array(12).keys()].map(i => `Grade ${i + 1}`).concat(['Undergraduate', 'Postgraduate']);
+    const grades = [...Array(12).keys()].map(i => `Grade ${i + 1}`);
     // Pre-select a default grade if none set yet
     if (!ob.grade) ob.grade = 'Grade 10';
     c.innerHTML = `
@@ -1958,37 +1954,11 @@ function initApp(){
         <div class="sb-logo-ic" aria-hidden="true"></div>
         <div>
           <div class="sb-logo-tx">Mentorix</div>
-          <div class="sb-logo-sub" style="font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c);">Knowledge is Infinite</div>
-        </div>
-      </div>
-      <!-- TIO HOLOGRAPHIC ORB CONTAINER -->
-      <div id="tio-sb-container" class="tio-sb-container tio-sb-compact">
-        <div class="tio-orb-wrapper" id="tio-sb-orb">
-          <div class="tio-ring"></div>
-          <div class="tio-orb">
-            <div class="tio-core"></div>
-            <div class="tio-face">
-              <div class="tio-eyes">
-                <div class="tio-eye left"></div>
-                <div class="tio-eye right"></div>
-              </div>
-              <div class="tio-mouth"></div>
-            </div>
-          </div>
-          <div class="tio-particles">
-            <span class="np1"></span>
-            <span class="np2"></span>
-            <span class="np3"></span>
-          </div>
-        </div>
-        <div class="tio-bubble-wrap">
-          <div class="tio-bubble" id="tio-sb-bubble">Welcome! Let's explore some new concepts today. 🚀</div>
         </div>
       </div>
       <div class="sb-user" id="sbu"></div>
       <nav class="sb-nav" id="sbn"></nav>
       <div class="sb-bot">
-        <div class="sb-btn" onclick="showShortcutsHelp()" title="Keyboard shortcuts (?)">⌨️<span class="nav-lbl" style="font-size:11px">Shortcuts</span></div>
         <div class="sb-btn" onclick="doLogout()" style="color:#FCA5A5">🚪<span class="nav-lbl" style="font-size:11px">Sign Out</span></div>
         <div class="sb-btn" onclick="colSB()"><span id="sci">←</span><span class="nav-lbl" id="scl">Collapse</span></div>
       </div>
@@ -3396,29 +3366,8 @@ function toggleDoubtVoice(){
    GLOBAL KEYBOARD SHORTCUTS
 ─────────────────────────────────────────── */
 document.addEventListener('keydown',function(e){
-  // Don't fire if typing in an input/textarea
-  const tag=(e.target.tagName||'').toLowerCase();
-  if(tag==='input'||tag==='textarea'||tag==='select')return;
-  if(e.ctrlKey||e.metaKey||e.altKey)return;
-  // Only when app is running (not auth/onboarding)
-  if(!D.profile)return;
-
-  const shortcuts={
-    'd': ()=>go('dash'),
-    'l': ()=>go('courses'),
-    'n': ()=>go('mentor'),
-    'e': ()=>go('explore'),
-    'c': ()=>go('careers'),
-    't': ()=>go('tests'),
-    'q': ()=>go('doubt'),
-    'b': ()=>go('notebook'),
-    'r': ()=>go('revision'),
-    'p': ()=>go('progress'),
-    's': ()=>go('settings'),
-    '?': ()=>showShortcutsHelp(),
-  };
-  const fn=shortcuts[e.key];
-  if(fn){e.preventDefault();fn();}
+  // Single-key navigation shortcuts disabled per user request
+  return;
 });
 
 let shortcutsHelpShown=false;
