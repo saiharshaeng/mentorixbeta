@@ -7,7 +7,7 @@
 let NB={selTopic:null,genTopic:'',genLoading:false,selSubj:'all'}; // Notebook UI state
 
 function saveToNotebook(topic,auto=false){
-  const l=LS.lesson;
+  const l = (typeof LS !== 'undefined' && LS) ? LS.lesson : null;
   if(!l&&!topic)return;
   const t=topic||l?.topic||'';
   if(!t)return;
