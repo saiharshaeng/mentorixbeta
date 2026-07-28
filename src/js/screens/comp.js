@@ -1817,44 +1817,46 @@ function renderAnalyticsTab(exam) {
     </div>
   `;
 
+  const countdownInfo = typeof getExamCountdownAndReadiness === 'function' ? getExamCountdownAndReadiness() : { examName: 'JEE Main 2026', approxDays: 250, approxWeeks: 35, readinessIndex: 65, readinessLabel: '⚡ Steady Progress (On Track)' };
+
   return `
     <div class="sw scr" style="padding-top:16px">
       
-      <!-- HERO RANK PREDICTOR CARD -->
-      <div class="card cglow mb20" style="padding:24px;border-color:rgba(139,92,246,0.3);background:linear-gradient(135deg, rgba(139,92,246,0.08), rgba(6,182,212,0.04))">
+      <!-- HERO TARGET EXAM COUNTDOWN & READINESS CARD -->
+      <div class="card cglow mb20" style="padding:24px;border-color:rgba(139,92,246,0.35);background:linear-gradient(135deg, rgba(139,92,246,0.12), rgba(6,182,212,0.06))">
         <div class="between mb12">
-          <div style="display:flex;align-items:center;gap:8px">
-            <span style="font-size:22px">🏆</span>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:26px">⏳</span>
             <div>
-              <div style="font-size:18px;font-weight:800;color:#fff">NTA All India Rank Predictor</div>
-              <div style="font-size:12px;color:var(--mut)">Real-time percentile & AIR estimation based on NTA scoring statistical curves</div>
+              <div style="font-size:18px;font-weight:800;color:#fff">${esc(countdownInfo.examName)} Countdown</div>
+              <div style="font-size:12px;color:var(--mut)">Live calculation based on completed NCERT topics, CBT test accuracy, and mistake recovery</div>
             </div>
           </div>
-          <span class="tag tp" style="font-size:11px">Auto-Updated Live</span>
+          <span class="tag tp font-poiret" style="font-size:11px;padding:4px 10px">🎯 Active Exam: ${esc(countdownInfo.examName)}</span>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:14px;margin:16px 0">
-          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:16px;text-align:center">
-            <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase">ESTIMATED AIR RANK</div>
-            <div style="font-size:32px;font-weight:900;color:#A78BFA;margin:6px 0">~${est.rank}</div>
-            <div style="font-size:11px;color:var(--sub)">Target: ${esc(compState.targetRank || 'AIR 1,000')}</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));gap:14px;margin:16px 0">
+          <div style="background:rgba(0,0,0,0.35);border:1px solid rgba(139,92,246,0.3);border-radius:14px;padding:16px;text-align:center">
+            <div style="font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase">COUNTDOWN TO EXAM</div>
+            <div style="font-size:32px;font-weight:900;color:#A78BFA;margin:6px 0">~${countdownInfo.approxDays} Days</div>
+            <div style="font-size:11px;color:var(--sub)">~${countdownInfo.approxWeeks} Weeks Left</div>
           </div>
 
-          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(6,182,212,0.25);border-radius:14px;padding:16px;text-align:center">
-            <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase">PREDICTED PERCENTILE</div>
-            <div style="font-size:32px;font-weight:900;color:#38BDF8;margin:6px 0">${est.percentile}%</div>
-            <div style="font-size:11px;color:var(--sub)">Target: ${targetEst.percentile}%</div>
+          <div style="background:rgba(0,0,0,0.35);border:1px solid rgba(6,182,212,0.3);border-radius:14px;padding:16px;text-align:center">
+            <div style="font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase">READINESS INDEX</div>
+            <div style="font-size:32px;font-weight:900;color:#38BDF8;margin:6px 0">${countdownInfo.readinessIndex}%</div>
+            <div style="font-size:11px;color:var(--sub)">${countdownInfo.readinessLabel}</div>
           </div>
 
-          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(16,185,129,0.25);border-radius:14px;padding:16px;text-align:center">
-            <div style="font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase">BENCHMARK SCORE</div>
-            <div style="font-size:32px;font-weight:900;color:#34D399;margin:6px 0">${Math.round(estimatedScore)} <span style="font-size:16px;color:var(--mut)">/ 300</span></div>
-            <div style="font-size:11px;color:var(--sub)">${targetGap > 0 ? `+${targetGap} pts to reach Goal` : '🎯 Target Achieved!'}</div>
+          <div style="background:rgba(0,0,0,0.35);border:1px solid rgba(16,185,129,0.3);border-radius:14px;padding:16px;text-align:center">
+            <div style="font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase">PREDICTED PERCENTILE</div>
+            <div style="font-size:32px;font-weight:900;color:#34D399;margin:6px 0">${est.percentile}%</div>
+            <div style="font-size:11px;color:var(--sub)">AIR Rank: ~${est.rank}</div>
           </div>
         </div>
 
         <div style="font-size:12px;color:var(--sub);background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:8px;display:flex;align-items:center;justify-content:space-between" class="flex-col-mob">
-          <span>⚡ Rank is recalculated automatically after <strong>every Mock Exam</strong> or <strong>every 2 Practice Tests</strong>.</span>
+          <span>⚡ Countdown &amp; Readiness recalculate automatically after <strong>every CBT practice session</strong>.</span>
           <span style="color:var(--pl);font-weight:600">Sessions Analyzed: ${history.length}</span>
         </div>
       </div>

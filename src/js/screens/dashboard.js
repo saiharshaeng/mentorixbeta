@@ -195,7 +195,7 @@ function rDash(){
       <!-- CENTER COLUMN: WORKSPACE ENGINE -->
       <div style="display:flex; flex-direction:column; gap:var(--sp-6)">
         
-        <!-- ══ HERO ZONE ══ -->
+        <!-- ══ HERO ZONE & TARGET EXAM COUNTDOWN ══ -->
         <div class="dash-hero-zone s1">
           <div class="dash-hero-greeting" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
             <div class="font-serif" style="font-size:24px;font-weight:700">Hey ${esc(name)}<span class="punct-anchor">.</span>${D.streak>=3?' 🔥':' 👋'}</div>
@@ -229,7 +229,58 @@ function rDash(){
               }).join('')}
             </div>
           </div>
-          <div class="dash-hero-meta">
+        </div>
+
+        <!-- ⏳ TARGET EXAM COUNTDOWN & READINESS CARD -->
+        ${(() => {
+          const info = typeof getExamCountdownAndReadiness === 'function' ? getExamCountdownAndReadiness() : { examName: 'JEE Main 2026', approxDays: 250, approxWeeks: 35, readinessIndex: 65, readinessLabel: '⚡ Steady Progress (On Track)', syllabusPct: 42 };
+          return `
+            <div class="card cglow" style="padding:20px;border-color:rgba(139,92,246,0.35);background:linear-gradient(135deg, rgba(139,92,246,0.12), rgba(6,182,212,0.06))">
+              <div class="between mb12">
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span style="font-size:22px">⏳</span>
+                  <div>
+                    <div style="font-size:16px;font-weight:800;color:#fff">${esc(info.examName)} Countdown</div>
+                    <div style="font-size:11px;color:var(--mut)">Live calculation based on completed topics, test accuracy, and mistake recovery</div>
+                  </div>
+                </div>
+                <button class="btn bsm bsec font-poiret" onclick="go('comp')" style="font-size:11px">🎯 Open Competitive Exams →</button>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));gap:12px;margin-bottom:12px">
+                <div style="background:rgba(0,0,0,0.35);border:1px solid rgba(139,92,246,0.3);border-radius:12px;padding:12px;text-align:center">
+                  <div style="font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase">COUNTDOWN</div>
+                  <div style="font-size:26px;font-weight:900;color:#A78BFA;margin:4px 0">~${info.approxDays} Days</div>
+                  <div style="font-size:10px;color:var(--sub)">~${info.approxWeeks} Weeks Left</div>
+                </div>
+
+                <div style="background:rgba(0,0,0,0.35);border:1px solid rgba(6,182,212,0.3);border-radius:12px;padding:12px;text-align:center">
+                  <div style="font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase">READINESS INDEX</div>
+                  <div style="font-size:26px;font-weight:900;color:#38BDF8;margin:4px 0">${info.readinessIndex}%</div>
+                  <div style="font-size:10px;color:var(--sub)">${info.readinessLabel}</div>
+                </div>
+
+                <div style="background:rgba(0,0,0,0.35);border:1px solid rgba(16,185,129,0.3);border-radius:12px;padding:12px;text-align:center">
+                  <div style="font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase">SYLLABUS DONE</div>
+                  <div style="font-size:26px;font-weight:900;color:#34D399;margin:4px 0">${info.syllabusPct}%</div>
+                  <div style="font-size:10px;color:var(--sub)">Topics Mastered</div>
+                </div>
+              </div>
+
+              <!-- TIO 3-STEP ACTION PLAN -->
+              <div style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:10px 12px">
+                <div style="font-size:10px;font-weight:700;color:var(--pl);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">⚡ TIO DAILY 3-STEP ACTION PLAN</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:6px">
+                  <button class="btn bsec bsm font-poiret" onclick="go('learn')" style="justify-content:flex-start;font-size:11px">📖 1. Master 1 NCERT Topic →</button>
+                  <button class="btn bpri bsm font-poiret" onclick="go('comp')" style="justify-content:flex-start;font-size:11px">🎯 2. Solve 5 PYQs →</button>
+                  <button class="btn bsec bsm font-poiret" onclick="go('revision')" style="justify-content:flex-start;font-size:11px">🔄 3. 5-Min Revision Queue →</button>
+                </div>
+              </div>
+            </div>
+          `;
+        })()}
+        
+        <div class="dash-hero-meta">
             ${D.streak>0?`<span class="dash-hero-streak"><span aria-hidden="true">🔥</span> ${D.streak}-day streak</span>`:''}
             <span class="dash-hero-xp"><span aria-hidden="true">⚡</span> Level ${lv2} · ${D.xp} XP</span>
             ${sessToday>0?`<span style="font-size:var(--fs-sm);color:var(--mut)">${sessToday} session${sessToday>1?'s':''} today</span>`:''}
