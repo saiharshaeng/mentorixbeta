@@ -52,7 +52,7 @@ function rMentor() {
       <!-- ACTIVE CONTEXT BAR -->
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
         <span class="tag tp" style="font-size:12px;padding:6px 12px">📚 Course: ${esc(D.activeCourseId || 'Physics & Math')}</span>
-        <span class="tag tc" style="font-size:12px;padding:6px 12px">🎯 Target: ${esc(profile.targetExams?.[0] || 'JEE Main')}</span>
+        <span class="tag tc" style="font-size:12px;padding:6px 12px">🎯 Target: ${esc(profile.targetExams?.[0] || 'General Studies')}</span>
         <span class="tag ${weakSpotsCount > 0 ? 'tgold' : 'tok'}" style="font-size:12px;padding:6px 12px">💡 Focus Weak Spots: ${weakSpotsCount}</span>
         <span class="tag tp" style="font-size:12px;padding:6px 12px">🎨 Theme: ${esc(profile.experienceMode || 'gamified')}</span>
       </div>
@@ -65,7 +65,11 @@ function rMentor() {
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show key formulas.')">📐 Key Formulas & Units</button>
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show today\'s weak topics.')">🛡️ Review Mistakes</button>
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start 5-q micro test.')">🎯 5-Q Micro Test</button>
-          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start a JEE mock.')">⚡ CBT Mock Test</button>
+          ${profile.targetExams?.[0] ? `
+            <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start a mock test.')">⚡ ${esc(profile.targetExams[0])} Mock Test</button>
+          ` : `
+            <button class="btn bsec bsm" onclick="go('settings')">🎯 Personalize Target Exam</button>
+          `}
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, open career roadmap.')">🚀 Career Roadmap</button>
         </div>
       </div>
