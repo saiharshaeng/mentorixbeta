@@ -1418,23 +1418,33 @@ function completeStageSession() {
           </div>
         </div>
 
+        ${(checksCount - correctCount >= 3 && D.settings?.showReflection !== false) ? `
+        <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:12px;padding:16px;margin-bottom:16px;text-align:left">
+          <div style="font-size:10px;color:var(--goldl);font-weight:700;text-transform:uppercase;margin-bottom:4px">💬 REFLECTION INSIGHT (OPTIONAL)</div>
+          <div style="font-size:12.5px;color:#fff;margin-bottom:10px">What felt hardest during this topic? (Helps Tio personalize future lessons)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will adjust formula explanations.','ok2');this.disabled=true">📐 Formula Application</button>
+            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will highlight question details.','ok2');this.disabled=true">👁️ Reading Questions</button>
+            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will review vector directions.','ok2');this.disabled=true">↗️ Vector Signs</button>
+            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will add full numerical steps.','ok2');this.disabled=true">🔢 Calculations</button>
+          </div>
+        </div>` : ''}
+
         <div style="background:rgba(255,255,255,0.03);border:1px solid var(--brd);border-radius:12px;padding:14px;margin-bottom:14px;text-align:left">
           <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">📅 REVISION SCHEDULED</div>
           <div style="font-size:12.5px;color:var(--sub);line-height:1.6">Key concepts added to your spaced repetition queue. Mentorix will remind you at the right moment.</div>
         </div>
 
-        ${nextTopicName ? `
-        <div style="background:rgba(139,92,246,0.05);border:1px solid rgba(139,92,246,0.15);border-radius:12px;padding:14px;margin-bottom:18px;text-align:left">
-          <div style="font-size:10px;color:var(--pl);font-weight:700;text-transform:uppercase;margin-bottom:4px">NEXT UP</div>
-          <div style="font-size:14px;color:#fff;font-weight:700">${esc(nextTopicName)}</div>
-        </div>` : ''}
-
-        <button class="btn bpri w100" id="comp-continue-btn" style="padding:14px" onclick="clearInterval(window._compNavTimer);go('courses')">Continue Learning Journey →</button>
-        <div style="font-size:11px;color:var(--mut);margin-top:10px">Returning to your course map in <span id="comp-nav-count">4</span>s</div>
+        <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">CHOOSE YOUR NEXT STEP</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px">
+          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('comp')">1. 🎯 Practice More</button>
+          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('recovery')">2. 🛡️ Revise Weakspots</button>
+          <button class="btn bpri bsm font-poiret" onclick="clearInterval(window._compNavTimer);${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">3. 🚀 Next Topic →</button>
+        </div>
       </div>
     `;
 
-    let countdown = 4;
+    let countdown = 10;
     window._compNavTimer = setInterval(() => {
       countdown--;
       const el = document.getElementById('comp-nav-count');

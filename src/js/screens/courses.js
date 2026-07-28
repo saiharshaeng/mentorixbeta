@@ -179,8 +179,8 @@ function rCourses(){
       ${esc(c.subject || getCourseTitle(c))}
     </div>
   `).join('') + (D.courses.length < MAX_COURSES ? `
-    <div class="tb" style="border:1px dashed var(--brd);color:var(--mut)" onclick="generateAndSaveCourses()" title="Add another course (${D.courses.length}/${MAX_COURSES})">
-      + Add Course
+    <div class="tb" style="border:1px dashed var(--brd);color:var(--mut);cursor:pointer" onclick="openCustomCourseModal()" title="Add custom course (${D.courses.length}/${MAX_COURSES})">
+      + Add Custom Course
     </div>
   ` : '');
 
@@ -814,6 +814,74 @@ function resolveMergeConflict(choice){
   toast('🎓 Courses updated!', 'ok2');
 }
 
+function openCustomCourseModal() {
+  const existing = document.getElementById('custom-course-modal');
+  if (existing) existing.remove();
+  const wrap = document.createElement('div');
+  wrap.id = 'custom-course-modal';
+  wrap.className = 'modal-bg';
+  wrap.innerHTML = `
+    <div class="modal-box" style="max-width:440px">
+      <div class="h2" style="color:#fff;margin-bottom:6px">✨ Add Custom Course</div>
+      <p class="sub" style="margin-bottom:18px">Create a course for any academic or non-academic domain (e.g. Quantum Computing, Astronomy, Robotics, Financial Literacy).</p>
+      <input class="inp mb16" id="custom-course-title-inp" placeholder="Course Name (e.g. Quantum Computing)" style="width:100%">
+      <div style="display:flex;gap:10px">
+        <button class="btn bgh bfull" onclick="closeCustomCourseModal()">Cancel</button>
+        <button class="btn bpri bfull" onclick="submitCustomCourse()">🚀 Create Course</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(wrap);
+}
+
+function closeCustomCourseModal() {
+  const el = document.getElementById('custom-course-modal');
+  if (el) el.remove();
+}
+
+function submitCustomCourse() {
+  const inp = document.getElementById('custom-course-title-inp');
+  const title = (inp ? inp.value : '').trim();
+  if (!title) {
+    toast('Please enter a course title.', 'err');
+    return;
+  }
+  closeCustomCourseModal();
+  createCustomUserCourse(title);
+}
+
+function createCustomUserCourse(title) {
+  const courseId = 'c_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5);
+  const newCourse = {
+    id: courseId,
+    title: title,
+    subject: title,
+    isCustom: true,
+    units: [
+      {
+        title: 'Unit 1: Fundamentals of ' + title,
+        chapters: [
+          {
+            title: 'Chapter 1: Core Concepts & Principles',
+            topics: [
+              'Introduction to ' + title,
+              'Core Principles of ' + title,
+              'Practical Applications of ' + title
+            ]
+          }
+        ]
+      }
+    ]
+  };
+
+  if (!D.courses) D.courses = [];
+  D.courses.push(newCourse);
+  activeCourseId = courseId;
+  saveNow();
+  rCourses();
+  toast(`✨ Created custom course: ${title}!`, 'ok2');
+}
+
 window.activeCourseId = activeCourseId;
 window.getContinueLearningChapter = getContinueLearningChapter;
 window.getContinueCourseChapter = getContinueLearningChapter;
@@ -829,3 +897,7 @@ window.closeCourseSetupModal = closeCourseSetupModal;
 window.renderCourseSetupModal = renderCourseSetupModal;
 window.toggleCsmSubject = toggleCsmSubject;
 window.submitCourseSetup = submitCourseSetup;
+window.openCustomCourseModal = openCustomCourseModal;
+window.closeCustomCourseModal = closeCustomCourseModal;
+window.submitCustomCourse = submitCustomCourse;
+window.createCustomUserCourse = createCustomUserCourse;
