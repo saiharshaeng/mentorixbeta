@@ -59,9 +59,12 @@
     }
 
     setupLenisScroll() {
-      if (typeof window.Lenis !== 'undefined') {
+      const mainEl = document.getElementById('main');
+      if (typeof window.Lenis !== 'undefined' && mainEl) {
         try {
           this.lenis = new window.Lenis({
+            wrapper: mainEl,
+            content: mainEl,
             duration: 0.8,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smoothWheel: true,
