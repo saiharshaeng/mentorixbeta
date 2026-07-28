@@ -656,31 +656,58 @@ function rLError(){
 function convertLessonToStructuredSections(lesson) {
   if (!lesson) return [];
   const topic = lesson.topic || 'Lesson';
-  return [
+  const sections = [
     {
-      title: '1. Objective & Overview',
+      title: '📌 1. Introduction & Intuition',
       blocks: [
         { type: 'objective', content: lesson.hook || `Master the core principles of ${topic}.` },
-        { type: 'explanation', title: 'Foundational Principles', content: lesson.explanation || '' }
+        { type: 'explanation', title: 'Physical Intuition', content: lesson.intuition || lesson.hook || '' }
       ]
     },
     {
-      title: '2. Core Concept Explanation',
+      title: '🌍 2. Real-World Application',
       blocks: [
-        { type: 'explanation', title: 'Deep Analysis', content: lesson.explanation || '' },
-        { type: 'takeaway', text: `Key insight: Focus on foundational boundary conditions for ${topic}.` }
+        { type: 'explanation', title: 'Where This Is Used', content: lesson.exam_insight || `Understanding ${topic} is fundamental across engineering, physical phenomena, and modern technology.` }
       ]
     },
     {
-      title: '3. Worked Examples',
-      blocks: (lesson.examples || []).map((ex, i) => ({
-        type: 'worked_example',
-        problem: `Example ${i + 1}: ${ex.q || ''}`,
-        solution: ex.s || ''
-      }))
+      title: '🔑 3. Prerequisites Safety Check',
+      blocks: [
+        { type: 'takeaway', text: `Key Foundation: Ensure you understand basic algebra, vector components, and unit consistency for ${topic}.` }
+      ]
     },
     {
-      title: '4. Mini Checkpoint',
+      title: '📖 4. Core Theory & Derivation',
+      blocks: [
+        { type: 'explanation', title: 'NCERT Technical Rigor', content: lesson.technical || lesson.explanation || '' }
+      ]
+    },
+    {
+      title: '📐 5. Formulas & Equations',
+      blocks: [
+        { type: 'explanation', title: 'Governing Formulas', content: lesson.technical || '' }
+      ]
+    }
+  ];
+
+  if (lesson.mnemonic) {
+    sections.push({
+      title: '💡 6. Mnemonics & Memory Tricks',
+      blocks: [
+        { type: 'takeaway', text: `Memory Trick: ${lesson.mnemonic}` }
+      ]
+    });
+  }
+
+  sections.push(
+    {
+      title: '✨ 7. Fascinating Fact',
+      blocks: [
+        { type: 'takeaway', text: lesson.fact || `Did you know? ${topic} principles govern everything from quantum interactions to cosmic astrophysics.` }
+      ]
+    },
+    {
+      title: '🎯 8. 5-Question Adaptive Checkpoint',
       blocks: (lesson.checks || []).map((chk, i) => ({
         type: 'checkpoint',
         checkpoint: {
@@ -692,21 +719,10 @@ function convertLessonToStructuredSections(lesson) {
           explanation: chk.e || ''
         }
       }))
-    },
-    {
-      title: '5. Summary & Key Takeaways',
-      blocks: [
-        {
-          type: 'takeaway',
-          text: (lesson.summary || []).join(' €¢ ')
-        },
-        {
-          type: 'summary',
-          nextTitle: 'Next Concept'
-        }
-      ]
     }
-  ];
+  );
+
+  return sections;
 }
 
 function renderLesson() {

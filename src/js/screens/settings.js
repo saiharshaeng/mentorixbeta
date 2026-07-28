@@ -224,6 +224,13 @@ function rSettings(){
           <label class="toggle"><input type="checkbox" ${D.settings?.eli5Mode?'checked':''} onchange="toggleELI5()"><div class="tslider"></div></label>
         </div>
         <div class="set-row">
+          <div>
+            <div style="color:var(--txt);font-size:14px;font-weight:500">💬 Request Reflection on 3+ Mistakes</div>
+            <div style="color:var(--mut);font-size:12px">Show optional self-reflection dialog when committing 3+ errors in a checkpoint</div>
+          </div>
+          <label class="toggle"><input type="checkbox" ${D.settings?.showReflection!==false?'checked':''} onchange="if(!D.settings)D.settings={};D.settings.showReflection=this.checked;saveAll();toast('Preference updated','ok2')"><div class="tslider"></div></label>
+        </div>
+        <div class="set-row">
           <div><div style="color:var(--txt);font-size:14px;font-weight:500">Text Size</div><div style="color:var(--mut);font-size:12px">Adjust how large text appears</div></div>
           <div style="display:flex;gap:6px">
             ${['sm','md','lg'].map(s=>{
