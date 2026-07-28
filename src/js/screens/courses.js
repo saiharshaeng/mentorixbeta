@@ -744,6 +744,9 @@ async function generateAutoCoursesAsync(profile, onProgress) {
       }
     }
     if (courseObj) {
+      if (!courseObj.id) {
+        courseObj.id = 'c_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5);
+      }
       out.push(courseObj);
     }
   }

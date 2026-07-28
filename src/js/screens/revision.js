@@ -38,13 +38,16 @@ function sm2NextInterval(topic){
 
 function getRevisionQueue(){
   const now=Date.now();
+  const mem = D.memory || {};
+  const history = mem.history || [];
+  const scores = mem.scores || {};
   return (D.topics||[]).map(t=>{
     const note=D.notes?.[t];
     const savedAt=note?.savedAt||0;
-    const lastRevised=D.memory?.history?.filter(h=>h.topic===t).slice(-1)[0]?.date;
+    const lastRevised=history.filter(h=>h && h.topic===t).slice(-1)[0]?.date;
     const lastTs=lastRevised?new Date(lastRevised).getTime():savedAt;
     const daysSince=Math.floor((now-lastTs)/86400000);
-    const score=D.memory?.scores?.[t]??100;
+    const score=scores[t]??100;
     const priority=daysSince>=7?'high':daysSince>=3?'mid':'low';
     return{topic:t,daysSince,score,priority,note};
   }).sort((a,b)=>{

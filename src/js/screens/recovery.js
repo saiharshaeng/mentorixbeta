@@ -173,6 +173,7 @@ function logMistake(topic, concept, question, level, classification, reason) {
       errorType: classification || 'Conceptual Error'
     });
   } else {
+    if (!D.memory) D.memory = { weakSpots: [], history: [], scores: {}, mistakeDiary: [] };
     if (!D.memory.weakSpots) D.memory.weakSpots = [];
     const exists = D.memory.weakSpots.some(w => w.topic === topic && w.concept === concept && !w.solved);
     if (!exists) {
