@@ -162,7 +162,7 @@
    */
   function isPersonalized() {
     const p = getProfile();
-    return Boolean(p && p.isOnboarded && p.grade && p.board && p.grade !== 'not specified');
+    return Boolean(p && (p.isOnboarded || (p.name && p.name !== 'Learner')) && p.grade !== 'not specified');
   }
 
   /**

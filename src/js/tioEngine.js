@@ -374,7 +374,9 @@ RULES FOR GENERATING EXPLANATIONS:
 
     return {
       greeting: `${timeGreeting}, ${profile.name || 'Learner'}! 🌟`,
-      summary: `You are on a ${streak}-day study streak! Today is a great day to build momentum towards ${profile.targetExams?.[0] || 'your goals'}.`,
+      summary: streak > 0 
+        ? `Awesome job maintaining your ${streak}-day study streak! I am right here with you to guide your prep and help you conquer ${profile.targetExams?.[0] || 'your goals'}.` 
+        : `Welcome back! Every great journey begins with a single focused step. I'm here with you to help you master ${profile.targetExams?.[0] || 'your syllabus'}.`,
       recommendedActions: [
         { label: '📖 Continue Active Course', icon: '⚡', action: "go('courses')", desc: 'Pick up right where you left off in your syllabus.' },
         { label: '🛡️ Reinforce Weak Concepts', icon: '💡', action: "go('recovery')", desc: `Clear ${weakList.length} active weak concepts in your Skill Recovery.` },

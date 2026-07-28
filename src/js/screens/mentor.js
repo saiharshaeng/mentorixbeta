@@ -30,7 +30,7 @@ function rMentor() {
             <span style="font-size:40px">🤖</span>
             <div>
               <div class="h2" style="color:#fff;margin-bottom:2px">${esc(briefing.greeting)}</div>
-              <div style="color:var(--pl);font-size:13px;font-weight:600">Tio — Central Operating Intelligence</div>
+              <div style="color:var(--pl);font-size:13px;font-weight:600">Tio — Your Personal AI Study Mentor & Guide</div>
             </div>
           </div>
           <span class="tag tgold" style="font-size:12px;padding:6px 12px">🔥 ${D.streak || 0} Day Streak</span>

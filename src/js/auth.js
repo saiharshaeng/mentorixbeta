@@ -177,6 +177,7 @@ function createProfileSubmit() {
     name: name,
     avatar: mascot.emoji,
     avatarId: mascot.id,
+    isOnboarded: true,
     createdAt: new Date().toISOString()
   };
 
