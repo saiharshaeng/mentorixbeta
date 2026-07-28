@@ -266,12 +266,30 @@
       if (p.includes('micro quiz') || p.includes('quick quiz') || p.includes('5-q micro test') || p.includes('5 question quiz')) {
         return { isDeterministic: true, intent: 'MICRO_QUIZ' };
       }
+      if (p.includes('overwhelmed') || p.includes('too hard') || p.includes('cant do this') || p.includes("can't do this") || p.includes('stressed') || p.includes('giving up') || p.includes('feeling stupid') || p.includes('scared') || p.includes('fail') || p.includes('exhausted')) {
+        return { isDeterministic: true, intent: 'EMPATHY_STRESS_RESET' };
+      }
+      if (p.includes('step by step') || p.includes('break down') || p.includes('break it down') || p.includes('how to solve') || p.includes('solve step')) {
+        return { isDeterministic: true, intent: 'STEP_BY_STEP_BREAKDOWN' };
+      }
 
       // Default: Generative intent (concept explanation, mentorship, etc.)
       return { isDeterministic: false, intent: 'GENERATIVE_TEACHING' };
     },
 
     executeDeterministicIntent(intent) {
+      if (intent === 'EMPATHY_STRESS_RESET') {
+        return {
+          handled: true,
+          response: `Take a deep breath, champ! 💙 Exam preparation is a long marathon, and it is 100% normal to feel tired or overwhelmed sometimes. You don't have to carry it all today.\n\nLet's break things down into a 5-minute easy win together — no pressure, no judgment. How would you like to proceed?\n\n<button class="btn bpri bsm mt10 mr8" onclick="sendQuickCommand('Tio, explain active topic.')">💡 Pick 1 Simple Concept</button><button class="btn bsec bsm mt10" onclick="sendQuickCommand('Tio, show key formulas.')">☕ Quick Formula Check</button>`
+        };
+      }
+      if (intent === 'STEP_BY_STEP_BREAKDOWN') {
+        return {
+          handled: true,
+          response: `🪜 **3-Step Numerical Problem Solving Blueprint**:\n\n1. **Step 1 — Extract & Convert**: List all given variables and convert them into SI units (meters, seconds, kilograms, coulombs).\n2. **Step 2 — Pick Governing Formula**: Match your given parameters to the core NCERT formula.\n3. **Step 3 — Substitute & Verify**: Substitute numerical values and perform dimensional sanity check.\n\n<button class="btn bpri bsm mt10 mr8" onclick="go('learn')">📖 Open Step-by-Step Interactive Lesson</button><button class="btn bsec bsm mt10" onclick="go('comp')">🎯 Practice Guided Problem</button>`
+        };
+      }
       if (intent === 'PROGRESS_QUERY') {
         const stats = window.CEE ? window.CEE.AnalyticsEngine.getDerivedStats() : { accuracy: 0, totalAttempts: 0 };
         const xp = window.D?.xp || 0;

@@ -49,12 +49,33 @@ function rMentor() {
         </div>
       </div>
 
-      <!-- ACTIVE CONTEXT BAR -->
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
-        <span class="tag tp" style="font-size:12px;padding:6px 12px">📚 Course: ${esc(D.activeCourseId || 'Physics & Math')}</span>
-        <span class="tag tc" style="font-size:12px;padding:6px 12px">🎯 Target: ${esc(profile.targetExams?.[0] || 'General Studies')}</span>
-        <span class="tag ${weakSpotsCount > 0 ? 'tgold' : 'tok'}" style="font-size:12px;padding:6px 12px">💡 Focus Weak Spots: ${weakSpotsCount}</span>
-        <span class="tag tp" style="font-size:12px;padding:6px 12px">🎨 Theme: ${esc(profile.experienceMode || 'gamified')}</span>
+      <!-- TIO REMEMBERS PERSISTENT MEMORY CARD -->
+      <div class="card mb20" style="padding:16px 20px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.25);border-radius:14px">
+        <div class="between mb8">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:18px">🧠</span>
+            <span style="color:var(--pl);font-weight:700;font-size:12px;text-transform:uppercase">Tio Remembers Your Prep State</span>
+          </div>
+          <span class="tag tp" style="font-size:10px;padding:2px 8px">Updated Live</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;font-size:12px">
+          <div style="background:rgba(0,0,0,0.3);padding:8px 10px;border-radius:8px">
+            <span style="color:var(--sub);font-size:10px;display:block">Target Exam</span>
+            <strong style="color:#fff">${esc(profile.targetExams?.[0] || 'General Studies')}</strong>
+          </div>
+          <div style="background:rgba(0,0,0,0.3);padding:8px 10px;border-radius:8px">
+            <span style="color:var(--sub);font-size:10px;display:block">Active Course</span>
+            <strong style="color:var(--pl)">${esc(D.activeCourseId || 'Physics & Math')}</strong>
+          </div>
+          <div style="background:rgba(0,0,0,0.3);padding:8px 10px;border-radius:8px">
+            <span style="color:var(--sub);font-size:10px;display:block">Active Focus Areas</span>
+            <strong style="color:${weakSpotsCount > 0 ? 'var(--goldl)' : 'var(--okl)'}">${weakSpotsCount} Weak Concepts</strong>
+          </div>
+          <div style="background:rgba(0,0,0,0.3);padding:8px 10px;border-radius:8px">
+            <span style="color:var(--sub);font-size:10px;display:block">Study Streak</span>
+            <strong style="color:var(--goldl)">🔥 ${D.streak || 0} Days Active</strong>
+          </div>
+        </div>
       </div>
 
       <!-- SMART COMMAND QUICK ACTIONS -->
@@ -65,6 +86,7 @@ function rMentor() {
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show key formulas.')">📐 Key Formulas & Units</button>
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, show today\'s weak topics.')">🛡️ Review Mistakes</button>
           <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start 5-q micro test.')">🎯 5-Q Micro Test</button>
+          <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, I feel overwhelmed.')">💙 Need Encouragement?</button>
           ${profile.targetExams?.[0] ? `
             <button class="btn bsec bsm" onclick="sendQuickCommand('Tio, start a mock test.')">⚡ ${esc(profile.targetExams[0])} Mock Test</button>
           ` : `
