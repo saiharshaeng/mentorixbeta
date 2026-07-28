@@ -830,49 +830,60 @@ function renderStageContent() {
 
         <div class="font-serif" style="font-size:17px;color:#fff;font-weight:700;line-height:1.65;margin:0 0 24px;font-style:italic;padding:0 4px">
           "${esc(l.hook)}"
-        </div>
-
         <button class="btn bpri blg w100 mx-btn-primary" onclick="advanceStage(2)">
           🚀 Begin Learning →
         </button>
       </div>
     `;
   } else if (stage === 2) {
-    // ”€”€ STAGE 2: EXPLANATION (3 LAYERS) ”€”€
+    // Stage 2: 3-Layer Explanation with Curriculum Rigor Badges & Tio Voice Readout
     const hasLayers = !!(l.intuition || l.technical || l.exam_insight);
+    const speechText = (l.intuition || '') + ' ' + (l.technical || '') + ' ' + (l.exam_insight || l.explanation || '');
     html = `
       <div class="card" style="padding:22px">
-        <h3 class="h3 mb14" style="color:var(--pl)">📖 Understanding ${esc(l.topic)}</h3>
+        <div class="between mb14">
+          <h3 class="h3" style="color:var(--pl);margin:0">📖 Understanding ${esc(l.topic)}</h3>
+          <button class="btn bsec bsm font-poiret" onclick="readoutTioExplanation('${escON(speechText)}')">🔊 Listen to Tio Explanation</button>
+        </div>
 
         ${hasLayers ? `
           <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-              <span style="font-size:16px">💡</span>
-              <div>
-                <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 1 — INTUITION</div>
-                <div style="font-size:11px;color:var(--mut)">The mental picture — before any formulas</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-size:16px">💡</span>
+                <div>
+                  <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 1 — INTUITION</div>
+                  <div style="font-size:11px;color:var(--mut)">The mental picture — before any formulas</div>
+                </div>
               </div>
+              <span class="tag tok font-poiret" style="font-size:10px;padding:2px 8px">📘 NCERT Intuition</span>
             </div>
             <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.intuition || ''}</div>
           </div>
           <div style="background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-              <span style="font-size:16px">“</span>
-              <div>
-                <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 2 — TECHNICAL</div>
-                <div style="font-size:11px;color:var(--mut)">Definitions, terminology and relationships</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-size:16px">📐</span>
+                <div>
+                  <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 2 — TECHNICAL</div>
+                  <div style="font-size:11px;color:var(--mut)">Definitions, terminology and relationships</div>
+                </div>
               </div>
+              <span class="tag tc font-poiret" style="font-size:10px;padding:2px 8px">⚡ JEE Main / NEET Standard</span>
             </div>
             <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.technical || ''}</div>
           </div>
           ${l.exam_insight ? `
           <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-              <span style="font-size:16px">🎯</span>
-              <div>
-                <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 3 — EXAM THINKING</div>
-                <div style="font-size:11px;color:var(--mut)">How this appears in JEE / NEET / competitive exams</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-size:16px">🔥</span>
+                <div>
+                  <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 3 — EXAM THINKING</div>
+                  <div style="font-size:11px;color:var(--mut)">How this appears in JEE / NEET / competitive exams</div>
+                </div>
               </div>
+              <span class="tag tgold font-poiret" style="font-size:10px;padding:2px 8px">🔥 JEE Advanced High-Rigor</span>
             </div>
             <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.exam_insight}</div>
           </div>` : ''}
@@ -883,7 +894,7 @@ function renderStageContent() {
         `}
 
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(1)">† Back</button>
+          <button class="btn bgh" onclick="advanceStage(1)">← Back</button>
           <button class="btn bpri bfull" onclick="advanceStage(3)">Next: Worked Examples →</button>
         </div>
       </div>
