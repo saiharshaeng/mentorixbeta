@@ -298,6 +298,46 @@ html[data-perf-tier="verylow"] * {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   PART 3: ADAPTIVE GRID SYSTEM & CANONICAL COMPONENT STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+/* Adaptive Content Grid (Section 81) */
+.mx-adaptive-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(var(--mx-card-grid-columns, 3), 1fr);
+}
+
+@media (max-width: 600px) {
+  .mx-adaptive-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .mx-adaptive-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mock Question Card (Section 62 - Exam Hall Isolation) */
+.mx-mock-question-card {
+  background: rgba(13, 11, 31, 0.95);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Notes Component (Section 67 - Canonical Notebook) */
+.mx-notes-component {
+  background: rgba(13, 11, 31, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* ═══════════════════════════════════════════════════════════
    UNIVERSAL DESIGN SYSTEM (UDS) REUSABLE COMPONENT RULES
    ═══════════════════════════════════════════════════════════ */
 

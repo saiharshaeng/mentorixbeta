@@ -48,6 +48,28 @@
         element.style.minWidth = profile.touchTarget || tokens.touchTargetMin;
       }
 
+      // Apply Mock Question Card isolation
+      if (componentName === 'MockQuestionCard') {
+        element.dataset.isolated = 'true';
+        element.dataset.showTio = 'false';
+        element.dataset.showHints = 'false';
+      }
+
+      // Apply LessonCard layout mode
+      if (componentName === 'LessonCard') {
+        element.dataset.cardLayout = profile.layout || 'horizontal';
+      }
+
+      // Apply CourseCard metadata mode
+      if (componentName === 'CourseCard') {
+        element.dataset.cardMetadata = profile.metadata || 'full';
+      }
+
+      // Apply NotesComponent presentation
+      if (componentName === 'NotesComponent') {
+        element.dataset.presentation = profile.presentation || 'side_panel';
+      }
+
       // Apply Dialog presentation (modal vs bottom sheet)
       if (componentName === 'Dialog') {
         element.dataset.presentation = profile.presentation || 'centered_modal';

@@ -522,6 +522,106 @@ function openGlobalSearch() {
   modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
 }
 
+/* ── UNIVERSAL DESIGN SYSTEM (UDS) HELPERS: EMPTY STATES, SKELETONS, ERRORS ── */
+
+/**
+ * Purposeful Empty State Renderer (Section 78)
+ */
+function renderUDSEmptyState(moduleKey = 'general', customTitle = '', customMessage = '') {
+  const configs = {
+    learning: {
+      emoji: '📚',
+      title: 'Ready to Start Learning?',
+      message: 'Select your target course to unlock structured lessons, AI tutoring, and bite-sized missions.',
+      actionLabel: 'Explore Courses →',
+      actionRoute: 'courses'
+    },
+    revision: {
+      emoji: '🧠',
+      title: 'Memory Vault Up to Date!',
+      message: 'No topics due for revision today. Spaced repetition automatically schedules reviews as needed.',
+      actionLabel: 'Browse AI Notebook',
+      actionRoute: 'notebook'
+    },
+    mocks: {
+      emoji: '🎯',
+      title: 'No Mock Exams Attempted Yet',
+      message: 'Take a timed CBT mock exam to test speed, simulate real test conditions, and calculate your predicted AIR rank.',
+      actionLabel: 'Start Practice Room →',
+      actionRoute: 'comp'
+    },
+    general: {
+      emoji: '✨',
+      title: customTitle || 'Nothing Here Yet',
+      message: customMessage || 'Complete learning tasks to see your activity update automatically.',
+      actionLabel: 'Go to Dashboard',
+      actionRoute: 'dash'
+    }
+  };
+
+  const cfg = configs[moduleKey] || configs.general;
+
+  return `
+    <div class="card mx-glass-card" style="text-align:center;padding:48px 24px;max-width:520px;margin:24px auto">
+      <div style="font-size:52px;margin-bottom:16px">${cfg.emoji}</div>
+      <div class="h2 font-serif" style="color:#fff;margin-bottom:8px">${esc(customTitle || cfg.title)}</div>
+      <p style="color:var(--sub);font-size:13px;line-height:1.6;margin-bottom:24px">${esc(customMessage || cfg.message)}</p>
+      <button class="btn bpri mx-btn-primary" onclick="go('${cfg.actionRoute}')">${esc(cfg.actionLabel)}</button>
+    </div>
+  `;
+}
+
+/**
+ * Layout-Stable Skeleton Loader Renderer (Section 79)
+ */
+function renderUDSSkeleton(type = 'card', count = 1) {
+  const items = Array.from({ length: count });
+
+  if (type === 'question') {
+    return items.map(() => `
+      <div class="card mx-glass-card" style="padding:24px;margin-bottom:16px">
+        <div style="height:20px;width:30%;background:rgba(255,255,255,0.06);border-radius:6px;margin-bottom:16px"></div>
+        <div style="height:16px;width:90%;background:rgba(255,255,255,0.04);border-radius:4px;margin-bottom:8px"></div>
+        <div style="height:16px;width:75%;background:rgba(255,255,255,0.04);border-radius:4px;margin-bottom:24px"></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="height:44px;background:rgba(255,255,255,0.03);border-radius:10px"></div>
+          <div style="height:44px;background:rgba(255,255,255,0.03);border-radius:10px"></div>
+          <div style="height:44px;background:rgba(255,255,255,0.03);border-radius:10px"></div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  return items.map(() => `
+    <div class="card mx-glass-card" style="padding:20px;margin-bottom:16px">
+      <div style="height:18px;width:40%;background:rgba(255,255,255,0.06);border-radius:4px;margin-bottom:12px"></div>
+      <div style="height:14px;width:80%;background:rgba(255,255,255,0.04);border-radius:4px;margin-bottom:8px"></div>
+      <div style="height:14px;width:60%;background:rgba(255,255,255,0.04);border-radius:4px"></div>
+    </div>
+  `).join('');
+}
+
+/**
+ * Unified Error Box Renderer (Section 80)
+ */
+function renderUDSErrorBox(message = 'An unexpected issue occurred.', retryFnName = 'location.reload()') {
+  return `
+    <div class="card mx-glass-card" style="border-left:4px solid var(--red);background:rgba(239,68,68,0.06);padding:24px;margin:20px 0">
+      <div style="display:flex;align-items:flex-start;gap:14px">
+        <div style="font-size:28px">⚠️</div>
+        <div>
+          <div class="h3 font-serif" style="color:var(--redl);margin-bottom:6px">Unable to Load Component</div>
+          <p style="color:var(--sub);font-size:13px;line-height:1.5;margin-bottom:16px">${esc(message)}</p>
+          <div style="display:flex;gap:10px">
+            <button class="btn bsm bpri" onclick="${esc(retryFnName)}">🔄 Try Again</button>
+            <button class="btn bsm bsec" onclick="go('dash')">🏠 Return Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 /* ── ADAPTIVE HARDWARE TIER ENGINE ────────────────────────── */
 
 function detectDeviceHardwareTier() {

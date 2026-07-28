@@ -49,6 +49,51 @@
       Desktop: { lazyLoad: true, skeletonFallback: true, responsiveSrc: true },
       Tablet:  { lazyLoad: true, skeletonFallback: true, responsiveSrc: true },
       Mobile:  { lazyLoad: true, skeletonFallback: true, responsiveSrc: true, lowBandwidthRes: true }
+    },
+    LessonCard: {
+      Desktop: { layout: 'horizontal', showProgress: true, showEstimate: true, showDifficulty: true },
+      Tablet:  { layout: 'balanced',   showProgress: true, showEstimate: true, showDifficulty: true },
+      Mobile:  { layout: 'vertical',   showProgress: true, showEstimate: true, showDifficulty: false }
+    },
+    CourseCard: {
+      Desktop: { metadata: 'full',      columns: 3, showTopics: true,  showCover: true },
+      Tablet:  { metadata: 'balanced',  columns: 2, showTopics: false, showCover: true },
+      Mobile:  { metadata: 'essential', columns: 1, showTopics: false, showCover: true }
+    },
+    ChapterCard: {
+      Desktop: { layout: 'detailed', showMastery: true, showPrereqs: true },
+      Tablet:  { layout: 'balanced', showMastery: true, showPrereqs: true },
+      Mobile:  { layout: 'stacked',  showMastery: true, showPrereqs: false }
+    },
+    MockQuestionCard: {
+      Desktop: { isolation: true, showTio: false, showHints: false, showPopups: false },
+      Tablet:  { isolation: true, showTio: false, showHints: false, showPopups: false },
+      Mobile:  { isolation: true, showTio: false, showHints: false, showPopups: false }
+    },
+    PracticeQuestionCard: {
+      Desktop: { isolation: false, showTio: true, showHints: true, showSolutions: true },
+      Tablet:  { isolation: false, showTio: true, showHints: true, showSolutions: true },
+      Mobile:  { isolation: false, showTio: true, showHints: true, showSolutions: true }
+    },
+    RevisionCard: {
+      Desktop: { mode: 'flip_card', padding: '24px', fontScale: '100%' },
+      Tablet:  { mode: 'flip_card', padding: '20px', fontScale: '95%' },
+      Mobile:  { mode: 'flip_card', padding: '16px', fontScale: '90%' }
+    },
+    AnalyticsCard: {
+      Desktop: { detail: 'rich_charts',    columns: 3 },
+      Tablet:  { detail: 'medium_charts',  columns: 2 },
+      Mobile:  { detail: 'summary_first',  columns: 1 }
+    },
+    NotesComponent: {
+      Desktop: { presentation: 'side_panel',   resizable: true,  enableMath: true },
+      Tablet:  { presentation: 'split_screen', resizable: false, enableMath: true },
+      Mobile:  { presentation: 'bottom_sheet', resizable: false, enableMath: true }
+    },
+    SearchComponent: {
+      Desktop: { presentation: 'persistent_bar', fullscreen: false },
+      Tablet:  { presentation: 'expandable',     fullscreen: false },
+      Mobile:  { presentation: 'fullscreen',     fullscreen: true }
     }
   });
 
