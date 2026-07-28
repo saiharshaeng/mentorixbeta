@@ -122,22 +122,40 @@
    MENTORIX DESIGN CONSTITUTION v1.0 — CORE UI COMPONENTS
    ═══════════════════════════════════════════════════════════ */
 
-/* Glassmorphic Container Panel */
+/* Glassmorphic Container Panel with Specular Metallic Highlights */
 .mx-glass-card {
   background: var(--uds-surface-glass);
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
   border: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--r-card, 24px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               box-shadow 0.25s ease,
               border-color 0.25s ease;
 }
 .mx-glass-card:hover {
   transform: translateY(-3px) scale(1.005);
-  border-color: rgba(139, 92, 246, 0.35);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.20);
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 14px 44px rgba(6, 182, 212, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Ambient Cosmic Aura Gradient Glow Utility */
+.mx-cosmic-glow {
+  position: relative;
+}
+.mx-cosmic-glow::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(20px);
 }
 
 /* Primary Brand Action Button */
@@ -168,7 +186,7 @@
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
 }
 .mx-btn-primary:hover {
-  box-shadow: 0 6px 28px rgba(6, 182, 212, 0.45);
+  box-shadow: 0 6px 28px rgba(6, 182, 212, 0.5);
   transform: translateY(-1px);
 }
 
@@ -181,7 +199,8 @@
 .mx-btn-ghost:hover {
   background: rgba(255, 255, 255, 0.12);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
 }
 
 /* Futuristic Poiret Category Pill & Badge */
