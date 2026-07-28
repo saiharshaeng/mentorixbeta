@@ -236,6 +236,31 @@ function rSettings(){
       </div>
     </div>
 
+    <!-- PRIVACY & DATA EXPORT (Sections 36, 41, 42) -->
+    <div class="set-sec">
+      <div class="h3 mb12 font-serif" style="color:var(--pl)">🔒 Privacy & Data Portability</div>
+      <div class="card mx-glass-card">
+        <div class="set-row">
+          <div>
+            <div style="color:var(--txt);font-size:14px;font-weight:500">📦 Export Learning Data</div>
+            <div style="color:var(--mut);font-size:12px">Download JSON backup of preferences, goals, notes and history</div>
+          </div>
+          <button class="btn bsm bsec font-poiret" onclick="exportUserData()">Export JSON 📥</button>
+        </div>
+        <div class="set-row">
+          <div>
+            <div style="color:var(--txt);font-size:14px;font-weight:500">⚙️ Granular Settings Reset</div>
+            <div style="color:var(--mut);font-size:12px">Reset specific categories without losing study progress</div>
+          </div>
+          <div style="display:flex;gap:6px">
+            <button class="btn bsm bgh font-poiret" onclick="resetSettingsCategory('appearance')">Theme</button>
+            <button class="btn bsm bgh font-poiret" onclick="resetSettingsCategory('learning')">Learning</button>
+            <button class="btn bsm bgh font-poiret" onclick="resetSettingsCategory('tio_memory')">Tio</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 10. ABOUT & SYSTEM STATUS -->
     <div class="set-sec">
       <div class="h3 mb12 font-serif" style="color:var(--pl)">ℹ️ About & System Status</div>

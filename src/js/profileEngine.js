@@ -181,6 +181,139 @@
   }
 
   /**
+   * Evidence-Based Preference Learning Accumulator (Section 39 & 43)
+   * Prevents volatile UI changes by requiring repeated evidence before updating inferred preferences.
+   */
+  const _observationBuffer = {};
+  function recordObservation(signalKey, value) {
+    if (!_observationBuffer[signalKey]) {
+      _observationBuffer[signalKey] = [];
+    }
+    _observationBuffer[signalKey].push({ value, timestamp: Date.now() });
+
+    // Keep last 10 observations
+    if (_observationBuffer[signalKey].length > 10) {
+      _observationBuffer[signalKey].shift();
+    }
+
+    // Require 5+ evidence instances before updating inferred preference
+    if (_observationBuffer[signalKey].length >= 5) {
+      const p = getProfile();
+      p.behavioral[signalKey] = value;
+      if (typeof window.saveAll === 'function') window.saveAll();
+    }
+  }
+
+  /**
+   * Multi-Factor Adaptive Recommendation Solver (Section 38)
+   */
+  function getAdaptiveRecommendations() {
+    const p = getProfile();
+    const memory = (window.D && window.D.memory) || {};
+    const weakAreas = memory.weakSpots || Object.keys(memory.weakAreas || {});
+    const targetExam = p.targetExams?.[0] || 'JEE Main';
+
+    const recs = [];
+
+    // Signal 1: Weak Subject / Concept Repair
+    if (weakAreas.length > 0) {
+      recs.push({
+        id: 'weak_repair',
+        priority: 1,
+        title: `Repair Weak Concept: ${weakAreas[0]}`,
+        subtitle: `Targeted practice for ${targetExam}`,
+        actionRoute: 'revision',
+        reason: 'Identified as high-frequency mistake area'
+      });
+    }
+
+    // Signal 2: Spaced Repetition Due Topics
+    recs.push({
+      id: 'spaced_revision',
+      priority: 2,
+      title: 'Daily Memory Vault Revision',
+      subtitle: 'Spaced repetition keep-alive session',
+      actionRoute: 'revision',
+      reason: 'Optimal retention curve trigger'
+    });
+
+    // Signal 3: CBT Mock Simulator Attempt
+    recs.push({
+      id: 'mock_test',
+      priority: 3,
+      title: `Take ${targetExam} Speed Mock Test`,
+      subtitle: 'Simulate CBT exam environment',
+      actionRoute: 'comp',
+      reason: 'Regular timed assessment maintains rank readiness'
+    });
+
+    return recs;
+  }
+
+  /**
+   * Granular Category Reset Strategy (Section 42)
+   */
+  function resetSettingsCategory(category = 'all') {
+    if (!window.D) return;
+
+    if (category === 'appearance' || category === 'all') {
+      window.D.settings.colorTheme = 'dark';
+      window.D.settings.appTheme = 'dark';
+      window.D.settings.accentColor = 'purple';
+      window.D.settings.fontSize = 'md';
+      window.D.settings.customCursor = true;
+      if (typeof window.applyAppTheme === 'function') window.applyAppTheme('dark');
+    }
+
+    if (category === 'learning' || category === 'all') {
+      window.D.settings.difficulty = 'medium';
+      window.D.settings.bossMode = false;
+      window.D.settings.eli5Mode = false;
+      window.D.settings.explanationDepth = 'standard';
+    }
+
+    if (category === 'recommendations' || category === 'all') {
+      Object.keys(_observationBuffer).forEach(k => delete _observationBuffer[k]);
+    }
+
+    if (category === 'tio_memory' || category === 'all') {
+      window.D.settings.mentorTone = 'friendly';
+      window.D.chatMsgs = [];
+    }
+
+    if (typeof window.saveAll === 'function') window.saveAll();
+    if (typeof window.toast === 'function') window.toast(`Reset ${category} settings successfully`, 'ok2');
+  }
+
+  /**
+   * Privacy Data Export (Section 41)
+   */
+  function exportUserData() {
+    const payload = {
+      profile: getProfile(),
+      settings: (window.D && window.D.settings) || {},
+      stats: {
+        xp: window.D?.xp || 0,
+        streak: window.D?.streak || 0,
+        topicsCount: (window.D?.topics || []).length,
+        badgesCount: (window.D?.badges || []).length
+      },
+      exportedAt: new Date().toISOString()
+    };
+
+    const str = JSON.stringify(payload, null, 2);
+    const blob = new Blob([str], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `mentorix_user_data_${Date.now()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+
+    if (typeof window.toast === 'function') window.toast('📦 User data exported successfully!', 'ok2');
+  }
+
+  /**
    * Generates SQL DDL Representation for Future DB Migrations.
    */
   function exportSchemaForSQL() {
@@ -218,6 +351,10 @@ CREATE TABLE IF NOT EXISTS learner_profiles (
     updateBehavioral,
     updateAdaptive,
     resolvePreference,
+    recordObservation,
+    getAdaptiveRecommendations,
+    resetSettingsCategory,
+    exportUserData,
     isPersonalized,
     getExperienceMode,
     isGamified,
@@ -226,5 +363,7 @@ CREATE TABLE IF NOT EXISTS learner_profiles (
 
   window.ProfileEngine = ProfileEngine;
   window.resolvePreference = resolvePreference;
+  window.resetSettingsCategory = resetSettingsCategory;
+  window.exportUserData = exportUserData;
 
 })(typeof window !== 'undefined' ? window : global);
