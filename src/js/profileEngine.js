@@ -132,6 +132,32 @@
   }
 
   /**
+   * Preference Resolution Engine (Section 11)
+   * Resolves a preference key following the strict hierarchy:
+   * Explicit User Setting > Accessibility Override > Automatic Behavioral Inference > Default
+   */
+  function resolvePreference(key, defaultValue = null) {
+    const p = getProfile();
+    const settings = (window.D && window.D.settings) || {};
+
+    // 1. Accessibility Overrides (Highest Priority)
+    if (key === 'reducedMotion' && p.accessibilityPreferences?.reducedMotion) return true;
+    if (key === 'highContrast' && p.accessibilityPreferences?.highContrast) return true;
+
+    // 2. Explicit User Choice (ALWAYS overrides automatic inference)
+    if (settings[key] !== undefined && settings[key] !== null) return settings[key];
+    if (p[key] !== undefined && p[key] !== null && p[key] !== '') return p[key];
+
+    // 3. Automatic Behavioral Inference (Telemetry-driven preference)
+    if (p.behavioral && p.behavioral[key] !== undefined && p.behavioral[key] !== null) {
+      return p.behavioral[key];
+    }
+
+    // 4. Default Fallback
+    return defaultValue;
+  }
+
+  /**
    * Checks if user has completed personalization onboarding.
    */
   function isPersonalized() {
@@ -191,6 +217,7 @@ CREATE TABLE IF NOT EXISTS learner_profiles (
     updateProfile,
     updateBehavioral,
     updateAdaptive,
+    resolvePreference,
     isPersonalized,
     getExperienceMode,
     isGamified,
@@ -198,5 +225,6 @@ CREATE TABLE IF NOT EXISTS learner_profiles (
   };
 
   window.ProfileEngine = ProfileEngine;
+  window.resolvePreference = resolvePreference;
 
 })(typeof window !== 'undefined' ? window : global);
