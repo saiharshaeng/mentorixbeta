@@ -21,19 +21,40 @@
     SESSION: 'session',
     APPLICATION: 'application',
     USER: 'user',
-    SERVER: 'server'
+    SERVER: 'server',
+    // 10 Platform Architecture Domains (Data Architecture Part 1)
+    IDENTITY: 'identity',
+    EDUCATION: 'education',
+    COMPETITIVE_EXAMS: 'competitive_exams',
+    REVISION: 'revision',
+    AI: 'ai',
+    CONTENT: 'content',
+    PROJECTS: 'projects',
+    ANALYTICS: 'analytics',
+    SETTINGS: 'settings',
+    SYSTEM: 'system'
   });
 
   class StateRegistry {
     constructor() {
       this.registeredDomains = new Map();
 
-      // Default Domain Registration
+      // Default Domain Ownership Registrations (Section 6)
       this.registerDomain(STATE_DOMAINS.UI, 'UIManager');
       this.registerDomain(STATE_DOMAINS.SESSION, 'SessionStateManager');
       this.registerDomain(STATE_DOMAINS.APPLICATION, 'ApplicationStateManager');
       this.registerDomain(STATE_DOMAINS.USER, 'UserStateManager');
       this.registerDomain(STATE_DOMAINS.SERVER, 'ServerSyncManager');
+      this.registerDomain(STATE_DOMAINS.IDENTITY, 'IdentityDomain');
+      this.registerDomain(STATE_DOMAINS.EDUCATION, 'CourseEngine');
+      this.registerDomain(STATE_DOMAINS.COMPETITIVE_EXAMS, 'MockEngine');
+      this.registerDomain(STATE_DOMAINS.REVISION, 'RevisionEngine');
+      this.registerDomain(STATE_DOMAINS.AI, 'AIDomain');
+      this.registerDomain(STATE_DOMAINS.CONTENT, 'QuestionRepository');
+      this.registerDomain(STATE_DOMAINS.PROJECTS, 'ProjectEngine');
+      this.registerDomain(STATE_DOMAINS.ANALYTICS, 'AnalyticsEngine');
+      this.registerDomain(STATE_DOMAINS.SETTINGS, 'SettingsDomain');
+      this.registerDomain(STATE_DOMAINS.SYSTEM, 'SystemDomain');
     }
 
     registerDomain(domainName, ownerName) {

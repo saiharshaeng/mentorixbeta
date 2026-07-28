@@ -43,8 +43,30 @@
       }
     }
 
+    validateStateMutation(domain, payload) {
+      if (!domain || !payload) return false;
+      
+      // Basic schema validations (Section 10)
+      if (domain === 'user' && payload.xpAdd !== undefined && (typeof payload.xpAdd !== 'number' || payload.xpAdd < 0)) {
+        console.warn('[StateManager] Invalid XP payload:', payload);
+        return false;
+      }
+      if (domain === 'session' && payload.topic && typeof payload.topic !== 'string') {
+        console.warn('[StateManager] Invalid session topic payload:', payload);
+        return false;
+      }
+
+      return true;
+    }
+
     applyStateUpdate(domain, payload, options = {}) {
       if (!domain || !payload) return;
+
+      // Section 10: Validation Layer — Pre-mutation verification
+      if (!this.validateStateMutation(domain, payload)) {
+        console.warn(`[StateManager] Pre-mutation validation failed for domain "${domain}"`);
+        return;
+      }
 
       let sr = typeof window !== 'undefined' ? window.StateRegistry : null;
       let ssm = typeof window !== 'undefined' ? window.SessionStateManager : null;
