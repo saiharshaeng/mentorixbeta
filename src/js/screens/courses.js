@@ -468,49 +468,61 @@ function completeCourseTopic(topicName, courseId) {
 }
 
 function skipToTopic(courseId, ui, ci, ti, topicTitle) {
-  if (!D.courses) return;
-  const course = D.courses.find(c => c.id === courseId);
-  if (!course) return;
-  const unit = course.units && course.units[ui];
-  if (!unit) return;
-  const chapter = unit.chapters && unit.chapters[ci];
-  if (!chapter) return;
+  const doUnlock = () => {
+    if (!D.courses) return;
+    const course = D.courses.find(c => c.id === courseId);
+    if (!course) return;
+    const unit = course.units && course.units[ui];
+    if (!unit) return;
+    const chapter = unit.chapters && unit.chapters[ci];
+    if (!chapter) return;
 
-  let changed = false;
-  if (chapter.locked) {
-    chapter.locked = false;
-    changed = true;
-  }
+    let changed = false;
+    if (chapter.locked) {
+      chapter.locked = false;
+      changed = true;
+    }
 
-  const subchapters = chapter.subchapters || [];
-  if (subchapters.length > 0) {
-    subchapters.forEach(sub => {
-      (sub.topics || []).forEach(t => {
+    const subchapters = chapter.subchapters || [];
+    if (subchapters.length > 0) {
+      subchapters.forEach(sub => {
+        (sub.topics || []).forEach(t => {
+          if (t.status === 'Locked') {
+            t.status = 'Unlocked';
+            changed = true;
+          }
+        });
+      });
+    } else {
+      (chapter.topics || []).forEach(t => {
         if (t.status === 'Locked') {
           t.status = 'Unlocked';
           changed = true;
         }
       });
-    });
+    }
+
+    if (changed && typeof saveAll === 'function') saveAll();
+
+    activeCourseId = courseId;
+    D.lastCourseId = courseId;
+    saveNow();
+
+    if (typeof go === 'function') {
+      go('learn', topicTitle);
+    }
+  };
+
+  if (typeof window.showConfirm === 'function') {
+    window.showConfirm(
+      '🌟 Curiosity Override',
+      `Curiosity is the best guide! Nexus recommends studying topics in order, but you can override this lock to explore "${topicTitle}" today. Learn anyway?`,
+      'Explore Topic →',
+      'bpri',
+      doUnlock
+    );
   } else {
-    (chapter.topics || []).forEach(t => {
-      if (t.status === 'Locked') {
-        t.status = 'Unlocked';
-        changed = true;
-      }
-    });
-  }
-
-  if (changed) {
-    saveAll();
-  }
-
-  activeCourseId = courseId;
-  D.lastCourseId = courseId;
-  saveNow();
-
-  if (typeof go === 'function') {
-    go('learn', topicTitle);
+    doUnlock();
   }
 }
 

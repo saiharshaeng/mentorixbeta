@@ -49,6 +49,24 @@
       }
       
       blueprint.status = toState;
+
+      // Connect with Tio Observation Engine
+      if (typeof window !== 'undefined' && window.TioEngine?.ObservationEngine) {
+        if (toState === 'Running') {
+          window.TioEngine.ObservationEngine.observeAction('SESSION_STARTED', {
+            sessionId: blueprint.sessionId,
+            type: blueprint.sessionType,
+            subject: blueprint.scope?.subject
+          });
+        } else if (toState === 'Submitted') {
+          window.TioEngine.ObservationEngine.observeAction('SESSION_SUBMITTED', {
+            sessionId: blueprint.sessionId,
+            type: blueprint.sessionType,
+            subject: blueprint.scope?.subject
+          });
+        }
+      }
+
       return blueprint;
     }
   };

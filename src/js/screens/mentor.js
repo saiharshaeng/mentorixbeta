@@ -118,11 +118,16 @@ async function sendMsg() {
 
   if (input) input.value = '';
 
-  // Check if this is a platform routing command first
+  // Check if this is a platform routing or deterministic query first
   if (window.TioEngine) {
     const routeRes = window.TioEngine.parseAndRoute(text);
     if (routeRes.routed) {
-      if (window.toast) window.toast(routeRes.message, 'ok2');
+      if (!D.chatMsgs) D.chatMsgs = [];
+      D.chatMsgs.push({ r: 'user', c: text });
+      D.chatMsgs.push({ r: 'ai', c: routeRes.message });
+      if (D.chatMsgs.length > 100) D.chatMsgs = D.chatMsgs.slice(-100);
+      if (typeof saveAll === 'function') saveAll();
+      renderMsgs();
       return;
     }
   }

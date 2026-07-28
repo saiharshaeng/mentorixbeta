@@ -3243,6 +3243,54 @@ function submitMockExam() {
       });
     }
 
+    // Cloud sync — non-blocking, fires in background after local save
+    if (window.SyncEngine) {
+      const cloudStudentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
+
+      // Record exam attempt delta
+      window.SyncEngine.recordDelta('attempt', 'insert', {
+        questionId: `mock_${compState.examId}_${Date.now()}`,
+        examId: compState.examId,
+        subject: 'Mixed',
+        chapter: 'Mock Exam',
+        isCorrect: correct > (exam.questions.length / 2),
+        timeTaken: exam.timeSpent.reduce((a, b) => a + b, 0),
+        marks: score,
+        sessionId: sessionRec.sessionId
+      });
+
+      // Record progress delta
+      window.SyncEngine.recordDelta('progress', 'upsert', {
+        totalQuestions: exam.questions.length,
+        accuracy: sessionRec.accuracy,
+        totalMarks: score,
+        level: (typeof D !== 'undefined' ? D.level : null) || 1,
+        masteryOverall: sessionRec.accuracy
+      });
+
+      // Record per-question mistakes as cloud deltas
+      results.forEach((r, qIdx) => {
+        if (!r.isCorrect && exam.answers[qIdx] !== undefined) {
+          const qObj = exam.questions[qIdx];
+          window.SyncEngine.recordDelta('mistake', 'insert', {
+            questionId: qObj.id || `q_${qIdx}`,
+            subject: qObj.section || 'General',
+            chapter: qObj.chapter || 'General',
+            topic: qObj.topic || null,
+            questionText: (qObj.q || '').substring(0, 500),
+            correctAnswer: String(Array.isArray(qObj.ans) ? qObj.ans[0] : qObj.ans),
+            userAnswer: String(exam.answers[qIdx]),
+            mistakeType: 'wrong_answer',
+            sessionId: sessionRec.sessionId
+          });
+        }
+      });
+
+      // Trigger immediate background sync (non-blocking)
+      setTimeout(() => window.SyncEngine.syncData(), 1000);
+    }
+
+
   // Save confidence data before clearing activeExam
   const examConfidence = exam.confidence || {};
   const examTimeSpent = exam.timeSpent || [];

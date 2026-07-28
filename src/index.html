@@ -595,6 +595,10 @@ console.log('[KaTeX] System ready');
 <script src="js/revision/activeRecallEngine.js?v=80"></script>
 <script src="js/mobile/index.js?v=80"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./js/supabase.js"></script>
+<script src="./js/supabaseAuth.js"></script>
+
 <script src="js/helpers.js?v=80"></script>
 <script src="js/constants.js?v=80"></script>
 <script src="js/storage.js?v=80"></script>
@@ -4265,7 +4269,11 @@ const MxAudio=(function(){
       avatar.classList.add('spin');
       setTimeout(() => avatar.classList.remove('spin'), 600);
     }
-    showTioBubble(getTioSpeech(), 6000);
+    // Show speech first, then open Tio chat after brief delay
+    showTioBubble(getTioSpeech(), 2500);
+    setTimeout(() => {
+      if (typeof go === 'function') go('mentor');
+    }, 500);
   }
 
   function updateTioSpeechBubble() {

@@ -89,6 +89,48 @@
       }
       return false;
     }
+
+    // Check if Supabase sync is available
+    _canSync() {
+      return !!(
+        window.SupabaseReady && 
+        window.SupabaseClient && 
+        window.LS
+      );
+    }
+
+    // Queue a delta for sync
+    async _queueDelta(action, data) {
+      if (!this._canSync()) return;
+      try {
+        await window.SyncEngine.recordDelta(
+          this.collectionName,
+          action,
+          data
+        );
+      } catch(e) {
+        // Delta queue failure is non-fatal
+        console.warn('[BaseRepo] Delta queue failed:', e);
+      }
+    }
+
+    // Push a single item to Supabase
+    async syncToSupabase(table, data, conflictColumn = 'id') {
+      if (!this._canSync()) return false;
+      try {
+        const { error } = await window.SupabaseClient
+          .from(table)
+          .upsert(data, { onConflict: conflictColumn });
+        if (error) {
+          console.warn('[BaseRepo] Supabase sync failed:', error.message);
+          return false;
+        }
+        return true;
+      } catch(e) {
+        console.warn('[BaseRepo] Supabase error:', e);
+        return false;
+      }
+    }
   }
 
   if (typeof window !== 'undefined') window.BaseRepository = BaseRepository;

@@ -1,13 +1,11 @@
 /**
  * workspaceResumeManager.js — Instant Workspace Restoration Manager
- * Mobile Phase L5 (Study Workspace & Context Preservation)
+ * Mobile Phase L5 (Study Workspace & Context Preservation) & Master Architecture Specification
  *
  * Restores exact workspace context after interruptions:
- * - Lesson & topic ID
- * - Reading scroll position
- * - Opened formula drawer state
- * - Expanded diagram reference
- * - Marked questions list
+ * - Active screen & topic parameter
+ * - Scroll position
+ * - Session state snapshots
  */
 
 'use strict';
@@ -17,14 +15,13 @@
   class WorkspaceResumeManager {
 
     saveWorkspaceSnapshot() {
-      if (typeof window === 'undefined') return;
+      if (typeof window === 'undefined' || !window.D) return;
 
-      const scm = window.SessionContextManager;
-      if (!scm) return;
-
+      const main = document.getElementById('main');
       const snapshot = {
-        context: scm.context,
-        scrollPositionY: window.scrollY || 0,
+        screen: window.D.screen || 'dash',
+        param: window.D._param || null,
+        scrollTop: main ? main.scrollTop : (window.scrollY || 0),
         timestamp: Date.now()
       };
 
@@ -42,15 +39,10 @@
         const raw = localStorage.getItem('mx_workspace_snapshot_v1');
         if (raw) {
           const snapshot = JSON.parse(raw);
-          const scm = window.SessionContextManager;
-          if (scm && snapshot.context) {
-            scm.context = Object.assign(scm.context, snapshot.context);
+          // Restore if under 24 hours old
+          if (snapshot && (Date.now() - snapshot.timestamp < 24 * 60 * 60 * 1000)) {
+            return snapshot;
           }
-
-          if (snapshot.scrollPositionY) {
-            setTimeout(() => window.scrollTo(0, snapshot.scrollPositionY), 100);
-          }
-          return snapshot;
         }
       } catch (e) {
         console.warn('[WorkspaceResumeManager] Failed to restore workspace snapshot:', e);

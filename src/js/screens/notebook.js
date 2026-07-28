@@ -34,6 +34,15 @@ function saveToNotebook(topic,auto=false){
   }
   D.notes[t]=note;
   saveAll();
+
+  // Trigger Tio Observation & Memory update
+  if (window.TioEngine?.ObservationEngine) {
+    window.TioEngine.ObservationEngine.observeAction('NOTE_SAVED', { topic: t, subject: detectSubject(t) });
+  }
+  if (window.TioEngine?.MemoryEngine) {
+    window.TioEngine.MemoryEngine.recordInteractionFact(`Saved study notes for ${t}`);
+  }
+
   if(!auto)toast('📓 Saved to AI Notebook!','ok2');
 }
 

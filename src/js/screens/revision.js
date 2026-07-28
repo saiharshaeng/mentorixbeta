@@ -421,6 +421,38 @@ function submitRevQuiz(){
     });
   }
 
+  // Connect with Tio Observation Engine & Supabase Cloud Storage
+  if (window.TioEngine?.ObservationEngine) {
+    window.TioEngine.ObservationEngine.observeAction(pct >= 80 ? 'PRACTICE_MASTERED' : 'REVISION_ATTEMPTED', {
+      topic: RV.topic,
+      score: pct,
+      accuracy: pct,
+      correct: sc,
+      total: total
+    });
+  }
+
+  if (window.SupabaseDB && window.SupabaseAuthBridge?.isCloudSynced()) {
+    const user = window.SupabaseAuthBridge.getSupabaseUser();
+    if (user) {
+      window.SupabaseDB.saveProgressSnapshot(user.id, {
+        totalQuestions: total,
+        accuracy: pct,
+        totalMarks: pct,
+        level: D.level || 1,
+        masteryOverall: pct
+      });
+      window.SupabaseDB.upsertRevisionItem(user.id, RV.topic, {
+        subject: RV.topic,
+        chapter: RV.topic,
+        confidence: pct / 100,
+        nextReviewAt: new Date(Date.now() + (pct >= 80 ? 6 : 1) * 86400000).toISOString(),
+        reviewCount: (D.memory?.history || []).length,
+        lastReviewedAt: new Date().toISOString()
+      });
+    }
+  }
+
   // KEY FIX: Mark existing weak spots for this topic as solved when score >= 80% (revision)
   // or on a per-concept level if they are undergoing targeted recovery
   let solvedCount = 0;

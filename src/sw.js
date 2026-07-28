@@ -40,7 +40,7 @@ self.addEventListener('fetch', function(e) {
 
   // Bypass Service Worker for sw.js itself & external APIs
   if (url.includes('sw.js') || url.includes('mentorix-proxy') || url.includes('groq.com') ||
-      url.includes('googleapis') || url.includes('cloudflare') ||
+      url.includes('supabase.co') || url.includes('googleapis') || url.includes('cloudflare') ||
       url.includes('workers.dev')) {
     return;
   }

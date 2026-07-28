@@ -205,6 +205,20 @@ function finishDiscovery() {
   if (window.CareerEngine) {
     window.CareerEngine.saveDiscoveryProfile(CS.intake);
   }
+
+  // Trigger Tio Structured Memory update
+  if (window.TioEngine?.MemoryEngine) {
+    window.TioEngine.MemoryEngine.updateMemoryLayer('goal', {
+      favSubjects: CS.intake.favSubjects,
+      interests: CS.intake.interests,
+      workStyle: CS.intake.workStyle,
+      goalPriority: CS.intake.goalPriority
+    });
+    window.TioEngine.MemoryEngine.recordInteractionFact(
+      `Career discovery completed: Interested in ${CS.intake.favSubjects.join(', ')} and ${CS.intake.interests || 'technology'}`
+    );
+  }
+
   CS.step = 'list';
   if (window.toast) window.toast('🎉 Career Discovery Complete! Generating personalized recommendations...', 'ok2');
   renderCareerContent();

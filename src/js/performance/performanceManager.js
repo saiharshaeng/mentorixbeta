@@ -56,6 +56,16 @@
       }
     }
 
+    applyPerformanceTierToDOM(tier) {
+      if (typeof document === 'undefined' || !document.body) return;
+      const config = this.getPerformanceConfig(tier);
+      document.body.classList.remove('tier-a', 'tier-b', 'tier-c', 'tier-d', 'budget-device-mode');
+      document.body.classList.add(config.tier.toLowerCase());
+      if (config.tier === 'TierC' || config.tier === 'TierD') {
+        document.body.classList.add('budget-device-mode');
+      }
+    }
+
     suspendBackgroundOperations() {
       this.isBackground = true;
 

@@ -10691,6 +10691,27 @@ html, body {
   box-shadow: 0 6px 20px rgba(16, 185, 129, 0.15);
 }
 
+/* ───────────────────────────────────────────
+   BUDGET DEVICE PERFORMANCE TIER OPTIMIZATIONS
+   ─────────────────────────────────────────── */
+body.budget-device-mode *,
+body.tier-c *,
+body.tier-d * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: opacity 0.1s ease, transform 0.1s ease !important;
+}
+
+body.budget-device-mode .avatar-companion-anim,
+body.budget-device-mode .hover-glow,
+body.tier-c .avatar-companion-anim,
+body.tier-d .avatar-companion-anim {
+  animation: none !important;
+  transform: none !important;
+}
+
 
 
 

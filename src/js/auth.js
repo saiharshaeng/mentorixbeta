@@ -178,6 +178,30 @@ function createProfileSubmit() {
   profiles.push(newProfile);
   saveProfiles(profiles);
 
+  // After local profile is successfully created:
+  // Optionally register with Supabase cloud
+  if (window.SupabaseAuthBridge && 
+      window.SupabaseReady) {
+    // Non-blocking — don't await, don't fail if error
+    window.SupabaseAuthBridge.registerWithSupabase({
+      username: newProfile.name
+        .toLowerCase()
+        .replace(/\s+/g,'_')
+        .replace(/[^a-z0-9_]/g,'')
+        .substring(0,20),
+      email: newProfile.email || null,
+      password: `mx_${Date.now()}_${Math.random()
+        .toString(36).substring(2,8)}`,
+      phone: newProfile.phone || null
+    }).then(result => {
+      if (result.success) {
+        console.log('[Auth] Cloud account created.');
+      }
+    }).catch(() => {
+      // Silent fail — local profile still works
+    });
+  }
+
   if (window.CloudSyncEngine) {
     window.CloudSyncEngine.migrateLocalData(id);
   }

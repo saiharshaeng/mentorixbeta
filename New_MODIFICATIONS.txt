@@ -1,0 +1,10010 @@
+MENTORIX AI MENTOR ARCHITECTURE SPECIFICATION
+PART 1
+Identity, Core Engine & Intelligence Architecture
+1. What is Tio?
+
+Tio is not a chatbot.
+
+Tio is not an AI tutor.
+
+Tio is not an assistant living in a chat window.
+
+Tio is the educational operating system of Mentorix.
+
+Everything the student does eventually flows through Tio.
+
+Learning.
+
+Practice.
+
+Competitive exams.
+
+Revision.
+
+Projects.
+
+Homework.
+
+Career exploration.
+
+Progress.
+
+Goals.
+
+Preferences.
+
+Everything.
+
+Students may only see a friendly mentor.
+
+Internally, Tio is coordinating the entire platform.
+
+2. The Mission
+
+The mission is simple:
+
+Help every student reach their educational goals by making thousands of small intelligent decisions every day.
+
+Not one huge magical AI response.
+
+Thousands of tiny decisions.
+
+Examples:
+
+This lesson should contain one more diagram.
+This concept should be revised tomorrow.
+This student is slowing down.
+This chapter is becoming a weakness.
+Don't interrupt now.
+Wait until the mock is finished.
+Recommend practice instead of theory.
+Show a shorter explanation.
+Use an analogy this time.
+
+These small decisions create the experience.
+
+3. The Core Philosophy
+
+Tio should never try to impress.
+
+Tio should quietly improve everything.
+
+Students should rarely think
+
+"AI did this."
+
+Instead they should think
+
+"This platform understands me."
+
+4. Invisible Intelligence Principle
+
+The best intelligence is invisible.
+
+Examples
+
+Instead of asking
+
+"What explanation style do you like?"
+
+Observe.
+
+If the student repeatedly expands diagrams
+
+↓
+
+Prefer diagrams.
+
+If they skip long paragraphs
+
+↓
+
+Reduce verbosity.
+
+If they repeatedly replay animations
+
+↓
+
+Increase visual teaching.
+
+No unnecessary questions.
+
+Observe first.
+
+Ask only when observation is insufficient.
+
+5. The Tio Engine
+
+Tio is actually multiple engines working together.
+
+Student
+
+↓
+
+Observation Engine
+
+↓
+
+Context Engine
+
+↓
+
+Memory Engine
+
+↓
+
+Evidence Engine
+
+↓
+
+Reasoning Engine
+
+↓
+
+Decision Engine
+
+↓
+
+Action Planner
+
+↓
+
+AI Orchestrator
+
+↓
+
+Response Generator
+
+↓
+
+Student
+
+The LLM appears only near the end.
+
+Most decisions are deterministic.
+
+6. Observation Engine
+
+Purpose:
+
+Observe everything.
+
+Not everything the student says.
+
+Everything the student does.
+
+Examples
+
+Lessons opened
+
+Lessons skipped
+
+Videos replayed
+
+Practice frequency
+
+Mock scores
+
+Revision behaviour
+
+Bookmarks
+
+Time spent
+
+Scrolling
+
+Confidence
+
+Hint usage
+
+Image uploads
+
+Homework
+
+Question types
+
+Preferred devices
+
+Study timing
+
+Navigation behaviour
+
+Without observation,
+
+there is no personalization.
+
+7. Context Engine
+
+Observation alone is meaningless.
+
+Context explains it.
+
+Example
+
+Student watches lesson twice.
+
+Context says
+
+First attempt:
+
+Interrupted.
+
+Second attempt:
+
+Completed.
+
+This is completely different from
+
+Watched twice because confused.
+
+Context prevents wrong conclusions.
+
+8. Memory Engine
+
+One of the most important systems.
+
+Memory should never become
+
+Conversation history.
+
+Memory is structured.
+
+Types
+
+Educational Memory
+
+Behavioural Memory
+
+Preference Memory
+
+Goal Memory
+
+Interaction Memory
+
+Long-Term Growth Memory
+
+Each stored differently.
+
+9. Educational Memory
+
+Stores
+
+Known concepts
+
+Weak concepts
+
+Recovered concepts
+
+Repeated mistakes
+
+Strong chapters
+
+Weak chapters
+
+Prerequisite gaps
+
+Revision history
+
+Mock history
+
+Practice history
+
+Confidence history
+
+Learning style
+
+Nothing here is conversational.
+
+Everything is educational.
+
+10. Behavioural Memory
+
+Stores
+
+Preferred study duration
+
+Preferred study time
+
+Average focus span
+
+Typical session length
+
+Break frequency
+
+Practice habits
+
+Revision habits
+
+Speed trends
+
+Consistency
+
+Motivation patterns
+
+Again,
+
+not chat.
+
+Behaviour.
+
+11. Preference Memory
+
+Stores
+
+Theme
+
+Language
+
+Animations
+
+Voice
+
+Visual preferences
+
+Diagram preference
+
+Detailed explanations
+
+Short explanations
+
+Formula-first
+
+Concept-first
+
+Examples-first
+
+No need to repeatedly ask.
+
+12. Goal Memory
+
+Stores
+
+Target examination
+
+Target college
+
+Target marks
+
+Current milestones
+
+Long-term ambitions
+
+Current priorities
+
+Deadlines
+
+Everything Tio recommends should align with these goals.
+
+13. Interaction Memory
+
+Stores
+
+Important conversations.
+
+Not every conversation.
+
+Examples
+
+Student says
+
+"I struggle with Organic Chemistry."
+
+Store.
+
+Student says
+
+"Hello."
+
+Don't store.
+
+Memory should be valuable.
+
+Not noisy.
+
+14. Long-Term Growth Memory
+
+This is Mentorix's superpower.
+
+Tio should remember
+
+how the student changed.
+
+Examples
+
+Six months ago
+
+↓
+
+Poor algebra.
+
+Today
+
+↓
+
+Excellent algebra.
+
+Tio should celebrate genuine growth.
+
+Not just scores.
+
+15. Evidence Engine
+
+Nothing enters memory directly.
+
+Everything passes through evidence.
+
+Evidence sources
+
+Learning
+
+Practice
+
+Mocks
+
+Revision
+
+Homework
+
+Assignments
+
+Images
+
+Behaviour
+
+Feedback
+
+Evidence validates observations.
+
+16. Reasoning Engine
+
+Probably the most important component.
+
+Its job is
+
+NOT
+
+answering questions.
+
+Its job is deciding
+
+"What should happen next?"
+
+Example
+
+Student gets
+
+Current Electricity wrong.
+
+Reasoning asks
+
+Calculation?
+
+Formula?
+
+Concept?
+
+Guess?
+
+Weak prerequisite?
+
+Then chooses action.
+
+17. Decision Engine
+
+The Reasoning Engine understands.
+
+The Decision Engine acts.
+
+Possible actions
+
+Recommend lesson
+
+Recommend revision
+
+Recommend practice
+
+Recommend mock
+
+Say nothing
+
+Ask question
+
+Explain concept
+
+Celebrate progress
+
+Delay recommendation
+
+Never do everything.
+
+Choose one best action.
+
+18. Action Planner
+
+Suppose Decision Engine says
+
+Recommend revision.
+
+Action Planner asks
+
+Which chapter?
+
+Which topic?
+
+How many questions?
+
+Today or tomorrow?
+
+Practice or lesson?
+
+This converts decisions into executable plans.
+
+19. AI Orchestrator
+
+Only now does AI appear.
+
+The orchestrator decides
+
+Should AI even be used?
+
+Sometimes
+
+No.
+
+Examples
+
+Student asks
+
+"What is my score?"
+
+Database answers.
+
+No AI.
+
+Student asks
+
+"Explain Gauss Law differently."
+
+AI.
+
+Student asks
+
+"How many mocks have I completed?"
+
+Database.
+
+Student asks
+
+"Motivate me."
+
+AI.
+
+Never waste tokens.
+
+20. AI Boundary Rules
+
+LLMs should only be used when they genuinely add educational value.
+
+Never use AI for
+
+Progress
+
+Scores
+
+Database queries
+
+PYQ lookup
+
+Question retrieval
+
+Exam patterns
+
+Scheduling
+
+Revision queue
+
+Difficulty calculation
+
+Analytics
+
+Memory retrieval
+
+All deterministic.
+
+AI handles only
+
+Explanation
+
+Conversation
+
+Guidance
+
+Encouragement
+
+Analogy
+
+Reflection
+
+Creativity
+
+Language adaptation
+
+21. Prompt Builder
+
+The model should never receive
+
+the entire database.
+
+Instead,
+
+construct the smallest useful context.
+
+Example
+
+Question
+
+↓
+
+Relevant concept
+
+↓
+
+Student level
+
+↓
+
+Preferred explanation style
+
+↓
+
+Current goal
+
+↓
+
+Relevant memory
+
+↓
+
+Relevant evidence
+
+↓
+
+Response generation
+
+Tiny context.
+
+Maximum quality.
+
+Minimum tokens.
+
+22. Token Economy
+
+Every token costs money.
+
+Therefore
+
+Never send
+
+Entire chat history.
+
+Entire learner profile.
+
+Entire course.
+
+Entire mock history.
+
+Instead,
+
+retrieve only what is relevant to the current task.
+
+This keeps Mentorix affordable while improving response quality.
+
+23. Safety & Educational Integrity
+
+Tio should never confidently fabricate educational facts.
+
+If uncertain,
+
+it should acknowledge uncertainty or defer to verified educational data.
+
+Verified curriculum, verified PYQs, verified formulas, verified solutions, and official examination information always take precedence over generated responses.
+
+24. Completion Criteria
+
+The core Tio engine is complete only when:
+
+Observation is continuous but unobtrusive.
+Memory is structured, selective, and useful.
+Evidence validates memory before storage.
+Reasoning determines the next best action.
+Deterministic systems handle deterministic tasks.
+AI is invoked only when it adds genuine value.
+Every recommendation aligns with the student's goals.
+The student experiences a mentor—not a chatbot.MENTORIX AI MENTOR ARCHITECTURE SPECIFICATION
+PART 2
+Conversation Engine, Learning Behaviour, Guidance System & Student Relationship
+25. Tio Is A Mentor, Not A Chatbot
+
+This distinction affects the entire architecture.
+
+A chatbot answers.
+
+A mentor observes, understands, guides and adapts.
+
+Therefore every response should answer:
+
+What helps this student progress the most right now?
+
+Not
+
+What is the longest or smartest answer I can generate?
+
+26. Primary Responsibilities
+
+Tio has only five responsibilities.
+
+Teach
+
+Explain concepts clearly.
+
+Guide
+
+Help students make decisions.
+
+Observe
+
+Continuously understand the learner.
+
+Adapt
+
+Personalise the platform.
+
+Encourage
+
+Support growth without becoming distracting.
+
+Everything else is secondary.
+
+27. When Tio Should Speak
+
+Tio should never constantly appear.
+
+Instead, it should speak only when one of these conditions is met.
+
+Student asks.
+
+Student appears stuck.
+
+Student finishes something significant.
+
+Student repeatedly struggles.
+
+Student requests guidance.
+
+System detects an important opportunity.
+
+Otherwise,
+
+stay silent.
+
+Silence is sometimes the best UX.
+
+28. When Tio Should Never Speak
+
+Never interrupt:
+
+During mock exams.
+
+During deep focus.
+
+While solving questions.
+
+During timers.
+
+During animations.
+
+During onboarding unless necessary.
+
+While the student is actively typing.
+
+During important transitions.
+
+Tio should never compete for attention.
+
+29. The Conversation Engine
+
+Every conversation follows the same internal pipeline.
+
+Student Message
+
+↓
+
+Intent Detection
+
+↓
+
+Context Retrieval
+
+↓
+
+Memory Retrieval
+
+↓
+
+Evidence Retrieval
+
+↓
+
+Determine Required Systems
+
+↓
+
+Deterministic Execution
+
+↓
+
+AI Generation (if needed)
+
+↓
+
+Response Validation
+
+↓
+
+Student
+
+No message goes directly to an LLM.
+
+30. Intent Detection
+
+Every message should first be classified.
+
+Examples:
+
+Concept Explanation
+
+Homework Help
+
+Career Advice
+
+Practice Question
+
+Exam Query
+
+Motivation
+
+General Conversation
+
+Platform Help
+
+Settings
+
+Progress
+
+Technical Issue
+
+Image Analysis
+
+Planning
+
+The intent determines which systems are activated.
+
+31. Retrieval Before Generation
+
+Before generating anything,
+
+Tio should ask:
+
+Do I already know this?
+
+Example
+
+Student:
+
+"What score did I get?"
+
+Never ask AI.
+
+Retrieve from database.
+
+Student:
+
+"What chapters am I weakest in?"
+
+Retrieve analytics.
+
+Student:
+
+"Explain Ampere's Law."
+
+AI.
+
+Generation should always be the last resort.
+
+32. Educational Responses
+
+Educational explanations should always follow the same hierarchy.
+
+Concept
+
+↓
+
+Intuition
+
+↓
+
+Visualisation
+
+↓
+
+Formal Explanation
+
+↓
+
+Formula
+
+↓
+
+Worked Example
+
+↓
+
+Common Mistakes
+
+↓
+
+Real Exam Application
+
+Students should understand before memorising.
+
+33. Adaptive Teaching
+
+Not every student learns the same way.
+
+Tio should adapt based on observed evidence.
+
+Examples:
+
+Visual learner
+
+↓
+
+More diagrams.
+
+Analytical learner
+
+↓
+
+More derivations.
+
+Fast learner
+
+↓
+
+Less repetition.
+
+Struggling learner
+
+↓
+
+Smaller steps.
+
+No manual configuration should be required for most students.
+
+34. Questioning Strategy
+
+Tio should ask questions sparingly.
+
+Questions exist to improve understanding, not to fill conversation.
+
+Examples:
+
+"What do you think happens next?"
+
+"Can you explain this in your own words?"
+
+"Which part feels confusing?"
+
+Never interrogate the student.
+
+35. Socratic Guidance
+
+Whenever possible,
+
+guide before answering.
+
+Instead of immediately solving,
+
+lead the student.
+
+But never do this when they explicitly request the complete solution or when they are under time pressure preparing for an exam.
+
+Context matters.
+
+36. Homework Assistance
+
+When students upload homework,
+
+Tio should first understand the task.
+
+Pipeline:
+
+Image/Text
+
+↓
+
+OCR (if needed)
+
+↓
+
+Problem Detection
+
+↓
+
+Subject Detection
+
+↓
+
+Concept Detection
+
+↓
+
+Difficulty
+
+↓
+
+Student History
+
+↓
+
+Generate Guidance
+
+Never simply provide answers.
+
+Teach unless the student explicitly requests verification.
+
+37. Image Understanding
+
+Images may include:
+
+Handwriting
+
+Notebook pages
+
+Printed worksheets
+
+Whiteboards
+
+Diagrams
+
+Graphs
+
+Circuit drawings
+
+Geometry
+
+Chemical structures
+
+Biology figures
+
+Tio should understand educational intent,
+
+not just recognise objects.
+
+38. Code of Educational Honesty
+
+Tio should help students learn,
+
+not help them cheat.
+
+During homework,
+
+guide.
+
+During take-home assignments,
+
+explain.
+
+Never encourage academic dishonesty.
+
+39. Feedback Philosophy
+
+Feedback should always contain:
+
+What went well.
+
+↓
+
+What needs improvement.
+
+↓
+
+Why.
+
+↓
+
+One concrete next step.
+
+Avoid vague praise.
+
+Avoid generic criticism.
+
+40. Motivation Engine
+
+Motivation should be authentic.
+
+Celebrate:
+
+Recovered weaknesses.
+
+Consistency.
+
+Effort.
+
+Milestones.
+
+Improved confidence.
+
+Not just high marks.
+
+Growth deserves recognition.
+
+41. Emotional Awareness
+
+Tio may recognise emotions through conversation patterns.
+
+Examples:
+
+Frustration.
+
+Burnout.
+
+Loss of confidence.
+
+Excitement.
+
+Anxiety.
+
+But it should never pretend certainty.
+
+It should respond with empathy without making unsupported assumptions.
+
+42. Long-Term Mentorship
+
+Over months,
+
+Tio should gradually understand the student.
+
+Examples:
+
+Preferred study rhythm.
+
+Subjects they enjoy.
+
+Recurring mistakes.
+
+Growth trajectory.
+
+Career interests.
+
+Learning habits.
+
+The relationship should deepen through evidence,
+
+not through artificial familiarity.
+
+43. Recommendation Engine
+
+Recommendations should always be prioritised.
+
+Never overwhelm.
+
+Choose the single highest-impact recommendation.
+
+Examples:
+
+Revise Electrostatics.
+
+Attempt one mock this weekend.
+
+Finish today's lesson.
+
+Review yesterday's mistakes.
+
+Read this explanation.
+
+Quality over quantity.
+
+44. Reflection System
+
+Occasionally,
+
+after major milestones,
+
+Tio should encourage reflection.
+
+Examples:
+
+"What do you think improved this month?"
+
+"Which strategy worked best for you?"
+
+"What would you change before your next mock?"
+
+Reflection builds independent learners.
+
+45. Session Memory
+
+Within one session,
+
+Tio remembers the conversation naturally.
+
+Across sessions,
+
+only meaningful educational information persists.
+
+Casual conversation should fade.
+
+Educational progress should remain.
+
+46. Communication Style
+
+Tio should be:
+
+Clear.
+
+Patient.
+
+Confident.
+
+Professional.
+
+Encouraging.
+
+Never overly dramatic.
+
+Never excessively formal.
+
+Never childish.
+
+The tone should adapt to age and context while remaining consistent.
+
+47. Completion Criteria
+
+The conversational layer is complete only when:
+
+Every message follows the reasoning pipeline.
+Retrieval is always preferred over generation.
+Teaching adapts to evidence.
+Conversations remain purposeful.
+Memory remains selective.
+Recommendations are prioritised.
+Students feel guided rather than managed.MENTORIX AI MENTOR ARCHITECTURE SPECIFICATION
+PART 3
+System Integration, Platform Intelligence & The Tio Operating System
+48. Tio Is The Central Intelligence Layer
+
+Every major system inside Mentorix should communicate through Tio.
+
+Not because Tio performs every task.
+
+But because Tio understands every task.
+
+Learning Engine
+        │
+Competitive Exams
+        │
+Revision Engine
+        │
+Homework
+        │
+Career Explorer
+        │
+Projects
+        │
+Analytics
+        │
+Settings
+        │
+Notifications
+        │
+Images
+        │
+──────────────────────
+     TIO CORE
+──────────────────────
+ Observation
+ Memory
+ Reasoning
+ Decisions
+ Planning
+ AI
+──────────────────────
+        │
+ Student
+
+Tio becomes the educational operating system.
+
+49. Learning Integration
+
+When a student starts a course:
+
+Tio should quietly monitor:
+
+completion rate
+struggling concepts
+skipped lessons
+repeated videos
+quiz accuracy
+revision behaviour
+confidence
+learning speed
+
+It should never interrupt every lesson.
+
+Instead, it waits until enough evidence exists to make a meaningful recommendation.
+
+50. Competitive Exam Integration
+
+Tio should never interfere during a mock.
+
+Instead:
+
+Before mock:
+
+suggest preparation
+remind weak areas
+encourage good habits
+
+During mock:
+
+Nothing.
+
+After mock:
+
+analyse performance
+explain weaknesses
+recommend revision
+recommend practice
+update learner model
+
+The examination experience remains authentic.
+
+51. Revision Integration
+
+Revision is one of Tio's biggest responsibilities.
+
+Tio should continuously answer:
+
+What deserves revision today?
+
+Not
+
+What was learned today?
+
+Priority comes from evidence.
+
+Factors include:
+
+forgetting trend
+repeated mistakes
+exam importance
+prerequisite importance
+upcoming goals
+confidence decay
+time since mastery
+
+Revision becomes intelligent rather than calendar-based.
+
+52. Homework Integration
+
+Homework is not another feature.
+
+Homework is another source of evidence.
+
+When students upload work,
+
+Tio should analyse:
+
+Correct answers
+
+↓
+
+Incorrect answers
+
+↓
+
+Presentation
+
+↓
+
+Reasoning
+
+↓
+
+Missing steps
+
+↓
+
+Recurring misconceptions
+
+↓
+
+Confidence
+
+↓
+
+Concept gaps
+
+Homework should update the learner model.
+
+53. Image Intelligence
+
+Images are educational documents.
+
+Possible uploads:
+
+Notebook
+
+↓
+
+Assignment
+
+↓
+
+Whiteboard
+
+↓
+
+Formula sheet
+
+↓
+
+Graph
+
+↓
+
+Circuit
+
+↓
+
+Diagram
+
+↓
+
+Handwritten derivation
+
+↓
+
+Teacher corrections
+
+↓
+
+Lab work
+
+The goal is understanding educational intent.
+
+Not merely recognising text.
+
+54. Career Integration
+
+Career guidance should never rely on personality quizzes alone.
+
+Instead combine:
+
+Interests
+
+↓
+
+Performance
+
+↓
+
+Subjects
+
+↓
+
+Projects
+
+↓
+
+Skills
+
+↓
+
+Long-term goals
+
+↓
+
+Consistency
+
+↓
+
+Student choices
+
+Career recommendations should evolve over time.
+
+55. Project Integration
+
+When students build projects,
+
+Tio should become a mentor.
+
+Not an automatic generator.
+
+Pipeline:
+
+Understand project
+
+↓
+
+Determine difficulty
+
+↓
+
+Break into milestones
+
+↓
+
+Guide implementation
+
+↓
+
+Review progress
+
+↓
+
+Suggest improvements
+
+↓
+
+Celebrate completion
+
+56. Goal Tracking
+
+Every student should have active goals.
+
+Examples:
+
+Finish Electrostatics
+
+Complete 3 mocks
+
+Reach 80% accuracy
+
+Study 2 hours daily
+
+Improve Organic Chemistry
+
+Goals are living objects.
+
+Not checklists.
+
+Tio continuously measures progress.
+
+57. Habit Intelligence
+
+Tio should observe habits.
+
+Examples:
+
+Morning learner
+
+Night learner
+
+Weekend learner
+
+Long sessions
+
+Short sessions
+
+Frequent breaks
+
+Last-minute cramming
+
+Then personalise accordingly.
+
+Never force routines.
+
+58. Notification Intelligence
+
+Notifications should never become spam.
+
+Every notification should satisfy:
+
+Useful
+
+Relevant
+
+Timely
+
+Actionable
+
+Examples:
+
+"Today's revision contains three concepts you've nearly mastered."
+
+Good.
+
+"You haven't opened Mentorix today."
+
+Poor.
+
+Quality over quantity.
+
+59. Platform Memory
+
+Mentorix should remember meaningful platform-wide behaviour.
+
+Examples:
+
+Favourite tools
+
+Frequently used calculator
+
+Preferred notes
+
+Favourite diagrams
+
+Most viewed formula sheet
+
+Frequently revisited lessons
+
+Everything contributes to a smoother experience.
+
+60. Cross-System Intelligence
+
+This is where Mentorix becomes unique.
+
+Example:
+
+Student repeatedly fails Rotational Mechanics in mocks.
+
+↓
+
+Learning engine confirms weak understanding.
+
+↓
+
+Homework also contains rotational mistakes.
+
+↓
+
+Revision priority increases.
+
+↓
+
+Future practice shifts accordingly.
+
+↓
+
+Tio recommends one lesson.
+
+↓
+
+Confidence improves.
+
+↓
+
+Revision priority decreases.
+
+Everything connects.
+
+Nothing remains isolated.
+
+61. Personalisation Engine
+
+Personalisation should happen automatically.
+
+Dimensions include:
+
+Explanation style
+
+Learning pace
+
+Visual density
+
+Example preference
+
+Difficulty progression
+
+Reminder timing
+
+Study rhythm
+
+Navigation shortcuts
+
+Dashboard layout (where appropriate)
+
+No lengthy configuration menus should be required for most users.
+
+62. Privacy Philosophy
+
+Not everything should be remembered.
+
+Examples not worth storing:
+
+Greetings
+
+Casual jokes
+
+Temporary conversation
+
+Random questions
+
+Examples worth storing:
+
+Learning preferences
+
+Goals
+
+Educational difficulties
+
+Long-term interests
+
+Accessibility needs
+
+Memory should remain purposeful and respectful.
+
+63. Performance Optimisation
+
+Tio should never make Mentorix feel slow.
+
+Rules:
+
+Observation runs asynchronously.
+
+Memory updates occur in the background.
+
+Analytics are incremental.
+
+Retrieval happens before generation.
+
+AI calls remain minimal.
+
+Heavy processing is deferred where possible.
+
+The UI should always remain responsive.
+
+64. Reliability
+
+If AI becomes unavailable,
+
+Mentorix should continue functioning.
+
+Learning.
+
+Practice.
+
+Mocks.
+
+Revision.
+
+Analytics.
+
+Progress.
+
+Everything deterministic should continue normally.
+
+AI should enhance the platform—not be a single point of failure.
+
+65. Extensibility
+
+Future capabilities should plug into the same architecture.
+
+Examples:
+
+Voice conversations
+
+Live tutoring
+
+Screen sharing
+
+Camera-based problem solving
+
+Real-time whiteboards
+
+Collaborative study
+
+Teacher mode
+
+Parent dashboard
+
+Wearables
+
+None of these should require redesigning the core.
+
+66. Success Metrics
+
+The success of Tio should not be measured by:
+
+Number of conversations
+Number of AI responses
+Tokens consumed
+Chat duration
+
+Instead measure:
+
+Learning improvement
+
+Retention
+
+Consistency
+
+Goal completion
+
+Revision effectiveness
+
+Mock improvement
+
+Reduced repeated mistakes
+
+Student satisfaction
+
+Long-term growth
+
+Educational outcomes matter more than AI usage.
+
+67. The Mentorix Intelligence Loop
+
+Every action follows the same universal cycle.
+
+Student Action
+
+↓
+
+Observation
+
+↓
+
+Evidence
+
+↓
+
+Memory Update
+
+↓
+
+Reasoning
+
+↓
+
+Decision
+
+↓
+
+Platform Action
+
+↓
+
+Student Improves
+
+↓
+
+New Evidence
+
+↓
+
+Repeat
+
+This loop should power every feature.
+
+68. Engineering Principles
+
+The Tio Operating System must always remain:
+
+Educational-first.
+
+Evidence-driven.
+
+Deterministic where correctness matters.
+
+AI-assisted where intelligence adds value.
+
+Privacy-conscious.
+
+Reliable.
+
+Scalable.
+
+Cost-efficient.
+
+Invisible when unnecessary.
+
+Helpful when needed.
+
+69. Completion Criteria
+
+Tio is considered complete only when:
+
+Every major Mentorix module communicates through the intelligence layer.
+Memory is structured and selective.
+Evidence drives every recommendation.
+AI is invoked only when necessary.
+The platform continues functioning even if AI services are temporarily unavailable.
+Personalisation emerges naturally from observed behaviour rather than endless questionnaires.
+Every recommendation aligns with the learner's goals, history, and current context.
+The Tio Manifesto
+
+Tio should never try to replace teachers, parents, books, or the student's own effort.
+
+Its purpose is to connect everything inside Mentorix into one coherent educational experience.
+
+It quietly observes, remembers what matters, reasons from evidence, and recommends the next best action. Most of its intelligence should remain invisible. Students should simply feel that Mentorix understands how they learn, remembers their progress, and guides them with consistency and accuracy.
+
+When a student studies for months inside Mentorix, they should not remember thousands of conversations with Tio.
+
+They should remember that they became more organised, more confident, more independent, and better prepared because every lesson, every practice session, every mock exam, every revision, every project, and every recommendation felt connected.
+
+That is the role of Tio.
+
+It is not the face of Mentorix.
+
+It is the intelligence that quietly makes every part of Mentorix work together as one educational ecosystem.MENTORIX PLATFORM CORE ARCHITECTURE SPECIFICATION
+PART 1
+Navigation System, Workspace System & Platform Behaviour
+1. Mission
+
+The Platform Core exists to make every Mentorix module feel like it belongs to one application.
+
+Students should never feel:
+
+"Now I entered another feature."
+
+Instead they should always feel:
+
+"I'm still inside Mentorix."
+
+One experience.
+
+One navigation philosophy.
+
+One interaction language.
+
+2. Core Design Principles
+
+Every platform decision should satisfy these principles.
+
+Consistency
+
+The same action should behave the same everywhere.
+
+Predictability
+
+Students should always know what will happen next.
+
+Recoverability
+
+Mistakes should rarely cause lost work.
+
+Speed
+
+Everything should feel immediate.
+
+Educational Priority
+
+Learning always comes before flashy UI.
+
+Continuity
+
+Students should resume exactly where they left.
+
+3. Platform Hierarchy
+
+The platform should have a clear hierarchy.
+
+Mentorix
+
++-- Dashboard
+
++-- Learning
+
++-- Competitive Exams
+
++-- Revision
+
++-- Homework
+
++-- Career
+
++-- Projects
+
++-- Analytics
+
++-- Notes
+
++-- Search
+
++-- Notifications
+
++-- Settings
+
++-- Tio
+
+No hidden navigation trees.
+
+No confusing structure.
+
+4. Global Navigation Philosophy
+
+Navigation should answer three questions.
+
+Where am I?
+
+Where can I go?
+
+How do I return?
+
+If any screen fails these,
+
+navigation is wrong.
+
+5. Navigation Layers
+
+Mentorix should use four navigation levels.
+
+Level 1
+
+Primary modules.
+
+Learning
+
+Competitive Exams
+
+Revision
+
+Career
+
+Projects
+
+Level 2
+
+Inside module.
+
+Subjects.
+
+Courses.
+
+Exam categories.
+
+Level 3
+
+Content.
+
+Lesson.
+
+Chapter.
+
+Mock.
+
+Practice.
+
+Revision Session.
+
+Level 4
+
+Actual workspace.
+
+Question.
+
+Video.
+
+Simulation.
+
+Notebook.
+
+Conversation.
+
+Students should never become lost.
+
+6. Universal Header
+
+Every major page should share the same header philosophy.
+
+Contains only:
+
+Current page
+
+Search
+
+Notifications
+
+Profile
+
+Tio access
+
+Nothing module-specific should appear here unless absolutely required.
+
+7. Universal Footer (Mobile)
+
+Bottom navigation only contains primary destinations.
+
+Never overload.
+
+Recommended:
+
+Home
+
+Learning
+
+Competitive
+
+Revision
+
+Tio
+
+Everything else is reachable from inside.
+
+8. Workspace Philosophy
+
+Every feature has one primary workspace.
+
+Learning
+
+?
+
+Lesson Workspace
+
+Practice
+
+?
+
+Question Workspace
+
+Mock
+
+?
+
+Exam Workspace
+
+Revision
+
+?
+
+Recall Workspace
+
+Homework
+
+?
+
+Review Workspace
+
+Projects
+
+?
+
+Builder Workspace
+
+Career
+
+?
+
+Explorer Workspace
+
+Each workspace should feel purpose-built.
+
+9. Workspace Rules
+
+Every workspace should answer:
+
+What is the primary task?
+
+Everything unrelated disappears.
+
+Examples
+
+Mock
+
+Primary task:
+
+Taking an exam.
+
+No recommendations.
+
+No notifications.
+
+No distractions.
+
+Lesson
+
+Primary task:
+
+Learning.
+
+Allow notes.
+
+Allow bookmarks.
+
+Allow Tio.
+
+Question Workspace
+
+Primary task:
+
+Problem solving.
+
+Large readable question.
+
+Minimal clutter.
+
+10. Resume Philosophy
+
+Students should never lose context.
+
+If they close Mentorix:
+
+Return to
+
+Last workspace.
+
+?
+
+Last scroll position.
+
+?
+
+Last question.
+
+?
+
+Last lesson timestamp.
+
+?
+
+Last note.
+
+?
+
+Last playback position.
+
+?
+
+Last revision card.
+
+Everything resumes naturally.
+
+11. Session Manager
+
+Every module has an active session.
+
+Examples
+
+Learning Session
+
+Practice Session
+
+Revision Session
+
+Mock Session
+
+Homework Session
+
+Project Session
+
+Sessions store temporary state until completed.
+
+12. Back Navigation
+
+Back should never behave unpredictably.
+
+Rules:
+
+Inside lesson
+
+?
+
+Previous lesson page.
+
+Inside mock
+
+?
+
+Never exit accidentally.
+
+Inside practice
+
+?
+
+Confirm before leaving.
+
+Inside settings
+
+?
+
+Return to previous page.
+
+Consistency is more important than browser defaults.
+
+13. Breadcrumb System
+
+Only use breadcrumbs where hierarchy matters.
+
+Example
+
+Learning
+
+Physics
+
+Electricity
+
+Current Electricity
+
+Kirchhoff's Laws
+
+Never show breadcrumbs inside mock exams.
+
+14. Universal Search Entry
+
+Search should always remain accessible.
+
+Students should never wonder:
+
+"Where was search?"
+
+Eventually search becomes the fastest way to access anything.
+
+15. Search Scope
+
+Search should understand educational intent.
+
+Examples
+
+"Ohm's Law"
+
+?
+
+Lesson
+
+?
+
+Formula
+
+?
+
+Practice Questions
+
+?
+
+PYQs
+
+?
+
+Revision
+
+?
+
+Notes
+
+?
+
+Mock Reviews
+
+?
+
+Career Relevance
+
+One search.
+
+Many results.
+
+16. Global State
+
+The platform always knows
+
+Current User
+
+?
+
+Current Module
+
+?
+
+Current Workspace
+
+?
+
+Current Session
+
+?
+
+Current Device
+
+?
+
+Current Connectivity
+
+?
+
+Pending Sync
+
+?
+
+Pending Notifications
+
+?
+
+Background Tasks
+
+Never duplicate state unnecessarily.
+
+17. Local State
+
+Every module manages its own temporary state.
+
+Example
+
+Practice
+
+Current Question
+
+Marked Questions
+
+Answers
+
+Timer
+
+Bookmarks
+
+Hints Used
+
+These remain isolated.
+
+18. State Boundaries
+
+Global state
+
+knows
+
+where you are.
+
+Local state
+
+knows
+
+what you're doing.
+
+Never mix them.
+
+19. Loading Philosophy
+
+Loading should feel intentional.
+
+Rules
+
+Skeletons instead of blank screens.
+
+Preserve layout.
+
+Never shift content.
+
+Progressively reveal information.
+
+Avoid full-screen spinners whenever possible.
+
+20. Empty States
+
+Every empty page should educate.
+
+Bad
+
+"No data."
+
+Good
+
+"You haven't completed any mock exams yet. Once you finish your first mock, detailed performance analysis will appear here."
+
+Every empty state should explain the next action.
+
+21. Platform Events
+
+Everything important becomes an event.
+
+Examples
+
+Lesson Completed
+
+Question Solved
+
+Mock Submitted
+
+Revision Finished
+
+Homework Uploaded
+
+Goal Achieved
+
+Events trigger other systems.
+
+Nothing communicates directly.
+
+22. Event Pipeline
+User Action
+
+?
+
+Platform Event
+
+?
+
+Interested Systems
+
+?
+
+Update
+
+?
+
+Background Processing
+
+?
+
+Optional Notification
+
+?
+
+Platform Stable
+
+Loose coupling.
+
+No feature should depend directly on another feature's internal implementation.
+
+23. Background Processing
+
+Heavy work should never block the interface.
+
+Examples
+
+Update analytics
+
+Update learner model
+
+Generate recommendations
+
+Sync progress
+
+Cache images
+
+Upload notes
+
+Everything runs asynchronously.
+
+24. Platform Behaviour Rules
+
+The platform should always:
+
+Remember.
+
+Recover.
+
+Adapt.
+
+Stay responsive.
+
+Stay predictable.
+
+Never surprise the student with unexpected behaviour.
+
+25. Completion Criteria
+
+The Platform Core Navigation Layer is complete only when:
+
+Every module follows the same navigation philosophy.
+Every workspace is purpose-driven.
+Resume works consistently.
+State management is clearly separated.
+Navigation is predictable.
+Events connect systems without tight coupling.
+The platform feels like one coherent product rather than multiple independent applications.MENTORIX PLATFORM CORE ARCHITECTURE SPECIFICATION
+PART 2
+Session Engine, Storage Architecture, Sync Engine & Platform Reliability
+26. Philosophy
+
+The student should never worry about technology.
+
+They should never think:
+
+Did it save?
+Will I lose progress?
+What happens if my internet disconnects?
+Which device has my latest progress?
+
+The answer should always be:
+
+"Mentorix already handled it."
+
+27. Platform State Layers
+
+Mentorix operates using four independent state layers.
+
+Permanent State
+
+↓
+
+Session State
+
+↓
+
+Temporary UI State
+
+↓
+
+Background State
+
+Each layer has its own responsibility.
+
+28. Permanent State
+
+Stores long-term information.
+
+Examples:
+
+completed lessons
+mastery
+revision evidence
+mock history
+practice history
+goals
+achievements
+preferences
+learner profile
+bookmarks
+notes
+
+Permanent state survives forever.
+
+29. Session State
+
+Exists only while an activity is active.
+
+Examples:
+
+Learning Session
+
+↓
+
+Current lesson
+
+↓
+
+Video timestamp
+
+↓
+
+Expanded sections
+
+↓
+
+Current quiz
+
+Practice Session
+
+↓
+
+Question order
+
+↓
+
+Answers
+
+↓
+
+Bookmarks
+
+↓
+
+Timer
+
+↓
+
+Hints
+
+Mock Session
+
+↓
+
+Current question
+
+↓
+
+Palette
+
+↓
+
+Marked questions
+
+↓
+
+Remaining time
+
+Session ends when activity ends.
+
+30. Temporary UI State
+
+Never sync.
+
+Never permanently store.
+
+Examples:
+
+Sidebar open
+
+↓
+
+Current tab
+
+↓
+
+Animation state
+
+↓
+
+Collapsed cards
+
+↓
+
+Current modal
+
+↓
+
+Hovered button
+
+These exist only for the interface.
+
+31. Background State
+
+Invisible systems.
+
+Examples:
+
+Pending uploads
+
+↓
+
+Pending downloads
+
+↓
+
+Pending sync
+
+↓
+
+Image processing
+
+↓
+
+Analytics updates
+
+↓
+
+Recommendation generation
+
+↓
+
+AI requests
+
+Student should rarely notice this layer.
+
+32. Autosave Philosophy
+
+Autosave should be continuous.
+
+Never rely on:
+
+Save Button.
+
+Instead,
+
+save meaningful events.
+
+Examples
+
+Question answered
+
+↓
+
+Autosave
+
+Lesson completed
+
+↓
+
+Autosave
+
+Notebook edited
+
+↓
+
+Autosave
+
+Goal updated
+
+↓
+
+Autosave
+
+Progress becomes event-driven.
+
+33. Autosave Frequency
+
+Different data requires different timing.
+
+Immediate
+
+Mock answers
+
+Practice answers
+
+Revision answers
+
+Bookmarks
+
+Notes
+
+Delayed
+
+Analytics
+
+Recommendations
+
+History aggregation
+
+Usage statistics
+
+Heavy processing should never delay the interface.
+
+34. Recovery Engine
+
+Every important workflow should be recoverable.
+
+Example
+
+Student closes browser.
+
+↓
+
+Returns later.
+
+↓
+
+Mentorix detects unfinished session.
+
+↓
+
+Resume?
+
+↓
+
+Continue exactly where left.
+
+Not restart.
+
+35. Recovery Policies
+
+Learning
+
+Resume lesson.
+
+Practice
+
+Resume if not completed.
+
+Revision
+
+Resume queue.
+
+Homework
+
+Resume upload.
+
+Projects
+
+Resume editor.
+
+Mock
+
+Depends on official rules and chosen mode.
+
+Every module defines its recovery behaviour explicitly.
+
+36. Connectivity Awareness
+
+Mentorix should always know:
+
+Online
+
+↓
+
+Slow Network
+
+↓
+
+Offline
+
+↓
+
+Reconnecting
+
+Every subsystem reacts accordingly.
+
+37. Offline Philosophy
+
+Not everything requires internet.
+
+Offline should support:
+
+Downloaded lessons
+
+Downloaded notes
+
+Downloaded revision
+
+Previously cached diagrams
+
+Bookmarks
+
+Reading
+
+Some quizzes (future)
+
+AI-dependent features clearly indicate when a connection is required.
+
+38. Sync Architecture
+Student Action
+
+↓
+
+Local Save
+
+↓
+
+Sync Queue
+
+↓
+
+Background Upload
+
+↓
+
+Server Validation
+
+↓
+
+Confirmation
+
+↓
+
+Queue Cleared
+
+Local experience comes first.
+
+Cloud consistency follows.
+
+39. Sync Queue
+
+Every unsynchronised action enters the queue.
+
+Examples
+
+Progress
+
+↓
+
+Notes
+
+↓
+
+Bookmarks
+
+↓
+
+Goals
+
+↓
+
+Settings
+
+↓
+
+Achievements
+
+↓
+
+Homework uploads
+
+Queue processes independently.
+
+40. Conflict Resolution
+
+Student edits notes on Laptop.
+
+Student edits same notes on Phone.
+
+Conflict detected.
+
+Possible strategies:
+
+Latest version
+
+Manual merge
+
+Section merge
+
+Timestamp priority
+
+The strategy depends on data type.
+
+41. Download Manager
+
+Downloads are managed centrally.
+
+Supports:
+
+Courses
+
+Lesson assets
+
+Videos
+
+Images
+
+Formula sheets
+
+Revision cards
+
+Future simulations
+
+One download system.
+
+Not many.
+
+42. Cache Manager
+
+Purpose:
+
+Speed.
+
+Cache:
+
+Images
+
+Diagrams
+
+Thumbnails
+
+Animations
+
+Frequently used assets
+
+Never cache sensitive information unnecessarily.
+
+43. Memory Management
+
+The platform should continuously release unused resources.
+
+Unload:
+
+Hidden pages
+
+Unused animations
+
+Large images
+
+Inactive simulations
+
+Old render trees
+
+Long study sessions should remain smooth.
+
+44. Background Scheduler
+
+Heavy work enters a scheduler.
+
+Tasks include:
+
+Recommendation updates
+
+Analytics
+
+Revision calculations
+
+Career analysis
+
+Image indexing
+
+Search indexing
+
+Nothing should block scrolling or interaction.
+
+45. Reliability Rules
+
+Every important operation should have:
+
+Retry
+
+↓
+
+Timeout
+
+↓
+
+Fallback
+
+↓
+
+Recovery
+
+↓
+
+Logging
+
+↓
+
+User-friendly message
+
+No silent failures.
+
+46. Error Classification
+
+Errors should be categorised.
+
+Network
+
+Server
+
+AI
+
+Storage
+
+Permission
+
+Validation
+
+Parsing
+
+Rendering
+
+Unknown
+
+Each has its own recovery strategy.
+
+47. User Feedback
+
+Never expose technical errors.
+
+Bad:
+
+"HTTP 500."
+
+Good:
+
+"We couldn't save your notes right now. They're safe on this device and we'll sync them automatically when your connection is restored."
+
+Students should know what happened and what Mentorix is doing about it.
+
+48. Logging Philosophy
+
+Log systems.
+
+Not users.
+
+Capture:
+
+Module
+
+↓
+
+Event
+
+↓
+
+Timestamp
+
+↓
+
+Outcome
+
+↓
+
+Duration
+
+↓
+
+Error Category
+
+Avoid storing unnecessary personal information.
+
+49. Performance Monitoring
+
+Continuously monitor:
+
+Page load
+
+↓
+
+Interaction latency
+
+↓
+
+Rendering time
+
+↓
+
+Memory usage
+
+↓
+
+Network latency
+
+↓
+
+AI response time
+
+↓
+
+Crash frequency
+
+Performance should be measurable.
+
+50. Platform Health
+
+The platform always knows its own condition.
+
+Healthy
+
+↓
+
+Minor Delay
+
+↓
+
+Degraded
+
+↓
+
+Offline
+
+↓
+
+Recovery
+
+Different modules can react differently.
+
+51. Universal Background Engine
+
+Many systems should share one scheduler.
+
+Instead of:
+
+Learning Scheduler
+
+Revision Scheduler
+
+Analytics Scheduler
+
+Sync Scheduler
+
+Use:
+
+One Background Task Engine
+
+Different priorities.
+
+Cleaner architecture.
+
+52. Future Scalability
+
+The architecture should comfortably support:
+
+Millions of questions.
+
+Thousands of lessons.
+
+Large note collections.
+
+Voice.
+
+Video.
+
+Live tutoring.
+
+Teacher mode.
+
+Parent mode.
+
+Collaborative study.
+
+Without redesigning the platform.
+
+53. Platform Principles
+
+The platform should always:
+
+Save before syncing.
+
+Recover before restarting.
+
+Queue before blocking.
+
+Retry before failing.
+
+Cache before downloading again.
+
+Protect progress above everything else.
+
+54. Completion Criteria
+
+The Platform Reliability Layer is complete only when:
+
+Progress is never accidentally lost.
+Every session can recover appropriately.
+Sync happens automatically in the background.
+Offline behaviour is clearly defined.
+Errors have deterministic recovery paths.
+Background work never blocks interaction.
+Long study sessions remain smooth and responsive.
+Students trust that Mentorix will preserve their work.
+Core Principle
+
+Students should spend their time thinking about learning, not about software.
+
+The ideal platform is one they barely notice. Their notes save automatically, their progress follows them across devices, interrupted sessions resume naturally, temporary network issues recover gracefully, and heavy processing happens invisibly in the background.
+
+When Mentorix is working at its best, the technology fades into the background and the educational experience stays at the centre.MENTORIX PLATFORM CORE ARCHITECTURE SPECIFICATION
+PART 3
+Experience Layer, Performance Standards & Unified Product Philosophy
+55. The Experience Philosophy
+
+Every screen inside Mentorix should answer one question:
+
+"What is the student trying to accomplish right now?"
+
+Everything else becomes secondary.
+
+The interface should never compete with the student's attention.
+
+The content is always the hero.
+
+56. Platform Interaction Language
+
+Every interaction should follow one universal language.
+
+Input
+
+Student performs an action.
+
+↓
+
+Response
+
+Immediate acknowledgement.
+
+↓
+
+Processing
+
+Background processing.
+
+↓
+
+Completion
+
+Visible result.
+
+Every interaction follows this rhythm.
+
+57. Interaction Speed Standards
+
+Every interaction should have target behaviour.
+
+Button Press
+
+↓
+
+Instant visual response.
+
+Navigation
+
+↓
+
+Immediate transition.
+
+Search
+
+↓
+
+Near-instant suggestions.
+
+Lesson Opening
+
+↓
+
+Skeleton first.
+
+Content second.
+
+Question Navigation
+
+↓
+
+No visible loading.
+
+Animations should never make the system feel slower.
+
+58. Visual Stability
+
+Nothing should unexpectedly move.
+
+Avoid:
+
+Layout shifts.
+
+Jumping buttons.
+
+Changing heights.
+
+Moving content while reading.
+
+The student's eyes should never need to relocate information unexpectedly.
+
+59. Educational Focus Mode
+
+Whenever the student enters a deep educational task:
+
+Lesson
+
+Practice
+
+Revision
+
+Mock
+
+Homework
+
+Project
+
+The platform should reduce visual noise automatically.
+
+Less decoration.
+
+Less movement.
+
+More focus.
+
+60. Motion Philosophy
+
+Animations should communicate.
+
+Never decorate.
+
+Animations should indicate:
+
+Navigation.
+
+Completion.
+
+Expansion.
+
+Progress.
+
+Relationships.
+
+Success.
+
+Failure.
+
+Not simply exist because they look nice.
+
+61. Colour Philosophy
+
+Colour communicates meaning.
+
+Examples:
+
+Learning
+
+Practice
+
+Revision
+
+Competitive Exams
+
+Career
+
+Projects
+
+Achievements
+
+Warnings
+
+Errors
+
+Success
+
+Every colour has a purpose.
+
+Never overload the student with colour.
+
+62. Typography Philosophy
+
+Reading should remain effortless.
+
+Hierarchy:
+
+Page
+
+↓
+
+Section
+
+↓
+
+Topic
+
+↓
+
+Content
+
+↓
+
+Caption
+
+↓
+
+Metadata
+
+Educational reading comfort is more important than artistic typography.
+
+63. Component Philosophy
+
+One component.
+
+One behaviour.
+
+Buttons behave identically everywhere.
+
+Cards behave identically everywhere.
+
+Dialogs behave identically everywhere.
+
+Inputs behave identically everywhere.
+
+Students learn the interface once.
+
+64. Empty Space Philosophy
+
+Whitespace is functional.
+
+It separates ideas.
+
+Reduces fatigue.
+
+Improves scanning.
+
+Never fill space simply because it exists.
+
+65. Progressive Disclosure
+
+Do not overwhelm students.
+
+Reveal information only when needed.
+
+Example
+
+Mock Analysis
+
+Show:
+
+Overall Result
+
+↓
+
+Subject Breakdown
+
+↓
+
+Chapter Breakdown
+
+↓
+
+Question Review
+
+↓
+
+Advanced Analytics
+
+Students choose depth.
+
+66. Information Density
+
+Different modules require different density.
+
+Learning
+
+Comfortable.
+
+Practice
+
+Moderate.
+
+Mock
+
+Compact.
+
+Analytics
+
+Dense but structured.
+
+One density does not fit every module.
+
+67. Universal Feedback System
+
+Every action should provide appropriate feedback.
+
+Tiny actions
+
+Small confirmation.
+
+Large actions
+
+Visible confirmation.
+
+Long actions
+
+Progress indicator.
+
+Background actions
+
+Silent unless something requires attention.
+
+68. Error Experience
+
+Errors should reduce anxiety.
+
+Every error explains:
+
+What happened.
+
+↓
+
+What Mentorix is doing.
+
+↓
+
+What the student can do.
+
+Never leave the student uncertain.
+
+69. Achievement Philosophy
+
+Achievements should reward meaningful educational progress.
+
+Celebrate:
+
+Mastery.
+
+Recovery.
+
+Consistency.
+
+Improvement.
+
+Persistence.
+
+Avoid addictive mechanics.
+
+70. Celebration System
+
+Major celebrations only.
+
+Examples:
+
+First completed course.
+
+Recovered weak chapter.
+
+Large improvement.
+
+Admission milestone.
+
+Project completion.
+
+Celebrate genuine progress.
+
+Not every button press.
+
+71. Notification Philosophy
+
+Notifications compete with learning.
+
+Therefore:
+
+Only interrupt when the value exceeds the interruption cost.
+
+Examples:
+
+Revision due.
+
+Goal achieved.
+
+Mock reminder.
+
+Sync problem.
+
+Avoid:
+
+Daily spam.
+
+Artificial streak pressure.
+
+Unnecessary engagement tactics.
+
+72. Accessibility Standards
+
+Accessibility is not optional.
+
+Every feature must support:
+
+Keyboard navigation.
+
+Readable contrast.
+
+Scalable text.
+
+Screen readers.
+
+Reduced motion.
+
+Touch accessibility.
+
+Clear focus indicators.
+
+Educational equality matters.
+
+73. Performance Budget
+
+Every feature consumes part of a finite budget.
+
+Before adding a feature, ask:
+
+CPU cost?
+
+Memory cost?
+
+Battery cost?
+
+Network cost?
+
+AI cost?
+
+Educational value?
+
+Only ship features whose value exceeds their cost.
+
+74. AI Performance Budget
+
+AI requests are expensive.
+
+Before every request ask:
+
+Can deterministic logic solve this?
+
+↓
+
+Can cached knowledge solve this?
+
+↓
+
+Can retrieval solve this?
+
+↓
+
+Only then call AI.
+
+This keeps Mentorix fast and sustainable.
+
+75. Platform Consistency Audit
+
+Every new feature should pass this checklist.
+
+Does it follow navigation philosophy?
+
+Does it use existing components?
+
+Does it preserve platform behaviour?
+
+Does it respect performance budgets?
+
+Does it integrate with Tio?
+
+Does it update evidence?
+
+Does it support mobile?
+
+Does it support accessibility?
+
+If not,
+
+redesign it.
+
+76. Educational Integrity Audit
+
+Every feature should answer:
+
+Does this improve learning?
+
+Does this reduce confusion?
+
+Does this create measurable value?
+
+Does this increase cognitive load unnecessarily?
+
+Educational value is always the deciding factor.
+
+77. Future-Proofing
+
+The platform should support future additions without redesign.
+
+Examples:
+
+Voice tutor.
+
+AR/VR simulations.
+
+Collaborative classrooms.
+
+Teacher dashboards.
+
+Parent dashboards.
+
+Coding environments.
+
+Research tools.
+
+Everything should plug into the existing architecture.
+
+78. Product Philosophy
+
+Mentorix should never become:
+
+A collection of AI tools.
+
+A collection of courses.
+
+A question bank.
+
+A chatbot.
+
+A mock test website.
+
+Instead it should become:
+
+A unified educational operating system.
+
+Every feature should strengthen the others.
+
+Nothing should feel isolated.
+
+79. The Final Architecture Loop
+
+Every interaction inside Mentorix should ultimately follow the same lifecycle.
+
+Student Goal
+
+↓
+
+Platform Navigation
+
+↓
+
+Workspace
+
+↓
+
+Student Action
+
+↓
+
+Platform Event
+
+↓
+
+Observation
+
+↓
+
+Evidence Collection
+
+↓
+
+Memory Update
+
+↓
+
+Reasoning
+
+↓
+
+Decision
+
+↓
+
+Platform Response
+
+↓
+
+Learning Progress
+
+↓
+
+Long-Term Growth
+
+↓
+
+Repeat
+
+This loop should power every module, from watching a lesson to completing a mock exam or reviewing a project.
+
+80. Launch Readiness Criteria
+
+Mentorix is considered launch-ready when:
+
+Learning, Competitive Exams, Revision, Homework, Career, Projects, and Tio all follow the same platform principles.
+Navigation and interaction are consistent across desktop, tablet, and mobile.
+Sessions recover gracefully and data is protected.
+AI enhances the experience without becoming a dependency.
+Performance remains smooth during long study sessions.
+Accessibility is built into every major workflow.
+Every new feature passes consistency, educational, and performance audits before release.
+The Mentorix Platform Manifesto
+
+Mentorix should not aim to be the platform with the most features.
+
+It should aim to be the platform where every feature belongs.
+
+Students should never have to learn a new interface when they move between learning, practice, revision, competitive exams, projects, or career exploration. Every interaction should feel familiar, every recommendation should be supported by evidence, and every part of the platform should contribute to the same educational journey.
+
+Technology should remain invisible. AI should remain purposeful. The interface should stay predictable. Progress should always be protected.
+
+When students use Mentorix every day, they should not remember individual screens or animations. They should remember that the platform felt reliable, coherent, and genuinely helpful—and that it helped them become a stronger, more independent learner.MENTORIX MOBILE & CROSS-DEVICE EXPERIENCE ARCHITECTURE
+PART 1
+Device Philosophy, Adaptive Layout Engine & Navigation Architecture
+1. Mission
+
+Mentorix should never feel like
+
+"A desktop website squeezed onto a phone."
+
+Nor should desktop feel like
+
+"A stretched mobile app."
+
+Every device deserves its own experience while remaining unmistakably Mentorix.
+
+The educational workflow stays the same.
+
+The presentation adapts.
+
+2. Core Philosophy
+
+Content changes.
+
+Navigation changes.
+
+Spacing changes.
+
+Gestures change.
+
+Layouts change.
+
+Interaction changes.
+
+Learning never changes.
+
+Whether a student studies on:
+
+6-inch phone
+8-inch tablet
+11-inch tablet
+13-inch laptop
+24-inch monitor
+Ultrawide display
+
+they should receive the same educational experience.
+
+3. Device Categories
+
+Never design around specific phones.
+
+Design around classes.
+
+Compact Mobile
+
+Regular Mobile
+
+Large Mobile
+
+Small Tablet
+
+Large Tablet
+
+Laptop
+
+Desktop
+
+Large Desktop
+
+Everything scales from these.
+
+4. Adaptive Layout Engine
+
+Instead of
+
+if mobile
+
+else desktop
+
+Mentorix should use
+
+Device Detection
+
+↓
+
+Screen Size
+
+↓
+
+Aspect Ratio
+
+↓
+
+Input Type
+
+↓
+
+Orientation
+
+↓
+
+Performance Tier
+
+↓
+
+Adaptive Layout Rules
+
+Every page is generated from these.
+
+5. Inputs Matter More Than Screen Size
+
+Example
+
+A Surface Pro
+
+Looks like tablet.
+
+Acts like laptop.
+
+Has
+
+Mouse
+
+Keyboard
+
+Touch
+
+Stylus
+
+The UI should adapt to capabilities,
+
+not just pixels.
+
+6. Device Profile
+
+Every device should expose
+
+Screen Width
+
+Screen Height
+
+Aspect Ratio
+
+Pixel Density
+
+Touch Support
+
+Keyboard Support
+
+Mouse Support
+
+Stylus Support
+
+Performance Tier
+
+Connection Quality
+
+Every layout reads from this.
+
+7. Performance Tier
+
+Instead of assuming every device is powerful,
+
+Mentorix classifies devices.
+
+Tier A
+
+High-end
+
+Tier B
+
+Mid-range
+
+Tier C
+
+Budget
+
+Tier D
+
+Very Low-End
+
+Animations
+
+3D
+
+Transitions
+
+Particle effects
+
+Background rendering
+
+adapt accordingly.
+
+8. Orientation System
+
+Portrait
+
+and
+
+Landscape
+
+should be treated as different layouts.
+
+Not rotated layouts.
+
+Especially on tablets.
+
+9. Mobile Philosophy
+
+Phone =
+
+Focus.
+
+One task.
+
+One screen.
+
+No split interfaces.
+
+Minimal distractions.
+
+Everything should support
+
+one-handed use whenever practical.
+
+10. Tablet Philosophy
+
+Tablet becomes
+
+Educational Workspace.
+
+Support
+
+Split panes
+
+Large diagrams
+
+Better note-taking
+
+More simultaneous context
+
+Without overwhelming the screen.
+
+11. Desktop Philosophy
+
+Desktop becomes
+
+Productivity Workspace.
+
+Allow
+
+Multiple panels
+
+Analytics
+
+Side notes
+
+Bookmarks
+
+Lesson outline
+
+Question navigator
+
+Reference material
+
+More information because more space exists.
+
+12. Workspace Adaptation
+
+Example
+
+Learning
+
+Desktop
+
+Sidebar
+
+Lesson
+
+Notes
+
+Tio
+
+Tablet
+
+Lesson
+
+↓
+
+Expandable Notes
+
+↓
+
+Expandable Tio
+
+Phone
+
+Lesson
+
+↓
+
+Floating Notes
+
+↓
+
+Bottom Sheet Tio
+
+Learning remains identical.
+
+Workspace adapts.
+
+13. Navigation Adaptation
+
+Desktop
+
+Persistent Sidebar
+
+Tablet
+
+Collapsible Sidebar
+
+Phone
+
+Bottom Navigation
+
+The navigation philosophy stays consistent.
+
+Only presentation changes.
+
+14. Tio Adaptation
+
+Desktop
+
+Dockable Panel
+
+Tablet
+
+Slide Panel
+
+Phone
+
+Bottom Sheet
+
+Never block the lesson.
+
+Never hide the content.
+
+15. Search Adaptation
+
+Desktop
+
+Global search bar
+
+Tablet
+
+Expandable search
+
+Phone
+
+Fullscreen search
+
+Same search engine.
+
+Different presentation.
+
+16. Notes Adaptation
+
+Desktop
+
+Resizable side notebook
+
+Tablet
+
+Split screen notebook
+
+Phone
+
+Bottom drawer notebook
+
+Students should never lose access to notes.
+
+17. Question Workspace
+
+Desktop
+
+Question
+
+Options
+
+Calculator
+
+Palette
+
+Reference
+
+Tablet
+
+Question
+
+Options
+
+Expandable calculator
+
+Phone
+
+Question
+
+↓
+
+Options
+
+↓
+
+Tools
+
+No horizontal scrolling.
+
+Ever.
+
+18. Mock Workspace
+
+This is extremely important.
+
+Mock exams should feel identical psychologically.
+
+Not visually.
+
+Phone
+
+Large question.
+
+Simple palette.
+
+Minimal tools.
+
+Desktop
+
+Larger workspace.
+
+More breathing room.
+
+Both preserve examination focus.
+
+19. Learning Workspace
+
+Learning should always prioritise:
+
+Lesson
+
+↓
+
+Diagram
+
+↓
+
+Explanation
+
+↓
+
+Practice
+
+↓
+
+Notes
+
+Never advertisements.
+
+Never decorative panels.
+
+20. Dashboard Adaptation
+
+Desktop
+
+More overview.
+
+Tablet
+
+Balanced overview.
+
+Phone
+
+Action-first dashboard.
+
+Today's work first.
+
+Not statistics.
+
+21. Card System
+
+Cards adapt.
+
+Desktop
+
+Multiple columns.
+
+Tablet
+
+Two columns.
+
+Phone
+
+Single column.
+
+Never shrink cards until unreadable.
+
+22. Grid Philosophy
+
+Instead of
+
+Fixed grids
+
+Use
+
+Adaptive educational grids.
+
+Content determines layout.
+
+Not arbitrary columns.
+
+23. Reading Width
+
+Educational text should never become too wide.
+
+Desktop
+
+Constrain lesson width.
+
+Reading comfort matters more than using every pixel.
+
+24. Completion Criteria
+
+The Adaptive Layout Layer is complete when:
+
+Every device class has a purpose-built layout.
+Navigation adapts without changing user workflows.
+Learning, Practice, Revision, and Mock workspaces preserve their educational goals across devices.
+Input methods (touch, keyboard, mouse, stylus) are treated as first-class capabilities.
+Performance tiers influence rendering without changing functionality.
+Students switching devices can continue seamlessly without relearning the interface.MENTORIX MOBILE & CROSS-DEVICE EXPERIENCE ARCHITECTURE
+PART 2
+Mobile Interaction Engine, Touch System & Responsive Behaviour
+25. Interaction Philosophy
+
+A student should never need to think:
+
+"How do I use this?"
+
+Every interaction should feel natural.
+
+The interface should disappear.
+
+The learning remains.
+
+26. Touch-First Design
+
+Mentorix is designed mobile-first.
+
+Desktop is an enhancement.
+
+Every feature should first work perfectly with:
+
+one thumb
+two thumbs
+one finger
+one hand
+
+Only afterwards should desktop enhancements be added.
+
+27. Thumb Reach Zones
+
+On mobile, the easiest-to-reach area is the lower half of the screen.
+
+Therefore:
+
+Primary actions belong near the bottom.
+
+Examples:
+
+Next
+
+Continue
+
+Submit
+
+Practice
+
+Review
+
+Open Tio
+
+Never place the most important action in the top-right corner if it can reasonably be lower.
+
+28. One-Handed Operation
+
+Every primary educational flow should be completable with one hand.
+
+Examples:
+
+Lesson
+
+↓
+
+Next Topic
+
+↓
+
+Quiz
+
+↓
+
+Notes
+
+↓
+
+Bookmark
+
+↓
+
+Back
+
+No awkward stretching.
+
+29. Touch Targets
+
+Interactive elements should prioritise comfort over density.
+
+Examples:
+
+Buttons
+
+Cards
+
+Question options
+
+Bookmarks
+
+Tabs
+
+Dropdowns
+
+No tiny controls.
+
+Educational apps are often used for hours.
+
+Comfort matters.
+
+30. Gesture Philosophy
+
+Gestures should enhance interaction.
+
+Never replace obvious controls.
+
+Every gesture must have a visible alternative.
+
+Example
+
+Swipe between flashcards.
+
+Good.
+
+Only way to move?
+
+Bad.
+
+31. Swipe Behaviour
+
+Allowed:
+
+Revision cards
+
+Image galleries
+
+Lesson pages (where appropriate)
+
+Notebook sections
+
+Question review
+
+Not allowed:
+
+Mock answer submission
+
+Deleting progress
+
+Dangerous actions
+
+32. Bottom Sheets
+
+Bottom sheets become the primary mobile utility layer.
+
+Used for:
+
+Notes
+
+Bookmarks
+
+Filters
+
+Question palette
+
+Tio
+
+Downloads
+
+Quick settings
+
+Never stack bottom sheets.
+
+One at a time.
+
+33. Floating Action Buttons
+
+Use sparingly.
+
+Allowed:
+
+Quick Note
+
+Ask Tio
+
+Quick Capture (future)
+
+Not every screen needs one.
+
+34. Scroll Behaviour
+
+Scrolling should always feel uninterrupted.
+
+Avoid:
+
+Nested vertical scrolling
+
+Unexpected horizontal scrolling
+
+Sticky elements that hide content
+
+Heavy parallax
+
+Reading should feel effortless.
+
+35. Keyboard Behaviour
+
+When the keyboard opens:
+
+Important fields remain visible.
+
+Primary action remains accessible.
+
+Content reflows smoothly.
+
+No sudden jumps.
+
+Especially important for:
+
+Search
+
+Notes
+
+Chat with Tio
+
+Goal editing
+
+Settings
+
+36. Safe Area Support
+
+Every layout must respect:
+
+Notches
+
+Dynamic Island
+
+Gesture bars
+
+Rounded corners
+
+Status bars
+
+Camera cut-outs
+
+Nothing important should sit beneath system UI.
+
+37. Foldables (Future-Ready)
+
+Treat foldables as two possible workspaces.
+
+Folded:
+
+Phone experience.
+
+Unfolded:
+
+Tablet experience.
+
+Never simply stretch the phone UI.
+
+38. Stylus Support
+
+Especially useful on tablets.
+
+Support:
+
+Handwritten notes
+
+Diagram annotation
+
+Formula writing
+
+Homework correction
+
+Freehand sketches
+
+Stylus should feel native, not an afterthought.
+
+39. Mouse & Trackpad Behaviour
+
+Desktop enhancements:
+
+Hover previews
+
+Right-click context menus
+
+Multi-select
+
+Drag-and-drop (where useful)
+
+Resizable panels
+
+These enhance productivity without changing workflows.
+
+40. Haptic Feedback
+
+Use only for meaningful events.
+
+Examples:
+
+Lesson completed
+
+Revision mastered
+
+Question submitted
+
+Achievement unlocked
+
+Bookmark saved
+
+Avoid vibration for every tap.
+
+41. Animation Philosophy
+
+Animations communicate state.
+
+Examples:
+
+Expand
+
+Collapse
+
+Transition
+
+Completion
+
+Loading
+
+Never delay interaction for the sake of animation.
+
+Users should be able to interrupt most animations.
+
+42. Animation Performance
+
+If the device is low-end:
+
+Reduce particle effects.
+
+Reduce blur.
+
+Reduce shadows.
+
+Reduce simultaneous animations.
+
+Maintain functionality.
+
+43. Image Viewer
+
+Images should support:
+
+Pinch to zoom
+
+Double-tap zoom
+
+Pan while zoomed
+
+Reset zoom
+
+Fullscreen
+
+Works for:
+
+Diagrams
+
+Homework
+
+Graphs
+
+Biology images
+
+Physics setups
+
+Chemistry structures
+
+44. PDF Experience
+
+Students should be able to:
+
+Scroll smoothly
+
+Jump to pages
+
+Search text
+
+Bookmark pages
+
+Highlight (future)
+
+Open linked questions
+
+Return exactly where they left
+
+Never force downloads for simple viewing.
+
+45. Video Experience
+
+Educational videos should support:
+
+Variable speed
+
+Captions
+
+Resume playback
+
+Picture-in-picture (future)
+
+Timestamp notes
+
+Auto-save progress
+
+Minimal controls during playback.
+
+46. Question Interaction
+
+Answer selection should be immediate.
+
+Changing answers should be simple.
+
+Bookmarks should never interfere with answering.
+
+The timer should remain visible but not distracting.
+
+No accidental submissions.
+
+47. Mock Interaction Rules
+
+The mock experience must feel stable.
+
+Rules:
+
+No accidental exits.
+
+Confirmation before leaving.
+
+Large, readable timer.
+
+Easy question navigation.
+
+No pop-ups during the exam.
+
+No Tio.
+
+No recommendations.
+
+No distractions.
+
+It should feel like a real examination hall.
+
+48. Lesson Interaction Rules
+
+Lessons encourage exploration.
+
+Allow:
+
+Notes
+
+Bookmarks
+
+Tio
+
+Glossary
+
+Diagrams
+
+Related concepts
+
+Practice links
+
+Everything supports understanding.
+
+49. Accessibility Gestures
+
+Support:
+
+Large touch targets
+
+Reduced motion
+
+VoiceOver/TalkBack navigation
+
+External keyboards
+
+Switch control
+
+High-contrast mode
+
+Touch alternatives for gestures
+
+Accessibility is built into interactions—not layered on afterwards.
+
+50. Cross-Device Continuity
+
+Switching devices should feel invisible.
+
+Example:
+
+Student watches lesson on laptop.
+
+Stops at 18:42.
+
+Later opens phone.
+
+Lesson resumes at 18:42.
+
+Notes remain open.
+
+Bookmarks remain synced.
+
+Workspace restored.
+
+No setup required.
+
+51. Device Capability Detection
+
+Instead of hardcoding layouts, the platform should detect capabilities.
+
+Examples:
+
+Touch available?
+
+Stylus available?
+
+Keyboard attached?
+
+High refresh display?
+
+Reduced motion enabled?
+
+Offline?
+
+Use these capabilities to adapt behaviour intelligently.
+
+52. Mobile Performance Rules
+
+Prioritise:
+
+Smooth scrolling
+
+Fast page transitions
+
+Low memory usage
+
+Minimal re-rendering
+
+Lazy loading
+
+Efficient image decoding
+
+Battery-friendly behaviour
+
+Long study sessions should remain smooth.
+
+53. Interaction Quality Checklist
+
+Every interactive component should answer:
+
+Can it be used with one hand?
+
+Can it be used with accessibility tools?
+
+Can it be interrupted?
+
+Can it recover from mistakes?
+
+Does it behave consistently across devices?
+
+If not, redesign it.
+
+54. Completion Criteria
+
+The Mobile Interaction Layer is complete when:
+
+Every primary workflow is comfortable on phones.
+Tablet interactions leverage additional space without changing the learning flow.
+Desktop interactions improve productivity without introducing different behaviours.
+Gestures are optional enhancements, never mandatory.
+Animations communicate rather than decorate.
+Cross-device continuity is seamless.
+Accessibility is integrated into every interaction.MENTORIX MOBILE & CROSS-DEVICE EXPERIENCE ARCHITECTURE
+PART 3
+Adaptive Component System & Universal Design Standards
+55. Mission
+
+Components should never be built for one page.
+
+Every component is a platform component.
+
+One implementation.
+
+One behaviour.
+
+Used everywhere.
+
+56. Component Philosophy
+
+Every component should satisfy:
+
+Reusable
+
+↓
+
+Predictable
+
+↓
+
+Adaptive
+
+↓
+
+Accessible
+
+↓
+
+Fast
+
+↓
+
+Educational
+
+If a component doesn't satisfy all six,
+
+it shouldn't become part of the design system.
+
+57. Adaptive Component Engine
+
+Instead of manually creating
+
+Desktop Card
+
+Tablet Card
+
+Mobile Card
+
+Each component should adapt.
+
+Component
+
+↓
+
+Device Profile
+
+↓
+
+Workspace
+
+↓
+
+Available Space
+
+↓
+
+Interaction Type
+
+↓
+
+Adaptive Rules
+
+↓
+
+Rendered Component
+
+The component decides how to present itself.
+
+58. Lesson Cards
+
+Purpose
+
+Present learning opportunities.
+
+Must contain
+
+Course
+
+Progress
+
+Estimated time
+
+Difficulty
+
+Continue button
+
+Desktop
+
+Horizontal layout.
+
+Tablet
+
+Balanced layout.
+
+Phone
+
+Vertical layout.
+
+Never hide progress.
+
+59. Course Cards
+
+Desktop
+
+Show:
+
+Cover
+
+Progress
+
+Instructor/System
+
+Estimated duration
+
+Completion
+
+Topics
+
+Tablet
+
+Reduce metadata.
+
+Phone
+
+Only essential information.
+
+Students should never scroll horizontally.
+
+60. Chapter Cards
+
+Every chapter should expose
+
+Mastery
+
+↓
+
+Progress
+
+↓
+
+Revision status
+
+↓
+
+Practice status
+
+↓
+
+Estimated completion
+
+↓
+
+Prerequisites completed
+
+The presentation changes.
+
+The information does not.
+
+61. Question Cards
+
+Probably the most important component.
+
+Contains
+
+Question
+
+Images
+
+Options
+
+Bookmark
+
+Report
+
+Timer (if applicable)
+
+Difficulty (Practice only)
+
+Desktop
+
+Larger margins.
+
+Tablet
+
+Balanced spacing.
+
+Phone
+
+Maximum reading width.
+
+Never shrink text.
+
+62. Mock Question Card
+
+Special component.
+
+Never reuse Practice Card.
+
+Must include
+
+Question
+
+Palette
+
+Timer
+
+Navigation
+
+Nothing else.
+
+No hints.
+
+No Tio.
+
+No recommendations.
+
+No educational distractions.
+
+63. Practice Question Card
+
+Practice allows
+
+Hints
+
+Solution
+
+Bookmarks
+
+Difficulty
+
+Topic
+
+Explanation
+
+Related concepts
+
+Entirely different philosophy from mock.
+
+64. Revision Card
+
+Extremely minimal.
+
+Front
+
+Recall prompt.
+
+Back
+
+Repair.
+
+Reinforcement.
+
+Confidence.
+
+Nothing unnecessary.
+
+Focus stays on recall.
+
+65. Analytics Cards
+
+Desktop
+
+Rich graphs.
+
+Tablet
+
+Medium detail.
+
+Phone
+
+Summary first.
+
+Tap for detail.
+
+Never force students to interpret tiny graphs.
+
+66. Dashboard Cards
+
+Dashboard cards answer
+
+"What should I do next?"
+
+Not
+
+"What statistics do I have?"
+
+Action first.
+
+Analytics second.
+
+67. Notes Component
+
+Single notebook.
+
+Never multiple notebook implementations.
+
+Supports
+
+Rich text
+
+Math
+
+Images
+
+Links
+
+Attachments
+
+Handwriting (future)
+
+Works everywhere.
+
+68. Search Component
+
+One search.
+
+Different presentation.
+
+Desktop
+
+Persistent.
+
+Tablet
+
+Expandable.
+
+Phone
+
+Fullscreen.
+
+Same engine.
+
+69. Dialog System
+
+Dialogs only for
+
+Confirmation
+
+Critical actions
+
+Required choices
+
+Never use dialogs for ordinary information.
+
+70. Bottom Sheet System
+
+Phone-only primary utility component.
+
+Uses
+
+Filters
+
+Bookmarks
+
+Tio
+
+Quick actions
+
+Downloads
+
+Settings
+
+Consistent behaviour everywhere.
+
+71. Side Panel System
+
+Desktop
+
+Persistent optional panels.
+
+Examples
+
+Notes
+
+Bookmarks
+
+Tio
+
+Lesson Outline
+
+Analytics
+
+Resizable.
+
+Dockable.
+
+Hideable.
+
+72. Drawer System
+
+Tablet
+
+Temporary side workspace.
+
+Desktop
+
+Optional.
+
+Phone
+
+Avoid.
+
+Use bottom sheets instead.
+
+73. Tabs
+
+Tabs should never overflow excessively.
+
+Desktop
+
+Horizontal.
+
+Tablet
+
+Horizontal.
+
+Phone
+
+Scrollable or segmented.
+
+Keep the number of top-level tabs limited.
+
+74. Accordions
+
+Used only when progressive disclosure improves comprehension.
+
+Examples
+
+Worked solution
+
+Additional explanation
+
+Related concepts
+
+Avoid nesting accordions.
+
+75. Forms
+
+Forms should adapt.
+
+Desktop
+
+Multiple columns where appropriate.
+
+Tablet
+
+Mixed.
+
+Phone
+
+Single-column.
+
+Never make users zoom.
+
+76. Progress Indicators
+
+Every progress indicator should have educational meaning.
+
+Examples
+
+Course
+
+Lesson
+
+Revision
+
+Mock
+
+Practice
+
+Goals
+
+Avoid decorative progress bars.
+
+77. Notification Component
+
+Compact.
+
+Non-blocking.
+
+Actionable.
+
+Dismissible.
+
+Should never interrupt learning unless necessary.
+
+78. Empty States
+
+Every module needs a purposeful empty state.
+
+Learning
+
+Guide toward first course.
+
+Revision
+
+Explain why nothing is scheduled.
+
+Mocks
+
+Encourage first attempt.
+
+Projects
+
+Invite creation.
+
+Every empty state teaches the next step.
+
+79. Skeleton Loaders
+
+Every major component should have a matching skeleton.
+
+Lessons
+
+Cards
+
+Questions
+
+Analytics
+
+Dashboards
+
+Maintain layout stability while loading.
+
+80. Error Components
+
+Every module shares one error language.
+
+Display:
+
+Clear explanation
+
+↓
+
+Recovery option
+
+↓
+
+Retry
+
+↓
+
+Support (if needed)
+
+Never expose implementation details.
+
+81. Adaptive Grid System
+
+Instead of fixed columns,
+
+define behaviour.
+
+Large desktop
+
+Multiple workspaces.
+
+Desktop
+
+3–4 content columns where appropriate.
+
+Tablet
+
+2 columns.
+
+Phone
+
+1 column.
+
+The grid follows content priority, not arbitrary numbers.
+
+82. Universal Component Rules
+
+Every component should:
+
+Maintain consistent spacing.
+
+Support dark/light themes.
+
+Support accessibility.
+
+Support localisation.
+
+Support reduced motion.
+
+Handle loading.
+
+Handle errors.
+
+Handle offline state (where applicable).
+
+Support keyboard navigation when relevant.
+
+83. Educational Consistency
+
+No component should encourage distraction.
+
+Avoid:
+
+Infinite carousels.
+
+Autoplaying content.
+
+Excessive animations.
+
+Competing calls to action.
+
+The learning objective always remains central.
+
+84. Component Audit Checklist
+
+Before a new component enters Mentorix, ask:
+
+Does a similar component already exist?
+Can an existing component be extended instead?
+Is it adaptive across device classes?
+Does it preserve platform consistency?
+Does it meet accessibility requirements?
+Is it performant on lower-end devices?
+Does it support the educational goal of its workspace?
+
+If the answer to any is "no," redesign it before adding it to the design system.
+
+85. Completion Criteria
+
+The Adaptive Component System is complete when:
+
+Every major UI element has one canonical implementation.
+Components adapt intelligently instead of being duplicated.
+Mobile, tablet, and desktop preserve the same educational workflow.
+Every component handles loading, empty, error, and accessibility states.
+New features build from the existing system rather than inventing new UI patterns.Perfect. At this point we've finished the platform itself.
+
+Now we're designing something every student will interact with eventually but hopefully very rarely.
+
+That's the sign of a good settings system.
+
+Students should spend their time learning—not configuring Mentorix.
+
+This document defines the entire settings ecosystem.
+
+MENTORIX SETTINGS & PERSONALISATION ARCHITECTURE
+PART 1
+Settings Philosophy, Hierarchy & User Preference Engine
+1. Mission
+
+The Settings module should not become a dumping ground.
+
+Every setting should answer one question:
+
+Does changing this meaningfully improve the student's experience?
+
+If not,
+
+it doesn't belong.
+
+2. Core Philosophy
+
+Mentorix should prefer
+
+automatic personalisation
+
+over
+
+manual configuration.
+
+The platform should learn.
+
+Settings should only override.
+
+3. The Preference Hierarchy
+
+Not every preference is equal.
+
+Mentorix should classify preferences into six layers.
+
+Account Preferences
+
+↓
+
+Educational Preferences
+
+↓
+
+Experience Preferences
+
+↓
+
+Accessibility Preferences
+
+↓
+
+Device Preferences
+
+↓
+
+Experimental Features
+
+Each behaves differently.
+
+4. Account Preferences
+
+These belong to the student.
+
+They sync everywhere.
+
+Examples
+
+Display name
+
+Profile picture
+
+Language
+
+Time zone
+
+Country
+
+Academic level
+
+Board
+
+Primary goals
+
+These define the account.
+
+5. Educational Preferences
+
+These affect learning.
+
+Examples
+
+Preferred explanation depth
+
+Visual-first learning
+
+Text-first learning
+
+Formula-first learning
+
+Practice frequency
+
+Revision intensity
+
+Competitive exam target
+
+Preferred mock schedule
+
+Lesson playback defaults
+
+These should sync across devices.
+
+6. Experience Preferences
+
+These affect the interface.
+
+Examples
+
+Theme
+
+Animations
+
+Compact mode
+
+Reading width
+
+Dashboard style
+
+Notification style
+
+Home screen layout
+
+These usually sync.
+
+7. Accessibility Preferences
+
+Highest priority.
+
+Examples
+
+Font scaling
+
+Reduced motion
+
+High contrast
+
+Colour adjustments
+
+Captions
+
+Screen reader enhancements
+
+Touch target enlargement
+
+Accessibility overrides everything else.
+
+8. Device Preferences
+
+Local only.
+
+Examples
+
+Downloaded content
+
+Camera permissions
+
+Microphone permissions
+
+Storage limits
+
+Local cache
+
+Offline content
+
+Never sync these.
+
+9. Experimental Features
+
+Future sandbox.
+
+Students can enable
+
+Beta features
+
+Experimental AI
+
+Prototype tools
+
+Labs
+
+Never enable by default.
+
+10. Automatic Personalisation Engine
+
+This is extremely important.
+
+Instead of asking
+
+"What do you prefer?"
+
+Mentorix first observes.
+
+Example
+
+Student constantly watches diagrams.
+
+↓
+
+Increase diagrams.
+
+Student always skips long explanations.
+
+↓
+
+Shorten explanations.
+
+Student repeatedly opens formulas first.
+
+↓
+
+Prioritise formulas.
+
+Observation first.
+
+Settings second.
+
+11. Preference Resolution Engine
+
+Sometimes preferences conflict.
+
+Example
+
+User selects
+
+Detailed explanations.
+
+But platform observes
+
+Very short reading behaviour.
+
+Which wins?
+
+Rule:
+
+Explicit user choice always overrides automatic inference.
+
+The student remains in control.
+
+12. Educational Profile
+
+Every learner gradually develops an educational profile.
+
+Not personality.
+
+Learning.
+
+Examples
+
+Average study duration
+
+Preferred session length
+
+Visual preference
+
+Analytical preference
+
+Problem-solving preference
+
+Revision behaviour
+
+Confidence trend
+
+Weak subject trend
+
+This profile powers personalisation.
+
+13. Preference Synchronisation
+
+Some settings sync.
+
+Some don't.
+
+Category	Sync
+Language	✅
+Theme	✅
+Learning Preferences	✅
+Goals	✅
+Revision Preferences	✅
+Downloads	❌
+Local Cache	❌
+Camera Permission	❌
+Storage Usage	❌
+
+Clear boundaries.
+
+14. First-Time Setup
+
+Onboarding should ask only what cannot be inferred.
+
+Examples
+
+Grade
+
+Board
+
+Target exam
+
+Language
+
+Primary goal
+
+Everything else can be learned over time.
+
+Avoid overwhelming questionnaires.
+
+15. Settings Search
+
+As settings grow,
+
+search becomes essential.
+
+Students should be able to type
+
+"dark"
+
+↓
+
+Dark Mode
+
+"revision"
+
+↓
+
+Revision Settings
+
+"notifications"
+
+↓
+
+Notification Settings
+
+One search.
+
+Entire settings.
+
+16. Settings Organisation
+
+Avoid long scrolling pages.
+
+Group logically.
+
+Example
+
+Account
+
+Learning
+
+Competitive Exams
+
+Revision
+
+Experience
+
+Accessibility
+
+Downloads
+
+Notifications
+
+Privacy
+
+AI (Tio)
+
+About
+
+No miscellaneous section.
+
+Everything has a home.
+
+17. Undo Philosophy
+
+Whenever possible,
+
+changing settings should be reversible immediately.
+
+Avoid hidden save buttons.
+
+Changes should preview instantly where safe.
+
+18. Defaults Matter
+
+Most students should never touch 80–90% of settings.
+
+Defaults should be excellent.
+
+Settings exist for edge cases and personal preferences.
+
+19. Completion Criteria
+
+The Settings Foundation is complete when:
+
+Preferences are clearly categorised.
+Automatic personalisation is the default.
+Explicit user choices always take precedence.
+Sync behaviour is well-defined.
+Students can find settings easily.
+Defaults provide an excellent experience without configuration.MENTORIX SETTINGS & PERSONALISATION ARCHITECTURE
+PART 2
+Educational Personalisation Engine
+20. Mission
+
+Personalisation exists to improve learning.
+
+Not to make the platform look different.
+
+The student should eventually feel
+
+"Mentorix understands how I learn."
+
+without remembering configuring anything.
+
+21. Personalisation Layers
+
+Personalisation operates in five independent layers.
+
+Educational
+
+↓
+
+Behavioural
+
+↓
+
+Visual
+
+↓
+
+Platform
+
+↓
+
+AI
+
+Each layer learns independently.
+
+22. Educational Personalisation
+
+This affects actual learning.
+
+Examples
+
+Explanation depth
+
+↓
+
+Practice frequency
+
+↓
+
+Revision scheduling
+
+↓
+
+Example difficulty
+
+↓
+
+Concept sequencing
+
+↓
+
+Assessment frequency
+
+↓
+
+Simulation recommendations
+
+This is the most valuable layer.
+
+23. Behavioural Personalisation
+
+This is built entirely from observation.
+
+Examples
+
+Typical study duration
+
+↓
+
+Preferred study hours
+
+↓
+
+Break frequency
+
+↓
+
+Reading speed
+
+↓
+
+Video completion rate
+
+↓
+
+Practice habits
+
+↓
+
+Revision consistency
+
+No questionnaires required.
+
+24. Visual Personalisation
+
+The platform gradually adapts presentation.
+
+Examples
+
+Larger diagrams
+
+↓
+
+Smaller cards
+
+↓
+
+Reading width
+
+↓
+
+Dense dashboards
+
+↓
+
+Compact tables
+
+↓
+
+Preferred analytics view
+
+Students can override everything.
+
+25. Platform Personalisation
+
+Platform navigation can adapt gently.
+
+Examples
+
+Frequently used modules move higher.
+
+Recent courses surface first.
+
+Frequently used tools become quicker to access.
+
+Never rearrange everything automatically.
+
+Predictability remains more important than cleverness.
+
+26. AI Personalisation
+
+Tio gradually learns:
+
+Preferred explanation style.
+
+↓
+
+Preferred analogy style.
+
+↓
+
+Level of detail.
+
+↓
+
+Encouragement style.
+
+↓
+
+Preferred questioning frequency.
+
+↓
+
+Preferred pacing.
+
+This affects conversation only.
+
+Never educational correctness.
+
+27. Learning Preferences
+
+Students may configure:
+
+Default lesson pace
+
+Explanation depth
+
+Preferred learning order
+
+Examples before theory
+
+Theory before examples
+
+Formula-first
+
+Concept-first
+
+Diagram preference
+
+Simulation preference
+
+Language
+
+Playback speed
+
+Everything else should be inferred.
+
+28. Competitive Exam Preferences
+
+Students can choose:
+
+Target examination
+
+Preferred difficulty
+
+Practice duration
+
+Subject priorities
+
+Daily targets
+
+Weekly targets
+
+Mock reminder preferences
+
+Timer visibility
+
+Calculator preferences (where appropriate)
+
+Never change official mock behaviour.
+
+29. Revision Preferences
+
+Students may customise:
+
+Revision duration
+
+Daily limit
+
+Revision intensity
+
+Flashcard preference
+
+Recall style
+
+Reminder timing
+
+Weak-topic priority
+
+Revision notification frequency
+
+The scheduling algorithm remains evidence-driven.
+
+30. Dashboard Personalisation
+
+Dashboard should answer
+
+"What should I do today?"
+
+Students may pin:
+
+Courses
+
+Mocks
+
+Goals
+
+Projects
+
+Revision
+
+Recent notes
+
+Everything else remains dynamic.
+
+31. Notification Preferences
+
+Students control:
+
+Revision reminders
+
+Goal reminders
+
+Homework reminders
+
+Mock reminders
+
+Achievement notifications
+
+Platform announcements
+
+System notifications
+
+Educational reminders always take priority over promotional messaging.
+
+32. Goal Preferences
+
+Students define:
+
+Primary exam
+
+Target score
+
+Daily study goal
+
+Weekly study goal
+
+Monthly milestone
+
+Long-term career objective
+
+Goals influence recommendations across Mentorix.
+
+33. Study Routine Engine
+
+Students may specify:
+
+Preferred study window
+
+Preferred session duration
+
+Preferred break interval
+
+Preferred rest day
+
+If not specified,
+
+Mentorix learns these automatically.
+
+34. Accessibility Personalisation
+
+Every accessibility option can be enabled independently.
+
+Examples
+
+Large fonts
+
+↓
+
+Reduced animations
+
+↓
+
+Colour adjustments
+
+↓
+
+Captions
+
+↓
+
+Keyboard-first mode
+
+↓
+
+Touch enhancement
+
+↓
+
+Reading support
+
+Accessibility never conflicts with educational content.
+
+35. Tio Preferences
+
+Students may choose:
+
+Conversation length
+
+Explanation depth
+
+Teaching style
+
+Encouragement frequency
+
+Voice (future)
+
+Response language
+
+Response speed preference (future)
+
+Everything else remains automatic.
+
+36. Privacy Controls
+
+Students should control:
+
+Learning analytics sharing
+
+Diagnostic sharing
+
+Crash reports
+
+Anonymous improvement data
+
+Export data
+
+Delete data
+
+Conversation history retention
+
+Educational memory reset
+
+Transparency builds trust.
+
+37. Download & Storage Preferences
+
+Students configure:
+
+Download quality
+
+Offline storage limit
+
+Automatic download
+
+Wi-Fi only downloads
+
+Cache size
+
+Automatic cleanup
+
+These remain device-specific.
+
+38. Adaptive Recommendation Engine
+
+Recommendations combine:
+
+Goals
+
+↓
+
+Weaknesses
+
+↓
+
+Upcoming exams
+
+↓
+
+Recent activity
+
+↓
+
+Revision priority
+
+↓
+
+Consistency
+
+↓
+
+Available time
+
+Never based on one signal alone.
+
+39. Preference Learning Rules
+
+The system may update inferred preferences only when evidence is consistent.
+
+Example
+
+Watching one diagram twice
+
+↓
+
+Not enough evidence.
+
+Watching diagrams for several weeks
+
+↓
+
+Update preference.
+
+Avoid reacting to isolated behaviour.
+
+40. Preference Conflict Resolution
+
+Example
+
+Student explicitly disables animations.
+
+New theme enables animations.
+
+Result:
+
+Animations remain disabled.
+
+Explicit preferences always override theme defaults.
+
+41. Preference Export
+
+Students should eventually be able to export:
+
+Learning preferences
+
+Goals
+
+Achievements
+
+Notes
+
+Bookmarks
+
+Study history
+
+Not vendor-locked.
+
+42. Reset Strategy
+
+Support multiple reset levels.
+
+Reset appearance.
+
+Reset learning preferences.
+
+Reset recommendations.
+
+Reset Tio memory (educational memory separately controlled).
+
+Reset all settings.
+
+Granular resets are safer than one destructive option.
+
+43. Personalisation Audit
+
+Every automatic adjustment should answer:
+
+Is there enough evidence?
+
+Does it improve learning?
+
+Can the student override it?
+
+Is it reversible?
+
+If any answer is "no," do not apply it.
+
+44. Completion Criteria
+
+The Educational Personalisation Engine is complete when:
+
+Personalisation is driven by evidence rather than assumptions.
+Students remain in control through explicit preferences.
+Educational behaviour adapts gradually over time.
+Visual, behavioural, and AI preferences remain independent.
+Privacy and accessibility are treated as first-class features.
+Recommendations align with goals, evidence, and long-term progress.Core Principle
+
+The best personalisation is the kind the student barely notices.
+
+Mentorix should not constantly announce that it is adapting. Instead, lessons gradually become easier to follow, revision becomes more effective, recommendations become more relevant, and Tio becomes a better mentor—all because the platform quietly learns from meaningful educational evidence.
+
+The goal is not to create an app that feels customised.
+
+The goal is to create an educational experience that feels naturally suited to each learner without sacrificing consistency, transparency, or student control.MENTORIX SETTINGS & PERSONALISATION ARCHITECTURE
+PART 3
+Progressive Settings System, Advanced Configuration & Personalisation Philosophy
+45. Mission
+
+Settings should scale with the user.
+
+A student preparing for board exams should not see the same settings as someone trying to optimise every aspect of their workflow.
+
+The platform grows with the learner.
+
+46. Three Configuration Modes
+
+Instead of exposing everything immediately:
+
+Simple Mode
+
+↓
+
+Standard Mode
+
+↓
+
+Advanced Mode
+
+This changes the settings interface only.
+
+Not functionality.
+
+47. Simple Mode
+
+Default.
+
+Visible immediately after signup.
+
+Only the settings that almost everyone needs.
+
+Example
+
+Appearance
+
+Language
+
+Notifications
+
+Learning Goal
+
+Downloads
+
+Accessibility
+
+Help
+
+About
+
+Nothing technical.
+
+Nothing overwhelming.
+
+48. Standard Mode
+
+Unlocks more educational controls.
+
+Learning
+
+Competitive Exams
+
+Revision
+
+Dashboard
+
+Tio
+
+Notes
+
+Privacy
+
+Notifications
+
+Downloads
+
+Appearance
+
+Accessibility
+
+This is where most users will stay.
+
+49. Advanced Mode
+
+Power-user mode.
+
+Hidden intentionally.
+
+Contains
+
+Performance
+
+Developer Diagnostics (future)
+
+Experimental Features
+
+Advanced AI Controls
+
+Sync Diagnostics
+
+Storage Inspector
+
+Import
+
+Export
+
+Advanced Learning Controls
+
+API integrations (future)
+
+Research features
+
+Very few users need this.
+
+That's okay.
+
+50. Progressive Disclosure
+
+Never show every setting.
+
+Example
+
+Learning
+
+↓
+
+General
+
+↓
+
+Advanced
+
+↓
+
+Developer
+
+Each level reveals only when needed.
+
+51. Educational Settings
+
+Instead of
+
+Learning
+
+
+Structure it like
+
+Learning
+
+Learning Style
+
+Lesson Experience
+
+Practice
+
+Revision
+
+Assessments
+
+Progress
+
+
+Students understand categories faster.
+
+52. Competitive Exam Settings
+Competitive Exams
+
+Target Exams
+
+Practice
+
+Mocks
+
+Performance
+
+Question Behaviour
+
+Timing
+
+Reports
+
+Notice
+
+Not technical.
+
+Educational.
+
+53. Revision Settings
+Revision
+
+Schedule
+
+Recall
+
+Notifications
+
+Daily Limits
+
+Recovery
+
+Flashcards
+
+Evidence
+
+Again
+
+Behaviour-based.
+
+54. Tio Settings
+
+Don't overwhelm.
+
+Instead
+
+Tio
+
+Conversation
+
+Teaching Style
+
+Explanation Depth
+
+Languages
+
+Memory
+
+Privacy
+
+Experimental
+
+Students shouldn't see prompt engineering controls.
+
+55. Appearance Settings
+Appearance
+
+Theme
+
+Font Size
+
+Reading Width
+
+Motion
+
+Colour
+
+Layout Density
+
+Icons
+
+
+Simple.
+
+56. Accessibility
+
+Accessibility deserves its own section.
+
+Never hide it.
+
+Accessibility
+
+Reading
+
+Vision
+
+Motor
+
+Audio
+
+Motion
+
+Captions
+
+Navigation
+
+57. Dashboard Personalisation
+
+Instead of hundreds of toggles
+
+Allow students to
+
+Pin
+
+Remove
+
+Reorder
+
+Resize (desktop)
+
+Collapse
+
+Everything else should adapt automatically.
+
+58. Notification Philosophy
+
+Instead of
+
+20 notification toggles
+
+Organise by
+
+Learning
+
+Revision
+
+Competitive
+
+Goals
+
+Achievements
+
+Platform
+
+Security
+
+Then inside each
+
+Silent
+
+Important
+
+Off
+
+Three levels.
+
+Far cleaner.
+
+59. Search Everywhere
+
+One search.
+
+Example
+
+Student types
+
+"timer"
+
+Find
+
+Practice Timer
+
+Mock Timer
+
+Reminder Timer
+
+Focus Timer
+
+Accessibility Timer
+
+Search replaces browsing.
+
+60. Smart Recommendations
+
+One thing Duolingo does brilliantly:
+
+It recommends settings.
+
+Mentorix should too.
+
+Example
+
+After weeks of usage
+
+"We've noticed you usually study for about 45 minutes. Would you like to set your default session length to 45 minutes?"
+
+Not automatic.
+
+Suggested.
+
+Student decides.
+
+61. Contextual Settings
+
+Don't force students into Settings.
+
+Example
+
+Inside Learning
+
+Student repeatedly changes playback speed.
+
+Suggestion:
+
+"Make 1.25× your default?"
+
+Inside Revision
+
+Student always uses Concept Recall.
+
+Suggest
+
+"Use Concept Recall by default?"
+
+Context beats menus.
+
+62. Smart Defaults
+
+Instead of
+
+Everything OFF
+
+Everything ON
+
+Defaults should come from
+
+Grade
+
+↓
+
+Board
+
+↓
+
+Device
+
+↓
+
+Country
+
+↓
+
+Goals
+
+↓
+
+Accessibility
+
+↓
+
+Observed Behaviour
+
+Good defaults reduce configuration dramatically.
+
+63. Platform Health
+
+Hidden Advanced page.
+
+Shows
+
+Sync
+
+Storage
+
+Downloads
+
+AI
+
+Performance
+
+Background Tasks
+
+Version
+
+Diagnostics
+
+Useful for debugging.
+
+Not for everyday students.
+
+64. Experimental Features
+
+Separate.
+
+Clearly labelled.
+
+Labs
+
+Voice Tutor
+
+Experimental AI
+
+Future Simulations
+
+Prototype Features
+
+
+Never mix stable and experimental settings.
+
+65. Import / Export
+
+Eventually support exporting
+
+Settings
+
+Goals
+
+Learning Preferences
+
+Study Plans
+
+Notes
+
+Bookmarks
+
+This also simplifies migration to new devices.
+
+66. Preference Inheritance
+
+One trick many products miss.
+
+Example
+
+Theme
+
+↓
+
+Automatically affects
+
+Charts
+
+PDF Viewer
+
+Code Blocks
+
+Tio
+
+Notes
+
+Diagrams
+
+One preference.
+
+Whole platform updates.
+
+No duplicate settings.
+
+67. "Recommended" Instead of "Default"
+
+Tiny UX trick.
+
+Instead of
+
+Default
+
+say
+
+Recommended
+
+Students trust recommendations more than arbitrary defaults.
+
+68. Explain Before Configuring
+
+Another trick.
+
+If a setting is advanced,
+
+add a one-line explanation.
+
+Example
+
+Adaptive Revision
+
+Mentorix automatically adjusts revision frequency based on your performance.
+
+No documentation required.
+
+69. Never Use Technical Language
+
+Never write
+
+Cache
+
+GPU
+
+Memory Optimisation
+
+Adaptive Rendering
+
+Background Sync Queue
+
+Instead
+
+Downloaded Content
+
+Smooth Animations
+
+Offline Learning
+
+Automatic Sync
+
+
+Only Advanced Mode may expose technical terminology.
+
+70. "Reset This Section"
+
+Never only provide
+
+Reset Everything.
+
+Allow
+
+Reset Learning
+
+Reset Revision
+
+Reset Appearance
+
+Reset Tio
+
+Reset Notifications
+
+Far safer.
+
+71. Hidden Intelligence (One of the biggest UX wins)
+
+This is something I'd strongly recommend and we haven't discussed before.
+
+Instead of asking students to configure everything, create a Platform Intelligence Layer that continuously improves defaults.
+
+Examples:
+
+Student always increases text size → recommend larger default.
+Student consistently dismisses achievement pop-ups immediately → quietly reduce celebratory animations.
+Student always opens Notes beside lessons on desktop → automatically reopen Notes next time.
+Student never uses bookmarks but frequently revisits the same lessons → suggest bookmarks as a feature instead of enabling anything automatically.
+Student always studies between 7–9 PM → schedule revision reminders in that window instead of at random times.
+
+The platform should adapt through suggestions, not silent behaviour changes.
+
+That preserves trust while reducing friction.
+
+72. Completion Criteria
+
+The Settings & Personalisation System is complete when:
+
+New users see only essential settings.
+Power users can access advanced configuration without cluttering the experience for everyone else.
+Settings are grouped by educational purpose, not implementation details.
+Search makes every setting discoverable.
+The platform prefers intelligent suggestions over endless manual toggles.
+Explicit user choices always override inferred behaviour.
+Every advanced setting includes a clear explanation.
+Final Principle
+
+The best settings page is the one students almost never need to open.
+
+Mentorix should learn from behaviour, recommend improvements at the right moment, and expose complexity only to users who genuinely want it. Most learners should be able to install the app, complete onboarding, and have an excellent experience with little to no manual configuration—while advanced users still have the depth to fine-tune the platform when they choose.MENTORIX ENGINEERING & LAUNCH QUALITY STANDARDS
+PART 1
+Platform Engineering Constitution
+1. Mission
+
+Every line of code added to Mentorix should make the platform:
+
+More reliable
+More maintainable
+More educational
+More consistent
+More scalable
+
+Never just "more feature-rich."
+
+2. The Core Rule
+
+Every new feature must answer:
+
+Does this improve learning?
+
+If the answer isn't clearly yes,
+
+don't build it.
+
+3. The Five Evaluation Pillars
+
+Every feature is evaluated against:
+
+Educational Value
+
+↓
+
+Engineering Quality
+
+↓
+
+Performance
+
+↓
+
+Consistency
+
+↓
+
+Maintainability
+
+Fail one pillar → redesign.
+
+4. Deterministic First
+
+One of the most important engineering rules.
+
+Never call AI if deterministic logic can solve it.
+
+Priority order:
+
+Static Logic
+
+↓
+
+Business Rules
+
+↓
+
+Stored Data
+
+↓
+
+Retrieval
+
+↓
+
+AI
+
+AI is the last resort.
+
+This reduces:
+
+latency
+hallucinations
+cost
+inconsistency
+5. Single Source of Truth
+
+Every important piece of data has one owner.
+
+Examples:
+
+Progress
+
+→ Progress Engine
+
+Revision Evidence
+
+→ Revision Engine
+
+Question Metadata
+
+→ Question Repository
+
+Learning Structure
+
+→ Course Engine
+
+No duplicate ownership.
+
+6. One Responsibility Per Module
+
+Every module should do one job.
+
+Good:
+
+QuestionRepository
+
+QuestionClassifier
+
+MockGenerator
+
+RevisionScheduler
+
+Bad:
+
+QuestionManager
+
+
+that loads questions, edits them, scores them, syncs them, caches them, and talks to AI.
+
+Keep responsibilities narrow.
+
+7. AI Isolation
+
+Never scatter AI calls throughout the codebase.
+
+Instead:
+
+Feature
+
+↓
+
+AI Gateway
+
+↓
+
+Prompt Builder
+
+↓
+
+Context Builder
+
+↓
+
+Model
+
+↓
+
+Response Validator
+
+↓
+
+Feature
+
+This keeps AI replaceable and testable.
+
+8. Feature Independence
+
+Learning should not break because Mock Exams changed.
+
+Revision should not break because Tio changed.
+
+Every subsystem should be independently deployable and testable.
+
+9. No Circular Dependencies
+
+Direction should always flow one way.
+
+Example:
+
+Question Bank
+
+↓
+
+Practice
+
+↓
+
+Revision
+
+↓
+
+Analytics
+
+Never:
+
+Analytics → Question Bank → Revision → Analytics
+
+Circular dependencies become maintenance nightmares.
+
+10. Explicit State Management
+
+Never rely on hidden state.
+
+Every important screen should clearly know:
+
+what it owns
+what it receives
+what it updates
+what it observes
+11. Predictable Error Handling
+
+Every error should fall into one of four categories:
+
+User Error
+
+↓
+
+Network Error
+
+↓
+
+Platform Error
+
+↓
+
+Unexpected Error
+
+Each has a defined recovery path.
+
+12. Logging Philosophy
+
+Log events for engineers.
+
+Not for curiosity.
+
+Examples:
+
+Course generation failed.
+
+Question import failed.
+
+Sync conflict detected.
+
+AI timeout.
+
+Database unavailable.
+
+Avoid logging every button click.
+
+13. Observability
+
+Every critical workflow should expose:
+
+Started
+
+↓
+
+Running
+
+↓
+
+Completed
+
+↓
+
+Failed
+
+↓
+
+Recovered
+
+This makes debugging dramatically easier.
+
+14. Feature Flags
+
+Every large feature should be launchable independently.
+
+Example:
+
+Voice Tutor
+
+OFF
+
+Homework OCR
+
+OFF
+
+Collaborative Learning
+
+OFF
+
+Launch readiness shouldn't depend on unfinished features.
+
+15. Performance Budget
+
+Every feature consumes:
+
+CPU
+
+Memory
+
+Battery
+
+Network
+
+AI Tokens
+
+Engineering Complexity
+
+Educational value must justify the cost.
+
+16. Component Reuse
+
+Before creating a new component, ask:
+
+Can an existing component be extended?
+
+If yes,
+
+extend it.
+
+Avoid duplicate UI implementations.
+
+17. API Philosophy
+
+Even internal APIs should be:
+
+Predictable
+
+Versioned
+
+Validated
+
+Documented
+
+Consistent
+
+Never create "special case" endpoints unless absolutely necessary.
+
+18. Security by Default
+
+Every new feature starts from:
+
+Least privilege
+
+Input validation
+
+Output sanitisation
+
+Permission checks
+
+Secure defaults
+
+Security is not an afterthought.
+
+19. Accessibility by Default
+
+Every feature must support:
+
+Keyboard navigation
+
+Screen readers
+
+Reduced motion
+
+Scalable text
+
+Accessible colours
+
+Touch accessibility
+
+Do not retrofit accessibility later.
+
+20. Completion Criteria
+
+The Engineering Constitution is complete when every engineer working on Mentorix can evaluate a feature against the same principles before writing code.
+
+What Comes Next
+
+Now we enter what I consider the most important engineering document before databases:
+
+Data & State Architecture
+
+Not tables.
+
+Not SQL.
+
+Not Supabase.
+
+Instead, we'll answer:
+
+What is the source of truth for every type of information?
+What should live only in memory?
+What should be cached?
+What should be stored permanently?
+What should sync instantly?
+What can sync later?
+What should never sync?
+How should data move through Mentorix from the moment a student taps a button until it's safely stored?
+
+Once that is defined, designing the Supabase schema becomes almost mechanical instead of guesswork.MENTORIX DATA & STATE ARCHITECTURE
+PART 1
+Platform Data Flow, State Ownership & Source of Truth
+1. Mission
+
+Every piece of information inside Mentorix must answer:
+
+Where did it originate?
+Who owns it?
+Who can modify it?
+Where is it stored?
+Who can read it?
+When is it synchronised?
+When can it be deleted?
+
+No data should exist without a defined lifecycle.
+
+2. Data Philosophy
+
+Treat data as a product.
+
+Not as variables.
+
+Every data object has a complete lifecycle.
+
+Created
+
+↓
+
+Validated
+
+↓
+
+Used
+
+↓
+
+Updated
+
+↓
+
+Archived
+
+↓
+
+Deleted (if applicable)
+3. Data Domains
+
+Before databases, classify information.
+
+The platform contains independent domains.
+
+Identity
+
+Education
+
+Competitive Exams
+
+Revision
+
+AI
+
+Content
+
+Projects
+
+Analytics
+
+Settings
+
+System
+
+Each domain owns its own data.
+
+4. Domain Ownership
+
+Never let two systems own the same information.
+
+Example
+
+User progress
+
+Owner
+
+Progress Engine
+
+Readers
+
+Dashboard
+
+Revision
+
+Analytics
+
+Courses
+
+Tio
+
+Only Progress Engine writes.
+
+Everyone else reads.
+
+5. Types of Data
+
+Mentorix has five categories.
+
+Permanent
+
+Should never disappear.
+
+Examples
+
+Account
+
+Achievements
+
+Completed courses
+
+Goals
+
+Long-term
+
+Changes over time.
+
+Examples
+
+Progress
+
+Mastery
+
+Revision evidence
+
+Preferences
+
+Session
+
+Lives only during activity.
+
+Examples
+
+Current lesson
+
+Current mock
+
+Current question
+
+Temporary timer
+
+Temporary
+
+Minutes.
+
+Examples
+
+Search results
+
+Filters
+
+Suggestions
+
+Cached previews
+
+Generated
+
+Can always be regenerated.
+
+Examples
+
+Recommendations
+
+Dashboard ordering
+
+Daily suggestions
+
+Recent statistics
+
+Don't permanently store what can be rebuilt cheaply.
+
+6. Single Source of Truth
+
+Every important object has one owner.
+
+Data	Owner
+User Profile	Identity Domain
+Learning Progress	Progress Engine
+Question Metadata	Question Repository
+Course Structure	Course Engine
+Mock Results	Mock Engine
+Revision Evidence	Revision Engine
+Settings	Settings Domain
+Tio Conversations	AI Domain
+
+No duplicate authority.
+
+7. Read vs Write
+
+Every domain exposes two responsibilities.
+
+Write
+
+Controlled.
+
+Read
+
+Open where appropriate.
+
+Example
+
+Question Repository
+
+Can update questions.
+
+Practice
+
+Cannot modify questions.
+
+Can only read.
+
+8. State Levels
+
+Not every piece of information belongs in the same place.
+
+Four levels.
+
+UI State
+
+↓
+
+Session State
+
+↓
+
+Application State
+
+↓
+
+Persistent State
+UI State
+
+Very short-lived.
+
+Examples
+
+Dropdown open
+
+Selected tab
+
+Expanded accordion
+
+Never save.
+
+Session State
+
+Current activity.
+
+Examples
+
+Current lesson
+
+Current revision session
+
+Current mock timer
+
+Restore only if needed.
+
+Application State
+
+Shared across modules.
+
+Examples
+
+Logged-in user
+
+Current course
+
+Current chapter
+
+Current subject
+
+Active exam
+
+Available everywhere.
+
+Persistent State
+
+Everything valuable.
+
+Examples
+
+Progress
+
+Achievements
+
+History
+
+Preferences
+
+Courses
+
+Results
+
+Eventually stored in the database.
+
+9. Data Flow
+
+Every action follows one direction.
+
+User
+
+↓
+
+Feature
+
+↓
+
+Validation
+
+↓
+
+Business Logic
+
+↓
+
+State Update
+
+↓
+
+Storage
+
+↓
+
+UI Update
+
+Never
+
+UI directly modifies storage.
+
+10. Validation Layer
+
+Every write operation passes validation.
+
+Never trust:
+
+Forms
+
+AI
+
+Imports
+
+PDF parser
+
+APIs
+
+Everything validates before becoming official data.
+
+11. Derived Data
+
+Some information should never be stored.
+
+Examples
+
+Completion percentage
+
+Current streak
+
+Weakest chapter
+
+Overall mastery
+
+These should be calculated from real evidence whenever practical.
+
+This avoids inconsistent data.
+
+12. Immutable Records
+
+Some records should never change.
+
+Examples
+
+Completed mock submission
+
+Original exam answers
+
+Question IDs
+
+Historical analytics snapshots
+
+Instead of editing,
+
+append newer records.
+
+History matters.
+
+13. Versioning
+
+Content evolves.
+
+Lessons
+
+Questions
+
+Mocks
+
+Courses
+
+Need versions.
+
+Student progress always points to the version they actually studied.
+
+14. Event-Based Thinking
+
+Instead of asking
+
+"What is the current value?"
+
+Also ask
+
+"What happened?"
+
+Example
+
+Student answered Question 201.
+
+↓
+
+Correct.
+
+↓
+
+18 seconds.
+
+↓
+
+Confidence: High.
+
+↓
+
+No hint.
+
+That event becomes valuable for revision, analytics and Tio.
+
+Events are richer than simple state.
+
+15. State Recovery
+
+If the app closes unexpectedly:
+
+Recover:
+
+Lesson position
+
+Current note draft
+
+Revision session
+
+Practice session
+
+Mock only if allowed by exam rules.
+
+The student should lose as little work as possible.
+
+16. Conflict Rules
+
+Example
+
+Phone changes goal.
+
+Laptop changes theme.
+
+No conflict.
+
+Example
+
+Phone edits note.
+
+Laptop edits same note simultaneously.
+
+Conflict resolution policy must exist.
+
+Don't silently overwrite.
+
+17. Offline Philosophy
+
+Even before we design offline support:
+
+Define what could work offline.
+
+Examples
+
+Downloaded lessons
+
+Downloaded PDFs
+
+Downloaded mocks
+
+Existing notes
+
+Bookmarks
+
+Previously synced progress (queued for upload later)
+
+Online-only features remain clearly identified.
+
+18. Data Lifecycle Audit
+
+Every new data model must document:
+
+Owner
+
+Created by
+
+Modified by
+
+Read by
+
+Stored where
+
+Retention period
+
+Deletion policy
+
+Privacy level
+
+No undocumented data.
+
+19. Data Architecture Checklist
+
+Before introducing new data:
+
+Is there already an owner?
+Is it permanent or derived?
+Does it belong to an existing domain?
+Does it require versioning?
+Does it need offline support?
+Does it need history?
+Does it need synchronisation?
+Does it contain personal information?
+
+Only after these questions are answered should implementation begin.
+
+20. Completion Criteria
+
+The Data & State Foundation is complete when:
+
+Every category of information has a clear owner.
+State is separated by lifetime (UI, session, application, persistent).
+Data flows in one direction.
+Validation precedes storage.
+Derived information is calculated rather than duplicated.
+Event history is preserved where educationally valuable.MENTORIX DOMAIN MODEL & BUSINESS ENTITIES
+PART 2
+Core Entity Architecture
+21. Mission
+
+Every object inside Mentorix should represent a real educational concept.
+
+Not a database table.
+
+Not a JSON object.
+
+A real-world entity.
+
+If you cannot explain what it represents to a teacher or student,
+
+it probably shouldn't exist.
+
+22. Domain Hierarchy
+
+Everything belongs to one parent domain.
+
+Identity
+│
+├── User
+├── Device
+├── Session
+└── Preferences
+
+Education
+│
+├── Subject
+├── Course
+├── Chapter
+├── Topic
+├── Lesson
+├── Knowledge Unit
+└── Learning Path
+
+Practice
+│
+├── Practice Session
+├── Question
+├── Attempt
+├── Hint
+└── Solution
+
+Competitive Exams
+│
+├── Exam
+├── Mock
+├── PYQ
+├── Test Session
+└── Ranking
+
+Revision
+│
+├── Revision Queue
+├── Revision Session
+├── Recall Attempt
+├── Evidence
+└── Mastery
+
+AI
+│
+├── Tio Conversation
+├── Context
+├── Memory
+├── Recommendation
+└── Feedback
+
+Notice how every object has a clear home.
+
+23. User Entity
+
+The User is not just an account.
+
+It represents the learner.
+
+It owns:
+
+Academic identity
+
+Learning history
+
+Goals
+
+Progress
+
+Achievements
+
+Preferences
+
+Revision history
+
+Competitive exam history
+
+Projects
+
+Tio relationship
+
+Everything else references the User.
+
+Nothing duplicates it.
+
+24. Subject Entity
+
+A Subject is the highest educational container.
+
+Examples
+
+Physics
+
+Chemistry
+
+Biology
+
+Mathematics
+
+History
+
+Programming
+
+Economics
+
+A Subject knows nothing about students.
+
+It only defines educational content.
+
+25. Course Entity
+
+A Course belongs to one Subject.
+
+A Course contains:
+
+Metadata
+
+Difficulty
+
+Objectives
+
+Prerequisites
+
+Estimated duration
+
+Chapter order
+
+Version
+
+Course content should remain immutable for a given version.
+
+26. Chapter Entity
+
+A Chapter represents one major learning milestone.
+
+It owns:
+
+Topics
+
+Learning objectives
+
+Practice groups
+
+Revision units
+
+Assessments
+
+Estimated effort
+
+It should never contain raw progress.
+
+Progress belongs to the learner.
+
+27. Topic Entity
+
+Topics divide chapters.
+
+Example
+
+Physics
+
+↓
+
+Mechanics
+
+↓
+
+Newton's Laws
+
+↓
+
+Free Body Diagrams
+
+↓
+
+Applications
+
+Every topic should remain small enough to complete in one focused study session.
+
+28. Lesson Entity
+
+Lessons deliver learning.
+
+A Lesson may contain:
+
+Text
+
+Images
+
+Videos
+
+Animations
+
+Simulations
+
+Examples
+
+Activities
+
+Mini quizzes
+
+Notes
+
+References
+
+Lessons are instructional.
+
+They are not assessments.
+
+29. Knowledge Unit (One of the most important entities)
+
+This is something I strongly recommend adding.
+
+A Lesson is made of many Knowledge Units.
+
+Examples
+
+Definition
+
+Formula
+
+Law
+
+Concept
+
+Diagram
+
+Process
+
+Exception
+
+Common Mistake
+
+Real-world Application
+
+Each Knowledge Unit becomes independently trackable.
+
+Meaning:
+
+The student doesn't "know Newton's Laws."
+
+They know:
+
+Definition ✅
+
+First Law ✅
+
+Second Law ⚠️
+
+Third Law ❌
+
+Applications ⚠️
+
+Free Body Diagrams ❌
+
+This dramatically improves revision quality.
+
+30. Practice Question Entity
+
+A Question should be independent.
+
+Never permanently tied to one lesson.
+
+Instead,
+
+it references:
+
+Knowledge Units
+
+Difficulty
+
+Skills
+
+Tags
+
+Question Type
+
+Exam relevance
+
+Explanation
+
+This allows reuse across:
+
+Practice
+
+Revision
+
+Mocks
+
+Adaptive tests
+
+Competitive exams
+
+31. Attempt Entity
+
+Every answer becomes an Attempt.
+
+An Attempt records:
+
+Question
+
+User
+
+Answer
+
+Correctness
+
+Confidence
+
+Time
+
+Hints used
+
+Timestamp
+
+Attempts are immutable educational evidence.
+
+Never edit them.
+
+32. Revision Evidence Entity
+
+One of Mentorix's most valuable assets.
+
+Evidence contains:
+
+Recall success
+
+Confidence
+
+Latency
+
+Repair required
+
+Reinforcement result
+
+Knowledge Unit
+
+Revision date
+
+Difficulty
+
+This drives scheduling.
+
+Not raw scores.
+
+33. Revision Queue Entity
+
+The queue should never simply contain:
+
+"Revise Physics."
+
+Instead
+
+Each queue item references
+
+Knowledge Units
+
+Priority
+
+Deadline
+
+Reason
+
+Difficulty
+
+Last review
+
+Expected duration
+
+The queue becomes explainable.
+
+34. Mastery Entity
+
+Mastery is not a percentage.
+
+It is a continuously evolving educational estimate.
+
+Mastery should be calculated from:
+
+Practice
+
+Revision
+
+Time
+
+Confidence
+
+Spacing
+
+Decay
+
+Competitive performance
+
+Recent consistency
+
+Never from one quiz.
+
+35. Mock Entity
+
+A Mock owns:
+
+Instructions
+
+Sections
+
+Question order
+
+Timing rules
+
+Scoring rules
+
+Negative marking
+
+Navigation rules
+
+Difficulty profile
+
+Mocks never modify questions.
+
+They assemble them.
+
+36. Tio Conversation Entity
+
+Separate educational conversation from chat.
+
+Conversation stores:
+
+Messages
+
+Educational context
+
+Referenced lessons
+
+Referenced Knowledge Units
+
+Actions suggested
+
+Follow-ups
+
+Conversation quality feedback
+
+This makes future assistance context-aware without mixing unrelated chats.
+
+37. Goal Entity
+
+Goals should be independent objects.
+
+Examples
+
+Complete Mechanics
+
+Finish SAT Reading
+
+Daily 2-hour study
+
+Score 90% in Chemistry
+
+Complete 5 mocks this week
+
+Goals influence recommendations.
+
+They are not just reminders.
+
+38. Achievement Entity
+
+Achievements should record meaningful milestones.
+
+Examples
+
+Finished first course
+
+30-day consistency
+
+Mastered 100 Knowledge Units
+
+Completed first mock
+
+Maintained revision schedule
+
+Achievements should never become the primary motivation.
+
+They acknowledge progress.
+
+39. Notification Entity
+
+Notifications are temporary communication.
+
+Each notification should know:
+
+Reason
+
+Priority
+
+Expiration
+
+Related entity
+
+Required action
+
+Dismiss state
+
+Notifications should never contain business logic.
+
+40. Entity Relationships
+
+One of the biggest architectural rules:
+
+Relationships should describe education.
+
+Not implementation.
+
+Example
+
+Question
+
+↓
+
+Knowledge Units
+
+↓
+
+Topic
+
+↓
+
+Chapter
+
+↓
+
+Course
+
+↓
+
+Subject
+
+Everything flows naturally.
+
+No shortcuts like
+
+Question → Course
+
+if Knowledge Units already define that relationship.
+
+41. Entity Independence Rules
+
+Every entity should answer:
+
+Can it exist independently?
+
+Can it be versioned?
+
+Can it be reused?
+
+Can it be referenced?
+
+Can it evolve without breaking others?
+
+If not,
+
+it's probably too tightly coupled.
+
+42. Identity vs Progress
+
+Never mix content with learner state.
+
+Content knows:
+
+"This lesson teaches Newton's Second Law."
+
+Progress knows:
+
+"Harsha has mastered Newton's Second Law."
+
+That separation is one of the biggest reasons educational platforms remain maintainable as they scale.
+
+43. Entity Lifecycle
+
+Every major entity should define:
+
+Created
+
+↓
+
+Published
+
+↓
+
+Used
+
+↓
+
+Updated (new version)
+
+↓
+
+Archived
+
+↓
+
+Retired
+
+Historical student records should always continue pointing to the version they actually studied.
+
+44. Completion Criteria
+
+The Domain Model is complete when:
+
+Every educational concept is represented by a dedicated business entity.
+Learner state is completely separated from educational content.
+Questions, lessons, and revision all revolve around shared Knowledge Units.
+Relationships reflect educational structure rather than implementation shortcuts.
+Every entity has a clear lifecycle, ownership, and responsibility.
+My biggest recommendation (and probably the single most valuable addition in this entire architecture)
+
+If I could add only one thing to Mentorix beyond what we've already planned, it would be the Knowledge Unit architecture.
+
+Nearly every educational platform tracks progress at the lesson or chapter level.
+
+That's too coarse.
+
+By tracking at the Knowledge Unit level, Mentorix can answer questions like:
+
+Which exact formula does the student keep forgetting?
+Which misconception keeps reappearing?
+Which diagram types cause difficulty?
+Which applications are mastered even though the underlying definition isn't?
+Which pieces of a chapter genuinely require revision?
+
+That level of granularity will make your revision engine, adaptive practice, competitive exam preparation, and Tio dramatically more accurate than platforms that only know "completed lesson" or "scored 80%."
+
+If Mentorix eventually becomes a large-scale educational platform, I genuinely think this architectural decision will be one of its strongest technical advantages.MENTORIX SERVICE & ENGINE ARCHITECTURE
+PART 1
+Core Platform Engines
+45. Mission
+
+Every important platform behaviour should be owned by a dedicated Engine.
+
+Not scattered across hundreds of files.
+
+An Engine is responsible for one business capability.
+
+46. Platform Architecture
+Presentation Layer
+
+↓
+
+Feature Layer
+
+↓
+
+Engine Layer
+
+↓
+
+Domain Layer
+
+↓
+
+Repository Layer
+
+↓
+
+Database
+
+↓
+
+Storage
+
+Every request flows downward.
+
+Never skip layers.
+
+47. What is an Engine?
+
+An Engine owns business logic.
+
+Example
+
+Revision Engine
+
+NOT
+
+Database queries.
+
+NOT
+
+UI rendering.
+
+NOT
+
+AI prompts.
+
+Only revision decisions.
+
+48. Core Engines
+
+Mentorix should eventually have these primary engines.
+
+Identity Engine
+
+Course Engine
+
+Learning Engine
+
+Knowledge Engine
+
+Progress Engine
+
+Practice Engine
+
+Competitive Engine
+
+Revision Engine
+
+Analytics Engine
+
+Recommendation Engine
+
+Goal Engine
+
+Achievement Engine
+
+Notification Engine
+
+Tio Engine
+
+Search Engine
+
+Settings Engine
+
+Sync Engine
+
+Notice
+
+No Engine overlaps another.
+
+49. Identity Engine
+
+Responsible for
+
+Authentication state
+
+Profile
+
+Academic identity
+
+Sessions
+
+Devices
+
+Permissions
+
+Never owns progress.
+
+50. Course Engine
+
+Responsible for
+
+Course discovery
+
+Course generation
+
+Chapter sequencing
+
+Lesson ordering
+
+Prerequisites
+
+Course versions
+
+Never tracks student performance.
+
+51. Knowledge Engine
+
+One of the most important.
+
+Responsible for
+
+Knowledge Units
+
+Relationships
+
+Dependencies
+
+Concept graph
+
+Prerequisite graph
+
+Cross-topic connections
+
+This becomes the educational brain.
+
+52. Learning Engine
+
+Responsible for
+
+Lesson progression
+
+Unlock rules
+
+Completion
+
+Study flow
+
+Recommendations during lessons
+
+Learning state
+
+It coordinates learning.
+
+It doesn't own content.
+
+53. Progress Engine
+
+Owns
+
+Completion
+
+Mastery
+
+Statistics
+
+Progress calculations
+
+Course percentages
+
+Learning velocity
+
+Nothing else updates progress directly.
+
+54. Practice Engine
+
+Responsible for
+
+Practice generation
+
+Adaptive difficulty
+
+Question selection
+
+Scoring
+
+Hints
+
+Practice summaries
+
+Never handles official mock rules.
+
+55. Competitive Engine
+
+Entirely separate.
+
+Owns
+
+Mock assembly
+
+Timer
+
+Exam rules
+
+Negative marking
+
+Section behaviour
+
+Question palette
+
+Exam scoring
+
+No learning hints.
+
+56. Revision Engine
+
+Already largely designed.
+
+Owns
+
+Revision queue
+
+Scheduling
+
+Evidence
+
+Recall
+
+Repair
+
+Reinforcement
+
+Mastery updates
+
+Revision recommendations
+
+57. Analytics Engine
+
+Only analytics.
+
+Responsible for
+
+Charts
+
+Insights
+
+Trend analysis
+
+Consistency
+
+Performance summaries
+
+Weakness reports
+
+Never modifies educational data.
+
+58. Recommendation Engine
+
+One of the smartest systems.
+
+Consumes
+
+Progress
+
+Goals
+
+Revision
+
+Competitive
+
+Knowledge
+
+Analytics
+
+Produces
+
+Recommended lessons
+
+Recommended revision
+
+Recommended mocks
+
+Recommended practice
+
+Recommended projects
+
+It never forces.
+
+Only recommends.
+
+59. Goal Engine
+
+Responsible for
+
+Goals
+
+Milestones
+
+Deadlines
+
+Goal completion
+
+Long-term planning
+
+Never generates recommendations.
+
+Recommendation Engine consumes Goal Engine.
+
+60. Achievement Engine
+
+Owns
+
+Badges
+
+Milestones
+
+Achievements
+
+Celebrations
+
+Reward triggers
+
+Never modifies learning.
+
+61. Notification Engine
+
+Owns
+
+Scheduling
+
+Priority
+
+Delivery
+
+Expiry
+
+Grouping
+
+Notifications should be generated here.
+
+Not everywhere.
+
+62. Search Engine
+
+Single search.
+
+Indexes
+
+Courses
+
+Lessons
+
+Knowledge Units
+
+Questions
+
+Notes
+
+Bookmarks
+
+Settings
+
+Projects
+
+Never duplicate search logic.
+
+63. Settings Engine
+
+Owns
+
+Preferences
+
+Configuration
+
+Personalisation
+
+Sync preferences
+
+Accessibility
+
+Appearance
+
+No other module edits settings directly.
+
+64. Sync Engine
+
+Responsible for
+
+Offline queue
+
+Conflict detection
+
+Retry
+
+Background sync
+
+Device consistency
+
+This engine becomes very important once Supabase is introduced.
+
+65. Tio Engine
+
+One of the largest.
+
+Coordinates
+
+Context Builder
+
+Memory
+
+Prompt Builder
+
+AI Gateway
+
+Response Validator
+
+Educational Verification
+
+Conversation
+
+Recommendations
+
+Tool calls
+
+Tio becomes an orchestration engine,
+
+not just an LLM wrapper.
+
+66. Repository Layer
+
+Every Engine talks to Repositories.
+
+Never directly to databases.
+
+Example
+
+Revision Engine
+
+↓
+
+Revision Repository
+
+↓
+
+Database
+
+Tomorrow
+
+Database changes.
+
+Only Repository changes.
+
+Engine stays untouched.
+
+67. Event Bus (One major recommendation)
+
+Instead of engines calling each other directly,
+
+important events should be published.
+
+Example
+
+Lesson Completed
+
+↓
+
+Event
+
+↓
+
+Progress Engine
+
+↓
+
+Revision Engine
+
+↓
+
+Analytics Engine
+
+↓
+
+Achievement Engine
+
+↓
+
+Recommendation Engine
+
+One event.
+
+Many listeners.
+
+Loose coupling.
+
+68. Engine Communication Rules
+
+Engines may
+
+Read
+
+Request
+
+Publish Events
+
+They should rarely directly modify another engine's data.
+
+Ownership remains clear.
+
+69. Long-running Jobs
+
+Some tasks shouldn't happen immediately.
+
+Examples
+
+Course generation
+
+Analytics recalculation
+
+Recommendation updates
+
+Mastery recalculation
+
+Large imports
+
+Background indexing
+
+Use asynchronous jobs.
+
+Keep the UI responsive.
+
+70. Completion Criteria
+
+The Engine Architecture is complete when:
+
+Every business capability belongs to exactly one engine.
+Engines communicate through repositories and events rather than tightly coupled function calls.
+Educational content, learner progress, AI, analytics, and recommendations remain independently evolvable.
+Infrastructure (database, Supabase, storage provider) can change without forcing changes to business logic.
+My Strongest Recommendation So Far
+
+There's one architectural idea I'd encourage even if it adds a little work now:
+
+Build Mentorix around events, not just function calls.
+
+For example:
+
+Question Answered
+
+↓
+
+Practice Engine validates
+
+↓
+
+Event published
+
+↓
+
+Progress updates
+
+↓
+
+Revision evidence updates
+
+↓
+
+Analytics recalculates
+
+↓
+
+Achievements check milestones
+
+↓
+
+Recommendation engine updates priorities
+
+↓
+
+Dashboard refreshes
+
+No engine needs to know the internal workings of another.
+
+As Mentorix grows—from learning, to competitive exams, to Tio, to future collaboration features—this event-driven approach will let you add capabilities without constantly rewriting existing systems.
+
+I think this will pay off far more than any individual feature because it gives Mentorix an architecture that can keep growing cleanly for years. AND AGAIN THIS IS HOW IT SHOULD BE , YOU CAN MAKE TINY MODIFICATIONS HERE AND THERE IF IT CAN BE BETTER I DONT MIND BUT JUST THINK AND ASK YOURSELF AND THX A LOT  KEEP. These are your core:
+
+
+
+Tool	Why	Role
+
+React	Already partially started, ecosystem is unbeatable	UI foundation
+
+GSAP + ScrollTrigger	Nothing beats it for cinematic control	All complex animations
+
+Framer Motion	Perfect for React component micro-interactions	Enter/exit, gestures
+
+Three.js	Your space aesthetic literally needs this	3D backgrounds, particles
+
+Tailwind CSS	Fastest way to implement a design system	Utility styling
+
+Shadcn/UI	Built on Radix, fully customizable, not generic	Base components
+
+Zustand	Lightweight, no boilerplate	Global state
+
+TanStack Query	Data fetching, caching done right	API layer
+
+D3.js	No competition for data viz	Analytics, heatmaps, charts
+
+Lenis	Already using it, keep it	Smooth scroll
+
+
+
+DROP or DEPRIORITIZE:
+
+
+
+MUI, Chakra, Ant Design, DaisyUI, NextUI — all too opinionated, will fight your design
+
+Axios — fetch() is fine for your scale
+
+Lodash — unnecessary unless you hit specific utility needs
+
+Prisma — you're on Cloudflare Workers, use D1 or KV instead
+
+Next.js — overkill right now, migrate later when you need SSR/SEO seriously
+
+
+
+ADD these (free, powerful, underused):
+
+
+
+Rive — Tio's animations. Nothing else comes close for character animation
+
+React Spring — physics-based interactions, card throws, elastic UI
+
+Anime.js — SVG morphing, text animations, lightweight sequences
+
+Recharts — built on D3, React-native, perfect for progress dashboards
+
+Radix UI primitives — Shadcn is built on this, gives you accessible headless components
+
+CSS Houdini (where supported) — custom paint worklets for unique visual effects
+
+Web Animations API — native, zero-dependency micro-interactions
+
+Tone.js — subtle ASMR audio feedback (Duolingo uses this psychologically)
+
+THE FONT DECISION
+
+
+
+From your list, here's my recommendation:
+
+
+
+Keep these 3 (perfect trio):
+
+
+
+Cinzel — for the space/cosmic headings. Timeless, Roman, celestial
+
+DM Serif Display — body headings, warm, humanized
+
+Poiret One — UI labels, badges, elegant and rare
+
+
+
+Drop these:
+
+
+
+Marcellus — too similar to DM Serif
+
+Playwright Indonesia — beautiful but too decorative for UI
+
+Julius Sans One — good but Poiret One is better
+
+Josephine Slab — too heavy for your aesthetic
+
+Marienda — too casual
+
+
+
+Add one more:
+
+
+
+Inter for body text — nothing beats it for readability at small sizes
+
+
+
+So: Cinzel + DM Serif Display + Poiret One + Inter + JetBrains Mono
+
+
+
+Five fonts maximum. Each with a specific role. Never overlapping.
+
+
+
+COLOR SYSTEM
+
+
+
+You said purples, violets, black, stars. Here's how to make it feel alive rather than gloomy:
+
+
+
+BACKGROUNDS (warm dark, not pure black)
+
+  --bg-deep:    #080810   ← deepest space
+
+  --bg-base:    #0d0d18   ← main background  
+
+  --bg-surface: #131325   ← card surfaces
+
+  --bg-raised:  #1a1a35   ← elevated cards
+
+
+
+PRIMARY (violet spectrum)
+
+  --violet-900: #2e1065   ← deepest violet
+
+  --violet-700: #5b21b6   ← dark violet
+
+  --violet-500: #7c3aed   ← primary action
+
+  --violet-400: #8b5cf6   ← primary light
+
+  --violet-300: #a78bfa   ← highlights
+
+  --violet-200: #c4b5fd   ← text accents
+
+
+
+ACCENT COLORS (for life and vibrancy)
+
+  --cosmic-cyan:  #06b6d4  ← Tio's color, space tech
+
+  --nebula-pink:  #ec4899  ← celebration, achievements
+
+  --star-gold:    #f59e0b  ← XP, rewards, streaks
+
+  --aurora-green: #10b981  ← success, mastery
+
+  --mars-red:     #ef4444  ← errors, warnings only
+
+
+
+STAR FIELD
+
+  Stars: white at varying opacities (.1 to .7)
+
+  Nebula glow: violet + cyan, very low opacity
+
+  Deep space: pure dark with grain texture
+
+THE PSYCHOLOGICAL FRAMEWORK
+
+
+
+This is the most important part. You mentioned Duolingo. Let me break down exactly what they do and how Mentorix should adapt it:
+
+
+
+1. Variable Reward Schedule (Duolingo's core trick)
+
+Every action has an unpredictable small reward. Sometimes you get a big celebration, sometimes a small one. The unpredictability is what makes it addictive. In Mentorix: randomize which celebration animation plays when you complete a lesson. Sometimes confetti, sometimes Tio does a backflip, sometimes a star bursts.
+
+
+
+2. Loss Aversion (streaks)
+
+Duolingo's streak is psychologically brutal — losing it feels worse than not having it. Mentorix: make the streak visible everywhere. When it's at risk, Tio gets worried. When it breaks, Tio comforts you.
+
+
+
+3. Progress Visibility (completion loops)
+
+Always show the user how close they are to the next milestone. Never let a screen feel like a dead end. In Mentorix: every screen has a subtle XP bar, chapter progress ring, or "3 questions to mastery" indicator.
+
+
+
+4. Autonomy + Mastery (flow state)
+
+Questions should always feel slightly challenging but never impossible. This is Csikszentmihalyi's flow. In Mentorix: difficulty adapts in real time. If you're getting everything right, Tio increases the difficulty immediately.
+
+
+
+5. Anthropomorphism (Tio)
+
+Duolingo's owl Duo is psychologically manipulative in the best way. Tio needs the same. Tio should react to everything — happy when you answer right, thoughtful when you're slow, encouraging when you fail. Rive animations make this possible.
+
+
+
+6. Spatial Metaphors (exploration feel)
+
+Your space theme is perfect for this. Learning shouldn't feel like a list — it should feel like exploring a galaxy. Each subject is a star system. Each chapter is a planet. Mastered topics glow. Locked topics are dark nebulae.
+
+
+
+DESIGN CONSTITUTION STRUCTURE
+
+
+
+Here's the plan for the document:
+
+
+
+MENTORIX DESIGN CONSTITUTION v1.0
+
+
+
+CHAPTER 1: Core Philosophy
+
+  - The Mentorix feeling
+
+  - What it should never feel like
+
+  - The space exploration metaphor
+
+
+
+CHAPTER 2: Color System
+
+  - Full token system
+
+  - Usage rules
+
+  - Dark mode only (for now)
+
+
+
+CHAPTER 3: Typography
+
+  - 5 fonts + roles
+
+  - Size scale
+
+  - Never use rules
+
+
+
+CHAPTER 4: Motion & Animation
+
+  - Library roles (GSAP vs Framer vs Anime.js)
+
+  - Timing standards
+
+  - Psychological animation principles
+
+  - Reduced motion fallbacks
+
+
+
+CHAPTER 5: Component Standards
+
+  - Cards (3 elevations)
+
+  - Buttons (5 variants)
+
+  - Inputs
+
+  - Glass/neumorphic rules
+
+
+
+CHAPTER 6: Tio Guidelines
+
+  - When Tio appears
+
+  - Tio's emotional states
+
+  - What Tio never does
+
+
+
+CHAPTER 7: Psychological UX Rules
+
+  - Reward mechanics
+
+  - Progress visibility rules
+
+  - Loss aversion systems
+
+  - Flow state maintenance
+
+
+
+CHAPTER 8: The Space Aesthetic
+
+  - What makes it space
+
+  - Star field rules
+
+  - Nebula effects
+
+  - 3D usage rules
+
+
+
+CHAPTER 9: Layout & Grid
+
+  - Spacing scale
+
+  - Breakpoints
+
+  - Asymmetry rules
+
+  - Negative space
+
+
+
+CHAPTER 10: Accessibility
+
+  - Contrast requirements
+
+  - Reduced motion
+
+  - Keyboard navigation
+
+  - Screen reader rules
+
+
+
+AMENDMENT PROCESS:
+
+  Any change requires:
+
+  - Reason for amendment
+
+  - Which screens it affects
+
+  - Approval note
+
+  - Version bump  . and do not edit yet and i think there is already a server running there once chekc and lemme know . and bro Bro one thing , right now i am using vanilla in a few places right , so i wanna evolve in design and i wanna make a permanent design spec or constitution or design markdown , so it is mostly permanent but amendments can be made , so tell me i am giving u some things below so tell me which is the best to use ok . Shadcn UI
+
+Radix UI
+
+Tailwind CSS
+
+Framer Motion
+
+Motion (by Framer)
+
+GSAP
+
+MUI (Material UI)
+
+Chakra UI
+
+NextUI
+
+DaisyUI
+
+Ant Design
+
+React Spring                            . React
+
+Next.js
+
+Three.js
+
+D3.js
+
+Lodash
+
+Framer Motion
+
+Axios
+
+Zustand
+
+TanStack Query
+
+Prisma. i want them to support images properly and analytics properly and animations and transistions and 3d models here and there and multiple fonts and colors etc and multiple visualization tehnqies etc and i want it to be unique so its hard to replicate and also it isnt what most people see everyday etc and it should be humanized and not genereic or ai made etc i want it to support almost everything without much lagging etc , also apart from things i included tell me if there are anything else i should consider no matter if its a framework or software or app or anything etc unless its paid , i want it free ok . and here are some keywords it needs to be:
+
+
+
+* useful
+
+* purposeful
+
+* engaging
+
+* addictive
+
+* satisfactory
+
+* ASMR
+
+* comforting
+
+* playful
+
+* interactive
+
+* micro-interactions
+
+* lively
+
+* attractive
+
+* vibrant
+
+* aesthetic
+
+* cool
+
+* full of life
+
+* encouraging
+
+* rare
+
+* unique
+
+
+
+ It needs to be based on the signature of Mentorix design. It needs to be advanced, entertaining, interesting, curious. Everything needs to feel like exploring, discovering, and learning, and most things should be reactive, etc. Like galactic exploring, space discovery, learning, etc. Again, make sure using so many things doesn't clog it, doesn't make useless stuff, or doesn't lag the thing. It doesn't cause many errors, or when editing something, it doesn't cause any other errors or make it hard to make tiny changes, etc. Keep all those, every single thing, in mind and then tell me. We need to get psychological, just like how Duolingo does it. There shouldn't be a single thing that we follow all along. We should use many UI activities, advanced UI/UX design techniques, and advanced techniques. We need to maintain a signature design throughout, but using different styles, creative methods, methodologies, ideologies, etc. Everything needs to be psychological, and we should always follow the keywords I mentioned above. Nothing should ever appear blank or boring. Everything should always keep the user engaged and active, and it should be unique, presentable, and advanced. Nothing should be random, and everything should be organized and in order, with no messy stuff. Nothing should feel generic or common.
+
+The most important and core thing is that nothing should look like AI-made. Everything should feel alive, humanized, and full of life, not AI-made at all. Everything, no matter what, should feel nice, achieved, important, celebrated, and rewarded to study more, like whenever we do something, etc., just like how Duolingo does it. Everything should have a purpose, and all the interactions, etc., should be lively.
+
+We need to follow the core methodologies of Apple, Duolingo, nothing Samsung, Syne, a few parts of Roblox, and Google. We should follow some techniques, psychological tricks, and other strategies used by this. We should not just copy their design alone. All techniques should be psychological in respect of design, UI/UX, and strategy. Tips and techniques used by big companies should be used, etc. There is still a lot and lot and lot and lot of stuff that I wanna tell you, but I don't really have the time now, and I'm not feeling that well. For now, just for now, we need to change the entire design spec. I want you to give me the first: let us discuss, then let us plan what to do step by step, how to change the current thing, etc. First, let us plan everything. And also, in some places, we should always be minimal, simple, decent, and vibrant, and we should almost everywhere display our logo and our name. We should use advanced UI/UX techniques like neuromorphic, glass morphic, and floating glass, etc., and everything should be calm. Nothing should feel rushed. It needs to make the user calm. Everything needs to feel calm. Also, everything needs to feel professional and interactive, vibrant, etc. We should not overdo everything. Again, we should kind of limit, etc. In fonts, currently I'm thinking:
+
+
+
+* Poiret One
+
+* Marclleus
+
+* Playwright indonesia
+
+* dm Serif Display
+
+* cinzel
+
+* Julius Sans one
+
+* Josephine sLab
+
+* Marienda
+
+
+
+and playfair display etc and for now, our signature color should be shades of purple or violet and black, and we should include stars in there because, for now, our core thinness space thingy is that. In the future, we may increase it, but for now it is that. Tell me what you think and how we should plan everything, etc. sry that its a lot but hope u can adjust , my suggestion is finish what u were doing then come back read all this and follow along and again do it properly

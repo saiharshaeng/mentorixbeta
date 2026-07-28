@@ -254,6 +254,22 @@
         }
         progressState.chapterProficiency[chapterId] = cProf;
       }
+
+      // Sync attempt to Supabase cloud if logged in
+      if (window.SupabaseDB && window.SupabaseAuthBridge?.isCloudSynced()) {
+        const user = window.SupabaseAuthBridge.getSupabaseUser();
+        if (user) {
+          window.SupabaseDB.saveAttempt(user.id, {
+            questionId,
+            examId: examId || 'JEE_MAIN',
+            subject,
+            chapter: chapterId,
+            isCorrect,
+            timeTaken: timeTakenSeconds || 45,
+            marks: isCorrect ? 4 : -1
+          });
+        }
+      }
     }
   };
 
@@ -285,6 +301,30 @@
       }
 
       if (mistakeDiary.length > 200) mistakeDiary.shift();
+
+      // Trigger Tio Observation
+      if (window.TioEngine?.ObservationEngine) {
+        window.TioEngine.ObservationEngine.observeAction('QUESTION_WRONG', {
+          examId, subject, chapter: chapterId, topic: topicId, questionId
+        });
+      }
+
+      // Sync mistake to Supabase Cloud
+      if (window.SupabaseDB && window.SupabaseAuthBridge?.isCloudSynced()) {
+        const user = window.SupabaseAuthBridge.getSupabaseUser();
+        if (user) {
+          window.SupabaseDB.saveMistake(user.id, {
+            questionId,
+            subject,
+            chapter: chapterId,
+            topic: topicId,
+            questionText,
+            userAnswer: selectedOptionText,
+            correctAnswer: correctOptionText,
+            mistakeType: errorType
+          });
+        }
+      }
     },
 
     resolveMistake(questionId) {
