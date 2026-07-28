@@ -437,62 +437,193 @@ Output ONLY this JSON format (all fields required):
 }
 
 function generateFallbackLesson(topic) {
+  const tLower = (topic || '').toLowerCase();
+
+  // 1. ELECTROSTATICS / ELECTRIC CHARGES & FIELDS
+  if (tLower.includes('electric') || tLower.includes('charge') || tLower.includes('electrostatic')) {
+    return {
+      "topic": topic,
+      "hook": "Ever wondered why rubbing a balloon makes it stick to a wall, or why lightning strikes during a storm? It all comes down to electric charge!",
+      "intuition": "Electric charge is a fundamental property of matter. Like charges repel each other, while opposite charges attract. Electric force acts across empty space via an electric field.",
+      "technical": "Quantization of charge states $q = \\pm n e$, where $e = 1.6 \\times 10^{-19} \\text{ C}$. Coulomb's Law dictates the electrostatic force between two point charges in vacuum:\n$$ F = \\frac{1}{4\\pi\\epsilon_0} \\frac{|q_1 q_2|}{r^2} $$\nwhere $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9 \\text{ N m}^2/\\text{C}^2$. Gauss's Law connects electric flux $\\Phi_E$ to enclosed charge: $\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{\\text{encl}}}{\\epsilon_0}$.",
+      "exam_insight": "In JEE Main & Advanced, 80% of Electrostatics questions focus on: (1) Vector superposition of forces, (2) Electric field due to continuous charge distributions (rings, dipoles, spheres), and (3) Gauss's Law symmetry applications.",
+      "explanation": "Coulomb's Law provides the fundamental force between stationary point charges. For continuous distributions (lines, disks, spheres), we integrate $d\\vec{E} = \\frac{1}{4\\pi\\epsilon_0} \\frac{dq}{r^2} \\hat{r}$ across the distribution geometry.",
+      "misconceptions": [
+        "A common mistake is treating electric field as a scalar — it is a vector field and requires vector addition (components along $x, y, z$).",
+        "Coulomb's Law strictly applies to point charges in a dielectric medium; for continuous conductors, induced charges must be accounted for."
+      ],
+      "examples": [
+        {
+          "q": "Two point charges $+2\\,\\mu\\text{C}$ and $+8\\,\\mu\\text{C}$ are placed $30\\text{ cm}$ apart. Find the force between them.",
+          "s": "Using Coulomb's Law: $F = \\frac{9 \\times 10^9 \\times (2 \\times 10^{-6}) \\times (8 \\times 10^{-6})}{(0.3)^2} = \\frac{1.44 \\times 10^{-1}}{0.09} = 1.6\\text{ N}$ (Repulsive)."
+        },
+        {
+          "q": "What is the electric field magnitude at a distance $r$ from an infinitely long wire with uniform linear charge density $\\lambda$?",
+          "s": "Applying Gauss's Law with a cylindrical Gaussian surface of radius $r$ and length $L$: $E(2\\pi r L) = \\frac{\\lambda L}{\\epsilon_0} \\implies E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$."
+        }
+      ],
+      "checks": [
+        {
+          "q": "What is the net force between two $+1\\,\\text{C}$ charges separated by $1\\text{ m}$ in vacuum?",
+          "o": ["$9 \\times 10^9\\text{ N}$", "$1.6 \\times 10^{-19}\\text{ N}$", "$0\\text{ N}$", "$3 \\times 10^8\\text{ N}$"],
+          "a": 0,
+          "e": "Using $F = \\frac{k q_1 q_2}{r^2} = \\frac{(9 \\times 10^9)(1)(1)}{1^2} = 9 \\times 10^9\\text{ N}$.",
+          "concept": "Coulomb's Law"
+        },
+        {
+          "q": "Which law states that electric flux through any closed surface is proportional to the total enclosed charge?",
+          "o": ["Faraday's Law", "Gauss's Law", "Lenz's Law", "Ampere's Law"],
+          "a": 1,
+          "e": "Gauss's Law states $\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{\\text{encl}}}{\\epsilon_0}$.",
+          "concept": "Gauss's Law"
+        },
+        {
+          "q": "What happens to the force between two charges if the distance between them is halved?",
+          "o": ["Doubled", "Halved", "Increases 4 times", "Decreases 4 times"],
+          "a": 2,
+          "e": "Because $F \\propto \\frac{1}{r^2}$, halving $r$ increases force by a factor of $2^2 = 4$.",
+          "concept": "Inverse-Square Property"
+        }
+      ],
+      "summary": [
+        "Charge is quantized ($q = ne$) and conserved in isolated systems.",
+        "Coulomb's Law gives electrostatic force: $F = k \\frac{|q_1 q_2|}{r^2}$.",
+        "Electric field is force per unit charge: $\\vec{E} = \\vec{F}/q_0$.",
+        "Gauss's Law links flux to enclosed charge: $\\Phi = \\frac{Q_{\\text{encl}}}{\\epsilon_0}$.",
+        "Always resolve electric fields into vector components before summing."
+      ],
+      "flashcards": [
+        { "q": "Formula for Coulomb's Law in vacuum?", "a": "$F = \\frac{1}{4\\pi\\epsilon_0} \\frac{|q_1 q_2|}{r^2}$" },
+        { "q": "Electric field of infinite line charge $\\lambda$?", "a": "$E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$" },
+        { "q": "Value of Coulomb constant $k$?", "a": "$9 \\times 10^9 \\text{ N m}^2/\\text{C}^2$" },
+        { "q": "SI unit of Electric Charge?", "a": "Coulomb (C)" }
+      ]
+    };
+  }
+
+  // 2. MECHANICS / NEWTON'S LAWS & WORK-ENERGY
+  if (tLower.includes('newton') || tLower.includes('motion') || tLower.includes('force') || tLower.includes('work') || tLower.includes('energy')) {
+    return {
+      "topic": topic,
+      "hook": "Why doesn't a moving space probe stop in outer space, but a rolling football comes to a halt on ground? Friction and Newton's Laws explain it all!",
+      "intuition": "Forces cause change in velocity (acceleration), not motion itself. Energy is transferred when a force acts through a distance.",
+      "technical": "Newton's Second Law defines net force: $\\vec{F}_{\\text{net}} = \\frac{d\\vec{p}}{dt} = m \\vec{a}$. Work done by a variable force is $W = \\int \\vec{F} \\cdot d\\vec{r}$. The Work-Energy Theorem states: $W_{\\text{net}} = \\Delta K = K_f - K_i = \\frac{1}{2}m v_f^2 - \\frac{1}{2}m v_i^2$.",
+      "exam_insight": "JEE Mechanics problems combine Free Body Diagrams (FBD), friction limits ($f_s \\le \\mu_s N$), and Work-Energy Theorem for multi-block pulley systems.",
+      "explanation": "Draw Free Body Diagrams for each isolated body. Write $\\sum F_x = m a_x$ and $\\sum F_y = m a_y$. For conservative forces, apply Conservation of Mechanical Energy: $E = K + U = \\text{constant}$.",
+      "misconceptions": [
+        "Normal force is NOT always equal to $mg$ — on an inclined plane of angle $\\theta$, $N = mg \\cos\\theta$.",
+        "Work done by centripetal force is strictly ZERO because $\\vec{F} \\perp \\vec{v}$ at all points."
+      ],
+      "examples": [
+        {
+          "q": "A $5\\text{ kg}$ block is pulled across a smooth horizontal surface by a $20\\text{ N}$ force at $60^\\circ$ above the horizontal. Find acceleration.",
+          "s": "Horizontal component $F_x = 20 \\cos(60^\\circ) = 10\\text{ N}$. Acceleration $a = \\frac{F_x}{m} = \\frac{10}{5} = 2\\text{ m/s}^2$."
+        }
+      ],
+      "checks": [
+        {
+          "q": "What is the net work done by a centripetal force on a particle in uniform circular motion?",
+          "o": ["$m v^2 / r$", "Zero", "$\\frac{1}{2} m v^2$", "$2\\pi r F$"],
+          "a": 1,
+          "e": "Since centripetal force is always perpendicular to velocity, $\\vec{F} \\cdot d\\vec{r} = 0$, so work done is zero.",
+          "concept": "Work-Energy Principle"
+        },
+        {
+          "q": "According to Newton's Second Law, acceleration of an object is directly proportional to:",
+          "o": ["Mass", "Net External Force", "Velocity", "Displacement"],
+          "a": 1,
+          "e": "$a = \\frac{F_{\\text{net}}}{m}$, so acceleration is directly proportional to net force.",
+          "concept": "Newton's Second Law"
+        }
+      ],
+      "summary": [
+        "Newton's Second Law: $\\vec{F}_{\\text{net}} = m \\vec{a}$.",
+        "Work-Energy Theorem: $W_{\\text{net}} = \\Delta K$.",
+        "Friction force limit: $f_{\\text{max}} = \\mu N$.",
+        "Potential energy for gravity: $U = mgh$; for spring: $U = \\frac{1}{2} k x^2$."
+      ],
+      "flashcards": [
+        { "q": "Work-Energy Theorem formula?", "a": "$W_{\\text{net}} = \\frac{1}{2}m v_f^2 - \\frac{1}{2}m v_i^2$" },
+        { "q": "Spring Potential Energy formula?", "a": "$U = \\frac{1}{2} k x^2$" }
+      ]
+    };
+  }
+
+  // 3. CALCULUS / MATHEMATICS
+  if (tLower.includes('calculus') || tLower.includes('deriv') || tLower.includes('integr') || tLower.includes('limit') || tLower.includes('math')) {
+    return {
+      "topic": topic,
+      "hook": "How do engineers calculate instantaneous rocket acceleration or the exact area under a curved arch? Calculus provides the exact mathematical language!",
+      "intuition": "Differential calculus measures rates of change (slopes), while Integral calculus accumulates small quantities (areas).",
+      "technical": "The derivative is defined as: $f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$. The Fundamental Theorem of Calculus links integration and differentiation: $\\int_a^b f(x) dx = F(b) - F(a)$ where $F'(x) = f(x)$. Standard derivative: $\\frac{d}{dx}(x^n) = n x^{n-1}$. Standard integral: $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$.",
+      "exam_insight": "In JEE Calculus, core areas include L'Hôpital's Rule for limits, chain rule for implicit differentiation, integration by parts $\\int u dv = uv - \\int v du$, and definite integral properties.",
+      "explanation": "Master standard derivatives and integrals. Use substitution $u = g(x)$ when an integrand contains both $g(x)$ and $g'(x) dx$. Use integration by parts (ILATE rule) for products of logarithmic, algebraic, trigonometric, and exponential functions.",
+      "misconceptions": [
+        "Continuous functions are not automatically differentiable — e.g. $f(x) = |x|$ is continuous at $x=0$ but not differentiable.",
+        "Don't forget the constant of integration $+C$ in indefinite integrals."
+      ],
+      "examples": [
+        {
+          "q": "Evaluate the indefinite integral $\\int x \\cos(x) dx$.",
+          "s": "Using integration by parts (ILATE): Let $u = x \\implies du = dx$, and $dv = \\cos(x) dx \\implies v = \\sin(x)$. Then $\\int x \\cos(x) dx = x \\sin(x) - \\int \\sin(x) dx = x \\sin(x) + \\cos(x) + C$."
+        }
+      ],
+      "checks": [
+        {
+          "q": "What is the derivative of $f(x) = \\ln(x^2 + 1)$ with respect to $x$?",
+          "o": ["$\\frac{1}{x^2+1}$", "$\\frac{2x}{x^2+1}$", "$2x \\ln(x)$", "$\\frac{x}{x^2+1}$"],
+          "a": 1,
+          "e": "Using the chain rule: $\\frac{d}{dx}\\ln(u) = \\frac{1}{u} \\frac{du}{dx} = \\frac{1}{x^2+1} (2x) = \\frac{2x}{x^2+1}$.",
+          "concept": "Chain Rule"
+        }
+      ],
+      "summary": [
+        "Derivative $f'(x)$ gives instantaneous rate of change.",
+        "Chain rule: $\\frac{d}{dx}f(g(x)) = f'(g(x)) g'(x)$.",
+        "Integration by parts: $\\int u dv = uv - \\int v du$.",
+        "Definite integral $\\int_a^b f(x) dx$ represents net area under curve."
+      ],
+      "flashcards": [
+        { "q": "Derivative of $\\sin(x)$?", "a": "$\\cos(x)$" },
+        { "q": "Integration by parts formula?", "a": "$\\int u dv = uv - \\int v du$" }
+      ]
+    };
+  }
+
+  // DEFAULT / GENERAL SYLLABUS FALLBACK
   return {
     "topic": topic,
-    "hook": `Have you ever wondered how we can describe or predict the behavior of "${topic}" in real life?`,
-    "intuition": `Think of "${topic}" like understanding the rules of a game before playing it. Once you grasp the core idea without any formulas, everything else clicks into place naturally. The key insight is that there is always a pattern connecting inputs to outputs.`,
-    "technical": `The concept of "${topic}" is a fundamental pillar of study. It describes a system governed by standard inputs, boundaries, and logical equations. In normal conditions, all variables behave predictably according to physical or mathematical rules. By mapping these relations, we can analyze the state of the system at any given point and design optimal control parameters.`,
-    "exam_insight": `In competitive examinations, questions on "${topic}" typically test your ability to apply core principles to unfamiliar scenarios. Watch for multi-step problems that combine this concept with prerequisite knowledge. Always verify boundary conditions and units before substituting values.`,
-    "explanation": `The concept of "${topic}" is a fundamental pillar of study. It describes a system governed by standard inputs, boundaries, and logical equations. In normal conditions, all variables behave predictably according to physical or mathematical rules. By mapping these relations, we can analyze the state of the system at any given point and design optimal control parameters.`,
+    "hook": `Understanding "${topic}" is essential for mastering the core concepts of your syllabus.`,
+    "intuition": `Break "${topic}" down into fundamental building blocks: state the definitions, map the governing principles, and practice applying them to standard numerical problems.`,
+    "technical": `The study of "${topic}" forms a central part of competitive curricula (CBSE 11th/12th and JEE Main/Advanced). Systems in this domain follow deterministic equations connecting input parameters to final physical or mathematical states.`,
+    "exam_insight": `Questions on "${topic}" test concept clarity, formula accuracy, and step-by-step problem-solving speed under timed examination conditions.`,
+    "explanation": `Study the fundamental laws governing "${topic}". Note physical quantities, SI units, vector relationships, and standard mathematical identities.`,
     "misconceptions": [
-      `Many students confuse the definition of "${topic}" with a related but distinct concept — always verify the precise conditions before applying any formula.`,
-      `A common mistake is skipping boundary condition checks, which leads to incorrect answers even when the method is right.`
+      `A common mistake in "${topic}" is substituting values without verifying SI unit consistency.`,
+      `Always check boundary constraints before applying standard formulas.`
     ],
     "examples": [
       {
-        "q": `What happens when we apply basic proportional relations to ${topic}?`,
-        "s": `We express the output as a function of the input: $y = k \\cdot x$. By substituting the given parameters, we can calculate the final response step-by-step.`
-      },
-      {
-        "q": `Evaluate the system boundaries for a standard scenario in ${topic}.`,
-        "s": `Identify the initial constraints, substitute them into the boundary equations, and solve for the equilibrium values.`
+        "q": `How do we solve standard numerical problems on ${topic}?`,
+        "s": `Identify given quantities, select the governing equation, convert units to SI, and solve for the target variable.`
       }
     ],
     "checks": [
       {
-        "q": `What is the primary objective of analyzing ${topic}?`,
-        "o": ["To understand core system properties", "To ignore boundaries", "To make random assumptions", "None of the above"],
+        "q": `What is the first step in solving a problem on ${topic}?`,
+        "o": ["Identify given parameters and target variable", "Guess an answer randomly", "Ignore units", "None of the above"],
         "a": 0,
-        "e": "Analyzing the topic establishes the core principles and relationships of the system.",
-        "concept": "Fundamental Principles"
-      },
-      {
-        "q": `How do variables behave under standard laws?`,
-        "o": ["Completely randomly", "Predictably according to logical equations", "They disappear", "None of the above"],
-        "a": 1,
-        "e": "Physical and mathematical systems follow deterministic governing equations.",
-        "concept": "System Variables"
-      },
-      {
-        "q": `What determines the initial state of a system?`,
-        "o": ["System color", "Boundary and starting conditions", "Ambient noise", "None of the above"],
-        "a": 1,
-        "e": "Starting parameters are dictated by boundary values.",
-        "concept": "Boundary Conditions"
+        "e": "Systematically identifying parameters and required variables ensures accuracy.",
+        "concept": "Problem Solving Strategy"
       }
     ],
     "summary": [
-      `Mastering the foundational definitions of ${topic} is key.`,
-      `Always check physical boundaries and initial conditions.`,
-      `Formulas represent mathematical relationships between parameters.`,
-      `Worked examples show how to substitute real numbers step-by-step.`,
-      `Silently tracking mistakes allows for targeted revision later.`
+      `Master definitions and formulas of ${topic}.`,
+      `Always verify SI units and boundary constraints.`,
+      `Practice numerical problems step-by-step.`
     ],
     "flashcards": [
-      { "q": `What defines "${topic}"?`, "a": `A structured conceptual module matching syllabus standards.` },
-      { "q": `Why are boundaries important?`, "a": `They establish the limits and initial state of system equations.` },
-      { "q": `How do we solve standard problems?`, "a": `State the equation, substitute known values, and compute sequentially.` },
-      { "q": `What is the best way to revise?`, "a": `Use flashcards and review logged weak spots from the mistake diary.` }
+      { "q": `Key goal for "${topic}"?`, "a": `Achieve conceptual clarity and numerical accuracy.` }
     ]
   };
 }

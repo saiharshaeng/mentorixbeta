@@ -5352,14 +5352,41 @@ body::before {
    These override anything above — always last in cascade.
    ═══════════════════════════════════════════════════════════════ */
 
-/* Lock the layout container — no overflow on any phone */
-#app{display:flex;width:100%;max-width:100vw;overflow-x:hidden}
-#main{flex:1;min-width:0;width:100%;max-width:100vw;overflow-x:hidden}
+/* Lock the layout container — no overflow on any phone, support 100dvh & safe areas */
+html, body {
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden !important;
+}
+#app {
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+#main {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  height: 100dvh;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)) !important;
+  box-sizing: border-box;
+}
 
-/* ── ALL BUTTONS: 44px minimum touch target (WCAG 2.5.5) ── */
+/* ── ALL BUTTONS & TABS: 44px minimum touch target (WCAG 2.5.5) ── */
 @media(max-width:768px){
-  .btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
-  .obtn{min-height:44px}
+  .btn, .obtn, .comp-exam-card, .nta-sub-tab, .nta-sec-tab {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* ── COMPETITIVE EXAMS TABS — scrollable horizontal strip ── */
