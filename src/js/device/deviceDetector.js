@@ -60,6 +60,23 @@
       return DeviceClasses.DESKTOP;
     }
 
+    static detectDeviceCategory() {
+      const w = window.innerWidth || 1024;
+      const Categories = exports.DeviceCategories || (window.DeviceCategories || {
+        COMPACT_MOBILE: 'CompactMobile', REGULAR_MOBILE: 'RegularMobile', LARGE_MOBILE: 'LargeMobile',
+        SMALL_TABLET: 'SmallTablet', LARGE_TABLET: 'LargeTablet', LAPTOP: 'Laptop', DESKTOP: 'Desktop', LARGE_DESKTOP: 'LargeDesktop'
+      });
+
+      if (w < 375) return Categories.COMPACT_MOBILE;
+      if (w < 428) return Categories.REGULAR_MOBILE;
+      if (w < 600) return Categories.LARGE_MOBILE;
+      if (w < 834) return Categories.SMALL_TABLET;
+      if (w < 1024) return Categories.LARGE_TABLET;
+      if (w < 1440) return Categories.LAPTOP;
+      if (w < 1920) return Categories.DESKTOP;
+      return Categories.LARGE_DESKTOP;
+    }
+
     static detectScreenClass() {
       const w = window.innerWidth || 1024;
       const h = window.innerHeight || 768;

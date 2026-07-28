@@ -198,7 +198,7 @@ function rDash(){
         <!-- ══ HERO ZONE ══ -->
         <div class="dash-hero-zone s1">
           <div class="dash-hero-greeting" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-            <div>Hey ${esc(name)}<span class="punct-anchor">.</span>${D.streak>=3?' 🔥':' 👋'}</div>
+            <div class="font-serif" style="font-size:24px;font-weight:700">Hey ${esc(name)}<span class="punct-anchor">.</span>${D.streak>=3?' 🔥':' 👋'}</div>
             <!-- Energy Check-in Scale -->
             <div class="energy-checkin-scale" style="display:flex;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:3px;gap:2px;pointer-events:auto">
               ${[
@@ -250,13 +250,13 @@ function rDash(){
 
         <!-- ══ STATUS ZONE ══ -->
         <div class="dash-status-zone s1">
-          <div class="dash-zone-label">At a glance</div>
+          <div class="dash-zone-label font-poiret">At a glance</div>
           <div class="dash-stat-grid">
-            <div class="sc card-lift" onclick="go('progress')" style="cursor:pointer" role="button" tabindex="0" aria-label="${D.xp} XP"><span class="sc-icon" aria-hidden="true">⚡</span><div class="sn count-in" style="color:var(--pl)">${D.xp}</div><div class="sl">XP</div></div>
-            <div class="sc card-lift" onclick="go('progress')" style="cursor:pointer" role="button" tabindex="0" aria-label="Level ${lv2}"><span class="sc-icon" aria-hidden="true">🏆</span><div class="sn count-in" style="color:var(--goldl)">${lv2}</div><div class="sl">LEVEL</div></div>
-            <div class="sc card-lift" role="button" tabindex="0" aria-label="${D.streak} day streak"><span class="sc-icon" aria-hidden="true">🔥</span><div class="sn count-in ${D.streak>=7?'streak-high':''}" style="color:#FCA5A5">${D.streak}</div><div class="sl">STREAK</div></div>
-            <div class="sc card-lift" onclick="go('notebook')" style="cursor:pointer" role="button" tabindex="0" aria-label="${(D.topics || []).length} topics learned"><span class="sc-icon" aria-hidden="true">📚</span><div class="sn count-in" style="color:var(--okl)">${(D.topics || []).length}</div><div class="sl">TOPICS</div></div>
-            <div class="sc card-lift" onclick="toggleSprintTimer()" style="cursor:pointer" role="button" tabindex="0" aria-label="${sessToday} study sessions today"><span class="sc-icon" aria-hidden="true">⏱️</span><div class="sn count-in" style="color:var(--cl)">${sessToday}</div><div class="sl">SESSIONS</div></div>
+            <div class="sc card-lift" onclick="go('progress')" style="cursor:pointer" role="button" tabindex="0" aria-label="${D.xp} XP"><span class="sc-icon" aria-hidden="true">⚡</span><div class="sn count-in font-cinzel" style="color:var(--pl)">${D.xp}</div><div class="sl font-poiret">XP</div></div>
+            <div class="sc card-lift" onclick="go('progress')" style="cursor:pointer" role="button" tabindex="0" aria-label="Level ${lv2}"><span class="sc-icon" aria-hidden="true">🏆</span><div class="sn count-in font-cinzel" style="color:var(--goldl)">${lv2}</div><div class="sl font-poiret">LEVEL</div></div>
+            <div class="sc card-lift" role="button" tabindex="0" aria-label="${D.streak} day streak"><span class="sc-icon" aria-hidden="true">🔥</span><div class="sn count-in font-cinzel ${D.streak>=7?'streak-high':''}" style="color:#FCA5A5">${D.streak}</div><div class="sl font-poiret">STREAK</div></div>
+            <div class="sc card-lift" onclick="go('notebook')" style="cursor:pointer" role="button" tabindex="0" aria-label="${(D.topics || []).length} topics learned"><span class="sc-icon" aria-hidden="true">📚</span><div class="sn count-in font-cinzel" style="color:var(--okl)">${(D.topics || []).length}</div><div class="sl font-poiret">TOPICS</div></div>
+            <div class="sc card-lift" onclick="toggleSprintTimer()" style="cursor:pointer" role="button" tabindex="0" aria-label="${sessToday} study sessions today"><span class="sc-icon" aria-hidden="true">⏱️</span><div class="sn count-in font-cinzel" style="color:var(--cl)">${sessToday}</div><div class="sl font-poiret">SESSIONS</div></div>
           </div>
 
           <!-- XP progress bar -->
@@ -283,13 +283,13 @@ function rDash(){
         </div>
 
         <!-- ══ STUDY CONSOLE ══ -->
-        <div class="dash-zone-label s2">Study console</div>
+        <div class="dash-zone-label s2 font-poiret">Study console</div>
         <div class="dash-study-console s2">
           <!-- Continue Course -->
-          <div class="sc-card main-card card-lift" style="cursor:pointer" onclick="${hasCont ? `go('learn', '${escON(contTopic)}')` : `go('courses')`}">
+          <div class="sc-card main-card card-lift mx-glass-card" style="cursor:pointer" onclick="${hasCont ? `go('learn', '${escON(contTopic)}')` : `go('courses')`}">
             <div>
-              <div class="sc-card-tag">CONTINUE LEARNING</div>
-              <div class="sc-card-title">${hasCont ? esc(contTopic) : 'Select a course path'}</div>
+              <div class="sc-card-tag font-poiret">CONTINUE LEARNING</div>
+              <div class="sc-card-title font-serif">${hasCont ? esc(contTopic) : 'Select a course path'}</div>
               <div class="sc-card-sub">${hasCont ? `Chapter: ${esc(contChapterTitle)}` : esc(contCourseTitle)}</div>
             </div>
             <div>
@@ -370,17 +370,18 @@ function rDash(){
 
         <!-- ══ DISCOVERY ZONE ══ -->
         <div class="dash-discovery-zone s3">
-          <div class="dash-zone-label">            <!-- Daily Challenge -->
-            <div class="dc-card" onclick="go('learn','${escON(ch.t)}')" style="cursor:pointer" role="button" tabindex="0">
-              <span class="tag tp" style="margin-bottom:12px;display:inline-block"><span aria-hidden="true">⚡</span> Daily Challenge</span>
+          <div class="dash-zone-label font-poiret">
+            <!-- Daily Challenge -->
+            <div class="dc-card mx-glass-card" onclick="go('learn','${escON(ch.t)}')" style="cursor:pointer" role="button" tabindex="0">
+              <span class="tag tp font-poiret" style="margin-bottom:12px;display:inline-block"><span aria-hidden="true">⚡</span> Daily Challenge</span>
               <div style="font-size:40px;margin-bottom:8px;line-height:1" aria-hidden="true">${ch.e}</div>
-              <div class="h3" style="margin-bottom:6px">${esc(ch.t)}</div>
-              <span class="tag tc">${ch.c}</span>
-              <div style="margin-top:12px"><button class="btn bpri bsm" onclick="event.stopPropagation();go('learn','${escON(ch.t)}')">Learn Now · +50 XP</button></div>
+              <div class="h3 font-serif" style="margin-bottom:6px">${esc(ch.t)}</div>
+              <span class="tag tc font-poiret">${ch.c}</span>
+              <div style="margin-top:12px"><button class="btn bpri bsm mx-btn-primary" onclick="event.stopPropagation();go('learn','${escON(ch.t)}')">Learn Now · +50 XP</button></div>
             </div>
             <!-- Interest Topics -->
             <div class="card" style="background:transparent;border:none;padding:0">
-              <div class="h3" style="margin-bottom:var(--sp-3)">🎯 Your Topics</div>
+              <div class="h3 font-serif" style="margin-bottom:var(--sp-3)">🎯 Your Topics</div>
               ${quick.length?quick.map(t=>`
                 <div onclick="go('learn','${escON(t)}')" style="display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:rgba(255,255,255,.04);border-radius:var(--r-card);cursor:pointer;border:1px solid var(--brd);margin-bottom:7px;transition:all .15s;color:var(--pl);font-size:var(--fs-sm)" onmouseover="this.style.borderColor='rgba(139,92,246,.4)'" onmouseout="this.style.borderColor='var(--brd)'" role="button" tabindex="0">
                   <span>${esc(t)}</span><span aria-hidden="true" style="color:var(--mut)">→</span>
@@ -391,30 +392,30 @@ function rDash(){
           <!-- Recent + Badges -->
           <div style="display:grid;grid-template-columns:${recent.length&&(D.badges||[]).length?'1fr 1fr':'1fr'};gap:var(--sp-4);margin-bottom:var(--sp-4)">
             ${recent.length?`
-            <div class="card card-lift">
-              <div class="h3" style="margin-bottom:var(--sp-3)"><span aria-hidden="true">📚</span> Recently Learned</div>
+            <div class="card card-lift mx-glass-card">
+              <div class="h3 font-serif" style="margin-bottom:var(--sp-3)"><span aria-hidden="true">📚</span> Recently Learned</div>
               <div style="display:flex;flex-wrap:wrap;gap:7px">
                 ${recent.map(t=>`<div onclick="go('learn','${escON(t)}')" style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:20px;padding:5px 13px;color:var(--okl);font-size:var(--fs-xs);cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(16,185,129,.2)'" onmouseout="this.style.background='rgba(16,185,129,.1)'" role="button" tabindex="0">✓ ${esc(t)}</div>`).join('')}
               </div>
-            </div>`:`<div class="card card-lift" style="text-align:center;padding:40px">
+            </div>`:`<div class="card card-lift mx-glass-card" style="text-align:center;padding:40px">
               <div style="font-size:48px;margin-bottom:10px" aria-hidden="true">📚</div>
               <p style="color:var(--mut);margin-bottom:14px;font-size:var(--fs-md)">Learn your first topic!</p>
               <button class="btn bpri bsm" onclick="go('learn')">Start Learning</button>
             </div>`}
             ${(D.badges||[]).length?`
-            <div class="card cgold card-lift">
-              <div class="h3" style="margin-bottom:var(--sp-3)"><span aria-hidden="true">🏆</span> Badges Earned</div>
+            <div class="card cgold card-lift mx-glass-card">
+              <div class="h3 font-serif" style="margin-bottom:var(--sp-3)"><span aria-hidden="true">🏆</span> Badges Earned</div>
               <div style="display:flex;flex-wrap:wrap;gap:7px">
-                ${(D.badges||[]).slice(-6).map(b=>{const bd=BADGES.find(x=>x.id===b);return `<div style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:7px 13px;color:var(--goldl);font-size:var(--fs-xs);font-weight:600"><span aria-hidden="true">${bd?.ic||'🏆'}</span> ${b}</div>`;}).join('')}
+                ${(D.badges||[]).slice(-6).map(b=>{const bd=BADGES.find(x=>x.id===b);return `<div class="font-cinzel" style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:7px 13px;color:var(--goldl);font-size:var(--fs-xs);font-weight:600"><span aria-hidden="true">${bd?.ic||'🏆'}</span> ${b}</div>`;}).join('')}
               </div>
             </div>`:''}
           </div>
 
           <!-- Quick Actions — horizontal chip scroll -->
-          <div class="dash-zone-label">Quick actions</div>
+          <div class="dash-zone-label font-poiret">Quick actions</div>
           <div class="quick-actions-row s4" role="list">
             ${[['📚','Learn','go(\'learn\')'],['📝','Notebook','go(\'notebook\')'],['🔄','Revise','go(\'revision\')'],['🛡️','Recovery','go(\'recovery\')'],['🎯','Test','go(\'tests\')'],['🚀','Careers','go(\'careers\')']]
-              .map(([ic,lb,fn])=>`<button class="qa-chip" onclick="${fn}" role="listitem"><span aria-hidden="true">${ic}</span> ${lb}</button>`).join('')}
+              .map(([ic,lb,fn])=>`<button class="qa-chip font-poiret" onclick="${fn}" role="listitem"><span aria-hidden="true">${ic}</span> ${lb}</button>`).join('')}
           </div>
         </div>
 
@@ -424,8 +425,8 @@ function rDash(){
       <div class="dash-telemetry-column">
         
         <!-- Pomodoro Sprint Timer -->
-        <div class="card sprint-timer-widget">
-          <div class="sc-card-tag" style="align-self: flex-start; color: var(--cl); margin-bottom: var(--sp-4)">⏱️ Study Sprint</div>
+        <div class="card sprint-timer-widget mx-glass-card">
+          <div class="sc-card-tag font-poiret" style="align-self: flex-start; color: var(--cl); margin-bottom: var(--sp-4)">⏱️ Study Sprint</div>
           
           <div class="sprint-timer-circle">
             <svg class="sprint-timer-svg">
@@ -438,7 +439,7 @@ function rDash(){
               <circle class="sprint-timer-bg-ring" cx="80" cy="80" r="70" />
               <circle class="sprint-timer-progress-ring" id="timer-ring" cx="80" cy="80" r="70" stroke-dasharray="440" stroke-dashoffset="0" />
             </svg>
-            <div class="sprint-timer-digits" id="timer-digits">25:00</div>
+            <div class="sprint-timer-digits font-mono" id="timer-digits">25:00</div>
           </div>
           
           <div style="display:flex; gap:10px; margin-top:20px; width:100%">

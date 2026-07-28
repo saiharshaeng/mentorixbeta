@@ -108,21 +108,21 @@ function rNotebook(){
 
   document.getElementById('main').innerHTML=`
   <div class="sw scr notebook-screen">
-    <div class="h1">📓 AI Notebook</div>
+    <div class="h1 font-serif">📓 AI Notebook</div>
     <p class="sub">Your personal AI-powered study notes — organised, searchable, always ready</p>
 
-    <div class="tio-inline mb16 s1">
+    <div class="tio-inline mb16 s1 mx-glass-card">
       <div class="nxav">✨</div>
-      <div><div style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO</div>
-      <div style="color:#C4B5FD;font-size:13px">"I can generate structured notes for any topic — even ones you haven't studied yet. Notes saved from lessons appear here automatically. 📄"</div></div>
+      <div><div class="font-poiret" style="color:var(--pl);font-size:11px;font-weight:700;margin-bottom:2px">TIO</div>
+      <div class="font-serif" style="color:#C4B5FD;font-size:13px">"I can generate structured notes for any topic — even ones you haven't studied yet. Notes saved from lessons appear here automatically. 📄"</div></div>
     </div>
 
     <!-- Generate new notes -->
-    <div class="nb-gen-area mb16 s2">
-      <div class="h3 mb8" style="color:var(--pl)">✨ Generate Notes for Any Topic</div>
+    <div class="nb-gen-area mb16 s2 mx-glass-card">
+      <div class="h3 mb8 font-poiret" style="color:var(--pl)">✨ Generate Notes for Any Topic</div>
       <div style="display:flex;gap:9px">
         <input class="inp" id="nb-inp" placeholder="e.g. Thermodynamics, Quadratic Equations, World War II…" value="${esc(NB.genTopic)}" oninput="NB.genTopic=this.value" onkeydown="if(event.key==='Enter')genNoteTrigger()">
-        <button class="btn bpri" id="nb-gen-btn" onclick="genNoteTrigger()" ${NB.genLoading?'disabled':''}>
+        <button class="btn bpri mx-btn-primary" id="nb-gen-btn" onclick="genNoteTrigger()" ${NB.genLoading?'disabled':''}>
           ${NB.genLoading?'<div class="dots"><span></span><span></span><span></span></div>':'📓 Generate'}
         </button>
       </div>
@@ -134,19 +134,19 @@ function rNotebook(){
       <div>
         <!-- Subject filter pills -->
         ${subjects.length>0?`<div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px">
-          <div class="nb-subj-pill${NB.selSubj==='all'?' on':''}" onclick="NB.selSubj='all';rNotebook()">All (${allTopics.length})</div>
-          ${subjects.map(s=>`<div class="nb-subj-pill${NB.selSubj===s?' on':''}" onclick="NB.selSubj='${escON(s)}';rNotebook()">${esc(s)}</div>`).join('')}
+          <div class="nb-subj-pill font-poiret${NB.selSubj==='all'?' on':''}" onclick="NB.selSubj='all';rNotebook()">All (${allTopics.length})</div>
+          ${subjects.map(s=>`<div class="nb-subj-pill font-poiret${NB.selSubj===s?' on':''}" onclick="NB.selSubj='${escON(s)}';rNotebook()">${esc(s)}</div>`).join('')}
         </div>`:''}
 
-        ${filtered.length===0?`<div class="nb-empty"><div style="font-size:48px;margin-bottom:12px">📓</div><p style="margin-bottom:10px">No notes yet!</p><p style="font-size:12px">Study a topic and click <strong>"Save Notes"</strong>, or generate notes above.</p></div>`
+        ${filtered.length===0?`<div class="nb-empty mx-glass-card"><div style="font-size:48px;margin-bottom:12px">📓</div><p style="margin-bottom:10px">No notes yet!</p><p style="font-size:12px">Study a topic and click <strong>"Save Notes"</strong>, or generate notes above.</p></div>`
         :filtered.map(t=>{
           const n=notes[t];
           const daysAgo=n?.savedAt?Math.floor((Date.now()-n.savedAt)/86400000):0;
-          return `<div class="nb-note-card${NB.selTopic===t?' active':''}" onclick="NB.selTopic='${escON(t)}';rNotebook()">
+          return `<div class="nb-note-card mx-glass-card${NB.selTopic===t?' active':''}" onclick="NB.selTopic='${escON(t)}';rNotebook()">
             <button class="nb-del" onclick="deleteNote('${escON(t)}',event)">✖</button>
-            <div style="font-weight:600;color:#fff;font-size:14px;margin-bottom:4px">${esc(t)}</div>
+            <div class="font-serif" style="font-weight:600;color:#fff;font-size:14px;margin-bottom:4px">${esc(t)}</div>
             <div style="display:flex;align-items:center;gap:6px">
-              <span class="tag tp" style="font-size:10px">${esc(n?.subject||'General')}</span>
+              <span class="tag tp font-poiret" style="font-size:10px">${esc(n?.subject||'General')}</span>
               <span style="color:var(--mut);font-size:11px">${daysAgo===0?'Today':daysAgo===1?'Yesterday':daysAgo+' days ago'}</span>
             </div>
           </div>`;
@@ -155,11 +155,11 @@ function rNotebook(){
 
       <!-- Right: note detail -->
       ${selNote?`<div id="nb-detail" class="scr">
-        <div class="card cglow mb12">
+        <div class="card cglow mb12 mx-glass-card">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
             <div>
-              <div class="h2 mb4">${esc(selNote.title)}</div>
-              <span class="tag tp">${esc(selNote.subject||'General')}</span>
+              <div class="h2 mb4 font-serif">${esc(selNote.title)}</div>
+              <span class="tag tp font-poiret">${esc(selNote.subject||'General')}</span>
             </div>
             <div style="display:flex;gap:7px">
               <button class="btn bsec bsm" onclick="go('learn','${escON(selNote.title)}')">📚 Study</button>
@@ -171,18 +171,18 @@ function rNotebook(){
           ${selNote.explain?`<div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:12px"><p style="color:#94A3B8;font-size:13px;line-height:1.8;margin:0;white-space:pre-line">${sanitizeHTML(selNote.explain)}</p></div>`:''}
         </div>
 
-        ${(selNote.formulas||[]).length?`<div class="card mb12">
-          <div class="h3 mb10" style="color:var(--cl)">📄 Key Formulas</div>
-          ${selNote.formulas.map(f=>`<div class="nb-formula">${sanitizeHTML(f)}</div>`).join('')}
+        ${(selNote.formulas||[]).length?`<div class="card mb12 mx-glass-card">
+          <div class="h3 mb10 font-serif" style="color:var(--cl)">📄 Key Formulas</div>
+          ${selNote.formulas.map(f=>`<div class="nb-formula font-mono">${sanitizeHTML(f)}</div>`).join('')}
         </div>`:''}
 
-        ${(selNote.points||[]).length?`<div class="card mb12">
-          <div class="h3 mb10" style="color:var(--pl)">🔑 Quick Revision Points</div>
+        ${(selNote.points||[]).length?`<div class="card mb12 mx-glass-card">
+          <div class="h3 mb10 font-serif" style="color:var(--pl)">🔑 Quick Revision Points</div>
           ${selNote.points.map(p=>`<div class="nb-point">${sanitizeHTML(p)}</div>`).join('')}
         </div>`:''}
 
-        ${(selNote.examples||[]).length?`<div class="card mb12">
-          <div class="h3 mb10" style="color:var(--gold)">💡 Examples</div>
+        ${(selNote.examples||[]).length?`<div class="card mb12 mx-glass-card">
+          <div class="h3 mb10 font-serif" style="color:var(--gold)">💡 Examples</div>
           ${selNote.examples.map((e,i)=>`<div style="display:flex;gap:9px;margin-bottom:8px"><div style="width:20px;height:20px;border-radius:50%;background:rgba(245,158,11,.2);color:var(--goldl);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">${i+1}</div><span style="color:#CBD5E1;font-size:13px;line-height:1.65">${sanitizeHTML(e)}</span></div>`).join('')}
         </div>`:''}
 

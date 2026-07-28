@@ -45,6 +45,30 @@
     },
 
     /**
+     * Triggers selective haptic feedback ONLY on meaningful events (Section 40)
+     */
+    triggerHaptic(eventType) {
+      if (typeof window === 'undefined' || typeof window.haptic !== 'function') return;
+      switch (String(eventType).toLowerCase()) {
+        case 'lesson_completed':
+        case 'achievement_unlocked':
+          window.haptic('celebration');
+          break;
+        case 'revision_mastered':
+          window.haptic('success');
+          break;
+        case 'question_submitted':
+          window.haptic('medium');
+          break;
+        case 'bookmark_saved':
+          window.haptic('light');
+          break;
+        default:
+          break;
+      }
+    },
+
+    /**
      * Get CSS variable definitions
      */
     getCSSVariableString() {

@@ -1,16 +1,50 @@
 :root{
-  /* â”€â”€ TYPOGRAPHY â€” Brand UI Updates â”€â”€ */
-  --f-display:'Manrope',sans-serif;
-  --f-body:'Manrope',sans-serif;
-  --f-struct:'Manrope',sans-serif;
-  --f-num:'IBM Plex Mono',monospace;
-  --f-voice:'Manrope',sans-serif;
-  --f-hero:'DM Serif Display',serif;
-  --f-notes:'Nunito',sans-serif;
-  --f-mono:'JetBrains Mono',monospace;
-  --f-achievement:'Cinzel',serif;
+  /* ── 5-FONT MATRIX (MENTORIX DESIGN CONSTITUTION v1.0) ── */
+  --font-cinzel: 'Cinzel', serif;
+  --font-serif: 'DM Serif Display', serif;
+  --font-poiret: 'Poiret One', cursive, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-  /* â”€â”€ 8-STEP TYPE SCALE â”€â”€ */
+  /* Backward-Compatible Font Aliases */
+  --f-display: var(--font-sans);
+  --f-body: var(--font-sans);
+  --f-struct: var(--font-sans);
+  --f-num: var(--font-mono);
+  --f-voice: var(--font-sans);
+  --f-hero: var(--font-serif);
+  --f-notes: var(--font-sans);
+  --f-mono: var(--font-mono);
+  --f-achievement: var(--font-cinzel);
+  --f-chip: var(--font-poiret);
+
+  /* ── COSMIC OBSIDIAN PALETTE (MENTORIX DESIGN CONSTITUTION v1.0) ── */
+  --bg-deep:    #080810;  /* Deepest space void */
+  --bg-base:    #0d0d18;  /* Main canvas background */
+  --bg-surface: #131325;  /* Glass card container surfaces */
+  --bg-raised:  #1a1a35;  /* Elevated action cards */
+  --bg-overlay: #222244;  /* Modal overlays */
+
+  --violet-900: #2e1065;
+  --violet-700: #5b21b6;
+  --violet-500: #7c3aed;  /* Primary action background */
+  --violet-400: #8b5cf6;  /* Primary purple glow */
+  --violet-300: #a78bfa;
+  --violet-200: #c4b5fd;
+
+  --cosmic-cyan:  #06b6d4; /* Tio AI cyan accent */
+  --star-gold:    #f59e0b; /* XP & streak gold */
+  --nebula-pink:  #ec4899; /* Achievements pink */
+  --aurora-green: #10b981; /* Success green */
+  --mars-red:     #ef4444; /* Warning red */
+
+  --text-primary:   #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+  --border-subtle:  rgba(255, 255, 255, 0.08);
+  --border-active:  rgba(6, 182, 212, 0.45);
+
+  /* ── 8-STEP TYPE SCALE ── */
   --fs-xs:11px;
   --fs-sm:13px;
   --fs-md:15px;
@@ -20,7 +54,7 @@
   --fs-3xl:48px;
   --fs-4xl:64px;
 
-  /* â”€â”€ STRICT 8-POINT SPACING GRID â”€â”€ */
+  /* ── STRICT 8-POINT SPACING GRID ── */
   --sp-1:4px;
   --sp-2:8px;
   --sp-3:12px;
@@ -32,20 +66,20 @@
   --sp-12:48px;
   --sp-16:64px;
 
-  /* â”€â”€ LINE HEIGHTS â”€â”€ */
+  /* ── LINE HEIGHTS ── */
   --lh-display:1.1;
   --lh-tight:1.3;
   --lh-body:1.7;
   --lh-loose:1.85;
 
-  /* â”€â”€ BORDER RADIUS â€” BRAND STANDARD 18-22px â”€â”€ */
-  --r-card:20px;
+  /* ── BORDER RADIUS ── */
+  --r-card:24px;
   --r-pill:9999px;
   --r-chip:14px;
   --r-btn:14px;
   --r-input:14px;
-  --r-modal:22px;
-  --r10:10px;--r12:12px;--r14:14px;--r18:18px;--r20:20px;--r24:22px;
+  --r-modal:24px;
+  --r10:10px;--r12:12px;--r14:14px;--r18:18px;--r20:20px;--r24:24px;
 
   /* ── UNIVERSAL DESIGN SYSTEM (UDS) INTENT TOKENS ── */
   --uds-cyan: #06B6D4;
@@ -59,9 +93,9 @@
   --uds-purple: #8B5CF6;
   --uds-purple-bg: rgba(139, 92, 246, 0.12);
 
-  --uds-bg-dark: #0A0A0F;
-  --uds-surface: #12121A;
-  --uds-surface-glass: rgba(18, 18, 26, 0.75);
+  --uds-bg-dark: #080810;
+  --uds-surface: #131325;
+  --uds-surface-glass: rgba(19, 19, 37, 0.55);
   --uds-border: rgba(255, 255, 255, 0.08);
 
   /* ── UDS MOTION BUDGET TOKENS ── */
@@ -70,11 +104,197 @@
   --uds-motion-nav: 250ms cubic-bezier(0.34, 1.3, 0.64, 1);
   --uds-motion-modal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* â”€â”€ SPRING MOTION PRESETS â”€â”€ */
+  /* ── SPRING MOTION PRESETS ── */
   --spring-nav:cubic-bezier(0.34,1.56,0.64,1);
   --spring-expand:cubic-bezier(0.25,1.25,0.5,1);
   --spring-settle:cubic-bezier(0.34,1.3,0.64,1);
   --spring-bounce:cubic-bezier(0.34,1.8,0.64,1);
+}
+
+/* ── 5-FONT MATRIX UTILITY CLASSES ── */
+.font-cinzel { font-family: var(--font-cinzel) !important; letter-spacing: -0.02em; }
+.font-serif { font-family: var(--font-serif) !important; }
+.font-poiret { font-family: var(--font-poiret) !important; letter-spacing: 0.05em; }
+.font-sans { font-family: var(--font-sans) !important; }
+.font-mono { font-family: var(--font-mono) !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   MENTORIX DESIGN CONSTITUTION v1.0 — CORE UI COMPONENTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* Glassmorphic Container Panel */
+.mx-glass-card {
+  background: var(--uds-surface-glass);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-card, 24px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+.mx-glass-card:hover {
+  transform: translateY(-3px) scale(1.005);
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.20);
+}
+
+/* Primary Brand Action Button */
+.mx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 24px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform 120ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 120ms ease,
+              background-color 120ms ease;
+}
+.mx-btn:active {
+  transform: scale(0.96);
+}
+.mx-btn-primary {
+  background: linear-gradient(135deg, var(--violet-500), var(--cosmic-cyan));
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+}
+.mx-btn-primary:hover {
+  box-shadow: 0 6px 28px rgba(6, 182, 212, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Ghost / Secondary Action Button */
+.mx-btn-ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+.mx-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Futuristic Poiret Category Pill & Badge */
+.mx-pill {
+  font-family: var(--font-poiret);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--cosmic-cyan);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.mx-badge {
+  font-family: var(--font-cinzel);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--star-gold);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PART 1: MENTORIX MOBILE & CROSS-DEVICE EXPERIENCE ARCHITECTURE
+   ═══════════════════════════════════════════════════════════ */
+
+/* Reading Comfort Constraint */
+.mx-readable-content {
+  max-width: var(--mx-reading-max-width, 72ch);
+  margin: 0 auto;
+}
+
+/* Mobile Bottom Navigation Bar (< 768px or Phone layout) */
+.mx-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--mx-bottom-nav-height, 64px);
+  background: rgba(13, 11, 31, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 8px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 767px) {
+  .mx-bottom-nav {
+    display: flex;
+  }
+  body {
+    padding-bottom: calc(var(--mx-bottom-nav-height, 64px) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+html[data-layout-family="phone"] .mx-bottom-nav {
+  display: flex;
+}
+
+.mx-bnav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 48px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 11px;
+  gap: 3px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mx-bnav-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.mx-bnav-item.active {
+  color: var(--cosmic-cyan);
+}
+
+.mx-bnav-item.active .mx-bnav-icon {
+  transform: translateY(-2px);
+}
+
+/* Performance Tier Visual Fallbacks (Tiers C & D) */
+html[data-perf-tier="low"] .mx-glass-card,
+html[data-perf-tier="verylow"] .mx-glass-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: rgba(13, 11, 31, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-perf-tier="verylow"] * {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
 }
 
 /* ═══════════════════════════════════════════════════════════

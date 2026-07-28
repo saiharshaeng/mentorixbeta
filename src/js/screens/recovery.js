@@ -27,13 +27,13 @@ function rRecovery(){
       const levelLabel = masteryState?.level || 'Improving';
 
       return `
-        <div class="card mb16 scr" style="border-left:4px solid var(--p);background:rgba(13,11,31,0.85)">
+        <div class="card mb16 scr mx-glass-card" style="border-left:4px solid var(--p);background:rgba(13,11,31,0.85)">
           <div class="between mb10">
             <div>
-              <div class="h3" style="color:#fff;margin-bottom:2px">${esc(topic)}</div>
-              <div style="font-size:11px;color:var(--pl);font-weight:700">Mastery Stage: ${esc(levelLabel)}</div>
+              <div class="h3 font-serif" style="color:#fff;margin-bottom:2px">${esc(topic)}</div>
+              <div class="font-poiret" style="font-size:11px;color:var(--pl);font-weight:700">Mastery Stage: ${esc(levelLabel)}</div>
             </div>
-            <span class="tag tp" style="font-size:11px;padding:3px 10px">Needs Practice</span>
+            <span class="tag tp font-poiret" style="font-size:11px;padding:3px 10px">Needs Practice</span>
           </div>
 
           <!-- 6-Dimensional Mastery Meter Grid -->
@@ -62,7 +62,7 @@ function rRecovery(){
             <p style="color:var(--sub);font-size:11px;margin-bottom:6px;font-weight:700;text-transform:uppercase">FOCUS CONCEPTS:</p>
             <div style="display:flex;flex-wrap:wrap;gap:6px">
               ${list.map(c => `
-                <span class="chip" style="border-color:rgba(139,92,246,0.3);background:rgba(139,92,246,0.08);color:var(--pl);font-size:11px;padding:3px 9px">
+                <span class="chip font-poiret" style="border-color:rgba(139,92,246,0.3);background:rgba(139,92,246,0.08);color:var(--pl);font-size:11px;padding:3px 9px">
                   💡 ${esc(c)}
                 </span>
               `).join('')}
@@ -70,18 +70,18 @@ function rRecovery(){
           </div>
           
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
-            <button class="btn bpri bsm" onclick="startRecoverySession('${escON(topic)}', 'recap')">📖 Concept Recap</button>
-            <button class="btn bok bsm" onclick="startRecoverySession('${escON(topic)}', 'recovery')">🎯 Micro Quiz</button>
-            <button class="btn bgh bsm" onclick="startRecoverySession('${escON(topic)}', 'flashcards')">🃏 Flashcards</button>
+            <button class="btn bpri bsm font-poiret" onclick="startRecoverySession('${escON(topic)}', 'recap')">📖 Concept Recap</button>
+            <button class="btn bok bsm font-poiret" onclick="startRecoverySession('${escON(topic)}', 'recovery')">🎯 Micro Quiz</button>
+            <button class="btn bgh bsm font-poiret" onclick="startRecoverySession('${escON(topic)}', 'flashcards')">🃏 Flashcards</button>
           </div>
         </div>
       `;
     }).join('');
   } else {
     recoverySessionsHTML = `
-      <div class="card cok" style="text-align:center;padding:36px">
+      <div class="card cok mx-glass-card" style="text-align:center;padding:36px">
         <div style="font-size:48px;margin-bottom:12px">🛡️</div>
-        <div class="h2" style="color:var(--okl);margin-bottom:8px">Improvement Journal Clear!</div>
+        <div class="h2 font-serif" style="color:var(--okl);margin-bottom:8px">Improvement Journal Clear!</div>
         <p class="sub" style="max-width:400px;margin:0 auto">You have no active weak concepts. Mentorix will automatically add concepts here if you encounter any friction during quizzes.</p>
       </div>
     `;
@@ -94,7 +94,7 @@ function rRecovery(){
 
   document.getElementById('main').innerHTML = `
     <div class="sw scr page-enter">
-      <div class="h1">📖 Mistake Diary & Skill Recovery</div>
+      <div class="h1 font-serif">📖 Mistake Diary & Skill Recovery</div>
       <p class="sub">Your personalized improvement journal. Every mistake teaches Mentorix how to help you grow.</p>
       
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px">

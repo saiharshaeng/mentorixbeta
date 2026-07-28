@@ -619,15 +619,15 @@ function renderLesson() {
   const pct = Math.round((stage / 8) * 100);
 
   a.innerHTML = `
-    <div class="lhero scr" style="padding:16px 20px;margin-bottom:16px">
+    <div class="lhero scr mx-glass-card" style="padding:16px 20px;margin-bottom:16px">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
         <div>
-          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Active Mission Â· 8 Mins Est.</div>
-          <div class="h2" style="margin:2px 0 0">${esc(l.topic)}</div>
+          <div class="font-poiret" style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Active Mission · 8 Mins Est.</div>
+          <div class="h2 font-serif" style="margin:2px 0 0">${esc(l.topic)}</div>
         </div>
         <div style="text-align:right">
-          <div style="font-size:11px;color:var(--mut);font-weight:700">STAGE ${stage} OF 8</div>
-          <div style="font-size:13px;color:var(--txt);font-weight:700">${stageTitles[stage - 1]}</div>
+          <div class="font-poiret" style="font-size:11px;color:var(--mut);font-weight:700">STAGE ${stage} OF 8</div>
+          <div class="font-serif" style="font-size:13px;color:var(--txt);font-weight:700">${stageTitles[stage - 1]}</div>
         </div>
       </div>
       <div style="margin-top:14px">
@@ -636,7 +636,7 @@ function renderLesson() {
         </div>
       </div>
     </div>
-    <div id="stage-card-wrap"></div>
+    <div id="stage-card-wrap" class="mx-readable-content"></div>
   `;
 
   renderStageContent();
@@ -651,43 +651,43 @@ function renderStageContent() {
   let html = '';
 
   if (stage === 1) {
-    // â”€â”€ STAGE 1: ORIENTATION + HOOK â”€â”€
+    // ── STAGE 1: ORIENTATION + HOOK ──
     const topicCtx1 = findCourseTopicContext(l.topic);
     const chTitle1 = topicCtx1?.chapterTitle || topicCtx1?.subchapterTitle || '';
     const prereqTitle1 = topicCtx1?.chapter?.prerequisites?.[0] || '';
     const diffLabel = LS.diagLevel === 'beginner' ? 'Foundational' : LS.diagLevel === 'advanced' ? 'Advanced' : 'Intermediate';
 
     html = `
-      <div class="card cglow" style="border:1px solid rgba(139,92,246,0.2);padding:24px">
+      <div class="card cglow mx-glass-card" style="border:1px solid rgba(139,92,246,0.2);padding:24px">
         <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.15);border-radius:14px;padding:16px;margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:10px">
             <div>
-              <div style="font-size:10px;color:var(--mut);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">LESSON BRIEF</div>
-              <div style="font-size:17px;color:#fff;font-weight:800">${esc(l.topic)}</div>
-              ${chTitle1 ? `<div style="font-size:12px;color:var(--sub);margin-top:3px">ðŸ“š ${esc(chTitle1)}</div>` : ''}
+              <div class="font-poiret" style="font-size:10px;color:var(--mut);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">LESSON BRIEF</div>
+              <div class="font-serif" style="font-size:17px;color:#fff;font-weight:800">${esc(l.topic)}</div>
+              ${chTitle1 ? `<div style="font-size:12px;color:var(--sub);margin-top:3px">📚 ${esc(chTitle1)}</div>` : ''}
             </div>
-            <span style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);border-radius:20px;padding:4px 12px;font-size:11px;color:var(--pl);font-weight:700;white-space:nowrap">${diffLabel}</span>
+            <span class="font-poiret" style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);border-radius:20px;padding:4px 12px;font-size:11px;color:var(--pl);font-weight:700;white-space:nowrap">${diffLabel}</span>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:14px">
-            <div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>â±ï¸</span>Est. 8 mins</div>
-            ${prereqTitle1 ? `<div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>ðŸ”—</span>Builds on: <strong style="color:var(--sub)">${esc(prereqTitle1)}</strong></div>` : ''}
+            <div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>⏱️</span>Est. 8 mins</div>
+            ${prereqTitle1 ? `<div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>🔗</span>Builds on: <strong style="color:var(--sub)">${esc(prereqTitle1)}</strong></div>` : ''}
           </div>
         </div>
 
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;background:rgba(255,255,255,0.02);padding:14px;border-radius:12px">
-          <div style="font-size:28px">ðŸ¤”</div>
+          <div style="font-size:28px">🤔</div>
           <div>
-            <div style="color:var(--pl);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">THINK ABOUT THIS</div>
+            <div class="font-poiret" style="color:var(--pl);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">THINK ABOUT THIS</div>
             <div style="color:var(--mut);font-size:12px">Before we begin, consider this question:</div>
           </div>
         </div>
 
-        <div style="font-size:17px;color:#fff;font-weight:700;line-height:1.65;margin:0 0 24px;font-style:italic;padding:0 4px">
+        <div class="font-serif" style="font-size:17px;color:#fff;font-weight:700;line-height:1.65;margin:0 0 24px;font-style:italic;padding:0 4px">
           "${esc(l.hook)}"
         </div>
 
-        <button class="btn bpri blg w100" onclick="advanceStage(2)">
-          ðŸš€ Begin Learning â†’
+        <button class="btn bpri blg w100 mx-btn-primary" onclick="advanceStage(2)">
+          🚀 Begin Learning →
         </button>
       </div>
     `;

@@ -79,11 +79,11 @@ function renderAuth() {
     <div class="auth-card" style="max-width:440px;width:90%">
       <div class="auth-m-hero">
         <div class="auth-m-mark" role="img" aria-label="Mentorix M logo"></div>
-        <div class="auth-wordmark">Mentorix</div>
+        <div class="auth-wordmark font-cinzel">Mentorix</div>
         <div class="auth-m-byline"><strong>by Harsha</strong> · AI Learning Ecosystem</div>
       </div>
       
-      <div class="h2" style="text-align:center;color:#fff;margin:18px 0 8px">Who's studying?</div>
+      <div class="h2 font-serif" style="text-align:center;color:#fff;margin:18px 0 8px">Who's studying?</div>
       
       <div id="auth-form">${listHTML}</div>
       

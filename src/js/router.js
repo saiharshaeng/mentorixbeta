@@ -91,6 +91,17 @@ function go(scr, param) {
   if (param !== undefined) D._param = param;
   document.body.setAttribute('data-screen', scr);
 
+  // Sync mobile bottom navigation bar active state
+  const bnavItems = document.querySelectorAll('#mx-bottom-nav .mx-bnav-item');
+  const targetScreen = scr === 'dash' ? 'dashboard' : scr;
+  bnavItems.forEach(item => {
+    if (item.getAttribute('data-screen') === targetScreen) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
   // Sync hash deep-link URL
   const routePath = CANONICAL_ROUTES[scr] || `/${scr}`;
   const hashTarget = `#${routePath}${param ? '/' + encodeURIComponent(param) : ''}`;

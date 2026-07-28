@@ -62,20 +62,26 @@
         SafeClass.applySafeAreaVars();
       }
 
-      this.injectLayoutTokensToDOM(family, tokens);
+      this.injectLayoutTokensToDOM(family, tokens, profile);
 
       if (window.UDFIAEngine && typeof window.UDFIAEngine.publish === 'function') {
-        window.UDFIAEngine.publish('Layout.FamilyChanged', { family, tokens });
+        window.UDFIAEngine.publish('Layout.FamilyChanged', { family, tokens, profile });
       }
 
       return family;
     }
 
-    injectLayoutTokensToDOM(family, tokens) {
+    injectLayoutTokensToDOM(family, tokens, profile) {
       if (typeof document === 'undefined' || !document.documentElement) return;
+
+      const p = profile || (window.DeviceManager ? window.DeviceManager.getProfile() : null);
 
       document.documentElement.dataset.layoutFamily = (family || 'Desktop').toLowerCase();
       document.documentElement.dataset.contentDensity = tokens.density || 'high';
+      document.documentElement.dataset.deviceCategory = (p?.deviceCategory || 'Desktop').toLowerCase();
+      document.documentElement.dataset.perfTier = (p?.performanceTier || 'High').toLowerCase();
+      document.documentElement.dataset.orientation = (p?.orientation || 'landscape').toLowerCase();
+      document.documentElement.dataset.inputPrimary = p?.inputMethods?.touch ? 'touch' : 'mouse';
 
       const setVar = (key, val) => {
         if (val) document.documentElement.style.setProperty(key, val);
@@ -87,6 +93,9 @@
       setVar('--asla-card-spacing', tokens.cardSpacing);
       setVar('--asla-touch-target', tokens.touchTargetSize);
       setVar('--asla-header-height', tokens.headerHeight);
+      setVar('--mx-reading-max-width', '72ch');
+      setVar('--mx-bottom-nav-height', '64px');
+      setVar('--mx-card-grid-columns', family === 'Phone' ? '1' : family === 'Tablet' ? '2' : '3');
     }
 
     onOrientationChanged(newOrientation) {

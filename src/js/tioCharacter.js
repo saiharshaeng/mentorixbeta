@@ -143,18 +143,16 @@
 
     const modal = document.createElement('div');
     modal.id = 'tio-menu-modal';
+    modal.className = 'mx-glass-card';
     modal.style.cssText = `
       position: fixed;
       bottom: 110px;
       right: 24px;
       z-index: 1000;
       width: 320px;
-      background: rgba(13, 11, 31, 0.95);
-      border: 1px solid rgba(139, 92, 246, 0.4);
       border-radius: 20px;
       padding: 18px;
       box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-      backdrop-filter: blur(20px);
       animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     `;
 
@@ -165,8 +163,8 @@
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:10px">
         <span style="font-size:28px">🤖</span>
         <div>
-          <div style="color:#fff;font-weight:700;font-size:14px">Tio Companion</div>
-          <div style="color:var(--pl);font-size:11px">How can I assist you right now?</div>
+          <div class="font-serif" style="color:#fff;font-weight:700;font-size:16px">Tio Companion</div>
+          <div class="font-poiret" style="color:var(--pl);font-size:12px">How can I assist you right now?</div>
         </div>
         <button onclick="document.getElementById('tio-menu-modal').remove()" style="margin-left:auto;background:none;border:none;color:var(--sub);cursor:pointer;font-size:16px">✕</button>
       </div>

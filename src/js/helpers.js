@@ -583,6 +583,34 @@ function initNetworkResilience() {
   }
 }
 
+/* ── CROSS-DEVICE CONTINUITY SNAPSHOT ──────────────────────────── */
+function saveContinuityState(topic, stage = 1, extra = {}) {
+  try {
+    const snapshot = {
+      topic: topic || '',
+      stage: stage || 1,
+      timestamp: Date.now(),
+      screen: window.D ? window.D.screen : 'dash',
+      ...extra
+    };
+    localStorage.setItem('mx_continuity_snapshot', JSON.stringify(snapshot));
+    if (window.UDFIAEngine && typeof window.UDFIAEngine.publish === 'function') {
+      window.UDFIAEngine.publish('Session.SnapshotSaved', { snapshot });
+    }
+  } catch (e) {
+    console.warn('[Continuity] Could not save snapshot:', e);
+  }
+}
+
+function getContinuityState() {
+  try {
+    const raw = localStorage.getItem('mx_continuity_snapshot');
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 // Auto-run hardware tier & network resilience on script load
 detectDeviceHardwareTier();
 initNetworkResilience();
@@ -613,3 +641,5 @@ window.renderBreadcrumb  = renderBreadcrumb;
 window.openGlobalSearch  = openGlobalSearch;
 window.detectDeviceHardwareTier = detectDeviceHardwareTier;
 window.initNetworkResilience    = initNetworkResilience;
+window.saveContinuityState      = saveContinuityState;
+window.getContinuityState       = getContinuityState;

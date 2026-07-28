@@ -310,17 +310,17 @@ function rCourses(){
       }
 
       worldMapHTML += `
-        <div class="world-landmark-card ${isChapterActive ? 'active-chapter' : ''} ${isChapterCompleted ? 'completed-chapter' : ''}" style="margin-bottom: 24px;">
+        <div class="world-landmark-card mx-glass-card ${isChapterActive ? 'active-chapter' : ''} ${isChapterCompleted ? 'completed-chapter' : ''}" style="margin-bottom: 24px;">
           <div class="world-landmark-header" style="border-left-color: ${biome.color}">
             <div style="display:flex;align-items:center;gap:12px">
               <span style="font-size:32px;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.4))">${biome.landmarkIcon}</span>
               <div>
-                <div style="font-size:11px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Chapter ${ci + 1} · ${biome.name}</div>
-                <div class="h2" style="color:#fff;margin:2px 0 0">${esc(chapter.title)}</div>
+                <div class="font-poiret" style="font-size:11px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Chapter ${ci + 1} · ${biome.name}</div>
+                <div class="h2 font-serif" style="color:#fff;margin:2px 0 0">${esc(chapter.title)}</div>
               </div>
             </div>
             <div style="display:flex;align-items:center;gap:8px">
-              <span class="tag ${isChapterCompleted ? 'tok' : isChapterUnlocked ? 'tp' : 'tred'}" style="font-size:11px;padding:4px 10px">
+              <span class="tag font-poiret ${isChapterCompleted ? 'tok' : isChapterUnlocked ? 'tp' : 'tred'}" style="font-size:11px;padding:4px 10px">
                 ${isChapterCompleted ? '✓ Completed' : isChapterUnlocked ? '🟡 Active Region' : '🔒 Locked'}
               </span>
             </div>
@@ -338,7 +338,7 @@ function rCourses(){
                   aria-label="Chapter ${ci + 1} Boss Test Checkpoint">
                   <span>👑</span>
                 </button>
-                <div class="node-title-pill" style="border-color:rgba(245,158,11,0.4);color:var(--goldl);font-weight:700">
+                <div class="node-title-pill font-poiret" style="border-color:rgba(245,158,11,0.4);color:var(--goldl);font-weight:700">
                   Chapter Boss Assessment
                 </div>
               </div>
@@ -354,17 +354,17 @@ function rCourses(){
   const cont = getContinueLearningChapter();
   if (cont) {
     continueBannerHTML = `
-      <div class="card cglow mb20" style="padding:16px 20px;border-left:4px solid var(--p);background:rgba(139,92,246,0.06)">
+      <div class="card cglow mb20 mx-glass-card" style="padding:16px 20px;border-left:4px solid var(--p);background:rgba(139,92,246,0.06)">
         <div style="display:flex;justify-content:between;align-items:center;flex-wrap:wrap;gap:12px">
           <div style="flex:1">
-            <div style="font-size:11px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">CONTINUE LEARNING</div>
-            <div class="h3" style="color:#fff;margin:3px 0 0">${esc(cont.topicTitle)}</div>
+            <div class="font-poiret" style="font-size:11px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">CONTINUE LEARNING</div>
+            <div class="h3 font-serif" style="color:#fff;margin:3px 0 0">${esc(cont.topicTitle)}</div>
             <div style="font-size:12px;color:var(--mut);margin-top:2px">
               Chapter: ${esc(cont.chapter.title)} · ⏱️ 8 Mins Est. · 🔥 Streak: ${D.streak} days
             </div>
           </div>
           <div>
-            <button class="btn bpri blg" onclick="go('learn', '${escON(cont.topicTitle)}')" style="box-shadow:0 6px 20px rgba(139,92,246,0.3)">
+            <button class="btn bpri blg mx-btn-primary" onclick="go('learn', '${escON(cont.topicTitle)}')" style="box-shadow:0 6px 20px rgba(139,92,246,0.3)">
               Resume Learning Mission →
             </button>
           </div>
@@ -377,25 +377,25 @@ function rCourses(){
     <div class="sw scr page-enter">
       
       <!-- Living World Dashboard Banner -->
-      <div class="world-header-banner mb20" style="background:${biome.bg}; border-color:${biome.color}22">
+      <div class="world-header-banner mb20 mx-glass-card" style="background:${biome.bg}; border-color:${biome.color}22">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-bottom:16px">
           <div>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <span style="background:${biome.color}33;color:${biome.color};padding:3px 10px;border-radius:8px;font-size:11px;font-weight:700;text-transform:uppercase">ENROLLED PATH</span>
+              <span class="font-poiret" style="background:${biome.color}33;color:${biome.color};padding:3px 10px;border-radius:8px;font-size:11px;font-weight:700;text-transform:uppercase">ENROLLED PATH</span>
               <button class="world-avatar-card" onclick="openAvatarModal()" title="Change Companion Avatar">
                 <span class="avatar-companion-anim">${getAvatarEmoji()}</span>
-                <span style="font-size:11px;color:#fff;font-weight:700">Companion Avatar ▾</span>
+                <span class="font-poiret" style="font-size:11px;color:#fff;font-weight:700">Companion Avatar ▾</span>
               </button>
             </div>
-            <h1 class="h1" style="font-size:clamp(28px,4vw,42px);margin:0;color:#fff">${esc(getCourseTitle(currentCourse))}</h1>
+            <h1 class="h1 font-serif" style="font-size:clamp(28px,4vw,42px);margin:0;color:#fff">${esc(getCourseTitle(currentCourse))}</h1>
           </div>
         </div>
 
         <!-- Metrics Row -->
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:14px">
           <div>
-            <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">Course Progress</div>
-            <div style="font-size:18px;font-weight:800;color:var(--pl);margin-top:2px">${overallProgress}%</div>
+            <div class="font-poiret" style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">Course Progress</div>
+            <div class="font-mono" style="font-size:18px;font-weight:800;color:var(--pl);margin-top:2px">${overallProgress}%</div>
           </div>
           <div>
             <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">Topics Completed</div>

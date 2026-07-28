@@ -216,13 +216,13 @@ function renderCareerList(container) {
   container.innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:10px">
       ${recommendations.map(c => `
-        <div class="card scr hover-glow" onclick="viewCareerDetail('${c.id}')" style="cursor:pointer;background:rgba(13,11,31,0.85);border:1px solid rgba(255,255,255,0.08);padding:20px;transition:transform 0.2s">
+        <div class="card scr hover-glow mx-glass-card" onclick="viewCareerDetail('${c.id}')" style="cursor:pointer;background:rgba(13,11,31,0.85);border:1px solid rgba(255,255,255,0.08);padding:20px;transition:transform 0.2s">
           <div class="between mb10">
             <span style="font-size:36px">${c.emoji}</span>
-            <span class="tag tgold" style="font-weight:700;font-size:12px;padding:4px 10px">${c.matchPct}% Compatibility</span>
+            <span class="tag tgold font-mono" style="font-weight:700;font-size:12px;padding:4px 10px">${c.matchPct}% Compatibility</span>
           </div>
-          <div class="h3" style="color:#fff;margin-bottom:4px">${esc(c.title)}</div>
-          <div style="font-size:12px;color:var(--pl);font-weight:600;margin-bottom:8px">${esc(c.category)}</div>
+          <div class="h3 font-serif" style="color:#fff;margin-bottom:4px">${esc(c.title)}</div>
+          <div class="font-poiret" style="font-size:12px;color:var(--pl);font-weight:600;margin-bottom:8px">${esc(c.category)}</div>
           <p style="color:var(--sub);font-size:12px;line-height:1.5;margin-bottom:12px">${esc(c.tagline)}</p>
 
           <!-- Transparent Recommendation Reason -->
@@ -233,8 +233,8 @@ function renderCareerList(container) {
           </div>
 
           <div class="between" style="border-top:1px solid rgba(255,255,255,0.06);padding-top:10px;font-size:11px">
-            <span style="color:var(--okl)">💰 ${esc(c.salary)}</span>
-            <span style="color:var(--cl)">📈 ${esc(c.growth)} Growth</span>
+            <span class="font-mono" style="color:var(--okl)">💰 ${esc(c.salary)}</span>
+            <span class="font-poiret" style="color:var(--cl)">📈 ${esc(c.growth)} Growth</span>
           </div>
         </div>
       `).join('')}
@@ -258,32 +258,32 @@ function renderCareerDetail(container) {
 
   container.innerHTML = `
     <button class="btn bgh bsm mb16" onclick="CS.step='list';renderCareerContent()">← Back to Recommended Careers</button>
-    <div class="card scr" style="padding:28px;background:rgba(13,11,31,0.9);border:1px solid rgba(139,92,246,0.3)">
+    <div class="card scr mx-glass-card" style="padding:28px;background:rgba(13,11,31,0.9);border:1px solid rgba(139,92,246,0.3)">
       <div class="between mb16">
         <div style="display:flex;align-items:center;gap:14px">
           <span style="font-size:48px">${c.emoji}</span>
           <div>
-            <div class="h2" style="color:#fff;margin-bottom:2px">${esc(c.title)}</div>
-            <div style="font-size:13px;color:var(--pl);font-weight:700">${esc(c.category)}</div>
+            <div class="h2 font-serif" style="color:#fff;margin-bottom:2px">${esc(c.title)}</div>
+            <div class="font-poiret" style="font-size:13px;color:var(--pl);font-weight:700">${esc(c.category)}</div>
           </div>
         </div>
-        <button class="btn bpri" onclick="CS.step='roadmap';renderCareerContent()">🗺️ View My Personalized Roadmap →</button>
+        <button class="btn bpri mx-btn-primary" onclick="CS.step='roadmap';renderCareerContent()">🗺️ View My Personalized Roadmap →</button>
       </div>
 
       <p style="color:var(--sub);font-size:14px;line-height:1.6;margin-bottom:20px">${esc(c.desc)}</p>
 
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px">
-        <div class="sc cglow">
-          <div class="sl">Salary Range</div>
-          <div class="sn" style="font-size:16px;color:var(--okl);margin-top:4px">${esc(c.salary)}</div>
+        <div class="sc cglow mx-glass-card">
+          <div class="sl font-poiret">Salary Range</div>
+          <div class="sn font-mono" style="font-size:16px;color:var(--okl);margin-top:4px">${esc(c.salary)}</div>
         </div>
-        <div class="sc cglow">
-          <div class="sl">Future Demand</div>
-          <div class="sn" style="font-size:16px;color:var(--cl);margin-top:4px">${esc(c.growth)}</div>
+        <div class="sc cglow mx-glass-card">
+          <div class="sl font-poiret">Future Demand</div>
+          <div class="sn font-poiret" style="font-size:16px;color:var(--cl);margin-top:4px">${esc(c.growth)}</div>
         </div>
-        <div class="sc cgold">
-          <div class="sl">Entry Difficulty</div>
-          <div class="sn" style="font-size:16px;color:var(--goldl);margin-top:4px">${esc(c.difficulty)}</div>
+        <div class="sc cgold mx-glass-card">
+          <div class="sl font-poiret">Entry Difficulty</div>
+          <div class="sn font-poiret" style="font-size:16px;color:var(--goldl);margin-top:4px">${esc(c.difficulty)}</div>
         </div>
       </div>
 

@@ -44,6 +44,7 @@
       const AccessClass = exports.AccessibilityDetector || window.AccessibilityDetector;
 
       const deviceClass = DetectorClass ? DetectorClass.detectDeviceClass() : 'Desktop';
+      const deviceCategory = DetectorClass && typeof DetectorClass.detectDeviceCategory === 'function' ? DetectorClass.detectDeviceCategory() : 'Desktop';
       const screenClass = DetectorClass ? DetectorClass.detectScreenClass() : 'DesktopHD';
       const inputMethods = DetectorClass ? DetectorClass.detectInputMethods() : {};
 
@@ -63,6 +64,7 @@
 
       const rawData = {
         deviceClass,
+        deviceCategory,
         screenClass,
         orientation,
         width,

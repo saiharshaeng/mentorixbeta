@@ -37,6 +37,25 @@
       });
     }
 
+    getPerformanceConfig(tier) {
+      const t = tier || (window.deviceProfile ? window.deviceProfile.performanceTier : 'High');
+      switch(t) {
+        case 'High':
+        case 'TierA':
+          return { particleCount: 30, blurPx: 24, enable3D: true, enableAnimations: true, enableParticles: true, tier: 'TierA' };
+        case 'Medium':
+        case 'TierB':
+          return { particleCount: 12, blurPx: 16, enable3D: true, enableAnimations: true, enableParticles: true, tier: 'TierB' };
+        case 'Low':
+        case 'TierC':
+          return { particleCount: 0, blurPx: 0, enable3D: false, enableAnimations: true, enableParticles: false, tier: 'TierC' };
+        case 'VeryLow':
+        case 'TierD':
+        default:
+          return { particleCount: 0, blurPx: 0, enable3D: false, enableAnimations: false, enableParticles: false, tier: 'TierD' };
+      }
+    }
+
     suspendBackgroundOperations() {
       this.isBackground = true;
 

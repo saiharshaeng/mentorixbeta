@@ -64,28 +64,28 @@ function rRevision(){
 
     <!-- Travel-site style accent headline -->
     <div class="dash-hero-zone" style="padding:var(--sp-6) 0">
-      <div class="editorial-section-label">SMART REVISION ENGINE</div>
-      <h1 class="dash-hero-greeting" style="font-size:clamp(28px,4vw,48px)">Revise Smart</h1>
+      <div class="editorial-section-label font-poiret">SMART REVISION ENGINE</div>
+      <h1 class="dash-hero-greeting font-serif" style="font-size:clamp(28px,4vw,48px)">Revise Smart</h1>
       <div class="dash-hero-meta">
         ${highCount>0?`<span class="dash-hero-streak"><span aria-hidden="true">⚠️</span> ${highCount} overdue</span>`:''}
-        ${midCount>0?`<span class="dash-hero-xp" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.2);color:var(--goldl)"><span aria-hidden="true">📅</span> ${midCount} due soon</span>`:''}
-        ${queue.length===0?'':'<span style="font-size:var(--fs-xs);color:var(--mut)">'+(queue.length)+' topics total</span>'}
+        ${midCount>0?`<span class="dash-hero-xp font-poiret" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.2);color:var(--goldl)"><span aria-hidden="true">📅</span> ${midCount} due soon</span>`:''}
+        ${queue.length===0?'':'<span class="font-poiret" style="font-size:var(--fs-xs);color:var(--mut)">'+(queue.length)+' topics total</span>'}
       </div>
     </div>
 
     <!-- Tio SM-2 explanation -->
-    <div class="tio-inline mb20 s1" style="background:rgba(139,92,246,.05);border:1px solid rgba(139,92,246,.15);border-radius:var(--r-card);padding:14px 16px">
+    <div class="tio-inline mb20 s1 mx-glass-card" style="background:rgba(139,92,246,.05);border:1px solid rgba(139,92,246,.15);border-radius:var(--r-card);padding:14px 16px">
       <div class="nxav" aria-hidden="true">✨</div>
-      <div><div style="color:var(--pl);font-size:var(--fs-xs);font-weight:700;margin-bottom:3px">TIO · SM-2 SPACED REPETITION</div>
+      <div><div class="font-poiret" style="color:var(--pl);font-size:var(--fs-xs);font-weight:700;margin-bottom:3px">TIO · SM-2 SPACED REPETITION</div>
       <div style="color:var(--sub);font-size:var(--fs-sm);line-height:var(--lh-body)">"Spaced repetition is the #1 memory technique. I'll remind you to revise topics at the perfect time — just before you forget them! 🧠"</div></div>
     </div>
 
     ${queue.length===0?`
-    <div class="card card-hero" style="text-align:center;padding:56px 32px">
+    <div class="card card-hero mx-glass-card" style="text-align:center;padding:56px 32px">
       <div style="font-size:64px;margin-bottom:16px" aria-hidden="true">🌍</div>
-      <div class="h2" style="margin-bottom:10px">Nothing to revise yet!</div>
+      <div class="h2 font-serif" style="margin-bottom:10px">Nothing to revise yet!</div>
       <p style="color:var(--mut);margin-bottom:20px;font-size:var(--fs-md)">Learn some topics first, then come back to revise them.</p>
-      <button class="btn bpri" style="padding:13px 28px" onclick="go('learn')">Start Learning →</button>
+      <button class="btn bpri mx-btn-primary" style="padding:13px 28px" onclick="go('learn')">Start Learning →</button>
     </div>`:`
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px" class="s2">
       ${queue.map(item=>{
@@ -93,17 +93,17 @@ function rRevision(){
         const urgLabel={high:'⚠️ Overdue',mid:'📅 Due soon',low:'✅ On track'}[item.priority];
         const sm2=sm2NextInterval(item.topic);
         const scoreBar=`<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Last score</span><span style="color:${item.score>=80?'var(--okl)':item.score>=50?'var(--goldl)':'var(--redl)'};font-size:var(--fs-xs);font-weight:700;font-family:var(--f-num)">${item.score}%</span></div><div class="mastery-bar-wrap"><div class="mastery-bar ${item.score>=80?'mastery-good':item.score>=50?'mastery-ok':'mastery-low'}" style="width:${item.score}%"></div></div></div>`;
-        return `<div class="rev-card rev-${item.priority}" style="background:${urgColor[1]};cursor:default" role="article" aria-label="${esc(item.topic)} - ${urgLabel}">
+        return `<div class="rev-card rev-${item.priority} mx-glass-card" style="background:${urgColor[1]};cursor:default" role="article" aria-label="${esc(item.topic)} - ${urgLabel}">
           <div class="between mb10">
-            <div style="font-size:var(--fs-md);font-weight:700;color:#fff;flex:1;margin-right:10px">${esc(item.topic)}</div>
-            <span style="font-size:var(--fs-xs);color:${urgColor[0]};font-weight:600;white-space:nowrap">${urgLabel}</span>
+            <div class="font-serif" style="font-size:var(--fs-md);font-weight:700;color:#fff;flex:1;margin-right:10px">${esc(item.topic)}</div>
+            <span class="font-poiret" style="font-size:var(--fs-xs);color:${urgColor[0]};font-weight:600;white-space:nowrap">${urgLabel}</span>
           </div>
           <div style="color:var(--mut);font-size:var(--fs-xs);margin-bottom:10px">${item.daysSince===0?'Studied today':item.daysSince===1?'Studied yesterday':`${item.daysSince} days ago`} · <span class="${sm2.cls}">${sm2.label}</span></div>
           ${scoreBar}
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px">
-            <button class="rev-method-btn" onclick="startRevision('${esc(item.topic)}','flashcards')"><span style="font-size:20px" aria-hidden="true">🃏</span><span>Flashcards</span></button>
-            <button class="rev-method-btn" onclick="startRevision('${esc(item.topic)}','quiz')"><span style="font-size:20px" aria-hidden="true">🎯</span><span>Mini Quiz</span></button>
-            <button class="rev-method-btn" onclick="startRevision('${esc(item.topic)}','recap')"><span style="font-size:20px" aria-hidden="true">📖</span><span>Recap</span></button>
+            <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','flashcards')"><span style="font-size:20px" aria-hidden="true">🃏</span><span>Flashcards</span></button>
+            <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','quiz')"><span style="font-size:20px" aria-hidden="true">🎯</span><span>Mini Quiz</span></button>
+            <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','recap')"><span style="font-size:20px" aria-hidden="true">📖</span><span>Recap</span></button>
           </div>
         </div>`;
       }).join('')}

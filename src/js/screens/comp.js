@@ -1932,13 +1932,13 @@ function renderPracticeTab(exam) {
   if (!compState.practiceChapter) compState.practiceChapter = 'All Chapters';
 
   return `
-    <div class="card" style="padding:22px">
-      <div class="h2 mb8" style="color:#fff">🎯 Custom Practice Room</div>
+    <div class="card mx-glass-card" style="padding:22px">
+      <div class="h2 mb8 font-serif" style="color:#fff">🎯 Custom Practice Room</div>
       <p class="sub mb20">Build a customized question set from any chapter, difficulty, and quantity. AI generates real exam-style questions.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
         <div>
-          <label class="inp-label">SUBJECT / SECTION</label>
+          <label class="inp-label font-poiret">SUBJECT / SECTION</label>
           <select class="inp" onchange="compState.practiceSubject=this.value;compState.practiceChapter='All Chapters';rComp()">
             ${subjects.map(s => `<option value="${s}" ${compState.practiceSubject===s?'selected':''}>${s}</option>`).join('')}
           </select>
@@ -2504,6 +2504,10 @@ function renderActiveExamUI() {
   const exam = compState.activeExam;
   if (!exam) return '';
 
+  // Section 47: Exam isolation — Hide Tio companion during active mock exam
+  const tioWidget = document.getElementById('tio-widget-container');
+  if (tioWidget) tioWidget.style.display = 'none';
+
   const q = exam.questions[exam.currentIndex];
   if (!q) return '';
 
@@ -2544,9 +2548,9 @@ function renderActiveExamUI() {
     const answeredInSub = qsInSub.filter(x => exam.status[x.i] === 'answered').length;
     const totalInSub = qsInSub.length;
     const subColor = sub === 'Mathematics' ? '#f0883e' : sub === 'Physics' ? '#58a6ff' : sub === 'Chemistry' ? '#3fb950' : '#a371f7';
-    return `<button class="nta-sub-tab${isActive ? ' active' : ''}" onclick="switchMockSection('${sub}')" style="${isActive ? `border-bottom-color:${subColor};color:${subColor};` : ''}">
+    return `<button class="nta-sub-tab font-poiret${isActive ? ' active' : ''}" onclick="switchMockSection('${sub}')" style="${isActive ? `border-bottom-color:${subColor};color:${subColor};` : ''}">
       ${sub}
-      <span class="nta-sub-count" style="${isActive ? `background:rgba(255,255,255,0.1);color:${subColor};` : ''}">${answeredInSub}/${totalInSub}</span>
+      <span class="nta-sub-count font-mono" style="${isActive ? `background:rgba(255,255,255,0.1);color:${subColor};` : ''}">${answeredInSub}/${totalInSub}</span>
     </button>`;
   }).join('');
 
@@ -2563,7 +2567,7 @@ function renderActiveExamUI() {
     const targetIdx = exam.questions.findIndex(
       q2 => (q2.section||'General') === currentSubject && (q2.sectionLabel||'Section A') === sec
     );
-    return `<button class="nta-sec-tab${isActive ? ' active' : ''}" onclick="navigateExam(${targetIdx >= 0 ? targetIdx : 0})">${sec}</button>`;
+    return `<button class="nta-sec-tab font-poiret${isActive ? ' active' : ''}" onclick="navigateExam(${targetIdx >= 0 ? targetIdx : 0})">${sec}</button>`;
   }).join('') : '';
 
   // ── PALETTE ────────────────────────────────────────────────────────────
@@ -2585,7 +2589,7 @@ function renderActiveExamUI() {
 
     let secGroupsHTML = Object.entries(secGroups).map(([secLabel, items]) => {
       const isNumSec = secLabel.toLowerCase().includes('b') || items.some(x => x.q.type === 'numerical');
-      const secTypeTag = isNumSec ? '<span class="nta-pal-sec-type nta-pal-sec-num">NUM</span>' : '<span class="nta-pal-sec-type nta-pal-sec-mcq">MCQ</span>';
+      const secTypeTag = isNumSec ? '<span class="nta-pal-sec-type nta-pal-sec-num font-poiret">NUM</span>' : '<span class="nta-pal-sec-type nta-pal-sec-mcq font-poiret">MCQ</span>';
       const btnHTML = items.map(({ q: q2, i }) => {
         const status = exam.status[i] || 'unvisited';
         const isCurrent = exam.currentIndex === i;
@@ -2596,19 +2600,19 @@ function renderActiveExamUI() {
           'marked': 'nta-pal-marked',
           'answered_marked': 'nta-pal-answered-marked'
         };
-        const cls = `nta-pal-btn ${statusMap[status] || 'nta-pal-unvisited'}${isCurrent ? ' nta-pal-current' : ''}`;
+        const cls = `nta-pal-btn font-mono ${statusMap[status] || 'nta-pal-unvisited'}${isCurrent ? ' nta-pal-current' : ''}`;
         return `<button class="${cls}" data-q-index="${i}" onclick="navigateExam(${i})">${i + 1}</button>`;
       }).join('');
       return `
-        <div class="nta-pal-sec-row">
-          <span class="nta-pal-sec-label">${secLabel}</span>
+        <div class="nta-pal-sec-row font-poiret">
+          <span class="nta-pal-sec-label font-poiret">${secLabel}</span>
           ${secTypeTag}
         </div>
         <div class="nta-pal-grid">${btnHTML}</div>`;
     }).join('');
 
     return `<div class="nta-pal-group${subActive ? ' nta-pal-group-active' : ''}">
-      <div class="nta-pal-sub" style="color:${subColor};border-left:3px solid ${subColor};padding-left:8px;">${sub.toUpperCase()}</div>
+      <div class="nta-pal-sub font-poiret" style="color:${subColor};border-left:3px solid ${subColor};padding-left:8px;">${sub.toUpperCase()}</div>
       ${secGroupsHTML}
     </div>`;
   }).join('');

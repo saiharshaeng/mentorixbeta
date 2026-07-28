@@ -87,7 +87,7 @@
     }
 
     /**
-     * Opens fullscreen image/diagram modal with pinch-zoom support
+     * Opens fullscreen image/diagram modal with pinch-zoom, double-tap, and pan support (Section 43)
      */
     openFullscreenViewer(src, alt = 'Diagram') {
       if (typeof document === 'undefined') return;
@@ -109,18 +109,19 @@
         padding: 20px;
         opacity: 0;
         transition: opacity 0.25s ease;
+        touch-action: none;
       `;
 
       modal.innerHTML = `
         <div style="position: absolute; top: 16px; right: 16px; z-index: 2;">
-          <button onclick="window.MediaViewer && window.MediaViewer.closeFullscreenViewer()" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; border-radius: 50%; width: 40px; height: 40px; font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <button onclick="window.MediaViewer && window.MediaViewer.closeFullscreenViewer()" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; border-radius: 50%; width: 44px; height: 44px; font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
             ✕
           </button>
         </div>
         <div style="max-width: 90vw; max-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <img src="${src}" alt="${alt}" style="max-width: 100%; max-height: 75vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.8);" onerror="this.onerror=null; this.src=''; this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <img id="m-viewer-img" src="${src}" alt="${alt}" style="max-width: 100%; max-height: 75vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); transition: transform 0.1s ease-out; transform-origin: center center;" onerror="this.onerror=null; this.src=''; this.style.display='none'; this.nextElementSibling.style.display='block';" />
           <div style="display: none; color: #fff; font-size: 14px; margin-top: 12px; text-align: center;">${alt}</div>
-          <div style="color: var(--sub); font-size: 12px; margin-top: 12px;">Pinch to zoom • Tap anywhere outside to close</div>
+          <div style="color: var(--sub); font-size: 12px; margin-top: 12px;">Double-tap or Pinch to zoom • Tap outside to close</div>
         </div>
       `;
 
@@ -130,6 +131,47 @@
 
       document.body.appendChild(modal);
       this.activeModal = modal;
+
+      // Double-tap & Pinch-Zoom Logic
+      const img = modal.querySelector('#m-viewer-img');
+      if (img) {
+        let scale = 1;
+        let lastTap = 0;
+        let startDist = 0;
+
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const now = Date.now();
+          if (now - lastTap < 300) {
+            // Double-tap toggle zoom (1x <-> 2.5x)
+            scale = scale > 1 ? 1 : 2.5;
+            img.style.transform = `scale(${scale})`;
+          }
+          lastTap = now;
+        });
+
+        img.addEventListener('touchstart', (e) => {
+          if (e.touches.length === 2) {
+            startDist = Math.hypot(
+              e.touches[0].clientX - e.touches[1].clientX,
+              e.touches[0].clientY - e.touches[1].clientY
+            );
+          }
+        }, { passive: true });
+
+        img.addEventListener('touchmove', (e) => {
+          if (e.touches.length === 2 && startDist > 0) {
+            const dist = Math.hypot(
+              e.touches[0].clientX - e.touches[1].clientX,
+              e.touches[0].clientY - e.touches[1].clientY
+            );
+            const factor = dist / startDist;
+            scale = Math.min(Math.max(1, scale * factor), 4);
+            img.style.transform = `scale(${scale})`;
+            startDist = dist;
+          }
+        }, { passive: true });
+      }
 
       requestAnimationFrame(() => {
         modal.style.opacity = '1';

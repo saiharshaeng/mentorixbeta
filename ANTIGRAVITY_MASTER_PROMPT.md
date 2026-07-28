@@ -16,11 +16,12 @@ Your job is not just to write code. Your job is to **preserve the soul of Mentor
 
 Before doing anything, confirm you have reviewed:
 1. `PRODUCT_VISION.md` — why Mentorix exists, who it's for, what it must feel like
-2. `ENGINEERING_CONSTITUTION.md` — all rules, post-edit checklist, error log
-3. `DESIGN.md` — visual identity, approved tech stack, animation rules
-4. `ARCHITECTURE.md` — system layers, folder structure, data flow
-5. `TIO.md` — Tio's personality, visual design, animation system
-6. `PATCHES_TO_MAKE.md` — complete roadmap, current priorities, sprint plan
+2. `MENTORIX_DESIGN_CONSTITUTION_v1.0.md` — 10-chapter design constitution, 5-font matrix, color tokens, psychological UX, tool mappings
+3. `ENGINEERING_CONSTITUTION.md` — all rules, post-edit checklist, error log
+4. `DESIGN.md` — visual identity, approved tech stack, animation rules
+5. `ARCHITECTURE.md` — system layers, folder structure, data flow
+6. `TIO.md` — Tio's personality, visual design, animation system
+7. `PATCHES_TO_MAKE.md` — complete roadmap, current priorities, sprint plan
 
 If any of these files have changed since your last session, re-read them before proceeding.
 

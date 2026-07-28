@@ -32,32 +32,35 @@ Every new component must naturally fit the existing design language.
 
 ---
 
-## Visual Identity
+## Visual Identity & Specifications (See MENTORIX_DESIGN_CONSTITUTION_v1.0.md)
 
-### Colors (CSS Variables — never hardcode)
+> [!IMPORTANT]
+> The complete 10-chapter design constitution, font matrix, color tokens, and psychological UX framework are documented in [MENTORIX_DESIGN_CONSTITUTION_v1.0.md](file:///C:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/MENTORIX_DESIGN_CONSTITUTION_v1.0.md).
+
+### Colors (CSS Variables — warm obsidian & violet palette)
 ```css
---bg: #0a0a0f          /* Deep space black */
---surface: #12121a     /* Card surfaces */
---p: #8b5cf6           /* Primary purple */
---pl: #a78bfa          /* Purple light */
---c: #06b6d4           /* Cyan accent */
---cl: #22d3ee          /* Cyan light */
---ok: #10B981          /* Success green */
---warn: #F59E0B        /* Warning amber */
---red: #EF4444         /* Error red */
---text: #ffffff        /* Primary text */
---sub: #94a3b8         /* Subtitle/secondary */
---mut: #475569         /* Muted text */
---brd: rgba(255,255,255,0.08)  /* Border */
+--bg-deep:    #080810;          /* Deepest space void */
+--bg-base:    #0d0d18;          /* Main canvas background */
+--bg-surface: #131325;          /* Card surfaces (40% translucent) */
+--bg-raised:  #1a1a35;          /* Elevated action cards */
+
+--violet-500: #7c3aed;          /* Primary CTA background */
+--violet-400: #8b5cf6;          /* Primary purple glow */
+--cosmic-cyan:  #06b6d4;        /* Tio AI cyan accent */
+--star-gold:    #f59e0b;        /* XP & streak gold */
+--nebula-pink:  #ec4899;        /* Achievements pink */
+--aurora-green: #10b981;        /* Success green */
+--mars-red:     #ef4444;        /* Warning red */
 ```
 
-### Typography (use only these)
-**Primary font:** Space Grotesk — headings, UI labels, buttons
-**Secondary font:** Inter — body text, paragraphs, descriptions
-**Mono font:** JetBrains Mono — code, formulas, technical content
-**Math font:** KaTeX default — LaTeX math rendering only
+### Typography (5-Font Matrix — use only these)
+* **Cinzel**: Hero Titles, Celestial Headings, Cosmic Badges (`.font-cinzel`)
+* **DM Serif Display**: Tio Prompts, Editorial Headers, Story Cards (`.font-serif`)
+* **Poiret One**: Category Chips, Navigation Pills, Stat Labels (`.font-poiret`)
+* **Inter**: Body Copy, Explanations, Quiz Options, UI Text (`.font-sans`)
+* **JetBrains Mono**: KaTeX Formulas, Telemetry, Test Timers (`.font-mono`)
 
-Never use system fonts. Never introduce a new font without founder approval.
+Never use unapproved fonts. Every text element must follow its explicit role in the 5-font matrix.
 
 ### Spacing Scale (8px base grid)
 ```

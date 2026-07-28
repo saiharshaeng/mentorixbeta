@@ -10,11 +10,22 @@
 (function(exports) {
 
   const DeviceClasses = Object.freeze({
-    DESKTOP:  'Desktop',
-    LAPTOP:   'Laptop',
-    TABLET:   'Tablet',
-    PHONE:    'Phone',
-    FOLDABLE: 'Foldable'
+    DESKTOP:        'Desktop',
+    LAPTOP:         'Laptop',
+    TABLET:         'Tablet',
+    PHONE:          'Phone',
+    FOLDABLE:       'Foldable'
+  });
+
+  const DeviceCategories = Object.freeze({
+    COMPACT_MOBILE: 'CompactMobile',
+    REGULAR_MOBILE: 'RegularMobile',
+    LARGE_MOBILE:   'LargeMobile',
+    SMALL_TABLET:   'SmallTablet',
+    LARGE_TABLET:   'LargeTablet',
+    LAPTOP:         'Laptop',
+    DESKTOP:        'Desktop',
+    LARGE_DESKTOP:  'LargeDesktop'
   });
 
   const ScreenClasses = Object.freeze({
@@ -28,6 +39,10 @@
   });
 
   const PerformanceTiers = Object.freeze({
+    TIER_A:   'High',
+    TIER_B:   'Medium',
+    TIER_C:   'Low',
+    TIER_D:   'VeryLow',
     HIGH:     'High',
     MEDIUM:   'Medium',
     LOW:      'Low',
@@ -44,6 +59,7 @@
   class DeviceProfile {
     constructor(data = {}) {
       this.deviceClass              = data.deviceClass || DeviceClasses.DESKTOP;
+      this.deviceCategory           = data.deviceCategory || DeviceCategories.DESKTOP;
       this.screenClass              = data.screenClass || ScreenClasses.DESKTOP_HD;
       this.orientation              = data.orientation || 'landscape';
       this.width                    = data.width || 1920;
@@ -98,6 +114,7 @@
   if (typeof window !== 'undefined') {
     window.DeviceProfile = DeviceProfile;
     window.DeviceClasses = DeviceClasses;
+    window.DeviceCategories = DeviceCategories;
     window.ScreenClasses = ScreenClasses;
     window.PerformanceTiers = PerformanceTiers;
     window.GraphicsTiers = GraphicsTiers;
@@ -105,6 +122,7 @@
 
   exports.DeviceProfile = DeviceProfile;
   exports.DeviceClasses = DeviceClasses;
+  exports.DeviceCategories = DeviceCategories;
   exports.ScreenClasses = ScreenClasses;
   exports.PerformanceTiers = PerformanceTiers;
   exports.GraphicsTiers = GraphicsTiers;
