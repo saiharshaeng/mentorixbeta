@@ -6,6 +6,8 @@
 
 let selCat=null;
 function rExplore(){
+  if (!D.topics) D.topics = [];
+  if (!D.exploredCats) D.exploredCats = [];
   document.getElementById('main').innerHTML=`
   <div class="sw scr">
     <div class="h1">🌍 Knowledge Explorer</div>

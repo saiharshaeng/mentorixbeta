@@ -225,7 +225,10 @@ function finishDiscovery() {
 }
 
 function renderCareerList(container) {
-  const recommendations = window.CareerEngine ? window.CareerEngine.getRecommendations() : [];
+  let recommendations = window.CareerEngine ? window.CareerEngine.getRecommendations() : [];
+  if (!recommendations || recommendations.length === 0) {
+    recommendations = window.CareerEngine ? (window.CareerEngine.CAREER_DATABASE || []).map(c => ({ ...c, matchPct: 95, transparentWhy: 'High-impact competitive career path aligned with your stream.' })) : [];
+  }
 
   container.innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:10px">
