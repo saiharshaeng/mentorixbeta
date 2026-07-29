@@ -107,8 +107,7 @@
       { key: 'jee_adv2022_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2022_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
       { key: 'jee_adv2023_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2023_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
       { key: 'jee_adv2024_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2024_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_pdf_ingested',  url: origin + '/data/pyq/fixed/jee_pdf_advanced_ingested.json', exam: 'JEE_MAIN', subject: null }
+      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null }
     ];
 
     let totalLoaded = 0;
@@ -122,8 +121,24 @@
         const raw = await r.json();
         if (!Array.isArray(raw) || raw.length === 0) continue;
 
+        // Filter out corrupted OCR questions & dummy options ("Option A", "JEEBOOKS")
+        const validRaw = raw.filter(q => {
+          if (!q) return false;
+          const stem = String(q.stem || q.question || q.q || '');
+          const expl = String(q.solution || q.explanation || q.expl || '');
+          let opts = [];
+          if (Array.isArray(q.options)) opts = q.options;
+          else if (q.options && typeof q.options === 'object') opts = [q.options.a||'', q.options.b||'', q.options.c||'', q.options.d||''];
+          else if (Array.isArray(q.opts)) opts = q.opts;
+
+          if (/JEEBOOKS|jeeneetbooks|Answer with Explanations|Central Idea Use geometry/i.test(stem) || /JEEBOOKS|jeeneetbooks/i.test(expl)) return false;
+          if (opts.some(opt => /^Option [A-D]$/i.test(String(opt).trim()))) return false;
+          if (stem.trim().length < 10) return false;
+          return true;
+        });
+
         // Normalize to pyqService format
-        const normalized = raw.map((q, i) => {
+        const normalized = validRaw.map((q, i) => {
           // Handle options object {a,b,c,d} or array
           let opts = [];
           if (Array.isArray(q.options)) {
@@ -315,7 +330,7 @@
   }
 
   async function _preloadAllBrowser() {
-    const origin = (typeof window !== 'undefined' && window.location.origin) ? window.location.origin : '';
+    const origin = (typeof window !== 'undefined' && window.location && window.location.origin) ? window.location.origin : 'http://localhost:8080';
     const allPapers = [...JEE_MAIN_PAPERS, ...JEE_ADVANCED_PAPERS];
     await Promise.all(allPapers.map(async paper => {
       if (fileCache[paper.file]) return;
