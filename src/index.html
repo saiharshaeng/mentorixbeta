@@ -81,7 +81,13 @@ if (location.protocol === 'file:') {
 </script>
 
 <!-- Mentorix OS Core Services -->
-<script>window._gitVersion = 'a8ffd97';</script>
+<script>
+window._gitVersion = 'a8ffd97';
+window.splashSkip = function() {
+  const el = document.getElementById('mx-splash-screen') || document.querySelector('.mx-splash');
+  if (el) el.remove();
+};
+</script>
 <script src="/js/services/moduleRegistry.js?v=a8ffd97"></script>
 <script src="/js/services/indexedDBCache.js?v=a8ffd97"></script>
 <script>

@@ -1,0 +1,326 @@
+{
+  "routes": [],
+  "dead_buttons": [
+    {
+      "file": "src\\js\\router.js",
+      "handler": "if(typeof renderOB===",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\js\\screens\\comp.js",
+      "handler": "if(window.QRAReviewEngine && window._lastEvalReport && window._lastAttemptPkg) { window.QRAReviewEngine.openReview(window._lastEvalReport, window._lastAttemptPkg); } else { toast(",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\js\\screens\\courses.js",
+      "handler": "if (${isUnlocked}) { activeCourseId=",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\js\\screens\\courses.js",
+      "handler": "if (${isUnlocked}) { activeCourseId=",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\js\\screens\\courses.js",
+      "handler": "if (${isChapterCompleted}) { toast(",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\js\\screens\\doubt.js",
+      "handler": "toggleDoubtVoice()",
+      "missingFn": "toggleDoubtVoice"
+    },
+    {
+      "file": "src\\js\\screens\\learn.js",
+      "handler": "readoutTioExplanation(",
+      "missingFn": "readoutTioExplanation"
+    },
+    {
+      "file": "src\\js\\screens\\learn.js",
+      "handler": "if(!LS.confidenceRating)LS.confidenceRating=3;saveCheckpoint();advanceStage(7)",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\js\\screens\\learn.js",
+      "handler": "clearInterval(window._compNavTimer);go(",
+      "missingFn": "clearInterval"
+    },
+    {
+      "file": "src\\js\\screens\\learn.js",
+      "handler": "clearInterval(window._compNavTimer);go(",
+      "missingFn": "clearInterval"
+    },
+    {
+      "file": "src\\js\\screens\\learn.js",
+      "handler": "clearInterval(window._compNavTimer);${nextTopicName ? `go(",
+      "missingFn": "clearInterval"
+    },
+    {
+      "file": "src\\js\\screens\\settings.js",
+      "handler": "requestNotifPerms()",
+      "missingFn": "requestNotifPerms"
+    },
+    {
+      "file": "src\\js\\screens\\settings.js",
+      "handler": "applyFontSize(",
+      "missingFn": "applyFontSize"
+    },
+    {
+      "file": "src\\js\\screens\\settings.js",
+      "handler": "pwaInstall()",
+      "missingFn": "pwaInstall"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "splashSkip()",
+      "missingFn": "splashSkip"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "onTioWidgetClick()",
+      "missingFn": "onTioWidgetClick"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "toggleMobDrawer()",
+      "missingFn": "toggleMobDrawer"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeMobDrawer()",
+      "missingFn": "closeMobDrawer"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "if(event.target===this)closeGlobalSearch()",
+      "missingFn": "if"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "stopVoiceReading()",
+      "missingFn": "stopVoiceReading"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "toggleTimerWidget()",
+      "missingFn": "toggleTimerWidget"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "timerToggle()",
+      "missingFn": "timerToggle"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "timerReset()",
+      "missingFn": "timerReset"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "setTimerMode(25,",
+      "missingFn": "setTimerMode"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "setTimerMode(5,",
+      "missingFn": "setTimerMode"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "setTimerMode(15,",
+      "missingFn": "setTimerMode"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "requestNotifPerms()",
+      "missingFn": "requestNotifPerms"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "pwaInstall()",
+      "missingFn": "pwaInstall"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "obSkipToLearn()",
+      "missingFn": "obSkipToLearn"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "obSkipToLearn()",
+      "missingFn": "obSkipToLearn"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "selectBoard(",
+      "missingFn": "selectBoard"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "toggleObSubject(",
+      "missingFn": "toggleObSubject"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "addObSubjectOther()",
+      "missingFn": "addObSubjectOther"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "obDone()",
+      "missingFn": "obDone"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "obDone()",
+      "missingFn": "obDone"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "colSB()",
+      "missingFn": "colSB"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "openMobDrawer()",
+      "missingFn": "openMobDrawer"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeMobDrawer();go(",
+      "missingFn": "closeMobDrawer"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); activeCourseId=",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); activeCourseId=",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); if(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "closeGlobalSearch(); go(",
+      "missingFn": "closeGlobalSearch"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "checkTutorAnswer()",
+      "missingFn": "checkTutorAnswer"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "revealHint(this,",
+      "missingFn": "revealHint"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "checkSocratic()",
+      "missingFn": "checkSocratic"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "startSocraticMode(",
+      "missingFn": "startSocraticMode"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "useStreakShield();document.getElementById(",
+      "missingFn": "useStreakShield"
+    },
+    {
+      "file": "src\\index.html",
+      "handler": "shareCertificate(",
+      "missingFn": "shareCertificate"
+    },
+    {
+      "file": "src\\instagram_milestone.html",
+      "handler": "downloadPNG()",
+      "missingFn": "downloadPNG"
+    },
+    {
+      "file": "src\\instagram_post.html",
+      "handler": "downloadPNG()",
+      "missingFn": "downloadPNG"
+    }
+  ],
+  "missing_image_fallbacks": [
+    {
+      "file": "src\\lib\\katex.min.js",
+      "tag": "<img src=\"'+l.escape(this.src)+'\" alt=\"'+l.escape(this.alt)+'\"',t=\"\";for(const e"
+    }
+  ],
+  "unhandled_api_calls": [
+    {
+      "file": "src\\tools\\mentorix_ingest.js",
+      "line": 24,
+      "snippet": "const res = await fetch(GROQ_URL, {"
+    }
+  ],
+  "console_error_calls": [],
+  "empty_states_handled": true,
+  "loading_states_handled": true
+}

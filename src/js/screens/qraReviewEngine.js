@@ -224,7 +224,7 @@
       let imageHTML = '';
       if (q.hasImage || q.imagePath || q.img) {
         const imgSrc = q.imagePath || q.img;
-        imageHTML = `<div style="margin:14px 0"><img src="${esc(imgSrc)}" loading="lazy" decoding="async" style="max-width:100%;max-height:300px;border-radius:10px;border:1px solid var(--brd,rgba(255,255,255,0.1))" alt="Question Diagram" /></div>`;
+        imageHTML = `<div style="margin:14px 0"><img src="${esc(imgSrc)}" loading="lazy" decoding="async" style="max-width:100%;max-height:300px;border-radius:10px;border:1px solid var(--brd,rgba(255,255,255,0.08))" alt="Question Diagram" onerror="this.onerror=null;this.parentElement.innerHTML='<div style=\\"padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;color:#94a3b8;font-size:12px;text-align:center;\\">📷 Diagram Image Unavailable</div>';" /></div>`;
       }
 
       container.innerHTML = `

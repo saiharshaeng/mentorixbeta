@@ -67,7 +67,8 @@
           }
           return `
             <div class="m-block-visual mb20" style="text-align: center;">
-              <img src="${block.src || block.url}" alt="${block.alt || 'Visual'}" style="max-width: 100%; border-radius: 12px;" />
+              <img src="${block.src || block.url}" alt="${block.alt || 'Visual'}" style="max-width: 100%; border-radius: 12px;" onerror="this.onerror=null;this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='block';" />
+              <div style="display:none;padding:16px;background:rgba(255,255,255,0.05);border-radius:10px;color:#94a3b8;font-size:12px;">📷 Diagram Image Unavailable</div>
             </div>
           `;
 
