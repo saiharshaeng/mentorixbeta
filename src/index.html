@@ -35,6 +35,25 @@ html, body {
 body:has(#app) {
   overflow: hidden;
 }
+/* Critical Splash Screen Overlay to prevent FOUC */
+#mx-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #0a0a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  user-select: none;
+}
+#mx-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 </style>
 
 <!-- ⚠️ FILE:// GUARD — must be FIRST script, before anything else -->
@@ -339,19 +358,6 @@ console.log('[KaTeX] System ready');
       <span class="mx-letter">I</span>
       <span class="mx-letter">X</span>
     </div>
-    
-    <div id="mx-line"></div>
-    
-    <div id="mx-subtitle" class="font-poiret">KNOWLEDGE IS INFINITE. EXPLORE IT.</div>
-    
-    <div id="mx-message">
-      <span class="line1">The mentor you never had.</span>
-      <span class="line2">Free. Forever.</span>
-    </div>
-    
-    <div id="mx-byline">by Harsha</div>
-    
-    <div id="mx-launch">LAUNCHING JULY 30</div>
     
     <div id="mx-progress">
       <div class="mx-progress-fill"></div>
@@ -4557,10 +4563,6 @@ function addHydrationBar(el){
   const cyanNebula = document.getElementById('mx-nebula-cyan');
   const content = document.getElementById('mx-content');
   const icon = document.getElementById('mx-icon');
-  const line = document.getElementById('mx-line');
-  const subtitle = document.getElementById('mx-subtitle');
-  const byline = document.getElementById('mx-byline');
-  const launch = document.getElementById('mx-launch');
   const progress = document.getElementById('mx-progress');
   const fill = document.querySelector('.mx-progress-fill');
 
@@ -4570,9 +4572,9 @@ function addHydrationBar(el){
       anime.remove('#mx-nebula');
     }
     const allAnimated = [
-      splash, stars, nebula, cyanNebula, content, icon, line, subtitle, byline, launch, progress, fill,
-      '.mx-letter', '.line1', '.line2'
-    ];
+      splash, stars, nebula, cyanNebula, content, icon, progress, fill,
+      '.mx-letter'
+    ].filter(Boolean);
     if (window.gsap) {
       gsap.set(allAnimated, { clearProps: 'will-change' });
     }
@@ -4584,8 +4586,8 @@ function addHydrationBar(el){
   if (prefersReducedMotion) {
     if (window.gsap) {
       gsap.set([
-        splash, stars, nebula, cyanNebula, content, icon, '.mx-letter', line, subtitle, '.line1', '.line2', byline, launch, progress, fill
-      ], {
+        splash, stars, nebula, cyanNebula, content, icon, '.mx-letter', progress, fill
+      ].filter(Boolean), {
         opacity: 1,
         scale: 1,
         y: 0,
@@ -4772,60 +4774,7 @@ function addHydrationBar(el){
       ease: 'power3.out'
     });
 
-    tl.fromTo(line,
-      { scaleX: 0, transformOrigin: 'left center', opacity: 0 },
-      { scaleX: 1, opacity: 1, duration: 0.55, ease: 'power2.inOut' },
-      '-=0.1'
-    );
-
-    // PHASE 5: SUBTITLE
-    tl.to(subtitle, {
-      opacity: 1,
-      duration: 0.45,
-      ease: 'power2.out'
-    });
-
-    // PHASE 6: MESSAGE — LINE 1
-    tl.to('.line1', {
-      opacity: 1,
-      y: 0,
-      duration: 0.55,
-      ease: 'power3.out'
-    });
-
-    // PHASE 7: MESSAGE — LINE 2
-    tl.to('.line2', {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      ease: 'power3.out'
-    });
-
-    tl.to('.line2', {
-      textShadow: '0 0 20px rgba(6,182,212,0.6)',
-      duration: 0.3,
-      ease: 'power2.out'
-    });
-    tl.to('.line2', {
-      textShadow: '0 0 0px rgba(6,182,212,0)',
-      duration: 0.5,
-      ease: 'power2.inOut'
-    });
-
-    // PHASE 8: BY HARSHA
-    tl.to(byline, {
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.out'
-    });
-
-    // PHASE 9: LAUNCH DATE + PROGRESS
-    tl.to(launch, {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out'
-    });
-
+    // PHASE 5: PROGRESS BAR FILL
     tl.to(progress, {
       opacity: 1,
       duration: 0.3,
@@ -4836,7 +4785,7 @@ function addHydrationBar(el){
       { scaleX: 0, transformOrigin: 'left center' },
       { 
         scaleX: 1, 
-        duration: 0.9,
+        duration: 0.7,
         ease: 'power2.inOut',
         onComplete: triggerParticleBurst
       }

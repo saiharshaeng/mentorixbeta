@@ -34,11 +34,6 @@ export default function MentorixSplash({ onComplete }) {
   const contentRef = useRef(null);
   const iconRef = useRef(null);
   const wordmarkRef = useRef(null);
-  const lineRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const messageRef = useRef(null);
-  const bylineRef = useRef(null);
-  const launchRef = useRef(null);
   const progressRef = useRef(null);
 
   // 1. Reduced Motion Check
@@ -317,64 +312,7 @@ export default function MentorixSplash({ onComplete }) {
       duration: 0.45,
       stagger: 0.065,
       ease: 'power3.out'
-    });
-
-    // Decorative line draws itself
-    tl.fromTo(lineRef.current,
-      { scaleX: 0, transformOrigin: 'left center', opacity: 0 },
-      { scaleX: 1, opacity: 1, duration: 0.55, ease: 'power2.inOut' },
-      '-=0.1'
-    );
-
-    // PHASE 5: SUBTITLE (3.3s → 3.85s)
-    tl.to(subtitleRef.current, {
-      opacity: 1,
-      duration: 0.45,
-      ease: 'power2.out'
-    });
-
-    // PHASE 6: MESSAGE — LINE 1 (3.85s → 4.5s)
-    tl.to('.line1', {
-      opacity: 1,
-      y: 0,
-      duration: 0.55,
-      ease: 'power3.out'
-    });
-
-    // PHASE 7: MESSAGE — LINE 2 (4.5s → 5.1s)
-    tl.to('.line2', {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      ease: 'power3.out'
-    });
-
-    // Pulse cyan glow on line2
-    tl.to('.line2', {
-      textShadow: '0 0 20px rgba(6,182,212,0.6)',
-      duration: 0.3,
-      ease: 'power2.out'
-    });
-    tl.to('.line2', {
-      textShadow: '0 0 0px rgba(6,182,212,0)',
-      duration: 0.5,
-      ease: 'power2.inOut'
-    });
-
-    // PHASE 8: BY HARSHA (5.1s → 5.7s)
-    tl.to(bylineRef.current, {
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.out'
-    });
-
-    // PHASE 9: LAUNCH DATE + PROGRESS (5.7s → 7.2s)
-    tl.to(launchRef.current, {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out'
-    });
-
+    // PHASE 5: PROGRESS BAR FILL
     tl.to(progressRef.current, {
       opacity: 1,
       duration: 0.3,
@@ -385,7 +323,7 @@ export default function MentorixSplash({ onComplete }) {
       { scaleX: 0, transformOrigin: 'left center' },
       { 
         scaleX: 1, 
-        duration: 0.9,
+        duration: 0.7,
         ease: 'power2.inOut',
         onComplete: triggerParticleBurst
       }
@@ -727,30 +665,6 @@ export default function MentorixSplash({ onComplete }) {
           {wordmarkLetters.split('').map((char, index) => (
             <span key={index} className="mx-letter will-change-anim">{char}</span>
           ))}
-        </div>
-
-        {/* Decorative Separator Line */}
-        <div ref={lineRef} id="mx-line" className="will-change-anim" />
-
-        {/* Brand Subtitle */}
-        <div ref={subtitleRef} id="mx-subtitle" className="will-change-anim">
-          KNOWLEDGE IS INFINITE. EXPLORE IT.
-        </div>
-
-        {/* Mission Statement */}
-        <div ref={messageRef} id="mx-message">
-          <span className="line1 will-change-anim">The mentor you never had.</span>
-          <span className="line2 will-change-anim">Free. Forever.</span>
-        </div>
-
-        {/* Founder Byline */}
-        <div ref={bylineRef} id="mx-byline" className="will-change-anim">
-          by Harsha
-        </div>
-
-        {/* Target Launch Info */}
-        <div ref={launchRef} id="mx-launch" className="will-change-anim">
-          LAUNCHING JULY 30
         </div>
 
         {/* Simulated Load Progress Indicator */}
