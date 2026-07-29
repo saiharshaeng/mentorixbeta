@@ -9501,8 +9501,8 @@
       "c": "$36$",
       "d": "$72$"
     },
-    "correct": "a",
-    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Quadratic Equations and Inequalities.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+    "correct": "b",
+    "solution": "Observe that $(x) + (x^2 - 9) = x^2 + x - 9$.\nLet $A = x$ and $B = x^2 - 9$. The given equation is $|A + B| = |A| + |B|$.\nThis property of absolute values holds true if and only if $A \\cdot B \\ge 0$.\nSubstituting the expressions back, we get: $x(x^2 - 9) \\ge 0 \\implies x(x - 3)(x + 3) \\ge 0$.\nThe critical points are $x = -3, 0, 3$. Testing intervals gives solution set $[-3, 0] \\cup [3, \\infty)$.\nComparing with $[\\alpha, \\beta] \\cup [\\gamma, \\infty)$, we get $\\alpha = -3$, $\\beta = 0$, and $\\gamma = 3$.\nTherefore, $(\\alpha^2 + \\beta^2 + \\gamma^2) = (-3)^2 + 0^2 + 3^2 = 9 + 0 + 9 = 18$ (Option B).",
     "marks": 4,
     "negativeMarks": -1,
     "source": "Official PYQ",

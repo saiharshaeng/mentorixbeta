@@ -28,6 +28,12 @@
                     questions = questions.filter(q => difficulty.includes(q.difficulty));
                 }
 
+                // 1b. Strict Subject Guard
+                if (subject) {
+                  const sl = subject.toLowerCase();
+                  questions = questions.filter(q => (q.section || '').toLowerCase().includes(sl));
+                }
+
                 // 2. Strict text & ID deduplication
                 const solvedIds = (window.D && window.D.compExam && window.D.compExam.solvedIds) ? window.D.compExam.solvedIds : [];
                 const seenTexts = new Set();
