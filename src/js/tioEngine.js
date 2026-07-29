@@ -239,13 +239,27 @@
     classifyIntent(userPrompt = '') {
       const p = userPrompt.toLowerCase().trim();
 
-      // 1. CASUAL SLANG, PROFANITY & EXPRESSIONS
-      if (/^(wtf|fuck|shit|damn|bitch|crap|ass|bro|dude|bruh|omg|lol|haha|lmao|rofl|xd|hahaha|wtffff|wtffffff)$/i.test(p) ||
-          (/\b(wtf|fuck|shit|damn|bitch|crap|ass|bro|dude|bruh|omg|lol|lmao|rofl|xd|hahaha)\b/i.test(p) && p.length < 30)) {
+      // 1. EARLY INTERCEPTOR: FOUL LANGUAGE & FRUSTRATION FILTER (Completely stops words from reaching AI)
+      const frustrationTriggers = ['wtf', 'fuck', 'shit', 'damn', 'hell', 'fucking', 'crap', 'bullshit', 'wtffff', 'wtffffff'];
+      const selfDoubtTriggers = ['dumb', 'stupid', 'useless', 'feeling dumb', 'feeling stupid', 'im dumb', "i'm dumb", 'failure'];
+
+      const hasFrustration = frustrationTriggers.some(w => p.includes(w));
+      const hasSelfDoubt = selfDoubtTriggers.some(w => p.includes(w));
+
+      if (hasFrustration) {
+        return { isDeterministic: true, intent: 'FOUL_LANGUAGE_INTERCEPT' };
+      }
+      if (hasSelfDoubt) {
+        return { isDeterministic: true, intent: 'SELF_DOUBT_INTERCEPT' };
+      }
+
+      // 2. CASUAL SLANG & EXPRESSIONS
+      if (/^(bro|dude|bruh|omg|lol|haha|lmao|rofl|xd|hahaha)$/i.test(p) ||
+          (/\b(bro|dude|bruh|omg|lol|lmao|rofl|xd|hahaha)\b/i.test(p) && p.length < 30)) {
         return { isDeterministic: true, intent: 'CASUAL_SLANG_EMPATHY' };
       }
 
-      // 2. GREETINGS & SMALLTALK
+      // 3. GREETINGS & SMALLTALK
       if (/^(hey|hello|hi|yo|sup|good morning|good evening|howdy|hola|whats up|what's up|how are you|hey tio|hi tio|hello tio)$/i.test(p) ||
           (/^(hey|hello|hi|yo|sup)\b/i.test(p) && p.length < 15)) {
         return { isDeterministic: true, intent: 'GREETING_SMALLTALK' };
@@ -279,7 +293,7 @@
       if (p.includes('micro quiz') || p.includes('quick quiz') || p.includes('5-q micro test') || p.includes('5 question quiz')) {
         return { isDeterministic: true, intent: 'MICRO_QUIZ' };
       }
-      if (p.includes('overwhelmed') || p.includes('too hard') || p.includes('cant do this') || p.includes("can't do this") || p.includes('stressed') || p.includes('giving up') || p.includes('feeling stupid') || p.includes('scared') || p.includes('fail') || p.includes('exhausted') || p.includes('tired')) {
+      if (p.includes('overwhelmed') || p.includes('too hard') || p.includes('cant do this') || p.includes("can't do this") || p.includes('stressed') || p.includes('giving up') || p.includes('scared') || p.includes('fail') || p.includes('exhausted') || p.includes('tired')) {
         return { isDeterministic: true, intent: 'EMPATHY_STRESS_RESET' };
       }
       if (p.includes('step by step') || p.includes('break down') || p.includes('break it down') || p.includes('how to solve') || p.includes('solve step')) {
@@ -291,6 +305,18 @@
     },
 
     executeDeterministicIntent(intent) {
+      if (intent === 'FOUL_LANGUAGE_INTERCEPT') {
+        return {
+          handled: true,
+          response: `I hear you, bro. It sounds like you're frustrated or overwhelmed right now. I'm not going to lecture you—I'm just going to ask: what's the one thing you need help with right now? Let's tackle it together, one step at a time. 💙\n\n<button class="btn bpri bsm mt10 mr8" onclick="sendQuickCommand('Tio, explain active topic.')">💡 Pick 1 Simple Concept</button><button class="btn bsec bsm mt10" onclick="sendQuickCommand('Tio, show key formulas.')">☕ Quick Formula Check</button>`
+        };
+      }
+      if (intent === 'SELF_DOUBT_INTERCEPT') {
+        return {
+          handled: true,
+          response: `I know that feeling. When you hit a wall, it's easy to feel like you're not enough. But every single obstacle is just a piece of your path. Tell me what's breaking you right now, and we'll crack it together! 💙\n\n<button class="btn bpri bsm mt10 mr8" onclick="sendQuickCommand('Tio, explain active topic.')">📖 Step-by-Step Lesson</button><button class="btn bsec bsm mt10" onclick="sendQuickCommand('Tio, show key formulas.')">📐 Key Formulas</button>`
+        };
+      }
       if (intent === 'CASUAL_SLANG_EMPATHY') {
         return {
           handled: true,
@@ -408,6 +434,9 @@ STRUCTURED LEARNER CONTEXT:
 - Active Course: ${activeCourseId}
 - Weak Concepts: ${weakSpotsCount > 0 ? mem.educational.weakConcepts.join(', ') : 'None'}
 - Known Facts: ${keyFacts || 'None recorded'}
+
+CRITICAL EMOTIONAL & FOUL LANGUAGE DIRECTIVE:
+You are Tio, a friendly, supportive, and emotionally intelligent mentor. If a user uses slang, foul language, or venting phrases, you must NOT treat it as an academic term. Instead, you must respond with empathy and ask how you can help. You are strictly forbidden from using foul language in your own responses.
 
 RULES FOR GENERATING EXPLANATIONS:
 1. Follow explanation hierarchy: Intuition → Concept → Visualisation → Formula → Real Exam Application.
