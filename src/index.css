@@ -577,15 +577,12 @@ html[data-perf-tier="verylow"] * {
   margin-left: 2px;
 }
 .dash-layout-container {
-  display: grid;
-  grid-template-columns: 1fr 380px;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
-  align-items: start;
-}
-@media (max-width: 1024px) {
-  .dash-layout-container {
-    grid-template-columns: 1fr;
-  }
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
 }
 .dash-telemetry-column {
   display: flex;
@@ -2939,7 +2936,8 @@ textarea.inp{line-height:1.65;min-height:80px}
 @keyframes xpShine{0%,100%{opacity:0;transform:translateX(-20px)}50%{opacity:1;transform:translateX(10px)}}
 
 /* â”€â”€â”€ TIGHTER DASHBOARD CARD GRID â”€â”€â”€ */
-.dash-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.dash-stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:22px}
+@media(max-width:1024px){.dash-stat-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}}
 @media(max-width:640px){.dash-stat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:380px){.dash-stat-grid{grid-template-columns:1fr 1fr}}
 
@@ -3865,19 +3863,19 @@ body[data-screen="learn"] .cglow {
   box-shadow: none !important;
 }
 
-/* Dashboard Directive Grid (4 columns) */
+/* Dashboard Directive Grid */
 .dash-study-console {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
   margin-bottom: 24px;
 }
-@media(max-width: 1100px) {
+@media (min-width: 1400px) {
   .dash-study-console {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media(max-width: 700px) {
+@media (max-width: 768px) {
   .dash-study-console {
     grid-template-columns: 1fr;
   }
@@ -3895,6 +3893,9 @@ body[data-screen="learn"] .cglow {
   box-shadow: var(--shadow-md);
   transition: all 0.25s ease;
   min-height: 220px;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .sc-card.main-card {
   border-color: rgba(139, 92, 246, 0.25);

@@ -233,6 +233,21 @@ function rDash(){
 
         <!-- ⏳ TARGET EXAM COUNTDOWN & READINESS CARD -->
         ${(() => {
+          const hasSelectedExam = !!(D.profile?.targetExam || (D.profile?.targetExams && D.profile?.targetExams.length > 0) || (D.compExam && D.compExam.selectedExam) || D.profile?.hasSelectedExam);
+          if (!hasSelectedExam) {
+            return `
+              <div class="card cglow" style="padding:20px;border-color:rgba(139,92,246,0.35);background:linear-gradient(135deg, rgba(139,92,246,0.12), rgba(6,182,212,0.06));display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+                <div style="display:flex;align-items:center;gap:14px">
+                  <div style="width:48px;height:48px;border-radius:14px;background:rgba(139,92,246,0.2);border:1px solid rgba(139,92,246,0.4);display:flex;align-items:center;justify-content:center;font-size:24px">🎯</div>
+                  <div>
+                    <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:4px">Select Your Target Exam</div>
+                    <div style="font-size:12px;color:var(--sub);line-height:1.5">Choose your target competitive exam (JEE Main, JEE Advanced, etc.) to unlock live countdowns and readiness tracking.</div>
+                  </div>
+                </div>
+                <button class="btn bpri" onclick="go('comp')" style="padding:10px 20px;font-size:13px;border-radius:12px">Select Target Exam →</button>
+              </div>
+            `;
+          }
           const info = typeof getExamCountdownAndReadiness === 'function' ? getExamCountdownAndReadiness() : { examName: 'JEE Main 2026', approxDays: 250, approxWeeks: 35, readinessIndex: 65, readinessLabel: '⚡ Steady Progress (On Track)', syllabusPct: 42 };
           return `
             <div class="card cglow" style="padding:20px;border-color:rgba(139,92,246,0.35);background:linear-gradient(135deg, rgba(139,92,246,0.12), rgba(6,182,212,0.06))">
