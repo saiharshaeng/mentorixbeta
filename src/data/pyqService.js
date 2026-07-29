@@ -189,6 +189,8 @@
 
           if (/JEEBOOKS|jeeneetbooks|Answer with Explanations|Central Idea Use geometry/i.test(stem) || /JEEBOOKS|jeeneetbooks/i.test(expl)) return false;
           if (opts.some(opt => /^Option [A-D]$/i.test(String(opt).trim()))) return false;
+          const cleanOptTexts = opts.map(o => String(o).trim().toLowerCase());
+          if (opts.length > 1 && new Set(cleanOptTexts).size < cleanOptTexts.length) return false;
           if (stem.trim().length < 10) return false;
           return true;
         });
