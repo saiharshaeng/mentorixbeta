@@ -1,0 +1,42 @@
+{
+  "totalIntegrated": 9176,
+  "totalRejected": 0,
+  "healthScores": {
+    "score100": 9173,
+    "score95": 0,
+    "score70": 3,
+    "needsReview": 0
+  },
+  "perSubjectStats": {
+    "Mathematics": {
+      "total": 3125,
+      "withImages": 0,
+      "missingImages": 0,
+      "withLatex": 0,
+      "withExpl": 3125,
+      "duplicates": 239,
+      "needsReview": 0
+    },
+    "Physics": {
+      "total": 4492,
+      "withImages": 0,
+      "missingImages": 0,
+      "withLatex": 875,
+      "withExpl": 4492,
+      "duplicates": 1365,
+      "needsReview": 0
+    },
+    "Chemistry": {
+      "total": 1559,
+      "withImages": 0,
+      "missingImages": 0,
+      "withLatex": 181,
+      "withExpl": 1559,
+      "duplicates": 135,
+      "needsReview": 0
+    }
+  },
+  "brokenImages": [],
+  "rejectedQuestions": [],
+  "duplicateHashesCount": 859
+}

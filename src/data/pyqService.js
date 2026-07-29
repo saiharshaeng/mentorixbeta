@@ -581,8 +581,16 @@
     const shuffled = shuffleArray([...uniqueFiltered]);
 
     let selected = shuffled.slice(0, count);
+    let isExhausted = false;
+    let nextChapterRecommendations = [];
 
-    if (selected.length < count && subject) {
+    if (chapter) {
+      // STRICT CHAPTER ISOLATION: Never mix questions from other chapters when a specific chapter is requested!
+      if (selected.length < count) {
+        isExhausted = true;
+        nextChapterRecommendations = ['Laws of Motion', 'Work Energy Power', 'Weak Spots Revision', 'Full Subject Practice'];
+      }
+    } else if (selected.length < count && subject) {
       const selectedStems = new Set(selected.map(q => (q.q || q.question || '').trim().toLowerCase()));
       const sl = subject.toLowerCase();
       const sameSubjectPool = pool.filter(q => {
@@ -598,7 +606,11 @@
       }
     }
 
-    return { questions: selected.map((q, i) => ({ ...q, id: i + 1, section: inferSubject(q) })) };
+    return { 
+      questions: selected.map((q, i) => ({ ...q, id: i + 1, section: inferSubject(q) })),
+      isExhausted,
+      nextChapterRecommendations
+    };
   }
 
   // ── MAIN API: getQuestions ─────────────────────────────────────────────────
