@@ -234,11 +234,24 @@
   };
 
   // ── 8. DETERMINISTIC INTENT ROUTER ─────────────────────────────
+  // ── 8. DETERMINISTIC INTENT ROUTER ─────────────────────────────
   const TioIntentRouter = {
     classifyIntent(userPrompt = '') {
       const p = userPrompt.toLowerCase().trim();
 
-      // Check deterministic navigation / queries first (NO LLM REQUIRED)
+      // 1. CASUAL SLANG, PROFANITY & EXPRESSIONS
+      if (/^(wtf|fuck|shit|damn|bitch|crap|ass|bro|dude|bruh|omg|lol|haha|lmao|rofl|xd|hahaha|wtffff|wtffffff)$/i.test(p) ||
+          (/\b(wtf|fuck|shit|damn|bitch|crap|ass|bro|dude|bruh|omg|lol|lmao|rofl|xd|hahaha)\b/i.test(p) && p.length < 30)) {
+        return { isDeterministic: true, intent: 'CASUAL_SLANG_EMPATHY' };
+      }
+
+      // 2. GREETINGS & SMALLTALK
+      if (/^(hey|hello|hi|yo|sup|good morning|good evening|howdy|hola|whats up|what's up|how are you|hey tio|hi tio|hello tio)$/i.test(p) ||
+          (/^(hey|hello|hi|yo|sup)\b/i.test(p) && p.length < 15)) {
+        return { isDeterministic: true, intent: 'GREETING_SMALLTALK' };
+      }
+
+      // Check deterministic navigation / queries (NO LLM REQUIRED)
       if (p.includes('my score') || p.includes('my marks') || p.includes('what score') || p.includes('my accuracy')) {
         return { isDeterministic: true, intent: 'PROGRESS_QUERY' };
       }
@@ -266,7 +279,7 @@
       if (p.includes('micro quiz') || p.includes('quick quiz') || p.includes('5-q micro test') || p.includes('5 question quiz')) {
         return { isDeterministic: true, intent: 'MICRO_QUIZ' };
       }
-      if (p.includes('overwhelmed') || p.includes('too hard') || p.includes('cant do this') || p.includes("can't do this") || p.includes('stressed') || p.includes('giving up') || p.includes('feeling stupid') || p.includes('scared') || p.includes('fail') || p.includes('exhausted')) {
+      if (p.includes('overwhelmed') || p.includes('too hard') || p.includes('cant do this') || p.includes("can't do this") || p.includes('stressed') || p.includes('giving up') || p.includes('feeling stupid') || p.includes('scared') || p.includes('fail') || p.includes('exhausted') || p.includes('tired')) {
         return { isDeterministic: true, intent: 'EMPATHY_STRESS_RESET' };
       }
       if (p.includes('step by step') || p.includes('break down') || p.includes('break it down') || p.includes('how to solve') || p.includes('solve step')) {
@@ -278,6 +291,18 @@
     },
 
     executeDeterministicIntent(intent) {
+      if (intent === 'CASUAL_SLANG_EMPATHY') {
+        return {
+          handled: true,
+          response: `Whoa, deep breath! 😅 I hear you—preparing for competitive exams gets super frustrating and intense at times. I'm right here with you!\n\nWant to vent, take a quick 2-minute breather, or tackle something simple together? I'm all ears! 💙`
+        };
+      }
+      if (intent === 'GREETING_SMALLTALK') {
+        return {
+          handled: true,
+          response: `Hey there! 👋 Great to see you. I'm Tio, your AI study companion.\n\nWhat are we focusing on today — Physics, Chemistry, or Math? Or would you like to take a quick diagnostic mock? 🎯`
+        };
+      }
       if (intent === 'EMPATHY_STRESS_RESET') {
         return {
           handled: true,
