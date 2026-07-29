@@ -146,9 +146,24 @@
       if (fileCache[bank.key]) continue;
       
       try {
-        const r = await fetch(bank.url, { cache: 'no-store' });
-        if (!r.ok) continue;
-        const raw = await r.json();
+        let raw = null;
+        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location) {
+          try {
+            const r = await fetch(bank.url, { cache: 'no-store' });
+            if (r.ok) raw = await r.json();
+          } catch(e) {}
+        }
+        if (!raw && typeof require === 'function') {
+          try {
+            const fs = require('fs');
+            const path = require('path');
+            const relativePath = bank.url.replace(/^https?:\/\/[^\/]+/, '').replace(/^\//, '');
+            const fullPath = path.join(process.cwd(), relativePath);
+            if (fs.existsSync(fullPath)) {
+              raw = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+            }
+          } catch(e) {}
+        }
         if (!Array.isArray(raw) || raw.length === 0) continue;
 
         // Filter out corrupted OCR questions & dummy options ("Option A", "JEEBOOKS")
@@ -282,6 +297,13 @@
     // QUARANTINE ENFORCED: Only non-quarantined fixed/ files loaded in Node environment.
     // Raw jee_chemistry_bank.json and jee_maths_bank.json are AI-generated — permanently blocked.
     const bankFiles = [
+      { key: 'jee_math_set',    p: 'questions/jee/mathematics/chapters/set.json',    subj: 'Mathematics', quarantined: false },
+      { key: 'jee_math_mat',    p: 'questions/jee/mathematics/chapters/mat.json',    subj: 'Mathematics', quarantined: false },
+      { key: 'jee_math_lim',    p: 'questions/jee/mathematics/chapters/lim.json',    subj: 'Mathematics', quarantined: false },
+      { key: 'jee_math_conic',  p: 'questions/jee/mathematics/chapters/conic.json',  subj: 'Mathematics', quarantined: false },
+      { key: 'jee_math_reas',   p: 'questions/jee/mathematics/chapters/reas.json',   subj: 'Mathematics', quarantined: false },
+      { key: 'jee_phys_gen',    p: 'questions/jee/physics/chapters/phys_gen.json',   subj: 'Physics',     quarantined: false },
+      { key: 'jee_chem_gen',    p: 'questions/jee/chemistry/chapters/chem_gen.json', subj: 'Chemistry',   quarantined: false },
       { key: 'jee_phys_fixed',  p: 'src/data/pyq/fixed/jee_physics_bank_fixed.json',  subj: 'Physics',     quarantined: false },
       { key: 'jee_comp_fixed',  p: 'src/data/pyq/fixed/jee_main_complete_fixed.json', subj: null,          quarantined: false },
       { key: 'jee_cls_fixed',   p: 'src/data/pyq/fixed/jee_classified_fixed.json',    subj: null,          quarantined: false },
@@ -786,6 +808,7 @@
 
   const pyqService = {
     init,
+    loadBankFiles,
     getQuestions,
     getBankQuestions,
     buildFullMockPaper,
