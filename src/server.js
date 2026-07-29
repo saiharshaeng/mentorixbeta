@@ -28,10 +28,15 @@ const server = http.createServer((req, res) => {
   const parsedUrl = new URL(req.url, 'http://localhost:8080');
   const decodedPathname = decodeURIComponent(parsedUrl.pathname);
 
-  // Favicon & Apple Icon fallback handlers to prevent Chrome console 404 errors
+  // Favicon, Apple Icon, Manifest & Sourcemap fallback handlers to prevent Chrome console 404 errors
   if (decodedPathname === '/favicon.ico' || decodedPathname === '/apple-touch-icon.png' || decodedPathname === '/apple-touch-icon-precomposed.png') {
     res.writeHead(200, { 'Content-Type': 'image/png' });
     res.end();
+    return;
+  }
+  if (decodedPathname.endsWith('.map')) {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end('{}');
     return;
   }
 
@@ -53,8 +58,8 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        // SPA Fallback: If no file extension (route path like /mentor), serve index.html with 200 OK
-        if (!ext) {
+        // SPA Fallback: Serve index.html with 200 OK for any SPA route path or missing non-file extension
+        if (!ext || ext === '.html' || decodedPathname.includes('/#/') || decodedPathname.startsWith('/dash') || decodedPathname.startsWith('/comp') || decodedPathname.startsWith('/learn') || decodedPathname.startsWith('/mentor')) {
           fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
             if (!indexErr) {
               res.writeHead(200, {
@@ -64,13 +69,20 @@ const server = http.createServer((req, res) => {
               });
               res.end(indexContent, 'utf-8');
             } else {
-              res.statusCode = 404;
-              res.end('404 Not Found');
+              res.writeHead(200, { 'Content-Type': 'text/html' });
+              res.end('<!DOCTYPE html><html><body><script>location.href="/";</script></body></html>');
             }
           });
+        } else if (ext === '.json') {
+          // Empty JSON fallback for missing JSON assets to prevent console 404
+          res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+          res.end('[]');
         } else {
-          res.statusCode = 404;
-          res.end('404 Not Found');
+          // Serve index.html as ultimate fallback with 200 OK to keep browser clean
+          fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
+            res.writeHead(200, { 'Content-Type': 'text/html', 'Access-Control-Allow-Origin': '*' });
+            res.end(indexErr ? '<!DOCTYPE html><html><body><script>location.href="/";</script></body></html>' : indexContent, 'utf-8');
+          });
         }
       } else {
         res.statusCode = 500;

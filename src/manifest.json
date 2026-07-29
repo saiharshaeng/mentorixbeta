@@ -1,9 +1,18 @@
 {
-  "name": "Mentorix",
+  "name": "MENTORIX — Your AI Learning Universe",
   "short_name": "Mentorix",
-  "start_url": "./index.html",
+  "description": "Adaptive AI Learning OS & CBT Exam Preparation Platform",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0f",
-  "theme_color": "#8b5cf6",
-  "icons": []
+  "background_color": "#0a0a1a",
+  "theme_color": "#0a0a1a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
