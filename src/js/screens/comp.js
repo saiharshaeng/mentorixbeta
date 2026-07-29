@@ -4338,6 +4338,7 @@ function updateDailyTime(val) {
 // Global exports
 window.rComp = rComp;
 window.setCompTab = setCompTab;
+window.switchCompTab = setCompTab;
 window.updateTargetVal = updateTargetVal;
 window.updateDailyTime = updateDailyTime;
 window.selectObExam = selectObExam;
