@@ -10888,6 +10888,50 @@ body.cbt-fullscreen-active #main,
   -webkit-overflow-scrolling: touch !important;
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   🖥️ DESKTOP PC WIDESCREEN LAYOUT POLISH & IMBALANCE CORRECTIONS
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1025px) {
+  .sw {
+    max-width: 1140px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .nta-body {
+    display: flex !important;
+    flex-direction: row !important;
+    height: calc(100vh - 64px) !important;
+  }
+  .nta-q-panel {
+    flex: 1 1 72% !important;
+    min-width: 0 !important;
+  }
+  .nta-palette-panel {
+    flex: 0 0 28% !important;
+    width: 320px !important;
+    border-left: 1px solid var(--brd) !important;
+  }
+
+  .modal-box {
+    max-width: 580px !important;
+  }
+}
+
 
 
 
