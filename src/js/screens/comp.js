@@ -2214,6 +2214,54 @@ function restoreFloatingElementsAfterExam() {
 }
 window.restoreFloatingElementsAfterExam = restoreFloatingElementsAfterExam;
 
+// 🚀 Sleek On-Demand Loading Modal for Selected Competitive Exams
+function showOnDemandExamLoader(examName, onDone) {
+  let loader = document.getElementById('on-demand-loader-modal');
+  if (!loader) {
+    loader = document.createElement('div');
+    loader.id = 'on-demand-loader-modal';
+    loader.style.cssText = 'position:fixed;inset:0;background:rgba(10,10,26,0.94);z-index:999999;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);';
+    document.body.appendChild(loader);
+  }
+
+  loader.innerHTML = `
+    <div style="background:rgba(15,15,35,0.96);border:1px solid rgba(139,92,246,0.3);border-radius:24px;padding:36px;max-width:440px;width:90%;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,0.8);">
+      <div style="font-size:48px;margin-bottom:16px;animation:pulse 1.2s infinite ease-in-out">🚀</div>
+      <h3 style="font-family:var(--f-display);font-size:22px;font-weight:800;color:#fff;margin:0 0 8px">Assembling ${esc(examName || 'Exam')}</h3>
+      <p style="font-size:13px;color:var(--mut);margin:0 0 24px;line-height:1.5">Fetching verified NTA questions, paper patterns, and step-by-step LaTeX proofs...</p>
+      
+      <div style="background:rgba(255,255,255,0.06);border-radius:12px;height:10px;overflow:hidden;margin-bottom:12px;position:relative;">
+        <div id="on-demand-bar-fill" style="width:15%;height:100%;background:linear-gradient(90deg,var(--p),var(--c));transition:width 0.25s ease;border-radius:12px;"></div>
+      </div>
+      
+      <div id="on-demand-bar-text" style="font-size:12px;font-weight:700;color:var(--pl);font-family:var(--f-mono);">Initializing question bank... 15%</div>
+    </div>
+  `;
+  loader.style.display = 'flex';
+
+  const cleanExamId = compState.examId || 'JEE_MAIN';
+  
+  if (window.pyqService && window.pyqService.preloadExam) {
+    window.pyqService.preloadExam(cleanExamId, function(pct) {
+      const fill = document.getElementById('on-demand-bar-fill');
+      const text = document.getElementById('on-demand-bar-text');
+      if (fill) fill.style.width = Math.max(15, pct) + '%';
+      if (text) text.textContent = `Loading ${examName} question banks... ${pct}%`;
+    }).then(function() {
+      setTimeout(function() {
+        loader.style.display = 'none';
+        if (typeof onDone === 'function') onDone();
+      }, 300);
+    });
+  } else {
+    setTimeout(function() {
+      loader.style.display = 'none';
+      if (typeof onDone === 'function') onDone();
+    }, 300);
+  }
+}
+window.showOnDemandExamLoader = showOnDemandExamLoader;
+
 // ⏱️ CBT Mock Setup
 async function startMockExamSetup(forcedMode) {
   hideFloatingElementsForExam();
@@ -2227,8 +2275,20 @@ async function startMockExamSetup(forcedMode) {
   }
 
   const exam = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const examName = exam ? exam.name : 'Competitive Exam';
   const diff = compState.practiceDifficulty || 'medium';
   const subjects = exam.subjects || ['General Studies'];
+
+  // Show sleek on-demand loader while fetching ONLY the selected exam's questions
+  if (window.pyqService) {
+    await new Promise(resolve => {
+      if (typeof showOnDemandExamLoader === 'function') {
+        showOnDemandExamLoader(examName, resolve);
+      } else {
+        window.pyqService.preloadExam(compState.examId).then(resolve);
+      }
+    });
+  }
 
   if (window.CompOrchestrator) {
     window.CompOrchestrator.selectPaper({
@@ -2237,12 +2297,6 @@ async function startMockExamSetup(forcedMode) {
       paperId: compState.selectedPaperId || null,
       type: 'mock'
     });
-  }
-
-
-  // Preload exam questions dynamically
-  if (window.pyqService) {
-    await window.pyqService.preloadExam(compState.examId);
   }
 
   let questions = [];
