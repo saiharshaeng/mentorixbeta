@@ -1,0 +1,1597 @@
+[
+  {
+    "questionNumber": 1,
+    "stem": "The number of 3 3 × matrices A whose entries are either 0 to 1 and for which system 1 0 0 X A y z       =          has exactly two distinct solutions, is",
+    "options": [
+      "0",
+      " 9 2 1 −",
+      "168",
+      "2"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 2,
+    "stem": "Let M and N be two 3 3 × non-singular skew-symmetric matrices such that T MN NM. If p = denotes the transpose of P, then 2 2 T 1 1 T M N (M N) (MN ) − − is equal to",
+    "options": [
+      " 2 M",
+      " 2 N −",
+      " 2 M −",
+      "MN"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Let 1 ω ≠ be a cube root of unity and S be the set of all non-singular matrices of the form 2 1 a b 1 c , 1 ω ω ω           where each of a, b and is either ω or",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 2,
+    "stem": "ω Then the number of distinct matrices in the set S is",
+    "options": [
+      "2",
+      "6",
+      "4",
+      "8"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 4,
+    "stem": "Let [ ] ij P a = be a 3 3 × matrix and let [ ], ij Q b = where 2i j ij ij b a + = for 1 ,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "i j ≤ ≤ If the determinant of P is 2, then the determinant of matrix Q is 13 2",
+    "options": [
+      " 10 2",
+      " 11 2",
+      " 12 2",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 5,
+    "stem": "If P is a 3 × 3 matrix such that 2 , T P P I = + where T P is he transpose of P and I is the 3 × 3 identity matrix, then there exists a column matrix 0 0 0 x X y z     = ≠       such that X = −",
+    "options": [
+      " 0 0 0 PX   =   ",
+      "PX = X",
+      " 2 PX X =",
+      "PX"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 6,
+    "stem": "If the adjoint of a 3 3 × matrix P is 1 4 4 2 1 7 , 1 1 3           then the possible value(s) of the determinant of P is (are) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) u x v x w x x p x q x r x x µ x x λ ν ∆ = 1 1 1 1 2 2 2 2 3 3 3 3 0 0 0 a x b y c z d a x b y c z d a x b y c z d + + + =   + + + =   + + + =  1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 1 x y z b c d a c d a b d a b c b c d a c d a b d a b c b c d a c d a b d a b c − − = = = , , x y z ∆ ∆ ∆ ∆ 1; x y z x y z − − = = = ∆ ∆ ∆ ∆ , y x z x y z ∆ −∆ −∆ = = = = ∆ ∆ ∆ 0 ∆≠ ⇒ 0 ∆= , , 0 x y z ∆ ∆ ∆≠ ⇒ 0 x y z ∆= = ∆= ∆= ∆⇒ 1 1 1 2 2 2 3 3 3 0 a b c a b c a b c = ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) u x v x w x u x v x w x x p x q x r x p x q x r x x µ x x x µ x x λ ν λ ν ′ ′ ′ ′ ′ ′ ′ ∆ = + + ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) u x v x w x p x q x r x x µ x x λ ν + ′ ′ ′ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 46",
+    "options": [
+      "–2",
+      "–1",
+      "1",
+      "2"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 7,
+    "stem": "The number of values of for which the system of equations ( 1) 8 4 k x y k + + = has no solution is",
+    "options": [
+      "infinite",
+      "1",
+      "2",
+      "3"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 8,
+    "stem": "If is the adjoint of 3 3 × matrix A and | | 4, A = then is equal to",
+    "options": [
+      "4",
+      "11",
+      "5",
+      "0"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 9,
+    "stem": "For matrices M and N, which of the following statement(s) is (are) not correct? and N",
+    "options": [
+      " is symmetric or skew symmetric, according as M is symmetric or skew symmetric",
+      "MN – NM is skew symmetric for all symmetric matrices M and N",
+      "MN is symmetric for all symmetric matrices M and N",
+      "(adj M) (adj N) = adj(MN) for all invertible matrices M"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 10,
+    "stem": "Let be a complex cube root of unity with and be a matrix with Then when",
+    "options": [
+      "57",
+      "55",
+      "58",
+      "56"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 11,
+    "stem": "If A is an non - singular matrix such that and then equals:",
+    "options": [
+      "",
+      "1",
+      "",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 12,
+    "stem": "If and and then K is equal to:",
+    "options": [
+      "",
+      "",
+      "1",
+      "–1"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 13,
+    "stem": "Let and be two matrices such that MN = NM. Further, if and then matrix U, if equals the zero matrix then U is the zero matrix",
+    "options": [
+      "determinant of is 0",
+      "there is a non-zero matrix U such that is the zero matrix",
+      "determinant of",
+      "for a"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 14,
+    "stem": "If is a matrix satisfying the equation where I is identity matrix, then the ordered pair (a, b) is equal to:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 15,
+    "stem": "The set of all values of for which the system of linear equations: , has a non-trivial solution,",
+    "options": [
+      "is an empty set",
+      "is a singleton",
+      "contains two elements",
+      "contains more than two elements"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 16,
+    "stem": "Let X and Y be two arbitrary, non-zero, skew- symmetric matrices and Z be an arbitrary non-zero, symmetric matrix. Then which of the following matrices is (are) skew symmetric?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 17,
+    "stem": "Which of the following values of satisfy the equation",
+    "options": [
+      "",
+      "9",
+      "",
+      "4"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 18,
+    "stem": "If and A adj A = A then is equal to:",
+    "options": [
+      "–1",
+      "5",
+      "4",
+      "13"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 19,
+    "stem": "Let 3 1 2 2 0 , 3 5 0 P α − −     =     −   where . R α ∈ Suppose [ ] ij Q a = is a matrix such that , PQ kI = where , 0 k R k ∈ ≠ and I is the identity matrix of order 3. If 23 8 k q = − and det 2 ( ) , 2 k Q = ,k ( 3) 3 1 kx k y k + + = − 1 3 1 3 3 2 4 4 P α     =       | | 4, A = α 3 3 × T N MN ω 1 ω ≠ [ ] ij P P × n n . ω + = i j ij p 2 0, ≠ P = n 3 3 × AA A A ′ ′ = 1 , B A A − ′ = BB′ 1 B + 1 B− 1 ( ) B −′ , 0, α β ≠ ( ) n n f n α β = + 3 1 (1) 1 (2) 1 (1) 1 (2) 1 (3) 1 (2) 1 (3) 1 (4) f f f f f f f f + + + + + + + + 2 (1 ) K α = − 2 2 (1 ) ( ) , β α β − − αβ 1 αβ M N 3 3 × 2 M N ≠ 2 4, M N = 2 2 ( ) M MN + 3 3 × 2 2 ( ) M MN U + 2 2 ( ) 1 M MN + ≥ 3 3 × 2 2 ( ) M MN U + 1 2 2 2 1 2 2     = −       A a b 9 , = T AA I 3 3 × (2, 1) − ( 2,1) − (2,1) ( 2, 1) − − λ 1 2 3 1 2 2 x x x x λ − + = 1 2 3 2 2 3 2 x x x x λ − + = 1 2 3 2 x x x λ − + = 3 3, × 3 3, × 3 4 4 3 − Y Z Z Y 44 44 + X Y 4 3 3 4 − X Z Z X 23 23 + X Y α 2 2 2 2 2 2 2 2 2 (1 α) (1 2α) (1 3α) (2 α) (2 2α) (2 3α) 648α ? (3 α) (3 2α) (3 3α) + + + + + + = − + + + 4 − 9 − 5 3 2 a b A −   =     , T A 5a b + _ 47 Matrices and Determinants then 13 det( adj( )) 2 = Q P",
+    "options": [
+      " 0, 8 k α = =",
+      "4 8 0 k α − + =",
+      " 9 det( adj( )) 2 = P Q",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 20,
+    "stem": "Let 1 0 0 4 1 0 16 4 1 P     =       and I be the identity matrix of order",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "If [ ] ij Q q = is a matrix such that 50 , P Q I − = then 31 32 21 q q q + equals",
+    "options": [
+      "52",
+      "103",
+      "201",
+      "205"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 21,
+    "stem": "Let ω be a complex number such that 2 1 ω + = z where 3 = − z . If 2 2 7 1 1 1 1 1 3 1 −ω − ω = ω ω k then k is equal to",
+    "options": [
+      "–1",
+      "1",
+      "–z",
+      "z"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 22,
+    "stem": "If 2 3 , 4 1 −   =   −   A then adj 2 (3 12 ) + A A is equal to 63 84 72       23.  Which of the following is (are) not the square of a 3 3 × matrix with real entries? 1 0 0 0 1 0 0 0 1         −   1 0 0 0 1 0 0 0 1           1 0 0 0 1 0 0 0 1 −     −     −   1 0 0 0 1 0 0 0 1     −     −  ",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 24,
+    "stem": "How many 3 3 × matrices M with entries from {0, 1, 2} are there, for which the sum of the diagonal entries of T M M is 5?",
+    "options": [
+      "162",
+      "135",
+      "126",
+      "198"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 25,
+    "stem": "If the system of linear equations 3 0; x ky z + + = 3 2 0; x ky z + − = 2 4 3 0 x y z + − = Has a non-zero solution (x,y,z), then 2 xz y is equal to",
+    "options": [
+      "30",
+      "–10",
+      "10",
+      "–30"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 26,
+    "stem": "If 4 2 2 2 4 2 2 2 4 x x x x x x x x x − − − 2 ( )( ) , A Bx x A = + − then the ordered pair (A, B) is equal to",
+    "options": [
+      "(4,5)",
+      "(–4,–5)",
+      "(–4,3)",
+      "(–4,5)"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 27,
+    "stem": "Let S be the set of all column matrices 1 2 3           b b b such that 1 2 3 , , ∈ℝ b b b and the system of equations (in real variables) 1 2 5 −+ + = x y z b 2 2 4 3 − + = x y z b 3 2 2 − + = x y z b has at least one solution. Then, which of the following system(s) (in real variables) has (have) at least one solution for each 1 2 3 ?    ∈       b b S b 1 2 2 5 ,2 3 + + = + = x y z b x z b and 3 4 5 + − = x y z b",
+    "options": [
+      " 1 2 2 3 ,4 5 + + = + = x y z b y z b and 3 2 6 + + = x y z b",
+      " 1 2 3 ,5 2 6 + + = + + = x y z b x y z b and 3 2 3 − − − = x y z b",
+      " 1 2 2 5 ,2 4 10 −+ − = − + = x y z b x y z b and 3 2 5 − + = x y z b",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 28,
+    "stem": "cos sin ,( ) sin cos −   = ∈     A R α α α α α such that 32 0 1 . 1 0 −   =     A then a value of α is",
+    "options": [
+      "π/6",
+      "0",
+      "π/32",
+      "π/64"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 29,
+    "stem": "The greatest value of c ∈ R for which the system of linear equations x – cy – cz = 0; cx – y + cz = 0; cx + cy – z = 0 has a non-trivial solution, is:",
+    "options": [
+      "1/2",
+      "–1",
+      "0",
+      "2"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 30,
+    "stem": "If the system of linear equations x – 2y + kz = 1; 2x + y + z = 2;  3x – y – kz = 3 has a solution (x,y,z), z ≠ 0, then (x,y) lies on the straight line whose equation is:",
+    "options": [
+      "3x – 4y – 1 = 0",
+      "3x – 4y – 4 = 0",
+      "4x – 3y – 4 = 0",
+      "4x – 3y – 1 = 0"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 31,
+    "stem": "Let the number 2, b, c be in an A.P. and 2 2 1 1 1 2 . 4 A b c b c     =       If _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 48",
+    "options": [
+      "[2,3)",
+      "(2 + 23/4,4)",
+      "[3,2 + 23/4]",
+      "[4,6]"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 32,
+    "stem": "The system of linear equations. 2 + + = x y z 2 3 2 5 + + = x y z 2 2 3 ( 1) 1 + + − = + x y a z a | 3 = a",
+    "options": [
+      "has infinitely many solutions a = 4.",
+      "is inconsistent when | | 3 = a",
+      "is inconsistent when a = 4",
+      "has a unique solution for |"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 33,
+    "stem": "If cos sin sin cos −   =     A θ θ θ θ then the matrix 5 0 − A when , 12 = π θ is equal to: 3 1 2 2 1 3 2 2   −          ",
+    "options": [
+      " 3 1 2 2 1 3 2 2         −    ",
+      " 1 3 2 2 3 1 2 2         −    ",
+      " 1 3 2 2 3 1 2 2   −          ",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 34,
+    "stem": "If 1 1 1 1 cos sin cos sin sin cos 2 sin 2 cos − − − − − − − −     = − − +     −   t t t t t t t e e t e t A e e t e t e t e t e e t e t then A is:",
+    "options": [
+      "Invertible only if 2 = t π",
+      "not invertible for any tεR",
+      "invertible for all tεR",
+      "invertible only  t = R"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 35,
+    "stem": "If the system of linear equations x – 4y + 7z = g;  3y  – 5z = h;  –2x + 5y – 9z = k is consistent, then:",
+    "options": [
+      "g + h + k = 0",
+      "2g + h + k = 0",
+      "g + h + 2k = 0",
+      "g + 2h + k = 0"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 36,
+    "stem": "If the system of equations x + y + z = 5; x + 2y + 3z = 9;  x + 3y + αz = β has infinitely many solutions, then β – α equals:",
+    "options": [
+      "5",
+      "18",
+      "21",
+      "8"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 37,
+    "stem": "Let d ∈ R and 2 4 (sin ) 2 1 (sin ) 2 5 (2sin ) ( sin ) 2 2 d A d d d θ θ θ θ − + −     = +     − − + +   θ ∈[0, 2π]. If the minimum value of det (A) is 8, then a value of d is: 1) +",
+    "options": [
+      "–7",
+      "2( 2 2) +",
+      "–5",
+      "2( 2"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 38,
+    "stem": "Let 2 2 1 1 1 2 b A b b b b     = +       where b > 0. Then the minimum value of det( ) A b is:",
+    "options": [
+      " 3",
+      " 3 −",
+      "2 3 −",
+      "2 3"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 39,
+    "stem": "The number of values of θ ∈ (0,π) for which the system of linear equations x + 3y + 7z = 0;  –x + 4y + 7z = 0 (sin 3θ)x + (cos 2θ) y + 2z = 0 has a non-trivial solution, is:",
+    "options": [
+      "One",
+      "Three",
+      "Four",
+      "Two"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 40,
+    "stem": "Let 0 2 . q r A p q r p q r     = −     −   If 3, T AA I = then |p| is: 3",
+    "options": [
+      "1 2",
+      "1 5",
+      "1 6",
+      "1"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 41,
+    "stem": "If the system of linear equations 2x + 2y + 3z = a 3x – y + 5z = b x – 3y + 2z = c where a, b, c are non-zero real numbers, has more then one solution, then:",
+    "options": [
+      "b – c – a = 0",
+      "a + b + c = 0",
+      "b + c – a = 0",
+      "b – c + a = 0"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 42,
+    "stem": "Let A and B be two invertible matrices of order 3 × 3. If det(ABAT) = 8 and det(AB–1) = 8, then det (BA–1 BT) is equal to:",
+    "options": [
+      "16",
+      "1/16",
+      "1/4",
+      "1"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 43,
+    "stem": "If 2 2 2 2 2 2 − − −− − − a b c a a b b c a b c c c a b = (a + b + c)(x + a + b + c)2, x ≠ 0 and a + b + c ≠ 0, then x is equal to: _ 49 Matrices and Determinants",
+    "options": [
+      "–(a + b + c)",
+      "2(a + b + c)",
+      "abc",
+      "–2(a + b + c)"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 44,
+    "stem": "An ordered pair (α, β) for which the system of linear equations (1 + α) x + βy + z = 2, αx + (1 + β)y + z = 3, αx",
+    "options": [
+      "(1, –3)",
+      "(–3, 1)",
+      "(2, 4)",
+      "(–4, 2)"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 45,
+    "stem": "Let 1 0 0 3 1 0 9 3 1 P   =       and Q = [qij] be two 3×3 matrices such that 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Q P I − = Then 21 31 32 q q q + is equal to:",
+    "options": [
+      "15",
+      "9",
+      "135",
+      "10"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 46,
+    "stem": "The set of all values of λ for which the system of linear equations. x – 2y – 2z = λx x + 2y + z = λy –x – y = λz has a non-trivial solution.",
+    "options": [
+      "contains more than two elements",
+      "is a singleton",
+      "is an empty set",
+      "contains exactly two elements"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 47,
+    "stem": "4 2 1 2 4 sin 1 sin , 1 cos cos −   −− = = +   +   M I M θ θ α β θ θ where ( ) α α θ = and ( ) β β θ = are real numbers and I is an identity matrix of 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 2,
+    "stem": "× If * α = Min of set { ( ) : [0,2 )} α θ θ π ∈ and * β = Min of set { ( ) : [0,2 )} β θ θ π ∈ then value of * * α β + is 4 2 1 2 4 sin 1 sin 1 cos cos M I M θ θ α β θ θ −   −− = = +   +   16 −",
+    "options": [
+      "37 16 −",
+      "17 16 −",
+      " 31 16 −",
+      "29"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 48,
+    "stem": "If a matrix M is given by 0 1 2 1 2 3 3 1 1         and if M α β γ     1 2 3  =    , then",
+    "options": [
+      " 1 1 adj( ) (adj ) − − + = − M M M b. 2 | adj( ) | 81 = M",
+      "Option B",
+      " 2 3 2 α β γ + + =",
+      " 2 3 β γ + ="
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 49,
+    "stem": "1 1 1 2 0 2 2 0 4 0 0 0 3 6 x x P Q x x         = =             and 1 R PQP − = then which are correct",
+    "options": [
+      " 2 det det 0 4 0 8 5 x x R x x     = +       for all x R ∈",
+      "for 1 x = there exists a unit vector ˆ ˆ ˆ ai j k β γ + + for which are 0 0 0 R α β γ     =      ",
+      "for 0 x = if 1 1 6 R a a b b     =       then 5 a b + =",
+      "there exists a real number x such that PQ= QP"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 50,
+    "stem": "Let 1 2 3 1 0 0 1 0 0 0 1 0 0 1 0 , 0 0 1 , 1 0 0 , 0 0 1 0 1 0 0 0 1 P P P             = = =                   4 5 6 0 1 0 0 0 1 0 0 1 0 0 1 , 1 0 0 , 0 1 0 , 1 0 0 0 1 0 1 0 0 P P P             = = =                   and 6 1 2 1 3 1 0 2 . 3 2 1 T k k k X P P =     =       ∑ Where T kP is transpose of matrix . kP Then which of the following options is/are correct? Matrix Match /Column Match",
+    "options": [
+      "X is a symmetric matrix",
+      " 1 1 If 1 1 , 1 1     =     X α then 30 α =",
+      " 30 X I − is an invertible matrix",
+      "The sum of diagonal entries of X is 18."
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 51,
+    "stem": "Consider the following linear equations 0 + + = ax by cz 0 + + = bx cy az 0 + + = cx ay bz Match the conditions/expressions in Column I with statements in Column II Column I Column II",
+    "options": [
+      " 0 + + ≠ a b c and 2 2 2 + + = + + a b c ab bc ca",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 1,
+    "stem": "The equations represent planes meeting only at a single point. _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 50",
+    "options": [
+      "Option A",
+      " 0 + + = a b c and 2 2 2 + + ≠ + + a b c ab bc ca",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 2,
+    "stem": "The equations represent the line . = = x y z",
+    "options": [
+      "Option A",
+      "Option B",
+      " 0 + + ≠ a b c and 2 2 2 + + ≠ + + a b c ab bc ca",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "The equations represent identical planes.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      " 0 + + = a b c and 2 2 2 + + = + + a b c ab bc ca"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 4,
+    "stem": "The equations represent the whole of the three dimensional space.",
+    "options": [
+      "A→3; B→2; C→1; D→4",
+      "A→1; B→2; C→3; D→4",
+      "A→3; B→1; C→2; D→4",
+      "A→3; B→4; C→2; D→1"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 52,
+    "stem": "Match the Statements/Expressions in Column I with the Statements/Expressions in Column II Column I Column II",
+    "options": [
+      "The minimum value of 2 2 4 2 x x x + + + is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 53,
+    "stem": "Match the statements given in Column I with the interval/union of intervals given in Column II Column I Column II",
+    "options": [
+      "The set 2 2iz Re : z 1 z         −     is a complex number, | z | 1, z 1 = ≠± is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 1,
+    "stem": "( , 1) (1, ) −∞− ∪ ∞",
+    "options": [
+      "Option A",
+      "The  domain of the function 1 f(x) sin− = x 2 2(x 1) 8(3) 1 3 − −     −   is",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 2,
+    "stem": "( , 0) (0, ) −∞ ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "If 1 tan 1 f( ) tan 1 tan , 1 tan 1 = − − − θ θ θ θ θ then the set f ( ) : 0 2 π θ θ   ≤ <     is",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 4,
+    "stem": "( , 1] [1, ) −∞− ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 5,
+    "stem": "( ,0] [2, ) −∞ ∪ ∞ Statement or Assertion & Reason",
+    "options": [
+      "A→ 4; B→ 5; C→ 3; D→ 3",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 54,
+    "stem": "Consider the system of equations 2 3 1 x y z − + = − 2 x y z k −+ − = 3 4 1 x y z − + = Statement-I: The system of equations has no solution for",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "k ≠ and Statement-II: The determinant for 1 3 1 1 2 0, 1 4 1 k − − − ≠ for",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 3,
+    "stem": "k ≠ _ 51 Matrices and Determinants Paragraph Paragraph for Question No. 55 to 57 ifU1,U2 and U3 are columns matrices satisfying. and U is matrix whose columns are then answer the following questions.",
+    "options": [
+      "Statement-I is True, Statement-II is True;  Statement-II is a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is True;  Statement-II is not a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is False",
+      "Statement-I is False, Statement-II is True"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 55,
+    "stem": "The value of is",
+    "options": [
+      "3",
+      "–3",
+      "3/2",
+      "2"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 56,
+    "stem": "The sum of the elements of is",
+    "options": [
+      "–1",
+      "0",
+      "1",
+      "3"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 57,
+    "stem": "The value of is Paragraph for Question No. 58 to 60 Let A be the set of all 3 3 × symmetric matrices all of whose entries are either 0 or 1. Five of these entries are 1 and four of them are 0.",
+    "options": [
+      "5",
+      "",
+      "4",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 58,
+    "stem": "The number of matrices in A is",
+    "options": [
+      "12",
+      "6",
+      "9",
+      "3"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 59,
+    "stem": "The number of matrices A in A for which the system of linear equations 1 0 0     =       x A y z has a unique solution is",
+    "options": [
+      "less than 4",
+      "at least 4 but less than 7",
+      "atleast 7 but less than 10",
+      "at least 10"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 60,
+    "stem": "The number of matrices A in A for which the system of linear equations 1 0 0     =       x A y z is inconsistent, is Paragraph for Question No. 61 to 63 Let p be an odd prime number and pT be the following set of 2 2 × matrices: : , , {0,1,..., 1}       = = ∈ −           p a b T A a b c p c a",
+    "options": [
+      "0",
+      "more than 2",
+      "2",
+      "1"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 61,
+    "stem": "The number of A in pT such that A is either symmetric or skew-symmetric or both, and det (A) divisible by p is",
+    "options": [
+      " 2 ( 1) p−",
+      "2( 1) p −",
+      " 2 ( 1) 1 p − + d. 2 1 p −",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 62,
+    "stem": "The number of A in pT such that the trace of A is not divisible by p but det (A) is divisible by p is [Note: The trace of a matrix is the sum of its diagonal entries.] 2 ( 1)( 2) p p − −",
+    "options": [
+      " 2 ( 1)( 1) p p p − − +",
+      " 3 2 ( 1) p p − −",
+      " 2 ( 1) p −",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 63,
+    "stem": "The number of A in p T such that det (A) is not divisible by p is 3 2 P P − Paragraph for Question No. 64 Let a, b and c be the three numbers satisfying [ ] 1 9 7 [ ] 8 2 7 0 0 0 ...( ) 7 3 7 a b c E    =      ",
+    "options": [
+      " 2 2P",
+      " 3 5 P P −",
+      " 3 3 P P −",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 64,
+    "stem": "If the point P(a, b, c), with reference to (E), lies on the plane 2 1, x y z + + = then the value of 7a + b + c is Integer & Subjective",
+    "options": [
+      "0",
+      "12",
+      "7",
+      "6"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 65,
+    "stem": "Let ω be the complex number 2 2 cos sin . 3 3 i π π + Then the number of distinct complex z satisfying 2 2 2 1 1 0 1 z z z ω ω ω ω ω ω + + = + is equal to",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 66,
+    "stem": "Let k be a positive real number and let 2 1 2 2 2 1 2 2 2 1 k k k A k k k k   −   = −     − −     and 0 2 1 1 2 0 2 . 2 0 k k B k k k k   −   = −     − −     If det (adj A) + det (adj B) 6 16 , = then [k] is equal to [Note: adj M denotes the adjoint of a square matrix M and [k] denotes the largest integer less than or equal to k]. 1 0 0 2 1 0 , 3 2 1 A     =       1 2 3 1 2 2 0 , 3 , 3 0 0 1 AU AU AU       = = =          3 3 × 1 2 3 , , U U U | | U 1 U − 3 [3 2 0] 2 0 U      5 2 3 2 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 52",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 67,
+    "stem": "Let M be a 3 3 × matrix satisfying 0 1 1 1 1 0 1 2 , 1 1 , and 1 0 . 0 3 0 1 1 12 −                     = − = =                     −           M M M Then the sum of the diagonal entries of M is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 68,
+    "stem": "The total number of distinct x R ∈ for which 2 3 2 3 2 3 1 2 4 1 8 0 3 9 1 27 x x x x x x x x x + + = + is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 69,
+    "stem": "For a real number α , if the system [JEE Adv. 2017 P-I] 2 2 1 1 1 1 1 1 x y z α α α α α α         = −              of linear equations, has infinitely many solutions, then 2 1+ α + α =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 70,
+    "stem": "Let P be a matrix of order 3 × 3 such that all the entries in P are from the set {–1, 0, 1}. Then, the maximum possible ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 6,
+    "stem": "(a,d) 1 4 4 adj 2 1 7 | adj | 4 1 1 3     = ⇒ =       P P We know, 1 | adj | | | − = n P P (where n is order of matrix) ⇒ 2 | adj | | | = P P ⇒ 2 4 | | P = ⇒ | | 2 P = ±",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 9,
+    "stem": "(c, d) (a) if M is symmetric and is if M is skew symmetric",
+    "options": [
+      "Option A",
+      "( )T T T T MN NM N M M N Τ − = − ( ). NM MN MN NM = − = − − So,  (MN – NM) is skew symmetric",
+      " if M and N are symmetric. So,  MN is not symmetric",
+      "(adj. ) (adj. ) adj ( ) adj( ). M N NM MN = ≠"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(b,c,d) Null matrix if n is a multiple of 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(a,b) (As M, N commute) Also, As is not null Det Also Det + = + = 2 2 2 ( ) (Det ) (Det( )) 0 M MN M M N There exist non-null U such that",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(d) 2 1 8 4 3 8 3 k k k k k k + ∆= = + + − + 2 4 3 k k = − + ( 3) ( 1) k k = − − 2 1 4 8 4 12 24 8 3 1 3 k k k k k k ∆= = + − + − + 2 4 12 8 k k = − + 2 4( 3 2) k k = − + 4( 2)( 1) k k = − − 2 2 2 1 4 3 2 1 4 3 1 k k k k k k k + ∆= = + −− − 2 2 1 k k = − + − 2 ( 1) k = − − ⇒ 0 ∆= ⇒ 3 k = ∵ 2 2 1 3 1 1 3 31 | | 4 2 4 4 A α = = 2 6 16 α − = ∴ 11 α = ( ) T T T T T N MN N M N N MN = = T N MN − ( )T T T MN N M NM MN = = ≠ 2 3 4 2 3 4 5 3 2 3 2 4 ω ω ω ω ω ω ω ω ω ω ω + + + + +       =         … … ⋮ ⋮ ⋮ ⋮ ⋮ … … n n n n n P 4 6 5 7 9 5 7 9 2 4 6 2 4 2 6 ω ω ω ω ω ω ω ω ω ω ω ω + + + +   + + +   + +   =     + +     … … … … … … … ⋮ ⋮ ⋮ … … … … … n n n n P 2 = P 1 1 ( )( ) T T T BBT A A A A − − = 1 1 ( )( ( ) ) T T A A A A − − = ⋅ 1 1 ( )( ) T T A A A A − − = ⋅ 1 1 ( )( ) T T A AA A − − = 1 1 ( ) ( ) T T A A A A − − = ⋅ 1 ( ) T T A A− = ⋅ 1 ( ) 1 T A A − = = 2 2 2 2 3 3 2 2 2 2 4 4 1 1 1 1 1 1 1 1 1 1 1 α β α β α β α β α β α β α β α β + + + + + + + + + + + + + + + + + + 2 2 2 2 1 1 1 1 1 1 1 1 1 1 α β α α α β β β = × 2 2 2 2 1 1 1 1 1 1 1 1 1 1 α α α α β β β β = × 2 2 2 1 1 1 1 1 α α β β = 2 2 2 (1 ) ( ) ( 1) α α β β = − − − 1 K = 2 4 = M N ⇒ 2 4 0 − = M N ⇒ 2 2 ( )( ) 0 − + = M N M N 2 2 2 , Det (( )( )) 0 ≠ − + = M N M N M N 2 − M N ⇒ 2 ( ) 0 + = M N ⇒ 2 2 ( ) 0 + = M MN U 9 = T AA I 1 2 2 1 2 2 1 2 2 1 2 9 2 2 2       − =       −    a I a b b _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 54 Equation . . .(i) and . . .(ii) . . .(iii) Solving",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(c) Non-trivial solution",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(b, c) We get Alterative:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(b) ⇒ ⇒ ⇒ ⇒ ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(b,c) As PQ kI = ⇒ 1 Q kP I − = Now ( ) | | k Q adj P I P = ⇒ 1 0 0 ( 3 4) 0 1 0 (20 12 ) 0 0 1 k Q α α − − −       = − − − −    +    − − −    ∵ 23 8 k q − = ⇒ ( 3 4) (20 12 ) 8 k k α α − − − − = + ⇒ 2(3 4) 5 3 α α + = + ⇒ 3 3 α = − ⇒ 1 α = − Also 3 | | | | | | k I Q P = ⇒ 2 2 9 0 4 2 9 0 0 0 9 2 2 2 0 9 0 4 2 2 2 2 4 0 0 9 a b a b a b a b a b + +         + − ⇒         + + + − + +     4 2 0 + + = a b ⇒ 2 4 a b + = − 2 2 2 0 a b + − = ⇒2 2 2 a b − = − 2 2 4 0 a b + + = ⇒ 2 2 5 a b + = 2, 1 a b = − = − 1 2 3 (2 ) 2 0 x x x λ − − + = 1 2 3 2 (3 ) 2 0 x x x λ − + + = 1 2 3 2 0 x x x λ − + − = 0 ∆= 2 2 1 2 3 2 0 1 2 λ λ λ − − −− = − − ⇒ 2 (2 ){3 4} 2 { 2 2} (4 3 ) 0 λ λ λ λ λ − + − + ⋅− + + −− = ⇒ 2 3 (6 2 8 3 4 ) 4 4 1 0 λ λ λ λ λ λ λ 2 + −− − + − + + − = ⇒ 3 5 3 0 λ λ λ 2 − − − + = 3 2 2 2 3 3 0 x λ λ λ λ 2 − + − − + = 2( 1) 2 ( 1) 3( 1) 0 λ λ λ λ λ − + − − − = 2 ( 1)( 2 3) 0 λ λ λ − + − = ( 1)( 3)( 1) 0 λ λ λ − + − = ⇒ 1,1, 3 λ = − 3 4 4 3 ( )T Y Z Z Y − 4 3 3 4 ( ) ( ) ( ) ( ) T T T T Z Y Y Z = − 4 3 3 4 Z Y Y Z = − + ⇒ symmetric 44 44 is symmetric X Y + 4 3 3 4 skew symmetric X Z Z X − 23 23 skew symmetric. X Y + 2 2 2 (1 α) (1 2α) (1 3α) 3 2α 3 4α 3 6α 5 2α 5 4α 5 6α + + + + + + + + + 3 3 2 2 2 1 648α ( ; ) R R R R R R = − → − → − 2 2 2 α 2 4α 2 9α 2 3 2α 3 4α 3 6α 2 2 2 − − − + + + 1 1 2 3 3 2 648α ( ; ) R R R R R R = − → − → − ⇒ 2 2 2 2α 5α 9α 3 2α 2α 3 6α 648α 0 0 2 − − − − − − + = − 2 2 2 1 1 1 1 2α α 1 1 1 1 1 1 1 2 4 4 4α α 2α 1 2 4 4 2 1 1 3 9 9 6α α 1 3 9 9 3 1 ∆= = − 3 3 1 1 1 1 1 1 2α 1 2 4 1 2 4 2α 4 1 3 9 1 3 9 = − = − × ⇒ 3 8 648 9 α α α − = − ⇒ = ± | | T A I AA = ⇒ 1 0 5 5 3 (10 3 ) 0 1 3 2 2 a b a a b b −      + =      −      2 2 25 10 3 a b a b + = + &15 2 0 &10 3 13 a b a b − = + = 3.15 10 13 2 + = a a ⇒ 65 2 13 = × a 2 5 = a 5 2 = a ⇒ 2 6 = a 3 = b ∴ 5 5 + = a b _ 55 Matrices and Determinants ⇒ 2 3 2 (20 12 ) k k α = + ⇒ (20 12 ) 2k α + = ⇒ 8 2k = ⇒ 4 k = 2 2 3 2 9 (adj ) adj 2 (2 ) 2 = = = = Q P Q P Q P incorrect.",
+    "options": [
+      "is incorrect.",
+      "is correct",
+      " 2 2 3 2 9 (adj ) adj 2 (2 ) 2 = = = = P Q P Q P Q correct.",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(b) 1 0 0 4 1 0 16 4 1 P     =       ⇒ 2 1 0 0 8 1 0 16(1 2) 8 1 P     =     +   , 3 1 0 0 12 1 0 16(1 2 3) 12 1 P     =     + +   ⇒ 50 1 0 0 4 50 1 0 2 16(1 2 ... 50) 4 50 1 P θ     = ×     + + + ×   50 1 0 0 200 1 0 20400 200 1 P     =       ∵ 50 1 P Q − = ⇒ 11 12 13 21 22 23 31 32 33 1 0 0 1 0 0 200 1 0 0 1 0 20400 200 1 0 0 1 q q q q q q q q q             − =                   ⇒ 21 200 0 q − = ⇒ 21 200 q = 31 20400 0 q − = ⇒ 31 20400 q = and 32 200 0 q − − ⇒ 32 200 q = ∴ 31 32 21 20400 200 103 200 q q q + + = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(b) Here ω is complex cube root of unity 2 2 1 1 2 3 3 0 0 1 1 1 R R R R → + + = −ω − ω ω ω 3( 1 ) 3z = −−ω−ω = − ⇒ k z = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) Given 2 3 4 1 A −   =   −   ⇒ 2 16 9 3 12 13 A −   =   −   ⇒ 24 36 12 48 12 A −   =   −   ∴ 2 72 63 3 12 84 51 A A −   + =   −   adj 2 51 63 (3 12 ) 84 72   + =     A A",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(d) Let 1 1 1 2 2 2 3 3 3 a b c M a b c a b c     =       ( ) ( ) ( ) 2 2 2 2 2 2 2 2 2 1 1 1 2 2 2 3 3 3 T tr M M a b c a b c a b c  = + + + + + + + +   ∴ Five of 9 number is 1 rest are zero or two are 2, 1 and rest zero. ∴ Number of ( ) 3 3 × metrices 9 9 5 2 1 2 1 126 72",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 198,
+    "stem": "C C = × + × × = + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(c) ∵ System of equation has non-zero solution. ∴ 1 3 3 2 0 2 4 3 k k − = − ⇒ 44 4 0 k − = ∴ 11 k = Let z λ = ∴ 11 3 x y λ + = − And 3 11 2 x y λ + = ∴ 5 , , 2 2 x y z λ λ λ = = − = ∴ 2 2 5 2 10 2 xz y λ λ λ ⋅ = =   −    ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(d) 4 2 2 2 4 2 2 2 4 x x x x x x x x x − ∆= − − 4 x =− makes all three row identical Hence 2 ( 4) x + will be factor Also, 1 1 2 2 C C C C → + + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 56 5 4 2 2 5 4 4 2 5 4 2 4 x x x x x x x x x − ∆= − − − − ⇒ 5 4 x− is a factor, 2 ( 4)( 4) x x λ ∆= − + ∴ 5, 4 B A = = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(a, b)Given system of equations can be written as 1 2 3 1 2 5 2 4 3 1 2 2 −         − = ⇒ =         −     x b y b AX B z b 1 1 2 1 2 3 3 1 3 1 2 5 1 2 5 [ | ] 2 4 3 0 0 6 1 2 2 0 0 7 −  −      = − − + −         − +     b b A B b b b b b b b 1 1 2 3 1 3 1 2 5 13 0 0 0 7 0 0 7   −     − + −     +     b b b b b b For solution of this system, 1 3 2 13 0 7 7 + − = b b b ⇒ 1 2 3 1 2 3 7 13 0 ( , , ) + − = ⇒ = b b b b b b 2 3 2 3 ( 7 13 , , ) − + K K K K where 2 3 , ∈ K K R . . . (i) 0 ∆≠ ⇒every set of values of (i) provides atleast a solution of system of option (d).",
+    "options": [
+      " 0 ∆≠ ⇒ any possible set of 1 2 3 ( , , ) b b b would give a solution. ⇒ every set of values of (i) provides at least a solution of system of option (a).",
+      " 1 1 2 3 1 3 1 1 3 0 0 0 3 1 0 0     − + +     − +   b b b b b b For solution of this system, 1 2 3 3 0 + + = b b b ⇒ 1 2 3 2 3 2 3 2 3 ( , , ) ( 3 , , ), , = − − ∈ b b b K K K K K K R . . . (ii) Obviously, the set represented by (i) is not contained in (ii). ⇒ This system doesn’t have solution for every set of 1 2 3 ( , , ) b b b of (i).",
+      "Equations are of parallel planes or identical planes. For solution, these planes should be identical for that, 1 2 3 3 3 3 ( , , ) ( ,2 , ) = − b b b K K K . . . (iii) Every such value of 1 2 3 ( , , ) b b b is contained in (i) but not every value of 1 2 3 ( , , ) b b b of (i) is present in (iii). ⇒ Not every 1 2 3 ( , , ) b b b of (i) gives solution to the system of equations of option (c).",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(d) cos sin sin cos −   =     A α α α α 2 cos sin cos sin sin cos sin cos − −    =       A α α α α α α α α cos2 sin 2 sin 2 cos −   =     α α α α 3 cos2 sin 2 cos sin sin 2 cos sin cos − −    =       A α α α α α α α α cos3 sin3 sin3 cos −   =     α α α α Similarly 32 cos32 sin32 0 1 sin32 cos 1 0 − −     = =         A α α α α cos 32 0 and sin 32 = 1 = α α 32 (4 1) , 2 = + ∈ n n I π α (4 1) , 64 = + ∈ n n I π α 64 = π α for n = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(a) for non trivial solution D = 0 1 1 0 1 − − − = − c c c c c c ⇒ 3 2 2 3 1 0 − −= c c ⇒ 2 ( 1) (2 1) 0 + − = c c ∴ Greatest value of c is 1 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(c) x – 2y + kz = 1 . . . (i) 2x + y + z = 2 . . . (ii) 3x – y – kz = 3 . . . (iii) (1)  +  (3) ⇒ 4x – 3y = 4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(d) put 2 2 c b + = in determinant of A 3 2 6 12 8 | | [2,16] 4 c c c A − + − = ∈ ⇒  (c – 2)3 ∈ [8, 64] ⇒ c∈ [4,6] 1 1 2 1 2 3 1 3 1 1 3 1 1 3 5 2 6 3 0 0 2 2 1 3 1 0 0         − − +         − − − − +     b b b b b b b b _ 57 Matrices and Determinants",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(b) 2 2 1 1 1 2 3 2 3 2 3 1 = = − − D a a 2 1 2 2 1 1 5 3 2 1 1 3 1 = = − + + − D a a a a 2 2 2 1 2 1 2 5 2 3 2 1 1 = = − + − D a a a 2 3 2 1 1 2 2 3 5 4 2 3 1 = = − − D a a D = 0 at |a| 3 = but 3 3 4 0 = ± − ≠ D So, the system is inconsistent for |a| 3 =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(a)  Here AAT = I ⇒ 1 cos sin sin cos T A A θ θ θ θ −   = =   −   Also cos( ) sin( ) sin( ) cos( ) n n n A n n θ θ θ θ −   =   −   ∴ 50 cos(50) sin(50) sin(50) cos(50) A θ θ θ θ −   =   −   3 1 2 2 1 3 2 2       =   −    ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(c) 1 1 cos sin | | 1 cos sin sin cos 1 2sin 2cos t t A e t t t t t t −     = − − − +     −   2 2 [5cos 5sin ] t e t t t R − = + ∀∈ 5 0 t e t R − = ≠∀∈",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(b) P1 ≡ x – 4y + 7z – g = 0 P2 ≡ 3x – 5y – h = 0 P3≡ –2x + 5y – 9z – k = 0 Here ∆ = 0; 2P1 + P2 + P3 = 0 when 2g + h + k = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(d) 1 1 1 1 1 1 1 2 3 0 1 2 ( 1) 4 ( 5) 1 3 0 2 1 D α α α α = = = − − = − − for infinite solutions D = 0 ⇒α = 5 5 1 1 0 9 2 3 0 3 5 x D β = ⇒ = ⇒ 0 0 1 1 1 3 0 15 2 5 β − − = − − ⇒ 2 15 0 β + − = ⇒ 13 0 β − = on 13 β = we get 0 y z D D = = α = 5, β = 13",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(c) det 2 4 sin 2 1 sin 2 5 2sin sin 2 2 d A d d d θ θ θ θ − + − = + − − + + (R1 → R1 + R3 – 2R2) 1 0 0 1 sin 2 5 2sin 2 2 sin d d d θ θ θ = + − + − = (2 + sinθ)(2 + 2d – sin θ) – d(2sinθ – d) = 4 + 4d – 2sinθ  + 2sinθ + 2dsinθ  – sin2θ  – 2dsinθ  + d2 = d2 + 4d + 4 – sin2θ = (d + 2)2 – sin2θ For a given d, minimum value of det (A) = (d + 2)2 – 1 = 8  ⇒ d = 1 or –5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(d) 2 2 1 1 1 2 b A b b b b     = +       (b > 0) 2 2 2 2 | | 2(2 2 ) (2 ) 1( 1) = + − − − + − − A b b b b b b b 2 2 | | 2( 2) 1 = + − − A b b 2 | | 3 A b = + | | 3 A b b b = + ⇒ 1 3 2 b b + ≥ 3 2 3 b b + ≥",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 39,
+    "stem": "(d) 1 3 7 1 4 7 0 sin3 cos2 2 θ θ − = (8 – 7 cos 2θ) – 3(–2 – 7 sin3θ) + 7 (– cos2θ – 4 sin3θ) = 0 14 – 7 cos2θ  + 21 sin3θ – 7 cos2θ – 28 sin3θ = 0 14 – 7 sin3θ – 14 cos2θ = 0 14 – 7 (3 sin θ – 4 sin3θ) – 14 (1 – 2 sin2θ) = 0 –21 sinθ + 28 sin3θ + 28 sin2 θ = 0 7 sinθ [–3 + 4 sin2θ + 4 sinθ] = 0 sin θ, 4 sin2θ  + 6 sinθ – 2 sinθ  – 3 = 0 2 sinθ (2 sinθ  + 3) – 1 (2 sinθ  + 3) = 0 sin θ 3 2 − = ; sinθ 1 2 = Hence, 2 solutions in (0,π) _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 58",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(a) A is orthogonal matrix 2 2 2 0 1 p p + + = ⇒ 1 | | 2 = P",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(a)  P1 : 2x + 2y + 3z = a P2 : 3x – y + 5z = b P3 : x – 3y + 2z = c We find P1 + P3 = P2 ⇒  a + c = b",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 42,
+    "stem": "(b) 2 | | | | 8 ⋅ = A B and | | 8 | | = A B ⇒| | 4 = A and 1 | | 2 = B ∴ 1 1 1 1 det( ) 4 4 16 −⋅ = × = T BA B",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 43,
+    "stem": "(d) 2 2 2 2 2 2 − − − − − − a b c a a b b c a b c c c a b 1 1 2 3 → + + R R R R 2 2 2 2 + + + + + + = − − − − a b c a b c a b c b b c a b c c c a b 1 0 0 ( ) 2 ( ) 0 2 2 = + + − + + − − a b c b a b c c c c a b 2 ( )( ) = + + + + a b c a b c ⇒ 2( ) = − + + x a b c",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 44,
+    "stem": "(c) For unique solution 1 1 0 1 1 0 2 α β α β α β + ∆≠ ⇒ + ≠ 1 1 1 0 1 1 0 2 2 α β α β − − ≠ ⇒ + ≠−",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 45,
+    "stem": "(c) 1 0 0 3 1 0 9 3 1 P   =       2 1 0 0 3 3 1 0 9 9 9 3 3 1 P   = +   + + +     3 1 0 0 3 3 3 1 0 6.9 3 3 3 1 P   = + +   + +     2 1 0 0 3 1 0 ( 1) 3 3 1 2 n P n n n n       =   +     5 1 0 0 5.3 1 0 15.9 5.3 1 P   =       5 3 Q P I = + 2 0 0 15 2 0 135 15 2 Q   =       21 31 32 15 135 10 15 q q q + + = = Alterative: 1 0 0 0 0 0 0 1 0 3 0 0 0 0 1 9 3 0 P     = +             P I X = + 0 0 0 3 0 0 9 3 0 X   =       2 0 0 0 0 0 0 9 0 0 X   =       3 0 X = 5 2 5 10 P I X X = + + 5 2 2 5 10 Q P I I X X = + = + + 2 0 0 0 0 0 0 0 0 0 2 0 15 0 0 0 0 0 0 0 2 15 15 0 90 0 0 Q       = + +                   2 0 0 15 2 0 135 15 2 Q   =      ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(b) 1 2 2 1 2 1 0 1 1 1 λ λ − − = ⇒ (λ –1)3 = 0 ⇒ λ = 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 47,
+    "stem": "(d) 4 4 2 2 sin .cos (1 sin )(1 cos ) m θ θ θ θ = + + + 4 4 2 2 2 sin cos sin cos θ θ θ θ + + 4 2 2 4 sin (1 sin ) 1 cos cos θ θ θ   − +   +   0 0 α α   =     1 | | m β + = 4 2 2 4 cos (1 sin ) 1 cos sin θ θ θ θ   +   −−   4 4 2 2 sin cos , 1 sin (1 sin ) | | | | m m α β β θ θ θ θ + = −− = + | | m β = − 4 4 2 2 2 [sin cos sin cos 2] [ 2] t t β θ θ θ θ = − + + = − + + ⇒ 37 min 16 β = − 4 4 2 2 2 1 sin cos 1 2sin cos 1 (sin ) 2 α θ θ θ θ θ = + = − = − ⇒ 1 min 2 α = 37 1 37 8 29 16 2 16 16 16 α β + = − + = − + = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 48,
+    "stem": "(a,c) 0 1 2 1 1 2 3 2 3 1 1 3 α β γ    =          ⇒ 2 1 β γ + = 2 3 2 α β γ + + = _ 59 Matrices and Determinants 3 3 α β γ + + = ⇒ 1, 1, 1 α β γ = = − = | | 2 = − M 2 2 2 4 | adj | | | | | 16 M M M = = = 1 1 adj ( ) | | 2 M M M M − − − = = 1 1 (adj ( ) adj ( ) 2 − − = = −M M M",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 49,
+    "stem": "(a,c) 1 det det det det( ) R Px Qx P − = ⇒ 2 2 det det 4(12 ) 48 4 R Q x x = = − = − Now 2 2 2 0 4 0 4(10 ) 40 4 5 x x x x x x = − = − ⇒ 2 det det 0 4 0 8 5 x x R x R x x     = + ∀∈       ⇒ Option (a) is correct At 1,det 48 4 44 det x Q R = = − = = Because det 0 R ≠ so 0 0 0 R α β γ       =          ⇒ 0 α β γ = = = So, ˆ ˆ ˆ i j k α β γ + + is not a unit vector Option (b) is wrong 1 1 1 2 0 0 0 2 2 , ( 0) 0 4 0 0 0 3 0 0 6 P Q x         = = =             1 R PQP − = 2 4 6 6 3 0 12 6 4 1 1 0 8 12 0 3 2 0 24 8 6 6 0 0 18 0 0 2 0 0 36 −             = − =                   2 1 2/3 0 4 4/3 0 0 6 R     =       1 4 1 2 / 3 1 ( 6 ) 0 2 4 / 3 0 0 0 R I a a b b −        − = −            2 4 0 3 b a −+ + = 4 2 0 3 a b − + = 8 8 0 9 −+ = ⇒ 3 b = 2 a =",
+    "options": [
+      "Option A",
+      "Option B",
+      "correct PQ QP = ⇒ 12 a for both are same ⇒ 4 2 2 0 x x x + + = + + ⇒x φ ∈ ⇒ No value exist ⇒ Option (d) is wrong",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 50,
+    "stem": "(a,b,d) Clearly 1 1 1 1 T P P P− = = 1 2 2 2 T P P P− = = . . . 1 6 6 6 T P P P− = = and , T A A = where 2 1 3 1 0 2 3 2 1 A     =       Using formula ( )T T T A B A B + = + 1 1 6 6 1 1 6 6 ( ... ) ... T T T T T T T T X P AP P AP P A P P A P X = + + = + + = ⇒ X is symmetric. Let 1 1 1 B   =    1 1 2 2 6 6 .... T T T XB P AP B P AP B P AP B = + + + 1 6 ...... P AB PAB P AB = + + + 1 2 6 6 ( ..... ) 3 6 XB P P P   = + + +    6 2 3 2 6 2 30 6 2 3 2 6 2 30 30 6 2 3 2 6 2 30 x x x x x x B x x x + +         = + + = =         + +     30 α ⇒ = since 1 1 1 30 1 1 1 X     =       ⇒ ( 30 ) 0 X I B − = has a non trivial solution 1 1 1 B   =    ⇒ | 30 | 0 − = X I 1 1 6 6 ...... T T X P AP P AP = + + trace (2 0 1) ..... (2 0 1) 3 6 18 = + + + + + + = × =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 51,
+    "stem": "(a) 2 2 2 1( )[( ) ( ) ( ) ] 2 ∆= = − + + − + − + − a b c b c a a b c a b b c c a c a b 0 + + = a b c and 2 2 2 + + = + + a b c ab bc ca ⇒ 0 = = = a b c ⇒ the equation represent whole of the three dimensional space.",
+    "options": [
+      "If 0 + + ≠ a b c and 2 2 2 + + = + + a b c ab bc ca 1 1 6 6 ( ) ( ) ........ ( ) T T r r x t P AP t P AP = + + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 60 ⇒ 0 ∆= and 0 = = ≠ a b c ⇒ the equations represent identical planes.",
+      " 0 + + = a b c and 2 2 2 + + ≠ + + a b c ab bc ca ⇒ 0 ∆= ⇒ the equations have infinitely many solutions. ( ) + + + ax by a b z ( ) + = + bx cy b c z ⇒ 2 2 ( ) ( ) − = − b ac y b ac z ⇒ = y z ⇒ 0 + + = ax by cy ⇒ = ax ay ⇒ x y z = =",
+      " 0 + + ≠ a b c and 2 2 2 + + ≠ + + a b c ab bc ca ⇒ 0 ∆≠ ⇒ the equation represent planes meeting at only one point.",
+      ""
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 52,
+    "stem": "(a) (A) 2 2 4 2 x x y x + + = + ⇒ 2 (2 ) 4 2 0 x y x y + − + − = ⇒ 2 4 12 0 y y + − ≥ 6 or 2 y y ≤− ≥ Minimum value is 2.",
+    "options": [
+      "Option A",
+      "( ) ( ) ( ) ( ) A B A B A B A B + − = − + ⇒ AB BA = as A is  symmetric and B is skew symmetric ⇒ ( )t AB AB = − ⇒ 1and 3 k k = =",
+      " 3 3 2 log log 2 3 log 3 a a − = ⇒ = Now 3 2 log 1 2 2 k −+ < < ⇒ 1 3.2 2 k − < < ⇒ 2 2 3 log log (3) 2 k  < <     ⇒ 1 k = or 2 k < and",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 1,
+    "stem": "−≤ ≤⇒− ≤− − ≥ y or y y",
+    "options": [
+      "Option A",
+      "For domain 2 2( 1) 8.3 1 1 1 3 − − −≤ ≤ − x x ⇒ 2 2 2 3 3 1",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 1,
+    "stem": "1 3 − − − −≤ ≤ − x x x Case (i): 2 2 2 3 3 1 0 1 3 − − − −≤ − x x x ⇒ 2 2 2 (3 1)(3 1) 0 (3 1) − − − − ≥ − x x x ⇒ ( ,0] (1, ). ∈−∞ ∪ ∞ x Case (ii): 2 2 3 3 1 0 1 3 2 − − + ≥ − − x x x ⇒ 2 2 (3 1)(3 1) 0 (3 .3 1) − − − + ≥ − x x x x ⇒ ( ,1) [2, ). ∈−∞ ∪ ∞ x So, ( , 0] [2, ) ∈−∞ ∪ ∞ x",
+    "options": [
+      "Option A",
+      "Option B",
+      " 1 1 3 → + R R R 0 0 2 ( ) tan 1 tan 1 tan 1 θ θ θ θ = − − − f 2 2 2(tan 1) 2sec . θ θ = + =",
+      " 1/ 2 3/ 2 1/2 3 15 ( ) ( ) (3 10) ( ) 3 ( ) ( 2) 2 2 ′ = − + × = − f x x x x x x Increasing, when"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 54,
+    "stem": "(a) 1 2 3 1 1 2 0 1 3 4 D − = − − = − and 1 1 2 3 1 2 (3 ) 0 1 3 4 D k k − − = − = − = − if 3 k = 2 1 1 3 1 2 ( 3) 0, 1 1 4 D k k − = − − = − = if 3 k = _ 61 Matrices and Determinants 3 1 2 1 1 1 ( 3) 0, 1 3 1 D k k − − − = − = − if 3 k = ⇒ system of equations has no solution for",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 55,
+    "stem": "(a) Let be so that . Similarly Hence and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 56,
+    "stem": "(b) Moreover adj Hence −= 1 adj 3 U U and sum of the elements of 57",
+    "options": [
+      "The value of",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 58,
+    "stem": "(a) If two zero’s are the entries in the diagonal, then 3 3 2 1 × C C If all the entries in the principle diagonal is 1, then 3 1 C ⇒ Total matrix 12 =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 59,
+    "stem": "(b) 0 0 1           a b a c b c either 0 = b or 0 = c ⇒  | | 0 ≠ A ⇒  2 matrices 0 1 0           a b a c b c either 0 = a or 0 = c ⇒  | | 0 ≠ A ⇒  2 matrices 1 0 0           a b a c b c either 0 = a or 0 = b ⇒  | | 0 ≠ A ⇒  2 matrices 1 1 1           a b a c b c . If 0 = = a b ⇒  | | 0 = A If 0 = = a c ⇒  | | 0 = A If 0 = = b c ⇒  | | 0 = A ⇒ there will be only 6 matrices",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 60,
+    "stem": "(b) The six matrix A for which | | 0 = A are 0 0 1 0 0 1 1 1 1           ⇒ inconsistent 0 1 0 1 1 1 0 1 0           ⇒ inconsistent 1 1 1 1 0 0 1 0 0           ⇒ infinite solutions 1 1 0 1 1 0 0 0 1           ⇒ inconsistent 1 0 1 0 1 0 1 0 1           ⇒ inconsistent 1 0 0 0 1 1 0 1 1           ⇒ infinite solutions",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 61,
+    "stem": "(d) We must have 2 2 a b kp − = ⇒ ( )( ) a b a b kp + − = ⇒ either 0 a b − = or a b + is a multiple of p when ; a b = number of matrices is p and when a b + = multiple of , p a b ⇒ has 1 p− ∴ Total number of matrices 1 p p = + − 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 64,
+    "stem": "(d) 8 7 0 9 2 3 0 + + =   + + =  a b c a b c . . .(E) 7 7 7 0 + + = a b c Now, 1 8 7 9 2 3 0 7 7 7 = D 1 U x y z      1 0 0 1 2 1 0 0 3 2 1 0 x y z       =          ⇒ 1 2 1 x y z       = −          2 3 2 2 1 , 1 . 4 3 U U         = − = −         − −     1 2 2 2 1 1 1 4 3 U     = − − −     − −   | | 3 U = 1 2 0 7 5 3 9 6 3 U − −     = − − −       1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 0,
+    "stem": "U −= 3 [3 2 0] 2 0 U      1 2 2 3 [3 2 0] 2 1 1 2 1 4 3 0     = − − −     − −   3 [ 1 4 4] 2 3 8",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 5,
+    "stem": "0   = − = −+ =    _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 62 \u0002  \u0002  \u0002 ∴ System (E) has infinite solutions. (say) 1 6 7 = = = − a b c k ⇒ 2 1 + + = a b c ⇒ 2 6 7 1 + − = k k k ⇒ 1 = k ∴ 7 7 6 7 6 6 + + = + − = = a b c k k k k",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 65,
+    "stem": "(1) 2 /3 ie π ω = 2 2 2 1 1 0 1 z z z ω ω ω ω ω ω + + = + 2 2 1 1 1 0 1 1 z z ω ω ω ω + = + ⇒ 2 2 2 [( )( ) 1 ( 1) (1 )] 0 z z z z z ω ω ω ω ω ω + + −− + − + −− = ⇒ 3 0 z = ⇒ 0 z = is only solution.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 66,
+    "stem": "(5) 3 | | (2 1) ,| | 0 = + = A k B (since B is a skew-symmetric matrix of order 3) ⇒ det (adj A) 1 3 2 | | ((2 1) ) 106 − = = + = n A k ⇒ 2 1 10 k + = ⇒2 9 k = [ ]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 67,
+    "stem": "(9) Let a b c M d e f g h i     =       0 1 1 2 1, 2, 3 0 3 M b e h −       = ⇒ = − = =          1 1 1 1 0, 3, 2 0 1 M a d g         − = ⇒ = = =         −     1 0 1 1 12 7 1 12 M g h i i       = ⇒ + + = ⇒=          ∴ Sum of diagonal elements = 9.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 68,
+    "stem": "(2) 3 2 3 3 1 1 1 0 2 6 1 0 0 6 24 2 x x x x x + ⋅ − = − ⇒ 3 3 (12 2) 0 x x + = ⇒ 6 3 6 5 0 x x + − = ⇒ 6 3 3 6 6 5 5 0 x x x + − − = ⇒ 3 3 (6 5)( 1) 0 x x − + = ⇒ 3 3 5 1, 6 x x = − = ⇒ 1/3 5 1, 6 x x   = − =     So, two solution",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 69,
+    "stem": "(1) 2 2 1 D 0 1 0 1 α α = ⇒α α = α α ⇒ 2 3 2 2 2 1(1 ) ( ) ( ) 0 α α α α α α α − − − + − = ⇒ 2 2 4 1 0 −α −α + α = ⇒  ( ) 2 2 1 0 α − = ⇒ 1 α = ± at 1 α = No solution. ∵ planes are parallel. At 1 α = − infinite solution. Now 2 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 70,
+    "stem": "(4) 11 12 13 21 22 23 31 32 33     =       a a a P a a a a a a The maximum possibility of |P| can be 6 if 21 22 22 23 21 23 31 32 32 33 31 33 2 = ± = ± = ± a a a a a a a a a a a a takes zero. Hence, | |",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  },
+  {
+    "questionNumber": 6,
+    "stem": "≠ P Next possibility is 4. 1 1 1 1 1 1 1 1 1 − −     = − −       P is one such possibility _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 45
+  }
+]

@@ -1,0 +1,1377 @@
+[
+  {
+    "questionNumber": 1,
+    "stem": "P E P E′ + = ( ) . ( ) P E E P E = ′ ( ). ( ) P E E P E ′ = : E a b = ( ) . a P E a b = + : E a b = ( ) b P E a b = + 1 2 E E ∪ 1 E 2 E 1 2 , E E 1 2 E E ∩ 1 E 2 E 1 2 , E E 1 2 1 2 1 2 ( ) ( ) ( ) ( ) P E E P E P E P E E ∪ = + − ∪ 1 2 3 ( ) P E E E ∪ ∪ = 1 2 3 1 2 2 3 3 1 ( ) ( ) ( ) ( ) ( ) ( ) P E P E P E P E E P E E P E E + + − ∩ − ∩ − ∩ 1 2 3 ( ) P E E E + ∩ ∩ 1 2 3 ( .... ) n P E E E E ∪ ∪ ∪ ∪ = 1 1 1 ( ) ( ) ( ) ... n i i j i j k i i j n i j k n P E P E E P E E E = ≤≠≤ ≤≠≠≤ − ∩ + ∩ ∩ − ∑ ∑ ∑ 1 1 2 .... ( 1) ( .... ) n n P E E E − + − ∩ ∩ ∩ 1 E 2 E 1 2 ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 0,
+    "stem": "P E E ∩ = 1 2 1 2 ( ) ( ) ( ) P E E P E P E ∪ = + 1 2 3 1 2 3 ( ) ( ) ( ) ( ) P E E E P E P E P E ∪ ∪ = + + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 98 \u0001 Two events and are independent iff Thus, for independent events: \u0001 Two non-null events cannot be mutually exclusive and independent at the same time. \u0001 If are independent events then and are also independent. \u0001 If are independent events then \u0001 For any two events A and B we have Conditional Probability \u0001 If are two events which occur in conjunction and takes place after has taken place (i.e., is dependent on ) then the probability of taking place after has taken place, denoted by is given by Expectation \u0001 The expectation of the random variable x to have the value is if the probability of the value is \u0001 If the values of the random variable x have the probabilities respectively then the expectation of x, denoted by is given by Repeated Trial: If the probability of success in one trial is p and that of failure is q so that then \u0001 the probability of r successes in n trials i.e., (r + 1)th term in the binomial expansion of \u0001 the probability of at least r successes in n trials \u0001 the probability of at most r successes in n trials 1 0 1 n n n n C q C pq − = + ⋅ ... + + . n r n r r C p q − Conditional Probability and Baye’s Theorem Total Conditional Probability \u0001 Events are mutually exclusive if for \u0001 Events are exhaustive if \u0001 If are equiprobable and exhaustive then 1 2 ( ) ( ) P E P E = = ... 1 ( ) . n P E n = \u0001 If are n mutually exclusive and exhaustive events and A is an event which can take place in conjunction with any one of then Bayes’ Theorem \u0001 If are n mutually exclusive and exhaustive events and A is an event which takes place in conjunction with any one of then the probability of the event happening when the event A takes place, is given by In case of equiprobable events, Note is calculated after the experiment has taken place. Such probabilities are called posteriori probabilities. etc., which are known before the experiment takes place are called priori probabilities. Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1,
+    "stem": "Let E and F be two independent events. The probability that exactly one of them occurs is and the probability on none of them occurring is If P(T) denotes the probability of occurrence of the event T, then 1 E 2 E 1 2 1 2 ( ) ( ) ( ) P E E P E P E ∩ = ⋅ 1 2 1 2 ( ) ( ) ( ) P E E P E P E ∩ = ⋅ 1 2 3 1 2 3 ( ) ( ) ( ) ( ) P E E E P E P E P E ∩ ∩ = ⋅ ⋅ 1 2 , E E 1 2 , E E 1 2 1 2 , '; ', E E E E 1 2 ', ' E E 1 2 , E E 1 2 1 2 ( )' {1 ( )}{1 ( )}. P E E P E P E ∪ = − − ( ) ( ) ( '). P A P A B P A B = ∩ + ∩ 1 2 , E E 2 E 1 E 2 E 1 E 2 E 1 E 2 1 ( / ), P E E 1 2 2 1 1 ( ) ( / ) . ( ) P E E P E E P E ∩ = 1x 1 1 p x 1x",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1,
+    "stem": "p 1 2 3 , , ,....... n x x x x 1 2 3 , , ,..... n p p p p ( ), E x 1 ( ) . n i i i E x x p = = ∑ 1 p q + = , n r n r r C p q − ⋅ ( ) . n q p + 1 ( 1) 1 .... . n r n r n r n r n n r r n C p q C p q C p − + − + + = + + + 1 2 , ,...., n E E E 0 i j E E ∩ = 1,2,3,...., . i j n = 1 2 , ,...., n E E E 1 2 ( ) ( ) .... ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1,
+    "stem": "n P E P E P E + + + = 1 2 , ,.... n E E E 1 2 3 , , ,.... n E E E E iE 1 1 2 2 ( ) ( ) ( / ) ( ) ( / ) .... ( ) ( / ) n n P A P E P A E P E P A E PE P A E = ⋅ + ⋅ ⋅ + + ⋅ 1 2 , ,... n E E E 1 E 1 E 1 ( ) ( / ) ( / ) ( ) ( / ) i i i n i i i P E P A E P E A P E P A E = ⋅ = ⋅ ∑ 1 ( / ) ( / ) ( / ) i i n i i P A E P E A P A E = = ∑ ( / ) i P E A ( ) i P E 11 25 2 . 25 4 3 P(E) , P(F) 5 5 = = 1 2 P(E) , P(F) 5 5 = = 2 1 P(E) , P(F) 5 5 = = 3 4 P(E) , P(F) 5 5 = = _ 99 Statistics and Probability",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 2,
+    "stem": "A ship is fitted with three engines E1, E2 and E3. The engines function independently of each other with respective probabilities and For the ship to be operational at least two of its engines must function. Let X denote the event that the ship is operational and let X1,X2 and X3 denote respectively the events that the engines E1,E2 and E3 are functioning. Which of the following is (are) true?",
+    "options": [
+      "",
+      "P[Exactly two engines of the ship are functioning",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Let X and Y be two events such that 1 ( | ) , 2 = P X Y 1 ( | ) , 3 = P Y X and Which of the following is (are) correct?",
+    "options": [
+      "",
+      "X and Y are independent",
+      "X and Y are not independent",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 4,
+    "stem": "All the students of a class performed poorly in Mathematics. The teacher decided to give grace marks of 10 to each of the students. Which of the following statistical measures will not change even after the grace marks were given?",
+    "options": [
+      "mean",
+      "median",
+      "mode",
+      "variance"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 5,
+    "stem": "The variance of first 50 even natural numbers is:",
+    "options": [
+      "",
+      "833",
+      "437",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 6,
+    "stem": "The mean of the data set comprising of 16 observations is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 16,
+    "stem": "If one of the observation valued 16 is deleted and three new observations values 3, 4 and 5 are added to the data,",
+    "options": [
+      "16.8",
+      "16.0",
+      "15.8",
+      "14.0"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 7,
+    "stem": "If the standard deviation of the numbers 2, 3, a and 11 is 3.5, then which of the following is true?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 8,
+    "stem": "A computer producing factory has only two plants and Plant produces 20% and plant produces 80% of the total computers produced. 7% of computers produced in the factory turn out to be defective. It is known that P(computer turns out to be defective given that it is produced in plant (computer turns out to be defective given that it is produced in Plant where P(E) denotes the probability of an event E. A computer produced in the factory is randomly selected and it does not turn out to be defective. Then the probability that it is produced in plant is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 9,
+    "stem": "A box contains 15 green and 10 yellow balls. If 10 balls are randomly drawn, one-by-one with replacement then the variance of the number of green balls drawn is",
+    "options": [
+      "4",
+      "6 25",
+      "12 5",
+      "6"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 10,
+    "stem": "If two different numbers are taken from the set {0,1, 2, 3,....,10}; then the probability that their sum as well as absolute difference are both multiple of 4, is 55",
+    "options": [
+      "14 45",
+      "7 55",
+      "6 55",
+      "12"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 11,
+    "stem": "For three events, A, B and C, P (Exactly one A or B occurs) = P (Exactly one of B or C occurs) = P (Exactly one of C or A occurs) 1 4 = and P (All the three events occur simultaneously) 1 16 = then the probability that at least one of the events occurs, is 16 1 1 , 2 4",
+    "options": [
+      "7 64",
+      "3 16",
+      "7 32",
+      "7"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1,
+    "stem": "4 1 3 [ | ] 16 c P X X = 7 [ ] 8 X = 2 5 [ | ] 16 P X X = 1 7 [ | ] 16 P X X = ( ) P X Y ∩ 1 . 6 = 2 ( ) 3 P X Y ∪ = 1 ( ) 3 c P X Y ∩ = 833 4 437 4 2 3 26 55 0 a a − + = 2 3 32 84 0 a a − + = 2 3 34 91 0 a a − + = 2 3 23 44 0 a a − + = 1T",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 2,
+    "stem": "T 1T 2T 1) T 10 P = 2), T 2T 36 73 47 79 78 93 75 83 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 100",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 12,
+    "stem": "A man X has 7 friends, 4 of them are ladies and 3 are men. His wife Y also has 7 friends, 3 of them are ladies and 4 are men. Assume X and Y have no common friends. Then the total number of  ways in which X and Y together can throw a party inviting 3 ladies and 3 men, so that 3 friends of each of X and Y are in this party, is",
+    "options": [
+      "469",
+      "484",
+      "485",
+      "468"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 13,
+    "stem": "Let X and Y be two events such that ( ) 1 , 3 = P X ( ) 1 | 2 = P X Y and ( ) 2 | 5 = P Y X ( ) 2 5 P X Y ∪ =",
+    "options": [
+      " ( ) 1 5 P X Y ∩ =",
+      " ( ) 4 15 P Y =",
+      " ( ) 1 '| 2 P X Y =",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 14,
+    "stem": "Three randomly chosen non-negative integers x, y and z are found to satisfy the equation x y z 10 + + = . Then the probability that z is even, is 11",
+    "options": [
+      "6 11",
+      "36 55",
+      "1 2",
+      "5"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 15,
+    "stem": "A bag contains 4 red and 6 black balls. A ball is drawn at random from the bag, its colour is observed and this ball along with two additional balls of the same colour are returned to the bag. If now a ball is drawn at random from the bag, then the probability that this drawn ball is red, is: 5",
+    "options": [
+      "3 4",
+      "3 10",
+      "2 5",
+      "1"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 16,
+    "stem": "If 9 1 ( 5) 9 i i x = − = ∑ and 9 2 1 ( 5) 45, i i x = − = ∑ then the standard deviation of the 9 items 1 2 9 , ,....., x x",
+    "options": [
+      "3",
+      "9",
+      "4",
+      "2"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 17,
+    "stem": "From 6 different novels and 3 different dictionaries, 4 novels and 1 dictionary are to be selected and arranged in a row on a shelf so that the dictionary is always in the middle. The number of such arrangements is",
+    "options": [
+      "At least 750 but less than 1000",
+      "At least 1000",
+      "Less then 500",
+      "At least 500 but less than 750"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 18,
+    "stem": "The mean and variance of seven observations are 8 and 16, respectively. If 5 of the observations are 2, 4, 10, 12, 14, then the product of the remaining two observations is:",
+    "options": [
+      "40",
+      "49",
+      "48",
+      "45"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 19,
+    "stem": "Let A and B be two non-null events such that A ⊂ B. Then, which of the following statements is always correct?",
+    "options": [
+      "P(A|B) = 1",
+      "P(A|B) = P(B) – P(A)",
+      "P(A|B) < P(A)",
+      "P(A|B) > P(A)"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 20,
+    "stem": "The minimum number of times one has to toss a fair coin so that the probability of observing at least one head is at least 90% is:",
+    "options": [
+      "5",
+      "3",
+      "2",
+      "4"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 21,
+    "stem": "A student scores the following marks in five tests: 45, 54, 41, 57, 43. His score is not known for the sixth test. If the mean score is 48 in the six tests, then the standard deviation of the marks in six tests is 3",
+    "options": [
+      "10 3",
+      "100 3",
+      "100 3",
+      "10"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 22,
+    "stem": "Consider a class of 5 girls and 7 boys. The number of different teams consisting of 2 girls and 3 boys that can be formed from this class, if there are two specific boys A and B, who refuse to be the members of the same team, is:",
+    "options": [
+      "200",
+      "300",
+      "500",
+      "350"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 23,
+    "stem": "5 students of a class have an average height 150 cm and variance 15 cm2. A new student, whose height is 156 cm2 joined them. The variance (in cm2) of the height of these six students is:",
+    "options": [
+      "22",
+      "20",
+      "16",
+      "18"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 24,
+    "stem": "Two cards are drawn successively with replacement from a well shuffled deck of 52 cards. Let X denote the random variable of number of aces obtained in the two drawn card. Then ( 1) ( 2) = + = P X P X equals:",
+    "options": [
+      "52/169",
+      "25/169",
+      "49/169",
+      "24/169"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 25,
+    "stem": "An urn contains 5 red and 2 green balls. A ball is drawn at random from the urn. If the drawn ball is green, then a red ball is added to the urn and if the drawn ball is red, then a green ball is added to the urn; the original ball is not returned to the urn. Now, a second ball is drawn at random from it. The probability that the second ball is red, is: 49 _ 101 Statistics and Probability",
+    "options": [
+      "26 49",
+      "32 49",
+      "27 49",
+      "21"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 26,
+    "stem": "A data consists of n observations: 1 2 , ......, . n x x x If 2 1 ( 1) 9 = + = ∑ n i i x n and 2 1 ( 1) 5 = + = ∑ n i i x n , then the standard deviation of this data is:",
+    "options": [
+      "5",
+      " 5",
+      " 7",
+      "2"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 27,
+    "stem": "The mean of five observations is 5 and their variance is 9.20. If three of the given five observations are 1, 3 and 8, then a ratio of other two observations is:",
+    "options": [
+      "4 : 9",
+      "6 : 7",
+      "5 : 8",
+      "10 : 3"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 28,
+    "stem": "An unbiased coin is tossed. If the outcome is a head then a pair of unbiased dice is rolled and the sum of the numbers obtained on them is noted. If the toss of the coin results in tail then a card from a well-shuffled pack of nine cards numbered 1,2,3,...,9 is randomly picked and the number on the card is noted. The probability that the noted number is either 7 or 8 is:",
+    "options": [
+      "13/36",
+      "19/36",
+      "19/72",
+      "15/72"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 29,
+    "stem": "If the probability of hitting a target by a shooter, in any shot, is 1/3, then the minimum number of independent shots at the target required by him so that the probability of hitting the target at least once is greater than 5 , 6 is:",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 30,
+    "stem": "If mean and standard deviation of 5 observations x1, x2, x3, x4, x5 are 10 and 3, respectively, then the variance of 6 observations x1,x2, ....,x5 and –50 is equal to:",
+    "options": [
+      "582.5",
+      "507.5",
+      "586.5",
+      "509.5"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 31,
+    "stem": "The outcome of each of 30 items was observed; 10 items gave an outcome 1 2 d − each, 10 items gave outcome 1 2 each and the remaining 10 items gave outcome 1 2 d + each. If the variance of this outcome data is 4 3 then |d| equals: 2",
+    "options": [
+      "2",
+      " 5 2",
+      "2 3",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 32,
+    "stem": "Two integers are selected at random from the set {1, 2,..., 11}. Given that the sum of selected numbers is even, the conditional probability that both the numbers are even is:",
+    "options": [
+      "2/5",
+      "1/2",
+      "3/5",
+      "7/10"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 33,
+    "stem": "Let S = {1, 2,......, 20}. A subset B of S is said to be “nice”, if the sum of the elements of B is 203. Then the probability that a randomly chosen subset of S is “nice” is 20 7 2",
+    "options": [
+      " 20 6 2",
+      " 20 5 2",
+      " 20 4 2",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 34,
+    "stem": "A bag contains 30 white balls and 10 red balls. 16 balls are drawn one by one randomly from the bag with replacement. If X be the number of white balls drawn, the meanof X standarddeviationof X      ",
+    "options": [
+      "4",
+      "4 3 3",
+      "4 3",
+      "3 2"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 35,
+    "stem": "If the sum of the deviations of 50 observations from 30 is 50, then the mean of these observation is:",
+    "options": [
+      "50",
+      "51",
+      "30",
+      "31"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 36,
+    "stem": "In a random experiment, a fair die is rolled until two fours are obtained in succession. The probability that the experiment will end in the fifth throw of the die is equal to: 5 225 6",
+    "options": [
+      " 5 150 6",
+      " 5 175 6",
+      " 5 200 6",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 37,
+    "stem": "The mean and the variance of five observation are 4 and 5.20, respectively. If three of the observations are 3, 4 and 4; then absolute value of the difference of the other two observations, is:",
+    "options": [
+      "1",
+      "3",
+      "7",
+      "5"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 38,
+    "stem": "In a game, a man wins Rs. 100 if he gets 5 of 6 on a throw of a fair die and loses Rs. 50 for getting any other number on the die. If he decides to throw the die either till he gets a five or a six or to a maximum of three throws, then his expected gain/loss (in rupees) is: 9 Loss",
+    "options": [
+      "400 3 gain",
+      "400 3 Loss",
+      "0",
+      "400"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 39,
+    "stem": "There are three bags B1, B2, B3. B1 contains 5 red and 5 green balls. B2 contains 3 red and 5 green balls and B3 contains 5 red and 3green balls. Bags B1, B2 and B3 have probabilities 3/10, 3/10 and 4/10 respectively of being chosen. A bag is selected at random and a ball is randomly chose from the bag. Then which of the following options is/are correct? _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 102 chosen ball is green, equals 3 10 Statement or Assertion & Reason",
+    "options": [
+      "Probability that the chosen ball is green equals 39 80",
+      "Probability that the chosen ball is green, given that the selected bag is 3, B equals 3 8",
+      "Probability that the selected bag is B3, given that the chosen ball is green, equals 4 13",
+      "Probability that the selected bag is B3, given that the"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 40,
+    "stem": "Let H1, H2,…Hn be mutually exclusive and exhaustive events with P(Hi) > 0, i = 1,2,…n. Let E be any other event with 0 < P(E) <1. Statement-I: for and Statement-II:",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is False.",
+      "Statement-I is False, Statement-II is True."
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 41,
+    "stem": "Consider the system of equations ax + by = 0, cx + dy = 0, where Statement-I: The probability that the system of equations has a unique solution is 3/8. and Statement-II: The probability that the system of equations has a solution is I. Paragraph Paragraph for Question No. 42 to 44 There are n urns each containing n +1 balls such that the ith urn contains i white balls and (n+1–i) red balls. Let ui be the event of selecting ith urn, i = 1,2,3,…n and w denotes the event of getting a white ball.",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is False",
+      "Statement-I is False, Statement-II is True"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 42,
+    "stem": "If where then is equal to",
+    "options": [
+      "1",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 43,
+    "stem": "If where c is a constant then is equal to",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 44,
+    "stem": "If n is even and E denotes the event of choosing even numbered urn then the value of is Paragraph for Question No. 45 to 47 A fair die is tossed repeatedly until a six is obtained. Let denote the number of tosses required.",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 45,
+    "stem": "The probability that equals",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 46,
+    "stem": "The probability that equals",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 47,
+    "stem": "The conditional probability that given equals Paragraph for Question No. 48 to 49 Let U1 and U2 be two urns such that U1 contains 3 white and 2 red balls, and U2 contains only 1 white ball. A fair coin is tossed. If head appears then 1 ball is drawn at random from U1 and put into U2. However, if tail appears then 2 balls are drawn at random from U1 and put into U2. Now 1 ball is drawn at random from U2.",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 48,
+    "stem": "The probability of the drawn ball from U2 being white is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 49,
+    "stem": "Given that the drawn ball from U2 is white, the probability that head appeared on the coin is ( | ) ( | ) ( ) > ⋅ i i i P H E P E H P H 1, 2, .. = i n ( ) 1 = = ∑ n i i n P H , , , a b c d {0,1}. ∈ ( ) , i P u i ∝ 1,2,3,... , i n = lim ( ) n P w →∞ 2 3 3 4 1 4 ( ) , i P u c = ( / ) n P u w 2 1 n + 1 1 n + 1 n n + 1 2 ( ( ) 1/ ), i P u n = ( / ) P w E 2 2 1 n n + + 2 2( 1) n n + + 1 n n + 1 1 n + X 3 = X 25 216 25 36 5 36 125 216 3 ≥ X 125 216 25 36 5 36 25 216 6 ≥ X 3 > X 125 216 25 216 5 36 25 36 13 30 23 30 19 30 11 30 17 23 11 23 15 23 12 23 _ 103 Statistics and Probability Paragraph for Question No. 50 to 51 A box contains 1 white ball, 3 red balls and 2 black balls. Another box contains 2 white balls, 3 red balls and 4 black balls. A third box B3 contains 3 white balls, 4 red balls and 5 black balls.",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 50,
+    "stem": "If 1 ball is drawn from each of the boxes and the probability that all 3 drawn balls are of the same colour is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 51,
+    "stem": "If 2 balls are drawn (without replacement) from a randomly selected box and one of the balls is white and the other ball is red, the probability that these 2 balls are drawn from box is Paragraph for Question No. 52 to 53 Box 1 contains three cards bearing numbers 1, 2, 3; box 2 contains five cards bearing numbers 1, 2, 3, 4, 5; and box 3 contains seven cards bearing numbers 1, 2, 3, 4, 5, 6, 7. A card is drawn from each of the boxes. Let be the number on the card drawn from the box,",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 52,
+    "stem": "The probability that is odd, is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 53,
+    "stem": "The probability that are in an arithmetic progression, is Paragraph for Question No. 54 to 55 Let and be the number of red and black balls, respectively, in box I. Let and be the number of red and black balls, respectively, in box II.",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 54,
+    "stem": "One of the two boxes, box I and box II, was selected at random and a ball was drawn randomly out of this box. The ball was found to be red. If the probability that this red ball was drawn from box II is then the correct option(s) with the possible values of and is (are)",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 55,
+    "stem": "A ball is drawn at random from box I and transferred to box II. If the probability of drawing a red ball from box I, after this transfer, is then the correct option(s) with the possible values of and is (are) Paragraph for Question No. 56 to 57 Football teams 1T and 2T have to pay two games against each other. If it assumed that the outcomes of the two games are independent. The probabilities of 1T winning, drawing and losing a game against 2T are 1 1 , 2 6 and 1 , 3 respectively. Each team gets 3 points for a win, 1 point for a draw and 0 point for a loss in a game. Let X and Y denote the total points scored by teams 1T and 2T respectively, after two games.",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 56,
+    "stem": "( ) P X Y > is 12",
+    "options": [
+      "1 4",
+      "5 12",
+      "1 2",
+      "7"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 57,
+    "stem": "( ) P X Y = is 2 Paragraph for Question No. 58 to 59 There are five students S1, S2, S3, S4 and S5 in a music class and for them there are five seats R1, R2, R3, R4 and R5 arranged in a row, where initially the seat Ri is allotted to the student Si, i = 1, 2, 3, 4, 5. But, on the examination day, the five students are randomly allotted the five seats. 1B 2 B 1 2 , B B 3, B 82 648 90 648 558 648 566 648 2 B 116 181 126 181 65 181 55 181 ix thi 1,2,3. = i 1 2 3 , + x x x 29 105 53 105 57 105 1 2 1 2 3 , , x x x 9 105 10 105 11 105 7 105 1n 2n 3n 4n 1, 3 1 2 3 , , n n n 4n 1 2 3 4 3, 3, 5, 15 n n n n = = = = 1 2 3 4 3, 6, 10, 50 n n n n = = = = 1 2 3 4 8, 6, 5, 20 n n n n = = = = 1 2 3 4 6, 12, 5, 20 n n n n = = = = 1, 3 1n 2n 1 2 4, 6 n n = = 1 2 2, 3 n n = = 1 2 10, 20 n n = = 1 2 3, 6 n n = = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 104",
+    "options": [
+      "11 36",
+      "1 3",
+      "13 36",
+      "1"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 58,
+    "stem": "The probability that, on the examination day, the student S1 gets the previously allotted seat R1, and none of the remaining students gets the seat previously allotted to him/her is 5",
+    "options": [
+      "3 40",
+      "1 8",
+      "7 40",
+      "1"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 59,
+    "stem": "For i = 1, 2, 3, 4, let Ti denote the event that the students Si and Si + 1 do not sit adjacent to each other on the day of the examination. Then, the probability of the event 1 2 3 4 T T T T ∩ ∩ ∩ is 5 Integer & Subjective",
+    "options": [
+      "1 15",
+      "1 10",
+      "7 60",
+      "1"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 60,
+    "stem": "Of the three independent events E2, E2, and E3, the probability that only E1 occurs is α, only E2 occurs is β and only E3 occurs is γ. Let the probability p that none of events E1, E2 or E3 occurs satisfy the equations (α – 2β) p = αβ and (β – 3γ) p = 2βγ . All the given probabilities are assumed to lie in the interval (0, 1). Then",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 61,
+    "stem": "A pack contains n cards numbered from 1 to n. Two consecutive numbered cards are removed from the pack and the sum of the numbers on the remaining cards is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1224,
+    "stem": "If the smaller of the numbers on the removed cards is k, then k –20 = _____",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 62,
+    "stem": "The minimum number of times a fair coin needs to be tossed, so that the probability of getting at least two heads is at least 0.96 is ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1,
+    "stem": "(a, d) Let P (E) = e and P (F) = f 11 ( ) ( ) 25 P E F P E F ∪ − ∩ = ⇒ 11 2 25 e f ef + − = . . .(i) 2 ( ) 25 P E F ∩ = ⇒ 2 (1 )(1 ) 25 e f − − = ⇒ 2 1 25 e f ef −− + = . . .(ii) From (i) and (ii) ef and e + f = Solving, we get 4 3 3 4 , or , . 5 5 5 5 e f e f = = = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 2,
+    "stem": "(b, d) (a)",
+    "options": [
+      "Option A",
+      "",
+      "",
+      ""
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 3,
+    "stem": "(a,b) ⇒ ⇒ . . .(i) . . .(ii) (A : correct) X & Y are independent (b: correct) are independent.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 2,
+    "stem": "6 P Y = ⇒ 1 ( ) 3 P Y = ( ) 1 ( ) 2 Y P X Y P X P X ∩  = =     ⇒ ( ) 3 ( ) P X P X Y = ∩ 1 1 3.6 2 = = 1 ( ) 2 P x = = ( ) ( ) ( ) ( ) P X Y P X P Y P X Y ∪ = + − ∩ 1 1 1 2 3 6 = + − 5 1 2 6 6 3 = − = 1 1 1 ( ) . ( ) ( ) 6 2 3 P X Y P X P Y ∩ = = = ⋅ ∴ & c X Y = ( ) . x c P X Y P X P X ∩ = 1 . P X P Y = − 1 1 1 1 1 . 2 3 6 3   = − = ≠     _ 105 Statistics and Probability",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(c) Let {0,1, 2, 3, 4......,10} A ≡ 11 2 ( ) n s C = (where ‘S’ denotes sample space) Let E be the given even {(0, 4), (0,8) (2,6), (2,10),(4,8),(6,10)} E ≡ ( ) 6 n E = ∴ 6 ( ) 55 P E =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(c) P (exactly one of A or B occurs) 1 ( ) ( ) 2 ( ) 4 P A P B P A B = + − ∩ = P (Exactly one of B or C occurs) 1 ( ) ( ) 2 ( ) 4 P B P C P B C = + − ∩ = P (Exactly one of C or A occurs) 1 ( ) ( ) 2 ( ) 4 P C P A P C A = + − ∩ = Adding all, we get 3 2 ( ) 2 ( ) 4 P A P A B Σ −Σ ∩ = ∴ 1 ( ) 16 P A B C ∩ ∩ = (Given) ∴ ( ) P A B C ∪ ∪ 3 1 7 ( ) ( ) ( ) 8 16 16 P A P A B P A B C = Σ −Σ ∩ + ∩ ∩ = + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(c) Total number of away 4 3 3 4 4 3 3 4 0 3 3 0 1 2 3 1 C C C C C C C C ⋅ ⋅ ⋅ + ⋅ ⋅ ⋅ 4 3 3 4 4 3 3 4 2 1 1 2 3 0 0 3 485 C C C C C C C C + ⋅ ⋅ ⋅ + ⋅ ⋅ ⋅ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(b, c) ( ) 1 3 P X = 1 2 X P Y  =     ⇒ ( ) ( ) 1 2 P X Y P Y ∩ = . . . (i) 2 5 Y P X  =     ⇒ ( ) ( ) 2 5 P X Y P X ∩ = ⇒ ( ) 2 15 P X Y ∩ = Put in eq.(i) ( ) 4 15 P Y =",
+    "options": [
+      "Option A",
+      "is correct.",
+      "is correct.",
+      "is incorrect. ( ) 2 2 1x x n − ∑ ⇒ 2 2 2 2 2 2 2 4 6 ... 100 2 4 ... 100 50 50 σ   + + + + + + +   −         ⇒ 2 3434 2601 833 σ = − = 16 16 ix Σ = ⇒ 256 ix Σ = ( ) 16 3 4 5 252 14 18 18 ix Σ − + + + = = ∴ 2 i 2 2 x (3.5) (x) 4 = − ∑ ⇒ 2 2 2 4 9 a 121 2 3 a 11 (3.5) 4 4 + + + + + +   = −    2 3 32 84 0 − = = a a x P = 2), T ⇒ 7 1 4 (10 ) 100 5 5 x x = + 7 200 80 x x = + ⇒ 7 280 x = 2 / T ( ) ( ) P A B P B ∩ = ⇒ 4 4 273 5(1 ) 5 280 1 4 1 280 70 4 273 (1 10 ) (1 ) 5 5 5 280 5 280 x x x     −   = −     − + − +         ⇒ 4 273 2 273 546 78 210 4 273 105 2 273 651 93 × × = = = + × + × 4 Ladies 3 Men x 3 Ladies 4 Men y _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 106"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(a) Probability 10 2 1 8 2 1 6 2 1 4 2 1 2 2 1 0 2 1 1 1 1 1 1 1 10 3 1 2 C C C C C C C + − + − + − + − + − + − + − + + + + + = ( ) 11 9 7 5 3 1 36 6 . 66 66 11 + + + + + = = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(c) 1 : E Event that first ball drawn is red. 2 : E Event that first ball drawn is black. : E Event that second ball drawn is red. 1 2 1 2 ( ) ( ) ( ) E E P E P E P P E P E E     = ⋅ + ⋅         4 6 6 4 2 10 12 10 12 5 = × × × =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(d) Standard deviation of 1 5 x − is 2 9 9 2 1 1 1 1 ( 5) ( 5) 9 9 i i x x σ = =   − −     = −       ∑ ∑ ⇒ 5 1 2 σ = −= As, standard deviation remains constant if observations are added/subtracted by a fixed quantity. So, σ of ix is 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(b) Number of ways of selecting 4 novels from 6 novels 6 4 C = Number of ways of selecting 1 dictionary from 3 dictionaries 3 1 C Required arrangements 6 3 4 1 4! 1080 C C × × = ⇒  Atleast 1000",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(c) Let 7 observations be x1, x2, x3, x4, x5, x6, x7 7 1 8 56 = = ⇒ = ∑ i i X x . . .(i) Also 2 =16 σ ⇒ ( ) 7 2 2 1 1 16 7 =   = −     ∑ i i x X ⇒ 7 2 1 1 16 64 7 i i x =   = −     ∑ ⇒ 7 2 1 560 =  =     ∑ i i x . . .(ii) Now, x1 = 2, x2 = 4, x3 = 10, x4 = 12, x5 = 14 ⇒  x6 + x7 = 14 (from (i) & 2 2 6 7 100 + = x x from (ii)) ∴ 2 2 2 6 7 6 7 6 7 ( ) 2 48 + = + − ⋅ = x x x x x x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(d) ( ) ( ) ( | ) ( ) ( ) ∩ = = P A B P A P A B P B P B (as A ⊂ B ⇒P(A ∩ B) = P(A)) ⇒ P(A| B)≥ P(A)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(d) Probability of observing at least one head out of n tosses 1 1 0.9 2 n   = − ≥     ⇒ 1 0.1 2 n  ≤     ⇒ 4 n ≥ ⇒  Minimum number of tosses = 4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(a) Let x be the 6th observation ⇒ 45 + 54 + 41 + 57 + 43 + x = 48 × 6 = 288 ⇒ x = 48 Variance 2 2 ( ) 6 ix x   = −       ∑ ⇒ Variance 2 14024 (48) 6 = − 100 3 = ⇒ Standard deviation 10 3 =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(b) Required numbers of ways = Total number of ways – When A and B are always included. 5 7 5 5 2 3 1 2 . 300 = − = C C C C",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(b) Give 1 150 5 = = ∑ \u0003 x x ⇒ 5 1 1 750 = = ∑ i x 2 1 2 ( ) 18 5 − = ∑ \u0003 x x 2 1 2 (150) 18 5 − = ∑x 2 1 112590 = ∑x Given height of new student 6 156 = x New 6 1 750 156 151 6 6 = + = = = ∑ \u0003 i i new x x Also, new variance 6 2 1 2 1 ( ) 6 i new x x = = = ∑ \u0003 2 2 112590 (156) (151) 6 + = = = 22821 – 22801 =  20 _ 107 Statistics and Probability",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(a) Two cards are drawn successively with replacement 4 Aces 48 Non Aces 4 1 1 1 1 52 1 1 1 1 48 48 4 24 ( 1) 52 52 52 169 = = × + × = C C C C P x C C C C 4 4 1 1 52 52 1 1 1 ( 2) 169 = = × = C C P x C C 25 ( 1) ( 2) 169 = + = = P x p x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(b) E1: Event of drawing a Red ball and placing a green ball in the bag E2: Event of drawing a green ball and placing a red ball in the bag E: Event of drawing a red ball in second draw 1 2 1 2 ( ) ( ) ( )     = × + ×         E E P E P E P P E P E E 5 4 2 6 2 7 7 7 7 49 3 = × + × =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(b) 2 ( 1) 9 + = ∑ ix n . . .(i) 2 ( 1) 5 + = ∑ ix n . . .(ii) (i) + (ii) ⇒ 2 1 ( 1) 7 x n + = ∑ ⇒ 2 6 = ∑ ix n (i) – (ii) ⇒ 4 4 = ∑ ix n ⇒ = ∑ ix n ⇒ 1 = ∑ ix n ⇒ Variance = 6 – 1 = 5 ⇒ Standard diviation 5 =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(a) Let two observations are x1 & x2 mean 5 5 ix = = ∑ ⇒ 1 2 1 3 8 25 x x + + + + = ⇒ 1 2 13 x x + = . . .(i) Variance 2 ( ) σ 2 25 9.20 5 ix ∑ = = = ⇒ 2 171 ix ∑ = ⇒ 2 2 1 2 97 x x + = . . .(ii) by (i) & (ii) 2 2 1 2 1 2 ( ) 2 97 x x x x + − = or 1 2 36 x x = ∴ 1 2 : 4 : 9 x x =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(c) 1 11 1 2 19 ( ) 2 36 2 9 72 P A = × + × =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(b) 0 0 1 2 5 1 3 3 6 n nC    − >       1 2 6 3 n   >     ⇒ 2 0.1666 3 n   >     min 5 n =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(b) 10 X = ⇒ 5 1 50 i i x = = ∑ S.D 5 2 2 1 ( ) 8 5 i i x X = = − = ∑ ⇒ 5 2 1 ( ) 190 i i x = = ∑ Variance 5 2 2 5 1 1 ( ) ( 50) 50 6 6 i i i i x x = = = − −   = −    ∑ ∑ =507.5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(d) Variance is independent of origin. So we shift the given data by 1 2 . So, 2 2 2 2 10 10 10 10 4 (0) 30 3 + × + − = d d 2 2 d = ⇒| | 2 d =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(a) Since sum of two numbers is even so either both are odd or both are even. Hence number of elements in reduced samples space 5 6 2 2 = + C C So, required probability 5 2 5 6 2 2 = + C C C",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(b) 7, 1, 6 2, 5 3, 4 1, 2, 4 20 5 2 = P",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(c) p (probability of getting white ball) 30 40 = 1 4 = q and n =16 mean = np 3 16 12 4 = ⋅ = and standard deviation 3 1 16 3 4 4 npq = = ⋅ ⋅ = Start 1/2 1/2 T→Number is 7 or 8 2 9 = H→Sum 7 or 8 11 36 ⇒ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 108",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(d) 50 1 ( 30) 50 i i x = − = ∑ 50 30 50 ix ∑ = × = 50 50 30 ix ∑ = + + Mean  = 50 30 50 30 1 31 50 ix X n ∑ × + = = = + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(b) 4 4 2 2 3 1 2 3 3 5 5 1 5 175 6 6 6 6 C   ⋅ + =    ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(c) mean 2 1 2 3 4, 5.2, 5, 3 4 x n x x x σ = = = = + = = 20 ix = ∑ x4 + x5 = 9 . . .(i) 2 2 2 2 ( ) 20 106 − = ⇒ = ∑ ∑ i i x x x x σ 2 2 4 5 65 x x + = . . .(ii) Using (i) and (ii) (x4 – x5)2 = 49 |x4 – x5| = 7",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(c) Expected Gain/Loss = = w × 100 + Lw (–50 + 100) + L2w (–50 –50 + 100) + L3 (–150) 2 3 1 2 1 2 1 2 100 (50) (0) ( 150) 0 3 3 3 3 3 3      = × + ⋅ + + − =           here w denotes probability that outcome 5 or 6 2 1 6 3 W   = =     here L denotes probability that outcome 1,2,3,4 4 2 6 3 L   = =    ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(d) Statement-I, If for some i, then If for then Hence statement I may not always be true. Statement II, (sample space)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(b) For unique solution where Total cases = 16. Favorable cases = 6 (Either or Probability that system of equations has unique solution is and system of equations has either unique solution or infinite solutions so that probability for system to have a solution is 1.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 44,
+    "stem": "(b) ( ) 0 ∩ = i P H E 0    = =         i i H E P P E H ( ) 0 ∩ ≠ i P H E 2,..., , 1, ∀ = n i ( ) ( ) ( ) ( ) ∩  = ×     i i i i H P H E P H P E P H P E ( ) ( ) ( )  ×       = > ⋅     i i i i E P P H H E P P H P E H [ 0 ( ) 1] < < as P E 1 2... ∪ ∪ = n H H H S ⇒ 1 2 ( ) ( ) ... ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 1,
+    "stem": "+ + + = n P H P H P H 0 a b c d ≠ , , , {0,1} a b c d ∈ 1, ad = 0 bc = 0, ad = 1). bc = 6 3 16 8 = ( ) i P u ki = ( ) 1 i P u Σ = ⇒ 2 ( 1) k n n = + 2 2 1 2 2 ( 1)(2 1) 2 lim ( ) lim lim ( 1) ( 1) 6 3 n n n n i i n n n P w n n n n →∞ →∞ →∞ = + + = = = + + ∑ 2 1 1 1 n n c u n P i w n c n     +     = =   Σ +       +   2 4 6 ... 2 ( 1) 2( 1) 2 w n n P n n E n + + + +  = =   + +   Bag1 Bag2 Bag3 Red Balls 5 3 5 Green Balls 5 5 3 Total 10 8 8 _ 109 Statistics and Probability",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(b) Required probability",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 47,
+    "stem": "(d) For the probability is For Hence the conditional probability",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 50,
+    "stem": "(a) P (required) = P (all are white) + P (all are red) + P (all are black)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 51,
+    "stem": "(d) Let A : one ball is white and other is red Both balls are from box Both balls are from box Both balls are from box Here, P (required)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 52,
+    "stem": "(b) Case (i): One odd, 2 even Total number of ways = 2×2×3+1×3×3+1×2×4 = 29. Case (ii): AII 3 odd Number of ways = 2×3×4 = 24 Favourable ways = 53 Required probability =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 53,
+    "stem": "(c) Here even Hence number of favourable ways",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 54,
+    "stem": "(a, b) P (Red Ball) of the given options 1 and 2 satisfy above condition",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 55,
+    "stem": "(c, d) P (Red after Transfer) = P (Red Transfer), P (Red Transfer in II Case) + P (Black Transfer). P (Red Transfer in II Case) of the given option 3 and 4 satisfy above condition.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 56,
+    "stem": "(b) 1 1 1 1 ( ) P x Y TT DT T D > = + + (Where 1T represents wins and D represents draw) 1 1 1 1 1 1 5 2 2 6 2 2 6 12 = ⋅ + ⋅ + ⋅ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 57,
+    "stem": "(c) 1 2 2 1 ( ) P X Y DD TT T T = = + + 1 1 1 1 1 1 6 6 2 3 3 2 = ⋅ + ⋅ + ⋅ 1 1 39 13 36 3 36 3 36 = + = = × 5 5 1 25 ( 3) 6 6 6 216    = = =       P X 1 5 1 11 ( 2) 6 6 6 36 ≤ = + × = P X 11 25 1 36 36 = − = 6, ≥ X 5 5 6 5 6 7 6 5 5 5 5 ... 6 6 6 1 5/6 6 1     + + ∞ =     −     3 > X 3 3 4 5 4 5 6 5 5 5 5 ... 6 6 6 6   + + + ∞=     6 3 (5/6) 25 (5/6) 36 = 1 3 1 2 1 1 3 1 6 2 1 1 1 P(W) 2 5 2 5 2 2 10 2 10 3 2 10 3 = × + × × + × + × × + × × 1 9 1 23 9 3 6 30 2 2 30   = + + + + =     2 Head appear on coin P ball drawn from U is white       1 3 1 2 1 12 2 5 2 5 2 1 3 1 6 2 1 1 1 23 2 10 2 10 3 2 10 3 × + × ×   = =     × + × × + × × 1 2 3 3 3 4 2 4 5 5 6 9 12 6 9 12 6 9 12 12 = × × + × × + × × × 6 36 40 82 . 648 648 648 648 = + + = 1 : E 1 B 2 : E 2 B 3 : E 3 B 2   =     E P A 2 2 1 2 .3 1 2 3 . ( ) A . ( ) . ( ) . ( )       =       + +             A P P E E A A P P E P P E P E E E E 2 3 1 1 9 2 1 3 2 3 3 4 1 1 1 1 1 1 6 9 12 2 2 2 1 1 3 55 6 1 1 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 181,
+    "stem": "1 1 1 5 6 11 3 3 3 × × = = = × × × + + × + × + × C C C C C C C C C C C C 53 53 . 3 5 7 105 = × × 2 1 3 2x x x = + ⇒ 1 3 x x + = 2 4 1 1 3 1 2 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 11,
+    "stem": "C C C C = ⋅ + ⋅ = (1) ( | ) ( ) ( | ) = ⋅ + ⋅ P P R I P II P R II 1 ( ) ( | ) ( | ) 3 ( ). ( | ) ( ) ( | ) ⋅ = = + ⋅ P II P R II P II R P I P R I P II P R II 3 3 4 3 1 1 2 3 4 1 3 + = + + + n n n n n n n n n 1 1 2 2 1 2 1 2 1 2 1 2 ( 1) 1 ( ) . ( 1) 1 3 − = + = + + − + + − n n n n P R n n n n n n n n 3/5 2/5 3/10 6/10 1/10 W R 2W 1W 1R 2R (2W) W 1 1W 1R 1/2 3W 1W, 2R 2W, 1R 1 2/3 1/3 Coin 1/2 1/2 H T W W W W _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 110 \u0002  \u0002  \u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 58,
+    "stem": "(a) Derangement of 2 3 4 5 , , , S S S S is 1 1 1 1 4! 1 9 1! 2! 3! 4!   = − + − + =     Probability 9 9 3 5! 120 40 = = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 59,
+    "stem": "(c) Method (i): The possible arrangements are: (1) 1 3 5 2 4 P P P P P (2) 1 4 2 5 3 P P P P P (3) 2 4 1 3 5 P P P P P (4) 2 4 1 5 3 P P P P P (5) 2 5 3 1 4 P P P P P (6) 3 1 4 2 5 P P P P P (7) 3 1 5 2 4 P P P P P (8) 3 5 2 4 1 P P P P P (9) 3 5 1 4 2 P P P P P (10) 4 1 3 5 2 P P P P P (11) 4 2 5 1 3 P P P P P (12) 4 2 5 3 1 P P P P P (13) 5 1 3 2 4 P P P P P (14) 5 2 4 1 3 P P P P P ∴ Required probability 14 120 = 7 60 = Method (ii): 4 3 3 1 1 1 at least one pair at least two pair 5! 4! 2! ( 3! 2! 3! 2! 2!) C C C − × × + × × + × × × 2 2 2 1 1 1 at least 3 ( 2! 2! 2 2! 2 2!) 2 14 C C C − × × + × × + × × + = Required probability 14 7 5! 60 = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 60,
+    "stem": "(6) Let then So, Similarly So, Also given Substituting back",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 61,
+    "stem": "(5) Clearly, ⇒ and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 62,
+    "stem": "(8) Let coin was tossed ‘n’ times Probability of getting at least two heads ⇒ ⇒ ⇒ 1 2 3 ( ) , ( ) and ( ) P E x P E y P E z = = = (1– ) (1 ) (1 ) x y z p − − = (1 ) (1 ) x y z α − − = (1 ) (1 ) x y z β − − = (1 ) (1 ) (1 ) x y z γ − − − = 1 x P x α − = x p α α = + z p γ γ = + 1 3 1 ( ) ( ) 1 p p P E p p p P E p α γ α γ γ γ α γ α α + + + = = = + + + 2 5 2 3 4 p y αβ βγ αγ β α β β γ α = = ⇒ = − − + 5 .5 2 4 4 p αγ α αγ α α γ α γ     − =     + +     ⇒ 6 5 p p α γ αγ − = ⇒ 1 6 1 p p γ α     + = +         ⇒ 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  },
+  {
+    "questionNumber": 6,
+    "stem": "1 p p γ α + = + 1 2 3 2 1224 3 4 n n + + + + − ≤ ≤ + + … … ⇒ ( 2) ( 1) ( 2) 1224 (3 ) 2 2 n n n n − − − ≤ ≤ + 2 3 2446 0 n n − − ≤ 2 2454 0 n n + − ≥ ⇒ 49 51 n < < ⇒ 50 n = ∴ ( 1) (2 1) 1224 2 n n k + − + = ⇒ 25 20 5 k k = ⇒ − = 1 1 2 2 n n n   = − +     1 1 0.96 2n n +   − ≥     2 25 1 n n ≥ + 8 n ≥ _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 95
+  }
+]

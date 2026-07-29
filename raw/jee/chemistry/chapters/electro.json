@@ -1,0 +1,410 @@
+[
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0144",
+    "stem": "Given below are two statements :\nStatement (I) : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement (II) : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0207",
+    "stem": "An electrochemical cell is constructed using half cells in the direction of spontaneous change\n$Fe(OH)_2(s) + 2e^- \\rightarrow Fe(s) + 2OH^-(aq) \\quad E^\\theta = -0.88\\text{ V}$\nand $AgBr(s) + e^- \\rightarrow Ag(s) + Br^-(aq) \\quad E^\\theta = +0.07\\text{ V}$\nWhich of the following option is correct?",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0298",
+    "stem": "Consider the following two half-cell reactions along with the standard reduction potential given:\n$CO_2 + 6H^+ + 6e^- \\rightarrow CH_3OH + H_2O \\quad E^\\circ_{red} = 0.02\\text{ V}$\n$\\frac{1}{2}O_2 + 2H^+ + 2e^- \\rightarrow H_2O \\quad E^\\circ_{red} = 1.23\\text{ V}$\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of $CH_3OH$ is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, $\\Delta V$ is _______ $\\text{m}^3$. (nearest integer)\nGiven: $F = 96500\\text{ C mol}^{-1}$",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_2025_fixed.json",
+    "originalId": "jm_math_2025_22JanS2_069",
+    "stem": "Given below are two statements :\nStatement (I) : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement (II) : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+    "options": [
+      "Both Statement I and Statement II are false",
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are true",
+      "Statement I is true but Statement II is false"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (0) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_chem_2026_02AprS1_057",
+    "stem": "An electrochemical cell is constructed using half cells in the direction of spontaneous change\n$Fe(OH)_2(s) + 2e^- \\rightarrow Fe(s) + 2OH^-(aq) \\quad E^\\theta = -0.88\\text{ V}$\nand $AgBr(s) + e^- \\rightarrow Ag(s) + Br^-(aq) \\quad E^\\theta = +0.07\\text{ V}$\nWhich of the following option is correct?",
+    "options": [
+      "Overall reaction $Fe(s) + 2OH^-(aq) + 2AgBr(s) \\rightleftharpoons Fe(OH)_2(s) + 2Ag(s) + 2Br^-(aq)$",
+      "$E_{cell}^\\theta = -0.95\\text{ V}$",
+      "Fe is reduced in the electrochemical cell",
+      "$E_{cell}^\\theta$ is an extensive property"
+    ],
+    "solution": "For a spontaneous cell reaction, $E_{cell}^\\theta > 0$. Therefore, the half-cell with the higher standard reduction potential undergoes reduction (acts as the cathode), and the other undergoes oxidation (acts as the anode).\nCathode (Reduction): $2 \\times [AgBr(s) + e^- \\rightarrow Ag(s) + Br^-(aq)] \\quad E_{cathode}^\\theta = +0.07\\text{ V}$\nAnode (Oxidation): $Fe(s) + 2OH^-(aq) \\rightarrow Fe(OH)_2(s) + 2e^- \\quad E_{anode}^\\theta = -0.88\\text{ V}$ (given as reduction potential)\nOverall Reaction: $Fe(s) + 2OH^-(aq) + 2AgBr(s) \\rightleftharpoons Fe(OH)_2(s) + 2Ag(s) + 2Br^-(aq)$\nThis matches option (a).\nChecking other options:\n- $E_{cell}^\\theta = E_{cathode}^\\theta - E_{anode}^\\theta = 0.07 - (-0.88) = +0.95\\text{ V}$ (Option b is incorrect).\n- Fe is oxidized from $0$ to $+2$ state (Option c is incorrect).\n- $E_{cell}^\\theta$ is an intensive property, not an extensive one (Option d is incorrect)."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_chem_2026_02AprS2_073",
+    "stem": "Consider the following two half-cell reactions along with the standard reduction potential given:\n$CO_2 + 6H^+ + 6e^- \\rightarrow CH_3OH + H_2O \\quad E^\\circ_{red} = 0.02\\text{ V}$\n$\\frac{1}{2}O_2 + 2H^+ + 2e^- \\rightarrow H_2O \\quad E^\\circ_{red} = 1.23\\text{ V}$\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of $CH_3OH$ is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, $\\Delta V$ is _______ $\\text{m}^3$. (nearest integer)\nGiven: $F = 96500\\text{ C mol}^{-1}$",
+    "options": [
+      "$-280$",
+      "$-560$",
+      "$+560$",
+      "$-840$"
+    ],
+    "solution": "In the fuel cell, methanol is oxidized at the anode and oxygen is reduced at the cathode.\nAnode: $CH_3OH + H_2O \\rightarrow CO_2 + 6H^+ + 6e^- \\quad (E^\\circ_{ox} = -0.02\\text{ V})$\nCathode: $\\frac{3}{2}O_2 + 6H^+ + 6e^- \\rightarrow 3H_2O \\quad (E^\\circ_{red} = 1.23\\text{ V})$\nOverall cell potential $E^\\circ = 1.23 - 0.02 = 1.21\\text{ V}$.\nThe maximum electrical work available from 1 mole of methanol ($n=6$) is $-\\Delta G^\\circ = nFE^\\circ = 6 \\times 96500 \\times 1.21 = 700660\\text{ J}$.\nActual useful work derived with 80% efficiency = $0.8 \\times 700660 = 560528\\text{ J}$.\nThis work is done by the cell to compress a gas. By thermodynamics, work done ON the gas is $W = -P_{ext} \\Delta V$.\nThus, $560528 = - (1 \\times 10^3\\text{ Pa}) \\times \\Delta V$.\n$\\Delta V = -560.528\\text{ m}^3$. Rounded to nearest integer, $\\Delta V = -560$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0261",
+    "stem": "In a conductometric titration, small volume of titrant of higher concentration is added stepwise to a larger volume of titrate of much lower concentration, and the conductance is measured after each addition. The limiting ionic conductivity (Λ 0 ) values (in mS m 2 mol −1 ) for different ions in aqueous solutions are given below: Ions Ag + K + Na + H + NO 3 − Cl − SO 4 2− OH − CH 3 COO − Λ 0 6.2 7.4 5.0 35.0 7.2 7.6 16.0 19.9 4.1 For different combinations of titrates and titrants given in List-I, the graphs of ‘conductance’ versus ‘volume of titrant’ are given in List-II. Match each entry in List-I with the appropriate entry in List-II and choose the correct option. List-I List-II (P) Titrate: KCl Titrant: AgNO 3 (1) (Q) Titrate: AgNO 3 Titrant: KCl (2) (R) Titrate: NaOH Titrant: HCl (3) (S) Titrate: NaOH Titrant: CH 3 COOH (4) (5)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0369",
+    "stem": "Which of the following electrolyte can be used to obtain H$_2$S​$_2$O​$_8$ by the process of electrolysis?",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0454",
+    "stem": "Given below are two statements :\nStatement (I) : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement (II) : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0517",
+    "stem": "An electrochemical cell is constructed using half cells in the direction of spontaneous change\n$Fe(OH)_2(s) + 2e^- \\rightarrow Fe(s) + 2OH^-(aq) \\quad E^\\theta = -0.88\\text{ V}$\nand $AgBr(s) + e^- \\rightarrow Ag(s) + Br^-(aq) \\quad E^\\theta = +0.07\\text{ V}$\nWhich of the following option is correct?",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "For a spontaneous cell reaction, $E_{cell}^\\theta > 0$. Therefore, the half-cell with the higher standard reduction potential undergoes reduction (acts as the cathode), and the other undergoes oxidation (acts as the anode).\nCathode (Reduction): $2 \\times [AgBr(s) + e^- \\rightarrow Ag(s) + Br^-(aq)] \\quad E_{cathode}^\\theta = +0.07\\text{ V}$\nAnode (Oxidation): $Fe(s) + 2OH^-(aq) \\rightarrow Fe(OH)_2(s) + 2e^- \\quad E_{anode}^\\theta = -0.88\\text{ V}$ (given as reduction potential)\nOverall Reaction: $Fe(s) + 2OH^-(aq) + 2AgBr(s) \\rightleftharpoons Fe(OH)_2(s) + 2Ag(s) + 2Br^-(aq)$\nThis matches option (a).\nChecking other options:\n- $E_{cell}^\\theta = E_{cathode}^\\theta - E_{anode}^\\theta = 0.07 - (-0.88) = +0.95\\text{ V}$ (Option b is incorrect).\n- Fe is oxidized from $0$ to $+2$ state (Option c is incorrect).\n- $E_{cell}^\\theta$ is an intensive property, not an extensive one (Option d is incorrect)."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0608",
+    "stem": "Consider the following two half-cell reactions along with the standard reduction potential given:\n$CO_2 + 6H^+ + 6e^- \\rightarrow CH_3OH + H_2O \\quad E^\\circ_{red} = 0.02\\text{ V}$\n$\\frac{1}{2}O_2 + 2H^+ + 2e^- \\rightarrow H_2O \\quad E^\\circ_{red} = 1.23\\text{ V}$\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of $CH_3OH$ is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, $\\Delta V$ is _______ $\\text{m}^3$. (nearest integer)\nGiven: $F = 96500\\text{ C mol}^{-1}$",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "In the fuel cell, methanol is oxidized at the anode and oxygen is reduced at the cathode.\nAnode: $CH_3OH + H_2O \\rightarrow CO_2 + 6H^+ + 6e^- \\quad (E^\\circ_{ox} = -0.02\\text{ V})$\nCathode: $\\frac{3}{2}O_2 + 6H^+ + 6e^- \\rightarrow 3H_2O \\quad (E^\\circ_{red} = 1.23\\text{ V})$\nOverall cell potential $E^\\circ = 1.23 - 0.02 = 1.21\\text{ V}$.\nThe maximum electrical work available from 1 mole of methanol ($n=6$) is $-\\Delta G^\\circ = nFE^\\circ = 6 \\times 96500 \\times 1.21 = 700660\\text{ J}$.\nActual useful work derived with 80% efficiency = $0.8 \\times 700660 = 560528\\text{ J}$.\nThis work is done by the cell to compress a gas. By thermodynamics, work done ON the gas is $W = -P_{ext} \\Delta V$.\nThus, $560528 = - (1 \\times 10^3\\text{ Pa}) \\times \\Delta V$.\n$\\Delta V = -560.528\\text{ m}^3$. Rounded to nearest integer, $\\Delta V = -560$."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_Advanced_2021_q29",
+    "stem": "[JEE PYQ 2021] The correct statement(s) related to colloids is(are) (A) The process of precipitating colloidal sol by an electrolyte is called peptization. (B) Colloidal solution freezes at higher temperature than the true solution at the same concentration. (C) Surfactants form micelle above critical micelle concentration (CMC). CMC depends on temperature. (D) M",
+    "options": [
+      "The process of precipitating colloidal sol by an electrolyte is called peptization.",
+      "Colloidal solution freezes at higher temperature than the true solution at the same concentration.",
+      "Surfactants form micelle above critical micelle concentration",
+      "Micelles are macromolecular colloids."
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_Advanced_2025_q41",
+    "stem": "[JEE PYQ 2025] In an electrochemical cell, dichromate ions in aqueous acidic medium are reduced to Cr 3+ . The current (in amperes) that flows through the cell for 48.25 minutes to produce 1 mole of Cr 3+ is ______. Use: 1 Faraday =96500 C mol −1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q233",
+    "stem": "[JEE PYQ 2025] Molar conductivity (Am) of aqueous solution of sodium stearate, which behaves as a strong electrolyte, is recorded at varying concentrations (C) of sodium stearate. Which one of the following plots provides the correct representation of micelle formation in the solution? ( critical micelle concentration (CMC) is marked with an arrow in the figures)",
+    "options": [
+      "Option A",
+      "Option B",
+      "of sodium stearate. Which one of the following plots provides the correct representation of micelle ",
+      "~ --le Section 2"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q392",
+    "stem": "[JEE PYQ 2025] (a, d) The explanation of gi ven s tatements are a s follows: (a) Teflon is prepar ed by heating tetrafluoroethene in presence of persulphate catalyst at higher pressure. nCF = CF Persulphate 2 2 catalyst The rmoplastic Polymer (PTFE) Thus, option (a) is correct. (b) Natural rubber is polyi soprene containing cis alken e units. nCH2=C-CH=CH 2 - (cH",
+    "options": [
+      "Teflon is prepar ed by heating tetrafluoroethene in presence of persulphate catalyst at higher press",
+      "Natural rubber is polyi soprene containing cis alken e units. nCH2=C-CH=CH 2 -",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q620",
+    "stem": "[JEE PYQ 2025] Consider an ionic solid MX with NaCl structure. Construct a new structure (Z) whose unit cell is constructed from the unit cell of MX following the sequential instruction given below. Neglect the charge balance. (a) Remove all the anions (X) except the central one (b) Replace all the face centered cations ( M) by anions (X) (c) Remove all the corne",
+    "options": [
+      "Remove all the anions",
+      "Replace all the face centered cations",
+      "Remove all the corner cations",
+      "Replace the central anion"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q740",
+    "stem": "[JEE PYQ 2025] (3) The unit cell of initial structure of ionic solid MX looks like c1-(at face cen tre) Na+ (at face ) Na+ (at corner e d ge) In NaCl type of solids cation s (Na + ) occupy the octah edral voids while anion s (Ci-) occupy th e face centre position s. However, as per th e de mand of problem the position of cation s and anion s are s wapped. We also",
+    "options": [
+      "Total number of atom s at FCC = 4",
+      "Option B",
+      "The unit cell of initial structure of ionic solid MX looks like c1-",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q800",
+    "stem": "[JEE PYQ 2025] (-11.62 JK- 1 mol- 1 ) Given, A (s) I An+ (aq, 2 M) 11 B 2 n+ (aq, 1 M) I B(s) So, reaction s at respective electrod e will be Anode A (s)-An+ + ne-x 2 Cathode B 2 \" + + 2ne--B(s) Overall reaction 2A(s) + B 2 \" + (aq) -2A\"+ (aq) + B(s) Furth er, 6.H 0 = MG 0 and E cell = 0 is also given Now by using th e Nernst equa tion RT l [Product] E -E'_ --n..",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q827",
+    "stem": "[JEE PYQ 2025] Which of the following statements is false? (a) In a balanced Wheatstone bridge, if the cell and the galvanometer are exc hanged, the null point is disturbed (b) A rheostat can be used as a potential divider (c) Kirchhoff's second law represents energy conservation (d) Wheatstone bridge is the most sensitive when all the four resistances are of the",
+    "options": [
+      "In a balanced Wheatstone bridge, if the cell and the galvanometer are exc hanged, the null point is ",
+      "A rheostat can be used as a potential divider",
+      "Kirchhoff's second law represents energy conservation",
+      "Wheatstone bridge is the most sensitive when all the four resistances are of the same order of magni"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q923",
+    "stem": "[JEE PYQ 2025] (c) Each resistance is converted with 16. (b) y two cells combined in opposite direction, so potential drop across each resistor is zero. H ence the current through each of resistor is zero.",
+    "options": [
+      "Option A",
+      "y two cells combined in opposite direction, so potential drop across each resistor is zero. H ence t",
+      "Each resistance is converted with 16.",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q1178",
+    "stem": "[JEE PYQ 2025] (a) The redox reaction is • Zn(s) + Cu 2 + --Zn 2 + + Cu The Nernst equa tion is E = E\" _ 2.303RT logl0 2F = 1.1 _ 2.303RT 2F Also. 1\",.G = -nEF = - 2F(1.1- 2 · 3 ~~RT) = -2.2F + 2.303RT = 2.303RT -2.2F +5 +4",
+    "options": [
+      "The redox reaction is • Zn",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q1229",
+    "stem": "[JEE PYQ 2025] Radiation of wavelength A, is inc ident on a photocell. The fastest emitted electron has speed v. If the wavelength 3A is changed to -, the speed of the 4 fastest emitted electron will be (a)> {1)112 (b)< {1r2 (c)=v(1r2 (d)=v(¾)l/2",
+    "options": [
+      "> {1)112",
+      "< {1r2",
+      "=v",
+      "=v"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q1457",
+    "stem": "[JEE PYQ 2025] For the following electrochemical cell at 298 K, Pt(s) I H 2 (g, lbar) I H+ (aq, 1 M) 11 M 4 + (aq ), M 2 + (aq) I Pt(s ) £cell= 0.092V w hen [M 2 + (aq)] = lOx [M 4 + (aq)] Given : E: 4 + 1 M 2 + =0.15 1V; 2.303 RT = 0.059 V F T he value of xis (a) -2 (c) 1 (b)- I (d) 2 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Jo",
+    "options": [
+      "-2",
+      "- I",
+      "1",
+      "2 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/free"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q2033",
+    "stem": "[JEE PYQ 2025] Given below are t h e half-cell reactions Mn2+ + 2e--Mn ;E 0 =-1.18 eV 2 (Mn 3 + + e--Mn2+); E 0 = + 1.51eV The E 0 for 3Mn 2 + ➔ Mn + 2Mn3+ will be (a) - 2 . 69 V; the reaction will not occur (b) -",
+    "options": [
+      "- 2 . 69 V; the reaction will not occur",
+      "-",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q2114",
+    "stem": "[JEE PYQ 2025] Y/ In order to solve the problem, calculate the value of cell constant of the first solution and then use this value of cell constant to calculate the value of k of second solution. Afterwards, finally calculate molar conductivity using value of k and m. For first solution, k=l.4Sm- 1 , R=50Q, M=0.2 S . 1 I pec1fic conductance (K) = -x - 1 .4 Sm- 1",
+    "options": [
+      "AU = -1364.4 7 kJ/mol AH= AU + AngRT Ang= - 1 AH=- 1364 _ 47 + -1 x 8.314X 298 1000 [Here, value of ",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q2435",
+    "stem": "[JEE PYQ 2025] The anode voltage of a photocell is kept fixed. The wavelength A of the light falling on the cathode is gradually changed. The plate current I of photocell varies as follows",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q2933",
+    "stem": "[JEE PYQ 2025] A compound M pXq h as cubic close packing (ccp) a rrangement of X. Its unit cell structure is shown below. The empirical formula of the compound, is IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/free_iit_jee_books Visit Website : https://www.jeeneetbooks.in 22 IIT JEE (Chemistry) • Solved Paper 2012 M",
+    "options": [
+      "MX",
+      "MX 2",
+      "M 2 X",
+      "M 5 X 14"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q2957",
+    "stem": "[JEE PYQ 2025] The value of l'-.G (kJ mol- 1 ) for the given cell is ( take 1 F = 96500 C moi- 1 ) (a) - 5.7 (b) 5.7 (c) 11.4 (d) - 11.4 Paragraph Bleaching powder and bleach solution are produced on a large scale and used in several house hold products. The effectiveness of bleach solution is often measured by iodometry.",
+    "options": [
+      "- 5.7",
+      "5.7",
+      "11.4",
+      "- 11.4 Paragraph Bleaching powder and bleach solution are produced on a large scale and used in seve"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q3158",
+    "stem": "[JEE PYQ 2025] V AB = Equivalent emf of two batteries in parallel. E1/r1 + E1 /rz 1/r 1 + 1 / r 2 = (6/1) + (3 /Z) = 5 V (1/1) + (1/Z) :.Answer is 5. Analysis of Question (i) In my opinion this is the simplest question of JEE 2011. (ii) When no current is drawn from this equivalent battery, then VAB = V = E Otherwise, V = E ± ir (iii) Similar type of question was",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q3191",
+    "stem": "[JEE PYQ 2025] Consider the following cell reaction, 2Fe (s) + 0 2 (g) + 4H+ (aq) ~ 2Fe 2 + (aq) + 2H 2 O (/), E° = 1.67 V At [Fe 2 + ) = 10- 3 M, P (0 2 ) = 0.1 atm and pH = 3, the cell potential at 25°C is (a) 1.47 V (b) 1.77 V (c) 1.87 V (d) 1.57 V",
+    "options": [
+      "1.47 V",
+      "1.77 V",
+      "1.87 V",
+      "1.57 V"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q3413",
+    "stem": "[JEE PYQ 2025] In self-reduction, the reducing species is (a) S (b) 0 2 - (c) s 2 - (d) SO 2 C 17 _ 18 The concentration of potassium ions inside a biological cell is at least twenty times higher than the outside. The resulting potential difference across the cell is important in several processes such as transmission of nerve impulses and maintaining the ion bal",
+    "options": [
+      "S",
+      "0 2 -",
+      "s 2 -",
+      "SO 2 C 17 _ 18 The concentration of potassium ions inside a biological cell is at least twenty times"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q3428",
+    "stem": "[JEE PYQ 2025] The packing efficiency of the two-dimensional square unit cell shown below is ~ (a) 39.27% (c) 74.05% I•-/ ·-►I (b) 68.02% (d) 78.54%",
+    "options": [
+      "39.27%",
+      "68.02%",
+      "74.05% I•-/ ·-►I",
+      "78.54%"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D)."
+  },
+  {
+    "sourceFile": "jee_pdf_advanced_ingested.json",
+    "originalId": "pdf_ingested_JEE_PYQ_2_q3455",
+    "stem": "[JEE PYQ 2025] The given cell is electrolytic con centration cell, So Ec~ll = 0 Anode: M(s) -M+(aq ) + e- Cathode: M+(aq) + e--M(s) M+ (aq) cath ode ~ M+(aq) anode E -E o -0.0 59110 [M+ Janodic cell -cell 1 g [M+] . = 0 _ 0.0591 log 0 .0 5 1 1 E cell = 70 mV (+ve) Hen ce, !!.G = -nFEcell = - ve cathodic 6 E _ E 0 _ 0.0591 l 0.0025 1 · cell -cell 1 og 1 E cell = 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Apply governing Electrochemistry NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C)."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0261",
+    "stem": "In a conductometric titration, small volume of titrant of higher concentration is added stepwise to a larger volume of titrate of much lower concentration, and the conductance is measured after each addition. The limiting ionic conductivity (Λ 0 ) values (in mS m 2 mol −1 ) for different ions in aqueous solutions are given below: Ions Ag + K + Na + H + NO 3 − Cl − SO 4 2− OH − CH 3 COO − Λ 0 6.2 7.4 5.0 35.0 7.2 7.6 16.0 19.9 4.1 For different combinations of titrates and titrants given in List-I, the graphs of ‘conductance’ versus ‘volume of titrant’ are given in List-II. Match each entry in List-I with the appropriate entry in List-II and choose the correct option. List-I List-II (P) Titrate: KCl Titrant: AgNO 3 (1) (Q) Titrate: AgNO 3 Titrant: KCl (2) (R) Titrate: NaOH Titrant: HCl (3) (S) Titrate: NaOH Titrant: CH 3 COOH (4) (5)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electrochemistry.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  }
+]

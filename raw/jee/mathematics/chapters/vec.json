@@ -1,0 +1,1388 @@
+[
+  {
+    "questionNumber": 0,
+    "stem": "a a + − = \u0001 \u0001 \u0001 Scalar Multiplication of a Vector by a Scalar \u0001 If k is a scalar then is a vector having the same (or opposite) direction as that of whose magnitude is |k| times that of and \u0001 \u0001 \u0001 Unit vector along Position Vector of a Point \u0001 If O is the origin and P is any point then the position vector of \u0001 If the position vectors of points A and B are and respectively then the position vector of the point P dividing AB in the ratio m : n is Figure 22.5 Figure 22.6 Relation between Two Collinear Vectors:  If and are two collinear (or parallel) vectors then there exists a scalar such that Relation between Three Coplanar Vectors \u0001 If are three vectors in a plane then there exists two unique scalars x, y such that \u0001 If as well as then AB \u0002\u0002\u0002\u0001 AB \u0002\u0002\u0002\u0001 | | AB \u0002\u0002\u0002\u0001 a\u0001 | a\u0001 0 \u0001 || AB CD . AB CD = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 AB CD = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ⇒ || AB CD , AB a BC = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 a b + \u0001 \u0001 . AC \u0002\u0002\u0002\u0001 ∴ AB BC AC + = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 AB BC CD DE AE + + + = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 2 AB AC AB AD AE + = = = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 a −\u0001 a\u0001 ka\u0001 a\u0001 .a\u0001 ∴ || ka a \u0001 \u0001 | | | | | || | ka ka k a = = \u0001 \u0001 \u0001 ( ) k a b ka kb + = + \u0001 \u0001 \u0001 \u0001 ( ) ( ) ( ) p qa pq a q pa = = \u0001 \u0001 \u0001 ˆ | | a a a a = = \u0001 \u0001 \u0001 . P OP = \u0001 a\u0001 b \u0001 . mb na m n + + \u0001 \u0001 a\u0001 b \u0001 λ . b a λ = \u0001 \u0001 , and a b r \u0001 \u0001 \u0001 r xa yb = + \u0001 \u0001 \u0001 1 1 r x a y b = + \u0001 \u0001 \u0001 2 2 r x a y b = + \u0001 \u0001 \u0001 1 2 1 2 , . x x y y = = ( ) A a\u0001 ( ) B b \u0001 m n P P O (origin) Figure 22.4 C D A B E Figure 22.3 b \u0001 a\u0001 a b + \u0001 \u0001 C B A A B C D Figure 22.2 AB \u0002\u0002\u0002\u0001 Figure 22.1 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 294 Relation between Four Vectors in Space \u0001 If are four vectors in space (of which no three are coplanar) then there exists three unique scalars x, y, z such that \u0001 If as well as then Vectors are three unit vectors along X, Y and Z  axes respectively where each pair of axes are  mutually perpendicular. . Let P be a point whose coordinates are (x, y, z). The position vector of P is where . Similarly, . The direction of is given by the direction cosines \u0001 The position vector of the point (x, y, z) is \u0001 Any vector in space can be written linearly in i.e., \u0001 If is equally inclined with axes then i.e., x = y = z. Addition of Vectors Expressed in Terms of If and then Condition of Collinearity of Three Points: The points A, B and C are collinear if Condition of Coplanarity of Four Points of Three Vectors: The points A, B, C and D are coplanar if the three vectors are coplanar,i i.e, if two scalars x, y can be found such that Position Vector of a Point of Section \u0001 If be two points then the position vector of the middle point P of AB is \u0001 If and be the vertices of a triangle ABC then the position vector of the centroid G is . Vector Conditions for Geometrical Results \u0001 Line segments AB and CD are equal \u0001 Lines AB and CD are parallel or \u0001 Lines AB and CD are perpendicular \u0001 A, B, C will be collinear \u0001 A, B, C, D will be coplanar or \u0001 A vector perpendicular to the plane passing through the points A, B and C is Equation of Straight Lines \u0001 The equation of the straight line passing through the point and parallel to the vector is where t is an arbitrary scalar and is the position vector of any point on the line. \u0001 The equation of the straight line passing through the point and is where t is an arbitrary scalar. \u0001 Three points whose position vectors are are collinear if where , , and a b c r \u0001 \u0001 \u0001 \u0001 r xa yb zc = + + \u0001 \u0001 \u0001 \u0001 1 1 1 r x a y b z c = + + \u0001 \u0001 \u0001 \u0001 2 2 2 r x a y b z c = + + \u0001 \u0001 \u0001 \u0001 1 2 1 2 1 2 , , . x x y y z z = = = , , i j k \u0001 \u0001 \u0001 , and i j k \u0001 \u0001 \u0001 ∴ | | 1 | | | | i j k = = = \u0001 \u0001 \u0001 r\u0001 ( ) r OQ QP OM ON QP = + = + + \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 ( , , ) xi yj zk x y z = + + = \u0001 \u0001 \u0001 2 2 | | | | r OP OQ QP = = + \u0002\u0002\u0002\u0001 \u0001 2 2 2 ( ) QN ON QP = + + 2 2 2 x y z = + + cos cos(90 ) POZ POQ ∠ = ° −∠ sin | | z z POQ OP r = ∠ = = \u0001 cos ,cos | | | | x y POX POY r r ∠ = ∠ = \u0001 \u0001 r\u0001 , , | | | | | | x y z r r r \u0001 \u0001 \u0001 . r xi yj zk = + + \u0001 \u0001 \u0001 \u0001 a\u0001 , , i j k \u0001 \u0001 \u0001 a i µj vk λ = + + \u0001 \u0001 \u0001 \u0001 r xi yj zk = + + \u0001 \u0001 \u0001 \u0001 | | | | | | x y z r r r = = \u0001 \u0001 \u0001 , , i j k \u0001 \u0001 \u0001 1 2 3 a a i a j a k = + + \u0001 \u0001 \u0001 \u0001 1 2 3 b b i b j b k = + + \u0001 \u0001 \u0001 \u0001 1 1 2 2 3 3 ˆ ( ) ( ) ( ) a b a b i a b j a b k + = + + + + + \u0001 \u0001 \u0001 \u0001 1 1 2 2 3 3 ˆ ( ) ( ) ( ) a b a b i a b j a b k − = − + − + − \u0001 \u0001 \u0001 \u0001 AB AC λ = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 , and AB AC AD \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 AB x AC y AD = + \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ( ), ( ) A a B b \u0001 \u0001 . 2 a b + \u0001 \u0001 ( ), ( ) A a B b \u0001 \u0001 ( ) C c\u0001 3 a b c + + \u0001 \u0001 \u0001 ⇔ | | | | AB CD = ⇔ AB kCD = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "AB CD × = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 ⇔ 0 AB CD ⋅ = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ⇔ AB k AC = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ⇔ AB AC AD λ µ = + \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 [ ] 0 AB AC AD = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 . AB AC × \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ( ) a\u0001 ( ) b \u0001 r a tb = + \u0001 \u0001 \u0001 r\u0001 ( ) a\u0001 ( ) b \u0001 (1 ) r t a tb = − + \u0001 \u0001 \u0001 , , a b c \u0001 \u0001 \u0001 0 a µb c λ ν + + = \u0001 \u0001 \u0001 0 µ λ ν + + = Figure 22.7 r\u0001 O Z ˆi ˆk ˆi Y X Q M y x N P (x,y,z) _ 295 Vector Algebra Equations of Bisectors of the Angle between Two Lines Let be the vertex of the angle BAC where and are vectors along AB and AC respectively. The equations of the bisectors of are where t is a scalar parameter. Shortest Distance between Two Non-coplalar Lines \u0001 If two lines AB, CD do not intersect, there is always a line cutting both the lines perpendicularly. The intercept on this line made by AB and CD is called the shortest distance between the lines AB and CD. In the figure, the shortest distance where \u0001 In the above figure, shortest distance LM = | projection of along | Equation of a Plane \u0001 The equation of the plane passing through the points is",
+    "options": [
+      " where is the position vector of any point on the plane and x, y are parameters.",
+      " \u0001 Four point whose position vectors are will be coplanar if where \u0001 The equation of the plane passing through and perpendicular to the vector is Vector Equation of a Sphere The vector equation of a sphere whose centre has the position vector and radius is , ρ is , being the position vectors for any point on the sphere. Volume of a Tetrahedron \u0001 The volume of a tetrahedron (area of the base) (corresponding altitute) because are coplanar and so Work Done by a Force Vector: The work done by the force in shifting a particles from the point A to the point B Vector Moment (Torque) of a Force Vector About a Point If the force acts at the point P then the vector moment of about the point A ( ) A a\u0001 b \u0001 c\u0001 BAC ∠ | | | | b c r a t c b   = + ±       \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 LM = 90 ALM CML ∠ = ∠ = ° AC \u0002\u0002\u0002\u0001 ML \u0002\u0002\u0002\u0001 · . | | ML AC ML = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ( ), ( ) ( ) A a B b and C c \u0001 \u0001 \u0001 (1 ) r xa yb x y c = + + − − \u0001 \u0001 \u0001 \u0001 r\u0001 [ ] 0 r a r b r c − − − = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 , , a b c and d \u0001 \u0001 \u0001 \u0001 0 xa yb zc wd + + + = \u0001 \u0001 \u0001 \u0001",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x y z w + + + = ( ) A a\u0001 p\u0001 ( )· 0 r a p − = \u0001 \u0001 \u0001 a\u0001 | | r a ρ − = \u0001 \u0001 r\u0001 1 3 = 1 1 · | || | 3 2 AB AC ED = × \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 0 1 | || |cos0 || 6 AB AC ED for AB AC ED = × × \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 1 1 ( )· [ ] 6 6 AB AC ED AB AC ED = × = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 1 1 [ [ ] 6 6 AB AC EA AD AB AC AD = + = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 , , AB AC EA \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 [ ]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "AB AC EA = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 F \u0001 · · AB F r F = = \u0002\u0002\u0002\u0001 \u0001 \u0001 \u0001 F \u0001 F \u0001 AP F r F = × = × \u0002\u0002\u0002\u0001 \u0001 \u0001 \u0001 F \u0001 r\u0001 A P Figure 22.12 Figure 22.11 A B r\u0001 F \u0001 Figure 22.10 A B D C E Figure 22.9 A B C D M L Figure 22.8 B A C c\u0001 b \u0001 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 296 Rotation About an Axis When a rigid body rotates about a fixed axis ON with an angular velocity ω then the velocity ω then the velocity of a particle P is given by where (unit vector along ON). Product of Two Vectors Scalar product of two vectors \u0001 The scalar product (or dot product) of two vectors is a scalar quantity such that where is the angle between \u0001 The angle between two units vectors is given by \u0001 The projection of on the vector \u0001 and \u0001 \u0001 \u0001 If and then \u0001 where etc. Vector product of two vectors \u0001 The vector product (or cross product) of two vectors is a vector quantity such that where angle between and is a unit vector perpendicular to the plane and such that from a right-handed triad. \u0001 \u0001 and \u0001 Unit vector perpendicular to both is \u0001 The angle between is given by \u0001 The vector area of the triangle whose two sides represent vectors and area (scalar) The vector area of the parallelogram whose two adjacent sides represent vectors are area (scalar) \u0001 \u0001 \u0001 If and then Product of Three or More Vectors Scalar triple product \u0001 The dot product of the vectors with the vectors is a scalar triple product of the three vectors and it is written as It is a scalar quantity. The magnitude of is equal to the volume V of a parallelopiped whose three concurrent edges are represented by and as shown in the figure. volume of the parallelepiped whose three concurrent edges are \u0001 i.e., dot and cross can be interchanged in a scalar triple product and each scalar triple product is written as \u0001 \u0001 \u0001 if or or or at least one vector v\u0001 v w r = × \u0001 \u0001 \u0001 r OP and w w = = \u0002\u0002\u0002\u0001 \u0001 \u0001 · a b \u0001 \u0001 and a b \u0001 \u0001 · | || |cos a b a b θ = \u0001 \u0001 \u0001 \u0001 θ and . a b \u0001 \u0001 · 0 a b a b ⊥ ⇔ = \u0001 \u0001 \u0001 \u0001 θ ˆ ˆ,a b ˆ ˆ cos . a b θ = ⋅ ˆb a\u0001 · , . ., · | | a b i e b a a = \u0001 \u0001 \u0001 \u0001 \u0001 · 1 · · i i j j k k = = = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 · 0 · · . i j j k k i = = = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 · · a b b a = \u0001 \u0001 \u0001 \u0001 ·( ) · · a b c a b a c + = + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 1 2 3 a a i a j a k = + + \u0001 \u0001 \u0001 \u0001 1 2 3 b b i b j b k = + + \u0001 \u0001 \u0001 \u0001 1 1 2 2 3 3 · a b a b a b a b = + + \u0001 \u0001 2 2 2 ( ) 2 · a b a b a b + = + + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 2 · , a a a = \u0001 \u0001 \u0001 a b × \u0001 \u0001 and a b \u0001 \u0001 ˆ | | | | sin a b a b n θ × = \u0001 \u0001 \u0001 \u0001 θ = ,a b \u0001 \u0001 ˆn a\u0001 b \u0001 ˆ , , a b n \u0001 \u0001 || 0 a b a b ⇔ × = \u0001 \u0001 \u0001 \u0001 a b a × ⊥ \u0001 \u0001 \u0001 a b b × ⊥ \u0001 \u0001 \u0001 and a b \u0001 \u0001 . | | a b a b × × \u0001 \u0001 \u0001 \u0001 θ ,a b \u0001 \u0001 ˆ ˆ sin | | . a b θ = × ∆ \u0001 1 and ( ) 2 a b a b = × \u0001 \u0001 \u0001 \u0001 1 | |. 2 a b × \u0001 \u0001 and a b a b = × \u0001 \u0001 \u0001 \u0001 | | . a b × \u0001 \u0001 0 i i j j k k × = = × = × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 , , i j k j k i k i j × = × = × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 . a b b a × = −× \u0001 \u0001 \u0001 \u0001 , , i k k i j k j j k i × = −× = − × = −× = − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 j i i j k × = −× = − \u0001 \u0001 \u0001 \u0001 \u0001 ( ) . a b c a b a c × + = × + × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 1 2 3 a a i a j a k = + + \u0001 \u0001 \u0001 \u0001 1 2 3 b b i b j b k = + + \u0001 \u0001 \u0001 \u0001 1 2 3 1 2 3 i j k a b a a a b b b × = \u0001 \u0001 \u0001 \u0001 \u0001 a b × \u0001 \u0001 c\u0001 , , a b c \u0001 \u0001 \u0001 ( ). . a b c × \u0001 \u0001 \u0001 ( ). a b c × \u0001 \u0001 \u0001 ,a b \u0001 \u0001 c\u0001 ∴ , , ( ) a b c a b c = × ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ( )· ·( ) a b c a b c × = × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 [ ]. a b c \u0001 \u0001 \u0001 [ ] [ ] [ ] a b c b c a c a b = = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 [ ] [ ] [ ] [ ] a b c b a c a c b c b a = − = − = − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 [ ] 0 a b c = \u0001 \u0001 \u0001 a b = \u0001 \u0001 b c = \u0001 \u0001 c a = \u0001 \u0001 0 = \u0001 a b c Figure 22.14 Figure 22.13 ω\u0001 N P r\u0001 O _ 297 Vector Algebra or are coplanar \u0001 \u0001 If then Condition for Coplanarity of Three Vectors: are coplanar Vector Triple Product \u0001 The vector product of is a vector triple product of the three vectors are vector triple products. \u0001 This is a vector in the plane of \u0001 This is a vector in the plane of Scalar Product of Four Vectors \u0001 is a scalar product of four vectors. It is a dot product of the vectors It is scalar triple product of the vectors as well as a scalar triple product of the vectors \u0001 Vector Product of Four Vectors \u0001 is a vector product of four vectors. If is the cross product of the vectors and \u0001 are also different vectors products of four vectors To Express a Vector in Terms of Noncoplanar Vectors \u0001 If are two known noncollinear vectors then are three noncoplanar vectors. So, any vector can be written as where are unknown scalars. \u0001 If are three known noncoplalar vectors then any vectors  can be written as where are unknown scalars. Note: The above two ways of expressing is useful in solving vector equations. Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 1,
+    "stem": "Let A \u0001 be vector parallel to line of intersection of planes 1P and 2P through origin. 1P is parallel to the vector and and is parallel to and then the angle between vectors and is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 2,
+    "stem": "Let and A vector in the plane of and whose projection on is , is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 3,
+    "stem": "The number of distinct real values of ,λ for which the vectors 2 ˆ ˆ ˆ , λ − + + i j k 2 ˆ ˆ ˆ λ − + i j k and 2 ˆ ˆ ˆ i j k λ + − are coplanar, is",
+    "options": [
+      "zero",
+      "one",
+      "two",
+      "three"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 4,
+    "stem": "Let , , \u0001 \u0001 \u0001 a b c be unit vectors such that",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "+ + = \u0001 \u0001 \u0001 \u0001 a b c Which one of the following is correct? , , × × × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c c a are mutually perpendicular",
+    "options": [
+      " 0 × = × = × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c c a",
+      " 0 × = × = × ≠ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c c a",
+      " 0 × = × = × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c a c",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 5,
+    "stem": "The edges of a parallelopiped are of unit length and are parallel to non-coplanar unit vectors such that Then the volume of the parallelopiped is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 6,
+    "stem": "Let two non-collinear unit vectors ˆa and ˆb form an acute angle. A point P moves so that at any time t the position vector \u0002\u0002\u0002\u0001 OP (where O is the origin) is given by ˆ ˆcos sin . + a t b t When P is farthest from origin , O let M be the length of \u0002\u0002\u0002\u0001 OP and ˆu be the unit vector along \u0002\u0002\u0002\u0001 OP . Then, , a b and c \u0001 \u0001 \u0001 [ ] 1 i j k = \u0001 \u0001 \u0001 1 2 3 1 2 3 1 2 3 ˆ , , a a i a j a k b b i b j b k c c i c j c k = + + = + + = + + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 1 2 3 1 2 3 1 2 3 [ ] a a a ab c b b b c c c = \u0001 \u0001 \u0001 , a b and c \u0001 \u0001 \u0001 [ , ] 0 a b c ⇔ = \u0001 \u0001 \u0001 a b and c × \u0001 \u0001 \u0001 , . a b and c \u0001 \u0001 \u0001 ( ) , ( ) a b c a b c × × × × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ( ) ( · ) ( · ) . a b c a c b a b c × × = − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 . b and c \u0001 \u0001 ( ) ( · ) ( · ) . a b c a c b b c a × × = − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a and b \u0001 \u0001 ( )·( ) a b c d × × \u0001 \u0001 \u0001 \u0001 . a b and c d × × \u0001 \u0001 \u0001 \u0001 , a b and c d × \u0001 \u0001 \u0001 \u0001 , . a b c and d × \u0001 \u0001 \u0001 \u0001 · · ( )·( ) · · a c a d a b c d b c b d × × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ( ) ( ) a b c d × × × \u0001 \u0001 \u0001 \u0001 a b × \u0001 \u0001 . c d × \u0001 \u0001 { ( )},{( ) } a b c d a b c d × × × × × × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 , , and . a b c d \u0001 \u0001 \u0001 \u0001 , a b \u0001 \u0001 , , a b a b × \u0001 \u0001 \u0001 \u0001 x\u0001 x a µb a b λ ν = + + × \u0001 \u0001 \u0001 \u0001 \u0001 , , λ µ ν , , λ µ ν x\u0001 ˆ ˆ 2 3 j k + ˆ ˆ 4 3 j k − 2P ˆ ˆj k − ˆ ˆ 3 3 , i j + A \u0001 ˆ ˆ ˆ 2 2 i j k + − 2 π 4 π 6 π 3 4 π ˆ ˆ ˆ ˆ ˆ ˆ 2 , a i j k b i j k = + + = − + \u0001 \u0001 ˆ ˆ ˆ . c i j k = − − \u0001 a\u0001 b \u0001 c\u0001 1 3 ˆ ˆ ˆ 4 4 i j k −+ ˆ ˆ ˆ 3 3 i j k + − ˆ ˆ ˆ 2 2 i j k + − ˆ ˆ ˆ 4 4 i j k + − ˆ ˆ ˆ , , a b c ˆ ˆ ˆ ˆ ˆ 1/ 2. a b b c a ⋅ = ⋅ ⋅ = 1 2 1 2 2 3 2 1 3 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 298 1/ 2 ˆ ˆ ˆ ˆ ˆ and (1 2 ) ˆ ˆ | | − = = + ⋅ − a b u M a b a b",
+    "options": [
+      " 1/ 2 ˆ ˆ ˆ ˆ ˆ and (1 ) ˆ ˆ | | + = = + ⋅ + a b u M a b a b",
+      " 1/ 2 ˆ ˆ ˆ ˆ ˆ and (1 ) ˆ ˆ | | − = = + ⋅ − a b u M a b a b",
+      " 1/ 2 ˆ ˆ ˆ ˆ ˆ and (1 2 ) ˆ ˆ | | + = = + ⋅ + a b u M a b a b",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 7,
+    "stem": "A particle P starts from the point 0 1 2 , = + z i where",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 1,
+    "stem": "= − i It moves first horizontally away origin by 5 units and then vertically away from origin by 3 units to reach a point z1. From z1 the particle moves 2 units in the direction of the vector ˆ ˆ + i j and then it moves through an angle 2 π in anticlockwise direction on a circle with centre at origin to reach a point z2. The point z2 is given by 7 −+ i",
+    "options": [
+      "6 7 + i",
+      "7 6 −+ i",
+      "7 6 + i",
+      "6"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 8,
+    "stem": "If , , \u0001 \u0001 \u0001 a b c and \u0001 d are unit vectors such that ( ) ( ) 1 × ⋅ × = \u0001 \u0001 \u0001 a b c d and 1 . , 2 = \u0001 \u0001 a c then \u0001 \u0001a d are parallel and , \u0001 \u0001 b c are parallel",
+    "options": [
+      ", , \u0001 \u0001 \u0001 a b c are non-coplanar",
+      ", , \u0001 \u0001 \u0001 b c d are non-coplanar",
+      ", \u0001 \u0001 b d are non-parallel",
+      ","
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 9,
+    "stem": "Let (3, 2, 6) P be a point in space and Q be a point on the line ˆ ˆ ˆ ( 2 ) µ = − + + \u0001r i j k ˆ ˆ ˆ ( 3 5). − + + i j Then the value of µ for which the vector PQ is parallel to the plane 4 3 1 − + = x y z is 1 8 −",
+    "options": [
+      "1 4",
+      " 1 4 −",
+      "1 8",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 10,
+    "stem": "The normal at a point P on the ellipse x2 + 4y2 = 16 meets the x-axis at Q. If M is the mid-point of the line segment PQ, then the locus of M intersects the latus rectums of the given ellipse at the points 4 3 2 3, 7   ± ±      ",
+    "options": [
+      " 3 5 2 , 2 7   ± ±      ",
+      " 3 5 19 , 2 4   ± ±      ",
+      " 1 2 3, 7   ± ±    ",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 11,
+    "stem": "Let P, Q, R and S be the points on the plane with position vectors ˆ ˆ ˆ ˆ ˆ 2 ,4 ,3 3 i j i i j − − + and ˆ ˆ 3 2 i j − + respectively. The quadrilateral PQRS must be a",
+    "options": [
+      "parallelogram, which is neither a rhombus nor a rectangle",
+      "square",
+      "rectangle, but not a square",
+      "rhombus, but not a square"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 12,
+    "stem": "Two adjacent sides of a parallelogram ABCD are given by ˆ ˆ ˆ 2 10 11 AB i j k = + + \u0002\u0002\u0002\u0001 and ˆ ˆ ˆ 2 2 . AD i j k = −+ + \u0002\u0002\u0002\u0001 The side AD is rotated by an acute angle α in the plane of the parallelogram so that AD becomes AD. If AD makes a right angle with the side AB, then the cosine of the angle α is given by 9",
+    "options": [
+      "8 9",
+      " 17 9",
+      "1 9",
+      "4 5"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 13,
+    "stem": "Let ˆ ˆ ˆ ˆ ˆ ˆ a i j k, b i j k = + + = −+ \u0001 \u0001 and ˆ ˆ ˆ c i j k = −− \u0001 be three vectors. A vector v\u0001 in the plane of a\u0001 and b, \u0001 whose projection on c\u0001 is 1 , 3 given by ˆ ˆ i 3j 3k + −",
+    "options": [
+      "ˆ ˆ ˆ i 3j 3k − +",
+      " ˆ ˆ ˆ 3i 3j k − − −",
+      "ˆ ˆ ˆ 3i j 3k −+",
+      "ˆ"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 14,
+    "stem": "The vector(s) which is/are coplanar with vectors ˆ ˆ ˆ i j 2k + + and ˆ ˆ ˆ i 2j k, + + and perpendicular to the vectors ˆ ˆ ˆ i j k + + is/are ˆ j k −+",
+    "options": [
+      "ˆ ˆ j k −",
+      "ˆ ˆ i j −+",
+      "ˆ ˆ i j −",
+      "ˆ"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 15,
+    "stem": "If a\u0001 and b \u0001 are vectors such that 29 a b + = \u0001 \u0001 and ˆ ˆ ˆ (2 3 4 ) a i j k × + + = \u0001 ˆ ˆ ˆ (2 3 4 ) i j k b + + × \u0001 then a possible value of ˆ ˆ ˆ ( ) ( 7 2 3 ) is a b i j k + ⋅− + + \u0001 \u0001",
+    "options": [
+      "0",
+      "3",
+      "4",
+      "8"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 16,
+    "stem": "Let and determine diagonals of a parallelogram P QRS and be another vector. Then the volume of the parallelepiped determined by the vectors and is ˆ ˆ ˆ 3 2 PR i j k = + − \u0002\u0002\u0002\u0001 ˆ ˆ ˆ 3 4 SQ i j k = − − \u0002\u0002\u0002\u0001 ˆ ˆ ˆ 2 3 PT i j k = + + \u0002\u0002\u0002\u0001 , PT PQ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 PS \u0002\u0002\u0002\u0001 _ 299 Vector Algebra",
+    "options": [
+      "5",
+      "20",
+      "10",
+      "30"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 17,
+    "stem": "If the vectors and are the sides of a triangles then the length of the median through is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 18,
+    "stem": "If then is equal to:",
+    "options": [
+      "2",
+      "3",
+      "0",
+      "1"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 19,
+    "stem": "Let and be three vectors each of magnitude and the angle between each pair of them is If is a non-zero vector perpendicular to and and is a nonzero vector perpendicular to and then",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 20,
+    "stem": "Let and be three non-zero vectors such that no two of them are collinear and If is the angle between vectors and then a value of sin is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 21,
+    "stem": "Let be a triangle. Let and If and then which of the following is (are true)?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 22,
+    "stem": "Let ,a b \u0001 \u0001 and c\u0001 be three unit vectors such that ( ) a b c × × \u0001 \u0001 \u0001 3 ( ). 2 b c = + \u0001 \u0001 If is not parallel to ,c\u0001 then the angle between and is:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 23,
+    "stem": "Let 1 2 3 ˆ ˆ ˆ ˆu u i u j u k = + + be a unit vector in R3 and 1 ˆ 6 w = ˆ ˆ ˆ ( 2 ). i j k + + Given that there exists a vector v\u0001 in R3 such that ˆ | | 1 u v × = \u0001 and ˆ ˆ ( ) 1. w u v ⋅ × = \u0001 Which the following statement (s) is (are) correct? 1 3 2| | | | u u =",
+    "options": [
+      "There is exactly one choice for such v\u0001",
+      "There are infinitely many choices for such v\u0001",
+      "If ˆu les in the xy-plane than 1 2 | | | | u u =",
+      "If ˆu les in the xz-plane than"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 24,
+    "stem": "Let ˆ ˆ ˆ 2 2 = + − \u0001a i j k and ˆ ˆ. = + \u0001 b i j Let \u0001c be a vector such that 3, − = \u0001 \u0001 c a ( ) 3 × × = \u0001 \u0001 \u0001 a b c and the angle between \u0001c and × \u0001 \u0001a b be 30°. Then ⋅ \u0001 \u0001",
+    "options": [
+      "5",
+      "1 8",
+      "25 8",
+      "2"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 25,
+    "stem": "Let u\u0001 be a vector coplanar with the vectors ˆ ˆ ˆ 2 3 a i j k = + − \u0001 and ˆ ˆ . b j k = + \u0001 If u\u0001 is perpendicular to a\u0001 and 24, u b ⋅ = \u0001 \u0001 then 2 u\u0001 is equal to",
+    "options": [
+      "84",
+      "336",
+      "315",
+      "256"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 26,
+    "stem": "The magnitude of the projection of the vector ˆ ˆ ˆ 2 3 + + i j k on the vector perpendicular to the plane containing the vectors ˆ ˆ ˆ + + i j k ˆ and ˆ ˆ ˆ 2 3 + + i j",
+    "options": [
+      " 3 2",
+      " 3 2",
+      " 6",
+      "3 6"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 27,
+    "stem": "Let ˆ ˆ ˆ 3 2 a i j xk = + + \u0001 and ˆ ˆ ˆ , b i j k = − + \u0001 for some real x. Then | | × = \u0001 \u0001a b r is possible if: 3 5 2 r ≥",
+    "options": [
+      " 3 3 3 5 2 2 r < <",
+      " 3 0 2 r < ≤",
+      " 3 3 3 2 2 r < <",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 28,
+    "stem": "The tangent and the normal lines at the point ( ) 3,1 to the circle x2 + y2 = 4 and the x-axis form a triangle. The area of this triangle (in square units) is: 3 ˆ ˆ 3 4 AB i k = + ˆ ˆ ˆ 5 2 4 AC i j k = − + , ABC A 18 72 33 45 2 a b b c c a abc λ     × × × =     \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001\u0001\u0001 λ ,x y \u0001 \u0001 z\u0001 2 . 3 π a\u0001 x\u0001 y z × \u0001 \u0001 b \u0001 y\u0001 , z x × \u0001 \u0001 ( )( ) b b z z x = ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 ( )( ) a a y y z = ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 ( )( ) a b a y b z ⋅ = − ⋅ ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ( )( ) a a y z y = ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 , a b \u0001 \u0001 c\u0001 1 ( ) | || | . 3 a b c b c a × × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 θ b \u0001 c\u0001 θ 2 2 3 2 3 − 2 3 2 3 3 − ∆PQR , , = = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 \u0001a QR b RP . = \u0002\u0002\u0002\u0001 \u0001c PQ | | 12, | | 4 3 = = \u0001 \u0001a b . 24, = \u0001 \u0001 b c 2 | | | | 12 2 − = \u0001 \u0001 c a 2 | | | | 30 2 − = \u0001 \u0001 c a | | 48 3 × + × = \u0001 \u0001 \u0001 \u0001 a b c a . 72 = − \u0001 \u0001a b b \u0001 a\u0001 b \u0001 3 4 π 2 π 2 3 π 5 6 π _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 300",
+    "options": [
+      "1/3",
+      "4/ 3",
+      "1/ 3",
+      "2/"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 29,
+    "stem": "Let ˆ ˆ ˆ ˆ ˆ , = − = + + \u0001 \u0001a i j b i j k and \u0001e be a vector such that 0 × + = \u0001 \u0001 \u0001 \u0001 a c b and . 4 = \u0001 \u0001 a c , then 2 | | \u0001c is equal to",
+    "options": [
+      "19 2",
+      "8",
+      "17 2",
+      "7"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 30,
+    "stem": "Let ˆ ˆ ˆ 2 , = + + \u0001a i j k 1 2 ˆ ˆ ˆ 2 , = + + \u0001 b bi b j k and ˆ ˆ ˆ 5 2 c i j k = + + \u0001 be three vectors such that the projection vector of \u0001 b on \u0001a is \u0001a . If + \u0001 \u0001a b is perpendicular to \u0001c ,then  | | \u0001 b is equal to:",
+    "options": [
+      " 22",
+      "4",
+      " 32",
+      "6"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 31,
+    "stem": "Let 1 ˆ ˆ ˆ 2 3 , = + + \u0001a i j k λ 2 ˆ ˆ ˆ 4 (3 ) 6 b i j k λ = + − + \u0001 and 3 ˆ ˆ ˆ 3 6 ( 1) c i j k λ = + + − \u0001 be three vectors such that 2 b a = \u0001 \u0001 and a\u0001 is perpendicular to ,\u0001c then a possible value of 1 2 3 ( , , ) λ λ λ is:",
+    "options": [
+      "1 ,4, 2 2   −    ",
+      " 1 ,4,0 2   −    ",
+      "(1, 3, 1)",
+      "(1, 5, 1)"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 32,
+    "stem": "Let A be a point on the line ˆ ˆ ˆ (1 3 ) ( 1) (2 5 ) r i j k µ µ µ = − + − + + \u0001 and B(3, 2, 6) be a point in the space. Then the value of µ for which the vector AB \u0002\u0002\u0002\u0001 is parallel to the plane x – 4y + 3z = 1 is:",
+    "options": [
+      "1/2",
+      "–1/4",
+      "1/4",
+      "1/8"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 33,
+    "stem": "Let ( 2)a b α λ = − + \u0001 \u0001 \u0001 and (4 2) 3 a b β λ = − + \u0001 \u0001 \u0001 be two given vectors where vectors a\u0001 and b \u0001 are non-collinear. The value of λ for which vectors α\u0001 and β \u0001 are collinear, is:",
+    "options": [
+      "–3",
+      "4",
+      "3",
+      "–4"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 34,
+    "stem": "Let ˆ ˆ ˆ ˆ ˆ ˆ 2 4 , 4 a i j k b i j k λ = + + = + + \u0001 \u0001 and 2 ˆ ˆ ˆ 2 4 ( 1) c i j k λ = + + − \u0001 be coplanar vectors. Then the non zero vector a c × \u0001 \u0001 is. ˆ ˆ 14 5 i j − +",
+    "options": [
+      " ˆ ˆ 14 5 i j − −",
+      " ˆ ˆ 10 5 i j − −",
+      " ˆ ˆ 10 5 i j − +",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 35,
+    "stem": "Let ˆ ˆ ˆ ˆ 3 , 3 i j i j + + and ˆ ˆ (1 ) i j β β + − respectively be the position vectors of the points A, B and C with respect to the origin O. If the distance of C from the bisector of the acute angle between OA and OB is 3 2 , then the sum of all possible values of β I",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 36,
+    "stem": "The sum of the distinct real values of µ, for which the vectors ˆ ˆ ˆ , i j k µ + + ˆ ˆ ˆ , i j k µ + + ˆ ˆ ˆ , i j k µ + + are co-planer is:",
+    "options": [
+      "2",
+      "0",
+      "–1",
+      "1"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 37,
+    "stem": "A tetrahedron has vertices P(1, 2, 1), Q(2, 1, 3), R(–1, 1, 2) and O(0, 0, 0). The angle between the faces OPQ and PQR is: 1 7 cos 31 −     ",
+    "options": [
+      " 1 9 cos 35 −     ",
+      " 1 19 cos 35 −     ",
+      " 1 17 cos 31 −     ",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 38,
+    "stem": "Let ,a b \u0001 \u0001 and c\u0001 be three unit vectors, out of which vectors b \u0001 and c\u0001 are non-parallel. If α and β are the angles which vector a\u0001 makes with vectors b \u0001 and c\u0001 respectively and a 1 ( ) , 2 a b c b × × = \u0001 \u0001 \u0001 \u0001 then |α – β| is equal to: Matrix Match / Column Match",
+    "options": [
+      "60º",
+      "30º",
+      "90º",
+      "45º"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 39,
+    "stem": "Match the statements/expressions in Column I with the values given in Column II. Column I Column II",
+    "options": [
+      "Root (s) of the expression 2 2 2sin sin 2 2 θ θ + =",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 5,
+    "stem": "π _ 301 Vector Algebra",
+    "options": [
+      "A→ 2,4; B→ 1,3,4,5; C→ 5; D→ 3",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 40,
+    "stem": "Match the statements in Column-I with those in Column-II Column I Column II",
+    "options": [
+      "A line from the origin meets the lines 2 1 1 1 2 1 x y z − − + = = − and 8 3 2 − x 3 1 1 1 y z + − = = − at P and Q respectively. If length PQ = d, then 2 d is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x ≠ The value of 2 ( ) f x dx π π π −∫ is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 41,
+    "stem": "Match the statements given in Column I with the values given in Column II. Column I Column II",
+    "options": [
+      "If ˆ ˆ ˆ ˆ a j 3k j 3k = + = −+ \u0001 and ˆ c 2 3k = \u0001 form a triangle, then the internal angle of the triangle between a\u0001 and b \u0001 is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 42,
+    "stem": "Match Column I with Column II and select the correct answer using the code given below the lists: Column I Column II",
+    "options": [
+      "Volume of parallelepiped determined by vectors, and is 2. Then the volume of the parallele-piped determined by vectors and is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 4,
+    "stem": "60 , \u0001 \u0001a b \u0001c 2( ), 3( ) × × \u0001 \u0001 \u0001 \u0001 a b b c ( ) × \u0001 \u0001 c a , \u0001 \u0001a b \u0001c 3( ), ( ) + + \u0001 \u0001 \u0001 \u0001 a b b c 2( ) + \u0001 \u0001 c a \u0001a \u0001 b (2 3 ) + \u0001 \u0001a b ( ) − \u0001 \u0001a b \u0001a \u0001 b ( ) + \u0001 \u0001a b \u0001a _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 302",
+    "options": [
+      "A→ 3; B→ 4; C→ 1; D→ 2",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 43,
+    "stem": "Match the following: Column I Column II",
+    "options": [
+      "Let Then equals",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 44,
+    "stem": "Match the Column: Column I Column II",
+    "options": [
+      "In if the magnitude of the projection vector of the vector on is and if then possible value(s) of is (are)",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 4,
+    "stem": "If q is a positive real number such that a, 5, q, b is an arithmetic progression, then the value(s) of is (are)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 45,
+    "stem": "Match the thermodynamic processes given under Column I with the expression given under Column II: Column I Column II",
+    "options": [
+      "In a triangle , XYZ ∆ let a, b and c be the lengths of the sides opposite to the angles X, Y and Z, respectively. If and λ = sin sin (XY) Z then possible values of n for which is (are)",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 2,
+    "stem": "2 1 ( ) cos(3cos ), − = y x x [ 1,1], ∈− x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 3,
+    "stem": "2 ≠± x 1 ( ) y x 2 ( 1) x  −   2 2 ( ) d y x dx ( ) dy x x dx  +  1 2 , ,... , ( 2) > n A A A n \u0001 ka 1,2,... . = n 1 1 1 1 1 1 ( ) ( ) n n k k k k k k a a a a − − + + = = × = ⋅× ∑ ∑ \u0001 \u0001 \u0001 \u0001 n ( ,1) P h 2 2 1 6 3 x y + = 8, x y + = h 1 1 1 1 tan tan 2 1 4 1 x x − −     +     + +     1 2 2 tan x −  =     2, R ˆ ˆ α β + i j ˆ ˆ 3 + i j 3 α | 2 3β, = + |α| { 2 2 3 2, 1 ( ) , 1 − − < = + ≥ ax x f x bx a x . ∈ x R ω 1 ≠ 2 4 3 (3 3 2 ) + − + ω ω n 2 4 3 (2 3 3 ) + + + − ω ω n 2 4 3 ( 3 2 3 ) 0, + + −+ + = ω ω n | | − q a 2 2 2 2( ) − = a b c cos( ) 0 = πλ n , ∆XYZ 1 cos2 + − X a b _ 303 Vector Algebra",
+    "options": [
+      "Option A",
+      "Option B",
+      "In let and be the position vectors of X, Y and Z with respect of the origin O, respectively. If the distance of Z from the bisector of the acute angle of with is then possible value(s) of is (are)",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 5,
+    "stem": "6 Statement or Assertion & Reason",
+    "options": [
+      "A→ 1,3,4; B→ 1; C→ 1,2; D→ 4,5",
+      "A→ 1; B→ 2; C→ 3; D→ 4,4",
+      "A→ 3; B→ 1; C→ 2; D→ 4,1",
+      "A→ 3; B→ 4; C→ 2; D→ 1,2"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 46,
+    "stem": "Let the vectors , , , , \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 PQ QR RS ST TU and \u0002\u0002\u0002\u0001 UP represent the sides of a regular hexagon. Statement-I: ( ) 0 × + ≠ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 PQ RS ST and Statement-II: 0 PQ RS × = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "PQ ST × = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 Paragraph Paragraph for Question No. 47 to 48 Let O be the origin, and , , OX OY OZ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 be three unit vectors in the directions of the sides , , QR RP PQ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 , respectively, of a triangle PQR.",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is True; Statement–II is not a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is False.",
+      "Statement-II is False, Statement-II is True."
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 47,
+    "stem": "OR OY × = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ( ) sin Q R +",
+    "options": [
+      " ( ) sin P R +",
+      "sin 2R",
+      " ( ) sin P Q +",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 48,
+    "stem": "If the triangle PQR varies, then the minimum value of ( ) ( ) ( ) cos cos cos P Q Q R R P + + + + + is 5 3 − Paragraph for Question No. 49 to 50 Let p, q be integers and let , α β be the roots of the equation, 2 1 0 x x − −= , whereα β ≠ . For 0 n = ,1,2..., let n n na p q α β = + .",
+    "options": [
+      " 3 2 −",
+      "3 2",
+      "5 3",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 49,
+    "stem": "If 4 28 a = , then p + 2q =",
+    "options": [
+      "12",
+      "21",
+      "14",
+      "7"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 50,
+    "stem": "12 a = 11 10 2a a + Paragraph for Question No. 51 to 52 Let the circle 2 2 1 : 9 C x y + = and 2 2 2 :( 3) ( 4) 16 C x y − + − = intersect at the points X and Y. Suppose that another circle 2 2 2 3 : ( ) ( ) C x h y k r − + − = satisfies the following conditions. (i) Centre of C3 is collinear with the centres of C1 and C2. (ii) C1 and C2 both lie inside C3 and (iii) C3 touches C1 at M and C2 at N Let the line though X and Y intersect C3 at Z and W and let a common tangent of C1 and C3 be a tangent to the parabola 2 8 x y α = Three are some expressions given in the following lists: Column-I Column-II k +",
+    "options": [
+      "2h",
+      " 11 10 a a +",
+      " 11 10 a a −",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 6,
+    "stem": "10 3 2, R ˆ ˆ ˆ ˆ 3 , 3 + + i j i j ˆ ˆ (1 ) + − β β i j \u0002\u0002\u0002\u0001 OX \u0002\u0002\u0002\u0001 OY 3 , 2 | | β (α) F 2 4 = y x | α 1| | α 2 | α , = − + − + y x x x α {0,1}. ∈ 8 (α) 2, 3 + F α 0 = α 1, = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 304",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 51,
+    "stem": "Which of the following is the only correct combination?",
+    "options": [
+      "(A–4)",
+      "(B– 2)",
+      "(A–6)",
+      "(B–5)"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 52,
+    "stem": "Which of the following is the only incorrect combination? Integer & Subjective",
+    "options": [
+      "(D–6)",
+      "(C)–(3)",
+      "(D–5)",
+      "(A–1)"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 53,
+    "stem": "If a\u0001 and b \u0001 are vectors in space given by ˆ ˆ 2 5 i j a − = \u0001 and ˆ ˆ ˆ 2 3 , 14 i j k b + + = \u0001 then the value of (2 ) [( ) a b a b + ⋅ × \u0001 \u0001 \u0001 \u0001 ( 2 )] a b × − \u0001 \u0001 is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 54,
+    "stem": "Let ˆ ˆ ˆ ˆ a i k, b i j = −− = −+ \u0001 \u0001 and ˆ ˆ ˆ c i 2j 3k = + + \u0001 be three given vectors. If r\u0001 is a vector such that r b c b × = × \u0001 \u0001 \u0001 \u0001 and r a 0, ⋅ = \u0001 \u0001 then the value of r b ⋅ \u0001 \u0001 is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 55,
+    "stem": "If , \u0001 \u0001a b andc\u0001are unit vectors satisfying 2 2 | | | | − + − + \u0001 \u0001 \u0001 \u0001 a b b c 2 | | − \u0001 \u0001 c a 9, = then 2 5 5 a b c + + \u0001 \u0001 \u0001 is.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 56,
+    "stem": "Consider the set of eight vectors ˆ ˆ ˆ { ; V ai bj ck = + + , , a b c { 1,1}}. ∈− Three non-coplanar vectors can be chosen from ways. Then p is.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 57,
+    "stem": "Let and be three non-coplanar unit vectors such that the angle between every pair of them is If where and are scalars, then the value of is _______",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 58,
+    "stem": "Suppose that and are three non-coplanar vectors in Let the components of a vector along and be 4, 3 and 5, respectively. If the components of this vector along and are x, y and z, respectively, then the value of is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 59,
+    "stem": "Let \u0001a and \u0001 b be two unit vectors such that",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 0,
+    "stem": "⋅ = \u0001 \u0001a b For some , , ∈ℝ x y let ( ). = + + × \u0001 \u0001 \u0001 \u0001 \u0001 c xa yb a b If | | 2 = \u0001c and the vector \u0001c is inclined at the same angle α to both \u0001a and , \u0001 b then the value of 2 8cos α is ______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 60,
+    "stem": "Consider the cube in the first octant with sides OP, OQ and OR of length 1, along the x-axis, y-axis and z-axis, respectively, where O(0, 0, 0) is the origin. Let 1 1 1 , , 2 2 2       S be the centre of the cube and T be the vertex of the cube opposite to the origin O such that S lies on the diagonal OT. If , , = = = \u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0001 \u0001 \u0001 \u0001 p SP q SQ r SR and , = \u0002\u0002\u0002\u0001 \u0001t ST then the value of | ( ) ( ) | × × ×\u0001 \u0001 \u0001 \u0001 p q r t is ______. ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 1,
+    "stem": "(b,d) Vector AB is parallel to Let is the angle between the vector, then Hence",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 3,
+    "stem": "R s\u0001 ,p q \u0001 \u0001 r\u0001 s\u0001 ( ), p q r − + + \u0001 \u0001 \u0001 ( ) p q r − + \u0001 \u0001 \u0001 ( ) p q r − − + \u0001 \u0001 \u0001 2x y z + + ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ [(2 3 ) (4) 3 ] [( ) (3 3 )] 54( ) i k k j k i j j k + × − × − × + = − θ 54 108 1 cos 3.54 2 2 θ +   = ± = ±     3 , 4 4 π π θ = a\u0001 b \u0001 1 2 r a b λ λ = + \u0001 \u0001 \u0001 c\u0001 1 3 ⇒ 1 2 1 2 1 2 ˆ ˆ ˆ [ ] 1 ˆ ˆ ˆ [( ) (2 ) ( ) ] 3 3 i j k i j k λ λ λ λ λ λ − − + − + + + ⋅ = 1 2 2 1 λ λ − = − ⇒ 1 1 ˆ ˆ ˆ (3 1) (3 1) r i j k λ λ = + − + + \u0001 ˆ ˆ ˆ 4 4 i j k −+ a\u0001 b \u0001 , a b λ + \u0001 \u0001 c\u0001 1 3 ⇒ ˆ ˆ ˆ ( ) 1 ˆ ˆ ˆ (1 ) (2 ) (1 ) 3 3 i j k i j k λ λ λ   − − + + − + + ⋅ =       ⇒ 3 λ = ˆ ˆ ˆ 4 4 i j k −+ _ 305 Vector Algebra",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(c)  Normal is 4xsec 2ycosec 12 φ φ − = Q (3cos ,0) φ ≡ M ( , ) α β ≡ 3cos 4cos 7 cos 2 2 φ φ α φ + = = ⇒ 2 cos 7 φ α = , sin β φ = 2 2 cos sin 1 φ φ + = ⇒ 2 2 2 2 4 4 1 x y 1 49 49 α β + = ⇒ + = ⇒ latus rectum x 2 3 = ± 2 48 1 y 1 y 49 7 + = ⇒ = ± ( 2 3, 1/7). ± ±",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(a) Evaluating midpoint of PR and QS which gives ˆ ˆ , 2 i M j   ≡ +     same for both. ˆ ˆ 6 PQ SR i j = = + \u0002\u0002\u0002\u0001 \u0002\u0002\u0001 ˆ ˆ 3 PS QR i j = = −+ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ⇒ 0 PQ PS ⋅ ≠ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 || , || and| |=| |,| |=| | PQ SR PS QR PQ SR PS QR \u0002\u0002\u0002\u0001 \u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 Hence, PQRS is a parallelogram but not rhombus or rectangle.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(b) ˆ ˆ ˆ ( ) 5(61 10 21 ) AD AB AB AD i j k = × × = − − \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ⇒ | ' | 17 cos 9 | ' | | | AD AD AD AD α ⋅ = = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(c) v a b λ = + \u0001 \u0001 \u0001 v.c 1 | c | 3 = \u0001 \u0001 \u0001 ⇒ 1 (a",
+    "options": [
+      "c (b.c) 3 λ + = \u0001 \u0001 \u0001 \u0001 \u0001 ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ | .( ) | ˆ ˆ ˆ ˆ ˆ ˆ a a a b a c a b c b a b b b c c a c b c c ⋅ ⋅ ⋅ = × = ⋅ ⋅ ⋅ ⋅ ⋅ ⋅ 1 1/ 2 1/ 2 1 1/ 2 1 1/ 2 . 2 1/ 2 1/ 2 1 = = (4cos ,2sin ) P φ φ M (3cos ,0) Q φ ˆ ˆ ( 3 2 ) S i j − + ˆ ˆ (3 2 ) R i j + M ˆ ˆ ( 2 ) P i j − − ˆ (4 ) Q i _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 306 ⇒ 1 | c | a.c 1 ( 1) 3 2 1 λ − −− = = = \u0001 \u0001 \u0001 \u0001 \u0001 ∴ ˆ ˆ ˆ v a 2b 2i j 3i = + + −+ \u0001 \u0001 \u0001",
+      "c",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(a,d) ˆ ˆ ˆ a i j 2k = + + \u0001 ⇒ ˆ ˆ ˆ b i 2j k = + + \u0001 ⇒ ˆ ˆ ˆ c i j k = + + \u0001 Vector coplanar with a\u0001 and b \u0001 and perpendicular to c\u0001 is given by c (a b) × × \u0001 \u0001 \u0001 (c.b)a (c.a)b = − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 4a 4b = − \u0001 \u0001 4(a",
+    "options": [
+      "Option A",
+      " 4( j k) = − = −+ \u0001 \u0001 \u0001 \u0001",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(c) 29 a b + = \u0001 \u0001 ˆ ˆ ˆ ˆ ˆ ˆ 2 3 4 2 3 4 a i j k i j k b × + + = + + × \u0001 \u0001 ˆ ˆ ˆ ˆ ˆ ˆ 2 3 4 2 3 4 0 a i j k i j k b × + + − + + × = \u0001 \u0001 ˆ ˆ ˆ ˆ ˆ ˆ 2 3 4 2 3 4 0 a i j k b i j k × + + + × + + = \u0001 \u0001 ˆ ˆ ˆ 2 3 4 0 a b i j k + × + + = \u0001 \u0001 ˆ ˆ ˆ 2 3 4 sin 0 a b i j k n θ + + + = \u0001 \u0001 sin 0 θ = It means a b + \u0001 \u0001 and ˆ ˆ ˆ 2 3 4 i j k + + are parallel. The angle a b + \u0001 \u0001 and ˆ ˆ 2 3 4 i j k + + will form same angle will be form by ˆ ˆ ˆ 2 3 4 i j k + + & ˆ ˆ ˆ 7 2 2 3 . i j j k − + + + Let θ is the angle between this pair then ˆ ˆ ˆ ˆ ˆ ˆ 2 3 4 7 2 3 cos ˆ ˆ ˆ ˆ ˆ 2 3 4 7 2 3 i j k i j k i j k i j k θ + + ⋅− + + = + + − + + 14 6 12 4 cos 29 61 29 61 θ − + − = = Now the possible value of ˆ ˆ ˆ ˆ ˆ ˆ . 7 2 3 7 2 3 cos a b i j k a b i j k θ + − + + = + − + + \u0001 \u0001 \u0001 \u0001 4 29",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 61,
+    "stem": "29 61 = 4 =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(c) Area of base (PQRS) Height = proj. of PT on Volume",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(c) Median through is So,  Length",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(b) Let [abc]2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(a,b,c) is in direction of i.e. . . .(i) Now . . .(ii) From (i) and (ii), Similarly, Now,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(a) Equate, ˆ ˆ ˆ 1 1 | | 3 1 2 2 2 1 3 4 i j k PR SQ = × = − − − \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 1 ˆ ˆ ˆ ˆ ˆ ˆ | 10 10 10 | 5| | 5 3 2 i j k i j k = − + − = − + = 1 2 3 2 ˆ ˆ ˆ 3 3 i j k − + − + = = 2 (5 3) 10 cu. units 3   = =     ' ' A ˆ ˆ ˆ ˆ ˆ (3 3 ) (5 2 4 ) 2 i k i j k + + − + ˆ ˆ ˆ 4 4 i j k = − + 2 2 2 4 1 4 33 = + + = [ ] a b b c c a × × × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 u b c = × ( ) {( ) ( )} a b b c c a = × ⋅ × × × \u0001 \u0001 \u0001 \u0001 \u0001 ( ) { ( )} a b u c a = × ⋅ × × \u0001 \u0001 \u0001 ( ) { } ( ) } a b u a c u c a = × ⋅ ⋅ − ⋅ \u0001 \u0001 ( ) { ] [ ] } a b bca c bcc a × ⋅ − \u0001 \u0001 \u0001 [ ][ ] bca abc = \u0001 \u0001 ⇒ 1 λ = \u0001a ( ) × × \u0001 \u0001 \u0001 x y z ( ) ( ) ⋅ − ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 x z y x y z ⇒ 1 1 2 ( ) 2 λ   = × −     \u0001 \u0001 \u0001 a y z 1( ) λ = − \u0001 \u0001 \u0001 a y z 1( ) λ ⋅ = ⋅ − ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a y y y y z 1 1 (2 1) λ λ = − ⇒ = ⋅ \u0001 \u0001 a y ( ) = ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 a a y y z ( )( ) = ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 b b z z x ( )( )[( ) ( )] ⋅ = ⋅ ⋅ − ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b a y b z y z z x ( )( )[1 1 2 1] = ⋅ ⋅ −− + \u0001 \u0001 \u0001 \u0001 a y b z ( )( ). = − ⋅ ⋅ \u0001 \u0001 \u0001 \u0001 a y b z 1 ( ) | || | 3 a b c b c a × × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 1 {( . ) ( ) } | || | 3 c b a c a b b c a − − ⋅ = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 1 ( ) ( ) | || | 3 c a b c b a b c a ⋅ − ⋅ = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 1 ( ) | || | 3 c b b c − ⋅ = \u0001 \u0001 \u0001 \u0001 ⇒ 1 cos 3 θ = − S P Q R T ( , , ) α β γ _ 307 Vector Algebra",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) Hence and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(b,c) ˆ | | 1 u v × = \u0001 | | sin 1 v θ = θ is angle between ˆ and \u0001 u v Also ˆ ˆ .( ) 1 w u v × = \u0001 ˆ ˆ | || || | sin cos 1 w u v θ α = \u0001 α is angle between ˆw and ˆ ( ) u v × \u0001 1.1 (1) cos 1 α = ⇒ 0 α = ° ⇒ ˆ ˆ u v w λ × = \u0001 where 0 λ > 1 2 3 ˆ ˆ ˆ x y z i j k u u u v v v 2 2 3 3 1 1 2 ˆ ˆ ˆ ˆ ˆ ˆ ( 2 )( ) ( ) ( ) 6 y x z y x i j k u v u v i u v u v j u v u v k λ = + + − + − + − ˆ ˆ ˆ ( 2 ) 6 i j k λ = + + 1 3 | | 2| | u u = 2 ( 0) u = ∵",
+    "options": [
+      "v\u0001 is a vector such that ˆ ( ) u v × \u0001 is parallel to ˆ.w",
+      "v\u0001 ˆ ˆ ( ), u v w × \u0001",
+      " 3 0 u = ⇒ 2 6 z u v λ = and 1 6 z u v λ − = ⇒ 2 1 | | | | u u =",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(d) ˆ ˆ ˆ ˆ ˆ 2 2 , a i j k b i j = + − = + \u0001 \u0001 and 3 a = \u0001 ∴ ˆ ˆ ˆ 2 2 a b i j k × = − + \u0001 \u0001 ⇒ | | 3 a b × = \u0001 \u0001 Now ˆ ( ) | || |sin30 a b c a b c n × × = × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 1 | ( ) | 3 | | 2 a b c c × × = ⋅ ⋅ \u0001 \u0001 \u0001 \u0001 ⇒ 1 3 3 | | 2 c = ⋅ \u0001 ∴ | | 2 c = \u0001 Now| | 3 c a − = \u0001 \u0001 ⇒ 2 2 2 9 c a c a + − ⋅ = \u0001 \u0001 ⇒ 4 9 2 9 c a + − ⋅ = \u0001 \u0001 ⇒ 2 c a ⋅ = \u0001 \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(b) Clearly, ( ( )) u a a b λ = × × \u0001 \u0001 \u0001 \u0001 ⇒ 2 (( ) ) u a b a a b λ = ⋅ − \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ ˆ ˆ ˆ ˆ ˆ (2 14 ) 2 {(2 3 ) 7( )} u a b i j k j k λ λ = − = + − − + \u0001 \u0001 \u0001 ⇒ ˆ ˆ ˆ 2 (2 4 8 ) u i j k λ = − − \u0001 As, 24 u b ⋅ = \u0001 \u0001 ⇒ ˆ ˆ ˆ ˆ ˆ 4 ( 2 4 ) ( ) 24 i j k j k λ − − ⋅ + = ⇒ 1 λ = − So, ˆ ˆ ˆ 4( 2 4 ) u i j k = − − − \u0001 ⇒ 2 336 u = \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(b) Vector perpendicular to plane containing the vectors ˆ ˆ ˆ + + i j k and ˆ ˆ ˆ 2 3 + + i j k is parallel to vector ˆ ˆ ˆ ˆ ˆ ˆ 1 1 1 2 1 2 3 = = − + i j k i j k ∴ Required magnitude of projection = ˆ ˆ ˆ ˆ ˆ ˆ (2 3 ) ( 2 ) ˆ ˆ ˆ | 2 | + + ⋅ − + − + i j k i j k i j k | 2 6 1| 3 3 2 | 6 | 6 −+ = = = ∴ 2 2 1 2 2 sin 1 cos 1 3 3 θ θ   = − = − =     | | | | b c a + = \u0001 \u0001 \u0001 ⇒ 2 2 2 | | | | 2 | | b c b c a + = ⋅= \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 2 48 | | 48 144 c + + = \u0001 ⇒ | | 4 3 c = \u0001 ∴ 2 | | | | 12 2 c a − = \u0001 \u0001 Also, | | | | a b c + = \u0001 \u0001 \u0001 ⇒ 2 2 2 | | | | 2 | | a b a b c + = ⋅ = \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 72 a b ⋅ = − \u0001 \u0001 0 a b c + + = \u0001 \u0001 \u0001 ⇒ a b c a × = × \u0001 \u0001 \u0001 \u0001 ⇒ | | 2| | 48 3 a b c a a b × + × = × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 3 ( ) ( ) 2 a b c b c × × = + \u0001 \u0001 \u0001 \u0001 3 3 ( . ) ( . ) 2 2 − = + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a c b a b c b c 3 . 2 = \u0001 \u0001 a c 3 . 2 = − \u0001 \u0001a b 3 . 2 = − \u0001 \u0001a b 3 cos 2 θ = − 5 6 π θ = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 308",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(d) ˆ ˆ ˆ 3 2 1 1 1 i j k a b x × = − \u0001 \u0001 ˆ ˆ (2 ) ( 3) 5 x i x j k = + + − − 2 2 | | 4 4 9 6 25 a b x x x x × = + + + + − + \u0001 \u0001 2 2 2 38 x x = − + ⇒ 75 | | 2 a b × ≥ \u0001 \u0001 ⇒ 3 | | 5 2 a b × ≥ \u0001 \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(d) Given x2 + y2 = 4 equation of tangent ⇒ 3 4 x y + = . . . (i) Equation of normal 3 0 x y − = . . . (ii) Coordinate of 4 ,0 3 T       ∴ Area of triangle = 2 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(a) × = − \u0001 \u0001 \u0001 a c b ( ) × × = −× \u0001 \u0001 \u0001 \u0001 \u0001 a c a b a ⇒ ( ) × × = × \u0001 \u0001 \u0001 \u0001 \u0001 a c a a b ⇒ ( ) ( ) ⋅ − ⋅ = × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a a c c a a a b ⇒ 2 4 − = × \u0001 \u0001 \u0001 \u0001 c a a b New ˆ ˆ ˆ ˆ ˆ 1 1 0 2 1 1 1 × = − = −− + \u0001 \u0001 i j k a b i j k So, ˆ ˆ ˆ ˆ ˆ 2 4 4 2 − − −− + \u0001c i j i j k ˆ ˆ ˆ 3 5 2 = − + i j i 3 5 ˆ ˆ ˆ 2 2 = − + \u0001c i j k 2 9 25 38 19 | | 1 4 4 4 2 = + + = = \u0001c 2 19 | | 2 = \u0001c",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(d) Projection of b \u0001 on . | | | | a b a a a = = \u0001 \u0001 \u0001 \u0001 \u0001 1 2 2 b b + = . . .(i) and ( ) ( ). 0 a b c a b c + ⊥ ⇒ + = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 1 2 5 10 b b + = − . . .(ii) form (i) and (ii) b1= –3 and b2 = 5 then 2 2 1 2 | | 2 6 b b b = + + = \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(b) 2 1 ˆ ˆ ˆ ˆ ˆ ˆ 4 (3 ) 6 4 2 6 i j k i j k λ λ + − + = + + ⇒ 2 1 1 2 3 2 2 3 λ λ λ λ − = ⇒ + = . . . (i) Given . 0 ac = \u0001 \u0001 ⇒ 1 3 6 6 3( 1) 0 λ λ + + − = ⇒ 1 3 2 1 λ λ + = − . . . (ii) Now 1 2 3 ( , , ) λ λ λ 1 1 1 ( ,3 2 , 1, 2 ) λ λ λ = − −− Now check the options, option (b) is correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(c) Let point A is ˆ ˆ ˆ (1 3 ) ( 1) (2 5 ) r i j k µ µ µ = − + − + + \u0001 and point B is (3, 2, –6) then ˆ ˆ ˆ (2 3 ) (3 ) (4 5 ) AB i j k µ µ µ = + + − + − \u0002\u0002\u0002\u0001 which is parallel to the plane x – 4y + 3z =1 ∴ 2 3 12 4 12 15 0 µ µ µ + − + + − = 8 2 µ = 1 4 µ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(d) ( 2)a b α λ = − + \u0001 \u0001 \u0001 (4 2) 3 a b β λ = − + \u0001 \u0001 \u0001 2 1 2 2 3 λ λ − = − 3 6 4 2 λ λ − = − 4 λ = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(c) [ ] 0 = \u0001 \u0001 \u0001 a b c ⇒ 1 2 4 1 4 0 2 4 λ λ 2 = −1 ⇒  λ3 – 2λ2 – 9λ + 18 = 0 ⇒  λ2(λ – 2) – 9(λ – 2) = 0 ⇒  (λ – 3)( λ + 3)( λ – 2) = 0 ⇒   λ = 2, 3, –3 So,  λ = 2(as a\u0001is parallel to c\u0001 for 3 λ = ± ) T O ( 3,1) P _ 309 Vector Algebra Hence ˆ ˆ ˆ 1 2 4 2 4 3 i j k a c × = \u0001 \u0001 ˆ ˆ 10 5 i j = − +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(b) Angle bisector is x – y = 0 ⇒ | (1 ) | 3 2 2 β β − − = ⇒ | 2 1| 3 β − = ⇒ β  = 2 or –1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(c) 1 1 1 1 0 1 1 µ µ µ = µ(µ2 – 1) –1(µ – 1) + 1(1 – µ) = 0 µ3 – µ – µ + 1 + 1 µ = 0 µ3 – 3µ + 2 = 0 µ3 – 1 – 3(µ – 1) = 0 µ = 1, µ2 + µ – 2 = 0 µ = 1, µ = –2 sum of distinct solutions = –1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(a) ˆ ˆ ˆ ˆ ˆ ˆ ( 2 ) (2 3 ) OP OQ i j k i j k × = + + × + + \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ˆ ˆ ˆ 5 3 i j k − − ˆ ˆ ˆ ˆ ˆ ˆ ( 2 ) ( 2 ) PQ PR i j k i j k × = − + × − − + \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ˆ ˆ ˆ 5 3 i j k − − 2 5 5 9 19 cos 35 ( 25 9 1) θ + + = = + +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(b) 1 ( . ) ( . ). , 2 a c b a b c b − = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ∵ b \u0001 and c\u0001 are linearly independent ∴ 1 . 2 a b = \u0001 \u0001 and . 0 a b = \u0001 \u0001 (All given vectors are unit vectors) ∴ ^ 60º a c = \u0001 \u0001 & ^ 90º a b = \u0001 \u0001 ∴ |α – β| = 30°",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 39,
+    "stem": "(a) | 3 + = \u0001 \u0001a b ⇒ 2 2cos 3 α + = ⇒ 2 2 cos 3 α + = ⇒ . 3 π α =",
+    "options": [
+      " 2 2 2 2sin 4sin cos 2 θ θ θ + = 2 2 2 sin 2sin (1 sin ) 1 θ θ θ + − = 4 1 3sin 2sin 1 0 sin 1 2, θ θ θ 2 − −= ⇒ = ± ± ⇒ , . 4 2 π π θ =",
+      "Let 3 π = x y ⇒ 1 , 2 6 π π   ≤ ≤∀∈    y x Now f(y) [2 ]cos[ ] = y y Critical points are y 1 3 , 1, , 3 2 2 y y y y = = = = ⇒ points of discontinuity , , , . 6 3 2 π π π π      ",
+      " 1 1 0 1 2 0 1 1 π π = ⇒volume of parallelepiped π =",
+      "|"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(a) (A) a b 1 3 2 − = + = \u0001 \u0001 | a | b,| b| 2 = = \u0001 \u0001 2 1 cos 2 2 2 θ = = × 2 , 3 3 π π θ = but its 2 3 π as its opposite to side of maximum length.",
+    "options": [
+      "Option A",
+      " b 2 2 a (f(x) 3x) dx a b − = − ∫ b 2 2 2 2 2 2 a 3 a b f(x)dx (b a ) a b 2 2 − + = − + − = ∫ ⇒ f (x) x. =",
+      " 5/ 6 2 7/ 6 ln (sec x tan x) ln 3 π π π π   +       5 5 7 7 ln sec tan ln sec tan ln 3 6 6 6 6 π π π π π π   = + − + =    ",
+      "Let 1 1 u z 1 1 z u = ⇒ = − − 1 | z | 1 1 1 2 = ⇒ − = ⇒ | u 1| | u | − = ∴  locus of u is perpendicular bisector of line segment joining 0 and 1 ⇒  maximum arg u approaches 2 π but will not attain."
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 43,
+    "stem": "(a) (A) 2 1 [ 1) '' '] 9 x y xy y − + =",
+    "options": [
+      "Option A",
+      " 2 4 n π π =",
+      " [ ] 2 = \u0001 \u0001a b c 2 [2 3 ] 6[ ] 6 4 24 × × + = = × = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c c a a b c 2 5  =   \u0001 \u0001 \u0001 a b c 6[ ] 12[ ] 60 + + + = = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c c a a b c 1 | | 20 2 × = \u0001 \u0001a b 1 | (2 3 ) ( ) | 2 + × − \u0001 \u0001 \u0001 \u0001 a b a b 1 | 2( ) 3( ) | 2 − × − × \u0001 \u0001 \u0001 \u0001 a b a b 5 40 100 2 × = | | 30 × = \u0001 \u0001a b ⇒| ( ) | | | 30 + × = × = \u0001 \u0001 \u0001 \u0001 \u0001 a b a b a 1 cos(3cos ) y x − = 1 2 3sin(3cos ) 1 x y x − ′ = − 2 1 1 3sin(3cos ) x y x − ′ − = ⇒ 2 1 2 2 3 1 3cos(3cos ). 1 1 x y x y x x x − − − ′ ′′ + − = − − ⇒ 2 (1 ) 9 xy x y y ′ ′′ − + − = − ⇒ 2 1 2 ( ) sin k k a a r n π + × = 2 1 2 cos k k a a r n π + ⋅ = ⇒ 1 1 1 1 1 1 n n k k k k k k a a a a − − + + = = × = ⋅ ∑ ∑ \u0001 \u0001 ⇒ 2 2 2 2 ( 1)sin ( 1)cos r n r n n n π π − = − 2 tan 1 n π = ⇒ ⇒",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 8,
+    "stem": "n = 2 21 1, 2 6 3 h h + = = ± _ 311 Vector Algebra Tangent at (2, 1) is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      ""
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 44,
+    "stem": "(a) (A) . . .(i) Given . . .(ii) From equation (i) and (ii), we get So,",
+    "options": [
+      "Option A",
+      " For continuity . . .(i) For differentiability",
+      " 3 , n k ≠ (n should not be a multiple of 3)",
+      "Let Given ;"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(c)  Since || \u0002\u0002\u0002\u0001 PQ \u0002\u0002\u0001 TR ∴  TR \u0002\u0002\u0001 is resultant of \u0002\u0002\u0001 SR and \u0002\u0002\u0002\u0001 ST vector. 2 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 3,
+    "stem": "6 3 x y x y + = + = 1 1 1 2 1 1 2 tan tan tan 2 1 4 1 x x x − − −  + =   + +   1 1 2 2 3 1 2 tan tan 4 3 x x x x − − +  =   +   ⇒ 2 3 7 6 0 x x − − = 2 ,3. 3 x = − 3 3 2 α β + = 3 2 3 α β + = ± 2 3 α β = + α 2 1 or = − |α| 1 or 2 = 2 2 1 3 2, ( ) 1 , x ax f x x bx a < − − =  ≥ +  2 3 2 a b a − − = + 2 3 2 a a b + + = − 6a b − = 6a b = − 2 3 2 0 a a − + = 1,2 a = 2 4 3 2 4 3 (3 3 2 ) (2 3 3 ) n n ω ω ω ω + + − + + + − + 3 2 4 3 ( 3 2 3 ) 0 n ω ω + + −+ + = 2 4 3 2 4 3 (3 3 2 ) ( (2 3 3 )) n n ω ω ω ω ω + + − + + + − + 2 2 4 3 ( ( 3 2 3) 0 n ω ω ω + + − + + = ⇒ 2 4 3 4 8 (3 3 2 ) (1 ) 0 n n n ω ω ω ω + − + + + + = ⇒ 5 a d = − 5 q d = + 5 2 b d = + | | | 2 | q a d − = 2 4 ab a b = + 2 ab a b = + (5 )(5 2 ) 2(5 5 2 ) 2(10 ) d d d d d − + = − + + = + 2 25 10 5 2 20 2 d d d d + − − = + 2 2 3 5 0 d d − − = 5 1, 2 d d = − = | 2 | 2,5 d = 2 2 2 (given) 2 c a b − = 2 2 2 2 2 4 4 (sin sin ) sin ( ) 2 R R X Y Z − = ⇒ 2 2(sin( ) sin( ) sin ( ) X Y X Y Z − ⋅ + = ⇒ 2 2 sin( ) sin( ) sin ( ) X Y Z Z ⋅ − ⋅ = ⇒ sin( ) 1 sin 2 X Y Z λ − = = ⇒ cos 0 for n odd integer. 2 nπ  = =     1 cos 2 2cos 2 2sin sin X Y X Y + − = 2 2 sin sin sin 2sin 0 X X Y Y + − = (sin sin )(sin 2sin ) 0 X Y X Y − + = ⇒ sin sin X Y = ⇒ sin",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 1,
+    "stem": "sin X a Y b = = 3 and 2 OX OY = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 2 2 1 1 9 2 2 2 β β     − + − =         2, 1 β = − ⇒ | | 2,1 β = α 0 = 2 0 Area 6 2 x dx = −∫ 8 2 6 3 = − α 1 = 1 2 0 1 Area (3 2 ) ( 1 2 ) x x dx x x dx = − − + + − ∫ ∫ 1 2 2 2 3/ 2 3/ 2 0 1 4 4 3 2 3 2 3 x x x x x x = − − + + − 8 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 2,
+    "stem": "3 = − (1, 3) Y 0 y x − = 1 x y + = ( ,1 ) Z β β − ( 3,1) X _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 312 ⇒ ( ) 0 × + ≠ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 PQ RS ST But for statement 2, we have 0 × ≠ \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0001 PQ RS which is not possible as || \u0002\u0002\u0002\u0001 PQ \u0002\u0002\u0002\u0001 RS Hence statement 1 is true and statement 2 is false. For 47 to 48 (c, a) OR RP OX OY QR RP × × = \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 \u0002\u0002\u0002\u0001 ( ) sin R = π− ( ) ( ) ( ) ( ) sin P Q cos P Q cos Q R cos R P = + = + + + + + cos R cos P cos Q = − − − P Q R 1 1 4sin sin sin 1 4 2 2 2 8     = − + ≥− + ⋅         minimum value 3 . 2 = − For 49 to 50 (a,b) 1 5 , 2 ± α β = 2 1 0 α −α −= ⇒ ( ) 2 4 1 α = α + ⇒ 4 2 2 1 α = α + α + ⇒ 4 1 2 1 α = α + + α + ⇒ 4 1 2 1 α = α + + α + 4 3 2 ⇒ α = α+ ...(i) ∴ 4 a 24 = ⇒ 4 4 p q 28 α + β = ⇒ ( ) ( ) p 3 2 q 3 2 28 α+ + β+ = ⇒ 1 5 1 5 p 3 2 q 3 2 28 2 2         + − + + + =                         ⇒ ( ) ( ) p 7 3 5 q 7 3 5 56 + + − = ⇒ ( ) ( ) 7 p q p q 3 5 56 + + − = ⇒ p q 8, p q 0 + = − = ⇒ p q 4 = = ⇒  p 2q 12 + = 12 12 12 a p q = α + β 10 2 10 2 p q = α α + β ⋅β ( ) ( ) 10 10 p 1 q 1 = α α+ + β β+ ( ) ( ) 11 11 10 10 p q p q = α + β + α + β 11 10 a a . = + For 51 to 52 (b, c)",
+    "options": [
+      " 2 2 2 3 3 4 4 12 r MN = = + + + = ⇒ r = 6 centre C of circle C3 lies on 4 3 y x = Let 4 , 3 C h h       12 3 3 2 OC MC OM = − = − = ∴ 2 2 16 3 9 h h + = ⇒ 5 3 3 h = ⇒ 9 5 h = 4 12 3 5 k h = = ∴ 18 12 2 6 5 5 h k + = + =",
+      "Equation of line ZW 1 2 C C = ⇒ 3 4 9 x y + = Distance of ZW from (0, 0) 2 2 | 9 | 9 5 3 4 − = + Length of 2 2 9 24 2 3 5 5 XY   = − =     Distance of ZW from C 2 2 3 9 12 4 9 6 5 5 5 3 4 × + × − = + T S T S R U N W Y M O Z X C (3,4) P _ 313 Vector Algebra Length of 2 2 2 6 24 6 2 6 5 5 ZW = − = ∴ lengthof 6 lengthof ZW XY =",
+      "Area of 1 1 72 6 . 2 2 5 MZN NM ZW   ∆ = =     Area of",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 1,
+    "stem": "( ) 2 ZMW ZW OM OP ∆ = + 8 1 24 6 9 28 6 . 3 2 5 5 25   = + =     ∴ Area of 5 Area of 4 MZN ZMW ∆ = ∆",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Slop of tangent of 1 C at 1 3 4/3 4 M − = = − ∴ Equation of tangent 2 3 1 y mx m = − + 3 9 3 1 4 16 y x = − − + 3 15 4 4 x y − = − ⇒ 4 5 3 y x = − − . . . (i) Tangent to 2 4(2 ) x y α = is 2 ' ' x m y m α = + . .  .(ii) Compare (i) and (ii) 4 ' 3 m = − and 2 5 ' m α = − ⇒ 10 3 α ="
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 53,
+    "stem": "(5) 2 2 (2 ) 2 | | 2( ) ( ) | | E a b b a a b b a b a a b   = + ⋅ − ⋅ − ⋅ +   \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 2 2 0 70 a b − ⋅ = = \u0001 \u0001 | | 1 a = \u0001 | | 1 b = 0 a b ⋅ = \u0001 \u0001 2 2 (2 ) [2| | | | ] E a b b a a b = + ⋅ + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 2 2 2 2 2 2 4| | | | | | ( ) 2| | ( ) | | | | a b a a b b b a a b = + ⋅ + ⋅ + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 2 2 5| | | | 5 a b = = \u0001 \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 54,
+    "stem": "(9) r b c b × = × \u0001 \u0001 \u0001 \u0001 taking cross with a a (r b) a (c b) × × = × × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 (a b)r (a r)b a (c b) ⋅ − ⋅ = × × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ ˆ ˆ ˆ r 3i 6j 3k = − + + \u0001 r b 3 6",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 9,
+    "stem": "⋅ = + = \u0001 \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 55,
+    "stem": "(3) 2 2 2 9 a b b c c a − + − + − = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 2 2 2 2 2 2 9 a b b c c a − ⋅+ − ⋅+ − ⋅ = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 3 2 a b b c c a − = ⋅ + ⋅+ ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 . . .(i) Now, 2 | | 0 a b c + + ≥ \u0001 \u0001 \u0001 ⇒ 1 1 1 2 0 a b b c c a + + + ⋅+ ⋅+ ⋅≥ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ⇒ 3 2 a b b c c a ⋅ + ⋅+ ⋅ ≥− \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 . . .(ii) Equation (i) and (ii) are simultaneously true If 1 2 a b b c c a ⋅ = ⋅ = ⋅ ≥− \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 Now, 2 2 5 5 a b c + + \u0001 \u0001 \u0001 4 25 25 20 50 20( ) a b b c a c = + + + ⋅+ ⋅+ ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 54 10 25 10 9 = − − − = ⇒  2 5 5 3 a b c + + = \u0001 \u0001 \u0001",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 56,
+    "stem": "(5) Let be vectors rest of the vectors are and let us find the number of ways of selecting co-planar vectors. Observe that out of any 3 coplanar vectors two will be collinear (anti parallel). Number of ways of selecting the anti parallel pair = 4 Number of ways of selecting the third vector = 6 Total = 24 Number of non co-planar selections Alternate Solution: Required value",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 57,
+    "stem": "(4) And . . .(i) . . .(ii) . . .(iii) (1,1,1), ( 1,1,1), (1, 1,1), ( 1, 1, 1) − − − −− , , , a b c d \u0001 \u0001 \u0001 \u0001 , , , a b c d − − − − \u0001 \u0001 \u0001 \u0001 8 5 3 24 32 2 , 5 C p = − = = = 8 6 4 3! × × = ∴ 5 p = | | | | | | 1 = = = \u0001 \u0001 \u0001 a b c × + × = + + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b b c pa qb rc ( ) ( ) ( ) ⋅ × = + ⋅ + ⋅ \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 a b c p q a b r a c 1 [ ] 2 = \u0001 \u0001 \u0001 a b c [ ] 2 2 + + = \u0001 \u0001 \u0001 q r p a b c 0 2 2 + + = p r q [ ] 2 2 + + = \u0001 \u0001 \u0001 p q r a b c ⇒ = = − p r q 2 2 2 2 2 4 + + = p q r q _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 314 \u0002  \u0002  \u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 58,
+    "stem": "(9) ⇒ ⇒ On solving we get ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 59,
+    "stem": "(3) ( ) = + + × \u0001 \u0001 \u0001 \u0001 \u0001 c xa yb a b . . . (i) . . ( ). = + + × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 c a x yb a a b a ⇒ 2 cosα = x Also, 2 . . | | ( ). = + + × \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 c b xa b y b a b b ⇒ 2cosα = y Squaring (i); 2 2 2 2 | | | | = + + × \u0001 \u0001 \u0001 c x y a b 2 8cos 3 α =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  },
+  {
+    "questionNumber": 60,
+    "stem": "(0.50) 1 1 1 1 ˆ ˆ ˆ ˆ ˆ ˆ ( ) 2 2 2 2 = = − − = − − \u0002\u0002\u0001 \u0001p SP ii j k i j k 1 ˆ ˆ ˆ ( ) 2 = = −+ − \u0002\u0002\u0002\u0001 \u0001q SQ i j k 1 ˆ ˆ ˆ ( ) 2 = = −− + \u0002\u0002\u0001 \u0001r SR i j k 1 ˆ ˆ ˆ ( ) 2 = = + + \u0002\u0002\u0002\u0001 \u0001t ST i j k ˆ ˆ ˆ 1 1 ˆ ˆ 1 1 1 ( ) 4 2 1 1 1 × = − −= + − − \u0001 \u0001 i j k p q i j ˆ ˆ ˆ ˆ ˆ ˆ 1 1 1 ˆ ˆ 1 1 1 1 1 1 ( ) 4 4 2 1 1 1 0 0 2 × = − − = − − = −+ \u0001 \u0001 i j k i j k r t i j ( ) 1 1 1 ˆ ˆ ˆ ˆ ˆ ˆ ( ) ( ) ( ) ( ) 2 4 4 2 × × × = + × −+ = × = \u0001 \u0001 \u0001 \u0001 p q r t i j i j k k 1 ( ) ( ) 0.50 2 × × × = = \u0001 \u0001 \u0001 \u0001 p q r t 4 3 5 = + + \u0001 \u0001 \u0001 \u0001 s p q r ( ) ( ) ( ) = − + + + − + + − − + \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 s x p q r y p q r z p q r ( ) ( ) ( ) = −+ − + − − + + + \u0001 \u0001 \u0001 \u0001 s x y z p x y z q x y z r 4 −+ − = x y z 3 − − = x y z ⇒ 5 + + = x y z 9 7 4, , 2 2 = = = − x y z 2 9 + + = x y z 1 1 1 , , 2 2 2       Q(0,1,0) X Y P(1,0,0) R(0,0,1) Z S T (1,1,1) O _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 295
+  }
+]

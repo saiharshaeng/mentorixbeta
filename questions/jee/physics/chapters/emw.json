@@ -1,0 +1,1178 @@
+[
+  {
+    "id": "JMP_PHY_EMW_2025_Q001",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0123",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": 2025,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "unicode": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "plainText": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "e3836d8ffd2d8f25"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q002",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0193",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "unicode": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "plainText": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "458b34d007ac9df6"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q003",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0262",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "unicode": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "plainText": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "85b7ed925eaaef60"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2025_Q004",
+    "raw": {
+      "sourceFile": "jee_main_2025_fixed.json",
+      "originalId": "jm_math_2025_22JanS2_048",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "600",
+        "1000",
+        "1200",
+        "1600"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": 2025,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "600",
+        "1000",
+        "1200",
+        "1600"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "unicode": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "plainText": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "e3836d8ffd2d8f25"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q005",
+    "raw": {
+      "sourceFile": "jee_main_2026_fixed.json",
+      "originalId": "jm_phy_2026_02AprS1_043",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "200",
+        "150",
+        "400",
+        "300"
+      ],
+      "solution": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "200",
+        "150",
+        "400",
+        "300"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "unicode": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "plainText": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "458b34d007ac9df6"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q006",
+    "raw": {
+      "sourceFile": "jee_main_2026_fixed.json",
+      "originalId": "jm_phy_2026_02AprS2_037",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "$60\\hat{k}$",
+        "$-60\\hat{k}$",
+        "$30\\hat{k}$",
+        "$-600\\hat{k}$"
+      ],
+      "solution": "The direction of propagation of an electromagnetic wave is given by $\\vec{E} \\times \\vec{B}$.\nGiven wave propagates in $+\\hat{i}$ direction, and $\\vec{B} = B\\hat{j}$. Thus, $\\hat{E} \\times \\hat{j} = \\hat{i}$. Since $(-\\hat{k}) \\times \\hat{j} = \\hat{i}$, the direction of $\\vec{E}$ is $-\\hat{k}$.\nThe magnitude of electric field is $E = cB = 3 \\times 10^8 \\times 2 \\times 10^{-7} = 60\\text{ V/m}$.\nTherefore, $\\vec{E} = -60\\hat{k}\\text{ V/m}$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "$60\\hat{k}$",
+        "$-60\\hat{k}$",
+        "$30\\hat{k}$",
+        "$-600\\hat{k}$"
+      ],
+      "correctAnswer": 1,
+      "formulas": {
+        "latex": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "unicode": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "plainText": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "The direction of propagation of an electromagnetic wave is given by $\\vec{E} \\times \\vec{B}$.\nGiven wave propagates in $+\\hat{i}$ direction, and $\\vec{B} = B\\hat{j}$. Thus, $\\hat{E} \\times \\hat{j} = \\hat{i}$. Since $(-\\hat{k}) \\times \\hat{j} = \\hat{i}$, the direction of $\\vec{E}$ is $-\\hat{k}$.\nThe magnitude of electric field is $E = cB = 3 \\times 10^8 \\times 2 \\times 10^{-7} = 60\\text{ V/m}$.\nTherefore, $\\vec{E} = -60\\hat{k}\\text{ V/m}$.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "85b7ed925eaaef60"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2025_Q007",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0289",
+      "stem": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+        "unicode": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+        "plainText": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13"
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "hard",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "59c4104b0fb97b78"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2025_Q008",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0433",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "unicode": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "plainText": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "e3836d8ffd2d8f25"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q009",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0503",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "unicode": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "plainText": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "458b34d007ac9df6"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q010",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0572",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "The direction of propagation of an electromagnetic wave is given by $\\vec{E} \\times \\vec{B}$.\nGiven wave propagates in $+\\hat{i}$ direction, and $\\vec{B} = B\\hat{j}$. Thus, $\\hat{E} \\times \\hat{j} = \\hat{i}$. Since $(-\\hat{k}) \\times \\hat{j} = \\hat{i}$, the direction of $\\vec{E}$ is $-\\hat{k}$.\nThe magnitude of electric field is $E = cB = 3 \\times 10^8 \\times 2 \\times 10^{-7} = 60\\text{ V/m}$.\nTherefore, $\\vec{E} = -60\\hat{k}\\text{ V/m}$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 1,
+      "formulas": {
+        "latex": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "unicode": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "plainText": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "The direction of propagation of an electromagnetic wave is given by $\\vec{E} \\times \\vec{B}$.\nGiven wave propagates in $+\\hat{i}$ direction, and $\\vec{B} = B\\hat{j}$. Thus, $\\hat{E} \\times \\hat{j} = \\hat{i}$. Since $(-\\hat{k}) \\times \\hat{j} = \\hat{i}$, the direction of $\\vec{E}$ is $-\\hat{k}$.\nThe magnitude of electric field is $E = cB = 3 \\times 10^8 \\times 2 \\times 10^{-7} = 60\\text{ V/m}$.\nTherefore, $\\vec{E} = -60\\hat{k}\\text{ V/m}$.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "85b7ed925eaaef60"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2025_Q011",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0289",
+      "stem": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+        "unicode": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13",
+        "plainText": "A cube of unit volume contains 35×10 7 photons of frequency 10 15 Hz. If the energy of all the photons is viewed as the average energy being contained in the electromagnetic waves within the same volume, then the amplitude of the magnetic field is 훼×10 −9 T. Taking permeability of free space 휇 0 =4휋×10 −7 Tm/A, Planck’s constant ℎ=6×10 −34 Js and 휋= 22 7 , the value of 훼 is____ SECTION 3 (Maximum Marks: 24) • This section contains SIX (06) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. • If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct numerical value is entered in the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2025 Paper 1 8/13"
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Electromagnetic Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "hard",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "59c4104b0fb97b78"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2025_Q012",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0358",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "unicode": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA.",
+        "plainText": "A parallel plate capacitor of area A = 16 cm² and separation between the plates 10 cm, is charged by a DC current. Consider a hypothetical plane surface of area A' = 3.2 cm² inside the capacitor and parallel to the plates. At an instant, the current through the circuit is 6A. At the same instant the displacement current through A' is _____ mA."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Displacement Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "e3836d8ffd2d8f25"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q013",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0378",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "unicode": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+        "plainText": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left(t - \\frac{x}{c}\\right)$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "458b34d007ac9df6"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_EMW_2026_Q014",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0397",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "The direction of propagation of an electromagnetic wave is given by $\\vec{E} \\times \\vec{B}$.\nGiven wave propagates in $+\\hat{i}$ direction, and $\\vec{B} = B\\hat{j}$. Thus, $\\hat{E} \\times \\hat{j} = \\hat{i}$. Since $(-\\hat{k}) \\times \\hat{j} = \\hat{i}$, the direction of $\\vec{E}$ is $-\\hat{k}$.\nThe magnitude of electric field is $E = cB = 3 \\times 10^8 \\times 2 \\times 10^{-7} = 60\\text{ V/m}$.\nTherefore, $\\vec{E} = -60\\hat{k}\\text{ V/m}$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "chapterCode": "EMW",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 1,
+      "formulas": {
+        "latex": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "unicode": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m.",
+        "plainText": "An electromagnetic wave travels in free space along the $x$-direction. At a particular point in space and time, $\\vec{B} = 2 \\times 10^{-7}\\hat{j}\\text{ T}$ is associated with this wave. The value of corresponding electric field $\\vec{E}$ at this point is _______ V/m."
+      },
+      "explanations": {
+        "basic": "Core principle of Electromagnetic Waves.",
+        "intermediate": "The direction of propagation of an electromagnetic wave is given by $\\vec{E} \\times \\vec{B}$.\nGiven wave propagates in $+\\hat{i}$ direction, and $\\vec{B} = B\\hat{j}$. Thus, $\\hat{E} \\times \\hat{j} = \\hat{i}$. Since $(-\\hat{k}) \\times \\hat{j} = \\hat{i}$, the direction of $\\vec{E}$ is $-\\hat{k}$.\nThe magnitude of electric field is $E = cB = 3 \\times 10^8 \\times 2 \\times 10^{-7} = 60\\text{ V/m}$.\nTherefore, $\\vec{E} = -60\\hat{k}\\text{ V/m}$.",
+        "advanced": "Detailed analytical derivation for Electromagnetic Waves."
+      },
+      "tags": [
+        "Electromagnetic Waves",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Electromagnetic Waves"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Electromagnetic Waves exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Electromagnetic Waves",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Electromagnetic Waves problem solving"
+      },
+      "hash": "85b7ed925eaaef60"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  }
+]

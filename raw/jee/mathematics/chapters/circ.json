@@ -1,0 +1,1465 @@
+[
+  {
+    "questionNumber": 2,
+    "stem": "a = \u0001 The equation of a circle whose centre is the origin and radius is a, is \u0001 The general equation of a circle is 2 2 2 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x y gx fy c + + + + = whose centre ( , ) g f = − and radius 2 2 g f c = + − \u0001 The equation of a circle whose one diameter is the line segment joining the points and is Concurrency: Suppose that and are the end-points of a diameter, the equation of circle can be written a \u0001 Let P(x1, x1) be a point in the plane, and S(x, y) = 0 represent a circle. The position of P with respect to the circle is governed by the following conditions: \u0001 P lie inside the circle \u0001 P lies on the circle \u0001 P lies outside the circle \u0001 We note that any point P lying on the circle can be represented in the polar form Condition for a Circle: The equation 2 2 2 2 ≡ + + + + S x y gx fy 0 = c represents \u0001 a real circle if \u0001 a point circle (i.e., a circle of zero radius) if \u0001 an imaginary circle if The general equation of the second degree in x and y, i.e., represents a circle if Location of a Point in Relation to a Circle \u0001 If and the circle is then (here O is the origin) \u0001 P is inside the circle if i.e., i.e., \u0001 P is on the circle if i.e., i.e., \u0001 P is outside the circle if i.e., i.e., \u0001 If P = (r1,y1) and the circle is \u0001 then \u0001 P is inside the circle if \u0001 P is on the circle if \u0001 P is outside the circle if Location of a Circle in Relation to a Circle Let be two circles. Let D be the discriminant for the quadratic equation in x (or y) obtained by eliminating y (or x) from the two equations of the circle. Then \u0001 they are two intersecting circles if D > 0 \u0001 they are nonintersecting (no common points) if D < 0 \u0001 they touch each other if D = 0 \u0001 If i.e., the circles are nonintersecting then (i) 1 0 S = is outside 2 0 S = if or equivalently, where A, B are centres and r1, r2 are radii respectively. (ii) in inside if equivalently, . If i.e., the circles touch then \u0001 they touch externally if AB = r1 + r2 \u0001 they touch internally if AB = |r1 – r2| A Line in Relation to a Circle: Let be a line and be a circle. \u0001 The points of intersection is obtained by solving L = 0, S = 0 \u0001 The line cuts the circle at two distinct real points if D > 0 where D is the discriminant of the quadratic equation in x (or y) obtained by eliminating y (or x) from L = 0, S = 0; equivalently, the length of the perpendicular from the centre to the line is less than the radius. 2 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 2,
+    "stem": "x y a + = 1 1 ( , ) x y 2 2 ( , ) x y 1 2 1 2 ( )( ) ( )( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x x x x y y y y − − + − − = 1 1 ( , ) P x y 2 2 ( , ) Q x y 1 2 1 2 ( )( ) ( )( ) 0 x x x x x y y y − − + − − = ⇒ 1 1 ( , ) 0 S x y < ⇒ 1 1 ( , ) 0 S x y = ⇒ 1 1 ( , ) 0 S x y > 2 2 2 x y a + = ( cos , sin ). P a a θ θ ≡ 2 2 g f c + ≥ 2 2 g f c + = 2 2 g f c + < 2 2 2 2 x hxy by + + + 2 2 0 gx fy c + + = , 0 a b h = = 1 1 ( , ) P x y = 2 2 2 0 S x y a ≡ + − = , PO a < 2 2 2 1 1 x y a + − 1 1 ( , ) 0 S x y < , PO a = 2 2 2 1 1 0, x y a + − = 1 1 ( , ) 0 S x y = , PO a > 2 2 2 1 1 0, x y a + − > 1 1 ( , ) 0 S x y > 2 2 2 2 0 S x y gx fy c ≡ + + + + = 1 1 ( , ) 0 S x y < 1 1 ( , ) 0 S x y = 1 1 ( , ) 0 S x y > 2 2 1 1 1 1 2 2 0 S x y g x f y c ≡ + + + + = 2 2 2 1 1 1 2 2 0 S x y g x f y c ≡ + + + + = 0, D < 2 1 1 ( , ) 0 S g f − − > 1 2 2 ( , ) 0; S g f − − > 1 2 AB r r > + 1 0 S = 2 0 S = 2 1 1 ( , ) 0; S g f − − < 2 1 AB r r < − 0, D = 0 L ax by c ≡ + + = 2 2 2 S x y gx ≡ + + 2 0 fy c + + = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 252 \u0001 The line touches the circle at a point if D < 0; equivalently, the length of the perpendicular from the centre to the line is equal to the radius. \u0001 The line does not cut or touch the circle if D < 0; equivalently, the length of the perpendicular from the centre to the line is greater than the radius. Tangents and Tangency \u0001 The equation of the tangent to a curve y = f(x) at the point is . \u0001 The equation of the tangent to the circle at the point is \u0001 The equation of the tangent to the circle at the point is xx1 + yy1 + Note In writing the equation of the tangent at we replace x.x (i.e., x2) by (i.e., ) by x + x (i.e., 2x) by (i.e., ) by in the equation of the circle. The same is true for other second degree curves together with the replacement of by \u0001 The line touches the circle if . \u0001 A line L = 0 touches the circle if p = r where p = length of the perpendicular from the centre of the circle to the line and r = radius of the circle. \u0001 The equation of the pair of tangents to the circle S = 0 from the point (x1, y1) is S.S1 = T 2 where value of S at (x1, y1) and T = 0 is the equation of tangent at (x1, y1) when the point is on the circle. Normal \u0001 The normal to a circle S = 0 at a point (x1, y1) is the line joining the point and the centre of the circle. \u0001 The equation of the normal to a curve y = f(x) at the point (x1, y1) is \u0001 The equation of the normal to the circle x2 + y2 = a the point is Any Point on a Circle, any Tangent to a Circle Any point on the circle 2 2 2 x y a + = can be taken as 1 1 ( , ) x y where 2 2 2 1 1 , x y a + = or \u0001 Any tangent to the circle can be taken as Here ± indicates that we can take two tangents to the circle in any direction. \u0001 Any tangent to the circle is given by Length of Tangent, Chord of Contact, Polar and Pole \u0001 The length of tangent from to the circle is \u0001 The chord of contact of the tangents from the point to the circle is is \u0001 The polar of the point with respect to the circle is is \u0001 The pole of the line with respect to the circle is the point whose polar with respect to the circle is Chord with Given Middle Point: The chord of the circle whose middle point is has the equation . Orthogonal Circles: Let and be two circles whose centres are A, B and radii respectively. The two circles cut orthogonally if 2 2 2 1 2 ; r r AB + = equivalently, 1 2 1 2 1 2 2 2 . g g f f c c + = + Equation of Line/Circles Through Intersection of a Line/Circle and a Circle \u0001 The equation of circles passing through the intersection of the line L = 0 and the circle is where λ is an arbitrary constant whose value is obtained using a given additional geometrical condition. 1 1 ( , ) x y 1 1 1 1 . ( ) x y dy y y x x dx   − = ⋅ −     2 2 2 x y a + = 1 1 ( , ) x y 2 1 1 . xx yy a + = 2 2 2 2 0 x y gx fy c + + + + = 1 1 ( , ) x y 1 1 ( ) ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "g x x f y y c + + + + + = 1 1 ( , ) x y 1, . xx y y 2y 1, yy 1, x x y y + + 2y 1 y y + 2xy 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "x y xy + y mx c = + 2 2 2 x y a + = 2 1 c a m = ± + 1S ≡ 1 1 1 1 , 1 ·( ) x y y y x x dy dx − − = −       1 1 ( , ) x y 1 1 x y x y = ( cos , sin ) a a θ θ 2 2 2 x y a + = 2 1 . y mx a m = ± + 2 2 2 ( ) ( ) x h y k a − + − = ( ) y k m x h −= − 2 1 . a m ± + 1 1 ( , ) x y 2 2 2 2 0 S x y gx fy c ≡ + + + + = 2 2 1 1 1 1 1 2 2 S x y gx fy c ≡ + + + + 1 1 ( , ) x y 2 2 2 x y a + = 2 1 1 xx yy a + = 2 2 2 2 0 x y gx fy c + + + + = 1 1 1 1 ( ) ( ) 0 xx yy g x x f y y c + + + + + + = 1 1 ( , ) x y 2 2 2 x y a + = 2 1 1 xx yy a + = 2 2 2 2 0 x y gx fy c + + + + = 1 1 1 1 ( ) ( ) 0 xx yy g x x f y y c + + + + + + = 0 L = 0 S = ( , ) α β",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "L = 0 S = 1 1 ( , ) x y 1S T = 2 2 1 1 1 1 2 2 0 S x y g x f y c ≡ + + + + = 2 2 2 S x y ≡ + + 2 2 2 2 2 0 g x f y c + + = 1 2 , r r 0 S = 0 S L λ + = _ 253 Circles and Systems of Circles \u0001 The equation of circles passing through the intersection of the two circles and is where λ is an arbitrary constant whose value is obtained using a given additional geometrical condition. \u0001 The equation of the common chord of the circles and is given by when the circles are intersecting. Radical Axis, Radical Centre and Coaxal Circles The locus of the point, from which the lengths of tangents to the circle and are equal, is a straight line. It is called the radical axis of the two circles and its equation is Note The equation of the common chord of two circles and their radical axis is the same when the circles are intersecting. \u0001 The radical centre of three circles and is the point of intersection of the radical axis of the circles, taken in pairs. So, the radical centre is the point of intersection of the radical axes and \u0001 Three or more circles are called coaxial (or coaxial) circles if each pair has the same radical axis. \u0001 The form of equation of a family of coaxial circles is where λ is a parameter (c being fixed) and (i.e., y-axis) is the common radical axis for each pair and the line joining centers of any two circles of the system is taken as the x-axis. \u0001 The limiting point of a coaxial system is the circle belonging to the family whose radius is 0. So the limiting points of the coaxial system are Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "Let ABCD be a quadrilateral with area 18, with side AB parallel to the side CD and AB = 2CD. Let AD be perpendicular to AB and CD. If a circle is drawn inside the quadrilateral ABCD touching all the sides, then its radius is",
+    "options": [
+      "3",
+      "2",
+      "",
+      "1"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 2,
+    "stem": "Let a and b be non-zero real numbers. Then, the equation represents and are of the same sign and is of sign opposite to that of a",
+    "options": [
+      "four straight lines, when and are of the same sign",
+      "two straight lines and a circle, when and is of sign opposite to that of a",
+      "two straight lines and a hyperbola, when and are of the same sign and is of sign opposite to that of a",
+      "a circle and an ellipse, when"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Tangents drawn from the point to the circle touch the circle at the points A and B. The equation of the circumcircle of the triangle PAB is 1 0 S = 2 0 S = 1 2 0,( 1) S S λ λ + = ≠− 1 0 S = 2 0 S = 1 2 0 S S − = 1 0 S = 2 0 S = 1 2",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "S S − = 1 2 0, 0 S S = = 3 0 S = 1 2 0 S S − = 2 3 0 S S − = 2 2 2 0, x y x c λ + + + = 0 x = 2 2 2 0 x y x c λ + + + = ( ,0) c ± 3/ 2 2 2 ( ) + + ax by c 2 2 ( 5 6 ) 0 − + = x xy y 0 c = ,a b , a b = c a b c a b c (1, 8) P 2 2 6 4 11 0 + − − − = x y x y 2 2 4 6 19 0 + + − + = x y x y 2 2 4 10 19 0 + − − + = x y x y 2 2 2 6 29 0 + − + − = x y x y 2 2 6 4 19 0 + − − + = x y x y S1 = 0 S2 = 0 Figure 20.4 Figure 20.3 S1 = 0 S2 = 0 S1 + S2 = 0 S1 = 0 S2 = 0 S1 + λS2 = Figure 20.2 S = 0 S + λL = 0 L = 0 Figure 20.1 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 254",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 4,
+    "stem": "The circle passing through the point (–1, 0) and touching the y-axis at (0, 2) also passes through the point",
+    "options": [
+      "",
+      "",
+      "",
+      "(–4, 0)"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 5,
+    "stem": "The locus of the mid-point of the chord of contact of tangents drawn from points lying on the straight line 4 5 20 x y − = to the circle is.",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 6,
+    "stem": "Circle(s) touching x-axis at a distance 3 from the origin and having an intercept of length on y-axis is (are)",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 7,
+    "stem": "The circle passing through and touching the axis of at (3, 0) also passes through the point",
+    "options": [
+      "(–5, 2)",
+      "(2, –5)",
+      "(5, –2)",
+      "(–2, 5)"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 8,
+    "stem": "The equation of the circle passing through the foci of the ellipse and having centre at (0, 3) is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 9,
+    "stem": "In a triangle the sum of two sides is and the product of the same two sides is y. If where is the third side of the triangle, then the ratio of the in-radius to",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 10,
+    "stem": "Let C be the circle with centre at (1,1) and radius = 1. If T is the circle centered at (0, y), passing through origin and touching the circle C externally, then the radius of T is equal to:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 11,
+    "stem": "A circle passes through the point (0, 1) and is orthogonal to the circles and Then is",
+    "options": [
+      "radius of is 8",
+      "radius of is 7",
+      "centre of is",
+      "centre of"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 12,
+    "stem": "Locus of the image of the point (2,3) in the line is a",
+    "options": [
+      "straight line parallel to x-axis",
+      "straight line parallel to y-axis",
+      "circle of radius",
+      "circle of radius"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 13,
+    "stem": "The number of common tangents to the circles and is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 14,
+    "stem": "Consider the family of all circles whose centers lie on the straight line y = x. If this family of circles is represented by the differential equation '' ' Py QY + + 1 0, = where P, Q are functions of x, y and then which of the following statements is (are) true?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 15,
+    "stem": "The centres of those circles which touch the circle, externally and also touch the x-axis, lie on: 3 , 0 2   −     5 , 2 2   −     3 5 , 2 2   −     2 2 9 x y + = 2 2 20( ) 36 45 0 x y x y + − + = 2 2 20( ) 36 45 0 x y x y + + − = 2 2 36( ) 20 45 0 x y x y + − + = 2 2 36( ) 20 45 0 x y x y + − − = 2 7 2 2 6 8 9 0 + − + + = x y x y 2 2 6 7 9 0 + − + + = x y x y 2 2 6 8 9 0 + − − + = x y x y 2 2 6 7 9 0 + − − + = x y x y (1, 2) − x 2 2 1, 16 9 x y + = 2 2 6 7 0 x y y + − − = 2 2 6 7 0 x y y + − + = 2 2 6 5 0 x y y + − − = 2 2 6 0 x y y x + − + = x 2 2 , − = x c y c 3 2 ( ) + y x x c 3 2 ( ) + y c x c 3 4 ( ) + y x x c 3 4 ( ) + y c x c 3 2 3 2 1 2 1 4 S 2 2 ( –1) 16 x y + = 2 2",
+    "options": [
+      "a circle",
+      "an ellipse which is not a circle",
+      "a hyperbola",
+      "a parabola"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "x y + = S S S ( 7,1) − S ( 8,1) − (2 3 4) ( 2 3) 0, − + + − + = x y k x y , ε k R 2 3 2 2 4 6 12 0 + − − − = x y x y 2 2 6 18 26 0, + + + + = x y x y 2 2 (here , ), ′ ′ ′′ = = dy d y y y y dx dx = + P y x = − P y x 2 1 ( ) ′ ′ + = − + + + P Q x y y y 2 ( ) ′ ′ − = + − − P Q x y y y 2 2 8 8 4 0, x y x y + − − − = _ 255 Circles and Systems of Circles",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 16,
+    "stem": "If one of the diameters of the circle, given by the equation, is a chord of a circle S, whose centre is at (–3, 2), then the radius of S is:",
+    "options": [
+      "",
+      "",
+      "5",
+      "10"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 17,
+    "stem": "Let RS be the diameter of the circle where S is the point (1, 0). Let P be a variable point (other than R and S) on the circle and tangents to the circle at S and P meet at the point Q. The normal to the circle at P intersects a line drawn through Q parallel to RS at point E. Then the",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 18,
+    "stem": "Let ,a b R ∈ and 2 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "a b + ≠ Suppose 1 : , , 0 , S z R z t R t a ibt   = ∈ = ∈ ≠   +   where",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "i = − If z x iy = + and , z S ∈ then ( , ) 0, 0 a b = ≠",
+    "options": [
+      "the circle with radius 1 2a and center 1 , 0 2a       for 0, 0 a b > ≠",
+      "the circle with radius 1 2a − and center 1 , 0 2a   −     for 0, 0 a b < ≠",
+      "the x-axis for 0, 0 a b ≠ =",
+      "the y-axis for"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 19,
+    "stem": "Let the orthocentre and centroid of a triangle be ( 3,5) A − and (3,3) B respectively, If C is the circum-centre of this triangle, then the radius of the circle having line segment AC as diameter, is 5 3 2",
+    "options": [
+      "3 5 2",
+      "10",
+      "2 10",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 20,
+    "stem": "If the tangent at (1,7) to the curve 2 6 x y = − touches the circle 2 2 16 12 0 x y x y c + + + + = then the value of c is",
+    "options": [
+      "95",
+      "195",
+      "185",
+      "85"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 21,
+    "stem": "Let O(0, 0) and A(0, 1) be two fixed points. Then the locus of a point P such that the perimeter of ∆AOP is 4, is:",
+    "options": [
+      "8x2 – 9y2 + 9y = 18",
+      "9x2 + 8y2 – 8y = 16",
+      "8x2 + 9y2 – 9y = 18",
+      "9x2 – 8y2 + 8y = 16"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 22,
+    "stem": "The sum of the squares of the lengths of the chords intercepted on the circle, x2 + y2 = 16, by the lines, x + y = n, n∈ N, where N  is the set of all natural numbers, is:",
+    "options": [
+      "320",
+      "160",
+      "105",
+      "210"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 23,
+    "stem": "Given that the slope of the tangent to a curve y = y(x) at any point (x,y) is 2 2 . y x If the curve passes through the centre of the circle x2 + y2 – 2x – 2y = 0, then its equation is :",
+    "options": [
+      "x loge|y| = 2(x – 1)",
+      "x loge|y| = x – 1",
+      "x2 loge|y| = –2(x – 1)",
+      "x loge|y| = –2(x – 1)"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 24,
+    "stem": "Three circles of radii a, b, c (a < b < c) touch each other externally, if they have x-axis as a common tangent, then: 1 1 = + b a c",
+    "options": [
+      "1 1 1 3 = + a b",
+      "a,b,c air in A.P",
+      " , , a b c are in A.P",
+      "1"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 25,
+    "stem": "If the circles x2 + y2 – 16x – 20y + 164 = r2 and (x – 4)2 + (y – 7)2 = 36 intersect at two distinct points, then:",
+    "options": [
+      "0 < r < 1",
+      "1 < r < 11",
+      "r > 11",
+      "r = 11"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 26,
+    "stem": "If a circle C passing through the point (4, 0) touches the circle x2 + y2 + 4x – 6y = 12 externally at the point (1, –1), then the radius of C is:",
+    "options": [
+      "57",
+      "4",
+      "2 5",
+      "5"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 27,
+    "stem": "If the area of an equilateral triangle inscribed in the circle, x2 + y2 + 10x + 12y + c = 0 is 27 3 sq. units then c is equal to:",
+    "options": [
+      "20",
+      "25",
+      "13",
+      "–25"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 28,
+    "stem": "A square is inscribed in the circle x2 + y2 – 6x + 8y – 103 = 0 with its sides parallel to the coordinate axes. Then the distance of the vertex of this square which is nearest to the origin is:",
+    "options": [
+      "13",
+      "137",
+      "6",
+      "41"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 29,
+    "stem": "The straight line x + 2y = 1 meets the coordinate axes at A and B. A circle is drawn through A, B and the origin. Then the sum of perpendicular distances from A and B on the tangent to the circle at the origin is: 2 2 4 6 12 0, x y x y + − + − = 5 2 5 3 2 2 1, x y + = 1 1 , 3 3       1 1 , 4 2       1 1 , 3 3   −     1 1 , 4 2   −     _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 256",
+    "options": [
+      " 5 4",
+      " 5 2",
+      "2 5",
+      "4 5"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 30,
+    "stem": "Two circles with equal radii are intersecting at the points (0, 1) and (0, –1). The tangent at the point (0, 1) to one of the circles passes through the centre of the other circle. Then the distance between the centres of these circles is:",
+    "options": [
+      "1",
+      "2",
+      "2.2",
+      "2"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 31,
+    "stem": "If a variable line, 3x + 4y – λ = 0 is such that the two circles x2 + y2 – 2x – 2y + 1 = 0 and x2 + y 2 – 18x – 2y + 78 = 0 are on its opposite sides, then the set of all values of λ is the interval:",
+    "options": [
+      "[12, 21]",
+      "(2, 17)",
+      "(23, 31)",
+      "[13, 23]"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 32,
+    "stem": "let C1 and C2 be the centres of the circles x2 + y2 – 2x – 2y – 2 = 0 and x2  + y2 – 6x – 6y +14 = 0 respectively. If P and Q are the points of intersection of these circles, then the area (in sq. units) of the quadrilateral PC1QC2 is:",
+    "options": [
+      "8",
+      "6",
+      "9",
+      "4"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 33,
+    "stem": "If a circle of radius R passes through the origin O and intersects the coordinate axes at A and B, then the locus of the foot of perpendicular from O on AB is:",
+    "options": [
+      "(x2 + y2)2 = 4Rx2y2",
+      "(x2 + y2)(x + y) = R2xy",
+      "(x2 + y2)3 = 4R2x2y2",
+      "(x2 + y2)2 = 4R2x2y2"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 34,
+    "stem": "A line y = mx + 1 meets the circle (x  – 3)2 + (y + 2)2 = 25 at points P and Q. If mid point of PQ has abscissa of 3 5 − , then value of m satisfies Matrix Match / Column Match",
+    "options": [
+      "6 ≤m < 8",
+      "2 ≤m < 4",
+      " 3 − ≤m < 1 −",
+      "4 ≤m < 6"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 35,
+    "stem": "Match the following: Normals are drawn at Points P, Q and R lying on the parabola which intersect at (3, 0). Then Column I Column II",
+    "options": [
+      "Area of",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 36,
+    "stem": "Match the statements in Column I with the properties Column II Column I Column II",
+    "options": [
+      "Two intersecting circles",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "have a common tangent",
+    "options": [
+      "Option A",
+      "Two mutually external circles",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 2,
+    "stem": "have a common normal",
+    "options": [
+      "Option A",
+      "Option B",
+      "two circles, one strictly inside the other",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 3,
+    "stem": "do not have a common tangent",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "two branches of a hyperbola"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 4,
+    "stem": "do not have a common normal Match the Column for Questions No. 37 to 39 The information are given in the three columns of the following table. Columns I, II and III contain conics, equations of tangent to the conics and points of contact, respectively. Column I Column II Column III (I) 2 2 2 x y a + = (i) 2 my m x a = +",
+    "options": [
+      "A→ 1,2; B→ 1,2; C→ 2,3; D→ 2,3",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "2 a 2a , m m       (II) 2 2 2 2 x a y a + = (ii) 2 y mx a m 1 = + +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 2,
+    "stem": "2 2 ma a , m 1 m 1   −     + +   (III) 2 y 4ax = (iii) 2 2 y mx a m 1 = + −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 3,
+    "stem": "2 2 2 2 2 a m 1 , a m 1 a m 1   −     + +   (IV) 2 2 2 2 x a y a − = (iv) 2 2 y mx a m 1 = + +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 4,
+    "stem": "2 2 2 2 2 a m 1 , a m 1 a m 1   − −     − −  ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 37,
+    "stem": "The tangent to a suitable conic Column I at 1 3, 2       is found to be 3x 2y 4 + = , then which of the following options is the only Correct combination?",
+    "options": [
+      "(IV) (iii) (4)",
+      "(II) (iii) (3)",
+      "(IV) (iv) (4)",
+      "(II) (iv) (3)"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 38,
+    "stem": "If a tangent to a suitable conic Column I is found to be y x 8 = + and its point of contact is (8, 16), then which of the following options is the only correct combination? 2 4 y x = PQR ∆ PQR ∆ 5/2 PQR ∆ (5/ 2, 0) PQR ∆ (2/3, 0) _ 257 Circles and Systems of Circles",
+    "options": [
+      "(III) (i) (1)",
+      "(I) (ii) (2)",
+      "(II) (iv) (3)",
+      "(III) (ii) (2)"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 39,
+    "stem": "For a 2 = , if a tangent is drawn to a suitable conic (Column I) at the point of contact ( ) 1, 1 − , then which of the following options is the only CORRECT combination for obtaining its equation? Statement or Assertion & Reason",
+    "options": [
+      "(II) (ii) (2)",
+      "(I) (i) (1)",
+      "(I) (ii) (2)",
+      "(III) (i) (1)"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 40,
+    "stem": "Tangents are drawn from the point (17, 7) to the circle Statement-I: The tangents are mutually perpendicular. and Statement-II: The locus of the points from which mutually perpendicular tangents can be drawn to the given circle is",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is False.",
+      "Statement-I is False, Statement-II is True."
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 41,
+    "stem": "Consider where p is a real number, and  C : x2 + y2 + 6x – 10y + 30 = 0. Statement-I: If line is a chord of circle then line is not always a diameter of circle and Statement-II: If line is a diameter of circle then line is not a chord of circle Paragraph Paragraph for Question No. 42 to 44 Let ABCD be a square of side length 2 units, is the circle through vertices, A, B, C, D and is the circle touching all the sides of the square ABCD. L is a line through A.",
+    "options": [
+      "Statement-I is True, statement-II is True; statement-II is a correct explanation for statement-I",
+      "Statement-I is True, statement-II is True; statement-II is not a correct explanation for statement-I.",
+      "Statement-I is True, statement-II is False",
+      "Statement-I is False, statement-II is True"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 42,
+    "stem": "If P is a point on and Q in another point on then is equal to",
+    "options": [
+      "0.75",
+      "1.25",
+      "1",
+      "0.5"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 43,
+    "stem": "A circle touches the line L and the circle externally such that both the circles are on the same side of the line, then the locus of centre of the circle is",
+    "options": [
+      "ellipse",
+      "hyperbola",
+      "parabola",
+      "parts of straight line"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 44,
+    "stem": "A line M through A is drawn parallel to BD. Point S moves such that its distances from the line BD and the vertex A are equal. If locus of S cuts M at and and AC at then area of is Paragraph for Question No. 45 to 48 Consider the circle and the parabola They intersect at P and Q in the first and the fourth quadrants, respectively. Tangents to the circle at P and Q intersect the x-axis at R and tangents to the parabola at P and Q intersect the x-axis at S.",
+    "options": [
+      " sq. unit",
+      " sq. unit",
+      "1 sq. unit",
+      "2 sq. unit"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 45,
+    "stem": "The ratio of the areas of the triangles PQS and PQR is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 46,
+    "stem": "The radius of the circumcircle of the triangle PRS is",
+    "options": [
+      "5",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 47,
+    "stem": "The radius of the incircle of the triangle PQR is",
+    "options": [
+      "4",
+      "3",
+      "",
+      "2"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 48,
+    "stem": "Equation of the circle with AB as its diameter is Paragraph for Question No. 49 to 50 A tangent PT is drawn to the circle at the point A straight line L, perpendicular to PT is a tangent to the circle 2 2",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 169,
+    "stem": "+ = x y 2 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 338,
+    "stem": "+ = x y 1 : 2 3 3 0 L x y p + + − = 2 : 2 3 3 0, L x y p + + + = 1L , C 2L . C 1L , C . C 2 C 1 C 1 C 2, C 2 2 2 2 2 2 2 2 PA PB PC PD QA QB QC QD + + + + + + 1 C 2 T 3 T 1, T 1 2 3 T T T ∆ 1 2 2 3 2 2 9 + = x y 2 8 . = y x 1 : 2 1 : 2 1 : 4 1 : 8 3 3 3 2 2 3 8/3 2 2 12 24 0 x y x + − + = 2 2 12 24 0 x y x + + + = 2 2 24 12 0 x y x + + − = 2 2 24 12 0 x y x + − − = 2 2 4 x y + = P 3,1. 2 2 ( 3) 1 x y − + = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 258",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 49,
+    "stem": "A common tangent of the two circles is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 50,
+    "stem": "A possible equation of L is Paragraph for Question No. 51 Let S be the circle in the xy-plane defined by the equation 2 2",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 51,
+    "stem": "Let P be a point on the circle S with both coordinates being positive. Let the tangent to S at P intersect the coordinate axes at the points M and N. Then, the mid-point of the line segment MN must lie on the curve 2 2 2 2 x y x y + = Integer & Subjective",
+    "options": [
+      " 2 ( ) 3 x y xy + =",
+      " 2/3 2/3 4/3 2 x y + =",
+      " 2 2 2 x y xy + =",
+      ""
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 52,
+    "stem": "Circles with radii 3, 4 and 5 touch each other externally if P is the point of intersection of tangents to these circles at their points of contact. Find the distance of P from the points of contact.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 53,
+    "stem": "If one of the vertices of the square circumscribing the circle is Find the other vertices of square",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 54,
+    "stem": "The centres of two circles and each of unit radius are at a distance of 6 units from each other. Let P be the mid-point of the line segment joining the centres of and and C be a circle touching circles and externally. If a common tangent to and C passing through P is also a common tangent to and C, then the radius of the circle C is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 55,
+    "stem": "The straight line divides the circular region into two parts. If 1 1 1 1 , , , , 4 4 8 4    −       then the number of point(s) in S lying inside the smaller part is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 56,
+    "stem": "Let be an integer. Take n distinct points on a circle and join each pair of points by a line segment. Colour the line segment joining every pair of adjacent points by blue and the rest by red. If the number of red and blue line segments are equal, then the value of n is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 57,
+    "stem": "For many values of p, the circle 2 2 x y 2x 4y p 0 + + + − = and the coordinate axes have exactly three common points?",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 58,
+    "stem": "Let P be a matrix of order 3 × 3 such that all the entries in P are from the set {–1, 0, 1}. Then, the maximum possible",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 59,
+    "stem": "Let the point B be the reflection of the point A(2, 3) with respect to the line8 6 23",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x y − − = Let TA and TB be circles of radii 2 and 1 with centres A and B respectively. Let T be a common tangent to the circles TA and TB such that both the circles are on the same side of T. If C is the point of intersection of T and the line passing through A and B, then the length of the line segment AC is ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 6,
+    "stem": "(a,c) Equation of circle can be written as Now, (radius)2 Equation is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(d) Equation of C is . . .(i) Also let then equation of T is . . .(ii) From the figure and equations (i) and (ii) we get ( 3) ( 1) ( 2) ( 8) 0 − − + − − = x x y y 2 2 4 10 19 0 + − − + = x y x y 2 2 (x 0) (y 2) x 0 λ − + − + = ∴ 1 4 0 5 λ λ + − = ⇒ = ∴ 2 2 x y 5x 4y 4 0 + + − + = y 0 = ⇒x 1, 4 = − − ∴ 4 20 9 5 x y α α −   + =     5 (4 20) 45 x y α α + − = 2 2 hx ky h k + = + 2 2 5 4 20 45 h k h k α α − = = + 2 2 9h h k α = + 2 2 45 4 20 k h k α − = + 2 2 2 2 4(9 ) 45 20 h k h k h k − = + + 2 2 2 2 36 45 20 h k h k h k − = + + 2 2 36 20( ) 45 h h k k − + = 2 2 36 20( ) 45 x x y y − + = 2 2 20( ) 36 45 0 x y x y + − + = 2 2 ( 3) ( ) 0 λ − + + = x y y ⇒ 2 2 6 9",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "λ + − + + = x y x y 7 9 16 = + = ⇒ 2 9 9 16 4 λ + − = ⇒ 2 64 8 λ λ = ⇒ = ± ∴ 2 2 6 8 9 0 + − ± + = x y x y (3, ) C k ⇒ r k = 2 2 2 ( 3) ( ) x y k k − + − = 2 2 4 ( 2) k k + + = 2 2 4 4 4 k k k + + + = 4 8 k = − 2 k = − 2 2 ( 3) ( 2) 4 x y − + + = ( , 0); ( , 0) ae ae − 9 1 16 e = − ⇒ 7 4 e = ( 7, 0); ( 7, 0) − 7 9 4 R = + = 2 2 2 ( 0) ( 3) 4 x y − + − = 2 2 6 9 16 x y y + − + = ∴ 2 2 6 7 0 x y y + − − = x a b = + y ab = 2 2 x c y − = ⇒ 2 2 2 1 cos(120 ) 2 2 a b c ab + − = − = ° ⇒ 2 3 C π ∠ = ⇒ , 4 abc R = ∆ r s ∆ = ⇒ 2 2 1 2 4 sin 2 3 4 ( ) 2 ab r x c R s abc y c π         ∆     = = + ⋅ ⋅ ⇒ 3 2 ( ) r y R c x c = + 2 2 ( 1) ( 1) 1 x y − + − = (0, ) (0, ) y k ≡ 2 2 2 ( ) x y k k + − = ( 7,0) (0, 3) ( 7, 0) − (0, 3) y ( 4, 0) − (4, 0) x (0, 3) − (1, – 2) (3, 0) 2 2 x y 9 + = P(h, k) 4x 5y 20 − = 4 20 Q , 5 α α −       _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 260 Hence radius of T is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(b,c) Given circles Radical axis . . .(i) Centre of circle lies on (i) Let the centre be Let equation be Orthogonallity gives . . .(ii) Hence radius Alternate solution Given circles Let equation of circle Circle passes through (0, 1) Applying condition of orthogonality",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(c) is family of lines passing through (1, 2). By congruency of triangles, we can prove that mirror image and the point (2, 3) will be equidistant from (1, 2) ∴ lies on a circle of radius",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(c) ∴ and ∴ and Number of common tangents ∴",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(b,c) Let the family of circles be On differentiation Again on differentiation and substituting we get",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(d) Parabola Property: distance from a fixed point and fixed line is equal",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(a,c) ⇒ Let and ⇒ 2 2 2 (1 ) 1 (1 ) k k + = + − ⇒ 1 4 k =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 1,
+    "stem": "4 2 2 2 15 0 + − − = x y x 2 2 1 0 + −= x y 7 0 + = x ( 7, ) − k 2 2 14 2 0 + + − + = x y x ky c 14 15 1 − = − ⇒ = c c (0,1) 1 2 1 0 1 →− + = ⇒ = k k 2 2 7 49 1 1 7 = + − = + − = k c 2 2 2 15 0 + − − = x y x 2 2 1 0 + −= x y 2 2 2 2 0 + + + + = x y gx fy c ⇒ 1 2 0 + + = f c 2 15, 0 1 − = − = − g c c ⇒ 1, 7, 1 = = = − c g f 49 1 1 7; centre ( 7,1) = + − = − r (2 3 4) ( 2 3) 0 − + + − + = x y k x y ( , ) h k ( , ) h k 2 2 (2 1) (3 2) 2 = − + − = 2 2 4 6 12 0 + − − − = x y x y 1 (2,3) = C 1 4 9 12 5 = + + = r 2 2 6 18 26 0 + + + + = x y x y 2 ( 3, 9) = − − C 2 2 2 (5) (12) 13 = + = r 1 2 | | 8 5 13 + = + = r r ∴ 1 2 1 2 ( , ) = + d C C r r 3 = 2 2 α α 0 x y x y c + − − + = 2 2 α α 0 x yy y ′ ′ + − − = 'α' 2 2 2 2 2 2 0 1 x yy x y yy y y ′   + ′ ′′ ′′ + + − =   ′ +   ⇒ 2 ( ) (1 ) 1 0 y x y y y y ′′ ′ ′ ′ − + + + + = 1 4 9 12 5 = + + = r ⇒ 25 50 5 3 = + = R 1 cos sin y θ θ −   =     1 cos 1 cos , sin tan sin E θ θ θ θ θ     − −                ⇒ tan( / 2) , tan tan 2 E θ θ θ       tan( / 2) tan h θ θ = tan 2 k θ = ∴ tan k h θ = ∴ tan 2 k h θ = 2 2tan 2 1 tan 2 k h θ θ = − E R (–1,0) S (1,0) (cos , sin ) P θ θ (tan ) y x θ = 1 cos 1, sin Q θ θ −       1 cos sin y θ θ −   =     Parallel to RS line R (2, –3) 5 5 (–3, 2) 5 2 ( , ) h k _ 261 Circles and Systems of Circles",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(a, c, d) 2 2 2 a ibt x iy a b t − + = + 2 2 2 a x a b t = + . . .(i) 2 2 2 bt y a b t − = + . . .(ii) If 0, 0, 0 a b x = ≠ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      " ⇒ If 0, 0, 0 a b y ≠ = = ⇒ (C) 2 2 2 a a b t x + = and 2 2 2 bt a b t y − + = ∴ a bt x y − = ⇒ ay t bx − = . . .(iii) Putting (iii) in (i) 2 2 2 2 2 2 a y x a b b x   + × =     a; 2 2 2 2 a y x x a x   + =     ⇒ 2 2 2 ( ) a x y ax + = ⇒ 2 2 1 0 x y a + − × = Circle with centre 1 ,0 2a       radius 2 2 1 1 0 0 2 2 a a −  + − =    "
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(d) ( 3,5) A − (3,3) B So, 2 10 AB = Now, as, 3 2 AC AB = So, radius 3 3 5 10 3 4 2 2 AB = = 20",
+    "options": [
+      "Equation of tangent at (1, 7) to curve 2 6 x y = − is 1 1 ( 7) 6 2 x y −= + − 2 5 0 x y − + = ...(i) Centre of circle ( 8, 6) = − − Radius of circle 64 36 100 c c = + − = − ∵ Line (i) touches the circle ∴ 2 (8) ( 6) 5 100 4 1 c − −− + = − + 5 100 c = − ⇒ c = 95",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(b) AP  + OP + AO = 4 2 2 2 ( 1) 1 14 + − + + + = h k h k 2 2 2 2 ( 1) 3 + − + + = h k h k 2 2 2 2 2 2 ( 1) 9 6 + − = + + − + h k h k h k 2 2 2 8 6 − −= − + k h k 2 2 4 3 + = + k h k k216 + 8k = 9(h2 + k2) 9h2 + 8k2 – 8k – 16 = 0 Locus of P is 9x2 + 8y2 – 8y – 16 = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) , 2 = n P but 4 2 < n ⇒ 1,2,3,4,5 Length of chord 2 2 16 2 = −n AB 2 64 2 ( ) = − = ℓ n say For  n = 1, 2 ℓ= 62 n = 2, 2 ℓ= 56 n = 3, 2 ℓ = 46 n = 4, 2 ℓ = 32 n = 5, l2 = 14 ∴ Required sum = 62 + 56 + 46 + 32 + 14 = 210",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(a)  given 2 2 dy y dx x = ⇒ 2 2 dy dx y x = ∫ ∫ ⇒ 1 1 2 ny c x = − + ℓ passes through centre (1,1) ⇒ c =1 ⇒  x ℓny = 2(x –1) ⇒ 2 2 1 k k k h  =   −   ∴ 2 2 (1 ) xy y y = − (0,0) O M y x A B P P(h,k) 1 A(0,1) O(0,0) A B C _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 262",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(a) = + AB AC CB 2 2 ( ) ( ) + − − b c b c 2 2 2 2 ( ) ( ) ( ) ( ) = + − − + + − − b a b a a c a c = = + bc ab ac 1 1 1 = + a c b",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(b) x2 + y2 – 16x – 20y + 164 = r2 A(8,10) R1 = r (x – 4)2 + (y – 7)2 = 36 B(4, 7) R2 = 6 1 2 1 2 | | R R AB R R − < < + ⇒ 1 < r < 11",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(d) x2 + y2 + 4x – 6y – 12 = 0 Equation of tangent at (1, –1) x – y + 2(x + 1) – 3(y – 1) – 12 = 0 3x – 4y – 7 = 0 ∴ Equation of circle is (x2 + y2 + 4x – 6y – 12) + λ(3x – 4y – 7) = 0 It passes through (4, 0): (16 + 16 – 12) + λ(12 – 7) = 0 ⇒  20 + λ(5) = 0 ⇒ λ = –4 ∴ (x2 + y2 + 4x – 6y – 12) – 4(3x – 4y – 7) = 0 or x2 + y2 – 8x + 10y + 16 = 0 Radius 16 25 16 5 = + − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(b) 2 1 3 sin120º 27 3 2 r   ⋅ =     2 3 27 3 2 2 3 r = 2 108 36 3 r = = Radius 25 36 36 C = + − = C =25 90º 120º 2 210º A B A B A − = + = = 105º A = 15º B =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(d) 9 16 103 8 2 R = + + = 13 OA = 265 OB = 137 OC = 41 OD =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(b) Equation of circle 1 ( 1)( 0) ( 0) 0 2 x x y y   − − + − − =     ⇒ 2 2 0 2 y x y x + − − = Equation of tangent of origin is 2 0 x y + = 1 2 2 2 5 2 5 + = + ℓ ℓ 4 1 5 2 2 5 + = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(d) In ∆APO 2 2 2 2 2  + =       r I r 2 = r So Distance between centers 2 = r = 2 P O r r A 1 (0,1/2) (1,0) (0,0) B 1ℓ 2 ℓ (11,–12) (–5,–12) (–5,4) (11,4) C D A B (3,–4) 120º 60º C(–5,–6) r r b a C B A c x=axis _ 263 Circles and Systems of Circles",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(a) Centre of circles are opposite side of line (3 + 4 –λ) (27 + 4 – λ) < 0 (l – 7) (l – 31) < 0 λ∈ (7, 31) distance from S1 3 4 1 5 λ + − ≥ ⇒λ∈(–∞, 2]∪ [(12, ∞] distance from S2 24 4 2 5 λ + − ≥ ⇒λ∈(–∞, 21]∪ [(41, ∞] so λ∈[ 12, 21]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(d) area 1 2 4 2 2 = × ⋅ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(c) Slope of AB = −h k Equation of AB is hx + ky = h2+ k2 2 2 2 2 ,0 , 0,     + +         h k h k A B h k AB = 2R ⇒ (h2 + k2)3 = 4R2h2k2 ⇒ (x2 + y2)3 = 4R2x2y2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(b) For point R, 3 3 1 5 5 m x y = − ⇒ = − R 3 3 ,1 5 5 m   − −     slope of  CR = 3 1 2 1 5 3 3 5 m m − + = − ⇒ − − 15 3 1 3 15 m m − = − −− 2 15 3 18 m m − = 2 5 6 0 m m − + = 2,3 m = 2 4 m ≤ ≤",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(a)  As normal passes through (3, 0) Centroid Circum radius units. Area of sq. units. circum centre",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(a) no common tangent.+",
+    "options": [
+      "When two circles are intersecting they have a common normal and common tangent.",
+      "Two mutually external circles have a common normal and common tangent.",
+      "When one circle lies inside of other then, they have a common normal but no common tangent.",
+      "Two branches of a hyperbola have a common normal but"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(a) Since the tangents are perpendicular locus of perpendicular tangents to circle is a director circle having equation",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(c) Circle Distance between and statement (ii) is false. But statement (i) is correct. ⇒ 3 0 3 2 m m m = − − ⇒ 3 m m = ⇒ 0, 1 m = ± ∴ 2 2 2 1 2 3 1 2 3 ( ) 2( ) 2 , , 0 3 3 3 m m m m m m   + + + +   ≡ − =         1 2 2 2 2 2 m m − + = = 2 2 2 ( , 2 ) (1, 2) Q m m ≡ − ≡ − 2 3 3 ( , 2 ) (1, 2) R m m ≡ − ≡ 1 4 1 2 2 PQR ∆ = × × = 1 4 2sin 2sin(2tan 2) QR R QPR − = = ∠ ⇒ 1 4 4 5 4 4 2 2 2 sin tan 5 1 4 − = =   × ×   −   ∴ 5 , 0 2   ≡    ⇒ 2 2 169 + = x y 2 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 338,
+    "stem": "+ = x y 2 2 ( 3) ( 5) 4 x y ≡ + + − = 1L 2L ⇒ 6 radius 13 < ⇒ 1 y mx = + (3, 2) C − P R Q x P(h,k) A B y (1, 1) (3, 3) 2 2 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 264",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 42,
+    "stem": "(a) Let A, B, C and D be the complex numbers, and respectively. ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 43,
+    "stem": "(c) Let C be the centre of the required circle Now draw a line parallel to L at a distance of (radius of ) from it. Now lies on a parabola.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 44,
+    "stem": "(c) [as A is the foucs, is the vertex and BD is the directrix of parabola]. Also is latus return ∴ Area of",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 45,
+    "stem": "(c) Coordinates of P and Q are and Area of Area of Ratio of area of triangle PQS and PQR is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(b) Equation of circumcircle of is It will pass through then Equation of circumcircle is Hence its radius is Alternative: Let",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 47,
+    "stem": "(d) Radius of incircle is as",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 48,
+    "stem": "(a)  A point on hyperbola is It lies on the circle, so The point of intersection are and The circle with AB as diameter is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 49,
+    "stem": "(d) Tangent in slope to 2 2 4 is x y + = Similarly tangent to 2 ( 3) 1is x y = mx − = . . .(i) . . .(ii) 2, 2, 2i − 2i − 2 2 2 2 2 2 2 2 PA PB PC PD QA QB QC QD + + + + + + 2 2 2 2 1 1 1 1 2 2 2 2 2 2 2 2 | 2 | | 2 | | 2 | | 2 | | 2 | | 2 | | 2 | | 2 | z z z i z i z z z i z i − + − + − + − = + + − + − + − 2 1 2 1 | | 2 3 | | 2 4 z z + = = + 1r 1 C 1 CP AC C = ⇒ 2 AG = ∴ 1 1 1 2 AT TG = = 1T 2 3 T T ∴ 2 3 1 4 2 T T = × 1 2 3 1 1 4 1 2 2 2 T T T ∆ = × × = (1, 2 2) + (1, 2 2) − 1 4 2 8 16 2 2 ∆ = ⋅ ⋅= PQR 1 4 2 2 4 2 2 ∆ = ⋅ ⋅ = PQS 1 : 4. ∆PRS 2 ( 1)( 9) 0 λ + − + + = x x y y (1, 2 2), 16 8 2 2 0 λ − + + ⋅ = ⇒ 8 2 2 2 2 λ = = 2 2 8 2 2 9 0 x y x y + − + − = 3 3. θ ∠ = PRS ⇒ 2 2 sin 2 3 θ = ⇒ 6 2 2 sinθ = = ⋅ PR R ⇒ 3 3. = R ∆ = r s 16 2 ∆= ⇒ 6 2 6 2 4 2 8 2 2 + + = = s ⇒ 16 2 2 8 2 = = r (3sec ,2tan ) θ θ 9sec 4 tan 24sec 0 θ θ θ 2 2 + − = ⇒ 2 2 13sec 24sec 4 0 sec 2, 13 θ θ θ − − = ⇒ = − ∴ sec 2 tan",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 3,
+    "stem": "θ θ = ⇒ = (6,2 3) A (6, 2 3) B − ∴ 2 2 2 2 2 ( 6) (2 3) 12 24",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x y x y x − + = ⇒ + − + = 2 2 1 y mx m = ± + 2 3 1 m −± + ⇒ 2 3 1 y mx m m = − ± + P (3, 0) y x R P Q S (–1, 0) O (1, 0) (9, 0) (1, 2 2) − (1,2 2) (–3, 0) D G C B A M T1 T2 C C1 P1 L A _ 265 Circles and Systems of Circles (i) & (ii) identical Taking (+) sign Squaring Taking (–) sign ⇒ (This is not possible). So put (i) Taking (+) (only this option given)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 50,
+    "stem": "(a) Equation of tangent at P is Slope of tangent is So, slope of L is So, equation of L (is tangent to and slope Taking (+) sign, . Taking (–) sign,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 51,
+    "stem": "(d) Let point (2cos ,2sin ) P θ θ Equation of tangent is cos sin 2 x y θ θ + = 2 ,0 cos N θ   =     2 0, sin M θ   =     Locus of mid-point is 2 2 1 1 1 x y + = i.e. 2 2 2 2 x y x y + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 52,
+    "stem": "Let A, B, C be the centre of the three circles. Clearly the point P is the in-centre of the ∆ABC, and Hence Now Hence",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 53,
+    "stem": "Since centre of circle i.e. (1, 0) is also the mid-point of diagonals of square and Other vertices are and ⇒ 2 2 2 1 1 3 1 m m m ± + = − ± + ⇒ 2 2 3 1 2 1 m m m − ± + = ± + 2 2 3 1 2 1 m m m − + + = + 2 3 1 m m − = + 2 2 9 1 m m = + 1 2 2 m = ± 2 2 3 1 2 1 m m m − − + = + + 2 3 3 1 m m − = + 2 2 1 m m = + 2 2 1 y mn m = ± + 1 1 1 8 2 2 y x = ± ± + 1 2 3 2 2 2 2 y x × = ± ± 2 2 6 y x = ± ± 2 6 y x = −+ ⇒ 2 2 6 x + = 2 2 . 3,1 4 to x y + = 3 4 x y + = 3 = − 1 3 = 2 2 ( 3) 1 x y − + = 1 ) 3 = 1 1 3 1 3 3 y x = −± + 3 3 2 y x = −± 3 3 2 y x = −+ 3 1 x y − = 3 3 2 y x = −− 3 5 x y − = ( )( )( ) s s a s b s c r s s − − − ∆ = = ( )( )( ) s a s b s c s − − − = 2 7 8 9 24 s = + + = ⇒ 12 s = 5.4.3 5 12 r = = ⇒ 1 2 0 2 z z z + = ⇒ 2 3 z i = − / 2 3 1 1 1 i z e z π ± −= − ⇒ 3 4 , (1 3) z z i = − + (1 3) i + − 0(1, 0) z 1(2, 3) z z3 z2 z4 O x y A B C 3 3 4 4 5 5 P 'x x 'y y O P M (2cos ,2sin ) θ θ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 266 \u0002  \u0002  \u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 55,
+    "stem": "(2) If and Then point lies in the smaller part, ∴ and lie inside.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 56,
+    "stem": "(5) Number of red lines Number of blue lines = n Hence,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 57,
+    "stem": "(2) Case (i): 2 2 2 4 0 x y x y p + + + − = put y = 0, 2 2 0 x x p + − = . . .(i) if it touches x-axes D = 0 ⇒ p = –1 put x = 0, 2 4 0 y y p + − = . . .(ii) put 1 p = −, 2 4 1 0 y y + + = 16 4 0 D = − > intersect at two points to y-axis. From eq. (ii) D = 0 4 p ⇒ = − From eq. (i) 2 2 4 0 x x + + = its D < 0. Case (ii): if p = 0, 2 2 2 4 0 x y x y + + + = put y = 0, gives x = 0, –2 put x = 0, gives y = 0, –4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 58,
+    "stem": "(4) 11 12 13 21 22 23 31 32 33     =       a a a P a a a a a a The maximum possibility of |P| can be 6 if 21 22 22 23 21 23 31 32 32 33 31 33 2 = ± = ± = ± a a a a a a a a a a a a takes zero. Hence, | |",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 6,
+    "stem": "≠ P Next possibility is 4. 1 1 1 1 1 1 1 1 1 − −     = − −       P is one such possibility.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 59,
+    "stem": "(10) 2 2 cos 3 α = 1 sin 3 α = 2 2 tanα = R ⇒ 2 2 8units. tanα = = R L:2x 3y 1 − − 2 2 S : x y 6 + − 1 L 0 > 1S 0 < 3 2, 4       1 1 , 4 4   −     2 = − nC n 2 − = nC n n 2 2 = nC n ( 1) 2 2 − = n n n 1 4 −= n ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  },
+  {
+    "questionNumber": 5,
+    "stem": "= n 16 18 23 5 10 2 AL − − = = 1 2 CB CA = 5 1 2 CA CA − = 10 CA = B 5 L 8x – 6y – 23= 0 A (2,3) C y x L:2x– S: x2 + y2 1 C A 2 2 P α α 3 2 C 1 B C R α _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 253
+  }
+]

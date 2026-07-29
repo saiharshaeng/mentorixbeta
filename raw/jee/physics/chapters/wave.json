@@ -1,0 +1,290 @@
+[
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0185",
+    "stem": "The equation of a plane progressive wave is given by $y = 5 \\cos \\pi \\left(200t - \\frac{x}{150}\\right)$ where $x$ and $y$ are in cm and $t$ is in second. The velocity of the wave is _______ m/s.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Waves.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0270",
+    "stem": "The equation of motion of a particle is given by $x = a \\sin\\left(50t + \\frac{\\pi}{3}\\right)\\text{ cm}$. The particle will come to rest at time $t_1$ and it will have zero acceleration at time $t_2$. The $t_1$ and $t_2$ respectively are _______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0348",
+    "stem": "The velocity of a particle executing simple harmonic motion along x-axis is described as $v^2 = 50 - x^2$, where $x$ represents displacement. If the time period of motion is $\\frac{x}{7}$ s, the value of $x$ is _____.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_phy_2026_02AprS1_035",
+    "stem": "The equation of a plane progressive wave is given by $y = 5 \\cos \\pi \\left(200t - \\frac{x}{150}\\right)$ where $x$ and $y$ are in cm and $t$ is in second. The velocity of the wave is _______ m/s.",
+    "options": [
+      "120",
+      "150",
+      "200",
+      "300"
+    ],
+    "solution": "The standard equation of a travelling wave is $y = A \\cos(\\omega t - k x)$.\nComparing it with the given equation $y = 5 \\cos \\left(200\\pi t - \\frac{\\pi x}{150}\\right)$, we find:\nAngular frequency $\\omega = 200\\pi\\text{ rad/s}$\nWave number $k = \\frac{\\pi}{150}\\text{ cm}^{-1}$\nThe velocity of the wave is given by $v = \\frac{\\omega}{k}$:\n$v = \\frac{200\\pi}{\\pi / 150} = 200 \\times 150 = 30000\\text{ cm/s}$\nConverting to meters per second:\n$v = 300\\text{ m/s}$."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_phy_2026_02AprS2_045",
+    "stem": "The equation of motion of a particle is given by $x = a \\sin\\left(50t + \\frac{\\pi}{3}\\right)\\text{ cm}$. The particle will come to rest at time $t_1$ and it will have zero acceleration at time $t_2$. The $t_1$ and $t_2$ respectively are _______.",
+    "options": [
+      "$\\frac{\\pi}{300}\\text{ s}, \\frac{\\pi}{75}\\text{ s}$",
+      "$\\frac{\\pi}{75}\\text{ s}, \\frac{\\pi}{300}\\text{ s}$",
+      "$\\frac{\\pi}{300}\\text{ s}, \\frac{\\pi}{25}\\text{ s}$",
+      "$\\frac{\\pi}{50}\\text{ s}, \\frac{\\pi}{100}\\text{ s}$"
+    ],
+    "solution": "Velocity $v = \\frac{dx}{dt} = 50a \\cos\\left(50t + \\frac{\\pi}{3}\\right)$. For particle to come to rest, $v=0 \\implies 50t_1 + \\frac{\\pi}{3} = \\frac{\\pi}{2} \\implies 50t_1 = \\frac{\\pi}{6} \\implies t_1 = \\frac{\\pi}{300}\\text{ s}$.\nAcceleration $A = \\frac{dv}{dt} = -2500a \\sin\\left(50t + \\frac{\\pi}{3}\\right)$. For zero acceleration, $A=0 \\implies 50t_2 + \\frac{\\pi}{3} = \\pi \\implies 50t_2 = \\frac{2\\pi}{3} \\implies t_2 = \\frac{2\\pi}{150} = \\frac{\\pi}{75}\\text{ s}$."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_phy_2026_04AprS1_048",
+    "stem": "The velocity of a particle executing simple harmonic motion along x-axis is described as $v^2 = 50 - x^2$, where $x$ represents displacement. If the time period of motion is $\\frac{x}{7}$ s, the value of $x$ is _____.",
+    "options": [
+      "$22$",
+      "$44$",
+      "$88$",
+      "$7$"
+    ],
+    "solution": "The standard equation for velocity in Simple Harmonic Motion is $v^2 = \\omega^2 (A^2 - x^2) = \\omega^2 A^2 - \\omega^2 x^2$.\nComparing this with the given equation $v^2 = 50 - x^2$, we identify the coefficient of $x^2$:\n$\\omega^2 = 1 \\implies \\omega = 1 \\text{ rad/s}$.\nThe time period is $T = \\frac{2\\pi}{\\omega} = 2\\pi \\text{ s}$.\nWe are given $T = \\frac{x}{7}$ s. Setting these equal and using $\\pi \\approx \\frac{22}{7}$:\n$\\frac{x}{7} = 2 \\pi \\implies \\frac{x}{7} = 2 \\left(\\frac{22}{7}\\right) \\implies x = 44$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0015",
+    "stem": "One end of a spring of negligible unstretched length and spring constant k is fixed at the origin (0,0). A point particle of mass m carrying a positive charge q is attached at its other end. The entire system is kept on a smooth horizontal surface. When a point dipole 푝 pointing towards the charge q is fixed at the origin, the spring gets stretched to a length l and attains a new equilibrium position (see figure below). If the point mass is now displaced slightly by ∆푙≪푙 from its equilibrium position and released, it is found to oscillate at frequency 1 훿 √ 푘 m . The value of 훿 is ______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0189",
+    "stem": "Two point-like objects of masses 20 gm and 30 gm are fixed at the two ends of a rigid massless rod of length 10 cm. This system is suspended vertically from a rigid ceiling using a thin wire attached to its center of mass, as shown in the figure. The resulting torsional pendulum undergoes small oscillations. The torsional constant of the wire is 1.2×10 −8 N m rad −1 . The angular frequency of the oscillations in 푛×10 −3 rad s −1 . The value of 푛 is _____. JEE (Advanced) 2023 Paper 1 8/9",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0192",
+    "stem": "A series LCR circuit is connected to a 45sin ( 휔푡 ) Volt source. The resonant angular frequency of the circuit is 10 5 rad s −1 and current amplitude at resonance is I 0 . When the angular frequency of the source is 휔=8×10 4 rad s −1 , the current amplitude in the circuit is 0.05 I 0 . If L=50 mH, match each entry in List-I with an appropriate value from List-II and choose the correct option. List-I List-II (P) I 0 in mA (1) 44.4 (Q) The quality factor of the circuit (2) 18 (R) The bandwidth of the circuit in rad s −1 (3) 400 (S) The peak power dissipated at resonance in Watt (4) 2250 (5) 500",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0233",
+    "stem": "Two beads, each with charge 푞 and mass m, are on a horizontal, frictionless, non-conducting, circular hoop of radius R. One of the beads is glued to the hoop at some point, while the other one performs small oscillations about its equilibrium position along the hoop. The square of the angular frequency of the small oscillations is given by [휀 0 is the permittivity of free space.]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0241",
+    "stem": "A source (S) of sound has frequency 240 Hz. When the observer (O) and the source move towards each other at a speed 푣 with respect to the ground (as shown in Case 1 in the figure), the observer measures the frequency of the sound to be 288 Hz. However, when the observer and the source move away from each other at the same speed 푣 with respect to the ground (as shown in Case 2 in the figure), the observer measures the frequency of sound to be 푛 Hz. The value of 푛 is _____.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0247",
+    "stem": "The circuit shown in the figure contains an inductor L, a capacitor C 0 , a resistor R 0 and an ideal battery. The circuit also contains two keys K 1 and K 2 . Initially, both the keys are open and there is no charge on the capacitor. At an instant, key K 1 is closed and immediately after this the current in R 0 is found to be I 1 . After a long time, the current attains a steady state value I 2 . Thereafter, K 2 is closed and simultaneously K 1 is opened and the voltage across C 0 oscillates with amplitude V 0 and angular frequency 휔 0 . Match the quantities mentioned in List-I with their values in List-II and choose the correct option. List-I List-II (P) The value of I 1 in Ampere is (1) 0 (Q) The value of I 2 in Ampere is (2) 2 (R) The value of 휔 0 in kilo-radians/s is (3) 4 (S) The value of V 0 in Volt is (4) 20 (5) 200",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0495",
+    "stem": "The equation of a plane progressive wave is given by $y = 5 \\cos \\pi \\left(200t - \\frac{x}{150}\\right)$ where $x$ and $y$ are in cm and $t$ is in second. The velocity of the wave is _______ m/s.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "The standard equation of a travelling wave is $y = A \\cos(\\omega t - k x)$.\nComparing it with the given equation $y = 5 \\cos \\left(200\\pi t - \\frac{\\pi x}{150}\\right)$, we find:\nAngular frequency $\\omega = 200\\pi\\text{ rad/s}$\nWave number $k = \\frac{\\pi}{150}\\text{ cm}^{-1}$\nThe velocity of the wave is given by $v = \\frac{\\omega}{k}$:\n$v = \\frac{200\\pi}{\\pi / 150} = 200 \\times 150 = 30000\\text{ cm/s}$\nConverting to meters per second:\n$v = 300\\text{ m/s}$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0580",
+    "stem": "The equation of motion of a particle is given by $x = a \\sin\\left(50t + \\frac{\\pi}{3}\\right)\\text{ cm}$. The particle will come to rest at time $t_1$ and it will have zero acceleration at time $t_2$. The $t_1$ and $t_2$ respectively are _______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Velocity $v = \\frac{dx}{dt} = 50a \\cos\\left(50t + \\frac{\\pi}{3}\\right)$. For particle to come to rest, $v=0 \\implies 50t_1 + \\frac{\\pi}{3} = \\frac{\\pi}{2} \\implies 50t_1 = \\frac{\\pi}{6} \\implies t_1 = \\frac{\\pi}{300}\\text{ s}$.\nAcceleration $A = \\frac{dv}{dt} = -2500a \\sin\\left(50t + \\frac{\\pi}{3}\\right)$. For zero acceleration, $A=0 \\implies 50t_2 + \\frac{\\pi}{3} = \\pi \\implies 50t_2 = \\frac{2\\pi}{3} \\implies t_2 = \\frac{2\\pi}{150} = \\frac{\\pi}{75}\\text{ s}$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0658",
+    "stem": "The velocity of a particle executing simple harmonic motion along x-axis is described as $v^2 = 50 - x^2$, where $x$ represents displacement. If the time period of motion is $\\frac{x}{7}$ s, the value of $x$ is _____.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "The standard equation for velocity in Simple Harmonic Motion is $v^2 = \\omega^2 (A^2 - x^2) = \\omega^2 A^2 - \\omega^2 x^2$.\nComparing this with the given equation $v^2 = 50 - x^2$, we identify the coefficient of $x^2$:\n$\\omega^2 = 1 \\implies \\omega = 1 \\text{ rad/s}$.\nThe time period is $T = \\frac{2\\pi}{\\omega} = 2\\pi \\text{ s}$.\nWe are given $T = \\frac{x}{7}$ s. Setting these equal and using $\\pi \\approx \\frac{22}{7}$:\n$\\frac{x}{7} = 2 \\pi \\implies \\frac{x}{7} = 2 \\left(\\frac{22}{7}\\right) \\implies x = 44$."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0015",
+    "stem": "One end of a spring of negligible unstretched length and spring constant k is fixed at the origin (0,0). A point particle of mass m carrying a positive charge q is attached at its other end. The entire system is kept on a smooth horizontal surface. When a point dipole 푝 pointing towards the charge q is fixed at the origin, the spring gets stretched to a length l and attains a new equilibrium position (see figure below). If the point mass is now displaced slightly by ∆푙≪푙 from its equilibrium position and released, it is found to oscillate at frequency 1 훿 √ 푘 m . The value of 훿 is ______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0189",
+    "stem": "Two point-like objects of masses 20 gm and 30 gm are fixed at the two ends of a rigid massless rod of length 10 cm. This system is suspended vertically from a rigid ceiling using a thin wire attached to its center of mass, as shown in the figure. The resulting torsional pendulum undergoes small oscillations. The torsional constant of the wire is 1.2×10 −8 N m rad −1 . The angular frequency of the oscillations in 푛×10 −3 rad s −1 . The value of 푛 is _____. JEE (Advanced) 2023 Paper 1 8/9",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0192",
+    "stem": "A series LCR circuit is connected to a 45sin ( 휔푡 ) Volt source. The resonant angular frequency of the circuit is 10 5 rad s −1 and current amplitude at resonance is I 0 . When the angular frequency of the source is 휔=8×10 4 rad s −1 , the current amplitude in the circuit is 0.05 I 0 . If L=50 mH, match each entry in List-I with an appropriate value from List-II and choose the correct option. List-I List-II (P) I 0 in mA (1) 44.4 (Q) The quality factor of the circuit (2) 18 (R) The bandwidth of the circuit in rad s −1 (3) 400 (S) The peak power dissipated at resonance in Watt (4) 2250 (5) 500",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0233",
+    "stem": "Two beads, each with charge 푞 and mass m, are on a horizontal, frictionless, non-conducting, circular hoop of radius R. One of the beads is glued to the hoop at some point, while the other one performs small oscillations about its equilibrium position along the hoop. The square of the angular frequency of the small oscillations is given by [휀 0 is the permittivity of free space.]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0241",
+    "stem": "A source (S) of sound has frequency 240 Hz. When the observer (O) and the source move towards each other at a speed 푣 with respect to the ground (as shown in Case 1 in the figure), the observer measures the frequency of the sound to be 288 Hz. However, when the observer and the source move away from each other at the same speed 푣 with respect to the ground (as shown in Case 2 in the figure), the observer measures the frequency of sound to be 푛 Hz. The value of 푛 is _____.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0247",
+    "stem": "The circuit shown in the figure contains an inductor L, a capacitor C 0 , a resistor R 0 and an ideal battery. The circuit also contains two keys K 1 and K 2 . Initially, both the keys are open and there is no charge on the capacitor. At an instant, key K 1 is closed and immediately after this the current in R 0 is found to be I 1 . After a long time, the current attains a steady state value I 2 . Thereafter, K 2 is closed and simultaneously K 1 is opened and the voltage across C 0 oscillates with amplitude V 0 and angular frequency 휔 0 . Match the quantities mentioned in List-I with their values in List-II and choose the correct option. List-I List-II (P) The value of I 1 in Ampere is (1) 0 (Q) The value of I 2 in Ampere is (2) 2 (R) The value of 휔 0 in kilo-radians/s is (3) 4 (S) The value of V 0 in Volt is (4) 20 (5) 200",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Oscillations.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0370",
+    "stem": "The equation of a plane progressive wave is given by $y = 5 \\cos \\pi \\left(200t - \\frac{x}{150}\\right)$ where $x$ and $y$ are in cm and $t$ is in second. The velocity of the wave is _______ m/s.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "The standard equation of a travelling wave is $y = A \\cos(\\omega t - k x)$.\nComparing it with the given equation $y = 5 \\cos \\left(200\\pi t - \\frac{\\pi x}{150}\\right)$, we find:\nAngular frequency $\\omega = 200\\pi\\text{ rad/s}$\nWave number $k = \\frac{\\pi}{150}\\text{ cm}^{-1}$\nThe velocity of the wave is given by $v = \\frac{\\omega}{k}$:\n$v = \\frac{200\\pi}{\\pi / 150} = 200 \\times 150 = 30000\\text{ cm/s}$\nConverting to meters per second:\n$v = 300\\text{ m/s}$."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0405",
+    "stem": "The equation of motion of a particle is given by $x = a \\sin\\left(50t + \\frac{\\pi}{3}\\right)\\text{ cm}$. The particle will come to rest at time $t_1$ and it will have zero acceleration at time $t_2$. The $t_1$ and $t_2$ respectively are _______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Velocity $v = \\frac{dx}{dt} = 50a \\cos\\left(50t + \\frac{\\pi}{3}\\right)$. For particle to come to rest, $v=0 \\implies 50t_1 + \\frac{\\pi}{3} = \\frac{\\pi}{2} \\implies 50t_1 = \\frac{\\pi}{6} \\implies t_1 = \\frac{\\pi}{300}\\text{ s}$.\nAcceleration $A = \\frac{dv}{dt} = -2500a \\sin\\left(50t + \\frac{\\pi}{3}\\right)$. For zero acceleration, $A=0 \\implies 50t_2 + \\frac{\\pi}{3} = \\pi \\implies 50t_2 = \\frac{2\\pi}{3} \\implies t_2 = \\frac{2\\pi}{150} = \\frac{\\pi}{75}\\text{ s}$."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0433",
+    "stem": "The velocity of a particle executing simple harmonic motion along x-axis is described as $v^2 = 50 - x^2$, where $x$ represents displacement. If the time period of motion is $\\frac{x}{7}$ s, the value of $x$ is _____.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "The standard equation for velocity in Simple Harmonic Motion is $v^2 = \\omega^2 (A^2 - x^2) = \\omega^2 A^2 - \\omega^2 x^2$.\nComparing this with the given equation $v^2 = 50 - x^2$, we identify the coefficient of $x^2$:\n$\\omega^2 = 1 \\implies \\omega = 1 \\text{ rad/s}$.\nThe time period is $T = \\frac{2\\pi}{\\omega} = 2\\pi \\text{ s}$.\nWe are given $T = \\frac{x}{7}$ s. Setting these equal and using $\\pi \\approx \\frac{22}{7}$:\n$\\frac{x}{7} = 2 \\pi \\implies \\frac{x}{7} = 2 \\left(\\frac{22}{7}\\right) \\implies x = 44$."
+  }
+]

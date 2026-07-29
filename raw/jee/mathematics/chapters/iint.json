@@ -1,0 +1,431 @@
+[
+  {
+    "questionNumber": 1,
+    "stem": "is equal to",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 2,
+    "stem": "Let 1/ ( ) (1 ) = + n n x f x x for 2 ≥ n and occurs  times ( ) ( )( ). = \u0001 \u0001…\u0001 \u0003\u0004\u0004\u0005\u0004\u0004\u0006 f n g x f f f x Then 2 ( ) − ∫ n x g x dx equals 1 1 1 (1 ) 1 n n nx K n + + + +",
+    "options": [
+      " 1 1 1 (1 ) ( 1) − + + − n n nx K n n",
+      " 1 1 1 (1 ) 1 − + + − n n nx K n",
+      " 1 1 1 (1 ) ( 1) n n nx K n n + + + +",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Let 4 2 4 2 , . 1 1 − − − = = + + + + ∫ ∫ x x x x x x e e I dx J dx e e e e Then for an arbitrary constant , C the value of − J I equals 4 2 4 2 1 1 log 2 1   + + +   − +   x x x x e e C e e",
+    "options": [
+      " 4 2 4 2 1 1 log 2 1   − + +   + +   x x x x e e C e e",
+      " 2 2 1 1 log 2 1   + + +   − +   x x x x e e C e e",
+      " 2 2 1 1 log 2 1   − + +   + +   x x x x e e C e e",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 4,
+    "stem": "The integral 2 9/ 2 sec (sec tan ) + ∫ x x dx equals (for some arbitrary constant K). 2 11/ 2 1 1 1 (sec tan ) (sec tan ) 11 7   + + +   +   x x K x x",
+    "options": [
+      " 2 11/ 2 1 1 1 (sec tan ) (sec tan ) 11 7   − − + +   +   x x K x x",
+      " 2 11/ 2 1 1 1 (sec tan ) (sec tan ) 11 7   − + +   +   x x K x x",
+      " 2 11/ 2 1 1 1 (sec tan ) (sec tan ) 11 7   − + + +   +   x x K x x",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 5,
+    "stem": "If then is equal to , N dx D ∫ 1 dD N AD B N dx = + + 1 N < 1 : dD AD B N N dx D dx dx D D + + = ∫ ∫ 1 N dD A dx B dx D D = + + ∫ ∫ ∫ 1 log N Ax B D dx D = + +∫ 1 N dx D ∫ 1 dx L ∫ 1L z = 1 dx Q ∫ 2 2 1 1 ( ) Q a L = ± ± 1 1 L dx Q ∫ 1 1 dQ L A B dx = + 2 1 Q dx Q ∫ 1 2 1 dQ Q AQ B C dx = + + 1 2 dx L L ∫ 2L t = 1 1 dx L Q ∫ 1 1 L t = 1 2 dx Q L ∫ 2L t = 2 1 dx Q Q ∫ 1 2 Q t Q = 2 3 4 2 1 2 2 1 x dx x x x − − + ∫ 4 2 2 2 2 1 x x c x − + + 4 2 3 2 2 1 x x c x − + + 4 2 2 2 1 x x c x − + + 4 2 2 2 2 1 2 x x c x − + + ( ) ( ), f x dx x = Ψ ∫ 5 3 ( ) x f x dx ∫ 3 3 2 3 1[ ( ) ( ) ] 3 x x x x dx C Ψ − Ψ + ∫ 3 3 3 3 1 ( ) 3 ( ) 3 x x x x dx C Ψ − Ψ + ∫ 3 3 2 3 1 ( ) ( ) 3 x x x x dx C Ψ − Ψ + ∫ 3 3 2 3 1[ ( ) ( ) ] 3 x x x x dx C Ψ − Ψ + ∫ _ 195 Indefinite Integration",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 6,
+    "stem": "The integral is equal to:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 7,
+    "stem": "The integral equals:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 8,
+    "stem": "The integral is equal to where C is an arbitrary constant",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 9,
+    "stem": "Let tan , ( 1) = > ∫ n nI xdx n .If 4 6 , + = I I a 5 5 tan + + x bx C where C is a constant of integration, then the ordered pair (a, b) is equal to 5      ",
+    "options": [
+      "1 , 1 5   −    ",
+      " 1 , 0 5   −    ",
+      " 1 ,1 5   −    ",
+      "1 , 0"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 10,
+    "stem": "The integral 2 2 5 3 2 3 2 5 2 sin cos (sin cos sin sin cos cos ) x x dx x x x x x x + + + ∫ is equal to 3 1 1 cot ) C x + + (where C is a constant of integration)",
+    "options": [
+      " 3 1 1 cot C x − + +",
+      " 3 1 3(1 tan ) C x + +",
+      " 3 1 3(1 tan ) C x − + +",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 11,
+    "stem": "5 sin 2 sin 2 ∫ x dx x is equal to: (where c is a constant of integration)",
+    "options": [
+      "2x + sinx + 2sin2x + c",
+      "x + 2sinx + 2sin2x + c",
+      "x + 2sinx + sin2x + c",
+      "2x + sinx + sin2x + c"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 12,
+    "stem": "If 6 1/3 3 6 2/3 ( )(1 ) (1 ) dx xf x x C x x = + + + ∫ where C is a constant of integration, then the function ƒ(x) is equal to: 3 1 2x −",
+    "options": [
+      " 3 1 6x −",
+      " 2 3 x",
+      " 2 1 2x −",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 13,
+    "stem": "For 2 1, ≠ + x nπ ∈ n N (the set of natural numbers), the integral 2 2 2 2 2sin( 1) sin 2( 1) 2sin( 1) sin 2( 1) − − − − + − ∫ x x x dx x x is equal to: 2 2 1 log sec ( 1) 2 − + e x c",
+    "options": [
+      " 2 1 log sec 2   − +     e x c",
+      " 2 2 1 log sec ( 1) 2 − + e x c",
+      " 2 2 1 1 log sec 2 2   − +     e x c",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 14,
+    "stem": "If 8 6 2 7 2 5 7 ( ) ( 0) ( 1 2 ) x x f x dx x x x + = ≥ + + ∫ and f(0) = 0, then the value of f(1) is: 4",
+    "options": [
+      " 1 2 −",
+      "1 2",
+      " 1 4 −",
+      "1"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 15,
+    "stem": "Let 2 n ≥ be a natural number and 0< θ < π/2. Then 1/ 1 (sin sin ) cos sin n n n d θ θ θ θ θ + − ∫ is equal to: 1 2 1 1 1 1 sin n n n n C n θ + −   + +   −  1 1 1 x x x e dx x +   + −     ∫ 1 ( 1) x x x e c + − + 1 x x xe C + + 1 ( 1) x x x e c + + + 1 x x xe c + − + 2 4 3/4 ( 1) dx x x + ∫ 1/ 4 4 4 1 x c x   + +     4 1/4 ( 1) x c + + 4 1/4 ( 1) x c − + + 1/4 4 4 1 x c x   + − +     12 9 5 3 3 2 5 ( 1) x x dx x x + + + ∫ 5 5 3 2 ( 1) x C x x − + + + 10 5 3 2 2( 1) x C x x + + + 5 5 3 2 2( 1) x C x x + + + 10 5 3 2 2( 1) x C x x − + + + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 196",
+    "options": [
+      " 1 2 1 1 1 1 sin n n n n C n θ + +   − +   − ",
+      " 1 2 1 1 1 1 sin n n n n C n θ + −   − +   +  ",
+      " 1 2 1 1 1 1 sin n n n n C n θ + −   − +   − ",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 16,
+    "stem": "If 3 3 4 4 1 5 ( ) , 48 x x x e dx e f x C − − = + ∫ where C is a constant of integration, then f(x) is equal to: 3 2 1 x − +",
+    "options": [
+      " 3 4 1 x − −",
+      " 3 4 1 x +",
+      " 3 2 1 x − −",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 17,
+    "stem": "2 2 4 1 ( )( 1 ) , m x dx A x x C x − = − + ∫ for a suitable chosen integer m and a function A(x), where C is a constant of integration then (A(x))m equals: 6 1 27x",
+    "options": [
+      " 3 1 3x −",
+      " 9 1 27x −",
+      " 4 1 9x −",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 18,
+    "stem": "If 1 ( ) 2 1 , 2 1 + = −+ − ∫ x dx f x x C x where C is a constant of integration, then f(x) is equal to: 4) 3 − x",
+    "options": [
+      "1( 4) 3 + x",
+      "1 ( 1) 3 + x",
+      "2( 2) 3 + x",
+      "2 ("
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 19,
+    "stem": "The integral cos(log ) e x dx ∫ is equal to: (where C is a constant of integration) ) cos(log )] e e x x x C − +",
+    "options": [
+      " [sin(log ) cos(log )] 2 e e x x x C − +",
+      " [sin(log ) cos(log )] 2 e e x x x C + +",
+      "[sin(log ) cos(log )] e e x x x C + +",
+      "[sin(log"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 20,
+    "stem": "The integral 13 11 4 2 4 3 2 (2 3 1) + + + ∫ x x dx x x is equal to: 12 4 2 3 (2 3 1) + + + x C x x Matrix Match / Column Match",
+    "options": [
+      " 4 4 2 3 (2 3 1) + + + x C x x",
+      " 12 4 2 3 6(2 3 1) + + + x C x x",
+      " 4 4 2 3 6(2 3 1) + + + x C x x",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 21,
+    "stem": "Match the statements/expressions in Column I with the open intervals in Column II. Column I Column II",
+    "options": [
+      "Interval contained in the domain of definition of",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 1,
+    "stem": ", 2 2 π π   −     non-zero solutions of the differential equation 2 ( 3) 0 ′ − + = x y y",
+    "options": [
+      "Option A",
+      "Interval containing the value of the integral 5 1 ( 1)( 2) − − ∫x x ( 3) − x ( 4)( 5) − − x x dx",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 2,
+    "stem": "0, 2 π      ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Interval in which at least one of the points of local maximum of 2 cos sin + x x lies",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 3,
+    "stem": "5 , 8 4 π π      ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Interval in which tan–1 (sin x + cos ) x is increasing"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 4,
+    "stem": "0, 8 π      ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 5,
+    "stem": "( , ) π π − Statement or Assertion & Reason",
+    "options": [
+      "A→ 1; B→ 3; C→ 4; D→ 2",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 22,
+    "stem": "Let ( ) F x be an indefinite integral of 2 sin .x Statement-I: The function ( ) F x satisfies ( ) ( ) π + = F x F x for all real x. and Statement-II: 2 2 sin ( ) sin π + = x x for all real x. ANSWERS & SOLUTIONS",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-I.",
+      "Statement-I is True, Statement-II is False.",
+      "Statement-I is False, Statement-II is True."
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(c) 5 sin 2 sin 2 ∫ x dx x 5 2sin cos 2 2 2sin cos 2 2 = ∫ x x dx x x sin3 sin2 sin + = ∫ x x dx x 3 3sin 4sin 2sin cos sin − − = ∫ x x x x dx x 2 (3 4sin 2cos ) = − + ∫ x x dx (3 2(1 cos2 ) 2cos ) = − − + ∫ x x dx (1 2cos2 2cos ) = + + ∫ x x dx 2sin sin 2 = + + + x x x c",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(d) 6 1/3 3 6 2/3 ( )(1 ) (1 ) dx xf x x C x x = + + + ∫ 6 1/3 2/3 7 6 ( )(1 ) 1 1 dx xf x x C x x = + +   +     ∫ Let 6 1 1 t x = + 7 6 dt dx x − = 1/3 2/3 1 1 6 2 dt t t − = − ∫ 1/3 6 1/3 6 2 1 1 1 (1 ) 1 2 2 x x x +   = − + = −     ∴ 3 1 ( ) 2 f x x = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(a) Put 2 ( 1) 1 − = x ⇒ 2 = xdx dt ∴ 1 1 cos 2 1 cos − = + ∫ t I dt t 1 tan 2 2   =     ∫ t dt 1 ln sec 2 = +c 2 1 ln sec 2   − = +     x I c",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(d) 8 6 2 7 2 5 7 ( 1 2 ) x x dx x x + + + ∫ 6 8 2 7 5 5 7 1 1 2 x x dx x x − − + =   + +     ∫ 5 7 1 1 1 2 C x x = + + + As f(0) = 0, 7 7 2 ( ) 2 1 x f x x x = + + 1 (1) 4 f =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(c) 1/ 1 (sin sin ) cos sin n n n d θ θ θ θ θ + − ∫ 1/ 1 1 1 sin 1 sin sin n n n d θ θ θ θ − +   −     = ∫ Put 1 1 1 sinn t θ − − = So ( 1) cos sinn n d dt θ θ θ − = Now 1/ 1 ( ) 1 n t dt n −∫ 1 1 1 ( ) 1 ( 1) 1 n t C n n + = + − + 1 1 1 1 1 1 1 sin n n t C n θ + −   = − = +   −  _ 199 Indefinite Integration",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(a) 3 3 4 4 1 5 ( ) , 48 x x x e dx e f x C − − = + ∫ Put x3= t 2 3x dx dt = 3 3 4 2 x x e x dx − ⋅ ⋅ ∫ 4 1 3 t t e dt − ⋅ ∫ 4 4 1 3 4 4 t t e e t dt − −   ⋅ −   − −   ∫ 4 [4 1] 48 t e t c − − + + 4 3 [4 1] 48 t e x c − − + + 3 ( ) 1 4 f x x = −− (From the given options (a) is most suitable)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(b) 2 2 4 1 ( )( 1 ) , m x dx A x x C x − = − + ∫ 2 4 1 | | 1 , x x dx x − ∫ Put 2 1 1 t x −= ⇒ 3 2 dt dx x − = Case (i): 0 x ≥ 3 / 2 1 2 3 t rdt C − ⇒− + ∫ ⇒ 3/ 2 2 1 1 1 3 x   − −     ⇒ 2 3 2 ( 1 ) 3 x C x − + − 3 1 ( ) 3 A x x = and m = 3 ( ) 3 3 9 1 1 ( ) 3 27 m A x x x   = − = −     Case (ii): 0 x ≤ we get ( ) 3 2 3 1 3 x C x − + − 3 1 ( ) , 3 3 A x m x = = − ( ) 9 1 ( ) 27 m A x x =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(a) 2 1 x t −= ⇒ 2 2 1 x t −= ⇒ 2 2 . dx t dt = 2 1 1 1 2 2 1 t x dx t dt t x + + + = − ∫ ∫ 2 3 2 t dt + = ∫ 3 2 1 3 ( 9) 2 3 6   = + = + +     t t t t c 2 1 9 2 1 6 x x c −+   = − +     4 2 1 3 x x c +   = − +     4 ( ) 3 + = x f x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(b) cos( ) I nx dx = ∫ ℓ cos(ln ). sin( ) ] I x x nx dx = ∫ ℓ cos(ln ). [sin( ). cos( ) ] x x nx x nx dx −∫ ℓ ℓ [sin( ) cos( ) 2 x I nx nx C = + + ℓ ℓ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(b) 13 11 4 2 4 3 2 (2 3 1) + + + ∫ x x dx x x 3 5 4 2 4 3 3 3 1 2   +       + +     ∫ dx x x x x Let 2 4 3 1 2   + + =     t x x 4 3 1 1 2 6 − = + ∫ dt C t t ⇒ 12 4 2 3 6(2 3 1) + + + x C x x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(a) ( ) 0 ′ > f x if cos sin > x x",
+    "options": [
+      " 2 ( 3) 0 − + = dy x y dx 2 ( 3) = − − ∫ ∫ dx dy x y ⇒ 1 ln | | 3 = + − y c x so domain is {3} − R _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 200 \u0002  \u0002  \u0002",
+      "Put 3 = + x t 2 2 ( 2)( 1) ( 1)( 2) − + + − − = ∫t t t t t dt 2 2 2 2 ( 1)( 41) 0 − − − = ∫t t t dt (being odd function )",
+      " 2 5 1 ( ) sin 4 2   = − −     f x x Maximum value occurs when 1 sin 2 = x",
+      ""
+    ],
+    "page": 193
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) 2 1 cos2 ( ) sin 2 − = = ∫ ∫ x F x xdx dx ⇒ 1 ( ) (2 sin2 ) 4 F x x x c = − + Since, ( ) ( ) π + ≠ F x F x Hence statement-I false. But statement-II is true as 2 sin x is periodic with period . π _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 193
+  }
+]

@@ -1,0 +1,1652 @@
+[
+  {
+    "questionNumber": 1,
+    "stem": "x y z a b c + + = lx my nz p + + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "Ax By Cz + + = 0, D = YOZ . x a = ZOX . y b = XOY . z c = . | | AB AC AB AC × × \u0001\u0001\u0001\u0002 \u0001\u0001\u0001\u0002 \u0001\u0001\u0001\u0002 \u0001\u0001\u0001\u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "By Cz D + + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "Ax Cz D + + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "Ax By D + + = 1 1 1 1 0 P a x b y c z d = + + + = 2 2 2 2 0 Q a x b y c z d = + + + = 0 P Q λ + = 1 1 r n d ⋅ = \u0002 \u0002 2 2 r n d ⋅ = \u0002 \u0002 1 2 1 2 ( ) r n n d d λ λ ⋅ + = + \u0002 \u0002 \u0002 0 ax by cz d + + + = 0, ax by cz d′ + + + = C M ( ) P a\u0002 ( ) P r\u0002 b \u0002 c\u0002 Figure 23.25 Figure 23.24 N d n\u0002 ( ) P r\u0002 r\u0002 Figure 23.23 N ( ) P r\u0002 ( ) A a\u0002 a\u0002 n\u0002 r\u0002 _ 323 Three Dimensional Geometry Vector form: Since parallel planes have the common normal, therefore equation of plane parallel to plane is where 2 d is a constant determined by the given condition. Equation of Plane Passing Through the Given Point. \u0001 Equation of plane passing through a given point: Equation of plane passing through the point is , where A, B and C are",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "r.’s of normal to the plane. \u0001 Equation of plane through three points: The equation of plane passing through three non-collinear points and 3 3 3 ( , , ) x y z is or . Foot of Perpendicular From a Point A(α, β, γ) to a Given Plane ax + by + cz + d = 0: If AP be the perpendicular from A to the given plane, then it is parallel to the normal, so that its equation is (say) Any point P on it is It lies on the given plane and we find the value of r and hence the point P. \u0001 Perpendicular distance Cartesian form: The length of the perpendicular from the point to the plane is . Vector form: The perpendicular distance of a point having position vector from the plane is given by Note \u0001 The distance between two parallel planes is the algebraic difference of perpendicular distances on the planes from origin. \u0001 Distance between two parallel planes and is . \u0001 Position of two points w.r.t. a plane: Two points and lie on the same or opposite sides of a plane according to and are of same or opposite signs. The plane divides the line joining the points P and Q externally or internally according to P and Q are lying on same or opposite sides of the plane. Angle between Two Planes. \u0001 Cartesian form: Angle between the planes is defined as angle between normals to the planes drawn from any point. Angle between the planes and is Note \u0001 If , then the planes are perpendicular to each other. \u0001 If , then the planes are parallel to each other. \u0001 Vector form: An angle θ  between the planes and is given by . Equation of Planes Bisecting Angle between Two Given Planes \u0001 Cartesian form: Equations of planes bisecting angles between the planes and a2x + b2y + c2z + d = 0 are \u0001 Vector form: The equation of the planes bisecting the angles between the planes and are or or . Image of a Point in a Plane: Let P and Q be two points and let π be a plane such that \u0001 Line is perpendicular to the plane π, and \u0001 Mid-point of lies on the plane π. Then either of the point is the image of the other in the plane π. 1 r n d ⋅ = \u0002 \u0002 2, r n d ⋅ = \u0002 \u0002 1 1 1 ( , , ) x y z 1 1 1 ( ) ( ) ( ) 0 A x x B y y C z z − + − + − = 1 1 1 2 2 2 ( , , ),( , , ) x y z x y z 1 1 1 2 2 2 3 3 3 1 1 0 1 1 x y z x y z x y z x y z = 1 1 1 2 1 2 1 2 1 3 1 3 1 3 1 0 x x y y z z x x y y z z x x y y z z − − − − − − = − − − x y z r a b c α β γ − − − = = = ( , , ). ar br cr α β γ + + + 1 1 1 , , ( ) x y z P 0 ax by cz d + + + = 1 1 1 2 2 2 ax by cz d a b c + + + + + a\u0002 r n d ⋅ = \u0002 \u0002 | | | | a n d p n ⋅ − = \u0002 \u0002 \u0002 1 0 Ax By Cz D + + + = 2 0 Ax By Cz D + + + = 2 1 2 2 2 ~ D D A B C + + 1 1 1 ( , , ) P x y z 2 2 2 ( , , ) Q x y z 0 ax by cz d + + + = 1 1 1 ax by cz d + + + 2 2 2 ax by cz d + + + 1 1 1 1 0 a x b y c z d + + + = 2 2 2 2 0 a x b y c z d + + + = 1 1 2 1 2 1 2 2 2 2 2 2 2 1 1 1 2 2 2 cos ( )( ) a a b b c c a b c a b c −  + +     + + + +   1 2 1 2 1 2 0 a a b b c c + + = 1 1 1 2 2 2 a b c a b c = = 1 1 1 r n d ⋅ = \u0002 \u0002 2 2 2 r n d ⋅ = \u0002 \u0002 1 2 1 2 . cos | || | n n n n θ = ± \u0002 \u0002 \u0002 \u0002 1 1 a x b y + 1 1 0 c z d + + = 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 1 1 2 2 2 ( ) ( ) a x b y c z d a x b y c z d a b c a b c + + + + + + = ± + + + + 1 1 1 r n d ⋅ = \u0002 \u0002 2 2 2 r n d ⋅ = \u0002 \u0002 1 1 2 2 1 2 | | | | | | | | r n d r n d n n ⋅ − ⋅ − = \u0002 \u0002 \u0002 \u0002 \u0002 \u0002 1 1 2 2 1 2 | | | | | | | | r n d r n d n n ⋅ − ⋅ − = ± \u0002 \u0002 \u0002 \u0002 \u0002 \u0002 1 2 1 2 1 2 ˆ ˆ ( ) | | | | d d r n n n n ⋅ ± = ± \u0002 \u0002 \u0002 PQ PQ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 324 To Find the Image of a Point in a Given Plane, we Proceed as Follows: \u0001 Write the equations of the line passing through P and normal to the given plane as . \u0001 Write the co-ordinates of image Q as (x1 + ar, y1, + br, z1 + cr). \u0001 Find the co-ordinates of the mid-point R of \u0001 Obtain the value of r by putting the co-ordinates of R in the equation of the plane. \u0001 Put the value of r in the co-ordinates of Coplanar Lines: Lines are said to be coplanar if they lie in the same plane or a plane can be made to pass through them. Cartesian Form: If the lines and are coplanar Then . The equation of the plane containing them is or . \u0001 Vector form : If the lines and are coplanar, then and the equation of the plane containing them is or Sphere A sphere is the locus of a point which moves in space in such a way that its distance from a fixed point always remains constant. The fixed point is called the centre and the constant distance is called the radius of the sphere. General Equation of Sphere: The general equation of a sphere is with centre i.e. (–(1/2) coeff. of x, –(1/2) coeff. of y, –(1/2) coeff. of z) and, radius From the above equation, we note the following characteristics of the equation of a sphere : (i)  It is a second degree equation in x, y, z; (ii) The coefficients of are all equal; (iii) The terms containing the products xy, yz and zx are absent. Note The equation repre- sents, \u0001 A real sphere, if . \u0001 A point sphere, if . \u0001 An imaginary sphere, if . \u0001 If then the radius of sphere is imaginary, whereas the centre is real. Such a sphere is called “pseudo-sphere” or a “virtual sphere”. \u0001 The equation of the sphere contains four unknown constants u, v, w and d and therefore a sphere can be found to satisfy four conditions. Equation in Sphere in Various Forms. \u0001 Equation of sphere with given centre and radius Cartesian Form: The equation of a sphere with centre (a, b, c) and radius is . . .(i) If the centre is at the origin, then equation (i) takes the form which is known as the standard form of the equation of the sphere. Vector Form: The equation of sphere with centre at and radius ‘a’ is \u0001 Diameter form of the equation of a sphere Cartesian Form: If and are the co-ordinates of the extremities of a diameter of a sphere, then its equation is Vector Form: If the position vectors of the extremities of a diameter of a sphere are and then its equation is or 1 1 1 x x y y z z a b c − − − = = . PQ . Q 1 1 1 1 1 1 x x y y z z l m n − − − = = 2 2 2 2 2 2 x x y y z z l m n − − − = = 2 1 2 1 2 1 1 1 1 2 2 2 0 x x y y z z l m n l m n − − − = 1 1 1 1 1 1 2 2 2 0 x x y y z z l m n l m n − − − = 2 2 2 1 1 1 2 2 2 0 x x y y z z l m n l m n − − − = 1 1 r a b λ = + \u0001 \u0001 \u0001 2 2 r a b λ = + \u0001 \u0001 \u0001 1 1 2 [ ] a b b = \u0001 \u0001 \u0001 2 1 2 [ ] a b b \u0001 \u0001 \u0001 1 2 1 1 2 [ ] [ ] r b b a b b = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 1 2 2 1 2 [ ] [ ]. r b b a b b = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 2 2 2 2 x y z ux + + + + 2 2 0 vy wz d + + = ( , , ). u v w − − − 2 2 2 u v w d = + + − 2 2 2 , , z y x 2 2 2 2 2 2 0 x y z ux vy wz d + + + + + + = 2 2 2 0 u v w d + + − > 2 2 2 0 u v w d + + − = 2 2 2 0 u v w d + + − < 2 2 2 0, u v w d + + − < R 2 2 2 2 ( ) ( ) ( ) x a y b z c R − + − + − = 2 2 2 2, x y z R + + = ( ) C c\u0001 | | r c a − = \u0001 \u0001 1 1 1 ( , , ) x y z 2 2 2 ( , , ) x y z 1 2 1 2 ( )( ) ( )( ) x x x x y y y y − − + − − 1 2 ( )( ) 0 z z z z + − − = a\u0001 , b \u0001 ( ) ( ) 0 r a r b − ⋅ − = \u0001 \u0001 \u0001 \u0001 2 | | ( ) 0 r r a b a b −⋅ − + ⋅ = \u0001 \u0001 \u0001 \u0001 \u0001 \u0001 ( ) P r\u0001 ( ) C a\u0001 Figure 23.27 Figure 23.26 R π Q 1 1 1 ( , , , ) x ar y br z cr + + + 1 1 ( , , ) P x y z 0 ax by cz d + + + = _ 325 Three Dimensional Geometry Section of a sphere by a plane Consider a sphere intersected by a plane. The set of points common to both sphere and plane is called a plane section of a sphere. The plane section of a sphere is always a circle. The equations of the sphere and the plane taken together represent the plane section. Let C be the centre of the sphere and M be the foot of the perpendicular from C on the plane. Then M is the centre of the circle and radius of the circle is given by The centre M of the circle is the point of intersection of the plane and line CM which passes through C and is perpendicular to the given plane. \u0001 Centre: The foot of the perpendicular from the centre of the sphere to the plane is the centre of the circle. (radius of circle)2 (radius of sphere)2 – (perpendicular from centre of spheres on the plane)2 \u0001 Great circle: The section of a sphere by a plane through the centre of the sphere is a great circle. Its centre and radius are the same as those of the given sphere. Condition of Tangency of a Plane to a Sphere: A plane touches a given sphere if the perpendicular distance from the centre of the sphere to the plane is equal to the radius of the sphere. \u0001 Cartesian form: The plane touches the sphere if \u0001 Vector form: The plane touches the sphere if . Note Two spheres and with centres and and radii and respectively \u0001 Do not meet and lies farther apart iff \u0001 Touch internally iff \u0001 Touch externally iff \u0001 Cut in a circle iff \u0001 One lies within the other if . When two spheres touch each other the common tangent plane is and when they cut in a circle, the plane of the circle is coefficients of being unity in both the cases. Let p be the length of perpendicular drawn from the centre of the sphere to the plane then \u0001 The plane cuts the sphere in a circle iff and in this case, the radius of circle is \u0001 The plane touches the sphere iff \u0001 The plane does not meet the sphere iff Equation of Concentric Sphere: Any sphere concentric with the sphere is + where λ is some real which makes it a sphere. Intersection of Straight Line and a Sphere: Let the equations of the sphere and the straight line be . . .(i) and (say) . . .(ii) Any point on the line (ii) is If this point lies on the sphere (i) then we have, or . . .(iii) This is a quadratic equation in r and so gives two values of r and therefore the line (ii) meets the sphere (i) in two points which may be real, coincident and imaginary,  according as root of (iii) are so. Angle of Intersection of Two Spheres: The angle of intersection of two spheres is the angle between the tangent planes to them at their point of intersection. As the radii of the spheres at this common point are normal to the tangent planes so this angle is also equal to the angle between the radii of the spheres at their point of intersection. If the angle of intersection of two spheres is a right angle, the spheres are said to be orthogonal. \u0001 Condition for orthogonality of two spheres: Let the equation of the two spheres be . . .(i) and . . .(ii) If the sphere (i) and (ii) cut orthogonally, then which is the required condition. 2 2 PM CP CM = − = lx my nz p + + = 2 2 2 x y z + + + 2 2 2 0, ux vy wz d + + + = 2 2 2 2 2 2 2 ( ) ( )( ) ul vm wn p l m n u v w d + + − = + + + + − r n d ⋅ = \u0002 \u0002 | | r a R − = \u0002 \u0002 | | | | a n d R n ⋅ − = \u0002 \u0002 \u0002 1 S 2 S 1 C 2 C 1r 2r 1 2 1 2 | | C C r r > + 1 2 1 2 | | | | C C r r = − 1 2 1 2 | | C C r r = + 1 2 1 2 1 2 | | | | r r C C r r − < < + 1 2 1 2 | | | | C C r r < − 1 2 0 S S − = 1 2 0; S S − = 2 2 2 , , x y z 2 2 2 2 x y z r + + = 0, Ax By Cz D + + + = p r < 2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "r p − . p r = . p r > 2 2 2 x y z + + 2 2 2 0 ux vy wz d + + + + = 2 2 2 x y z + + 2 2 2 0, ux vy wz λ + + + = 2 2 2 2 2 2 0 x y z ux vy wz d + + + + + + = x y z r l m n α β γ − − − = = = ( , , ). lr mr nr α β γ + + + 2 2 2 ( ) ( ) ( ) 2 ( ) lr mr nr u lr α β γ α + + + + + + + 2 ( ) 2 ( ) 0 v mr w nr d β γ + + + + + = 2 2 2 [ ] 2 [ ( ) ( )] ( )] r l m n r l u m v n w α β γ 2 + + + + + + + + 2 2 2 ( 2 2 2 ) 0 u v w d α β γ α β γ + + + + + + + = 2 2 2 2 2 2 0 x y z ux vy wz d + + + + + + = 2 2 2 2 2 2 0 x y z u x v y w z d ′ ′ ′ ′ + + + + + + = 2 2 2 , uu vv ww d d ′ ′ ′ ′ + + = + Figure 23.28 C P Q M _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 326 Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 1,
+    "stem": "A plane passes through (1, 2,1) − and is perpendicular to two planes 2 2 x y z − + 0 = and 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 4,
+    "stem": "x y z − + = The distance of the plane form the point (1,2,2) is",
+    "options": [
+      "0",
+      "1",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "A line with positive direction cosines passes through the point P (2, – 1, 2) and makes equal angles with the coordinate axes. The line meets the plane 2x + y + z = 9 at point Q. The length of the line segment PQ equals",
+    "options": [
+      "1",
+      " 2",
+      "3",
+      "2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Equation of the plane containing the straight line 2 3 4 x y z = = and perpendicular to the plane containing the straight lines 3 4 2 x y z = = and 4 2 3 x y z = = is 2 4 0 x y z + − =",
+    "options": [
+      " 2 2 0 x y z + − =",
+      "3 2 2 0 x y z + − =",
+      " 2 0 x y z − + =",
+      "5"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 4,
+    "stem": "If the distance of point (1, 2,1) P − from the plane 2 2 , x y z α + − − where 0, α > is 5, then the foot of the perpendicular from P to the plane is 1 5 , , 3 3 2   −    ",
+    "options": [
+      "8 4 7 , , 3 3 3   −    ",
+      "4 4 1 , , 3 3 3   −    ",
+      "1 2 10 , , 3 3 3      ",
+      "2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 5,
+    "stem": "The point P is the intersection of the straight line joining the points Q (2, 3, 5) and R (1, –1, 4) with the plane 5x – 4y– z = 1. If S is the foot of the perpendicular drawn from the point T(2, 1, 4) to QR, then the length of the line segment PS is.",
+    "options": [
+      "I 2",
+      " 2",
+      "2",
+      "2 2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 6,
+    "stem": "If the straight lines 1 1 2 x y z x k − + = = and 1 1 5 2 x y z k + + = = are coplanar, then the plane (s) containing these two lines is (are) 2 1 y z − = −",
+    "options": [
+      " 2 1 y z + = −",
+      " 1 y z + = −",
+      " 1 y z − = −",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 7,
+    "stem": "The equation of a plane passing through the line of intersection of the plane 2 3 2 x y z + + = and 3 x y z − + = and at a distance 2 3 from the point (3, 1, –1) is 2 1 2 x y − −−",
+    "options": [
+      "5 11 17 x y z − + =",
+      " 2 3 2 1 x y + = −",
+      " 3 x y z + + =",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 8,
+    "stem": "Perpendicular are drawn from points on the line to the plane The feet of perpendicular lie on the line",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 9,
+    "stem": "Distance between two parallel planes and is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 10,
+    "stem": "If the lines and are coplanar, then can have",
+    "options": [
+      "any value",
+      "exactly one value",
+      "exactly two values",
+      "exactly three values"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 11,
+    "stem": "A line l passing through the origin is perpendicular to the lines Then, the coordinates(s) of the point(s) on at a distance of from the point of intersection of l and is(are)",
+    "options": [
+      "",
+      "",
+      "(1, 1, 1)",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 12,
+    "stem": "Two lines and are coplanar. Then 2 2 2 2 1 2 1 3 x y z + + = = −",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 3,
+    "stem": "x y z + + = 1 2 5 8 13 x y z − − = = − 1 2 2 3 5 x y z − − = = − 1 2 4 3 7 x y z − − = = − 1 2 2 7 5 x y z − − = = − 2 2 8 x y z + + = 4 2 4 5 0 x y z + + + = 3 2 5 2 7 2 9 2 2 3 4 1 1 x y z k − − − = = − 1 4 5 2 1 x y z k − − − = = k 1 ˆ ˆ ˆ : (3 ) ( 1 2 ) (4 2 ) , l t i t j t k + + −+ + + t , −∞< < ∞ 2 ˆ ˆ ˆ : (3 2 ) (3 2 ) (2 ) , l s i s j s k + + + + + s −∞< < ∞ 2l 17 1l 7 7 5 , , 3 3 3       ( 1, 1, 0) − − , 7 7 8 , 9 9 9       1 : 5, 3 2 α = = − − y z L x 2 : , 1 2 α α = = − − y z L x α _ 327 Three Dimensional Geometry",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 13,
+    "stem": "The image of the line in the plane is the line:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 14,
+    "stem": "The angle between the lines whose direction cosines satisfy the equations and is :",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 15,
+    "stem": "From a point perpendiculars and are drawn respectively on the lines and If is such that is a right angle, then the possible value(s) of is(are)",
+    "options": [
+      "",
+      "1",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 16,
+    "stem": "The distance of the point (1, 0, 2) from the point of intersection of the line and the plane is",
+    "options": [
+      "",
+      "8",
+      "",
+      "13"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 17,
+    "stem": "The equation of the plane containing the line and parallel to the plane, is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 18,
+    "stem": "In consider the planes and Let be a plane, different from and which passes through the intersection of and If the distance of the point (0, 1, 0) from is 1 and the distance of a point from is 2, then which of the following relations is (are) true?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 19,
+    "stem": "In let L be a straight line passing through the origin. Suppose that all the points on L are at a constant distance from the two planes and Let M be the locus of the feet of the perpendiculars drawn from the points on L to the plane Which of the following points lie(s) on M ?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 20,
+    "stem": "The system of linear equations , has a non-trivial solution for :",
+    "options": [
+      "infinitely many values of",
+      "exactly one value of",
+      "exactly two values of",
+      "exactly three value of"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 21,
+    "stem": "The distance of the point from the plane measured along the line is:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 22,
+    "stem": "If the line, lies in the plane, then",
+    "options": [
+      "26",
+      "18",
+      "5",
+      "2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 23,
+    "stem": "Let P be the image of the point (3, 1, 7) with respect to the lane",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 3,
+    "stem": "x y z − + = Then the equation of the plane passing through P and containing the straight line 1 2 1 x y z = = is 0 x y − =",
+    "options": [
+      " 3 0 x y z + − =",
+      "3 0 x z + =",
+      " 4 7 0 x y z − + =",
+      "2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 24,
+    "stem": "If the image of the point P (1, –2, 3) in the plane, 2 3 4 22 0 + − + = x y z measured parallel to the line, 1 4 5 = = x y z is Q, then PQ is equal to 1 3 4 3 1 5 x y z − − − = = − 2 3 0 x y z − + + = 3 5 2 3 1 5 x y z + − − = = − 3 5 2 3 1 5 x y z + − + = = − − 3 5 2 3 1 5 x y z − + − = = − 3 5 2 3 1 5 x y z − + − = = − − 0 m n + + = ℓ 2 2 2 m n = + ℓ 3 π 4 π 6 π 2 π ( , , ), P λ λ λ PQ PR , 1 y x z = = ,",
+    "options": [
+      " 42",
+      "6 5",
+      "3 5",
+      "2 42"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 1,
+    "stem": "y x z = − = − P QPR ∠ λ 2 1 − 2 − 2 1 2 3 4 12 − + − = = x y z 16, − + = x y z 2 14 3 21 2 5 3; x y z − + = 4 5, x y z + + = 3 6 1, x y z + + = 2 6 12 13 x y z + + = 3 6 7 x y z + + = − 3 6 7 x y z + + = 2 6 12 13 x y z + + = − 3, R 1 : 0 = P y 2 :",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 1,
+    "stem": "+ = P x z 3P 1P 2, P 1P",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "P 3P (α, β, γ) 3P 2α + β + 2γ 2 0 + = 2α – β + 2γ 4 0 + = 2α + β – 2γ – 10 0 = 2α – β + 2γ – 8 0 = 3, R 1 : 2 1 0 + − + = P x y z 2 : 2 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "− + −= P x y z",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 1,
+    "stem": "P 5 2 0, , 6 3   − −     1 1 1 , , 6 3 6   − −     5 1 ,0, 6 6   −     1 2 ,0, 3 3   −     0 x y z λ + − = 0 x y z λ − − = 0 x y z λ + − = λ λ λ λ (1, 5,9) − 5 x y z − + = x y z = = 3 10 10 3 10 3 20 3 3 2 4 2 1 3 − + + = = − x y z 9, lx my x + − = 2 2 l m + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 328",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 25,
+    "stem": "The distance of the point (1, 3 –7) from the plane passing through the point (1, –1, –1), having normal perpendicular to both the 1 2 4 1 2 3 − + − = = − x y z lines 2 1 7 2 1 1 − + + = = − − x y z and , is 83",
+    "options": [
+      " 5 83",
+      "10 74",
+      "20 74",
+      "10"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 26,
+    "stem": "The equation of the plane passing through the point (1, 1, 1) and perpendicular to the planes 2x y 2z 5 + − = and 3x 6y 2z 7 − − = , is 2y 15z 31 + + =",
+    "options": [
+      "14x 2y 15z 3 − + + =",
+      "14x 2y 15z 27 − + =",
+      "14x 2y 15z 1 + − =",
+      "14x"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 27,
+    "stem": "Let 1 : 2 3 + − = P x y z and 2 : 2 2 + + = P x y z be two planes. Then, which of the following statements(s) is (are) TRUE? perpendicular to the line of intersection of P1 and P2, then the distance of the point (2, 1, 1) from the plane P3 is 2 3 28 If 1L is the line of intersection of the planes 2 2 3 2 0, x y z − + − = 1 0 x y z − + + = and 2 L is the line of intersection of the planes 2 3 0, x y z + −−= 3 2 1 0, x y z − + −= then the distance of the origin from the plane containing the lines 1L and 2, 2 1 4 2 1 3 2 1 2 2",
+    "options": [
+      "1",
+      "",
+      "",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 29,
+    "stem": "The length of the projection of the line segment joining the points (5, 1,4) − and (4, 1,3) − on the plane, 7 x y z + + = is: 3",
+    "options": [
+      " 2 3",
+      "2 3",
+      "2 3",
+      "1"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 30,
+    "stem": "The length of the perpendicular from the point (2,–1, 4) on the straight line, 3 2 10 7 1 + − = = − x y z is",
+    "options": [
+      "less than 2",
+      "greater than 3 but less than 4",
+      "greater than 4",
+      "greater than 2 but less than 3"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 31,
+    "stem": "The equation of a plane containing the line of intersection of the planes 2x – y – 4 = 0 and y + 2z – 4 = 0 and passing through the point (1, 1, 0) is:",
+    "options": [
+      "x + 3y + z = 4",
+      "x – y – z = 0",
+      "x – 3y – 2z = –2",
+      "2x – z = 2"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 32,
+    "stem": "The vector equation of the plane through the line of intersection of the planes x + y + z = 1 and 2x + 3y + 4z = 5 which is perpendicular to the plane x – y + z = 0 is : ˆ ˆ( ) 2 0 r i k × − + = \u0002",
+    "options": [
+      " ˆ ˆ( ) 2 0 r i k × + + = \u0002",
+      " ˆ ˆ .( ) 2 0 r i k − −= \u0002",
+      " ˆ ˆ .( ) 2 0 r i k − + = \u0002",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 33,
+    "stem": "The plane through the intersection of the planes 1 + + = x y z and 2 3 4 0 + −+ = x y z and parallel to y-axis also passes through the point:",
+    "options": [
+      "(–3, 0, –1)",
+      "(3, 3, –1)",
+      "(3, 2, 1)",
+      "(–3, 1, 1)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 34,
+    "stem": "The equation of the line passing through (–4, 3, 1), parallel to the plane 2 5 0 + −−= x y z and intersection the line 1 3 2 3 2 1 + − − = = − − x y z is 4 3 1 2 1 4 − + − = = x y z",
+    "options": [
+      " 4 3 1 1 1 1 + − − = = − x y z",
+      " 4 3 1 3 1 1 + − − = = − x y z",
+      " 4 3 1 1 1 3 + − − = = x y z",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 35,
+    "stem": "The equation of the plane containing the straight line 2 3 4 x y z = = and perpendicular to the plane containing the straight lines 3 4 2 x y z = = and 4 2 3 x y z = = is",
+    "options": [
+      "x + 2y – 2z = 0",
+      "x – 2y + z = 0",
+      "5x + 2y – 4z = 0",
+      "3x + 2y – 3z = 0"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 36,
+    "stem": "If the lines x = ay +b, z = cy + d and x = a'z + b', y = c'z + d' are perpendicular, then: _ 329 Three Dimensional Geometry",
+    "options": [
+      "cc' + a + a' = 0",
+      "aa' + c + c' = 0",
+      "ab' + bc' + 1 = 0",
+      "bb' + cc' + 1 = 0"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 37,
+    "stem": "The plane passing through the point (4, –1, 2) and parallel to the lines 2 2 1 3 1 2 x y z + − + = = − and 2 3 4 1 2 3 x y z − − − = = also passes through the point:",
+    "options": [
+      "(–1, –1, –1)",
+      "(–1, –1, 1)",
+      "(1, 1, –1)",
+      "(1, 1, 1)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 38,
+    "stem": "The plane which bisects the line segment joining the points (–3,–3, 4) and (3, 7, 6) at right angles, passes through which one of the following points ?",
+    "options": [
+      "(4, –1,7)",
+      "(4,1,–2)",
+      "(–2,3,5)",
+      "(2,1,3)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 39,
+    "stem": "On which of the following lines lies the point of intersection of the line, 4 5 3 2 2 1 x y z − − − = = and the plane, x + y + z = 2 ? 3 4 1 1 3 2 x y z + − + = = −",
+    "options": [
+      " 2 3 3 2 2 3 x y z − − + = =",
+      " 4 5 5 1 1 1 x y z − − − = = −",
+      " 1 3 4 1 2 5 x y z − − + = = −",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 40,
+    "stem": "The direction ratios of normal to the plane through the points (0, –1, 0) and (0, 0, 1) and making an anlge 4 π with the plane y – z + 5 = 0 are: 2 ,1,–1",
+    "options": [
+      "2 3, 1,–1",
+      "2, 2, 2 −",
+      "2, –1, 1",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 41,
+    "stem": "The plane containing the line 3 2 1 2 1 3 − + − = = − x y z and also containing its projection on the plane 2x + 3y – z = 5, contains which one of the following points?",
+    "options": [
+      "(2, 0, –2)",
+      "(–2, 2, 2)",
+      "(0, –2, 2)",
+      "(2, 2, 0)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 42,
+    "stem": "If the point (2, α, β) lies on the plane which passes through the points (3, 4, 2) and (7, 0, 6) and is perpendicular to the plane 2x – 5y = 15, then 2α– 3β is equal to :-",
+    "options": [
+      "5",
+      "17",
+      "12",
+      "7"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 43,
+    "stem": "Given 11 12 13 b c c a a b + + + = = for ∆ABC with usual notation. If cos cos cos A B C α β γ = = , then  the ordered triad (α,β,γ) has a value",
+    "options": [
+      "(3,4,5)",
+      "(19,7,25)",
+      "(7,19,25)",
+      "(5,12,13)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 44,
+    "stem": "If the point (2, α, β) lies on the plane which passes through the points (3, 4, 2) and (7, 0, 6) and is perpendicular to the plane 2x – 5y = 15, then 2α– 3β is equal to :-",
+    "options": [
+      "5",
+      "17",
+      "12",
+      "7"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 45,
+    "stem": "Two lines 3 1 6 1 3 1 − + − = = − x y z and 5 2 3 7 6 4 + − − = = − x y z intersect at the point R. The reflection of R in the xy plane has coordinates:-",
+    "options": [
+      "(2, 4, 7)",
+      "(–2, 4, 7)",
+      "(2, –4, –7)",
+      "(2,–4, 7)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 46,
+    "stem": "Given 11 12 13 b c c a a b + + + = = for ∆ABC with usual notation. If cos cos cos A B C α β γ = = , then  the ordered triad (α,β,γ) has a value",
+    "options": [
+      "(3,4,5)",
+      "(19,7,25)  c. (7,19,25)",
+      "Option C",
+      "(5,12,13)"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 47,
+    "stem": "The perpendicular distance from the origin to the plane containing the two lines, 2 2 5 3 5 7 x y z + − + = = and 1 4 4, 1 4 7 x y z − − + = = is",
+    "options": [
+      "11 6",
+      "6 11",
+      "11",
+      "11 6"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 48,
+    "stem": "If an angle between the line, 1 2 3 2 1 2 + − − = = − x y z and the plane, 2 3 − − = x y kz is 1 2 2 cos , 3 −        then a value of k is: 3 5 −",
+    "options": [
+      " 5 3 −",
+      " 5 3",
+      " 3 5",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 49,
+    "stem": "Let S be the set of all real values of λ such that a plane passing through the points (–λ2, 1, 1), (1, –λ2, 1) and (1, 1, –λ2) also passes through the point (–1, –1, 1). Then S is equal to:",
+    "options": [
+      "{ 3}",
+      "{ 3 3} −",
+      "{1, –1}",
+      "{3,–3}"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 50,
+    "stem": "Let 1L and 2L denote the lines ˆ ˆ ˆ ˆ ( 2 2 ), r i i j k λ = + −+ + \u0002 R λ ∈ and ˆ ˆ ˆ (2 2 ), r i j k µ = − + \u0002 R µ ∈ respectively. If 3L is a line which is perpendicular to both 1L and 2L and cuts both of them, then which of the following options describe(s) 3L ? _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 330 2 ˆ ˆ ˆ ˆ ˆ ˆ (2 2 ) (2 2 ), 9 r i j k t i j k t R = − + + + − ∈ \u0002",
+    "options": [
+      " ˆ ˆ ˆ (2 2 ), r t i j k t R = + − ∈ \u0002",
+      " 2 ˆ ˆ ˆ ˆ ˆ ˆ (4 ), (2 2 ), 9 r i j k t i j k t R = + + + + + ∈ \u0002",
+      " 1 ˆ ˆ ˆ ˆ ˆ (2 ) (2 2 ), 3 r i k t i j k t R = + + + − ∈ \u0002",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 51,
+    "stem": "Three lines 1 2 3 , , L L L are given by 1 ˆ : , L r i λ = \u0002 2 ˆ ˆ : , L r j k µ = + \u0002 3 ˆ ˆ ˆ : . L r i j k γ = + + \u0002 Which of the following points Q can be taken on L2 so that the points P on line L1, point Q on L2 and point R on L3 are collinear. 1 ˆ ˆ 2 k j + Matrix Match / Column Match",
+    "options": [
+      " 1 ˆ ˆ 2 k j −",
+      "ˆk",
+      "ˆ ˆ k j +",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 52,
+    "stem": "Match the statement of Column I with those in Column II: Column I Column II",
+    "options": [
+      "Two rays in the first quadrant and intersects each other in the interval the value of is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 53,
+    "stem": "Match the statement of Column I with those in Column II Column I Column II",
+    "options": [
+      " then",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 54,
+    "stem": "Match the statements/expressions in Column I with the values given in Column II. Column I Column II",
+    "options": [
+      "The number of solutions of the equation sinx xe cosx 0 − = in the interval 0, 2 π      ",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 5,
+    "stem": "5 55 Match the statements in Column-I with those in Column-II. Column I Column II",
+    "options": [
+      "A line from the origin meets",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 1,
+    "stem": "–1 | | x y a + = 1 ax y − = 0 ( , a a ∈ ), ∞ 0 a ( , , ) α β γ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "x y z + + = ˆ ˆ ˆ , a i j k α β γ = + + \u0002 ˆ ˆ ( ) 0, k k a × × = \u0002 γ = 4/3 1 0 2 2 0 1 (1 ) ( 1) y dx y dy − + − ∫ ∫ 1 0 0 1 1 1 x dx xdx − + + ∫ ∫ 1 2 1 1 tan , 2 i t i ∞ − =  =     ∑ tan t = 1 2 cos , cos , a b b c a c θ θ = = + + 3 cos c a b θ = + 2 1 tan 2 θ  +     2 3 tan 2 θ  =     2 x y + 2 0 z + = 5 3 2/3 _ 331 Three Dimensional Geometry the lines 2 1 1 1 2 1 x y z − − + = = − and 8 3 2 x − 3 1 1 1 y z + − = = − at P and Q respectively. If length PQ = d, then 2 d is",
+    "options": [
+      "Option A",
+      "The values of x satisfying 1 tan ( 3) x − + 1 tan ( 3) x − − − = 1 sin− 3 5       are",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x ≠ The value of 2 ( ) f x dx π π π −∫ is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 56,
+    "stem": "Consider the lines and  the planes Let be the equation of the plane passing through the point of intersection of lines and and perpendicular to planes and Column I Column II",
+    "options": [
+      "",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 4,
+    "stem": "– 2 Statement or Assertion & Reason",
+    "options": [
+      "A→ 3; B→ 2; C→ 4; D→ 1",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 57,
+    "stem": "Consider the planes 3 6 2 15 x y z − − = and 2 2 5 x y z + − = Statement-I The parametric equations of the line of intersection of the given planes are 3 14 , 1 2 , 15 x t y t z t = + = + = and Statement-II The vectors ˆ ˆ ˆ 14 2 15 i j k + + is parallel to the line of intersection of the given planes.",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-II",
+      "Statement-I is True, Statement-II is False",
+      "Statement-I is False, Statement-II is True"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 58,
+    "stem": "Consider three planes 1 : 1, P x y z − + = 2 : 1, P x y z + − = − 3 : 3 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "P x y z − + = Let 1 2 3 , , L L L be the lines of intersection of the planes 2P and 3, P 3P and 1, P and 1P and 2, P respectively. Statement-I: At least two of the lines 1 2 , L L and 3L are non-parallel. and Statement-II The three planes do not have a common point. Paragraph Paragraph for Question No. 59 to 61 Consider the line 1 1 2 1 : , 3 1 2 x y z L + + + = = 2 2 2 3 : 1 2 3 x y z L − + − = =",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is False",
+      "Statement-I is False, Statement-II is True"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 59,
+    "stem": "The unit vector perpendicular to both 1L and 2L is ˆ ˆ ˆ 7 7 99 i j k − − 1 2 1 3 4 3 3 : , : 2 1 1 1 1 2 − + − + + = = = = − x y z x y z L L 1 2 : 7 2 3, : 3 5 6",
+    "options": [
+      " ˆ ˆ ˆ 7 7 99 i j k −+ +",
+      " ˆ ˆ ˆ 7 5 5 3 i j k −− +",
+      " ˆ ˆ ˆ 7 5 5 3 i j k −+ +",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 4,
+    "stem": "+ + = + − = P x y z P x y z + + = ax by cz d 1L 2, L 1P",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "P = a = b = c = d _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 332",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 60,
+    "stem": "The shortest distance between 1L and 2L is 5 3",
+    "options": [
+      "0",
+      "17 3",
+      "41 5 3",
+      "17"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 61,
+    "stem": "The distance of the point (1, 1, 1) from the plane passing through the point (−1, −2, −1) and whose normal is perpendicular to both the lines 1L and 2L is 75 Integer & Subjective",
+    "options": [
+      " 2 75",
+      " 7 75",
+      "13 75",
+      "23"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 62,
+    "stem": "Find the equation of the plane containing the line 2 3 x y z − + − = 0, 3x + 5 y z + = and at a distance of 1 6 from the point (2,1, 1) −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 63,
+    "stem": "Incident ray is along the unit vector ˆv and the reflected ray is along the unit vector ˆ. w The normal is along unit vector ˆa outwards. Express ˆw in terms of ˆa and ˆv .",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 64,
+    "stem": "If the distance between the plane 2 Ax y z d − + = and the plane containing the lines 1 2 3 2 3 4 x y z − − − = = and 2 3 4 3 4 5 x y z − − − = = is 6, then | | d is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 65,
+    "stem": "For a point P in the plane, let and be the distances of the point P from the lines and respectively. The area of the region R consisting of all points P lying in the first quadrant of the plane and satisfying is _______",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 66,
+    "stem": "Let P be a point in the first octant, whose image Q in the plane x + y = 3 (that is, the line segment PQ is perpendicular to the plane x + y = 3 and the mid-point of PQ lies in the plane x + y = 3) lies on the z-axis. Let the distance of P from the x-axis be 5. If R is the image of P in the xy-plane, then the length of PR is _____.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 67,
+    "stem": "Equation of three lines ˆ ˆ ˆ ˆ ˆ ˆ ; ( ); ( ) r i r i j r i j k λ µ γ = = + = + + \u0002 \u0002 \u0002 and a plane 1 x y z + + = are given then area of triangle formed by point of intersection of line and plane is , ∆then 2 (6 ) ∆ equals ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x y z − + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 10,
+    "stem": "α ⇒ = Equation of 1 2 1 1 2 2 x y z PQ t − + − = = = − ( 1,2 2, 2 1) Q t t t ≡ + − − + and 5 5 5 9 3 PQ t α + = ⇒ = = 8 4 7 , , . 3 3 3 Q −   ⇒ ≡   ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 6,
+    "stem": "(b,c) Points (1, –1, 0) & (–1, –1, 0) lies on the required plane. The normal to the plane required is 2 ˆ ˆ ˆ 2 2 4 (2 10) (4 5 ) 5 2 i j k k i k j k k k k = = −− − + − ∴ The equation of required plane containing both the lines is 2 ( 4) (10 2 ) 4(4 5 ) k x k y k z d − + − + − = Point (1, –1, 0) lies on the plane (1) 2 ( 4) (2 10) k k d − + − = ∴ Equation of plane is 2 2 ( 4) (10 2 ) (4 5 ) 2 14 k x k y k z k k − + + + − = + − ∵ 2 4 0 k − = ⇒ 2 k = ± From (ii) we get, for k = 2, 6 6 6 1 y z y z − = −⇒ − = − for 2 k =−14 14 14 y z + = − 1 y z + = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(c) Lines are co-planer S.D. = 0 ⇒ or Exactly two values.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(b, d) The common perpendicular is along (2 2, –1, 3 ) λ λ λ − − λ ⇒ (2 2) ( 1) 3 3 λ λ λ − + − − + = ⇒ 4 6 λ = ⇒ 3 5 9 1, , 2 2 2 B λ −   = ⇒ ≡    ⇒ 7 5 . . of 1, , (2, 7, 5) 2 2 D R AB −   = ≡ −     1 2 2 7 5 x y z − − = = − 5 2 2 8 0 & 2 2 0 2 x y z x y z + + − = + + + = 2 2 2 5 21 ( 8) 7 2 2 3 2 2 1 2 −− = = + + ⇒ 2 1 3 4 4 5 1 1 0 2 1 k k − − − − = ⇒ 1 1 1 1 1 0 2 1 k k − − − = 2 (1 2 ) (1 ) (2 ) 0 k k k + + + − − = 2 3 0 k k + = ( 3) 0 k k + = 0 k = 3 k = − ˆ ˆ ˆ ˆ ˆ ˆ 1 2 2 2 3 2 2 2 1 i j k i j k = − + − 2 ℓ 1ℓ ℓ × (0, 0, 0) M _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 334 Let So, So, Let the required point be P Given that So,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(a,d) Will be coplanar if shortest distance is zero so",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(a) Equation of AB is Co-ordinate of point B is point satisfy the equation of plane Co-ordinate of point B (–1, 4, 3) Co-ordinate of point C (–3, 5, 2) equation of line passing through ‘C’ is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(a) or Case (i): Case (ii): ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(c) Case (i): Case (ii) : and and So, For as points P and Q coincide",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(d) Let ∴ Required distance",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(c) Put in first two planes and ⇒ when Let be a plane parallel to given plane. ∴ is required plane. (2 , 3 , 2 ) M λ λ λ ≡ − 2 3 3 1 2 4 1 1 2 2 λ λ λ λ − − + − = = ⇒ = (2, 3, 2) M ≡ − 17 PM = ⇒ 2 2 2 (3 2 2) (3 2 3) (2 2) 17 s s s + − + + + + + − = ⇒ 2 9 28 20 0 s s + + = 7 7 8 ( 1, –1, 0) or , , 9 9 9 P   ≡−     5 0 0 0 3 2 α − − − = = − − x y z 0 1 2 α α − = = − − x y z ⇒ 5 0 0 0 3 2 0 0 1 2 α α α − − − = − − 2 (5 ) ( 5 4) 0, 1, 4, 5 α α α α − − + = = 1, 4 α = 1 3 4 2 1 1 x y z λ − − − = = = − ⇒ 1 2 x λ = + 3 y λ = − 4 z λ = + 2(1 2 ) (3 ) (4 ) 3 0 λ λ λ + − − + + + = ⇒ 1 λ = − ⇒ ⇒ ⇒ 3 5 2 3 1 5 x y z + − − = = − 0; m n + + = ℓ 2 2 2 m n = + ℓ ⇒ ( ) m n = − + ℓ ⇒ 2 2 2 2 2 m n mn m n + + = + ⇒ 0 mn = ⇒ 0 m = 0 n = 0 m = 0 n = 0 n + = ℓ 0 m + = ℓ ⇒ k = ℓ k = ℓ 0 m = m k = − n k = − 0 n = 1/ 2 = ℓ 1 2 = ℓ 0 m = 0 n = 1/ 2 n = − ⇒ 1 cos 2 θ = / 3 θ π = 1 , ( , ,1) 1 1 0 − = = = x y z r Q r r 1 , ( , , 1) 1 1 0 + = = = − − − x y z k R k k ˆ ˆ ˆ ( ) ( ) ( 1) λ λ λ = − + − + − \u0001\u0001\u0001\u0002 PQ r i r j k 1 0 as is to λ λ −+ − = ⊥ \u0001\u0001\u0001\u0005 r r PQ L ⇒ 2 2 λ λ = ⇒ = r r ˆ ˆ ˆ ( ) ( ) ( 1) λ λ λ = − + + + + \u0001\u0001\u0001\u0002 PR k i k j k 2 0 as is to λ λ − − − = ⊥ \u0001\u0001\u0001\u0005 k k PR L ⇒ 0 = k ⊥ PQ PR ( )( ) ( )( ) ( 1)( 1) 0 λ λ λ λ λ λ − − + − + + − + = r k r k ⇒ 1, 1 λ = − 1 λ = ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 1,
+    "stem": "λ = − 3 2 = + x r 4 1 = − y r 12 2 = + z r ∴ 3 2 4 1 12 2 16 + − + + + = r r r ⇒ 1 = r ( , , ) (5,3,14) = x y z 2 2 2 4 3 12 13 = + + = 0 z = ∴ 2 5 3 x y − = 5 x y + = 4, 1, x y = = 0 z = 3 6 x y z k + + = 4 3 0 k + + = ⇒ 7 k = ∴ 3 6 7 x y z + + = A C B x 1 y 3 z 4 3 1 5 − − − = = − 2x y z 3 0 − + + = _ 335 Three Dimensional Geometry",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(b,d) Let the required plane be Distance of from is 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(a,b) Line L will be parallel to the line of intersection of and Let a, b and c be the direction ratios of line L Equation of line L is Again foot of perpendicular from origin to plane is ∴ Equation of project of line L on plane is Clearly points and satisfy the line of projection i.e. M Alternative solution Direction ratio of plane can be found by So, Equation of plane is and point and satisfy.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(d) Three values",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(b) Equation of line can be taken as As lies on plane Required distance",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) (i) lies on the plane . . .(i) (ii) . . .(ii) From (i) and (ii) and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(c) 3 1 7 2(6) 4 1 1 1 3 x y z − − − = = = = − − 1, 5, 3 x y z = − = = ( 1,5,3) P − ( 1) ( 5 ( 3) 0 a x b y c z + + −+ − = 2 0 a b c + + = . . .(i) 5 3 0 a b c − − = 1 4 7 a b c = = − − ( 1) 4( 5) 7( 3) 0 x y z − + + − − − = 4 7 0 x y z −+ − = 4 7 0 x y z − + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(c) Line PQ; 1 2 3 1 4 5 x y z − + − = = 1 0 x z y λ + + −= ⇒ 2 | 1| 1 1 2 2 λ λ λ − = ⇒ = − + ⇒ 3 2 2 2 0 P x y z ≡ − + − = 3P ( , , ) α β γ | 2 2 2 | 2 4 1 4 α β γ − + − = × + ⇒ 2 2 4 0 and 2 2 8 0 α β λ α β λ − + + = − + − = 1P 2P ⇒ 2 0 and 2 0 a b c a b c + − = − + = ⇒ : : ::1: 3: 5 a b c − − 0 0 0 1 3 5 x y z − − − = = − − 1P 1 1 1 , , 6 3 6   − −     1P 1 2 1 6 6 6 1 3 5 x y z k + + − = = = − − 5 2 0, , 6 3   − −     1 1 1 , , 6 3 6   − −     1 2 1 ( ) (13, 4,5) n n n × × ≡ − \u0002 \u0002 \u0002 13 4 5 0 x y z − + = 5 2 0, , 6 3   − −     1 1 1 , , 6 3 6   − −     1 1 1 1 0 1 1 λ λ λ − − − = − 2 1( 1) ( 1) 1( 1) 0 λ λ λ λ + − − + − + = 3 1 1 0 λ λ λ λ + + − − −= 3 0 λ λ − = x-1 5 9 PQ : 1 1 1 λ + − = = = y z ∴ Q ( 1, 5, 9) λ λ λ + − + Q 5 − + = x y z ∴ ( 1) ( 5) ( 9) 5 λ λ λ + − − + + = 10 λ = − ⇒ ( 9, 15, 1) − − − Q ∴ 2 2 2 (1 9) ( 5 15) (9 1) PQ = + + −+ + + 100 100 100 10 3 = + + = (3, 2, 4) − − ∴ 3 2 4 9 − + = ℓ m ⇒ 3 2 5 − = ℓ m 2 3 0 − − = ℓ m ⇒ 2 3 − = ℓ m 1 = ℓ 1 = − m P (1, –2, 3) Q F x–y+z = 3 Q (3, 1, 7) P (–1, 5, 3) (1, 5,9) P − x y z = = 5 x y z − + = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 336 Let ( 1, 4 2, 5 3) F λ + λ − λ + F lines on the plane 2( 1) 3(4 2) 4(5 3) 22 0 λ + + λ − − λ + + = ⇒ 6 6 0 −λ + = ⇒ 1 λ= (2, 2, 8) F ⇒ 2, 2 42 PQ PF = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(d) Normal vector ˆ ˆ ˆ ˆ ˆ ˆ 1 2 3 5 7 3 2 1 1 i j k i j k − = + + − − So, plane is 5( 1) 7( 1) 3( 1) 0 x y z − + + + + = ⇒ 5 7 3 5 0 x y z + + + = Distance 5 21 21 5 10 25 49 9 83 + − + = + +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(d) Let normal of the plane have dr's (a, b, c) ∴ ( ) ˆ ˆ ˆ i j k ˆ ˆ ˆ ˆ ˆ ˆ ai bj ck 2 1 2 14i 2j 15k 3 6 2 + + = − = − − − − − ∴ Plane 14x 2y 15z d + + = ⇒  14x 2y 15z",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 31,
+    "stem": "+ + = 27 (c, d) Equation of planes : 1 : 2 3 + − = P x y z 2 : 2 2 + + = P x y z Let direction ratios of line of intersection of planes 1P and 2P are < a, b, c > ∴ 2 0 + −= a b c and 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 0,
+    "stem": "+ + = a b c ∴ Direction ratios 1, 1,1 =< − > The given line is : 4/3 1/3 3 3 3 − − = = − x y z It is parallel to the line of intersection of 1P and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 2,
+    "stem": "P ∴ 2 2 1 1 cos 60º 2 6 6 θ θ + − = = ⇒ = Equation of plane 3P is 1.( 4) ( 2) ( 2) 0 − − − + + = x y z ∴ 3 : 0 − + = P x y z Distance of plane 3P from point (2, 1, 1) 2 1 1 2 1 1 1 3 −+ = = + + units",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(c) 1L is parallel to ˆ ˆ ˆ ˆ 2 2 3 1 1 1 i j k i j − = + − 2 L is parallel to ˆ ˆ ˆ ˆ ˆ 1 2 1 3 5 7 3 1 2 i j k i j k −= − − − Also, 2 L passes through 5 8 , ,0 7 7       So, required plane is 5 8 7 7 1 1 0 0 3 5 7 x y z − − = − − ⇒ 7 7 8 3 0 x y z − + = = Now, perpendicular distance 3 1 162 3 2 = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(a) Normal to the plane 7 x y z + + = is ˆ ˆ ˆ n i j k = + + \u0002 ˆ ˆ AB i k = −− ⇒ 2 AB AB = = BC = Length of projection of AB on n AB n = ⋅ \u0002 \u0002 ˆ ˆ ˆ ( ) 2 ˆ ˆ ( ) 3 3 i j k i k + + = −− ⋅ = Length of projection of the line segment on the plane is AC 2 2 2 4 2 2 3 3 AC AB BC = − = − = 2 2 3 AC =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(b) Now ɵ ˆ ˆ (10 7 ) 0 ⋅ − + = \u0001\u0001\u0001\u0002 MP i j k M P= (2,–1,4) <10,–7,1> A(–3,2,0) (10λ–3,–7λ+2,λ) 3 1 2, , 2 2 − ≡      (4,–1,3) ˆ ˆ ˆ n i j k = + + \u0002 (5,–1,4) B C A _ 337 Three Dimensional Geometry ⇒ 1 = 2 λ ∴ Length of perpendicular 1 49 ( ) 0 4 4 = = + + PM 50 25 5 4 2 2 = = = Which is greater than 3 but less than 4.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(b) The required plane is (2x – y – 4) + λ (y + 2z – 4) = 0 it passes through (1, 1, 0) ⇒ (2 – 1 – 4) + λ(1 – 4) = 0 ⇒ –3 – 3λ = 0 ⇒ λ = –1 ⇒ x – y – z = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(c) Let the plane be (x + y + z – 1) +λ (2x + 3y + 4z – 5) = 0 ⇒ (2λ +1)x +(3λ +1)y + (4λ +1)z –(5λ +1) = 0 ⊥ to the plane x – y + z = 0 ⇒ 1 3 λ = − ⇒  the required plane is x – z + 2 = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(a) Equation of plane ( 1) (2 3 4) 0 + + − + + − + = x y z x y z λ (1 2 ) (1 3 ) (1 ) 1 4 0 + + + + − −+ = x y z λ λ λ λ dr’s  of normal of the plane are 1 2 ,1 3 ,1 + + − λ λ λ Since plane is parallel to y – axis 1 3 0 + = λ ⇒ λ= –1/3 So the equation of plane is 4 7 0 + − = x z Point (3,2,1) satisfies this equation Hence Answer is (c)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(b) Normal vector of plane containing two intersecting lines is parallel to vector 1 ˆ ˆ ˆ ( ) 3 0 1 3 2 1     =     − −   \u0002 i j k V ˆ ˆ 2 6 = − + i k Required line is parallel to vector 2 ˆ ˆ ˆ ( ) 1 2 1 2 0 6     = −     −   \u0002 i j k V ˆ ˆ ˆ 3 = −+ i j k Required equation of line is ⇒ 4 3 1 3 1 1 + − − = = − x y z",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(b) Vector along the normal to the plane containing the lines 3 4 2 x y z = = and 4 2 3 x y z = = is ˆ ˆ ˆ (8 10 ) i j k −− vector perpendicular to the vectors ˆ ˆ ˆ 2 3 4 i j k + + and ˆ ˆ ˆ 8 10 i j k −− is ˆ ˆ ˆ 26 52 26 i j k − + so, required plane is 26x – 52y + 26z = 0 x – 2y + z = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(b) Line , x ay b z cy d = + = + ⇒ 1 x b y z d a c − − = = Line , a z b z y c z d ′ ′ ′ ′ + = + ⇒ 1 x b y d z a c ′ ′ − − = = ′ ′ Given both the lines are perpendicular ⇒  aa' + c' + c = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(d) Let n\u0002 be the normal vector to the plane passing through (4, –1, 2) and parallel to the lines L1 & L2 then ˆ ˆ ˆ 3 1 2 1 2 3 i j k n = − \u0002 ∴ ˆ ˆ ˆ 7 7 7 n i j k = − + \u0002 ∴ Equation of plane is 1( 4) 1( 1) 1( 2) 0 x y z − − − + + − = ∴ 1 0 x y z + − −= New check options",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(b) p : 3(x – 0) + 5 (y – 2) + 1 (z – 5) = 0 3x + 5y + z = 15 (0, 2, 5) A(–3,–3, 4) (–4,3,1) <–3, 2,–1> <a,b,c> (–1,3,2) _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 338",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 39,
+    "stem": "(c) General point on the given line is x = 2λ + 4 y = 2λ + 5 z = λ + 3 Solving with plane, 2λ + 4 + 2λ + 5 +λ + 3 = 2 5λ + 12 = 2 5λ = –10 λ = –2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(b ,d) Let the equation of plane be a(x – 0) + b(y + 1) + c(z – 0) = 0 It passes through (0,0,1) then b + c = 0 . . . (i) Now 2 2 2 (0) (1) ( 1) cos 4 2 + + − = + + a b c a b c π ⇒ a2 = –2bc and b = –c we get a2 = 2c2 ⇒ 2 = ± a c ⇒ direction ratio (a,b,c) ( 2 , 1,1) = − or ( 2 ,1,–1)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(a) The normal vector of required plane ˆ ˆ ˆ ˆ ˆ ˆ (2 3 ) (2 3 ) = − + × + − i j k i j k ˆ ˆ ˆ 8 8 8 = − + + i j k So, direction ratio of normal is (–1, 1, 1) So required plane is –(x – 3) + (y + 2) + (z – 1) = 0 ⇒ –x + y + z + 4 = 0 Which is satisfied by (2, 0, –2)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 42,
+    "stem": "(d) Normal vector of plane ˆ ˆ ˆ 2 5 0 4(5 2 3 ) 4 4 4 = − = − + − − i j k i j k equation of plane is 5( 7) 2 3( 6) 0 − + − − = x y z 5 2 3 17 + − = x y z",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 43,
+    "stem": "(c) b + c = 11λ, c + a = 12λ, a + b = 13λ ⇒ a = 7λ, b = 6λ, c = 5λ(using cosine formula) 1 19 5 cos ,cos ,cos 5 35 7 A B C = = = α : β : γ ⇒ 7 : 19 : 25",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 44,
+    "stem": "(d) Normal vector of plane ˆ ˆ ˆ 2 5 0 4(5 2 3 ) 4 4 4 = − = − + − − i j k i j k equation of plane is 5( 7) 2 3( 6) 0 − + − − = x y z 5 2 3 17 + − = x y z",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 45,
+    "stem": "(c) Point on L1 (λ + 3, 3λ – 1, –λ + 6) Point on L2 (7µ  – 5, –6µ + 2, 4µ + 3) ⇒ λ + 3 = 7µ – 5 . . . (i) 3λ – 1 = –6µ  + 2 . . . (ii) ⇒ λ = –1, µ  = 1 point R(2,–4,7) Reflection is (2,–4,–7)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(c) b + c = 11λ, c + a = 12λ, a + b = 13λ ⇒ a = 7λ, b = 6λ, c = 5λ (using cosine formula) 1 19 5 cos ,cos ,cos 5 35 7 A B C = = = α : β : γ ⇒ 7 : 19 : 25",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 47,
+    "stem": "(a) 3 5 7 1 4 7 i j k ˆ ˆ ˆ (35 28) (21.7) (12 5) i j k − − + − ˆ ˆ ˆ 7 14 7 i j k − + ˆ ˆ ˆ 2 i j k − + 1( 2) 2( 2) 1( 15) 0 x y z + − − + + = 2 11 0 x y z − + + = 11 11 4 1 1 6 = + +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 48,
+    "stem": "(c) DR's of line are 2, 1, –2 normal vector of plane is ˆ ˆ ˆ 2 − − i j kk 2 ˆ ˆ ˆ ˆ ˆ ˆ (2 2 ).( 2 ) sin 3 1 4 + − − − = + + i j k i j kk k α 2 2 sin 3 5 = + k k α . . .(i) 2 2 cos 3 = α . . .(ii) 2 2 (1) (2) 1 + = ⇒ 2 5 3 = k",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 49,
+    "stem": "(b) All four points are coplaner so 2 2 2 1 2 0 2 1 0 0 2 2 1 − − + = − − λ λ λ 2 2 2 ( 1) (3 ) 0 + − = λ λ 3 = ± λ _ 339 Three Dimensional Geometry",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 50,
+    "stem": "(b,c,d) Both given lines are skew lines. So direction ratios of any line perpendicular to these lines are ˆ ˆ ˆ 6 6 3 2,2, 1 i j k + − < −> Points at shortest distance between given lines are 1 AB lineL ⊥ \u0001\u0001\u0001\u0002 2 AB lineL ⊥ \u0001\u0001\u0001\u0002 So 8 2 2 , , 9 9 9 A      Now equation of required line ( ) 8 2 2 ˆ ˆ ˆ ˆ ˆ ˆ 2 2 9 9 9 r i j k i j k α   = + + + + −     \u0002 Now by option b, c, d are correct.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 51,
+    "stem": "(a,d) ( ,0,0) P λ (0, ,1) Q µ (1,1, ) R γ PQ k PR = \u0001\u0001\u0001\u0002 \u0001\u0001\u0001\u0002 1 1 λ µ λ γ γ − − ⇒ = = − − − 1 1 1 1 µ λ γ ⇒+ = = − µ ⇒ cannot take value of 1 and 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 53,
+    "stem": "(a) | | x y a + = 1 ax y − = | | 1 0 1 a x a + = > + | | 1 0 1 a y a − = > + 1 0; a + > 1, a > ∴ 0 1 a = ˆ ˆ ˆ a i j k α β γ = + + \u0002 ⇒ ˆ a k γ ⋅= \u0002 ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ( ) ( ) ( ) ( ) k k a k a k k k a k i j k γ α β γ × × = ⋅ − ⋅ = − + + \u0002 \u0002 ˆ ˆ 0 i j α β = + = \u0002 ⇒ 0 α β = = 2 α β γ + + = ⇒ 2 γ = 1 0 1 2 2 2 0 1 0 4 (1 ) ( 1) 2 (1 ) 3 y dy y dy y dy − + − = − = ∫ ∫ ∫ 1 0 1 0 1 0 1 1 2 1 x dx x dx x dx − − + + = − ∫ ∫ ∫ 1 1 3/2 0 0 2 4 2 2 3 3 x dx x = = ⋅ ⋅ = ∫ sin sin sin cos cos sin sin A B C A B A B + ≤ cos cos cos( ) B A B A B + = − ⇒ cos( ) 1 A B − ≥ ⇒ cos( ) 1 A B − = ⇒sin 1 C = 1 2 1 1 tan 2 i t i ∞ − =  =     ∑ 1 1 1 2 1 1 2 tan [tan (2 1) tan (2 1)] 4 1 1 i i i i i ∞ ∞ − − − = =  = + − −   −+   ∑ ∑ 1 1 1 1 [(tan 3 tan ) (tan 5 tan 3) ... − − − − = − + − + 1 1 . tan (2 1) tan (2 1)... ] n n − − + + − − ∞ 1 1 1 2 tan (2 1) tan 1 lim tan 1 (2 1) n n t n n − − − →∞ = + − = + + ⇒ tan lim 1 n n t n →∞ = + ⇒ 4 t π = 2 1 1 2 1 1 tan 2 cos 1 tan 2 a b c θ θ θ − = = + + ⇒ 2 1 tan 2 b c a b c a θ + − = + + 2 3 3 2 3 1 tan 2 cos 1 tan 2 c a b θ θ θ − = = + + ⇒ 2 3 tan 2 a b c a b c θ + − = + + ∴ 2 2 3 1 2 2 tan tan 2 2 3 3 b b θ θ + = = 2 2 0 x y z + + = 0 1 1 1 2 2 x y z r − − − = = = ( , 2 1, 2 ) P r r r + 1 (2 1)2 2 2 0 r r r × + + + × = ⇒ 2 9 r = − ∴ 2 5 4 , , 9 9 9   − −     4 25 16 5 81 3 + + = = A B (1 ,2 ,2 ) λ λ λ − (2 , ,2 ) µ µ µ − 1L 2 L _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 340",
+    "options": [
+      " Now",
+      "We have Also,",
+      "Line through (0, 1) and perpendicular to plane is given by Let be the foot of perpendicular on the straight line then Point is given by ∴ Required perpendicular distance units",
+      "Data could not be retrieved."
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 54,
+    "stem": "(a) 1 = + ∫ ∫ dy dx y ⇒ ( ) 2 1 = − x f x e ⇒ (ln 2) 3 = f",
+    "options": [
+      " '( ) 0, (0, / 2) π > ∀∈ f x x (0) 0and ( / 2) 0 π < > f f so one solution.",
+      "Let (a, b, c) is direction ratio of the intersected line, then 4 0 + + = ak b c 4 2 0 + + = a kb c 2 8 4 2 16 = = − − − a b c k k k We must have 2 2(8 ) 2(4 2 ) ( 16) 0 − + − + − = k k k ⇒ 2,4. = k",
+      "Let ( ) | 2| | 1| | 1| | 2| = + + + + − + − f x x x x x ⇒ k can take value 2, 3, 4, 5.",
+      ""
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 56,
+    "stem": "(a) Plane perpendicular to and has Direction Ratios of normal . . .(i) For point of intersection of lines ⇒ Point is (5, –2, –1) . . .(ii) From (i) and (ii), required plane is or",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 57,
+    "stem": "(d) 3 6 2 15 x y z − − = , 2 2 5 x y z + − = For 0, z = we get 3, 1 x y = = − 1P 2P ˆ ˆ ˆ ˆ ˆ ˆ 7 1 2 16 48 32 3 5 6 = − + + − i j k i j k 1 1 1 2 2 2 (2 1, , 3) ( 4, 3, 2 3) λ λ λ λ λ λ + − − ≡ + − − 1 2 1 2 2 1 4 or 2 3 λ λ λ λ + = + − = 1 2 1 2 3 or 3 λ λ λ λ − = − + = ⇒ 1 2 2, 1 λ λ = = ∴ –1( 5) 3( 2) 2( 1) 0 − + + + + = x y z 3 2 13 −+ + = − x y z 3 2 13 − − = x y z ⇒ 1, 3, 2,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 13,
+    "stem": "= = − = − = a b c d 4x − 4x 2 4 x − 6 4 2x − 2 − 1 − 1 2 _ 341 Three Dimensional Geometry Direction vectors of plane are 3 6 2 < −−>and 2 1 2 < − > then the dr’s of line of intersection of planes is 14 2 15 < > 3 1 0 14 2 15 x y z λ − + − = = = ⇒ 14 3, 2 1, 15 x y z λ λ λ = + = − = Hence, statement 1 is false. But statement 2 is true.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 58,
+    "stem": "(d) The direction cosines of each of the lines 1 2 3 , , L L L are proportional to (0,1,1).",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 59,
+    "stem": "(b) ˆ ˆ ˆ 3 1 2 7 5 1 2 3 i j k i j k = −− + Hence unit vector will be ˆ ˆ ˆ 7 5 . 5 3 i j k −− +",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 60,
+    "stem": "(d) (1 2)( 1) (2 2)( 7) (1 3)(5) 17 S.D. . 5 3 5 3 + − + − − + + = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 61,
+    "stem": "(c) Plane is given by ( 1) 7( 2) 5( 1) 0 x y z − + − + + + = ⇒ 7 5 10 0 x y z + − + = ⇒ distance 1 7 5 10 13 . 75 75 + −+ = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 62,
+    "stem": "Let the equation of plane be (3 2) ( 1) ( 1) 5 3 0 x y z λ λ λ λ + + − + + − − = ⇒ 2 2 2 6 4 1 1 5 3 1 6 (3 2) ( 1) ( 1) λ λ λ λ λ λ λ + + −− −− − = + + − + + ⇒ 2 2 6( 1) 11 12 6 λ λ λ − = + + ⇒ 24 0, 5 λ = − ⇒ The planes are 2 3 0 x y z − + − = and 62 29 19 105 0 x y z + + − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 63,
+    "stem": "ˆvis unit vector along the incident ray and ˆw is the unit vector along the reflected ray. Hence ˆa is a unit vector along the external bisector of ˆv and ˆw . Hence ˆ ˆ ˆ w v a λ − = ⇒ 2 ˆ ˆ 1 1 w v λ + − ⋅ = or 2 2 2cos2θ λ − = or 2sin λ θ = where 2θ is the angle between ˆvand ˆw . Hence ˆ ˆ w v − ˆ 2sin a θ = ˆ 2cos(90 )a θ = °− ˆ ˆ ˆ (2 ) a v a = − ⋅ ⇒ ˆ ˆ ˆ ˆ ˆ 2( ) w v a v a = − ⋅",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 64,
+    "stem": "(6) 21 3 4 0 m n + + = 31 4 5 0 m n + + = 1 1 2 1 m n = = − − Equation of plane will be ( 1) ( 2) ( 3) 0 a x b y c z − + − + − = 1( 1) 2( 2) 1( 3) 0 x y z − − + − − − = 1 2 4 3 0 x y z −+ + −−+ = 2 0 x y z −+ −= 2 0 x y z − + = | | 6 6 d =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 65,
+    "stem": "(6) For ⇒ ⇒ Area of region 2 = x 2 2 = x ( , ) α β P = y x 1 2 2 ( ) ( ) 4 ≤ + ≤ d p d p ( , ), α β α β > P 2 2 2 4 2 α ≤ ≤ 2 2 2 α ≤ ≤ 2 2 ((2 2) ( 2) ) = − 8 2 6 . = − = sq units ˆv ˆw ˆa 2θ mirror (90-θ) _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 342 \u0002 \u0002 \u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 66,
+    "stem": "(8) ( , , ), (0,0, ) α β γ = = P Q K as it lie on z-axis mid-point of PQ, i.e. , , 2 2 2 α β γ +       K satisfies 3 + = x y ⇒ 6 α β + = . . . (i)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "r. of PQ ( 0, 0, ) ( , ,0) α β γ = − − − = K p p ⇒ & α β γ = = K . . . (ii) ∴ (i) & (ii) 3 α β ⇒ = = ∴ ( , , ) (3,3, ) α α = = P K K distance of P from x-axis = 5 ⇒ 2 2 2 2 2 2 25 25 3 25 β γ α + = ⇒ + = ⇒ + = K K ⇒ | | 4 = K Length of 2 | | 8 = = PR K"
+    ],
+    "page": 317
+  },
+  {
+    "questionNumber": 67,
+    "stem": "(75) Put ( ,0,0) λ in 1 x y z + + = ⇒ 1 (1,0,0) P λ = ⇒ Put ( , ,0) 2 1 µ µ µ ⇒ = 1 1 , ,0 2 2 Q  ⇒     Put 1 ( , , ) 3 γ γ γ γ ⇒ = 1 1 1 , , 3 3 3 R  ⇒     Area of triangle ˆ ˆ ˆ ˆ ˆ 1 1 2 | | 2 2 2 3 i j i j k PQR PQxPR x    − − − = =         \u0001\u0001\u0001\u0002 \u0001\u0001\u0001\u0002 2 1 3 ˆ ˆ ˆ | | (6 ) 0.75 12 12 i j k = + + = ⇒ ∆ = _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 317
+  }
+]

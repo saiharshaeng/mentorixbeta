@@ -105,6 +105,13 @@
     const normTarget = targetExam ? normalizeExamId(targetExam) : null;
 
     const allBanks = [
+      { key: 'jee_math_set',      url: origin + '/questions/jee/mathematics/chapters/set.json',   exam: 'JEE_MAIN',  subject: 'Mathematics' },
+      { key: 'jee_math_mat',      url: origin + '/questions/jee/mathematics/chapters/mat.json',   exam: 'JEE_MAIN',  subject: 'Mathematics' },
+      { key: 'jee_math_lim',      url: origin + '/questions/jee/mathematics/chapters/lim.json',   exam: 'JEE_MAIN',  subject: 'Mathematics' },
+      { key: 'jee_math_conic',    url: origin + '/questions/jee/mathematics/chapters/conic.json', exam: 'JEE_MAIN',  subject: 'Mathematics' },
+      { key: 'jee_math_reas',     url: origin + '/questions/jee/mathematics/chapters/reas.json',  exam: 'JEE_MAIN',  subject: 'Mathematics' },
+      { key: 'jee_phys_gen',      url: origin + '/questions/jee/physics/chapters/phys_gen.json', exam: 'JEE_MAIN',  subject: 'Physics' },
+      { key: 'jee_chem_gen',      url: origin + '/questions/jee/chemistry/chapters/chem_gen.json',exam: 'JEE_MAIN',  subject: 'Chemistry' },
       { key: 'jee_phys_fixed',    url: origin + '/data/pyq/fixed/jee_physics_bank_fixed.json',    exam: 'JEE_MAIN',  subject: 'Physics' },
       { key: 'jee_comp_fixed',    url: origin + '/data/pyq/fixed/jee_main_complete_fixed.json',   exam: 'JEE_MAIN',  subject: null },
       { key: 'jee_cls_fixed',     url: origin + '/data/pyq/fixed/jee_classified_fixed.json',      exam: 'JEE_MAIN',  subject: null },
@@ -162,6 +169,28 @@
 
         // Normalize to pyqService format
         const normalized = validRaw.map((q, i) => {
+          if (q && q.processed) {
+            const p = q.processed;
+            return {
+              id: q.id || (bank.key + '_' + i),
+              q: p.stem || '',
+              opts: p.options || [],
+              ans: [typeof p.correctAnswer === 'number' ? p.correctAnswer : 0],
+              type: (p.type || 'mcq').toLowerCase() === 'mcq' ? 'mcq' : 'numerical',
+              section: p.subject || 'Physics',
+              sectionLabel: 'Section A',
+              chap: p.chapter || 'General',
+              expl: cleanExplanation(p.explanations?.intermediate || p.explanations?.basic || '', p.chapter, p.correctAnswer),
+              difficulty: p.difficulty || 'medium',
+              year: p.year || 2024,
+              marking: { correct: 4, wrong: -1, skip: 0 },
+              source: 'PYQ',
+              exam: p.exam || bank.exam,
+              hasImage: p.hasImage || false,
+              imageRef: p.imageRef || null
+            };
+          }
+
           let opts = [];
           if (Array.isArray(q.options)) opts = q.options;
           else if (q.options && typeof q.options === 'object') opts = [q.options.a||'', q.options.b||'', q.options.c||'', q.options.d||''];

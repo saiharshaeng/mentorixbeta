@@ -1,0 +1,1839 @@
+[
+  {
+    "questionNumber": 3,
+    "stem": "y x = the tangent at 0 x = has slope 0 and crosses the curve, as shown below. If you consider this figure carefully, the reason that the tangent crosses the curve is because the concavity of the graph is changing (from concave downwards to concave upwards) at",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x = technically, 0 x = is a point of inflexion. At any point of inflexion for a given curve, the tangent will cross the curve. Geometrical Meaning of dy dx and its use \u0001 , dy dx α β   =     slope of the tangent to the curve ( ) y f x = at point (a, b) \u0001 The equation of the tangent to the curve ( ) y f x = at the point (a, b) is , .( ). dy y x a dx α β β   − = −     dy dx as rate measurer \u0001 If where t is the time then  dx dt =rate of change of  x. \u0001 If then rate of change of . rate of change of dy y dx x = \u0001 If x is the displacement then  dx dt =rate of change of displacement at time t =velocity at time t , d dx dt dt       i.e., 2 2 rate d x dt = of change of velocity at time t = acceleration at time t \u0001 rate dx dt = of increase iff 0 dx dt > dx dt = rate of decrease iff 0 dx dt < Approximate Estimation \u0001 If ( ) y f x = and very small change dx takes place in the value of x when it is a then the corresponding change dy in the value of y is (approximately) \u0001 If x is a variable then the percent error in calculation of 100 dx x x = × Maximum and Minimum Relative (Local) Maximum and Minimum of Functions of one Variable \u0001 A function ( ) f x is said to have a local maximum (minimum) at x a = if for , ( ) a h x a h f a − < < + is the greatest (least) where h is an arbitrary positive number (which may be taken very small). ∴ ( ) ( ), ( , ) f a f x x a h a h > ∈ − + ⇒ ( ) f x has a local maximum at x a = and ( ) ( ), ( , ) f a f x x a h a h < ∈ − + ⇒ ( ) f x has a local minimum at . x a = Note (i) A function may have local maximum (minimum) at more than one point. (ii) The value of the function at a local maximum may be less than the value of the function at a local minimum. Global Maximum and Minimum \u0001 A function ( ) f x is said to have a global maximum (minimum) at a point x a = if ( ) f a is the greatest (least) among the values of ( ) f x at all the points of the interval of values of x. Determination of Points of Local Maximum of Minimum \u0001 If the function ( ) f x is differentiable in R then at the points of extremum, i.e., local maximum or minimum, the following will hold: \u0001 ( ), . ., 0 dy f x i e dx ′ = \u0001 If at , '( ) 0 x f α α = = and ( ) x x t = ( ) y f x = . x a dy y x dx δ δ =   =     y x Tangent at x 0 3 y x = Figure 15.1 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 170 (i) f'' (α) < 0 then at x = α the function f(x) has a local maximum and the maximum value is f(α). (ii) f'' (α) > 0 then at x = α, f(x) has a local minimum and the minimum value is f(α). Note If ''( ) 0, f α = nothing can be concluded. In this case we have to take help of other methods. \u0001 If at , '( ) 0 x f α α = = and (i) '( ) 0, '( ) 0 f f α α −∈> +∈< then x α = is a point of local maximum. (ii) '( ) 0, '( ) 0 f f α α −∈< +∈> then x α = is a point of local maximum. (iii) '( ) f α−∈and '( ) f α+∈both have the same sign then x α = is a point of neither maximum nor minimum. Note The above knowledge points give the method of finding maximum or minimum value of a function of one variable. If a student is required to find the maximum or minimum value of a function of two or more variables, where the variables are connected by one or more relations, then change the function into a function of one variable by using the relation(s), and then work with the resulting function of one variable. Critical Points, Point of Inflection \u0001 The function ( ) y f x = has a critical point at x α = if '( ) 0 f α = or '( ) f α does not exist. \u0001 A function can have maximum or minimum at critical points. \u0001 The function ( ) y f x = has a point of inflection at x α = if (i) ''( ) 0 f α = or does not exist and (ii) f' (α) exists and ''( ), ''( ) f f α α −∈ +∈have opposite signs. Maximum or Minimum Value of a Function in a Closed Interval \u0001 The maximum or minimum value of a function in a closed interval is generally used in the global sense of the term. For the function ( ), [ , ] y f x x a b = ∈ \u0001 max ( ) f x = greatest among ( ), ( ), ( ) f a f b f α min ( ) f x = least among ( ), ( ), ( ) f a f b f α where α is a critical point of ( ) f x over [a, b]. Convexity and Concavity of a Curve \u0001 If ''( ) 0, ( , ) f x x a b < ∈ then the curve ( ) y f x = is convex in (a,b). \u0001 If ''( ) 0, ( , ) f x x a b > ∈ then the curve ( ) y f x = is concave in (a,b). Monotonic Function & Lagrange’s Theorem Increasing and decreasing functions at a point \u0001 A function f(x) is an increasing function at x a = if \u0001 A function f(x) is a decreasing function at x a = if '( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f a < Monotinic (or monotone) function in an interval \u0001 If a function f(x),x belonging to an interval, be such that f(x)goes on increasing as x increases in the interval then f(x) is said to be monotone increasing or monotonically increasing or simply monotonic increasing (m.i.) in the interval. If '( ) 0 f x > for a x b < < then ( ) f x is m.i. in ( , ). a b If '( ) 0 f x > for a x b ≤ ≤ then ( ) f x is m.i. in [a, b]. \u0001 If a function ( ), f x x belonging to an interval, be such that f(x) goes on decreasing as x increases in the interval then f(x) is said to be monotonic decreasing (m.d.) in the interval. If '( ) 0 f x < for a x b < < then ( ) f x is m.i. in (a, b). If '( ) 0 f x < for a x b ≤ ≤ then ( ) f x is m.i. in [a, b]. \u0001 ( ) f x is m.i. in (a, b) ⇒ 1 2 1 2 ( ) ( )if in ( , ) f x f x x x a b > > ( ) f x is m.d. in (a, b) ⇒ 1 2 ( ) ( ) f x f x < if 1 2 in ( , ) x x a b > Note (i) In the above, monotonicity is in the strict sense. If '( ) 0 f x ≥ then also we say ( ) f x is m.i. (ii)  If ''( ) 0 f x > in (a, b) then '( ) f x is m.i. in (a, b)  If ''( ) 0 f x < in (a, b) then '( ) f x is m.d. in (a, b) (iii) The sketch of monotonic functions is as follows: Figure 15. 2 Greatest and Least Value of a Monotonic Function in a Closed Interval \u0001 If f(x) is m.i. in [a, b] then in the interval, the greatest value of ( ) ( ) f x f b = the least value of ( ) ( ). f x f a = \u0001 If f(x) is m.d. in [a, b] then in the interval, the greatest value of ( ) ( ) f x f a = the least value of ( ) ( ). f x f b = \u0001 If f(x) is m.i. in [a, b] and m.d. in [b, c] then in [a, c], the greatest value of ( ) ( ) f x f b = the least value of ( ) min{ ( ), ( )}. f x f a f c = \u0001 If f(x) is m.d. in [a, b] and m.i. in [b, c] then in [a, c], the greatest value of ( ) max{ ( ), ( )} f x f a f c = the least value of ( ) ( ). f x f b = Y O X ( ) is m.i. in [ , ] y f x a b = a b ( ) y f x = Y O X ( ) is m.d. in [ , ] y f x a b = a b ( ) y f x = _ 171 Applications of Derivatives Figure 15.3 Invertibility of a Function Let :[ , ] [ , ] f a b c d → be a function. Then f is invertible if f is an one-one and onto function. \u0001 A sufficient condition for f to be invertible is that f is strictly m.i. (or m.d.) over the interval [a, b] Note: A function may be invertible through it is non- monotonic. Example: , y x x = is rational, ,x x − irrational. The inverse function is , x y y = is rational, ,y y − is irrational. Rolle’s and Lagrange’s Theorems If ( ) f x be a continuous function in [a, b] and ( ) f x is differentiable in (a, b) then \u0001 ( ) ( ) '( ) 0 f a f b f c = ⇒ = where a c b < < (Rolle’s Theorem) \u0001 ( ) ( ) ( ) f b f a f c b a − ′ = − where a c b < < (Lagrange’s Theorem) Use of Rolle’s and Lagrange’s Theorems in Equations \u0001 If the equation ( ) 0 f x = has two unequal real roots α and β ( ) α β < then '( ) 0 f x = will have  a real root γ such that . α γ β < < \u0001 If , α β are real such that ( ) f α and ( ) f β are of opposite signs then ( ) 0 f x = has a real root lying between α and . β \u0001 If ( ) 0 f x = has two real roots , α α (repeated root) then '( ) 0 f x = will have a root . α Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 1,
+    "stem": "If ''( ) ( ) f x f x = − and ( ) '( ) g x f x = and 2 ( ) 2 x f x f     =         2 2 x g     +         and given that then is equal to",
+    "options": [
+      "5",
+      "10",
+      "0",
+      "15"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "A tangent drawn to the curve at cuts the x-axis and y-axis at A and B respectively such that given that then",
+    "options": [
+      "equation of curve",
+      "normal at (1, 1) is",
+      "curve passes through",
+      "equation of curve is"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 3,
+    "stem": "f(x) is cubic polynomial which has local maximum at If and has local minima at then",
+    "options": [
+      "the distance between (–1,2) and where is the point of local minima is",
+      " is increasing for",
+      " has local minima at",
+      "the value of"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 5,
+    "stem": "The differential equation determines a family of circles with",
+    "options": [
+      "variable radii and a fixed centre at",
+      "variable radii and a fixed centre at",
+      "fixed radius 1 and variable centres along the x-axis",
+      "fixed radius 1 and variable centres along the y-axis"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 6,
+    "stem": "Let for all real x. Statement-I For each real t, there exists a point c in such that and Statement-II for each real t. (5) 5, F = (10) F ( ) y f x = ( , ) P x y : 3 :1, BP AP = (1) 1, f = 3 0 dy x y dx − = 3 4 x y + = (2,1/8) 3 0 dy x y dx + =",
+    "options": [
+      "Statement-I is True, Statement-II is True; Statement-II is a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is True; Statement-II is not a correct explanation for Statement-I",
+      "Statement-I is True, Statement-II is False",
+      "Statement-I is False, Statement-II is True"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 1,
+    "stem": "x = − (2) 18, (1) 1 f f = = − ( ) f x ′ 0, x = ( , ( )), a f a x a = 2 5 ( ) f x [1, 2 5] x∈ ( ) f x 1 x = (0) 5 f = 2 2 d x dy 1 2 2 −       d y dx 1 3 2 2 − −    −       d y dy dx dx 2 2 2 −           d y dy dx dx 3 2 2 −    −       d y dy dx dx 2 1 y dy dx y − = (0,1) (0, 1) − ( ) 2 cos f x x = + [ , ] t t π + ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f c ′ = ( ) ( 2 ) f t f t π = + Y m.i. X a b O m.d. c Y m.i. X a b O m.d. c _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 172",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 7,
+    "stem": "The total number of local maxima and local minima of the function is",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 8,
+    "stem": "Let be a non-constant twice differentiable function defined on such that and Then",
+    "options": [
+      " vanishes at least twice on [0, 1]",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 9,
+    "stem": "Let where is a twice differentiable positive function on such that Then, for",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 10,
+    "stem": "Let the function be given by Then, is",
+    "options": [
+      "even and is strictly increasing in",
+      "odd and is strictly decreasing in",
+      "odd and is strictly increasing in",
+      "neither even nor odd, but is strictly increasing in(–∝,∝)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 11,
+    "stem": "For function f (x) 1 cos , 1, x x a x = ≥ =",
+    "options": [
+      "for at least one x in interval [1, ], ( 2) ( ) 2 f x f x ∞ + − <",
+      "",
+      "for all x in the interval",
+      "f ’ (x) is strcily decreasing in the interval"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 12,
+    "stem": "Let f, g and h be real-valued functions defined on the interval [0, 1] by and If a, b and c denote, respectively, the absolute maximum of f, g and h on [0, 1] then",
+    "options": [
+      " and",
+      " and",
+      " and",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 13,
+    "stem": "Let f be a real-valued function defined on the interval (−1, 1) such that for all and let be the inverse function of f. Then (2) is equal to",
+    "options": [
+      "1",
+      "1/3",
+      "1/2",
+      "1/e"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 14,
+    "stem": "Let f be defined by where be is a constant such that Then is differentiable on (0, 1)",
+    "options": [
+      "f is not invertible on (0, 1)",
+      " on (0, 1) and",
+      " on (0, 1)",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 15,
+    "stem": "If for all then",
+    "options": [
+      "f has a local maximum at x = 2",
+      "f is decreasing on (2, 3)",
+      "there exists some such that",
+      "f has a local minimum at x = 3"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 16,
+    "stem": "A curves passes through the point Let the slope of the curve at each point (x, y) be Then the equation of the curve is 3 2/3 (2 ) , 3 1 ( ) , 1 2 x x f x x x  + −< ≤−  =  −< <  ( ) f x ( , ) −∞∞ ( ) (1 ) f x f x = − 1",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "4 f   ′ =     ( ) ′′ f x 1 0 2 f   ′ =     1/ 2 1/ 2 1 sin 0 2 f x x dx −   + =     ∫ ( ) 1/ 2 1 sin sin 0 1/ 2 (1 1) t t f t e dt f e dt π π = − ∫ ∫ ( ) log( ( )) = g x f x ( ) f x (0, ) ∞ ( 1) ( ). + = f x x f x 1, 2, 3, ..., = N 2 1 1 1 4 1 ... 9 25 (2 1)   − + + + +   −   N 2 1 1 1 4 1 ... 9 25 (2 1)   + + + +   −   N 2 1 1 1 4 1 ... 9 25 (2 1)   − + + + +   +   N 2 1 1 1 4 1 ... 9 25 (2 1)   + + + +   +   N :( , ) , 2 2 π π   −∞∞→−     g 1 ( ) 2tan ( ) . 2 π − = − u g u e g (0, ) ∞ ( , ) −∞∞ ( , ) −∞∞ xlimf '(x) 1 →∞ = [1, ),f(x 2) f(x) 2 ∞ + − > [1, ) ∞ 2 2 ( ) , ( ) x x f x e e g x − = + 2 2 x x xe e− = + 2 2 2 ( ) . x x h x x e e− = + a b = c b ≠ a c = a b ≠ a b ≠ c b ≠ a b c = = ( ) 2 x e f x − = + 4 0 1 , x t dt + ∫ ( 1,1) x∈− 1 f − 1 ( )' f : (0,1) →ℝ b x f(x) , 1 bx − = − 0 b",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 1,
+    "stem": "< < 1 f f − ≠ 1 f (b) f (0) ′ = ′ 1 f f − = 1 f (b) f (0) ′ = ′ 1 f − 2 0 ( ) ( 2) ( 3) x t f x e t t dt = − − ∫ (0, ), x ∈ ∞ (0, ) c∈ ∞ ( ) 0 f c ′′ = 1, . 6 π       sec ,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "y y x x x   + >     1 sin log 2 y x x  = +     y cosec log 2 x x  − +     2 sec log 2 y x x  = +     2 1 cos log 2 y x x  = +     _ 173 Applications of Derivatives",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 17,
+    "stem": "Let Then for all natural numbers n, vanishes at",
+    "options": [
+      "a unique point in the interval",
+      "a unique point in the interval",
+      "a unique point in the interval (n, n + 1)",
+      "two points in the interval (n, n +1)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 18,
+    "stem": "A rectangular sheet of fixed perimeter with sides having their lengths in the ratio 8 : 15 is converted into an open rectangular box by folding after removing squares of equal area from all four corners. If the total area of removed squares is 100, the resulting box has maximum volume. Then the lengths of the sides of the rectangular sheet are",
+    "options": [
+      "24",
+      "32",
+      "45",
+      "60"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 19,
+    "stem": "At present, a film is manufacturing 2000 items. It is estimated that the rate of change of production P w.r.t. additional number of workers is given by If the firm employs 25 more workers, then the new level of production of items is",
+    "options": [
+      "2500",
+      "3000",
+      "3500",
+      "4500"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 20,
+    "stem": "The function has a local minimum or a local maximum at",
+    "options": [
+      "–2",
+      "",
+      "2",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 21,
+    "stem": "If and are extreme points of then:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 22,
+    "stem": "If g is the inverse of a function f and then is equal to:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 23,
+    "stem": "The normal to the curve at (1, 1)",
+    "options": [
+      "does not meet the curve again",
+      "meets the curve again in the second quadrant",
+      "meets the curve again in the third quadrant",
+      "meets the curve again in the fourth quadrant"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 24,
+    "stem": "Let ( ) ( ) / 2 2 2 2 2 2 2 .... 2 ( ) lim , ! .... 4 x n n n n n n x n x x n f x n n n x n x x n →∞         + + +           =        + + +              for all",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x > Then (3) (2) (3) (2) f f f f ′ ′ ≥",
+    "options": [
+      " 1 (1) 2 f f  ≥    ",
+      " 1 2 3 3 f f     ≤        ",
+      " (2) 0 f ′ ≤",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 25,
+    "stem": "Let : (0, ) f R → ∞and : g R R → be twice differentiable functions such that f ′′ and g′′ are continuous functions on R. Supposes (2) (2) 0, f g ′′ = = (2) 0, f ′′ ≠ and (2)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "g ′ ≠ If 2 ( ) ( ) lim 1, ( ) ( ) x f x g x f x g x → = ′ ′ then ( ) ( ) 0 f x f x ′′ − = for at least one x R ∈",
+    "options": [
+      "f has a local minimum at 2 x =",
+      "f has a local maximum at 2 x =",
+      " (2) (2) f f ′′ >",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 26,
+    "stem": "Twenty meters of wire is available for fencing off a flower- bed in the form of a circular sector. Then the maximum area (in sq. m) of the flower-bed, is",
+    "options": [
+      "25",
+      "30",
+      "12.5",
+      "10"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 27,
+    "stem": "Let ( ) : 0, 1 f → ℝ be a continuous function. Then, which of the following function(s) has (have) the value zero at some point in the interval (0, 1)? ( ) 0 sin x xe f t t dt −∫",
+    "options": [
+      " ( ) ( ) 2 0 sin f x f t t dt π +∫",
+      " ( ) 9x f x −",
+      " ( ) 2 0 cos x x f t t dt π − −∫",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 28,
+    "stem": "If : f → ℝ ℝis a twice differentiable function such that ( ) \" 0 f x > for all x ∈ℝ, and ( ) 1 1 , 1 1 2 2 f f  = =     , then ( ) ' 1 1 f > ( ) sin ,",
+    "options": [
+      " ( ) 1 ' 1 1 2 f < ≤",
+      " ( ) 1 0 ' 1 2 f < ≤",
+      " ( ) ' 1 0 f ≤",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f x x x x π = > ( ) f x ′ 1 , 2 n n   +     1 , 1 2 n n   + +     x 100 12 . dp x dx = − ( ) 2| | | 2| || 2| 2| || = + + − + − f x x x x x = x 2 3 − 2 3 1 x = − 2 x = 2 ( ) log f x x x α β = + + 1 6, 2 α β = − = 1 6, 2 α β = − = − 1 2, 2 α β = = − 1 2, 2 α β = = 5 1 ( ) , 1 f x x ′ = + ( ) g x ′ 5 1 x + 4 5x { } 5 1 1 ( ) g x + ( ) { } 5 1 g x + 2 2 2 3 0, x xy y + − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 174",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 29,
+    "stem": "If : f → ℝ ℝ is a differentiable function such that ( ) ( ) ' 2 f x f x > for x ∈ℝ, and ( ) 0 1 f = , then ( ) f x is decreasing in ( ) 0, ∞",
+    "options": [
+      " ( ) f x is increasing in ( ) 0, ∞",
+      " ( ) 2 ' x f x e < in ( ) 0, ∞",
+      " ( ) 2x f x e > in ( ) 0, ∞",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 30,
+    "stem": "Let 2 2 1 ( ) f x x x = + and 1 ( ) , g x x x = − { 1,0,1}. x R ∈ −− If ( ) ( ) , ( ) f x h x g x = then the local minimum value of ( ) h x is: −",
+    "options": [
+      "2 2",
+      "3",
+      "–3",
+      "2 2"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 31,
+    "stem": "Let { : ( ) | | ( 1)sin x S t R f x x e x π = ∈ = − ⋅ − is not differ- entiable at f}. Then the set S is equal to π",
+    "options": [
+      "{0, } π",
+      "φ (an empty set)",
+      "{0}",
+      "{ }"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 32,
+    "stem": "The shortest distance between the line y = x and the curve y2 = x – 2 is:",
+    "options": [
+      " 7 4 2",
+      "7 8",
+      "11 4 2",
+      "2"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 33,
+    "stem": "If the tangents on the ellipse 4x2 + y2 = 8 at the points (1, 2) and (a, b) are perpendicular to each other, then a2 is equal to:",
+    "options": [
+      "64/17",
+      "2/17",
+      "128/17",
+      "4/17"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 34,
+    "stem": "If S1 and S2 are respectively the sets of local minimum and local maximum points of the function, ƒ(x) = 9x4 + 12x3 – 36x2 + 25, x∈ R, then:",
+    "options": [
+      "S1 = {–2, 1}; S2 = {0}",
+      "S1 = {–2, 0}; S2 = {1}",
+      "S1 = {–2}; S2 = {0, 1}",
+      "S1 = {–1}; S2 = {0, 2}"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 35,
+    "stem": "Let ƒ : [0, 2] → R be a twice differentiable function such that ƒ''(x) > 0, for all x∈ (0, 2). If f(x) = ƒ(x) + ƒ(2 – x), then f is:",
+    "options": [
+      "decreasing on (0, 2)",
+      "decreasing on (0, 1) and increasing on (1, 2)",
+      "increasing on (0, 2)",
+      "increasing on (0, 1) and decreasing on (1, 2)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 36,
+    "stem": "The height of a right circular cylinder of maximum volume inscribed in a sphere of radius 3 is 6 3",
+    "options": [
+      "2 3",
+      " 3",
+      " 6",
+      "2"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 37,
+    "stem": "The maximum volume (in cu. m) of the right circular cone having slant height 3 m is. 3 π",
+    "options": [
+      "3 3 π",
+      "6π",
+      "2 3 π",
+      "4"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 38,
+    "stem": "If x = 3 ant y = 3 sec t, then the value of 2 2 d y dx at 4 t π = is: 1 6 2",
+    "options": [
+      " 3 2 2",
+      " 1 3 2",
+      "1 6",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 39,
+    "stem": "For each t∈R, let [t] be the greatest integer less than or equal to t. Then, 1 (1 | | sin |1 |)sin [1 ] 2 lim |1 |[1 ] x x x x x x π →+   − + − −     − −",
+    "options": [
+      "equals –1",
+      "equals 1",
+      "does not exist",
+      "equals 0"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 40,
+    "stem": "The tangent to the curve, 2 x y xe = passing through the point (1, e) also passes through the point",
+    "options": [
+      "4 ,2 3 e      ",
+      "(2,3e)",
+      "5 ,2 3 e      ",
+      "(3,6e)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 41,
+    "stem": "A helicopter is flying along the curve given by 3/2 7, y x − = ( 0). x ≥ A soldier positioned at the point 1 ,7 2       wants to shoot down the helicopter when it is nearest to him. Then this nearest distance is: 5 6 _ 175 Applications of Derivatives",
+    "options": [
+      "1 2",
+      "1 7 3 3",
+      "1 7 6 3",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 42,
+    "stem": "The maximum value of the function f(x) = 3x3 – 18x2 + 27x  – 40 on the set S ={x ∈ R : x2 + 30 ≤ 11x} is:",
+    "options": [
+      "122",
+      "–222",
+      "–122",
+      "222"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 43,
+    "stem": "The maximum area (in sq. units) of a rectangle having its base on the x-axis and its other two vertices on the parabola, y = 12 – x2 such that the rectangle lies inside the parabola, is:",
+    "options": [
+      "20 2",
+      "18 3",
+      "32",
+      "36"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 44,
+    "stem": "If the function f given by f(x) = x3 –3(a – 2)x2 + 3ax + 7, for some a ∈ R is increasing in (0, 1] and decreasing in [1, 5), then a root of the equation, 2 ( ) 14 0( 1) ( 1) − = ≠ − f x x x is:",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "–7"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 45,
+    "stem": "The tangent to the curve y = x2 – 5x + 5, parallel to the line 2y = 4x + 1, also passes through the point. 8   −    ",
+    "options": [
+      "1 7 , 4 2      ",
+      "7 1 , 2 4      ",
+      " 1 ,7 8   −    ",
+      "1 , 7"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 46,
+    "stem": "Equation of a tangent to the parabola, x2 = 8y, which makes an angle θ with the positive direction of x-axis, is:",
+    "options": [
+      "x = y cot θ  + 2 tan θ",
+      "x = y cot θ – 2 tan θ",
+      "y = x tan θ – 2 cot θ",
+      "y = x tan θ + 2 cot θ"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 47,
+    "stem": "Let T denote a curve ( ) y f x = which is in the first quadrant and let the point (1, 0) lie on it. Let the tangent to T at a point P intersect the y-axis at Yp and PYp has length 1 for each point P on T. Then which of the following option may be correct? 2 ' 1 0 xy x + − =",
+    "options": [
+      " 2 2 1 1 1 x y n x x   + −   = − −     ℓ",
+      " 2 ' 1 0 xy x − − =",
+      " 2 2 1 1 1 x y n x x   + −   = − + −     ℓ",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 48,
+    "stem": "Let 2 sin ( ) ,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x f x x x π = > Let 1 2 3.... ..... n x x x x < < < < be all points of local maximum of ( ) f x and 1 2 3 y y y < < ... ... ny < < < be all the points of local minimum of ( ) f x then correct option is/are 1 2 n n x x + − > for every n Matrix Match / Column Match",
+    "options": [
+      "| | 1 n n x y − > for every n",
+      " 1 1 x y <",
+      " 1 2 ,2 2 nx n n   ∈ +     for every n",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 49,
+    "stem": "Match the statements/expressions in Column I with the open intervals in Column II. Column I Column II",
+    "options": [
+      "Interval contained in the domain of definition of non-zero solutions of the differential equation",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 50,
+    "stem": "Match the statements/expressions in Column I with the values given in Column II. Column I Column II",
+    "options": [
+      "The number of solutions of the equation xesinx– cos = 0 in the interval",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "2 2 ( 3) 0 ′ − + = x y y , 2 2 π π   −     5 1 ( 1)( 2) − − ∫x x ( 3) − x ( 4)( 5) − − x x dx 0, 2 π       sin + x x 5 , 8 4 π π       (sin + x cos )x 0, 8 π       ( , ) π π − 0, 2 π       _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 176 kx + 4y + z = 0, 4x + ky + 2z = 0 and 2x + 2y + z = 0 intersect in a straight line",
+    "options": [
+      "Option A",
+      "Option B",
+      "Value (s) of k for which |x –1| + |x –2| + |x +1| + |x +2| = 4k has integer solution (s)",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 51,
+    "stem": "Match the statements given in Column I with the values given in Column II. Column I Column II",
+    "options": [
+      "If and form a triangle, then the internal angle of the triangle between and is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 52,
+    "stem": "Match the statements given in Column I with the interval/union of intervals given in Column II. Column I Column II",
+    "options": [
+      "The set is a complex number, is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 53,
+    "stem": "Match the following: Column I Column II",
+    "options": [
+      "The number of polynomials with non-negative integer coefficients of degree satisfying and is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 4,
+    "stem": "0 ˆ ˆ ˆ ˆ a j 3k j 3k = + = −+ \u0003 ˆ c 2 3k = \u0003 a\u0003 b \u0003 6 π f 6 π       2 3 π 2 ln3 π 5/ 6 7 / 6 sec( x) dx π ∫ 3 π 1 Arg 1 z     −   π 2 π 2 2iz Re : z 1 z         −     | z | 1, z 1 = ≠± ( , 1) (1, ) −∞− ∪ ∞ 1 f (x) sin− = x 2 2(x 1) 8(3) 1 3 − −     −   ( , 0) (0, ) −∞ ∪ ∞ 1 tan 1 f( ) tan 1 tan , 1 tan 1 θ θ θ θ θ = − − − f( ) : 0 2 π θ θ   ≤ <     [2, ) ∞ 3/ 2 f (x) x (3x 10), = − x 0, ≥ ( , 1] [1, ) −∞− ∪ ∞ ( ,0] [2, ) −∞ ∪ ∞ ( ) f x 2, ≤ (0) 0 = f 1 0 ( ) ∫f x dx 1, = [ 13, 13] − 2 2 ( ) sin( ) cos( ) = + f x x x 2 2 2 3 (1 ) − + ∫ x x dx e 1/ 2 1/ 2 1/ 2 0 1 cos2 .log 1 equals 1 cos2 .log 1 x x dx x x x dx x −   +       −       +       −     ∫ ∫ _ 177 Applications of Derivatives Match the Column for Questions No. 54 to 56 The information are given in the three columns of the following table. Columns I, II and III contain conics, equations of tangent to the conics and points of contact, respectively. Column I Column II Column III (I) ( ) 0 f x = for some 2 (1, ) x e ∈ (i) lim ( ) 0 x f x →∞ =",
+    "options": [
+      "A→ 2; B→ 3; C→ 1; D→ 4",
+      "A→ 1; B→ 2; C→ 3; D→ 4",
+      "A→ 3; B→ 1; C→ 2; D→ 4",
+      "A→ 3; B→ 4; C→ 2; D→ 1"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 1,
+    "stem": "f is increasing in (0, 1) (II) '( ) 0 f x = for some (1, ) x e ∈ (ii) lim ( ) x f x →∞ = −∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "f is decreasing in 2 ( , ) e e (III) '( ) 0 f x = for some (0, 1) x∈ (iii) lim '( ) x f x →∞ = −∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 3,
+    "stem": "f ' is increasing in (0, 1) (IV) \"( ) 0 f x = for some (1, ) x e ∈ (iv) lim \"( ) 0 x f x →∞ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 4,
+    "stem": "f ' is decreasing in 2 ( , ) e e",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 54,
+    "stem": "Which of the following options is the only correct combination?",
+    "options": [
+      "(I) (ii) (3)",
+      "(IV) (i) (4)",
+      "(III) (iv) (1)",
+      "(II) (iii) (4)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 55,
+    "stem": "Which of the following option is the only correct combination?",
+    "options": [
+      "(I) (i) (1)",
+      "(II) (ii) (2)",
+      "(III) (iii) (3)",
+      "(IV) (iv) (4)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 56,
+    "stem": "Which of the following options is the only incorrect combination? Paragraph Paragraph for Question No. 57 to 58 Suppose we define the definite integral using the following formula for more accurate result for When",
+    "options": [
+      "(II) (iii) (1)",
+      "(I) (iii) (1)",
+      "(III) (i) (3)",
+      "(II) (iv) (2)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 57,
+    "stem": "is equal to",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 58,
+    "stem": "If and c is a point such that and is the point lying on the curve for which is maximum, then is equal to Paragraph for Question No. 59 to 61 Consider the function defined by",
+    "options": [
+      "",
+      "",
+      "",
+      "0"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 59,
+    "stem": "Which of the following is true?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 60,
+    "stem": "Which of the following is true? maximum nor a local minimum at x = 1",
+    "options": [
+      "f (x) is decreasing on (–1,1) and has a local minimum at x = 1",
+      "f (x)is increasing on (–1,1) and has a local maximum at x = 1",
+      "f (x) is increasing on (–1,1) but has neither a local maximum nor a local minimum at x = 1",
+      "f (x) is decreasing on (–1,1) but has neither a local"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 61,
+    "stem": "The 3 function f’ (x) is Paragraph for Question No. 62 to 64 Let f (x) = (1–x)2 sin2 x + x2 10 for all and let for all",
+    "options": [
+      "increasing in and decreasing in",
+      "decreasing in and increasing in",
+      "increasing in (–t, t)",
+      "decreasing in (–t, t)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 62,
+    "stem": "Consider the statements: P: There exists some x IR ∈ such that ( ) 2 f x x + 2 2(1 ) x = + Q: There exists some x IR ∈ such that 2 ( ) 1 f x + 2 (1 ) x x = + then ( ) 2 b a b a f x dx − = ∫ ( ( ) ( )), f a f b + ( , ) c a b ∈ ( ) ( ( ) ( )) 2 c a F c f a f c − = + + ( ( ) ( )). 2 b c f b f c − + , 2 a b c + = ( ) ( ( ) ( ) 2 ( )). 4 b a b a f x dx f a f b f c − = + + ∫ / 2 0 sin x dx π ∫ (1 2) 8 π + (1 2) 4 π + 8 2 π 4 2 π ( ) 0 ( , ) f x x a b ′′ < ∀∈ , a c b < < ( , ( )) c f c ( ) F c ( ) f c ′ ( ) ( ) f b f a b a − − 2( ( ) ( )) f b f a b a − − 2 ( ) ( ) 2 f b f a b a − − :( , ) ( , ) f −∞∞→−∞∞ 2 2 1 ( ) , 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "1 x ax f x a x ax − + = < < + + 2 2 (2 ) (1) (2 ) ( 1) 0 a f a f ′′ ′′ + + − − = 2 2 (2 ) (1) (2 ) ( 1) 0 a f a f ′′ ′′ − − + − = 2 (1) ( 1) (2 ) f f a ′ ′ − = − 2 (1) ( 1) (2 ) f f a ′ ′ − = − + 1 , 4 t   −−     1 , 4 t   −     1 , 4 t   −−     1 , 4 t   −     , x IR ∈ 2( 1) ( ) lnt ( ) 1 x I t g x f t t −   = −   +   ∫ (1, ). x∈ ∞ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 178",
+    "options": [
+      "both P and Q are true",
+      "P is true and Q is false",
+      "P is false and Q is true",
+      "both P and Q are false"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 63,
+    "stem": "Which of the following is true?",
+    "options": [
+      "g is increasing on (1,∞)",
+      "g is decreasing on(1,∞)",
+      "g is increasing on (1, 2) and decreasing on (2,∞)",
+      "g is decreasing on (1, 2) and increasing on (2,∞)"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 64,
+    "stem": "If the function e–x f(x) assumes its minimum in the interval [0,1] at which of the following is true? Integer & Subjective",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 65,
+    "stem": "If for all Find the equation of tangent to the curve y = f (x) at the point (1,2)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 66,
+    "stem": "If length of tangent at any point on the curve y = f (x) intercepted between the point and the x-axis is of length 1. Find the equation of the curve.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 67,
+    "stem": "If p(x) be a polynomial of degree 3 satisfying p(–1) = 10, p(1) = –6 and p(x) has maximum at x = –1 and p'(x) has minima at x = 1. Find the distance between the local maximum and local minimum of the curve.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 68,
+    "stem": "f (x) is a differentiable function and g(x) is a double differentiable function such that and If Prove that there exists some such that g (c).",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 69,
+    "stem": "If f (x) is a twice differentiable function such that where then the minimum number of zeroes of in the interval is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 70,
+    "stem": "The maximum value of the function f(x) = 2x3–15x2 + 36x – 48 on the set is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 71,
+    "stem": "If the function and then the value of is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 72,
+    "stem": "Let f be a function defined on R (the set of all real numbers) such that f'(x) = 2010 (x–2009)(x–2010)2 (x–2011)3(x–2012)4 , for all If g is a function defined on R with values in the interval (0, ∞) such that f (x) = ln (g (x)), for all x ∈ R, then the number of points in R at which g has a local maximum is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 73,
+    "stem": "Let where denotes and g(x) is a given non-constant differentiable function on with g(0)  = g(2) = 0. Then the value of y(2) is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 74,
+    "stem": "Let p(x) be a real polynomial of least degree which has a local maximum at x = 1 and a local minimum at x = 3. If p(A) = 6 and p(C) = 2, then p’(0) is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 75,
+    "stem": "Let f :IR IR be defined as f(x) = The total number of points at which f attains either a local maximum or a local minimum is:",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 76,
+    "stem": "A cylindrical container is to be made from certain solid material with the following constraints: It has a fixed inner volume of V mm3, has a 2 mm thick solid wall and is open at the top. The bottom of the container is a solid circular disc of thickness 2 mm and is of radius equal to the outer radius of the container. If the volume of the material used to make the container is minimum when the inner radius of the container is 10 mm, then the value of",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 77,
+    "stem": "Let : f → ℝ ℝ be a differentiable function such that ( ) f 0 0, f 3 2 π   = =     and ( ) f ' 0 1 = . If ( ) ( ) ( ) / 2 x g x f ' t cosect cot t cosect f t dt π = −     ∫ for x 0, 2 π   ∈    , then ( ) x 0 lim g x → = ANSWERS & SOLUTIONS 1",
+    "options": [
+      " and ⇒ ⇒ 1 , 4 = x 1 3 ( ) ( ), 4 4 ′ < < < f x f x x 1 ( ) ( ), 0 4 ′ > < < f x f x x 1 ( ) ( ),0 4 ′ < < < f x f x x 3 ( ) ( ), 1 4 ′ < < < f x f x x 2 1 2 1 2 ( ) ( ) ( ) , f x f x x x − < − 1 2 , . x x R ∈ | ( )| 1 f x ≤ ( ) ( ). f x g x ′ = 2 2 (0) (0)",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 9,
+    "stem": "f g + = ( 3, 3) c∈− ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "g c ′′ < ( ) 0, ( ) 2, ( ) 1, f a f b f c = = = − ( ) 2, ( ) 0, f d f e = = , a b c d e < < < < 2 ( ) ( ( )) ( ) ( ) g x f x f x f x ′ ′′ = + [ , ] a e { } 2 | 20 9 | = + ≤ A x x x 3 / 2 ( ) = + x f x x e 1 ( ) ( ), − = g x f x '(1) g . x R ∈ y (x) y(x)g (x) g(x)g (x), y(0) 0, x , ′ ′ ′ + = = ∈ℝ f (x) ′ df (x) dx ℝ → 2 | | | 1|. x x + − 250π V ( ) ( ) f x f x ′ = − ( ) ( ) f x g x ′ = ⇒ ( ) ( ) ( ) ( ) 0 f x f x f x f x ′′ ′ ′ ⋅ + ⋅ = 2 2 ( ) ( ( )) f x f x c ′ + = ⇒ 2 2 ( ( )) ( ( )) f x g x c + = ( ) F x c = ⇒ (10) 5 F = _ 179 Applications of Derivatives",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "(c,d) Equation of the tangent is Given so that ⇒ Given ∴ 3 1 y x =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 3,
+    "stem": "(b,c) The required polynomial which satisfy the condition is has local maximum at and local minimum at . Hence is increasing for",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 8,
+    "stem": "(a,b,c,d) Put Hence is an even function or an odd function. Also, and for we have Also, (obtained by putting, Since Also atleast twice in [0, 1] (Rolle’s Theorem)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f c ′ = ( ) ( 2 ) f t f t π = + 1 x = − 0 x = ( ) (1 ) f x f x = − 1/ 2 x x = + f 1 1 2 2 x f x     + = −         ( 1/2) f x + ( 1/2)sin f x x + '( ) '(1 ) f x f x = − − 1/ 2, x = '(1/ 2)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f = 1 0 sin sin 1/2 1/2 (1 ) ( ) π π − = − ∫ ∫ t t f t e dt f y e dy 1 ). t y −= (1/4) 0, (3/4)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "′ ′ = = f f (1/2) 0 ′ = f ⇒ ( ) 0 f x ′ = ( 1) log( ( 1) log log( ( )) log ( ) + = + = + = + g x f x x f x x g x ( 1) ( ) log + − = g x g x x ⇒ 2 1 ( 1) ( ) ′′ ′′ + − = − g x g x x 1 1 1 4 2 2     ′′ ′′ + − = −         g g 1 1 4 2 1 2 2 9     ′′ ′′ + − + = −         g g 1/4 3/4 1/2 –3 –2 –1 0 1 2 –1 1 B A ( , ) P x y ,0 / y x dy dx   −     0, dy y x dx   −     _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 180 Summing up all terms Hence,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(b,c,d) For 1 for x 1 →∞ Also for 1 x ≥ is decreasing for Also,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(d) Clearly for and f(1) is the greatest",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(b) . . .(i) ⇒ Put",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(a,b,c,d) f is increasing in F is decreasing in (2, 3) & is differentiable on [2, 3] By Rolle’s theorem, At least one c such that .",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(a) Let ⇒ The curve passes through",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(b,c) We have ⇒ 2 1 1 4 2 2 (2 1)     ′′ ′′ + − − = −     −     g N g N N 2 1 1 1 1 4 1 ... . 2 2 9 (2 1)       ′′ ′′ + − = − + + +       −       g N g N 1 ( ) 2 tan ( ) 2 u g u e π − = − 1 1 1 1 1 2 tan tan cot tan cot − − − − − = − − = − u u u u u e e e e e ( ) ( ) − = − g x g x ⇒ ( ) g x ( ) 0 ′ > g x ⇒ 1 f(x) xcos ,x 1 x   = ≥     1 1 1 f '(x) cos sin x x x     = + →         2 2 3 1 1 1 1 1 1 f '(x) sin sin cos x x x x x x       = − −             3 1 1 cos 0 x x   = <     ⇒ f '(x) [1, ) ∞ ⇒ f '(x 2) f '(x). + < x x 1 1 limf(x 2) f (x) lim (x 2)cos xcos 2 x 2 x →∞ →∞   + − = + − =   +   ∴ f(x 2) f(x) 2 x 1 + − > ∀≥ 2 2 2 2 ( ) '( ) 2 ( ) 0 [0,1] x x x x f x e e f x x e e x − − = + ⇒ = − ≥∀∈ 0 1 x ≤ ≤ ( ) ( ) ( ) f x g x h x ≥ ≥ ∵ 1 (1) (1) (1) f g h e e = = = + ∴ 1 . a b c e a b c e = = = + ⇒ = = 4 0 ( ) 2 1 x x e f x t dt − = + + ∫ 1 ( ( )) f f x x − = 1 1 '( ( ))( ( ))' 1 f f x f x − − = ⇒ 1 1 1 ( (2))' '( (2)) f f f − − = ⇒ (0) 2 f = ⇒ 1(2) 0 f − = 1 1 ( (2))' '(0) f f − = 4 ( '( ) ( )) 1 x e f x f x x − − = + 0 '(0) 2 1 '(0) 3 x f f = ⇒ − = ⇒ = 1 ( (2))' 1/3. f − = b x f(x) 1 bx − = − b x y 1 bx − = − ⇒ b y x 1 by − = − b y 0 x 1 0 1 1 by − < < ⇒ < < − b y 1 0 y b or y 1 by b − > ⇒ < > − b y 1 1 0 1 y 1 by b − −< ⇒−< < − ∴ 1 y",
+    "options": [
+      "Option A",
+      " −< < 2 0 ( ) ( 2) ( 3) x t f x e t t dt = − − ∫ (0, ) x ∀ ∈ ∞ 2 ( ) ( 2) ( 3) x f x e x x ′ = − − ∴ ( , 2) (3, ) −∞ ∪ ∞ (2) (3) 0 f f ′ ′ = = ( ) f x ′ ∴ (2, 3) c ∈ ( ) 0 f x ′′ = sec . dy y y dx x x = + y vx = sec dv dx v x = cos dx v dv x = ∫ ∫ sin ln v x c = + sin ln y x c x  = +     1, 6 π       ⇒ 1 sin ln . 2 y x x  = +     ( ) sin cos 0 f x x x x π π π ′ = + = ⇒ tan x x π π = − 2 1 , ( 1) 2 n x n π π π +   ∈ +     ⇒ 1 , 1 ( , 1) 2 x n n n n   ∈ + + ∈ +     2 3 _ 181 Applications of Derivatives",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(a,c) Let the sides of rectangle be 15k and 8k and side of square be x then (15 k – 2x) (8k –2x) x is volume Only k = 3 is permissible. So, the sides are 45 and 24.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(c) . . .(i) Given if So,  (i) becomes If (is 25 move workers)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(a,b) As, According to the figure shown, points of local minima/ maxima are .",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(c) Here (As x = –1 is an extreme point) . . .(i) Also, gives . . .(ii) Solving (i) and (ii) gives",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(d) Slope of normal is –1. Equation of normal is , ,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(b,c) 2 2 2 2 2 2 2 2 2 2 1 1 1 ... 2 ( ) lim 1 1 ! 1 ... 2 x n n n n x x x n n n n n f x x x x n n n n n n →∞        + + +               =          + + +               2 2 1 1 1 1 ( ) lim n n n r r x x rx nf x n n n n r r n →∞ = =         = + − +               ∑ ∑ ℓ ℓ ℓ 2 2 2 1 1 lim 1 1 n n n r r x rx r x n n n n n →∞ = =         = + − +               ∑ ∑ ℓ ℓ 1 1 2 2 0 0 ( ( )) (1 ) (1 ) n f x x n xy dy x n x y dy = + − + ∫ ∫ ℓ ℓ ℓ Let xy t = 2 0 0 ( ( )) (1 ) (1 ) x x n f x n t dt n t dt = + − + ∫ ∫ ℓ ℓ ℓ 3 2 2 2(2 23 60 ) v x kx k x = − + 5 0 x dv dx = = 2 2 5 6 46 60 | 0 x x kx k = − + = 2 6 23 15 0 x k − + = 5 3, . 6 k k = = 100 12 dp x dx = − 3/ 2 2 100",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 12,
+    "stem": "3 P x x C = − + 3/2 100 8 P x x C = − + 0, 2000 x P = = ⇒ 2000 C = 3/2 100 8 2000 P x x = − + 25 x = 2 3/ 2 100 25 8 (5 ) 2000 P = × −× + 2500 1000 2000 3500 = − + = ( ) ( ) | ( ) ( ) | Min ( ( ), ( )) 2 + − − = f x g x f x g x f x g x ⇒ 2 | | | 2 | || 2 | 2 | || Min (| 2 |, | 2 |) 2 + + − + − = + x x x x x x 2 2, , 0 3 − = − x ( ) 2 1; f x x x α β ′ = + + ( 1) 0 f ′ − = 2 1 0 α β − − + = (2) 0 f ′ = 4 1 0 2 α β + + = 1 2, 2 α β = = − { } ( ) g f x x = { } ( ) . ( ) 1 g f x f x ′ ′ = ⇒ { } 1 ( ) ( ) g f x g x ′ = ′ ⇒ 5 { ( )} 1 g f x x ′ = + { } { } { } 5 ( ) 1 ( ) g f g x g x ′ = + ⇒ { } 5 ( ) 1 ( ) g x g x ′ = + 2 2 2 3 0 x xy y + − = 2 2 6 0 dy dy x x y y dx dx   + + − =     2 2 2 6 0 dy dy x x y y dx dx + + − = (2 6 ) (2 2 ) 0 dy x y x y dx + + + = ( ) ( 3 ) dy x y dx x y − + = − ⇒ (1,1) 1 dy dx   =     1 1( 1) x −= − − 2 x y + = 2 y x = − 2 2 2 (2 ) 3(2 ) 0 x x x x + − − − = 2 2 2 4 2 3(4 4 ) 0 x x x x x + − − + − = 2 2 2 4 2 12 3 12 0 x x x x x + − − − + = 2 4 16 12 0 x x − + − = ( 1)( 3) 0 x x − − = 1, 3 x = 1, 1 x y = = 3, 1 x y = = − 2 4 + x 2 4 − − x 2 2 − 2 /3 − 4 −x 8/3 2 4 + x 4x _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 182 2 ( ) 1 ( ) 1 f x x n f x x ′ +   =   +   ℓ (2) 3 0 (2) 5 f n f ′   = <     ℓ ⇒ (2) 0 f ′ < ⇒ (3) 4 2 (3) 10 5 f n n f ′     = =         ℓ ℓ ⇒ (2) (3) (2) (3) f f f f ′ ′ ≥ Now ( ) 0 ( ) f x f x ′ > in (0,1) and ( ) 0 ( ) f x f x ′ < in (1, ) ∞ ( ) f x is increasing in (0,1) & decreasing in [1, ) ∞(as ( ) f x is positive) hence 1 (1) 2 f f   ≥     and 1 2 3 3 f f    ≤      ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(a,d) 2 ( ) ( ) lim 1 ( ) ( ) x f x g x f x g x → = ′ ′ ∵ 2 ( ) ( ) lim ( ) ( ) x f x g x f x g x → ′ ′ 0 0       in determinant form as (2) 0, (2) 0 f g ′ = = ∵ Using L.H. 2 ( ) ( ) ( ) ( ) (2) (2) (2) (2) lim ( ) ( ) ( ) ( ) (2) (2) (2) (2) x f x g x g x f x f g g f f x g x g x f x f g g f → ′ ′ ′ ′ + + = ′′ ′ ′′ ′ ′′ ′′ ′′ ′ + + (2) (2) 1 (2) (2) g f f g ′ = = ′′ ′ ⇒ (2) (2) f f ′′ = and (2) 0 f ′ = & rang of ( ) (0, ) f x ∈ ∞ so \"(2) (2) ve f f = = + so ( ) f x has point of minima at 2 x = and (2) (2) f f ′ = so ( ) f x ′ have atleast one solution in x R ∈",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(a) Total length 20 r r r = + + θ = ⇒ 20 2r r − θ = Area 2 2 1 1 20 2 2 2 r r r r −   = θ =     ⇒ 2 10 A r r = − ⇒ 0 dA dr = ⇒10 2 0, 5 r r − = = ⇒ 50 25 25 A = − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(b,c)  (a) →  Always positive",
+    "options": [
+      "Option A",
+      "is correct.",
+      "is correct.",
+      "is incorrect."
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(d) ( ) \" 0 f x > ⇒  f is concave up ∴ ( ) ' 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(a,c) ( ) ( ) ' 2 R f x f x x > ∀∈ ⇒ ( ) ( ) 2 2 ' 2 0 x x f x e e f x − − − > ⇒ ( ) ( ) 2 0 x d f x e dx − > ⇒ ( ) 2x f x e− is SI in ( ) 0, ∞ ∴ ( ) ( ) 2 0 0 x f x e f e − > θ r 2 1 1 1 , 2 2       (1,1) 0 1 _ 183 Applications of Derivatives ⇒ ( ) 2x f x e > for ( ) 0, x∈ ∞ ( ) ( ) 2 ' 2 2 x f x f x e > > ∴ ( ) ( ) ' 0 0, f x x > ∀ ∈ ∞ ∴ ( ) f x is increasing in ( ) 0, . ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(a) 2 2 1 1 ( ) x x x h x x + = − ( ) ( ) 1 1 2 x x x x = − + − 1 0, x x − > ( ) ( ) 1 1 2 (2 2, ] x x x x − + ∈ ∞ − ( ) ( ) 1 1 1 2 0, ( , 2 2] x x x x x x − < − + ∈−∞− − Local minimum is 2 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(b) ( ) ( 1)sin x f x x e x π = − − ,0 x π = are repeated roots and also continuous. Hence, ‘f’ is differentiable at all x. i.e., 4 2 3 tan 2 8 1 3 θ + = = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(a) we have 2 1 ⋅ = dy y dx ⇒ 2 (2 , ) p t t dy dx +   1 1 2 = = t 1 2 = t ∴ 9 1 , 4 2   =     P So, shortest distance 9 2 , 7 4 4 2 4 2 − = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(b) 4x2 + y2 = 8 . . .(i) also (1,2) 4 2 dy x dx y   = − = −     ⇒ 4 1 2 − = a y 8 = − b a ⇒ 2 2 64 = b a 2 68 8 = a 2 2 17 = a",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(a) ƒ(x) = 9x4 + 12x3 – 36x2 + 25 ƒ'(x) = 36x3 + 36x2 – 72x = 36x(x2 + x – 2) = 36x(x – 1)(x + 2) Points of minima = {–2, 1} = S1 Point of maxima = {0} = S2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(b) ( ) ( ) (2 ) = + − f x f x f x φ ( ) ( ) - (2 ) ′ ′ ′ = − f x f x f x φ since ( ) ′′ f x ⇒ ( ) 0 ′′ > f x is increasing (0, 2) ∀∈ x Case (i):  When x > 2 – x ⇒ x > 1 ⇒ '( ) >0 (1,2) ∀∈ x x φ ∴ ( )x φ is increasing (1,2) Case (ii): When x < 2 – x ⇒  x < 1 ⇒ ( ) <0 (0,1) ′ ∀ ∈ x x φ ∴ ( )x φ is increasing (0,1)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(a) h = 2rsinθ a = 2rcosθ v = π(r cosθ)2(2r sinθ) v = 2πr3cos2θ sinθ dv dθ =π r3 (– 2cosθ sin2θ cos3θ )= 0 or 1 tan 2 θ = ∵ 1 2 3 3 h = × = 2 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(a) ∴  h = 3 cos θ θ r h ℓ =3(given) θ r h a – + – + –2 0 1 y=x x-axis y2= x – 2 y O(0,0) 2 9 1 (2 , ) , 4 2 t t   + ≡    _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 184 r = 3 sin θ New 2 2 1 (9sin ) (3cos ) 3 3 = = ⋅ V r h π π θ θ ∴ 2 sin 3 ⇒ = dV d θ θ Also, 2 2 2 sin 3 =   d V d θ θ = negative ⇒ Volume is maximum, when 2 sin 3 = θ ∴ max 2 sin 2 3 3   = =       V θ π (in cu. m)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(d) 2 3sec dx t dt = 3sec tan dy t t dt = tan sin sec dy t t dt t = = 2 2 cos d y dt t dx dx = 3 2 cos cos 1 1 3 3sec 3.2 2 6 2 t t t = = = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 39,
+    "stem": "(d) 1 (1 | | sin |1 |)sin [1 ] 2 lim |1 |[1 ] + →   − + − −     − − x x x x x x π 1 (1 ) sin(1 ) lim sin ( 1) ( 1)( 1) 2 + → − + −   = −   − −   x x x x π 1 sin( 1) lim 1 ( 1) (1 1)( 1) 0 ( 1) x x x + →   − − − = − − =   −  ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(a) 2 x y xe = ( ) 2 2 (1, ) (1, ) 2 2 3 x x e e dy e e x e e e e dx = ⋅ ⋅ + = ⋅+ = T : y – e = 3e (x – 1) y = 3ex – 3e + e y = (3e)x – 2e 4 ,2 3 e       lies on it",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(c) 3/2 7 y x − = ( 0) x ≥ 1/ 2 3 2 dy x dx = 3 7 1 1 2 2 y x x     −   = −        −     3/ 2 3 1 1 2 2 x x x     −   = −        −     2 3 1 2 2 x x ⋅ = − 2 3 1 2 x x = − 2 3 2 1 0 x x + −= 2 3 3 1 0 x x x + − −= ( 1)(3 1) 0 x x + − = 1 x = −(rejected) 1 3 x = 3/ 2 3/ 2 1 7 7 3 y x   = + = +     2 3 1 1 1 1 1 2 3 3 36 27 AB     − + = +         ℓ 3 4 9 2 + = × 7 1 7 108 6 3 = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 42,
+    "stem": "(a) S = {x ∈ R, x2 + 30 – 11x ≤ 0} = {x ∈ R, 5 ≤ x ≤ 6} Now ƒ(x) = 3x3 – 18x2 + 27x – 40 ⇒ ƒ'(x) = 9(x – 1)(x – 3), which is positive in [5, 6] ⇒ ƒ(x) increasing in [5, 6] Hence maximum value = ƒ(6) = 122",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 43,
+    "stem": "(c) 2 ( ) 2 (12 ) f a a a = − 2 ( ) 2(12 3 ) f a a ′ = − maximum at a = 2 maximum area = f(2) = 32 (0,0) (a,0) (a,12–a2) B A 1 , 7 2       (x,y) _ 185 Applications of Derivatives",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 44,
+    "stem": "(c) 2 ( ) 3 –6( – 2) + 3 ′ = f x x a x a '( ) 0 (0, 1] ≥∀∈ f x x '( ) 0 [1, 5) f x x ≤∀∈ '( ) 0 = f x at x = 1 ⇒  a = 5 f(x) – 14 = (x – 1)2 (x – 7) 2 ( ) 14 7 ( 1) − = − − f x x x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 45,
+    "stem": "(d) y = x2 – 5x + 5 2 5 2 = − = dt x dx ⇒ 7 2 = x at 7 1 , 2 4 − = = x y Equation of tangent at 7 1 , 2 4 −       is 29 2 0 4 − − = x y Now check options 1 , 7 8 = = − x y",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(a) x2 = 8y tan 4 = = dy x dx θ ∴ x1 = 4tanθ y1 = 2 tan2θ Equation of tangent: y – 2tan2θ = tanθ (x – 4tanθ) ⇒ x = y cotθ + 2 tanθ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 47,
+    "stem": "(a,b,c,d) (a, f (a))= r f’(x) be differentiation of f(x) equation of tangent (y – f (a)) = f’(a)(x – a) put x = 0 y – f (a) = –af’(a) yp = (0, f (a) – af’(a)) pyp = 2 2 ( '( )) 1 a af a + = a2+a2(f’(a))2=1 (f’(a))2 2 2 1 a a − = 2 2 1 ( '( )) x f x x − = ± ∫ ∫ put 2 1 x t − = ⇒ 2 2 1 1 | | 2 1 1 t dt t y t n c t t − +   = ± = ± − + ∫   − −   ℓ 2 2 1 (1 ) 2 1 t t n c t   + = ± − +   −   ℓ 2 2 1 1 1 x x n c x   + −   = ± − − +     ℓ Put 1 x = and 0 y = 0 c ⇒ =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 48,
+    "stem": "(a,c,d) 4 2 cos tan 2 '( ) x x x x f x x π π π   −     =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 51,
+    "stem": "(a) ⇒| u – 1 | = | u | locus of u is perpendicular bisector of line segment joining 0 and 1 maximum arg u approaches but will not attain.",
+    "options": [
+      " but its as its opposite to side of maximum length.",
+      "",
+      "",
+      "Let"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 52,
+    "stem": "(a) Increasing, when",
+    "options": [
+      " Using ∵",
+      "For domain Case (i): Case (ii): ⇒ So,",
+      "",
+      ""
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 1,
+    "stem": "y y −≤ ≤⇒− ≤− − ≥ ( , 1] [1, ) −∞− ∪ ∞ x 2 2(x 1) 8.3 1 1 1 3 − − −≤ ≤ − ⇒ x x 2 2x 2 3 3 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 1,
+    "stem": "1 3 − − − −≤ ≤ − x x 2 2x 2 3 3 1 0 1 3 − − − −≤ − ⇒ x x 2 2x 2 (3 1)(3 1) 0 (3 1) − − − − ≥ − ⇒ x ( ,0] (1, ). ∈−∞ ∪ ∞ x x 2 2x 3 3 1 0 1 3 2 − − + ≥ − − x 2 x x x 2 (3 1)(3 1) 0 (3 .3 1) − − − + ≥ − ⇒x ( ,1) [2, ). ∈−∞ ∪ ∞ x ( , 0] [2, ). ∈−∞ ∪ ∞ 1 1 3 R R R → + 0 0 2 f ( ) tan 1 tan 1 tan 1 θ θ θ θ = − − − 2 2 2(tan 1) 2sec . θ θ = + = 1/ 2 3/ 2 1/ 2 3 15 f (x) (x) (3x 10) (x) 3 (x) (x 2) 2 2 ′ = − + × = − x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "≥ 2 ( ) , f x ax bx = + 1 0 ( ) 1 f x dx = ∫ ⇒ 2 3 6 a b + = ( , ) (0,2) a b ≡ (3,0). 2 ( ) 2 cos 4 f x x π   = −     2 2 4 x n π π − = 2 2 4 x n π π = + ⇒ 9 , 4 4 x π π = ± ± [ 3, 13]. x∈− P (16,16) B (24,0) C (4,0) A θ _ 187 Applications of Derivatives",
+    "options": [
+      "Option A",
+      "Option B",
+      "",
+      " as it is an odd function."
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 60,
+    "stem": "(a) Decreasing (–1, 1) and minima at x = 1.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 62,
+    "stem": "(c) . Hence no solution Also Let There exists a solution of g (x) in Hence statement Q is true.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 63,
+    "stem": "(b) We know, Let ∴ h is decreasing x > 1 ⇒ g is decreasing in",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 65,
+    "stem": "2 2 2 2 2 0 0 3 3 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 8,
+    "stem": "1 1 x x x x dx x dx e e−   + = =   + +   ∫ ∫ 1/ 2 1/ 2 1 cos2 ln 0 1 x x dx x − +   =   −   ∫ / 2 0 0 0 2 2 sin sin(0) sin 2sin 4 2 2 x dx π π π π     + +       = + +                   ∫ (1 2) 8 π = + ( ) ( ) ( ) ( ) ( ) F c b a f c f a f b ′ ′ = − + − ( ) ( )( ) 0 F c f c b a ′′ ′′ = − < ( ) 0 F c ′ = ⇒ ( ) ( ) ( ) f b f a f c b a − ′ = − 2 2 2 2 2 4 4 ( 1) 4 ( 1)(2 )( 1) ( ) ( 1) ax x ax ax x x a x ax f x x ax + + − − + + + ′′ + + 2 4 (1) (2 ) a f a ′′ = + 2 4 ( 1) (2 ) a f a − ′′ − = − 2 2 (2 ) (1) (2 ) ( 1)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "a f a f ′′ ′′ + + − − = 2 2 2 2 ( 1) ( ) ( 1) a x f x x ax − ′ + + ''( ) 2[12 3] 0 1/ 4. f x x x = + = ⇒ = − 2 : ( ) 2 2(1 ) P f x x x + = + 2 2 2 2 (1 )sin 2 2 2 x x x x x − + + = + 2 2 2 (1 ) sin 2 2 x x x x − + = + 2 2 2 ( 2 1)sin 2 2 x x x x − + + = + 2 2 2 2 2 cos cos cos 1 x x x x x = + + 2 2 cos ( 2 1) 1 0 x x x − + + = 2 2 (1 ) cos 1 0 x x − + = 2 : 2 ( ) 1 2 2 Q f x x x + = + 2 2 2 2 1 1 sin 2 x x x x x − + + = + 2 2 1 ( ) 1 sin 2 g x x x x = − + − 1 (0) 0 2 g = > 1 ( ) 0 2 g π π = − < ∴ [0, ]. π 1 2( 1) ( ) ( ) (1, ) 1 x t g x n t f t dt x t −   = − ∀ ∈ ∞   +   ∫ ℓ 2( 1) ( ) ( ) 1 x g x n x f x x −   ′ = −   +   ℓ ( ) 0 . f x x > ∀ ∈ℝ 2( 1) ( ) 1 x h x n x x − = − + ℓ 4 ( ) 2 1 h x n x x = − − + ℓ 2 2 2 4 1 4 ( 1) ( ) ( 1) ( 1) x x h x x x x x − + ′ = − = + + 2 2 ( 1) ( 1) x x − = − + ∴ ( ) 0 h x ′ < ( ) (1) h x h < ⇒ 2( 1) 0 1 x n x x − − < + ℓ ∴ (1, ) x ∀∈ ∞ 2( 1) 0 1 x n x x − − < + ℓ ∴ ( ) 0 (1, ) g x x ′ < ∀ ∈ ∞ (1, ) ∞ ( ) ( ) − = x g x e f x ( ) 0 ′′ > g x ( ) ′ g x 1/ 4, ( ) (1/ 4) 0 ′ ′ < < = x g x g ⇒ ( ( ) ( )) 0 − ′ − < x f x f x e ⇒ ( ) ( ) ′ < f x f x (0,1/ 4). 2 1 2 1 2 ( ) ( ) ( ) f x f x x x − < − ⇒ 1 2 1 2 1 2 1 2 1 2 ( ) ( ) lim lim x x x x f x f x x x x x → → − < − − _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 188 Hence is a constant function and P (1, 2) lines on the curve. is the curve. Hence the equation of tangent is .",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 66,
+    "stem": "Length of tangent",
+    "options": [
+      "Option A",
+      "Option B",
+      " Writing and integrating, we get the equation of the curve as",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 67,
+    "stem": "Let the polynomial be According to give conditions Also and Solving for a, b, c, d we get is the point of maximum and is the point of minimum. Hence distance between(–1,10) and(3,–22) is units.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 68,
+    "stem": "Let us suppose that both and are positive for all Since and From we get Moreover, is assumed to be positive ⇒ The curve is open upwards. If is decreasing, then for some value of area of the rectangle i.e., which is a contradiction. If is increasing, for some value of area of the rectangle i.e., which is a contradiction. If is minimum at then area of the rectangle i.e., which is a contradiction. Hence and cannot be both positive through the interval (–3, 3). Similarly we can prove that and cannot be both negative throughout the interval Hence there is atleast one value of where and are of opposite sign Alternate: . . .(i) In the same way . . .(ii) . . .(iii) For , we get . . .(iv) or . . .(v) Case (i): Let is concave upward ⇒ ( ) f x δ ′ < ⇒ ( ) 0 f x ′ = ( ) f x ⇒ ( ) 2 f x = 2 0 y − = 2 1 dx y dy   = +     ⇒ 2 2 1 1 dx y dy     = +           ⇒ 2 1 dy y dx y =± − ⇒ 2 1 y dy x y − =± + ∫ sin , cos y dy d θ θ θ = = 2 2 1 1 1 ln y y x c y − − − + = ± + 3 2 ( ) P x ax bx cx d = + + + ( 1) 10 P a b c d − = −+ −+ = (1) 6 P a b c d = + + + = − ( 1) 3 2 0 P a b c ′ − = − + = (1) 6 2 0 P a b ′′ = + = ⇒ 3 0 a b + = 3 2 ( ) 3 9 5 P x x x x = − − + ⇒ 2 ( ) 3 6 9 3( 1)( 3) P x x x x x ′ = − − = + − ⇒ 1 x = − 3 x = 4 65 ( ) g x ( ) g x ′′ ( 3, 3) x∈− 2 2 (0) (0) 9 f g + = 1 ( ) 1, 2 2 (0) 3 f x g −≤ ≤ ≤ ≤ ( ) ( ), f x g x ′ = 3 ( ) ( ) ( 3) x f x g x dx f − = + − ∫ ( ) g x ′′ ( ) y g x = ( ) g x 3 ( ) x x g x dx − > ∫ (0 ( 3))2 2 −− ⇒ ( ) 2 2 3 1 f x > × − ( ) 1 f x > ( ) g x 3 ( ) x x g x dx − > ∫ (3 0)2 2 − ⇒ ( ) 2 2 3 1 f x > × − ( ) 1 f x > ( ) g x 0, x = 3 ( ) x g x dx − > ∫ (3 0)2 2 − ⇒ ( ) 2 2 6 1 f x > × − ( ) 1 f x > ( ) g x ( ) g x ′′ ( ) g x ( ) g x ′′ ( 3, 3). − ( 3, 3) c∈− ( ) g x ( ) g x ′′ ⇒ ( ) ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "g c g c ′′ ⋅ < 3 3 0 0 ( ) ( ) (3) (0) g x dx f x dx f f ′ = = − ∫ ∫ ⇒ 3 0 ( ) 2 g x dx < ∫ 0 3 ( ) 2 g x dx − < ∫ ⇒ 3 0 0 3 ( ) ( ) 4 g x dx g x dx − + < ∫ ∫ 2 2 ( (0)) ( (0)) 9 f g + = 2 2 (0) 3 g < < 3 (0) 2 2 g −< < − 2 2 (0) 3 g < < ( ) g x ( 3, 3) x ∀ − _ 189 Applications of Derivatives then the area Which is a contradiction form equation (iii) ∴ will be concave downward for some i.e., . . .(vi) Also at that point c, will be greater than . . .(vii) From equation (vi) and (vii) for some Case (ii): Let is concave downward then the area Which is a contradiction form equation (iii) will be concave upward form some i.e., . . .(viii) Also at that point c, will be less than . . .(ix) From equation (viii) and (ix), we get for some",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 69,
+    "stem": "to get the zero of g(x) we take function between any two roots of there lies at least one root of ⇒ , or has 4 minimum solution minimum three solution minimum 7 solution ⇒ has minimum 6 solution.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 70,
+    "stem": "(7) so f(x)is increasing in Also,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 72,
+    "stem": "(1) as so there is only one point of local maxima.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 73,
+    "stem": "(0) Put Put",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 74,
+    "stem": "(9) Since least degree hence p(x) is cubic. Let . . .(i) . . .(ii) . . .(iii) . . .(iv) . . .(v) 0 3 3 0 ( ) ( ) 6 2 g x dx g x dx − + > ∫ ∫ ( ) g x ( 3, 3) c∈− ( ) 0 g c ′′ < ( ) g c 2 2 ⇒ ( ) 0 g c > ( ) ( ) 0 g c g c ′′ ⋅ < ( 3, 3) c∈− 3 (0) 2 2 g −< < − ( ) g x ( 3, 3) x ∀ − 0 3 3 0 ( ) ( ) 6 2 g x dx g x dx − + > ∫ ∫ ∴ ( ) g x ( 3, 3) c∈− ( ) 0 g c ′′ > ( ) g c 2 2 − ⇒ ( ) 0 g c < ( ) ( ) 0 g c g c ′′ ⋅ < ( 3, 3) c∈− ( ) ( ) ( ) ( ) d g x f x f x dx ′ = ⋅ ( ) ( ) ( ) h x f x f x ′ = ⋅ ( ) h x ( ) 0 h x ′ = ( ) 0 g x = ( ) 0 h x = ⇒ ( ) 0 f x = ( ) 0 f x ′ = ( ) 0 f x = ( ) 0 f x ′ = ( ) 0 h x = ( ) ( ) 0 h x g x ′ = = '( ) 6( 2)( 3) = − − f x x x (3, ) ∞ {4 5} = ≤ ≤ A x ∴ max (5)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 7,
+    "stem": "= = f f 2 / 2 1 (0) 1, '( ) 3 2 = = + x f f x x e ⇒ '( ( )) '( ) 1 = f g x g x 1 '(1)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "'(0) θ = ⇒ = = x g f ( ) ln{ ( )} f x g x = ( ) ( ) f x g x e = ( ) '( ) . '( ) f x g x e f x = '( ) 0 '( ) 0 g x f x = ⇒ = ( ) 0 f x e ≠ ⇒ 2 3 4 2010( 2009)( 2010) ( 2011) ( 2012) 0 x x x x − − − − = y (x) y(x)g (x) g(x)g (x) ′ ′ ′ + = ⇒ g(x) g(x) g(x) e y (x) e g (x) y(x) e g(x) g (x) ′ ′ ′ + = ⇒ g(x) g(x) d (y(x)e ) e g(x) g (x) dx ′ = ∴ g(x) g(x) y(x) e e g(x) g (x) dx ′ = = ∫ te tdt, where g(x) t = = ∫ t (t 1)e c = − + ∴ g(x) g(x) y(x)e (g(x) 1)e c = − + x 0 0 (0 1).1 c c 1 = ⇒ = − + ⇒ = x 2 y(2).1 (0 1). (1) 1 = ⇒ = − + y(2)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 0,
+    "stem": "= 2 ( ) p x ax bx cx d 3 = + + + (1) 6 p a b c d = = + + + (3) 2 27 9 3 p a b c d = = + + + 2 '( ) 3 2 p x ax bx c = + + '(1) 0 3 2 p a b c = = + + '(3) 0 27 6 P a b c = = + + (4) (3) 24 4 0 6 b b − ⇒ + = ⇒ = − (3, 0) ( 3, 0) − (0, 3) − (0, 2 2) − (3, 0) ( 3, 0) − (0, 3) (0, 2 2) _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 190 \u0002  \u0002  \u0002 From (v) . . .(vi) From (iii)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 75,
+    "stem": "(5) So, total no. of local maxima and local minima is = 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 76,
+    "stem": "(4) Let inner radius be r and inner length be Volume of material be M ⇒",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 77,
+    "stem": "(2) ( ) ( ) ( ) /2 x g x f ' t cosect cot t cosect f t dt π = −     ∫ ( ) ( ) 2 x g x cosec t f t π/ = ⋅ ( ) 1 cosec 2 f x f x π   ⋅ − ⋅     ⇒ ( ) ( ) 3 cosec g x f x x = − ⋅ ( ) ( ) ( ) x 0 x 0 lim g x lim 3 f x cosec x → → = − ⋅ ( ) ( ) x 0 x 0 f x f ' x 3 lim 3 lim 3 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  },
+  {
+    "questionNumber": 2,
+    "stem": "sin x cosx → → = − = − = −= (2) (1) 4 26 8 2 a b c − ⇒−= + + 4 26 48 2 a a c −= − + ⇒ 4 22 11 2 2 a c a −+ = = − 3 2 0 a b c + + = 3( ) 2( 6) (11 2) 0 a a + − + − = 3 12 11 2 0 a a a − − − = 2 2 1 a a = ⇒ = ∴ (0) 11 2 11 2 9 c f a = = − = − = 2 1 fx x x = + − 2 2 2 2 if 1 1 if –1 x<0 1 if 0 1 –x 1 if 1 x –1 x x x x x x x x x ≤−  − −  ≤ − − +  =  ≤ < + +   ≥ +  ℓ 2r V π = ℓ 2 2 ( 2) ( 2) M r r π π = + + − ℓ ℓ 2 3 4 8 8 0 4 dM V V r dr r r π π = − − + + + 0 when 10 dM r dr = = 1000 V π = ⇒ 4 250 V π = _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 171
+  }
+]

@@ -1,0 +1,629 @@
+[
+  {
+    "questionNumber": 0,
+    "stem": "a h b k c + + = 1 1 2 2 , a b a b = 1 1 a x b y v + = 2 2 . a x b y v + = ( )· ( ) dy P x y Q x dx + = ( ) , P x dx e∫ { } ( ) ( ) · ( )· . P x dx P x dx d y e Q x e dx ∫ ∫ = ∴ { } ( ) ( ) · ( )· P x dx P x dx y e Q x e dx ∫ ∫ = ∫ ( )· ( )· ( ) ( ) dy R y P x S y Q x dx + = ( ) ( ) dS y R y dy = ( ) ; S y z = ( ) ( )· dS y dS y dy dy dy dx = ( ) . dz dy R y dx dx = ( ) ( ) dz P x z Q x dx + = { ( , )}",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f x y d φ φ = ∑ ( ) d xy xdy ydx = + 2 y xdy ydx d x x −  =     2 x ydx xdy d y y   − =     log y xdy ydx d x xy −  =     1 2 2 tan y xdy ydx d x x y − −  =   +   1 2 2 tan x ydx xdy d y x y −  − =   +   ( ) 1 2 sin 1 ( ) xdy ydx d xy xy − + = − dy dx 1 2 { ( , )}{ ( , )}.....{ ( , )} 0 n p f x y p f x y p f x y − − − = 1( , ) 0, p f x y − = 1( , , ) 0, x y c φ = 1 2 ( , , ) ( , , ) ..... ( , , ) 0 n x y c x y c x y c φ φ φ ⋅ ⋅ ⋅ = ( , ) y f x p = ( , ) y f x p = ( , , )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x p c φ = ( , ) y f x p = ( , , )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f x p c = ( , ) x f y p = ( , ) x f y p = ( , , )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "y p c ψ = ( , ) x f y p = ( , , )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "y p c ψ = ( ) y px f p = + { ( )}",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "dp x f p dx ′ + = ∴ p c = '( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "f p x + = , p c = ( ) y cx f c = + '( ) 0, f p x + = ( ) y px f p = + '( ) 0 f p x + = _ 227 Differential Equations any arbitrary constant) touching all the lines given by This solution is called the singular solution. Some Results on Tangents and Normal’s Figure 18.1 \u0001 The equation of the tangent at to the curve is \u0001 The equation of the normal at to the curve is \u0001 The length of the tangent l \u0001 The length of the normal \u0001 The length of the cartesian subtangent \u0001 The length of the cartesian subnormal \u0001 The initial ordinate of the tangent Orthogonal trajectory: The orthogonal trajectories of a family of curves from another family of curves such that each curve of one family cuts all the curves of the other family at right angles. The differential equation of the orthogonal trajectories of the curves is the family of curves whose differential equation is Method: To find the orthogonal trajectories of a family of curves whose differential equation is known, put in the equation. The resulting differential equation is the equation of the orthogonal trajectories. Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 1,
+    "stem": "The tangent to the curve = x y e drawn at the point ( , ) c c e intersects the line joining the points 1 ( 1, ) − − c c e and 1 ( 1, ) + + c c e",
+    "options": [
+      "on the left of = x c",
+      "on the right of = x c",
+      "at no point",
+      "at all points"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 2,
+    "stem": "If y (x) satisfies the differential equation ' tan 2 y y x x − = sec x and y(0) = 0, then. 2 4 2 ' 3 3 3 3 y π π π  = +    ",
+    "options": [
+      " 2 4 8 2 y π π  =    ",
+      " 2 ' 4 18 y π π  =    ",
+      " 2 3 9 y π π  =    ",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 3,
+    "stem": "The function is the solution of the differential equation in (–1,1) satisfying Then is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 4,
+    "stem": "Let the population of rabbits surviving at a time t be government by the differential equation If then (p)t equals:",
+    "options": [
+      " /2 400 300 te −",
+      "",
+      "",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 5,
+    "stem": "Let be a solution of the differential equation If then which of the has no critical point in the interval",
+    "options": [
+      "",
+      "",
+      " has a critical point in the interval",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 6,
+    "stem": "Let ( ) y x be the solution of the differential equation ( log ) dy x x y dx + = 2x log ,( 1). x x ≥ Then is equal to ( ). y cx f c = + ( , ) P x y ( ) y f x = ( ). dy Y y X x dx − = − ( , ) P x y ( ) y f x = 1 ( ). Y y X x dy dx − − = − 2 1 . dx CP y dy   = = +    2 1 . dy PD y dx   = = +    . dx CA y dy = = . dy AD y dx = = . dy OB y x dx = = − , , 0 dy f x y dx  =     , ,",
+    "options": [
+      "",
+      "0",
+      "2",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "dx f x y dy   − =     dx dy − ( ) = y f x 2 1 + − dy xy dx x 4 2 2 1 + = − x x x (0)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "= f 3 2 3 2 ( ) ∫f x dx 3 3 2 π − 3 3 4 π − 3 6 4 π − 3 6 2 π − ( ) 1 ( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 200,
+    "stem": "2 dp t p t dt = − ( )0 100, p = /2 300 200 t e− − /2 600 500 te − /2 400 300 t e− − ( ) y x (1 )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 1,
+    "stem": "′ + + = x x e y ye (0) 2, = y ( 4) 0 − = y ( 2) 0 − = y ( ) y x ( 1,0) − ( ) y x ( 1,0) − ( ) y e e 2e y = f (x) P (x, y) Y XC D A O C B _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 228",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 7,
+    "stem": "If a curve passes through the point and satisfies the differential equation, then is equal to:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 8,
+    "stem": "A solution curve of the differential equation 2 ( + + x xy 2 4 2 4) 0, + + − = dy x y y dx 0, x > passes through the point 2 ( 3) y x = +",
+    "options": [
+      "intersects 2 y x = + exactly at one point",
+      "intersects 2 y x = + exactly at two points",
+      "intersects 2 ( 2) y x = +",
+      "does NOT intersect"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 9,
+    "stem": "If  (2 sin ) ( 1)cos 0 + + + = dy x y x dx and (0) 1 = y , then 2 π       y is equal to 2 3 −",
+    "options": [
+      " 1 3 −",
+      "4 3",
+      "1 3",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 10,
+    "stem": "If ( ) y y x = satisfies the differential equation ( ) 1 8 x 9 x dy 4 9 x dx, −   + = + +     x 0 > and ( ) y 0 7 = , then ( ) y 256 =",
+    "options": [
+      "80",
+      "9",
+      "16",
+      "3"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 11,
+    "stem": "Let ( ) y y x = be the solution of the differential equation sin cos 4 , (0, ). dy y x x x dx π × + = ∈ 0, 2 y π   = =     then 6 y π       is equal to: 2 8 9 π −",
+    "options": [
+      " 2 4 9 π −",
+      " 2 4 9 3 π",
+      " 2 8 9 3 π −",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 12,
+    "stem": "Let y = y(x) be the solution of the differential equation, 2 2 2 ( 1) 2 ( 1) 1 + + + = dy x x x y dx such that (0)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "= y If (1) , 32 = ay π",
+    "options": [
+      "1/2",
+      "1/16",
+      "1/4",
+      "1"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 13,
+    "stem": "If ( ) = y y x is the solution of the differential equation, 2 2 = + = dy y y x dx satisfying (1) 1, = y then 1 2    y is equal to: 4",
+    "options": [
+      "7 64",
+      "13 16",
+      "49 16",
+      "1"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 14,
+    "stem": "Let f:[0,1]→R be such that f(xy) = f(x).f(y) for all x,y,ε [0,1], and f(0) ≠ 0. If y = y(x) satisfies the differential equation, ( ) = dy f x dx with y(0) = 1, then 1 3 4 4     +         y y is equal to",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "2"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 15,
+    "stem": "If 2 2 3 1 , , , cos cos 3 3 −   + = ∈    dy y x dx x x π π and 4 , 4 3 y π  =     then 4 y π   −     equals: 3 1 3 e +",
+    "options": [
+      " 6 1 3 e +",
+      "1 3",
+      " 4 3 −",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 16,
+    "stem": "Let f be a differentiable function such that 3 ( ) ( ) 7 , 4 f x f x x ′ = − (x > 0) and f(1) ≠ 4. Then 0 1 lim x xf x + →    : 7",
+    "options": [
+      "Exists and equals 4",
+      "Does not exist",
+      "Exist and equals 0",
+      "Exists and equals 4"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 17,
+    "stem": "The curve amongst the family of curves, represented by the differential equation, (x2 – y2)dx + 2xy dy = 0 which passes through (1,1) is: ( ) y f x = (1, 1) − (1 ) , y xy dx x dy + = 1 2 f   −     2 5 − 4 5 − 2 5 4 5 _ 229 Differential Equations",
+    "options": [
+      "A circle with centre on the y-axis",
+      "A circle with centre on the x-axis",
+      "An ellipse with major axis along the y-axis",
+      "A hyperbola with transverse axis along the x-axis"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 18,
+    "stem": "If y(x) is the solution of the differential equation 2 2 1 , x dy x y e dx x − +   + =     x > 0, where 2 1 (1) , 2 x y e− = then: log 4 e c y =",
+    "options": [
+      "y(x) is decreasing in (0,1)",
+      "y(x) is decreasing in 1 ,1 2      ",
+      " log 2 (log 2) 4 c e y =",
+      "(log 2)"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 19,
+    "stem": "The solution of the differential equation 2 ( ) = − dy x y dx when y(1) =1, is: 1 log 2( 1) 1 − + − = − + − e x y x x y",
+    "options": [
+      " 2 log 2( 1) 2 − = − − e y y x",
+      " 2 log 2 − = − − e y x y x",
+      " 1 log 2 1 + − − = + − − + e x y x y x y",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 20,
+    "stem": "Let y = y(x) be the solution of the differential equation, , dy x y x dx + = log ,( 1). > e x x If 2 (2) log 4 1, e y = − then y(e) is equal to: 2 2 e −",
+    "options": [
+      " 2 4 e",
+      "4 e",
+      " 2 e −",
+      ""
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 21,
+    "stem": "If a cuver passes through the point (1, –2) and has slope of the tangent at any point (x, y) on it as 2 2 x y x − , then the curve also passes through the point: Statement or Assertion & Reason",
+    "options": [
+      "( 2,1) −",
+      "( 3,0)",
+      "(–1, 2)",
+      "(3, 0)"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 22,
+    "stem": "Let a solution ( ) y y x = of the differential equation 2 1 x x dy − 2 1 0 y y dx − − = satisfy 2 (2) . 3 y = Statement-I: 1 ( ) sec sec 6 y x x π −   = −     and Statement-II: ( ) y x is given by 2 1 2 3 1 1 y x x = − − Integer & Subjective",
+    "options": [
+      "statement-I is True, statement-II is True; statement-II is a correct explanation for statement-I",
+      "statement-I is True, statement-II is True; statement-II is not a correct explanation for statement-I.",
+      "statement-I is True, statement-II is False",
+      "statement-I is False, statement-II is True"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 23,
+    "stem": "Let : → ℝ ℝ f be a differentiable function with (0)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "= f If ( ) = y f x satisfies the differential equation (2 5 )(5 2), = + − dy y y dx then the value of lim ( ) →∞ x f x is ______. ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 2,
+    "stem": "(a, d) ' tan 2 sec y y x x x − = tan log cos I.F. cos x dx x e e x ∫ = = = ∴ cos 2 sec .cos y x x x x dx = ∫ ⇒ 2 cos y x x c = + ⇒ 2 cos ( (0) 0) y x x y ⋅ = = ∵ ⇒ 2 sec y x x = ∴ 2 2 4 2 and y' 4 3 3 8 2 3 3 y π π π π π     = = +        ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 5,
+    "stem": "(a, c) Hence g(x) has a root in between",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 0,
+    "stem": "g g ⋅ − < ( 1,0) − ( ln ) 2 log , + = dy x x y x x dx ( 1) ≥ x 1 = x 0 = y 2 log + = dy y dx x x 1 ln . . ln ∫ = = x x I F e dx x .ln",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 2,
+    "stem": "ln = +∫ y x c xdx .ln 2[ ln ] = + − y x c x x x 1, 0 = = x y 0 2.( 1) = + − c ⇒ 2 = c .ln 2 2[ ln ] = + − y x x x x = x e 2 2[ ] = + − y e e 2 = y _ 231 Differential Equations",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 8,
+    "stem": "(a, d) 2 dy [( + 2)( + 2 + )] 0 dx − = x x y y ⇒ ( 2) y x t = + ( 2). dy dt x t dx dx = + + ⇒ 2 2 (( 2)( 2 ( 2) ) ( 2) ( 2) . 0 dt x x x t x t x t dx   + + + + + + − + =     2 ( 2) 0 x + = or 2 (1 ) ( 2) 0 dt t x t dx   + + + =     ⇒ ( 2)(1 ) 0 dt x t t dx + + + = 1 2 t dx dt t x +   = −   +   ( 2) nt t n x c + = − + + ℓ ℓ ⇒ ( 2) 2 2 y y n n x c x x     + = − + +     + +     ℓ ℓ ( 2) ( 2) 2 y ny n x n x c x − + + = − + + + ℓ ℓ ℓ ⇒ 2 y ny c x + = + ℓ 3 3 3 n c + = + ℓ 3 1 c n = + ℓ ⇒ 3 2 y ny n e x + = + ℓ ℓ",
+    "options": [
+      " 3 2 y ny n e x + = + ℓ ℓ ⇒ ( 2) 1 3 1 n x n + + = + ℓ ℓ ⇒ one solution",
+      "Option B",
+      "In 2 2 ( 2) ( 2) 2 x x x + + + + ⇒ 3 1 n = + ℓ ⇒ 2 ( 2) ( 2) 3 n x x n e + + + = ℓ ℓ 2 ( 2) ( 2) 3 x x e e + + = ⇒ 2 2 3 ( 2) x e e x + = + no solution",
+      " 2 ( 3) y x = + ⇒ 2 2 ( 3) ( 3) 3 1 2 x n x n x + + + = + + ℓ ℓ 2 ( 2) 1 2( 2) 2 ( 3) 3 1 2 x x n x n x + + + + + + = + + ℓ ℓ 1 ( ) 2 ( 3) ( 2) 2 3 1 ( 2) g x n x x n x = + + + + + − − + ℓ ℓ 2 2 2 2 1 2( 2) ( 3) ( ) 1 0 1 ( 3) ( 2) ( 3)( 2) x x g x x x x x + − + ′ = + + − = + + + + + 2 2 2 8 8 3 ( 3)( 2) x x x x x + + − − = + + ( ) g x increasing ⇒ 1 7 (0) 2 3 2 1 3 3 2 2 g n n n = + + + − = + ℓ ℓ ℓ Which is positive, thus no solution"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(d) dx dy 8 x 9 x 4 9 x = + + + ∫ ∫ Let 4 9 x t + + = 1 1 1 d dt 2 x 2 9 x 2 4 9 x ⋅ ⋅ = + + + (1 ) y xy dx xdy + = 2 0 − + = ydx xdy xy dx 2 2 0  + =     x y d xy dx y 2 2 + = x x C y (1, 1) − 1 1 2 −+ = C ⇒ 1 2 = − C 1 ( ) 2 = − i x 1 1 1 2 4 2 2 − + = − y ⇒ 1 1 1 2 2 8 − − = − y 1 5 2 8 = y 4 5 = y ez 3e/4 ex+2 2 3 /( 2) e x + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 232 ⇒  dy dt = ∫ ∫ ⇒ y t c = + y 4 9 x C = + + + ...(i) ( ) y 0 7 = ⇒  C 0 = ∴ y 4 9 x = + + ⇒  ( ) y 256 4 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(d) sin cos 4 , (0, ) dy x y x x x dx π + − ∈ 4 cot sin dy x y x dx x + = ∴ cot . , sin xdx I F e x ∫ = = ∴ Solution is given by 4 sin sin sin x y x xdx x = ⋅ ∫ 2 sin 2 y x x c = + When , 0 2 x y π = = ⇒ 2 2 x c = − ∴ Equation is: 2 2 sin 2 2 y x x π = − When 6 x π = then 2 2 1 2 2 36 2 y π π ⋅ = ⋅ − ∴ 2 8 9 y π = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(b) 2 2 2 2 1 1 ( 1)   + =   + +   dy x y dx x x (Linear differential equation) ∴ I.F. = 2 ( 1) 2 ( 1) + = + ℓn x e x So, general solution 2 1 .( 1) tan− + = + y x x c As y(0) = 0⇒ c = 0 ∴ 1 2 tan ( ) 1 − = + x y x x As, (1) 32 ⋅ = a y π ⇒ 1 1 4 16 = ⇒ = a a",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(c) 2   + =     dy y x dx x ⇒ I.F. = x2 ∴ 4 2 3 4 4 = + x yx (As y(1) =1) ∴ 1 49 2 16   = =     y x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(b) ƒ(xy) = ƒ(x). ƒ(y) ƒ(0) = 1 as ƒ(0) ≠ 0 ⇒  ƒ(x) = 1 ( ) 1 = = dy f x dx ⇒   y = x + c At,  x = 0, y = 1  ⇒ c = 1 y = x + 1 1 3 1 3 1 1 3 4 4 4 4     + = + + + =         y y",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(a) 2 2 3sec . sec dy x y x dx + = I.F. 2 3 sec 3 tan xdx x e e ∫ = = or 3tan 2 3tan . sec . = ∫ x x y e x e dx or 3tan 3tan 1 . 3 x x y e e C = + . . .(i) Given 4 4 3 y π  =     ∴ 2 3 4 1 . 3 3 e e C = + ∴ 3 C e = New put 4 x π = − in equation (i) ∴ 3 3 3 1 . 3 y e e e − − = + ∴ 6 1 3 = + y e ∴ 6 1 4 3   − = +     y e π",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(a) 3 ( ) ( ) 7 4 f x f x x ′ = − (x > 0) given f(1) ≠ 4 0 1 lim ? x xf x + →  =     3 7 4 dy y dx x + = (This is LDE) IF 3 3 3 ln| | 4 4 4 dx x x e e x ∫ = = = 3 3 4 4 .",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 7,
+    "stem": "x y x x dx = ∫ 3 / 4 4 . 7 7 / 4 x y x C 7 = ⋅ + 3/ 4 ( ) 4 . f x x C x− = + 3 4 1 4 . f C x x x  = +     7 4 0 0 1 lim lim 4 . 4 x x xf C x x + + → →    = + =         _ 233 Differential Equations",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(b) 2 2 ( ) 2 0 x y dx xy dy − + = 2 2 2 − = dy y x dx xy Put dy dv y vx v x dx dx = ⇒ = + solving we get 2 2 1 v dx dv x v = − + ∫ ∫ ln(v2 + 1) = –ln x + C (y2 + x2) = Cx 1 + 1 = C ⇒ C = 2 y2 + x2 = 2x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(b) 2 2 1 x dy x y e dx x − +   + =     I.F. 2 1 1 2 2 2 x dx dx x nx x x e e e e x X +     +     +     ∫ ∫ = = = = ⋅ ℓ So, 2 2 2 ( ) x x x y xe e xe C − = ⋅ + ∫ ⇒ 2x xye xdx C = + ∫ ⇒ 2 2 2 2 x xye x C = + It passes through 2 1 1, 2 e−       we get C = 0 2 2 x xe y − = ⇒ 2 1 ( 2 1) 2 x dy e x dx − = − + ⇒ f(x) is decreasing is 1,1 2       2(log 2) (log 2) (log 2) 2 e e e e y − = 1 log 2 8 e =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(d) − = x y t ⇒ 1 = − dy dt dx dx 2 1 = − = dt t dx ⇒ 2 1 1 = − ∫ ∫ dt dx t ⇒ 1 1 2 1 +  = +   −   ℓ t n x t λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ given y(1)= 1 ⇒ 1 (1) 1 1 2 = + ⇒ = − ℓn λ λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ ⇒ 1 2( 1) 1   − + − = −   + −   ℓ x y n x x y",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(b) dy y nx dx x = = ℓ 1 dx x e x ∫ = xy x nx C = + ∫ℓ 2 2 1 2 2 x x nx x ⋅ ∫ ℓ 2 , 2 4 x x xy nx C = − + ℓ for 2y(2)=2 ℓn2 – 1 ⇒ C = 0 2 4 x x y nx = − ℓ ( ) 4 e y e =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(b) 2 2 dy x y dx x − = 2 dy y x dx x = = I.F = 2 2 dx x e x ∫ = 2 2 . . y x x x dx C + ∫ 4x C y = + Hence b passes through (–1, 2) ⇒ 9 4 C = − ∴ 4 2 9 4 4 x yx = − Now check option(s), which is satisfied by option (ii)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(c) 2 2 1 1 dx dy x x y y = − − ∫ ∫ 1 1 sec sec x y c − − = + 1 1 2 sec 2 sec 3 c − −  = +     3 6 6 c π π π = − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 234 \u0002  \u0002  \u0002 1 1 sec sec 6 x y π − − = + 1 sec sec 6 y x π −   = −     1 1 1 1 cos cos 6 x y π − − = + 1 1 1 1 1 3 cos cos cos 2 y x − − −  = −       2 1 3 1 1 1 2 2 y x x   = − −     2 2 3 1 1 . y x x = − −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(0.40) (2 5 )(5 2) = + − dy y y dx ⇒ (5 2)(5 2) = + − ∫ ∫ dy dx y y ⇒ 1 1 1 4 5 2 5 2   − =   − +   ∫ ∫ dy dx y y ⇒ 1 5 2 ln 20 5 2 − = + + y x C y 5 2 (0) 0 ln 5 2 − = ⇒ = + y f x y 5 2 ln 5 2 − →−∞ →−∞ + y x y ∴ 2 lim ( ) 0.40 5 →∞ = = x f x o _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 227
+  }
+]

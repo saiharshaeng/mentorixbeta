@@ -1,0 +1,1179 @@
+[
+  {
+    "questionNumber": 1,
+    "stem": "The digit in the units place of the value of a positive integral power of a digit also follows a sequence of digits. The digits in unit places of etc., are 7, 9, 3, 1, 7 etc. Using this fact we can determine the digit in the unit place of a power of a natural number. For example:  What is the digit in the unit place of ? Consider the value of etc. The digit in the unit place will be in the sequence 3, 9, 7, 1, 3, 9, 7, 1,..The 50th term in it is 9. So the digit in the unit place of is 9. Representation of Complex Numbers in Argand Plane \u0001 The complex number is represented in a plane by the point (x, y). The plane in which complex numbers are represented by point is called the Argand plane. If then the complex number will be represented by a point in the first quadrant. Similarly for other possible signs of x and y the location of the point is as shown in the figure. Modulus, Amplitude (Argument), Conjugate of a Complex Number: If then \u0001 modulus of 2 2 | | z z x y = = + + \u0001 amplitude of 1 amp ( arg ) tan . y z z or z x − = = We know that has many values. The smallest numerical value falling in the quadrant of the complex number is called the fundamental amplitude (or simply amplitude). The general value is , where is the fundamental amplitude, and this value is called the general amplitude. The amp z lies between –p and p, i.e., ≥ ≤π 0 amp z or − < π < amp",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "z If z belongs to the first quadrant then its amplitude is between 0 and if z belongs to the second quadrant then the amplitude is between and ; if z belongs to the third quadrant then the amplitude is between –p and and if z belongs to the fourth quadrant then the amplitude is between and 0. \u0001 Method of calculating amp z is as follows. Calculate in the first quadrant. If z is in the first quadrant, amp If z is in the second quadrant, amp If z is in the third quadrant, amp If z is in the fourth quadrant, amp Note (1) The complex number has indeterminate amplitude. \u0001 Conjugate of \u0001 The trigonometrical form (or polar form) of a complex z x iy = + , x R y ∈ ∈ , 1, R i = − 2 1; i = − Re( ) , z z x = = Im( ) . z z y = = 1 1 1 2 2 2 , z x iy z x iy = + = + 1 2 1 2 1 2 ( ) ( ) z z x x i y y + = ± + ± 1 2 1 2 1 2 1 2 1 2 . ( ) ( ) z z x x y y i x y y x = − + + 2 2 2 1 1 z x iy = = + 2 2 2 2 2 2 ( )( ) x iy x iy x iy − + − 2 2 2 2 2 2 2 x iy x i y − = − 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 x iy x y i x y x y x y − = = − + + + 1 1 2 2 x iy x iy + = + ⇔ 1 2 1 2 , . x x y y + = 1, , 1, ni i i = −− 4 ,4 1,4 2,4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 3,
+    "stem": "n m m m m = + + + 1 2 3 4 5 7 ,7 ,7 ,7 ,7 , 50 (193) 1 2 3 4 5 6 3 ,3 ,3 ,3 ,3 ,3 , 50 (193) z x iy = + 0, 0 x y > > z x iy = + 1 tan y x − 1 2 tan y r x π − + 1 tan y x − ; 2 π 2 π π 2 π − 2 π − 1 tan ( ) y x α − = z α = z π α = − z α π = − . z α = − 0 z = . z z x iy = = − 1 tan Y x α − = , π α α − x α − Figure: 3.2 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 30 number is | | z z = {(cos (amp ) sin(amp )}, z i z + i.e., where r = |z| and q = amp z. \u0001 Unimodular complex number z is such that and hence unimodular complex number. where θ = amp z. (2) While taking a complex number z in working out a problem or solving an equation we take (in algebraic form) or (in trigonometrical form). If the modulus or amplitude of the complex number is known, it is always convenient to take z in the trigonometrical form. (3)  (i) is always a unimolecular complex number if (ii) If amp or is purely imaginary; if amp or is purely real. To Express Real Part and Imaginary Part in Terms of the Complex Number \u0001 Let then Adding these, 1 ( ). 2 x z z = + Subtracting these, Note (1) is always real and is always imaginary. (2) is always real. Properties of Conjugate, Amplitude and Modulus \u0001 \u0001 amp(z1.z2) = amp z1 + amp z2 amp 1 2 z z       = amp z1 – amp z2 amp z z    = 2amp z amp z2 = 2 amp z. Note If Then and ∴ amp (z1z2) = amp z1 + amp z2 and  amp 1 2 z z = amp z1 – amp z2 Clearly, these results on amplitude hold when we take fundamental amplitudes only. \u0001 1 1 1 2 1 2 2 2 | . | | | . | | | | | | n n z z z z z z z z z z = = = 1 2 1 2 | | | | | | z z z z + ≤ + equality holding if are collinear with at one end. 1 2 1 2 | | || | | || z z z z − ≥ − \u0001 2 | | z z z ⋅ = Power of a Complex Number (De Moivre’s Theorem) \u0001 If etc., then 1 2 1 1 2 2 . (cos sin )(cos sin ) = + + θ θ θ θ z z i i 1 2 1 2 cos( ) sin( ) = + = + θ θ θ θ i \u0001 where n is a positive integer. \u0001 where \u0001 nth roots of unity where If then the nth roots of unity are which are in G.P. Cube Roots of Unity \u0001 Cube roots of unity (cos sin ) z r i θ = + | | 1 z = cos sin z i θ θ = + z x iy = + (cos sin ) z r i θ θ = + | | z z",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "z ≠ 2 z π = , 2 z π − 0 z = , z π ; z x iy = + z x iy = − 2 ; z z x + = ∴ 2 z z iy − = ∴ 1 ( ) 2 y z z i = − z z + z z − z z 1 2 1 2 z z z z ± = ± 1 2 1 2 . . z z z z = 1 1 2 2 z z z z  =       1 1 1 1 (cos sin ), z r i θ θ = + 2 2 2 2 (cos sin ) z r i θ θ = + 1 2 1 2 1 1 2 2 1 2 . (cos sin )(cos sin ) z z rr i i rr θ θ θ θ = + + = 1 2 1 2 {cos( ) sin( )} i θ θ θ θ + + + 1 1 1 1 2 2 2 2 (cos sin ) (cos sin ) z r i z r i θ θ θ θ + = + 1 1 2 1 2 2 {cos( ) sin( )} r i r θ θ θ θ = − + − 0, z = 1 2 , z z 0 z = 1 z z = 1 1 1 2 2 2 cos sin , cos sin , z i z i θ θ θ θ = + = + 1 2 3 1 2 3 1 2 3 . . .... cos( ....) sin( ....) z z z i θ θ θ θ θ θ = + + + + + + + (cos sin ) cos sin , n i n i n θ θ θ θ + = + (cos sin ) cos sin n i n i n θ θ θ θ − + = − (cos sin ) cos sin n i n i n θ θ θ θ − = − / / (cos sin ) {cos(2 ) sin(2 )} p q p q i r i r θ θ π θ π θ + = + + + (2 ) (2 ) cos sin , r p r p i q q π θ π θ + + = + 0,1,2,......,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "r q = − 1/ 1/ 1 (cos0 sin0) n n i = = + 1/ (cos2 sin 2 ) n r i r π π = + 2 2 cos sin , r r i n n π π = + 0,1,2,.....,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "r n = − 0 2 2 cos sin i z n n π π + = 2 3 1 0 0 0 0 1, , , ,....., n z z z z − 1/3 1/3 1/3 1 (cos0 sin0) (cos2 sin 2 ) i r i r π π = = + = + _ 31 Complex Number where r = 0, 1, 2 \u0001 If one of the non-real complex roots be w then the other non-real complex root will be w2. \u0001 where and \u0001 The value of 3 if i.e., n is divisible by 3 0 if i.e., n is not divisible by 3 Note Any complex number for which can be expressed in terms of w and i. Application of Complex Numbers in Geometrical Problems The geometrical meaning of complex expression, equations and inequations are as follows: \u0001 is a point whose coordinates are Note The complex number z is also represented by a vector. If P represents z in the Argand plane we say represents the complex number z, O being the origin. If P and Q represents complex numbers z and z1 respectively then \u0001 distance between the origin and the point distance between the points z and z1. \u0001 amp , z ZOX = ∠ where Z represents z 1 1 amp . z ZOZ z = = ∠ \u0001 If are three points taken in the anticlockwise sense then amp = \u0001 The angle between two line segment joining the points and is 1 2 3 4 amp z z z z − = − or 1 2 3 4 – amp z z z z − = − π \u0001 Complex numbers z satisfying represents points on the circle whose centre is and radius Complex numbers z satisfying represents points inside the circle whose centre is and radius Complex numbers z satisfying represents points outside the circle whose centre is and radius \u0001 If z is on the circle then iz is also on the circle, the radius vector being shifted by in the anticlockwise sense. \u0001 The line segment joining the complex numbers is divided by the complex number z in the ratio m : n if \u0001 General equation of a line is where is a real constant and is a non-real complex constant. \u0001 General equation of a circle is where is a real constant and is a non-real complex constant. 2 2 cos sin , 3 3 r r i π π = + 1 3 1 3 1, , . 2 2 2 2 i i = − + − − 2 3 1 1, , w w = 3 1 w = 2 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "w w + + = 2 1 n n w w + + = 3 , n m = = 3 , n m ≠ 1: 3 3 :1, real part or imaginary part = z x iy z = + ⇒ ( , ) x y OP \u0001\u0001\u0001\u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "QP z z = − \u0001\u0001\u0001\u0002 | |z = 1 | | z z z − = 3 1 2 , , z z z 3 1 2 1 z z z z − = − 3 1 2 Z Z Z ∠ 1 2 , z z 3 4 , z z 0 | | z z ρ − = 0z . ρ = 0 | | z z ρ − < 0z . ρ = 0 | | z z ρ − > 0z . ρ = | | z ρ = / 2 π 1 2 , z z 2 1 mz nz z m n + = + 0 z z α α β + + = β α 0 zz z z α α β + + + = β α 1z z 2z m n Figure: 3.8 iz z / 2 π Figure: 3.7 O 0 | | z z ρ − > 0z 0 | | z z ρ − Figure: 3.6 Figure: 3.4 Y X O amp z amp z1 amp z/z1 1z 1 | | z z − ( , ) z x y | |z P(z) Y z – z1 Q (z1) X z Figure: 3.3 1z 3z 2z Figure: 3.5 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 32 Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "If w = α + iβ, where 0 β ≠ and 1, z ≠ satisfies the condition that is purely real, then the set of values of z is",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 2,
+    "stem": "A man walks a distance of 3 units from the origin towards the north-east (N 45° E) direction. From there, he walks a distance of 4 units towards the north-west (N 45° W) direction to reach a point P. Then the position of P in the Argand plane is / 4 (3 4 ) π + i i e",
+    "options": [
+      " / 4 3 4 π + ie i",
+      " / 4 (3 4 ) π − i i e",
+      " / 4 (4 3 ) π + i i e",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 3,
+    "stem": "If | | 1 = z and 1, z = ± then all the values of 2 1 z z − lie on",
+    "options": [
+      "a line not passing through the origin",
+      "| | 2 z =",
+      "the x-axis",
+      "the y-axis"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 4,
+    "stem": "Let z x iy = + be a complex where x and y are integers. Then the area of the rectangle whose vertices are the roots of the equation 3 3 350 + = zz zz is",
+    "options": [
+      "48",
+      "32",
+      "40",
+      "80"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 5,
+    "stem": "Let cos sin . θ θ = + z i Then the value of 15 2 1 1 Im( ) − =∑ m m z at 2 θ = ° is 1 4 sin 2° 6. Let ω be a complex cube root of unity with",
+    "options": [
+      " 1 sin2°",
+      " 1 3 sin 2°",
+      " 1 2 sin 2°",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "ω ≠ A fair die is thrown three times. If r1,r2 and r3 are the numbers obtained on the die, then the probability that 3 1 2 0 r r r ω ω ω + + = is 36",
+    "options": [
+      "1 18",
+      "1 9",
+      "2 9",
+      "1"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 7,
+    "stem": "Let z1 and z2 be two distinct complex numbers and let 1 2 (1 ) z t z tz = − + for some real number t with 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "t < < If Arg (W) denotes the principal argument of a non-zero complex number w, then 1 2 1 ( ) Arg ( ) z z z z − = −",
+    "options": [
+      " 1 2 1 2 | | | | | | z z z z z z − + − = −",
+      "Arg 1 2 ( ) Arg( ) z z z z − = −",
+      " 1 1 2 1 2 1 0 z z z z z z z z − − = − −",
+      "Arg"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 8,
+    "stem": "Let z be a complex number such that the imaginary part of z is nonzero and 2 1 = + + a z z is real. Then a cannot take the value 4",
+    "options": [
+      "–1",
+      "1 3",
+      "1 2",
+      "3"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 9,
+    "stem": "If is a complex number of unit modulus and argument then arg equals",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 10,
+    "stem": "Let complex number α and 1 α lie on circles and respectively. If satisfies the equation then",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 11,
+    "stem": "Let 3 2 i w + = and { : 1,2,3,...}. n P W n = = Further 1 1 : Re 2   = ∈ >     H z C z and 2 = H 1 : Re , 2 −   ∈ <     z C z where C is the set of all complex numbers. If 1 ∈ z 1, ∩ P H 2 2 ∈ ∩ z P H and O represents the origin, then 2 1 ∠ = z z O",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 12,
+    "stem": "If z is a complex number such that | | 2, z ≥ then the minimum value of : 1 w wz z −     −   { : | | 1} z z = { : } z z z = { : 1} z z ≠ { : | | 1, 1} z z z = ≠ z , θ 1 1 z z +     +   θ − 2 π θ − θ π θ − 2 2 2 0 0 ( ) ( ) x x y y r − + − = 2 2 2 0 0 ( ) ( ) 4 , x x y y r − + − = 0 0 0 z x iy = + 2 2 0 2 | | , z r r = + | | α = 1 2 1 2 1 7 1 3 2 π 6 π 2 3 π 5 6 π 1 2 z + _ 33 Complex Number but less than",
+    "options": [
+      "is equal to",
+      "lies in the interval (1, 2)",
+      "is strictly greater than",
+      "is strictly greater than"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 13,
+    "stem": "A complex number z is said to be unimodular if Suppose and are complex numbers such that is unimodular and is not unimodular. Then the point lies on a",
+    "options": [
+      "straight line parallel to x-axis",
+      "straight line parallel to y-axis",
+      "circle of radius 2",
+      "circle of radius"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 14,
+    "stem": "A value of for which is purely imaginary, is:",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 15,
+    "stem": "Let a, b, x and y be real numbers such that 1 a b − = and",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "y ≠ If the complex number z x iy = + satisfies Im 1 az b y z +  =   +   , then which of the following is (are) possible value(s) of x? 2 1 1 y −− −",
+    "options": [
+      " 2 1 1 y −+ −",
+      " 2 1 1 y − +",
+      " 2 1 1 y + +",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 16,
+    "stem": "For a non-zero complex number z, let arg(z) denote the principal argument with arg( ) . − < ≤ z π π Then, which of the following statement(s) is (are) False? and z3, the locus of the point z satisfying the condition",
+    "options": [
+      "arg( 1 ) , 4 π −− = i where 1 = − i",
+      "The function : ( , ], π π →− ℝ f defined by ( ) arg( 1 ) = −+ f t it for all , ∈ℝ t is continuous at all points or , ℝ where 1 = − i",
+      "For any two non-zero complex number 1z and 2, z 1 1 2 2 arg arg( ) arg( )  − +     z z z z is an integer multiple of 2π",
+      "For any three given distinct complex numbers z1, z2"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 17,
+    "stem": "Let s, t, r be non-zero complex numbers and L be the set of solutions z = x + iy ( , , 1) ∈ = − ℝ x y i of the equation 0, + + = sz tz r where . = − z x iy Then, which of the many elements",
+    "options": [
+      "If L has exactly one element, then | | | | ≠ s t",
+      "If | | | |, = s t then L has infinitely many elements",
+      "The number of elements in { :| 1 | 5} ∩ −+ = L z z i is at most 2",
+      "If L has more than one element, then L has infinitely"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 18,
+    "stem": "If 3 ( 1), 2 2 i z i = + = − then 5 8 9 (1 ) iz z iz + + + is equal to 9 ( 1 2 )i −+",
+    "options": [
+      "–1",
+      "1",
+      "0",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 19,
+    "stem": "Let 3 2 sin , : ispurelyimaginary 2 1 2 sin  +    = ∈−     −     i A o i π θ π θ Then the sum of the elements in A is:",
+    "options": [
+      "5 6 π",
+      "2 3 π",
+      "3 4 π",
+      "π"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 20,
+    "stem": "Let z0 be a root of the quadratic equation, 2 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "+ + = x x If 81 93 0 0 3 6 3 = + − z iz iz then arg z is equal to:",
+    "options": [
+      "π/4",
+      "π/3",
+      "0",
+      "π/6"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 21,
+    "stem": "Let z1 and z2 be any two non-zero complex numbers such that 3|z1| = 2 |z2|. If 1 2 2 1 3 2 2 3 z z z z z = + 0 z = 5 2 5 2 3 2 5 2 | | 1. = z 1z 2z 1 2 1 2 2 2 − − z z z z 2z 1z 2 θ 2 3 sin 1 2 sin i i θ θ + − 3 π 6 π 1 3 sin 4 −        1 1 sin 3 −      y y′ x x′ (–2,0) A 1 ,0 2 − B (0, 2) ′ − A (–2,0) B (2,0) Q _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 34",
+    "options": [
+      " 1 17 | | 2 2 = z",
+      "Re( ) 0 z =",
+      " 5 | | 2 = z",
+      "Im( )"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 22,
+    "stem": "Let 5 5 3 3 . 2 2 2 2 i i z     = + + −             If R(z) and I[z] respectively denote the real and imaginary parts of z, then:",
+    "options": [
+      "R(z) > 0 and I(z) > 0",
+      "R(z) < 0 and I(z) > 0",
+      "R(z) = –3",
+      "I(z) = 0"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 23,
+    "stem": "Let 3 1 2 ( 1), 3 27 x iy i i +   −− = = −     where x and y are real numbers, then y –x equals",
+    "options": [
+      "–85",
+      "85",
+      "–91",
+      "91"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 24,
+    "stem": "Let z be a complex number such that |z| + z = 3 + i (where 1 i = − ). Then |z| is equal to: 3",
+    "options": [
+      "5 4",
+      " 41 4",
+      " 34 3",
+      "5"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 25,
+    "stem": "If ( ) z R z α α α − ∈ + is a purely imaginary number and |z| = 2, then α value of a is:",
+    "options": [
+      "1",
+      "2",
+      " 2",
+      "1/2"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 26,
+    "stem": "Let Z1 and Z2 be two complex numbers satisfying |Z1| = 9 and |Z2 – 3 – 4i | = 4. Then the minimum value of |Z1 – Z2| is:",
+    "options": [
+      "0",
+      "1",
+      " 2",
+      "2"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 27,
+    "stem": "If z is a complex number belonging to the set S ={ :| 2 | 5} −+ ≥ z z i and 0z ∈S such that 0 1 | 1| z − maximum. Then arg 0 0 0 0 4 2 z z z z i   − −   − +   is π Matrix Match / Column Match",
+    "options": [
+      "4 π",
+      "3 4 π",
+      " 2 π −",
+      "2"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 28,
+    "stem": "Match the statements in column-I with those in column-II. Note: Here z takes the values in the complex plane and Im z and Re z denote, respectively, the imaginary part and the real part of z] Column I Column II",
+    "options": [
+      "The set of points z satisfying | | || | | || − = + z i z z i z is contained in or equal to",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "an ellipse with eccentricity 4 5",
+    "options": [
+      "Option A",
+      "The set of points z satisfying | 4 | | 4 | 10 + + − = z z is contained in or equal to",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 2,
+    "stem": "the set of points z satisfying Im z = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "If | | 2, = ω then the set of points 1/ = − z ω ω contained in or equal to",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 3,
+    "stem": "the set of points z satisfying |Im z| 1 ≤",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "If | | 1, = ω then the set of points 1/ z ω ω = + is contained in or equal to"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 4,
+    "stem": "the set of points z satisfying |Re z| 1 ≤",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 5,
+    "stem": "the set of points z satisfying | | 3 ≤ z",
+    "options": [
+      "A→3; B→1; C→1,5; D→2,5",
+      "A→1; B→2; C→3; D→4",
+      "A→2; B→1; C→4; D→5",
+      "A→3; B→1; C→3; D→5"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 29,
+    "stem": "Match the statements given in Column I with the values given in Column II. Column I Column II",
+    "options": [
+      "If ˆ ˆ ˆ ˆ a j 3k j 3k = + = −+ \u0002 and ˆ c 2 3k = \u0002 form a triangle, then the internal angle of the triangle between a\u0002 and b \u0002 is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 5,
+    "stem": "2 π _ 35 Complex Number",
+    "options": [
+      "A→1; B→2,4; C→4; D→2",
+      "A→1; B→2; C→3; D→4",
+      "A→2; B→1; C→4; D→5",
+      "A→3; B→1; C→3; D→5"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 30,
+    "stem": "Match the statements given in Column I with the interval/union of intervals given in Column II Column I Column II",
+    "options": [
+      "The set 2 2iz Re : z 1 z         −     is a complex number, | z | 1, z 1 = ≠± is",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "( , 1) (1, ) −∞− ∪ ∞",
+    "options": [
+      "Option A",
+      "The  domain of the function 1 f (x) sin − = x 2 2(x 1) 8(3) 1 3 − −     −   is",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 2,
+    "stem": "( , 0) (0, ) −∞ ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "If 1 tan 1 ( ) tan 1 tan , 1 tan 1 f θ θ = − θ θ − − θ then the set f( ) : 0 2 π θ θ   ≤ <     is",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 4,
+    "stem": "( , 1] [1, ) −∞− ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 5,
+    "stem": "( ,0] [2, ) −∞ ∪ ∞",
+    "options": [
+      "A→4; B→2, 4; C→4; D→2",
+      "A→4; B→5; C→3; D →3",
+      "A→2; B→1, 4; C→3; D→4",
+      "A→1; B→2; C→5; D→4"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 31,
+    "stem": "Let Column I Column II",
+    "options": [
+      "For each zk there exists a zj such zk. zj = 1",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 32,
+    "stem": "Match the Column Column I Column II",
+    "options": [
+      "In if the magnitude of the projection vector of the vector on is and if | | 2 3 , α = + β then possible value(s) of is (are)",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 5,
+    "stem": "5 Paragraph Paragraph for Question No. 33 to 36 Let A, B, C be three sets of complex numbers as defined below { :Im 1} A z z = ≥ { :| 2 | 3} B z z i = −−= { :Re((1 ) ) 2}. C z i z = − = 2 2 cos sin ; 1,2,...,9. 10 10 k k k z i k π π     = + =         {1,2,.....,9} k ∈",
+    "options": [
+      "A→3, 4, 5; B→1, 5; C→2, 3, 4, 5; D→1, 2, 3, 5",
+      "A→3, 5; B→1, 4; C→1, 2, 3, 5; D→, 2, 3, 5",
+      "A→1, 2; B→1, 2; C→1, 2, 4, 5; D→2, 5",
+      "A→ 1, 2, 3, 5; B→ 2, 4; C→ 1, 2, 3, 4; D→1, 3, 5"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "k z z z = z 1 2 9 |1 ||1 |.....|1 | 10 z z z − − − 9 1 2 1 cos 10 k kπ =   −     ∑ 2, R ˆ ˆ α β + i j ˆ ˆ 3 + i j 3 |α| { 2 2 3 2, 1 ( ) , 1 − − < = + ≥ ax x f x bx a x . ∈ x R ω 1 ≠ 2 4 3 (3 3 2 ) + − + ω ω n 2 4 3 (2 3 3 ) + + + − ω ω n 2 4 3 ( 3 2 3 ) 0, + + −+ + = ω ω n | | − q a _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 36",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 33,
+    "stem": "The number of elements in the set A B C ∩ ∩ is",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "∞"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 34,
+    "stem": "Let z be any point in . A B C ∩ ∩ Then, 2 2 | 1 | | 5 | z i z i + − + −− lies between",
+    "options": [
+      "25 and 29",
+      "30 and 34",
+      "35 and 39",
+      "40 and 44"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 35,
+    "stem": "Let z be any point in A B C ∩ ∩ and let w be any point satisfying | 2 | 3. w i − −< Then, | | | | 3 z w − + lies between",
+    "options": [
+      "–6 and 3",
+      "–3 and 6",
+      "–6 and 6",
+      "–6 and 9"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 36,
+    "stem": "Let ω be a solution of 3 1 0 x −= with Im( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "ω > If a = 2 with b and c satisfying (E), then the value of a b c 3 1 3 ω ω ω + + is equal to Integer & Subjective",
+    "options": [
+      "–2",
+      "2",
+      "3",
+      "–3"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 37,
+    "stem": "If z is any complex number satisfying | z 3 2i | 2, −− ≤ then the minimum value of | 2z 6 5i | − + is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 38,
+    "stem": "Let i /3 e , π ω = and a, b, c, x, y, z be non-zero complex numbers such that a b c x + + = 2 a b c y ω ω + + = 2 a b c z. ω ω + + = Then the value of 2 2 2 2 2 2 | x | | y| | z| | a | | b| | c| + + + + is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 39,
+    "stem": "For any integer k, let where The value of the expression is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 40,
+    "stem": "Let 1 3 , 2 i z −+ = where 1, i = − and , {1, 2, 3}. r s∈ Let 2 2 ( )r s s r z z P z z   − =     and I be the identity matrix of order 2. Then the total number of ordered pairs ( , ) r s for which 2 P I = − is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 41,
+    "stem": "That 1 ω ≠be a cube root of unity. Then minimum value of set 2 2 {| | ; a b c ω ω + + a,b,c are distinct non zero integers} equals_______.| ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x = Alternative Let 2 2 1 , 1 z z E z zz z z z = = = − − − which is imaginary.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "i = − 12 1 1 3 4 1 4 2 1 | | | | k k k k k k α α α α + = − − = Σ − Σ − 1 1 w wz w wz z z − − = − − ⇒ ( 1)( ) 0 z z w w − − = 1 z z = ⇒ 2 | | 1 z = ⇒ | | 1 z = y x O 4 3 A P / 4 3 ie π _ 37 Complex Number",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 2,
+    "stem": "6 6 6 216 9 × × × × = = = × ×",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 7,
+    "stem": "(a,c,d) Given 1 2 (1 ) z t z tz = − + ⇒ 1 2 1 z z t z z − = ⇒ − arg 2 1 0 z z z z   − =   −   . . .(i) ⇒ arg 1 2 1 ( ) arg( ) z z z z − = − 1 1 2 1 2 1 z z z z z z z z − − = − − 1 1 2 1 2 1 0 z z z z z z z z − − = − − AP PB AB + = ⇒ 1 2 1 2 | | | | | | . z z z z z z − + − = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(c, d) Now, for and for Possible position of are whereas of are (as shown in the figure). So, possible value of according to the given option is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(b) The minimum value of is",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(c) z ω = 2 2 1 1 1 1 z z ω ω ω ω ω + + − = = = + + − ∴ 1 arg 1 z z ω θ + = = + cos sin ) z i θ θ = + | | OB α = 1 1 | | | | OC α α = = OBD ∆ 2 2 2 0 0 | | | | cos 2 | | | | z r z α θ α + − = OCD ∆ 2 2 0 2 0 1 | | 4 | | cos 1 2 | | | | z r z α θ α + − = 2 2 2 2 2 0 2 0 0 0 1 | | 4 |z | | | | | 1 2 | || | 2 | | | | z r r z z α α α α + − + − = ⇒ 1 | | 7 α = 6 6 3 , so 2 π π       + = = = n i i n i w e w e 1 1 , cos 6 2 π > n z 2 1 , cos 6 2 π < − n z 1z 1 2 3 , , A A A 2z 1 2 3 , , B B B 1 2 ∠z Oz 2 5 or . 3 6 π π 1 1 2 2 z z   + = −−     1 2 z + 3 2 1 2 1 2 2 1 2 − = − z z z z ⇒ 2 2 1 2 1 2 | 2 | | 2 | − = − z z z z ⇒ 1 2 1 2 1 2 1 2 ( 2 )( 2 ) (2 )(2 ) − − = − − z z z z z z z z ( ) P z 1 ( ) A z 2 ( ) B z r A D B(α) 2r C(1/ ) α 0z θ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 38 θ z z1 z2 z3 π θ − But . Hence, z lies on a circle of radius 2 centered at origin.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(d) (For purely imaginary) ,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(a, d) ( ) Im 1 a x iy b y x iy + +  =   + +   ⇒  Im 1 az b y z +  =   +   ⇒ 1 Im 1 az a y z + −  =   +   ⇒ 1 Im 1 a y z   − =   +   ⇒ 1 1 Im 1 1 z y z z +   − ⋅ =   + +   ⇒ 2 1 Im 1 z y z   +   − =   +   ⇒ ( ) 2 2 1 y y x y = + + ⇒ ( ) 2 2 1 1 x y + + = ⇒ ( ) 2 2 1 1 x y + = − ⇒ 2 1 1 . x y = −± −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(a, b, d) (a) 1 3 arg( 1 ) tan (1) 4 4 π π π π − −− = − + = − + = − i",
+    "options": [
+      "Option A",
+      " 1 1 ( tan ), 0 ( ) arg( 1 ) tan , 0 π π − − − + < = −+ =  − ≥  t t f t it t t Clearly f(t) is discontinuous at 0 = t",
+      " 1 1 2 1 2 2 2 1 arg arg( ) arg( ) arg     − + = ⋅         z z z z z z z z 2 arg(1) 2 2 π π π + = + = k k k",
+      " 1 2 3 3 2 1 ( )( ) arg ( )( ) π − −  =   − −   z z z z z z z z ⇒ 1 2 3 3 2 2 arg arg − −     +     − −     z z z z z z z z 1 3 2 3 1 2 arg , arg θ π θ − −     = − =     − −     z z z z z z z z ⇒ 1 2 3 3 2 1 arg arg π − −     + =     − −     z z z z z z z z 1 2 3 3 2 1 ( )( ) arg ( )( ) π − −  =   − −   z z z z z z z z"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(a, c, d) 0 + + = sz tz r . . . (i) Taking conjugate of (i) 0 + + = s z t z r . . . (ii) Eliminating z from (i) and (ii) ( ) ( ) 0 + + − + + = ssz tsz sr tsz ttz tr 2 2 (| | | | ) − = − z s t tr rs elements.",
+    "options": [
+      "If | | | |, ≠ s t then z has unique value",
+      "If | | | | = s t and 0, − ≠ rt rs then z has infinitely many values If | | | | = s t and 0, − ≠ rt rs then  z has no value ⇒ L may be empty set or infinite set",
+      "Locus of z is null set or singleton set or a line in all cases. It will intersect given circle at most two points.",
+      "If L has more than one element, then L has infinite"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(a) 3 cos sin 2 2 6 6 i z i π π = + = + ⇒ 5 5 5 3 cos sin 6 6 2 i z i π π − + = + = and 8 4 4 1 3 cos sin 6 6 2 i z i π π   + = + = −      ⇒ 9 5 8 9 3 1 3 3 (1 ) 1 2 2 2 2 2 2 i i i iz z iz   + + + = + − − + − +       9 1 3 cos3 sin3 1 2 i i π π   + = = + = −       ⇒ 1 1 2 2 1 1 2 2 4 4 + = + z z z z z z z z ⇒ 2 2 2 2 1 2 2 1 4 | | | | 4| | | | 0 z z z z + − − = ⇒ 2 2 1 2 (| | 1) ( | | 4) 0 z z − ⋅ − = 2 | | 1, z ≠ ∴ 2 | | 2 z = 2 3 sin 1 2 sin 1 2 sin 1 2 sin θ θ θ θ + + × − + i i i i 2 2 6sin 0 θ − = 2 1 sin 3 θ = 1 sin 3 θ = 1 1 sin 3 θ − = π / 2 π / 2 π − π − _ 39 Complex Number",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(a) Given 3 2 sin 1 2 sin i z i θ θ + = − is purely img so real part becomes zero. 3 2 sin 1 2 sin 1 2 sin 1 2 sin i i z i i θ θ θ θ + +    = ×    − +    2 2 (3 4sin ) (8sin ) 4sin i z i θ θ θ − + = + Now Re( ) 0 z = 2 2 3 4sin 0 1 4sin θ θ − = + 2 3 sin 4 θ = 3 2 sin , , 4 3 3 3 π π π θ θ = ± ⇒ = − ∵ , 3 π θ π   ∈−     then sum of the elements in A is 2 2 3 3 3 3 π π π π − + + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(a) 0 Z ω = or 2 ω (where ω is a non real cube root of unity) 81 93 0 3 6 ( ) 3 ( ) Z i i ω ω = + − 3 3 z i = + ⇒ arg 4 z π =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(d) Let z1 and z2 be any non-zero complex number such that 3|z1| = 2|z2| If 1 2 2 1 3 2 , 2 3 z z z z z = + then Given 1 2 3| | 2 | | = z z Now 1 2 3 1 2 z z = Let 1 2 3 cos sin 2 z a i z θ θ = = + 1 1 2 2 3 2 2 3 z z z z z = + 1 2cos a a θ = + = Im( ) 0 z =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) 5 5 3 3 2 2 2 2 i i z     = + + −             / 6 5 /6 5 ( ) ( ) i i Z e e π π − = + 5 /6 5 /6 i i e e π π − = + 5 sin5 5 5 cos cos sin 6 6 6 6 i i π π π π − −     = + + +         5 2cos 0 6 π = < I(z) = 0 and Re(z) <0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(d) 3 3 (6 ) 2 3 27 +   −− = −     i i 198 107 27 27 i x iy − − + = = Hence, y – x = 198 – 107 = 91",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(d) |z| + z = 3 + i z = 3 – |z| + i Let 3 – |z| = a ⇒  |z| = (3 – a) ⇒ z = a + i ⇒  z = 2 1 a + ⇒  9 + a2 – 6a = a2 + 1 ⇒ 8 4 6 3 a = = ⇒ 4 5 | | 3 3 3 z = − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(b) 0 z z z z α α α α − − + = + + 2 2 0 zz z z zz z z α α α α α α + − − + − + − = 2 2 | |z α = , 2 a = ±",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(a) |z1| = 9 , |  z2 – (3 + 4i) = 4 C1 (0, 0) radius r1 = 9 C2(3, 4), radius r2 = 4 C1C2 = |r1 – r2 | = 5 ∴  Circle touches internally ∴ |z1 – z2|min = 0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(c) | (2 ) | 5 − − ≥ z i 2–i C P (z0) _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 40 For 0 | 1| z − to be minimum, 0 0 0 z x iy = + is at point P as shown in figure arg 0 0 0 0 4 ( ) 2 z z z z i   − +   − +   = arg 4 2 2 2 x iy i   −   +   = arg (2 ) 2 i x y   − −   +   =arg ( ) iλ − = 2 π − ( 0) λ > ∵",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(a) (A) , 0 | | | | z z i i z z z − = + ≠ | | z z is unimodular complex number and lies on perpendicular bisector of i and i − ⇒ 1 1| | | | = ± ⇒ = ± z z z z a is number Im(z) = 0.",
+    "options": [
+      "Option A",
+      "| 4 | | 4 | 10 z z + + − = z lies on an ellipse whose focus are (4, 0) and (–4, 0) and length of major axis is 10 ⇒ 2 8 and 2 10 4/5 ae a e = = ⇒ = | Re( ) | 5. z ≤",
+      "| | 2 2(cos sin ) w w i θ θ = ⇒ = + 1 2(cos sin ) (cos sin ) 2 x iy i i θ θ θ θ + = + − − 2 2 2 2 3 5 cos sin 1 2 2 (3/2) (5/2) x y i θ θ = + ⇒ + = 2 9/ 4 9 16 4 1 1 25/ 4 25 25 5 e e = − = − = ⇒ =",
+      "| | 1 cos sin cos sin w x iy i i θ θ θ = ⇒ + = + + − 2cos x iy θ + = | Re( ) | 1,| Im( )"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(a) (A) a b 1 3 2 − = + = \u0002 \u0002 | a | b, | b | 2 = = \u0002 \u0002 2 1 cos 2 2 2 θ = = × 2 , 3 3 π π θ = but its 2 3 π as its opposite to side of maximum length.",
+    "options": [
+      "Option A",
+      " b 2 2 a (f (x) 3x) dx a b − = − ∫ b 2 2 2 2 2 2 a 3 a b f (x)dx (b a ) a b 2 2 − + = − + − = ∫ ⇒  f (x) x. =",
+      " 5/ 6 2 7 / 6 ln (sec x tan x) ln 3   +       π π π π 5 5 7 7 ln sec tan ln sec tan . ln 3 6 6 6 6   = + − + =     π π π π π π",
+      "Let 1 1 u z 1 1 z u = ⇒ = − − 1 | z | 1 1 1 2 = ⇒ − = ⇒ | u 1| | u | − = ∴  locus of u is perpendicular bisector of line segment joining 0 and 1 ⇒ maximum arg u approaches 2 π but will not attain."
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(a) (A) 2 2 2 2i(x iy) 2i(x iy) z 1 (x iy) 1 (x y 2ixy) + + = = − + − − + Using 2 2 1 x y − = 2 2ix 2y 1 Z . y 2y 2ixy − = = − − ∵ 1 1 1 y 1 1or",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "y y −≤ ≤⇒− ≤− − ≥",
+    "options": [
+      "Option A",
+      "For domain x 2 2(x 1) 8.3 1 1 1 3 − − −≤ ≤ − ⇒ x x 2 2x 2 3 3 1",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "1 3 − − − −≤ ≤ − Case (i): x x 2 2x 2 3 3 1 0 1 3 − − − −≤ − ⇒ x x 2 2x 2 (3 1)(3 1) 0 (3 1) − − − − ≥ − ⇒ x ( ,0] (1, ). ∈−∞ ∪ ∞ Case (ii): x x 2 2x 3 3 1 0 1 3 2 − − + ≥ − − ⇒ x 2 x x x 2 (3 1)(3 1) 0 (3 .3 1) − − − + ≥ − ⇒  x ( ,1) [2, ). ∈−∞ ∪ ∞ So,  x ( , 0] [2, ). ∈−∞ ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      " 1 1 3 R R R → + 0 0 2 f ( ) tan 1 tan 1 tan 1 θ θ θ θ = − − − 2 2 2(tan 1) 2sec . θ θ = + = _ 41 Complex Number",
+      " 1/ 2 3/ 2 1/ 2 3 15 f (x) (x) (3x 10) (x) 3 (x) (x 2) 2 2 ′ = − + × = − Increasing, when x"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 31,
+    "stem": "(a) (A) is root of unity will also be root of unity. Take as",
+    "options": [
+      "Option A",
+      " take we can always find",
+      " 10 1 2 9 1 ( )( )...( ) z z z z z z z −= − − − complex number. Put",
+      ""
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(a) (A) . . .(i) Given . . .(ii) From equation (i) and (ii), we get So",
+    "options": [
+      "Option A",
+      " For continuity . . .(i) For differentiability",
+      "",
+      "Let Given"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(b) A= Set of points on and above the line 1 y = in the Argand plane. B= Set of points on the circle, 2 2 2 ( 2) ( 1) 3 x y − + − = C= Re(1 ) Re(1 ) ( ) − = − + i z i x iy ⇒ 2 x y = = Hence ( ) A B C ∩ ∩ = has only one point of intersection.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(c) The points ( 1,1) − and (5,1) are the extremities of a diameter of the given circle. Hence 2 2 | 1 | | 5 |",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 36,
+    "stem": "z i z i + − + − − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(d) || | | || | | z w z w − < − and | | z w − = Distance between z and w z is fixed. Hence, distance between z and w would be maximum for diametrically opposite points. ⇒ | | 6 − < z w ⇒ 6 | | | | 6 −< − < z w ⇒ 3 | | | | 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 9,
+    "stem": "−< − + < z w",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 36,
+    "stem": "(a) a 2, k 2, b 12, c 14 = = = = − 2 2 12 4 3 1 3 3 1 3 ω ω ω ω ω − = + + = + + 2 3( ) 1 ω ω = + + 3( 1) 1 2 = − + = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(5) 5 | 2z 6 5i | 2 z 3 2   −+ = − −     5 2 3 3 i 2   ≥ − −     (corresponding Pt A) 5 2 5 2   = =     kz 10th kz ⇒ 10th jz . kz 1 0 z ≠ 1 , kz z z = .z ⇒ 2 9 1 2 9 ( )( )...( ) 1 ... z z z z z z z z z z − − − = + + + + ∀∈ 1 z = 1 2 9 (1 )(1 )...(1 )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 10,
+    "stem": "z z z − − − = 1 2 9 1 ... 0 z z z + + + + = ⇒ 1 9 Re(1) Re( ) ... Re( ) 0 z z + + + = ⇒ 1 2 9 Re( ) Re( ) ... Re( )",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 1,
+    "stem": "z z z + + + = − ⇒ 9 1 2 1 cos",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 2,
+    "stem": "10 k kπ = − = ∑ 3 3 2 α β + = 3 2 3 α β + = ± 2 3 α β = + α 2 1 or = − |α| 1or 2 = 2 2 1 3 2, ( ) 1 , x ax f x x bx a < − − =  ≥ +  2 3 2 a b a − − = + 2 3 2 a a b + + = − 6a b − = 6a b = − 2 3 2 0 a a − + = 1, 2 a = 2 4 3 2 4 3 2 4 3 (3 3 2 ) (2 3 3 ) ( 3 2 3 ) 0 n n n ω ω ω ω ω ω + + + − + + + − + −+ + = 2 4 3 2 4 3 2 2 4 3 (3 3 2 ) ( (2 3 3 )) ( ( 3 2 3) 0 n n n ω ω ω ω ω ω ω ω + + + − + + + − + − + + = ⇒ 2 4 3 4 8 (3 3 2 ) (1 ) 0 n n n ω ω ω ω + − + + + + = ⇒ 3 , n k k N ≠ ∈ 5 a d = − 5 q d = + 5 2 b d = + | | | 2 | q a d − = 2 4 ab a b = + 2 ab a b = + (5 )(5 2 ) 2(5 5 2 ) 2(10 ) d d d d d − + = − + + = + 2 25 10 5 2 20 2 d d d d + − − = + 2 2 3 5 0 d d − − = 5 1, 2 d d = − = | 2 | 2,5 d = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 42 \u0002  \u0002  \u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(3) The expression may not attain integral value for all a, b, c If we consider a = b = c, then x = 3a 2 y a(1 ) a(1 i 3) ω ω = + + = + 2 z a(1 ) a(1 i 3) ω ω = + + = + ∴ 2 2 2 | x | | y | | z | + + 2 2 2 2 9 | a | 4 | a | 4 | a | 17 | a | = + + = ∴ 2 2 2 2 2 2 | x | | y | | z | 17 3 | a | | b | | c | + + = + + Note: However if i(2 / 3) e , π ω = then the value of the expression = 3.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(1) z ω = (where ω is cube root of unit) 2 2 ( )r s s r P ω ω ω ω   − =     ⇒ 2 2 2 2 2 ( ) ( ) r s r s s r s r P ω ω ω ω ω ω ω ω    − − =       2 4 2 2 2 2 2 4 1 0 ( 1) 0 1 ( 1) r s r s r r s r s r r s r s ω ω ω ω ω ω ω ω + + + +  −   + − + =    − − + +     2 4 1, r s ω ω + = − 2 (( 1) 1) 0 r s r ω + − + = , {1, 2, 3} r s ∈ Second equation represent 1, 3 r = Case (i): 1 r = ⇒ 4 2 1 s ω ω ω = −− = ⇒ 1 s = Case (ii): 3 r = ⇒ 4 1 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 2,
+    "stem": "= −−= − s ω No value of s is possible Total number of ordered pairs ( , ) 1 r s =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(3) 2 2 2 2 2 | | a b c a b c ab bc ca ω ω + + = + + − − − 2 2 2 1[( ) ( ) ( ) ] 2 a b b c c a = − + − + − it will be minimum when 1, 2, 3 a b c = = = So, minimum value is 3. 12 7 7 1 3 (4 2) 7 1 1 12 4 3 1 π π π = − = Σ − = = Σ − k i i k i i k k e e e e _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 31
+  }
+]

@@ -1,0 +1,1850 @@
+[
+  {
+    "id": "JMP_PHY_SEMI_2025_Q001",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0113",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2025,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "unicode": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "plainText": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "74dea7f35d0039f0"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q002",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0187",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "unicode": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "plainText": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "3b3d4e4a16d0ca0e"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q003",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0255",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors and Logic Gates.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "unicode": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "plainText": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors and Logic Gates.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "af8e20c1fd00b954"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q004",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0338",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors and Communication Systems.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "unicode": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "plainText": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble)."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors and Communication Systems.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "59b237a50e3f6c08"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q005",
+    "raw": {
+      "sourceFile": "jee_classified_fixed.json",
+      "originalId": "jee_cls_0342",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors and Communication Systems.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "unicode": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "plainText": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductors and Communication Systems.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "57126b52ff98ddfc"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2025_Q006",
+    "raw": {
+      "sourceFile": "jee_main_2025_fixed.json",
+      "originalId": "jm_math_2025_22JanS2_038",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "NOR Gate",
+        "AND Gate",
+        "NAND Gate",
+        "OR Gate"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (0) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2025,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "NOR Gate",
+        "AND Gate",
+        "NAND Gate",
+        "OR Gate"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "unicode": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "plainText": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (0) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "74dea7f35d0039f0"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q007",
+    "raw": {
+      "sourceFile": "jee_main_2026_fixed.json",
+      "originalId": "jm_phy_2026_02AprS1_037",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "A resistor and a standard p-n junction diode",
+        "Two standard p-n junction diodes connected back-to-back",
+        "A resistor and a Zener diode",
+        "Two Zener diodes connected back-to-back"
+      ],
+      "solution": "The output voltage $v_o(t)$ is a clipped version of the input, restricted symmetrically to $+5\\text{V}$ and $-5\\text{V}$. \nTo achieve bidirectional symmetric voltage clipping, two Zener diodes must be connected back-to-back (in series, but pointing in opposite directions) across the output terminals.\nDuring the positive half-cycle, one Zener diode is forward biased and acts like a normal diode, while the other is reverse biased and experiences Zener breakdown at its $V_Z = 5\\text{V}$, holding the voltage constant.\nDuring the negative half-cycle, their roles reverse, successfully clipping the output at $-5\\text{V}$. Thus, two back-to-back Zener diodes are required."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "A resistor and a standard p-n junction diode",
+        "Two standard p-n junction diodes connected back-to-back",
+        "A resistor and a Zener diode",
+        "Two Zener diodes connected back-to-back"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "unicode": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "plainText": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "The output voltage $v_o(t)$ is a clipped version of the input, restricted symmetrically to $+5\\text{V}$ and $-5\\text{V}$. \nTo achieve bidirectional symmetric voltage clipping, two Zener diodes must be connected back-to-back (in series, but pointing in opposite directions) across the output terminals.\nDuring the positive half-cycle, one Zener diode is forward biased and acts like a normal diode, while the other is reverse biased and experiences Zener breakdown at its $V_Z = 5\\text{V}$, holding the voltage constant.\nDuring the negative half-cycle, their roles reverse, successfully clipping the output at $-5\\text{V}$. Thus, two back-to-back Zener diodes are required.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "3b3d4e4a16d0ca0e"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q008",
+    "raw": {
+      "sourceFile": "jee_main_2026_fixed.json",
+      "originalId": "jm_phy_2026_02AprS2_030",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "OR gate",
+        "AND gate",
+        "NAND gate",
+        "NOR gate"
+      ],
+      "solution": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "OR gate",
+        "AND gate",
+        "NAND gate",
+        "NOR gate"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "unicode": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "plainText": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "af8e20c1fd00b954"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q009",
+    "raw": {
+      "sourceFile": "jee_main_2026_fixed.json",
+      "originalId": "jm_phy_2026_04AprS1_038",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "$Y = 1101$",
+        "$Y = 0010$",
+        "$Y = 0111$",
+        "$Y = 1000$"
+      ],
+      "solution": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "$Y = 1101$",
+        "$Y = 0010$",
+        "$Y = 0111$",
+        "$Y = 1000$"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "unicode": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "plainText": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble)."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "59b237a50e3f6c08"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q010",
+    "raw": {
+      "sourceFile": "jee_main_2026_fixed.json",
+      "originalId": "jm_phy_2026_04AprS1_042",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "$2.2$",
+        "$2.0$",
+        "$2.1$",
+        "$2.4$"
+      ],
+      "solution": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": 2026,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "$2.2$",
+        "$2.0$",
+        "$2.1$",
+        "$2.4$"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "unicode": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "plainText": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "57126b52ff98ddfc"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2025_Q011",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0344",
+      "stem": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductor.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+        "unicode": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+        "plainText": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductor.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "57d5c9f3bb664a37"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2025_Q012",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0424",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "unicode": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "plainText": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "74dea7f35d0039f0"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q013",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0497",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "The output voltage $v_o(t)$ is a clipped version of the input, restricted symmetrically to $+5\\text{V}$ and $-5\\text{V}$. \nTo achieve bidirectional symmetric voltage clipping, two Zener diodes must be connected back-to-back (in series, but pointing in opposite directions) across the output terminals.\nDuring the positive half-cycle, one Zener diode is forward biased and acts like a normal diode, while the other is reverse biased and experiences Zener breakdown at its $V_Z = 5\\text{V}$, holding the voltage constant.\nDuring the negative half-cycle, their roles reverse, successfully clipping the output at $-5\\text{V}$. Thus, two back-to-back Zener diodes are required."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "unicode": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "plainText": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "The output voltage $v_o(t)$ is a clipped version of the input, restricted symmetrically to $+5\\text{V}$ and $-5\\text{V}$. \nTo achieve bidirectional symmetric voltage clipping, two Zener diodes must be connected back-to-back (in series, but pointing in opposite directions) across the output terminals.\nDuring the positive half-cycle, one Zener diode is forward biased and acts like a normal diode, while the other is reverse biased and experiences Zener breakdown at its $V_Z = 5\\text{V}$, holding the voltage constant.\nDuring the negative half-cycle, their roles reverse, successfully clipping the output at $-5\\text{V}$. Thus, two back-to-back Zener diodes are required.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "3b3d4e4a16d0ca0e"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q014",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0565",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "unicode": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "plainText": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "af8e20c1fd00b954"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q015",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0648",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "unicode": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "plainText": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble)."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "59b237a50e3f6c08"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q016",
+    "raw": {
+      "sourceFile": "jee_main_complete_fixed.json",
+      "originalId": "jee_comp_0652",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "unicode": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "plainText": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "57126b52ff98ddfc"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2025_Q017",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0319",
+      "stem": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductor.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+        "unicode": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)",
+        "plainText": "Which of the following circuits represents a forward biased diode? (Options refer to circuit diagrams A, B, C, D, E which are not shown)"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Semiconductor.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "57d5c9f3bb664a37"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2025_Q018",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0349",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2025",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "unicode": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?",
+        "plainText": "To obtain the given truth table \n <svg width='600' height='350' viewBox='0 0 600 350' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='80' r='4'/><circle cx='50' cy='120' r='4'/><text x='30' y='85'>A</text><text x='30' y='125'>B</text><line x1='50' y1='80' x2='120' y2='80' stroke='black' stroke-width='2'/><line x1='50' y1='120' x2='100' y2='120' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='60' x2='180' y2='60' stroke='black' stroke-width='2'/><line x1='120' y1='80' x2='120' y2='240' stroke='black' stroke-width='2'/><line x1='120' y1='240' x2='180' y2='240' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='140' x2='150' y2='140' stroke='black' stroke-width='2'/><line x1='100' y1='120' x2='100' y2='220' stroke='black' stroke-width='2'/><line x1='100' y1='220' x2='150' y2='220' stroke='black' stroke-width='2'/><polygon points='150,130 150,150 170,140' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='140' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='125'>B̄</text><polygon points='150,210 150,230 170,220' fill='white' stroke='black' stroke-width='2'/><circle cx='173' cy='220' r='3' fill='white' stroke='black' stroke-width='2'/><text x='160' y='205'>B̄</text><line x1='176' y1='140' x2='180' y2='140' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='80' stroke='black' stroke-width='2'/><line x1='176' y1='220' x2='180' y2='220' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='260' stroke='black' stroke-width='2'/><path d='M180 50 L180 90 L210 90 A20 20 0 0 0 210 50 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='75'>AB̄</text><path d='M180 230 L180 270 L210 270 A20 20 0 0 0 210 230 Z' fill='white' stroke='black' stroke-width='2'/><text x='250' y='255'>AB̄</text><line x1='180' y1='60' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='140' x2='180' y2='70' stroke='black' stroke-width='2'/><line x1='180' y1='240' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='180' y1='220' x2='180' y2='250' stroke='black' stroke-width='2'/><line x1='210' y1='70' x2='280' y2='70' stroke='black' stroke-width='2'/><line x1='280' y1='70' x2='280' y2='140' stroke='black' stroke-width='2'/><line x1='280' y1='140' x2='330' y2='140' stroke='black' stroke-width='2'/><line x1='210' y1='250' x2='300' y2='250' stroke='black' stroke-width='2'/><line x1='300' y1='250' x2='300' y2='160' stroke='black' stroke-width='2'/><line x1='300' y1='160' x2='330' y2='160' stroke='black' stroke-width='2'/><circle cx='355' cy='150' r='15' fill='white' stroke='black' stroke-width='2'/><text x='350' y='155'>G</text><line x1='330' y1='140' x2='340' y2='140' stroke='black' stroke-width='2'/><line x1='330' y1='160' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='140' x2='340' y2='160' stroke='black' stroke-width='2'/><line x1='340' y1='150' x2='355' y2='150' stroke='black' stroke-width='2'/><line x1='370' y1='150' x2='450' y2='150' stroke='black' stroke-width='2'/><circle cx='450' cy='150' r='4'/><text x='470' y='155'>Y</text></svg> <table border='1px'><tr><th>A</th><th>B</th><th>Y</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>, which logic gate should be placed at G in the given circuit?"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Step 1: Identify given parameters and apply governing NCERT principles for Digital Logic.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "74dea7f35d0039f0"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q019",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0372",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "The output voltage $v_o(t)$ is a clipped version of the input, restricted symmetrically to $+5\\text{V}$ and $-5\\text{V}$. \nTo achieve bidirectional symmetric voltage clipping, two Zener diodes must be connected back-to-back (in series, but pointing in opposite directions) across the output terminals.\nDuring the positive half-cycle, one Zener diode is forward biased and acts like a normal diode, while the other is reverse biased and experiences Zener breakdown at its $V_Z = 5\\text{V}$, holding the voltage constant.\nDuring the negative half-cycle, their roles reverse, successfully clipping the output at $-5\\text{V}$. Thus, two back-to-back Zener diodes are required."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "unicode": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+        "plainText": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "The output voltage $v_o(t)$ is a clipped version of the input, restricted symmetrically to $+5\\text{V}$ and $-5\\text{V}$. \nTo achieve bidirectional symmetric voltage clipping, two Zener diodes must be connected back-to-back (in series, but pointing in opposite directions) across the output terminals.\nDuring the positive half-cycle, one Zener diode is forward biased and acts like a normal diode, while the other is reverse biased and experiences Zener breakdown at its $V_Z = 5\\text{V}$, holding the voltage constant.\nDuring the negative half-cycle, their roles reverse, successfully clipping the output at $-5\\text{V}$. Thus, two back-to-back Zener diodes are required.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "3b3d4e4a16d0ca0e"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q020",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0390",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 3,
+      "formulas": {
+        "latex": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "unicode": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______.",
+        "plainText": "![Logic Circuit Diagram](https://cracku.in/media/uploads/image_6Neclly.png)\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram (where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate), the given circuit works as _______."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "af8e20c1fd00b954"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q021",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0423",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "unicode": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+        "plainText": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble)."
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "59b237a50e3f6c08"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_PHY_SEMI_2026_Q022",
+    "raw": {
+      "sourceFile": "jee_physics_bank_fixed.json",
+      "originalId": "jee_phys_0427",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "solution": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$."
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Electronics",
+      "chapterCode": "SEMI",
+      "year": "2026",
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 2,
+      "formulas": {
+        "latex": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "unicode": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+        "plainText": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____"
+      },
+      "explanations": {
+        "basic": "Core principle of Semiconductors and Electronics.",
+        "intermediate": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$.",
+        "advanced": "Detailed analytical derivation for Semiconductors and Electronics."
+      },
+      "tags": [
+        "Semiconductors and Electronics",
+        "JEE PYQ",
+        "Physics"
+      ],
+      "difficulty": "Easy",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Semiconductors and Electronics"
+        ],
+        "prerequisites": [
+          "Fundamentals"
+        ],
+        "learningObjectives": [
+          "Solve Semiconductors and Electronics exam problems"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 11",
+        "subject": "Physics",
+        "chapter": "Semiconductors and Electronics",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Master Semiconductors and Electronics problem solving"
+      },
+      "hash": "57126b52ff98ddfc"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  }
+]

@@ -1,0 +1,4733 @@
+[
+  {
+    "id": "JMP_MAT_DEQ_2024_Q001",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "a h b k c + + = 1 1 2 2 , a b a b = 1 1 a x b y v + = 2 2 . a x b y v + = ( )· ( ) dy P x y Q x dx + = ( ) , P x dx e∫ { } ( ) ( ) · ( )· . P x dx P x dx d y e Q x e dx ∫ ∫ = ∴ { } ( ) ( ) · ( )· P x dx P x dx y e Q x e dx ∫ ∫ = ∫ ( )· ( )· ( ) ( ) dy R y P x S y Q x dx + = ( ) ( ) dS y R y dy = ( ) ; S y z = ( ) ( )· dS y dS y dy dy dy dx = ( ) . dz dy R y dx dx = ( ) ( ) dz P x z Q x dx + = { ( , )}",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "a h b k c + + = 1 1 2 2 , a b a b = 1 1 a x b y v + = 2 2 . a x b y v + = ( )· ( ) dy P x y Q x dx + = ( ) , P x dx e∫ { } ( ) ( ) · ( )· . P x dx P x dx d y e Q x e dx ∫ ∫ = ∴ { } ( ) ( ) · ( )· P x dx P x dx y e Q x e dx ∫ ∫ = ∫ ( )· ( )· ( ) ( ) dy R y P x S y Q x dx + = ( ) ( ) dS y R y dy = ( ) ; S y z = ( ) ( )· dS y dS y dy dy dy dx = ( ) . dz dy R y dx dx = ( ) ( ) dz P x z Q x dx + = { ( , )}",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "a h b k c + + = 1 1 2 2 , a b a b = 1 1 a x b y v + = 2 2 . a x b y v + = ( )· ( ) dy P x y Q x dx + = ( ) , P x dx e∫ { } ( ) ( ) · ( )· . P x dx P x dx d y e Q x e dx ∫ ∫ = ∴ { } ( ) ( ) · ( )· P x dx P x dx y e Q x e dx ∫ ∫ = ∫ ( )· ( )· ( ) ( ) dy R y P x S y Q x dx + = ( ) ( ) dS y R y dy = ( ) ; S y z = ( ) ( )· dS y dS y dy dy dy dx = ( ) . dz dy R y dx dx = ( ) ( ) dz P x z Q x dx + = { ( , )}",
+        "unicode": "a h b k c + + = 1 1 2 2 , a b a b = 1 1 a x b y v + = 2 2 . a x b y v + = ( )· ( ) dy P x y Q x dx + = ( ) , P x dx e∫ { } ( ) ( ) · ( )· . P x dx P x dx d y e Q x e dx ∫ ∫ = ∴ { } ( ) ( ) · ( )· P x dx P x dx y e Q x e dx ∫ ∫ = ∫ ( )· ( )· ( ) ( ) dy R y P x S y Q x dx + = ( ) ( ) dS y R y dy = ( ) ; S y z = ( ) ( )· dS y dS y dy dy dy dx = ( ) . dz dy R y dx dx = ( ) ( ) dz P x z Q x dx + = { ( , )}",
+        "plainText": "a h b k c + + = 1 1 2 2 , a b a b = 1 1 a x b y v + = 2 2 . a x b y v + = ( )· ( ) dy P x y Q x dx + = ( ) , P x dx e∫ { } ( ) ( ) · ( )· . P x dx P x dx d y e Q x e dx ∫ ∫ = ∴ { } ( ) ( ) · ( )· P x dx P x dx y e Q x e dx ∫ ∫ = ∫ ( )· ( )· ( ) ( ) dy R y P x S y Q x dx + = ( ) ( ) dS y R y dy = ( ) ; S y z = ( ) ( )· dS y dS y dy dy dy dx = ( ) . dz dy R y dx dx = ( ) ( ) dz P x z Q x dx + = { ( , )}"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 1.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "e2c775f27cc5a6b9"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q002",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "f x y d φ φ = ∑ ( ) d xy xdy ydx = + 2 y xdy ydx d x x −  =     2 x ydx xdy d y y   − =     log y xdy ydx d x xy −  =     1 2 2 tan y xdy ydx d x x y − −  =   +   1 2 2 tan x ydx xdy d y x y −  − =   +   ( ) 1 2 sin 1 ( ) xdy ydx d xy xy − + = − dy dx 1 2 { ( , )}{ ( , )}.....{ ( , )} 0 n p f x y p f x y p f x y − − − = 1( , ) 0, p f x y − = 1( , , ) 0, x y c φ = 1 2 ( , , ) ( , , ) ..... ( , , ) 0 n x y c x y c x y c φ φ φ ⋅ ⋅ ⋅ = ( , ) y f x p = ( , ) y f x p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "f x y d φ φ = ∑ ( ) d xy xdy ydx = + 2 y xdy ydx d x x −  =     2 x ydx xdy d y y   − =     log y xdy ydx d x xy −  =     1 2 2 tan y xdy ydx d x x y − −  =   +   1 2 2 tan x ydx xdy d y x y −  − =   +   ( ) 1 2 sin 1 ( ) xdy ydx d xy xy − + = − dy dx 1 2 { ( , )}{ ( , )}.....{ ( , )} 0 n p f x y p f x y p f x y − − − = 1( , ) 0, p f x y − = 1( , , ) 0, x y c φ = 1 2 ( , , ) ( , , ) ..... ( , , ) 0 n x y c x y c x y c φ φ φ ⋅ ⋅ ⋅ = ( , ) y f x p = ( , ) y f x p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "f x y d φ φ = ∑ ( ) d xy xdy ydx = + 2 y xdy ydx d x x −  =     2 x ydx xdy d y y   − =     log y xdy ydx d x xy −  =     1 2 2 tan y xdy ydx d x x y − −  =   +   1 2 2 tan x ydx xdy d y x y −  − =   +   ( ) 1 2 sin 1 ( ) xdy ydx d xy xy − + = − dy dx 1 2 { ( , )}{ ( , )}.....{ ( , )} 0 n p f x y p f x y p f x y − − − = 1( , ) 0, p f x y − = 1( , , ) 0, x y c φ = 1 2 ( , , ) ( , , ) ..... ( , , ) 0 n x y c x y c x y c φ φ φ ⋅ ⋅ ⋅ = ( , ) y f x p = ( , ) y f x p = ( , , )",
+        "unicode": "f x y d φ φ = ∑ ( ) d xy xdy ydx = + 2 y xdy ydx d x x −  =     2 x ydx xdy d y y   − =     log y xdy ydx d x xy −  =     1 2 2 tan y xdy ydx d x x y − −  =   +   1 2 2 tan x ydx xdy d y x y −  − =   +   ( ) 1 2 sin 1 ( ) xdy ydx d xy xy − + = − dy dx 1 2 { ( , )}{ ( , )}.....{ ( , )} 0 n p f x y p f x y p f x y − − − = 1( , ) 0, p f x y − = 1( , , ) 0, x y c φ = 1 2 ( , , ) ( , , ) ..... ( , , ) 0 n x y c x y c x y c φ φ φ ⋅ ⋅ ⋅ = ( , ) y f x p = ( , ) y f x p = ( , , )",
+        "plainText": "f x y d φ φ = ∑ ( ) d xy xdy ydx = + 2 y xdy ydx d x x −  =     2 x ydx xdy d y y   − =     log y xdy ydx d x xy −  =     1 2 2 tan y xdy ydx d x x y − −  =   +   1 2 2 tan x ydx xdy d y x y −  − =   +   ( ) 1 2 sin 1 ( ) xdy ydx d xy xy − + = − dy dx 1 2 { ( , )}{ ( , )}.....{ ( , )} 0 n p f x y p f x y p f x y − − − = 1( , ) 0, p f x y − = 1( , , ) 0, x y c φ = 1 2 ( , , ) ( , , ) ..... ( , , ) 0 n x y c x y c x y c φ φ φ ⋅ ⋅ ⋅ = ( , ) y f x p = ( , ) y f x p = ( , , )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 2.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "7969c78e327a5133"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q003",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "x p c φ = ( , ) y f x p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "x p c φ = ( , ) y f x p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "x p c φ = ( , ) y f x p = ( , , )",
+        "unicode": "x p c φ = ( , ) y f x p = ( , , )",
+        "plainText": "x p c φ = ( , ) y f x p = ( , , )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 3.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "8c7679700b440762"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q004",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "f x p c = ( , ) x f y p = ( , ) x f y p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "f x p c = ( , ) x f y p = ( , ) x f y p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "f x p c = ( , ) x f y p = ( , ) x f y p = ( , , )",
+        "unicode": "f x p c = ( , ) x f y p = ( , ) x f y p = ( , , )",
+        "plainText": "f x p c = ( , ) x f y p = ( , ) x f y p = ( , , )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 4.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "9760d0efec9fbdcf"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q005",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "y p c ψ = ( , ) x f y p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "y p c ψ = ( , ) x f y p = ( , , )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "y p c ψ = ( , ) x f y p = ( , , )",
+        "unicode": "y p c ψ = ( , ) x f y p = ( , , )",
+        "plainText": "y p c ψ = ( , ) x f y p = ( , , )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 5.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "bb4357b30a658601"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q006",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "y p c ψ = ( ) y px f p = + { ( )}",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "y p c ψ = ( ) y px f p = + { ( )}",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "y p c ψ = ( ) y px f p = + { ( )}",
+        "unicode": "y p c ψ = ( ) y px f p = + { ( )}",
+        "plainText": "y p c ψ = ( ) y px f p = + { ( )}"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 6.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "6cca6117c56d8444"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q007",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "dp x f p dx ′ + = ∴ p c = '( )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "dp x f p dx ′ + = ∴ p c = '( )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "dp x f p dx ′ + = ∴ p c = '( )",
+        "unicode": "dp x f p dx ′ + = ∴ p c = '( )",
+        "plainText": "dp x f p dx ′ + = ∴ p c = '( )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 7.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "545e9eabe01f7bee"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q008",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "f p x + = , p c = ( ) y cx f c = + '( ) 0, f p x + = ( ) y px f p = + '( ) 0 f p x + = _ 227 Differential Equations any arbitrary constant) touching all the lines given by This solution is called the singular solution. Some Results on Tangents and Normal’s Figure 18.1 \u0001 The equation of the tangent at to the curve is \u0001 The equation of the normal at to the curve is \u0001 The length of the tangent l \u0001 The length of the normal \u0001 The length of the cartesian subtangent \u0001 The length of the cartesian subnormal \u0001 The initial ordinate of the tangent Orthogonal trajectory: The orthogonal trajectories of a family of curves from another family of curves such that each curve of one family cuts all the curves of the other family at right angles. The differential equation of the orthogonal trajectories of the curves is the family of curves whose differential equation is Method: To find the orthogonal trajectories of a family of curves whose differential equation is known, put in the equation. The resulting differential equation is the equation of the orthogonal trajectories. Multiple Choice Questions One and More than One Correct",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "f p x + = , p c = ( ) y cx f c = + '( ) 0, f p x + = ( ) y px f p = + '( ) 0 f p x + = _ 227 Differential Equations any arbitrary constant) touching all the lines given by This solution is called the singular solution. Some Results on Tangents and Normal’s Figure 18.1 \u0001 The equation of the tangent at to the curve is \u0001 The equation of the normal at to the curve is \u0001 The length of the tangent l \u0001 The length of the normal \u0001 The length of the cartesian subtangent \u0001 The length of the cartesian subnormal \u0001 The initial ordinate of the tangent Orthogonal trajectory: The orthogonal trajectories of a family of curves from another family of curves such that each curve of one family cuts all the curves of the other family at right angles. The differential equation of the orthogonal trajectories of the curves is the family of curves whose differential equation is Method: To find the orthogonal trajectories of a family of curves whose differential equation is known, put in the equation. The resulting differential equation is the equation of the orthogonal trajectories. Multiple Choice Questions One and More than One Correct",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "f p x + = , p c = ( ) y cx f c = + '( ) 0, f p x + = ( ) y px f p = + '( ) 0 f p x + = _ 227 Differential Equations any arbitrary constant) touching all the lines given by This solution is called the singular solution. Some Results on Tangents and Normal’s Figure 18.1 \u0001 The equation of the tangent at to the curve is \u0001 The equation of the normal at to the curve is \u0001 The length of the tangent l \u0001 The length of the normal \u0001 The length of the cartesian subtangent \u0001 The length of the cartesian subnormal \u0001 The initial ordinate of the tangent Orthogonal trajectory: The orthogonal trajectories of a family of curves from another family of curves such that each curve of one family cuts all the curves of the other family at right angles. The differential equation of the orthogonal trajectories of the curves is the family of curves whose differential equation is Method: To find the orthogonal trajectories of a family of curves whose differential equation is known, put in the equation. The resulting differential equation is the equation of the orthogonal trajectories. Multiple Choice Questions One and More than One Correct",
+        "unicode": "f p x + = , p c = ( ) y cx f c = + '( ) 0, f p x + = ( ) y px f p = + '( ) 0 f p x + = _ 227 Differential Equations any arbitrary constant) touching all the lines given by This solution is called the singular solution. Some Results on Tangents and Normal’s Figure 18.1 \u0001 The equation of the tangent at to the curve is \u0001 The equation of the normal at to the curve is \u0001 The length of the tangent l \u0001 The length of the normal \u0001 The length of the cartesian subtangent \u0001 The length of the cartesian subnormal \u0001 The initial ordinate of the tangent Orthogonal trajectory: The orthogonal trajectories of a family of curves from another family of curves such that each curve of one family cuts all the curves of the other family at right angles. The differential equation of the orthogonal trajectories of the curves is the family of curves whose differential equation is Method: To find the orthogonal trajectories of a family of curves whose differential equation is known, put in the equation. The resulting differential equation is the equation of the orthogonal trajectories. Multiple Choice Questions One and More than One Correct",
+        "plainText": "f p x + = , p c = ( ) y cx f c = + '( ) 0, f p x + = ( ) y px f p = + '( ) 0 f p x + = _ 227 Differential Equations any arbitrary constant) touching all the lines given by This solution is called the singular solution. Some Results on Tangents and Normal’s Figure 18.1 \u0001 The equation of the tangent at to the curve is \u0001 The equation of the normal at to the curve is \u0001 The length of the tangent l \u0001 The length of the normal \u0001 The length of the cartesian subtangent \u0001 The length of the cartesian subnormal \u0001 The initial ordinate of the tangent Orthogonal trajectory: The orthogonal trajectories of a family of curves from another family of curves such that each curve of one family cuts all the curves of the other family at right angles. The differential equation of the orthogonal trajectories of the curves is the family of curves whose differential equation is Method: To find the orthogonal trajectories of a family of curves whose differential equation is known, put in the equation. The resulting differential equation is the equation of the orthogonal trajectories. Multiple Choice Questions One and More than One Correct"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 8.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "062ce231886b7905"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2007_Q009",
+    "raw": {
+      "questionNumber": 1,
+      "stem": "The tangent to the curve = x y e drawn at the point ( , ) c c e intersects the line joining the points 1 ( 1, ) − − c c e and 1 ( 1, ) + + c c e",
+      "options": [
+        "on the left of = x c",
+        "on the right of = x c",
+        "at no point",
+        "at all points"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2007,
+      "shift": "P-I",
+      "type": "mcq",
+      "stem": "The tangent to the curve = x y e drawn at the point ( , ) c c e intersects the line joining the points 1 ( 1, ) − − c c e and 1 ( 1, ) + + c c e",
+      "options": [
+        "on the left of = x c",
+        "on the right of = x c",
+        "at no point",
+        "at all points"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "The tangent to the curve = x y e drawn at the point ( , ) c c e intersects the line joining the points 1 ( 1, ) − − c c e and 1 ( 1, ) + + c c e",
+        "unicode": "The tangent to the curve = x y e drawn at the point ( , ) c c e intersects the line joining the points 1 ( 1, ) − − c c e and 1 ( 1, ) + + c c e",
+        "plainText": "The tangent to the curve = x y e drawn at the point ( , ) c c e intersects the line joining the points 1 ( 1, ) − − c c e and 1 ( 1, ) + + c c e"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 9.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "3dd7cc1391a626f7"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2012_Q010",
+    "raw": {
+      "questionNumber": 2,
+      "stem": "If y (x) satisfies the differential equation ' tan 2 y y x x − = sec x and y(0) = 0, then. 2 4 2 ' 3 3 3 3 y π π π  = +    ",
+      "options": [
+        " 2 4 8 2 y π π  =    ",
+        " 2 ' 4 18 y π π  =    ",
+        " 2 3 9 y π π  =    ",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2012,
+      "shift": "P-I",
+      "type": "mcq",
+      "stem": "If y (x) satisfies the differential equation ' tan 2 y y x x − = sec x and y(0) = 0, then. 2 4 2 ' 3 3 3 3 y π π π  = +    ",
+      "options": [
+        " 2 4 8 2 y π π  =    ",
+        " 2 ' 4 18 y π π  =    ",
+        " 2 3 9 y π π  =    ",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If y (x) satisfies the differential equation ' tan 2 y y x x − = sec x and y(0) = 0, then. 2 4 2 ' 3 3 3 3 y π π π  = +    ",
+        "unicode": "If y (x) satisfies the differential equation ' tan 2 y y x x − = sec x and y(0) = 0, then. 2 4 2 ' 3 3 3 3 y π π π  = +    ",
+        "plainText": "If y (x) satisfies the differential equation ' tan 2 y y x x − = sec x and y(0) = 0, then. 2 4 2 ' 3 3 3 3 y π π π  = +    "
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 10.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "de746d2d5e31fa64"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q011",
+    "raw": {
+      "questionNumber": 3,
+      "stem": "The function is the solution of the differential equation in (–1,1) satisfying Then is",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Adv. 2014 P-II",
+      "type": "mcq",
+      "stem": "The function is the solution of the differential equation in (–1,1) satisfying Then is",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "The function is the solution of the differential equation in (–1,1) satisfying Then is",
+        "unicode": "The function is the solution of the differential equation in (–1,1) satisfying Then is",
+        "plainText": "The function is the solution of the differential equation in (–1,1) satisfying Then is"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 11.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "b381a80303412d8c"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q012",
+    "raw": {
+      "questionNumber": 4,
+      "stem": "Let the population of rabbits surviving at a time t be government by the differential equation If then (p)t equals:",
+      "options": [
+        " /2 400 300 te −",
+        "",
+        "",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2014",
+      "type": "mcq",
+      "stem": "Let the population of rabbits surviving at a time t be government by the differential equation If then (p)t equals:",
+      "options": [
+        " /2 400 300 te −",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let the population of rabbits surviving at a time t be government by the differential equation If then (p)t equals:",
+        "unicode": "Let the population of rabbits surviving at a time t be government by the differential equation If then (p)t equals:",
+        "plainText": "Let the population of rabbits surviving at a time t be government by the differential equation If then (p)t equals:"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 12.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "89b6049564cad512"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q013",
+    "raw": {
+      "questionNumber": 5,
+      "stem": "Let be a solution of the differential equation If then which of the has no critical point in the interval",
+      "options": [
+        "",
+        "",
+        " has a critical point in the interval",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Adv. 2015 P-I",
+      "type": "mcq",
+      "stem": "Let be a solution of the differential equation If then which of the has no critical point in the interval",
+      "options": [
+        "",
+        "",
+        " has a critical point in the interval",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let be a solution of the differential equation If then which of the has no critical point in the interval",
+        "unicode": "Let be a solution of the differential equation If then which of the has no critical point in the interval",
+        "plainText": "Let be a solution of the differential equation If then which of the has no critical point in the interval"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 13.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "82161a1fa1dba711"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q014",
+    "raw": {
+      "questionNumber": 6,
+      "stem": "Let ( ) y x be the solution of the differential equation ( log ) dy x x y dx + = 2x log ,( 1). x x ≥ Then is equal to ( ). y cx f c = + ( , ) P x y ( ) y f x = ( ). dy Y y X x dx − = − ( , ) P x y ( ) y f x = 1 ( ). Y y X x dy dx − − = − 2 1 . dx CP y dy   = = +    2 1 . dy PD y dx   = = +    . dx CA y dy = = . dy AD y dx = = . dy OB y x dx = = − , , 0 dy f x y dx  =     , ,",
+      "options": [
+        "",
+        "0",
+        "2",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2015",
+      "type": "mcq",
+      "stem": "Let ( ) y x be the solution of the differential equation ( log ) dy x x y dx + = 2x log ,( 1). x x ≥ Then is equal to ( ). y cx f c = + ( , ) P x y ( ) y f x = ( ). dy Y y X x dx − = − ( , ) P x y ( ) y f x = 1 ( ). Y y X x dy dx − − = − 2 1 . dx CP y dy   = = +    2 1 . dy PD y dx   = = +    . dx CA y dy = = . dy AD y dx = = . dy OB y x dx = = − , , 0 dy f x y dx  =     , ,",
+      "options": [
+        "",
+        "0",
+        "2",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let ( ) y x be the solution of the differential equation ( log ) dy x x y dx + = 2x log ,( 1). x x ≥ Then is equal to ( ). y cx f c = + ( , ) P x y ( ) y f x = ( ). dy Y y X x dx − = − ( , ) P x y ( ) y f x = 1 ( ). Y y X x dy dx − − = − 2 1 . dx CP y dy   = = +    2 1 . dy PD y dx   = = +    . dx CA y dy = = . dy AD y dx = = . dy OB y x dx = = − , , 0 dy f x y dx  =     , ,",
+        "unicode": "Let ( ) y x be the solution of the differential equation ( log ) dy x x y dx + = 2x log ,( 1). x x ≥ Then is equal to ( ). y cx f c = + ( , ) P x y ( ) y f x = ( ). dy Y y X x dx − = − ( , ) P x y ( ) y f x = 1 ( ). Y y X x dy dx − − = − 2 1 . dx CP y dy   = = +    2 1 . dy PD y dx   = = +    . dx CA y dy = = . dy AD y dx = = . dy OB y x dx = = − , , 0 dy f x y dx  =     , ,",
+        "plainText": "Let ( ) y x be the solution of the differential equation ( log ) dy x x y dx + = 2x log ,( 1). x x ≥ Then is equal to ( ). y cx f c = + ( , ) P x y ( ) y f x = ( ). dy Y y X x dx − = − ( , ) P x y ( ) y f x = 1 ( ). Y y X x dy dx − − = − 2 1 . dx CP y dy   = = +    2 1 . dy PD y dx   = = +    . dx CA y dy = = . dy AD y dx = = . dy OB y x dx = = − , , 0 dy f x y dx  =     , ,"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 14.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "936bbdf70d012c6b"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q015",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "dx f x y dy   − =     dx dy − ( ) = y f x 2 1 + − dy xy dx x 4 2 2 1 + = − x x x (0)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "dx f x y dy   − =     dx dy − ( ) = y f x 2 1 + − dy xy dx x 4 2 2 1 + = − x x x (0)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "dx f x y dy   − =     dx dy − ( ) = y f x 2 1 + − dy xy dx x 4 2 2 1 + = − x x x (0)",
+        "unicode": "dx f x y dy   − =     dx dy − ( ) = y f x 2 1 + − dy xy dx x 4 2 2 1 + = − x x x (0)",
+        "plainText": "dx f x y dy   − =     dx dy − ( ) = y f x 2 1 + − dy xy dx x 4 2 2 1 + = − x x x (0)"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 15.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "3f8ca7a07c05ccd5"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q016",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "= f 3 2 3 2 ( ) ∫f x dx 3 3 2 π − 3 3 4 π − 3 6 4 π − 3 6 2 π − ( ) 1 ( )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "= f 3 2 3 2 ( ) ∫f x dx 3 3 2 π − 3 3 4 π − 3 6 4 π − 3 6 2 π − ( ) 1 ( )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "= f 3 2 3 2 ( ) ∫f x dx 3 3 2 π − 3 3 4 π − 3 6 4 π − 3 6 2 π − ( ) 1 ( )",
+        "unicode": "= f 3 2 3 2 ( ) ∫f x dx 3 3 2 π − 3 3 4 π − 3 6 4 π − 3 6 2 π − ( ) 1 ( )",
+        "plainText": "= f 3 2 3 2 ( ) ∫f x dx 3 3 2 π − 3 3 4 π − 3 6 4 π − 3 6 2 π − ( ) 1 ( )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 16.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "45ec93f51a2b6451"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q017",
+    "raw": {
+      "questionNumber": 200,
+      "stem": "2 dp t p t dt = − ( )0 100, p = /2 300 200 t e− − /2 600 500 te − /2 400 300 t e− − ( ) y x (1 )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "2 dp t p t dt = − ( )0 100, p = /2 300 200 t e− − /2 600 500 te − /2 400 300 t e− − ( ) y x (1 )",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "2 dp t p t dt = − ( )0 100, p = /2 300 200 t e− − /2 600 500 te − /2 400 300 t e− − ( ) y x (1 )",
+        "unicode": "2 dp t p t dt = − ( )0 100, p = /2 300 200 t e− − /2 600 500 te − /2 400 300 t e− − ( ) y x (1 )",
+        "plainText": "2 dp t p t dt = − ( )0 100, p = /2 300 200 t e− − /2 600 500 te − /2 400 300 t e− − ( ) y x (1 )"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 17.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "80de7003925675b1"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q018",
+    "raw": {
+      "questionNumber": 1,
+      "stem": "′ + + = x x e y ye (0) 2, = y ( 4) 0 − = y ( 2) 0 − = y ( ) y x ( 1,0) − ( ) y x ( 1,0) − ( ) y e e 2e y = f (x) P (x, y) Y XC D A O C B _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 228",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "′ + + = x x e y ye (0) 2, = y ( 4) 0 − = y ( 2) 0 − = y ( ) y x ( 1,0) − ( ) y x ( 1,0) − ( ) y e e 2e y = f (x) P (x, y) Y XC D A O C B _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 228",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "′ + + = x x e y ye (0) 2, = y ( 4) 0 − = y ( 2) 0 − = y ( ) y x ( 1,0) − ( ) y x ( 1,0) − ( ) y e e 2e y = f (x) P (x, y) Y XC D A O C B _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 228",
+        "unicode": "′ + + = x x e y ye (0) 2, = y ( 4) 0 − = y ( 2) 0 − = y ( ) y x ( 1,0) − ( ) y x ( 1,0) − ( ) y e e 2e y = f (x) P (x, y) Y XC D A O C B _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 228",
+        "plainText": "′ + + = x x e y ye (0) 2, = y ( 4) 0 − = y ( 2) 0 − = y ( ) y x ( 1,0) − ( ) y x ( 1,0) − ( ) y e e 2e y = f (x) P (x, y) Y XC D A O C B _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 228"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 18.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "98fcca151b2ee192"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q019",
+    "raw": {
+      "questionNumber": 7,
+      "stem": "If a curve passes through the point and satisfies the differential equation, then is equal to:",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2016",
+      "type": "mcq",
+      "stem": "If a curve passes through the point and satisfies the differential equation, then is equal to:",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If a curve passes through the point and satisfies the differential equation, then is equal to:",
+        "unicode": "If a curve passes through the point and satisfies the differential equation, then is equal to:",
+        "plainText": "If a curve passes through the point and satisfies the differential equation, then is equal to:"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 19.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "2fb64efe1ddbea2a"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q020",
+    "raw": {
+      "questionNumber": 8,
+      "stem": "A solution curve of the differential equation 2 ( + + x xy 2 4 2 4) 0, + + − = dy x y y dx 0, x > passes through the point 2 ( 3) y x = +",
+      "options": [
+        "intersects 2 y x = + exactly at one point",
+        "intersects 2 y x = + exactly at two points",
+        "intersects 2 ( 2) y x = +",
+        "does NOT intersect"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Adv. 2016 P-I",
+      "type": "mcq",
+      "stem": "A solution curve of the differential equation 2 ( + + x xy 2 4 2 4) 0, + + − = dy x y y dx 0, x > passes through the point 2 ( 3) y x = +",
+      "options": [
+        "intersects 2 y x = + exactly at one point",
+        "intersects 2 y x = + exactly at two points",
+        "intersects 2 ( 2) y x = +",
+        "does NOT intersect"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "A solution curve of the differential equation 2 ( + + x xy 2 4 2 4) 0, + + − = dy x y y dx 0, x > passes through the point 2 ( 3) y x = +",
+        "unicode": "A solution curve of the differential equation 2 ( + + x xy 2 4 2 4) 0, + + − = dy x y y dx 0, x > passes through the point 2 ( 3) y x = +",
+        "plainText": "A solution curve of the differential equation 2 ( + + x xy 2 4 2 4) 0, + + − = dy x y y dx 0, x > passes through the point 2 ( 3) y x = +"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 20.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "ba99ff981f283d6a"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q021",
+    "raw": {
+      "questionNumber": 9,
+      "stem": "If  (2 sin ) ( 1)cos 0 + + + = dy x y x dx and (0) 1 = y , then 2 π       y is equal to 2 3 −",
+      "options": [
+        " 1 3 −",
+        "4 3",
+        "1 3",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2017",
+      "type": "mcq",
+      "stem": "If  (2 sin ) ( 1)cos 0 + + + = dy x y x dx and (0) 1 = y , then 2 π       y is equal to 2 3 −",
+      "options": [
+        " 1 3 −",
+        "4 3",
+        "1 3",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If  (2 sin ) ( 1)cos 0 + + + = dy x y x dx and (0) 1 = y , then 2 π       y is equal to 2 3 −",
+        "unicode": "If  (2 sin ) ( 1)cos 0 + + + = dy x y x dx and (0) 1 = y , then 2 π       y is equal to 2 3 −",
+        "plainText": "If  (2 sin ) ( 1)cos 0 + + + = dy x y x dx and (0) 1 = y , then 2 π       y is equal to 2 3 −"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 21.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "3416f16f78b6654c"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q022",
+    "raw": {
+      "questionNumber": 10,
+      "stem": "If ( ) y y x = satisfies the differential equation ( ) 1 8 x 9 x dy 4 9 x dx, −   + = + +     x 0 > and ( ) y 0 7 = , then ( ) y 256 =",
+      "options": [
+        "80",
+        "9",
+        "16",
+        "3"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Adv. 2017 P-II",
+      "type": "mcq",
+      "stem": "If ( ) y y x = satisfies the differential equation ( ) 1 8 x 9 x dy 4 9 x dx, −   + = + +     x 0 > and ( ) y 0 7 = , then ( ) y 256 =",
+      "options": [
+        "80",
+        "9",
+        "16",
+        "3"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If ( ) y y x = satisfies the differential equation ( ) 1 8 x 9 x dy 4 9 x dx, −   + = + +     x 0 > and ( ) y 0 7 = , then ( ) y 256 =",
+        "unicode": "If ( ) y y x = satisfies the differential equation ( ) 1 8 x 9 x dy 4 9 x dx, −   + = + +     x 0 > and ( ) y 0 7 = , then ( ) y 256 =",
+        "plainText": "If ( ) y y x = satisfies the differential equation ( ) 1 8 x 9 x dy 4 9 x dx, −   + = + +     x 0 > and ( ) y 0 7 = , then ( ) y 256 ="
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 22.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "58098b861d9aae57"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q023",
+    "raw": {
+      "questionNumber": 11,
+      "stem": "Let ( ) y y x = be the solution of the differential equation sin cos 4 , (0, ). dy y x x x dx π × + = ∈ 0, 2 y π   = =     then 6 y π       is equal to: 2 8 9 π −",
+      "options": [
+        " 2 4 9 π −",
+        " 2 4 9 3 π",
+        " 2 8 9 3 π −",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2018",
+      "type": "mcq",
+      "stem": "Let ( ) y y x = be the solution of the differential equation sin cos 4 , (0, ). dy y x x x dx π × + = ∈ 0, 2 y π   = =     then 6 y π       is equal to: 2 8 9 π −",
+      "options": [
+        " 2 4 9 π −",
+        " 2 4 9 3 π",
+        " 2 8 9 3 π −",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let ( ) y y x = be the solution of the differential equation sin cos 4 , (0, ). dy y x x x dx π × + = ∈ 0, 2 y π   = =     then 6 y π       is equal to: 2 8 9 π −",
+        "unicode": "Let ( ) y y x = be the solution of the differential equation sin cos 4 , (0, ). dy y x x x dx π × + = ∈ 0, 2 y π   = =     then 6 y π       is equal to: 2 8 9 π −",
+        "plainText": "Let ( ) y y x = be the solution of the differential equation sin cos 4 , (0, ). dy y x x x dx π × + = ∈ 0, 2 y π   = =     then 6 y π       is equal to: 2 8 9 π −"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 23.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "31f44e42f83d58b3"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q024",
+    "raw": {
+      "questionNumber": 12,
+      "stem": "Let y = y(x) be the solution of the differential equation, 2 2 2 ( 1) 2 ( 1) 1 + + + = dy x x x y dx such that (0)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "Let y = y(x) be the solution of the differential equation, 2 2 2 ( 1) 2 ( 1) 1 + + + = dy x x x y dx such that (0)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let y = y(x) be the solution of the differential equation, 2 2 2 ( 1) 2 ( 1) 1 + + + = dy x x x y dx such that (0)",
+        "unicode": "Let y = y(x) be the solution of the differential equation, 2 2 2 ( 1) 2 ( 1) 1 + + + = dy x x x y dx such that (0)",
+        "plainText": "Let y = y(x) be the solution of the differential equation, 2 2 2 ( 1) 2 ( 1) 1 + + + = dy x x x y dx such that (0)"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 24.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "8a9e26c99fd9a08e"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q025",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "= y If (1) , 32 = ay π",
+      "options": [
+        "1/2",
+        "1/16",
+        "1/4",
+        "1"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "= y If (1) , 32 = ay π",
+      "options": [
+        "1/2",
+        "1/16",
+        "1/4",
+        "1"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "= y If (1) , 32 = ay π",
+        "unicode": "= y If (1) , 32 = ay π",
+        "plainText": "= y If (1) , 32 = ay π"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 25.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "393bb976102c9825"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q026",
+    "raw": {
+      "questionNumber": 13,
+      "stem": "If ( ) = y y x is the solution of the differential equation, 2 2 = + = dy y y x dx satisfying (1) 1, = y then 1 2    y is equal to: 4",
+      "options": [
+        "7 64",
+        "13 16",
+        "49 16",
+        "1"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "If ( ) = y y x is the solution of the differential equation, 2 2 = + = dy y y x dx satisfying (1) 1, = y then 1 2    y is equal to: 4",
+      "options": [
+        "7 64",
+        "13 16",
+        "49 16",
+        "1"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If ( ) = y y x is the solution of the differential equation, 2 2 = + = dy y y x dx satisfying (1) 1, = y then 1 2    y is equal to: 4",
+        "unicode": "If ( ) = y y x is the solution of the differential equation, 2 2 = + = dy y y x dx satisfying (1) 1, = y then 1 2    y is equal to: 4",
+        "plainText": "If ( ) = y y x is the solution of the differential equation, 2 2 = + = dy y y x dx satisfying (1) 1, = y then 1 2    y is equal to: 4"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 26.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "93100b4079c13eb7"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q027",
+    "raw": {
+      "questionNumber": 14,
+      "stem": "Let f:[0,1]→R be such that f(xy) = f(x).f(y) for all x,y,ε [0,1], and f(0) ≠ 0. If y = y(x) satisfies the differential equation, ( ) = dy f x dx with y(0) = 1, then 1 3 4 4     +         y y is equal to",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "Let f:[0,1]→R be such that f(xy) = f(x).f(y) for all x,y,ε [0,1], and f(0) ≠ 0. If y = y(x) satisfies the differential equation, ( ) = dy f x dx with y(0) = 1, then 1 3 4 4     +         y y is equal to",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let f:[0,1]→R be such that f(xy) = f(x).f(y) for all x,y,ε [0,1], and f(0) ≠ 0. If y = y(x) satisfies the differential equation, ( ) = dy f x dx with y(0) = 1, then 1 3 4 4     +         y y is equal to",
+        "unicode": "Let f:[0,1]→R be such that f(xy) = f(x).f(y) for all x,y,ε [0,1], and f(0) ≠ 0. If y = y(x) satisfies the differential equation, ( ) = dy f x dx with y(0) = 1, then 1 3 4 4     +         y y is equal to",
+        "plainText": "Let f:[0,1]→R be such that f(xy) = f(x).f(y) for all x,y,ε [0,1], and f(0) ≠ 0. If y = y(x) satisfies the differential equation, ( ) = dy f x dx with y(0) = 1, then 1 3 4 4     +         y y is equal to"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 27.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "a896e5184424508b"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q028",
+    "raw": {
+      "questionNumber": 15,
+      "stem": "If 2 2 3 1 , , , cos cos 3 3 −   + = ∈    dy y x dx x x π π and 4 , 4 3 y π  =     then 4 y π   −     equals: 3 1 3 e +",
+      "options": [
+        " 6 1 3 e +",
+        "1 3",
+        " 4 3 −",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "If 2 2 3 1 , , , cos cos 3 3 −   + = ∈    dy y x dx x x π π and 4 , 4 3 y π  =     then 4 y π   −     equals: 3 1 3 e +",
+      "options": [
+        " 6 1 3 e +",
+        "1 3",
+        " 4 3 −",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If 2 2 3 1 , , , cos cos 3 3 −   + = ∈    dy y x dx x x π π and 4 , 4 3 y π  =     then 4 y π   −     equals: 3 1 3 e +",
+        "unicode": "If 2 2 3 1 , , , cos cos 3 3 −   + = ∈    dy y x dx x x π π and 4 , 4 3 y π  =     then 4 y π   −     equals: 3 1 3 e +",
+        "plainText": "If 2 2 3 1 , , , cos cos 3 3 −   + = ∈    dy y x dx x x π π and 4 , 4 3 y π  =     then 4 y π   −     equals: 3 1 3 e +"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 28.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "57bdd47774d6702c"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q029",
+    "raw": {
+      "questionNumber": 16,
+      "stem": "Let f be a differentiable function such that 3 ( ) ( ) 7 , 4 f x f x x ′ = − (x > 0) and f(1) ≠ 4. Then 0 1 lim x xf x + →    : 7",
+      "options": [
+        "Exists and equals 4",
+        "Does not exist",
+        "Exist and equals 0",
+        "Exists and equals 4"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "Let f be a differentiable function such that 3 ( ) ( ) 7 , 4 f x f x x ′ = − (x > 0) and f(1) ≠ 4. Then 0 1 lim x xf x + →    : 7",
+      "options": [
+        "Exists and equals 4",
+        "Does not exist",
+        "Exist and equals 0",
+        "Exists and equals 4"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let f be a differentiable function such that 3 ( ) ( ) 7 , 4 f x f x x ′ = − (x > 0) and f(1) ≠ 4. Then 0 1 lim x xf x + →    : 7",
+        "unicode": "Let f be a differentiable function such that 3 ( ) ( ) 7 , 4 f x f x x ′ = − (x > 0) and f(1) ≠ 4. Then 0 1 lim x xf x + →    : 7",
+        "plainText": "Let f be a differentiable function such that 3 ( ) ( ) 7 , 4 f x f x x ′ = − (x > 0) and f(1) ≠ 4. Then 0 1 lim x xf x + →    : 7"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 29.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "a1b20b24f909353d"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q030",
+    "raw": {
+      "questionNumber": 17,
+      "stem": "The curve amongst the family of curves, represented by the differential equation, (x2 – y2)dx + 2xy dy = 0 which passes through (1,1) is: ( ) y f x = (1, 1) − (1 ) , y xy dx x dy + = 1 2 f   −     2 5 − 4 5 − 2 5 4 5 _ 229 Differential Equations",
+      "options": [
+        "A circle with centre on the y-axis",
+        "A circle with centre on the x-axis",
+        "An ellipse with major axis along the y-axis",
+        "A hyperbola with transverse axis along the x-axis"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "The curve amongst the family of curves, represented by the differential equation, (x2 – y2)dx + 2xy dy = 0 which passes through (1,1) is: ( ) y f x = (1, 1) − (1 ) , y xy dx x dy + = 1 2 f   −     2 5 − 4 5 − 2 5 4 5 _ 229 Differential Equations",
+      "options": [
+        "A circle with centre on the y-axis",
+        "A circle with centre on the x-axis",
+        "An ellipse with major axis along the y-axis",
+        "A hyperbola with transverse axis along the x-axis"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "The curve amongst the family of curves, represented by the differential equation, (x2 – y2)dx + 2xy dy = 0 which passes through (1,1) is: ( ) y f x = (1, 1) − (1 ) , y xy dx x dy + = 1 2 f   −     2 5 − 4 5 − 2 5 4 5 _ 229 Differential Equations",
+        "unicode": "The curve amongst the family of curves, represented by the differential equation, (x2 – y2)dx + 2xy dy = 0 which passes through (1,1) is: ( ) y f x = (1, 1) − (1 ) , y xy dx x dy + = 1 2 f   −     2 5 − 4 5 − 2 5 4 5 _ 229 Differential Equations",
+        "plainText": "The curve amongst the family of curves, represented by the differential equation, (x2 – y2)dx + 2xy dy = 0 which passes through (1,1) is: ( ) y f x = (1, 1) − (1 ) , y xy dx x dy + = 1 2 f   −     2 5 − 4 5 − 2 5 4 5 _ 229 Differential Equations"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 30.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "5594817957fa2ba6"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q031",
+    "raw": {
+      "questionNumber": 18,
+      "stem": "If y(x) is the solution of the differential equation 2 2 1 , x dy x y e dx x − +   + =     x > 0, where 2 1 (1) , 2 x y e− = then: log 4 e c y =",
+      "options": [
+        "y(x) is decreasing in (0,1)",
+        "y(x) is decreasing in 1 ,1 2      ",
+        " log 2 (log 2) 4 c e y =",
+        "(log 2)"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "If y(x) is the solution of the differential equation 2 2 1 , x dy x y e dx x − +   + =     x > 0, where 2 1 (1) , 2 x y e− = then: log 4 e c y =",
+      "options": [
+        "y(x) is decreasing in (0,1)",
+        "y(x) is decreasing in 1 ,1 2      ",
+        " log 2 (log 2) 4 c e y =",
+        "(log 2)"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If y(x) is the solution of the differential equation 2 2 1 , x dy x y e dx x − +   + =     x > 0, where 2 1 (1) , 2 x y e− = then: log 4 e c y =",
+        "unicode": "If y(x) is the solution of the differential equation 2 2 1 , x dy x y e dx x − +   + =     x > 0, where 2 1 (1) , 2 x y e− = then: log 4 e c y =",
+        "plainText": "If y(x) is the solution of the differential equation 2 2 1 , x dy x y e dx x − +   + =     x > 0, where 2 1 (1) , 2 x y e− = then: log 4 e c y ="
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 31.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "4100d3cef2b970a3"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q032",
+    "raw": {
+      "questionNumber": 19,
+      "stem": "The solution of the differential equation 2 ( ) = − dy x y dx when y(1) =1, is: 1 log 2( 1) 1 − + − = − + − e x y x x y",
+      "options": [
+        " 2 log 2( 1) 2 − = − − e y y x",
+        " 2 log 2 − = − − e y x y x",
+        " 1 log 2 1 + − − = + − − + e x y x y x y",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "The solution of the differential equation 2 ( ) = − dy x y dx when y(1) =1, is: 1 log 2( 1) 1 − + − = − + − e x y x x y",
+      "options": [
+        " 2 log 2( 1) 2 − = − − e y y x",
+        " 2 log 2 − = − − e y x y x",
+        " 1 log 2 1 + − − = + − − + e x y x y x y",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "The solution of the differential equation 2 ( ) = − dy x y dx when y(1) =1, is: 1 log 2( 1) 1 − + − = − + − e x y x x y",
+        "unicode": "The solution of the differential equation 2 ( ) = − dy x y dx when y(1) =1, is: 1 log 2( 1) 1 − + − = − + − e x y x x y",
+        "plainText": "The solution of the differential equation 2 ( ) = − dy x y dx when y(1) =1, is: 1 log 2( 1) 1 − + − = − + − e x y x x y"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 32.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "acbe335b89d15809"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q033",
+    "raw": {
+      "questionNumber": 20,
+      "stem": "Let y = y(x) be the solution of the differential equation, , dy x y x dx + = log ,( 1). > e x x If 2 (2) log 4 1, e y = − then y(e) is equal to: 2 2 e −",
+      "options": [
+        " 2 4 e",
+        "4 e",
+        " 2 e −",
+        ""
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "Let y = y(x) be the solution of the differential equation, , dy x y x dx + = log ,( 1). > e x x If 2 (2) log 4 1, e y = − then y(e) is equal to: 2 2 e −",
+      "options": [
+        " 2 4 e",
+        "4 e",
+        " 2 e −",
+        ""
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let y = y(x) be the solution of the differential equation, , dy x y x dx + = log ,( 1). > e x x If 2 (2) log 4 1, e y = − then y(e) is equal to: 2 2 e −",
+        "unicode": "Let y = y(x) be the solution of the differential equation, , dy x y x dx + = log ,( 1). > e x x If 2 (2) log 4 1, e y = − then y(e) is equal to: 2 2 e −",
+        "plainText": "Let y = y(x) be the solution of the differential equation, , dy x y x dx + = log ,( 1). > e x x If 2 (2) log 4 1, e y = − then y(e) is equal to: 2 2 e −"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 33.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "e08175117525fc92"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q034",
+    "raw": {
+      "questionNumber": 21,
+      "stem": "If a cuver passes through the point (1, –2) and has slope of the tangent at any point (x, y) on it as 2 2 x y x − , then the curve also passes through the point: Statement or Assertion & Reason",
+      "options": [
+        "( 2,1) −",
+        "( 3,0)",
+        "(–1, 2)",
+        "(3, 0)"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Main 2019",
+      "type": "mcq",
+      "stem": "If a cuver passes through the point (1, –2) and has slope of the tangent at any point (x, y) on it as 2 2 x y x − , then the curve also passes through the point: Statement or Assertion & Reason",
+      "options": [
+        "( 2,1) −",
+        "( 3,0)",
+        "(–1, 2)",
+        "(3, 0)"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "If a cuver passes through the point (1, –2) and has slope of the tangent at any point (x, y) on it as 2 2 x y x − , then the curve also passes through the point: Statement or Assertion & Reason",
+        "unicode": "If a cuver passes through the point (1, –2) and has slope of the tangent at any point (x, y) on it as 2 2 x y x − , then the curve also passes through the point: Statement or Assertion & Reason",
+        "plainText": "If a cuver passes through the point (1, –2) and has slope of the tangent at any point (x, y) on it as 2 2 x y x − , then the curve also passes through the point: Statement or Assertion & Reason"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 34.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "3ca533ed31599ab7"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2008_Q035",
+    "raw": {
+      "questionNumber": 22,
+      "stem": "Let a solution ( ) y y x = of the differential equation 2 1 x x dy − 2 1 0 y y dx − − = satisfy 2 (2) . 3 y = Statement-I: 1 ( ) sec sec 6 y x x π −   = −     and Statement-II: ( ) y x is given by 2 1 2 3 1 1 y x x = − − Integer & Subjective",
+      "options": [
+        "statement-I is True, statement-II is True; statement-II is a correct explanation for statement-I",
+        "statement-I is True, statement-II is True; statement-II is not a correct explanation for statement-I.",
+        "statement-I is True, statement-II is False",
+        "statement-I is False, statement-II is True"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2008,
+      "shift": "P -II",
+      "type": "mcq",
+      "stem": "Let a solution ( ) y y x = of the differential equation 2 1 x x dy − 2 1 0 y y dx − − = satisfy 2 (2) . 3 y = Statement-I: 1 ( ) sec sec 6 y x x π −   = −     and Statement-II: ( ) y x is given by 2 1 2 3 1 1 y x x = − − Integer & Subjective",
+      "options": [
+        "statement-I is True, statement-II is True; statement-II is a correct explanation for statement-I",
+        "statement-I is True, statement-II is True; statement-II is not a correct explanation for statement-I.",
+        "statement-I is True, statement-II is False",
+        "statement-I is False, statement-II is True"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let a solution ( ) y y x = of the differential equation 2 1 x x dy − 2 1 0 y y dx − − = satisfy 2 (2) . 3 y = Statement-I: 1 ( ) sec sec 6 y x x π −   = −     and Statement-II: ( ) y x is given by 2 1 2 3 1 1 y x x = − − Integer & Subjective",
+        "unicode": "Let a solution ( ) y y x = of the differential equation 2 1 x x dy − 2 1 0 y y dx − − = satisfy 2 (2) . 3 y = Statement-I: 1 ( ) sec sec 6 y x x π −   = −     and Statement-II: ( ) y x is given by 2 1 2 3 1 1 y x x = − − Integer & Subjective",
+        "plainText": "Let a solution ( ) y y x = of the differential equation 2 1 x x dy − 2 1 0 y y dx − − = satisfy 2 (2) . 3 y = Statement-I: 1 ( ) sec sec 6 y x x π −   = −     and Statement-II: ( ) y x is given by 2 1 2 3 1 1 y x x = − − Integer & Subjective"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 35.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "fc246f9711f39396"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q036",
+    "raw": {
+      "questionNumber": 23,
+      "stem": "Let : → ℝ ℝ f be a differentiable function with (0)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "Let : → ℝ ℝ f be a differentiable function with (0)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "Let : → ℝ ℝ f be a differentiable function with (0)",
+        "unicode": "Let : → ℝ ℝ f be a differentiable function with (0)",
+        "plainText": "Let : → ℝ ℝ f be a differentiable function with (0)"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 36.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "4b5e15b27f0e0859"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q037",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "= f If ( ) = y f x satisfies the differential equation (2 5 )(5 2), = + − dy y y dx then the value of lim ( ) →∞ x f x is ______. ANSWERS & SOLUTIONS",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_ADVANCED",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Adv. 2018 P-II",
+      "type": "numerical",
+      "stem": "= f If ( ) = y f x satisfies the differential equation (2 5 )(5 2), = + − dy y y dx then the value of lim ( ) →∞ x f x is ______. ANSWERS & SOLUTIONS",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "= f If ( ) = y f x satisfies the differential equation (2 5 )(5 2), = + − dy y y dx then the value of lim ( ) →∞ x f x is ______. ANSWERS & SOLUTIONS",
+        "unicode": "= f If ( ) = y f x satisfies the differential equation (2 5 )(5 2), = + − dy y y dx then the value of lim ( ) →∞ x f x is ______. ANSWERS & SOLUTIONS",
+        "plainText": "= f If ( ) = y f x satisfies the differential equation (2 5 )(5 2), = + − dy y y dx then the value of lim ( ) →∞ x f x is ______. ANSWERS & SOLUTIONS"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 37.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "7c7616e7c9d196eb"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q038",
+    "raw": {
+      "questionNumber": 2,
+      "stem": "(a, d) ' tan 2 sec y y x x x − = tan log cos I.F. cos x dx x e e x ∫ = = = ∴ cos 2 sec .cos y x x x x dx = ∫ ⇒ 2 cos y x x c = + ⇒ 2 cos ( (0) 0) y x x y ⋅ = = ∵ ⇒ 2 sec y x x = ∴ 2 2 4 2 and y' 4 3 3 8 2 3 3 y π π π π π     = = +        ",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(a, d) ' tan 2 sec y y x x x − = tan log cos I.F. cos x dx x e e x ∫ = = = ∴ cos 2 sec .cos y x x x x dx = ∫ ⇒ 2 cos y x x c = + ⇒ 2 cos ( (0) 0) y x x y ⋅ = = ∵ ⇒ 2 sec y x x = ∴ 2 2 4 2 and y' 4 3 3 8 2 3 3 y π π π π π     = = +        ",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(a, d) ' tan 2 sec y y x x x − = tan log cos I.F. cos x dx x e e x ∫ = = = ∴ cos 2 sec .cos y x x x x dx = ∫ ⇒ 2 cos y x x c = + ⇒ 2 cos ( (0) 0) y x x y ⋅ = = ∵ ⇒ 2 sec y x x = ∴ 2 2 4 2 and y' 4 3 3 8 2 3 3 y π π π π π     = = +        ",
+        "unicode": "(a, d) ' tan 2 sec y y x x x − = tan log cos I.F. cos x dx x e e x ∫ = = = ∴ cos 2 sec .cos y x x x x dx = ∫ ⇒ 2 cos y x x c = + ⇒ 2 cos ( (0) 0) y x x y ⋅ = = ∵ ⇒ 2 sec y x x = ∴ 2 2 4 2 and y' 4 3 3 8 2 3 3 y π π π π π     = = +        ",
+        "plainText": "(a, d) ' tan 2 sec y y x x x − = tan log cos I.F. cos x dx x e e x ∫ = = = ∴ cos 2 sec .cos y x x x x dx = ∫ ⇒ 2 cos y x x c = + ⇒ 2 cos ( (0) 0) y x x y ⋅ = = ∵ ⇒ 2 sec y x x = ∴ 2 2 4 2 and y' 4 3 3 8 2 3 3 y π π π π π     = = +        "
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 38.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "9f8c784b713fbe55"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q039",
+    "raw": {
+      "questionNumber": 5,
+      "stem": "(a, c) Hence g(x) has a root in between",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(a, c) Hence g(x) has a root in between",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(a, c) Hence g(x) has a root in between",
+        "unicode": "(a, c) Hence g(x) has a root in between",
+        "plainText": "(a, c) Hence g(x) has a root in between"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 39.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "080a933292529c47"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q040",
+    "raw": {
+      "questionNumber": 0,
+      "stem": "g g ⋅ − < ( 1,0) − ( ln ) 2 log , + = dy x x y x x dx ( 1) ≥ x 1 = x 0 = y 2 log + = dy y dx x x 1 ln . . ln ∫ = = x x I F e dx x .ln",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "g g ⋅ − < ( 1,0) − ( ln ) 2 log , + = dy x x y x x dx ( 1) ≥ x 1 = x 0 = y 2 log + = dy y dx x x 1 ln . . ln ∫ = = x x I F e dx x .ln",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "g g ⋅ − < ( 1,0) − ( ln ) 2 log , + = dy x x y x x dx ( 1) ≥ x 1 = x 0 = y 2 log + = dy y dx x x 1 ln . . ln ∫ = = x x I F e dx x .ln",
+        "unicode": "g g ⋅ − < ( 1,0) − ( ln ) 2 log , + = dy x x y x x dx ( 1) ≥ x 1 = x 0 = y 2 log + = dy y dx x x 1 ln . . ln ∫ = = x x I F e dx x .ln",
+        "plainText": "g g ⋅ − < ( 1,0) − ( ln ) 2 log , + = dy x x y x x dx ( 1) ≥ x 1 = x 0 = y 2 log + = dy y dx x x 1 ln . . ln ∫ = = x x I F e dx x .ln"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 40.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "087cd4715c90fda4"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q041",
+    "raw": {
+      "questionNumber": 2,
+      "stem": "ln = +∫ y x c xdx .ln 2[ ln ] = + − y x c x x x 1, 0 = = x y 0 2.( 1) = + − c ⇒ 2 = c .ln 2 2[ ln ] = + − y x x x x = x e 2 2[ ] = + − y e e 2 = y _ 231 Differential Equations",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "ln = +∫ y x c xdx .ln 2[ ln ] = + − y x c x x x 1, 0 = = x y 0 2.( 1) = + − c ⇒ 2 = c .ln 2 2[ ln ] = + − y x x x x = x e 2 2[ ] = + − y e e 2 = y _ 231 Differential Equations",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "ln = +∫ y x c xdx .ln 2[ ln ] = + − y x c x x x 1, 0 = = x y 0 2.( 1) = + − c ⇒ 2 = c .ln 2 2[ ln ] = + − y x x x x = x e 2 2[ ] = + − y e e 2 = y _ 231 Differential Equations",
+        "unicode": "ln = +∫ y x c xdx .ln 2[ ln ] = + − y x c x x x 1, 0 = = x y 0 2.( 1) = + − c ⇒ 2 = c .ln 2 2[ ln ] = + − y x x x x = x e 2 2[ ] = + − y e e 2 = y _ 231 Differential Equations",
+        "plainText": "ln = +∫ y x c xdx .ln 2[ ln ] = + − y x c x x x 1, 0 = = x y 0 2.( 1) = + − c ⇒ 2 = c .ln 2 2[ ln ] = + − y x x x x = x e 2 2[ ] = + − y e e 2 = y _ 231 Differential Equations"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 41.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "3c27f64be3f09946"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q042",
+    "raw": {
+      "questionNumber": 8,
+      "stem": "(a, d) 2 dy [( + 2)( + 2 + )] 0 dx − = x x y y ⇒ ( 2) y x t = + ( 2). dy dt x t dx dx = + + ⇒ 2 2 (( 2)( 2 ( 2) ) ( 2) ( 2) . 0 dt x x x t x t x t dx   + + + + + + − + =     2 ( 2) 0 x + = or 2 (1 ) ( 2) 0 dt t x t dx   + + + =     ⇒ ( 2)(1 ) 0 dt x t t dx + + + = 1 2 t dx dt t x +   = −   +   ( 2) nt t n x c + = − + + ℓ ℓ ⇒ ( 2) 2 2 y y n n x c x x     + = − + +     + +     ℓ ℓ ( 2) ( 2) 2 y ny n x n x c x − + + = − + + + ℓ ℓ ℓ ⇒ 2 y ny c x + = + ℓ 3 3 3 n c + = + ℓ 3 1 c n = + ℓ ⇒ 3 2 y ny n e x + = + ℓ ℓ",
+      "options": [
+        " 3 2 y ny n e x + = + ℓ ℓ ⇒ ( 2) 1 3 1 n x n + + = + ℓ ℓ ⇒ one solution",
+        "Option B",
+        "In 2 2 ( 2) ( 2) 2 x x x + + + + ⇒ 3 1 n = + ℓ ⇒ 2 ( 2) ( 2) 3 n x x n e + + + = ℓ ℓ 2 ( 2) ( 2) 3 x x e e + + = ⇒ 2 2 3 ( 2) x e e x + = + no solution",
+        " 2 ( 3) y x = + ⇒ 2 2 ( 3) ( 3) 3 1 2 x n x n x + + + = + + ℓ ℓ 2 ( 2) 1 2( 2) 2 ( 3) 3 1 2 x x n x n x + + + + + + = + + ℓ ℓ 1 ( ) 2 ( 3) ( 2) 2 3 1 ( 2) g x n x x n x = + + + + + − − + ℓ ℓ 2 2 2 2 1 2( 2) ( 3) ( ) 1 0 1 ( 3) ( 2) ( 3)( 2) x x g x x x x x + − + ′ = + + − = + + + + + 2 2 2 8 8 3 ( 3)( 2) x x x x x + + − − = + + ( ) g x increasing ⇒ 1 7 (0) 2 3 2 1 3 3 2 2 g n n n = + + + − = + ℓ ℓ ℓ Which is positive, thus no solution"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "mcq",
+      "stem": "(a, d) 2 dy [( + 2)( + 2 + )] 0 dx − = x x y y ⇒ ( 2) y x t = + ( 2). dy dt x t dx dx = + + ⇒ 2 2 (( 2)( 2 ( 2) ) ( 2) ( 2) . 0 dt x x x t x t x t dx   + + + + + + − + =     2 ( 2) 0 x + = or 2 (1 ) ( 2) 0 dt t x t dx   + + + =     ⇒ ( 2)(1 ) 0 dt x t t dx + + + = 1 2 t dx dt t x +   = −   +   ( 2) nt t n x c + = − + + ℓ ℓ ⇒ ( 2) 2 2 y y n n x c x x     + = − + +     + +     ℓ ℓ ( 2) ( 2) 2 y ny n x n x c x − + + = − + + + ℓ ℓ ℓ ⇒ 2 y ny c x + = + ℓ 3 3 3 n c + = + ℓ 3 1 c n = + ℓ ⇒ 3 2 y ny n e x + = + ℓ ℓ",
+      "options": [
+        " 3 2 y ny n e x + = + ℓ ℓ ⇒ ( 2) 1 3 1 n x n + + = + ℓ ℓ ⇒ one solution",
+        "Option B",
+        "In 2 2 ( 2) ( 2) 2 x x x + + + + ⇒ 3 1 n = + ℓ ⇒ 2 ( 2) ( 2) 3 n x x n e + + + = ℓ ℓ 2 ( 2) ( 2) 3 x x e e + + = ⇒ 2 2 3 ( 2) x e e x + = + no solution",
+        " 2 ( 3) y x = + ⇒ 2 2 ( 3) ( 3) 3 1 2 x n x n x + + + = + + ℓ ℓ 2 ( 2) 1 2( 2) 2 ( 3) 3 1 2 x x n x n x + + + + + + = + + ℓ ℓ 1 ( ) 2 ( 3) ( 2) 2 3 1 ( 2) g x n x x n x = + + + + + − − + ℓ ℓ 2 2 2 2 1 2( 2) ( 3) ( ) 1 0 1 ( 3) ( 2) ( 3)( 2) x x g x x x x x + − + ′ = + + − = + + + + + 2 2 2 8 8 3 ( 3)( 2) x x x x x + + − − = + + ( ) g x increasing ⇒ 1 7 (0) 2 3 2 1 3 3 2 2 g n n n = + + + − = + ℓ ℓ ℓ Which is positive, thus no solution"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(a, d) 2 dy [( + 2)( + 2 + )] 0 dx − = x x y y ⇒ ( 2) y x t = + ( 2). dy dt x t dx dx = + + ⇒ 2 2 (( 2)( 2 ( 2) ) ( 2) ( 2) . 0 dt x x x t x t x t dx   + + + + + + − + =     2 ( 2) 0 x + = or 2 (1 ) ( 2) 0 dt t x t dx   + + + =     ⇒ ( 2)(1 ) 0 dt x t t dx + + + = 1 2 t dx dt t x +   = −   +   ( 2) nt t n x c + = − + + ℓ ℓ ⇒ ( 2) 2 2 y y n n x c x x     + = − + +     + +     ℓ ℓ ( 2) ( 2) 2 y ny n x n x c x − + + = − + + + ℓ ℓ ℓ ⇒ 2 y ny c x + = + ℓ 3 3 3 n c + = + ℓ 3 1 c n = + ℓ ⇒ 3 2 y ny n e x + = + ℓ ℓ",
+        "unicode": "(a, d) 2 dy [( + 2)( + 2 + )] 0 dx − = x x y y ⇒ ( 2) y x t = + ( 2). dy dt x t dx dx = + + ⇒ 2 2 (( 2)( 2 ( 2) ) ( 2) ( 2) . 0 dt x x x t x t x t dx   + + + + + + − + =     2 ( 2) 0 x + = or 2 (1 ) ( 2) 0 dt t x t dx   + + + =     ⇒ ( 2)(1 ) 0 dt x t t dx + + + = 1 2 t dx dt t x +   = −   +   ( 2) nt t n x c + = − + + ℓ ℓ ⇒ ( 2) 2 2 y y n n x c x x     + = − + +     + +     ℓ ℓ ( 2) ( 2) 2 y ny n x n x c x − + + = − + + + ℓ ℓ ℓ ⇒ 2 y ny c x + = + ℓ 3 3 3 n c + = + ℓ 3 1 c n = + ℓ ⇒ 3 2 y ny n e x + = + ℓ ℓ",
+        "plainText": "(a, d) 2 dy [( + 2)( + 2 + )] 0 dx − = x x y y ⇒ ( 2) y x t = + ( 2). dy dt x t dx dx = + + ⇒ 2 2 (( 2)( 2 ( 2) ) ( 2) ( 2) . 0 dt x x x t x t x t dx   + + + + + + − + =     2 ( 2) 0 x + = or 2 (1 ) ( 2) 0 dt t x t dx   + + + =     ⇒ ( 2)(1 ) 0 dt x t t dx + + + = 1 2 t dx dt t x +   = −   +   ( 2) nt t n x c + = − + + ℓ ℓ ⇒ ( 2) 2 2 y y n n x c x x     + = − + +     + +     ℓ ℓ ( 2) ( 2) 2 y ny n x n x c x − + + = − + + + ℓ ℓ ℓ ⇒ 2 y ny c x + = + ℓ 3 3 3 n c + = + ℓ 3 1 c n = + ℓ ⇒ 3 2 y ny n e x + = + ℓ ℓ"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 42.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "7b6bb3829687a8b4"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q043",
+    "raw": {
+      "questionNumber": 10,
+      "stem": "(d) dx dy 8 x 9 x 4 9 x = + + + ∫ ∫ Let 4 9 x t + + = 1 1 1 d dt 2 x 2 9 x 2 4 9 x ⋅ ⋅ = + + + (1 ) y xy dx xdy + = 2 0 − + = ydx xdy xy dx 2 2 0  + =     x y d xy dx y 2 2 + = x x C y (1, 1) − 1 1 2 −+ = C ⇒ 1 2 = − C 1 ( ) 2 = − i x 1 1 1 2 4 2 2 − + = − y ⇒ 1 1 1 2 2 8 − − = − y 1 5 2 8 = y 4 5 = y ez 3e/4 ex+2 2 3 /( 2) e x + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 232 ⇒  dy dt = ∫ ∫ ⇒ y t c = + y 4 9 x C = + + + ...(i) ( ) y 0 7 = ⇒  C 0 = ∴ y 4 9 x = + + ⇒  ( ) y 256 4 5",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(d) dx dy 8 x 9 x 4 9 x = + + + ∫ ∫ Let 4 9 x t + + = 1 1 1 d dt 2 x 2 9 x 2 4 9 x ⋅ ⋅ = + + + (1 ) y xy dx xdy + = 2 0 − + = ydx xdy xy dx 2 2 0  + =     x y d xy dx y 2 2 + = x x C y (1, 1) − 1 1 2 −+ = C ⇒ 1 2 = − C 1 ( ) 2 = − i x 1 1 1 2 4 2 2 − + = − y ⇒ 1 1 1 2 2 8 − − = − y 1 5 2 8 = y 4 5 = y ez 3e/4 ex+2 2 3 /( 2) e x + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 232 ⇒  dy dt = ∫ ∫ ⇒ y t c = + y 4 9 x C = + + + ...(i) ( ) y 0 7 = ⇒  C 0 = ∴ y 4 9 x = + + ⇒  ( ) y 256 4 5",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(d) dx dy 8 x 9 x 4 9 x = + + + ∫ ∫ Let 4 9 x t + + = 1 1 1 d dt 2 x 2 9 x 2 4 9 x ⋅ ⋅ = + + + (1 ) y xy dx xdy + = 2 0 − + = ydx xdy xy dx 2 2 0  + =     x y d xy dx y 2 2 + = x x C y (1, 1) − 1 1 2 −+ = C ⇒ 1 2 = − C 1 ( ) 2 = − i x 1 1 1 2 4 2 2 − + = − y ⇒ 1 1 1 2 2 8 − − = − y 1 5 2 8 = y 4 5 = y ez 3e/4 ex+2 2 3 /( 2) e x + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 232 ⇒  dy dt = ∫ ∫ ⇒ y t c = + y 4 9 x C = + + + ...(i) ( ) y 0 7 = ⇒  C 0 = ∴ y 4 9 x = + + ⇒  ( ) y 256 4 5",
+        "unicode": "(d) dx dy 8 x 9 x 4 9 x = + + + ∫ ∫ Let 4 9 x t + + = 1 1 1 d dt 2 x 2 9 x 2 4 9 x ⋅ ⋅ = + + + (1 ) y xy dx xdy + = 2 0 − + = ydx xdy xy dx 2 2 0  + =     x y d xy dx y 2 2 + = x x C y (1, 1) − 1 1 2 −+ = C ⇒ 1 2 = − C 1 ( ) 2 = − i x 1 1 1 2 4 2 2 − + = − y ⇒ 1 1 1 2 2 8 − − = − y 1 5 2 8 = y 4 5 = y ez 3e/4 ex+2 2 3 /( 2) e x + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 232 ⇒  dy dt = ∫ ∫ ⇒ y t c = + y 4 9 x C = + + + ...(i) ( ) y 0 7 = ⇒  C 0 = ∴ y 4 9 x = + + ⇒  ( ) y 256 4 5",
+        "plainText": "(d) dx dy 8 x 9 x 4 9 x = + + + ∫ ∫ Let 4 9 x t + + = 1 1 1 d dt 2 x 2 9 x 2 4 9 x ⋅ ⋅ = + + + (1 ) y xy dx xdy + = 2 0 − + = ydx xdy xy dx 2 2 0  + =     x y d xy dx y 2 2 + = x x C y (1, 1) − 1 1 2 −+ = C ⇒ 1 2 = − C 1 ( ) 2 = − i x 1 1 1 2 4 2 2 − + = − y ⇒ 1 1 1 2 2 8 − − = − y 1 5 2 8 = y 4 5 = y ez 3e/4 ex+2 2 3 /( 2) e x + _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 232 ⇒  dy dt = ∫ ∫ ⇒ y t c = + y 4 9 x C = + + + ...(i) ( ) y 0 7 = ⇒  C 0 = ∴ y 4 9 x = + + ⇒  ( ) y 256 4 5"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 43.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "e398b61d628c347f"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q044",
+    "raw": {
+      "questionNumber": 11,
+      "stem": "(d) sin cos 4 , (0, ) dy x y x x x dx π + − ∈ 4 cot sin dy x y x dx x + = ∴ cot . , sin xdx I F e x ∫ = = ∴ Solution is given by 4 sin sin sin x y x xdx x = ⋅ ∫ 2 sin 2 y x x c = + When , 0 2 x y π = = ⇒ 2 2 x c = − ∴ Equation is: 2 2 sin 2 2 y x x π = − When 6 x π = then 2 2 1 2 2 36 2 y π π ⋅ = ⋅ − ∴ 2 8 9 y π = −",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(d) sin cos 4 , (0, ) dy x y x x x dx π + − ∈ 4 cot sin dy x y x dx x + = ∴ cot . , sin xdx I F e x ∫ = = ∴ Solution is given by 4 sin sin sin x y x xdx x = ⋅ ∫ 2 sin 2 y x x c = + When , 0 2 x y π = = ⇒ 2 2 x c = − ∴ Equation is: 2 2 sin 2 2 y x x π = − When 6 x π = then 2 2 1 2 2 36 2 y π π ⋅ = ⋅ − ∴ 2 8 9 y π = −",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(d) sin cos 4 , (0, ) dy x y x x x dx π + − ∈ 4 cot sin dy x y x dx x + = ∴ cot . , sin xdx I F e x ∫ = = ∴ Solution is given by 4 sin sin sin x y x xdx x = ⋅ ∫ 2 sin 2 y x x c = + When , 0 2 x y π = = ⇒ 2 2 x c = − ∴ Equation is: 2 2 sin 2 2 y x x π = − When 6 x π = then 2 2 1 2 2 36 2 y π π ⋅ = ⋅ − ∴ 2 8 9 y π = −",
+        "unicode": "(d) sin cos 4 , (0, ) dy x y x x x dx π + − ∈ 4 cot sin dy x y x dx x + = ∴ cot . , sin xdx I F e x ∫ = = ∴ Solution is given by 4 sin sin sin x y x xdx x = ⋅ ∫ 2 sin 2 y x x c = + When , 0 2 x y π = = ⇒ 2 2 x c = − ∴ Equation is: 2 2 sin 2 2 y x x π = − When 6 x π = then 2 2 1 2 2 36 2 y π π ⋅ = ⋅ − ∴ 2 8 9 y π = −",
+        "plainText": "(d) sin cos 4 , (0, ) dy x y x x x dx π + − ∈ 4 cot sin dy x y x dx x + = ∴ cot . , sin xdx I F e x ∫ = = ∴ Solution is given by 4 sin sin sin x y x xdx x = ⋅ ∫ 2 sin 2 y x x c = + When , 0 2 x y π = = ⇒ 2 2 x c = − ∴ Equation is: 2 2 sin 2 2 y x x π = − When 6 x π = then 2 2 1 2 2 36 2 y π π ⋅ = ⋅ − ∴ 2 8 9 y π = −"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 44.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "0906f927f68bf0af"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q045",
+    "raw": {
+      "questionNumber": 12,
+      "stem": "(b) 2 2 2 2 1 1 ( 1)   + =   + +   dy x y dx x x (Linear differential equation) ∴ I.F. = 2 ( 1) 2 ( 1) + = + ℓn x e x So, general solution 2 1 .( 1) tan− + = + y x x c As y(0) = 0⇒ c = 0 ∴ 1 2 tan ( ) 1 − = + x y x x As, (1) 32 ⋅ = a y π ⇒ 1 1 4 16 = ⇒ = a a",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(b) 2 2 2 2 1 1 ( 1)   + =   + +   dy x y dx x x (Linear differential equation) ∴ I.F. = 2 ( 1) 2 ( 1) + = + ℓn x e x So, general solution 2 1 .( 1) tan− + = + y x x c As y(0) = 0⇒ c = 0 ∴ 1 2 tan ( ) 1 − = + x y x x As, (1) 32 ⋅ = a y π ⇒ 1 1 4 16 = ⇒ = a a",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(b) 2 2 2 2 1 1 ( 1)   + =   + +   dy x y dx x x (Linear differential equation) ∴ I.F. = 2 ( 1) 2 ( 1) + = + ℓn x e x So, general solution 2 1 .( 1) tan− + = + y x x c As y(0) = 0⇒ c = 0 ∴ 1 2 tan ( ) 1 − = + x y x x As, (1) 32 ⋅ = a y π ⇒ 1 1 4 16 = ⇒ = a a",
+        "unicode": "(b) 2 2 2 2 1 1 ( 1)   + =   + +   dy x y dx x x (Linear differential equation) ∴ I.F. = 2 ( 1) 2 ( 1) + = + ℓn x e x So, general solution 2 1 .( 1) tan− + = + y x x c As y(0) = 0⇒ c = 0 ∴ 1 2 tan ( ) 1 − = + x y x x As, (1) 32 ⋅ = a y π ⇒ 1 1 4 16 = ⇒ = a a",
+        "plainText": "(b) 2 2 2 2 1 1 ( 1)   + =   + +   dy x y dx x x (Linear differential equation) ∴ I.F. = 2 ( 1) 2 ( 1) + = + ℓn x e x So, general solution 2 1 .( 1) tan− + = + y x x c As y(0) = 0⇒ c = 0 ∴ 1 2 tan ( ) 1 − = + x y x x As, (1) 32 ⋅ = a y π ⇒ 1 1 4 16 = ⇒ = a a"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 45.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "9061fae0234c2448"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q046",
+    "raw": {
+      "questionNumber": 13,
+      "stem": "(c) 2   + =     dy y x dx x ⇒ I.F. = x2 ∴ 4 2 3 4 4 = + x yx (As y(1) =1) ∴ 1 49 2 16   = =     y x",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(c) 2   + =     dy y x dx x ⇒ I.F. = x2 ∴ 4 2 3 4 4 = + x yx (As y(1) =1) ∴ 1 49 2 16   = =     y x",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(c) 2   + =     dy y x dx x ⇒ I.F. = x2 ∴ 4 2 3 4 4 = + x yx (As y(1) =1) ∴ 1 49 2 16   = =     y x",
+        "unicode": "(c) 2   + =     dy y x dx x ⇒ I.F. = x2 ∴ 4 2 3 4 4 = + x yx (As y(1) =1) ∴ 1 49 2 16   = =     y x",
+        "plainText": "(c) 2   + =     dy y x dx x ⇒ I.F. = x2 ∴ 4 2 3 4 4 = + x yx (As y(1) =1) ∴ 1 49 2 16   = =     y x"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 46.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "722a77a733ac35f7"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q047",
+    "raw": {
+      "questionNumber": 14,
+      "stem": "(b) ƒ(xy) = ƒ(x). ƒ(y) ƒ(0) = 1 as ƒ(0) ≠ 0 ⇒  ƒ(x) = 1 ( ) 1 = = dy f x dx ⇒   y = x + c At,  x = 0, y = 1  ⇒ c = 1 y = x + 1 1 3 1 3 1 1 3 4 4 4 4     + = + + + =         y y",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(b) ƒ(xy) = ƒ(x). ƒ(y) ƒ(0) = 1 as ƒ(0) ≠ 0 ⇒  ƒ(x) = 1 ( ) 1 = = dy f x dx ⇒   y = x + c At,  x = 0, y = 1  ⇒ c = 1 y = x + 1 1 3 1 3 1 1 3 4 4 4 4     + = + + + =         y y",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(b) ƒ(xy) = ƒ(x). ƒ(y) ƒ(0) = 1 as ƒ(0) ≠ 0 ⇒  ƒ(x) = 1 ( ) 1 = = dy f x dx ⇒   y = x + c At,  x = 0, y = 1  ⇒ c = 1 y = x + 1 1 3 1 3 1 1 3 4 4 4 4     + = + + + =         y y",
+        "unicode": "(b) ƒ(xy) = ƒ(x). ƒ(y) ƒ(0) = 1 as ƒ(0) ≠ 0 ⇒  ƒ(x) = 1 ( ) 1 = = dy f x dx ⇒   y = x + c At,  x = 0, y = 1  ⇒ c = 1 y = x + 1 1 3 1 3 1 1 3 4 4 4 4     + = + + + =         y y",
+        "plainText": "(b) ƒ(xy) = ƒ(x). ƒ(y) ƒ(0) = 1 as ƒ(0) ≠ 0 ⇒  ƒ(x) = 1 ( ) 1 = = dy f x dx ⇒   y = x + c At,  x = 0, y = 1  ⇒ c = 1 y = x + 1 1 3 1 3 1 1 3 4 4 4 4     + = + + + =         y y"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 47.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "b3c22a86325f40f9"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q048",
+    "raw": {
+      "questionNumber": 15,
+      "stem": "(a) 2 2 3sec . sec dy x y x dx + = I.F. 2 3 sec 3 tan xdx x e e ∫ = = or 3tan 2 3tan . sec . = ∫ x x y e x e dx or 3tan 3tan 1 . 3 x x y e e C = + . . .(i) Given 4 4 3 y π  =     ∴ 2 3 4 1 . 3 3 e e C = + ∴ 3 C e = New put 4 x π = − in equation (i) ∴ 3 3 3 1 . 3 y e e e − − = + ∴ 6 1 3 = + y e ∴ 6 1 4 3   − = +     y e π",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(a) 2 2 3sec . sec dy x y x dx + = I.F. 2 3 sec 3 tan xdx x e e ∫ = = or 3tan 2 3tan . sec . = ∫ x x y e x e dx or 3tan 3tan 1 . 3 x x y e e C = + . . .(i) Given 4 4 3 y π  =     ∴ 2 3 4 1 . 3 3 e e C = + ∴ 3 C e = New put 4 x π = − in equation (i) ∴ 3 3 3 1 . 3 y e e e − − = + ∴ 6 1 3 = + y e ∴ 6 1 4 3   − = +     y e π",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(a) 2 2 3sec . sec dy x y x dx + = I.F. 2 3 sec 3 tan xdx x e e ∫ = = or 3tan 2 3tan . sec . = ∫ x x y e x e dx or 3tan 3tan 1 . 3 x x y e e C = + . . .(i) Given 4 4 3 y π  =     ∴ 2 3 4 1 . 3 3 e e C = + ∴ 3 C e = New put 4 x π = − in equation (i) ∴ 3 3 3 1 . 3 y e e e − − = + ∴ 6 1 3 = + y e ∴ 6 1 4 3   − = +     y e π",
+        "unicode": "(a) 2 2 3sec . sec dy x y x dx + = I.F. 2 3 sec 3 tan xdx x e e ∫ = = or 3tan 2 3tan . sec . = ∫ x x y e x e dx or 3tan 3tan 1 . 3 x x y e e C = + . . .(i) Given 4 4 3 y π  =     ∴ 2 3 4 1 . 3 3 e e C = + ∴ 3 C e = New put 4 x π = − in equation (i) ∴ 3 3 3 1 . 3 y e e e − − = + ∴ 6 1 3 = + y e ∴ 6 1 4 3   − = +     y e π",
+        "plainText": "(a) 2 2 3sec . sec dy x y x dx + = I.F. 2 3 sec 3 tan xdx x e e ∫ = = or 3tan 2 3tan . sec . = ∫ x x y e x e dx or 3tan 3tan 1 . 3 x x y e e C = + . . .(i) Given 4 4 3 y π  =     ∴ 2 3 4 1 . 3 3 e e C = + ∴ 3 C e = New put 4 x π = − in equation (i) ∴ 3 3 3 1 . 3 y e e e − − = + ∴ 6 1 3 = + y e ∴ 6 1 4 3   − = +     y e π"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 48.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "19b7737dff085c32"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q049",
+    "raw": {
+      "questionNumber": 16,
+      "stem": "(a) 3 ( ) ( ) 7 4 f x f x x ′ = − (x > 0) given f(1) ≠ 4 0 1 lim ? x xf x + →  =     3 7 4 dy y dx x + = (This is LDE) IF 3 3 3 ln| | 4 4 4 dx x x e e x ∫ = = = 3 3 4 4 .",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(a) 3 ( ) ( ) 7 4 f x f x x ′ = − (x > 0) given f(1) ≠ 4 0 1 lim ? x xf x + →  =     3 7 4 dy y dx x + = (This is LDE) IF 3 3 3 ln| | 4 4 4 dx x x e e x ∫ = = = 3 3 4 4 .",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(a) 3 ( ) ( ) 7 4 f x f x x ′ = − (x > 0) given f(1) ≠ 4 0 1 lim ? x xf x + →  =     3 7 4 dy y dx x + = (This is LDE) IF 3 3 3 ln| | 4 4 4 dx x x e e x ∫ = = = 3 3 4 4 .",
+        "unicode": "(a) 3 ( ) ( ) 7 4 f x f x x ′ = − (x > 0) given f(1) ≠ 4 0 1 lim ? x xf x + →  =     3 7 4 dy y dx x + = (This is LDE) IF 3 3 3 ln| | 4 4 4 dx x x e e x ∫ = = = 3 3 4 4 .",
+        "plainText": "(a) 3 ( ) ( ) 7 4 f x f x x ′ = − (x > 0) given f(1) ≠ 4 0 1 lim ? x xf x + →  =     3 7 4 dy y dx x + = (This is LDE) IF 3 3 3 ln| | 4 4 4 dx x x e e x ∫ = = = 3 3 4 4 ."
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 49.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "a39ed5ff0894376f"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q050",
+    "raw": {
+      "questionNumber": 7,
+      "stem": "x y x x dx = ∫ 3 / 4 4 . 7 7 / 4 x y x C 7 = ⋅ + 3/ 4 ( ) 4 . f x x C x− = + 3 4 1 4 . f C x x x  = +     7 4 0 0 1 lim lim 4 . 4 x x xf C x x + + → →    = + =         _ 233 Differential Equations",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "x y x x dx = ∫ 3 / 4 4 . 7 7 / 4 x y x C 7 = ⋅ + 3/ 4 ( ) 4 . f x x C x− = + 3 4 1 4 . f C x x x  = +     7 4 0 0 1 lim lim 4 . 4 x x xf C x x + + → →    = + =         _ 233 Differential Equations",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "x y x x dx = ∫ 3 / 4 4 . 7 7 / 4 x y x C 7 = ⋅ + 3/ 4 ( ) 4 . f x x C x− = + 3 4 1 4 . f C x x x  = +     7 4 0 0 1 lim lim 4 . 4 x x xf C x x + + → →    = + =         _ 233 Differential Equations",
+        "unicode": "x y x x dx = ∫ 3 / 4 4 . 7 7 / 4 x y x C 7 = ⋅ + 3/ 4 ( ) 4 . f x x C x− = + 3 4 1 4 . f C x x x  = +     7 4 0 0 1 lim lim 4 . 4 x x xf C x x + + → →    = + =         _ 233 Differential Equations",
+        "plainText": "x y x x dx = ∫ 3 / 4 4 . 7 7 / 4 x y x C 7 = ⋅ + 3/ 4 ( ) 4 . f x x C x− = + 3 4 1 4 . f C x x x  = +     7 4 0 0 1 lim lim 4 . 4 x x xf C x x + + → →    = + =         _ 233 Differential Equations"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 50.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "a2ff42eb912af2bd"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q051",
+    "raw": {
+      "questionNumber": 17,
+      "stem": "(b) 2 2 ( ) 2 0 x y dx xy dy − + = 2 2 2 − = dy y x dx xy Put dy dv y vx v x dx dx = ⇒ = + solving we get 2 2 1 v dx dv x v = − + ∫ ∫ ln(v2 + 1) = –ln x + C (y2 + x2) = Cx 1 + 1 = C ⇒ C = 2 y2 + x2 = 2x",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(b) 2 2 ( ) 2 0 x y dx xy dy − + = 2 2 2 − = dy y x dx xy Put dy dv y vx v x dx dx = ⇒ = + solving we get 2 2 1 v dx dv x v = − + ∫ ∫ ln(v2 + 1) = –ln x + C (y2 + x2) = Cx 1 + 1 = C ⇒ C = 2 y2 + x2 = 2x",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(b) 2 2 ( ) 2 0 x y dx xy dy − + = 2 2 2 − = dy y x dx xy Put dy dv y vx v x dx dx = ⇒ = + solving we get 2 2 1 v dx dv x v = − + ∫ ∫ ln(v2 + 1) = –ln x + C (y2 + x2) = Cx 1 + 1 = C ⇒ C = 2 y2 + x2 = 2x",
+        "unicode": "(b) 2 2 ( ) 2 0 x y dx xy dy − + = 2 2 2 − = dy y x dx xy Put dy dv y vx v x dx dx = ⇒ = + solving we get 2 2 1 v dx dv x v = − + ∫ ∫ ln(v2 + 1) = –ln x + C (y2 + x2) = Cx 1 + 1 = C ⇒ C = 2 y2 + x2 = 2x",
+        "plainText": "(b) 2 2 ( ) 2 0 x y dx xy dy − + = 2 2 2 − = dy y x dx xy Put dy dv y vx v x dx dx = ⇒ = + solving we get 2 2 1 v dx dv x v = − + ∫ ∫ ln(v2 + 1) = –ln x + C (y2 + x2) = Cx 1 + 1 = C ⇒ C = 2 y2 + x2 = 2x"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 51.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "5a33323bf49c7030"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q052",
+    "raw": {
+      "questionNumber": 18,
+      "stem": "(b) 2 2 1 x dy x y e dx x − +   + =     I.F. 2 1 1 2 2 2 x dx dx x nx x x e e e e x X +     +     +     ∫ ∫ = = = = ⋅ ℓ So, 2 2 2 ( ) x x x y xe e xe C − = ⋅ + ∫ ⇒ 2x xye xdx C = + ∫ ⇒ 2 2 2 2 x xye x C = + It passes through 2 1 1, 2 e−       we get C = 0 2 2 x xe y − = ⇒ 2 1 ( 2 1) 2 x dy e x dx − = − + ⇒ f(x) is decreasing is 1,1 2       2(log 2) (log 2) (log 2) 2 e e e e y − = 1 log 2 8 e =",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(b) 2 2 1 x dy x y e dx x − +   + =     I.F. 2 1 1 2 2 2 x dx dx x nx x x e e e e x X +     +     +     ∫ ∫ = = = = ⋅ ℓ So, 2 2 2 ( ) x x x y xe e xe C − = ⋅ + ∫ ⇒ 2x xye xdx C = + ∫ ⇒ 2 2 2 2 x xye x C = + It passes through 2 1 1, 2 e−       we get C = 0 2 2 x xe y − = ⇒ 2 1 ( 2 1) 2 x dy e x dx − = − + ⇒ f(x) is decreasing is 1,1 2       2(log 2) (log 2) (log 2) 2 e e e e y − = 1 log 2 8 e =",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(b) 2 2 1 x dy x y e dx x − +   + =     I.F. 2 1 1 2 2 2 x dx dx x nx x x e e e e x X +     +     +     ∫ ∫ = = = = ⋅ ℓ So, 2 2 2 ( ) x x x y xe e xe C − = ⋅ + ∫ ⇒ 2x xye xdx C = + ∫ ⇒ 2 2 2 2 x xye x C = + It passes through 2 1 1, 2 e−       we get C = 0 2 2 x xe y − = ⇒ 2 1 ( 2 1) 2 x dy e x dx − = − + ⇒ f(x) is decreasing is 1,1 2       2(log 2) (log 2) (log 2) 2 e e e e y − = 1 log 2 8 e =",
+        "unicode": "(b) 2 2 1 x dy x y e dx x − +   + =     I.F. 2 1 1 2 2 2 x dx dx x nx x x e e e e x X +     +     +     ∫ ∫ = = = = ⋅ ℓ So, 2 2 2 ( ) x x x y xe e xe C − = ⋅ + ∫ ⇒ 2x xye xdx C = + ∫ ⇒ 2 2 2 2 x xye x C = + It passes through 2 1 1, 2 e−       we get C = 0 2 2 x xe y − = ⇒ 2 1 ( 2 1) 2 x dy e x dx − = − + ⇒ f(x) is decreasing is 1,1 2       2(log 2) (log 2) (log 2) 2 e e e e y − = 1 log 2 8 e =",
+        "plainText": "(b) 2 2 1 x dy x y e dx x − +   + =     I.F. 2 1 1 2 2 2 x dx dx x nx x x e e e e x X +     +     +     ∫ ∫ = = = = ⋅ ℓ So, 2 2 2 ( ) x x x y xe e xe C − = ⋅ + ∫ ⇒ 2x xye xdx C = + ∫ ⇒ 2 2 2 2 x xye x C = + It passes through 2 1 1, 2 e−       we get C = 0 2 2 x xe y − = ⇒ 2 1 ( 2 1) 2 x dy e x dx − = − + ⇒ f(x) is decreasing is 1,1 2       2(log 2) (log 2) (log 2) 2 e e e e y − = 1 log 2 8 e ="
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 52.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "c55f4d2b36308769"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q053",
+    "raw": {
+      "questionNumber": 19,
+      "stem": "(d) − = x y t ⇒ 1 = − dy dt dx dx 2 1 = − = dt t dx ⇒ 2 1 1 = − ∫ ∫ dt dx t ⇒ 1 1 2 1 +  = +   −   ℓ t n x t λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ given y(1)= 1 ⇒ 1 (1) 1 1 2 = + ⇒ = − ℓn λ λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ ⇒ 1 2( 1) 1   − + − = −   + −   ℓ x y n x x y",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(d) − = x y t ⇒ 1 = − dy dt dx dx 2 1 = − = dt t dx ⇒ 2 1 1 = − ∫ ∫ dt dx t ⇒ 1 1 2 1 +  = +   −   ℓ t n x t λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ given y(1)= 1 ⇒ 1 (1) 1 1 2 = + ⇒ = − ℓn λ λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ ⇒ 1 2( 1) 1   − + − = −   + −   ℓ x y n x x y",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(d) − = x y t ⇒ 1 = − dy dt dx dx 2 1 = − = dt t dx ⇒ 2 1 1 = − ∫ ∫ dt dx t ⇒ 1 1 2 1 +  = +   −   ℓ t n x t λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ given y(1)= 1 ⇒ 1 (1) 1 1 2 = + ⇒ = − ℓn λ λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ ⇒ 1 2( 1) 1   − + − = −   + −   ℓ x y n x x y",
+        "unicode": "(d) − = x y t ⇒ 1 = − dy dt dx dx 2 1 = − = dt t dx ⇒ 2 1 1 = − ∫ ∫ dt dx t ⇒ 1 1 2 1 +  = +   −   ℓ t n x t λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ given y(1)= 1 ⇒ 1 (1) 1 1 2 = + ⇒ = − ℓn λ λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ ⇒ 1 2( 1) 1   − + − = −   + −   ℓ x y n x x y",
+        "plainText": "(d) − = x y t ⇒ 1 = − dy dt dx dx 2 1 = − = dt t dx ⇒ 2 1 1 = − ∫ ∫ dt dx t ⇒ 1 1 2 1 +  = +   −   ℓ t n x t λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ given y(1)= 1 ⇒ 1 (1) 1 1 2 = + ⇒ = − ℓn λ λ ⇒ 1 1 2 1   + − = +   − +   ℓ x y n x x y λ ⇒ 1 2( 1) 1   − + − = −   + −   ℓ x y n x x y"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 53.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "6c9687319eab9f37"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q054",
+    "raw": {
+      "questionNumber": 20,
+      "stem": "(b) dy y nx dx x = = ℓ 1 dx x e x ∫ = xy x nx C = + ∫ℓ 2 2 1 2 2 x x nx x ⋅ ∫ ℓ 2 , 2 4 x x xy nx C = − + ℓ for 2y(2)=2 ℓn2 – 1 ⇒ C = 0 2 4 x x y nx = − ℓ ( ) 4 e y e =",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(b) dy y nx dx x = = ℓ 1 dx x e x ∫ = xy x nx C = + ∫ℓ 2 2 1 2 2 x x nx x ⋅ ∫ ℓ 2 , 2 4 x x xy nx C = − + ℓ for 2y(2)=2 ℓn2 – 1 ⇒ C = 0 2 4 x x y nx = − ℓ ( ) 4 e y e =",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(b) dy y nx dx x = = ℓ 1 dx x e x ∫ = xy x nx C = + ∫ℓ 2 2 1 2 2 x x nx x ⋅ ∫ ℓ 2 , 2 4 x x xy nx C = − + ℓ for 2y(2)=2 ℓn2 – 1 ⇒ C = 0 2 4 x x y nx = − ℓ ( ) 4 e y e =",
+        "unicode": "(b) dy y nx dx x = = ℓ 1 dx x e x ∫ = xy x nx C = + ∫ℓ 2 2 1 2 2 x x nx x ⋅ ∫ ℓ 2 , 2 4 x x xy nx C = − + ℓ for 2y(2)=2 ℓn2 – 1 ⇒ C = 0 2 4 x x y nx = − ℓ ( ) 4 e y e =",
+        "plainText": "(b) dy y nx dx x = = ℓ 1 dx x e x ∫ = xy x nx C = + ∫ℓ 2 2 1 2 2 x x nx x ⋅ ∫ ℓ 2 , 2 4 x x xy nx C = − + ℓ for 2y(2)=2 ℓn2 – 1 ⇒ C = 0 2 4 x x y nx = − ℓ ( ) 4 e y e ="
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 54.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "e41b41591bc805f4"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q055",
+    "raw": {
+      "questionNumber": 21,
+      "stem": "(b) 2 2 dy x y dx x − = 2 dy y x dx x = = I.F = 2 2 dx x e x ∫ = 2 2 . . y x x x dx C + ∫ 4x C y = + Hence b passes through (–1, 2) ⇒ 9 4 C = − ∴ 4 2 9 4 4 x yx = − Now check option(s), which is satisfied by option (ii)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(b) 2 2 dy x y dx x − = 2 dy y x dx x = = I.F = 2 2 dx x e x ∫ = 2 2 . . y x x x dx C + ∫ 4x C y = + Hence b passes through (–1, 2) ⇒ 9 4 C = − ∴ 4 2 9 4 4 x yx = − Now check option(s), which is satisfied by option (ii)",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(b) 2 2 dy x y dx x − = 2 dy y x dx x = = I.F = 2 2 dx x e x ∫ = 2 2 . . y x x x dx C + ∫ 4x C y = + Hence b passes through (–1, 2) ⇒ 9 4 C = − ∴ 4 2 9 4 4 x yx = − Now check option(s), which is satisfied by option (ii)",
+        "unicode": "(b) 2 2 dy x y dx x − = 2 dy y x dx x = = I.F = 2 2 dx x e x ∫ = 2 2 . . y x x x dx C + ∫ 4x C y = + Hence b passes through (–1, 2) ⇒ 9 4 C = − ∴ 4 2 9 4 4 x yx = − Now check option(s), which is satisfied by option (ii)",
+        "plainText": "(b) 2 2 dy x y dx x − = 2 dy y x dx x = = I.F = 2 2 dx x e x ∫ = 2 2 . . y x x x dx C + ∫ 4x C y = + Hence b passes through (–1, 2) ⇒ 9 4 C = − ∴ 4 2 9 4 4 x yx = − Now check option(s), which is satisfied by option (ii)"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 55.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "ec36b1e913ad4429"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q056",
+    "raw": {
+      "questionNumber": 22,
+      "stem": "(c) 2 2 1 1 dx dy x x y y = − − ∫ ∫ 1 1 sec sec x y c − − = + 1 1 2 sec 2 sec 3 c − −  = +     3 6 6 c π π π = − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 234 \u0002  \u0002  \u0002 1 1 sec sec 6 x y π − − = + 1 sec sec 6 y x π −   = −     1 1 1 1 cos cos 6 x y π − − = + 1 1 1 1 1 3 cos cos cos 2 y x − − −  = −       2 1 3 1 1 1 2 2 y x x   = − −     2 2 3 1 1 . y x x = − −",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(c) 2 2 1 1 dx dy x x y y = − − ∫ ∫ 1 1 sec sec x y c − − = + 1 1 2 sec 2 sec 3 c − −  = +     3 6 6 c π π π = − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 234 \u0002  \u0002  \u0002 1 1 sec sec 6 x y π − − = + 1 sec sec 6 y x π −   = −     1 1 1 1 cos cos 6 x y π − − = + 1 1 1 1 1 3 cos cos cos 2 y x − − −  = −       2 1 3 1 1 1 2 2 y x x   = − −     2 2 3 1 1 . y x x = − −",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(c) 2 2 1 1 dx dy x x y y = − − ∫ ∫ 1 1 sec sec x y c − − = + 1 1 2 sec 2 sec 3 c − −  = +     3 6 6 c π π π = − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 234 \u0002  \u0002  \u0002 1 1 sec sec 6 x y π − − = + 1 sec sec 6 y x π −   = −     1 1 1 1 cos cos 6 x y π − − = + 1 1 1 1 1 3 cos cos cos 2 y x − − −  = −       2 1 3 1 1 1 2 2 y x x   = − −     2 2 3 1 1 . y x x = − −",
+        "unicode": "(c) 2 2 1 1 dx dy x x y y = − − ∫ ∫ 1 1 sec sec x y c − − = + 1 1 2 sec 2 sec 3 c − −  = +     3 6 6 c π π π = − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 234 \u0002  \u0002  \u0002 1 1 sec sec 6 x y π − − = + 1 sec sec 6 y x π −   = −     1 1 1 1 cos cos 6 x y π − − = + 1 1 1 1 1 3 cos cos cos 2 y x − − −  = −       2 1 3 1 1 1 2 2 y x x   = − −     2 2 3 1 1 . y x x = − −",
+        "plainText": "(c) 2 2 1 1 dx dy x x y y = − − ∫ ∫ 1 1 sec sec x y c − − = + 1 1 2 sec 2 sec 3 c − −  = +     3 6 6 c π π π = − = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 234 \u0002  \u0002  \u0002 1 1 sec sec 6 x y π − − = + 1 sec sec 6 y x π −   = −     1 1 1 1 cos cos 6 x y π − − = + 1 1 1 1 1 3 cos cos cos 2 y x − − −  = −       2 1 3 1 1 1 2 2 y x x   = − −     2 2 3 1 1 . y x x = − −"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 56.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "edab2907ec7024fb"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  },
+  {
+    "id": "JMP_MAT_DEQ_2024_Q057",
+    "raw": {
+      "questionNumber": 23,
+      "stem": "(0.40) (2 5 )(5 2) = + − dy y y dx ⇒ (5 2)(5 2) = + − ∫ ∫ dy dx y y ⇒ 1 1 1 4 5 2 5 2   − =   − +   ∫ ∫ dy dx y y ⇒ 1 5 2 ln 20 5 2 − = + + y x C y 5 2 (0) 0 ln 5 2 − = ⇒ = + y f x y 5 2 ln 5 2 − →−∞ →−∞ + y x y ∴ 2 lim ( ) 0.40 5 →∞ = = x f x o _",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "page": 227
+    },
+    "processed": {
+      "version": 1,
+      "exam": "JEE_MAIN",
+      "collection": "JEE",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "chapterCode": "DEQ",
+      "year": 2024,
+      "shift": "Shift 1",
+      "type": "numerical",
+      "stem": "(0.40) (2 5 )(5 2) = + − dy y y dx ⇒ (5 2)(5 2) = + − ∫ ∫ dy dx y y ⇒ 1 1 1 4 5 2 5 2   − =   − +   ∫ ∫ dy dx y y ⇒ 1 5 2 ln 20 5 2 − = + + y x C y 5 2 (0) 0 ln 5 2 − = ⇒ = + y f x y 5 2 ln 5 2 − →−∞ →−∞ + y x y ∴ 2 lim ( ) 0.40 5 →∞ = = x f x o _",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "formulas": {
+        "latex": "(0.40) (2 5 )(5 2) = + − dy y y dx ⇒ (5 2)(5 2) = + − ∫ ∫ dy dx y y ⇒ 1 1 1 4 5 2 5 2   − =   − +   ∫ ∫ dy dx y y ⇒ 1 5 2 ln 20 5 2 − = + + y x C y 5 2 (0) 0 ln 5 2 − = ⇒ = + y f x y 5 2 ln 5 2 − →−∞ →−∞ + y x y ∴ 2 lim ( ) 0.40 5 →∞ = = x f x o _",
+        "unicode": "(0.40) (2 5 )(5 2) = + − dy y y dx ⇒ (5 2)(5 2) = + − ∫ ∫ dy dx y y ⇒ 1 1 1 4 5 2 5 2   − =   − +   ∫ ∫ dy dx y y ⇒ 1 5 2 ln 20 5 2 − = + + y x C y 5 2 (0) 0 ln 5 2 − = ⇒ = + y f x y 5 2 ln 5 2 − →−∞ →−∞ + y x y ∴ 2 lim ( ) 0.40 5 →∞ = = x f x o _",
+        "plainText": "(0.40) (2 5 )(5 2) = + − dy y y dx ⇒ (5 2)(5 2) = + − ∫ ∫ dy dx y y ⇒ 1 1 1 4 5 2 5 2   − =   − +   ∫ ∫ dy dx y y ⇒ 1 5 2 ln 20 5 2 − = + + y x C y 5 2 (0) 0 ln 5 2 − = ⇒ = + y f x y 5 2 ln 5 2 − →−∞ →−∞ + y x y ∴ 2 lim ( ) 0.40 5 →∞ = = x f x o _"
+      },
+      "explanations": {
+        "basic": "Key concept in Differential Equations.",
+        "intermediate": "Detailed step-by-step solution for Differential Equations question 57.",
+        "advanced": "Deep conceptual insight into Differential Equations problem solving."
+      },
+      "tags": [
+        "Differential Equations",
+        "JEE PYQ",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "usageTag": "PRACTICE",
+      "hasImage": false,
+      "imageRef": null,
+      "ocrRawText": null,
+      "ai": {
+        "concepts": [
+          "Differential Equations"
+        ],
+        "prerequisites": [
+          "Basic Algebra"
+        ],
+        "learningObjectives": [
+          "Mastering Differential Equations problem types"
+        ]
+      }
+    },
+    "metadata": {
+      "curriculum": {
+        "grade": "Grade 12",
+        "subject": "Mathematics",
+        "chapter": "Differential Equations",
+        "subchapter": "General",
+        "topic": "PYQ Practice",
+        "learningOutcome": "Solve Differential Equations standard exam problems"
+      },
+      "hash": "acab2f6c9cd9f1aa"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "averageTimeSec": 120,
+      "accuracyPercent": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:38:00Z"
+    }
+  }
+]

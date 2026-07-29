@@ -1,0 +1,1190 @@
+[
+  {
+    "questionNumber": 1,
+    "stem": "x R f x x ∈ = + , ( ) 2 1 x g x x = − _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 4 of is to be used. In (c), the definition is general. The function is described by no rules but by a property of Clearly obeys the property, but there may be other functions satisfying the same property. \u0001 Some special piecewise functions: Modulus function i.e., Sign function , Step function or greatest integer function where x = greatest integer less than or equal to x, i.e., . Dirichlet function is rational is irrational. \u0001 Even, odd and periodic functions A function is even if for all domain A function is odd if for all domain A function is periodic if for all domain and k is a positive constant. If k is the least possible positive constant then k is the period of the function. Example: are even functions are odd functions are neither even nor odd functions are periodic functions. Some standard periodic functions with their periods: Function Period Function Period 1 constant intermediate If and are two trigonometrical functions of periods 1 and µ then is periodic and has the period = 1 c.m. of . \u0001 One-one (injective and many-one functions): A function is one-one (injective) if otherwise it is many-one. Example: is one-one but is many-one because and \u0001 Into and onto (subjective) functions: A function is an into function if for at least one there is no such that If there is no such then f  is an onto (surjective) function. Example: is an onto function from R to R but is not onto, i.e., into function from R to R because, and so for every we have the real and and so for we have no real In order to check whether from the set A to B is onto or not, write x in terms of y and see if for every If so, it is onto. Otherwise, it is into. A function f which is one-one and onto (i.e., injective as well as subjective) is called bijective. Inverse function: Let be a function whose domain is A and whose range is B. If for every there exists a single values of x such that then an inverse function of f (x) from B to A is defined, given by Figure: 1.6 \u0001 Composite function: If be a function whose domain is A and range is B, and be a function whose domain is B and the range is C then is a composite function whose domain is A and range is C such that where and , ( ) 3 x g x x = + ( ). h x ( ) x h x e = ( ) f x x = ( ) , 0 f x x x = > 0, 0 x = , 0 x x − < ( ) 1, 0 f x x = > 0, 0 x = 1, 0 x − < ( ) [ ], f x x = ( ) , 1 f x n n x n = ≤ < + ( ) f x = 1, x 0, x ( ) f x ( ) ( ) f x f x − = x ∈ ( ) f x ( ) ( ) f x f x − = − x∈ ( ) f x ( ) ( ) f x k f x + = x∈ 2 cos , , 1 x x x − 3 sin ,x x 2, x x e + sin ,tan , [ ] x x x x − sin ,cos x x 2p sin ,cos ax ax 2 / a π sin ,cosec x x 2p sec ,cosex ax ax 2 / a π tan ,cot x x π tan ,cot ax ax / a π [ ] x x − ( ) f x ( ) g x ( ) ( ) af x bg x + { , } λ µ ( ) f x 1 2 1 2 ( ) ( ) ; f x f x x x = ⇒ = ( ) 3 1 f x x = − 2 ( ) 1 g x x = + 1 2 ( ) ( ) f x f x = ⇒ 1 2 3 1 3 1 x x −= − ⇒ 1 2 x x = 1 2 ( ) ( ) g x g x = ⇒ 2 2 1 2 1 1 x x + = + ⇒ 2 2 1 2 x x = ⇒ 1 2 2 , x x x = − : f A B → B β ∈ A α ∈ ( ) . f α β = B β ∈ ( ) 2 1 y f x x = = − 2 ( ) 1 y g x x = = + ( ) 1 1 2 2 f x y x + + = = y R ∈ 1 , 2 y x +   =     ( ) 1 1 x g x y = − = − 1 y < ( 1). x y = − ( ) y f x = , . y B x A ∈ ∈ ( ) y f x = y B ∈ ( ) f x y = 1( ). x f y − = ( ) f x ( ) g y ( )( ) g o f x ( )( ) g o f x z C = ∈ ( ) f x y = ( ) . g y z = X f Y 1 f − a b c a1 b1 c1 _ 5 Set Relations and Functions Figure: 1.7 Example: Let and then Greatest Integer and Fractional Part \u0001 Greatest integer: Any real number x can always think of lying between two consecutive integers say P and i.e. That means, there always exist an integer, say ‘P’ which is just less than or equal to x. This unique ‘P’ is called the greatest integral value of x and is symbolically denoted as [x] i.e. [x] stands for the greatest integer that is less than or equal to x. \u0001 Fractional part: Fractional Part of any real number is defined as the difference between the number ‘x’ and it’s integral value‘[x]’and is symbolically denoted as {x}.Thus, e.g. if x = 5.68, then [x] = 5 and {x} = 0.68. If x is an integer {x} = 0 {[x]} = 0. ⇒ If then then Figure: 1.8 Domain → R; Range → [0,1); Period → 1; Nature → neither even nor odd \u0001 Periodic function: A function is said to be a periodic function provided there exists a positive real number T such that for all The least of all such positive numbers T is called the principal period or fundamental period or simply period of f. \u0001 To check the periodicity of a function put and solve this equation to find the positive values of T independent of x. If positive values of T independent of x are obtained, then is a periodic function and the least positive value of T is the period of the function If no positive value of T independent of x is obtained then is non-periodic function. \u0001 A constant function is periodic but does not have a well- defined period. \u0001 If is periodic with period p, then where is also period with period \u0001 If is periodic with period p, then a where is also periodic with period p. \u0001 If is periodic with period p, then where is also period with period Let has period (m, n ∈N and co-prime) and has period (r, s ∈N and co-prime) and let t be the LCM of p and q i.e. , then t shall be the period of provided there does not exist a positive number) for which f (k + x) + g(k + x) = f (x)+g(x), else k will be the period. The same rule is c applicable for any other algebraic combination of and Multiple Choice Questions One and More than One Correct",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 1,
+    "stem": "If r, s, t are prime numbers and p, q are the positive integers such that the LCM of p, q is then the number of ordered pair is",
+    "options": [
+      "252",
+      "254",
+      "225",
+      "224"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 2,
+    "stem": "Let f be a non-negative function defined on the interval 1 [0, ]. If 2 0 1 ( ( )) ′ − ∫ x f t 0 ( ) , 0 1, = ≤ ≤ ∫ x dt f t dt x and (0) 0, = f then 1 1 2 2  >     f and 1 1 3 3  <     f ( ) 2 3 y f x x = = + ( ) sin . g x x = ( )( ) { ( )} ( ) g o f x g f x g y = = (2 3) sin(2 3) g x x = + = +",
+    "options": [
+      " 1 1 2 2  <     f and 1 1 3 3  >     f",
+      " 1 1 2 2  >     f and 1 1 3 3  >     f",
+      " 1 1 2 2  <     f and 1 1 3 3  <     f",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 1,
+    "stem": "P + ( 1). P x P ≤ < + { } [ ], x x x = − [ ] x x ⇒ = ⇒ [ ) 0, 1 , x ∈ [ ] 0 { } x x x = ⇒ = [1,2), x ∈ [ ] 1 { } 1 x x x = ⇒ = − : f X Y → ( ) ( ), f x T f x + = . x X ∈ ( ) ( ) f T x f x + = ( ) f x ( ). f x ( ) f x ( ) f x ( ) f ax b + , ( 0) a b R a ∈ ≠ / | |. p a ( ) f x ( ) f x b + , ( 0) a b R a ∈ ≠ ( ) f x ( ) f ax b + , ( 0) a b R a ∈ ≠ / | |. p a ( ) f x / p m n = ( ) g x / q r s = LCM of ( , ) HCM of ( , ) m r t r s = f g + ( ) k t < ( ) f x ( ). g x 2 4 2, r t s ( , ) p q 0 0 0 0 1 Y 2 3 –1 –2 X (0, 1) { } y x = f x1 x2 x3 g ( )( ) go f x z1 z2 z3 y1 y2 y3 _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 6",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Let S = {1, 2, 3, 4}. The total number of unordered pairs of disjoint subsets of S is equal to",
+    "options": [
+      "25",
+      "34",
+      "42",
+      "41"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 4,
+    "stem": "Let P { :sin cos 2cos } θ θ θ θ = − = and Q = {θ : sinθ  + cos θ 2 sin } = θ be two sets. Then",
+    "options": [
+      "P Q ⊂ and Q P φ − ≠",
+      "Q P ⊄",
+      "P Q ⊄",
+      "P = Q"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 5,
+    "stem": "Let 2 ( ) f x x = and ( ) sin g x x = for all ∈ . x ℝ Then the set of all x satisfying (f o g o g o f) (x) = (g o g o f) (x), where (f o g) (x) = f (g(x)), is , {..., 2, 1,0,1,2...} n n π ∈ − −",
+    "options": [
+      " , {0,1,2...} n n ± π ∈",
+      " , {1,2...} n n ± π ∈",
+      " 2 , {..., 2, 1,0,1,2...} 2 n n π + π ∈ − −",
+      "2"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 6,
+    "stem": "The function f: [0, 3] →[1, 29], defined by 3 2 ( ) 2 15 36 1, f x x x x = − + + is",
+    "options": [
+      "one-one and onto.",
+      "onto but not one-one.",
+      "one-one but not onto.",
+      "neither one-one nor onto."
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 7,
+    "stem": "Let and be two sets containing 2 elements and 4 elements respectively. The number of subsets of having 3 or more elements is",
+    "options": [
+      "256",
+      "220",
+      "219",
+      "211"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 8,
+    "stem": "If and the equation (where [x] denotes the greatest integer x) has no integral solution, then all possible values of a lie in the interval:",
+    "options": [
+      "( 1,0) (0,1) − ∪",
+      "(1, 2)",
+      "(–2, –1)",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 9,
+    "stem": "If and where N is the set of natural numbers, then is equal to:",
+    "options": [
+      "N",
+      "Y – X",
+      "X",
+      "Y"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 10,
+    "stem": "Let be given by Then is an even function",
+    "options": [
+      " is an odd function",
+      " is a one-one function",
+      " is an onto function",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 11,
+    "stem": "Let A and B be two sets containing four and two elements respectively. Then the number of subsets of the set",
+    "options": [
+      "219",
+      "256",
+      "275",
+      "510"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 12,
+    "stem": "Let for all and for all Let (f o g)(x) denote f (g(x)) and (g o f)(x) denote g(f (x)). Then which of the following is (are) true? such that",
+    "options": [
+      "Range of f is",
+      "Range of f o g is",
+      "",
+      "There is an"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 13,
+    "stem": "If 1 ( ) 2 3 , 2 f x f x  + =   0, ≠ x and { : ( ) = ∈ S x R f x ( )} f x = − ; then S:",
+    "options": [
+      "is an empty set",
+      "contains exactly one element",
+      "contains exactly two elements",
+      "contains more than two elements"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 14,
+    "stem": "Let ,a b R ∈ and : f R R → bedefined by 3 ( ) cos(| |) | | sin f x a x x b x = − + 3 (| |). x x + Then f is 1 x = if 1 a = and 1 b =",
+    "options": [
+      "differentiable at 0 x = if 0 a = and 1 b =",
+      "differentiable at 1 x = if 1 a = and 0 b =",
+      "not differentiable at 0 x = if 1 a = and 0 b =",
+      "not differentiable at"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 15,
+    "stem": "Let a,b,c∈R. If 2 ( ) = + + f x ax bx c is such that 3 + + = a b c and ( ) ( ) ( ) , + = + + f x y f x f y xy , ∀ ∈ x y R then 10 1 ( ) =∑ n f n is equal to A B A B × a R ∈ 2 2 3( [ ] 2( [ ]) 0 x x x x a − − + − + = ≤ ( , 2) (2, ) −∞− ∪ ∞ {4 3 1: } n X n n N = − − ∈ {9( 1): }, Y n n N = − ∈ X Y ∪ : , R 2 2 π π   − →     f 3 ( ) (log(sec tan )) . f x x x = + ( ) f x ( ) f x ( ) f x ( ) f x , × A B ( ) sin sin sin 6 2     =         π π f x x ∈ x R ( ) sin 2 = π g x x . ∈ x R 1 1 , 2 2   −     1 1 , 2 2   −     0 ( ) lim ( ) 6 → = π x f x g x ∈ x R ( )( ) 1 g f x = \u0002 _ 7 Set Relations and Functions",
+    "options": [
+      "190",
+      "255",
+      "330",
+      "165"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 16,
+    "stem": "If S is the set of distinct values of 'b' for which the following system of linear equations 1 + + = x y z 1 x ay z + + = 0 ax by z + + = has no solution, then S is",
+    "options": [
+      "a finite set containing two or more elements",
+      "a singleton",
+      "an empty set",
+      "an infinite set"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 17,
+    "stem": "The function 1 1 : , 2 2   →−     f R defined as 2 ( ) 1 = + x f x x is 18 Let { } 1, 2, 3, ..., 9 S = . For k = 1, 2, ..., 5, let k N be the number of subsets of S, each containing five elements out of which exactly k are odd. Then N1 + N2 + N3 + 4 5 + = N N",
+    "options": [
+      "125",
+      "210",
+      "252",
+      "126"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 19,
+    "stem": "If ( ) ( ) ( ) ( ) cos 2 cos 2 sin 2 cos cos sin sin sin cos x x x f x x x x x x x = − − , then ( ) ' 0 f x = at exactly three points in ( ) , −π π",
+    "options": [
+      " ( ) f x attains its maximum at x = 0",
+      " ( ) f x attains its minimum when x = 0",
+      " ( ) ' 0 f x = at more than three points in ( ) , −π π",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 20,
+    "stem": "Let f :[0, ] ∞→ℝ be a continuous function such that 1 0 ( ) 1 2 ( ) − = − + ∫ x x f x x e f t dt For all [0, ). ∈ ∞ x Then, which of the following statement(s) is (are) True? ( ) { } 2 , [0,1] : ( ) 1 x y f x y x ∈ × ≤ ≤ − ℝ is 1 4 π −",
+    "options": [
+      "The curve ( ) = y f x passes through the point (1, 2)",
+      "The curve ( ) = y f x passes through the point (2, –1)",
+      "The area of the region ( ) { } 2 , [0,1] : ( ) 1 x y f x y x ∈ × ≤ ≤ − ℝ is 2 4 π −",
+      "The area of the region"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 21,
+    "stem": "Two sets A and B are as under: {( , ) :| 5| 1and| 5| 1} A a b R R a b = ∈ × − < − < 2 2 {( , ) : 4( 6) 9( 5) 36}, B a b R R a b = ∈ × − + − ≤ Then B φ ∩ = (an empty set)",
+    "options": [
+      "Neither A B ⊂ nor B A ⊂",
+      "B A ⊂",
+      "A B ⊂",
+      "A"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 22,
+    "stem": "Let { : 0 S x R x = ∈ ≥ and 2 3 ( 6) 6 0} x x x − + − + = Then S:",
+    "options": [
+      "Contains exactly four elements",
+      "Is an empty set",
+      "Contains exactly one element",
+      "Contains exactly two elements"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 23,
+    "stem": "If 2 cos ( ) 2 cos − = + x x f x x x and ( ) log ,( 0) = > e g x x x then value of integral / 4 / 4 ( ( )) −∫g f x dx π π is: e",
+    "options": [
+      "log 3 e",
+      "log 2 e",
+      "loge e",
+      "log 1"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 24,
+    "stem": "Let ƒ(x) = ax (a> 0) be written as ƒ(x) = ƒ1(x) + ƒ2(x), where ƒ1(x) is an even function of ƒ2(x) is an odd function. Then ƒ1(x + y) + ƒ1(x – y) equals",
+    "options": [
+      "2ƒ1(x)ƒ1(y)",
+      "2ƒ1(x)ƒ2(y)",
+      "2ƒ1(x + y)ƒ2(x – y)",
+      "2f1(x + y)ƒ1(x – y)"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 25,
+    "stem": "For x ∈ R – {0, 1}, let 1 1 ( ) , = f x x 2( ) 1 = − f x x and 3 1 ( ) 1 = − f x x be three given functions. If a function J(x) satisfies 2 1 3 ( º º )( ) ( ) = f J f x f x then J(x) is equal to: 3 1 ( ) f x x",
+    "options": [
+      " 3( ) f x",
+      " 1( ) f x",
+      " 2( ) f x",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 26,
+    "stem": "Let A = {xεR:x is not a positive integer} Define a function f : A→R as f (x) 2 ( ) 1 x f x x = − then f is _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 8",
+    "options": [
+      "injective but not subjective",
+      "not injective",
+      "subjective but not injective",
+      "neither injective nor subjective"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 27,
+    "stem": "In a class of 140 students numbered 1 to 140, all even numbered students opted mathematics course, those whose number is divisible by 3 opted Physics course and those whose number is divisible by 5 opted Chemistry course. Then the number of students who did not opt for any of the three courses is:",
+    "options": [
+      "102",
+      "42",
+      "1",
+      "38"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 28,
+    "stem": "Let N be the set of natural numbers and two functions f and g be defined as f, g: N→N such that: 1 if isodd 2 ( ) if iseven 2 n n f n n n +   =   and g(n) = n–(–1)n. The f o g is:",
+    "options": [
+      "Both one-one and onto",
+      "One-one but not onto",
+      "Neither one-one nor onto d. onto but not one-one",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 29,
+    "stem": "Let f :R→R be defined by 2 ( ) , 1 x f x x = + x∈R. Then the range of  f is [ 1,1] R −−",
+    "options": [
+      "(–1, 1) –{0}",
+      " 1 1 , 2 2   −    ",
+      " 1 1 , 2 2 R   −−    ",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 30,
+    "stem": "Let a function f: (0, ∞) → (0, ∞) be defined by 1 ( ) 1 . = − f x x Then f is:",
+    "options": [
+      "Injective only",
+      "It is surjective",
+      "Both injective as well as surjective",
+      "Neither injective nor surjective"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 31,
+    "stem": "Let S be the set of all points in (–π, π) at which the function, f(x) = min {sin x, cos x} is not differentiable. Then S is a subset of which of the following? ,0, 4 4 π π   −    ",
+    "options": [
+      " 3 3 , , , 4 4 4 4 π π π π   − −    ",
+      " 3 3 , , , 4 2 2 4 π π π π   − −    ",
+      " , , , 2 4 4 2 π π π π   − −    ",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 32,
+    "stem": "Let S = {1,2,3, ...., 100}. The number of non-empty subsets A of S such that the product of elements in A is even is: 50 2 1 +",
+    "options": [
+      " 50 50 2 (2 1) −",
+      " 100 2 1 −",
+      " 50 2 1 −",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 33,
+    "stem": "Let Z be the set of integers. If { : 2( 2) = ∈ + A x Z x 2 ( 5 6)} 1 − + = x x and { : 3 2 1 9}, = ∈ −< −< B x Z x then",
+    "options": [
+      "218",
+      "210",
+      "215",
+      "212"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 34,
+    "stem": "In a class of 60 students, 40 opted for NCC, 30 opted for NSS and 20 opted for both NCC and NSS. If one of these students is selected at random, then the probability that the student selected has opted neither for NCC nor for NSS is:",
+    "options": [
+      "2/3",
+      "1/6",
+      "1/3",
+      "5/6"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 35,
+    "stem": "Let : f R R → be a function we say that f has Property 1 if 0 ( ) (0) lim | | h f h f h → − exist and is finite, Property 2 if 2 0 ( ) (0) lim h f h f h → − exist and is finite. Then which of the following options is/are correct? ( ) | | f x x = has property 1",
+    "options": [
+      " ( ) | | f x x x = has property 2",
+      " 2 / 3 ( ) f x x = has property 1",
+      " ( ) sin f x x = has property 2",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 36,
+    "stem": "Let : f R R → be given by Define 0 ( ) ( ) ,",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 0,
+    "stem": "x F x f t dt x = > ∫ Then which of the following options is/are correct? ( ) F x has a local minima at 1 x = Matrix Match / Column Match",
+    "options": [
+      " ( ) 0, (0,5) F x x ≠ ∀∈",
+      "F(x) has two local maxima and one local minima in (0, ) ∞",
+      " ( ) F x has a local maxima at 2 x =",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 37,
+    "stem": "Match the statements given in Column I with the interval/union of intervals given in Column II Column I Column II",
+    "options": [
+      "The set 2 2iz Re : z 1 z         −     is a complex number, | z | 1, z 1 = ≠± is 1.( , 1) (1, ) −∞−∪ ∞ ( ) ( 1)( 2)( 5). f x x x x = − − − _ 9 Set Relations and Functions",
+      "The domain of the function 1 ( ) sin f x − = 2 2( 1) 8(3) 1 3 x x − −     −   is",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 2,
+    "stem": "( , 0) (0, ) −∞ ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "If 1 tan 1 ( ) tan 1 tan , 1 tan 1 f θ θ = − θ θ − − θ then the set ( ) : 0 2 f π   θ ≤θ <     is",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 4,
+    "stem": "( , 1] [1, ) −∞− ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 5,
+    "stem": "( ,0] [2, ) −∞ ∪ ∞",
+    "options": [
+      "A→4; B→2, 4; C→4; D→2",
+      "A→4; B→5; C→3; D→3",
+      "A→2; B→1, 4; C→3; D→4",
+      "A→1; B→2; C→5; D→4"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 38,
+    "stem": "Match the Column Column I Column II",
+    "options": [
+      "In if the magnitude of the projection vector of the vector on is and if then possible value(s) of is (are)",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 5,
+    "stem": "5 1, 2, 3, 5; B 2, 4; C 1, 2, 3, 4; D 1, 3, 5 Paragraph Paragraph for Questions 39 to 41 Consider the polynomial 2 3 ( ) 1 2 3 4 . f x x x x = + + + Let s be the sum of all distinct real roots of f(x) and let t = |s|.",
+    "options": [
+      "A 3, 4, 5; B 1, 5; C 2, 3, 4, 5; D 1, 2, 3, 5",
+      "A 3, 5; B 1, 4; C 1, 2, 3, 5; D 1, 2, 3, 5",
+      "A 1, 2; B 1, 2; C 1,2,4, 5; D 2, 5",
+      "A"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 39,
+    "stem": "The real number s lies in the interval 1 0, 4      ",
+    "options": [
+      " 1 ,0 4   −    ",
+      " 3 11, 4   − −    ",
+      " 3 1 , 4 2   − −    ",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 40,
+    "stem": "The area bounded by the curve y = f (x) and the lines x = 0, y = 0 and x = t, lies in the interval 21 0,64      ",
+    "options": [
+      "3 ,3 4      ",
+      "21 11 , 64 16      ",
+      "(9,10)",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 41,
+    "stem": "The 3 function f’ (x) is 2, R ˆ ˆ α β + i j ˆ ˆ 3 + i j 3 α | 2 3β, = + |α| { 2 2 3 2, 1 ( ) , 1 − − < = + ≥ ax x f x bx a x . ∈ x R ω 1 ≠ 2 4 3 (3 3 2 ) + − + ω ω n 2 4 3 (2 3 3 ) + + + − ω ω n 2 4 3 ( 3 2 3 ) 0, + + −+ + = ω ω n | | − q a → → → → → → → → → → → → → → → → _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 10 Paragraph for Questions 42 to 43 Let the ( ) sin( cos ) f x x π = and ( ) cos(2 sin ) g x x π = be two functions defined for x > 0. Define the following sets whose elements are written in increasing order. { : ( ) 0}, { : '( ) 0} X x f x Y x f x = = = = { : ( ) 0}, { : '( ) 0} X x g x W x g x = = = = Column-I Column -II",
+    "options": [
+      "X",
+      "decreasing in 1 , 4 t   −−     and increasing in 1 , 4 t   −    ",
+      "increasing in (–t, t)",
+      "decreasing in (–t, t)"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 1,
+    "stem": "3 , ,4 ,7 2 2 π π π π   ⊇   ",
+    "options": [
+      "Option A",
+      "Y",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 2,
+    "stem": "An arithmetic progression",
+    "options": [
+      "Option A",
+      "Option B",
+      "X",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 3,
+    "stem": "Not an arithmetic prog- ression",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "W"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 4,
+    "stem": "7 13 , , 6 6 6 π π π   ⊇   ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 5,
+    "stem": "2 , , 3 3 π π π   ⊇   ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 6,
+    "stem": "3 , 6 4 π π   ⊇   ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 42,
+    "stem": "Which of the following is the only correct combination?",
+    "options": [
+      "(D) – 1,3,4",
+      "(C) – 3,6",
+      "(C) – 1,2,6",
+      "(D) – 2, 5"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 43,
+    "stem": "Which is the only correct combination? Integer & Subjective",
+    "options": [
+      "(A) – 2,6",
+      "(B)–2,6",
+      "(B) – 3,4",
+      "(A) – 1,2"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 44,
+    "stem": "Find the range of values of t for which 2 2 1 2 5 2sin , , . 2 2 3 2 1 x x t t x x π π − +   = ∈−   − −  ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 45,
+    "stem": "The number of 5 digit numbers which are divisible by 4, with digits from the set {1, 2, 3, 4, 5} and the repetition of digits is allowed, is _______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 46,
+    "stem": "Let X be the set consisting of the first 2018 terms of the arithmetic progression 1, 6, 11,...., and Y be the set consisting of the first 2018 terms of the arithmetic progression 9, 16, 23, ... . Then, the number of elements in the set X ∪ Y is _______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 47,
+    "stem": "Let Xbe a set with exactly 5 elements and Y be a set with exactly 7 elements. If α is the number of one-one functions from X to Y andβ is the number of onto functions from Y to X, then the value of 1 ( ) 5! β α − is ______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 48,
+    "stem": "Let : → ℝ ℝ f be a differentiable function withf(0) = 1 and satisfying the equation ( ) ( ) '( ) + = f x y f x f y '( ) ( ) + f x f y for all , . ∈ℝ x y Then, the value of log ( (4)) e f is ______.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 49,
+    "stem": "Let S be the set of matrices of order 3 x 3, such that all elements of the matrix belong to {0,1}.Let E1= { :| | 0}; A S A ∈ = where |A| denotes determinant of matrix",
+    "options": [
+      " 2 { : E A S = ∈ Sum of elements of 7}. A = Find P(E1/E2)",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 50,
+    "stem": "A set S is given by{1,2,3,4,5,6}. | | X is a number of elements in set X. Subsets A and B of set S are chosen such that each elements of S is equally likely and 1 | | | |. B A ≤ < Then the number of ordered pairs of (A, B) are ANSWERS & SOLUTIONS",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 10,
+    "stem": "(a, b, c) hence is odd function Let is one-one function Hence is one-one function. And Hence is an on to function.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 11,
+    "stem": "(a) Set A has 4 elements, Set B has 2 elements Number of elements in set Total number of subsets of Number of subsets having 0 elements Number of subsets having 1 element each ∴ Number of subsets having 2 elements each Number of subsets having at least 3 elements",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 12,
+    "stem": "(a, b, c) Given Also, Hence, Range of [ , ] A x y = , { , , } d B a b c = A B × 2 4 8 × = A B × 82 256 = ∴ A B × 8 2 null set single ton set subset having 2 elements 256 1 8 C     = − + +     256 1 5 28 219 = −−− = 2 2 3( [ ]) 2( [ ]) 0 x x x x a − − + − + = 2 2 3{ } 2{ } 0 x x a − + + = ∴ 2 2 2 4 12 1 1 3 { } 6 3 a a x −± + ± + = = − 0 { } 1 x ≤ < 2 1 1 3 0 1 3 a + + ≤ < 2 1 1 3 2 a −≤ + < 2 1 3 4 a + < 2 3( 1) 0 a − < ( 1,1) a∈− 0 a ≠ 4 3 1, n x n n N = − − ∈ (1 3) 3 1, n x n n N = + − − ∈ ⇒ 0,9,54, ... X = 9( 1), y n n N = − ∈ ⇒ 0,9,18, ... y = ⇒ . x y y ∪ = 3 ( ) (log(sec tan )) , 2 2 π π   = + ∀ ∈−     f x x x x ( ) ( ), − = − f x f x ( ) f x ( ) sec tan , 2 2 π π   = + ∀ ∈−     g x x x x ⇒ ( ) sec (sec tan ) 0 , 2 2 π π   ′ = + + > ∀ ∈−     g x x x x x ⇒ ( ) g x 3 (log ( ( ))) e g x ( ) (0, ) , 2 2 π π   ∈ ∝∀ ∈−     g x x ⇒ log( ( )) . ∈ g x R ( ) f x ∴ ( ) 4 2 8 × = × = A B ∴ 8 ( ) 2 256 × = = A B 0 8 1 = = C 1 8 8 = = C 2 8! 8 7 8 28 2!6! 2 × = = = = C 256 1 8 28 256 37 219 = −−− = − = ( ) sin 2 g x x x R π = ∀ ∈ 1 ( ) sin ( ( )) 3 f x g g x   =     ( ( ( ))) , 2 2 g g g x x R π π   ∈− ∀ ∈     1 1 ( ) and ( ( )) , 2 2 f x f g x   ∈−     0 0 1 1 sin ( ( )) ( ( )) ( ) 3 3 lim lim 1 ( ) ( ) ( ( )) 3 x x g g x g g x f x g x g x g g x → →       = ⋅ ⇒ 0 sin sin 2 lim 6 6 sin 2 x x x π π π π →       ⋅ = 1 1 ( ( )) sin , sin 2 2 2 2 g f x π π       ∈−             ⇒ ( ( ))",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 1,
+    "stem": "g f x ≠ _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 12",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 13,
+    "stem": "(c) . . .(i) 1 3 2 ( ) f f x x x  + =     . . .(ii) 2 ( ) f x x x = − Now Exactly two elements",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 14,
+    "stem": "(a,b) at 0, x = 0 x = is repeated root of 3 ( ) | | sin | | g x x x x = + hence ( ) f x is differentiable & at 1 x = ⇒ 3 3 cos | | cos( ) a x x a x x − = − as cos( ) cos( ) θ θ − = ∴ ( ) f x is differentiable",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 15,
+    "stem": "(c) 2 ( ) f x ax bx c = + + (1) 3 f a b c = + + = Now ( ) ( ) ( ) f x y f x f y xy + = + + Put 1 y = ( 1) ( ) (1) f x f x f x + = + + ( 1) ( ) 3 f x f x x + = + + Now (2) 7 f = , (3) 12 f = Now 3 7 12 ..... n n S t = + + + . . .(i) 1 3 7 ..... n n n S t t − = + + + . . .(ii) On subtracting (ii) from (i), we get 3 4 5 ..... nt = + + + upton terms ⇒ 2 ( 5 ) 2 n n n t + = ⇒ 2 ( 5 ) 2 n n n n S t + = Σ =∑ ⇒ 1 ( 1) (2 1) 5 ( 1) 2 6 2 n n n n n n S + + +   = +     ⇒ 10 330 S =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 16,
+    "stem": "(b) 1 1 1 1 1 0 1 D a a b = = ⇒ 1 a = and at 1 a = ⇒ 1 2 3 0 D D D = = = But at 1 a = and 1 b = First two equations are and third equation is 0 0 x y z x y z + + =   + + =  ⇒ There is no solution. ∴ {1} b = is a singleton set.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 17,
+    "stem": "(a) 1 1 : , 2 2 f R   →−     , 2 ( ) 1 x f x x R x = ∀ ∈ + ⇒ 2 2 2 2 2 (1 ) 1 2 ( 1)( 1) ( ) (1 ) (1 ) x x x x x f x x x + ⋅− ⋅ − + − ′ = = + + ∴ From above diagram of f(x), f(x) is surjective but not injective.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 18,
+    "stem": "(d) 1 2 3 4 5 N N N N N + + + + 5 4 5 4 5 4 5 4 5 1 4 2 3 3 2 4 1 5 C C C C C C C C C = ⋅ ⋅+ ⋅ + ⋅ + ⋅ + 5 40 60 20 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 126,
+    "stem": "= + + + + =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 19,
+    "stem": "(a, c) ( ) ( ) ( ) ( ) cos2 1 cos2 cos2 sin 2 sin2 f x x x x x x = − − + − 2 2 cos 2 cos 2 sin 2 x x x = + − 2 2 cos 2 cos2 1 x x = + − 2 1 2 cos2 1 2 x   = + −     is maximum has x = 0.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 20,
+    "stem": "(b, c)∵ 1 0 ( ) 1 2 ( ) − = − + ∫ x x f x x e e f t dt . . . (i) On differentiating both sides and using eq. (1) ( ) 2 ( ) 2 3 = + − f x f x x ∴ 2 2 3 − = − dy y x dx Using linear differential equation concept. 2 1 . − = −+ + x y x c e . . . (ii) when 0, = x 1 0 = ⇒ = y c ∴ 1 + = x y . . . (iii) It passes through (2, –1) Now 2 1 1 − ≤ ≤ − x y x 1 ( ) 2 3   + =     f x f x x : ( ) ( ) = − S f x f x ∵ 1 ( ) 2 3   + =     f x f x x 1 → x x (1) 2 (2) −× 6 3 ( ) 3 − = − f x x x ( ) ( ) = − f x f x ∴ 2 2 − = + x x x x 4 2 = x x 2 = x x ⇒ 2 = ± x (0,1) (1,0) 1– x= y 2 1 = − y x x= 1 x y O (0, 0) (1, –1/2) (1, 1/2) x = –1 x = 1 singof f′(x) _ 13 Set Relations and Functions",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 21,
+    "stem": "(c) As, 5 1 a − < and 5 1 b − < ⇒ 4 , 6 a b < < and 2 2 ( 6) ( 5) 1 9 4 a b − − + ≤ Taking axes as a-axis and b-axis The set A represents square PQRS inside set B representing ellipse and hence . A B ⊂",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 22,
+    "stem": "(d) 2 3 ( 6) 6 0 x x x − + − + = 2 3 ( 3 3)( 3 3) 6 0 x x x − + −+ −− + = 2 2 3 ( 3) 3 0 x x − + − −= 2 ( 3) 2 | 3| 3 0 x x − + − −= (| 3| 3)(| 3| 1) 0 x x − + − − = ⇒ | 3| 1,| 3| 3 0 x x − = − + ≠ ⇒ 3 1 x − = ± ⇒ 4,2 x = 16,4 x =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 23,
+    "stem": "(d) 2 cos (( )) ( ( )) 2 cos −⋅   = =   + ⋅   ℓ ℓ x x g f n f x n x x ∴ / 4 2 cos 2 cos −/4 − ⋅   =   + ⋅   ∫ℓ x x I n dx x x π π / 4 2 cos 2 cos 2 cos 2 cos −/4  − ⋅ + ⋅      = +       + ⋅ − ⋅       ∫ ℓ ℓ x x x x n n dx x x x x π π / 2 0 (0) 0 = = ∫ dx π log 1 = e",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 24,
+    "stem": "(a) ( ) , 0 x f x a a = > ( ) 2 x x x x a a a a f x − − + + − = ⇒ 1( ) 2 x x a a f x − + = 2( ) 2 x x a a f x − − = ⇒ 1 2 ( ) ( ) f x y f x y + + − 2 2 x y x y x y x y a a a a + −− − −+ + + = + ( ) ( ) 2 x x y y a a a a − − + = + 1 1 ( ) 2 ( ) f x f y = × 1 1 2 ( ) ( ) f x f y =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 25,
+    "stem": "(a) Given 1 1 ( ) , = f x x 2( ) 1 = − f x x and 3 1 ( ) 1 = − f x x 2 1 3 ( º º )( ) ( ) = f J f x f x 2 1 3 º ( ( ( ))) ( ) = f J f x f x 2 1 º 1  1   =     −     f J x x 1 1 1 J x x 1   − =   −   1 1 1 1 1 1 −  = − = =   − − −   x x J x x x x New 1 → x x 3 1 1 ( ) ( ) 1 1 1 = = = − − x J x f x x x",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 26,
+    "stem": "(a) 1 ( ) 2 1 1 f x x   = +   −   2 2 ( ) ( 1) f x x ′ = − ⇒ ƒ is one-one but not onto",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 27,
+    "stem": "(d) Let n(A) = number of students opted Mathematics = 70, n(B) = number of students opted Physics = 46, n(C) = number of students opted Chemistry = 28, n(A ∩ B) = 23, n(B ∩ C) = 9, n(A ∩ C) = 14, n(A ∩ B ∩ C) = 4, Now n(A ∪ B ∪ C) = n(A) + n(B) + n(C) – n(A ∩ B) – n(B ∩ C) – n(A ∩ C) + n(A ∩ B ∩ C) = 70 + 46 + 28 – 23 – 9 – 14 + 4 = 102 So number of students not opted for any course = Total – n(A∪B∪C)= 140 – 102 = 38",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 28,
+    "stem": "(d) 1 isodd 2 ( ) iseven 2 n n f x n n +   =    1; is odd ( ) ( ) –1; is odd n n n g x n n n n +  = −−   n n   =  +  ; iseven 2 ( ( )) 1; isodd 2 n f g n n ∴ many one but onto",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 29,
+    "stem": "(b) (0) 0 f = and f (x) is odd. Further, if x> 0 then 1 1 ( ) 0, 1 2 f x x x   = ∈    + Hence 1 1 ( ) , 2 2 f x   =∈−     (3,5) (6,4) (6,5) b =5 (6,6) b a = 6 (6,7) ⇒ (4,5) S R (9,5) (6,3) a (0,0) Q P 2 2 ( 6) ( 5) 1 9 4 a b − − + ≤ ε _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 14",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 30,
+    "stem": "(b) 1 | 1| ( ) 1 − = − = x f x x x 1 1 0 1 1 1 − < ≤  = −  ≥  x x x x x ⇒ ƒ(x) is not injective but range of function is [0, ∞) Remark: If co-domain is [0, ∞), then ƒ(x) will be surjective",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 32,
+    "stem": "(a) S = {1,2,3------100} = Total non empty subsets-subsets with product of element is odd = 2100 – 1 – 1[(250–1)] = 2100 – 250= 250(250 – 1)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 33,
+    "stem": "(c) 2 ( 2)( 5 6) { : 2 1} + − + = ∈ = x x x A x Z 2 ( 2)( 5 6) 0 2 2 + − + = x x x ⇒x = –2, 2, 3 A = {–2, 2, 3} B = {x ∈Z : –3 < 2x – 1 < 9} B = {0, 1, 2, 3, 4} A × B has is 15 elements so number of subsets of A × B is 215",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 34,
+    "stem": "(b) A→ opted NCCB→opted NSS ∴ P (neither A nor B) 10 1 60 6 z = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 35,
+    "stem": "(b,d) 0 | | 0 lim 0 | | h h h → − =",
+    "options": [
+      " ( ) | | f x x x = ⇒ 2 0 ( ) (0) lim h f h f h → − 2 0 | | 0 lim h h h h → − = does not exist",
+      " 2 / 3 0 0 lim 0 | | h h h → − =",
+      " 2 0 sin 0 lim h h h → − does not exist",
+      ""
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 36,
+    "stem": "( ) ( 1)( 2)( 5) f x x x x = − − − 0 ( ) ( ) x F x f t dt =∫ ∴ '( ) ( ) ( 1)( 2)( 5) F x f x x x x = = − − − ⇒ ( ) F x has two local minima points at 1 x = and 5 x = ( ) f x has one local maxima point at 2 x =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 37,
+    "stem": "(a) (A) 2 2 2 2i(x iy) 2i(x iy) z 1 (x iy) 1 (x y 2ixy) + + = = − + − − + Using 2 2 1 x y − = 2 2ix 2y 1 Z . y 2y 2ixy − = = − − ∵ 1 1 1 y 1 1or",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 1,
+    "stem": "y y −≤ ≤⇒− ≤− − ≥",
+    "options": [
+      "Option A",
+      "Fordomain x 2 2(x 1) 8.3 1 1 1 3 − − −≤ ≤ − ⇒ x x 2 2x 2 3 3 1",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 1,
+    "stem": "1 3 − − − −≤ ≤ − Case (i): x x 2 2x 2 3 3 1 0 1 3 − − − −≤ − ⇒ x x 2 2x 2 (3 1)(3 1) 0 (3 1) − − − − ≥ − ⇒ x ( ,0] (1, ). ∈−∞ ∪ ∞ Case (ii): x x 2 2x 3 3 1 0 1 3 2 − − + ≥ − − ⇒ x 2 x x x 2 (3 1)(3 1) 0 (3 .3 1) − − − + ≥ − ⇒x ( ,1) [2, ). ∈−∞ ∪ ∞ So, x ( , 0] [2, ). ∈−∞ ∪ ∞",
+    "options": [
+      "Option A",
+      "Option B",
+      " 1 1 3 R R R → + 0 0 2 ( ) tan 1 tan 1 tan 1 = − − − f θ θ θ θ 2 2 2(tan 1) 2sec . θ θ = + =",
+      " 1/2 3/2 1/2 3 15 ( ) ( ) (3 10) ( ) 3 ( ) ( 2) 2 2 = − + × = − ′ f x x x x x x Increasing, when"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 2,
+    "stem": "≥ x A 20 20 10 B 3 4 π − 4 π y x f(x) 1 – + + – 1 2 5 _ 15 Set Relations and Functions",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 38,
+    "stem": "(a) (A) . . .(i) Given . . .(ii) From equation (i) and (ii), we get So",
+    "options": [
+      "Option A",
+      " For continuity . . .(i) For differentiability",
+      " 2 4 3 2 4 3 2 4 3 (3 3 2 ) (2 3 3 ) ( 3 2 3 ) n n n ω ω ω ω ω ω + + + − + + − + + −+ + 2 4 3 2 2 4 3 2 2 2 4 3 (3 3 2 ) ( (2 3 3 )) ( ( 3 2 3 ) 0 n n n ω ω ω ω ω ω ω ω + + + − + + + − + − + + =",
+      "Let Given"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 39,
+    "stem": "(c) Since, 1 3 0 2 4 f f S     − ⋅ − < ⇒         lie in 3 1 , . 4 2   − −    ",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 40,
+    "stem": "(a) 3 1 4 2 s − < < − 1 3 2 4 t < < 1/2 3/4 3 2 3 2 0 0 (4 3 2 1) area (4 3 2 1) x x x dx x x x dx + + + < < + + + ∫ ∫ 4 3 1/ 2 4 3 2 3/ 4 0 0 [ ] area [ ] x x x x x x x x 2 + + + < < + + + 1 1 1 1 81 27 9 3 area 16 8 4 2 256 64 16 4 + + + < < + + + 15 525 area . 16 256 < <",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 41,
+    "stem": "(b) ''( ) 2[12 3] 0 1/ 4. f x x x = + = ⇒ = −",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 43,
+    "stem": "(d) ( ) 0 sin( cos ) 0 f x x π = ⇒ = ⇒ cos x n π π = ⇒cos x n = ⇒ cos 1,0,1 x = − ⇒ { ,(2 1) } { , } 2 2 X n n n n I π π π = + = ∈ '( ) 0 f x = ⇒cos( cos )( sin ) 0 x x π π − = ⇒ cos (2 1) 2 x n π π = + or x nπ = ⇒ 1 cos 2 x n = + or x nπ = ⇒ 1 cos 2 x = ± or x nπ = ⇒ 2 2 ,2 , , 3 3 Y n n n n I π π π π π   = ± ± ∈     ( ) 0 g x = ⇒cos(2 sin ) 0 x π = ⇒2 sin (2 1) 2 x n π π = + ⇒ 2 1 1 3 sin , 4 4 4 n x + = = ± ± ⇒ 1 1 1 3 sin , sin , 4 4 Z n n n I π π − −   = ± ± ∈     '( ) 0 g x = ⇒ sin(2 sin )(2 cos ) 0 x x π π − = ⇒ 2 sin x n π π = or (2 1) 2 x n π = + ⇒ 1 sin 0, , 1 2 2 n x = = ± ± or (2 1) 2 x n π = + ⇒ ,(2 1) , , 2 6 W n n n n I π π π π   = + ± ∈     0",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 44,
+    "stem": "Let 2sin y t = So, 2 2 1 2 5 3 2 1 x x y x x − + = − − ⇒ 2 (3 5) 2 ( 1) ( 1) 0 y x x y y − − − − + = Since 1, , 3 x R 1   ∈ − −     So, 0 D ≥ ⇒ 2 1 0 y y − −≥ Or, 1 5 2 y + ≥ and 1 5 2 y − ≤ Or, 1 5 sin 4 t + ≥ and 1 5 sin 4 t − ≤ Hence range of t is 3 , , 2 10 10 2 π π π π     − − ∪         3 3 2 α β + = 3 2 3 α β + = ± 2 3 α β = + α 2 1 or = − |α| 1 or 2 = 2 2 1 3 2, ( ) 1 , x ax f x x bx a < − − =  ≥ +  2 3 2 a b a − − = + 2 3 2 a a b + + = − 6a b − = 6a b = − 2 3 2 0 a a − + = 1,2 a = ⇒ 2 4 3 4 8 (3 3 2 ) (1 ) 0 n n n ω ω ω ω + − + + + + = ⇒ 3 , n k k N ≠ ∈ 5 a d = − 5 q d = + 5 2 b d = + | | | 2 | q a d − = 2 4 ab a b = + 2 ab a b = + (5 )(5 2 ) 2(5 5 2 ) 2(10 ) d d d d d − + = − + + = + 2 25 10 5 2 20 2 d d d d + − − = + 2 2 3 5 0 d d − − = 5 1, 2 d d = − = | 2 | 2,5 d = _ JEE-Main & Advanced Chapter-wise Solved Papers: Mathematics 16 \u0002\u0002\u0002",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 45,
+    "stem": "(625)Last two digits can be 12, 24, 32, 44 and 52 Hence, number of 5 digit numbers = 5 × 53 = 625",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 46,
+    "stem": "(3748)X = {1, 6, 11 ..... 10086} Y = {9, 16, 23 ..... 14128} First common term is 16 with common difference 35 16 ( 1)35 = + − nt n 35 19 10086 = − ≤ n ⇒ 288.71 ≤ n Hence number of common terms is 288 ( ) ( ) ( ) ( ) ∪ = + − ∩ n X Y n X n Y n X Y 2018 2018 288 3748 = + − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 47,
+    "stem": "(119)α = Number of one-one functions from X to Y β = Number of onto functions from Y to X = make 5 groups out of 7 elements of Y and permutate these groups to 5 elements of X 4 2 3 7 7 5 5 3.( 1) . 4 ( 2) ( 1) 2. 3 = × + × ⇒ 3 1 7 7 7 ( ) 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 5,
+    "stem": "2 ( 2) 3 β α − = + − 7[5 15 3] 119 = + − =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 48,
+    "stem": "(2) (0) 1, : = → f f R R ( ) ( ) '( ) '( ) ( ) , + = + ∀ ∈ f x y f x f y f x f y x y R Put 0 (0) 2 (0) '(0) '(0) 1/ 2 = = ⇒ = ⇒ = x y f f f f Put 0, = y ( ) ( ) '(0) '( ) (0) = + f x f x f f x f ⇒ 1 ( ) ( ) '( ) 2 = + f x f x f x ⇒ '( ) 1 ln( ( )) ( ) 2 2 = ⇒ = + f x x f x C f x (0) 1 0 = ⇒ = f C ⇒ ln( ( )) 2 = x f x ∴ 4 ln( (4)) 2 2 = = f",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 49,
+    "stem": "(0.50) 2 : E Sum of elements of 7 A = ⇒These are 7 ones and 2 zeros Number of such matrices 9 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 36,
+    "stem": "C = = Out of all such matrices; E1 will be those when both zeros lie in the same row or in the same column. 1 1 1 . 0 1 1 0 1 1 eg           3 3 1 2 2 2 ( ) 2 18 n E E x C x C ∩ = = ↑ ↑ So 1 2 2 ( ) 18 1 ( 1/ 2) ( ) 36 2 n E E n E E n E ∩ = = =",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  },
+  {
+    "questionNumber": 50,
+    "stem": "(1523) Number of ordered pair (A, B) 6 6 6 6 6 6 6 6 6 1 2 3 6 2 3 4 5 6 ( ..... ) ( ) C C C C C C C C C + + + + + + + + 6 6 6 6 6 6 6 3 4 5 6 4 5 6 ( ) ( ) C C C C C C C + + + + + 6 6 5 6 C C 6 6 6 6 6 6 1 2 2 3 5 6 ( ....... ) C C C C C C = + + + 6 6 6 6 6 6 6 6 1 3 2 4 3 5 4 6 ( ) C C C C C C C C + + + + 6 6 6 6 6 6 1 4 2 5 3 6 ( ) C C C C C C + + + 6 6 6 6 6 6 1 5 2 6 1 6 ( ) ( ) C C C C C C + + + 12 6 12 6 12 6 5 1 4 2 3 3 ( ) ( ) ( ) C C C C C C = − + − + − 12 6 12 6 2 4 1 1 ( ) ( ) C C C C + − + − 12 12 6 6 6 1 5 1 4 5 ( ...... ) ( ....... ) C C C C C = + + − + + + 1585 62 1523 = − = _",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "page": 3
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0140",
+    "stem": "Given below are two statements :\nStatement (I) : A spectral line will be observed for a $2p_x \\to 2p_y$ transition.\nStatement (II) : $2p_x$ and $2p_y$ are degenerate orbitals.\nIn the light of the above statements, choose the correct answer from the options given below :",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0194",
+    "stem": "Angular momentum of an electron in a hydrogen atom is $\\frac{3h}{\\pi}$, then the energy of the electron is _______ eV.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atoms.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0269",
+    "stem": "The binding energy per nucleon of ${}^{209}_{83}\\text{Bi}$ is _______ MeV.\n[Take $m({}^{209}_{83}\\text{Bi}) = 208.980388\\text{ u}, m_p = 1.007825\\text{ u}, m_n = 1.008665\\text{ u}, 1\\text{ u} = 931\\text{ MeV/c}^2$]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Nuclear Physics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_classified_fixed.json",
+    "originalId": "jee_cls_0329",
+    "stem": "Two nuclei of mass number $3$ combine with another nucleus of mass number $4$ to yield a nucleus of mass number $10$. If the binding energy per nucleon for the mass numbers $3$, $4$ and $10$ are $5.6$ MeV, $7.4$ MeV and $6.1$ MeV, respectively, then in the process, $\\Delta M c^2 = \\text{\\_\\_\\_\\_\\_}$ MeV.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Nuclei.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_2025_fixed.json",
+    "originalId": "jm_math_2025_22JanS2_065",
+    "stem": "Given below are two statements :\nStatement (I) : A spectral line will be observed for a $2p_x \\to 2p_y$ transition.\nStatement (II) : $2p_x$ and $2p_y$ are degenerate orbitals.\nIn the light of the above statements, choose the correct answer from the options given below :",
+    "options": [
+      "Both Statement-I and Statement-II are true.",
+      "Both Statement-I and Statement-II are false.",
+      "Statement-I is true but Statement-II is false.",
+      "Statement-I is false but Statement-II is true."
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_phy_2026_02AprS1_044",
+    "stem": "Angular momentum of an electron in a hydrogen atom is $\\frac{3h}{\\pi}$, then the energy of the electron is _______ eV.",
+    "options": [
+      "-1.51",
+      "-0.85",
+      "-0.38",
+      "-0.28"
+    ],
+    "solution": "According to Bohr's quantization condition, the angular momentum $L$ of an electron in the $n$-th orbit is given by:\n$L = \\frac{nh}{2\\pi}$\nWe are given $L = \\frac{3h}{\\pi}$. Equating the two expressions:\n$\\frac{nh}{2\\pi} = \\frac{3h}{\\pi} \\implies \\frac{n}{2} = 3 \\implies n = 6$\nThe total energy of an electron in the $n$-th orbit of a hydrogen atom is:\n$E_n = -\\frac{13.6}{n^2}\\text{ eV}$\nSubstituting $n = 6$:\n$E_6 = -\\frac{13.6}{6^2} = -\\frac{13.6}{36} = -0.3777... \\approx -0.38\\text{ eV}$."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_phy_2026_02AprS2_044",
+    "stem": "The binding energy per nucleon of ${}^{209}_{83}\\text{Bi}$ is _______ MeV.\n[Take $m({}^{209}_{83}\\text{Bi}) = 208.980388\\text{ u}, m_p = 1.007825\\text{ u}, m_n = 1.008665\\text{ u}, 1\\text{ u} = 931\\text{ MeV/c}^2$]",
+    "options": [
+      "$7.48$",
+      "$7.84$",
+      "$8.79$",
+      "$6.94$"
+    ],
+    "solution": "For ${}^{209}_{83}\\text{Bi}$, the number of protons $Z = 83$ and neutrons $N = 209 - 83 = 126$.\nMass of constituent nucleons = $83(1.007825) + 126(1.008665) = 83.649475 + 127.091790 = 210.741265\\text{ u}$.\nMass defect $\\Delta m = 210.741265 - 208.980388 = 1.760877\\text{ u}$.\nTotal binding energy $BE = \\Delta m \\times 931 = 1.760877 \\times 931 = 1639.3765\\text{ MeV}$.\nBinding energy per nucleon $= 1639.3765 / 209 = 7.8439\\text{ MeV} \\approx 7.84\\text{ MeV}$."
+  },
+  {
+    "sourceFile": "jee_main_2026_fixed.json",
+    "originalId": "jm_phy_2026_04AprS1_029",
+    "stem": "Two nuclei of mass number $3$ combine with another nucleus of mass number $4$ to yield a nucleus of mass number $10$. If the binding energy per nucleon for the mass numbers $3$, $4$ and $10$ are $5.6$ MeV, $7.4$ MeV and $6.1$ MeV, respectively, then in the process, $\\Delta M c^2 = \\text{\\_\\_\\_\\_\\_}$ MeV.",
+    "options": [
+      "$6.9$",
+      "$7.9$",
+      "$2.2$",
+      "$4.3$"
+    ],
+    "solution": "The reaction is: $2X^3 + Y^4 \\rightarrow Z^{10}$.\nThe initial total binding energy is the sum of the binding energies of the reactants:\n$BE_{\\text{initial}} = 2 \\times (3 \\times 5.6 \\text{ MeV}) + (4 \\times 7.4 \\text{ MeV}) = 33.6 \\text{ MeV} + 29.6 \\text{ MeV} = 63.2 \\text{ MeV}$.\nThe final binding energy is the binding energy of the product:\n$BE_{\\text{final}} = 10 \\times 6.1 \\text{ MeV} = 61.0 \\text{ MeV}$.\nThe energy equivalent of the mass difference $\\Delta M c^2$ reflects the change in rest mass energy, which is the negative of the change in binding energy:\n$\\Delta M c^2 = BE_{\\text{initial}} - BE_{\\text{final}} = 63.2 \\text{ MeV} - 61.0 \\text{ MeV} = 2.2 \\text{ MeV}$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0191",
+    "stem": "Match the temperature of a black body given in List-I with an appropriate statement in List-II, and choose the correct option. [Given: Wien’s constant as 2.9×10 −3 m-K and ℎ푐 푒 =1.24×10 −6 V-m] List-I List-II (P) 2000 K (1) The radiation at peak wavelength can lead to emission of photoelectrons from a metal of work function 4 eV. (Q) 3000 K (2) The radiation at peak wavelength is visible to human eye. (R) 5000 K (3) The radiation at peak emission wavelength will result in the widest central maximum of a single slit diffraction. (S) 10000 K (4) The power emitted per unit area is 1/16 of that emitted by a blackbody at temperature 6000 K. (5) The radiation at peak emission wavelength can be used to image human bones.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0208",
+    "stem": "Match the electronic configurations in List-I with appropriate metal complex ions in List-II and choose the correct option. [Atomic Number: Fe = 26, Mn = 25, Co = 27] List-I List-II (P) t 2g 6 e g 0 (1) [Fe(H 2 O) 6 ] 2+ (Q) t 2g 3 e g 2 (2) [Mn(H 2 O) 6 ] 2+ (R) e 2 t 2 3 (3) [Co(NH 3 ) 6 ] 3+ (S) t 2g 4 e g 2 (4) [FeCl 4 ]  (5) [CoCl 4 ] 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0450",
+    "stem": "Given below are two statements :\nStatement (I) : A spectral line will be observed for a $2p_x \\to 2p_y$ transition.\nStatement (II) : $2p_x$ and $2p_y$ are degenerate orbitals.\nIn the light of the above statements, choose the correct answer from the options given below :",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0504",
+    "stem": "Angular momentum of an electron in a hydrogen atom is $\\frac{3h}{\\pi}$, then the energy of the electron is _______ eV.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "According to Bohr's quantization condition, the angular momentum $L$ of an electron in the $n$-th orbit is given by:\n$L = \\frac{nh}{2\\pi}$\nWe are given $L = \\frac{3h}{\\pi}$. Equating the two expressions:\n$\\frac{nh}{2\\pi} = \\frac{3h}{\\pi} \\implies \\frac{n}{2} = 3 \\implies n = 6$\nThe total energy of an electron in the $n$-th orbit of a hydrogen atom is:\n$E_n = -\\frac{13.6}{n^2}\\text{ eV}$\nSubstituting $n = 6$:\n$E_6 = -\\frac{13.6}{6^2} = -\\frac{13.6}{36} = -0.3777... \\approx -0.38\\text{ eV}$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0579",
+    "stem": "The binding energy per nucleon of ${}^{209}_{83}\\text{Bi}$ is _______ MeV.\n[Take $m({}^{209}_{83}\\text{Bi}) = 208.980388\\text{ u}, m_p = 1.007825\\text{ u}, m_n = 1.008665\\text{ u}, 1\\text{ u} = 931\\text{ MeV/c}^2$]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "For ${}^{209}_{83}\\text{Bi}$, the number of protons $Z = 83$ and neutrons $N = 209 - 83 = 126$.\nMass of constituent nucleons = $83(1.007825) + 126(1.008665) = 83.649475 + 127.091790 = 210.741265\\text{ u}$.\nMass defect $\\Delta m = 210.741265 - 208.980388 = 1.760877\\text{ u}$.\nTotal binding energy $BE = \\Delta m \\times 931 = 1.760877 \\times 931 = 1639.3765\\text{ MeV}$.\nBinding energy per nucleon $= 1639.3765 / 209 = 7.8439\\text{ MeV} \\approx 7.84\\text{ MeV}$."
+  },
+  {
+    "sourceFile": "jee_main_complete_fixed.json",
+    "originalId": "jee_comp_0639",
+    "stem": "Two nuclei of mass number $3$ combine with another nucleus of mass number $4$ to yield a nucleus of mass number $10$. If the binding energy per nucleon for the mass numbers $3$, $4$ and $10$ are $5.6$ MeV, $7.4$ MeV and $6.1$ MeV, respectively, then in the process, $\\Delta M c^2 = \\text{\\_\\_\\_\\_\\_}$ MeV.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "The reaction is: $2X^3 + Y^4 \\rightarrow Z^{10}$.\nThe initial total binding energy is the sum of the binding energies of the reactants:\n$BE_{\\text{initial}} = 2 \\times (3 \\times 5.6 \\text{ MeV}) + (4 \\times 7.4 \\text{ MeV}) = 33.6 \\text{ MeV} + 29.6 \\text{ MeV} = 63.2 \\text{ MeV}$.\nThe final binding energy is the binding energy of the product:\n$BE_{\\text{final}} = 10 \\times 6.1 \\text{ MeV} = 61.0 \\text{ MeV}$.\nThe energy equivalent of the mass difference $\\Delta M c^2$ reflects the change in rest mass energy, which is the negative of the change in binding energy:\n$\\Delta M c^2 = BE_{\\text{initial}} - BE_{\\text{final}} = 63.2 \\text{ MeV} - 61.0 \\text{ MeV} = 2.2 \\text{ MeV}$."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0191",
+    "stem": "Match the temperature of a black body given in List-I with an appropriate statement in List-II, and choose the correct option. [Given: Wien’s constant as 2.9×10 −3 m-K and ℎ푐 푒 =1.24×10 −6 V-m] List-I List-II (P) 2000 K (1) The radiation at peak wavelength can lead to emission of photoelectrons from a metal of work function 4 eV. (Q) 3000 K (2) The radiation at peak wavelength is visible to human eye. (R) 5000 K (3) The radiation at peak emission wavelength will result in the widest central maximum of a single slit diffraction. (S) 10000 K (4) The power emitted per unit area is 1/16 of that emitted by a blackbody at temperature 6000 K. (5) The radiation at peak emission wavelength can be used to image human bones.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0208",
+    "stem": "Match the electronic configurations in List-I with appropriate metal complex ions in List-II and choose the correct option. [Atomic Number: Fe = 26, Mn = 25, Co = 27] List-I List-II (P) t 2g 6 e g 0 (1) [Fe(H 2 O) 6 ] 2+ (Q) t 2g 3 e g 2 (2) [Mn(H 2 O) 6 ] 2+ (R) e 2 t 2 3 (3) [Co(NH 3 ) 6 ] 3+ (S) t 2g 4 e g 2 (4) [FeCl 4 ]  (5) [CoCl 4 ] 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "Step 1: Identify given parameters and apply governing NCERT principles for Atomic Structure.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0379",
+    "stem": "Angular momentum of an electron in a hydrogen atom is $\\frac{3h}{\\pi}$, then the energy of the electron is _______ eV.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "According to Bohr's quantization condition, the angular momentum $L$ of an electron in the $n$-th orbit is given by:\n$L = \\frac{nh}{2\\pi}$\nWe are given $L = \\frac{3h}{\\pi}$. Equating the two expressions:\n$\\frac{nh}{2\\pi} = \\frac{3h}{\\pi} \\implies \\frac{n}{2} = 3 \\implies n = 6$\nThe total energy of an electron in the $n$-th orbit of a hydrogen atom is:\n$E_n = -\\frac{13.6}{n^2}\\text{ eV}$\nSubstituting $n = 6$:\n$E_6 = -\\frac{13.6}{6^2} = -\\frac{13.6}{36} = -0.3777... \\approx -0.38\\text{ eV}$."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0404",
+    "stem": "The binding energy per nucleon of ${}^{209}_{83}\\text{Bi}$ is _______ MeV.\n[Take $m({}^{209}_{83}\\text{Bi}) = 208.980388\\text{ u}, m_p = 1.007825\\text{ u}, m_n = 1.008665\\text{ u}, 1\\text{ u} = 931\\text{ MeV/c}^2$]",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "For ${}^{209}_{83}\\text{Bi}$, the number of protons $Z = 83$ and neutrons $N = 209 - 83 = 126$.\nMass of constituent nucleons = $83(1.007825) + 126(1.008665) = 83.649475 + 127.091790 = 210.741265\\text{ u}$.\nMass defect $\\Delta m = 210.741265 - 208.980388 = 1.760877\\text{ u}$.\nTotal binding energy $BE = \\Delta m \\times 931 = 1.760877 \\times 931 = 1639.3765\\text{ MeV}$.\nBinding energy per nucleon $= 1639.3765 / 209 = 7.8439\\text{ MeV} \\approx 7.84\\text{ MeV}$."
+  },
+  {
+    "sourceFile": "jee_physics_bank_fixed.json",
+    "originalId": "jee_phys_0414",
+    "stem": "Two nuclei of mass number $3$ combine with another nucleus of mass number $4$ to yield a nucleus of mass number $10$. If the binding energy per nucleon for the mass numbers $3$, $4$ and $10$ are $5.6$ MeV, $7.4$ MeV and $6.1$ MeV, respectively, then in the process, $\\Delta M c^2 = \\text{\\_\\_\\_\\_\\_}$ MeV.",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "solution": "The reaction is: $2X^3 + Y^4 \\rightarrow Z^{10}$.\nThe initial total binding energy is the sum of the binding energies of the reactants:\n$BE_{\\text{initial}} = 2 \\times (3 \\times 5.6 \\text{ MeV}) + (4 \\times 7.4 \\text{ MeV}) = 33.6 \\text{ MeV} + 29.6 \\text{ MeV} = 63.2 \\text{ MeV}$.\nThe final binding energy is the binding energy of the product:\n$BE_{\\text{final}} = 10 \\times 6.1 \\text{ MeV} = 61.0 \\text{ MeV}$.\nThe energy equivalent of the mass difference $\\Delta M c^2$ reflects the change in rest mass energy, which is the negative of the change in binding energy:\n$\\Delta M c^2 = BE_{\\text{initial}} - BE_{\\text{final}} = 63.2 \\text{ MeV} - 61.0 \\text{ MeV} = 2.2 \\text{ MeV}$."
+  }
+]
