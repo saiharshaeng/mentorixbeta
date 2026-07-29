@@ -163,8 +163,8 @@
 
     if (totalLoaded > 0 && !masterIndex) {
       masterIndex = {
-        JEE_MAIN: Object.keys(fileCache).filter(k => k.includes('jee')).map(k => ({ file: k, year: 2024, questionCount: fileCache[k].questions.length })),
-        NEET: Object.keys(fileCache).filter(k => k.includes('neet')).map(k => ({ file: k, year: 2024, questionCount: fileCache[k].questions.length })),
+        JEE_MAIN: Object.keys(fileCache).filter(k => k.includes('jee')).map(k => ({ file: k, year: 2024, questionCount: (fileCache[k] && Array.isArray(fileCache[k].questions)) ? fileCache[k].questions.length : 0 })),
+        NEET: Object.keys(fileCache).filter(k => k.includes('neet')).map(k => ({ file: k, year: 2024, questionCount: (fileCache[k] && Array.isArray(fileCache[k].questions)) ? fileCache[k].questions.length : 0 })),
         JEE_ADVANCED: [],
         EAMCET: []
       };

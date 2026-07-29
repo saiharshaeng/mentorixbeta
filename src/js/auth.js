@@ -143,38 +143,48 @@ function selectMascot(btn, id, emoji) {
 
 function createProfileSubmit() {
   const rawUsername = (document.getElementById('p-username')?.value || '').trim();
-  const name = (document.getElementById('p-name')?.value || rawUsername).trim();
+  const name = (document.getElementById('p-name')?.value || '').trim();
 
+  // USERNAME IS MANDATORY — no exceptions
   if (!rawUsername) {
-    showAuthErr('p-err', 'Username is mandatory. Please enter a unique @username.');
+    showAuthErr('p-err', 'A username is required to create your profile.');
+    document.getElementById('p-username')?.focus();
     return;
   }
 
-  if (window.CloudSyncEngine) {
-    const valRes = window.CloudSyncEngine.validateUsername(rawUsername);
-    if (!valRes.valid) {
-      showAuthErr('p-err', valRes.error);
-      return;
-    }
+  // Username rules: 3-20 chars, letters/numbers/underscores only
+  const cleanUsername = rawUsername.replace(/^@/, '').toLowerCase();
+  const usernameRegex = /^[a-z0-9_]{3,20}$/;
+  if (!usernameRegex.test(cleanUsername)) {
+    showAuthErr('p-err', 'Username must be 3–20 characters: letters, numbers, and underscores only. No spaces or special characters.');
+    document.getElementById('p-username')?.focus();
+    return;
   }
+
+  // Display name is also required
+  const displayName = name || cleanUsername;
 
   const profiles = getProfiles();
-  if (profiles.some(p => (p.username || '').toLowerCase() === rawUsername.toLowerCase())) {
-    showAuthErr('p-err', 'Username already taken. Please pick another.');
-    return;
-  }
-  if (profiles.length >= 6) {
-    showAuthErr('p-err', 'Maximum of 6 profile slots reached.');
+  if (profiles.some(p =>
+    (p.username || '').toLowerCase().replace(/^@/, '') === cleanUsername
+  )) {
+    showAuthErr('p-err', 'That username is already taken. Please choose a different one.');
+    document.getElementById('p-username')?.focus();
     return;
   }
 
-  const id = 'profile_' + (profiles.length + 1);
+  if (profiles.length >= 6) {
+    showAuthErr('p-err', 'Maximum of 6 profiles reached.');
+    return;
+  }
+
+  const id = 'profile_' + Date.now();
   const mascot = window._selectedMascot || { id: 'robot_coder', emoji: '🤖' };
 
   const newProfile = {
     id: id,
-    username: rawUsername.startsWith('@') ? rawUsername : `@${rawUsername}`,
-    name: name,
+    username: '@' + cleanUsername,
+    name: displayName,
     avatar: mascot.emoji,
     avatarId: mascot.id,
     isOnboarded: true,
@@ -183,35 +193,6 @@ function createProfileSubmit() {
 
   profiles.push(newProfile);
   saveProfiles(profiles);
-
-  // After local profile is successfully created:
-  // Optionally register with Supabase cloud
-  if (window.SupabaseAuthBridge && 
-      window.SupabaseReady) {
-    // Non-blocking — don't await, don't fail if error
-    window.SupabaseAuthBridge.registerWithSupabase({
-      username: newProfile.name
-        .toLowerCase()
-        .replace(/\s+/g,'_')
-        .replace(/[^a-z0-9_]/g,'')
-        .substring(0,20),
-      email: newProfile.email || null,
-      password: `mx_${Date.now()}_${Math.random()
-        .toString(36).substring(2,8)}`,
-      phone: newProfile.phone || null
-    }).then(result => {
-      if (result.success) {
-        console.log('[Auth] Cloud account created.');
-      }
-    }).catch(() => {
-      // Silent fail — local profile still works
-    });
-  }
-
-  if (window.CloudSyncEngine) {
-    window.CloudSyncEngine.migrateLocalData(id);
-  }
-
   selectProfile(id);
 }
 

@@ -13,6 +13,29 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>MENTORIX — Your AI Learning Universe</title>
 
+<style>
+/* ── SCROLL FIX ── */
+html, body {
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+#app {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+.screen, [class*="-screen"] {
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+/* Remove double scrollbars */
+body:has(#app) {
+  overflow: hidden;
+}
+</style>
+
 <!-- ⚠️ FILE:// GUARD — must be FIRST script, before anything else -->
 <script>
 if (location.protocol === 'file:') {
@@ -782,7 +805,6 @@ function getNextStep(current) {
     return 8; // Skip straight to learning style for non-academic goals
   }
   if (current === 3) {
-    if (ob.grade === 'Undergraduate' || ob.grade === 'Postgraduate') return 4;
     return 5;
   }
   if (current === 4) return 5; // Degree details -> Board
@@ -807,7 +829,6 @@ function getPrevStep(current) {
   }
   if (current === 6) return 5;
   if (current === 5) {
-    if (ob.grade === 'Undergraduate' || ob.grade === 'Postgraduate') return 4;
     return 3;
   }
   if (current === 4) return 3;
@@ -922,7 +943,10 @@ function renderOBS() {
 
   // STEP 3 — GRADE (Academic Only)
   if (ob.step === 3) {
-    const grades = [...Array(12).keys()].map(i => `Grade ${i + 1}`);
+    const grades = [
+      'Grade 8', 'Grade 9', 'Grade 10',
+      'Grade 11', 'Grade 12'
+    ];
     // Pre-select a default grade if none set yet
     if (!ob.grade) ob.grade = 'Grade 10';
     c.innerHTML = `
@@ -1935,8 +1959,7 @@ function initApp(){
   applyMentorTheme();
   const tioWidget = document.getElementById('tio-widget-container');
   if (tioWidget) {
-    tioWidget.style.display = 'flex';
-    if (typeof window.updateTioEyes === 'function') window.updateTioEyes();
+    tioWidget.style.display = 'none';
   }
   // Re-apply cursor setting (could be restored from saved settings)
   if (D.settings?.customCursor === false) {
@@ -3363,37 +3386,6 @@ function toggleDoubtVoice(){
 }
 
 /* ───────────────────────────────────────────
-   GLOBAL KEYBOARD SHORTCUTS
-─────────────────────────────────────────── */
-document.addEventListener('keydown',function(e){
-  // Single-key navigation shortcuts disabled per user request
-  return;
-});
-
-let shortcutsHelpShown=false;
-function showShortcutsHelp(){
-  if(shortcutsHelpShown)return;
-  shortcutsHelpShown=true;
-  const m=document.createElement('div');m.className='modal-bg';m.id='kb-help';
-  m.innerHTML=`<div class="modal-box" style="max-width:420px">
-    <div class="between mb16"><div class="h2">⌨️ Keyboard Shortcuts</div><button onclick="document.getElementById('kb-help').remove();shortcutsHelpShown=false" style="background:none;border:none;cursor:pointer;color:var(--mut);font-size:20px">✖</button></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      ${[['D','Dashboard'],['L','Courses'],['N','AI Mentor'],['E','Explore'],['C','Career Explorer'],['T','Tests'],['Q','Doubt Solver'],['B','Notebook'],['R','Revision'],['P','Progress'],['S','Settings'],['Ctrl+K','Universal Search'],['?','This help']].map(([k,v])=>`
-        <div onclick="animKeyPress(this)" style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,.04);border-radius:8px;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(139,92,246,.1)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
-          <span class="key-cap">${k}</span>
-          <span style="color:var(--sub);font-size:13px">${v}</span>
-        </div>`).join('')}
-    </div>
-    <p style="color:var(--mut);font-size:11px;text-align:center;margin-top:14px">Press keys directly to navigate · <span class="key-cap">?</span> to toggle this</p>
-  </div>`;
-  document.body.appendChild(m);
-  m.addEventListener('click',ev=>{if(ev.target===m){m.remove();shortcutsHelpShown=false;}});
-  // Also close on Escape key
-  const _kbEsc=(e)=>{if(e.key==='Escape'){const el=document.getElementById('kb-help');if(el){el.remove();shortcutsHelpShown=false;}document.removeEventListener('keydown',_kbEsc);}};
-  document.addEventListener('keydown',_kbEsc);
-}
-
-/* ───────────────────────────────────────────
    VOICE OUTPUT — Read Lessons Aloud (Web Speech API)
 ─────────────────────────────────────────── */
 let voiceUtterance=null;
@@ -4213,11 +4205,6 @@ const MxAudio=(function(){
   }
 
   function onTioWidgetClick() {
-    const avatar = document.getElementById('tio-avatar-body');
-    if (avatar) {
-      avatar.classList.add('spin');
-      setTimeout(() => avatar.classList.remove('spin'), 600);
-    }
     // Show speech first, then open Tio chat after brief delay
     showTioBubble(getTioSpeech(), 2500);
     setTimeout(() => {

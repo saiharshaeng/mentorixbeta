@@ -92,18 +92,7 @@
     }
 
     setupGlobalKeybindings() {
-      window.addEventListener('keydown', (e) => {
-        // Cmd+K or Ctrl+K
-        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-          e.preventDefault();
-          this.toggle();
-        }
-        // / key outside input fields
-        if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName) && !this.isOpen) {
-          e.preventDefault();
-          this.open();
-        }
-      });
+      // Keyboard shortcuts disabled per constitution
     }
 
     toggle() {

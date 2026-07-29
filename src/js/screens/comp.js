@@ -1278,6 +1278,31 @@ function setMockModeRadio(mode) {
 window.setMockModeRadio = setMockModeRadio;
 
 function renderHubTab(exam) {
+  const examNotice = `
+    <div style="
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.25);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    ">
+      <span style="font-size:20px;flex-shrink:0">📢</span>
+      <div>
+        <div style="font-weight:700;color:#f59e0b;margin-bottom:4px;font-size:14px">
+          Beta Notice
+        </div>
+        <div style="font-size:13px;color:var(--sub);line-height:1.6">
+          Currently available: <strong style="color:#fff">JEE Main</strong> and 
+          <strong style="color:#fff">JEE Advanced</strong>.<br>
+          NEET, EAMCET, SAT, and other exams are coming soon.
+        </div>
+      </div>
+    </div>
+  `;
+
   const stats = (D.compExam && D.compExam.chapterStats) || {};
   const history = (D.compExam && D.compExam.sessionHistory) || [];
   
@@ -1353,14 +1378,7 @@ function renderHubTab(exam) {
   }).join('');
 
   return `
-    <!-- EXAM NOTICE BANNER -->
-    <div class="card mb16" style="padding:12px 16px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.22);border-radius:12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
-      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#C4B5FD">
-        <span style="font-size:16px">🎯</span>
-        <span><strong>Active Launch Focus:</strong> JEE Main & JEE Advanced are fully live. All other exams are marked coming soon.</span>
-      </div>
-      <span class="tag tp" style="font-size:10px">v1.0 Launch</span>
-    </div>
+    ${examNotice}
 
     <!-- EXAM SELECTOR ROW -->
     <div class="comp-exam-row mb20">
@@ -2153,8 +2171,52 @@ function beginMockExamAfterInstructions() {
   rComp();
 }
 
+function hideFloatingElementsForExam() {
+  const elementsToHide = [
+    'tio-widget-container',
+    'tio-speech-bubble',
+    'eli5-badge',
+    'fnbtn',
+    'timer-fab',
+    'notif-bell',
+    'pwa-banner',
+    'xp-bar',
+    'xp-fab',
+    'level-badge',
+    'streak-badge'
+  ];
+  elementsToHide.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.dataset.examHidden = el.style.display || '';
+      el.style.display = 'none';
+    }
+  });
+  document.querySelectorAll(
+    '.tio-float, .floating-widget, .fab-btn, ' +
+    '[class*="tio-"], [class*="xp-float"]'
+  ).forEach(el => {
+    if (!el.dataset.examHidden) {
+      el.dataset.examHidden = el.style.display || '';
+      el.style.display = 'none';
+    }
+  });
+  document.body.dataset.examMode = 'true';
+}
+window.hideFloatingElementsForExam = hideFloatingElementsForExam;
+
+function restoreFloatingElementsAfterExam() {
+  document.querySelectorAll('[data-exam-hidden]').forEach(el => {
+    el.style.display = el.dataset.examHidden || '';
+    delete el.dataset.examHidden;
+  });
+  document.body.dataset.examMode = '';
+}
+window.restoreFloatingElementsAfterExam = restoreFloatingElementsAfterExam;
+
 // ⏱️ CBT Mock Setup
 async function startMockExamSetup(forcedMode) {
+  hideFloatingElementsForExam();
   const btn = document.getElementById('launch-mock-btn');
   const checkedRadio = document.querySelector('input[name="mock-mode-select"]:checked');
   const mode = forcedMode || (checkedRadio ? checkedRadio.value : 'full');
@@ -2999,6 +3061,7 @@ function calculateJEEScore(answers, questions) {
 window.calculateJEEScore = calculateJEEScore;
 
 function submitMockExam() {
+  restoreFloatingElementsAfterExam();
   const exam = compState.activeExam;
   if (!exam) return;
 
