@@ -191,3 +191,4 @@ async function sendMsg() {
 window.rMentor = rMentor;
 window.sendQuickCommand = sendQuickCommand;
 window.sendMsg = sendMsg;
+window.sendMentorMsg = sendMsg;
