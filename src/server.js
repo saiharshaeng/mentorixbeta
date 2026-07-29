@@ -28,9 +28,9 @@ const server = http.createServer((req, res) => {
   const parsedUrl = new URL(req.url, 'http://localhost:8080');
   const decodedPathname = decodeURIComponent(parsedUrl.pathname);
 
-  // Favicon fallback handler to prevent Chrome console 404 errors
-  if (decodedPathname === '/favicon.ico') {
-    res.writeHead(200, { 'Content-Type': 'image/x-icon' });
+  // Favicon & Apple Icon fallback handlers to prevent Chrome console 404 errors
+  if (decodedPathname === '/favicon.ico' || decodedPathname === '/apple-touch-icon.png' || decodedPathname === '/apple-touch-icon-precomposed.png') {
+    res.writeHead(200, { 'Content-Type': 'image/png' });
     res.end();
     return;
   }

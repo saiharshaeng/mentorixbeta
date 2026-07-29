@@ -213,6 +213,8 @@
         this.activeInsight = `Select a topic or mock paper to begin your competitive practice session.`;
       } else if (ctx.screen === 'learn') {
         this.activeInsight = `Take it one topic at a time. I'm right here if you want a step-by-step example.`;
+      } else if (!name || name === 'there' || name === 'Student' || !window.D?.user) {
+        this.activeInsight = `I'm Tio, your AI learning companion. Welcome to Mentorix!`;
       } else {
         this.activeInsight = `Welcome back, ${name}! Ready to continue where we left off?`;
       }
@@ -222,7 +224,7 @@
      * Render floating Tio companion widget & speech bubble
      */
     renderBubble() {
-      if (this.mode === TioModes.HIDDEN) {
+      if (this.mode === TioModes.HIDDEN || !window.D?.user || document.querySelector('.ob') || document.querySelector('.auth') || document.querySelector('.asla-auth-card')) {
         this.hideBubble();
         return;
       }

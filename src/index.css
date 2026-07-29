@@ -1937,10 +1937,9 @@ select.inp{cursor:pointer}
 .sec-divider-lbl{color:var(--mut);font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
 
 /* â”€â”€ ONBOARDING â”€â”€ */
-/* .ob — the full-page onboarding wrapper. Styled as a fixed full-viewport overlay to bypass parent #app constraints. */
-.ob{position:fixed;inset:0;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6vh 20px 80px;z-index:9999;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--bg)}
-/* .ob-card — no max-height, no overflow. Let .ob scroll the page. */
-.ob-card{background:rgba(10,10,26,.92);border:1px solid rgba(139,92,246,.2);border-radius:var(--r-card);padding:20px 24px;width:100%;max-width:560px;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);margin:0 auto;}
+.ob{position:fixed;inset:0;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;z-index:9999;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--bg)}
+/* .ob-card — compact & centered */
+.ob-card{background:rgba(10,10,26,.95);border:1px solid rgba(139,92,246,.28);border-radius:24px;padding:22px 26px;width:100%;max-width:440px;-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);margin:auto;box-shadow:0 24px 64px rgba(0,0,0,0.6), 0 0 32px rgba(139,92,246,0.12);}
 .ob-step{display:none}.ob-step.on{display:block; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); animation:scIn .3s ease}
 .ob-prog{height:8px; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);}
 .ob-prog{height:8px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;margin-bottom:var(--sp-6);position:relative}
