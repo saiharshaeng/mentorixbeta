@@ -2881,7 +2881,10 @@ function renderActiveExamUI() {
         </div>
 
         <!-- Palette nav -->
-        <div class="nta-pal-nav-label">Question Palette</div>
+        <div class="nta-pal-nav-label" style="display:flex;justify-content:space-between;align-items:center;">
+          <span>Question Palette</span>
+          <span style="font-size:10px;color:var(--pl);font-weight:600;" title="Keyboard shortcuts active: Alt+N (Next), Alt+P (Prev), Alt+M (Mark), Alt+C (Clear)">⌨️ Shortcuts: Alt+N / Alt+P</span>
+        </div>
         <div class="nta-pal-scroll">${paletteHTML}</div>
 
         <div class="nta-pal-legend">
@@ -4442,5 +4445,26 @@ if (typeof window !== 'undefined') {
   window.confirmSubmitMockExam = confirmSubmitMockExam;
   window.submitMockExam = submitMockExam;
   window.renderActiveExamUI = renderActiveExamUI;
+
+  // ⌨️ CBT EXAM KEYBOARD SHORTCUTS (Alt+N: Next, Alt+P: Prev, Alt+M: Mark Review, Alt+C: Clear)
+  window.addEventListener('keydown', function(e) {
+    if (!compState.activeExam || !compState.activeExam.instructionsRead) return;
+    const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
+    if (activeTag === 'input' || activeTag === 'textarea') return;
+
+    if (e.altKey && (e.key === 'n' || e.key === 'N')) {
+      e.preventDefault();
+      saveAndNextMock();
+    } else if (e.altKey && (e.key === 'p' || e.key === 'P')) {
+      e.preventDefault();
+      if (typeof prevMockQuestion === 'function') prevMockQuestion();
+    } else if (e.altKey && (e.key === 'm' || e.key === 'M' || e.key === 'r' || e.key === 'R')) {
+      e.preventDefault();
+      markMockForReview();
+    } else if (e.altKey && (e.key === 'c' || e.key === 'C')) {
+      e.preventDefault();
+      clearActiveExamAnswer();
+    }
+  });
 }
 

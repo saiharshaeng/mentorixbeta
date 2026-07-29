@@ -100,9 +100,18 @@ const xpP = xp => Math.round((xpR(xp) / 500) * 100);
 
 window._katexCache = window._katexCache || new Map();
 
+function formatChemicalFormulas(str) {
+  if (!str || typeof str !== 'string') return str;
+  return str.replace(/\\ce\{([^}]+)\}/g, (match, formula) => {
+    const formatted = formula.replace(/(\d+)/g, '<sub>$1</sub>');
+    return `<b class="chem-formula" style="font-weight:700;color:var(--c);letter-spacing:0.5px;">${formatted}</b>`;
+  });
+}
+window.formatChemicalFormulas = formatChemicalFormulas;
+
 function cleanMathDelimiters(str) {
   if (!str || typeof str !== 'string') return str;
-  return str
+  let cleaned = str
     .replace(/\\\s+\(/g, '\\(')
     .replace(/\\\s+\)/g, '\\)')
     .replace(/\\\s+\[/g, '\\[')
@@ -111,26 +120,26 @@ function cleanMathDelimiters(str) {
     .replace(/\\right(?![a-zA-Z\s|)]}>.])/g, '\\right)')
     .replace(/\\right\\\s*\)/g, '\\right)')
     .replace(/\\text\s*\{\s*\(\s*/g, '\\text{(');
+  return formatChemicalFormulas(cleaned);
 }
 window.cleanMathDelimiters = cleanMathDelimiters;
 
 /**
  * Renders KaTeX math in `el` (or document.body if omitted).
- * Caches expressions & defers via requestAnimationFrame to avoid main-thread blocking.
+ * Pre-processes LaTeX & chemical formulas synchronously to avoid FOUT.
  */
-function renderMath(el) {
+function renderMath(el, force = false) {
   const target = el || document.body;
   if (!target) return;
 
-  // Skip if already rendered in this DOM container
-  if (target.dataset && target.dataset.katexRendered === 'true') {
+  if (!force && target.dataset && target.dataset.katexRendered === 'true' && !target.innerHTML.includes('\\(') && !target.innerHTML.includes('\\ce{')) {
     return;
   }
 
   const runRender = () => {
     if (typeof window.renderMathInElement === 'function') {
       try {
-        if (target.innerHTML && (target.innerHTML.includes('\\ (') || target.innerHTML.includes('\\ )') || target.innerHTML.includes('\\left'))) {
+        if (target.innerHTML && (target.innerHTML.includes('\\ (') || target.innerHTML.includes('\\ )') || target.innerHTML.includes('\\left') || target.innerHTML.includes('\\ce{'))) {
           target.innerHTML = cleanMathDelimiters(target.innerHTML);
         }
         window.renderMathInElement(target, {
@@ -148,15 +157,11 @@ function renderMath(el) {
         console.warn('[KaTeX Cache] Render warning:', e);
       }
     } else {
-      setTimeout(() => renderMath(target), 200);
+      setTimeout(() => renderMath(target, force), 150);
     }
   };
 
-  if (typeof requestAnimationFrame === 'function') {
-    requestAnimationFrame(runRender);
-  } else {
-    runRender();
-  }
+  runRender();
 }
 window.renderMath = renderMath;
 
