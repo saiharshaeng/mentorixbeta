@@ -27,16 +27,6 @@
       "missingFn": "if"
     },
     {
-      "file": "src\\js\\screens\\doubt.js",
-      "handler": "toggleDoubtVoice()",
-      "missingFn": "toggleDoubtVoice"
-    },
-    {
-      "file": "src\\js\\screens\\learn.js",
-      "handler": "readoutTioExplanation(",
-      "missingFn": "readoutTioExplanation"
-    },
-    {
       "file": "src\\js\\screens\\learn.js",
       "handler": "if(!LS.confidenceRating)LS.confidenceRating=3;saveCheckpoint();advanceStage(7)",
       "missingFn": "if"
@@ -55,21 +45,6 @@
       "file": "src\\js\\screens\\learn.js",
       "handler": "clearInterval(window._compNavTimer);${nextTopicName ? `go(",
       "missingFn": "clearInterval"
-    },
-    {
-      "file": "src\\js\\screens\\settings.js",
-      "handler": "requestNotifPerms()",
-      "missingFn": "requestNotifPerms"
-    },
-    {
-      "file": "src\\js\\screens\\settings.js",
-      "handler": "applyFontSize(",
-      "missingFn": "applyFontSize"
-    },
-    {
-      "file": "src\\js\\screens\\settings.js",
-      "handler": "pwaInstall()",
-      "missingFn": "pwaInstall"
     },
     {
       "file": "src\\index.html",
@@ -130,16 +105,6 @@
       "file": "src\\index.html",
       "handler": "setTimerMode(15,",
       "missingFn": "setTimerMode"
-    },
-    {
-      "file": "src\\index.html",
-      "handler": "requestNotifPerms()",
-      "missingFn": "requestNotifPerms"
-    },
-    {
-      "file": "src\\index.html",
-      "handler": "pwaInstall()",
-      "missingFn": "pwaInstall"
     },
     {
       "file": "src\\index.html",

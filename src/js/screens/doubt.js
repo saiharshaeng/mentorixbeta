@@ -21,7 +21,7 @@ function rDoubt(){
     <div class="doubt-inp-area s2">
       <textarea class="inp" id="dq" rows="3" placeholder="Type your question or doubt… e.g. 'Why does acceleration increase when force increases?' or 'How does photosynthesis work?'" style="border:none;background:transparent;font-size:15px;padding:0;resize:none" oninput="DS.q=this.value">${esc(DS.q)}</textarea>
       <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px">
-        <button class="voice-btn" id="doubt-voice-btn" onclick="toggleDoubtVoice()" title="Voice input">🎙️</button>
+        <button class="voice-btn" id="doubt-voice-btn" disabled style="opacity:0.4;cursor:not-allowed;" title="Voice input — Coming Soon">🎙️</button>
         <button class="btn bgh bsm" onclick="DS.q='';DS.ans=null;DS.testQ=null;const _dq=document.getElementById('dq');if(_dq)_dq.value='';const _dans=document.getElementById('dans');if(_dans)_dans.innerHTML=''">Clear</button>
         <button class="btn bpri" id="dask" onclick="askDoubt()" ${DS.loading?'disabled':''}>
           ${DS.loading?'<div class="dots"><span></span><span></span><span></span></div>':'🔍 Solve this doubt'}

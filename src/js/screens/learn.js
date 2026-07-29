@@ -1531,6 +1531,25 @@ function saveReflections() {
   saveCheckpoint();
 }
 
+function readoutTioExplanation(text) {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    if (window.speechSynthesis.speaking) {
+      window.speechSynthesis.cancel();
+      if (window.toast) window.toast('Stopped audio playback', 'sub');
+      return;
+    }
+    const cleanText = String(text || '').replace(/<[^>]*>/g, '').replace(/\\\(|\\\)|\\\[|\\\]/g, '');
+    const utter = new SpeechSynthesisUtterance(cleanText);
+    utter.rate = 1.0;
+    utter.pitch = 1.0;
+    window.speechSynthesis.speak(utter);
+    if (window.toast) window.toast('🔊 Reading Tio explanation...', 'ok2');
+  } else if (window.toast) {
+    window.toast('Audio speech synthesis not supported on this browser', 'sub');
+  }
+}
+
+window.readoutTioExplanation = readoutTioExplanation;
 window.saveCheckpoint = saveCheckpoint;
 window.rLearn = rLearn;
 window.advanceStage = advanceStage;

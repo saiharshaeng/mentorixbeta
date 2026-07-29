@@ -440,6 +440,39 @@ function setExperienceMode(mode) {
 }
 
 // Global window exports to maintain compatibility with other screens and inline event handlers
+function requestNotifPerms() {
+  if (typeof Notification !== 'undefined' && Notification.requestPermission) {
+    Notification.requestPermission().then(permission => {
+      if (window.toast) {
+        if (permission === 'granted') window.toast('✅ Notifications enabled!', 'ok2');
+        else window.toast('Notifications permission requested', 'sub');
+      }
+      if (typeof rSettings === 'function') rSettings();
+    });
+  } else if (window.toast) {
+    window.toast('Notifications not supported on this browser', 'sub');
+  }
+}
+
+function applyFontSize(size) {
+  if (typeof document !== 'undefined') {
+    document.documentElement.setAttribute('data-font-size', size);
+  }
+  if (window.toast) window.toast(`Text size set to ${size.toUpperCase()}`, 'ok2');
+}
+
+function pwaInstall() {
+  if (window.deferredPWAEvent) {
+    window.deferredPWAEvent.prompt();
+  } else if (window.toast) {
+    window.toast('📱 To install, tap Share ➔ Add to Home Screen in browser menu', 'sub');
+  }
+}
+
+window.requestNotifPerms = requestNotifPerms;
+window.applyFontSize = applyFontSize;
+window.pwaInstall = pwaInstall;
+
 window.rSettings = rSettings;
 window.setPersonality = setPersonality;
 window.setMode = setMode;
