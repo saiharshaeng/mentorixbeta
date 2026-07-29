@@ -1,0 +1,411 @@
+{
+  "total_questions": 72408,
+  "missing_chapter": 6664,
+  "missing_subject": 0,
+  "missing_answer": 25092,
+  "missing_explanation": 44475,
+  "unique_hashes": 42326,
+  "cbt_isolation_violations": 0,
+  "per_subject": {
+    "Mathematics": {
+      "total": 20476,
+      "valid_ans": 14539,
+      "valid_exp": 3963
+    },
+    "Physics": {
+      "total": 7289,
+      "valid_ans": 4042,
+      "valid_exp": 5920
+    },
+    "Chemistry": {
+      "total": 19142,
+      "valid_ans": 13286,
+      "valid_exp": 3775
+    },
+    "Computer Science": {
+      "total": 38,
+      "valid_ans": 35,
+      "valid_exp": 38
+    },
+    "Biology": {
+      "total": 9761,
+      "valid_ans": 5013,
+      "valid_exp": 13
+    },
+    "General Aptitude": {
+      "total": 10118,
+      "valid_ans": 5068,
+      "valid_exp": 9199
+    },
+    "General Studies": {
+      "total": 4,
+      "valid_ans": 0,
+      "valid_exp": 2
+    },
+    "Computer Science & IT": {
+      "total": 3,
+      "valid_ans": 0,
+      "valid_exp": 0
+    },
+    "General": {
+      "total": 242,
+      "valid_ans": 1,
+      "valid_exp": 1
+    },
+    "PJOK": {
+      "total": 120,
+      "valid_ans": 120,
+      "valid_exp": 120
+    },
+    "BACE - Applied Mathematics": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 30
+    },
+    "Biochemistry & Molecular Biology": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 30
+    },
+    "Biotechnology Skills": {
+      "total": 60,
+      "valid_ans": 60,
+      "valid_exp": 60
+    },
+    "BACE": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "Biotechnology": {
+      "total": 50,
+      "valid_ans": 50,
+      "valid_exp": 50
+    },
+    "Technical Skills and Applications": {
+      "total": 50,
+      "valid_ans": 50,
+      "valid_exp": 50
+    },
+    "Basic Science": {
+      "total": 60,
+      "valid_ans": 60,
+      "valid_exp": 60
+    },
+    "Basic Technology": {
+      "total": 65,
+      "valid_ans": 65,
+      "valid_exp": 65
+    },
+    "Further Mathematics": {
+      "total": 200,
+      "valid_ans": 200,
+      "valid_exp": 200
+    },
+    "HOSA Nutrition": {
+      "total": 72,
+      "valid_ans": 72,
+      "valid_exp": 72
+    },
+    "VARC": {
+      "total": 48,
+      "valid_ans": 48,
+      "valid_exp": 48
+    },
+    "DILR": {
+      "total": 42,
+      "valid_ans": 42,
+      "valid_exp": 42
+    },
+    "Quantitative Ability": {
+      "total": 44,
+      "valid_ans": 44,
+      "valid_exp": 44
+    },
+    "Verbal Ability and Reading Comprehension": {
+      "total": 48,
+      "valid_ans": 48,
+      "valid_exp": 48
+    },
+    "Data Interpretation and Logical Reasoning": {
+      "total": 20,
+      "valid_ans": 20,
+      "valid_exp": 20
+    },
+    "Data interpretation and Logical Reasoning": {
+      "total": 20,
+      "valid_ans": 20,
+      "valid_exp": 20
+    },
+    "Quantitative Aptitude": {
+      "total": 22,
+      "valid_ans": 22,
+      "valid_exp": 22
+    },
+    "Quant": {
+      "total": 88,
+      "valid_ans": 88,
+      "valid_exp": 88
+    },
+    "Arts": {
+      "total": 170,
+      "valid_ans": 170,
+      "valid_exp": 170
+    },
+    "Cultural and Creative Arts": {
+      "total": 151,
+      "valid_ans": 151,
+      "valid_exp": 151
+    },
+    "Intro to Marketing Concepts FBLA": {
+      "total": 160,
+      "valid_ans": 160,
+      "valid_exp": 160
+    },
+    "Redox Reactions and Electrochemistry": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 30
+    },
+    "Further Mathematics (Elective Mathematics)": {
+      "total": 170,
+      "valid_ans": 170,
+      "valid_exp": 170
+    },
+    "Computer Hardware and GSM Repairs 1": {
+      "total": 160,
+      "valid_ans": 160,
+      "valid_exp": 160
+    },
+    "Contract Development & Administration": {
+      "total": 150,
+      "valid_ans": 150,
+      "valid_exp": 150
+    },
+    "Forensic Science": {
+      "total": 310,
+      "valid_ans": 310,
+      "valid_exp": 310
+    },
+    "Intro": {
+      "total": 1,
+      "valid_ans": 1,
+      "valid_exp": 1
+    },
+    "CS - Python": {
+      "total": 1,
+      "valid_ans": 1,
+      "valid_exp": 1
+    },
+    "ExamOven Features": {
+      "total": 4,
+      "valid_ans": 4,
+      "valid_exp": 4
+    },
+    "Nutrition": {
+      "total": 168,
+      "valid_ans": 168,
+      "valid_exp": 168
+    },
+    "Pendidikan Jasmani, Olahraga, dan Kesehatan": {
+      "total": 80,
+      "valid_ans": 80,
+      "valid_exp": 80
+    },
+    "English Studies": {
+      "total": 270,
+      "valid_ans": 270,
+      "valid_exp": 270
+    },
+    "NECO BECE (Nigeria) English Studies": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "English": {
+      "total": 60,
+      "valid_ans": 60,
+      "valid_exp": 50
+    },
+    "Forensic Anthropology": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 30
+    },
+    "IELTS Grammar": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "Listening": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "Urban Planning": {
+      "total": 13,
+      "valid_ans": 13,
+      "valid_exp": 13
+    },
+    "Psychology": {
+      "total": 14,
+      "valid_ans": 14,
+      "valid_exp": 14
+    },
+    "IELTS Vocabulary": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "WAEC WASSCE (Computer Hardware and GSM Repairs 1)": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 30
+    },
+    "Computer Hardware and GSM Repairs": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "Leadership & Influence": {
+      "total": 130,
+      "valid_ans": 130,
+      "valid_exp": 130
+    },
+    "MTEL": {
+      "total": 200,
+      "valid_ans": 200,
+      "valid_exp": 200
+    },
+    "Analytical Ability and Logical Reasoning": {
+      "total": 80,
+      "valid_ans": 80,
+      "valid_exp": 0
+    },
+    "Computer Awareness": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 0
+    },
+    "General English": {
+      "total": 20,
+      "valid_ans": 20,
+      "valid_exp": 0
+    },
+    "Analytical Ability & Logical Reasoning": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 0
+    },
+    "Computer Awareness & General English": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 0
+    },
+    "Ethics & Professional Responsibilities": {
+      "total": 100,
+      "valid_ans": 100,
+      "valid_exp": 100
+    },
+    "Physical & Health Education": {
+      "total": 60,
+      "valid_ans": 60,
+      "valid_exp": 60
+    },
+    "CPPB Domain II: Pre-Solicitation Planning": {
+      "total": 170,
+      "valid_ans": 170,
+      "valid_exp": 170
+    },
+    "Procurement Business Principles": {
+      "total": 120,
+      "valid_ans": 120,
+      "valid_exp": 120
+    },
+    "Introduction to Marketing Concepts": {
+      "total": 40,
+      "valid_ans": 40,
+      "valid_exp": 40
+    },
+    "Pre Vocational Studies": {
+      "total": 430,
+      "valid_ans": 430,
+      "valid_exp": 430
+    },
+    "Biologie": {
+      "total": 43,
+      "valid_ans": 43,
+      "valid_exp": 43
+    },
+    "Mathématiques": {
+      "total": 39,
+      "valid_ans": 39,
+      "valid_exp": 39
+    },
+    "Physique": {
+      "total": 25,
+      "valid_ans": 25,
+      "valid_exp": 25
+    },
+    "Chimie": {
+      "total": 30,
+      "valid_ans": 30,
+      "valid_exp": 30
+    },
+    "MATHÉMATIQUES": {
+      "total": 13,
+      "valid_ans": 13,
+      "valid_exp": 13
+    },
+    "BIOLOGIE": {
+      "total": 11,
+      "valid_ans": 11,
+      "valid_exp": 11
+    },
+    "ÉTHIQUE": {
+      "total": 15,
+      "valid_ans": 15,
+      "valid_exp": 15
+    },
+    "EMPATHIE": {
+      "total": 15,
+      "valid_ans": 15,
+      "valid_exp": 15
+    },
+    "Ethique": {
+      "total": 15,
+      "valid_ans": 15,
+      "valid_exp": 15
+    },
+    "Empathie": {
+      "total": 15,
+      "valid_ans": 15,
+      "valid_exp": 15
+    },
+    "CPPB Domain I: Regulatory & Compliance": {
+      "total": 120,
+      "valid_ans": 120,
+      "valid_exp": 120
+    },
+    "RRB-NTPC": {
+      "total": 100,
+      "valid_ans": 100,
+      "valid_exp": 0
+    },
+    "CPPB Domain III: Sourcing & Supplier Selection": {
+      "total": 160,
+      "valid_ans": 160,
+      "valid_exp": 160
+    },
+    "SAT Math": {
+      "total": 2,
+      "valid_ans": 0,
+      "valid_exp": 0
+    },
+    "Reading & Writing": {
+      "total": 1,
+      "valid_ans": 0,
+      "valid_exp": 0
+    }
+  }
+}
