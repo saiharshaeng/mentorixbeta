@@ -121,7 +121,22 @@ function go(scr, param) {
   if (typeof buildMobileNav === 'function') buildMobileNav();
 
   // Step 10 — spring page transition
-  const main = document.getElementById('main');
+  let main = document.getElementById('main');
+  if (!main) {
+    if (typeof window.initApp === 'function') {
+      try { window.initApp(); } catch (e) {}
+    }
+    main = document.getElementById('main');
+    if (!main) {
+      const appEl = document.getElementById('app') || document.body;
+      main = document.createElement('div');
+      main.id = 'main';
+      main.setAttribute('role', 'main');
+      main.setAttribute('tabindex', '-1');
+      appEl.appendChild(main);
+    }
+  }
+
   if (main) {
     // Exit: fade + slide up
     main.style.opacity    = '0';
