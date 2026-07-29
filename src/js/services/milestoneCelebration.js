@@ -12,7 +12,7 @@
   // Single Configuration Source
   const COMMUNITY_STATS = Object.freeze({
     enabled: true,
-    learners: 2150,
+    learners: 2250,
     suffix: '+',
     label: 'LEARNERS REACHED',
     subtitle: 'Still counting...',
