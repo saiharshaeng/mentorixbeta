@@ -97,8 +97,21 @@ function checkRateLimit() {
 // ────────────────────────────────────────────────────────────
 
 async function ai(msgs, sys, mt = 1000, json = false, model = window.MODEL_CHAT || MODEL, useVision = false) {
-  // Local Interceptor for simple greetings & platform questions (0 AI Tokens)
-  const lastUserMsg = [...msgs].reverse().find(m => m.role === 'user')?.content?.trim()?.toLowerCase() || '';
+  // Local Interceptor for simple greetings, foul language & empathy guard (0 AI Tokens)
+  const rawUserMsg = [...msgs].reverse().find(m => m.role === 'user')?.content?.trim() || '';
+  const lastUserMsg = rawUserMsg.toLowerCase();
+
+  // 1. Foul Language Filter & Empathy Guard
+  const FOUL_WORDS_REGEX = /\b(fuck|shit|bitch|asshole|bastard|idiot|stupid|dumb|crap|dick|pussy|stfu|motherfucker)\b/i;
+  if (FOUL_WORDS_REGEX.test(rawUserMsg)) {
+    return "Hey, I understand studying can be frustrating at times! Let's take a deep breath together. I'm here to support you without judgment. How can I help make this topic easier for you?";
+  }
+
+  const EMOTIONAL_STRESS_REGEX = /\b(stressed|depressed|sad|exhausted|giving up|cant do this|can't do this|hopeless|scared|anxious|failing|so hard)\b/i;
+  if (EMOTIONAL_STRESS_REGEX.test(rawUserMsg) && rawUserMsg.length < 80) {
+    return "I hear you, and it's completely okay to feel that way. Preparing for big exams is tough, but remember: you don't have to master everything in one day. Take it step by step, and I'm right here with you. What topic shall we tackle together?";
+  }
+
   if (lastUserMsg && lastUserMsg.length < 30) {
     if (['hi', 'hello', 'hey', 'namaste', 'good morning', 'good evening', 'hi tio', 'hello tio', 'hey tio'].includes(lastUserMsg)) {
       return "Hey there! I'm Tio, your AI mentor on Mentorix. How can I help you with your studies today?";

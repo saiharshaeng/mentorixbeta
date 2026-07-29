@@ -129,10 +129,11 @@ window.cleanMathDelimiters = cleanMathDelimiters;
  * Pre-processes LaTeX & chemical formulas synchronously to avoid FOUT.
  */
 function renderMath(el, force = false) {
-  const target = el || document.body;
+  const target = el || (typeof document !== 'undefined' ? document.body : null);
   if (!target) return;
 
-  if (!force && target.dataset && target.dataset.katexRendered === 'true' && !target.innerHTML.includes('\\(') && !target.innerHTML.includes('\\ce{')) {
+  const html = target.innerHTML || '';
+  if (!force && target.dataset && target.dataset.katexRendered === 'true' && !html.includes('\\(') && !html.includes('\\ce{')) {
     return;
   }
 

@@ -58,7 +58,7 @@
       let isHighFocus = false;
 
       // High-Focus Activity Detection (Mock CBT, active exam overlay, or active numerical solving)
-      if (document.body?.getAttribute?.('data-screen') === 'comp') {
+      if (typeof document !== 'undefined' && document.body && document.body.getAttribute && document.body.getAttribute('data-screen') === 'comp') {
         const compTab = window.compState?.currentTab;
         if (compTab === 'mock') {
           const isExamRunning = !!document.getElementById('cbt-exam-interface') || !!window._cbtActiveSession;
