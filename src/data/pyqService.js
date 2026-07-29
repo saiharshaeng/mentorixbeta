@@ -144,6 +144,17 @@
         try { onProgress(Math.round((completed / banks.length) * 100)); } catch(e){}
       }
       if (fileCache[bank.key]) continue;
+
+      if (typeof window !== 'undefined' && window.IndexedDBCache) {
+        try {
+          const cachedData = await window.IndexedDBCache.getChapterData(bank.key);
+          if (cachedData && Array.isArray(cachedData) && cachedData.length > 0) {
+            fileCache[bank.key] = { questions: cachedData };
+            totalLoaded += cachedData.length;
+            continue;
+          }
+        } catch(e) {}
+      }
       
       try {
         let raw = null;

@@ -80,11 +80,24 @@ if (location.protocol === 'file:') {
 }
 </script>
 
+<!-- Mentorix OS Core Services -->
+<script>window._gitVersion = 'a8ffd97';</script>
+<script src="/js/services/moduleRegistry.js?v=a8ffd97"></script>
+<script src="/js/services/indexedDBCache.js?v=a8ffd97"></script>
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js?v=a8ffd97').catch(function(err) {
+      console.warn('[PWA ServiceWorker] Registration skipped/failed:', err);
+    });
+  });
+}
+</script>
 <!-- Central Question Intelligence Engine (QIE) -->
-<script src="/modules/questionEngine/QuestionEngine.js?v=80"></script>
+<script src="/modules/questionEngine/QuestionEngine.js?v=a8ffd97"></script>
 <!-- PYQ Question Banks & Services -->
-<script src="/data/pyq/classified/jee_classified.js?v=80"></script>
-<script src="/data/pyqService.js?v=80"></script>
+<script src="/data/pyq/classified/jee_classified.js?v=a8ffd97"></script>
+<script src="/data/pyqService.js?v=a8ffd97"></script>
 <!-- Official Exam Specifications -->
 <script src="/js/exam_specs.js?v=80"></script>
 <!-- Session Generation Engine (SGE) & Session Policy Engine (SPE) -->
