@@ -2826,11 +2826,11 @@ function renderActiveExamUI() {
       <div class="nta-numerical">
         <div class="nta-numerical-label">Enter exact numerical answer:</div>
         <input
-          type="number"
-          step="any"
+          type="text"
+          inputmode="decimal"
           id="numerical-ans-input"
           class="nta-numerical-input"
-          placeholder="e.g. 12, −3.5, 0.25"
+          placeholder="e.g. 12, −3.5, 0.25, 1.5e-3"
           value="${savedNum !== undefined ? savedNum : ''}"
           oninput="saveNumericalAnswer(this.value)"
         >
@@ -3260,8 +3260,8 @@ function submitMockExam() {
           isCorrect = sortedUser === sortedCorrect;
         } else if (q.type === 'numerical') {
           const correctAns = Array.isArray(q.ans) ? q.ans[0] : q.ans;
-          const numUser = parseFloat(String(userAns || '').replace(/[^0-9.\-]/g, ''));
-          const numCorrect = parseFloat(String(correctAns || '').replace(/[^0-9.\-]/g, ''));
+          const numUser = parseFloat(String(userAns || '').replace(/[^0-9.\-eE]/g, ''));
+          const numCorrect = parseFloat(String(correctAns || '').replace(/[^0-9.\-eE]/g, ''));
           isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
         } else {
           const correctIdx = Array.isArray(q.ans) ? q.ans[0] : q.ans;

@@ -25,6 +25,28 @@
   --bg-raised:  #1a1a35;  /* Elevated action cards */
   --bg-overlay: #222244;  /* Modal overlays */
 
+  /* ── KaTeX Responsive Math Overflow ── */
+  --katex-overflow: auto;
+}
+
+.katex-display, .katex-render-target, .katex {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+.katex-display {
+  margin: 0.5em 0;
+  padding: 4px 0;
+}
+@media (max-width: 480px) {
+  .katex-display {
+    font-size: 0.9em;
+  }
+}
+
+:root {
+
   --violet-900: #2e1065;
   --violet-700: #5b21b6;
   --violet-500: #7c3aed;  /* Primary action background */
