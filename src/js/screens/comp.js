@@ -2375,8 +2375,13 @@ async function startMockExamSetup(forcedMode) {
 
   if (mode === 'full') {
     const cleanId = (compState.examId || "").toLowerCase();
-    const patterns = window.EXAM_PATTERNS || (typeof require !== 'undefined' ? require('../../data/examPatterns.js') : null);
-    const pattern = (patterns && patterns[cleanId]) 
+    let patterns = (typeof window !== 'undefined' && window.EXAM_PATTERNS) ? window.EXAM_PATTERNS : (typeof EXAM_PATTERNS !== 'undefined' ? EXAM_PATTERNS : null);
+    if (!patterns && typeof require !== 'undefined') {
+      try { patterns = require('../data/examPatterns.js'); } catch(e1) {
+        try { patterns = require('../../data/examPatterns.js'); } catch(e2) {}
+      }
+    }
+    const pattern = (patterns && (patterns[cleanId] || patterns[cleanId.toUpperCase()])) 
       || (patterns && patterns.default) 
       || { durationMinutes: 180, subjects: ["Mathematics", "Physics", "Chemistry"], sections: [{ name: "Section A", type: "mcq", questionsPerSubject: 20, marking: { correct: 4, wrong: -1 } }, { name: "Section B", type: "numerical", questionsPerSubject: 5, marking: { correct: 4, wrong: -1 } }] };
 
@@ -2387,20 +2392,22 @@ async function startMockExamSetup(forcedMode) {
     
     if (cleanId === 'jee_main') {
       pattern.sections.forEach(sec => {
-        const sub = sec.subject;
+        const sub = sec.subject || sec.name || "Physics";
+        const secA = sec.sectionA || { count: 20, marksCorrect: 4, marksWrong: -1 };
+        const secB = sec.sectionB || { count: 5, marksCorrect: 4, marksWrong: 0 };
         normalizedSections.push({
           subject: sub,
           sectionName: "Section A",
           type: "mcq",
-          count: sec.sectionA.count,
-          marking: { correct: sec.sectionA.marksCorrect, wrong: sec.sectionA.marksWrong }
+          count: secA.count || 20,
+          marking: { correct: secA.marksCorrect !== undefined ? secA.marksCorrect : 4, wrong: secA.marksWrong !== undefined ? secA.marksWrong : -1 }
         });
         normalizedSections.push({
           subject: sub,
           sectionName: "Section B",
           type: "numerical",
-          count: sec.sectionB.count,
-          marking: { correct: sec.sectionB.marksCorrect, wrong: sec.sectionB.marksWrong }
+          count: secB.count || 5,
+          marking: { correct: secB.marksCorrect !== undefined ? secB.marksCorrect : 4, wrong: secB.marksWrong !== undefined ? secB.marksWrong : 0 }
         });
       });
     } else if (cleanId === 'jee_adv' || cleanId === 'jee_advanced') {
@@ -4568,6 +4575,7 @@ if (typeof window !== 'undefined') {
   window.confirmSubmitMockExam = confirmSubmitMockExam;
   window.submitMockExam = submitMockExam;
   window.renderActiveExamUI = renderActiveExamUI;
+  window.WORLD_EXAMS = WORLD_EXAMS;
 
   // ⌨️ CBT EXAM KEYBOARD SHORTCUTS (Alt+N: Next, Alt+P: Prev, Alt+M: Mark Review, Alt+C: Clear)
   window.addEventListener('keydown', function(e) {
