@@ -83,10 +83,14 @@ const server = http.createServer((req, res) => {
         res.end(`Server Error: ${err.code}`);
       }
     } else {
+      const cacheControl = (ext === '.html')
+        ? 'no-cache, must-revalidate'
+        : 'public, max-age=31536000, immutable';
+
       res.writeHead(200, {
         'Content-Type': contentType,
         'Access-Control-Allow-Origin': '*',
-        'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
+        'Cache-Control': cacheControl
       });
       res.end(content, 'utf-8');
     }
