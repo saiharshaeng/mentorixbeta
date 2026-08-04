@@ -166,8 +166,7 @@ function go(scr, param) {
 
       // Focus management
       requestAnimationFrame(() => {
-        const h = main.querySelector('h1,h2,[data-focus-first]');
-        if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+        if (h && typeof h.focus === 'function') { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
         if (window.TioOrchestrator) window.TioOrchestrator.updateState();
       });
     }, 90);
