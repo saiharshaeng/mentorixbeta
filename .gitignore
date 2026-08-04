@@ -1,15 +1,20 @@
 node_modules/
 backups/
+backup/
 deploy/
 .DS_Store
 *.log
 .gemini/
 .system_generated/
 
-
-# Large files - not tracked by git
+# Large files & temporary scratch files - not tracked by git
 Questions_Database/
 deploy.zip
+src.zip
+src_archive_extract/
+src_broken_backup/
+scratch/
+metadata/
 src/jee.json.zip
 src/data/pyq/processed/
 src/data/pyq/normalized/

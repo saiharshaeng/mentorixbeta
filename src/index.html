@@ -4,7 +4,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- maximum-scale removed: disabling pinch-zoom blocks low-vision users from
      reading content, a WCAG 2.1 failure. The app's settings panel already
      offers font-size controls for users who want larger text by default. -->
@@ -15,21 +15,27 @@
 <title>MENTORIX — Your AI Learning Universe</title>
 
 <style>
-/* ── SCROLL FIX ── */
+/* ── SCROLL FIX & IOS SAFARI VIEWPORT ── */
 html, body {
   overflow-x: hidden;
   overscroll-behavior: none;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  touch-action: manipulation;
 }
 #app {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
 }
 .screen, [class*="-screen"] {
   overflow-y: auto;
   overflow-x: hidden;
-  min-height: 100%;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
 }
 /* Remove double scrollbars */
 body:has(#app) {
@@ -221,8 +227,7 @@ if (window.location.protocol.startsWith('http')) {
           reg.update().catch(function(){});
         }
         navigator.serviceWorker.addEventListener('controllerchange', function() {
-          console.log('[SW] New service worker activated — reloading for fresh code');
-          window.location.reload();
+          console.log('[SW] New service worker activated');
         });
       }).catch(function(err) {
         console.warn('[SW] Service worker registration bypassed cleanly:', err ? err.message : 'Offline');

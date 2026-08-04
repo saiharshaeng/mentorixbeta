@@ -264,7 +264,7 @@
          */
         getSocraticExplanation: function(question, stage = 1) {
             const rawExpl = String(question?.expl || question?.explanation || 'Think about the fundamental principles underlying this topic.').trim();
-            const sentences = rawExpl.split(/(?<=[.!?])\s+/);
+            const sentences = rawExpl.match(/[^.!?]+[.!?]+/g) || [rawExpl];
 
             if (stage === 1) {
                 return {

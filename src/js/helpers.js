@@ -216,19 +216,21 @@ function pJSON(txt) {
   // Clean raw JSON string to double-escape LaTeX backslashes inside math delimiters.
   // Also automatically inserts missing backslashes for standard symbols (pi, sqrt, ce, frac, etc.)
   try {
+    const fixLatex = (p) => {
+      p = p.replace(/(\\)?ce{/g, (m, bs) => bs ? m : '\\ce{');
+      p = p.replace(/(\\)?(pi|sqrt|theta|alpha|beta|gamma|frac|pm|text)/g, (m, bs, sym) => bs ? m : '\\' + sym);
+      return p;
+    };
     txt = txt.replace(/\$\$([\s\S]*?)\$\$/g, (m, p) => {
-      p = p.replace(/(?<!\\)ce{/g, '\\ce{');
-      p = p.replace(/(?<!\\)(pi|sqrt|theta|alpha|beta|gamma|frac|pm|text)/g, '\\$1');
+      p = fixLatex(p);
       return '$$' + p.replace(/\\/g, '\\\\').replace(/\\\\\\\\/g, '\\\\') + '$$';
     });
     txt = txt.replace(/\$([^\$]*?)\$/g, (m, p) => {
-      p = p.replace(/(?<!\\)ce{/g, '\\ce{');
-      p = p.replace(/(?<!\\)(pi|sqrt|theta|alpha|beta|gamma|frac|pm|text)/g, '\\$1');
+      p = fixLatex(p);
       return '$' + p.replace(/\\/g, '\\\\').replace(/\\\\\\\\/g, '\\\\') + '$';
     });
     txt = txt.replace(/\\([\s\S]*?)\\\)/g, (m, p) => {
-      p = p.replace(/(?<!\\)ce{/g, '\\ce{');
-      p = p.replace(/(?<!\\)(pi|sqrt|theta|alpha|beta|gamma|frac|pm|text)/g, '\\$1');
+      p = fixLatex(p);
       return '\\(' + p.replace(/\\/g, '\\\\').replace(/\\\\\\\\/g, '\\\\') + '\\)';
     });
   } catch (e) {

@@ -74,9 +74,8 @@ function addTopic(t, courseId) {
     if (D.topics.length >= 10) awardBadge('Knowledge Seeker');
   }
   if (!D.notes) D.notes = {};
-  if (!D.notes[t]) {
-    triggerAutoNoteGeneration(t);
-  }
+  // Disabled background AI note auto-generation to save API token costs.
+  // Notes are now generated on-demand when the student taps "Generate Notes" in the Notebook.
 }
 
 async function triggerAutoNoteGeneration(topic) {

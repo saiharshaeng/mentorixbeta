@@ -127,7 +127,7 @@
           .from('profiles')
           .select('auth_email')
           .eq('username', username.toLowerCase())
-          .single();
+          .maybeSingle();
 
         if (!profile) {
           return { error: { message: 'Username not found.' } };
@@ -193,7 +193,7 @@
         .from('profiles')
         .select('*')
         .eq('id', userId)
-        .single();
+        .maybeSingle();
     },
 
     async updateProfile(userId, updates) {
@@ -208,7 +208,7 @@
         .from('profiles')
         .select('username')
         .eq('username', username.toLowerCase())
-        .single();
+        .maybeSingle();
       return !data; // true = available
     },
 
@@ -367,7 +367,7 @@
         .from('profiles')
         .select('settings')
         .eq('id', userId)
-        .single();
+        .maybeSingle();
       return data?.settings || null;
     }
   };
