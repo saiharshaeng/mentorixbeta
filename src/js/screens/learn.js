@@ -517,7 +517,7 @@ Output a single JSON object with these exact keys:
       }
     }
 
-    if (lesson && (lesson.explanation || lesson.technical)) {
+    if (isValidLesson(lesson)) {
       LS.lesson = lesson;
       LS.loading = false;
       LS.err = '';
@@ -1587,101 +1587,6 @@ function renderStageContent() {
         </div>
       </div>
     `;
-  } else if (stage === 8) {
-    // ── STEP 8: RESULTS & PATHWAY CHOICE ──
-    let nextTopicName = '';
-    try {
-      if (window.CourseProgressionEngine) {
-        const nextPos = window.CourseProgressionEngine.getCurrentPosition();
-        if (nextPos?.topicTitle && nextPos.topicTitle !== l.topic) nextTopicName = nextPos.topicTitle;
-      }
-    } catch(e) {}
-
-    if (!nextTopicName) {
-      try {
-        const activeCourse = (D.courses || []).find(c => c.id === D.lastCourseId) || (D.courses || [])[0];
-        if (activeCourse && activeCourse.units) {
-          let foundCurrent = false;
-          outer: for (const unit of activeCourse.units || []) {
-            for (const chapter of unit.chapters || []) {
-              for (const sub of chapter.subchapters || []) {
-                for (const topic of sub.topics || []) {
-                  const tTitle = typeof topic === 'string' ? topic : (topic.title || topic.name || '');
-                  if (foundCurrent && tTitle && tTitle !== l.topic) {
-                    nextTopicName = tTitle;
-                    break outer;
-                  }
-                  if (tTitle === l.topic) foundCurrent = true;
-                }
-              }
-            }
-          }
-        }
-      } catch(e) {}
-    }
-
-    if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
-    const totalChecks = (l.checks || []).length;
-    const correctCount = Object.values(LS.checkAttempts || {}).filter(a => a.correct).length;
-    const scorePct = totalChecks > 0 ? Math.round((correctCount / totalChecks) * 100) : 0;
-    if (!D.memory.history) D.memory.history = [];
-    D.memory.history.push({ topic: l.topic, score: scorePct, completedAt: Date.now() });
-    if (D.memory.history.length > 100) D.memory.history = D.memory.history.slice(-100);
-    D.memory.activeLesson = null;
-    D.lastStudiedTopic = l.topic;
-    saveAll();
-
-    html = `
-      <div class="card" style="padding:28px;text-align:center">
-        <div style="font-size:48px;margin-bottom:10px">🎓</div>
-        <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">STEP 8 OF 8 · RESULTS & PATHWAY CHOICE</div>
-        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:14px">Topic Completed: ${esc(l.topic)}</div>
-        
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;text-align:left">
-          <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:14px">
-            <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase;margin-bottom:4px">ACCURACY</div>
-            <div style="font-size:24px;font-weight:800;color:#fff">${scorePct}%</div>
-            <div style="font-size:11px;color:var(--sub)">${correctCount}/${totalChecks} correct</div>
-          </div>
-          <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.2);border-radius:12px;padding:14px">
-            <div style="font-size:10px;color:var(--pl);font-weight:700;text-transform:uppercase;margin-bottom:4px">PERFORMANCE</div>
-            <div style="font-size:18px;font-weight:800;color:#fff">${scorePct >= 80 ? '🔥 Excellent' : scorePct >= 60 ? '👍 Good' : scorePct >= 40 ? '🙂 Fair' : '📖 Needs Review'}</div>
-          </div>
-        </div>
-
-        ${scorePct < 50 ? `
-        <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:20px;margin-bottom:22px;text-align:left">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-            <span style="font-size:28px">🔄</span>
-            <div>
-              <div style="font-size:14px;font-weight:700;color:var(--redl)">This topic needs more work</div>
-              <div style="color:var(--mut);font-size:12px">You scored ${scorePct}% — re-learning will reinforce the concepts you missed.</div>
-            </div>
-          </div>
-          <button class="btn bpri bfull" style="margin-top:8px;padding:13px;font-size:14px;border-radius:12px" onclick="go('learn','${escON(l.topic)}')">
-            🔄 Re-learn "${esc(l.topic)}" from Scratch
-          </button>
-        </div>` : ''}
-
-        <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">CHOOSE YOUR NEXT PATHWAY</div>
-        
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px">
-          <button class="btn bpri bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:3px" onclick="${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">
-            <span>🚀 Next Topic</span>
-            <span style="font-size:10px;opacity:0.8;font-weight:400">${nextTopicName ? esc(nextTopicName).substring(0, 22) + (nextTopicName.length > 22 ? '…' : '') : 'Back to Courses'}</span>
-          </button>
-          <button class="btn bsec bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="go('cbt', '${escON(l.topic)}')">
-            🎯 Practice Questions
-          </button>
-          <button class="btn bsec bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="go('revision')">
-            🔍 Revise / Deep Dive
-          </button>
-          <button class="btn bgh bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="advanceStage(6)">
-            📋 View Summary
-          </button>
-        </div>
-      </div>
-    `;
   }
 
   c.innerHTML = html;
@@ -1695,7 +1600,7 @@ function renderStageContent() {
 }
 
 function advanceStage(stageNum, force) {
-  if (stageNum === 7 && !force) {
+  if (stageNum === 8 && !force) {
     const l = LS.lesson;
     const checks = l ? (l.checks || []) : [];
     const total = checks.length || 5;
@@ -1736,7 +1641,7 @@ function advanceStage(stageNum, force) {
             </p>
             <div style="display:flex;gap:12px;justify-content:center">
               <button class="btn bsec" style="padding:12px 20px" onclick="advanceStage(4)">Review Again</button>
-              <button class="btn bpri" style="padding:12px 20px" onclick="advanceStage(7, true)">Continue Anyway</button>
+              <button class="btn bpri" style="padding:12px 20px" onclick="advanceStage(8, true)">Continue Anyway</button>
             </div>
           </div>
         `;
@@ -1873,7 +1778,7 @@ function submitConfidence(level) {
   }
 
   if (!isCorrect) {
-    toast(`š ï¸ Incorrect choice logged to Mistake Diary.`);
+    toast(`❌ Incorrect — logged to Mistake Diary.`);
     haptic('error');
   }
 
@@ -2025,23 +1930,12 @@ function completeStageSession() {
 
         <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">CHOOSE YOUR NEXT STEP</div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px">
-          <button class="btn bpri bsm font-poiret" onclick="clearInterval(window._compNavTimer);${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">1. 🚀 Next Topic →</button>
-          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('comp')">2. 🎯 Practice More</button>
-          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('tio')">3. 🔍 Revise / Deep Dive</button>
+          <button class="btn bpri bsm font-poiret" onclick="${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">1. 🚀 Next Topic →</button>
+          <button class="btn bsec bsm font-poiret" onclick="go('comp')">2. 🎯 Practice More</button>
+          <button class="btn bsec bsm font-poiret" onclick="go('revision')">3. 🔍 Revise / Deep Dive</button>
         </div>
       </div>
     `;
-
-    let countdown = 10;
-    window._compNavTimer = setInterval(() => {
-      countdown--;
-      const el = document.getElementById('comp-nav-count');
-      if (el) el.textContent = countdown;
-      if (countdown <= 0) {
-        clearInterval(window._compNavTimer);
-        go('courses');
-      }
-    }, 1000);
   } else {
     go('courses');
   }

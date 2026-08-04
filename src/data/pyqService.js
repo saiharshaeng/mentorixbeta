@@ -117,8 +117,9 @@
       { key: 'jee_adv2022_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2022_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
       { key: 'jee_adv2023_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2023_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
       { key: 'jee_adv2024_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2024_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'neet_bio',          url: origin + '/data/pyq/neet/neet_biology_bank.json',           exam: 'NEET',         subject: 'Biology' }
+      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null }
+      // { key: 'neet_bio',          url: origin + '/data/pyq/neet/neet_biology_bank.json',           exam: 'NEET',         subject: 'Biology' }
+      // DISABLED: all 5000 questions have correct='a' (data corruption). Re-enable after fixing answer field.
     ];
 
     const banks = normTarget 
