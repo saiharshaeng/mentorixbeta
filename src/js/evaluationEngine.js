@@ -39,7 +39,8 @@
       if (studentAnswer === undefined || studentAnswer === null) return false;
 
       const type = questionObj.type || 'mcq';
-      const official = questionObj.officialAnswer;
+      const rawOfficial = questionObj.officialAnswer !== undefined ? questionObj.officialAnswer : questionObj.ans;
+      const official = Array.isArray(rawOfficial) && (type === 'mcq' || type === 'numerical' || type === 'integer') ? rawOfficial[0] : rawOfficial;
 
       if (type === 'mcq' || type === 'assertion_reason' || type === 'case_study') {
         const correctVal = Array.isArray(official) ? official[0] : official;
