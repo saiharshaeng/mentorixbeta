@@ -1,0 +1,259 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q262",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q262_RAW",
+    "question": {
+      "latex": "The increase in the pressure required to decrease the volume $$\\Delta V$$ of water is $6.3 \\times 10^7 \\text{ N/m}^2$. The percentage decrease in the volume is _____. $Bulk modulus of water $= 2.1 \\times 10^9 \\text{ N/m}^2$.$",
+      "unicode": "The increase in the pressure required to decrease the volume Delta V of water is 6.3 × 10^7 text{ N/m}². The percentage decrease in the volume is _____. Bulk modulus of water = 2.1 × 10^9 text{ N/m}².",
+      "plainText": "The increase in the pressure required to decrease the volume Delta V of water is 6.3 times 10^7 text{ N/m}^2. The percentage decrease in the volume is _____. Bulk modulus of water = 2.1 times 10^9 text{ N/m}^2."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2\\%$",
+        "unicode": "2%",
+        "plainText": "2%"
+      },
+      {
+        "id": "b",
+        "latex": "$3\\%$",
+        "unicode": "3%",
+        "plainText": "3%"
+      },
+      {
+        "id": "c",
+        "latex": "$6\\%$",
+        "unicode": "6%",
+        "plainText": "6%"
+      },
+      {
+        "id": "d",
+        "latex": "$4\\%$",
+        "unicode": "4%",
+        "plainText": "4%"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The Bulk modulus $B$ is defined as the ratio of volume stress (increase in pressure) to volume strain (fractional decrease in volume):\n$B = \\frac{\\Delta P}{\\Delta V / V}$\nRearranging for the fractional decrease in volume:\n$\\frac{\\Delta V}{V} = \\frac{\\Delta P}{B} = \\frac{6.3 \\times 10^7}{2.1 \\times 10^9} = 3 \\times 10^{-2}$\nPercentage decrease in volume $= \\frac{\\Delta V}{V} \\times 100\\% = 3 \\times 10^{-2} \\times 100\\% = 3\\%$.",
+      "unicode": "The Bulk modulus B is defined as the ratio of volume stress (increase in pressure) to volume strain (fractional decrease in volume):\nB = (Delta P/Delta V / V)\nRearranging for the fractional decrease in volume:\n(Delta V/V) = (Delta P/B) = (6.3 × 10^7/2.1 × 10^9) = 3 × 10^{-2}\nPercentage decrease in volume = (Delta V/V) × 100% = 3 × 10^{-2} × 100% = 3%.",
+      "plainText": "The Bulk modulus B is defined as the ratio of volume stress (increase in pressure) to volume strain (fractional decrease in volume): B = (Delta P)/(Delta V / V) Rearranging for the fractional decrease in volume: (Delta V)/(V) = (Delta P)/(B) = (6.3 times 10^7)/(2.1 times 10^9) = 3 times 10^{-2} Percentage decrease in volume = (Delta V)/(V) times 100% = 3 times 10^{-2} times 100% = 3%."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Solids",
+      "subchapter": "Mechanical Properties of Solids Core Concepts",
+      "topic": "Mechanical Properties of Solids Primary Topic",
+      "learningOutcome": "Master fundamental principles of Mechanical Properties of Solids",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.539Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.539Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q269",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q269_RAW",
+    "question": {
+      "latex": "A string $A$ of length $0.314$ m and Young's modulus $2 \\times 10^{10} \\text{ N/m}^2$ is connected to another string $B$ of length and Young's modulus both twice of those of $A$. This series combination of strings is then suspended from a rigid support and its free end is fixed to a load of mass $0.8$ kg. The net change in length of the combination is _____ mm. $radius of both the strings is $0.2$ mm and acceleration due to gravity $= 10 \\text{ m/s}^2$$ $Mass of both strings is to be neglected as compared to the mass of load$",
+      "unicode": "A string A of length 0.314 m and Young's modulus 2 × 10^{10} text{ N/m}² is connected to another string B of length and Young's modulus both twice of those of A. This series combination of strings is then suspended from a rigid support and its free end is fixed to a load of mass 0.8 kg. The net change in length of the combination is _____ mm. radius of both the strings is 0.2 mm and acceleration due to gravity = 10 text{ m/s}² Mass of both strings is to be neglected as compared to the mass of load",
+      "plainText": "A string A of length 0.314 m and Young's modulus 2 times 10^{10} text{ N/m}^2 is connected to another string B of length and Young's modulus both twice of those of A. This series combination of strings is then suspended from a rigid support and its free end is fixed to a load of mass 0.8 kg. The net change in length of the combination is _____ mm. radius of both the strings is 0.2 mm and acceleration due to gravity = 10 text{ m/s}^2 Mass of both strings is to be neglected as compared to the mass of load"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "$1.9$",
+        "unicode": "1.9",
+        "plainText": "1.9"
+      },
+      {
+        "id": "d",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "For string $A$: $L_A = 0.314 \\text{ m} \\approx \\frac{\\pi}{10} \\text{ m}$, $Y_A = 2 \\times 10^{10} \\text{ N/m}^2$.\nFor string $B$: $L_B = 2L_A$, $Y_B = 2Y_A$.\nThe cross-sectional area for both is $S = \\pi r^2 = \\pi (0.2 \\times 10^{-3})^2 = 4\\pi \\times 10^{-8} \\text{ m}^2$.\nThe tension $T$ throughout the strings is $T = mg = 0.8 \\times 10 = 8 \\text{ N}$.\nThe elongation of string $A$ is:\n$\\Delta L_A = \\frac{T L_A}{S Y_A} = \\frac{8 \\times 0.314}{(4\\pi \\times 10^{-8}) \\times (2 \\times 10^{10})} = \\frac{8 \\times 0.314}{8\\pi \\times 10^2} = \\frac{0.314}{100\\pi}$.\nUsing $\\pi \\approx 3.14$, $\\Delta L_A = \\frac{0.1}{100} \\text{ m} = 1 \\times 10^{-3} \\text{ m} = 1 \\text{ mm}$.\nThe elongation of string $B$ is:\n$\\Delta L_B = \\frac{T L_B}{S Y_B} = \\frac{T (2L_A)}{S (2Y_A)} = \\frac{T L_A}{S Y_A} = \\Delta L_A = 1 \\text{ mm}$.\nTotal elongation $= \\Delta L_A + \\Delta L_B = 1 \\text{ mm} + 1 \\text{ mm} = 2 \\text{ mm}$.",
+      "unicode": "For string A: L_A = 0.314 text{ m} approx (π/10) text{ m}, Y_A = 2 × 10^{10} text{ N/m}².\nFor string B: L_B = 2L_A, Y_B = 2Y_A.\nThe cross-sectional area for both is S = π r² = π (0.2 × 10^{-3})² = 4π × 10^{-8} text{ m}².\nThe tension T throughout the strings is T = mg = 0.8 × 10 = 8 text{ N}.\nThe elongation of string A is:\nDelta L_A = (T L_A/S Y_A) = (8 × 0.314/(4π × 10^{-8)) × (2 × 10^{10})} = (8 × 0.314/8π × 10²) = (0.314/100π).\nUsing π approx 3.14, Delta L_A = (0.1/100) text{ m} = 1 × 10^{-3} text{ m} = 1 text{ mm}.\nThe elongation of string B is:\nDelta L_B = (T L_B/S Y_B) = (T (2L_A)/S (2Y_A)) = (T L_A/S Y_A) = Delta L_A = 1 text{ mm}.\nTotal elongation = Delta L_A + Delta L_B = 1 text{ mm} + 1 text{ mm} = 2 text{ mm}.",
+      "plainText": "For string A: L_A = 0.314 text{ m} approx (pi)/(10) text{ m}, Y_A = 2 times 10^{10} text{ N/m}^2. For string B: L_B = 2L_A, Y_B = 2Y_A. The cross-sectional area for both is S = pi r^2 = pi (0.2 times 10^{-3})^2 = 4pi times 10^{-8} text{ m}^2. The tension T throughout the strings is T = mg = 0.8 times 10 = 8 text{ N}. The elongation of string A is: Delta L_A = (T L_A)/(S Y_A) = (8 times 0.314)/((4pi times 10^{-8)) times (2 times 10^{10})} = (8 times 0.314)/(8pi times 10^2) = (0.314)/(100pi). Using pi approx 3.14, Delta L_A = (0.1)/(100) text{ m} = 1 times 10^{-3} text{ m} = 1 text{ mm}. The elongation of string B is: Delta L_B = (T L_B)/(S Y_B) = (T (2L_A))/(S (2Y_A)) = (T L_A)/(S Y_A) = Delta L_A = 1 text{ mm}. Total elongation = Delta L_A + Delta L_B = 1 text{ mm} + 1 text{ mm} = 2 text{ mm}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Solids",
+      "subchapter": "Mechanical Properties of Solids Core Concepts",
+      "topic": "Mechanical Properties of Solids Primary Topic",
+      "learningOutcome": "Master fundamental principles of Mechanical Properties of Solids",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.539Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.539Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q532",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q532_RAW",
+    "question": {
+      "latex": "A uniform wire of length $l$ of weight $w$ is suspended from the roof with a weight of $W$ at the other end. The stress in the wire at $\\frac{l}{3}$ distance from the top is $\\left$ \\frac{W}{A} + \\frac{2}{\\gamma}\\frac{w}{A} \\right$$, where, $A$ is the cross sectional area of the wire. The value of $\\gamma$ is _______.",
+      "unicode": "A uniform wire of length l of weight w is suspended from the roof with a weight of W at the other end. The stress in the wire at (l/3) distance from the top is left (W/A) + (2/gamma)(w/A) right, where, A is the cross sectional area of the wire. The value of gamma is _______.",
+      "plainText": "A uniform wire of length l of weight w is suspended from the roof with a weight of W at the other end. The stress in the wire at (l)/(3) distance from the top is left (W)/(A) + (2)/(gamma)(w)/(A) right, where, A is the cross sectional area of the wire. The value of gamma is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "c",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "d",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Stress in the wire at any point is defined as the total load supported below that point divided by the cross-sectional area $A$.\nA point at a distance $l/3$ from the top is equivalent to a distance of $l - l/3 = 2l/3$ from the bottom.\nThe total tension at this point must support the hanging weight $W$ plus the weight of the lower portion of the wire.\nSince the wire is uniform and has total weight $w$, the weight of the bottom segment of length $2l/3$ is $\\frac{2}{3}w$.\nTotal Tension $T = W + \\frac{2}{3}w$.\nStress $= \\frac{T}{A} = \\frac{W + \\frac{2}{3}w}{A} = \\frac{W}{A} + \\frac{2}{3}\\frac{w}{A}$.\nComparing this with the given expression $\\frac{W}{A} + \\frac{2}{\\gamma}\\frac{w}{A}$, we see that $\\gamma = 3$.",
+      "unicode": "Stress in the wire at any point is defined as the total load supported below that point divided by the cross-sectional area A.\nA point at a distance l/3 from the top is equivalent to a distance of l - l/3 = 2l/3 from the bottom.\nThe total tension at this point must support the hanging weight W plus the weight of the lower portion of the wire.\nSince the wire is uniform and has total weight w, the weight of the bottom segment of length 2l/3 is (2/3)w.\nTotal Tension T = W + (2/3)w.\nStress = (T/A) = (W + frac{2/3)w}{A} = (W/A) + (2/3)(w/A).\nComparing this with the given expression (W/A) + (2/gamma)(w/A), we see that gamma = 3.",
+      "plainText": "Stress in the wire at any point is defined as the total load supported below that point divided by the cross-sectional area A. A point at a distance l/3 from the top is equivalent to a distance of l - l/3 = 2l/3 from the bottom. The total tension at this point must support the hanging weight W plus the weight of the lower portion of the wire. Since the wire is uniform and has total weight w, the weight of the bottom segment of length 2l/3 is (2)/(3)w. Total Tension T = W + (2)/(3)w. Stress = (T)/(A) = (W + frac{2)/(3)w}{A} = (W)/(A) + (2)/(3)(w)/(A). Comparing this with the given expression (W)/(A) + (2)/(gamma)(w)/(A), we see that gamma = 3."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Solids",
+      "subchapter": "Mechanical Properties of Solids Core Concepts",
+      "topic": "Mechanical Properties of Solids Primary Topic",
+      "learningOutcome": "Master fundamental principles of Mechanical Properties of Solids",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

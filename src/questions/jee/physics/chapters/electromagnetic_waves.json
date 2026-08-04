@@ -1,0 +1,89 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_ELECTROMAGNE_2026_S1_Q158",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_ELECTROMAGNE_2026_S1_Q158_RAW",
+    "question": {
+      "latex": "An electromagnetic wave travelling in x-direction is described by field equation $E_y = 300 \\sin \\omega \\left$t - \\frac{x}{c}\\right$$. If the electron is restricted to move in y-direction only with speed of $1.5 \\times 10^6\\text{ m/s}$ then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "unicode": "An electromagnetic wave travelling in x-direction is described by field equation E_y = 300 sin omega leftt - (x/c)right. If the electron is restricted to move in y-direction only with speed of 1.5 × 10^6text{ m/s} then ratio of maximum electric and magnetic forces acting on the electron is _______.",
+      "plainText": "An electromagnetic wave travelling in x-direction is described by field equation E_y = 300 sin omega leftt - (x)/(c)right. If the electron is restricted to move in y-direction only with speed of 1.5 times 10^6text{ m/s} then ratio of maximum electric and magnetic forces acting on the electron is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "200",
+        "unicode": "200",
+        "plainText": "200"
+      },
+      {
+        "id": "b",
+        "latex": "150",
+        "unicode": "150",
+        "plainText": "150"
+      },
+      {
+        "id": "c",
+        "latex": "400",
+        "unicode": "400",
+        "plainText": "400"
+      },
+      {
+        "id": "d",
+        "latex": "300",
+        "unicode": "300",
+        "plainText": "300"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "In an electromagnetic wave in vacuum, the amplitudes of the electric field ($E_0$) and magnetic field ($B_0$) are related by $E_0 = c B_0$, where $c$ is the speed of light.\nThe maximum electric force on the electron is $F_E = e E_0$.\nThe maximum magnetic force on the electron moving with speed $v$ is $F_B = e v B_0 \\sin(90^\\circ) = e v B_0$ (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n$\\frac{F_E}{F_B} = \\frac{e E_0}{e v B_0} = \\frac{E_0}{v B_0}$\nSubstitute $E_0 = c B_0$:\n$\\frac{F_E}{F_B} = \\frac{c B_0}{v B_0} = \\frac{c}{v}$\nGiven $c = 3 \\times 10^8\\text{ m/s}$ and $v = 1.5 \\times 10^6\\text{ m/s}$:\n$\\frac{F_E}{F_B} = \\frac{3 \\times 10^8}{1.5 \\times 10^6} = 2 \\times 10^2 = 200$.",
+      "unicode": "In an electromagnetic wave in vacuum, the amplitudes of the electric field (E_0) and magnetic field (B_0) are related by E_0 = c B_0, where c is the speed of light.\nThe maximum electric force on the electron is F_E = e E_0.\nThe maximum magnetic force on the electron moving with speed v is F_B = e v B_0 sin(90^circ) = e v B_0 (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular).\nThe ratio of the maximum electric force to the maximum magnetic force is:\n(F_E/F_B) = (e E_0/e v B_0) = (E_0/v B_0)\nSubstitute E_0 = c B_0:\n(F_E/F_B) = (c B_0/v B_0) = (c/v)\nGiven c = 3 × 10^8text{ m/s} and v = 1.5 × 10^6text{ m/s}:\n(F_E/F_B) = (3 × 10^8/1.5 × 10^6) = 2 × 10² = 200.",
+      "plainText": "In an electromagnetic wave in vacuum, the amplitudes of the electric field (E_0) and magnetic field (B_0) are related by E_0 = c B_0, where c is the speed of light. The maximum electric force on the electron is F_E = e E_0. The maximum magnetic force on the electron moving with speed v is F_B = e v B_0 sin(90^circ) = e v B_0 (since the electron moves in the y-direction and magnetic field is in the z-direction, they are mutually perpendicular). The ratio of the maximum electric force to the maximum magnetic force is: (F_E)/(F_B) = (e E_0)/(e v B_0) = (E_0)/(v B_0) Substitute E_0 = c B_0: (F_E)/(F_B) = (c B_0)/(v B_0) = (c)/(v) Given c = 3 times 10^8text{ m/s} and v = 1.5 times 10^6text{ m/s}: (F_E)/(F_B) = (3 times 10^8)/(1.5 times 10^6) = 2 times 10^2 = 200."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "subchapter": "Electromagnetic Waves Core Concepts",
+      "topic": "Electromagnetic Waves Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electromagnetic Waves",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.531Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.531Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

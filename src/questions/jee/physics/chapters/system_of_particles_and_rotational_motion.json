@@ -1,0 +1,524 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q1241",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q1241_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (d) As the rod rotates in vertical plane so a torque is acting on it, which is due to the vertical component of weigh t of rod. L Initial condition Now, Torque T = force x perpendicular distance of line of action of force from axis of rotation . e I =mgsm x - 2 Again, Torque 't = Ia . . mI2 Where, I = moment of mert1a = - 3 lforce and Torque freque",
+      "unicode": "[JEE PYQ 2025] (d) As the rod rotates in vertical plane so a torque is acting on it, which is due to the vertical component of weigh t of rod. L Initial condition Now, Torque T = force x perpendicular distance of line of action of force from axis of rotation . e I =mgsm x - 2 Again, Torque 't = Ia . . mI2 Where, I = moment of mert1a = - 3 lforce and Torque freque",
+      "plainText": "[JEE PYQ 2025] (d) As the rod rotates in vertical plane so a torque is acting on it, which is due to the vertical component of weigh t of rod. L Initial condition Now, Torque T = force x perpendicular distance of line of action of force from axis of rotation . e I =mgsm x - 2 Again, Torque 't = Ia . . mI2 Where, I = moment of mert1a = - 3 lforce and Torque freque"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "As the rod rotates in vertical plane so a torque is acting on it, which is due to the vertical compo",
+        "unicode": "As the rod rotates in vertical plane so a torque is acting on it, which is due to the vertical compo",
+        "plainText": "As the rod rotates in vertical plane so a torque is acting on it, which is due to the vertical compo"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.235Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.235Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q1376",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q1376_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] A w h eel of radius Rand mass Mis placed at the bottom of a fixed step of h ei ght R as shown in the figure. A constant force i s continuously applied on the surface of the wheel so that it just climbs the step without slipping. Consider the torque T about an axis normal to the plane of the paper passing through the point Q. Which of the following",
+      "unicode": "[JEE PYQ 2025] A w h eel of radius Rand mass Mis placed at the bottom of a fixed step of h ei ght R as shown in the figure. A constant force i s continuously applied on the surface of the wheel so that it just climbs the step without slipping. Consider the torque T about an axis normal to the plane of the paper passing through the point Q. Which of the following",
+      "plainText": "[JEE PYQ 2025] A w h eel of radius Rand mass Mis placed at the bottom of a fixed step of h ei ght R as shown in the figure. A constant force i s continuously applied on the surface of the wheel so that it just climbs the step without slipping. Consider the torque T about an axis normal to the plane of the paper passing through the point Q. Which of the following"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "If the force is applied normal to the circumference at point P, then -r is zero",
+        "unicode": "If the force is applied normal to the circumference at point P, then -r is zero",
+        "plainText": "If the force is applied normal to the circumference at point P, then -r is zero"
+      },
+      {
+        "id": "b",
+        "latex": "If the force is applied tangentially at point S, then -r * 0 but the wheel never climbs the step",
+        "unicode": "If the force is applied tangentially at point S, then -r * 0 but the wheel never climbs the step",
+        "plainText": "If the force is applied tangentially at point S, then -r * 0 but the wheel never climbs the step"
+      },
+      {
+        "id": "c",
+        "latex": "If the force is applied at point P tangentially, then -r decreases continuously as the wheel climbs",
+        "unicode": "If the force is applied at point P tangentially, then -r decreases continuously as the wheel climbs",
+        "plainText": "If the force is applied at point P tangentially, then -r decreases continuously as the wheel climbs"
+      },
+      {
+        "id": "d",
+        "latex": "If the force is applied normal to the circumferen ce at point X, then -r is constant",
+        "unicode": "If the force is applied normal to the circumferen ce at point X, then -r is constant",
+        "plainText": "If the force is applied normal to the circumferen ce at point X, then -r is constant"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.246Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.246Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q1379",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q1379_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] A rigid uniform bar AB of length Lis slipping from its vertical position on a frictionless floor (as shown in the figure). At some instant of time, the angle made by the bar with the vertical is 0. Which of the following statements about its motion is/are correct? + I I I I I I L 0 (a) Instantaneous torque about the point in contact with the floor",
+      "unicode": "[JEE PYQ 2025] A rigid uniform bar AB of length Lis slipping from its vertical position on a frictionless floor (as shown in the figure). At some instant of time, the angle made by the bar with the vertical is 0. Which of the following statements about its motion is/are correct? + I I I I I I L 0 (a) Instantaneous torque about the point in contact with the floor",
+      "plainText": "[JEE PYQ 2025] A rigid uniform bar AB of length Lis slipping from its vertical position on a frictionless floor (as shown in the figure). At some instant of time, the angle made by the bar with the vertical is 0. Which of the following statements about its motion is/are correct? + I I I I I I L 0 (a) Instantaneous torque about the point in contact with the floor"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Instantaneous torque about the point in contact with the floor is proportional to sin0",
+        "unicode": "Instantaneous torque about the point in contact with the floor is proportional to sin0",
+        "plainText": "Instantaneous torque about the point in contact with the floor is proportional to sin0"
+      },
+      {
+        "id": "b",
+        "latex": "The trajectory of the point A is parabola",
+        "unicode": "The trajectory of the point A is parabola",
+        "plainText": "The trajectory of the point A is parabola"
+      },
+      {
+        "id": "c",
+        "latex": "The mid-point of the bar will fall vertically downward",
+        "unicode": "The mid-point of the bar will fall vertically downward",
+        "plainText": "The mid-point of the bar will fall vertically downward"
+      },
+      {
+        "id": "d",
+        "latex": "When the ba r makes an angle 0with the ve rtical, the displacement of its mid-point from the initial",
+        "unicode": "When the ba r makes an angle 0with the ve rtical, the displacement of its mid-point from the initial",
+        "plainText": "When the ba r makes an angle 0with the ve rtical, the displacement of its mid-point from the initial"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.246Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.246Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q2324",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q2324_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Two beams, A and B, of plane polarised light with mutually perpendicular planes of polarisation are seen through a polaroid. From the position when t h e beam A has maximum intensity (and beam B has zero intensity), a rotation of polaroid through 30° makes the two beams appear equally bright. If the initial intensities of the two beams are IA andJB",
+      "unicode": "[JEE PYQ 2025] Two beams, A and B, of plane polarised light with mutually perpendicular planes of polarisation are seen through a polaroid. From the position when t h e beam A has maximum intensity (and beam B has zero intensity), a rotation of polaroid through 30° makes the two beams appear equally bright. If the initial intensities of the two beams are IA andJB",
+      "plainText": "[JEE PYQ 2025] Two beams, A and B, of plane polarised light with mutually perpendicular planes of polarisation are seen through a polaroid. From the position when t h e beam A has maximum intensity (and beam B has zero intensity), a rotation of polaroid through 30° makes the two beams appear equally bright. If the initial intensities of the two beams are IA andJB"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "3/2",
+        "unicode": "3/2",
+        "plainText": "3/2"
+      },
+      {
+        "id": "c",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "d",
+        "latex": "1/3 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/fr",
+        "unicode": "1/3 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/fr",
+        "plainText": "1/3 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/fr"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.297Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.297Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q3188",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q3188_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Consider a disc rotating in the horizontal plane with a constant angular speed w about its centre 0. The disc has a shaded region on one side of the diameter and an unshaded region on the other side as shown in the figure. When the disc is in the orientation as shown, two pebbles P and Q are simultaneously projected at an angle towards R. The veloc",
+      "unicode": "[JEE PYQ 2025] Consider a disc rotating in the horizontal plane with a constant angular speed w about its centre 0. The disc has a shaded region on one side of the diameter and an unshaded region on the other side as shown in the figure. When the disc is in the orientation as shown, two pebbles P and Q are simultaneously projected at an angle towards R. The veloc",
+      "plainText": "[JEE PYQ 2025] Consider a disc rotating in the horizontal plane with a constant angular speed w about its centre 0. The disc has a shaded region on one side of the diameter and an unshaded region on the other side as shown in the figure. When the disc is in the orientation as shown, two pebbles P and Q are simultaneously projected at an angle towards R. The veloc"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P lands in the shaded region and Q in the unshaded region",
+        "unicode": "P lands in the shaded region and Q in the unshaded region",
+        "plainText": "P lands in the shaded region and Q in the unshaded region"
+      },
+      {
+        "id": "b",
+        "latex": "P lands in the unshaded region a nd Q in the shaded region",
+        "unicode": "P lands in the unshaded region a nd Q in the shaded region",
+        "plainText": "P lands in the unshaded region a nd Q in the shaded region"
+      },
+      {
+        "id": "c",
+        "latex": "bothP andQ land in the unshaded region",
+        "unicode": "bothP andQ land in the unshaded region",
+        "plainText": "bothP andQ land in the unshaded region"
+      },
+      {
+        "id": "d",
+        "latex": "both P and Q land in the shaded region",
+        "unicode": "both P and Q land in the shaded region",
+        "plainText": "both P and Q land in the shaded region"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.362Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.362Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q3674",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SYSTEMOFPART_2025_S1_Q3674_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] A large glass slab( μ =~)of thickness 8 cm is placed over a point source of light on a plane surface. It is seen that light IIT JEE (Physics) • Solved Paper 2010 emerges out of the top surface of the slab from a circular area of radius R cm. What is the value of R? SECTION Ill -Paragraph Type This section contains 2 paragraphs. Based upon each of t",
+      "unicode": "[JEE PYQ 2025] A large glass slab( μ =~)of thickness 8 cm is placed over a point source of light on a plane surface. It is seen that light IIT JEE (Physics) • Solved Paper 2010 emerges out of the top surface of the slab from a circular area of radius R cm. What is the value of R? SECTION Ill -Paragraph Type This section contains 2 paragraphs. Based upon each of t",
+      "plainText": "[JEE PYQ 2025] A large glass slab( μ =~)of thickness 8 cm is placed over a point source of light on a plane surface. It is seen that light IIT JEE (Physics) • Solved Paper 2010 emerges out of the top surface of the slab from a circular area of radius R cm. What is the value of R? SECTION Ill -Paragraph Type This section contains 2 paragraphs. Based upon each of t"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": ",",
+        "unicode": ",",
+        "plainText": ","
+      },
+      {
+        "id": "b",
+        "latex": ",",
+        "unicode": ",",
+        "plainText": ","
+      },
+      {
+        "id": "c",
+        "latex": "and",
+        "unicode": "and",
+        "plainText": "and"
+      },
+      {
+        "id": "d",
+        "latex": "out of which ONLY ONE is correct. P 1 2- 14 The key feature of Bohr's theory of spectrum of hydrogen",
+        "unicode": "out of which ONLY ONE is correct. P 1 2- 14 The key feature of Bohr's theory of spectrum of hydrogen",
+        "plainText": "out of which ONLY ONE is correct. P 1 2- 14 The key feature of Bohr's theory of spectrum of hydrogen"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing System of Particles and Rotational Motion NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.390Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.390Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

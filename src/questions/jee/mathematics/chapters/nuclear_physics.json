@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_NUCLEARPHYSI_2026_S_Q269",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_NUCLEARPHYSI_2026_S_Q269_RAW",
+    "question": {
+      "latex": "The binding energy per nucleon of ${}^{209}_{83}\\text{Bi}$ is _______ MeV.\n[Take $m({}^{209}_{83}\\text{Bi}) = 208.980388\\text{ u}, m_p = 1.007825\\text{ u}, m_n = 1.008665\\text{ u}, 1\\text{ u} = 931\\text{ MeV/c}^2$]",
+      "unicode": "The binding energy per nucleon of {}^{209}_{83}text{Bi} is _______ MeV.\n[Take m({}^{209}_{83}text{Bi}) = 208.980388text{ u}, m_p = 1.007825text{ u}, m_n = 1.008665text{ u}, 1text{ u} = 931text{ MeV/c}²]",
+      "plainText": "The binding energy per nucleon of {}^{209}_{83}text{Bi} is _______ MeV. [Take m({}^{209}_{83}text{Bi}) = 208.980388text{ u}, m_p = 1.007825text{ u}, m_n = 1.008665text{ u}, 1text{ u} = 931text{ MeV/c}^2]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$7.48$",
+        "unicode": "7.48",
+        "plainText": "7.48"
+      },
+      {
+        "id": "b",
+        "latex": "$7.84$",
+        "unicode": "7.84",
+        "plainText": "7.84"
+      },
+      {
+        "id": "c",
+        "latex": "$8.79$",
+        "unicode": "8.79",
+        "plainText": "8.79"
+      },
+      {
+        "id": "d",
+        "latex": "$6.94$",
+        "unicode": "6.94",
+        "plainText": "6.94"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Nuclear Physics",
+      "subchapter": "Nuclear Physics Core Concepts",
+      "topic": "Nuclear Physics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Nuclear Physics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

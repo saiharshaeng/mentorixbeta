@@ -192,6 +192,47 @@ function renderQuestionText(text) {
   return s;
 }
 
+function openImageZoomModal(imgSrc, caption) {
+  let modal = document.getElementById('mx-img-zoom-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'mx-img-zoom-modal';
+    modal.style.cssText = 'position:fixed;inset:0;z-index:999999;background:rgba(0,0,0,0.92);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity 0.2s ease;';
+    document.body.appendChild(modal);
+  }
+
+  modal.innerHTML = `
+    <div style="position:absolute;top:16px;right:20px;display:flex;gap:12px;z-index:10;">
+      <button onclick="window.closeImageZoomModal()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:18px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+    </div>
+    <div style="max-width:90vw;max-height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:#fff;padding:12px;box-shadow:0 20px 50px rgba(0,0,0,0.5);">
+      <img src="${imgSrc}" style="max-width:100%;max-height:75vh;object-fit:contain;transition:transform 0.2s ease;" id="mx-img-zoom-target" />
+    </div>
+    <div style="margin-top:16px;color:#fff;font-size:14px;font-weight:500;text-align:center;max-width:600px;">
+      ${caption ? esc(caption) : 'Question Diagram — Click anywhere or press ESC to close'}
+    </div>
+  `;
+
+  modal.style.display = 'flex';
+  requestAnimationFrame(() => { modal.style.opacity = '1'; });
+
+  modal.onclick = (e) => {
+    if (e.target === modal || e.target.tagName === 'BUTTON') {
+      window.closeImageZoomModal();
+    }
+  };
+}
+
+function closeImageZoomModal() {
+  const modal = document.getElementById('mx-img-zoom-modal');
+  if (modal) {
+    modal.style.opacity = '0';
+    setTimeout(() => { modal.style.display = 'none'; }, 200);
+  }
+}
+window.openImageZoomModal = openImageZoomModal;
+window.closeImageZoomModal = closeImageZoomModal;
+
 function renderQuestionImage(question) {
   if (!question) return '';
 
@@ -226,7 +267,8 @@ function renderQuestionImage(question) {
     question.images.forEach(img => { if (img) imgList.push(String(img)); });
   }
   if (question.imagePath) imgList.push(String(question.imagePath));
-  if (question.image && !imgList.includes(String(question.image))) imgList.push(String(question.image));
+  if (question.image && typeof question.image === 'string' && !imgList.includes(String(question.image))) imgList.push(String(question.image));
+  if (question.image && typeof question.image === 'object' && question.image.originalUrl) imgList.push(String(question.image.originalUrl));
   if (question.diagramUrl && !imgList.includes(String(question.diagramUrl))) imgList.push(String(question.diagramUrl));
   if (question.img && !imgList.includes(String(question.img))) imgList.push(String(question.img));
 
@@ -236,6 +278,7 @@ function renderQuestionImage(question) {
       if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
         src = 'data/pyq/' + src;
       }
+      const desc = question.imageDescription || 'Click to zoom diagram';
       return `
         <div class="q-image-wrapper" style="position:relative;margin:12px 0;text-align:center;">
           <img 
@@ -245,7 +288,7 @@ function renderQuestionImage(question) {
             alt="Question Diagram ${idx + 1}"
             class="q-image"
             style="max-width:100%;max-height:420px;object-fit:contain;border-radius:10px;border:1px solid rgba(255,255,255,0.15);background:#fff;padding:8px;box-shadow:0 4px 16px rgba(0,0,0,0.2);cursor:zoom-in;"
-            onclick="window.open('${src}', '_blank')"
+            onclick="openImageZoomModal('${src}', '${esc(desc)}')"
             onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';"
           />
           <div class="q-image-fallback q-image-text" style="display:none;background:rgba(139,92,246,0.06);border:1px dashed rgba(139,92,246,0.3);border-radius:10px;padding:16px;margin:10px 0;text-align:center;align-items:center;justify-content:center;flex-direction:column;">
@@ -804,14 +847,36 @@ function saveCompState() {
 // OFFLINE FALLBACK QUESTION BANK
 // ═══════════════════════════════════════════════════════════
 const OFFLINE_EXAM_QUESTIONS = {
+  jee_main: [
+    { q: "What is the net force between two $+1\\,\\text{C}$ charges separated by $1\\text{ m}$ in vacuum?", opts: ["$9 \\times 10^9\\text{ N}$", "$1.6 \\times 10^{-19}\\text{ N}$", "$0\\text{ N}$", "$3 \\times 10^8\\text{ N}$"], ans: [0], type: "mcq", chap: "Electrostatics", expl: "Using $F = \\frac{k q_1 q_2}{r^2} = \\frac{(9 \\times 10^9)(1)(1)}{1^2} = 9 \\times 10^9\\text{ N}$." },
+    { q: "Which law states that electric flux through any closed surface is proportional to the total enclosed charge?", opts: ["Faraday's Law", "Gauss's Law", "Lenz's Law", "Ampere's Law"], ans: [1], type: "mcq", chap: "Electrostatics", expl: "Gauss's Law states $\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{\\text{encl}}}{\\epsilon_0}$." },
+    { q: "A simple pendulum of length 1m is on Earth ($g=10$ m/s²). What is its period?", opts: ["$\\pi$ s", "$2\\pi$ s", "$\\pi/2$ s", "$4\\pi$ s"], ans: [1], type: "mcq", chap: "Oscillations", expl: "$T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{1/10} \\approx 2$ s." },
+    { q: "In SHM, when is kinetic energy maximum?", opts: ["At extreme positions", "At mean position", "At all positions equally", "When acceleration is maximum"], ans: [1], type: "mcq", chap: "Oscillations", expl: "KE is maximum when x=0 (mean position), zero when x=±A." },
+    { q: "In photoelectric effect, doubling the intensity of light will:", opts: ["Double the KE of electrons", "Double the number of electrons emitted", "Increase the threshold frequency", "Decrease the stopping potential"], ans: [1], type: "mcq", chap: "Modern Physics", expl: "Intensity determines number of photons → number of photoelectrons emitted." },
+    { q: "Energy of electron in n=2 orbit of hydrogen atom is:", opts: ["-13.6 eV", "-3.4 eV", "-1.51 eV", "-0.85 eV"], ans: [1], type: "mcq", chap: "Atomic Physics", expl: "$E_2 = -13.6/2^2 = -13.6/4 = -3.4$ eV." },
+    { q: "What is the general formula for alkenes?", opts: ["$C_nH_{2n+2}$", "$C_nH_{2n}$", "$C_nH_{2n-2}$", "$C_nH_n$"], ans: [1], type: "mcq", chap: "Organic Chemistry", expl: "Alkenes have one double bond. General formula $C_nH_{2n}$." },
+    { q: "Which reagent distinguishes aldehyde from ketone?", opts: ["Bromine water", "Tollens reagent", "HCl", "NaOH"], ans: [1], type: "mcq", chap: "Organic Chemistry", expl: "Tollens reagent gives silver mirror test with aldehydes only." },
+    { q: "Find the derivative of $f(x) = x^3 - 3x + 2$ at $x = 2$.", opts: ["6", "9", "12", "3"], ans: [1], type: "mcq", chap: "Calculus", expl: "f'(x) = 3x^2 - 3. At x=2, f'(2) = 3(4)-3 = 9." },
+    { q: "Calculate the work done when a force of $10\\text{ N}$ moves a body by $5\\text{ m}$ in its direction.", opts: ["50 J", "2 J", "15 J", "0.5 J"], ans: [0], type: "mcq", chap: "Work Power Energy", expl: "$W = F \\cdot d = 10 \\times 5 = 50\\text{ J}$." }
+  ],
   jee_adv: [
     { q: "If $f(x) = x^3 - 3x + 2$, find the number of distinct real roots of $f(x) = 0$.", opts: ["0", "1", "2", "3"], ans: [2], type: "mcq", chap: "Calculus", expl: "f(x) = (x-1)^2(x+2). Distinct roots: x=1 and x=-2. Answer: 2 distinct roots." },
     { q: "A particle position is $x = t^3 - 6t^2 + 9t + 2$. At what times is velocity zero?", opts: ["t=1 and t=3", "t=2 only", "t=0 and t=3", "t=1 only"], ans: [0], type: "mcq", chap: "Application of Derivatives", expl: "v = 3t^2 - 12t + 9 = 3(t-1)(t-3). Zero at t=1 and t=3." },
-    { q: "A resistance of $4\u03a9$ and $12\u03a9$ are connected in parallel, then in series with $2\u03a9$. Total resistance?", opts: ["5 ohm", "6 ohm", "9 ohm", "3 ohm"], ans: [0], type: "mcq", chap: "Current Electricity", expl: "Parallel: 4*12/(4+12) = 3 ohm. Series: 3+2 = 5 ohm." }
+    { q: "A resistance of $4\\Omega$ and $12\\Omega$ are connected in parallel, then in series with $2\\Omega$. Total resistance?", opts: ["5 ohm", "6 ohm", "9 ohm", "3 ohm"], ans: [0], type: "mcq", chap: "Current Electricity", expl: "Parallel: 4*12/(4+12) = 3 ohm. Series: 3+2 = 5 ohm." },
+    { q: "Two point charges $+2\\,\\mu\\text{C}$ and $+8\\,\\mu\\text{C}$ are placed $30\\text{ cm}$ apart. Force between them?", opts: ["1.6 N", "0.8 N", "3.2 N", "0.4 N"], ans: [0], type: "mcq", chap: "Electrostatics", expl: "$F = \\frac{(9 \\times 10^9)(2 \\times 10^{-6})(8 \\times 10^{-6})}{(0.3)^2} = 1.6\\text{ N}$." },
+    { q: "What is the electric field magnitude at distance $r$ from an infinite wire of charge density $\\lambda$?", opts: ["$\\lambda / (2\\pi\\epsilon_0 r)$", "$\\lambda / (4\\pi\\epsilon_0 r^2)$", "$\\lambda r / \\epsilon_0$", "Zero"], ans: [0], type: "mcq", chap: "Gauss Law", expl: "Applying Gauss Law with cylindrical surface gives $E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$." },
+    { q: "An electron jumps from n=3 to n=1 in hydrogen. Energy of emitted photon?", opts: ["12.09 eV", "13.6 eV", "10.2 eV", "1.51 eV"], ans: [0], type: "mcq", chap: "Modern Physics", expl: "E3 = -1.51 eV, E1 = -13.6 eV. Delta E = -1.51 - (-13.6) = 12.09 eV." },
+    { q: "A radioactive sample has half-life 10 days. Fraction remaining after 30 days?", opts: ["1/8", "1/4", "1/6", "1/16"], ans: [0], type: "mcq", chap: "Nuclear Physics", expl: "30 days = 3 half-lives. Fraction = (1/2)^3 = 1/8." },
+    { q: "IUPAC name of $CH_3-CH_2-CH(CH_3)-CHO$ is:", opts: ["3-methylbutanal", "2-methylbutanal", "Pentanal", "3-methylbutan-1-one"], ans: [0], type: "mcq", chap: "Organic Chemistry", expl: "Longest chain with CHO = 4 carbons. Methyl on C3 → 3-methylbutanal." },
+    { q: "Which product forms when HBr adds to propene by Markovnikov's rule?", opts: ["2-bromopropane", "1-bromopropane", "1,2-dibromopropane", "Propane"], ans: [0], type: "mcq", chap: "Hydrocarbons", expl: "H adds to CH2, Br adds to C2 → 2-bromopropane." },
+    { q: "Integral of $\\int \\frac{1}{x} dx$ is:", opts: ["$\\ln|x| + C$", "$x^2/2 + C$", "$-1/x^2 + C$", "$e^x + C$"], ans: [0], type: "mcq", chap: "Integration", expl: "Standard integral formula $\\int (1/x) dx = \\ln|x| + C$." }
   ],
   neet: [
     { q: "Which part of the nephron is responsible for selective reabsorption of glucose and amino acids?", opts: ["Bowman's capsule", "Proximal convoluted tubule", "Loop of Henle", "Collecting duct"], ans: [1], type: "mcq", chap: "Excretion", expl: "The PCT actively reabsorbs glucose, amino acids, Na+ and water." },
-    { q: "Graffian follicle secretes:", opts: ["Progesterone", "Estrogen", "LH", "FSH"], ans: [1], type: "mcq", chap: "Reproduction", expl: "Graffian follicle secretes estrogen. After ovulation it becomes corpus luteum which secretes progesterone." }
+    { q: "Graffian follicle secretes:", opts: ["Progesterone", "Estrogen", "LH", "FSH"], ans: [1], type: "mcq", chap: "Reproduction", expl: "Graffian follicle secretes estrogen. After ovulation it becomes corpus luteum." },
+    { q: "Functional unit of muscle contraction is:", opts: ["Sarcomere", "Myofibril", "Actin", "Myosin"], ans: [0], type: "mcq", chap: "Locomotion", expl: "Sarcomere is the functional contractile unit between two Z lines." },
+    { q: "Master gland of the endocrine system is:", opts: ["Pituitary gland", "Thyroid gland", "Adrenal gland", "Pancreas"], ans: [0], type: "mcq", chap: "Endocrine System", expl: "Pituitary gland controls other endocrine glands under hypothalamic regulation." },
+    { q: "Site of photosynthesis in plant cells:", opts: ["Chloroplast", "Mitochondria", "Ribosome", "Golgi apparatus"], ans: [0], type: "mcq", chap: "Plant Physiology", expl: "Chloroplast contains thylakoids and stroma for light and dark reactions." }
   ],
   sat: [
     { q: "If $2x + 3 = 11$, what is the value of $4x - 1$?", opts: ["7", "13", "15", "17"], ans: [2], type: "mcq", chap: "Linear Equations", expl: "2x=8, x=4. So 4(4)-1=15." },
@@ -824,12 +889,18 @@ const OFFLINE_EXAM_QUESTIONS = {
     { q: "If the average of five consecutive integers is 13, what is the largest?", opts: ["13", "14", "15", "16"], ans: [2], type: "mcq", chap: "Quantitative Reasoning", expl: "Middle integer = 13, so integers are 11,12,13,14,15. Largest = 15." }
   ]
 };
+window.OFFLINE_EXAM_QUESTIONS = OFFLINE_EXAM_QUESTIONS;
 
 function triggerMath() {
-  requestAnimationFrame(() => {
+  if (typeof requestAnimationFrame === 'function') {
+    requestAnimationFrame(() => {
+      const container = document.getElementById('cbt-question-panel') || document.getElementById('main') || document.body;
+      _doRenderMath(container);
+    });
+  } else {
     const container = document.getElementById('cbt-question-panel') || document.getElementById('main') || document.body;
     _doRenderMath(container);
-  });
+  }
 }
 
 // Internal math renderer — does NOT call window.renderMath to avoid infinite recursion.
@@ -2410,7 +2481,8 @@ async function startMockExamSetup(forcedMode) {
 
     // ════════════════════════════════════════════════════════════════
     // REAL PYQ PAPER: Always serve one complete, intact NTA shift paper
-    // pyqService now handles rotation and validation internally.
+    // pyqService handles loading, rotation and validation internally.
+    // Full mock mode MUST NEVER fall back to random question banks.
     // ════════════════════════════════════════════════════════════════
     if (window.pyqService) {
       const targetCount = pattern.totalQuestions || 75;
@@ -2421,50 +2493,22 @@ async function startMockExamSetup(forcedMode) {
       });
 
       if (result && result.questions && result.questions.length >= 45) {
-        questions = result.questions.map((q, i) => ({
+        // Clone paper questions to preserve immutable paper cache
+        const clonedQs = JSON.parse(JSON.stringify(result.questions));
+        questions = clonedQs.map((q, i) => ({
           ...q,
           id: i + 1,
+          sourceType: 'PAPER',
           marking: q.marking || (q.type === 'numerical' ? { correct: 4, wrong: 0, skip: 0 } : { correct: 4, wrong: -1, skip: 0 })
         }));
       }
     }
 
-    // ════════════════════════════════════════════════════════════════
-    // FALLBACK: Section-by-section assembly only if pyqService failed
-    // (e.g. network issue loading the JSON files)
-    // ════════════════════════════════════════════════════════════════
     if (questions.length === 0) {
-      console.warn('[Mock] ⚠️ pyqService returned no questions — using offline procedural fallback');
-      for (const ns of normalizedSections) {
-        if ((ns.count || 0) <= 0) continue;
-
-        let sectionQuestions = [];
-        if (window.pyqService) {
-          const result = window.pyqService.getQuestions({
-            examId: compState.examId,
-            count: ns.count,
-            subject: ns.subject,
-            type: ns.type
-          });
-          if (result && result.questions && result.questions.length > 0) {
-            sectionQuestions = result.questions;
-          }
-        }
-
-        // Hard fallback if still empty: pull from real PYQ bank
-        if (sectionQuestions.length < ns.count && window.pyqService && window.pyqService.getOfflineFallback) {
-          sectionQuestions = window.pyqService.getOfflineFallback(compState.examId, ns.subject, ns.count);
-        }
-
-        questions.push(...sectionQuestions.slice(0, ns.count).map(q => ({
-          ...q,
-          section: ns.subject,
-          type: ns.type,
-          marking: ns.marking,
-          sectionLabel: ns.sectionName
-        })));
+      console.error('[Mock] ❌ PyqService failed to load intact paper for', compState.examId);
+      if (typeof window !== 'undefined' && window.toast) {
+        window.toast('⚠️ Exam Paper Unavailable: Please check your connection or try another exam.', 'err');
       }
-      questions = questions.map((q, i) => ({ ...q, id: i + 1 }));
     }
   } else {
     // Diagnostic 6 Qs
@@ -2560,35 +2604,56 @@ let examTimerInterval = null;
 let examSecondsLeft = 10800; // 3 hours
 
 function startExamTimer(totalSeconds) {
-  examSecondsLeft = totalSeconds || 10800;
-  if (compState.activeExam) {
-    compState.activeExam.timeLeft = examSecondsLeft;
-  }
+  const exam = compState.activeExam;
+  const examKey = 'mentorix_cbt_timer_' + (compState.examId || 'jee_main');
+  
+  let startTime = Date.now();
+  let durationSec = totalSeconds || (exam ? exam.timeLeft : 10800);
+
+  // Check if session start time is stored in localStorage for reload resilience
+  try {
+    const saved = localStorage.getItem(examKey);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (parsed && parsed.startTime && parsed.durationSec) {
+        startTime = parsed.startTime;
+        durationSec = parsed.durationSec;
+      } else {
+        localStorage.setItem(examKey, JSON.stringify({ startTime, durationSec }));
+      }
+    } else {
+      localStorage.setItem(examKey, JSON.stringify({ startTime, durationSec }));
+    }
+  } catch (e) {}
+
   clearInterval(examTimerInterval);
-  
-  updateTimerDisplay();
-  
-  examTimerInterval = setInterval(() => {
-    examSecondsLeft--;
+
+  const tick = () => {
+    const elapsedSec = Math.floor((Date.now() - startTime) / 1000);
+    examSecondsLeft = Math.max(0, durationSec - elapsedSec);
+    
     if (compState.activeExam) {
       compState.activeExam.timeLeft = examSecondsLeft;
     }
-    
+
+    updateTimerDisplay();
+
     if (examSecondsLeft <= 0) {
       clearInterval(examTimerInterval);
-      submitMockExam();
-      return;
+      try { localStorage.removeItem(examKey); } catch(e){}
+      if (compState.activeExam) {
+        submitMockExam();
+      }
     }
-    
-    updateTimerDisplay();
-  }, 1000);
+  };
+
+  tick();
+  examTimerInterval = setInterval(tick, 1000);
 }
 
 function updateTimerDisplay() {
   const h = Math.floor(examSecondsLeft / 3600);
-  const m = Math.floor(
-    (examSecondsLeft % 3600) / 60
-  );
+  const m = Math.floor((examSecondsLeft % 3600) / 60);
   const s = examSecondsLeft % 60;
   
   const timeStr = 
@@ -2596,30 +2661,26 @@ function updateTimerDisplay() {
     String(m).padStart(2,'0') + ':' +
     String(s).padStart(2,'0');
   
-  const timerEl = document.getElementById(
-    'cbt-timer'
-  ) || document.getElementById(
-    'exam-timer-text'
-  ) || document.querySelector(
-    '[class*="timer"], [class*="clock"]'
-  );
+  const timerEl = document.getElementById('cbt-timer') || 
+                  document.getElementById('exam-timer-text') || 
+                  document.querySelector('[class*="timer"], [class*="clock"]');
   
   if (timerEl) {
     timerEl.textContent = timeStr;
     
-    // Color changes
-    timerEl.style.color = '';
-    if (examSecondsLeft < 600) {
-      // Under 10 min — red + pulse
-      timerEl.style.color = '#ef4444';
-      timerEl.style.animation = 
-        'pulse 1s ease-in-out infinite';
+    // Under 5 min (300 sec) — red + pulse as per Specification #4
+    if (examSecondsLeft < 300) {
+      timerEl.style.color = '#EF4444';
+      timerEl.style.animation = 'pulseTimer 1s ease-in-out infinite';
+      timerEl.classList.add('danger');
     } else if (examSecondsLeft < 1800) {
-      // Under 30 min — amber
-      timerEl.style.color = '#f59e0b';
+      timerEl.style.color = '#F59E0B';
       timerEl.style.animation = '';
+      timerEl.classList.remove('danger');
     } else {
+      timerEl.style.color = '#10B981';
       timerEl.style.animation = '';
+      timerEl.classList.remove('danger');
     }
   }
 }
@@ -2878,14 +2939,6 @@ function renderActiveExamUI() {
 
         </div>
 
-          <!-- CONFIDENCE COLLECTION (non-blocking) -->
-          <div class="nta-confidence-row" id="nta-confidence-row" style="display:flex;align-items:center;gap:8px;padding:10px 0;margin-top:8px;border-top:1px solid rgba(255,255,255,0.05);flex-wrap:wrap">
-            <span style="font-size:11px;color:var(--mut);font-weight:600;flex-shrink:0">Confidence:</span>
-            <button class="nta-conf-btn ${(exam.confidence && exam.confidence[exam.currentIndex]) === 'very_confident' ? 'active' : ''}" onclick="setExamConfidence('very_confident')" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid rgba(16,185,129,0.3);background:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'very_confident' ? 'rgba(16,185,129,0.2)' : 'transparent'};color:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'very_confident' ? '#10B981' : 'var(--mut)'};cursor:pointer;transition:all 0.2s">🟢 Sure</button>
-            <button class="nta-conf-btn ${(exam.confidence && exam.confidence[exam.currentIndex]) === 'somewhat_confident' ? 'active' : ''}" onclick="setExamConfidence('somewhat_confident')" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid rgba(245,158,11,0.3);background:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'somewhat_confident' ? 'rgba(245,158,11,0.15)' : 'transparent'};color:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'somewhat_confident' ? '#F59E0B' : 'var(--mut)'};cursor:pointer;transition:all 0.2s">🟡 Maybe</button>
-            <button class="nta-conf-btn ${(exam.confidence && exam.confidence[exam.currentIndex]) === 'guessing' ? 'active' : ''}" onclick="setExamConfidence('guessing')" style="font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid rgba(239,68,68,0.3);background:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'guessing' ? 'rgba(239,68,68,0.12)' : 'transparent'};color:${(exam.confidence && exam.confidence[exam.currentIndex]) === 'guessing' ? '#EF4444' : 'var(--mut)'};cursor:pointer;transition:all 0.2s">🔴 Guessing</button>
-          </div>
-
         <!-- ACTION BAR -->
         <div class="nta-action-bar">
           <div class="nta-action-left">
@@ -2898,6 +2951,7 @@ function renderActiveExamUI() {
           <div class="nta-action-right">
             <button class="nta-btn nta-btn-mark" onclick="markMockForReview()">🔖 Mark &amp; Next</button>
             <button class="nta-btn nta-btn-next" onclick="saveAndNextMock()">${hasNext ? 'Save &amp; Next →' : '✅ Save &amp; Review'}</button>
+            <button class="nta-btn nta-submit-btn" onclick="confirmSubmitMockExam()">🏁 Submit Test</button>
           </div>
         </div>
       </div>
@@ -2935,9 +2989,8 @@ function renderActiveExamUI() {
         </div>
 
         <!-- Palette nav -->
-        <div class="nta-pal-nav-label" style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="nta-pal-nav-label">
           <span>Question Palette</span>
-          <span style="font-size:10px;color:var(--pl);font-weight:600;" title="Keyboard shortcuts active: Alt+N (Next), Alt+P (Prev), Alt+M (Mark), Alt+C (Clear)">⌨️ Shortcuts: Alt+N / Alt+P</span>
         </div>
         <div class="nta-pal-scroll">${paletteHTML}</div>
 
@@ -2948,8 +3001,6 @@ function renderActiveExamUI() {
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-answered-marked"></span>Ans. + Marked</div>
           <div class="nta-leg-item"><span class="nta-leg-dot nta-pal-unvisited"></span>Not Visited</div>
         </div>
-
-        <button class="nta-pal-submit-btn" onclick="confirmSubmitMockExam()">🏁 Submit Test</button>
       </div>
 
     </div>
@@ -3140,7 +3191,7 @@ function submitMockExam() {
   // Track stats per subject
   const subjectStats = {};
   (examDb.subjects || ['General']).forEach(sub => {
-    subjectStats[sub] = { correct: 0, total: 0, time: 0 };
+    subjectStats[sub] = { correct: 0, total: 0, time: 0, numericalWrong: 0 };
   });
 
   const results = exam.questions.map((q, idx) => {
@@ -3209,7 +3260,9 @@ function submitMockExam() {
           isCorrect = sortedUser === sortedCorrect;
         } else if (q.type === 'numerical') {
           const correctAns = Array.isArray(q.ans) ? q.ans[0] : q.ans;
-          isCorrect = String(userAns).trim() === String(correctAns).trim();
+          const numUser = parseFloat(String(userAns || '').replace(/[^0-9.\-]/g, ''));
+          const numCorrect = parseFloat(String(correctAns || '').replace(/[^0-9.\-]/g, ''));
+          isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
         } else {
           const correctIdx = Array.isArray(q.ans) ? q.ans[0] : q.ans;
           isCorrect = userAns === correctIdx;
@@ -3224,6 +3277,9 @@ function submitMockExam() {
           incorrect++;
           const penalty = q.type === 'numerical' ? 0 : ((q.marking && q.marking.wrong !== undefined) ? q.marking.wrong : marking.wrong);
           score += penalty;
+          if (q.type === 'numerical') {
+            subjectStats[sub].numericalWrong = (subjectStats[sub].numericalWrong || 0) + 1;
+          }
         }
       }
     }
@@ -3241,6 +3297,7 @@ function submitMockExam() {
         return ansArr.join(', ');
       })(),
       isCorrect,
+      isSkipped: userAns === undefined || userAns === '' || (Array.isArray(userAns) && userAns.length === 0),
       explanation: q.expl || 'Self-explanatory standard answer.'
     };
   });
@@ -3585,7 +3642,9 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
               ${Object.entries(subjectStats).map(([sub, st]) => {
                 const attempted = st.total - (st.skipped || 0);
                 const wrong = (attempted - st.correct);
-                const subScore = st.correct * (marking.correct || 4) + wrong * (marking.wrong || -1);
+                const numericalWrong = st.numericalWrong || 0;
+                const penalisedWrong = wrong - numericalWrong;
+                const subScore = st.correct * (marking.correct || 4) + penalisedWrong * (marking.wrong || -1);
                 const acc = attempted > 0 ? Math.round((st.correct / attempted) * 100) : 0;
                 const accColor = acc >= 70 ? '#10B981' : acc >= 50 ? '#F59E0B' : '#EF4444';
                 return `<tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
@@ -3671,10 +3730,18 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
       <div class="h2 mb14" style="color:#fff">Review Questions & Explanations</div>
       <div style="display:flex;flex-direction:column;gap:12px">
         ${results.map((res, idx) => {
+          const isUnattempted = res.isSkipped || res.user === undefined || res.user === '' || (Array.isArray(res.user) && res.user.length === 0);
+          const cardBorder = res.isCorrect ? 'rgba(16,185,129,0.2)' : (isUnattempted ? 'rgba(255,255,255,0.08)' : 'rgba(239,68,68,0.2)');
+          const statusTag = res.isCorrect 
+            ? '<span class="tag tok">✅ Correct</span>' 
+            : (isUnattempted 
+                ? '<span class="tag" style="background:rgba(255,255,255,0.06);color:#94A3B8;border:1px solid rgba(255,255,255,0.12);font-weight:600">⚪ Not Attempted</span>' 
+                : '<span class="tag tred">❌ Wrong</span>');
+
           // Mistake classification for wrong answers
           let mistakeTag = '';
           let interventionNote = '';
-          if (!res.isCorrect && res.user !== undefined && res.user !== '') {
+          if (!res.isCorrect && !isUnattempted) {
             const timeMs = ((examTimeSpent && examTimeSpent[idx]) || 0) * 1000;
             const conf = (compState.lastExamConfidence || {})[idx] || 'somewhat_confident';
             const mistakeType = (window.MistakeClassifier && window.MistakeClassifier.classify)
@@ -3690,19 +3757,19 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
             interventionNote = `<div style="font-size:11px;color:var(--mut);margin-top:8px;padding:8px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.15);border-radius:8px">💡 ${esc(intervention)}</div>`;
           }
           return `
-          <div class="card" style="padding:16px;border:1px solid ${res.isCorrect?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}">
+          <div class="card" style="padding:16px;border:1px solid ${cardBorder}">
             <div class="between mb8" style="font-size:12px">
               <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
                 <span style="font-weight:700;color:var(--mut)">Q${idx + 1}</span>
-                <span class="tag ${res.isCorrect?'tok':'tred'}">${res.isCorrect?'✓ Correct':'✗ Wrong'}</span>
+                ${statusTag}
                 ${mistakeTag}
               </div>
-              ${!res.isCorrect ? `<button onclick="addToRevisionFromReview('${esc(res.q || '').substring(0,40)}')" style="font-size:10px;padding:3px 10px;border-radius:12px;background:rgba(139,92,246,0.12);color:#A78BFA;border:1px solid rgba(139,92,246,0.3);cursor:pointer;font-weight:700">+ Add to Revision</button>` : ''}
+              ${(!res.isCorrect && !isUnattempted) ? `<button onclick="addToRevisionFromReview('${esc(res.q || '').substring(0,40)}')" style="font-size:10px;padding:3px 10px;border-radius:12px;background:rgba(139,92,246,0.12);color:#A78BFA;border:1px solid rgba(139,92,246,0.3);cursor:pointer;font-weight:700">+ Add to Revision</button>` : ''}
             </div>
             <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:10px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}${renderQuestionImage(res)}</p>
             
             <div style="display:flex;gap:16px;font-size:12px;margin-bottom:10px;flex-wrap:wrap">
-              <div>Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':'var(--redl)'}">${res.user !== undefined && res.user !== '' ? (res.user.join ? res.user.map(u => String.fromCharCode(65+u)).join(', ') : (isNaN(res.user) ? res.user : String.fromCharCode(65+res.user))) : 'Skipped'}</strong></div>
+              <div>Your Answer: <strong style="color:${res.isCorrect?'var(--okl)':(isUnattempted?'var(--sub)':'var(--redl)')}">${!isUnattempted ? (res.user.join ? res.user.map(u => String.fromCharCode(65+u)).join(', ') : (isNaN(res.user) ? res.user : String.fromCharCode(65+res.user))) : 'Not Attempted'}</strong></div>
               <div>Correct: <strong style="color:var(--okl)">${res.correct || '—'}</strong></div>
             </div>
 
@@ -3898,7 +3965,9 @@ function checkPracticeNumericalAnswer(correctAns, expl) {
   const explBox = document.getElementById('practice-expl-box');
   const explText = document.getElementById('practice-expl-text');
 
-  const isCorrect = String(userVal) === String(correctAns);
+  const numUser = parseFloat(String(userVal || '').replace(/[^0-9.\-]/g, ''));
+  const numCorrect = parseFloat(String(correctAns || '').replace(/[^0-9.\-]/g, ''));
+  const isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
 
   if (resultText) {
     if (isCorrect) {

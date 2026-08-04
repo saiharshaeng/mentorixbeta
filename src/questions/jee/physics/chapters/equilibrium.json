@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_EQUILIBRIUM_2026_S1_Q567",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_EQUILIBRIUM_2026_S1_Q567_RAW",
+    "question": {
+      "latex": "The pH of a solution obtained by mixing $5$ mL of $0.1$ M $NH_4OH$ solution with $250$ mL of $0.1$ M $NH_4Cl$ solution is \\_\\_\\_\\_\\_ $\\times 10^{-2}$. $Nearest integer$\nGiven: $pK_b$NH_4OH$ = 4.74$, $\\log 2 = 0.30$, $\\log 3 = 0.48$, $\\log 5 = 0.70$",
+      "unicode": "The pH of a solution obtained by mixing 5 mL of 0.1 M NH_4OH solution with 250 mL of 0.1 M NH_4Cl solution is _____ × 10^{-2}. Nearest integer\nGiven: pK_bNH_4OH = 4.74, log 2 = 0.30, log 3 = 0.48, log 5 = 0.70",
+      "plainText": "The pH of a solution obtained by mixing 5 mL of 0.1 M NH_4OH solution with 250 mL of 0.1 M NH_4Cl solution is _____ times 10^{-2}. Nearest integer Given: pK_bNH_4OH = 4.74, log 2 = 0.30, log 3 = 0.48, log 5 = 0.70"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$756$",
+        "unicode": "756",
+        "plainText": "756"
+      },
+      {
+        "id": "b",
+        "latex": "$644$",
+        "unicode": "644",
+        "plainText": "644"
+      },
+      {
+        "id": "c",
+        "latex": "$474$",
+        "unicode": "474",
+        "plainText": "474"
+      },
+      {
+        "id": "d",
+        "latex": "$526$",
+        "unicode": "526",
+        "plainText": "526"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The mixed solution acts as a basic buffer system.\nMoles of weak base ($NH_4OH$) = $M \\times V \\text{ (in mL)} = 0.1 \\times 5 = 0.5$ mmol.\nMoles of salt ($NH_4Cl$) = $0.1 \\times 250 = 25$ mmol.\nUsing the Henderson-Hasselbalch equation for basic buffers:\n$pOH = pK_b + \\log\\left(\\frac{\\text{[Salt]}}{\\text{[Base]}}\\right) = 4.74 + \\log\\left(\\frac{25}{0.5}\\right)$\n$pOH = 4.74 + \\log(50)$\nWe evaluate $\\log(50) = \\log\\left(\\frac{100}{2}\\right) = \\log 100 - \\log 2 = 2 - 0.30 = 1.70$.\n$pOH = 4.74 + 1.70 = 6.44$.\nThe corresponding pH is calculated as: $pH = 14 - pOH = 14 - 6.44 = 7.56$.\nThe answer expressed as $x \\times 10^{-2}$ is $756 \\times 10^{-2}$.",
+      "unicode": "The mixed solution acts as a basic buffer system.\nMoles of weak base (NH_4OH) = M × V text{ (in mL)} = 0.1 × 5 = 0.5 mmol.\nMoles of salt (NH_4Cl) = 0.1 × 250 = 25 mmol.\nUsing the Henderson-Hasselbalch equation for basic buffers:\npOH = pK_b + logleft(frac{text{[Salt]}}{text{[Base]}}right) = 4.74 + logleft((25/0.5)right)\npOH = 4.74 + log(50)\nWe evaluate log(50) = logleft((100/2)right) = log 100 - log 2 = 2 - 0.30 = 1.70.\npOH = 4.74 + 1.70 = 6.44.\nThe corresponding pH is calculated as: pH = 14 - pOH = 14 - 6.44 = 7.56.\nThe answer expressed as x × 10^{-2} is 756 × 10^{-2}.",
+      "plainText": "The mixed solution acts as a basic buffer system. Moles of weak base (NH_4OH) = M times V text{ (in mL)} = 0.1 times 5 = 0.5 mmol. Moles of salt (NH_4Cl) = 0.1 times 250 = 25 mmol. Using the Henderson-Hasselbalch equation for basic buffers: pOH = pK_b + logleft(frac{text{[Salt]}}{text{[Base]}}right) = 4.74 + logleft((25)/(0.5)right) pOH = 4.74 + log(50) We evaluate log(50) = logleft((100)/(2)right) = log 100 - log 2 = 2 - 0.30 = 1.70. pOH = 4.74 + 1.70 = 6.44. The corresponding pH is calculated as: pH = 14 - pOH = 14 - 6.44 = 7.56. The answer expressed as x times 10^{-2} is 756 times 10^{-2}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Equilibrium",
+      "subchapter": "Equilibrium Core Concepts",
+      "topic": "Equilibrium Primary Topic",
+      "learningOutcome": "Master fundamental principles of Equilibrium",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.557Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.557Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

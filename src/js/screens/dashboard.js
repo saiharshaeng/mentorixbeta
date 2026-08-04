@@ -140,7 +140,7 @@ function initDashboardPhysics() {
 }
 
 function rDash(){
-  checkStreak();
+  if (typeof checkStreak === 'function') checkStreak();
   const p=D.profile,lv2=lv(D.xp),pct=xpP(D.xp),xpr=xpR(D.xp);
   const ch=DC[new Date().getDay()%DC.length];
   const name=(p?.name||'there').split(' ')[0];

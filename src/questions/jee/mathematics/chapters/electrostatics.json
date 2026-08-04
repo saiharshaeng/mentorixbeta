@@ -1,0 +1,517 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_ELECTROSTATI_2025_S_Q105",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROSTATI_2025_S_Q105_RAW",
+    "question": {
+      "latex": "For a short dipole placed at origin O with dipole moment P along the x-axis, the electric potential and electric field at point A (distance r on x-axis) are $V_0$ and $E_0$. What is the electric potential and electric field at point B (distance 2r on y-axis)? \n <svg width='200' height='220' viewBox='-20 -10 220 230' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0, 8 3, 0 6' fill='black'/></marker><marker id='arrowhead-reverse' markerWidth='8' markerHeight='6' refX='0' refY='3' orient='auto'><polygon points='8 0, 0 3, 8 6' fill='black'/></marker></defs><line x1='0' y1='200' x2='180' y2='200' stroke='black' stroke-width='1.5' marker-end='url(#arrowhead)'/><line x1='0' y1='200' x2='0' y2='20' stroke='black' stroke-width='1.5' marker-end='url(#arrowhead)'/><line x1='0' y1='200' x2='0' y2='60' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><line x1='0' y1='200' x2='120' y2='200' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><circle cx='-3' cy='200' r='3' fill='red'/><circle cx='3' cy='200' r='3' fill='blue'/><text x='-6' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>-</text><text x='1' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>+</text><line x1='15' y1='200' x2='45' y2='200' stroke='red' stroke-width='2' marker-end='url(#arrowhead)'/><text x='52' y='195' font-size='12' font-family='Arial, sans-serif' font-weight='bold' fill='red'>P</text><circle cx='0' cy='200' r='2' fill='black'/><circle cx='120' cy='200' r='2' fill='black'/><circle cx='0' cy='60' r='2' fill='black'/><text x='-8' y='215' font-size='12' font-family='Arial, sans-serif'>O</text><text x='116' y='215' font-size='12' font-family='Arial, sans-serif'>A</text><text x='-8' y='55' font-size='12' font-family='Arial, sans-serif'>B</text><text x='185' y='205' font-size='12' font-family='Arial, sans-serif'>x</text><text x='-12' y='15' font-size='12' font-family='Arial, sans-serif'>y</text><line x1='5' y1='185' x2='115' y2='185' stroke='black' stroke-width='1' marker-start='url(#arrowhead-reverse)' marker-end='url(#arrowhead)'/><text x='60' y='180' font-size='12' text-anchor='middle' font-family='Arial, sans-serif'>r</text><line x1='15' y1='195' x2='15' y2='65' stroke='black' stroke-width='1' marker-start='url(#arrowhead-reverse)' marker-end='url(#arrowhead)'/><text x='25' y='130' font-size='12' font-family='Arial, sans-serif'>2r</text></svg>",
+      "unicode": "For a short dipole placed at origin O with dipole moment P along the x-axis, the electric potential and electric field at point A (distance r on x-axis) are V_0 and E_0. What is the electric potential and electric field at point B (distance 2r on y-axis)? \n <svg width='200' height='220' viewBox='-20 -10 220 230' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0, 8 3, 0 6' fill='black'/></marker><marker id='arrowhead-reverse' markerWidth='8' markerHeight='6' refX='0' refY='3' orient='auto'><polygon points='8 0, 0 3, 8 6' fill='black'/></marker></defs><line x1='0' y1='200' x2='180' y2='200' stroke='black' stroke-width='1.5' marker-end='url(#arrowhead)'/><line x1='0' y1='200' x2='0' y2='20' stroke='black' stroke-width='1.5' marker-end='url(#arrowhead)'/><line x1='0' y1='200' x2='0' y2='60' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><line x1='0' y1='200' x2='120' y2='200' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><circle cx='-3' cy='200' r='3' fill='red'/><circle cx='3' cy='200' r='3' fill='blue'/><text x='-6' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>-</text><text x='1' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>+</text><line x1='15' y1='200' x2='45' y2='200' stroke='red' stroke-width='2' marker-end='url(#arrowhead)'/><text x='52' y='195' font-size='12' font-family='Arial, sans-serif' font-weight='bold' fill='red'>P</text><circle cx='0' cy='200' r='2' fill='black'/><circle cx='120' cy='200' r='2' fill='black'/><circle cx='0' cy='60' r='2' fill='black'/><text x='-8' y='215' font-size='12' font-family='Arial, sans-serif'>O</text><text x='116' y='215' font-size='12' font-family='Arial, sans-serif'>A</text><text x='-8' y='55' font-size='12' font-family='Arial, sans-serif'>B</text><text x='185' y='205' font-size='12' font-family='Arial, sans-serif'>x</text><text x='-12' y='15' font-size='12' font-family='Arial, sans-serif'>y</text><line x1='5' y1='185' x2='115' y2='185' stroke='black' stroke-width='1' marker-start='url(#arrowhead-reverse)' marker-end='url(#arrowhead)'/><text x='60' y='180' font-size='12' text-anchor='middle' font-family='Arial, sans-serif'>r</text><line x1='15' y1='195' x2='15' y2='65' stroke='black' stroke-width='1' marker-start='url(#arrowhead-reverse)' marker-end='url(#arrowhead)'/><text x='25' y='130' font-size='12' font-family='Arial, sans-serif'>2r</text></svg>",
+      "plainText": "For a short dipole placed at origin O with dipole moment P along the x-axis, the electric potential and electric field at point A (distance r on x-axis) are V_0 and E_0. What is the electric potential and electric field at point B (distance 2r on y-axis)? <svg width='200' height='220' viewBox='-20 -10 220 230' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0, 8 3, 0 6' fill='black'/></marker><marker id='arrowhead-reverse' markerWidth='8' markerHeight='6' refX='0' refY='3' orient='auto'><polygon points='8 0, 0 3, 8 6' fill='black'/></marker></defs><line x1='0' y1='200' x2='180' y2='200' stroke='black' stroke-width='1.5' marker-end='url(#arrowhead)'/><line x1='0' y1='200' x2='0' y2='20' stroke='black' stroke-width='1.5' marker-end='url(#arrowhead)'/><line x1='0' y1='200' x2='0' y2='60' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><line x1='0' y1='200' x2='120' y2='200' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><circle cx='-3' cy='200' r='3' fill='red'/><circle cx='3' cy='200' r='3' fill='blue'/><text x='-6' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>-</text><text x='1' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>+</text><line x1='15' y1='200' x2='45' y2='200' stroke='red' stroke-width='2' marker-end='url(#arrowhead)'/><text x='52' y='195' font-size='12' font-family='Arial, sans-serif' font-weight='bold' fill='red'>P</text><circle cx='0' cy='200' r='2' fill='black'/><circle cx='120' cy='200' r='2' fill='black'/><circle cx='0' cy='60' r='2' fill='black'/><text x='-8' y='215' font-size='12' font-family='Arial, sans-serif'>O</text><text x='116' y='215' font-size='12' font-family='Arial, sans-serif'>A</text><text x='-8' y='55' font-size='12' font-family='Arial, sans-serif'>B</text><text x='185' y='205' font-size='12' font-family='Arial, sans-serif'>x</text><text x='-12' y='15' font-size='12' font-family='Arial, sans-serif'>y</text><line x1='5' y1='185' x2='115' y2='185' stroke='black' stroke-width='1' marker-start='url(#arrowhead-reverse)' marker-end='url(#arrowhead)'/><text x='60' y='180' font-size='12' text-anchor='middle' font-family='Arial, sans-serif'>r</text><line x1='15' y1='195' x2='15' y2='65' stroke='black' stroke-width='1' marker-start='url(#arrowhead-reverse)' marker-end='url(#arrowhead)'/><text x='25' y='130' font-size='12' font-family='Arial, sans-serif'>2r</text></svg>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$V_0/2$ and $E_0/16$",
+        "unicode": "V_0/2 and E_0/16",
+        "plainText": "V_0/2 and E_0/16"
+      },
+      {
+        "id": "b",
+        "latex": "zero and $E_0/8$",
+        "unicode": "zero and E_0/8",
+        "plainText": "zero and E_0/8"
+      },
+      {
+        "id": "c",
+        "latex": "zero and $E_0/16$",
+        "unicode": "zero and E_0/16",
+        "plainText": "zero and E_0/16"
+      },
+      {
+        "id": "d",
+        "latex": "$V_0$ and $E_0/4$",
+        "unicode": "V_0 and E_0/4",
+        "plainText": "V_0 and E_0/4"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.044Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.044Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q184",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q184_RAW",
+    "question": {
+      "latex": "Two charged conducting spheres $S_1$ and $S_2$ of radii $8\\text{ cm}$ and $18\\text{ cm}$ are connected to each other by a wire. After equilibrium is established, the ratio of electric fields on $S_1$ and $S_2$ spheres are $E_{S_1}$ and $E_{S_2}$ respectively. The value of $\\frac{E_{S_1}}{E_{S_2}}$ is _______.",
+      "unicode": "Two charged conducting spheres S_1 and S_2 of radii 8text{ cm} and 18text{ cm} are connected to each other by a wire. After equilibrium is established, the ratio of electric fields on S_1 and S_2 spheres are E_{S_1} and E_{S_2} respectively. The value of frac{E_{S_1}}{E_{S_2}} is _______.",
+      "plainText": "Two charged conducting spheres S_1 and S_2 of radii 8text{ cm} and 18text{ cm} are connected to each other by a wire. After equilibrium is established, the ratio of electric fields on S_1 and S_2 spheres are E_{S_1} and E_{S_2} respectively. The value of frac{E_{S_1}}{E_{S_2}} is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{3}{2}$",
+        "unicode": "(3/2)",
+        "plainText": "(3)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{2}{3}$",
+        "unicode": "(2/3)",
+        "plainText": "(2)/(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{4}{9}$",
+        "unicode": "(4/9)",
+        "plainText": "(4)/(9)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{9}{4}$",
+        "unicode": "(9/4)",
+        "plainText": "(9)/(4)"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q186",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q186_RAW",
+    "question": {
+      "latex": "![Two mutually perpendicular dipoles](https://cracku.in/media/uploads/image_ym0nAW9.png)\nTwo short electric dipoles $A$ and $B$ having dipole moment $p_1$ and $p_2$ respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point $x$ is making an angle of $60^\\circ$ with the line joining points $O$ and $x$. The ratio of the dipole moments $p_2/p_1$ is _______.",
+      "unicode": "![Two mutually perpendicular dipoles](https://cracku.in/media/uploads/image_ym0nAW9.png)\nTwo short electric dipoles A and B having dipole moment p_1 and p_2 respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point x is making an angle of 60^circ with the line joining points O and x. The ratio of the dipole moments p_2/p_1 is _______.",
+      "plainText": "![Two mutually perpendicular dipoles](https://cracku.in/media/uploads/image_ym0nAW9.png) Two short electric dipoles A and B having dipole moment p_1 and p_2 respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point x is making an angle of 60^circ with the line joining points O and x. The ratio of the dipole moments p_2/p_1 is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\sqrt{3}}{2}$",
+        "unicode": "frac{√(3)}{2}",
+        "plainText": "frac{sqrt(3)}{2}"
+      },
+      {
+        "id": "b",
+        "latex": "$2\\sqrt{3}$",
+        "unicode": "2√(3)",
+        "plainText": "2sqrt(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{1}{\\sqrt{3}}$",
+        "unicode": "(1/√(3))",
+        "plainText": "(1)/(sqrt(3))"
+      },
+      {
+        "id": "d",
+        "latex": "$\\sqrt{3}$",
+        "unicode": "√(3)",
+        "plainText": "sqrt(3)"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q264",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q264_RAW",
+    "question": {
+      "latex": "Two metal plates (A, B) are kept horizontally with separation of $\\left(\\frac{12}{\\pi}\\right)\\text{ cm}$, with plate A on the top. An atomizer jet sprays oil (density $1.5\\text{ g/cm}^3$) droplets of radius $1\\text{ mm}$ horizontally. All oil droplets carry a charge $5\\text{ nC}$. The potentials $V_A$ and $V_B$ are required on plates A and B respectively in order to ensure the droplets do not descend. The values of $V_A$ and $V_B$ are _______.\n(Neglect the air resistance to the droplets and take $g = 10\\text{ m/s}^2$)",
+      "unicode": "Two metal plates (A, B) are kept horizontally with separation of left((12/π)right)text{ cm}, with plate A on the top. An atomizer jet sprays oil (density 1.5text{ g/cm}³) droplets of radius 1text{ mm} horizontally. All oil droplets carry a charge 5text{ nC}. The potentials V_A and V_B are required on plates A and B respectively in order to ensure the droplets do not descend. The values of V_A and V_B are _______.\n(Neglect the air resistance to the droplets and take g = 10text{ m/s}²)",
+      "plainText": "Two metal plates (A, B) are kept horizontally with separation of left((12)/(pi)right)text{ cm}, with plate A on the top. An atomizer jet sprays oil (density 1.5text{ g/cm}^3) droplets of radius 1text{ mm} horizontally. All oil droplets carry a charge 5text{ nC}. The potentials V_A and V_B are required on plates A and B respectively in order to ensure the droplets do not descend. The values of V_A and V_B are _______. (Neglect the air resistance to the droplets and take g = 10text{ m/s}^2)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$100\\text{ V}$ and $580\\text{ V}$",
+        "unicode": "100text{ V} and 580text{ V}",
+        "plainText": "100text{ V} and 580text{ V}"
+      },
+      {
+        "id": "b",
+        "latex": "$580\\text{ V}$ and $100\\text{ V}$",
+        "unicode": "580text{ V} and 100text{ V}",
+        "plainText": "580text{ V} and 100text{ V}"
+      },
+      {
+        "id": "c",
+        "latex": "$60\\text{ V}$ and $400\\text{ V}$",
+        "unicode": "60text{ V} and 400text{ V}",
+        "plainText": "60text{ V} and 400text{ V}"
+      },
+      {
+        "id": "d",
+        "latex": "$0\\text{ V}$ and $-200\\text{ V}$",
+        "unicode": "0text{ V} and -200text{ V}",
+        "plainText": "0text{ V} and -200text{ V}"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q265",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROSTATI_2026_S_Q265_RAW",
+    "question": {
+      "latex": "Two point charges $8\\ \\mu\\text{C}$ and $-2\\ \\mu\\text{C}$ are located at $x = 2\\text{ cm}$ and $x = 4\\text{ cm}$, respectively on the $x$-axis. The ratio of electric flux due to these charges through two spheres of radii $3\\text{ cm}$ and $5\\text{ cm}$ with their centers at the origin is _______.",
+      "unicode": "Two point charges 8 mutext{C} and -2 mutext{C} are located at x = 2text{ cm} and x = 4text{ cm}, respectively on the x-axis. The ratio of electric flux due to these charges through two spheres of radii 3text{ cm} and 5text{ cm} with their centers at the origin is _______.",
+      "plainText": "Two point charges 8 mutext{C} and -2 mutext{C} are located at x = 2text{ cm} and x = 4text{ cm}, respectively on the x-axis. The ratio of electric flux due to these charges through two spheres of radii 3text{ cm} and 5text{ cm} with their centers at the origin is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$4 : 1$",
+        "unicode": "4 : 1",
+        "plainText": "4 : 1"
+      },
+      {
+        "id": "b",
+        "latex": "$3 : 4$",
+        "unicode": "3 : 4",
+        "plainText": "3 : 4"
+      },
+      {
+        "id": "c",
+        "latex": "$4 : 3$",
+        "unicode": "4 : 3",
+        "plainText": "4 : 3"
+      },
+      {
+        "id": "d",
+        "latex": "$4 : 5$",
+        "unicode": "4 : 5",
+        "plainText": "4 : 5"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROSTATI_2025_S1_Q85",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROSTATI_2025_S1_Q85_RAW",
+    "question": {
+      "latex": "For a short dipole placed at origin O with dipole moment P along the x-axis, the electric potential and electric field at point A $distance r on x-axis$ are $V_0$ and $E_0$. What is the electric potential and electric field at point B $distance 2r on y-axis$? \n <svg width='200' height='220' viewBox='-20 -10 220 230' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0, 8 3, 0 6' fill='black'/></marker><marker id='arrowhead-reverse' markerWidth='8' markerHeight='6' refX='0' refY='3' orient='auto'><polygon points='8 0, 0 3, 8 6' fill='black'/></marker></defs><line x1='0' y1='200' x2='180' y2='200' stroke='black' stroke-width='1.5' marker-end='url$#arrowhead$'/><line x1='0' y1='200' x2='0' y2='20' stroke='black' stroke-width='1.5' marker-end='url$#arrowhead$'/><line x1='0' y1='200' x2='0' y2='60' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><line x1='0' y1='200' x2='120' y2='200' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><circle cx='-3' cy='200' r='3' fill='red'/><circle cx='3' cy='200' r='3' fill='blue'/><text x='-6' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>-</text><text x='1' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>+</text><line x1='15' y1='200' x2='45' y2='200' stroke='red' stroke-width='2' marker-end='url$#arrowhead$'/><text x='52' y='195' font-size='12' font-family='Arial, sans-serif' font-weight='bold' fill='red'>P</text><circle cx='0' cy='200' r='2' fill='black'/><circle cx='120' cy='200' r='2' fill='black'/><circle cx='0' cy='60' r='2' fill='black'/><text x='-8' y='215' font-size='12' font-family='Arial, sans-serif'>O</text><text x='116' y='215' font-size='12' font-family='Arial, sans-serif'>A</text><text x='-8' y='55' font-size='12' font-family='Arial, sans-serif'>B</text><text x='185' y='205' font-size='12' font-family='Arial, sans-serif'>x</text><text x='-12' y='15' font-size='12' font-family='Arial, sans-serif'>y</text><line x1='5' y1='185' x2='115' y2='185' stroke='black' stroke-width='1' marker-start='url$#arrowhead-reverse$' marker-end='url$#arrowhead$'/><text x='60' y='180' font-size='12' text-anchor='middle' font-family='Arial, sans-serif'>r</text><line x1='15' y1='195' x2='15' y2='65' stroke='black' stroke-width='1' marker-start='url$#arrowhead-reverse$' marker-end='url$#arrowhead$'/><text x='25' y='130' font-size='12' font-family='Arial, sans-serif'>2r</text></svg>",
+      "unicode": "For a short dipole placed at origin O with dipole moment P along the x-axis, the electric potential and electric field at point A distance r on x-axis are V_0 and E_0. What is the electric potential and electric field at point B distance 2r on y-axis? \n <svg width='200' height='220' viewBox='-20 -10 220 230' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0, 8 3, 0 6' fill='black'/></marker><marker id='arrowhead-reverse' markerWidth='8' markerHeight='6' refX='0' refY='3' orient='auto'><polygon points='8 0, 0 3, 8 6' fill='black'/></marker></defs><line x1='0' y1='200' x2='180' y2='200' stroke='black' stroke-width='1.5' marker-end='url#arrowhead'/><line x1='0' y1='200' x2='0' y2='20' stroke='black' stroke-width='1.5' marker-end='url#arrowhead'/><line x1='0' y1='200' x2='0' y2='60' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><line x1='0' y1='200' x2='120' y2='200' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><circle cx='-3' cy='200' r='3' fill='red'/><circle cx='3' cy='200' r='3' fill='blue'/><text x='-6' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>-</text><text x='1' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>+</text><line x1='15' y1='200' x2='45' y2='200' stroke='red' stroke-width='2' marker-end='url#arrowhead'/><text x='52' y='195' font-size='12' font-family='Arial, sans-serif' font-weight='bold' fill='red'>P</text><circle cx='0' cy='200' r='2' fill='black'/><circle cx='120' cy='200' r='2' fill='black'/><circle cx='0' cy='60' r='2' fill='black'/><text x='-8' y='215' font-size='12' font-family='Arial, sans-serif'>O</text><text x='116' y='215' font-size='12' font-family='Arial, sans-serif'>A</text><text x='-8' y='55' font-size='12' font-family='Arial, sans-serif'>B</text><text x='185' y='205' font-size='12' font-family='Arial, sans-serif'>x</text><text x='-12' y='15' font-size='12' font-family='Arial, sans-serif'>y</text><line x1='5' y1='185' x2='115' y2='185' stroke='black' stroke-width='1' marker-start='url#arrowhead-reverse' marker-end='url#arrowhead'/><text x='60' y='180' font-size='12' text-anchor='middle' font-family='Arial, sans-serif'>r</text><line x1='15' y1='195' x2='15' y2='65' stroke='black' stroke-width='1' marker-start='url#arrowhead-reverse' marker-end='url#arrowhead'/><text x='25' y='130' font-size='12' font-family='Arial, sans-serif'>2r</text></svg>",
+      "plainText": "For a short dipole placed at origin O with dipole moment P along the x-axis, the electric potential and electric field at point A distance r on x-axis are V_0 and E_0. What is the electric potential and electric field at point B distance 2r on y-axis? <svg width='200' height='220' viewBox='-20 -10 220 230' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0, 8 3, 0 6' fill='black'/></marker><marker id='arrowhead-reverse' markerWidth='8' markerHeight='6' refX='0' refY='3' orient='auto'><polygon points='8 0, 0 3, 8 6' fill='black'/></marker></defs><line x1='0' y1='200' x2='180' y2='200' stroke='black' stroke-width='1.5' marker-end='url#arrowhead'/><line x1='0' y1='200' x2='0' y2='20' stroke='black' stroke-width='1.5' marker-end='url#arrowhead'/><line x1='0' y1='200' x2='0' y2='60' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><line x1='0' y1='200' x2='120' y2='200' stroke='black' stroke-dasharray='3 3' stroke-width='1'/><circle cx='-3' cy='200' r='3' fill='red'/><circle cx='3' cy='200' r='3' fill='blue'/><text x='-6' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>-</text><text x='1' y='195' font-size='10' font-family='Arial, sans-serif' fill='white'>+</text><line x1='15' y1='200' x2='45' y2='200' stroke='red' stroke-width='2' marker-end='url#arrowhead'/><text x='52' y='195' font-size='12' font-family='Arial, sans-serif' font-weight='bold' fill='red'>P</text><circle cx='0' cy='200' r='2' fill='black'/><circle cx='120' cy='200' r='2' fill='black'/><circle cx='0' cy='60' r='2' fill='black'/><text x='-8' y='215' font-size='12' font-family='Arial, sans-serif'>O</text><text x='116' y='215' font-size='12' font-family='Arial, sans-serif'>A</text><text x='-8' y='55' font-size='12' font-family='Arial, sans-serif'>B</text><text x='185' y='205' font-size='12' font-family='Arial, sans-serif'>x</text><text x='-12' y='15' font-size='12' font-family='Arial, sans-serif'>y</text><line x1='5' y1='185' x2='115' y2='185' stroke='black' stroke-width='1' marker-start='url#arrowhead-reverse' marker-end='url#arrowhead'/><text x='60' y='180' font-size='12' text-anchor='middle' font-family='Arial, sans-serif'>r</text><line x1='15' y1='195' x2='15' y2='65' stroke='black' stroke-width='1' marker-start='url#arrowhead-reverse' marker-end='url#arrowhead'/><text x='25' y='130' font-size='12' font-family='Arial, sans-serif'>2r</text></svg>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$V_0/2$ and $E_0/16$",
+        "unicode": "V_0/2 and E_0/16",
+        "plainText": "V_0/2 and E_0/16"
+      },
+      {
+        "id": "b",
+        "latex": "zero and $E_0/8$",
+        "unicode": "zero and E_0/8",
+        "plainText": "zero and E_0/8"
+      },
+      {
+        "id": "c",
+        "latex": "zero and $E_0/16$",
+        "unicode": "zero and E_0/16",
+        "plainText": "zero and E_0/16"
+      },
+      {
+        "id": "d",
+        "latex": "$V_0$ and $E_0/4$",
+        "unicode": "V_0 and E_0/4",
+        "plainText": "V_0 and E_0/4"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.527Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.527Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

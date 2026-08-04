@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_STRAIGHTLINE_2026_S_Q235",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STRAIGHTLINE_2026_S_Q235_RAW",
+    "question": {
+      "latex": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines $x + (k - 1)y + 3 = 0$ and $2x + k^2y - 4 = 0$. If the line $x - y + 2 = 0$ intersects the circle at the points A and B, then $(AB)^2$ is equal to:",
+      "unicode": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines x + (k - 1)y + 3 = 0 and 2x + k²y - 4 = 0. If the line x - y + 2 = 0 intersects the circle at the points A and B, then (AB)² is equal to:",
+      "plainText": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines x + (k - 1)y + 3 = 0 and 2x + k^2y - 4 = 0. If the line x - y + 2 = 0 intersects the circle at the points A and B, then (AB)^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$10$",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "b",
+        "latex": "$27$",
+        "unicode": "27",
+        "plainText": "27"
+      },
+      {
+        "id": "c",
+        "latex": "$18$",
+        "unicode": "18",
+        "plainText": "18"
+      },
+      {
+        "id": "d",
+        "latex": "$34$",
+        "unicode": "34",
+        "plainText": "34"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Straight Lines and Circles",
+      "subchapter": "Straight Lines and Circles Core Concepts",
+      "topic": "Straight Lines and Circles Primary Topic",
+      "learningOutcome": "Master fundamental principles of Straight Lines and Circles",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_STRAIGHTLINE_2026_S1_Q190",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STRAIGHTLINE_2026_S1_Q190_RAW",
+    "question": {
+      "latex": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines $x + $k - 1$y + 3 = 0$ and $2x + k^2y - 4 = 0$. If the line $x - y + 2 = 0$ intersects the circle at the points A and B, then $$AB$^2$ is equal to:",
+      "unicode": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines x + k - 1y + 3 = 0 and 2x + k²y - 4 = 0. If the line x - y + 2 = 0 intersects the circle at the points A and B, then AB² is equal to:",
+      "plainText": "Let a circle pass through the origin and its centre be the point of intersection of two mutually perpendicular lines x + k - 1y + 3 = 0 and 2x + k^2y - 4 = 0. If the line x - y + 2 = 0 intersects the circle at the points A and B, then AB^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$10$",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "b",
+        "latex": "$27$",
+        "unicode": "27",
+        "plainText": "27"
+      },
+      {
+        "id": "c",
+        "latex": "$18$",
+        "unicode": "18",
+        "plainText": "18"
+      },
+      {
+        "id": "d",
+        "latex": "$34$",
+        "unicode": "34",
+        "plainText": "34"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since the two lines are perpendicular, the product of their slopes is $-1$: $\\frac{-1}{k-1} \\times \\frac{-2}{k^2} = -1 \\implies k^3 - k^2 + 2 = 0$. Using trial and error, $k = -1$.\nThe lines become $x - 2y + 3 = 0$ and $2x + y - 4 = 0$. Solving these gives the intersection center point $C(1, 2)$.\nThe circle passes through $(0,0)$, so its radius squared $R^2 = 1^2 + 2^2 = 5$.\nThe perpendicular distance $p$ from $C(1,2)$ to line $x - y + 2 = 0$ is $p = \\frac{|1 - 2 + 2|}{\\sqrt{2}} = \\frac{1}{\\sqrt{2}}$.\nThe length of chord $AB$ is $2\\sqrt{R^2 - p^2} = 2\\sqrt{5 - 1/2} = 2\\sqrt{9/2} = \\sqrt{18}$. Therefore, $(AB)^2 = 18$.",
+      "unicode": "Since the two lines are perpendicular, the product of their slopes is -1: (-1/k-1) × (-2/k²) = -1 implies k³ - k² + 2 = 0. Using trial and error, k = -1.\nThe lines become x - 2y + 3 = 0 and 2x + y - 4 = 0. Solving these gives the intersection center point C(1, 2).\nThe circle passes through (0,0), so its radius squared R² = 1² + 2² = 5.\nThe perpendicular distance p from C(1,2) to line x - y + 2 = 0 is p = (|1 - 2 + 2|/√(2)) = (1/√(2)).\nThe length of chord AB is 2√(R² - p²) = 2√(5 - 1/2) = 2√(9/2) = √(18). Therefore, (AB)² = 18.",
+      "plainText": "Since the two lines are perpendicular, the product of their slopes is -1: (-1)/(k-1) times (-2)/(k^2) = -1 implies k^3 - k^2 + 2 = 0. Using trial and error, k = -1. The lines become x - 2y + 3 = 0 and 2x + y - 4 = 0. Solving these gives the intersection center point C(1, 2). The circle passes through (0,0), so its radius squared R^2 = 1^2 + 2^2 = 5. The perpendicular distance p from C(1,2) to line x - y + 2 = 0 is p = (|1 - 2 + 2|)/(sqrt(2)) = (1)/(sqrt(2)). The length of chord AB is 2sqrt(R^2 - p^2) = 2sqrt(5 - 1/2) = 2sqrt(9/2) = sqrt(18). Therefore, (AB)^2 = 18."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Straight Lines and Circles",
+      "subchapter": "Straight Lines and Circles Core Concepts",
+      "topic": "Straight Lines and Circles Primary Topic",
+      "learningOutcome": "Master fundamental principles of Straight Lines and Circles",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

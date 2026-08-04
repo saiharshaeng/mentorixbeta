@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_COORDINATION_2026_S1_Q534",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_COORDINATION_2026_S1_Q534_RAW",
+    "question": {
+      "latex": "5.33 g of $CrCl_3 \\cdot 6H_2O$, which is a $1:3$ electrolyte, is dissolved in water and is passed through a cation exchanger. The chloride ions in the eluted solution, on treatment with $AgNO_3$ results in 8.61 g of $AgCl$. The ratio of moles of complex reacted and moles of $AgCl$ formed is _______ $\\times 10^{-2}$. $Nearest integer$\n[Molar mass in $\\text{g mol}^{-1}$ Cr : 52, Ag : 108, Cl : 35.5, H : 1, O : 16]",
+      "unicode": "5.33 g of CrCl_3 · 6H_2O, which is a 1:3 electrolyte, is dissolved in water and is passed through a cation exchanger. The chloride ions in the eluted solution, on treatment with AgNO_3 results in 8.61 g of AgCl. The ratio of moles of complex reacted and moles of AgCl formed is _______ × 10^{-2}. Nearest integer\n[Molar mass in text{g mol}^{-1} Cr : 52, Ag : 108, Cl : 35.5, H : 1, O : 16]",
+      "plainText": "5.33 g of CrCl_3 cdot 6H_2O, which is a 1:3 electrolyte, is dissolved in water and is passed through a cation exchanger. The chloride ions in the eluted solution, on treatment with AgNO_3 results in 8.61 g of AgCl. The ratio of moles of complex reacted and moles of AgCl formed is _______ times 10^{-2}. Nearest integer [Molar mass in text{g mol}^{-1} Cr : 52, Ag : 108, Cl : 35.5, H : 1, O : 16]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "31",
+        "unicode": "31",
+        "plainText": "31"
+      },
+      {
+        "id": "b",
+        "latex": "32",
+        "unicode": "32",
+        "plainText": "32"
+      },
+      {
+        "id": "c",
+        "latex": "33",
+        "unicode": "33",
+        "plainText": "33"
+      },
+      {
+        "id": "d",
+        "latex": "34",
+        "unicode": "34",
+        "plainText": "34"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The molar mass of $CrCl_3 \\cdot 6H_2O = 52 + (3 \\times 35.5) + 6 \\times (2 + 16) = 52 + 106.5 + 108 = 266.5\\text{ g/mol}$.\nMoles of the complex = $\\frac{5.33}{266.5} = 0.02\\text{ mol}$.\nThe complex acts as a $1:3$ electrolyte, which implies that it produces 1 cation and 3 anions per molecule. Since the only anions are chlorides, all 3 chloride ions are outside the coordination sphere. Formula: $[Cr(H_2O)_6]Cl_3$.\nMolar mass of $AgCl = 108 + 35.5 = 143.5\\text{ g/mol}$.\nMoles of $AgCl$ formed = $\\frac{8.61}{143.5} = 0.06\\text{ mol}$.\nThe question asks for the ratio of (moles of complex reacted) to (moles of $AgCl$ formed).\n$\\text{Ratio} = \\frac{0.02}{0.06} = \\frac{1}{3} = 0.3333\\dots = 33.33 \\times 10^{-2}$.\nThe nearest integer to 33.33 is 33.",
+      "unicode": "The molar mass of CrCl_3 · 6H_2O = 52 + (3 × 35.5) + 6 × (2 + 16) = 52 + 106.5 + 108 = 266.5text{ g/mol}.\nMoles of the complex = (5.33/266.5) = 0.02text{ mol}.\nThe complex acts as a 1:3 electrolyte, which implies that it produces 1 cation and 3 anions per molecule. Since the only anions are chlorides, all 3 chloride ions are outside the coordination sphere. Formula: [Cr(H_2O)_6]Cl_3.\nMolar mass of AgCl = 108 + 35.5 = 143.5text{ g/mol}.\nMoles of AgCl formed = (8.61/143.5) = 0.06text{ mol}.\nThe question asks for the ratio of (moles of complex reacted) to (moles of AgCl formed).\ntext{Ratio} = (0.02/0.06) = (1/3) = 0.3333dots = 33.33 × 10^{-2}.\nThe nearest integer to 33.33 is 33.",
+      "plainText": "The molar mass of CrCl_3 cdot 6H_2O = 52 + (3 times 35.5) + 6 times (2 + 16) = 52 + 106.5 + 108 = 266.5text{ g/mol}. Moles of the complex = (5.33)/(266.5) = 0.02text{ mol}. The complex acts as a 1:3 electrolyte, which implies that it produces 1 cation and 3 anions per molecule. Since the only anions are chlorides, all 3 chloride ions are outside the coordination sphere. Formula: [Cr(H_2O)_6]Cl_3. Molar mass of AgCl = 108 + 35.5 = 143.5text{ g/mol}. Moles of AgCl formed = (8.61)/(143.5) = 0.06text{ mol}. The question asks for the ratio of (moles of complex reacted) to (moles of AgCl formed). text{Ratio} = (0.02)/(0.06) = (1)/(3) = 0.3333dots = 33.33 times 10^{-2}. The nearest integer to 33.33 is 33."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Coordination Compounds",
+      "subchapter": "Coordination Compounds Core Concepts",
+      "topic": "Coordination Compounds Primary Topic",
+      "learningOutcome": "Master fundamental principles of Coordination Compounds",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

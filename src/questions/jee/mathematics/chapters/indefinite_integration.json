@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_INDEFINITEIN_2026_S_Q244",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INDEFINITEIN_2026_S_Q244_RAW",
+    "question": {
+      "latex": "Let $f(x) = \\int \\left(\\frac{16x + 24}{x^2 + 2x - 15}\\right) dx$. If $f(4) = 14 \\log_e(3)$ and $f(7) = \\log_e(2^\\alpha \\cdot 3^\\beta), \\alpha, \\beta \\in \\mathbb{N}$, then $\\alpha + \\beta$ is equal to:",
+      "unicode": "Let f(x) = int left((16x + 24/x² + 2x - 15)right) dx. If f(4) = 14 log_e(3) and f(7) = log_e(2^α · 3^β), α, β in mathbb{N}, then α + β is equal to:",
+      "plainText": "Let f(x) = int left((16x + 24)/(x^2 + 2x - 15)right) dx. If f(4) = 14 log_e(3) and f(7) = log_e(2^alpha cdot 3^beta), alpha, beta in mathbb{N}, then alpha + beta is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$31$",
+        "unicode": "31",
+        "plainText": "31"
+      },
+      {
+        "id": "b",
+        "latex": "$37$",
+        "unicode": "37",
+        "plainText": "37"
+      },
+      {
+        "id": "c",
+        "latex": "$39$",
+        "unicode": "39",
+        "plainText": "39"
+      },
+      {
+        "id": "d",
+        "latex": "$41$",
+        "unicode": "41",
+        "plainText": "41"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Indefinite Integration",
+      "subchapter": "Indefinite Integration Core Concepts",
+      "topic": "Indefinite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Indefinite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INDEFINITEIN_2026_S1_Q199",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INDEFINITEIN_2026_S1_Q199_RAW",
+    "question": {
+      "latex": "Let $f$x$ = \\int \\left$\\frac{16x + 24}{x^2 + 2x - 15}\\right$ dx$. If $f$4$ = 14 \\log_e$3$$ and $f$7$ = \\log_e$2^\\alpha \\cdot 3^\\beta$, \\alpha, \\beta \\in \\mathbb{N}$, then $\\alpha + \\beta$ is equal to:",
+      "unicode": "Let fx = int left(16x + 24/x² + 2x - 15)right dx. If f4 = 14 log_e3 and f7 = log_e2^α · 3^β, α, β in mathbb{N}, then α + β is equal to:",
+      "plainText": "Let fx = int left(16x + 24)/(x^2 + 2x - 15)right dx. If f4 = 14 log_e3 and f7 = log_e2^alpha cdot 3^beta, alpha, beta in mathbb{N}, then alpha + beta is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$31$",
+        "unicode": "31",
+        "plainText": "31"
+      },
+      {
+        "id": "b",
+        "latex": "$37$",
+        "unicode": "37",
+        "plainText": "37"
+      },
+      {
+        "id": "c",
+        "latex": "$39$",
+        "unicode": "39",
+        "plainText": "39"
+      },
+      {
+        "id": "d",
+        "latex": "$41$",
+        "unicode": "41",
+        "plainText": "41"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Integrand uses partial fractions: $\\frac{16x + 24}{(x+5)(x-3)} = \\frac{A}{x+5} + \\frac{B}{x-3}$.\n$A = \\frac{16(-5)+24}{-5-3} = \\frac{-56}{-8} = 7$, and $B = \\frac{16(3)+24}{3+5} = \\frac{72}{8} = 9$.\nSo $f(x) = 7\\ln|x+5| + 9\\ln|x-3| + C$.\nApplying $f(4) = 14\\ln 3$: $f(4) = 7\\ln 9 + 9\\ln 1 + C = 14\\ln 3 + C \\implies C = 0$.\nThen $f(7) = 7\\ln 12 + 9\\ln 4 = 7\\ln(2^2 \\cdot 3) + 9\\ln(2^2) = 14\\ln 2 + 7\\ln 3 + 18\\ln 2 = 32\\ln 2 + 7\\ln 3 = \\ln(2^{32} \\cdot 3^7)$.\nThus $\\alpha = 32$ and $\\beta = 7$, yielding $\\alpha + \\beta = 39$.",
+      "unicode": "Integrand uses partial fractions: (16x + 24/(x+5)(x-3)) = (A/x+5) + (B/x-3).\nA = (16(-5)+24/-5-3) = (-56/-8) = 7, and B = (16(3)+24/3+5) = (72/8) = 9.\nSo f(x) = 7ln|x+5| + 9ln|x-3| + C.\nApplying f(4) = 14ln 3: f(4) = 7ln 9 + 9ln 1 + C = 14ln 3 + C implies C = 0.\nThen f(7) = 7ln 12 + 9ln 4 = 7ln(2² · 3) + 9ln(2²) = 14ln 2 + 7ln 3 + 18ln 2 = 32ln 2 + 7ln 3 = ln(2^{32} · 3^7).\nThus α = 32 and β = 7, yielding α + β = 39.",
+      "plainText": "Integrand uses partial fractions: (16x + 24)/((x+5)(x-3)) = (A)/(x+5) + (B)/(x-3). A = (16(-5)+24)/(-5-3) = (-56)/(-8) = 7, and B = (16(3)+24)/(3+5) = (72)/(8) = 9. So f(x) = 7ln|x+5| + 9ln|x-3| + C. Applying f(4) = 14ln 3: f(4) = 7ln 9 + 9ln 1 + C = 14ln 3 + C implies C = 0. Then f(7) = 7ln 12 + 9ln 4 = 7ln(2^2 cdot 3) + 9ln(2^2) = 14ln 2 + 7ln 3 + 18ln 2 = 32ln 2 + 7ln 3 = ln(2^{32} cdot 3^7). Thus alpha = 32 and beta = 7, yielding alpha + beta = 39."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Indefinite Integration",
+      "subchapter": "Indefinite Integration Core Concepts",
+      "topic": "Indefinite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Indefinite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "JEE_MAIN_CHE_AMINES_2026_S1_Q178",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_AMINES_2026_S1_Q178_RAW",
+    "question": {
+      "latex": "Consider the three aromatic molecules $P, Q and R$:\nP is N,N-dimethylaniline; \nQ is N,N-dimethyl-o-toluidine $one methyl group at ortho position$; \nand R is N,N-dimethyl-2,6-xylidine $two methyl groups at ortho positions$.\nThe correct order regarding the reactivity of these compounds with $Ph - N \\equiv NCl^-$ $benzene diazonium chloride$ under optimum but slightly acidic medium is :",
+      "unicode": "Consider the three aromatic molecules P, Q and R:\nP is N,N-dimethylaniline; \nQ is N,N-dimethyl-o-toluidine one methyl group at ortho position; \nand R is N,N-dimethyl-2,6-xylidine two methyl groups at ortho positions.\nThe correct order regarding the reactivity of these compounds with Ph - N equiv NCl^- benzene diazonium chloride under optimum but slightly acidic medium is :",
+      "plainText": "Consider the three aromatic molecules P, Q and R: P is N,N-dimethylaniline; Q is N,N-dimethyl-o-toluidine one methyl group at ortho position; and R is N,N-dimethyl-2,6-xylidine two methyl groups at ortho positions. The correct order regarding the reactivity of these compounds with Ph - N equiv NCl^- benzene diazonium chloride under optimum but slightly acidic medium is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P > Q > R",
+        "unicode": "P > Q > R",
+        "plainText": "P > Q > R"
+      },
+      {
+        "id": "b",
+        "latex": "R > P > Q",
+        "unicode": "R > P > Q",
+        "plainText": "R > P > Q"
+      },
+      {
+        "id": "c",
+        "latex": "R > Q > P",
+        "unicode": "R > Q > P",
+        "plainText": "R > Q > P"
+      },
+      {
+        "id": "d",
+        "latex": "P > R > Q",
+        "unicode": "P > R > Q",
+        "plainText": "P > R > Q"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The coupling reaction of the given amines with benzene diazonium chloride involves electrophilic aromatic substitution on the ring attached to the nitrogen atom.\nThe reactivity depends entirely on the +M activating effect of the $-NMe_2$ group. For the $+M$ effect to operate maximally, the unhybridized p-orbital on nitrogen (containing the lone pair) must be parallel to the p-orbitals of the benzene ring.\nIn Q (one ortho methyl) and even more so in R (two ortho methyls), steric repulsion between the ortho substituents and the bulky methyl groups on the nitrogen forces the $-NMe_2$ group out of the plane of the benzene ring. \nThis phenomenon is known as Steric Inhibition of Resonance (SIR). Due to SIR, the nitrogen lone pair can no longer efficiently delocalize into the ring, drastically decreasing the ring's nucleophilicity.\nP has no ortho groups, so the group remains planar, enabling maximum +M effect.\nThus, the reactivity order decreases as steric hindrance increases: P > Q > R.",
+      "unicode": "The coupling reaction of the given amines with benzene diazonium chloride involves electrophilic aromatic substitution on the ring attached to the nitrogen atom.\nThe reactivity depends entirely on the +M activating effect of the -NMe_2 group. For the +M effect to operate maximally, the unhybridized p-orbital on nitrogen (containing the lone pair) must be parallel to the p-orbitals of the benzene ring.\nIn Q (one ortho methyl) and even more so in R (two ortho methyls), steric repulsion between the ortho substituents and the bulky methyl groups on the nitrogen forces the -NMe_2 group out of the plane of the benzene ring. \nThis phenomenon is known as Steric Inhibition of Resonance (SIR). Due to SIR, the nitrogen lone pair can no longer efficiently delocalize into the ring, drastically decreasing the ring's nucleophilicity.\nP has no ortho groups, so the group remains planar, enabling maximum +M effect.\nThus, the reactivity order decreases as steric hindrance increases: P > Q > R.",
+      "plainText": "The coupling reaction of the given amines with benzene diazonium chloride involves electrophilic aromatic substitution on the ring attached to the nitrogen atom. The reactivity depends entirely on the +M activating effect of the -NMe_2 group. For the +M effect to operate maximally, the unhybridized p-orbital on nitrogen (containing the lone pair) must be parallel to the p-orbitals of the benzene ring. In Q (one ortho methyl) and even more so in R (two ortho methyls), steric repulsion between the ortho substituents and the bulky methyl groups on the nitrogen forces the -NMe_2 group out of the plane of the benzene ring. This phenomenon is known as Steric Inhibition of Resonance (SIR). Due to SIR, the nitrogen lone pair can no longer efficiently delocalize into the ring, drastically decreasing the ring's nucleophilicity. P has no ortho groups, so the group remains planar, enabling maximum +M effect. Thus, the reactivity order decreases as steric hindrance increases: P > Q > R."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Amines",
+      "subchapter": "Amines Core Concepts",
+      "topic": "Amines Primary Topic",
+      "learningOutcome": "Master fundamental principles of Amines",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.532Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.532Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_AMINES_2026_S1_Q297",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_AMINES_2026_S1_Q297_RAW",
+    "question": {
+      "latex": "Product $C$ of the following reaction sequence will be\nAniline $\\xrightarrow{Br_2 / \\text{water}} A \\xrightarrow{NaNO_2 / HCl, 273-278 K} B \\xrightarrow{$i$ HBF_4 \\ $ii$ NaNO_2, Cu, \\Delta} C$",
+      "unicode": "Product C of the following reaction sequence will be\nAniline xrightarrow{Br_2 / text{water}} A xrightarrow{NaNO_2 / HCl, 273-278 K} B xrightarrow{i HBF_4  ii NaNO_2, Cu, Delta} C",
+      "plainText": "Product C of the following reaction sequence will be Aniline xrightarrow{Br_2 / text{water}} A xrightarrow{NaNO_2 / HCl, 273-278 K} B xrightarrow{i HBF_4 ii NaNO_2, Cu, Delta} C"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "1-Bromo-4-nitrobenzene",
+        "unicode": "1-Bromo-4-nitrobenzene",
+        "plainText": "1-Bromo-4-nitrobenzene"
+      },
+      {
+        "id": "b",
+        "latex": "1, 3, 5-Tribromo-2-nitrobenzene",
+        "unicode": "1, 3, 5-Tribromo-2-nitrobenzene",
+        "plainText": "1, 3, 5-Tribromo-2-nitrobenzene"
+      },
+      {
+        "id": "c",
+        "latex": "4-Bromo-1-nitrobenzene",
+        "unicode": "4-Bromo-1-nitrobenzene",
+        "plainText": "4-Bromo-1-nitrobenzene"
+      },
+      {
+        "id": "d",
+        "latex": "1, 3, 5-Tribromobenzene",
+        "unicode": "1, 3, 5-Tribromobenzene",
+        "plainText": "1, 3, 5-Tribromobenzene"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "1. Aniline on reaction with bromine water undergoes severe electrophilic aromatic substitution, rapidly substituting at both ortho and the para position. Product A is $2,4,6$-tribromoaniline.\n2. Product A is then treated with cold nitrous acid ($NaNO_2 + HCl$), which converts the primary amine into a diazonium salt. Product B is $2,4,6$-tribromobenzenediazonium chloride.\n3. Product B reacts with fluoroboric acid ($HBF_4$) yielding the diazonium fluoroborate salt, which on subsequent heating with aqueous sodium nitrite in presence of copper replaces the diazonium group with a nitro group ($-NO_2$).\nThe resulting compound retains the three bromines at positions relative to the newly added nitro group. If the $-NO_2$ is carbon-1, the bromines are at 2, 4, and 6. For IUPAC naming convention, aiming for the lowest locant set yields: 1, 3, 5-Tribromo-2-nitrobenzene.",
+      "unicode": "1. Aniline on reaction with bromine water undergoes severe electrophilic aromatic substitution, rapidly substituting at both ortho and the para position. Product A is 2,4,6-tribromoaniline.\n2. Product A is then treated with cold nitrous acid (NaNO_2 + HCl), which converts the primary amine into a diazonium salt. Product B is 2,4,6-tribromobenzenediazonium chloride.\n3. Product B reacts with fluoroboric acid (HBF_4) yielding the diazonium fluoroborate salt, which on subsequent heating with aqueous sodium nitrite in presence of copper replaces the diazonium group with a nitro group (-NO_2).\nThe resulting compound retains the three bromines at positions relative to the newly added nitro group. If the -NO_2 is carbon-1, the bromines are at 2, 4, and 6. For IUPAC naming convention, aiming for the lowest locant set yields: 1, 3, 5-Tribromo-2-nitrobenzene.",
+      "plainText": "1. Aniline on reaction with bromine water undergoes severe electrophilic aromatic substitution, rapidly substituting at both ortho and the para position. Product A is 2,4,6-tribromoaniline. 2. Product A is then treated with cold nitrous acid (NaNO_2 + HCl), which converts the primary amine into a diazonium salt. Product B is 2,4,6-tribromobenzenediazonium chloride. 3. Product B reacts with fluoroboric acid (HBF_4) yielding the diazonium fluoroborate salt, which on subsequent heating with aqueous sodium nitrite in presence of copper replaces the diazonium group with a nitro group (-NO_2). The resulting compound retains the three bromines at positions relative to the newly added nitro group. If the -NO_2 is carbon-1, the bromines are at 2, 4, and 6. For IUPAC naming convention, aiming for the lowest locant set yields: 1, 3, 5-Tribromo-2-nitrobenzene."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Amines",
+      "subchapter": "Amines Core Concepts",
+      "topic": "Amines Primary Topic",
+      "learningOutcome": "Master fundamental principles of Amines",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.541Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.541Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

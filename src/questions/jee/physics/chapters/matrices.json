@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_MATRICES_2026_S1_Q540",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MATRICES_2026_S1_Q540_RAW",
+    "question": {
+      "latex": "Consider the matrices $A = \\begin{bmatrix} 2 & -2 \\\\ 4 & -2 \\end{bmatrix}$ and $B = \\begin{bmatrix} 3 & 9 \\\\ 1 & 3 \\end{bmatrix}$. If matrices $P$ and $Q$ are such that $PA = B$ and $AQ = B$, then the absolute value of the sum of the diagonal elements of $2$P + Q$$ is:",
+      "unicode": "Consider the matrices A = begin{bmatrix} 2 & -2  4 & -2 end{bmatrix} and B = begin{bmatrix} 3 & 9  1 & 3 end{bmatrix}. If matrices P and Q are such that PA = B and AQ = B, then the absolute value of the sum of the diagonal elements of 2P + Q is:",
+      "plainText": "Consider the matrices A = begin{bmatrix} 2 & -2 4 & -2 end{bmatrix} and B = begin{bmatrix} 3 & 9 1 & 3 end{bmatrix}. If matrices P and Q are such that PA = B and AQ = B, then the absolute value of the sum of the diagonal elements of 2P + Q is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$17$",
+        "unicode": "17",
+        "plainText": "17"
+      },
+      {
+        "id": "b",
+        "latex": "$34$",
+        "unicode": "34",
+        "plainText": "34"
+      },
+      {
+        "id": "c",
+        "latex": "$51$",
+        "unicode": "51",
+        "plainText": "51"
+      },
+      {
+        "id": "d",
+        "latex": "$68$",
+        "unicode": "68",
+        "plainText": "68"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "$|A| = -4 - (-8) = 4 \neq 0$, so $A$ is invertible.\n$A^{-1} = \\frac{1}{4}\\begin{bmatrix} -2 & 2 \\\\ -4 & 2 \\end{bmatrix} = \\begin{bmatrix} -1/2 & 1/2 \\\\ -1 & 1/2 \\end{bmatrix}$.\n$P = B A^{-1} \\implies Tr(P) = Tr(B A^{-1})$.\n$Q = A^{-1} B \\implies Tr(Q) = Tr(A^{-1} B) = Tr(B A^{-1}) = Tr(P)$.\nCalculate $P = \\begin{bmatrix} 3 & 9 \\\\ 1 & 3 \\end{bmatrix} \\begin{bmatrix} -1/2 & 1/2 \\\\ -1 & 1/2 \\end{bmatrix} = \\begin{bmatrix} -21/2 & 6 \\\\ -7/2 & 2 \\end{bmatrix}$.\n$Tr(P) = -21/2 + 2 = -17/2$.\n$Tr(2(P + Q)) = 2[Tr(P) + Tr(Q)] = 4 Tr(P) = 4(-17/2) = -34$.\nAbsolute value is $|-34| = 34$.",
+      "unicode": "|A| = -4 - (-8) = 4 \neq 0, so A is invertible.\nA^{-1} = (1/4)begin{bmatrix} -2 & 2  -4 & 2 end{bmatrix} = begin{bmatrix} -1/2 & 1/2  -1 & 1/2 end{bmatrix}.\nP = B A^{-1} implies Tr(P) = Tr(B A^{-1}).\nQ = A^{-1} B implies Tr(Q) = Tr(A^{-1} B) = Tr(B A^{-1}) = Tr(P).\nCalculate P = begin{bmatrix} 3 & 9  1 & 3 end{bmatrix} begin{bmatrix} -1/2 & 1/2  -1 & 1/2 end{bmatrix} = begin{bmatrix} -21/2 & 6  -7/2 & 2 end{bmatrix}.\nTr(P) = -21/2 + 2 = -17/2.\nTr(2(P + Q)) = 2[Tr(P) + Tr(Q)] = 4 Tr(P) = 4(-17/2) = -34.\nAbsolute value is |-34| = 34.",
+      "plainText": "|A| = -4 - (-8) = 4 eq 0, so A is invertible. A^{-1} = (1)/(4)begin{bmatrix} -2 & 2 -4 & 2 end{bmatrix} = begin{bmatrix} -1/2 & 1/2 -1 & 1/2 end{bmatrix}. P = B A^{-1} implies Tr(P) = Tr(B A^{-1}). Q = A^{-1} B implies Tr(Q) = Tr(A^{-1} B) = Tr(B A^{-1}) = Tr(P). Calculate P = begin{bmatrix} 3 & 9 1 & 3 end{bmatrix} begin{bmatrix} -1/2 & 1/2 -1 & 1/2 end{bmatrix} = begin{bmatrix} -21/2 & 6 -7/2 & 2 end{bmatrix}. Tr(P) = -21/2 + 2 = -17/2. Tr(2(P + Q)) = 2[Tr(P) + Tr(Q)] = 4 Tr(P) = 4(-17/2) = -34. Absolute value is |-34| = 34."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Matrices",
+      "subchapter": "Matrices Core Concepts",
+      "topic": "Matrices Primary Topic",
+      "learningOutcome": "Master fundamental principles of Matrices",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

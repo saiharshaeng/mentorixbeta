@@ -1,0 +1,63 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_RELATIONS_2026_S_Q246",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_RELATIONS_2026_S_Q246_RAW",
+    "question": {
+      "latex": "Let $A = \\{2, 3, 4, 5, 6\\}$. Let $R$ be a relation on the set $A \\times A$ given by $(x, y) R (z, w)$ if and only if $x$ divides $z$ and $y \\leq w$. Then the number of elements in $R$ is:",
+      "unicode": "Let A = {2, 3, 4, 5, 6}. Let R be a relation on the set A × A given by (x, y) R (z, w) if and only if x divides z and y leq w. Then the number of elements in R is:",
+      "plainText": "Let A = {2, 3, 4, 5, 6}. Let R be a relation on the set A times A given by (x, y) R (z, w) if and only if x divides z and y leq w. Then the number of elements in R is:"
+    },
+    "options": [],
+    "answers": [
+      "2"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Relations",
+      "subchapter": "Relations Core Concepts",
+      "topic": "Relations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Relations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

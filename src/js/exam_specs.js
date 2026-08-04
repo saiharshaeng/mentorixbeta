@@ -20,46 +20,57 @@ const EXAM_SPECS = {
     durationMinutes: 180,
     totalQuestions: 75,
     maxScore: 300,
-    markingScheme: { correct: 4, wrong: -1, numericalWrong: 0 },
+    markingScheme: { correct: 4, wrong: -1, numericalWrong: -1 },
     subjects: ['Mathematics', 'Physics', 'Chemistry'],
     sections: [
-      { name: 'Section A (MCQ)', count: 20, correct: 4, wrong: -1 },
-      { name: 'Section B (Numerical)', count: 5, correct: 4, wrong: 0 }
+      { name: 'Section A (MCQ - 20 Mandatory)', count: 20, correct: 4, wrong: -1 },
+      { name: 'Section B (Numerical Value - Attempt 5)', count: 5, correct: 4, wrong: -1 }
     ],
     syllabus: {
-      Mathematics: [
-        {
-          unit: 'Algebra',
-          chapters: [
-            { name: 'Complex Numbers', weight: 4, topics: ['Algebra of Complex Numbers', 'Polar and Euler Form', 'De Moivre Theorem', 'Roots of Unity'] },
-            { name: 'Quadratic Equations', weight: 3, topics: ['Nature of Roots', 'Common Roots', 'Location of Roots', 'Quadratic Inequalities'] },
-            { name: 'Sequences and Series', weight: 4, topics: ['Arithmetic Progression', 'Geometric Progression', 'Arithmetico-Geometric Progression', 'Special Series'] },
-            { name: 'Matrices and Determinants', weight: 5, topics: ['Types of Matrices', 'Properties of Determinants', 'Adjoint and Inverse', 'System of Linear Equations'] }
-          ]
-        },
-        {
-          unit: 'Calculus',
-          chapters: [
-            { name: 'Limits and Continuity', weight: 4, topics: ['Evaluation of Limits', 'L\'Hopital\'s Rule', 'Continuity and Differentiability'] },
-            { name: 'Differentiation', weight: 5, topics: ['First Principles', 'Chain Rule', 'Implicit and Parametric Differentiation', 'Higher Order Derivatives'] },
-            { name: 'Integrals', weight: 7, topics: ['Indefinite Integration', 'Definite Integration Properties', 'Leibniz Rule', 'Area Under Curves'] }
-          ]
-        }
-      ],
       Physics: [
         {
           unit: 'Mechanics',
           chapters: [
-            { name: 'Kinematics', weight: 4, topics: ['Motion in a Straight Line', 'Motion in a Plane', 'Projectiles', 'Relative Velocity'] },
+            { name: 'Units & Measurements', weight: 3, topics: ['SI Units', 'Dimensional Analysis', 'Errors in Measurement'] },
+            { name: 'Kinematics', weight: 5, topics: ['Motion in 1D', 'Motion in 2D', 'Projectiles', 'Relative Motion'] },
             { name: 'Laws of Motion', weight: 5, topics: ['Newton\'s Laws', 'Friction', 'Circular Motion Dynamics'] },
-            { name: 'Rotational Motion', weight: 4, topics: ['Moment of Inertia', 'Torque and Angular Momentum', 'Rolling Motion'] }
+            { name: 'Work, Energy & Power', weight: 4, topics: ['Work-Energy Theorem', 'Conservation of Energy', 'Collisions'] },
+            { name: 'Rotational Motion', weight: 5, topics: ['Center of Mass', 'Moment of Inertia', 'Torque & Angular Momentum', 'Rolling Motion'] },
+            { name: 'Gravitation', weight: 4, topics: ['Kepler\'s Laws', 'Gravitational Field & Potential', 'Escape & Orbital Speed'] }
           ]
         },
         {
-          unit: 'Electrodynamics',
+          unit: 'Properties of Matter & Thermal Physics',
           chapters: [
-            { name: 'Electrostatics', weight: 7, topics: ['Coulomb\'s Law', 'Electric Field and Potential', 'Gauss\'s Law', 'Capacitance'] },
-            { name: 'Current Electricity', weight: 8, topics: ['Ohm\'s Law', 'Kirchhoff\'s Laws', 'Potentiometer and Meter Bridge', 'Heating Effects'] }
+            { name: 'Properties of Solids & Fluids', weight: 4, topics: ['Elasticity', 'Fluid Statics & Dynamics', 'Viscosity & Surface Tension'] },
+            { name: 'Thermal Physics & Thermodynamics', weight: 6, topics: ['Thermal Expansion', 'Heat Transfer', 'First & Second Law of Thermodynamics'] },
+            { name: 'Kinetic Theory of Gases', weight: 3, topics: ['Ideal Gas Laws', 'Degrees of Freedom', 'Equipartition of Energy'] }
+          ]
+        },
+        {
+          unit: 'Oscillations & Waves',
+          chapters: [
+            { name: 'Oscillations (SHM)', weight: 4, topics: ['Simple Harmonic Motion', 'Spring-Mass System', 'Simple Pendulum'] },
+            { name: 'Waves', weight: 4, topics: ['Wave Equation', 'Sound Waves & Doppler Effect', 'Standing Waves & Organ Pipes'] }
+          ]
+        },
+        {
+          unit: 'Electromagnetism',
+          chapters: [
+            { name: 'Electrostatics', weight: 7, topics: ['Coulomb\'s Law', 'Electric Field & Potential', 'Gauss\'s Law', 'Capacitors & Dielectrics'] },
+            { name: 'Current Electricity', weight: 8, topics: ['Ohm\'s Law', 'Kirchhoff\'s Laws', 'Potentiometer & Wheatstone Bridge'] },
+            { name: 'Magnetic Effects of Current & Magnetism', weight: 6, topics: ['Biot-Savart Law', 'Ampere\'s Law', 'Moving Charges in B-Field', 'Bar Magnet & Magnetic Properties'] },
+            { name: 'Electromagnetic Induction & AC', weight: 6, topics: ['Faraday\'s & Lenz\'s Law', 'Self & Mutual Inductance', 'AC Circuits & Resonance', 'Transformers'] }
+          ]
+        },
+        {
+          unit: 'Optics & Modern Physics',
+          chapters: [
+            { name: 'Electromagnetic Waves', weight: 2, topics: ['EM Wave Spectrum', 'Displacement Current'] },
+            { name: 'Ray & Wave Optics', weight: 8, topics: ['Reflection & Refraction', 'Lenses & Mirrors', 'Interference (YDSE)', 'Diffraction & Polarization'] },
+            { name: 'Dual Nature of Matter & Radiation', weight: 4, topics: ['Photoelectric Effect', 'de Broglie Wavelength'] },
+            { name: 'Atoms & Nuclei', weight: 5, topics: ['Bohr Model', 'Nuclear Binding Energy', 'Nuclear Fission & Fusion'] },
+            { name: 'Semiconductor Electronics', weight: 5, topics: ['p-n Junction Diode', 'Zener Diode', 'Logic Gates'] }
           ]
         }
       ],
@@ -67,15 +78,75 @@ const EXAM_SPECS = {
         {
           unit: 'Physical Chemistry',
           chapters: [
+            { name: 'Some Basic Concepts of Chemistry', weight: 3, topics: ['Mole Concept & Molar Mass', 'Stoichiometry & Limiting Reagent', 'Molarity, Molality & Normality', 'Equivalent Concept & Titration'] },
             { name: 'Atomic Structure', weight: 4, topics: ['Bohr Model', 'Quantum Numbers', 'Electronic Configuration'] },
-            { name: 'Chemical Bonding', weight: 6, topics: ['Ionic and Covalent Bonding', 'VSEPR Theory', 'Hybridization', 'Molecular Orbital Theory'] }
+            { name: 'Chemical Bonding & Molecular Structure', weight: 6, topics: ['VSEPR Theory', 'Hybridization', 'Molecular Orbital Theory'] },
+            { name: 'Chemical Thermodynamics', weight: 5, topics: ['First & Second Law', 'Enthalpy & Entropy', 'Gibbs Free Energy'] },
+            { name: 'Solutions', weight: 4, topics: ['Raoult\'s Law', 'Colligative Properties', 'Van\'t Hoff Factor'] },
+            { name: 'Equilibrium (Chemical & Ionic)', weight: 5, topics: ['Le Chatelier\'s Principle', 'pH & Buffer Solutions', 'Solubility Product'] },
+            { name: 'Redox Reactions & Electrochemistry', weight: 6, topics: ['Nernst Equation', 'Conductance & Kohlrausch Law', 'Electrolytic Cells'] },
+            { name: 'Chemical Kinetics', weight: 5, topics: ['Order & Molecularity', 'Integrated Rate Laws', 'Arrhenius Equation'] }
+          ]
+        },
+        {
+          unit: 'Inorganic Chemistry',
+          chapters: [
+            { name: 'Periodic Table & Periodicity', weight: 4, topics: ['Periodic Trends', 'Ionization Enthalpy & Electron Gain'] },
+            { name: 'p-Block Elements', weight: 5, topics: ['Group 13 to 18 Trends & Compounds'] },
+            { name: 'd and f-Block Elements', weight: 5, topics: ['Transition Elements Properties', 'Lanthanides & Actinides'] },
+            { name: 'Coordination Compounds', weight: 6, topics: ['Werner\'s Theory', 'IUPAC Naming', 'Crystal Field Theory (CFT)', 'Isomerism'] }
           ]
         },
         {
           unit: 'Organic Chemistry',
           chapters: [
-            { name: 'Organic Chemistry Basics', weight: 5, topics: ['IUPAC Nomenclature', 'Isomerism', 'Inductive and Resonance Effects', 'Electrophiles and Nucleophiles'] },
-            { name: 'Hydrocarbons', weight: 4, topics: ['Alkanes', 'Alkenes', 'Alkynes', 'Aromatic Hydrocarbons'] }
+            { name: 'Basic Principles & Techniques (GOC)', weight: 6, topics: ['IUPAC Naming', 'Inductive & Resonance Effects', 'Isomerism', 'Reaction Intermediates'] },
+            { name: 'Hydrocarbons', weight: 5, topics: ['Alkanes', 'Alkenes', 'Alkynes', 'Aromaticity & Benzene Reactions'] },
+            { name: 'Haloalkanes & Haloarenes', weight: 4, topics: ['SN1 and SN2 Mechanisms', 'E1 and E2 Eliminations'] },
+            { name: 'Alcohols, Phenols & Ethers', weight: 5, topics: ['Preparation & Chemical Reactions', 'Acidic Nature of Phenol'] },
+            { name: 'Aldehydes, Ketones & Carboxylic Acids', weight: 6, topics: ['Nucleophilic Addition', 'Aldol & Cannizzaro Reactions'] },
+            { name: 'Organic Compounds Containing Nitrogen', weight: 4, topics: ['Basicity of Amines', 'Diazonium Salts'] },
+            { name: 'Biomolecules', weight: 4, topics: ['Carbohydrates', 'Proteins & Amino Acids', 'Nucleic Acids (DNA/RNA)'] }
+          ]
+        }
+      ],
+      Mathematics: [
+        {
+          unit: 'Algebra',
+          chapters: [
+            { name: 'Sets, Relations & Functions', weight: 4, topics: ['Types of Relations', 'One-One and Onto Functions', 'Composition of Functions'] },
+            { name: 'Inverse Trigonometric Functions', weight: 4, topics: ['Principal Value & Domain', 'Properties of Inverse Trig Functions', 'Simplification of Inverse Trig Expressions', 'Equations involving Inverse Trig'] },
+            { name: 'Complex Numbers & Quadratic Equations', weight: 5, topics: ['De Moivre Theorem', 'Roots of Unity', 'Nature & Location of Roots'] },
+            { name: 'Matrices & Determinants', weight: 6, topics: ['Matrix Algebra', 'Adjoint & Inverse', 'System of Linear Equations (Cramer\'s Rule)'] },
+            { name: 'Permutations & Combinations', weight: 4, topics: ['Fundamental Counting Principle', 'Permutations with Repetition', 'Combinations'] },
+            { name: 'Binomial Theorem', weight: 4, topics: ['General & Middle Term', 'Binomial Coefficients Properties'] },
+            { name: 'Sequences & Series', weight: 5, topics: ['AP, GP, AGP', 'Sum of Special Series'] }
+          ]
+        },
+        {
+          unit: 'Calculus',
+          chapters: [
+            { name: 'Limits, Continuity & Differentiability', weight: 6, topics: ['Standard Limits', 'L\'Hopital\'s Rule', 'Continuity & Differentiability Check'] },
+            { name: 'Application of Derivatives', weight: 6, topics: ['Tangents & Normals', 'Monotonicity', 'Maxima & Minima'] },
+            { name: 'Indefinite & Definite Integrals', weight: 7, topics: ['Integration Techniques', 'Definite Integral Properties', 'Leibniz Rule'] },
+            { name: 'Area Under Curves', weight: 4, topics: ['Area bounded by Parabolas, Circles & Lines'] },
+            { name: 'Differential Equations', weight: 4, topics: ['Variable Separable', 'Homogeneous DE', 'Linear Differential Equations'] }
+          ]
+        },
+        {
+          unit: 'Coordinate Geometry & Vectors',
+          chapters: [
+            { name: 'Straight Lines & Circles', weight: 6, topics: ['Slope & Form of Lines', 'Angle between Lines', 'Equation of Circle & Tangents'] },
+            { name: 'Conic Sections (Parabola, Ellipse, Hyperbola)', weight: 6, topics: ['Standard Equations', 'Tangents & Normals', 'Foci & Directrix'] },
+            { name: 'Vector Algebra', weight: 5, topics: ['Dot & Cross Product', 'Scalar & Vector Triple Product'] },
+            { name: 'Three Dimensional Geometry', weight: 6, topics: ['Direction Cosines', 'Equation of Line in 3D', 'Shortest Distance between Lines', 'Planes'] }
+          ]
+        },
+        {
+          unit: 'Trigonometry & Statistics',
+          chapters: [
+            { name: 'Trigonometric Functions & Equations', weight: 4, topics: ['Trigonometric Ratios & Identities', 'General Solutions'] },
+            { name: 'Statistics & Probability', weight: 5, topics: ['Mean, Variance & Standard Deviation', 'Bayes Theorem', 'Binomial Distribution'] }
           ]
         }
       ]
@@ -129,6 +200,7 @@ const EXAM_SPECS = {
         {
           unit: 'Physical Chemistry',
           chapters: [
+            { name: 'Some Basic Concepts of Chemistry', weight: 3, topics: ['Mole Concept & Molar Mass', 'Stoichiometry & Limiting Reagent', 'Molarity, Molality & Normality', 'Equivalent Concept & Titration'] },
             { name: 'Chemical Equilibrium', weight: 6, topics: ['Le Chatelier\'s Principle', 'Solubility Product', 'Acid-Base Buffers'] }
           ]
         }

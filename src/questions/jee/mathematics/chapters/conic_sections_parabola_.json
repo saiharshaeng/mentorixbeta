@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q237",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q237_RAW",
+    "question": {
+      "latex": "Let the parabola $y = x^2 + px + q$ passing through the point $(1, -1)$ be such that the distance between its vertex and the $x$-axis is minimum. Then the value of $p^2 + q^2$ is:",
+      "unicode": "Let the parabola y = x² + px + q passing through the point (1, -1) be such that the distance between its vertex and the x-axis is minimum. Then the value of p² + q² is:",
+      "plainText": "Let the parabola y = x^2 + px + q passing through the point (1, -1) be such that the distance between its vertex and the x-axis is minimum. Then the value of p^2 + q^2 is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections (Parabola)",
+      "subchapter": "Conic Sections (Parabola) Core Concepts",
+      "topic": "Conic Sections (Parabola) Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections (Parabola)",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S1_Q192",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S1_Q192_RAW",
+    "question": {
+      "latex": "Let the parabola $y = x^2 + px + q$ passing through the point $$1, -1$$ be such that the distance between its vertex and the $x$-axis is minimum. Then the value of $p^2 + q^2$ is:",
+      "unicode": "Let the parabola y = x² + px + q passing through the point 1, -1 be such that the distance between its vertex and the x-axis is minimum. Then the value of p² + q² is:",
+      "plainText": "Let the parabola y = x^2 + px + q passing through the point 1, -1 be such that the distance between its vertex and the x-axis is minimum. Then the value of p^2 + q^2 is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since the parabola passes through $(1,-1)$, we have $-1 = 1 + p + q \\implies q = -2 - p$.\nThe vertex of the parabola is at $(-\\frac{p}{2}, -\\frac{p^2}{4} + q)$. The distance to the $x$-axis is $|-\\frac{p^2}{4} + q| = |-\\frac{p^2}{4} - p - 2| = \\frac{1}{4}|p^2 + 4p + 8|$.\nTo minimize $\\frac{1}{4}((p+2)^2 + 4)$, we set $p = -2$. \nThen $q = -2 - (-2) = 0$.\nThe value of $p^2 + q^2 = (-2)^2 + 0^2 = 4$.",
+      "unicode": "Since the parabola passes through (1,-1), we have -1 = 1 + p + q implies q = -2 - p.\nThe vertex of the parabola is at (-(p/2), -(p²/4) + q). The distance to the x-axis is |-(p²/4) + q| = |-(p²/4) - p - 2| = (1/4)|p² + 4p + 8|.\nTo minimize (1/4)((p+2)² + 4), we set p = -2. \nThen q = -2 - (-2) = 0.\nThe value of p² + q² = (-2)² + 0² = 4.",
+      "plainText": "Since the parabola passes through (1,-1), we have -1 = 1 + p + q implies q = -2 - p. The vertex of the parabola is at (-(p)/(2), -(p^2)/(4) + q). The distance to the x-axis is |-(p^2)/(4) + q| = |-(p^2)/(4) - p - 2| = (1)/(4)|p^2 + 4p + 8|. To minimize (1)/(4)((p+2)^2 + 4), we set p = -2. Then q = -2 - (-2) = 0. The value of p^2 + q^2 = (-2)^2 + 0^2 = 4."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections (Parabola)",
+      "subchapter": "Conic Sections (Parabola) Core Concepts",
+      "topic": "Conic Sections (Parabola) Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections (Parabola)",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

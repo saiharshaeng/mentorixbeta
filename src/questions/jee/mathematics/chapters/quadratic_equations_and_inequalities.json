@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2026_S_Q302",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2026_S_Q302_RAW",
+    "question": {
+      "latex": "If the set of all solutions of $|x^2 + x - 9| = |x| + |x^2 - 9|$ is $[\\alpha, \\beta] \\cup [\\gamma, \\infty)$, then $(\\alpha^2 + \\beta^2 + \\gamma^2)$ is equal to:",
+      "unicode": "If the set of all solutions of |x² + x - 9| = |x| + |x² - 9| is [α, β] cup [gamma, ∞), then (α² + β² + gamma²) is equal to:",
+      "plainText": "If the set of all solutions of |x^2 + x - 9| = |x| + |x^2 - 9| is [alpha, beta] cup [gamma, infty), then (alpha^2 + beta^2 + gamma^2) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "b",
+        "latex": "$18$",
+        "unicode": "18",
+        "plainText": "18"
+      },
+      {
+        "id": "c",
+        "latex": "$36$",
+        "unicode": "36",
+        "plainText": "36"
+      },
+      {
+        "id": "d",
+        "latex": "$72$",
+        "unicode": "72",
+        "plainText": "72"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations and Inequalities",
+      "subchapter": "Quadratic Equations and Inequalities Core Concepts",
+      "topic": "Quadratic Equations and Inequalities Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations and Inequalities",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.055Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.055Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2026_S1_Q242",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2026_S1_Q242_RAW",
+    "question": {
+      "latex": "If the set of all solutions of $|x^2 + x - 9| = |x| + |x^2 - 9|$ is $[\\alpha, \\beta] \\cup [\\gamma, \\infty$$, then $$\\alpha^2 + \\beta^2 + \\gamma^2$$ is equal to:",
+      "unicode": "If the set of all solutions of |x² + x - 9| = |x| + |x² - 9| is [α, β] cup [gamma, ∞, then α² + β² + gamma² is equal to:",
+      "plainText": "If the set of all solutions of |x^2 + x - 9| = |x| + |x^2 - 9| is [alpha, beta] cup [gamma, infty, then alpha^2 + beta^2 + gamma^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "b",
+        "latex": "$18$",
+        "unicode": "18",
+        "plainText": "18"
+      },
+      {
+        "id": "c",
+        "latex": "$36$",
+        "unicode": "36",
+        "plainText": "36"
+      },
+      {
+        "id": "d",
+        "latex": "$72$",
+        "unicode": "72",
+        "plainText": "72"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Observe that $(x) + (x^2 - 9) = x^2 + x - 9$.\nLet $A = x$ and $B = x^2 - 9$. The given equation is $|A + B| = |A| + |B|$.\nThis property of absolute values holds true if and only if $A \\cdot B \\ge 0$.\nSubstituting the expressions back, we get: $x(x^2 - 9) \\ge 0$.\n$\\implies x(x - 3)(x + 3) \\ge 0$.\nThe critical points are $x = -3, 0, 3$. Evaluating the sign of the product in the intervals formed by these points:\nFor $x \\in [3, \\infty)$, the product is $\\ge 0$.\nFor $x \\in [-3, 0]$, the product is $\\ge 0$.\nThe solution set is $[-3, 0] \\cup [3, \\infty)$.\nComparing this with $[\\alpha, \\beta] \\cup [\\gamma, \\infty)$, we get $\\alpha = -3$, $\\beta = 0$, and $\\gamma = 3$.\nTherefore, $(\\alpha^2 + \\beta^2 + \\gamma^2) = (-3)^2 + 0^2 + 3^2 = 9 + 0 + 9 = 18$.",
+      "unicode": "Observe that (x) + (x² - 9) = x² + x - 9.\nLet A = x and B = x² - 9. The given equation is |A + B| = |A| + |B|.\nThis property of absolute values holds true if and only if A · B ge 0.\nSubstituting the expressions back, we get: x(x² - 9) ge 0.\nimplies x(x - 3)(x + 3) ge 0.\nThe critical points are x = -3, 0, 3. Evaluating the sign of the product in the intervals formed by these points:\nFor x in [3, ∞), the product is ge 0.\nFor x in [-3, 0], the product is ge 0.\nThe solution set is [-3, 0] cup [3, ∞).\nComparing this with [α, β] cup [gamma, ∞), we get α = -3, β = 0, and gamma = 3.\nTherefore, (α² + β² + gamma²) = (-3)² + 0² + 3² = 9 + 0 + 9 = 18.",
+      "plainText": "Observe that (x) + (x^2 - 9) = x^2 + x - 9. Let A = x and B = x^2 - 9. The given equation is |A + B| = |A| + |B|. This property of absolute values holds true if and only if A cdot B ge 0. Substituting the expressions back, we get: x(x^2 - 9) ge 0. implies x(x - 3)(x + 3) ge 0. The critical points are x = -3, 0, 3. Evaluating the sign of the product in the intervals formed by these points: For x in [3, infty), the product is ge 0. For x in [-3, 0], the product is ge 0. The solution set is [-3, 0] cup [3, infty). Comparing this with [alpha, beta] cup [gamma, infty), we get alpha = -3, beta = 0, and gamma = 3. Therefore, (alpha^2 + beta^2 + gamma^2) = (-3)^2 + 0^2 + 3^2 = 9 + 0 + 9 = 18."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations and Inequalities",
+      "subchapter": "Quadratic Equations and Inequalities Core Concepts",
+      "topic": "Quadratic Equations and Inequalities Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations and Inequalities",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.537Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.537Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

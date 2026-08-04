@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_LIMITS_2026_S_Q166",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_LIMITS_2026_S_Q166_RAW",
+    "question": {
+      "latex": "If $\\lim_{x \\to 2} \\frac{\\sin(x^3 - 5x^2 + ax + b)}{(\\sqrt{x - 1} - 1)\\log_e(x - 1)} = m$, then $a + b + m$ is equal to :",
+      "unicode": "If lim_{x to 2} (sin(x³ - 5x² + ax + b)/(√(x - 1) - 1)log_e(x - 1)) = m, then a + b + m is equal to :",
+      "plainText": "If lim_{x to 2} (sin(x^3 - 5x^2 + ax + b))/((sqrt(x - 1) - 1)log_e(x - 1)) = m, then a + b + m is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Limits",
+      "subchapter": "Limits Core Concepts",
+      "topic": "Limits Primary Topic",
+      "learningOutcome": "Master fundamental principles of Limits",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_LIMITS_2026_S1_Q136",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_LIMITS_2026_S1_Q136_RAW",
+    "question": {
+      "latex": "If $\\lim_{x \\to 2} \\frac{\\sin$x^3 - 5x^2 + ax + b$}{$\\sqrt{x - 1} - 1$\\log_e$x - 1$} = m$, then $a + b + m$ is equal to :",
+      "unicode": "If lim_{x to 2} (sinx³ - 5x² + ax + b/√(x - 1) - 1log_ex - 1) = m, then a + b + m is equal to :",
+      "plainText": "If lim_{x to 2} (sinx^3 - 5x^2 + ax + b)/(sqrt(x - 1) - 1log_ex - 1) = m, then a + b + m is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let the limit be evaluated as $x \\to 2$. Substitute $x = 2 + h$, as $h \\to 0$.\nThe denominator becomes $D = (\\sqrt{1+h} - 1)\\log_e(1+h)$.\nUsing standard expansions or equivalents for small $h$:\n$\\sqrt{1+h} - 1 \\approx \\frac{h}{2}$ and $\\log_e(1+h) \\approx h$.\nSo, $D \\approx \\frac{h^2}{2}$. For the limit to exist and be finite ($m \\neq 0$), the numerator must be an infinitesimal of order $h^2$.\nThe numerator is $N = \\sin((2+h)^3 - 5(2+h)^2 + a(2+h) + b)$.\nLet $P(x) = x^3 - 5x^2 + ax + b$. We must have $P(2) = 0$ and $P'(2) = 0$ for $P(2+h)$ to be of order $h^2$.\n$P'(x) = 3x^2 - 10x + a$. Setting $P'(2) = 0 \\implies 12 - 20 + a = 0 \\implies a = 8$.\nSetting $P(2) = 0 \\implies 8 - 20 + 2a + b = 0 \\implies 2(8) + b = 12 \\implies 16 + b = 12 \\implies b = -4$.\nWith these values, $P(x) = x^3 - 5x^2 + 8x - 4 = (x-2)^2(x-1)$.\nThen $P(2+h) = h^2(1+h) = h^2 + h^3$.\nThe numerator limits to $\\sin(h^2 + h^3) \\approx h^2$.\nThe limit $m = \\lim_{h \\to 0} \\frac{h^2}{h^2 / 2} = 2$.\nFinally, $a + b + m = 8 + (-4) + 2 = 6$.",
+      "unicode": "Let the limit be evaluated as x to 2. Substitute x = 2 + h, as h to 0.\nThe denominator becomes D = (√(1+h) - 1)log_e(1+h).\nUsing standard expansions or equivalents for small h:\n√(1+h) - 1 approx (h/2) and log_e(1+h) approx h.\nSo, D approx (h²/2). For the limit to exist and be finite (m neq 0), the numerator must be an infinitesimal of order h².\nThe numerator is N = sin((2+h)³ - 5(2+h)² + a(2+h) + b).\nLet P(x) = x³ - 5x² + ax + b. We must have P(2) = 0 and P'(2) = 0 for P(2+h) to be of order h².\nP'(x) = 3x² - 10x + a. Setting P'(2) = 0 implies 12 - 20 + a = 0 implies a = 8.\nSetting P(2) = 0 implies 8 - 20 + 2a + b = 0 implies 2(8) + b = 12 implies 16 + b = 12 implies b = -4.\nWith these values, P(x) = x³ - 5x² + 8x - 4 = (x-2)²(x-1).\nThen P(2+h) = h²(1+h) = h² + h³.\nThe numerator limits to sin(h² + h³) approx h².\nThe limit m = lim_{h to 0} (h²/h² / 2) = 2.\nFinally, a + b + m = 8 + (-4) + 2 = 6.",
+      "plainText": "Let the limit be evaluated as x to 2. Substitute x = 2 + h, as h to 0. The denominator becomes D = (sqrt(1+h) - 1)log_e(1+h). Using standard expansions or equivalents for small h: sqrt(1+h) - 1 approx (h)/(2) and log_e(1+h) approx h. So, D approx (h^2)/(2). For the limit to exist and be finite (m neq 0), the numerator must be an infinitesimal of order h^2. The numerator is N = sin((2+h)^3 - 5(2+h)^2 + a(2+h) + b). Let P(x) = x^3 - 5x^2 + ax + b. We must have P(2) = 0 and P'(2) = 0 for P(2+h) to be of order h^2. P'(x) = 3x^2 - 10x + a. Setting P'(2) = 0 implies 12 - 20 + a = 0 implies a = 8. Setting P(2) = 0 implies 8 - 20 + 2a + b = 0 implies 2(8) + b = 12 implies 16 + b = 12 implies b = -4. With these values, P(x) = x^3 - 5x^2 + 8x - 4 = (x-2)^2(x-1). Then P(2+h) = h^2(1+h) = h^2 + h^3. The numerator limits to sin(h^2 + h^3) approx h^2. The limit m = lim_{h to 0} (h^2)/(h^2 / 2) = 2. Finally, a + b + m = 8 + (-4) + 2 = 6."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Limits",
+      "subchapter": "Limits Core Concepts",
+      "topic": "Limits Primary Topic",
+      "learningOutcome": "Master fundamental principles of Limits",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

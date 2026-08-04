@@ -1,0 +1,424 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_STATISTICS_2026_S_Q158",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STATISTICS_2026_S_Q158_RAW",
+    "question": {
+      "latex": "If the mean of the data\n\n| Class | $5 - 10$ | $10 - 15$ | $15 - 20$ | $20 - 25$ | $25 - 30$ | $30 - 35$ |\n|---|---|---|---|---|---|---|\n| Frequency | 2 | $k$ | 28 | 54 | $k + 1$ | 5 |\n\nis $21$, then $k$ is one of the roots of the equation :",
+      "unicode": "If the mean of the data\n\n| Class | 5 - 10 | 10 - 15 | 15 - 20 | 20 - 25 | 25 - 30 | 30 - 35 |\n|---|---|---|---|---|---|---|\n| Frequency | 2 | k | 28 | 54 | k + 1 | 5 |\n\nis 21, then k is one of the roots of the equation :",
+      "plainText": "If the mean of the data | Class | 5 - 10 | 10 - 15 | 15 - 20 | 20 - 25 | 25 - 30 | 30 - 35 | |---|---|---|---|---|---|---| | Frequency | 2 | k | 28 | 54 | k + 1 | 5 | is 21, then k is one of the roots of the equation :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2x^2 - 23x - 10 = 0$",
+        "unicode": "2x² - 23x - 10 = 0",
+        "plainText": "2x^2 - 23x - 10 = 0"
+      },
+      {
+        "id": "b",
+        "latex": "$4x^2 - 35x + 24 = 0$",
+        "unicode": "4x² - 35x + 24 = 0",
+        "plainText": "4x^2 - 35x + 24 = 0"
+      },
+      {
+        "id": "c",
+        "latex": "$2x^2 - 19x - 10 = 0$",
+        "unicode": "2x² - 19x - 10 = 0",
+        "plainText": "2x^2 - 19x - 10 = 0"
+      },
+      {
+        "id": "d",
+        "latex": "$2x^2 - 35x + 98 = 0$",
+        "unicode": "2x² - 35x + 98 = 0",
+        "plainText": "2x^2 - 35x + 98 = 0"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "subchapter": "Statistics Core Concepts",
+      "topic": "Statistics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Statistics",
+      "tags": [
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_STATISTICS_2026_S_Q234",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STATISTICS_2026_S_Q234_RAW",
+    "question": {
+      "latex": "The mean and variance of $n$ observations are $8$ and $16$, respectively. If the sum of the first $(n - 1)$ observations is $48$ and the sum of squares of the first $(n - 1)$ observations is $496$, then the value of $n$ is:",
+      "unicode": "The mean and variance of n observations are 8 and 16, respectively. If the sum of the first (n - 1) observations is 48 and the sum of squares of the first (n - 1) observations is 496, then the value of n is:",
+      "plainText": "The mean and variance of n observations are 8 and 16, respectively. If the sum of the first (n - 1) observations is 48 and the sum of squares of the first (n - 1) observations is 496, then the value of n is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$21$",
+        "unicode": "21",
+        "plainText": "21"
+      },
+      {
+        "id": "b",
+        "latex": "$16$",
+        "unicode": "16",
+        "plainText": "16"
+      },
+      {
+        "id": "c",
+        "latex": "$13$",
+        "unicode": "13",
+        "plainText": "13"
+      },
+      {
+        "id": "d",
+        "latex": "$7$",
+        "unicode": "7",
+        "plainText": "7"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "subchapter": "Statistics Core Concepts",
+      "topic": "Statistics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Statistics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.051Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.051Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_STATISTICS_2026_S_Q310",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STATISTICS_2026_S_Q310_RAW",
+    "question": {
+      "latex": "Suppose that the mean and median of the non-negative numbers $21, 8, 17, a, 51, 103, b, 13, 67, (a > b)$, are $40$ and $21$, respectively. If the mean deviation about the median is $26$, then $2a$ is equal to:",
+      "unicode": "Suppose that the mean and median of the non-negative numbers 21, 8, 17, a, 51, 103, b, 13, 67, (a > b), are 40 and 21, respectively. If the mean deviation about the median is 26, then 2a is equal to:",
+      "plainText": "Suppose that the mean and median of the non-negative numbers 21, 8, 17, a, 51, 103, b, 13, 67, (a > b), are 40 and 21, respectively. If the mean deviation about the median is 26, then 2a is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$109$",
+        "unicode": "109",
+        "plainText": "109"
+      },
+      {
+        "id": "b",
+        "latex": "$117$",
+        "unicode": "117",
+        "plainText": "117"
+      },
+      {
+        "id": "c",
+        "latex": "$161$",
+        "unicode": "161",
+        "plainText": "161"
+      },
+      {
+        "id": "d",
+        "latex": "$131$",
+        "unicode": "131",
+        "plainText": "131"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "subchapter": "Statistics Core Concepts",
+      "topic": "Statistics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Statistics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_STATISTICS_2026_S1_Q189",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STATISTICS_2026_S1_Q189_RAW",
+    "question": {
+      "latex": "The mean and variance of $n$ observations are $8$ and $16$, respectively. If the sum of the first $$n - 1$$ observations is $48$ and the sum of squares of the first $$n - 1$$ observations is $496$, then the value of $n$ is:",
+      "unicode": "The mean and variance of n observations are 8 and 16, respectively. If the sum of the first n - 1 observations is 48 and the sum of squares of the first n - 1 observations is 496, then the value of n is:",
+      "plainText": "The mean and variance of n observations are 8 and 16, respectively. If the sum of the first n - 1 observations is 48 and the sum of squares of the first n - 1 observations is 496, then the value of n is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$21$",
+        "unicode": "21",
+        "plainText": "21"
+      },
+      {
+        "id": "b",
+        "latex": "$16$",
+        "unicode": "16",
+        "plainText": "16"
+      },
+      {
+        "id": "c",
+        "latex": "$13$",
+        "unicode": "13",
+        "plainText": "13"
+      },
+      {
+        "id": "d",
+        "latex": "$7$",
+        "unicode": "7",
+        "plainText": "7"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let total sum of $n$ observations be $S_n$ and sum of squares be $Q_n$.\nGiven mean is $8 \\implies S_n = 8n$. Variance is $16 \\implies \\frac{Q_n}{n} - 8^2 = 16 \\implies Q_n = 80n$.\nLet the $n$-th observation be $x_n$. $x_n = S_n - 48 = 8n - 48$.\n$x_n^2 = Q_n - 496 = 80n - 496$.\n$(8n-48)^2 = 80n - 496 \\implies 64n^2 - 768n + 2304 = 80n - 496 \\implies 64n^2 - 848n + 2800 = 0$.\nDividing by $16 \\implies 4n^2 - 53n + 175 = 0$.\nSolving gives $n = \\frac{53 \\pm \\sqrt{2809 - 2800}}{8} = \\frac{53 \\pm 3}{8}$. Hence $n=7$ (as $n=50/8$ is not an integer).",
+      "unicode": "Let total sum of n observations be S_n and sum of squares be Q_n.\nGiven mean is 8 implies S_n = 8n. Variance is 16 implies (Q_n/n) - 8² = 16 implies Q_n = 80n.\nLet the n-th observation be x_n. x_n = S_n - 48 = 8n - 48.\nx_n² = Q_n - 496 = 80n - 496.\n(8n-48)² = 80n - 496 implies 64n² - 768n + 2304 = 80n - 496 implies 64n² - 848n + 2800 = 0.\nDividing by 16 implies 4n² - 53n + 175 = 0.\nSolving gives n = frac{53 ± √(2809 - 2800)}{8} = (53 ± 3/8). Hence n=7 (as n=50/8 is not an integer).",
+      "plainText": "Let total sum of n observations be S_n and sum of squares be Q_n. Given mean is 8 implies S_n = 8n. Variance is 16 implies (Q_n)/(n) - 8^2 = 16 implies Q_n = 80n. Let the n-th observation be x_n. x_n = S_n - 48 = 8n - 48. x_n^2 = Q_n - 496 = 80n - 496. (8n-48)^2 = 80n - 496 implies 64n^2 - 768n + 2304 = 80n - 496 implies 64n^2 - 848n + 2800 = 0. Dividing by 16 implies 4n^2 - 53n + 175 = 0. Solving gives n = frac{53 pm sqrt(2809 - 2800)}{8} = (53 pm 3)/(8). Hence n=7 (as n=50/8 is not an integer)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "subchapter": "Statistics Core Concepts",
+      "topic": "Statistics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Statistics",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_STATISTICS_2026_S1_Q250",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STATISTICS_2026_S1_Q250_RAW",
+    "question": {
+      "latex": "Suppose that the mean and median of the non-negative numbers $21, 8, 17, a, 51, 103, b, 13, 67, $a > b$$, are $40$ and $21$, respectively. If the mean deviation about the median is $26$, then $2a$ is equal to:",
+      "unicode": "Suppose that the mean and median of the non-negative numbers 21, 8, 17, a, 51, 103, b, 13, 67, a > b, are 40 and 21, respectively. If the mean deviation about the median is 26, then 2a is equal to:",
+      "plainText": "Suppose that the mean and median of the non-negative numbers 21, 8, 17, a, 51, 103, b, 13, 67, a > b, are 40 and 21, respectively. If the mean deviation about the median is 26, then 2a is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$109$",
+        "unicode": "109",
+        "plainText": "109"
+      },
+      {
+        "id": "b",
+        "latex": "$117$",
+        "unicode": "117",
+        "plainText": "117"
+      },
+      {
+        "id": "c",
+        "latex": "$161$",
+        "unicode": "161",
+        "plainText": "161"
+      },
+      {
+        "id": "d",
+        "latex": "$131$",
+        "unicode": "131",
+        "plainText": "131"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "There are 9 numbers. Their sum is $9 \\times 40 = 360$.\nSum $= 8 + 13 + 17 + 21 + 51 + 67 + 103 + a + b = 280 + a + b = 360 \\implies a + b = 80$.\nThe median is the 5th number when sorted. The known numbers are $8, 13, 17, 21, 51, 67, 103$. For $21$ to be the median, exactly four numbers must be $\\le 21$ and four numbers $\\ge 21$. So $a$ and $b$ must be positioned such that 21 stays at the 5th position.\nSince $a > b$ and $a + b = 80$, $a$ must be $> 21$. For $21$ to be the 5th element, $b$ must be $\\le 21$.\nThe mean deviation about the median is $26$:\n$\\frac{1}{9} \\sum |x_i - 21| = 26 \\implies \\sum |x_i - 21| = 234$.\nSubstituting the values:\n$|8-21| + |13-21| + |17-21| + |21-21| + |51-21| + |67-21| + |103-21| + |a-21| + |b-21| = 234$\n$13 + 8 + 4 + 0 + 30 + 46 + 82 + (a - 21) + (21 - b) = 234$\n$183 + a - b = 234 \\implies a - b = 51$.\nWe have $a + b = 80$ and $a - b = 51$.\nAdding these equations: $2a = 131$.",
+      "unicode": "There are 9 numbers. Their sum is 9 × 40 = 360.\nSum = 8 + 13 + 17 + 21 + 51 + 67 + 103 + a + b = 280 + a + b = 360 implies a + b = 80.\nThe median is the 5th number when sorted. The known numbers are 8, 13, 17, 21, 51, 67, 103. For 21 to be the median, exactly four numbers must be le 21 and four numbers ge 21. So a and b must be positioned such that 21 stays at the 5th position.\nSince a > b and a + b = 80, a must be > 21. For 21 to be the 5th element, b must be le 21.\nThe mean deviation about the median is 26:\n(1/9) sum |x_i - 21| = 26 implies sum |x_i - 21| = 234.\nSubstituting the values:\n|8-21| + |13-21| + |17-21| + |21-21| + |51-21| + |67-21| + |103-21| + |a-21| + |b-21| = 234\n13 + 8 + 4 + 0 + 30 + 46 + 82 + (a - 21) + (21 - b) = 234\n183 + a - b = 234 implies a - b = 51.\nWe have a + b = 80 and a - b = 51.\nAdding these equations: 2a = 131.",
+      "plainText": "There are 9 numbers. Their sum is 9 times 40 = 360. Sum = 8 + 13 + 17 + 21 + 51 + 67 + 103 + a + b = 280 + a + b = 360 implies a + b = 80. The median is the 5th number when sorted. The known numbers are 8, 13, 17, 21, 51, 67, 103. For 21 to be the median, exactly four numbers must be le 21 and four numbers ge 21. So a and b must be positioned such that 21 stays at the 5th position. Since a > b and a + b = 80, a must be > 21. For 21 to be the 5th element, b must be le 21. The mean deviation about the median is 26: (1)/(9) sum |x_i - 21| = 26 implies sum |x_i - 21| = 234. Substituting the values: |8-21| + |13-21| + |17-21| + |21-21| + |51-21| + |67-21| + |103-21| + |a-21| + |b-21| = 234 13 + 8 + 4 + 0 + 30 + 46 + 82 + (a - 21) + (21 - b) = 234 183 + a - b = 234 implies a - b = 51. We have a + b = 80 and a - b = 51. Adding these equations: 2a = 131."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "subchapter": "Statistics Core Concepts",
+      "topic": "Statistics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Statistics",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.537Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.537Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

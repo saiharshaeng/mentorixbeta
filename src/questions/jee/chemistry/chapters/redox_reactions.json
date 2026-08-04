@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_CHE_REDOXREACTIO_2026_S1_Q286",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_REDOXREACTIO_2026_S1_Q286_RAW",
+    "question": {
+      "latex": "In order to oxidise a mixture of $1$ mole each of $FeC_2O_4$, $Fe_2$C_2O_4$_3$, $FeSO_4$ and $Fe_2$SO_4$_3$ in acidic medium, the number of moles of $KMnO_4$ required is",
+      "unicode": "In order to oxidise a mixture of 1 mole each of FeC_2O_4, Fe_2C_2O_4_3, FeSO_4 and Fe_2SO_4_3 in acidic medium, the number of moles of KMnO_4 required is",
+      "plainText": "In order to oxidise a mixture of 1 mole each of FeC_2O_4, Fe_2C_2O_4_3, FeSO_4 and Fe_2SO_4_3 in acidic medium, the number of moles of KMnO_4 required is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "$7$",
+        "unicode": "7",
+        "plainText": "7"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "$KMnO_4$ acts as an oxidizing agent in an acidic medium, with its $n$-factor being $5$ ($Mn^{+7} \\to Mn^{+2}$).\nWe calculate the equivalents of reducing agents:\n1. $FeC_2O_4 \\to Fe^{3+} + 2CO_2$: Fe goes from $+2$ to $+3$ ($1e^-$), $C_2O_4^{2-}$ goes to $2CO_2$ ($2e^-$). Total $n$-factor = $3$. (Moles = 1, Eq = 3).\n2. $Fe_2(C_2O_4)_3 \\to 2Fe^{3+} + 6CO_2$: Fe is already in $+3$ state ($0e^-$), $3$ oxalate ions go to $6CO_2$ ($6e^-$). Total $n$-factor = $6$. (Moles = 1, Eq = 6).\n3. $FeSO_4 \\to Fe^{3+}$: Fe goes from $+2$ to $+3$ ($1e^-$). Total $n$-factor = $1$. (Moles = 1, Eq = 1).\n4. $Fe_2(SO_4)_3$: Fe is already in its highest $+3$ oxidation state and sulfate doesn't oxidize. $n$-factor = $0$. (Moles = 1, Eq = 0).\nTotal equivalents to be oxidized = $3 + 6 + 1 + 0 = 10$.\nEquivalents of $KMnO_4$ = Moles $\\times$ $n$-factor = Moles $\\times$ $5$.\n$5 \\times \\text{Moles} = 10 \\implies \\text{Moles of } KMnO_4 = 2$.",
+      "unicode": "KMnO_4 acts as an oxidizing agent in an acidic medium, with its n-factor being 5 (Mn^{+7} to Mn^{+2}).\nWe calculate the equivalents of reducing agents:\n1. FeC_2O_4 to Fe^{3+} + 2CO_2: Fe goes from +2 to +3 (1e^-), C_2O_4^{2-} goes to 2CO_2 (2e^-). Total n-factor = 3. (Moles = 1, Eq = 3).\n2. Fe_2(C_2O_4)_3 to 2Fe^{3+} + 6CO_2: Fe is already in +3 state (0e^-), 3 oxalate ions go to 6CO_2 (6e^-). Total n-factor = 6. (Moles = 1, Eq = 6).\n3. FeSO_4 to Fe^{3+}: Fe goes from +2 to +3 (1e^-). Total n-factor = 1. (Moles = 1, Eq = 1).\n4. Fe_2(SO_4)_3: Fe is already in its highest +3 oxidation state and sulfate doesn't oxidize. n-factor = 0. (Moles = 1, Eq = 0).\nTotal equivalents to be oxidized = 3 + 6 + 1 + 0 = 10.\nEquivalents of KMnO_4 = Moles × n-factor = Moles × 5.\n5 × text{Moles} = 10 implies text{Moles of } KMnO_4 = 2.",
+      "plainText": "KMnO_4 acts as an oxidizing agent in an acidic medium, with its n-factor being 5 (Mn^{+7} to Mn^{+2}). We calculate the equivalents of reducing agents: 1. FeC_2O_4 to Fe^{3+} + 2CO_2: Fe goes from +2 to +3 (1e^-), C_2O_4^{2-} goes to 2CO_2 (2e^-). Total n-factor = 3. (Moles = 1, Eq = 3). 2. Fe_2(C_2O_4)_3 to 2Fe^{3+} + 6CO_2: Fe is already in +3 state (0e^-), 3 oxalate ions go to 6CO_2 (6e^-). Total n-factor = 6. (Moles = 1, Eq = 6). 3. FeSO_4 to Fe^{3+}: Fe goes from +2 to +3 (1e^-). Total n-factor = 1. (Moles = 1, Eq = 1). 4. Fe_2(SO_4)_3: Fe is already in its highest +3 oxidation state and sulfate doesn't oxidize. n-factor = 0. (Moles = 1, Eq = 0). Total equivalents to be oxidized = 3 + 6 + 1 + 0 = 10. Equivalents of KMnO_4 = Moles times n-factor = Moles times 5. 5 times text{Moles} = 10 implies text{Moles of } KMnO_4 = 2."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Redox Reactions",
+      "subchapter": "Redox Reactions Core Concepts",
+      "topic": "Redox Reactions Primary Topic",
+      "learningOutcome": "Master fundamental principles of Redox Reactions",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.540Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.540Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

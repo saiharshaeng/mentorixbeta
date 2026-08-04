@@ -1,0 +1,432 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_THREEDIMENSI_2026_S_Q240",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THREEDIMENSI_2026_S_Q240_RAW",
+    "question": {
+      "latex": "Let the point A be the foot of perpendicular drawn from the point $P(a, b, 0)$ on the line $\\frac{x - 1}{2} = \\frac{y - 2}{1} = \\frac{z - \\alpha}{3}$. If the midpoint of the line segment PA is $(0, \\frac{3}{4}, -\\frac{1}{4})$, then the value of $a^2 + b^2 + \\alpha^2$ is equal to:",
+      "unicode": "Let the point A be the foot of perpendicular drawn from the point P(a, b, 0) on the line (x - 1/2) = (y - 2/1) = (z - α/3). If the midpoint of the line segment PA is (0, (3/4), -(1/4)), then the value of a² + b² + α² is equal to:",
+      "plainText": "Let the point A be the foot of perpendicular drawn from the point P(a, b, 0) on the line (x - 1)/(2) = (y - 2)/(1) = (z - alpha)/(3). If the midpoint of the line segment PA is (0, (3)/(4), -(1)/(4)), then the value of a^2 + b^2 + alpha^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "$6$",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "d",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Three Dimensional Geometry",
+      "subchapter": "Three Dimensional Geometry Core Concepts",
+      "topic": "Three Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Three Dimensional Geometry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THREEDIMENSI_2026_S_Q314",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THREEDIMENSI_2026_S_Q314_RAW",
+    "question": {
+      "latex": "A line with direction ratios $1, -1, 2$ intersects the lines $\\frac{x}{2} = \\frac{y}{3} = \\frac{z+1}{3}$ and $\\frac{x+1}{-1} = \\frac{y-2}{1} = \\frac{z}{4}$ at the points $P$ and $Q$, respectively. If the length of the line segment $PQ$ is $\\alpha$, then $225\\alpha^2$ is equal to:",
+      "unicode": "A line with direction ratios 1, -1, 2 intersects the lines (x/2) = (y/3) = (z+1/3) and (x+1/-1) = (y-2/1) = (z/4) at the points P and Q, respectively. If the length of the line segment PQ is α, then 225α² is equal to:",
+      "plainText": "A line with direction ratios 1, -1, 2 intersects the lines (x)/(2) = (y)/(3) = (z+1)/(3) and (x+1)/(-1) = (y-2)/(1) = (z)/(4) at the points P and Q, respectively. If the length of the line segment PQ is alpha, then 225alpha^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1024$",
+        "unicode": "1024",
+        "plainText": "1024"
+      },
+      {
+        "id": "b",
+        "latex": "$1014$",
+        "unicode": "1014",
+        "plainText": "1014"
+      },
+      {
+        "id": "c",
+        "latex": "$1104$",
+        "unicode": "1104",
+        "plainText": "1104"
+      },
+      {
+        "id": "d",
+        "latex": "$1204$",
+        "unicode": "1204",
+        "plainText": "1204"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Three Dimensional Geometry",
+      "subchapter": "Three Dimensional Geometry Core Concepts",
+      "topic": "Three Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Three Dimensional Geometry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THREEDIMENSI_2026_S_Q315",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THREEDIMENSI_2026_S_Q315_RAW",
+    "question": {
+      "latex": "The square of the distance of the point $(-2, -8, 6)$ from the line $\\frac{x - 1}{1} = \\frac{y - 1}{2} = \\frac{z}{-1}$ along the line $\\frac{x + 5}{1} = \\frac{y + 5}{-1} = \\frac{z}{2}$ is equal to:",
+      "unicode": "The square of the distance of the point (-2, -8, 6) from the line (x - 1/1) = (y - 1/2) = (z/-1) along the line (x + 5/1) = (y + 5/-1) = (z/2) is equal to:",
+      "plainText": "The square of the distance of the point (-2, -8, 6) from the line (x - 1)/(1) = (y - 1)/(2) = (z)/(-1) along the line (x + 5)/(1) = (y + 5)/(-1) = (z)/(2) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "$6$",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Three Dimensional Geometry",
+      "subchapter": "Three Dimensional Geometry Core Concepts",
+      "topic": "Three Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Three Dimensional Geometry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THREEDIMENSI_2026_S1_Q195",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THREEDIMENSI_2026_S1_Q195_RAW",
+    "question": {
+      "latex": "Let the point A be the foot of perpendicular drawn from the point $P$a, b, 0$$ on the line $\\frac{x - 1}{2} = \\frac{y - 2}{1} = \\frac{z - \\alpha}{3}$. If the midpoint of the line segment PA is $$0, \\frac{3}{4}, -\\frac{1}{4}$$, then the value of $a^2 + b^2 + \\alpha^2$ is equal to:",
+      "unicode": "Let the point A be the foot of perpendicular drawn from the point Pa, b, 0 on the line (x - 1/2) = (y - 2/1) = (z - α/3). If the midpoint of the line segment PA is 0, (3/4), -(1/4), then the value of a² + b² + α² is equal to:",
+      "plainText": "Let the point A be the foot of perpendicular drawn from the point Pa, b, 0 on the line (x - 1)/(2) = (y - 2)/(1) = (z - alpha)/(3). If the midpoint of the line segment PA is 0, (3)/(4), -(1)/(4), then the value of a^2 + b^2 + alpha^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "$6$",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "d",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let the midpoint be $M(0, 3/4, -1/4)$. Using section formula, coordinates of A are $2M - P = (-a, \\frac{3}{2} - b, -\\frac{1}{2})$.\nSince A lies on the line: $\\frac{-a - 1}{2} = \\frac{\\frac{3}{2} - b - 2}{1} = \\frac{-\\frac{1}{2} - \\alpha}{3} = t$.\nDirection ratios of the line are $\\vec{d} = 2\\hat{i} + \\hat{j} + 3\\hat{k}$ and $\\vec{PA} = -2a\\hat{i} + (\\frac{3}{2} - 2b)\\hat{j} - \\frac{1}{2}\\hat{k}$. Since $PA \\perp \\vec{d}$, $\\vec{PA} \\cdot \\vec{d} = 0 \\implies -4a + \\frac{3}{2} - 2b - \\frac{3}{2} = 0 \\implies b = -2a$.\nSubstitute $b$ into the line equation for $A$: $\\frac{-a-1}{2} = \\frac{3/2 - (-2a) - 2}{1} \\implies 2a - \\frac{1}{2} = \\frac{-a-1}{2} \\implies 4a - 1 = -a - 1 \\implies a = 0$. So $b = 0$.\nThe parameter $t = \\frac{-0-1}{2} = -\\frac{1}{2}$. Then $\\frac{-1/2 - \\alpha}{3} = -\\frac{1}{2} \\implies \\alpha = 1$.\nTherefore, $a^2 + b^2 + \\alpha^2 = 0 + 0 + 1 = 1$.",
+      "unicode": "Let the midpoint be M(0, 3/4, -1/4). Using section formula, coordinates of A are 2M - P = (-a, (3/2) - b, -(1/2)).\nSince A lies on the line: (-a - 1/2) = (frac{3/2) - b - 2}{1} = (-frac{1/2) - α}{3} = t.\nDirection ratios of the line are vec{d} = 2hat{i} + hat{j} + 3hat{k} and vec{PA} = -2ahat{i} + ((3/2) - 2b)hat{j} - (1/2)hat{k}. Since PA perp vec{d}, vec{PA} · vec{d} = 0 implies -4a + (3/2) - 2b - (3/2) = 0 implies b = -2a.\nSubstitute b into the line equation for A: (-a-1/2) = (3/2 - (-2a) - 2/1) implies 2a - (1/2) = (-a-1/2) implies 4a - 1 = -a - 1 implies a = 0. So b = 0.\nThe parameter t = (-0-1/2) = -(1/2). Then (-1/2 - α/3) = -(1/2) implies α = 1.\nTherefore, a² + b² + α² = 0 + 0 + 1 = 1.",
+      "plainText": "Let the midpoint be M(0, 3/4, -1/4). Using section formula, coordinates of A are 2M - P = (-a, (3)/(2) - b, -(1)/(2)). Since A lies on the line: (-a - 1)/(2) = (frac{3)/(2) - b - 2}{1} = (-frac{1)/(2) - alpha}{3} = t. Direction ratios of the line are vec{d} = 2hat{i} + hat{j} + 3hat{k} and vec{PA} = -2ahat{i} + ((3)/(2) - 2b)hat{j} - (1)/(2)hat{k}. Since PA perp vec{d}, vec{PA} cdot vec{d} = 0 implies -4a + (3)/(2) - 2b - (3)/(2) = 0 implies b = -2a. Substitute b into the line equation for A: (-a-1)/(2) = (3/2 - (-2a) - 2)/(1) implies 2a - (1)/(2) = (-a-1)/(2) implies 4a - 1 = -a - 1 implies a = 0. So b = 0. The parameter t = (-0-1)/(2) = -(1)/(2). Then (-1/2 - alpha)/(3) = -(1)/(2) implies alpha = 1. Therefore, a^2 + b^2 + alpha^2 = 0 + 0 + 1 = 1."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Three Dimensional Geometry",
+      "subchapter": "Three Dimensional Geometry Core Concepts",
+      "topic": "Three Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Three Dimensional Geometry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THREEDIMENSI_2026_S1_Q255",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THREEDIMENSI_2026_S1_Q255_RAW",
+    "question": {
+      "latex": "The square of the distance of the point $$-2, -8, 6$$ from the line $\\frac{x - 1}{1} = \\frac{y - 1}{2} = \\frac{z}{-1}$ along the line $\\frac{x + 5}{1} = \\frac{y + 5}{-1} = \\frac{z}{2}$ is equal to:",
+      "unicode": "The square of the distance of the point -2, -8, 6 from the line (x - 1/1) = (y - 1/2) = (z/-1) along the line (x + 5/1) = (y + 5/-1) = (z/2) is equal to:",
+      "plainText": "The square of the distance of the point -2, -8, 6 from the line (x - 1)/(1) = (y - 1)/(2) = (z)/(-1) along the line (x + 5)/(1) = (y + 5)/(-1) = (z)/(2) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "$6$",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $A(-2, -8, 6)$. The required distance is measured parallel to the line with direction ratios $1, -1, 2$.\nLet $L$ be the line passing through $A$ and parallel to the given direction: $\\frac{x + 2}{1} = \\frac{y + 8}{-1} = \\frac{z - 6}{2} = r$.\nLet it intersect the first line at point $B$. The coordinates of $B$ are $(r - 2, -r - 8, 2r + 6)$.\nSince $B$ lies on the line $\\frac{x - 1}{1} = \\frac{y - 1}{2} = \\frac{z}{-1}$, we substitute the coordinates of $B$:\n$\\frac{r - 2 - 1}{1} = \\frac{-r - 8 - 1}{2} = \\frac{2r + 6}{-1}$.\n$r - 3 = \\frac{-r - 9}{2} = -2r - 6$.\nSolving $r - 3 = -2r - 6 \\implies 3r = -3 \\implies r = -1$.\nSubstitute $r = -1$ back to find point $B(-3, -7, 4)$.\nThe square of the distance between $A(-2, -8, 6)$ and $B(-3, -7, 4)$ is:\n$AB^2 = (-3 - (-2))^2 + (-7 - (-8))^2 + (4 - 6)^2 = (-1)^2 + 1^2 + (-2)^2 = 1 + 1 + 4 = 6$.",
+      "unicode": "Let A(-2, -8, 6). The required distance is measured parallel to the line with direction ratios 1, -1, 2.\nLet L be the line passing through A and parallel to the given direction: (x + 2/1) = (y + 8/-1) = (z - 6/2) = r.\nLet it intersect the first line at point B. The coordinates of B are (r - 2, -r - 8, 2r + 6).\nSince B lies on the line (x - 1/1) = (y - 1/2) = (z/-1), we substitute the coordinates of B:\n(r - 2 - 1/1) = (-r - 8 - 1/2) = (2r + 6/-1).\nr - 3 = (-r - 9/2) = -2r - 6.\nSolving r - 3 = -2r - 6 implies 3r = -3 implies r = -1.\nSubstitute r = -1 back to find point B(-3, -7, 4).\nThe square of the distance between A(-2, -8, 6) and B(-3, -7, 4) is:\nAB² = (-3 - (-2))² + (-7 - (-8))² + (4 - 6)² = (-1)² + 1² + (-2)² = 1 + 1 + 4 = 6.",
+      "plainText": "Let A(-2, -8, 6). The required distance is measured parallel to the line with direction ratios 1, -1, 2. Let L be the line passing through A and parallel to the given direction: (x + 2)/(1) = (y + 8)/(-1) = (z - 6)/(2) = r. Let it intersect the first line at point B. The coordinates of B are (r - 2, -r - 8, 2r + 6). Since B lies on the line (x - 1)/(1) = (y - 1)/(2) = (z)/(-1), we substitute the coordinates of B: (r - 2 - 1)/(1) = (-r - 8 - 1)/(2) = (2r + 6)/(-1). r - 3 = (-r - 9)/(2) = -2r - 6. Solving r - 3 = -2r - 6 implies 3r = -3 implies r = -1. Substitute r = -1 back to find point B(-3, -7, 4). The square of the distance between A(-2, -8, 6) and B(-3, -7, 4) is: AB^2 = (-3 - (-2))^2 + (-7 - (-8))^2 + (4 - 6)^2 = (-1)^2 + 1^2 + (-2)^2 = 1 + 1 + 4 = 6."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Three Dimensional Geometry",
+      "subchapter": "Three Dimensional Geometry Core Concepts",
+      "topic": "Three Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Three Dimensional Geometry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.538Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.538Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

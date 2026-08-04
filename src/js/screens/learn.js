@@ -26,8 +26,82 @@ function saveCheckpoint() {
       activeStage: LS.activeStage || 1,
       checkAttempts: LS.checkAttempts || {}
     };
-    saveAll();
+    if (typeof saveAll === 'function') saveAll();
   }
+}
+
+async function fetchCachedLesson(topicKey) {
+  const sb = window.SupabaseClient || window.supabase || null;
+  if (!sb) return null;
+  try {
+    const { data, error } = await sb
+      .from('cached_lessons')
+      .select('content')
+      .eq('topic_key', topicKey)
+      .single();
+    if (error || !data) return null;
+    return data.content;
+  } catch(e) { return null; }
+}
+
+async function saveLessonToCache(topicKey, lessonObj) {
+  const sb = window.SupabaseClient || window.supabase || null;
+  if (!sb || !lessonObj) return;
+  try {
+    await sb
+      .from('cached_lessons')
+      .upsert({ topic_key: topicKey, content: lessonObj, updated_at: new Date().toISOString() },
+               { onConflict: 'topic_key' });
+    if (Array.isArray(lessonObj.checks) && lessonObj.checks.length > 0) {
+      await saveQuestionsToCache(topicKey, lessonObj.checks);
+    }
+  } catch(e) { console.warn('[LearnEngine] Lesson cache save failed:', e); }
+}
+
+async function fetchCachedQuestions(topicKey) {
+  const sb = window.SupabaseClient || window.supabase || null;
+  if (!sb) return null;
+  try {
+    const { data, error } = await sb
+      .from('cached_questions')
+      .select('questions')
+      .eq('topic_key', topicKey)
+      .single();
+    if (error || !data) return null;
+    return data.questions;
+  } catch(e) { return null; }
+}
+
+async function saveQuestionsToCache(topicKey, questionsArray) {
+  const sb = window.SupabaseClient || window.supabase || null;
+  if (!sb || !questionsArray) return;
+  try {
+    await sb
+      .from('cached_questions')
+      .upsert({ topic_key: topicKey, questions: questionsArray, updated_at: new Date().toISOString() },
+               { onConflict: 'topic_key' });
+  } catch(e) { console.warn('[LearnEngine] Question cache save failed:', e); }
+}
+
+function validateLessonDepth(lesson, curCtx) {
+  if (!lesson || !curCtx) return true;
+  const match = curCtx.match(/Required Formulae: (.+)/);
+  if (!match) return true;
+  
+  const formulaeInContext = match[1].split(',').map(f => f.trim()).filter(f => f && f !== 'None' && f !== 'N/A');
+  if (formulaeInContext.length === 0) return true;
+
+  const lessonText = JSON.stringify(lesson);
+  const presentFormulae = formulaeInContext.filter(f => {
+    const rawSymbol = f.split(/[^a-zA-Z]/)[0];
+    return rawSymbol ? lessonText.includes(rawSymbol) : true;
+  });
+
+  if (presentFormulae.length < Math.ceil(formulaeInContext.length / 2)) {
+    console.warn('[LearnEngine] Lesson failed depth validation. Missing key formulae.');
+    return false;
+  }
+  return true;
 }
 
 function findCourseTopicContext(topicTitle) {
@@ -176,8 +250,7 @@ function rLearn(){
   else if(LS.loading) rLLoading();
   else if(LS.err) rLError();
   
-  if(t&&!LS.lesson&&!LS.loading&&!LS.diagDone) setTimeout(showDiagnostic,80);
-  else if(t&&!LS.lesson&&!LS.loading&&LS.diagDone) setTimeout(doLesson,80);
+  if(t&&!LS.lesson&&!LS.loading) setTimeout(doLesson,80);
 }
 
 function setLearnTopic(t){
@@ -287,28 +360,63 @@ function startFromDiag(){
   doLesson();
 }
 
+const _activeLessonPromises = {};
+
+function isValidLesson(lesson) {
+  return !!(
+    lesson &&
+    typeof lesson === 'object' &&
+    lesson.topic &&
+    lesson.explanation &&
+    Array.isArray(lesson.checks) &&
+    lesson.checks.length >= 3
+  );
+}
+
 async function doLesson(){
   const topic=(LS.topic||'').trim();
   if(!topic)return;
   if(isTopicForbidden(topic)){showForbiddenWarning(topic);return;}
-  
-  LS.topic=topic;
-  LS.lesson=null;
-  LS.loading=true;
-  LS.ans={};
-  LS.sub=false;
-  LS.err='';
-  LS.weakAreas=[];
-  LS.activeSectionIdx=0;
-  LS.sectionAnswers={};
-  LS.activeStage=1;
-  LS.checkAttempts={};
-  
-  D._param=topic;
-  rLLoading();
+
+  // 1. Single In-flight Request Guard: Deduplicate parallel calls for exact same topic
+  if (_activeLessonPromises[topic]) {
+    return _activeLessonPromises[topic];
+  }
+
+  // 2. Cache Inspection & Re-use: If lesson already validly exists, render immediately
+  if (isValidLesson(LS.lesson) && LS.topic === topic) {
+    LS.loading = false;
+    LS.err = '';
+    renderLesson();
+    return;
+  }
+
+  if (D.memory?.activeLesson && D.memory.activeLesson.topic === topic && isValidLesson(D.memory.activeLesson.lesson)) {
+    LS.lesson = D.memory.activeLesson.lesson;
+    LS.loading = false;
+    LS.err = '';
+    renderLesson();
+    return;
+  }
+
+  const lessonTask = (async () => {
+    LS.topic=topic;
+    LS.lesson=null;
+    LS.loading=true;
+    LS.ans={};
+    LS.sub=false;
+    LS.err='';
+    LS.weakAreas=[];
+    LS.activeSectionIdx=0;
+    LS.sectionAnswers={};
+    LS.activeStage=1;
+    LS.checkAttempts={};
+    
+    D._param=topic;
+    rLLoading();
   
   try{
-    checkStreak();
+    if (typeof checkStreak === 'function') checkStreak();
 
     if (!LS.diagDone) {
       const grade = D.profile?.grade || 'Grade 10';
@@ -323,9 +431,9 @@ async function doLesson(){
       }
     }
 
-    const curCtx = window.CurriculumEngine ? window.CurriculumEngine.getTopicContextForAI(topic) : null;
+    let curCtx = window.CurriculumEngine ? window.CurriculumEngine.getTopicContextForAI(topic) : null;
     if (!curCtx) {
-      throw new Error(`Verified curriculum for topic "${topic}" is not available in the database. Out-of-syllabus content generation is blocked.`);
+      curCtx = `OFFICIAL CURRICULUM BOUNDARY FOR TOPIC: "${topic}"\n- Primary Topic: ${topic}\n- Official Learning Objectives:\n  * Master core definitions and physical principles of ${topic}\n  * Learn key equations and step-by-step problem-solving applications`;
     }
     const levelHint=LS.diagLevel==='beginner'?'Explain simply with analogies and basic examples':
                     LS.diagLevel==='advanced'?'Go deep — include technical details, complex examples, equations':
@@ -334,90 +442,120 @@ async function doLesson(){
                    LS.goal==='4'?'Target competitive exam standards (Olympiad, JEE, Advanced problem solving)':
                    'Focus on conceptual mastery and practical applications';
 
-    const sys=`You are Mentorix AI tutor. IMPORTANT: Output ONLY a raw JSON object. No markdown, no backticks, no explanation. Start with { end with }.
-ADAPT TO GRADE LEVEL: The explanation level, formulas, rigor, and technical depth MUST match a student in ${D.profile?.grade || 'Grade 10'}. Teach with the appropriate academic terminology, equations, and mathematical rigor. ${levelHint}. Goal: ${goalHint}.
-CRITICAL — MATH & CHEMISTRY LAUNCH RULES: If the topic involves math or physics, wrap all equations in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$. For Chemistry compounds, use $\\ce{CO2}$ formatting. Always show equations and step-by-step worked solutions.`;
+    const sys = `You are Mentorix AI tutor. Output ONLY raw JSON. No markdown. No backticks.
 
-    const prompt=`Create a curriculum-driven micro learning lesson about "${topic.replace(/"/g,"'")}" matching the following curriculum boundary:
-${curCtx}
+GRADE: ${D.profile?.grade || 'Grade 10'}
+LEVEL ADAPTATION: ${levelHint}
+GOAL: ${goalHint}
 
-Output ONLY this JSON format (all fields required):
+MANDATORY CONTENT RULES:
+1. FORMULAS: Every formula listed in the curriculum boundary MUST appear in your response using LaTeX ($...$). Do not omit any formula.
+2. DERIVATIONS: If depth level is 3+, show step-by-step derivations, not just final answers.
+3. WORKED EXAMPLES: Must include actual numerical values, not placeholder variables. Show every substitution step.
+4. EXAM TRAPS: The exam_insight field must name specific question patterns from JEE Main/NEET, not generic advice.
+5. MISCONCEPTIONS: Must be specific to this exact topic, not generic study advice.
+6. CHECKS: Questions must test formula application (not just recall). At least 1 question must require a calculation.
+
+MATH FORMATTING: Wrap all equations in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$`;
+
+    const prompt = `${curCtx}
+
+Generate a complete lesson for the topic: "${topic}"
+
+Output a single JSON object with these exact keys:
 {
-  "topic": "${topic.replace(/"/g,"'")}",
-  "hook": "1-sentence highly engaging real-world connection question that sparks curiosity.",
-  "intuition": "Simple jargon-free mental picture of this concept in 2-3 sentences. No equations. Build a strong mental model using everyday language and analogy.",
-  "technical": "Precise technical explanation with formal definitions, mathematical relationships, key formulas and scientific terminology. 2-4 paragraphs.",
-  "exam_insight": "How this concept appears in JEE/NEET/competitive exams. Common question patterns, edge cases and traps students fall into. 1-2 paragraphs.",
-  "explanation": "Full integrated explanation combining intuition, technical depth and applications across 3-5 paragraphs.",
-  "misconceptions": [
-    "Most common student mistake or misconception about this topic.",
-    "Second frequent conceptual error students make."
-  ],
+  "topic": "${topic}",
+  "hook": "1-2 sentence real-world hook",
+  "prerequisites": ["concept students must know before this topic", "another prerequisite"],
+  "application": "2-3 sentences on real-world use cases of this topic in engineering, medicine, or daily life — NOT exam patterns",
+  "intuition": "core intuition in plain language",
+  "technical": "complete technical explanation with ALL formulae in LaTeX ($...$). Show derivations if depth >= 3.",
+  "exam_insight": "specific JEE Main/Advanced question patterns for this exact topic",
+  "explanation": "step-by-step worked solution with actual numbers",
+  "misconceptions": ["specific mistake 1", "specific mistake 2"],
   "examples": [
-    {
-      "q": "Worked Example 1 question statement.",
-      "s": "Step-by-step solution showing values substitution and reasoning at each step."
-    },
-    {
-      "q": "Worked Example 2 question statement.",
-      "s": "Step-by-step solution showing values substitution and reasoning at each step."
-    }
+    {"q": "problem with numbers", "s": "full step-by-step solution"},
+    {"q": "harder problem", "s": "full step-by-step solution"}
   ],
   "checks": [
-    {
-      "q": "Concept check question 1 (multiple choice)?",
-      "o": ["Option A","Option B","Option C","Option D"],
-      "a": 0,
-      "e": "Clear reason explaining why option A is correct.",
-      "concept": "Core Concept Check"
-    },
-    {
-      "q": "Concept check question 2?",
-      "o": ["Option A","Option B","Option C","Option D"],
-      "a": 1,
-      "e": "Reason explaining correct choice.",
-      "concept": "Application Check"
-    },
-    {
-      "q": "Concept check question 3?",
-      "o": ["Option A","Option B","Option C","Option D"],
-      "a": 2,
-      "e": "Reason explaining correct choice.",
-      "concept": "Boundary Check"
-    }
+    {"q": "question", "o": ["A","B","C","D"], "a": 0, "e": "explanation", "concept": "name"},
+    {"q": "question", "o": ["A","B","C","D"], "a": 1, "e": "explanation", "concept": "name"},
+    {"q": "question", "o": ["A","B","C","D"], "a": 2, "e": "explanation", "concept": "name"}
   ],
-  "summary": [
-    "Key takeaway point 1",
-    "Key takeaway point 2",
-    "Key takeaway point 3",
-    "Key takeaway point 4",
-    "Key takeaway point 5"
-  ],
+  "summary": ["key point 1", "key point 2", "key point 3"],
   "flashcards": [
-    {"q": "Front Question 1?", "a": "Back Answer 1"},
-    {"q": "Front Question 2?", "a": "Back Answer 2"},
-    {"q": "Front Question 3?", "a": "Back Answer 3"},
-    {"q": "Front Question 4?", "a": "Back Answer 4"}
+    {"q": "formula question", "a": "LaTeX formula"}
   ]
 }`;
 
+    const topicKey = topic.toLowerCase().trim().replace(/\s+/g, '_');
     let raw = null;
+    let lesson = null;
+
+    // STEP 0: Check Supabase DB-First cache before calling AI
     try {
-      const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('AI Tutor server timed out (15s)')), 15000)
-      );
-      raw = await Promise.race([
-        ai([{role:'user',content:prompt}],sys,3800,true),
-        timeoutPromise
-      ]);
-    } catch (err) {
-      throw new Error('AI Tutor request timed out. Please click retry to generate your live lesson.');
+      const dbCached = await fetchCachedLesson(topicKey);
+      if (dbCached && (dbCached.explanation || dbCached.technical) && (dbCached.checks || dbCached.topic)) {
+        lesson = dbCached;
+      }
+    } catch (e) {
+      console.warn('[Learn] Supabase DB cache check error:', e);
     }
 
-    let lesson = raw ? pJSON(raw) : null;
-    if(!lesson?.topic || !lesson.explanation || !lesson.checks || lesson.checks.length < 3) {
-      throw new Error('Could not parse curriculum-aligned online lesson data from AI tutor.');
+    // Fallback: Check local storage cache if DB unavailable
+    if (!lesson) {
+      try {
+        const stored = localStorage.getItem(`mx_lesson_${topic}`);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed && (parsed.content || parsed.explanation)) {
+            lesson = parsed.content || parsed;
+          }
+        }
+      } catch (e) {
+        console.warn('[Learn] Local lesson cache read notice:', e);
+      }
     }
+
+    if (lesson && (lesson.explanation || lesson.technical)) {
+      LS.lesson = lesson;
+      LS.loading = false;
+      LS.err = '';
+      addXP(10, 'Mission Started');
+      saveCheckpoint();
+      renderLesson();
+      return; // ← Exit early: $0ms lag, 0 AI calls
+    }
+
+    if (!lesson) {
+      try {
+        const timeoutPromise = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('AI Proxy 503/timeout (15s)')), 15000)
+        );
+        raw = await Promise.race([
+          ai([{role:'user',content:prompt}],sys,3800,true),
+          timeoutPromise
+        ]);
+        lesson = raw ? pJSON(raw) : null;
+      } catch (err) {
+        // Activate local high-fidelity lesson generator instantly (Zero 503 latency)
+        lesson = generateFallbackLesson(topic);
+      }
+    }
+
+    if (!lesson || (!lesson.explanation && !lesson.technical)) {
+      lesson = generateFallbackLesson(topic);
+    }
+
+    if (!lesson || (!lesson.explanation && !lesson.technical)) {
+      throw new Error('Lesson generation temporarily unavailable. Please check your internet connection or click retry.');
+    }
+
+    // Persist to Supabase DB cache & local storage for instant future loads for all students
+    saveLessonToCache(topicKey, lesson);
+    try {
+      localStorage.setItem(`mx_lesson_${topic}`, JSON.stringify(lesson));
+    } catch (e) {}
     
     LS.lesson=lesson;
     LS.loading=false;
@@ -427,10 +565,27 @@ Output ONLY this JSON format (all fields required):
     saveCheckpoint();
     renderLesson();
   }catch(e){
+    console.warn('[Learn] Remote lesson generation notice. Applying fallback lesson...', e);
+    const fallback = generateFallbackLesson(topic);
+    if (fallback && fallback.explanation) {
+      LS.lesson = fallback;
+      LS.loading = false;
+      LS.err = '';
+      saveCheckpoint();
+      renderLesson();
+    } else {
+      LS.loading = false;
+      LS.err = e.message || 'Online AI Tutor service is temporarily busy. Click below to retry.';
+      rLError();
+    }
+  } finally {
     LS.loading = false;
-    LS.err = e.message || 'Online AI Tutor service is temporarily busy. Click below to retry.';
-    rLError();
+    delete _activeLessonPromises[topic];
   }
+  })();
+
+  _activeLessonPromises[topic] = lessonTask;
+  return lessonTask;
 }
 
 function generateFallbackLesson(topic) {
@@ -583,6 +738,181 @@ function generateFallbackLesson(topic) {
       "flashcards": [
         { "q": "Derivative of $\\sin(x)$?", "a": "$\\cos(x)$" },
         { "q": "Integration by parts formula?", "a": "$\\int u dv = uv - \\int v du$" }
+      ]
+    };
+  }
+
+  // 4. THERMODYNAMICS / HEAT & ENTROPY
+  if (tLower.includes('thermo') || tLower.includes('heat') || tLower.includes('entropy') || tLower.includes('carnot') || tLower.includes('internal energy')) {
+    return {
+      "topic": topic,
+      "hook": "Why does a refrigerator cool food but your hand feels warm when you rub it? Both are explained by the same laws of thermodynamics.",
+      "intuition": "Heat is energy in transit. The First Law says energy is conserved — you can't create or destroy it. The Second Law says heat flows naturally from hot to cold, and perfect efficiency is impossible.",
+      "technical": "First Law: $\\Delta U = Q - W$ where $\\Delta U$ is change in internal energy, $Q$ is heat added to system, $W$ is work done by system. For an ideal gas: $W = P\\Delta V$ (isobaric), $W = nRT\\ln(V_f/V_i)$ (isothermal), $W = 0$ (isochoric). Carnot efficiency: $\\eta = 1 - \\frac{T_C}{T_H}$ where temperatures are in Kelvin. Second Law: entropy $\\Delta S \\geq 0$ for isolated systems. Specific heat: $Q = mc\\Delta T$; latent heat: $Q = mL$.",
+      "exam_insight": "JEE Main tests: (1) identifying process type from PV diagram shape, (2) calculating work as area under PV curve, (3) Carnot efficiency between given temperatures. Most common trap: using Celsius instead of Kelvin in Carnot formula.",
+      "explanation": "A Carnot engine operates between $T_H = 500\\text{ K}$ and $T_C = 300\\text{ K}$. Efficiency: $\\eta = 1 - \\frac{300}{500} = 1 - 0.6 = 0.4 = 40\\%$. If input heat $Q_H = 1000\\text{ J}$, work output $W = \\eta \\times Q_H = 400\\text{ J}$, heat rejected $Q_C = 600\\text{ J}$.",
+      "misconceptions": [
+        "Carnot efficiency formula requires absolute temperature (Kelvin), never Celsius.",
+        "Work done BY the gas is positive when gas expands; work done ON the gas is positive in some conventions — always check the sign convention used."
+      ],
+      "examples": [
+        {"q": "2 moles of ideal gas expand isothermally at 300 K from 10 L to 20 L. Find work done. ($R = 8.314$ J/mol·K)", "s": "$W = nRT\\ln(V_f/V_i) = 2 \\times 8.314 \\times 300 \\times \\ln(2) = 4988 \\times 0.693 = 3457\\text{ J}$"},
+        {"q": "A system absorbs 500 J of heat and does 200 J of work. Find change in internal energy.", "s": "$\\Delta U = Q - W = 500 - 200 = 300\\text{ J}$"}
+      ],
+      "checks": [
+        {"q": "A Carnot engine works between 127°C and 27°C. What is its efficiency?", "o": ["25%", "33%", "50%", "75%"], "a": 0, "e": "$T_H = 400\\text{ K}$, $T_C = 300\\text{ K}$. $\\eta = 1 - 300/400 = 25\\%$. Convert to Kelvin first.", "concept": "Carnot Efficiency"},
+        {"q": "Which process has zero work done by the gas?", "o": ["Isothermal", "Isobaric", "Isochoric", "Adiabatic"], "a": 2, "e": "Isochoric means constant volume. $W = P\\Delta V = 0$ since $\\Delta V = 0$.", "concept": "Thermodynamic Processes"},
+        {"q": "First Law of Thermodynamics is a statement of:", "o": ["Conservation of momentum", "Conservation of energy", "Conservation of mass", "Entropy increase"], "a": 1, "e": "$\\Delta U = Q - W$ is the mathematical statement of energy conservation for thermodynamic systems.", "concept": "First Law"}
+      ],
+      "summary": [
+        "First Law: $\\Delta U = Q - W$ — energy is always conserved.",
+        "Carnot efficiency: $\\eta = 1 - T_C/T_H$ — always use Kelvin.",
+        "Work = area under PV curve; shape of curve tells you the process type."
+      ],
+      "flashcards": [
+        {"q": "First Law of Thermodynamics formula?", "a": "$\\Delta U = Q - W$"},
+        {"q": "Carnot efficiency formula?", "a": "$\\eta = 1 - \\frac{T_C}{T_H}$"},
+        {"q": "Work done in isothermal process?", "a": "$W = nRT\\ln\\frac{V_f}{V_i}$"}
+      ]
+    };
+  }
+
+  // 5. OPTICS / LIGHT, LENSES & MIRRORS
+  if (tLower.includes('optic') || tLower.includes('lens') || tLower.includes('mirror') || tLower.includes('refract') || tLower.includes('reflect') || tLower.includes('snell')) {
+    return {
+      "topic": topic,
+      "hook": "How does a magnifying glass burn paper, but the same shape of glass in your eye lets you read? It's all about how light bends at curved surfaces.",
+      "intuition": "Light bends when it crosses between materials of different optical density. Curved mirrors and lenses exploit this to converge or diverge rays, forming images. The same formula governs both — only the sign convention changes.",
+      "technical": "Mirror formula: $\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}$. Lens formula: $\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}$. Magnification: $m = -\\frac{v}{u}$ (mirror), $m = \\frac{v}{u}$ (lens). Snell's Law: $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$. Refractive index: $n = \\frac{c}{v} = \\frac{\\sin i}{\\sin r}$. Critical angle: $\\sin\\theta_c = \\frac{n_2}{n_1}$ (for $n_1 > n_2$). Lens maker's equation: $\\frac{1}{f} = (n-1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$. Power of lens: $P = \\frac{1}{f}$ in dioptres.",
+      "exam_insight": "JEE Main most common traps: (1) sign convention — always use New Cartesian (distances measured from pole, incident ray direction is positive), (2) total internal reflection only occurs when going from denser to rarer medium, (3) for lens combinations $P = P_1 + P_2$.",
+      "explanation": "Object placed 30 cm in front of convex lens of focal length 10 cm. Using lens formula: $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$. Here $u = -30$ cm, $f = +10$ cm. $\\frac{1}{v} = \\frac{1}{10} + \\frac{1}{-30} = \\frac{3-1}{30} = \\frac{2}{30}$. So $v = +15$ cm. Image is real, on other side. $m = v/u = 15/(-30) = -0.5$ (inverted, diminished).",
+      "misconceptions": [
+        "Mirror and lens formulas look similar but differ — lens uses $\\frac{1}{v} - \\frac{1}{u}$, mirror uses $\\frac{1}{v} + \\frac{1}{u}$. Mixing them is the most common error.",
+        "Total internal reflection requires the ray to travel from denser to rarer medium AND angle to exceed critical angle — both conditions must hold."
+      ],
+      "examples": [
+        {"q": "A concave mirror has focal length 15 cm. Object is 45 cm in front. Find image distance and magnification.", "s": "$\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$. $u = -45$, $f = -15$. $\\frac{1}{v} = \\frac{1}{-15} - \\frac{1}{-45} = \\frac{-3+1}{45} = \\frac{-2}{45}$. $v = -22.5$ cm. $m = -v/u = -(-22.5)/(-45) = -0.5$ (inverted, diminished)."},
+        {"q": "Light travels from glass ($n=1.5$) to air ($n=1$). Find critical angle.", "s": "$\\sin\\theta_c = \\frac{n_2}{n_1} = \\frac{1}{1.5} = 0.667$. $\\theta_c = \\sin^{-1}(0.667) \\approx 41.8°$."}
+      ],
+      "checks": [
+        {"q": "A convex lens of focal length 20 cm forms a real image at 60 cm. Where is the object?", "o": ["30 cm", "40 cm", "20 cm", "15 cm"], "a": 0, "e": "$\\frac{1}{u} = \\frac{1}{v} - \\frac{1}{f} = \\frac{1}{60} - \\frac{1}{20} = \\frac{1-3}{60} = \\frac{-2}{60}$. $u = -30$ cm.", "concept": "Lens Formula"},
+        {"q": "Which condition is necessary for total internal reflection?", "o": ["Ray going rarer to denser", "Ray going denser to rarer", "Any angle of incidence", "Parallel rays only"], "a": 1, "e": "TIR only occurs when ray travels from denser to rarer medium and angle exceeds critical angle.", "concept": "Total Internal Reflection"},
+        {"q": "Two thin lenses of power +3D and -1D are in contact. Combined focal length?", "o": ["25 cm", "50 cm", "100 cm", "200 cm"], "a": 1, "e": "$P = P_1 + P_2 = 3 + (-1) = 2D$. $f = 1/P = 1/2 = 0.5$ m $= 50$ cm.", "concept": "Lens Power"}
+      ],
+      "summary": [
+        "Mirror: $\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}$. Lens: $\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}$. Don't mix them.",
+        "Snell's Law: $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$. TIR: denser to rarer, angle > critical angle.",
+        "Lens power $P = 1/f$ in dioptres. Combined lenses in contact: $P = P_1 + P_2$."
+      ],
+      "flashcards": [
+        {"q": "Lens formula?", "a": "$\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}$"},
+        {"q": "Critical angle formula?", "a": "$\\sin\\theta_c = \\frac{n_2}{n_1}$"},
+        {"q": "Power of a lens?", "a": "$P = \\frac{1}{f}$ (f in metres, P in dioptres)"}
+      ]
+    };
+  }
+
+  // 6. WAVES & SIMPLE HARMONIC MOTION (SHM)
+  if (tLower.includes('wave') || tLower.includes('shm') || tLower.includes('harmonic') || tLower.includes('oscillat') || tLower.includes('pendulum') || tLower.includes('spring')) {
+    return {
+      "topic": topic,
+      "hook": "Every sound you hear, every Wi-Fi signal, every earthquake — all waves. And the same equation that describes a pendulum describes electrons in atoms.",
+      "intuition": "SHM is motion where restoring force is proportional to displacement. Waves are SHM propagating through a medium. Master SHM and you understand sound, light, and quantum mechanics at their core.",
+      "technical": "SHM displacement: $x = A\\sin(\\omega t + \\phi)$. Velocity: $v = A\\omega\\cos(\\omega t + \\phi)$. Acceleration: $a = -\\omega^2 x$. Angular frequency: $\\omega = 2\\pi f = \\frac{2\\pi}{T}$. Spring-mass: $T = 2\\pi\\sqrt{\\frac{m}{k}}$. Simple pendulum: $T = 2\\pi\\sqrt{\\frac{L}{g}}$. Energy: $E = \\frac{1}{2}kA^2 = \\frac{1}{2}m\\omega^2 A^2$. Wave speed: $v = f\\lambda$. Standing wave: $\\lambda_n = \\frac{2L}{n}$.",
+      "exam_insight": "JEE Main traps: (1) pendulum period is independent of mass and amplitude (for small angles), (2) at mean position KE is max and PE is zero, at extreme position KE is zero and PE is max, (3) $a = -\\omega^2 x$ — acceleration is always opposite to displacement.",
+      "explanation": "A spring of $k = 100$ N/m has a 0.25 kg mass. Find period and frequency. $\\omega = \\sqrt{k/m} = \\sqrt{100/0.25} = \\sqrt{400} = 20$ rad/s. $T = 2\\pi/\\omega = 2\\pi/20 = 0.314$ s. $f = 1/T = 3.18$ Hz. If amplitude $A = 5$ cm, max velocity $= A\\omega = 0.05 \\times 20 = 1$ m/s.",
+      "misconceptions": [
+        "Pendulum period depends on length and g, NOT on mass or amplitude (for small angles < 15°).",
+        "In SHM, speed is maximum at mean position (x=0) and zero at extreme positions (x=±A), not the other way around."
+      ],
+      "examples": [
+        {"q": "A particle in SHM has amplitude 10 cm and period 2s. Find its velocity when displacement is 6 cm.", "s": "$v = \\omega\\sqrt{A^2 - x^2}$. $\\omega = 2\\pi/T = \\pi$ rad/s. $v = \\pi\\sqrt{(0.1)^2-(0.06)^2} = \\pi\\sqrt{0.01-0.0036} = \\pi\\sqrt{0.0064} = \\pi \\times 0.08 = 0.251$ m/s."},
+        {"q": "A wave has frequency 500 Hz and wavelength 0.68 m. Find wave speed.", "s": "$v = f\\lambda = 500 \\times 0.68 = 340$ m/s (speed of sound in air)."}
+      ],
+      "checks": [
+        {"q": "A simple pendulum of length 1m is on Earth ($g=10$ m/s²). What is its period?", "o": ["$\\pi$ s", "$2\\pi$ s", "$\\pi/2$ s", "$4\\pi$ s"], "a": 1, "e": "$T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{1/10} = 2\\pi/\\sqrt{10} \\approx 2\\pi/3.16 \\approx 2$ s. Exact: $2\\pi\\sqrt{0.1}$.", "concept": "Simple Pendulum"},
+        {"q": "In SHM, when is kinetic energy maximum?", "o": ["At extreme positions", "At mean position", "At all positions equally", "When acceleration is maximum"], "a": 1, "e": "KE $= \\frac{1}{2}m\\omega^2(A^2-x^2)$. Maximum when $x=0$ (mean position), zero when $x=\\pm A$.", "concept": "Energy in SHM"},
+        {"q": "The acceleration in SHM is:", "o": ["Constant", "Maximum at mean position", "Proportional to displacement, opposite direction", "Independent of displacement"], "a": 2, "e": "$a = -\\omega^2 x$. Proportional to displacement, directed towards mean position.", "concept": "SHM Acceleration"}
+      ],
+      "summary": [
+        "SHM: $a = -\\omega^2 x$. Period of spring: $T = 2\\pi\\sqrt{m/k}$. Pendulum: $T = 2\\pi\\sqrt{L/g}$.",
+        "Max KE at mean position, max PE at extremes. Total energy $= \\frac{1}{2}kA^2$.",
+        "Wave speed: $v = f\\lambda$. Frequency and wavelength are inversely related at constant speed."
+      ],
+      "flashcards": [
+        {"q": "Period of spring-mass system?", "a": "$T = 2\\pi\\sqrt{m/k}$"},
+        {"q": "Velocity in SHM at displacement x?", "a": "$v = \\omega\\sqrt{A^2 - x^2}$"},
+        {"q": "Wave speed formula?", "a": "$v = f\\lambda$"}
+      ]
+    };
+  }
+
+  // 7. MODERN PHYSICS / QUANTUM & ATOMS
+  if (tLower.includes('photoelectric') || tLower.includes('quantum') || tLower.includes('bohr') || tLower.includes('nuclear') || tLower.includes('radioact') || tLower.includes('fission') || tLower.includes('fusion') || tLower.includes('atom')) {
+    return {
+      "topic": topic,
+      "hook": "Einstein won his Nobel Prize not for relativity but for explaining why light can knock electrons out of metal — the photoelectric effect that proved light is made of particles.",
+      "intuition": "At atomic scales, energy comes in discrete packets called quanta. Electrons in atoms exist only at fixed energy levels. When they jump between levels they absorb or emit light of exact frequencies. This discreteness is what makes atoms stable and lasers possible.",
+      "technical": "Photoelectric effect: $E_k = hf - \\phi$ where $h = 6.626 \\times 10^{-34}$ J·s, $f$ is frequency, $\\phi$ is work function. Threshold frequency: $f_0 = \\phi/h$. Bohr model energy levels: $E_n = -\\frac{13.6}{n^2}$ eV. Orbital radius: $r_n = 0.529n^2$ Å. de Broglie wavelength: $\\lambda = h/mv$. Radioactive decay: $N = N_0 e^{-\\lambda t}$. Half life: $T_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0.693}{\\lambda}$. Mass-energy: $E = mc^2$.",
+      "exam_insight": "JEE Main traps: (1) increasing intensity increases number of photoelectrons NOT their kinetic energy, (2) $E_n$ is negative — more negative means more tightly bound, (3) half-life questions often require $N = N_0(1/2)^{t/T_{1/2}}$ not the exponential form.",
+      "explanation": "Light of frequency $8 \\times 10^{14}$ Hz hits a metal with work function 2 eV. Find max KE of emitted electrons. $E_{photon} = hf = 6.626\\times10^{-34} \\times 8\\times10^{14} = 5.3\\times10^{-19}$ J $= 3.31$ eV. $E_k = 3.31 - 2 = 1.31$ eV.",
+      "misconceptions": [
+        "Increasing light intensity increases the NUMBER of photoelectrons, not their kinetic energy. KE depends only on frequency.",
+        "Bohr energy $E_n = -13.6/n^2$ eV is negative — the negative sign means the electron is bound. Higher n means less negative = higher energy = less tightly bound."
+      ],
+      "examples": [
+        {"q": "An electron jumps from n=3 to n=1 in hydrogen. Find the energy of emitted photon.", "s": "$E_3 = -13.6/9 = -1.51$ eV. $E_1 = -13.6$ eV. $\\Delta E = E_3 - E_1 = -1.51-(-13.6) = 12.09$ eV emitted."},
+        {"q": "A radioactive sample has half-life 10 days. What fraction remains after 30 days?", "s": "30 days = 3 half-lives. Fraction remaining $= (1/2)^3 = 1/8$."}
+      ],
+      "checks": [
+        {"q": "In photoelectric effect, doubling the intensity of light will:", "o": ["Double the KE of electrons", "Double the number of electrons emitted", "Increase the threshold frequency", "Decrease the stopping potential"], "a": 1, "e": "Intensity determines number of photons → number of photoelectrons. KE depends on frequency, not intensity.", "concept": "Photoelectric Effect"},
+        {"q": "Energy of electron in n=2 orbit of hydrogen atom is:", "o": ["-13.6 eV", "-3.4 eV", "-1.51 eV", "-0.85 eV"], "a": 1, "e": "$E_2 = -13.6/2^2 = -13.6/4 = -3.4$ eV.", "concept": "Bohr Model"},
+        {"q": "After 3 half-lives, what fraction of a radioactive sample remains?", "o": ["1/4", "1/6", "1/8", "1/16"], "a": 2, "e": "$(1/2)^3 = 1/8$.", "concept": "Radioactive Decay"}
+      ],
+      "summary": [
+        "Photoelectric: $E_k = hf - \\phi$. Intensity affects count, frequency affects KE.",
+        "Bohr levels: $E_n = -13.6/n^2$ eV. Photon emitted when electron drops to lower level.",
+        "Half-life: fraction remaining $= (1/2)^{t/T_{1/2}}$."
+      ],
+      "flashcards": [
+        {"q": "Photoelectric equation?", "a": "$E_k = hf - \\phi$"},
+        {"q": "Bohr energy levels for hydrogen?", "a": "$E_n = -13.6/n^2$ eV"},
+        {"q": "Radioactive decay fraction remaining?", "a": "$(1/2)^{t/T_{1/2}}$"}
+      ]
+    };
+  }
+
+  // 8. ORGANIC CHEMISTRY / HYDROCARBONS & FUNCTIONAL GROUPS
+  if (tLower.includes('organic') || tLower.includes('alkane') || tLower.includes('alkene') || tLower.includes('alkyne') || tLower.includes('benzene') || tLower.includes('iupac') || tLower.includes('carbonyl') || tLower.includes('aldehyde') || tLower.includes('ketone') || tLower.includes('alcohol') || tLower.includes('ester') || tLower.includes('amine')) {
+    return {
+      "topic": topic,
+      "hook": "Every medicine, fuel, plastic, and food molecule is organic chemistry. Aspirin, petrol, nylon, sugar — all carbon chains following the same bonding rules.",
+      "intuition": "Carbon is unique — it forms 4 bonds and can chain with itself indefinitely. The functional group attached to the chain determines all the chemical behaviour. Learn the functional groups and you can predict reactions without memorising each one.",
+      "technical": "Homologous series: alkanes $C_nH_{2n+2}$, alkenes $C_nH_{2n}$, alkynes $C_nH_{2n-2}$. IUPAC naming: find longest chain → number from end nearest substituent → name substituents as prefixes. Functional group priority: carboxylic acid > ester > aldehyde > ketone > alcohol > amine. Inductive effect: electron-donating groups (+I) increase electron density; electron-withdrawing groups (−I) decrease it. Hyperconjugation stabilises carbocations. SN1 vs SN2: SN1 — tertiary substrate, polar protic solvent, racemisation. SN2 — primary substrate, polar aprotic solvent, inversion of configuration.",
+      "exam_insight": "JEE Main organic questions test: (1) IUPAC naming with multiple substituents and functional groups, (2) identifying major product of elimination vs substitution, (3) distinguishing aldehydes from ketones using Tollens/Fehling test, (4) Markovnikov vs anti-Markovnikov addition.",
+      "explanation": "Name this compound: $CH_3-CH(OH)-CH_2-CH_3$. Step 1: longest chain = 4 carbons → butane. Step 2: OH group → ol suffix. Step 3: number from end nearest OH → carbon 2. Name: Butan-2-ol. Check: $CH_3$ on C1, OH on C2, $CH_2$ on C3, $CH_3$ on C4.",
+      "misconceptions": [
+        "Markovnikov's rule: H adds to carbon with MORE hydrogens (not the more substituted carbon directly). The positive charge ends up on the more substituted carbon.",
+        "Aldehydes give positive Tollens and Fehling tests; ketones do not. Acetaldehyde is an exception that gives iodoform test; acetone also gives iodoform test."
+      ],
+      "examples": [
+        {"q": "Give the IUPAC name of $CH_3-CH_2-CH(CH_3)-CHO$.", "s": "Longest chain including CHO = 4 carbons. CHO = aldehyde suffix 'al'. Methyl substituent on C3 (numbering from CHO end = C1). Name: 3-methylbutanal."},
+        {"q": "Which product forms when HBr adds to propene ($CH_3-CH=CH_2$) by Markovnikov's rule?", "s": "H adds to $CH_2$ (more H's). Br adds to middle carbon. Product: $CH_3-CHBr-CH_3$ (2-bromopropane)."}
+      ],
+      "checks": [
+        {"q": "What is the general formula for alkenes?", "o": ["$C_nH_{2n+2}$", "$C_nH_{2n}$", "$C_nH_{2n-2}$", "$C_nH_n$"], "a": 1, "e": "Alkenes have one double bond. General formula $C_nH_{2n}$. Alkanes: $C_nH_{2n+2}$. Alkynes: $C_nH_{2n-2}$.", "concept": "Homologous Series"},
+        {"q": "Which reagent distinguishes aldehyde from ketone?", "o": ["Bromine water", "Tollens reagent", "HCl", "NaOH"], "a": 1, "e": "Tollens reagent (ammoniacal AgNO3) gives silver mirror with aldehydes only. Ketones do not reduce Tollens reagent.", "concept": "Aldehyde vs Ketone"},
+        {"q": "IUPAC name of $CH_3CH_2OH$ is:", "o": ["Methanol", "Ethanol", "Propanol", "Butanol"], "a": 1, "e": "2 carbons → eth. OH group → anol. Ethanol. OH on C1 so no locant needed.", "concept": "IUPAC Naming"}
+      ],
+      "summary": [
+        "Alkanes $C_nH_{2n+2}$, alkenes $C_nH_{2n}$, alkynes $C_nH_{2n-2}$. Functional group determines reactivity.",
+        "IUPAC: longest chain → nearest substituent end → substituents as prefixes → functional group suffix.",
+        "Markovnikov: H to carbon with more H's. Tollens test: aldehydes yes, ketones no."
+      ],
+      "flashcards": [
+        {"q": "General formula for alkanes?", "a": "$C_nH_{2n+2}$"},
+        {"q": "Markovnikov's rule?", "a": "H adds to carbon with more hydrogens in addition reactions"},
+        {"q": "Test to distinguish aldehyde from ketone?", "a": "Tollens reagent — gives silver mirror with aldehydes only"}
       ]
     };
   }
@@ -752,14 +1082,14 @@ function renderLesson() {
   const stage = LS.activeStage || 1;
 
   const stageTitles = [
-    'Orientation & Hook',
-    'Concept Understanding',
-    'Worked Examples',
-    'Active Concept Checks',
-    'Reflection',
-    'Confidence Check',
-    'Core Takeaways',
-    'Revision Hooks'
+    'Step 1: Prerequisites & Foundation',
+    'Step 2: Introduction & Overview',
+    'Step 3: Real-World Connection',
+    'Step 4: Core Concept Deep Dive',
+    'Step 5: Worked Examples',
+    'Step 6: Question Models & Strategies',
+    'Step 7: Practice Test',
+    'Step 8: Results & Pathway Choice'
   ];
 
   const pct = Math.round((stage / 8) * 100);
@@ -768,11 +1098,11 @@ function renderLesson() {
     <div class="lhero scr mx-glass-card" style="padding:16px 20px;margin-bottom:16px">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
         <div>
-          <div class="font-poiret" style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Active Mission · 8 Mins Est.</div>
+          <div class="font-poiret" style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">8-Step Master Topic Learning Cycle</div>
           <div class="h2 font-serif" style="margin:2px 0 0">${esc(l.topic)}</div>
         </div>
         <div style="text-align:right">
-          <div class="font-poiret" style="font-size:11px;color:var(--mut);font-weight:700">STAGE ${stage} OF 8</div>
+          <div class="font-poiret" style="font-size:11px;color:var(--mut);font-weight:700">STEP ${stage} OF 8</div>
           <div class="font-serif" style="font-size:13px;color:var(--txt);font-weight:700">${stageTitles[stage - 1]}</div>
         </div>
       </div>
@@ -788,226 +1118,426 @@ function renderLesson() {
   renderStageContent();
 }
 
+/**
+ * Sanitize text for HTML insertion while preserving LaTeX math delimiters.
+ * Extracts $...$ and $$...$$ blocks, escapes the rest, then re-inserts math.
+ */
+function escMath(s) {
+  if (!s || typeof s !== 'string') return '';
+  const mathBlocks = [];
+  let processed = String(s)
+    .replace(/\$\$[\s\S]*?\$\$/g, m => { mathBlocks.push(m); return `%%MATH${mathBlocks.length - 1}%%`; })
+    .replace(/\$[^$]*?\$/g, m => { mathBlocks.push(m); return `%%MATH${mathBlocks.length - 1}%%`; })
+    .replace(/\\\([\s\S]*?\\\)/g, m => { mathBlocks.push(m); return `%%MATH${mathBlocks.length - 1}%%`; })
+    .replace(/\\\[[\s\S]*?\\\]/g, m => { mathBlocks.push(m); return `%%MATH${mathBlocks.length - 1}%%`; });
+  processed = processed
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  processed = processed.replace(/%%MATH(\d+)%%/g, (_, idx) => mathBlocks[parseInt(idx)]);
+  return processed;
+}
+window.escMath = escMath;
+
 function renderStageContent() {
   const c = document.getElementById('stage-card-wrap');
   const l = LS.lesson;
   if (!c || !l) return;
   const stage = LS.activeStage || 1;
+  const _esc = typeof escMath === 'function' ? escMath : (s => String(s || ''));
 
   let html = '';
 
   if (stage === 1) {
-    // ── STAGE 1: ORIENTATION + HOOK ──
+    // ── STEP 1: PREREQUISITES & FOUNDATION ──
     const topicCtx1 = findCourseTopicContext(l.topic);
     const chTitle1 = topicCtx1?.chapterTitle || topicCtx1?.subchapterTitle || '';
-    const prereqTitle1 = topicCtx1?.chapter?.prerequisites?.[0] || '';
     const diffLabel = LS.diagLevel === 'beginner' ? 'Foundational' : LS.diagLevel === 'advanced' ? 'Advanced' : 'Intermediate';
+
+    // Smart prerequisites rendering (supports both object array and string array formats)
+    let prereqHtml = '';
+    if (l.prerequisites && Array.isArray(l.prerequisites) && l.prerequisites.length > 0) {
+      if (typeof l.prerequisites[0] === 'object' && l.prerequisites[0].concept) {
+        // V3 format: array of {concept, formula, summary}
+        prereqHtml = l.prerequisites.map((p, i) => `
+          <div style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.15);border-radius:10px;padding:12px;cursor:pointer"
+            onclick="const d=this.querySelector('.prereq-detail');d.style.display=d.style.display==='none'?'block':'none'">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="color:var(--pl);font-size:14px">📌</span>
+                <span style="color:#fff;font-size:13px;font-weight:600">${esc(p.concept)}</span>
+              </div>
+              <span style="font-size:10px;color:var(--mut)">tap to expand ▾</span>
+            </div>
+            <div class="prereq-detail" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(139,92,246,0.15)">
+              ${p.summary ? `<div style="font-size:12px;color:var(--sub);line-height:1.5;margin-bottom:6px">${_esc(p.summary)}</div>` : ''}
+              ${p.formula ? `<div style="font-size:12.5px;color:#C4B5FD;font-weight:600" class="katex-render-target">${p.formula}</div>` : ''}
+            </div>
+          </div>
+        `).join('');
+      } else {
+        // Old format: string array
+        prereqHtml = l.prerequisites.map(p => `
+          <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.12);border-radius:8px">
+            <span style="color:var(--pl)">•</span>
+            <span style="color:var(--sub);font-size:12.5px" class="katex-render-target">${_esc(typeof p === 'string' ? p : p.concept || p)}</span>
+          </div>
+        `).join('');
+      }
+    } else {
+      prereqHtml = `<div style="color:var(--mut);font-size:12px;padding:10px">No specific prerequisites listed. Review your previous chapter concepts.</div>`;
+    }
 
     html = `
       <div class="card cglow mx-glass-card" style="border:1px solid rgba(139,92,246,0.2);padding:24px">
         <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.15);border-radius:14px;padding:16px;margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:10px">
             <div>
-              <div class="font-poiret" style="font-size:10px;color:var(--mut);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">LESSON BRIEF</div>
+              <div class="font-poiret" style="font-size:10px;color:var(--mut);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">STEP 1 OF 8 · PREREQUISITES & FOUNDATION</div>
               <div class="font-serif" style="font-size:17px;color:#fff;font-weight:800">${esc(l.topic)}</div>
               ${chTitle1 ? `<div style="font-size:12px;color:var(--sub);margin-top:3px">📚 ${esc(chTitle1)}</div>` : ''}
             </div>
             <span class="font-poiret" style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);border-radius:20px;padding:4px 12px;font-size:11px;color:var(--pl);font-weight:700;white-space:nowrap">${diffLabel}</span>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:14px">
-            <div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>⏱️</span>Est. 8 mins</div>
-            ${prereqTitle1 ? `<div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>🔗</span>Builds on: <strong style="color:var(--sub)">${esc(prereqTitle1)}</strong></div>` : ''}
+            <div style="font-size:11px;color:var(--mut);display:flex;align-items:center;gap:5px"><span>⏱️</span>Est. 12 mins</div>
           </div>
         </div>
 
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;background:rgba(255,255,255,0.02);padding:14px;border-radius:12px">
-          <div style="font-size:28px">🤔</div>
-          <div>
-            <div class="font-poiret" style="color:var(--pl);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">THINK ABOUT THIS</div>
-            <div style="color:var(--mut);font-size:12px">Before we begin, consider this question:</div>
-          </div>
+        <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">📌 WHAT YOU SHOULD KNOW BEFORE STARTING</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">
+          ${prereqHtml}
         </div>
 
-        <div class="font-serif" style="font-size:17px;color:#fff;font-weight:700;line-height:1.65;margin:0 0 24px;font-style:italic;padding:0 4px">
-          "${esc(l.hook)}"
+        <div class="font-serif" style="font-size:15px;color:#E2E8F0;font-weight:600;line-height:1.65;margin:0 0 24px;padding:12px 16px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.15);border-radius:10px">
+          💡 "${_esc(l.hook)}"
+        </div>
+
         <button class="btn bpri blg w100 mx-btn-primary" onclick="advanceStage(2)">
-          🚀 Begin Learning →
+          I'm Ready — Let's Begin →
         </button>
       </div>
     `;
   } else if (stage === 2) {
-    // Stage 2: 3-Layer Explanation with Curriculum Rigor Badges & Tio Voice Readout
-    const hasLayers = !!(l.intuition || l.technical || l.exam_insight);
-    const speechText = (l.intuition || '') + ' ' + (l.technical || '') + ' ' + (l.exam_insight || l.explanation || '');
+    // ── STEP 2: INTRODUCTION & OVERVIEW ──
+    const introText = l.chapter_intro || l.intuition || `Let's explore the fundamental ideas behind ${l.topic}.`;
+    const speechText = introText + ' ' + (l.definition || '');
     html = `
       <div class="card" style="padding:22px">
         <div class="between mb14">
-          <h3 class="h3" style="color:var(--pl);margin:0">📖 Understanding ${esc(l.topic)}</h3>
-          <button class="btn bsec bsm font-poiret" onclick="readoutTioExplanation('${escON(speechText)}')">🔊 Listen to Tio Explanation</button>
+          <h3 class="h3" style="color:var(--pl);margin:0">📖 Step 2: Introduction & Overview</h3>
+          <button class="btn bsec bsm font-poiret" onclick="readoutTioExplanation('${escON(speechText)}')">🔊 Listen to Tio</button>
         </div>
 
-        ${hasLayers ? `
-          <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
-              <div style="display:flex;align-items:center;gap:8px">
-                <span style="font-size:16px">💡</span>
-                <div>
-                  <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 1 — INTUITION</div>
-                  <div style="font-size:11px;color:var(--mut)">The mental picture — before any formulas</div>
-                </div>
-              </div>
-              <span class="tag tok font-poiret" style="font-size:10px;padding:2px 8px">📘 NCERT Intuition</span>
-            </div>
-            <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.intuition || ''}</div>
-          </div>
-          <div style="background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
-              <div style="display:flex;align-items:center;gap:8px">
-                <span style="font-size:16px">📐</span>
-                <div>
-                  <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 2 — TECHNICAL</div>
-                  <div style="font-size:11px;color:var(--mut)">Definitions, terminology and relationships</div>
-                </div>
-              </div>
-              <span class="tag tc font-poiret" style="font-size:10px;padding:2px 8px">⚡ JEE Main / NEET Standard</span>
-            </div>
-            <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.technical || ''}</div>
-          </div>
-          ${l.exam_insight ? `
-          <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
-              <div style="display:flex;align-items:center;gap:8px">
-                <span style="font-size:16px">🔥</span>
-                <div>
-                  <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase">LAYER 3 — EXAM THINKING</div>
-                  <div style="font-size:11px;color:var(--mut)">How this appears in JEE / NEET / competitive exams</div>
-                </div>
-              </div>
-              <span class="tag tgold font-poiret" style="font-size:10px;padding:2px 8px">🔥 JEE Advanced High-Rigor</span>
-            </div>
-            <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.exam_insight}</div>
-          </div>` : ''}
-        ` : `
-          <div class="explain-text-box" style="font-size:14.5px;line-height:1.75;color:#E2E8F0;display:flex;flex-direction:column;gap:12px">
-            ${l.explanation.split('\n').filter(p=>p.trim()).map(p=>`<p class="katex-render-target">${p}</p>`).join('')}
-          </div>
-        `}
-
-        <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(1)">← Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(3)">Next: Worked Examples →</button>
-        </div>
-      </div>
-    `;
-  } else if (stage === 3) {
-    // ”€”€ STAGE 3: WORKED EXAMPLES + MISCONCEPTIONS ”€”€
-    html = `
-      <div class="card" style="padding:22px">
-        <h3 class="h3 mb14" style="color:var(--pl)">“ Worked Solutions</h3>
-        <div style="display:flex;flex-direction:column;gap:20px">
-          ${(l.examples || []).map((ex, idx) => `
-            <div style="background:rgba(255,255,255,0.02);border:1px solid var(--brd);border-radius:14px;overflow:hidden">
-              <div style="padding:14px 16px;border-bottom:1px solid var(--brd)">
-                <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:8px">EXAMPLE ${idx + 1}</div>
-                <div style="color:#fff;font-weight:700;font-size:14px;line-height:1.6" class="katex-render-target">${esc(ex.q)}</div>
-              </div>
-              <div style="padding:12px 16px;background:rgba(139,92,246,0.03)">
-                <button onclick="(function(btn){var sol=btn.nextElementSibling;var open=sol.style.display!=='none';sol.style.display=open?'none':'block';btn.textContent=open?'Reveal Step-by-Step Solution †“':'Hide Solution †‘';})(this)"
-                  style="background:none;border:none;color:var(--pl);font-size:12px;font-weight:700;cursor:pointer;padding:0;text-align:left;width:100%">
-                  Reveal Step-by-Step Solution †“
-                </button>
-                <div style="display:none;margin-top:12px;color:var(--sub);font-size:13px;line-height:1.7;padding-top:12px;border-top:1px dashed rgba(255,255,255,0.06)" class="katex-render-target">
-                  ${ex.s}
-                </div>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-
-        ${(l.misconceptions && l.misconceptions.length > 0) ? `
-        <div style="margin-top:20px;background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:16px">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-            <span style="font-size:16px">š ï¸</span>
+        <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+            <span style="font-size:16px">💡</span>
             <div>
-              <div style="font-size:10px;color:var(--redl);font-weight:700;letter-spacing:1px;text-transform:uppercase">COMMON MISTAKES</div>
-              <div style="font-size:11px;color:var(--mut)">Watch out — students often get these wrong</div>
+              <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase">CHAPTER INTRODUCTION</div>
+              <div style="font-size:11px;color:var(--mut)">What this topic is about & what we'll cover</div>
             </div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            ${(l.misconceptions || []).map(m => `
-              <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#E2E8F0;line-height:1.55">
-                <span style="color:var(--redl);font-weight:700;flex-shrink:0">✨—</span>
-                <span class="katex-render-target">${esc(m)}</span>
+          <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${_esc(introText)}</div>
+        </div>
+
+        ${l.definition ? `
+        <div style="background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
+          <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">📐 DEFINITION</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.65" class="katex-render-target">${_esc(l.definition)}</div>
+        </div>` : ''}
+
+        ${(l.topics_covered && l.topics_covered.length > 0) ? `
+        <div style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.15);border-radius:12px;padding:16px;margin-bottom:14px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">🗺️ WHAT WE'LL COVER</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            ${l.topics_covered.map((t, i) => `
+              <div style="display:flex;align-items:center;gap:8px;padding:6px 0">
+                <span style="background:var(--pl);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">${i + 1}</span>
+                <span style="color:#E2E8F0;font-size:13px">${esc(t)}</span>
               </div>
             `).join('')}
           </div>
         </div>` : ''}
 
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(2)">† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(4)">Next: Test Your Understanding →</button>
+          <button class="btn bgh" onclick="advanceStage(1)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(3)">Next: Step 3 — Real-World Connection →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 3) {
+    // ── STEP 3: REAL-WORLD CONNECTION ──
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">🌍 Step 3: Real-World Connection</h3>
+        
+        <div style="background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+            <span style="font-size:18px">🚀</span>
+            <div>
+              <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase">WHERE THIS IS USED IN THE REAL WORLD</div>
+              <div style="font-size:11px;color:var(--mut)">Engineering, medicine, daily life applications</div>
+            </div>
+          </div>
+          <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.application || l.explanation || `Understanding ${l.topic} is fundamental across engineering, physical phenomena, and modern technology.`}</div>
+        </div>
+
+        <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;padding:16px;margin-top:14px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+            <span style="font-size:18px">🎯</span>
+            <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase">EXAM PATTERNS FOR THIS TOPIC</div>
+          </div>
+          <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.exam_insight || 'Check previous exam papers for question patterns on this topic.'}</div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(2)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(4)">Next: Step 4 — Core Concept Deep Dive →</button>
         </div>
       </div>
     `;
   } else if (stage === 4) {
-    // ”€”€ STAGE 4: CHECKS ”€”€
-    if (!LS.questionStartTime) {
-      LS.questionStartTime = Date.now();
-    }
-
-    let incorrectCount = 0;
-    const checksCount = (l.checks || []).length || 3;
-    for (let i = 0; i < checksCount; i++) {
-      const attempt = LS.checkAttempts[i];
-      if (attempt && attempt.answered && !attempt.correct) incorrectCount++;
-    }
-
-    let diagnosticHTML = '';
-    if (incorrectCount >= 2 && window.CurriculumEngine) {
-      const mistakeHistory = {};
-      if (window.D && window.D.memory && Array.isArray(window.D.memory.weakSpots)) {
-        window.D.memory.weakSpots.forEach(s => {
-          const key = String(s.topic || '').trim().toLowerCase();
-          mistakeHistory[key] = (mistakeHistory[key] || 0) + 1;
-        });
-      }
-      const weakness = window.CurriculumEngine.findRootWeakness(LS.topic, window.D?.topics || [], mistakeHistory);
-      if (weakness) {
-        diagnosticHTML = `
-          <div class="card s2" style="border-left:4px solid var(--red);border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);padding:14px 18px;margin-top:20px;text-align:left">
-            <div style="color:var(--redl);font-weight:700;font-size:var(--fs-sm);margin-bottom:4px">
-              •µï¸ Tio's Diagnostic Insight: Foundational Gap Detected!
-            </div>
-            <p style="font-size:12.5px;color:var(--sub);line-height:1.5;margin:0 0 10px">
-              It looks like you are struggling with this concept. The root cause might be a missing or weak understanding of the prerequisite topic: <strong>${esc(weakness.title)}</strong> (${weakness.reason}).
-            </p>
-            <button class="btn bsm" style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:var(--pl)" onclick="go('learn', '${escON(weakness.title)}')">
-              👈 Go back &amp; study: ${esc(weakness.title)}
-            </button>
+    // ── STEP 4: CORE CONCEPT DEEP DIVE ──
+    // Variables table
+    let variablesHtml = '';
+    if (l.variables && Array.isArray(l.variables) && l.variables.length > 0) {
+      variablesHtml = `
+        <div style="margin-bottom:16px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">📊 VARIABLE REFERENCE</div>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+              <thead>
+                <tr style="border-bottom:1px solid rgba(139,92,246,0.2)">
+                  <th style="text-align:left;padding:8px;color:var(--pl);font-weight:700">Symbol</th>
+                  <th style="text-align:left;padding:8px;color:var(--pl);font-weight:700">Name</th>
+                  <th style="text-align:left;padding:8px;color:var(--pl);font-weight:700">Unit</th>
+                  <th style="text-align:left;padding:8px;color:var(--pl);font-weight:700">Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${l.variables.map(v => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                    <td style="padding:8px;color:#C4B5FD;font-weight:600" class="katex-render-target">${v.symbol || ''}</td>
+                    <td style="padding:8px;color:#fff">${esc(v.name || '')}</td>
+                    <td style="padding:8px;color:var(--sub)" class="katex-render-target">${_esc(v.unit || '')}</td>
+                    <td style="padding:8px;color:var(--mut)">${esc(v.meaning || '')}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
           </div>
-        `;
-      }
+        </div>`;
     }
 
     html = `
       <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">🔬 Step 4: Core Concept Deep Dive</h3>
+
+        ${l.definition ? `
+        <div style="background:rgba(59,130,246,0.06);border-left:3px solid #60a5fa;border-radius:0 12px 12px 0;padding:16px;margin-bottom:16px">
+          <div style="font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">📐 DEFINITION</div>
+          <div style="font-size:14.5px;color:#fff;font-weight:600;line-height:1.65" class="katex-render-target">${_esc(l.definition)}</div>
+        </div>` : ''}
+        
+        <div style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.18);border-radius:12px;padding:16px;margin-bottom:16px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">📐 TECHNICAL EXPLANATION & FORMULAS</div>
+          <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.technical || l.explanation || ''}</div>
+        </div>
+
+        ${variablesHtml}
+
+        ${(l.alternative_formulas && l.alternative_formulas.length > 0) ? `
+        <div style="margin-bottom:16px">
+          <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">🔄 ALTERNATIVE FORMS</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            ${l.alternative_formulas.map(f => `
+              <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:8px;padding:8px 12px" class="katex-render-target">${f}</div>
+            `).join('')}
+          </div>
+        </div>` : ''}
+
+        ${l.conditions ? `
+        <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;padding:14px;margin-bottom:16px">
+          <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">⚡ CONDITIONS & LIMITATIONS</div>
+          <div style="font-size:13px;color:#E2E8F0;line-height:1.6" class="katex-render-target">${_esc(l.conditions)}</div>
+        </div>` : ''}
+
+        ${(l.misconceptions && l.misconceptions.length > 0) ? `
+        <div style="background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:14px;margin-bottom:16px">
+          <div style="font-size:10px;color:var(--redl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">⚠️ COMMON MISCONCEPTIONS</div>
+          ${(l.misconceptions || []).map(m => `
+            <div style="font-size:12.5px;color:#E2E8F0;line-height:1.55;margin-bottom:6px" class="katex-render-target">🚨 ${_esc(m)}</div>
+          `).join('')}
+        </div>` : ''}
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(3)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(5)">Next: Step 5 — Worked Examples →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 5) {
+    // ── STEP 5: WORKED EXAMPLES ──
+    const diffBadges = { easy: '📗 Easy', medium: '📘 Medium', hard: '📕 Hard' };
+    const diffColors = { easy: 'rgba(16,185,129,0.15)', medium: 'rgba(59,130,246,0.15)', hard: 'rgba(239,68,68,0.15)' };
+
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">📝 Step 5: Worked Examples</h3>
+        
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:16px">
+          ${(l.examples || []).map((ex, idx) => {
+            const diff = ex.difficulty || (idx === 0 ? 'easy' : idx === 1 ? 'medium' : 'hard');
+            const badge = diffBadges[diff] || diffBadges.medium;
+            const bgColor = diffColors[diff] || diffColors.medium;
+            
+            // Split solution into steps
+            const solutionSteps = (ex.s || '').split(/(?=Step \d)/i).filter(s => s.trim());
+            
+            return `
+            <div style="background:rgba(255,255,255,0.02);border:1px solid var(--brd);border-radius:12px;padding:14px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">EXAMPLE ${idx + 1}</div>
+                <span style="background:${bgColor};border-radius:12px;padding:3px 10px;font-size:10px;font-weight:700">${badge}</span>
+              </div>
+              <div style="color:#fff;font-weight:700;font-size:13.5px;margin-bottom:10px" class="katex-render-target">${_esc(ex.q)}</div>
+              <div style="padding-top:10px;border-top:1px dashed rgba(255,255,255,0.08)">
+                ${solutionSteps.length > 1 ? solutionSteps.map(step => `
+                  <div style="color:var(--sub);font-size:12.5px;line-height:1.6;margin-bottom:6px;padding-left:8px;border-left:2px solid rgba(139,92,246,0.3)" class="katex-render-target">${step.trim()}</div>
+                `).join('') : `
+                  <div style="color:var(--sub);font-size:12.5px;line-height:1.6" class="katex-render-target">${ex.s || ''}</div>
+                `}
+              </div>
+            </div>
+          `;
+          }).join('')}
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(4)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(6)">Next: Step 6 — Question Models & Strategies →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 6) {
+    // ── STEP 6: QUESTION MODELS & STRATEGIES ──
+    let qModelsHtml = '';
+    if (l.question_models && Array.isArray(l.question_models) && l.question_models.length > 0) {
+      qModelsHtml = l.question_models.map((qm, i) => `
+        <div style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.18);border-radius:12px;padding:16px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <span style="background:var(--pl);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">${i + 1}</span>
+            <span style="color:#fff;font-size:14px;font-weight:700">${esc(qm.type || 'Question Type')}</span>
+          </div>
+          <div style="font-size:13px;color:#E2E8F0;line-height:1.6;margin-bottom:8px" class="katex-render-target">${_esc(qm.description || '')}</div>
+          <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:8px;padding:10px">
+            <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase;margin-bottom:4px">💡 STRATEGY</div>
+            <div style="font-size:12.5px;color:var(--sub);line-height:1.5" class="katex-render-target">${_esc(qm.strategy || '')}</div>
+          </div>
+        </div>
+      `).join('');
+    } else {
+      // Fallback: show generic exam approach if question_models not provided
+      qModelsHtml = `
+        <div style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.18);border-radius:12px;padding:16px">
+          <div style="font-size:14px;color:#fff;font-weight:700;margin-bottom:8px">How ${esc(l.topic)} appears in exams</div>
+          <div style="font-size:13px;color:#E2E8F0;line-height:1.6" class="katex-render-target">${l.exam_insight || 'Practice previous year questions to understand exam patterns.'}</div>
+        </div>`;
+    }
+
+    // Summary + Flashcards section
+    let summaryHtml = '';
+    if (l.summary && l.summary.length > 0) {
+      summaryHtml = `
+        <div style="margin-top:18px">
+          <div style="font-size:10px;color:var(--okl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">✨ KEY TAKEAWAYS</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            ${l.summary.map(pt => `
+              <div style="display:flex;align-items:start;gap:8px;background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;border:1px solid var(--brd)">
+                <span style="font-size:14px;color:var(--ok)">✨</span>
+                <span style="color:#fff;font-size:13px;line-height:1.5" class="katex-render-target">${_esc(pt)}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+    }
+
+    let flashcardsHtml = '';
+    if (l.flashcards && l.flashcards.length > 0) {
+      flashcardsHtml = `
+        <div style="margin-top:18px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">🃏 FLASHCARDS — TAP TO FLIP</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            ${l.flashcards.map((fc, i) => `
+              <div id="fc-${i}" onclick="
+                const front=this.querySelector('.fc-front');
+                const back=this.querySelector('.fc-back');
+                const isFlipped=this.dataset.flipped==='true';
+                front.style.display=isFlipped?'block':'none';
+                back.style.display=isFlipped?'none':'block';
+                this.dataset.flipped=(!isFlipped).toString();
+              " data-flipped="false"
+                style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.2);border-radius:12px;padding:14px;cursor:pointer;min-height:50px">
+                <div class="fc-front" style="display:block">
+                  <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:4px">Q ${i+1} — TAP TO SEE ANSWER</div>
+                  <div style="color:#fff;font-size:13px;font-weight:600" class="katex-render-target">${_esc(fc.q)}</div>
+                </div>
+                <div class="fc-back" style="display:none">
+                  <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase;margin-bottom:4px">✅ ANSWER</div>
+                  <div style="color:var(--okl);font-size:13px;font-weight:700" class="katex-render-target">${_esc(fc.a)}</div>
+                  <div style="font-size:10px;color:var(--mut);margin-top:4px">Tap to flip back</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+    }
+
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">🧠 Step 6: Question Models & Strategies</h3>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+          ${qModelsHtml}
+        </div>
+
+        ${summaryHtml}
+        ${flashcardsHtml}
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(5)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(7)">Next: Step 7 — Practice Test →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 7) {
+    // ── STEP 7: PRACTICE TEST (5-QUESTION DIAGNOSTIC) ──
+    if (!LS.questionStartTime) LS.questionStartTime = Date.now();
+    const checksCount = (l.checks || []).length || 5;
+
+    html = `
+      <div class="card" style="padding:22px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-          <h3 class="h3" style="color:var(--pl)">🎯 Active Concept Checks</h3>
-          <span style="font-size:12px;color:var(--mut)">Solve all ${checksCount} questions to proceed.</span>
+          <h3 class="h3" style="color:var(--pl)">🎯 Step 7: Practice Test</h3>
+          <span style="font-size:11px;color:var(--mut)">2 Easy · 2 Medium · 1 Hard</span>
         </div>
         
         <div style="display:flex;flex-direction:column;gap:16px">
           ${(l.checks || []).map((ch, qidx) => {
             const attempt = LS.checkAttempts[qidx] || { answered: false, correct: false, selected: -1 };
             const isPending = LS.pendingConfidence && LS.pendingConfidence.qidx === qidx;
+            const diffTag = ch.difficulty ? (ch.difficulty === 'easy' ? 'Easy' : ch.difficulty === 'hard' ? 'Hard' : 'Medium') : (qidx < 2 ? 'Easy' : (qidx < 4 ? 'Medium' : 'Hard'));
             
             return `
               <div style="border:1px solid ${attempt.answered ? (attempt.correct ? 'var(--ok)' : 'var(--red)') : (isPending ? 'var(--pl)' : 'var(--brd)')};background:rgba(255,255,255,0.01);border-radius:12px;padding:16px">
-                <div style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:8px">Question ${qidx + 1} Â· ${esc(ch.concept || 'Concept Check')}</div>
-                <div style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px" class="katex-render-target">${esc(ch.q)}</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <span style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase">Question ${qidx + 1} of ${checksCount}</span>
+                  <span class="tag font-poiret" style="font-size:10px;padding:2px 8px">${diffTag}</span>
+                </div>
+                <div style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px" class="katex-render-target">${_esc(ch.q)}</div>
                 
                 <div style="display:flex;flex-direction:column;gap:8px">
-                  ${ch.o.map((opt, oidx) => {
+                  ${(ch.o || []).map((opt, oidx) => {
                     let optCls = 'qopt';
                     if (attempt.answered) {
                       if (oidx === ch.a) optCls += ' cor';
@@ -1019,7 +1549,7 @@ function renderStageContent() {
                     return `
                       <div class="${optCls}" ${clickHandler}>
                         <span class="qltr">${String.fromCharCode(65 + oidx)}</span>
-                        <span class="katex-render-target">${esc(opt)}</span>
+                        <span class="katex-render-target">${_esc(opt)}</span>
                       </div>
                     `;
                   }).join('')}
@@ -1030,7 +1560,7 @@ function renderStageContent() {
                     <div style="font-size:12.5px;color:var(--pl);font-weight:700;margin-bottom:10px">🤔 How confident are you about this choice?</div>
                     <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:8px">
                       <button class="btn bsm" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--okl)" onclick="submitConfidence('Very Confident')">🔥 Very Confident</button>
-                      <button class="btn bsm" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#60a5fa" onclick="submitConfidence('Confident')">‘ Confident</button>
+                      <button class="btn bsm" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#60a5fa" onclick="submitConfidence('Confident')">👍 Confident</button>
                       <button class="btn bsm" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:#fbbf24" onclick="submitConfidence('Unsure')">🤷 Unsure</button>
                       <button class="btn bsm" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:var(--redl)" onclick="submitConfidence('Guess')">🎲 Just a Guess</button>
                     </div>
@@ -1039,7 +1569,7 @@ function renderStageContent() {
 
                 ${attempt.answered ? `
                   <div class="expl" style="margin-top:10px;background:${attempt.correct ? 'rgba(16,185,129,0.05)' : 'rgba(239,68,68,0.05)'};border:1px solid ${attempt.correct ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'};border-radius:8px;padding:10px;font-size:12.5px;line-height:1.6">
-                    <strong style="color:${attempt.correct ? 'var(--okl)' : 'var(--redl)'}">${attempt.correct ? 'Correct!' : 'Incorrect!'}</strong> [Confidence: ${attempt.confidence || 'Unsure'}] Â· ${ch.e}
+                    <strong style="color:${attempt.correct ? 'var(--okl)' : 'var(--redl)'}">${attempt.correct ? 'Correct!' : 'Incorrect!'}</strong> · <span class="katex-render-target">${ch.e || ''}</span>
                   </div>
                 ` : ''}
               </div>
@@ -1047,137 +1577,383 @@ function renderStageContent() {
           }).join('')}
         </div>
 
-        ${diagnosticHTML}
-
         <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(3)">† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(5)">Next: Reflect &amp; Connect →</button>
-        </div>
-      </div>
-    `;
-  } else if (stage === 5) {
-    // ”€”€ STAGE 5: REFLECTION ”€”€
-    if (!LS.reflections) LS.reflections = {};
-    const topicCtx5 = findCourseTopicContext(l.topic);
-    const chTitle5 = topicCtx5?.chapterTitle || topicCtx5?.subchapterTitle || '';
-    html = `
-      <div class="card" style="padding:22px">
-        ${(topicCtx5 && chTitle5) ? `
-        <div style="background:rgba(139,92,246,0.05);border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:12px 14px;margin-bottom:18px">
-          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">🔗 KNOWLEDGE MAP</div>
-          <div style="font-size:12px;color:var(--sub)">📚 ${esc(chTitle5)} → <strong style="color:var(--txt)">${esc(l.topic)}</strong></div>
-        </div>` : ''}
-
-        <h3 class="h3 mb6" style="color:var(--pl)">💭 Reflect on Your Learning</h3>
-        <p style="color:var(--mut);font-size:12.5px;margin-bottom:18px;line-height:1.6">Not graded. Take a moment to consolidate — this sharpens long-term memory.</p>
-
-        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:22px">
-          <div>
-            <div style="font-size:12px;color:var(--sub);font-weight:600;margin-bottom:6px">Which part of <strong style="color:var(--txt)">${esc(l.topic)}</strong> felt most challenging?</div>
-            <textarea id="reflect-1" class="inp" rows="2" placeholder="e.g. The formula derivation was confusing..." style="font-size:13px;resize:none;width:100%;box-sizing:border-box">${LS.reflections.q1 ? esc(LS.reflections.q1) : ''}</textarea>
-          </div>
-          <div>
-            <div style="font-size:12px;color:var(--sub);font-weight:600;margin-bottom:6px">What surprised you or connected to something you already knew?</div>
-            <textarea id="reflect-2" class="inp" rows="2" placeholder="e.g. This reminds me of Newton's Second Law because..." style="font-size:13px;resize:none;width:100%;box-sizing:border-box">${LS.reflections.q2 ? esc(LS.reflections.q2) : ''}</textarea>
-          </div>
-          <div>
-            <div style="font-size:12px;color:var(--sub);font-weight:600;margin-bottom:6px">Explain <strong style="color:var(--txt)">${esc(l.topic)}</strong> in one sentence, in your own words:</div>
-            <textarea id="reflect-3" class="inp" rows="2" placeholder="e.g. It is essentially..." style="font-size:13px;resize:none;width:100%;box-sizing:border-box">${LS.reflections.q3 ? esc(LS.reflections.q3) : ''}</textarea>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:10px">
-          <button class="btn bgh" onclick="advanceStage(4)">† Back</button>
-          <button class="btn bgh bfull" style="color:var(--mut)" onclick="saveReflections();advanceStage(6)">Skip →</button>
-          <button class="btn bpri bfull" onclick="saveReflections();advanceStage(6)">Save &amp; Continue →</button>
-        </div>
-      </div>
-    `;
-  } else if (stage === 6) {
-    // ”€”€ STAGE 6: CONFIDENCE SELF-RATING ”€”€
-    const currentConf = LS.confidenceRating || 0;
-    const confOpts = [
-      { val: 1, emoji: '😟', label: 'Lost', desc: 'I barely understood any of this', bg: 'rgba(239,68,68,0.08)', brd: 'rgba(239,68,68,0.3)', col: 'var(--redl)' },
-      { val: 2, emoji: '😕', label: 'Shaky', desc: 'I got the basics but many gaps remain', bg: 'rgba(245,158,11,0.08)', brd: 'rgba(245,158,11,0.3)', col: 'var(--goldl)' },
-      { val: 3, emoji: '🙂', label: 'Getting There', desc: 'I understand most of it', bg: 'rgba(59,130,246,0.08)', brd: 'rgba(59,130,246,0.3)', col: '#60a5fa' },
-      { val: 4, emoji: '😊', label: 'Confident', desc: 'I could solve most questions on this', bg: 'rgba(16,185,129,0.08)', brd: 'rgba(16,185,129,0.3)', col: 'var(--okl)' },
-      { val: 5, emoji: '🔥', label: 'Mastered', desc: 'I could explain this to someone else', bg: 'rgba(139,92,246,0.1)', brd: 'rgba(139,92,246,0.35)', col: 'var(--pl)' }
-    ];
-    html = `
-      <div class="card" style="padding:22px;text-align:center">
-        <div style="font-size:40px;margin-bottom:10px">🎯</div>
-        <h3 class="h3 mb6" style="color:var(--pl)">How Confident Do You Feel?</h3>
-        <p style="color:var(--mut);font-size:12.5px;margin-bottom:22px">Rate your understanding of <strong style="color:var(--txt)">${esc(l.topic)}</strong> right now.</p>
-        
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;text-align:left">
-          ${confOpts.map(opt => `
-            <div onclick="LS.confidenceRating=${opt.val};saveCheckpoint();renderStageContent()" 
-              style="background:${currentConf===opt.val ? opt.bg : 'rgba(255,255,255,0.02)'};border:2px solid ${currentConf===opt.val ? opt.brd : 'var(--brd)'};border-radius:12px;padding:14px 16px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:14px">
-              <span style="font-size:22px;flex-shrink:0">${opt.emoji}</span>
-              <div style="flex:1">
-                <div style="font-weight:700;color:${currentConf===opt.val ? opt.col : 'var(--txt)'};font-size:14px">${opt.label}</div>
-                <div style="font-size:11.5px;color:var(--mut);margin-top:2px">${opt.desc}</div>
-              </div>
-              ${currentConf===opt.val ? `<span style="color:${opt.col};font-size:18px;font-weight:700">✨“</span>` : ''}
-            </div>
-          `).join('')}
-        </div>
-
-        <div style="display:flex;gap:10px">
-          <button class="btn bgh" onclick="advanceStage(5)">† Back</button>
-          <button class="btn bpri bfull" onclick="if(!LS.confidenceRating)LS.confidenceRating=3;saveCheckpoint();advanceStage(7)">${currentConf ? 'Continue →' : 'Skip (Neutral) →'}</button>
-        </div>
-      </div>
-    `;
-  } else if (stage === 7) {
-    // ”€”€ STAGE 7: SUMMARY ”€”€
-    html = `
-      <div class="card" style="padding:22px">
-        <h3 class="h3 mb14" style="color:var(--pl)">✨… Core Takeaways</h3>
-        
-        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
-          ${(l.summary || []).map(pt => `
-            <div style="display:flex;align-items:start;gap:10px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid var(--brd)">
-              <span style="font-size:16px;color:var(--ok)">✨“</span>
-              <span style="color:#fff;font-size:13.5px;line-height:1.5" class="katex-render-target">${esc(pt)}</span>
-            </div>
-          `).join('')}
-        </div>
-
-        <div style="display:flex;gap:10px;margin-top:20px">
-          <button class="btn bgh" onclick="advanceStage(6)">† Back</button>
-          <button class="btn bpri bfull" onclick="advanceStage(8)">Next: Revision Hooks →</button>
+          <button class="btn bgh" onclick="advanceStage(6)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(8)">Next: Step 8 — Results & Pathway Choice →</button>
         </div>
       </div>
     `;
   } else if (stage === 8) {
-    // ”€”€ STAGE 8: FLASHCARDS (REVISION HOOKS) ”€”€
+    // ── STEP 8: RESULTS & PATHWAY CHOICE ──
+    let nextTopicName = '';
+    try {
+      if (window.CourseProgressionEngine) {
+        const nextPos = window.CourseProgressionEngine.getCurrentPosition();
+        if (nextPos?.topicTitle && nextPos.topicTitle !== l.topic) nextTopicName = nextPos.topicTitle;
+      }
+    } catch(e) {}
+
+    if (!nextTopicName) {
+      try {
+        const activeCourse = (D.courses || []).find(c => c.id === D.lastCourseId) || (D.courses || [])[0];
+        if (activeCourse && activeCourse.units) {
+          let foundCurrent = false;
+          outer: for (const unit of activeCourse.units || []) {
+            for (const chapter of unit.chapters || []) {
+              for (const sub of chapter.subchapters || []) {
+                for (const topic of sub.topics || []) {
+                  const tTitle = typeof topic === 'string' ? topic : (topic.title || topic.name || '');
+                  if (foundCurrent && tTitle && tTitle !== l.topic) {
+                    nextTopicName = tTitle;
+                    break outer;
+                  }
+                  if (tTitle === l.topic) foundCurrent = true;
+                }
+              }
+            }
+          }
+        }
+      } catch(e) {}
+    }
+
+    if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
+    const totalChecks = (l.checks || []).length;
+    const correctCount = Object.values(LS.checkAttempts || {}).filter(a => a.correct).length;
+    const scorePct = totalChecks > 0 ? Math.round((correctCount / totalChecks) * 100) : 0;
+    if (!D.memory.history) D.memory.history = [];
+    D.memory.history.push({ topic: l.topic, score: scorePct, completedAt: Date.now() });
+    if (D.memory.history.length > 100) D.memory.history = D.memory.history.slice(-100);
+    D.memory.activeLesson = null;
+    D.lastStudiedTopic = l.topic;
+    saveAll();
+
     html = `
-      <div class="card" style="padding:22px;text-align:center">
-        <h3 class="h3 mb6" style="color:var(--pl);text-align:left">ƒ Revision Hooks</h3>
-        <p class="sub mb16" style="text-align:left">These are added to your spaced repetition queue. Flip each card to verify key facts.</p>
+      <div class="card" style="padding:28px;text-align:center">
+        <div style="font-size:48px;margin-bottom:10px">🎓</div>
+        <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">STEP 8 OF 8 · RESULTS & PATHWAY CHOICE</div>
+        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:14px">Topic Completed: ${esc(l.topic)}</div>
         
-        <div style="display:grid;grid-template-columns:1fr;gap:12px;max-width:480px;margin:0 auto 24px">
-          ${(l.flashcards || []).map((card, idx) => `
-            <div class="flashcard-widget" onclick="this.classList.toggle('flipped')" style="perspective:1000px;cursor:pointer;height:120px;position:relative">
-              <div class="flashcard-inner" style="position:absolute;width:100%;height:100%;transition:transform 0.4s;transform-style:preserve-3d;">
-                <div class="flashcard-front" style="position:absolute;width:100%;height:100%;backface-visibility:hidden;background:rgba(139,92,246,0.08);border:1px dashed rgba(139,92,246,0.4);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px">
-                  <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">CARD ${idx + 1}</div>
-                  <div style="color:#fff;font-weight:700;font-size:13.5px;margin-top:4px" class="katex-render-target">${esc(card.q)}</div>
-                  <div style="font-size:10px;color:var(--pl);margin-top:8px">Click to Flip 🔄</div>
-                </div>
-                <div class="flashcard-back" style="position:absolute;width:100%;height:100%;backface-visibility:hidden;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;transform:rotateY(180deg)">
-                  <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase">ANSWER</div>
-                  <div style="color:#E2E8F0;font-size:13px;line-height:1.5;margin-top:4px" class="katex-render-target">${esc(card.a)}</div>
-                </div>
-              </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;text-align:left">
+          <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:14px">
+            <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase;margin-bottom:4px">ACCURACY</div>
+            <div style="font-size:24px;font-weight:800;color:#fff">${scorePct}%</div>
+            <div style="font-size:11px;color:var(--sub)">${correctCount}/${totalChecks} correct</div>
+          </div>
+          <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.2);border-radius:12px;padding:14px">
+            <div style="font-size:10px;color:var(--pl);font-weight:700;text-transform:uppercase;margin-bottom:4px">PERFORMANCE</div>
+            <div style="font-size:18px;font-weight:800;color:#fff">${scorePct >= 80 ? '🔥 Excellent' : scorePct >= 60 ? '👍 Good' : scorePct >= 40 ? '🙂 Fair' : '📖 Needs Review'}</div>
+          </div>
+        </div>
+
+        ${scorePct < 50 ? `
+        <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:20px;margin-bottom:22px;text-align:left">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <span style="font-size:28px">🔄</span>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:var(--redl)">This topic needs more work</div>
+              <div style="color:var(--mut);font-size:12px">You scored ${scorePct}% — re-learning will reinforce the concepts you missed.</div>
+            </div>
+          </div>
+          <button class="btn bpri bfull" style="margin-top:8px;padding:13px;font-size:14px;border-radius:12px" onclick="go('learn','${escON(l.topic)}')">
+            🔄 Re-learn "${esc(l.topic)}" from Scratch
+          </button>
+        </div>` : ''}
+
+        <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">CHOOSE YOUR NEXT PATHWAY</div>
+        
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px">
+          <button class="btn bpri bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:3px" onclick="${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">
+            <span>🚀 Next Topic</span>
+            <span style="font-size:10px;opacity:0.8;font-weight:400">${nextTopicName ? esc(nextTopicName).substring(0, 22) + (nextTopicName.length > 22 ? '…' : '') : 'Back to Courses'}</span>
+          </button>
+          <button class="btn bsec bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="go('cbt', '${escON(l.topic)}')">
+            🎯 Practice Questions
+          </button>
+          <button class="btn bsec bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="go('revision')">
+            🔍 Revise / Deep Dive
+          </button>
+          <button class="btn bgh bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="advanceStage(6)">
+            📋 View Summary
+          </button>
+        </div>
+      </div>
+        </div>
+      </div>
+    `;
+  } else if (stage === 4) {
+    // ── STEP 4: DEEP CONCEPTUAL BREAKDOWN (TEXT, FORMULAS, VISUALS) ──
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">📖 Step 4: Deep Conceptual Breakdown</h3>
+        
+        <div style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.18);border-radius:12px;padding:16px;margin-bottom:16px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">📐 TECHNICAL RIGOR & FORMULAS</div>
+          <div style="font-size:14px;color:#E2E8F0;line-height:1.75" class="katex-render-target">${l.technical || l.explanation || ''}</div>
+        </div>
+
+        <h4 class="h4 mb10" style="color:var(--sub)">Worked Examples</h4>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:16px">
+          ${(l.examples || []).map((ex, idx) => `
+            <div style="background:rgba(255,255,255,0.02);border:1px solid var(--brd);border-radius:12px;padding:14px">
+              <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:6px">EXAMPLE ${idx + 1}</div>
+              <div style="color:#fff;font-weight:700;font-size:13.5px;margin-bottom:8px" class="katex-render-target">${escMath(ex.q)}</div>
+              <div style="color:var(--sub);font-size:12.5px;line-height:1.6;padding-top:8px;border-top:1px dashed rgba(255,255,255,0.08)" class="katex-render-target">${ex.s}</div>
             </div>
           `).join('')}
         </div>
 
-        <div style="display:flex;gap:10px">
-          <button class="btn bgh" onclick="advanceStage(7)">† Back</button>
-          <button class="btn bpri bfull" onclick="completeStageSession()">🚀 Complete Learning Mission &amp; Sync →</button>
+        ${(l.misconceptions && l.misconceptions.length > 0) ? `
+        <div style="background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:14px;margin-bottom:16px">
+          <div style="font-size:10px;color:var(--redl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">⚠️ COMMON MISCONCEPTIONS</div>
+          ${(l.misconceptions || []).map(m => `
+            <div style="font-size:12.5px;color:#E2E8F0;line-height:1.55;margin-bottom:6px" class="katex-render-target">🚨 ${escMath(m)}</div>
+          `).join('')}
+        </div>` : ''}
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(3)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(5)">Next: Step 5 — Memory Hack & Cool Fact →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 5) {
+    // ── STEP 5: MEMORY HACK & COOL FACT ──
+    const mnemonic = l.mnemonic || (l.misconceptions && l.misconceptions.length > 0 ? '⚠️ Common trap: ' + l.misconceptions[0] : null);
+    const fact = l.fact || (l.exam_insight ? '🎯 Exam insight: ' + l.exam_insight.split('.')[0] + '.' : null);
+
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">💡 Step 5: Memory Hack & Cool Fact</h3>
+        
+        ${mnemonic ? `
+        <div style="background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.22);border-radius:12px;padding:16px;margin-bottom:16px">
+          <div style="font-size:10px;color:var(--goldl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">🧠 MEMORY HACK</div>
+          <div style="font-size:14px;color:#fff;font-weight:700" class="katex-render-target">${escMath(mnemonic)}</div>
+        </div>` : ''}
+
+        ${fact ? `
+        <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.22);border-radius:12px;padding:16px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">✨ COOL FACT</div>
+          <div style="font-size:13.5px;color:#E2E8F0;line-height:1.6" class="katex-render-target">${escMath(fact)}</div>
+        </div>` : ''}
+
+        ${(!mnemonic && !fact) ? `
+        <div style="background:rgba(255,255,255,0.02);border:1px solid var(--brd);border-radius:12px;padding:20px;text-align:center">
+          <div style="font-size:24px;margin-bottom:8px">🧠</div>
+          <div style="color:var(--sub);font-size:13px">The best memory trick for ${esc(l.topic || 'this topic')} is solving problems repeatedly. Move to the test.</div>
+        </div>` : ''}
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(4)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(6)">Next: Step 6 — 5-Question Diagnostic Test →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 6) {
+    // ── STEP 6: 5-QUESTION DIAGNOSTIC TEST (2 EASY, 2 MEDIUM, 1 HARD) ──
+    if (!LS.questionStartTime) LS.questionStartTime = Date.now();
+
+    const checksCount = (l.checks || []).length || 5;
+
+    html = `
+      <div class="card" style="padding:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <h3 class="h3" style="color:var(--pl)">🎯 Step 6: 5-Question Diagnostic Test</h3>
+          <span style="font-size:11px;color:var(--mut)">2 Easy · 2 Medium · 1 Hard</span>
+        </div>
+        
+        <div style="display:flex;flex-direction:column;gap:16px">
+          ${(l.checks || []).map((ch, qidx) => {
+            const attempt = LS.checkAttempts[qidx] || { answered: false, correct: false, selected: -1 };
+            const isPending = LS.pendingConfidence && LS.pendingConfidence.qidx === qidx;
+            const diffTag = qidx < 2 ? 'Easy' : (qidx < 4 ? 'Medium' : 'Hard');
+            
+            return `
+              <div style="border:1px solid ${attempt.answered ? (attempt.correct ? 'var(--ok)' : 'var(--red)') : (isPending ? 'var(--pl)' : 'var(--brd)')};background:rgba(255,255,255,0.01);border-radius:12px;padding:16px">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <span style="font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase">Question ${qidx + 1} of ${checksCount}</span>
+                  <span class="tag font-poiret" style="font-size:10px;padding:2px 8px">${diffTag}</span>
+                </div>
+                <div style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px" class="katex-render-target">${escMath(ch.q)}</div>
+                
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  ${(ch.o || []).map((opt, oidx) => {
+                    let optCls = 'qopt';
+                    if (attempt.answered) {
+                      if (oidx === ch.a) optCls += ' cor';
+                      else if (attempt.selected === oidx) optCls += ' wrg';
+                    } else if (attempt.selected === oidx) {
+                      optCls += ' sel';
+                    }
+                    const clickHandler = (attempt.answered || LS.pendingConfidence) ? '' : `onclick="submitStageCheck(${qidx}, ${oidx})"`;
+                    return `
+                      <div class="${optCls}" ${clickHandler}>
+                        <span class="qltr">${String.fromCharCode(65 + oidx)}</span>
+                        <span class="katex-render-target">${escMath(opt)}</span>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+
+                ${isPending ? `
+                  <div style="margin-top:14px;background:rgba(139,92,246,0.03);border:1px solid rgba(139,92,246,0.15);border-radius:10px;padding:14px;text-align:center">
+                    <div style="font-size:12.5px;color:var(--pl);font-weight:700;margin-bottom:10px">🤔 How confident are you about this choice?</div>
+                    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:8px">
+                      <button class="btn bsm" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--okl)" onclick="submitConfidence('Very Confident')">🔥 Very Confident</button>
+                      <button class="btn bsm" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:#60a5fa" onclick="submitConfidence('Confident')">👍 Confident</button>
+                      <button class="btn bsm" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:#fbbf24" onclick="submitConfidence('Unsure')">🤷 Unsure</button>
+                      <button class="btn bsm" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:var(--redl)" onclick="submitConfidence('Guess')">🎲 Just a Guess</button>
+                    </div>
+                  </div>
+                ` : ''}
+
+                ${attempt.answered ? `
+                  <div class="expl" style="margin-top:10px;background:${attempt.correct ? 'rgba(16,185,129,0.05)' : 'rgba(239,68,68,0.05)'};border:1px solid ${attempt.correct ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'};border-radius:8px;padding:10px;font-size:12.5px;line-height:1.6">
+                    <strong style="color:${attempt.correct ? 'var(--okl)' : 'var(--redl)'}">${attempt.correct ? 'Correct!' : 'Incorrect!'}</strong> · ${ch.e}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(5)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(7)">Next: Step 7 — Key Takeaways Summary →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 7) {
+    // ── STEP 7: KEY TAKEAWAYS SUMMARY ──
+    html = `
+      <div class="card" style="padding:22px">
+        <h3 class="h3 mb14" style="color:var(--pl)">✨ Step 7: Key Takeaways Summary</h3>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+          ${(l.summary || []).map(pt => `
+            <div style="display:flex;align-items:start;gap:10px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid var(--brd)">
+              <span style="font-size:16px;color:var(--ok)">✨</span>
+              <span style="color:#fff;font-size:13.5px;line-height:1.5" class="katex-render-target">${escMath(pt)}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        ${(l.flashcards && l.flashcards.length > 0) ? `
+        <div style="margin-top:20px">
+          <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">🃏 FLASHCARDS — TAP TO FLIP</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            ${(l.flashcards || []).map((fc, i) => `
+              <div
+                id="fc-${i}"
+                onclick="
+                  const front = this.querySelector('.fc-front');
+                  const back = this.querySelector('.fc-back');
+                  const isFlipped = this.dataset.flipped === 'true';
+                  front.style.display = isFlipped ? 'block' : 'none';
+                  back.style.display = isFlipped ? 'none' : 'block';
+                  this.dataset.flipped = (!isFlipped).toString();
+                "
+                data-flipped="false"
+                style="background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.2);border-radius:12px;padding:14px;cursor:pointer;min-height:56px;display:flex;flex-direction:column;justify-content:center"
+              >
+                <div class="fc-front" style="display:block">
+                  <div style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase;margin-bottom:4px">Q ${i+1} — TAP TO SEE ANSWER</div>
+                  <div style="color:#fff;font-size:13.5px;font-weight:600" class="katex-render-target">${escMath(fc.q)}</div>
+                </div>
+                <div class="fc-back" style="display:none">
+                  <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase;margin-bottom:4px">✅ ANSWER</div>
+                  <div style="color:var(--okl);font-size:13.5px;font-weight:700" class="katex-render-target">${escMath(fc.a)}</div>
+                  <div style="font-size:10px;color:var(--mut);margin-top:6px">Tap to flip back</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        ` : ''}
+
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="btn bgh" onclick="advanceStage(6)">← Back</button>
+          <button class="btn bpri bfull" onclick="advanceStage(8)">Next: Step 8 — 3 Action Pathways →</button>
+        </div>
+      </div>
+    `;
+  } else if (stage === 8) {
+    // ── STEP 8: 3 ACTION PATHWAYS ──
+    let nextTopicName = '';
+    try {
+      if (window.CourseProgressionEngine) {
+        const nextPos = window.CourseProgressionEngine.getCurrentPosition();
+        if (nextPos?.topicTitle && nextPos.topicTitle !== l.topic) nextTopicName = nextPos.topicTitle;
+      }
+    } catch(e) {}
+
+    if (!nextTopicName) {
+      try {
+        const activeCourse = (D.courses || []).find(c => c.id === D.lastCourseId) || (D.courses || [])[0];
+        if (activeCourse && activeCourse.units) {
+          let foundCurrent = false;
+          outer: for (const unit of activeCourse.units || []) {
+            for (const chapter of unit.chapters || []) {
+              for (const sub of chapter.subchapters || []) {
+                for (const topic of sub.topics || []) {
+                  const tTitle = typeof topic === 'string' ? topic : (topic.title || topic.name || '');
+                  if (foundCurrent && tTitle && tTitle !== l.topic) {
+                    nextTopicName = tTitle;
+                    break outer;
+                  }
+                  if (tTitle === l.topic) foundCurrent = true;
+                }
+              }
+            }
+          }
+        }
+      } catch(e) {}
+    }
+
+    if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
+    const totalChecks = (l.checks || []).length;
+    const correctCount = Object.values(LS.checkAttempts || {}).filter(a => a.correct).length;
+    const scorePct = totalChecks > 0 ? Math.round((correctCount / totalChecks) * 100) : 0;
+    if (!D.memory.history) D.memory.history = [];
+    D.memory.history.push({ topic: l.topic, score: scorePct, completedAt: Date.now() });
+    if (D.memory.history.length > 100) D.memory.history = D.memory.history.slice(-100);
+    D.memory.activeLesson = null;
+    D.lastStudiedTopic = l.topic;
+    saveAll();
+
+    html = `
+      <div class="card" style="padding:28px;text-align:center">
+        <div style="font-size:48px;margin-bottom:10px">🎓</div>
+        <div style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">STEP 8 OF 8 · 3 ACTION PATHWAYS</div>
+        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:22px">Topic Completed: ${esc(l.topic)}</div>
+        
+        ${scorePct < 50 ? `
+        <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:20px;margin-bottom:22px;text-align:left">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <span style="font-size:28px">🔄</span>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:var(--redl)">This topic needs more work</div>
+              <div style="color:var(--mut);font-size:12px">You scored ${scorePct}% — re-learning will reinforce the concepts you missed.</div>
+            </div>
+          </div>
+          <button class="btn bpri bfull" style="margin-top:8px;padding:13px;font-size:14px;border-radius:12px" onclick="go('learn','${escON(l.topic)}')">
+            🔄 Re-learn "${esc(l.topic)}" from Scratch
+          </button>
+        </div>` : ''}
+
+        <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">CHOOSE YOUR NEXT PATHWAY</div>
+        
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px">
+          <button class="btn bpri bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:3px" onclick="${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">
+            <span>🚀 Next Topic</span>
+            <span style="font-size:10px;opacity:0.8;font-weight:400">${nextTopicName ? esc(nextTopicName).substring(0, 22) + (nextTopicName.length > 22 ? '…' : '') : 'Back to Courses'}</span>
+          </button>
+          <button class="btn bsec bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="go('cbt', '${escON(l.topic)}')">
+            2. 🎯 Practice More Questions
+          </button>
+          <button class="btn bsec bsm font-poiret" style="padding:14px 8px;font-size:12px;border-radius:12px" onclick="go('revision')">
+            3. 🔍 Revise / Deep Dive
+          </button>
         </div>
       </div>
     `;
@@ -1185,15 +1961,108 @@ function renderStageContent() {
 
   c.innerHTML = html;
   
-  setTimeout(() => {
+  requestAnimationFrame(() => {
     const el = document.getElementById('stage-card-wrap');
     if (el && window.renderMath) {
-      window.renderMath(el);
+      window.renderMath(el, true);
     }
-  }, 30);
+  });
 }
 
-function advanceStage(stageNum) {
+function advanceStage(stageNum, force) {
+  if (stageNum === 7 && !force) {
+    const l = LS.lesson;
+    const checks = l ? (l.checks || []) : [];
+    const total = checks.length || 5;
+
+    let allAnswered = true;
+    let correctCount = 0;
+    let wrongCount = 0;
+
+    for (let i = 0; i < total; i++) {
+      const att = LS.checkAttempts ? LS.checkAttempts[i] : null;
+      if (!att || !att.answered) {
+        allAnswered = false;
+        break;
+      }
+      if (att.correct) {
+        correctCount++;
+      } else {
+        wrongCount++;
+      }
+    }
+
+    if (!allAnswered) {
+      if (typeof toast === 'function') toast("Answer all questions before moving on.");
+      return;
+    }
+
+    const scorePct = total > 0 ? Math.round((correctCount / total) * 100) : 100;
+
+    if (scorePct < 60 || wrongCount >= 3) {
+      const wrap = document.getElementById('stage-card-wrap');
+      if (wrap) {
+        wrap.innerHTML = `
+          <div class="card" style="padding:28px;text-align:center;max-width:480px;margin:20px auto;border:1px solid rgba(239,68,68,0.3);background:rgba(15,23,42,0.95);border-radius:16px;box-shadow:0 20px 25px -5px rgba(0,0,0,0.5)">
+            <div style="font-size:40px;margin-bottom:12px">⚠️</div>
+            <h3 class="h3 mb14" style="color:var(--redl)">Diagnostic Test Summary</h3>
+            <p style="color:#e2e8f0;font-size:14.5px;line-height:1.6;margin-bottom:24px">
+              You got ${correctCount}/${total} correct. Review the explanations above before continuing.
+            </p>
+            <div style="display:flex;gap:12px;justify-content:center">
+              <button class="btn bsec" style="padding:12px 20px" onclick="advanceStage(4)">Review Again</button>
+              <button class="btn bpri" style="padding:12px 20px" onclick="advanceStage(7, true)">Continue Anyway</button>
+            </div>
+          </div>
+        `;
+      }
+      return;
+    }
+
+    if (window.D) {
+      if (!window.D.memory) window.D.memory = {};
+      if (!window.D.memory.weakSpots) window.D.memory.weakSpots = [];
+
+      for (let i = 0; i < total; i++) {
+        const att = LS.checkAttempts ? LS.checkAttempts[i] : null;
+        if (att && att.answered && !att.correct) {
+          const ch = checks[i] || {};
+          const conceptStr = ch.concept || (ch.q ? ch.q.substring(0, 40) : LS.topic);
+          window.D.memory.weakSpots.push({
+            topic: LS.topic,
+            concept: conceptStr,
+            solved: false,
+            addedAt: Date.now()
+          });
+        }
+      }
+    }
+  }
+
+  if (stageNum === 8) {
+    const l = LS.lesson;
+    const checks = l ? (l.checks || []) : [];
+    const total = checks.length || 5;
+    let correctCount = 0;
+    for (let i = 0; i < total; i++) {
+      const att = LS.checkAttempts ? LS.checkAttempts[i] : null;
+      if (att && att.correct) correctCount++;
+    }
+    const scorePct = total > 0 ? Math.round((correctCount / total) * 100) : 100;
+    if (scorePct === 100) {
+      if (typeof addXP === 'function') addXP(50, 'Perfect Score');
+    } else if (scorePct >= 60) {
+      if (typeof addXP === 'function') addXP(30, 'Topic Mastered');
+    } else {
+      if (typeof addXP === 'function') addXP(10, 'Topic Attempted');
+    }
+
+    if (typeof completeStageSession === 'function') {
+      completeStageSession();
+    }
+    return;
+  }
+
   LS.activeStage = stageNum;
   saveCheckpoint();
   renderLesson();
@@ -1448,9 +2317,9 @@ function completeStageSession() {
 
         <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">CHOOSE YOUR NEXT STEP</div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px">
-          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('comp')">1. 🎯 Practice More</button>
-          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('recovery')">2. 🛡️ Revise Weakspots</button>
-          <button class="btn bpri bsm font-poiret" onclick="clearInterval(window._compNavTimer);${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">3. 🚀 Next Topic →</button>
+          <button class="btn bpri bsm font-poiret" onclick="clearInterval(window._compNavTimer);${nextTopicName ? `go('learn','${escON(nextTopicName)}')` : `go('courses')`}">1. 🚀 Next Topic →</button>
+          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('comp')">2. 🎯 Practice More</button>
+          <button class="btn bsec bsm font-poiret" onclick="clearInterval(window._compNavTimer);go('tio')">3. 🔍 Revise / Deep Dive</button>
         </div>
       </div>
     `;
@@ -1531,27 +2400,13 @@ function saveReflections() {
   saveCheckpoint();
 }
 
-function readoutTioExplanation(text) {
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    if (window.speechSynthesis.speaking) {
-      window.speechSynthesis.cancel();
-      if (window.toast) window.toast('Stopped audio playback', 'sub');
-      return;
-    }
-    const cleanText = String(text || '').replace(/<[^>]*>/g, '').replace(/\\\(|\\\)|\\\[|\\\]/g, '');
-    const utter = new SpeechSynthesisUtterance(cleanText);
-    utter.rate = 1.0;
-    utter.pitch = 1.0;
-    window.speechSynthesis.speak(utter);
-    if (window.toast) window.toast('🔊 Reading Tio explanation...', 'ok2');
-  } else if (window.toast) {
-    window.toast('Audio speech synthesis not supported on this browser', 'sub');
-  }
-}
-
-window.readoutTioExplanation = readoutTioExplanation;
 window.saveCheckpoint = saveCheckpoint;
 window.rLearn = rLearn;
+window.doLesson = doLesson;
+window.fetchCachedLesson = fetchCachedLesson;
+window.saveLessonToCache = saveLessonToCache;
+window.fetchCachedQuestions = fetchCachedQuestions;
+window.saveQuestionsToCache = saveQuestionsToCache;
 window.advanceStage = advanceStage;
 window.submitStageCheck = submitStageCheck;
 window.submitConfidence = submitConfidence;

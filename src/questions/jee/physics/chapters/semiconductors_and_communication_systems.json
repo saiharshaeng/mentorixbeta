@@ -1,0 +1,175 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_SEMICONDUCTO_2026_S1_Q273",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SEMICONDUCTO_2026_S1_Q273_RAW",
+    "question": {
+      "latex": "![Logic Circuit]$https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20$2$.png?w=622&auto=format%2Ccompress&fmt=avif$\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $$Y$$ will be:\n$Note: The circuit is an OR gate where input B has an inverter/NOT bubble$.",
+      "unicode": "![Logic Circuit]https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%202.png?w=622&auto=format%2Ccompress&fmt=avif\nTwo 4 bits binary numbers, A = 1101 and B = 1010 are given in the inputs of a logic circuit shown in figure below. The output Y will be:\nNote: The circuit is an OR gate where input B has an inverter/NOT bubble.",
+      "plainText": "![Logic Circuit]https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%202.png?w=622&auto=format%2Ccompress&fmt=avif Two 4 bits binary numbers, A = 1101 and B = 1010 are given in the inputs of a logic circuit shown in figure below. The output Y will be: Note: The circuit is an OR gate where input B has an inverter/NOT bubble."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$Y = 1101$",
+        "unicode": "Y = 1101",
+        "plainText": "Y = 1101"
+      },
+      {
+        "id": "b",
+        "latex": "$Y = 0010$",
+        "unicode": "Y = 0010",
+        "plainText": "Y = 0010"
+      },
+      {
+        "id": "c",
+        "latex": "$Y = 0111$",
+        "unicode": "Y = 0111",
+        "plainText": "Y = 0111"
+      },
+      {
+        "id": "d",
+        "latex": "$Y = 1000$",
+        "unicode": "Y = 1000",
+        "plainText": "Y = 1000"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Based on the circuit schematic, the top input $A$ enters directly, and the bottom input $B$ goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is $Y = A \\lor \\bar{B}$.\nGiven inputs are:\n$A = 1101$\n$B = 1010 \\implies \\bar{B} = 0101$\nBitwise OR operation: $1101 \\lor 0101 = 1101$.\nThus, the output is $Y = 1101$.",
+      "unicode": "Based on the circuit schematic, the top input A enters directly, and the bottom input B goes through a NOT gate (denoted by a bubble) before entering the OR gate.\nThe logic equation is Y = A lor bar{B}.\nGiven inputs are:\nA = 1101\nB = 1010 implies bar{B} = 0101\nBitwise OR operation: 1101 lor 0101 = 1101.\nThus, the output is Y = 1101.",
+      "plainText": "Based on the circuit schematic, the top input A enters directly, and the bottom input B goes through a NOT gate (denoted by a bubble) before entering the OR gate. The logic equation is Y = A lor bar{B}. Given inputs are: A = 1101 B = 1010 implies bar{B} = 0101 Bitwise OR operation: 1101 lor 0101 = 1101. Thus, the output is Y = 1101."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Communication Systems",
+      "subchapter": "Semiconductors and Communication Systems Core Concepts",
+      "topic": "Semiconductors and Communication Systems Primary Topic",
+      "learningOutcome": "Master fundamental principles of Semiconductors and Communication Systems",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.540Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.540Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_SEMICONDUCTO_2026_S1_Q277",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SEMICONDUCTO_2026_S1_Q277_RAW",
+    "question": {
+      "latex": "![Diode Circuit]$https://cracku.in/media/uploads/image_f7pe4AR.png$\nConsider a circuit consisting of a capacitor $$20 \\text{ } \\mu\\text{F}$$, resistor $$100 \\text{ } \\Omega$$ and two identical diodes as shown in figure. $A parallel combination of an upward and downward pointing diode, all in series with the R and C$. The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "unicode": "![Diode Circuit]https://cracku.in/media/uploads/image_f7pe4AR.png\nConsider a circuit consisting of a capacitor 20 text{ } mutext{F}, resistor 100 text{ } Omega and two identical diodes as shown in figure. A parallel combination of an upward and downward pointing diode, all in series with the R and C. The resistance of diode under forward biasing condition is 10 text{ } Omega. The time constant of the circuit is α × 10^{-3} text{ s}. The value of α is _____",
+      "plainText": "![Diode Circuit]https://cracku.in/media/uploads/image_f7pe4AR.png Consider a circuit consisting of a capacitor 20 text{ } mutext{F}, resistor 100 text{ } Omega and two identical diodes as shown in figure. A parallel combination of an upward and downward pointing diode, all in series with the R and C. The resistance of diode under forward biasing condition is 10 text{ } Omega. The time constant of the circuit is alpha times 10^{-3} text{ s}. The value of alpha is _____"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2.2$",
+        "unicode": "2.2",
+        "plainText": "2.2"
+      },
+      {
+        "id": "b",
+        "latex": "$2.0$",
+        "unicode": "2.0",
+        "plainText": "2.0"
+      },
+      {
+        "id": "c",
+        "latex": "$2.1$",
+        "unicode": "2.1",
+        "plainText": "2.1"
+      },
+      {
+        "id": "d",
+        "latex": "$2.4$",
+        "unicode": "2.4",
+        "plainText": "2.4"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is $10 \\text{ } \\Omega$.\nThe total effective resistance of the circuit in series with the capacitor is $R_{eq} = R_{\\text{resistor}} + R_{\\text{diode}} = 100 \\text{ } \\Omega + 10 \\text{ } \\Omega = 110 \\text{ } \\Omega$.\nThe time constant $\\tau$ for an RC circuit is given by $\\tau = R_{eq} C$.\n$\\tau = 110 \\times (20 \\times 10^{-6}) = 2200 \\times 10^{-6} \\text{ s} = 2.2 \\times 10^{-3} \\text{ s}$.\nMatching this to $\\alpha \\times 10^{-3} \\text{ s}$, we obtain $\\alpha = 2.2$.",
+      "unicode": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit).\nThus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is 10 text{ } Omega.\nThe total effective resistance of the circuit in series with the capacitor is R_{eq} = R_{text{resistor}} + R_{text{diode}} = 100 text{ } Omega + 10 text{ } Omega = 110 text{ } Omega.\nThe time constant tau for an RC circuit is given by tau = R_{eq} C.\ntau = 110 × (20 × 10^{-6}) = 2200 × 10^{-6} text{ s} = 2.2 × 10^{-3} text{ s}.\nMatching this to α × 10^{-3} text{ s}, we obtain α = 2.2.",
+      "plainText": "The two diodes are in anti-parallel configuration. In either half-cycle of the AC source, exactly one diode is forward biased while the other is reverse biased (open circuit). Thus, the equivalent resistance of the diode pair at any time during conduction is purely the forward resistance of one diode, which is 10 text{ } Omega. The total effective resistance of the circuit in series with the capacitor is R_{eq} = R_{text{resistor}} + R_{text{diode}} = 100 text{ } Omega + 10 text{ } Omega = 110 text{ } Omega. The time constant tau for an RC circuit is given by tau = R_{eq} C. tau = 110 times (20 times 10^{-6}) = 2200 times 10^{-6} text{ s} = 2.2 times 10^{-3} text{ s}. Matching this to alpha times 10^{-3} text{ s}, we obtain alpha = 2.2."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Communication Systems",
+      "subchapter": "Semiconductors and Communication Systems Core Concepts",
+      "topic": "Semiconductors and Communication Systems Primary Topic",
+      "learningOutcome": "Master fundamental principles of Semiconductors and Communication Systems",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.540Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.540Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

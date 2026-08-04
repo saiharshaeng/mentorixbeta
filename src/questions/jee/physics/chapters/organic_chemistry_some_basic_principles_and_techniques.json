@@ -1,0 +1,90 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_ORGANICCHEMI_2026_S1_Q566",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_ORGANICCHEMI_2026_S1_Q566_RAW",
+    "question": {
+      "latex": "$2.0$ g of a bromo hydrocarbon $$X$$ was subjected to Carius analysis, gave $3.36$ g of $AgBr$. The percentage of carbon in the compound $$X$$ is $26.7\\%$. Total number of carbon atoms in the empirical formula for compound $$X$$ is \\_\\_\\_\\_\\_.\n$Given molar mass in g mol$^{-1}$ H: $1$, C: $12$, Br: $80$, Ag: $108$$",
+      "unicode": "2.0 g of a bromo hydrocarbon X was subjected to Carius analysis, gave 3.36 g of AgBr. The percentage of carbon in the compound X is 26.7%. Total number of carbon atoms in the empirical formula for compound X is _____.\nGiven molar mass in g mol^{-1} H: 1, C: 12, Br: 80, Ag: 108",
+      "plainText": "2.0 g of a bromo hydrocarbon X was subjected to Carius analysis, gave 3.36 g of AgBr. The percentage of carbon in the compound X is 26.7%. Total number of carbon atoms in the empirical formula for compound X is _____. Given molar mass in g mol^{-1} H: 1, C: 12, Br: 80, Ag: 108"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "b",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "c",
+        "latex": "$6$",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "d",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Molar mass of $AgBr = 108 + 80 = 188$ g/mol.\nMoles of $AgBr = \\frac{3.36}{188} \\approx 0.01787$ mol. Since one mole of AgBr has one mole of Br, there are $0.01787$ moles of Br atoms.\nMass of Br in the sample = $0.01787 \\times 80 = 1.4298$ g.\nPercentage of Br in compound $X = \\frac{1.4298}{2.0} \\times 100 \\approx 71.49\\%$.\nGiven Percentage of C = $26.7\\%$.\nAssuming it's a simple bromo hydrocarbon, Percentage of H = $100 - (71.49 + 26.7) = 1.81\\%$.\nRelative number of moles (dividing % by atomic masses):\nMoles of C = $26.7 / 12 = 2.225$\nMoles of H = $1.81 / 1 = 1.81$\nMoles of Br = $71.49 / 80 = 0.8936$\nSimplifying the ratio by dividing by the smallest value ($0.8936$):\nC: $2.225 / 0.8936 \\approx 2.49 \\approx 2.5$\nH: $1.81 / 0.8936 \\approx 2.02 \\approx 2$\nBr: $0.8936 / 0.8936 = 1$\nTo eliminate fractions, multiply entirely by 2: Ratio becomes C:$5$, H:$4$, Br:$2$.\nThe empirical formula is $C_5H_4Br_2$, carrying 5 Carbon atoms.",
+      "unicode": "Molar mass of AgBr = 108 + 80 = 188 g/mol.\nMoles of AgBr = (3.36/188) approx 0.01787 mol. Since one mole of AgBr has one mole of Br, there are 0.01787 moles of Br atoms.\nMass of Br in the sample = 0.01787 × 80 = 1.4298 g.\nPercentage of Br in compound X = (1.4298/2.0) × 100 approx 71.49%.\nGiven Percentage of C = 26.7%.\nAssuming it's a simple bromo hydrocarbon, Percentage of H = 100 - (71.49 + 26.7) = 1.81%.\nRelative number of moles (dividing % by atomic masses):\nMoles of C = 26.7 / 12 = 2.225\nMoles of H = 1.81 / 1 = 1.81\nMoles of Br = 71.49 / 80 = 0.8936\nSimplifying the ratio by dividing by the smallest value (0.8936):\nC: 2.225 / 0.8936 approx 2.49 approx 2.5\nH: 1.81 / 0.8936 approx 2.02 approx 2\nBr: 0.8936 / 0.8936 = 1\nTo eliminate fractions, multiply entirely by 2: Ratio becomes C:5, H:4, Br:2.\nThe empirical formula is C_5H_4Br_2, carrying 5 Carbon atoms.",
+      "plainText": "Molar mass of AgBr = 108 + 80 = 188 g/mol. Moles of AgBr = (3.36)/(188) approx 0.01787 mol. Since one mole of AgBr has one mole of Br, there are 0.01787 moles of Br atoms. Mass of Br in the sample = 0.01787 times 80 = 1.4298 g. Percentage of Br in compound X = (1.4298)/(2.0) times 100 approx 71.49%. Given Percentage of C = 26.7%. Assuming it's a simple bromo hydrocarbon, Percentage of H = 100 - (71.49 + 26.7) = 1.81%. Relative number of moles (dividing % by atomic masses): Moles of C = 26.7 / 12 = 2.225 Moles of H = 1.81 / 1 = 1.81 Moles of Br = 71.49 / 80 = 0.8936 Simplifying the ratio by dividing by the smallest value (0.8936): C: 2.225 / 0.8936 approx 2.49 approx 2.5 H: 1.81 / 0.8936 approx 2.02 approx 2 Br: 0.8936 / 0.8936 = 1 To eliminate fractions, multiply entirely by 2: Ratio becomes C:5, H:4, Br:2. The empirical formula is C_5H_4Br_2, carrying 5 Carbon atoms."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+      "subchapter": "Organic Chemistry - Some Basic Principles and Techniques Core Concepts",
+      "topic": "Organic Chemistry - Some Basic Principles and Techniques Primary Topic",
+      "learningOutcome": "Master fundamental principles of Organic Chemistry - Some Basic Principles and Techniques",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.557Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.557Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

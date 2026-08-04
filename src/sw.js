@@ -1,9 +1,9 @@
 /**
- * sw.js — Mentorix Service Worker v75
+ * sw.js — Mentorix Service Worker v80
  * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-v81';
+const CACHE_NAME = 'mentorix-shell-v80';
 
 const CORE_ASSETS = [
   './',
@@ -45,8 +45,8 @@ self.addEventListener('fetch', function(e) {
     return;
   }
 
-  // PYQ data files — Network-First with Cache / JS Fallback
-  if (url.includes('/data/pyq/') || url.includes('pyqService') || url.includes('master_index')) {
+  // PYQ data & structured QIE files — Network-First with Cache / JS Fallback
+  if (url.includes('/data/pyq/') || url.includes('/questions/jee/') || url.includes('pyqService') || url.includes('master_index')) {
     e.respondWith(
       fetch(e.request).catch(function() {
         return caches.match(e.request).then(function(cached) {

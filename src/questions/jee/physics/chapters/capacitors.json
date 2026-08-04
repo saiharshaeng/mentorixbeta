@@ -1,0 +1,90 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_CAPACITORS_2026_S1_Q147",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_CAPACITORS_2026_S1_Q147_RAW",
+    "question": {
+      "latex": "![Capacitor half-filled with dielectric]$https://www.sarthaks.com/?qa=blob&qa_blobid=12716304422748890071$\nA parallel plate air capacitor has a capacitance $C$. When it is half filled as show in figure with a dielectric constant $K = 5$, the percentage increase in the capacitance is _______.",
+      "unicode": "![Capacitor half-filled with dielectric]https://www.sarthaks.com/?qa=blob&qa_blobid=12716304422748890071\nA parallel plate air capacitor has a capacitance C. When it is half filled as show in figure with a dielectric constant K = 5, the percentage increase in the capacitance is _______.",
+      "plainText": "![Capacitor half-filled with dielectric]https://www.sarthaks.com/?qa=blob&qa_blobid=12716304422748890071 A parallel plate air capacitor has a capacitance C. When it is half filled as show in figure with a dielectric constant K = 5, the percentage increase in the capacitance is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "33.34",
+        "unicode": "33.34",
+        "plainText": "33.34"
+      },
+      {
+        "id": "b",
+        "latex": "66.67",
+        "unicode": "66.67",
+        "plainText": "66.67"
+      },
+      {
+        "id": "c",
+        "latex": "200",
+        "unicode": "200",
+        "plainText": "200"
+      },
+      {
+        "id": "d",
+        "latex": "400",
+        "unicode": "400",
+        "plainText": "400"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The initial capacitance of the air capacitor is $C = \\frac{\\epsilon_0 A}{d}$.\nWhen a dielectric of thickness $d/2$ is inserted, it behaves as two capacitors in series: one with dielectric $K$ and thickness $d/2$, and the other with air (dielectric 1) and thickness $d/2$.\nThe capacitance of the dielectric-filled part is $C_1 = \\frac{K\\epsilon_0 A}{d/2} = \\frac{2K\\epsilon_0 A}{d} = 2KC = 2(5)C = 10C$.\nThe capacitance of the air-filled part is $C_2 = \\frac{\\epsilon_0 A}{d/2} = \\frac{2\\epsilon_0 A}{d} = 2C$.\nThe equivalent capacitance $C_{new}$ is their series combination:\n$C_{new} = \\frac{C_1 C_2}{C_1 + C_2} = \\frac{10C \\times 2C}{10C + 2C} = \\frac{20C}{12} = \\frac{5}{3}C$.\nThe percentage increase in capacitance is:\n$\\%\text{ Increase} = \\frac{C_{new} - C}{C} \\times 100\\% = \\left(\\frac{5/3 C - C}{C}\\right) \\times 100\\% = \\frac{2}{3} \\times 100\\% \\approx 66.67\\%$.",
+      "unicode": "The initial capacitance of the air capacitor is C = (epsilon_0 A/d).\nWhen a dielectric of thickness d/2 is inserted, it behaves as two capacitors in series: one with dielectric K and thickness d/2, and the other with air (dielectric 1) and thickness d/2.\nThe capacitance of the dielectric-filled part is C_1 = (Kepsilon_0 A/d/2) = (2Kepsilon_0 A/d) = 2KC = 2(5)C = 10C.\nThe capacitance of the air-filled part is C_2 = (epsilon_0 A/d/2) = (2epsilon_0 A/d) = 2C.\nThe equivalent capacitance C_{new} is their series combination:\nC_{new} = (C_1 C_2/C_1 + C_2) = (10C × 2C/10C + 2C) = (20C/12) = (5/3)C.\nThe percentage increase in capacitance is:\n%\text{ Increase} = frac{C_{new} - C}{C} × 100% = left((5/3 C - C/C)right) × 100% = (2/3) × 100% approx 66.67%.",
+      "plainText": "The initial capacitance of the air capacitor is C = (epsilon_0 A)/(d). When a dielectric of thickness d/2 is inserted, it behaves as two capacitors in series: one with dielectric K and thickness d/2, and the other with air (dielectric 1) and thickness d/2. The capacitance of the dielectric-filled part is C_1 = (Kepsilon_0 A)/(d/2) = (2Kepsilon_0 A)/(d) = 2KC = 2(5)C = 10C. The capacitance of the air-filled part is C_2 = (epsilon_0 A)/(d/2) = (2epsilon_0 A)/(d) = 2C. The equivalent capacitance C_{new} is their series combination: C_{new} = (C_1 C_2)/(C_1 + C_2) = (10C times 2C)/(10C + 2C) = (20C)/(12) = (5)/(3)C. The percentage increase in capacitance is: % ext{ Increase} = frac{C_{new} - C}{C} times 100% = left((5/3 C - C)/(C)right) times 100% = (2)/(3) times 100% approx 66.67%."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Capacitors",
+      "subchapter": "Capacitors Core Concepts",
+      "topic": "Capacitors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Capacitors",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.531Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.531Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

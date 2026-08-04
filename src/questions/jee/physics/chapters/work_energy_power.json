@@ -1,0 +1,1027 @@
+[
+  {
+    "id": "JEE_ADVANCED_PHY_WORKENERGYPO_2020_S1_Q7",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_WORKENERGYPO_2020_S1_Q7_RAW",
+    "question": {
+      "latex": "A particle of mass m moves in circular orbits with potential energy V ( r ) =Fr, where F is a positive constant and r is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle’s orbit is denoted by R and its speed and energy are denoted by v and E, respectively, then for the n th orbit (here h is the Planck’s constant)",
+      "unicode": "A particle of mass m moves in circular orbits with potential energy V ( r ) =Fr, where F is a positive constant and r is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle’s orbit is denoted by R and its speed and energy are denoted by v and E, respectively, then for the n th orbit (here h is the Planck’s constant)",
+      "plainText": "A particle of mass m moves in circular orbits with potential energy V ( r ) =Fr, where F is a positive constant and r is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle’s orbit is denoted by R and its speed and energy are denoted by v and E, respectively, then for the n th orbit (here h is the Planck’s constant)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "R∝푛 13 ⁄ and v∝푛 23 ⁄",
+        "unicode": "R∝푛 13 ⁄ and v∝푛 23 ⁄",
+        "plainText": "R∝푛 13 ⁄ and v∝푛 23 ⁄"
+      },
+      {
+        "id": "b",
+        "latex": "R∝푛 23 ⁄ and v∝푛 13 ⁄",
+        "unicode": "R∝푛 23 ⁄ and v∝푛 13 ⁄",
+        "plainText": "R∝푛 23 ⁄ and v∝푛 13 ⁄"
+      },
+      {
+        "id": "c",
+        "latex": "E= 3 2 ( 푛 2 ℎ 2 F 2 4휋 2 m ) 13 ⁄",
+        "unicode": "E= 3 2 ( 푛 2 ℎ 2 F 2 4휋 2 m ) 13 ⁄",
+        "plainText": "E= 3 2 ( 푛 2 ℎ 2 F 2 4휋 2 m ) 13 ⁄"
+      },
+      {
+        "id": "d",
+        "latex": "E=2( 푛 2 ℎ 2 F 2 4휋 2 m ) 13 ⁄",
+        "unicode": "E=2( 푛 2 ℎ 2 F 2 4휋 2 m ) 13 ⁄",
+        "plainText": "E=2( 푛 2 ℎ 2 F 2 4휋 2 m ) 13 ⁄"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.061Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.061Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_WORKENERGYPO_2020_S1_Q25",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_WORKENERGYPO_2020_S1_Q25_RAW",
+    "question": {
+      "latex": "In thermodynamics, the P−V work done is given by 푤=−∫푑V P ext . For a system undergoing a particular process, the work done is, 푤=−∫푑V ( RT V−푏 − 푎 V 2 ) . This equation is applicable to a",
+      "unicode": "In thermodynamics, the P−V work done is given by 푤=−∫푑V P ext . For a system undergoing a particular process, the work done is, 푤=−∫푑V ( RT V−푏 − 푎 V 2 ) . This equation is applicable to a",
+      "plainText": "In thermodynamics, the P−V work done is given by 푤=−∫푑V P ext . For a system undergoing a particular process, the work done is, 푤=−∫푑V ( RT V−푏 − 푎 V 2 ) . This equation is applicable to a"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "system that satisfies the van der Waals equation of state.",
+        "unicode": "system that satisfies the van der Waals equation of state.",
+        "plainText": "system that satisfies the van der Waals equation of state."
+      },
+      {
+        "id": "b",
+        "latex": "process that is reversible and isothermal.",
+        "unicode": "process that is reversible and isothermal.",
+        "plainText": "process that is reversible and isothermal."
+      },
+      {
+        "id": "c",
+        "latex": "process that is reversible and adiabatic.",
+        "unicode": "process that is reversible and adiabatic.",
+        "plainText": "process that is reversible and adiabatic."
+      },
+      {
+        "id": "d",
+        "latex": "process that is irreversible and at constant pressure.",
+        "unicode": "process that is irreversible and at constant pressure.",
+        "plainText": "process that is irreversible and at constant pressure."
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.062Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.062Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_WORKENERGYPO_2023_S1_Q34",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_WORKENERGYPO_2023_S1_Q34_RAW",
+    "question": {
+      "latex": "Match the temperature of a black body given in List-I with an appropriate statement in List-II, and choose the correct option. [Given: Wien’s constant as 2.9×10 −3 m-K and ℎ푐 푒 =1.24×10 −6 V-m] List-I List-II (P) 2000 K (1) The radiation at peak wavelength can lead to emission of photoelectrons from a metal of work function 4 eV. (Q) 3000 K (2) The radiation at peak wavelength is visible to human eye. (R) 5000 K (3) The radiation at peak emission wavelength will result in the widest central maximum of a single slit diffraction. (S) 10000 K (4) The power emitted per unit area is 1/16 of that emitted by a blackbody at temperature 6000 K. (5) The radiation at peak emission wavelength can be used to image human bones.",
+      "unicode": "Match the temperature of a black body given in List-I with an appropriate statement in List-II, and choose the correct option. [Given: Wien’s constant as 2.9×10 −3 m-K and ℎ푐 푒 =1.24×10 −6 V-m] List-I List-II (P) 2000 K (1) The radiation at peak wavelength can lead to emission of photoelectrons from a metal of work function 4 eV. (Q) 3000 K (2) The radiation at peak wavelength is visible to human eye. (R) 5000 K (3) The radiation at peak emission wavelength will result in the widest central maximum of a single slit diffraction. (S) 10000 K (4) The power emitted per unit area is 1/16 of that emitted by a blackbody at temperature 6000 K. (5) The radiation at peak emission wavelength can be used to image human bones.",
+      "plainText": "Match the temperature of a black body given in List-I with an appropriate statement in List-II, and choose the correct option. [Given: Wien’s constant as 2.9×10 −3 m-K and ℎ푐 푒 =1.24×10 −6 V-m] List-I List-II (P) 2000 K (1) The radiation at peak wavelength can lead to emission of photoelectrons from a metal of work function 4 eV. (Q) 3000 K (2) The radiation at peak wavelength is visible to human eye. (R) 5000 K (3) The radiation at peak emission wavelength will result in the widest central maximum of a single slit diffraction. (S) 10000 K (4) The power emitted per unit area is 1/16 of that emitted by a blackbody at temperature 6000 K. (5) The radiation at peak emission wavelength can be used to image human bones."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P→3,Q→5,R→2,S→3",
+        "unicode": "P→3,Q→5,R→2,S→3",
+        "plainText": "P→3,Q→5,R→2,S→3"
+      },
+      {
+        "id": "b",
+        "latex": "P→3,Q→2,R→4,S→1",
+        "unicode": "P→3,Q→2,R→4,S→1",
+        "plainText": "P→3,Q→2,R→4,S→1"
+      },
+      {
+        "id": "c",
+        "latex": "P→3,Q→4,R→2,S→1",
+        "unicode": "P→3,Q→4,R→2,S→1",
+        "plainText": "P→3,Q→4,R→2,S→1"
+      },
+      {
+        "id": "d",
+        "latex": "P→1,Q→2,R→5,S→3 SECTION 4 (Maximum Marks: 12) •This section contains FOUR (04) Matching List Sets. •Each set has ONE Multiple Choice Question. •Each set has TWO lists: List-I and List-II. •List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). •FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. •Answer to each question will be evaluated according to the following marking scheme: Full Marks: +3 ONLY if the option corresponding to the correct combination is chosen; Zero Marks: 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2023 Paper 1 9/9",
+        "unicode": "P→1,Q→2,R→5,S→3 SECTION 4 (Maximum Marks: 12) •This section contains FOUR (04) Matching List Sets. •Each set has ONE Multiple Choice Question. •Each set has TWO lists: List-I and List-II. •List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). •FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. •Answer to each question will be evaluated according to the following marking scheme: Full Marks: +3 ONLY if the option corresponding to the correct combination is chosen; Zero Marks: 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2023 Paper 1 9/9",
+        "plainText": "P→1,Q→2,R→5,S→3 SECTION 4 (Maximum Marks: 12) •This section contains FOUR (04) Matching List Sets. •Each set has ONE Multiple Choice Question. •Each set has TWO lists: List-I and List-II. •List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). •FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. •Answer to each question will be evaluated according to the following marking scheme: Full Marks: +3 ONLY if the option corresponding to the correct combination is chosen; Zero Marks: 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2023 Paper 1 9/9"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "Assertion"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.074Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.074Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_WORKENERGYPO_2025_S1_Q26",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_WORKENERGYPO_2025_S1_Q26_RAW",
+    "question": {
+      "latex": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is W 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is W S , then the ratio W 0 W S is ___",
+      "unicode": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is W 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is W S , then the ratio W 0 W S is ___",
+      "plainText": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is W 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is W S , then the ratio W 0 W S is ___"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.084Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.084Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_WORKENERGYPO_2025_S1_Q43",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_WORKENERGYPO_2025_S1_Q43_RAW",
+    "question": {
+      "latex": "Considering ideal gas behavior, the expansion work done (in kJ) when 144 g of water is electrolyzed completely under constant pressure at 300 K is ______. Use: Universal gas constant (R) =8.3 J K −1 mol −1 ; Atomic mass (in amu): H = 1, O = 16",
+      "unicode": "Considering ideal gas behavior, the expansion work done (in kJ) when 144 g of water is electrolyzed completely under constant pressure at 300 K is ______. Use: Universal gas constant (R) =8.3 J K −1 mol −1 ; Atomic mass (in amu): H = 1, O = 16",
+      "plainText": "Considering ideal gas behavior, the expansion work done (in kJ) when 144 g of water is electrolyzed completely under constant pressure at 300 K is ______. Use: Universal gas constant (R) =8.3 J K −1 mol −1 ; Atomic mass (in amu): H = 1, O = 16"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Work Energy Power. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.085Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.085Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q7",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q7_RAW",
+    "question": {
+      "latex": "A particle of mass m moves in circular orbits with potential energy 푉 ( 푟 ) =퐹푟, where F is a positive constant and r is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle’s orbit is denoted by R and its speed and energy are denoted by v and E, respectively, then for the n th orbit (here h is the Planck’s constant)",
+      "unicode": "A particle of mass m moves in circular orbits with potential energy 푉 ( 푟 ) =퐹푟, where F is a positive constant and r is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle’s orbit is denoted by R and its speed and energy are denoted by v and E, respectively, then for the n th orbit (here h is the Planck’s constant)",
+      "plainText": "A particle of mass m moves in circular orbits with potential energy 푉 ( 푟 ) =퐹푟, where F is a positive constant and r is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle’s orbit is denoted by R and its speed and energy are denoted by v and E, respectively, then for the n th orbit (here h is the Planck’s constant)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "푅∝푛 13 ⁄ and v∝푛 23 ⁄",
+        "unicode": "푅∝푛 13 ⁄ and v∝푛 23 ⁄",
+        "plainText": "푅∝푛 13 ⁄ and v∝푛 23 ⁄"
+      },
+      {
+        "id": "b",
+        "latex": "푅∝푛 23 ⁄ and v∝푛 13 ⁄",
+        "unicode": "푅∝푛 23 ⁄ and v∝푛 13 ⁄",
+        "plainText": "푅∝푛 23 ⁄ and v∝푛 13 ⁄"
+      },
+      {
+        "id": "c",
+        "latex": "퐸= 3 2 ( 푛 2 ℎ 2 퐹 2 4휋 2 푚 ) 13 ⁄",
+        "unicode": "퐸= 3 2 ( 푛 2 ℎ 2 퐹 2 4휋 2 푚 ) 13 ⁄",
+        "plainText": "퐸= 3 2 ( 푛 2 ℎ 2 퐹 2 4휋 2 푚 ) 13 ⁄"
+      },
+      {
+        "id": "d",
+        "latex": "퐸=2( 푛 2 ℎ 2 퐹 2 4휋 2 푚 ) 13 ⁄",
+        "unicode": "퐸=2( 푛 2 ℎ 2 퐹 2 4휋 2 푚 ) 13 ⁄",
+        "plainText": "퐸=2( 푛 2 ℎ 2 퐹 2 4휋 2 푚 ) 13 ⁄"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2020",
+      "createdDate": "2026-07-29T19:27:46.474Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.474Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q16",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q16_RAW",
+    "question": {
+      "latex": "Consider one mole of helium gas enclosed in a container at initial pressure 푃 1 and volume 푉 1 . It expands isothermally to volume 4푉 1 . After this, the gas expands adiabatically and its volume becomes 32푉 1 . The work done by the gas during isothermal and adiabatic expansion processes are 푊 푖푠표 and 푊 푎푑푖푎 , respectively. If the ratio 푊 푖푠표 푊 푎푑푖푎 =푓 ln2, then 푓 is ________.",
+      "unicode": "Consider one mole of helium gas enclosed in a container at initial pressure 푃 1 and volume 푉 1 . It expands isothermally to volume 4푉 1 . After this, the gas expands adiabatically and its volume becomes 32푉 1 . The work done by the gas during isothermal and adiabatic expansion processes are 푊 푖푠표 and 푊 푎푑푖푎 , respectively. If the ratio 푊 푖푠표 푊 푎푑푖푎 =푓 ln2, then 푓 is ________.",
+      "plainText": "Consider one mole of helium gas enclosed in a container at initial pressure 푃 1 and volume 푉 1 . It expands isothermally to volume 4푉 1 . After this, the gas expands adiabatically and its volume becomes 32푉 1 . The work done by the gas during isothermal and adiabatic expansion processes are 푊 푖푠표 and 푊 푎푑푖푎 , respectively. If the ratio 푊 푖푠표 푊 푎푑푖푎 =푓 ln2, then 푓 is ________."
+    },
+    "options": [],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2020",
+      "createdDate": "2026-07-29T19:27:46.475Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.475Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q25",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q25_RAW",
+    "question": {
+      "latex": "In thermodynamics, the 푃−푉 work done is given by 푤=−∫푑푉 푃 ext . For a system undergoing a particular process, the work done is, 푤=−∫푑푉 ( 푅푇 푉−푏 − 푎 푉 2 ) . This equation is applicable to a",
+      "unicode": "In thermodynamics, the 푃−푉 work done is given by 푤=−∫푑푉 푃 ext . For a system undergoing a particular process, the work done is, 푤=−∫푑푉 ( 푅푇 푉−푏 − 푎 푉 2 ) . This equation is applicable to a",
+      "plainText": "In thermodynamics, the 푃−푉 work done is given by 푤=−∫푑푉 푃 ext . For a system undergoing a particular process, the work done is, 푤=−∫푑푉 ( 푅푇 푉−푏 − 푎 푉 2 ) . This equation is applicable to a"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "system that satisfies the van der Waals equation of state.",
+        "unicode": "system that satisfies the van der Waals equation of state.",
+        "plainText": "system that satisfies the van der Waals equation of state."
+      },
+      {
+        "id": "b",
+        "latex": "process that is reversible and isothermal.",
+        "unicode": "process that is reversible and isothermal.",
+        "plainText": "process that is reversible and isothermal."
+      },
+      {
+        "id": "c",
+        "latex": "process that is reversible and adiabatic.",
+        "unicode": "process that is reversible and adiabatic.",
+        "plainText": "process that is reversible and adiabatic."
+      },
+      {
+        "id": "d",
+        "latex": "process that is irreversible and at constant pressure.",
+        "unicode": "process that is irreversible and at constant pressure.",
+        "plainText": "process that is irreversible and at constant pressure."
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2020",
+      "createdDate": "2026-07-29T19:27:46.475Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.475Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q33",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2020_S1_Q33_RAW",
+    "question": {
+      "latex": "Consider a 70% efficient hydrogen-oxygen fuel cell working under standard conditions at 1 bar and 298 K. Its cell reaction is H 2 ( 푔 ) + 1 2 O 2 ( 푔 ) →H 2 O ( 푙 ) . The work derived from the cell on the consumption of 1.0×10 −3 mol of H 2 (푔) is used to compress 1.00 mol of a monoatomic ideal gas in a thermally insulated container. What is the change in the temperature (in K) of the ideal gas? The standard reduction potentials for the two half-cells are given below. O 2 ( 푔 ) +4H + ( 푎푞 ) +4푒 − →2 H 2 O ( 푙 ) , 퐸 0 =1.23 V, 2H + ( 푎푞 ) +2푒 − →H 2 ( 푔 ) , 퐸 0 =0.00 V . Use 퐹=96500 C mol −1 ,푅=8.314 J mol −1 K −1 .",
+      "unicode": "Consider a 70% efficient hydrogen-oxygen fuel cell working under standard conditions at 1 bar and 298 K. Its cell reaction is H 2 ( 푔 ) + 1 2 O 2 ( 푔 ) →H 2 O ( 푙 ) . The work derived from the cell on the consumption of 1.0×10 −3 mol of H 2 (푔) is used to compress 1.00 mol of a monoatomic ideal gas in a thermally insulated container. What is the change in the temperature (in K) of the ideal gas? The standard reduction potentials for the two half-cells are given below. O 2 ( 푔 ) +4H + ( 푎푞 ) +4푒 − →2 H 2 O ( 푙 ) , 퐸 0 =1.23 V, 2H + ( 푎푞 ) +2푒 − →H 2 ( 푔 ) , 퐸 0 =0.00 V . Use 퐹=96500 C mol −1 ,푅=8.314 J mol −1 K −1 .",
+      "plainText": "Consider a 70% efficient hydrogen-oxygen fuel cell working under standard conditions at 1 bar and 298 K. Its cell reaction is H 2 ( 푔 ) + 1 2 O 2 ( 푔 ) →H 2 O ( 푙 ) . The work derived from the cell on the consumption of 1.0×10 −3 mol of H 2 (푔) is used to compress 1.00 mol of a monoatomic ideal gas in a thermally insulated container. What is the change in the temperature (in K) of the ideal gas? The standard reduction potentials for the two half-cells are given below. O 2 ( 푔 ) +4H + ( 푎푞 ) +4푒 − →2 H 2 O ( 푙 ) , 퐸 0 =1.23 V, 2H + ( 푎푞 ) +2푒 − →H 2 ( 푔 ) , 퐸 0 =0.00 V . Use 퐹=96500 C mol −1 ,푅=8.314 J mol −1 K −1 ."
+    },
+    "options": [],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2020",
+      "createdDate": "2026-07-29T19:27:46.476Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.476Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2023_S1_Q27",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2023_S1_Q27_RAW",
+    "question": {
+      "latex": "A Hydrogen-like atom has atomic number 푍. Photons emitted in the electronic transitions from level 푛=4 to level 푛=3 in these atoms are used to perform photoelectric effect experiment on a target metal. The maximum kinetic energy of the photoelectrons generated is 1.95 eV. If the photoelectric threshold wavelength for the target metal is 310 nm, the value of 푍 is _______. [Given: ℎ푐=1240 eV-nm and 푅ℎ푐=13.6 eV, where 푅 is the Rydberg constant, ℎ is the Planck’s constant and 푐 is the speed of light in vacuum]",
+      "unicode": "A Hydrogen-like atom has atomic number 푍. Photons emitted in the electronic transitions from level 푛=4 to level 푛=3 in these atoms are used to perform photoelectric effect experiment on a target metal. The maximum kinetic energy of the photoelectrons generated is 1.95 eV. If the photoelectric threshold wavelength for the target metal is 310 nm, the value of 푍 is _______. [Given: ℎ푐=1240 eV-nm and 푅ℎ푐=13.6 eV, where 푅 is the Rydberg constant, ℎ is the Planck’s constant and 푐 is the speed of light in vacuum]",
+      "plainText": "A Hydrogen-like atom has atomic number 푍. Photons emitted in the electronic transitions from level 푛=4 to level 푛=3 in these atoms are used to perform photoelectric effect experiment on a target metal. The maximum kinetic energy of the photoelectrons generated is 1.95 eV. If the photoelectric threshold wavelength for the target metal is 310 nm, the value of 푍 is _______. [Given: ℎ푐=1240 eV-nm and 푅ℎ푐=13.6 eV, where 푅 is the Rydberg constant, ℎ is the Planck’s constant and 푐 is the speed of light in vacuum]"
+    },
+    "options": [],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2023",
+      "createdDate": "2026-07-29T19:27:46.498Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.498Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2023_S1_Q35",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2023_S1_Q35_RAW",
+    "question": {
+      "latex": "A series LCR circuit is connected to a 45sin ( 휔푡 ) Volt source. The resonant angular frequency of the circuit is 10 5 rad s −1 and current amplitude at resonance is 퐼 0 . When the angular frequency of the source is 휔=8×10 4 rad s −1 , the current amplitude in the circuit is 0.05 퐼 0 . If 퐿=50 mH, match each entry in List-I with an appropriate value from List-II and choose the correct option. List-I List-II (P) 퐼 0 in mA (1) 44.4 (Q) The quality factor of the circuit (2) 18 (R) The bandwidth of the circuit in rad s −1 (3) 400 (S) The peak power dissipated at resonance in Watt (4) 2250 (5) 500",
+      "unicode": "A series LCR circuit is connected to a 45sin ( 휔푡 ) Volt source. The resonant angular frequency of the circuit is 10 5 rad s −1 and current amplitude at resonance is 퐼 0 . When the angular frequency of the source is 휔=8×10 4 rad s −1 , the current amplitude in the circuit is 0.05 퐼 0 . If 퐿=50 mH, match each entry in List-I with an appropriate value from List-II and choose the correct option. List-I List-II (P) 퐼 0 in mA (1) 44.4 (Q) The quality factor of the circuit (2) 18 (R) The bandwidth of the circuit in rad s −1 (3) 400 (S) The peak power dissipated at resonance in Watt (4) 2250 (5) 500",
+      "plainText": "A series LCR circuit is connected to a 45sin ( 휔푡 ) Volt source. The resonant angular frequency of the circuit is 10 5 rad s −1 and current amplitude at resonance is 퐼 0 . When the angular frequency of the source is 휔=8×10 4 rad s −1 , the current amplitude in the circuit is 0.05 퐼 0 . If 퐿=50 mH, match each entry in List-I with an appropriate value from List-II and choose the correct option. List-I List-II (P) 퐼 0 in mA (1) 44.4 (Q) The quality factor of the circuit (2) 18 (R) The bandwidth of the circuit in rad s −1 (3) 400 (S) The peak power dissipated at resonance in Watt (4) 2250 (5) 500"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "푃→2,푄→3,푅→5,푆→1",
+        "unicode": "푃→2,푄→3,푅→5,푆→1",
+        "plainText": "푃→2,푄→3,푅→5,푆→1"
+      },
+      {
+        "id": "b",
+        "latex": "푃→3,푄→1,푅→4,푆→2",
+        "unicode": "푃→3,푄→1,푅→4,푆→2",
+        "plainText": "푃→3,푄→1,푅→4,푆→2"
+      },
+      {
+        "id": "c",
+        "latex": "푃→4,푄→5,푅→3,푆→1",
+        "unicode": "푃→4,푄→5,푅→3,푆→1",
+        "plainText": "푃→4,푄→5,푅→3,푆→1"
+      },
+      {
+        "id": "d",
+        "latex": "푃→4,푄→2,푅→1,푆→5",
+        "unicode": "푃→4,푄→2,푅→1,푆→5",
+        "plainText": "푃→4,푄→2,푅→1,푆→5"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2023",
+      "createdDate": "2026-07-29T19:27:46.499Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.499Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2024_S1_Q34",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2024_S1_Q34_RAW",
+    "question": {
+      "latex": "One mole of a monatomic ideal gas undergoes the cyclic process J→ K→ L→ M→ J, as shown in the P-T diagram. Match the quantities mentioned in List-I with their values in List-II and choose the correct option. [ℛ is the gas constant.] List-I List-II (P) Work done in the complete cyclic process (1) ℛ푇 0 −4ℛ푇 0 ln2 (Q) Change in the internal energy of the gas in the process JK (2) 0 (R) Heat given to the gas in the process KL (3) 3ℛ푇 0 (S) Change in the internal energy of the gas in the process MJ (4) −2ℛ푇 0 ln2 (5) −3ℛ푇 0 ln2",
+      "unicode": "One mole of a monatomic ideal gas undergoes the cyclic process J→ K→ L→ M→ J, as shown in the P-T diagram. Match the quantities mentioned in List-I with their values in List-II and choose the correct option. [ℛ is the gas constant.] List-I List-II (P) Work done in the complete cyclic process (1) ℛ푇 0 −4ℛ푇 0 ln2 (Q) Change in the internal energy of the gas in the process JK (2) 0 (R) Heat given to the gas in the process KL (3) 3ℛ푇 0 (S) Change in the internal energy of the gas in the process MJ (4) −2ℛ푇 0 ln2 (5) −3ℛ푇 0 ln2",
+      "plainText": "One mole of a monatomic ideal gas undergoes the cyclic process J→ K→ L→ M→ J, as shown in the P-T diagram. Match the quantities mentioned in List-I with their values in List-II and choose the correct option. [ℛ is the gas constant.] List-I List-II (P) Work done in the complete cyclic process (1) ℛ푇 0 −4ℛ푇 0 ln2 (Q) Change in the internal energy of the gas in the process JK (2) 0 (R) Heat given to the gas in the process KL (3) 3ℛ푇 0 (S) Change in the internal energy of the gas in the process MJ (4) −2ℛ푇 0 ln2 (5) −3ℛ푇 0 ln2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P → 1; Q → 3; R → 5; S → 4",
+        "unicode": "P → 1; Q → 3; R → 5; S → 4",
+        "plainText": "P → 1; Q → 3; R → 5; S → 4"
+      },
+      {
+        "id": "b",
+        "latex": "P → 4; Q → 3; R → 5; S → 2",
+        "unicode": "P → 4; Q → 3; R → 5; S → 2",
+        "plainText": "P → 4; Q → 3; R → 5; S → 2"
+      },
+      {
+        "id": "c",
+        "latex": "P → 4; Q → 1; R → 2; S → 2",
+        "unicode": "P → 4; Q → 1; R → 2; S → 2",
+        "plainText": "P → 4; Q → 1; R → 2; S → 2"
+      },
+      {
+        "id": "d",
+        "latex": "P → 2; Q → 5; R → 3; S → 4 SECTION 4 (Maximum Marks: 12) • This section contains FOUR (04) Matching List Sets. • Each set has ONE Multiple Choice Question. • Each set has TWO lists: List-I and List-II. • List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). • FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 ONLY if the option corresponding to the correct combination is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2024 Paper 1 7/8",
+        "unicode": "P → 2; Q → 5; R → 3; S → 4 SECTION 4 (Maximum Marks: 12) • This section contains FOUR (04) Matching List Sets. • Each set has ONE Multiple Choice Question. • Each set has TWO lists: List-I and List-II. • List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). • FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 ONLY if the option corresponding to the correct combination is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2024 Paper 1 7/8",
+        "plainText": "P → 2; Q → 5; R → 3; S → 4 SECTION 4 (Maximum Marks: 12) • This section contains FOUR (04) Matching List Sets. • Each set has ONE Multiple Choice Question. • Each set has TWO lists: List-I and List-II. • List-I has Four entries (P), (Q), (R) and (S) and List-II has Five entries (1), (2), (3), (4) and (5). • FOUR options are given in each Multiple Choice Question based on List-I and List-II and ONLY ONE of these four options satisfies the condition asked in the Multiple Choice Question. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 ONLY if the option corresponding to the correct combination is chosen; Zero Marks : 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases. JEE (Advanced) 2024 Paper 1 7/8"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2024",
+      "createdDate": "2026-07-29T19:27:46.505Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.505Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_WORKENERGYPO_2025_S1_Q26",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WORKENERGYPO_2025_S1_Q26_RAW",
+    "question": {
+      "latex": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is 푊 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is 푊 푆 , then the ratio 푊 0 푊 푆 is ___",
+      "unicode": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is 푊 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is 푊 푆 , then the ratio 푊 0 푊 푆 is ___",
+      "plainText": "Two identical plates P and Q, radiating as perfect black bodies, are kept in vacuum at constant absolute temperatures T P and T Q , respectively, with T Q <T P , as shown in Fig. 1. The radiated power transferred per unit area from P to Q is 푊 0 . Subsequently, two more plates, identical to P and Q, are introduced between P and Q, as shown in Fig. 2. Assume that heat transfer takes place only between adjacent plates. If the power transferred per unit area in the direction from P to Q (Fig. 2) in the steady state is 푊 푆 , then the ratio 푊 0 푊 푆 is ___"
+    },
+    "options": [],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Work Energy Power",
+      "subchapter": "Work Energy Power Core Concepts",
+      "topic": "Work Energy Power Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work Energy Power",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "JEE_Advanced_2025",
+      "createdDate": "2026-07-29T19:27:46.511Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.511Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

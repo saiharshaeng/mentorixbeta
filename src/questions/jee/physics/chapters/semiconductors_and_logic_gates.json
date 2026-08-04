@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_SEMICONDUCTO_2026_S1_Q205",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SEMICONDUCTO_2026_S1_Q205_RAW",
+    "question": {
+      "latex": "![Logic Circuit Diagram]$https://cracku.in/media/uploads/image_6Neclly.png$\nIf $X$ and $Y$ are the inputs to the circuit shown in the diagram $where inputs $X$ and $Y$ each pass through a NOT gate, and their outputs are then fed into an AND gate$, the given circuit works as _______.",
+      "unicode": "![Logic Circuit Diagram]https://cracku.in/media/uploads/image_6Neclly.png\nIf X and Y are the inputs to the circuit shown in the diagram where inputs X and Y each pass through a NOT gate, and their outputs are then fed into an AND gate, the given circuit works as _______.",
+      "plainText": "![Logic Circuit Diagram]https://cracku.in/media/uploads/image_6Neclly.png If X and Y are the inputs to the circuit shown in the diagram where inputs X and Y each pass through a NOT gate, and their outputs are then fed into an AND gate, the given circuit works as _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "OR gate",
+        "unicode": "OR gate",
+        "plainText": "OR gate"
+      },
+      {
+        "id": "b",
+        "latex": "AND gate",
+        "unicode": "AND gate",
+        "plainText": "AND gate"
+      },
+      {
+        "id": "c",
+        "latex": "NAND gate",
+        "unicode": "NAND gate",
+        "plainText": "NAND gate"
+      },
+      {
+        "id": "d",
+        "latex": "NOR gate",
+        "unicode": "NOR gate",
+        "plainText": "NOR gate"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "From the boolean logic expression derived from the circuit configuration: the inputs $X$ and $Y$ are first inverted to $\\overline{X}$ and $\\overline{Y}$.\nThese signals are then passed through an AND gate. The output is $Z = \\overline{X} \\cdot \\overline{Y}$.\nBy De Morgan's laws, $\\overline{X} \\cdot \\overline{Y} = \\overline{X + Y}$.\nThis is exactly the logical expression for a NOR gate.",
+      "unicode": "From the boolean logic expression derived from the circuit configuration: the inputs X and Y are first inverted to overline{X} and overline{Y}.\nThese signals are then passed through an AND gate. The output is Z = overline{X} · overline{Y}.\nBy De Morgan's laws, overline{X} · overline{Y} = overline{X + Y}.\nThis is exactly the logical expression for a NOR gate.",
+      "plainText": "From the boolean logic expression derived from the circuit configuration: the inputs X and Y are first inverted to overline{X} and overline{Y}. These signals are then passed through an AND gate. The output is Z = overline{X} cdot overline{Y}. By De Morgan's laws, overline{X} cdot overline{Y} = overline{X + Y}. This is exactly the logical expression for a NOR gate."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Semiconductors and Logic Gates",
+      "subchapter": "Semiconductors and Logic Gates Core Concepts",
+      "topic": "Semiconductors and Logic Gates Primary Topic",
+      "learningOutcome": "Master fundamental principles of Semiconductors and Logic Gates",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

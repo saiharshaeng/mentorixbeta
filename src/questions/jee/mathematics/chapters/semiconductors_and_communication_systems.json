@@ -1,0 +1,175 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_SEMICONDUCTO_2026_S_Q338",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_SEMICONDUCTO_2026_S_Q338_RAW",
+    "question": {
+      "latex": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, $A = 1101$ and $B = 1010$ are given in the inputs of a logic circuit shown in figure below. The output $(Y)$ will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "unicode": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif)\nTwo 4 bits binary numbers, A = 1101 and B = 1010 are given in the inputs of a logic circuit shown in figure below. The output (Y) will be:\n(Note: The circuit is an OR gate where input B has an inverter/NOT bubble).",
+      "plainText": "![Logic Circuit](https://media.prothomalo.com/prothomalo-bangla%2F2024-06%2Fce1509fc-78f5-4418-9e69-ac9205df9873%2F1%20(2).png?w=622&auto=format%2Ccompress&fmt=avif) Two 4 bits binary numbers, A = 1101 and B = 1010 are given in the inputs of a logic circuit shown in figure below. The output (Y) will be: (Note: The circuit is an OR gate where input B has an inverter/NOT bubble)."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$Y = 1101$",
+        "unicode": "Y = 1101",
+        "plainText": "Y = 1101"
+      },
+      {
+        "id": "b",
+        "latex": "$Y = 0010$",
+        "unicode": "Y = 0010",
+        "plainText": "Y = 0010"
+      },
+      {
+        "id": "c",
+        "latex": "$Y = 0111$",
+        "unicode": "Y = 0111",
+        "plainText": "Y = 0111"
+      },
+      {
+        "id": "d",
+        "latex": "$Y = 1000$",
+        "unicode": "Y = 1000",
+        "plainText": "Y = 1000"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Semiconductors and Communication Systems",
+      "subchapter": "Semiconductors and Communication Systems Core Concepts",
+      "topic": "Semiconductors and Communication Systems Primary Topic",
+      "learningOutcome": "Master fundamental principles of Semiconductors and Communication Systems",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_SEMICONDUCTO_2026_S_Q342",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_SEMICONDUCTO_2026_S_Q342_RAW",
+    "question": {
+      "latex": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor ($20 \\text{ } \\mu\\text{F}$), resistor ($100 \\text{ } \\Omega$) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is $10 \\text{ } \\Omega$. The time constant of the circuit is $\\alpha \\times 10^{-3} \\text{ s}$. The value of $\\alpha$ is _____",
+      "unicode": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png)\nConsider a circuit consisting of a capacitor (20 text{ } mutext{F}), resistor (100 text{ } Omega) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is 10 text{ } Omega. The time constant of the circuit is α × 10^{-3} text{ s}. The value of α is _____",
+      "plainText": "![Diode Circuit](https://cracku.in/media/uploads/image_f7pe4AR.png) Consider a circuit consisting of a capacitor (20 text{ } mutext{F}), resistor (100 text{ } Omega) and two identical diodes as shown in figure. (A parallel combination of an upward and downward pointing diode, all in series with the R and C). The resistance of diode under forward biasing condition is 10 text{ } Omega. The time constant of the circuit is alpha times 10^{-3} text{ s}. The value of alpha is _____"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2.2$",
+        "unicode": "2.2",
+        "plainText": "2.2"
+      },
+      {
+        "id": "b",
+        "latex": "$2.0$",
+        "unicode": "2.0",
+        "plainText": "2.0"
+      },
+      {
+        "id": "c",
+        "latex": "$2.1$",
+        "unicode": "2.1",
+        "plainText": "2.1"
+      },
+      {
+        "id": "d",
+        "latex": "$2.4$",
+        "unicode": "2.4",
+        "plainText": "2.4"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Semiconductors and Communication Systems",
+      "subchapter": "Semiconductors and Communication Systems Core Concepts",
+      "topic": "Semiconductors and Communication Systems Primary Topic",
+      "learningOutcome": "Master fundamental principles of Semiconductors and Communication Systems",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

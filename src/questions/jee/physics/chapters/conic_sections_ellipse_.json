@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_CONICSECTION_2026_S1_Q541",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_CONICSECTION_2026_S1_Q541_RAW",
+    "question": {
+      "latex": "Let $A$ be the point $$3, 0$$ and circles with variable diameter $AB$ touch the circle $x^2 + y^2 = 36$ internally. Let the curve $C$ be the locus of the point $B$. If the eccentricity of $C$ is $e$, then $72e^2$ is equal to:",
+      "unicode": "Let A be the point 3, 0 and circles with variable diameter AB touch the circle x² + y² = 36 internally. Let the curve C be the locus of the point B. If the eccentricity of C is e, then 72e² is equal to:",
+      "plainText": "Let A be the point 3, 0 and circles with variable diameter AB touch the circle x^2 + y^2 = 36 internally. Let the curve C be the locus of the point B. If the eccentricity of C is e, then 72e^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "b",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "c",
+        "latex": "$18$",
+        "unicode": "18",
+        "plainText": "18"
+      },
+      {
+        "id": "d",
+        "latex": "$36$",
+        "unicode": "36",
+        "plainText": "36"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let the center of the variable circle with diameter $AB$ be $M$. Its radius is $r = AB/2$.\nThe circle touches $x^2 + y^2 = 6^2$ internally, meaning the distance between its center $M$ and the origin $O(0,0)$ equals $6 - r$.\n$OM = 6 - AB/2 \\implies OM + AB/2 = 6$.\nSince $M$ is the midpoint of $AB$, $OM$ is the median of triangle $OAB$. However, expressing everything in terms of $B(h,k)$:\n$M = \\left( \\frac{h+3}{2}, \\frac{k}{2} \\right)$, $r = \\frac{\\sqrt{(h-3)^2 + k^2}}{2}$.\n$OM = \\sqrt{ \\left(\\frac{h+3}{2}\\right)^2 + \\left(\\frac{k}{2}\\right)^2 }$.\n$2 OM + 2 r = 12 \\implies \\sqrt{(h+3)^2 + k^2} + \\sqrt{(h-3)^2 + k^2} = 12$.\nThis is the definition of an ellipse with foci at $(\\pm 3, 0)$ and $2a = 12 \\implies a = 6$.\nThe distance between foci is $2ae = 6 \\implies 12e = 6 \\implies e = 1/2$.\n$72e^2 = 72(1/4) = 18$.",
+      "unicode": "Let the center of the variable circle with diameter AB be M. Its radius is r = AB/2.\nThe circle touches x² + y² = 6² internally, meaning the distance between its center M and the origin O(0,0) equals 6 - r.\nOM = 6 - AB/2 implies OM + AB/2 = 6.\nSince M is the midpoint of AB, OM is the median of triangle OAB. However, expressing everything in terms of B(h,k):\nM = left( (h+3/2), (k/2) right), r = frac{√((h-3)² + k²)}{2}.\nOM = √( left((h+3/2)right)² + left((k/2)right)² ).\n2 OM + 2 r = 12 implies √((h+3)² + k²) + √((h-3)² + k²) = 12.\nThis is the definition of an ellipse with foci at (± 3, 0) and 2a = 12 implies a = 6.\nThe distance between foci is 2ae = 6 implies 12e = 6 implies e = 1/2.\n72e² = 72(1/4) = 18.",
+      "plainText": "Let the center of the variable circle with diameter AB be M. Its radius is r = AB/2. The circle touches x^2 + y^2 = 6^2 internally, meaning the distance between its center M and the origin O(0,0) equals 6 - r. OM = 6 - AB/2 implies OM + AB/2 = 6. Since M is the midpoint of AB, OM is the median of triangle OAB. However, expressing everything in terms of B(h,k): M = left( (h+3)/(2), (k)/(2) right), r = frac{sqrt((h-3)^2 + k^2)}{2}. OM = sqrt( left((h+3)/(2)right)^2 + left((k)/(2)right)^2 ). 2 OM + 2 r = 12 implies sqrt((h+3)^2 + k^2) + sqrt((h-3)^2 + k^2) = 12. This is the definition of an ellipse with foci at (pm 3, 0) and 2a = 12 implies a = 6. The distance between foci is 2ae = 6 implies 12e = 6 implies e = 1/2. 72e^2 = 72(1/4) = 18."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Conic Sections (Ellipse)",
+      "subchapter": "Conic Sections (Ellipse) Core Concepts",
+      "topic": "Conic Sections (Ellipse) Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections (Ellipse)",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

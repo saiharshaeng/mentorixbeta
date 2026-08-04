@@ -13,6 +13,7 @@
 'use strict';
 
 (function () {
+  let _tioFloatBusy = false; // Concurrency guard for Tio float widget
   /* ── UNIFIED API ABSTRACTION LAYER ────────────────────────── */
 
   const StudentProfileAPI = {
@@ -58,7 +59,7 @@
       let isHighFocus = false;
 
       // High-Focus Activity Detection (Mock CBT, active exam overlay, or active numerical solving)
-      if (typeof document !== 'undefined' && document.body && document.body.getAttribute && document.body.getAttribute('data-screen') === 'comp') {
+      if (document.body?.getAttribute?.('data-screen') === 'comp') {
         const compTab = window.compState?.currentTab;
         if (compTab === 'mock') {
           const isExamRunning = !!document.getElementById('cbt-exam-interface') || !!window._cbtActiveSession;
@@ -364,6 +365,7 @@
   }
 
   async function sendTioFloatMsg() {
+    if (_tioFloatBusy) return;
     const inp = document.getElementById('tio-float-inp');
     const msgsContainer = document.getElementById('tio-float-msgs');
     if (!inp || !msgsContainer) return;
@@ -372,6 +374,11 @@
     if (!text) return;
 
     inp.value = '';
+    _tioFloatBusy = true;
+
+    // Visually disable send button
+    const sendBtn = inp.parentElement ? inp.parentElement.querySelector('button[onclick*="sendTioFloatMsg"]') : null;
+    if (sendBtn) { sendBtn.disabled = true; sendBtn.style.opacity = '0.5'; }
 
     // Append User Message
     const userDiv = document.createElement('div');
@@ -402,7 +409,17 @@
       sessionContext = window.SessionContextManager.getSessionContextForTio();
     }
 
-    const sysPrompt = `You are Tio, a supportive AI tutor. ${sessionContext ? 'ACTIVE CONTEXT: ' + sessionContext : ''}`;
+    // Build system prompt — use TIO_SYSTEM_PROMPT (ai.js) for full personality + context,
+    // with hardcoded fallback if ai.js hasn't loaded yet
+    let sysPrompt;
+    if (typeof TIO_SYSTEM_PROMPT === 'function') {
+      const profile = StudentProfileAPI.getProfile();
+      const activeTopic = CurrentContextAPI.getContext().param || window.D?.lastStudiedTopic || '';
+      sysPrompt = TIO_SYSTEM_PROMPT(profile, activeTopic);
+      if (sessionContext) sysPrompt += '\n\nACTIVE SESSION CONTEXT:\n' + sessionContext;
+    } else {
+      sysPrompt = `You are Tio, a supportive AI tutor. ${sessionContext ? 'ACTIVE CONTEXT: ' + sessionContext : ''}`;
+    }
 
     let replyText = 'I am right here with you! Let us solve this step by step. 🌟';
     try {
@@ -412,6 +429,8 @@
       }
     } catch (e) {
       console.warn('[TioFloat] AI call warning:', e);
+      if (sendBtn) { sendBtn.disabled = false; sendBtn.style.opacity = '1'; }
+      _tioFloatBusy = false;
     }
 
     const typ = document.getElementById('tio-float-typing');
@@ -432,6 +451,10 @@
     if (typeof window.renderMath === 'function') {
       window.renderMath(replyDiv);
     }
+
+    // Re-enable send button
+    if (sendBtn) { sendBtn.disabled = false; sendBtn.style.opacity = '1'; }
+    _tioFloatBusy = false;
   }
 
   function askTioAboutConcept(conceptTitle = '', contextText = '') {

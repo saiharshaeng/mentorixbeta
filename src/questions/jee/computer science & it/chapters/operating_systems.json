@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_GEN_OPERATINGSYS_2024_S1_Q2",
+    "version": 1,
+    "rawRef": "JEE_MAIN_GEN_OPERATINGSYS_2024_S1_Q2_RAW",
+    "question": {
+      "latex": "Which of the following scheduling algorithms is non-preemptive?",
+      "unicode": "Which of the following scheduling algorithms is non-preemptive?",
+      "plainText": "Which of the following scheduling algorithms is non-preemptive?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "First-Come First-Served (FCFS)",
+        "unicode": "First-Come First-Served (FCFS)",
+        "plainText": "First-Come First-Served (FCFS)"
+      },
+      {
+        "id": "b",
+        "latex": "Round Robin (RR)",
+        "unicode": "Round Robin (RR)",
+        "plainText": "Round Robin (RR)"
+      },
+      {
+        "id": "c",
+        "latex": "Shortest Remaining Time First (SRTF)",
+        "unicode": "Shortest Remaining Time First (SRTF)",
+        "plainText": "Shortest Remaining Time First (SRTF)"
+      },
+      {
+        "id": "d",
+        "latex": "Preemptive Priority Scheduling",
+        "unicode": "Preemptive Priority Scheduling",
+        "plainText": "Preemptive Priority Scheduling"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "FCFS processes requests strictly in arrival order until completion without preemption.",
+      "unicode": "FCFS processes requests strictly in arrival order until completion without preemption.",
+      "plainText": "FCFS processes requests strictly in arrival order until completion without preemption."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Computer Science & IT",
+      "chapter": "Operating Systems",
+      "subchapter": "Operating Systems Core Concepts",
+      "topic": "Operating Systems Primary Topic",
+      "learningOutcome": "Master fundamental principles of Operating Systems",
+      "tags": [],
+      "difficulty": "easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.425Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.425Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

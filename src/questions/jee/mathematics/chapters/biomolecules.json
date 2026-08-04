@@ -1,0 +1,512 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_BIOMOLECULES_2025_S_Q127",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BIOMOLECULES_2025_S_Q127_RAW",
+    "question": {
+      "latex": "Identify the number of structure/s from the following which can be correlated to D-glyceraldehyde. <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 87' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h20M40 100h20M50' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h-20M40 100h20M40 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='1' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='78' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='60' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M50 10l0 121' stroke='#000' stroke-width='2' fill='none'/><path d='M50 40h20M50 70h-20M50 100h-20M50 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='60' y='9' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='90' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='75' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><g transform='scale(1,-1) translate(0,-150)'><path d='M60 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M60 40h-20M60 70h20M60 100h-20M60 130h-20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='40' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='99' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='22' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='40' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text></g></svg>",
+      "unicode": "Identify the number of structure/s from the following which can be correlated to D-glyceraldehyde. <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 87' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h20M40 100h20M50' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h-20M40 100h20M40 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='1' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='78' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='60' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M50 10l0 121' stroke='#000' stroke-width='2' fill='none'/><path d='M50 40h20M50 70h-20M50 100h-20M50 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='60' y='9' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='90' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='75' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><g transform='scale(1,-1) translate(0,-150)'><path d='M60 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M60 40h-20M60 70h20M60 100h-20M60 130h-20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='40' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='99' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='22' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='40' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text></g></svg>",
+      "plainText": "Identify the number of structure/s from the following which can be correlated to D-glyceraldehyde. <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 87' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h20M40 100h20M50' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h-20M40 100h20M40 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='1' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='78' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='60' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M50 10l0 121' stroke='#000' stroke-width='2' fill='none'/><path d='M50 40h20M50 70h-20M50 100h-20M50 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='60' y='9' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='90' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='75' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><g transform='scale(1,-1) translate(0,-150)'><path d='M60 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M60 40h-20M60 70h20M60 100h-20M60 130h-20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='40' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='99' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='22' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='40' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text></g></svg>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "tree",
+        "unicode": "tree",
+        "plainText": "tree"
+      },
+      {
+        "id": "b",
+        "latex": "two",
+        "unicode": "two",
+        "plainText": "two"
+      },
+      {
+        "id": "c",
+        "latex": "four",
+        "unicode": "four",
+        "plainText": "four"
+      },
+      {
+        "id": "d",
+        "latex": "one",
+        "unicode": "one",
+        "plainText": "one"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Biomolecules",
+      "subchapter": "Biomolecules Core Concepts",
+      "topic": "Biomolecules Primary Topic",
+      "learningOutcome": "Master fundamental principles of Biomolecules",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.045Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.045Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q219",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q219_RAW",
+    "question": {
+      "latex": "Match List - I with List - II.\nList - I: Vitamin\nA. Vitamin $B_1$\nB. Vitamin $B_2$\nC. Vitamin $B_6$\nD. Vitamin C\n\nList - II: Name\nI. Pyridoxine\nII. Ascorbic acid\nIII. Thiamine\nIV. Riboflavin\n\nChoose the correct answer from the options given below :",
+      "unicode": "Match List - I with List - II.\nList - I: Vitamin\nA. Vitamin B_1\nB. Vitamin B_2\nC. Vitamin B_6\nD. Vitamin C\n\nList - II: Name\nI. Pyridoxine\nII. Ascorbic acid\nIII. Thiamine\nIV. Riboflavin\n\nChoose the correct answer from the options given below :",
+      "plainText": "Match List - I with List - II. List - I: Vitamin A. Vitamin B_1 B. Vitamin B_2 C. Vitamin B_6 D. Vitamin C List - II: Name I. Pyridoxine II. Ascorbic acid III. Thiamine IV. Riboflavin Choose the correct answer from the options given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "A-II, B-I, C-III, D-IV",
+        "unicode": "A-II, B-I, C-III, D-IV",
+        "plainText": "A-II, B-I, C-III, D-IV"
+      },
+      {
+        "id": "b",
+        "latex": "A-IV, B-III, C-II, D-I",
+        "unicode": "A-IV, B-III, C-II, D-I",
+        "plainText": "A-IV, B-III, C-II, D-I"
+      },
+      {
+        "id": "c",
+        "latex": "A-III, B-IV, C-I, D-II",
+        "unicode": "A-III, B-IV, C-I, D-II",
+        "plainText": "A-III, B-IV, C-I, D-II"
+      },
+      {
+        "id": "d",
+        "latex": "A-I, B-III, C-II, D-IV",
+        "unicode": "A-I, B-III, C-II, D-IV",
+        "plainText": "A-I, B-III, C-II, D-IV"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Biomolecules",
+      "subchapter": "Biomolecules Core Concepts",
+      "topic": "Biomolecules Primary Topic",
+      "learningOutcome": "Master fundamental principles of Biomolecules",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q294",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q294_RAW",
+    "question": {
+      "latex": "Identify the correct pair having amino acid (A) and the hormone (B) that is iodinated derivative of the amino acid (A).\n(T and Y represent one letter code for amino acids)",
+      "unicode": "Identify the correct pair having amino acid (A) and the hormone (B) that is iodinated derivative of the amino acid (A).\n(T and Y represent one letter code for amino acids)",
+      "plainText": "Identify the correct pair having amino acid (A) and the hormone (B) that is iodinated derivative of the amino acid (A). (T and Y represent one letter code for amino acids)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "A: T, B: Insulin",
+        "unicode": "A: T, B: Insulin",
+        "plainText": "A: T, B: Insulin"
+      },
+      {
+        "id": "b",
+        "latex": "A: T, B: Thyroxine",
+        "unicode": "A: T, B: Thyroxine",
+        "plainText": "A: T, B: Thyroxine"
+      },
+      {
+        "id": "c",
+        "latex": "A: Y, B: Thyroxine",
+        "unicode": "A: Y, B: Thyroxine",
+        "plainText": "A: Y, B: Thyroxine"
+      },
+      {
+        "id": "d",
+        "latex": "A: Y, B: Insulin",
+        "unicode": "A: Y, B: Insulin",
+        "plainText": "A: Y, B: Insulin"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Biomolecules",
+      "subchapter": "Biomolecules Core Concepts",
+      "topic": "Biomolecules Primary Topic",
+      "learningOutcome": "Master fundamental principles of Biomolecules",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.054Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.054Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q368",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q368_RAW",
+    "question": {
+      "latex": "Given below are two statements:\nStatement I: The structure of Maltose is a non-reducing sugar.\nStatement II: The structure of Lactose is a reducing sugar.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "unicode": "Given below are two statements:\nStatement I: The structure of Maltose is a non-reducing sugar.\nStatement II: The structure of Lactose is a reducing sugar.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "plainText": "Given below are two statements: Statement I: The structure of Maltose is a non-reducing sugar. Statement II: The structure of Lactose is a reducing sugar. In the light of the above statements, choose the correct answer from the options given below"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both Statement I and Statement II are true",
+        "unicode": "Both Statement I and Statement II are true",
+        "plainText": "Both Statement I and Statement II are true"
+      },
+      {
+        "id": "b",
+        "latex": "Both Statement I and Statement II are false",
+        "unicode": "Both Statement I and Statement II are false",
+        "plainText": "Both Statement I and Statement II are false"
+      },
+      {
+        "id": "c",
+        "latex": "Statement I is true but Statement II is false",
+        "unicode": "Statement I is true but Statement II is false",
+        "plainText": "Statement I is true but Statement II is false"
+      },
+      {
+        "id": "d",
+        "latex": "Statement I is false but Statement II is true",
+        "unicode": "Statement I is false but Statement II is true",
+        "plainText": "Statement I is false but Statement II is true"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Biomolecules",
+      "subchapter": "Biomolecules Core Concepts",
+      "topic": "Biomolecules Primary Topic",
+      "learningOutcome": "Master fundamental principles of Biomolecules",
+      "tags": [
+        "Assertion"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.058Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.058Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q369",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BIOMOLECULES_2026_S_Q369_RAW",
+    "question": {
+      "latex": "Match the LIST-I with LIST-II\nList-I (Name of amino acid)\nA. Arginine\nB. Aspartic acid\nC. Lysine\nD. Glutamic acid\nList-II (One letter symbol/type)\nI. D/Non-essential\nII. R/Essential\nIII. E/Non-essential\nIV. K/Essential\nChoose the correct answer from the options given below:",
+      "unicode": "Match the LIST-I with LIST-II\nList-I (Name of amino acid)\nA. Arginine\nB. Aspartic acid\nC. Lysine\nD. Glutamic acid\nList-II (One letter symbol/type)\nI. D/Non-essential\nII. R/Essential\nIII. E/Non-essential\nIV. K/Essential\nChoose the correct answer from the options given below:",
+      "plainText": "Match the LIST-I with LIST-II List-I (Name of amino acid) A. Arginine B. Aspartic acid C. Lysine D. Glutamic acid List-II (One letter symbol/type) I. D/Non-essential II. R/Essential III. E/Non-essential IV. K/Essential Choose the correct answer from the options given below:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "A-II, B-I, C-IV, D-III",
+        "unicode": "A-II, B-I, C-IV, D-III",
+        "plainText": "A-II, B-I, C-IV, D-III"
+      },
+      {
+        "id": "b",
+        "latex": "A-IV, B-III, C-II, D-I",
+        "unicode": "A-IV, B-III, C-II, D-I",
+        "plainText": "A-IV, B-III, C-II, D-I"
+      },
+      {
+        "id": "c",
+        "latex": "A-III, B-IV, C-I, D-II",
+        "unicode": "A-III, B-IV, C-I, D-II",
+        "plainText": "A-III, B-IV, C-I, D-II"
+      },
+      {
+        "id": "d",
+        "latex": "A-II, B-IV, C-I, D-III",
+        "unicode": "A-II, B-IV, C-I, D-III",
+        "plainText": "A-II, B-IV, C-I, D-III"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Biomolecules",
+      "subchapter": "Biomolecules Core Concepts",
+      "topic": "Biomolecules Primary Topic",
+      "learningOutcome": "Master fundamental principles of Biomolecules",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.058Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.058Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BIOMOLECULES_2025_S1_Q102",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BIOMOLECULES_2025_S1_Q102_RAW",
+    "question": {
+      "latex": "Identify the number of structure/s from the following which can be correlated to D-glyceraldehyde. <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 87' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h20M40 100h20M50' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h-20M40 100h20M40 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='1' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='78' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='60' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M50 10l0 121' stroke='#000' stroke-width='2' fill='none'/><path d='M50 40h20M50 70h-20M50 100h-20M50 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='60' y='9' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='90' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='75' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><g transform='scale$1,-1$ translate$0,-150$'><path d='M60 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M60 40h-20M60 70h20M60 100h-20M60 130h-20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='40' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='99' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='22' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='40' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text></g></svg>",
+      "unicode": "Identify the number of structure/s from the following which can be correlated to D-glyceraldehyde. <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 87' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h20M40 100h20M50' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h-20M40 100h20M40 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='1' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='78' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='60' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M50 10l0 121' stroke='#000' stroke-width='2' fill='none'/><path d='M50 40h20M50 70h-20M50 100h-20M50 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='60' y='9' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='90' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='75' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><g transform='scale1,-1 translate0,-150'><path d='M60 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M60 40h-20M60 70h20M60 100h-20M60 130h-20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='40' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='99' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='22' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='40' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text></g></svg>",
+      "plainText": "Identify the number of structure/s from the following which can be correlated to D-glyceraldehyde. <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 87' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h20M40 100h20M50' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='60' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M40 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M40 40h20M40 70h-20M40 100h20M40 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='60' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='1' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='78' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='60' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><path d='M50 10l0 121' stroke='#000' stroke-width='2' fill='none'/><path d='M50 40h20M50 70h-20M50 100h-20M50 130h20' stroke='#000' stroke-width='2' fill='none'/><text x='60' y='9' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='90' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='25' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='75' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'><g transform='scale1,-1 translate0,-150'><path d='M60 14l0 116' stroke='#000' stroke-width='2' fill='none'/><path d='M60 40h-20M60 70h20M60 100h-20M60 130h-20' stroke='#000' stroke-width='2' fill='none'/><text x='50' y='10' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='middle'>CHO</text><text x='40' y='40' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='99' y='70' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text><text x='22' y='100' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='start'>OH</text><text x='40' y='130' font-family='Arial' font-size='12' dominant-baseline='middle' text-anchor='end'>HO</text></g></svg>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "tree",
+        "unicode": "tree",
+        "plainText": "tree"
+      },
+      {
+        "id": "b",
+        "latex": "two",
+        "unicode": "two",
+        "plainText": "two"
+      },
+      {
+        "id": "c",
+        "latex": "four",
+        "unicode": "four",
+        "plainText": "four"
+      },
+      {
+        "id": "d",
+        "latex": "one",
+        "unicode": "one",
+        "plainText": "one"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Biomolecules",
+      "subchapter": "Biomolecules Core Concepts",
+      "topic": "Biomolecules Primary Topic",
+      "learningOutcome": "Master fundamental principles of Biomolecules",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.528Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.528Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,231 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_AREAUNDERCUR_2026_S_Q249",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_AREAUNDERCUR_2026_S_Q249_RAW",
+    "question": {
+      "latex": "If the area of the region bounded by $16x^2 - 9y^2 = 144$ and $8x - 3y = 24$ is $A$, then $3(A + 6 \\log_e(3))$ is equal to:",
+      "unicode": "If the area of the region bounded by 16x² - 9y² = 144 and 8x - 3y = 24 is A, then 3(A + 6 log_e(3)) is equal to:",
+      "plainText": "If the area of the region bounded by 16x^2 - 9y^2 = 144 and 8x - 3y = 24 is A, then 3(A + 6 log_e(3)) is equal to:"
+    },
+    "options": [],
+    "answers": [
+      "3"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Area Under Curves",
+      "subchapter": "Area Under Curves Core Concepts",
+      "topic": "Area Under Curves Primary Topic",
+      "learningOutcome": "Master fundamental principles of Area Under Curves",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_AREAUNDERCUR_2026_S_Q318",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_AREAUNDERCUR_2026_S_Q318_RAW",
+    "question": {
+      "latex": "The area of the region $\\{(x, y) : y \\le \\pi - |x|, y \\le |x \\sin x|, y \\ge 0\\}$ is:",
+      "unicode": "The area of the region {(x, y) : y le π - |x|, y le |x sin x|, y ge 0} is:",
+      "plainText": "The area of the region {(x, y) : y le pi - |x|, y le |x sin x|, y ge 0} is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1 + \\frac{\\pi^2}{8}$",
+        "unicode": "1 + (π²/8)",
+        "plainText": "1 + (pi^2)/(8)"
+      },
+      {
+        "id": "b",
+        "latex": "$2 + \\frac{\\pi^2}{4}$",
+        "unicode": "2 + (π²/4)",
+        "plainText": "2 + (pi^2)/(4)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi^2}{8} - 1$",
+        "unicode": "(π²/8) - 1",
+        "plainText": "(pi^2)/(8) - 1"
+      },
+      {
+        "id": "d",
+        "latex": "$4 + \\frac{\\pi^2}{2}$",
+        "unicode": "4 + (π²/2)",
+        "plainText": "4 + (pi^2)/(2)"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Area Under Curves",
+      "subchapter": "Area Under Curves Core Concepts",
+      "topic": "Area Under Curves Primary Topic",
+      "learningOutcome": "Master fundamental principles of Area Under Curves",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_AREAUNDERCUR_2026_S1_Q258",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_AREAUNDERCUR_2026_S1_Q258_RAW",
+    "question": {
+      "latex": "The area of the region $\\{$x, y$ : y \\le \\pi - |x|, y \\le |x \\sin x|, y \\ge 0\\}$ is:",
+      "unicode": "The area of the region {x, y : y le π - |x|, y le |x sin x|, y ge 0} is:",
+      "plainText": "The area of the region {x, y : y le pi - |x|, y le |x sin x|, y ge 0} is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1 + \\frac{\\pi^2}{8}$",
+        "unicode": "1 + (π²/8)",
+        "plainText": "1 + (pi^2)/(8)"
+      },
+      {
+        "id": "b",
+        "latex": "$2 + \\frac{\\pi^2}{4}$",
+        "unicode": "2 + (π²/4)",
+        "plainText": "2 + (pi^2)/(4)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi^2}{8} - 1$",
+        "unicode": "(π²/8) - 1",
+        "plainText": "(pi^2)/(8) - 1"
+      },
+      {
+        "id": "d",
+        "latex": "$4 + \\frac{\\pi^2}{2}$",
+        "unicode": "4 + (π²/2)",
+        "plainText": "4 + (pi^2)/(2)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since both $|x \\sin x|$ and $\\pi - |x|$ are even functions, the region is symmetric about the y-axis.\nFor $x \\ge 0$, the constraints are $y \\le \\pi - x$, $y \\le x \\sin x$, and $y \\ge 0$.\nConsider the functions $y = \\pi - x$ and $y = x \\sin x$ in the interval $x \\in [0, \\pi]$.\nThey intersect at $x = \\frac{\\pi}{2}$ since $\\frac{\\pi}{2} \\sin \\frac{\\pi}{2} = \\frac{\\pi}{2}$ and $\\pi - \\frac{\\pi}{2} = \\frac{\\pi}{2}$.\nFor $0 \\le x \\le \\frac{\\pi}{2}$, $x \\sin x \\le x < \\frac{\\pi}{2} \\le \\pi - x$, so $x \\sin x$ is the tighter upper bound.\nFor $\\frac{\\pi}{2} \\le x \\le \\pi$, $\\pi - x$ is the tighter upper bound.\nThus, Area on right side $= \\int_0^{\\pi/2} x \\sin x \\, dx + \\int_{\\pi/2}^{\\pi} (\\pi - x) \\, dx$.\n$\\int x \\sin x \\, dx = \\sin x - x \\cos x$.\n$\\int_0^{\\pi/2} x \\sin x \\, dx = (1 - 0) - (0 - 0) = 1$.\n$\\int_{\\pi/2}^{\\pi} (\\pi - x) \\, dx = \\left[ -\\frac{(\\pi - x)^2}{2} \\right]_{\\pi/2}^{\\pi} = 0 - \\left(-\\frac{\\pi^2}{8}\\right) = \\frac{\\pi^2}{8}$.\nThe area for $x \\ge 0$ is $1 + \\frac{\\pi^2}{8}$.\nTotal area due to symmetry is $2 \\left( 1 + \\frac{\\pi^2}{8} \\right) = 2 + \\frac{\\pi^2}{4}$.",
+      "unicode": "Since both |x sin x| and π - |x| are even functions, the region is symmetric about the y-axis.\nFor x ge 0, the constraints are y le π - x, y le x sin x, and y ge 0.\nConsider the functions y = π - x and y = x sin x in the interval x in [0, π].\nThey intersect at x = (π/2) since (π/2) sin (π/2) = (π/2) and π - (π/2) = (π/2).\nFor 0 le x le (π/2), x sin x le x < (π/2) le π - x, so x sin x is the tighter upper bound.\nFor (π/2) le x le π, π - x is the tighter upper bound.\nThus, Area on right side = int_0^{π/2} x sin x , dx + int_{π/2}^{π} (π - x) , dx.\nint x sin x , dx = sin x - x cos x.\nint_0^{π/2} x sin x , dx = (1 - 0) - (0 - 0) = 1.\nint_{π/2}^{π} (π - x) , dx = left[ -((π - x)²/2) right]_{π/2}^{π} = 0 - left(-(π²/8)right) = (π²/8).\nThe area for x ge 0 is 1 + (π²/8).\nTotal area due to symmetry is 2 left( 1 + (π²/8) right) = 2 + (π²/4).",
+      "plainText": "Since both |x sin x| and pi - |x| are even functions, the region is symmetric about the y-axis. For x ge 0, the constraints are y le pi - x, y le x sin x, and y ge 0. Consider the functions y = pi - x and y = x sin x in the interval x in [0, pi]. They intersect at x = (pi)/(2) since (pi)/(2) sin (pi)/(2) = (pi)/(2) and pi - (pi)/(2) = (pi)/(2). For 0 le x le (pi)/(2), x sin x le x < (pi)/(2) le pi - x, so x sin x is the tighter upper bound. For (pi)/(2) le x le pi, pi - x is the tighter upper bound. Thus, Area on right side = int_0^{pi/2} x sin x , dx + int_{pi/2}^{pi} (pi - x) , dx. int x sin x , dx = sin x - x cos x. int_0^{pi/2} x sin x , dx = (1 - 0) - (0 - 0) = 1. int_{pi/2}^{pi} (pi - x) , dx = left[ -((pi - x)^2)/(2) right]_{pi/2}^{pi} = 0 - left(-(pi^2)/(8)right) = (pi^2)/(8). The area for x ge 0 is 1 + (pi^2)/(8). Total area due to symmetry is 2 left( 1 + (pi^2)/(8) right) = 2 + (pi^2)/(4)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Area Under Curves",
+      "subchapter": "Area Under Curves Core Concepts",
+      "topic": "Area Under Curves Primary Topic",
+      "learningOutcome": "Master fundamental principles of Area Under Curves",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.538Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.538Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

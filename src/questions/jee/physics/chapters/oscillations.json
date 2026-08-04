@@ -1,0 +1,89 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_OSCILLATIONS_2026_S1_Q220",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_OSCILLATIONS_2026_S1_Q220_RAW",
+    "question": {
+      "latex": "The equation of motion of a particle is given by $x = a \\sin\\left$50t + \\frac{\\pi}{3}\\right$\\text{ cm}$. The particle will come to rest at time $t_1$ and it will have zero acceleration at time $t_2$. The $t_1$ and $t_2$ respectively are _______.",
+      "unicode": "The equation of motion of a particle is given by x = a sinleft50t + (π/3)righttext{ cm}. The particle will come to rest at time t_1 and it will have zero acceleration at time t_2. The t_1 and t_2 respectively are _______.",
+      "plainText": "The equation of motion of a particle is given by x = a sinleft50t + (pi)/(3)righttext{ cm}. The particle will come to rest at time t_1 and it will have zero acceleration at time t_2. The t_1 and t_2 respectively are _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\pi}{300}\\text{ s}, \\frac{\\pi}{75}\\text{ s}$",
+        "unicode": "(π/300)text{ s}, (π/75)text{ s}",
+        "plainText": "(pi)/(300)text{ s}, (pi)/(75)text{ s}"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\pi}{75}\\text{ s}, \\frac{\\pi}{300}\\text{ s}$",
+        "unicode": "(π/75)text{ s}, (π/300)text{ s}",
+        "plainText": "(pi)/(75)text{ s}, (pi)/(300)text{ s}"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi}{300}\\text{ s}, \\frac{\\pi}{25}\\text{ s}$",
+        "unicode": "(π/300)text{ s}, (π/25)text{ s}",
+        "plainText": "(pi)/(300)text{ s}, (pi)/(25)text{ s}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\pi}{50}\\text{ s}, \\frac{\\pi}{100}\\text{ s}$",
+        "unicode": "(π/50)text{ s}, (π/100)text{ s}",
+        "plainText": "(pi)/(50)text{ s}, (pi)/(100)text{ s}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Velocity $v = \\frac{dx}{dt} = 50a \\cos\\left(50t + \\frac{\\pi}{3}\\right)$. For particle to come to rest, $v=0 \\implies 50t_1 + \\frac{\\pi}{3} = \\frac{\\pi}{2} \\implies 50t_1 = \\frac{\\pi}{6} \\implies t_1 = \\frac{\\pi}{300}\\text{ s}$.\nAcceleration $A = \\frac{dv}{dt} = -2500a \\sin\\left(50t + \\frac{\\pi}{3}\\right)$. For zero acceleration, $A=0 \\implies 50t_2 + \\frac{\\pi}{3} = \\pi \\implies 50t_2 = \\frac{2\\pi}{3} \\implies t_2 = \\frac{2\\pi}{150} = \\frac{\\pi}{75}\\text{ s}$.",
+      "unicode": "Velocity v = (dx/dt) = 50a cosleft(50t + (π/3)right). For particle to come to rest, v=0 implies 50t_1 + (π/3) = (π/2) implies 50t_1 = (π/6) implies t_1 = (π/300)text{ s}.\nAcceleration A = (dv/dt) = -2500a sinleft(50t + (π/3)right). For zero acceleration, A=0 implies 50t_2 + (π/3) = π implies 50t_2 = (2π/3) implies t_2 = (2π/150) = (π/75)text{ s}.",
+      "plainText": "Velocity v = (dx)/(dt) = 50a cosleft(50t + (pi)/(3)right). For particle to come to rest, v=0 implies 50t_1 + (pi)/(3) = (pi)/(2) implies 50t_1 = (pi)/(6) implies t_1 = (pi)/(300)text{ s}. Acceleration A = (dv)/(dt) = -2500a sinleft(50t + (pi)/(3)right). For zero acceleration, A=0 implies 50t_2 + (pi)/(3) = pi implies 50t_2 = (2pi)/(3) implies t_2 = (2pi)/(150) = (pi)/(75)text{ s}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Oscillations",
+      "subchapter": "Oscillations Core Concepts",
+      "topic": "Oscillations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Oscillations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.536Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.536Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

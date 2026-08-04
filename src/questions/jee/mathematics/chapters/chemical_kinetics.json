@@ -1,0 +1,548 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2025_S_Q129",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2025_S_Q129_RAW",
+    "question": {
+      "latex": "Consider the given energy profile diagram and choose the correct option. ![Question 54 shift2](India/undergraduate/JEEMains/assets/jeeMain_2025_22Jan_shift2_q54.png)",
+      "unicode": "Consider the given energy profile diagram and choose the correct option. ![Question 54 shift2](India/undergraduate/JEEMains/assets/jeeMain_2025_22Jan_shift2_q54.png)",
+      "plainText": "Consider the given energy profile diagram and choose the correct option. ![Question 54 shift2](India/undergraduate/JEEMains/assets/jeeMain_2025_22Jan_shift2_q54.png)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Activation energy of backward reaction is E₁ and product is more stable than reactant.",
+        "unicode": "Activation energy of backward reaction is E₁ and product is more stable than reactant.",
+        "plainText": "Activation energy of backward reaction is E₁ and product is more stable than reactant."
+      },
+      {
+        "id": "b",
+        "latex": "Activation energy of forward reaction is E₁ + E₂ and product is more stable than reactant.",
+        "unicode": "Activation energy of forward reaction is E₁ + E₂ and product is more stable than reactant.",
+        "plainText": "Activation energy of forward reaction is E₁ + E₂ and product is more stable than reactant."
+      },
+      {
+        "id": "c",
+        "latex": "Activation energy of forward reaction is E₂ and product is less stable than reactant.",
+        "unicode": "Activation energy of forward reaction is E₂ and product is less stable than reactant.",
+        "plainText": "Activation energy of forward reaction is E₂ and product is less stable than reactant."
+      },
+      {
+        "id": "d",
+        "latex": "Activation energy of both forward and backward reaction is E₁ + E₂ and reactant is more stable than product.",
+        "unicode": "Activation energy of both forward and backward reaction is E₁ + E₂ and reactant is more stable than product.",
+        "plainText": "Activation energy of both forward and backward reaction is E₁ + E₂ and reactant is more stable than product."
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.045Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.045Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q208",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q208_RAW",
+    "question": {
+      "latex": "$t_{100\\%}$ is the time required for the $100\\%$ completion of the reaction while $t_{1/2}$ is the time required for $50\\%$ of the reaction to be completed. Which of the following option correctly represents the relation between $t_{100\\%}$ and $t_{1/2}$ for zero and first order reactions respectively?",
+      "unicode": "t_{100%} is the time required for the 100% completion of the reaction while t_{1/2} is the time required for 50% of the reaction to be completed. Which of the following option correctly represents the relation between t_{100%} and t_{1/2} for zero and first order reactions respectively?",
+      "plainText": "t_{100%} is the time required for the 100% completion of the reaction while t_{1/2} is the time required for 50% of the reaction to be completed. Which of the following option correctly represents the relation between t_{100%} and t_{1/2} for zero and first order reactions respectively?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$t_{100\\%} = (t_{1/2})^2$ and $t_{100\\%} = (t_{1/2})^{-\\infty}$",
+        "unicode": "t_{100%} = (t_{1/2})² and t_{100%} = (t_{1/2})^{-∞}",
+        "plainText": "t_{100%} = (t_{1/2})^2 and t_{100%} = (t_{1/2})^{-infty}"
+      },
+      {
+        "id": "b",
+        "latex": "$t_{100\\%} = 2t_{1/2}$ and $t_{100\\%} = \\infty$",
+        "unicode": "t_{100%} = 2t_{1/2} and t_{100%} = ∞",
+        "plainText": "t_{100%} = 2t_{1/2} and t_{100%} = infty"
+      },
+      {
+        "id": "c",
+        "latex": "$t_{100\\%} = 2t_{1/2}$ and $t_{100\\%} = (2t_{1/2})^2$",
+        "unicode": "t_{100%} = 2t_{1/2} and t_{100%} = (2t_{1/2})²",
+        "plainText": "t_{100%} = 2t_{1/2} and t_{100%} = (2t_{1/2})^2"
+      },
+      {
+        "id": "d",
+        "latex": "$t_{100\\%} = (t_{1/2})^\\infty$ and $t_{100\\%} = 2t_{1/2}$",
+        "unicode": "t_{100%} = (t_{1/2})^∞ and t_{100%} = 2t_{1/2}",
+        "plainText": "t_{100%} = (t_{1/2})^infty and t_{100%} = 2t_{1/2}"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q224",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q224_RAW",
+    "question": {
+      "latex": "For reaction $A \\rightarrow P$, rate constant $k = 1.5 \\times 10^3\\text{ s}^{-1}$ at $27^\\circ\\text{C}$. If activation energy for the above reaction is $60\\text{ kJ mol}^{-1}$, then the temperature (in $^\\circ\\text{C}$) at which rate constant, $k = 4.5 \\times 10^3\\text{ s}^{-1}$ is _______. (Nearest integer)\nGiven : $\\log 2 = 0.30$, $\\log 3 = 0.48$, $R = 8.3\\text{ J K}^{-1}\\text{ mol}^{-1}$, $\\ln 10 = 2.3$",
+      "unicode": "For reaction A rightarrow P, rate constant k = 1.5 × 10³text{ s}^{-1} at 27^circtext{C}. If activation energy for the above reaction is 60text{ kJ mol}^{-1}, then the temperature (in ^circtext{C}) at which rate constant, k = 4.5 × 10³text{ s}^{-1} is _______. (Nearest integer)\nGiven : log 2 = 0.30, log 3 = 0.48, R = 8.3text{ J K}^{-1}text{ mol}^{-1}, ln 10 = 2.3",
+      "plainText": "For reaction A rightarrow P, rate constant k = 1.5 times 10^3text{ s}^{-1} at 27^circtext{C}. If activation energy for the above reaction is 60text{ kJ mol}^{-1}, then the temperature (in ^circtext{C}) at which rate constant, k = 4.5 times 10^3text{ s}^{-1} is _______. (Nearest integer) Given : log 2 = 0.30, log 3 = 0.48, R = 8.3text{ J K}^{-1}text{ mol}^{-1}, ln 10 = 2.3"
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q282",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q282_RAW",
+    "question": {
+      "latex": "Consider the reaction $aX \\rightarrow bY$, for which the rate constant at $30^\\circ\\text{C}$ is $1 \\times 10^{-3}\\text{ mol}^{-1}\\text{ L s}^{-1}$. Which of the following statements are true?\nA. When concentration of 'X' is increased to four times, the rate of reaction becomes 16 times.\nB. The reaction is a second order reaction.\nC. The half-life period is independent of the concentration of X.\nD. Decomposition of $\\text{N}_2\\text{O}_5$ is an example of the above reaction.\nE. $\\ln \\frac{[R_o]}{[R]}$ vs time is valid for the above reaction.\nChoose the correct answer from the options given below:",
+      "unicode": "Consider the reaction aX rightarrow bY, for which the rate constant at 30^circtext{C} is 1 × 10^{-3}text{ mol}^{-1}text{ L s}^{-1}. Which of the following statements are true?\nA. When concentration of 'X' is increased to four times, the rate of reaction becomes 16 times.\nB. The reaction is a second order reaction.\nC. The half-life period is independent of the concentration of X.\nD. Decomposition of text{N}_2text{O}_5 is an example of the above reaction.\nE. ln ([R_o]/[R]) vs time is valid for the above reaction.\nChoose the correct answer from the options given below:",
+      "plainText": "Consider the reaction aX rightarrow bY, for which the rate constant at 30^circtext{C} is 1 times 10^{-3}text{ mol}^{-1}text{ L s}^{-1}. Which of the following statements are true? A. When concentration of 'X' is increased to four times, the rate of reaction becomes 16 times. B. The reaction is a second order reaction. C. The half-life period is independent of the concentration of X. D. Decomposition of text{N}_2text{O}_5 is an example of the above reaction. E. ln ([R_o])/([R]) vs time is valid for the above reaction. Choose the correct answer from the options given below:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "A and B Only",
+        "unicode": "A and B Only",
+        "plainText": "A and B Only"
+      },
+      {
+        "id": "b",
+        "latex": "A, B and C Only",
+        "unicode": "A, B and C Only",
+        "plainText": "A, B and C Only"
+      },
+      {
+        "id": "c",
+        "latex": "A, B, D and E Only",
+        "unicode": "A, B, D and E Only",
+        "plainText": "A, B, D and E Only"
+      },
+      {
+        "id": "d",
+        "latex": "C and D Only",
+        "unicode": "C and D Only",
+        "plainText": "C and D Only"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.054Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.054Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q297",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q297_RAW",
+    "question": {
+      "latex": "Consider the following gas phase reaction being carried out in a closed vessel at $25^\\circ\\text{C}$.\n$2A(g) \\rightarrow 4B(g) + C(g)$\nAt time $30\\text{ min}$, the total pressure of the system is $300\\text{ mm Hg}$. At time $t = \\infty$, the total pressure is $600\\text{ mm Hg}$. The pressure of $C(g)$ at $30\\text{ minutes}$ time interval would be _______ mm Hg.",
+      "unicode": "Consider the following gas phase reaction being carried out in a closed vessel at 25^circtext{C}.\n2A(g) rightarrow 4B(g) + C(g)\nAt time 30text{ min}, the total pressure of the system is 300text{ mm Hg}. At time t = ∞, the total pressure is 600text{ mm Hg}. The pressure of C(g) at 30text{ minutes} time interval would be _______ mm Hg.",
+      "plainText": "Consider the following gas phase reaction being carried out in a closed vessel at 25^circtext{C}. 2A(g) rightarrow 4B(g) + C(g) At time 30text{ min}, the total pressure of the system is 300text{ mm Hg}. At time t = infty, the total pressure is 600text{ mm Hg}. The pressure of C(g) at 30text{ minutes} time interval would be _______ mm Hg."
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.054Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.054Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q357",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2026_S_Q357_RAW",
+    "question": {
+      "latex": "Consider the first order reaction $R \\to P$. The fraction of molecules decomposed in the given first order reaction can be expressed as",
+      "unicode": "Consider the first order reaction R to P. The fraction of molecules decomposed in the given first order reaction can be expressed as",
+      "plainText": "Consider the first order reaction R to P. The fraction of molecules decomposed in the given first order reaction can be expressed as"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1 - e^{k_1 t}$",
+        "unicode": "1 - e^{k_1 t}",
+        "plainText": "1 - e^{k_1 t}"
+      },
+      {
+        "id": "b",
+        "latex": "$1 + e^{k_1 t}$",
+        "unicode": "1 + e^{k_1 t}",
+        "plainText": "1 + e^{k_1 t}"
+      },
+      {
+        "id": "c",
+        "latex": "$1 + e^{-k_1 t}$",
+        "unicode": "1 + e^{-k_1 t}",
+        "plainText": "1 + e^{-k_1 t}"
+      },
+      {
+        "id": "d",
+        "latex": "$1 - e^{-k_1 t}$",
+        "unicode": "1 - e^{-k_1 t}",
+        "plainText": "1 - e^{-k_1 t}"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALKINE_2025_S1_Q104",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALKINE_2025_S1_Q104_RAW",
+    "question": {
+      "latex": "Consider the given energy profile diagram and choose the correct option. ![Question 54 shift2]$India/undergraduate/JEEMains/assets/jeeMain_2025_22Jan_shift2_q54.png$",
+      "unicode": "Consider the given energy profile diagram and choose the correct option. ![Question 54 shift2]India/undergraduate/JEEMains/assets/jeeMain_2025_22Jan_shift2_q54.png",
+      "plainText": "Consider the given energy profile diagram and choose the correct option. ![Question 54 shift2]India/undergraduate/JEEMains/assets/jeeMain_2025_22Jan_shift2_q54.png"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Activation energy of backward reaction is E₁ and product is more stable than reactant.",
+        "unicode": "Activation energy of backward reaction is E₁ and product is more stable than reactant.",
+        "plainText": "Activation energy of backward reaction is E₁ and product is more stable than reactant."
+      },
+      {
+        "id": "b",
+        "latex": "Activation energy of forward reaction is E₁ + E₂ and product is more stable than reactant.",
+        "unicode": "Activation energy of forward reaction is E₁ + E₂ and product is more stable than reactant.",
+        "plainText": "Activation energy of forward reaction is E₁ + E₂ and product is more stable than reactant."
+      },
+      {
+        "id": "c",
+        "latex": "Activation energy of forward reaction is E₂ and product is less stable than reactant.",
+        "unicode": "Activation energy of forward reaction is E₂ and product is less stable than reactant.",
+        "plainText": "Activation energy of forward reaction is E₂ and product is less stable than reactant."
+      },
+      {
+        "id": "d",
+        "latex": "Activation energy of both forward and backward reaction is E₁ + E₂ and reactant is more stable than product.",
+        "unicode": "Activation energy of both forward and backward reaction is E₁ + E₂ and reactant is more stable than product.",
+        "plainText": "Activation energy of both forward and backward reaction is E₁ + E₂ and reactant is more stable than product."
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Chemical Kinetics",
+      "subchapter": "Chemical Kinetics Core Concepts",
+      "topic": "Chemical Kinetics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Kinetics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.528Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.528Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

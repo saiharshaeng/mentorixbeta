@@ -12,6 +12,7 @@
  * Uses a dynamic 12-question pool to route users adaptively through difficulty levels without latency.
  */
 'use strict';
+function escON(s){return String(s||'').replace(/'/g,"\\'");}
 
 let TS = {
   step: 'home',             // 'home' | 'source' | 'configure' | 'active' | 'results'
@@ -634,6 +635,22 @@ function subTest() {
   
   if (typeof saveAll === 'function') saveAll();
 
+  // Boss Test completion — if launched from chapter boss test, record result
+  if (D._bossTestContext && typeof pct !== 'undefined') {
+    const btCtx = D._bossTestContext;
+    if (window.CourseProgressionEngine && typeof window.CourseProgressionEngine.completeBossTest === 'function') {
+      const btId = `boss_${btCtx.courseId}_u${btCtx.unitIdx}_c${btCtx.chapterIdx}`;
+      window.CourseProgressionEngine.completeBossTest({ courseId: btCtx.courseId, bossTestId: btId, score: pct });
+      if (pct >= 80) {
+        if (typeof toast === 'function') toast(`👑 Boss Test Passed! Chapter "${btCtx.chapterTitle}" mastered.`, 'badge');
+        if (typeof launchConfetti === 'function') launchConfetti(60);
+      } else {
+        if (typeof toast === 'function') toast(`📚 Score ${pct}% — need 80% to pass. Topics remain unlocked, keep practicing!`, 'err');
+      }
+    }
+    delete D._bossTestContext;
+  }
+
   // Draw Results Page
   const grade = pct >= 85 ? { ic: '🏆', lbl: 'Outstanding Mastery', col: 'var(--goldl)' }
                 : pct >= 65 ? { ic: '🌟', lbl: 'Strong Recall', col: 'var(--okl)' }
@@ -648,6 +665,27 @@ function subTest() {
         <div style="color:var(--mut);font-size:12.5px;margin-top:6px">${sc} of ${total} answers correct · +${sc * 15} XP earned</div>
       </div>
 
+      ${(() => {
+        const wrongItems = qs.map((q, i) => ({ q, i, chosen: TS.ans[i] }))
+          .filter(({ q, i, chosen }) => chosen !== undefined && chosen !== q.a);
+        if (wrongItems.length === 0) return '';
+        return `
+        <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:14px;padding:16px 18px;margin-bottom:18px">
+          <div style="font-size:10px;color:var(--redl);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">⚡ Concepts That Need Work (${wrongItems.length})</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            ${wrongItems.map(({ q, i }) => {
+              const concept = q.concept || q.chapter || TS.topic || 'Concept';
+              return `<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(0,0,0,0.2);border-radius:8px;padding:8px 12px">
+                <div>
+                  <div style="font-size:10px;color:var(--mut);margin-bottom:2px">Q${i+1}</div>
+                  <div style="color:#fff;font-size:12.5px;font-weight:600">${esc(concept)}</div>
+                </div>
+                <button class="btn bsec bsm" style="font-size:11px;padding:4px 10px;white-space:nowrap" onclick="go('learn','${escON(TS.topic)}')">Study →</button>
+              </div>`;
+            }).join('')}
+          </div>
+        </div>`;
+      })()}
       <div style="display:flex;gap:10px;margin-bottom:24px">
         <button class="btn bpri" style="flex:1" onclick="tsSetType('${TS.assessmentType}')">🔄 Retake</button>
         <button class="btn bgh" style="flex:1" onclick="rTests()">🏠 Center Home</button>

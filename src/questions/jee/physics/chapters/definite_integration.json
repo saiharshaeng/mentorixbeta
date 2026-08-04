@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_DEFINITEINTE_2026_S1_Q528",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_DEFINITEINTE_2026_S1_Q528_RAW",
+    "question": {
+      "latex": "If $\\alpha = \\int_0^{2\\sqrt{3}} \\log_2$x^2 + 4$ dx + \\int_2^4 \\sqrt{2^x - 4} dx$, then $\\alpha^2$ is equal to _______.",
+      "unicode": "If α = int_0^{2√(3)} log_2x² + 4 dx + int_2^4 √(2^x - 4) dx, then α² is equal to _______.",
+      "plainText": "If alpha = int_0^{2sqrt(3)} log_2x^2 + 4 dx + int_2^4 sqrt(2^x - 4) dx, then alpha^2 is equal to _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "192",
+        "unicode": "192",
+        "plainText": "192"
+      },
+      {
+        "id": "b",
+        "latex": "128",
+        "unicode": "128",
+        "plainText": "128"
+      },
+      {
+        "id": "c",
+        "latex": "256",
+        "unicode": "256",
+        "plainText": "256"
+      },
+      {
+        "id": "d",
+        "latex": "64",
+        "unicode": "64",
+        "plainText": "64"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Consider the function $f(x) = \\log_2(x^2 + 4)$ for $x > 0$.\nLet's find the inverse function $y = f(x) \\implies y = \\log_2(x^2 + 4) \\implies 2^y = x^2 + 4 \\implies x = \\sqrt{2^y - 4}$. Thus, $f^{-1}(x) = \\sqrt{2^x - 4}$.\nWe have a known property of integration for invertible functions:\n$\\int_a^b f(x) dx + \\int_{f(a)}^{f(b)} f^{-1}(y) dy = b f(b) - a f(a)$.\nHere, $a = 0$ and $b = 2\\sqrt{3}$.\nCalculate $f(a)$ and $f(b)$:\n$f(0) = \\log_2(0 + 4) = \\log_2(4) = 2$.\n$f(2\\sqrt{3}) = \\log_2(12 + 4) = \\log_2(16) = 4$.\nNotice that the second integral $\\int_2^4 \\sqrt{2^x - 4} dx$ exactly matches $\\int_{f(a)}^{f(b)} f^{-1}(x) dx$.\nTherefore, $\\alpha = I_1 + I_2 = b f(b) - a f(a) = (2\\sqrt{3})(4) - 0(2) = 8\\sqrt{3}$.\nWe are asked for $\\alpha^2$, which is $(8\\sqrt{3})^2 = 64 \\times 3 = 192$.",
+      "unicode": "Consider the function f(x) = log_2(x² + 4) for x > 0.\nLet's find the inverse function y = f(x) implies y = log_2(x² + 4) implies 2^y = x² + 4 implies x = √(2^y - 4). Thus, f^{-1}(x) = √(2^x - 4).\nWe have a known property of integration for invertible functions:\nint_a^b f(x) dx + int_{f(a)}^{f(b)} f^{-1}(y) dy = b f(b) - a f(a).\nHere, a = 0 and b = 2√(3).\nCalculate f(a) and f(b):\nf(0) = log_2(0 + 4) = log_2(4) = 2.\nf(2√(3)) = log_2(12 + 4) = log_2(16) = 4.\nNotice that the second integral int_2^4 √(2^x - 4) dx exactly matches int_{f(a)}^{f(b)} f^{-1}(x) dx.\nTherefore, α = I_1 + I_2 = b f(b) - a f(a) = (2√(3))(4) - 0(2) = 8√(3).\nWe are asked for α², which is (8√(3))² = 64 × 3 = 192.",
+      "plainText": "Consider the function f(x) = log_2(x^2 + 4) for x > 0. Let's find the inverse function y = f(x) implies y = log_2(x^2 + 4) implies 2^y = x^2 + 4 implies x = sqrt(2^y - 4). Thus, f^{-1}(x) = sqrt(2^x - 4). We have a known property of integration for invertible functions: int_a^b f(x) dx + int_{f(a)}^{f(b)} f^{-1}(y) dy = b f(b) - a f(a). Here, a = 0 and b = 2sqrt(3). Calculate f(a) and f(b): f(0) = log_2(0 + 4) = log_2(4) = 2. f(2sqrt(3)) = log_2(12 + 4) = log_2(16) = 4. Notice that the second integral int_2^4 sqrt(2^x - 4) dx exactly matches int_{f(a)}^{f(b)} f^{-1}(x) dx. Therefore, alpha = I_1 + I_2 = b f(b) - a f(a) = (2sqrt(3))(4) - 0(2) = 8sqrt(3). We are asked for alpha^2, which is (8sqrt(3))^2 = 64 times 3 = 192."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

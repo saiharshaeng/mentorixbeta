@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_BINOMIALTHEO_2025_S1_Q511",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_BINOMIALTHEO_2025_S1_Q511_RAW",
+    "question": {
+      "latex": "If $\\sum_{r=1}^{30} r$31-r$ \\cdot {^{29}C_{r-1}} = \\alpha \\times 2^{28}$, then $\\alpha$ is equal to",
+      "unicode": "If sum_{r=1}^{30} r31-r · {^{29}C_{r-1}} = α × 2^{28}, then α is equal to",
+      "plainText": "If sum_{r=1}^{30} r31-r cdot {^{29}C_{r-1}} = alpha times 2^{28}, then alpha is equal to"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "450",
+        "unicode": "450",
+        "plainText": "450"
+      },
+      {
+        "id": "b",
+        "latex": "460",
+        "unicode": "460",
+        "plainText": "460"
+      },
+      {
+        "id": "c",
+        "latex": "465",
+        "unicode": "465",
+        "plainText": "465"
+      },
+      {
+        "id": "d",
+        "latex": "435",
+        "unicode": "435",
+        "plainText": "435"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.554Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.554Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

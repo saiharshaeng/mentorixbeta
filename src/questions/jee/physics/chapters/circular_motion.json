@@ -1,0 +1,89 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_CIRCULARMOTI_2026_S1_Q202",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_CIRCULARMOTI_2026_S1_Q202_RAW",
+    "question": {
+      "latex": "A $0.5\\text{ kg}$ mass is in contact against the inner wall of a cylindrical drum of radius $4\\text{ m}$ rotating about its vertical axis. The minimum rotational speed of the drum to enable the mass to remain stuck to the wall $without falling$ is $5\\text{ rad/s}$. The coefficient of friction between the drum's inner wall surface and mass is _______ . $Take $g = 10\\text{ m/s}^2$$",
+      "unicode": "A 0.5text{ kg} mass is in contact against the inner wall of a cylindrical drum of radius 4text{ m} rotating about its vertical axis. The minimum rotational speed of the drum to enable the mass to remain stuck to the wall without falling is 5text{ rad/s}. The coefficient of friction between the drum's inner wall surface and mass is _______ . Take g = 10text{ m/s}²",
+      "plainText": "A 0.5text{ kg} mass is in contact against the inner wall of a cylindrical drum of radius 4text{ m} rotating about its vertical axis. The minimum rotational speed of the drum to enable the mass to remain stuck to the wall without falling is 5text{ rad/s}. The coefficient of friction between the drum's inner wall surface and mass is _______ . Take g = 10text{ m/s}^2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$0.1$",
+        "unicode": "0.1",
+        "plainText": "0.1"
+      },
+      {
+        "id": "b",
+        "latex": "$0.5$",
+        "unicode": "0.5",
+        "plainText": "0.5"
+      },
+      {
+        "id": "c",
+        "latex": "$0.7$",
+        "unicode": "0.7",
+        "plainText": "0.7"
+      },
+      {
+        "id": "d",
+        "latex": "$0.3$",
+        "unicode": "0.3",
+        "plainText": "0.3"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "For the mass to remain stuck without falling, the upward static friction must balance the downward gravitational force: $f = mg$.\nThe normal force provided by the wall is the centripetal force: $N = m \\omega^2 r$.\nThe maximum static friction is $f_{max} = \\mu N = \\mu m \\omega^2 r$.\nSetting $mg = \\mu m \\omega^2 r$, the mass $m$ cancels out.\n$\\mu = \\frac{g}{\\omega^2 r} = \\frac{10}{5^2 \\times 4} = \\frac{10}{25 \\times 4} = \\frac{10}{100} = 0.1$.",
+      "unicode": "For the mass to remain stuck without falling, the upward static friction must balance the downward gravitational force: f = mg.\nThe normal force provided by the wall is the centripetal force: N = m omega² r.\nThe maximum static friction is f_{max} = mu N = mu m omega² r.\nSetting mg = mu m omega² r, the mass m cancels out.\nmu = (g/omega² r) = (10/5² × 4) = (10/25 × 4) = (10/100) = 0.1.",
+      "plainText": "For the mass to remain stuck without falling, the upward static friction must balance the downward gravitational force: f = mg. The normal force provided by the wall is the centripetal force: N = m omega^2 r. The maximum static friction is f_{max} = mu N = mu m omega^2 r. Setting mg = mu m omega^2 r, the mass m cancels out. mu = (g)/(omega^2 r) = (10)/(5^2 times 4) = (10)/(25 times 4) = (10)/(100) = 0.1."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Circular Motion",
+      "subchapter": "Circular Motion Core Concepts",
+      "topic": "Circular Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of Circular Motion",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

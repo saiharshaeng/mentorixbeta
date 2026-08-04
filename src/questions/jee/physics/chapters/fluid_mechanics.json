@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_FLUIDMECHANI_2026_S1_Q210",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_FLUIDMECHANI_2026_S1_Q210_RAW",
+    "question": {
+      "latex": "If an air bubble of diameter $2\\text{ mm}$ rises steadily through a liquid of density $2000\\text{ kg/m}^3$ at a rate of $0.5\\text{ cm/s}$, then the coefficient of viscosity of liquid is _______ Poise. $Take $g = 10\\text{ m/s}^2$$",
+      "unicode": "If an air bubble of diameter 2text{ mm} rises steadily through a liquid of density 2000text{ kg/m}³ at a rate of 0.5text{ cm/s}, then the coefficient of viscosity of liquid is _______ Poise. Take g = 10text{ m/s}²",
+      "plainText": "If an air bubble of diameter 2text{ mm} rises steadily through a liquid of density 2000text{ kg/m}^3 at a rate of 0.5text{ cm/s}, then the coefficient of viscosity of liquid is _______ Poise. Take g = 10text{ m/s}^2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$0.88$",
+        "unicode": "0.88",
+        "plainText": "0.88"
+      },
+      {
+        "id": "b",
+        "latex": "$8.8$",
+        "unicode": "8.8",
+        "plainText": "8.8"
+      },
+      {
+        "id": "c",
+        "latex": "$88.8$",
+        "unicode": "88.8",
+        "plainText": "88.8"
+      },
+      {
+        "id": "d",
+        "latex": "$0.088$",
+        "unicode": "0.088",
+        "plainText": "0.088"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "For an air bubble rising steadily, terminal velocity $v = \\frac{2r^2(\\rho_{liq} - \\rho_{air})g}{9\\eta}$. Since $\\rho_{air}$ is negligible, $v \\approx \\frac{2r^2 \\rho_{liq} g}{9\\eta}$.\nWe need $\\eta = \\frac{2r^2 \\rho_{liq} g}{9v}$.\nGiven $r = 1\\text{ mm} = 10^{-3}\\text{ m}$, $v = 0.5\\text{ cm/s} = 5 \\times 10^{-3}\\text{ m/s}$.\n$\\eta = \\frac{2 \\times (10^{-3})^2 \\times 2000 \\times 10}{9 \\times 5 \\times 10^{-3}} = \\frac{40 \\times 10^{-6}}{45 \\times 10^{-3}} = \\frac{40}{45} \\times 10^{-3}\\text{ Pa.s}$? Wait, calculation error. $\\eta = \\frac{2 \\times 10^{-6} \\times 20000}{45 \\times 10^{-3}} = \\frac{40}{45}\\text{ Pa.s} = 0.888\\text{ Pa.s}$.\nSince $1\\text{ Poise} = 0.1\\text{ Pa.s}$, $\\eta = 0.888 \\times 10 = 8.88\\text{ Poise} \\approx 8.8\\text{ Poise}$.",
+      "unicode": "For an air bubble rising steadily, terminal velocity v = frac{2r²(rho_{liq} - rho_{air})g}{9eta}. Since rho_{air} is negligible, v approx frac{2r² rho_{liq} g}{9eta}.\nWe need eta = frac{2r² rho_{liq} g}{9v}.\nGiven r = 1text{ mm} = 10^{-3}text{ m}, v = 0.5text{ cm/s} = 5 × 10^{-3}text{ m/s}.\neta = frac{2 × (10^{-3})² × 2000 × 10}{9 × 5 × 10^{-3}} = frac{40 × 10^{-6}}{45 × 10^{-3}} = (40/45) × 10^{-3}text{ Pa.s}? Wait, calculation error. eta = frac{2 × 10^{-6} × 20000}{45 × 10^{-3}} = (40/45)text{ Pa.s} = 0.888text{ Pa.s}.\nSince 1text{ Poise} = 0.1text{ Pa.s}, eta = 0.888 × 10 = 8.88text{ Poise} approx 8.8text{ Poise}.",
+      "plainText": "For an air bubble rising steadily, terminal velocity v = frac{2r^2(rho_{liq} - rho_{air})g}{9eta}. Since rho_{air} is negligible, v approx frac{2r^2 rho_{liq} g}{9eta}. We need eta = frac{2r^2 rho_{liq} g}{9v}. Given r = 1text{ mm} = 10^{-3}text{ m}, v = 0.5text{ cm/s} = 5 times 10^{-3}text{ m/s}. eta = frac{2 times (10^{-3})^2 times 2000 times 10}{9 times 5 times 10^{-3}} = frac{40 times 10^{-6}}{45 times 10^{-3}} = (40)/(45) times 10^{-3}text{ Pa.s}? Wait, calculation error. eta = frac{2 times 10^{-6} times 20000}{45 times 10^{-3}} = (40)/(45)text{ Pa.s} = 0.888text{ Pa.s}. Since 1text{ Poise} = 0.1text{ Pa.s}, eta = 0.888 times 10 = 8.88text{ Poise} approx 8.8text{ Poise}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Fluid Mechanics",
+      "subchapter": "Fluid Mechanics Core Concepts",
+      "topic": "Fluid Mechanics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Fluid Mechanics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAT_2026_S_Q316",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAT_2026_S_Q316_RAW",
+    "question": {
+      "latex": "If $y = \\tan^{-1} \\left( \\frac{3 \\cos x - 4 \\sin x}{4 \\cos x + 3 \\sin x} \\right) + 2 \\tan^{-1} \\left( \\frac{x}{1 + \\sqrt{1 - x^2}} \\right)$, then $\\frac{dy}{dx}$ at $x = \\frac{\\sqrt{3}}{2}$ is equal to:",
+      "unicode": "If y = tan^{-1} left( (3 cos x - 4 sin x/4 cos x + 3 sin x) right) + 2 tan^{-1} left( (x/1 + √(1 - x²)) right), then (dy/dx) at x = frac{√(3)}{2} is equal to:",
+      "plainText": "If y = tan^{-1} left( (3 cos x - 4 sin x)/(4 cos x + 3 sin x) right) + 2 tan^{-1} left( (x)/(1 + sqrt(1 - x^2)) right), then (dy)/(dx) at x = frac{sqrt(3)}{2} is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "$-1$",
+        "unicode": "-1",
+        "plainText": "-1"
+      },
+      {
+        "id": "c",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "d",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Differentiation",
+      "subchapter": "Differentiation Core Concepts",
+      "topic": "Differentiation Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differentiation",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAT_2026_S1_Q256",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAT_2026_S1_Q256_RAW",
+    "question": {
+      "latex": "If $y = \\tan^{-1} \\left$ \\frac{3 \\cos x - 4 \\sin x}{4 \\cos x + 3 \\sin x} \\right$ + 2 \\tan^{-1} \\left$ \\frac{x}{1 + \\sqrt{1 - x^2}} \\right$$, then $\\frac{dy}{dx}$ at $x = \\frac{\\sqrt{3}}{2}$ is equal to:",
+      "unicode": "If y = tan^{-1} left (3 cos x - 4 sin x/4 cos x + 3 sin x) right + 2 tan^{-1} left (x/1 + √(1 - x²)) right, then (dy/dx) at x = frac{√(3)}{2} is equal to:",
+      "plainText": "If y = tan^{-1} left (3 cos x - 4 sin x)/(4 cos x + 3 sin x) right + 2 tan^{-1} left (x)/(1 + sqrt(1 - x^2)) right, then (dy)/(dx) at x = frac{sqrt(3)}{2} is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "$-1$",
+        "unicode": "-1",
+        "plainText": "-1"
+      },
+      {
+        "id": "c",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "d",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $y = y_1 + y_2$.\nFor $y_1$, divide the numerator and denominator inside the tangent inverse by $4\\cos x$:\n$y_1 = \\tan^{-1} \\left( \\frac{\\frac{3}{4} - \\tan x}{1 + \\frac{3}{4} \\tan x} \\right) = \\tan^{-1} \\left( \\frac{3}{4} \\right) - \\tan^{-1}(\\tan x) = \\tan^{-1} \\left( \\frac{3}{4} \\right) - x$.\nThus, $\\frac{dy_1}{dx} = -1$.\nFor $y_2$, let $x = \\sin \\theta$, then $dx = \\cos \\theta \\, d\\theta$:\n$y_2 = 2 \\tan^{-1} \\left( \\frac{\\sin \\theta}{1 + \\cos \\theta} \\right) = 2 \\tan^{-1} \\left( \\tan \\frac{\\theta}{2} \\right) = \\theta = \\sin^{-1} x$.\nThus, $\\frac{dy_2}{dx} = \\frac{1}{\\sqrt{1 - x^2}}$.\nAt $x = \\frac{\\sqrt{3}}{2}$, $\\frac{dy_2}{dx} = \\frac{1}{\\sqrt{1 - 3/4}} = 2$.\nTherefore, $\\frac{dy}{dx} = \\frac{dy_1}{dx} + \\frac{dy_2}{dx} = -1 + 2 = 1$.",
+      "unicode": "Let y = y_1 + y_2.\nFor y_1, divide the numerator and denominator inside the tangent inverse by 4cos x:\ny_1 = tan^{-1} left( (frac{3/4) - tan x}{1 + (3/4) tan x} right) = tan^{-1} left( (3/4) right) - tan^{-1}(tan x) = tan^{-1} left( (3/4) right) - x.\nThus, (dy_1/dx) = -1.\nFor y_2, let x = sin θ, then dx = cos θ , dθ:\ny_2 = 2 tan^{-1} left( (sin θ/1 + cos θ) right) = 2 tan^{-1} left( tan (θ/2) right) = θ = sin^{-1} x.\nThus, (dy_2/dx) = (1/√(1 - x²)).\nAt x = frac{√(3)}{2}, (dy_2/dx) = (1/√(1 - 3/4)) = 2.\nTherefore, (dy/dx) = (dy_1/dx) + (dy_2/dx) = -1 + 2 = 1.",
+      "plainText": "Let y = y_1 + y_2. For y_1, divide the numerator and denominator inside the tangent inverse by 4cos x: y_1 = tan^{-1} left( (frac{3)/(4) - tan x}{1 + (3)/(4) tan x} right) = tan^{-1} left( (3)/(4) right) - tan^{-1}(tan x) = tan^{-1} left( (3)/(4) right) - x. Thus, (dy_1)/(dx) = -1. For y_2, let x = sin theta, then dx = cos theta , dtheta: y_2 = 2 tan^{-1} left( (sin theta)/(1 + cos theta) right) = 2 tan^{-1} left( tan (theta)/(2) right) = theta = sin^{-1} x. Thus, (dy_2)/(dx) = (1)/(sqrt(1 - x^2)). At x = frac{sqrt(3)}{2}, (dy_2)/(dx) = (1)/(sqrt(1 - 3/4)) = 2. Therefore, (dy)/(dx) = (dy_1)/(dx) + (dy_2)/(dx) = -1 + 2 = 1."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Differentiation",
+      "subchapter": "Differentiation Core Concepts",
+      "topic": "Differentiation Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differentiation",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.538Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.538Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

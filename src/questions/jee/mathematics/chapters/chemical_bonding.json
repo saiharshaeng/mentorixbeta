@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CHEMICALBOND_2025_S_Q126",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CHEMICALBOND_2025_S_Q126_RAW",
+    "question": {
+      "latex": "Arrange the following compounds in increasing order of their dipole moment : HBr, H₂S, NF₃ and CHCl₃",
+      "unicode": "Arrange the following compounds in increasing order of their dipole moment : HBr, H₂S, NF₃ and CHCl₃",
+      "plainText": "Arrange the following compounds in increasing order of their dipole moment : HBr, H₂S, NF₃ and CHCl₃"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$NF_3 < HBr < H_2S < CHCl_3$",
+        "unicode": "NF_3 < HBr < H_2S < CHCl_3",
+        "plainText": "NF_3 < HBr < H_2S < CHCl_3"
+      },
+      {
+        "id": "b",
+        "latex": "$HBr < H_2S < NF_3 < CHCl_3$",
+        "unicode": "HBr < H_2S < NF_3 < CHCl_3",
+        "plainText": "HBr < H_2S < NF_3 < CHCl_3"
+      },
+      {
+        "id": "c",
+        "latex": "$H_2S < HBr < NF_3 < CHCl_3$",
+        "unicode": "H_2S < HBr < NF_3 < CHCl_3",
+        "plainText": "H_2S < HBr < NF_3 < CHCl_3"
+      },
+      {
+        "id": "d",
+        "latex": "$CHCl_3 < NF_3 < HBr < H_2S$",
+        "unicode": "CHCl_3 < NF_3 < HBr < H_2S",
+        "plainText": "CHCl_3 < NF_3 < HBr < H_2S"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Chemical Bonding",
+      "subchapter": "Chemical Bonding Core Concepts",
+      "topic": "Chemical Bonding Primary Topic",
+      "learningOutcome": "Master fundamental principles of Chemical Bonding",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.045Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.045Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

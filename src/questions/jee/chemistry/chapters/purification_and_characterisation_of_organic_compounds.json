@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_CHE_PURIFICATION_2026_S1_Q173",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_PURIFICATION_2026_S1_Q173_RAW",
+    "question": {
+      "latex": "Given below are two statements :\nStatement $I$ : 1,2,3-Trihydroxypropane can be separated from water by simple distillation.\nStatement $II$ : An azeotropic mixture cannot be separated by fractional distillation.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "unicode": "Given below are two statements :\nStatement I : 1,2,3-Trihydroxypropane can be separated from water by simple distillation.\nStatement II : An azeotropic mixture cannot be separated by fractional distillation.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "plainText": "Given below are two statements : Statement I : 1,2,3-Trihydroxypropane can be separated from water by simple distillation. Statement II : An azeotropic mixture cannot be separated by fractional distillation. In the light of the above statements, choose the correct answer from the options given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both Statement I and Statement II are true",
+        "unicode": "Both Statement I and Statement II are true",
+        "plainText": "Both Statement I and Statement II are true"
+      },
+      {
+        "id": "b",
+        "latex": "Both Statement I and Statement II are false",
+        "unicode": "Both Statement I and Statement II are false",
+        "plainText": "Both Statement I and Statement II are false"
+      },
+      {
+        "id": "c",
+        "latex": "Statement I is true but Statement II is false",
+        "unicode": "Statement I is true but Statement II is false",
+        "plainText": "Statement I is true but Statement II is false"
+      },
+      {
+        "id": "d",
+        "latex": "Statement I is false but Statement II is true",
+        "unicode": "Statement I is false but Statement II is true",
+        "plainText": "Statement I is false but Statement II is true"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Statement I: 1,2,3-trihydroxypropane (glycerol) has a very high boiling point and decomposes at or near its boiling point under normal atmospheric pressure. Thus, it cannot be purified by simple distillation; instead, it is separated by distillation under reduced pressure. (Statement I is false)\nStatement II: Azeotropic mixtures boil at a constant temperature without any change in composition. The vapor has the exact same composition as the liquid. Therefore, they cannot be separated into their pure components by fractional distillation. (Statement II is true)\nTherefore, Statement I is false but Statement II is true.",
+      "unicode": "Statement I: 1,2,3-trihydroxypropane (glycerol) has a very high boiling point and decomposes at or near its boiling point under normal atmospheric pressure. Thus, it cannot be purified by simple distillation; instead, it is separated by distillation under reduced pressure. (Statement I is false)\nStatement II: Azeotropic mixtures boil at a constant temperature without any change in composition. The vapor has the exact same composition as the liquid. Therefore, they cannot be separated into their pure components by fractional distillation. (Statement II is true)\nTherefore, Statement I is false but Statement II is true.",
+      "plainText": "Statement I: 1,2,3-trihydroxypropane (glycerol) has a very high boiling point and decomposes at or near its boiling point under normal atmospheric pressure. Thus, it cannot be purified by simple distillation; instead, it is separated by distillation under reduced pressure. (Statement I is false) Statement II: Azeotropic mixtures boil at a constant temperature without any change in composition. The vapor has the exact same composition as the liquid. Therefore, they cannot be separated into their pure components by fractional distillation. (Statement II is true) Therefore, Statement I is false but Statement II is true."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Purification and Characterisation of Organic Compounds",
+      "subchapter": "Purification and Characterisation of Organic Compounds Core Concepts",
+      "topic": "Purification and Characterisation of Organic Compounds Primary Topic",
+      "learningOutcome": "Master fundamental principles of Purification and Characterisation of Organic Compounds",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.532Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.532Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

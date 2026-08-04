@@ -1,0 +1,256 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CURRENTELECT_2026_S_Q263",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CURRENTELECT_2026_S_Q263_RAW",
+    "question": {
+      "latex": "Two resistors of $200\\ \\Omega$ and $400\\ \\Omega$ are connected in series with a battery of $100\\text{ V}$. A bulb rated at $200\\text{ V}, 100\\text{ W}$ is connected across the $400\\ \\Omega$ resistance. The potential drop across the bulb is _______ V.",
+      "unicode": "Two resistors of 200 Omega and 400 Omega are connected in series with a battery of 100text{ V}. A bulb rated at 200text{ V}, 100text{ W} is connected across the 400 Omega resistance. The potential drop across the bulb is _______ V.",
+      "plainText": "Two resistors of 200 Omega and 400 Omega are connected in series with a battery of 100text{ V}. A bulb rated at 200text{ V}, 100text{ W} is connected across the 400 Omega resistance. The potential drop across the bulb is _______ V."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$25$",
+        "unicode": "25",
+        "plainText": "25"
+      },
+      {
+        "id": "b",
+        "latex": "$50$",
+        "unicode": "50",
+        "plainText": "50"
+      },
+      {
+        "id": "c",
+        "latex": "$66.6$",
+        "unicode": "66.6",
+        "plainText": "66.6"
+      },
+      {
+        "id": "d",
+        "latex": "$100$",
+        "unicode": "100",
+        "plainText": "100"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Current Electricity",
+      "subchapter": "Current Electricity Core Concepts",
+      "topic": "Current Electricity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Current Electricity",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CURRENTELECT_2026_S_Q337",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CURRENTELECT_2026_S_Q337_RAW",
+    "question": {
+      "latex": "A voltmeter with internal resistance of $x \\text{ } \\Omega$ can be used to measure upto $20$ V. In order to increase its measuring range to $30$ V, the required modification is to _____.",
+      "unicode": "A voltmeter with internal resistance of x text{ } Omega can be used to measure upto 20 V. In order to increase its measuring range to 30 V, the required modification is to _____.",
+      "plainText": "A voltmeter with internal resistance of x text{ } Omega can be used to measure upto 20 V. In order to increase its measuring range to 30 V, the required modification is to _____."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "connect resistor of $\\frac{x}{2} \\text{ } \\Omega$, in series with voltmeter.",
+        "unicode": "connect resistor of (x/2) text{ } Omega, in series with voltmeter.",
+        "plainText": "connect resistor of (x)/(2) text{ } Omega, in series with voltmeter."
+      },
+      {
+        "id": "b",
+        "latex": "connect resistor of $\\frac{x}{2} \\text{ } \\Omega$, in parallel to voltmeter.",
+        "unicode": "connect resistor of (x/2) text{ } Omega, in parallel to voltmeter.",
+        "plainText": "connect resistor of (x)/(2) text{ } Omega, in parallel to voltmeter."
+      },
+      {
+        "id": "c",
+        "latex": "connect a resistor of $x \\text{ } \\Omega$ in series with voltmeter.",
+        "unicode": "connect a resistor of x text{ } Omega in series with voltmeter.",
+        "plainText": "connect a resistor of x text{ } Omega in series with voltmeter."
+      },
+      {
+        "id": "d",
+        "latex": "connect resistor of $2x \\text{ } \\Omega$ in parallel to voltmeter.",
+        "unicode": "connect resistor of 2x text{ } Omega in parallel to voltmeter.",
+        "plainText": "connect resistor of 2x text{ } Omega in parallel to voltmeter."
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Current Electricity",
+      "subchapter": "Current Electricity Core Concepts",
+      "topic": "Current Electricity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Current Electricity",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CURRENTELECT_2026_S_Q343",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CURRENTELECT_2026_S_Q343_RAW",
+    "question": {
+      "latex": "![DC Circuit Bridge](https://cracku.in/media/uploads/image_KaCrJ2M.png)\nThe voltage and the current between $A$ and $B$ points shown in the circuit are _____. (Note: Applying Thevenin's / Millman's simplification to the multi-branch network leads to an equivalent voltage and short circuit current).",
+      "unicode": "![DC Circuit Bridge](https://cracku.in/media/uploads/image_KaCrJ2M.png)\nThe voltage and the current between A and B points shown in the circuit are _____. (Note: Applying Thevenin's / Millman's simplification to the multi-branch network leads to an equivalent voltage and short circuit current).",
+      "plainText": "![DC Circuit Bridge](https://cracku.in/media/uploads/image_KaCrJ2M.png) The voltage and the current between A and B points shown in the circuit are _____. (Note: Applying Thevenin's / Millman's simplification to the multi-branch network leads to an equivalent voltage and short circuit current)."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$24 \\text{ V}, 12 \\text{ A}$",
+        "unicode": "24 text{ V}, 12 text{ A}",
+        "plainText": "24 text{ V}, 12 text{ A}"
+      },
+      {
+        "id": "b",
+        "latex": "$24 \\text{ V}, 4 \\text{ A}$",
+        "unicode": "24 text{ V}, 4 text{ A}",
+        "plainText": "24 text{ V}, 4 text{ A}"
+      },
+      {
+        "id": "c",
+        "latex": "$18 \\text{ V}, 12 \\text{ A}$",
+        "unicode": "18 text{ V}, 12 text{ A}",
+        "plainText": "18 text{ V}, 12 text{ A}"
+      },
+      {
+        "id": "d",
+        "latex": "$27 \\text{ V}, 4 \\text{ A}$",
+        "unicode": "27 text{ V}, 4 text{ A}",
+        "plainText": "27 text{ V}, 4 text{ A}"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Current Electricity",
+      "subchapter": "Current Electricity Core Concepts",
+      "topic": "Current Electricity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Current Electricity",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

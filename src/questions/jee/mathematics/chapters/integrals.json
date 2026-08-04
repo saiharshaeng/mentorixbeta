@@ -1,0 +1,1132 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q625",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q625_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The value of the integral 7' / 2 ~8 f 3vcosti dS 1 equa s 0 (✓cos8 + ✓sin8 ) 5",
+      "unicode": "[JEE PYQ 2025] The value of the integral 7' / 2 ~8 f 3vcosti dS 1 equa s 0 (✓cos8 + ✓sin8 ) 5",
+      "plainText": "[JEE PYQ 2025] The value of the integral 7' / 2 ~8 f 3vcosti dS 1 equa s 0 (✓cos8 + ✓sin8 ) 5"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.198Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.198Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q682",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q682_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (4.0) Given , 6 = -= 3.00 2 2 f \"'4 dx I=; - it/4 (l + esinx) (2 - cos2x) On applying property J: f(x)dx =J:J (a + b -x) dx, we get 2 w4 esinxdx I =; f_it/4 (l + esinx) (2- cos2x) ... (i ) ... (ii) On adding integral s (i ) and (ii), we get 2I _ .3_ f \"'4 dx rr -it1 4 2 - cos2x I _ __l__ f\"'4 dx ⇒ -rr -,r/4 1 -tan 2 x 2 ---~ l + tan 2 x [ as cos2x",
+      "unicode": "[JEE PYQ 2025] (4.0) Given , 6 = -= 3.00 2 2 f \"'4 dx I=; - it/4 (l + esinx) (2 - cos2x) On applying property J: f(x)dx =J:J (a + b -x) dx, we get 2 w4 esinxdx I =; f_it/4 (l + esinx) (2- cos2x) ... (i ) ... (ii) On adding integral s (i ) and (ii), we get 2I _ .3_ f \"'4 dx rr -it1 4 2 - cos2x I _ __l__ f\"'4 dx ⇒ -rr -,r/4 1 -tan 2 x 2 ---~ l + tan 2 x [ as cos2x",
+      "plainText": "[JEE PYQ 2025] (4.0) Given , 6 = -= 3.00 2 2 f \"'4 dx I=; - it/4 (l + esinx) (2 - cos2x) On applying property J: f(x)dx =J:J (a + b -x) dx, we get 2 w4 esinxdx I =; f_it/4 (l + esinx) (2- cos2x) ... (i ) ... (ii) On adding integral s (i ) and (ii), we get 2I _ .3_ f \"'4 dx rr -it1 4 2 - cos2x I _ __l__ f\"'4 dx ⇒ -rr -,r/4 1 -tan 2 x 2 ---~ l + tan 2 x [ as cos2x"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.202Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.202Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q802",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q802_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The integral J sin 2 xcos 2 X dx (sins x+ cos 3 xsin 2 x + sin 3 xcos 2 x + COSS x) 2 is equal to (a) 1 + C (b ) - 1 3 + C 3(1 + tan 3 x) 3(1 + tan x) 1 (c)-~-+C 1 + cot 3 x (d) - 1 +C 1 + cot 3 x (where C is a con stant of integration) [ 12 sin 2 x",
+      "unicode": "[JEE PYQ 2025] The integral J sin 2 xcos 2 X dx (sins x+ cos 3 xsin 2 x + sin 3 xcos 2 x + COSS x) 2 is equal to (a) 1 + C (b ) - 1 3 + C 3(1 + tan 3 x) 3(1 + tan x) 1 (c)-~-+C 1 + cot 3 x (d) - 1 +C 1 + cot 3 x (where C is a con stant of integration) [ 12 sin 2 x",
+      "plainText": "[JEE PYQ 2025] The integral J sin 2 xcos 2 X dx (sins x+ cos 3 xsin 2 x + sin 3 xcos 2 x + COSS x) 2 is equal to (a) 1 + C (b ) - 1 3 + C 3(1 + tan 3 x) 3(1 + tan x) 1 (c)-~-+C 1 + cot 3 x (d) - 1 +C 1 + cot 3 x (where C is a con stant of integration) [ 12 sin 2 x"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "1 + C",
+        "unicode": "1 + C",
+        "plainText": "1 + C"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "-~-+C 1 + cot 3 x",
+        "unicode": "-~-+C 1 + cot 3 x",
+        "plainText": "-~-+C 1 + cot 3 x"
+      },
+      {
+        "id": "d",
+        "latex": "- 1 +C 1 + cot 3 x",
+        "unicode": "- 1 +C 1 + cot 3 x",
+        "plainText": "- 1 +C 1 + cot 3 x"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.209Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.209Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q892",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q892_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (c) We have, . dy smx - + ycosx = 4x dx ⇒ : + ycotx = 4x cosec x This is a linear differential equation of form dy +Py= Q dx where P = cot x, Q = 4x cosec x Now, IF= el Pdx = ef cotxdx = elogsinx = sinx Solution of the differential equation is y-sinx = f 4x cosec xsinxdx + C ⇒ ysinx = f 4xdx + C = 2x 2 + C Put x = 2:.,y = 0, we get 2 ⇒ Put ⇒ ⇒ 112",
+      "unicode": "[JEE PYQ 2025] (c) We have, . dy smx - + ycosx = 4x dx ⇒ : + ycotx = 4x cosec x This is a linear differential equation of form dy +Py= Q dx where P = cot x, Q = 4x cosec x Now, IF= el Pdx = ef cotxdx = elogsinx = sinx Solution of the differential equation is y-sinx = f 4x cosec xsinxdx + C ⇒ ysinx = f 4xdx + C = 2x 2 + C Put x = 2:.,y = 0, we get 2 ⇒ Put ⇒ ⇒ 112",
+      "plainText": "[JEE PYQ 2025] (c) We have, . dy smx - + ycosx = 4x dx ⇒ : + ycotx = 4x cosec x This is a linear differential equation of form dy +Py= Q dx where P = cot x, Q = 4x cosec x Now, IF= el Pdx = ef cotxdx = elogsinx = sinx Solution of the differential equation is y-sinx = f 4x cosec xsinxdx + C ⇒ ysinx = f 4xdx + C = 2x 2 + C Put x = 2:.,y = 0, we get 2 ⇒ Put ⇒ ⇒ 112"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "= {;:)-11: 112 2 y = 9-11 811 2 y =- 9 Alternate Method We h ave, sinx dy + ycosx = 4x, which dx b .",
+        "unicode": "= {;:)-11: 112 2 y = 9-11 811 2 y =- 9 Alternate Method We h ave, sinx dy + ycosx = 4x, which dx b .",
+        "plainText": "= {;:)-11: 112 2 y = 9-11 811 2 y =- 9 Alternate Method We h ave, sinx dy + ycosx = 4x, which dx b ."
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "We have, . dy smx - + ycosx = 4x dx ⇒ : + ycotx = 4x cosec x This is a linear differential equation",
+        "unicode": "We have, . dy smx - + ycosx = 4x dx ⇒ : + ycotx = 4x cosec x This is a linear differential equation",
+        "plainText": "We have, . dy smx - + ycosx = 4x dx ⇒ : + ycotx = 4x cosec x This is a linear differential equation"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.214Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.214Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1126",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1126_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (2) Given, f(x + y) = f(x) f'(y) + f'(x)f(YJ, '</x,y ER and f(0) = 1 Put x = y = 0 , we get f(0) = f(0) f'(0) + f'(0) f(0) ⇒ 1 = 2f'(0) ⇒ f'(0) = _l_ 2 Put x = x and y = 0, we get f(x) = f (x) f'(0) + f'(x) f (0) 1 ⇒ f(x) = 2 f (x) + f'(x) 1 f'(x) 1 ⇒ f'(x) = -f(x) ⇒ -= - 2 f(x) 2 On integrating, we get 1 log f(x) = -x + C 2 l ⇒ f(x) = Ae 2 x, wh e",
+      "unicode": "[JEE PYQ 2025] (2) Given, f(x + y) = f(x) f'(y) + f'(x)f(YJ, '</x,y ER and f(0) = 1 Put x = y = 0 , we get f(0) = f(0) f'(0) + f'(0) f(0) ⇒ 1 = 2f'(0) ⇒ f'(0) = _l_ 2 Put x = x and y = 0, we get f(x) = f (x) f'(0) + f'(x) f (0) 1 ⇒ f(x) = 2 f (x) + f'(x) 1 f'(x) 1 ⇒ f'(x) = -f(x) ⇒ -= - 2 f(x) 2 On integrating, we get 1 log f(x) = -x + C 2 l ⇒ f(x) = Ae 2 x, wh e",
+      "plainText": "[JEE PYQ 2025] (2) Given, f(x + y) = f(x) f'(y) + f'(x)f(YJ, '</x,y ER and f(0) = 1 Put x = y = 0 , we get f(0) = f(0) f'(0) + f'(0) f(0) ⇒ 1 = 2f'(0) ⇒ f'(0) = _l_ 2 Put x = x and y = 0, we get f(x) = f (x) f'(0) + f'(x) f (0) 1 ⇒ f(x) = 2 f (x) + f'(x) 1 f'(x) 1 ⇒ f'(x) = -f(x) ⇒ -= - 2 f(x) 2 On integrating, we get 1 log f(x) = -x + C 2 l ⇒ f(x) = Ae 2 x, wh e"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Given, f",
+        "unicode": "Given, f",
+        "plainText": "Given, f"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "= -x 4 = 2 2 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https:",
+        "unicode": "= -x 4 = 2 2 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https:",
+        "plainText": "= -x 4 = 2 2 IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https:"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.229Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.229Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1591",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1591_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The integral f-----is (xs + x3 + 1)3 equal to -xs (a)~-~-+C (x 5 + x 3 + 1)2 10 (b) X + C 2(x 5 + x 3 + 1)2 X S (c)-~~-+C 2(x 5 + x 3 + 1)2 10 (d) - x + C 2(xs + x3 + 1)2 where, C is an arbitrary constant. 15 1 . [(n+l)(n+2) . .. 3n]l/n. l . 1m -------1s equa n ➔ 00 n 211 to (a)~ e4 9 (c)- e2 (b/7 e2 (d) 3 log 3 - 2",
+      "unicode": "[JEE PYQ 2025] The integral f-----is (xs + x3 + 1)3 equal to -xs (a)~-~-+C (x 5 + x 3 + 1)2 10 (b) X + C 2(x 5 + x 3 + 1)2 X S (c)-~~-+C 2(x 5 + x 3 + 1)2 10 (d) - x + C 2(xs + x3 + 1)2 where, C is an arbitrary constant. 15 1 . [(n+l)(n+2) . .. 3n]l/n. l . 1m -------1s equa n ➔ 00 n 211 to (a)~ e4 9 (c)- e2 (b/7 e2 (d) 3 log 3 - 2",
+      "plainText": "[JEE PYQ 2025] The integral f-----is (xs + x3 + 1)3 equal to -xs (a)~-~-+C (x 5 + x 3 + 1)2 10 (b) X + C 2(x 5 + x 3 + 1)2 X S (c)-~~-+C 2(x 5 + x 3 + 1)2 10 (d) - x + C 2(xs + x3 + 1)2 where, C is an arbitrary constant. 15 1 . [(n+l)(n+2) . .. 3n]l/n. l . 1m -------1s equa n ➔ 00 n 211 to (a)~ e4 9 (c)- e2 (b/7 e2 (d) 3 log 3 - 2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "~-~-+C",
+        "unicode": "~-~-+C",
+        "plainText": "~-~-+C"
+      },
+      {
+        "id": "b",
+        "latex": "X + C 2",
+        "unicode": "X + C 2",
+        "plainText": "X + C 2"
+      },
+      {
+        "id": "c",
+        "latex": "-~~-+C 2",
+        "unicode": "-~~-+C 2",
+        "plainText": "-~~-+C 2"
+      },
+      {
+        "id": "d",
+        "latex": "- x + C 2",
+        "unicode": "- x + C 2",
+        "plainText": "- x + C 2"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.256Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.256Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1849",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1849_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (a) Here,f'(x) = 2 -f (x ) X or dy+1'= 2 dx x [i.e. linea r differential e quatio n in y] Integrating Factor, IF : . Required solution is ⇒ ⇒ (a) y · (IF)= f Q(IF)dx + C y(x ) = f 2(x) dx + C yx = x 2 + C C y = x + -[·: C * 0, as f (l) * I] X lim r(I) = lim (I -Cx 2 ) = I x➔O+ X x➔O+ : . Option (a) is correct. (b) lim+ x j I)= lim+ (I+ Cx 2 ) = I x",
+      "unicode": "[JEE PYQ 2025] (a) Here,f'(x) = 2 -f (x ) X or dy+1'= 2 dx x [i.e. linea r differential e quatio n in y] Integrating Factor, IF : . Required solution is ⇒ ⇒ (a) y · (IF)= f Q(IF)dx + C y(x ) = f 2(x) dx + C yx = x 2 + C C y = x + -[·: C * 0, as f (l) * I] X lim r(I) = lim (I -Cx 2 ) = I x➔O+ X x➔O+ : . Option (a) is correct. (b) lim+ x j I)= lim+ (I+ Cx 2 ) = I x",
+      "plainText": "[JEE PYQ 2025] (a) Here,f'(x) = 2 -f (x ) X or dy+1'= 2 dx x [i.e. linea r differential e quatio n in y] Integrating Factor, IF : . Required solution is ⇒ ⇒ (a) y · (IF)= f Q(IF)dx + C y(x ) = f 2(x) dx + C yx = x 2 + C C y = x + -[·: C * 0, as f (l) * I] X lim r(I) = lim (I -Cx 2 ) = I x➔O+ X x➔O+ : . Option (a) is correct. (b) lim+ x j I)= lim+ (I+ Cx 2 ) = I x"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Here,f'",
+        "unicode": "Here,f'",
+        "plainText": "Here,f'"
+      },
+      {
+        "id": "b",
+        "latex": "lim+ x j I)= lim+",
+        "unicode": "lim+ x j I)= lim+",
+        "plainText": "lim+ x j I)= lim+"
+      },
+      {
+        "id": "c",
+        "latex": "lim x 2 f'",
+        "unicode": "lim x 2 f'",
+        "plainText": "lim x 2 f'"
+      },
+      {
+        "id": "d",
+        "latex": "f",
+        "unicode": "f",
+        "plainText": "f"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.269Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.269Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1891",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1891_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (a) Let I = --dx - n12 l+i' . . . (i) [·: S: f(x)dx= f>(a+ b-x)dx] ⇒ f n/ 2 x 2 cos (-x) l = ----dx -n/ 2 I + e-x \".(ii) O n adding Eq s. ( i) and (i i), we get 21 = f\" 12 x 2 cosx [ - 1 - + - 1 -] dx - n/ 2 I+ e' I + e-x f n/ 2 2 = x cosx · (1) dx -n/ 2 1·:(f(x)dx l l = 2 (f(x)dx, w hen f(-x) = f(x) J r n/ 2 2 ⇒ 21 = 2 Jo x cosx dx Using integrati",
+      "unicode": "[JEE PYQ 2025] (a) Let I = --dx - n12 l+i' . . . (i) [·: S: f(x)dx= f>(a+ b-x)dx] ⇒ f n/ 2 x 2 cos (-x) l = ----dx -n/ 2 I + e-x \".(ii) O n adding Eq s. ( i) and (i i), we get 21 = f\" 12 x 2 cosx [ - 1 - + - 1 -] dx - n/ 2 I+ e' I + e-x f n/ 2 2 = x cosx · (1) dx -n/ 2 1·:(f(x)dx l l = 2 (f(x)dx, w hen f(-x) = f(x) J r n/ 2 2 ⇒ 21 = 2 Jo x cosx dx Using integrati",
+      "plainText": "[JEE PYQ 2025] (a) Let I = --dx - n12 l+i' . . . (i) [·: S: f(x)dx= f>(a+ b-x)dx] ⇒ f n/ 2 x 2 cos (-x) l = ----dx -n/ 2 I + e-x \".(ii) O n adding Eq s. ( i) and (i i), we get 21 = f\" 12 x 2 cosx [ - 1 - + - 1 -] dx - n/ 2 I+ e' I + e-x f n/ 2 2 = x cosx · (1) dx -n/ 2 1·:(f(x)dx l l = 2 (f(x)dx, w hen f(-x) = f(x) J r n/ 2 2 ⇒ 21 = 2 Jo x cosx dx Using integrati"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Let I = --dx - n12 l+i' . . .",
+        "unicode": "Let I = --dx - n12 l+i' . . .",
+        "plainText": "Let I = --dx - n12 l+i' . . ."
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.271Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.271Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1981",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q1981_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The integral r log x2 dx is z log x2 + log(36 - 12x + x2) equ al to (a) 2 (b) 4 (c) 1 (d) 6",
+      "unicode": "[JEE PYQ 2025] The integral r log x2 dx is z log x2 + log(36 - 12x + x2) equ al to (a) 2 (b) 4 (c) 1 (d) 6",
+      "plainText": "[JEE PYQ 2025] The integral r log x2 dx is z log x2 + log(36 - 12x + x2) equ al to (a) 2 (b) 4 (c) 1 (d) 6"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "d",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.275Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.275Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q2062",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q2062_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (a) Let T,-+ 1 be the general term in the expansion of ( 1 -2 ✓x ) 50 T,+1 = 5oC,(1)50-r (- 2xl/2 )' = 50C,2' Xr/2(-1)' For the integral powe r of x, r should b e ev en integer. 25 :. Sum of coefficients= L 50 C 2 ,(2f' r=O = ~[(1 + 2fO + (1 -2)50] 2 = ~[:350 + 1] 2 Aliter We have, (1 -2.Jx) 50 = C 0 - C 1 2.Jx + C 2 (2✓xf + ... + C 50 (2✓x)50 .. (",
+      "unicode": "[JEE PYQ 2025] (a) Let T,-+ 1 be the general term in the expansion of ( 1 -2 ✓x ) 50 T,+1 = 5oC,(1)50-r (- 2xl/2 )' = 50C,2' Xr/2(-1)' For the integral powe r of x, r should b e ev en integer. 25 :. Sum of coefficients= L 50 C 2 ,(2f' r=O = ~[(1 + 2fO + (1 -2)50] 2 = ~[:350 + 1] 2 Aliter We have, (1 -2.Jx) 50 = C 0 - C 1 2.Jx + C 2 (2✓xf + ... + C 50 (2✓x)50 .. (",
+      "plainText": "[JEE PYQ 2025] (a) Let T,-+ 1 be the general term in the expansion of ( 1 -2 ✓x ) 50 T,+1 = 5oC,(1)50-r (- 2xl/2 )' = 50C,2' Xr/2(-1)' For the integral powe r of x, r should b e ev en integer. 25 :. Sum of coefficients= L 50 C 2 ,(2f' r=O = ~[(1 + 2fO + (1 -2)50] 2 = ~[:350 + 1] 2 Aliter We have, (1 -2.Jx) 50 = C 0 - C 1 2.Jx + C 2 (2✓xf + ... + C 50 (2✓x)50 .. ("
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Let T,-+ 1 be the general term in the expansion of",
+        "unicode": "Let T,-+ 1 be the general term in the expansion of",
+        "plainText": "Let T,-+ 1 be the general term in the expansion of"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "= Co + Cz",
+        "unicode": "= Co + Cz",
+        "plainText": "= Co + Cz"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.280Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.280Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q2452",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q2452_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] :i:/ Put t = x -[x] = {X}, which is a fra ctional part function and lie between 0 :-:; { X} < 1 and then solve it. Given, a E R and equation is - 3 {x - [xl} 2 + 2 {x - [xl} + a 2 = 0 Let t = x -[x], then equation is -3t 2 + 2t + a2 = 0 ⇒ t=1±~ 3 t = x -[x] = {X} [Fractional part] 0 :-:; t:<,1 1 ± ✓1 + 3a 2 0 :<, ---''------:<, 1 3 Taking positive",
+      "unicode": "[JEE PYQ 2025] :i:/ Put t = x -[x] = {X}, which is a fra ctional part function and lie between 0 :-:; { X} < 1 and then solve it. Given, a E R and equation is - 3 {x - [xl} 2 + 2 {x - [xl} + a 2 = 0 Let t = x -[x], then equation is -3t 2 + 2t + a2 = 0 ⇒ t=1±~ 3 t = x -[x] = {X} [Fractional part] 0 :-:; t:<,1 1 ± ✓1 + 3a 2 0 :<, ---''------:<, 1 3 Taking positive",
+      "plainText": "[JEE PYQ 2025] :i:/ Put t = x -[x] = {X}, which is a fra ctional part function and lie between 0 :-:; { X} < 1 and then solve it. Given, a E R and equation is - 3 {x - [xl} 2 + 2 {x - [xl} + a 2 = 0 Let t = x -[x], then equation is -3t 2 + 2t + a2 = 0 ⇒ t=1±~ 3 t = x -[x] = {X} [Fractional part] 0 :-:; t:<,1 1 ± ✓1 + 3a 2 0 :<, ---''------:<, 1 3 Taking positive"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.305Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.305Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q3358",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q3358_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Concept Involved Integration by Substitution i.e., I = f J(g(x))-g'(x)dx Put, g(x)=t ⇒ g'(x)dx= dt I = f f(t)dt Description of Situation Generally, students gets confused afrer sub stitution i.e., secx+ tanx=t. Now, for secx we should use sec 2 x-tan 2 x = l ⇒ (secx-tan x)(secx+ tan x)=l 1 ⇒ secx-tanx=- t Sol. Here, I = J sec 2 dx (sec x + tan x/ 1",
+      "unicode": "[JEE PYQ 2025] Concept Involved Integration by Substitution i.e., I = f J(g(x))-g'(x)dx Put, g(x)=t ⇒ g'(x)dx= dt I = f f(t)dt Description of Situation Generally, students gets confused afrer sub stitution i.e., secx+ tanx=t. Now, for secx we should use sec 2 x-tan 2 x = l ⇒ (secx-tan x)(secx+ tan x)=l 1 ⇒ secx-tanx=- t Sol. Here, I = J sec 2 dx (sec x + tan x/ 1",
+      "plainText": "[JEE PYQ 2025] Concept Involved Integration by Substitution i.e., I = f J(g(x))-g'(x)dx Put, g(x)=t ⇒ g'(x)dx= dt I = f f(t)dt Description of Situation Generally, students gets confused afrer sub stitution i.e., secx+ tanx=t. Now, for secx we should use sec 2 x-tan 2 x = l ⇒ (secx-tan x)(secx+ tan x)=l 1 ⇒ secx-tanx=- t Sol. Here, I = J sec 2 dx (sec x + tan x/ 1"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "Conceptual",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.373Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.373Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q3475",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRALS_2025_S1_Q3475_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Here, he --W = eV 0 A Vo =-1-ne 4ne 0 r ( 1240 ev)-(4.7 eV) 1200 9 X 10 9 X n X 1.6 X 10- 19 10-2 ( 6 _ 2 _ 4 _ 7 ) = 9 X 10 9 X n X 1.6 X 10- 19 10-2 1.5 xl0- 2 or n = -----1.04 x 10 7 9 X 1.6 X 10-l O :. Answer is 7. Analysis of Question (i) Question is moderately difficult. (ii) In eV 0 if we substitute the value of e = 1.6 x 10- 19 C, then answ",
+      "unicode": "[JEE PYQ 2025] Here, he --W = eV 0 A Vo =-1-ne 4ne 0 r ( 1240 ev)-(4.7 eV) 1200 9 X 10 9 X n X 1.6 X 10- 19 10-2 ( 6 _ 2 _ 4 _ 7 ) = 9 X 10 9 X n X 1.6 X 10- 19 10-2 1.5 xl0- 2 or n = -----1.04 x 10 7 9 X 1.6 X 10-l O :. Answer is 7. Analysis of Question (i) Question is moderately difficult. (ii) In eV 0 if we substitute the value of e = 1.6 x 10- 19 C, then answ",
+      "plainText": "[JEE PYQ 2025] Here, he --W = eV 0 A Vo =-1-ne 4ne 0 r ( 1240 ev)-(4.7 eV) 1200 9 X 10 9 X n X 1.6 X 10- 19 10-2 ( 6 _ 2 _ 4 _ 7 ) = 9 X 10 9 X n X 1.6 X 10- 19 10-2 1.5 xl0- 2 or n = -----1.04 x 10 7 9 X 1.6 X 10-l O :. Answer is 7. Analysis of Question (i) Question is moderately difficult. (ii) In eV 0 if we substitute the value of e = 1.6 x 10- 19 C, then answ"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "➔",
+        "unicode": "➔",
+        "plainText": "➔"
+      },
+      {
+        "id": "b",
+        "latex": "➔",
+        "unicode": "➔",
+        "plainText": "➔"
+      },
+      {
+        "id": "c",
+        "latex": "➔",
+        "unicode": "➔",
+        "plainText": "➔"
+      },
+      {
+        "id": "d",
+        "latex": "➔",
+        "unicode": "➔",
+        "plainText": "➔"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Integrals NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Integrals NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "subchapter": "Integrals Core Concepts",
+      "topic": "Integrals Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integrals",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.380Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.380Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

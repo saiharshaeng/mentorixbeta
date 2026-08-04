@@ -1,0 +1,958 @@
+[
+  {
+    "id": "JEE_ADVANCED_CHE_THERMODYNAMI_2020_S1_Q26",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_CHE_THERMODYNAMI_2020_S1_Q26_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2020] In thermodynamics, the 푃−푉 work done is given by 푤=−∫푑푉 푃 ext . For a system undergoing a particular process, the work done is, 푤=−∫푑푉 ( 푅푇 푉−푏 − 푎 푉 2 ) . This equation is applicable to a (A) system that satisfies the van der Waals equation of state. (B) process that is reversible and isothermal. (C) process that is reversible and adiabatic. (D) p",
+      "unicode": "[JEE PYQ 2020] In thermodynamics, the 푃−푉 work done is given by 푤=−∫푑푉 푃 ext . For a system undergoing a particular process, the work done is, 푤=−∫푑푉 ( 푅푇 푉−푏 − 푎 푉 2 ) . This equation is applicable to a (A) system that satisfies the van der Waals equation of state. (B) process that is reversible and isothermal. (C) process that is reversible and adiabatic. (D) p",
+      "plainText": "[JEE PYQ 2020] In thermodynamics, the 푃−푉 work done is given by 푤=−∫푑푉 푃 ext . For a system undergoing a particular process, the work done is, 푤=−∫푑푉 ( 푅푇 푉−푏 − 푎 푉 2 ) . This equation is applicable to a (A) system that satisfies the van der Waals equation of state. (B) process that is reversible and isothermal. (C) process that is reversible and adiabatic. (D) p"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "system that satisfies the van der Waals equation of state.",
+        "unicode": "system that satisfies the van der Waals equation of state.",
+        "plainText": "system that satisfies the van der Waals equation of state."
+      },
+      {
+        "id": "b",
+        "latex": "process that is reversible and isothermal.",
+        "unicode": "process that is reversible and isothermal.",
+        "plainText": "process that is reversible and isothermal."
+      },
+      {
+        "id": "c",
+        "latex": "process that is reversible and adiabatic.",
+        "unicode": "process that is reversible and adiabatic.",
+        "plainText": "process that is reversible and adiabatic."
+      },
+      {
+        "id": "d",
+        "latex": "process that is irreversible and at constant pressure.",
+        "unicode": "process that is irreversible and at constant pressure.",
+        "plainText": "process that is irreversible and at constant pressure."
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2020.pdf",
+      "createdDate": "2026-07-29T19:27:46.141Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.141Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_CHE_THERMODYNAMI_2022_S1_Q140",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_CHE_THERMODYNAMI_2022_S1_Q140_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2022] 2 mol of Hg(g) is combusted in a fixed volume bomb calorimeter with excess of O 2 at 298 K and 1 atm into HgO(s). During the reaction, temperature increases from 298.0 K to 312.8 K. If heat capacity of the bomb calorimeter and enthalpy of formation of Hg(g) are 20.00 kJ K -1 and 61.32 kJ mol -1 at 298 K, respectively, the calculated standard molar",
+      "unicode": "[JEE PYQ 2022] 2 mol of Hg(g) is combusted in a fixed volume bomb calorimeter with excess of O 2 at 298 K and 1 atm into HgO(s). During the reaction, temperature increases from 298.0 K to 312.8 K. If heat capacity of the bomb calorimeter and enthalpy of formation of Hg(g) are 20.00 kJ K -1 and 61.32 kJ mol -1 at 298 K, respectively, the calculated standard molar",
+      "plainText": "[JEE PYQ 2022] 2 mol of Hg(g) is combusted in a fixed volume bomb calorimeter with excess of O 2 at 298 K and 1 atm into HgO(s). During the reaction, temperature increases from 298.0 K to 312.8 K. If heat capacity of the bomb calorimeter and enthalpy of formation of Hg(g) are 20.00 kJ K -1 and 61.32 kJ mol -1 at 298 K, respectively, the calculated standard molar"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2022.pdf",
+      "createdDate": "2026-07-29T19:27:46.154Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.154Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q699",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q699_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (d) I -2 process is isothermal and 2-3 process is isoch ori c. Vf T. V (I) W1➔ 2 = nRiln-= 1 x R_Q_ In __1. V; 3 ½ = RTo In 2Vo = RTo In 2 3 V 0 3 ( I sochoric process) RT. = _o In 2 (I ➔ P) 3 f (II) l'iU = 2.nR(Tr -T;) l'iU1➔2➔3 = ~[l x R( To -~) ] = RT 0 (II ➔R) (First law of thermodynamics) RT. =RT 0 + - 0 ln2 3 RT. =- 0 [3+ ln2] 3 (III ➔T) IWWW",
+      "unicode": "[JEE PYQ 2025] (d) I -2 process is isothermal and 2-3 process is isoch ori c. Vf T. V (I) W1➔ 2 = nRiln-= 1 x R_Q_ In __1. V; 3 ½ = RTo In 2Vo = RTo In 2 3 V 0 3 ( I sochoric process) RT. = _o In 2 (I ➔ P) 3 f (II) l'iU = 2.nR(Tr -T;) l'iU1➔2➔3 = ~[l x R( To -~) ] = RT 0 (II ➔R) (First law of thermodynamics) RT. =RT 0 + - 0 ln2 3 RT. =- 0 [3+ ln2] 3 (III ➔T) IWWW",
+      "plainText": "[JEE PYQ 2025] (d) I -2 process is isothermal and 2-3 process is isoch ori c. Vf T. V (I) W1➔ 2 = nRiln-= 1 x R_Q_ In __1. V; 3 ½ = RTo In 2Vo = RTo In 2 3 V 0 3 ( I sochoric process) RT. = _o In 2 (I ➔ P) 3 f (II) l'iU = 2.nR(Tr -T;) l'iU1➔2➔3 = ~[l x R( To -~) ] = RT 0 (II ➔R) (First law of thermodynamics) RT. =RT 0 + - 0 ln2 3 RT. =- 0 [3+ ln2] 3 (III ➔T) IWWW"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "I -2 process is isothermal and 2-3 process is isoch ori c. Vf T. V",
+        "unicode": "I -2 process is isothermal and 2-3 process is isoch ori c. Vf T. V",
+        "plainText": "I -2 process is isothermal and 2-3 process is isoch ori c. Vf T. V"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.203Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.203Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q930",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q930_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] A reversible cyclic process for an ideal gas is shown below. Here, p, V and T are pressure, volume and temperature, respectively. The thermodynamic parameters q, w , H and U are heat, work, enthalpy and internal energy, respectively. (a) (b) (c) (d) 0 A Me = H Heated iron tube 873 K A (1) Br 2 , NaOH (2) H30 + (3) Sodalime, tJ. 0 0 CHO ~ =,ac OHC C",
+      "unicode": "[JEE PYQ 2025] A reversible cyclic process for an ideal gas is shown below. Here, p, V and T are pressure, volume and temperature, respectively. The thermodynamic parameters q, w , H and U are heat, work, enthalpy and internal energy, respectively. (a) (b) (c) (d) 0 A Me = H Heated iron tube 873 K A (1) Br 2 , NaOH (2) H30 + (3) Sodalime, tJ. 0 0 CHO ~ =,ac OHC C",
+      "plainText": "[JEE PYQ 2025] A reversible cyclic process for an ideal gas is shown below. Here, p, V and T are pressure, volume and temperature, respectively. The thermodynamic parameters q, w , H and U are heat, work, enthalpy and internal energy, respectively. (a) (b) (c) (d) 0 A Me = H Heated iron tube 873 K A (1) Br 2 , NaOH (2) H30 + (3) Sodalime, tJ. 0 0 CHO ~ =,ac OHC C"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "0 A Me = H Heated iron tube 873 K A",
+        "unicode": "0 A Me = H Heated iron tube 873 K A",
+        "plainText": "0 A Me = H Heated iron tube 873 K A"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.215Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.215Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q981",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q981_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] One mole of a monoatomic ideal gas undergoes four thermodynamic processes as shown sch ematically in the pV-diagram below. Among these four processes, one is isobaric, one is isochoric, one is isothermal and one is adiabatic. Match the processes mentioned in List-1 with the corresponding statements in List-II. p List-I List-II p In process I 1. Wor",
+      "unicode": "[JEE PYQ 2025] One mole of a monoatomic ideal gas undergoes four thermodynamic processes as shown sch ematically in the pV-diagram below. Among these four processes, one is isobaric, one is isochoric, one is isothermal and one is adiabatic. Match the processes mentioned in List-1 with the corresponding statements in List-II. p List-I List-II p In process I 1. Wor",
+      "plainText": "[JEE PYQ 2025] One mole of a monoatomic ideal gas undergoes four thermodynamic processes as shown sch ematically in the pV-diagram below. Among these four processes, one is isobaric, one is isochoric, one is isothermal and one is adiabatic. Match the processes mentioned in List-1 with the corresponding statements in List-II. p List-I List-II p In process I 1. Wor"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P --,4; Q--,3; R--, 1; S--,2",
+        "unicode": "P --,4; Q--,3; R--, 1; S--,2",
+        "plainText": "P --,4; Q--,3; R--, 1; S--,2"
+      },
+      {
+        "id": "b",
+        "latex": "P --,1; Q--,3; R--,2; S--,4",
+        "unicode": "P --,1; Q--,3; R--,2; S--,4",
+        "plainText": "P --,1; Q--,3; R--,2; S--,4"
+      },
+      {
+        "id": "c",
+        "latex": "P--,3; Q--,4; R--, 1; S --,2",
+        "unicode": "P--,3; Q--,4; R--, 1; S --,2",
+        "plainText": "P--,3; Q--,4; R--, 1; S --,2"
+      },
+      {
+        "id": "d",
+        "latex": "P--,3; Q --,4; R--,2; S--, 1",
+        "unicode": "P--,3; Q --,4; R--,2; S--, 1",
+        "plainText": "P--,3; Q --,4; R--,2; S--, 1"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.218Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.218Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2172",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2172_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] 7°C was measured for the beaker and its contents (Expt. 1 ). Because the enthalpy of neutralisation of a strong acid with a strong base is a constant (- 57.0k.Jmol- 1 \\ this experiment could be used to measure the calorimeter constant. In a second experiment (Expt. 2), 100 mL of 2.0 M acetic acid (K 0 = 2.0x 10- 5 ) was mixed with 100 mL of 1.0 M N",
+      "unicode": "[JEE PYQ 2025] 7°C was measured for the beaker and its contents (Expt. 1 ). Because the enthalpy of neutralisation of a strong acid with a strong base is a constant (- 57.0k.Jmol- 1  this experiment could be used to measure the calorimeter constant. In a second experiment (Expt. 2), 100 mL of 2.0 M acetic acid (K 0 = 2.0x 10- 5 ) was mixed with 100 mL of 1.0 M N",
+      "plainText": "[JEE PYQ 2025] 7°C was measured for the beaker and its contents (Expt. 1 ). Because the enthalpy of neutralisation of a strong acid with a strong base is a constant (- 57.0k.Jmol- 1 this experiment could be used to measure the calorimeter constant. In a second experiment (Expt. 2), 100 mL of 2.0 M acetic acid (K 0 = 2.0x 10- 5 ) was mixed with 100 mL of 1.0 M N"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.287Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.287Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2223",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2223_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] S ince, there is no mention of temperature, room temperature w ill be considered and thermodynamically controlled product would be the major product as: CH3 CH3 I - CH H+ I -CH CH2~ 2 BP CH 3 ~ 2 3°.carbocation",
+      "unicode": "[JEE PYQ 2025] S ince, there is no mention of temperature, room temperature w ill be considered and thermodynamically controlled product would be the major product as: CH3 CH3 I - CH H+ I -CH CH2~ 2 BP CH 3 ~ 2 3°.carbocation",
+      "plainText": "[JEE PYQ 2025] S ince, there is no mention of temperature, room temperature w ill be considered and thermodynamically controlled product would be the major product as: CH3 CH3 I - CH H+ I -CH CH2~ 2 BP CH 3 ~ 2 3°.carbocation"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.290Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.290Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2334",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2334_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] For t h e complete combustion of ethanol, C 2 H 5 OH(4 + 30 2 (g) ~ 2CO 2 (g)+ 3H 2 O(0, the amount of heat produced as measured in bomb calorimeter, is 1364.47 kJ mol- 1 at 25°C. Assuming ideality the enthalpy of combustion, 11cH, for the reaction will be (R = 8.314 J K- 1 mol- 1 ) (a) - 1366.95kJ mo1- 1 (b) - 1361.95kJ mo1- 1 (c) -1460.50kJ mo1-",
+      "unicode": "[JEE PYQ 2025] For t h e complete combustion of ethanol, C 2 H 5 OH(4 + 30 2 (g) ~ 2CO 2 (g)+ 3H 2 O(0, the amount of heat produced as measured in bomb calorimeter, is 1364.47 kJ mol- 1 at 25°C. Assuming ideality the enthalpy of combustion, 11cH, for the reaction will be (R = 8.314 J K- 1 mol- 1 ) (a) - 1366.95kJ mo1- 1 (b) - 1361.95kJ mo1- 1 (c) -1460.50kJ mo1-",
+      "plainText": "[JEE PYQ 2025] For t h e complete combustion of ethanol, C 2 H 5 OH(4 + 30 2 (g) ~ 2CO 2 (g)+ 3H 2 O(0, the amount of heat produced as measured in bomb calorimeter, is 1364.47 kJ mol- 1 at 25°C. Assuming ideality the enthalpy of combustion, 11cH, for the reaction will be (R = 8.314 J K- 1 mol- 1 ) (a) - 1366.95kJ mo1- 1 (b) - 1361.95kJ mo1- 1 (c) -1460.50kJ mo1-"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "- 1366.95kJ mo1- 1",
+        "unicode": "- 1366.95kJ mo1- 1",
+        "plainText": "- 1366.95kJ mo1- 1"
+      },
+      {
+        "id": "b",
+        "latex": "- 1361.95kJ mo1- 1",
+        "unicode": "- 1361.95kJ mo1- 1",
+        "plainText": "- 1361.95kJ mo1- 1"
+      },
+      {
+        "id": "c",
+        "latex": "-1460.50kJ mo1- 1",
+        "unicode": "-1460.50kJ mo1- 1",
+        "plainText": "-1460.50kJ mo1- 1"
+      },
+      {
+        "id": "d",
+        "latex": "- 1350.50kJ mo1- 1",
+        "unicode": "- 1350.50kJ mo1- 1",
+        "plainText": "- 1350.50kJ mo1- 1"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.297Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.297Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2928",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q2928_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The standard enthalpies of fo rmation of CO 2 (g), H 2 O(1) and glucose(s) at 25°C are -400 kJ/mol, -300 kJ/mol and - 1300 kJ/mol, respectively. The standard enthalpy of combustion per gram of glucose at 25°C is (a) + 2900 kJ (b) -2900 kJ (c) -16.11 kJ (d) + 16.11 kJ",
+      "unicode": "[JEE PYQ 2025] The standard enthalpies of fo rmation of CO 2 (g), H 2 O(1) and glucose(s) at 25°C are -400 kJ/mol, -300 kJ/mol and - 1300 kJ/mol, respectively. The standard enthalpy of combustion per gram of glucose at 25°C is (a) + 2900 kJ (b) -2900 kJ (c) -16.11 kJ (d) + 16.11 kJ",
+      "plainText": "[JEE PYQ 2025] The standard enthalpies of fo rmation of CO 2 (g), H 2 O(1) and glucose(s) at 25°C are -400 kJ/mol, -300 kJ/mol and - 1300 kJ/mol, respectively. The standard enthalpy of combustion per gram of glucose at 25°C is (a) + 2900 kJ (b) -2900 kJ (c) -16.11 kJ (d) + 16.11 kJ"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "and glucose",
+        "unicode": "and glucose",
+        "plainText": "and glucose"
+      },
+      {
+        "id": "b",
+        "latex": "-2900 kJ",
+        "unicode": "-2900 kJ",
+        "plainText": "-2900 kJ"
+      },
+      {
+        "id": "c",
+        "latex": "-16.11 kJ",
+        "unicode": "-16.11 kJ",
+        "plainText": "-16.11 kJ"
+      },
+      {
+        "id": "d",
+        "latex": "+ 16.11 kJ",
+        "unicode": "+ 16.11 kJ",
+        "plainText": "+ 16.11 kJ"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.342Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.342Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q3717",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2025_S1_Q3717_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The species which by definition has zero standard molar enthalpy of formation at 298 K is (al Biz(gl (bl Cl 2 (gl (cl HzO(gl (dl CH 4 (gl",
+      "unicode": "[JEE PYQ 2025] The species which by definition has zero standard molar enthalpy of formation at 298 K is (al Biz(gl (bl Cl 2 (gl (cl HzO(gl (dl CH 4 (gl",
+      "plainText": "[JEE PYQ 2025] The species which by definition has zero standard molar enthalpy of formation at 298 K is (al Biz(gl (bl Cl 2 (gl (cl HzO(gl (dl CH 4 (gl"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Thermodynamics NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Thermodynamics NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.396Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.396Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_CHE_THERMODYNAMI_2026_S1_Q164",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_THERMODYNAMI_2026_S1_Q164_RAW",
+    "question": {
+      "latex": "Consider the following data.\n$i$ $2Al$s$ + 6HCl$aq$ \\rightarrow Al_2Cl_6$aq$ + 3H_2$g$ \\quad \\Delta H_1 = -1200\\text{ kJ/mol}$\n$ii$ $H_2$g$ + Cl_2$g$ \\rightarrow 2HCl$g$ \\quad \\Delta H_2 = -164\\text{ kJ/mol}$\n$iii$ $HCl$g$ + aq \\rightarrow HCl$aq$ \\quad \\Delta H_3 = -83\\text{ kJ/mol}$\n$iv$ $Al_2Cl_6$s$ + aq \\rightarrow Al_2Cl_6$aq$ \\quad \\Delta H_4 = -663\\text{ kJ/mol}$\n$Note: The standard convention used here takes $+ Q$ on the product side as an exothermic process, yielding negative $\\Delta H$ values for the above reactions as given in the raw text$.\nThe enthalpy of formation of anhydrous solid $Al_2Cl_6$ is :",
+      "unicode": "Consider the following data.\ni 2Als + 6HClaq rightarrow Al_2Cl_6aq + 3H_2g quad Delta H_1 = -1200text{ kJ/mol}\nii H_2g + Cl_2g rightarrow 2HClg quad Delta H_2 = -164text{ kJ/mol}\niii HClg + aq rightarrow HClaq quad Delta H_3 = -83text{ kJ/mol}\niv Al_2Cl_6s + aq rightarrow Al_2Cl_6aq quad Delta H_4 = -663text{ kJ/mol}\nNote: The standard convention used here takes + Q on the product side as an exothermic process, yielding negative Delta H values for the above reactions as given in the raw text.\nThe enthalpy of formation of anhydrous solid Al_2Cl_6 is :",
+      "plainText": "Consider the following data. i 2Als + 6HClaq rightarrow Al_2Cl_6aq + 3H_2g quad Delta H_1 = -1200text{ kJ/mol} ii H_2g + Cl_2g rightarrow 2HClg quad Delta H_2 = -164text{ kJ/mol} iii HClg + aq rightarrow HClaq quad Delta H_3 = -83text{ kJ/mol} iv Al_2Cl_6s + aq rightarrow Al_2Cl_6aq quad Delta H_4 = -663text{ kJ/mol} Note: The standard convention used here takes + Q on the product side as an exothermic process, yielding negative Delta H values for the above reactions as given in the raw text. The enthalpy of formation of anhydrous solid Al_2Cl_6 is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$-648\\text{ kJ mol}^{-1}$",
+        "unicode": "-648text{ kJ mol}^{-1}",
+        "plainText": "-648text{ kJ mol}^{-1}"
+      },
+      {
+        "id": "b",
+        "latex": "$-1350\\text{ kJ mol}^{-1}$",
+        "unicode": "-1350text{ kJ mol}^{-1}",
+        "plainText": "-1350text{ kJ mol}^{-1}"
+      },
+      {
+        "id": "c",
+        "latex": "$-2002\\text{ kJ mol}^{-1}$",
+        "unicode": "-2002text{ kJ mol}^{-1}",
+        "plainText": "-2002text{ kJ mol}^{-1}"
+      },
+      {
+        "id": "d",
+        "latex": "$-1527\\text{ kJ mol}^{-1}$",
+        "unicode": "-1527text{ kJ mol}^{-1}",
+        "plainText": "-1527text{ kJ mol}^{-1}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "We need the enthalpy of the reaction: $2Al(s) + 3Cl_2(g) \\rightarrow Al_2Cl_6(s)$\nUsing Hess's Law, we can manipulate the given equations:\nEquation 1: $2Al(s) + 6HCl(aq) \\rightarrow Al_2Cl_6(aq) + 3H_2(g) \\quad \\Delta H = -1200\\text{ kJ}$\nReverse Equation 4: $Al_2Cl_6(aq) \\rightarrow Al_2Cl_6(s) + aq \\quad \\Delta H = +663\\text{ kJ}$\nMultiply Equation 3 by 6: $6HCl(g) + aq \\rightarrow 6HCl(aq) \\quad \\Delta H = 6(-83) = -498\\text{ kJ}$\nMultiply Equation 2 by 3: $3H_2(g) + 3Cl_2(g) \\rightarrow 6HCl(g) \\quad \\Delta H = 3(-164) = -492\\text{ kJ}$\nAdding all the above modified equations cancels the intermediate species $HCl(aq), HCl(g), H_2(g)$ and $Al_2Cl_6(aq)$ leaving:\n$2Al(s) + 3Cl_2(g) \\rightarrow Al_2Cl_6(s)$\nSum of enthalpies = $(-1200) + (+663) + (-498) + (-492) = -1527\\text{ kJ/mol}$.",
+      "unicode": "We need the enthalpy of the reaction: 2Al(s) + 3Cl_2(g) rightarrow Al_2Cl_6(s)\nUsing Hess's Law, we can manipulate the given equations:\nEquation 1: 2Al(s) + 6HCl(aq) rightarrow Al_2Cl_6(aq) + 3H_2(g) quad Delta H = -1200text{ kJ}\nReverse Equation 4: Al_2Cl_6(aq) rightarrow Al_2Cl_6(s) + aq quad Delta H = +663text{ kJ}\nMultiply Equation 3 by 6: 6HCl(g) + aq rightarrow 6HCl(aq) quad Delta H = 6(-83) = -498text{ kJ}\nMultiply Equation 2 by 3: 3H_2(g) + 3Cl_2(g) rightarrow 6HCl(g) quad Delta H = 3(-164) = -492text{ kJ}\nAdding all the above modified equations cancels the intermediate species HCl(aq), HCl(g), H_2(g) and Al_2Cl_6(aq) leaving:\n2Al(s) + 3Cl_2(g) rightarrow Al_2Cl_6(s)\nSum of enthalpies = (-1200) + (+663) + (-498) + (-492) = -1527text{ kJ/mol}.",
+      "plainText": "We need the enthalpy of the reaction: 2Al(s) + 3Cl_2(g) rightarrow Al_2Cl_6(s) Using Hess's Law, we can manipulate the given equations: Equation 1: 2Al(s) + 6HCl(aq) rightarrow Al_2Cl_6(aq) + 3H_2(g) quad Delta H = -1200text{ kJ} Reverse Equation 4: Al_2Cl_6(aq) rightarrow Al_2Cl_6(s) + aq quad Delta H = +663text{ kJ} Multiply Equation 3 by 6: 6HCl(g) + aq rightarrow 6HCl(aq) quad Delta H = 6(-83) = -498text{ kJ} Multiply Equation 2 by 3: 3H_2(g) + 3Cl_2(g) rightarrow 6HCl(g) quad Delta H = 3(-164) = -492text{ kJ} Adding all the above modified equations cancels the intermediate species HCl(aq), HCl(g), H_2(g) and Al_2Cl_6(aq) leaving: 2Al(s) + 3Cl_2(g) rightarrow Al_2Cl_6(s) Sum of enthalpies = (-1200) + (+663) + (-498) + (-492) = -1527text{ kJ/mol}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.532Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.532Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

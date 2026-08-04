@@ -156,6 +156,10 @@
     }
 
     let topicFound = false;
+    let chapterJustCompleted = false;
+    let completedChapterTitle = '';
+    let nextChapterTitle = '';
+
     (course.units || []).forEach((unit, ui) => {
       (unit.chapters || []).forEach((chap, ci) => {
         const subchapters = chap.subchapters || [];
@@ -213,10 +217,6 @@
           const tName = typeof t === 'string' ? t : (t.title || t.name || '');
           return state.completedTopics.includes(tName.trim()) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
         });
-
-        let chapterJustCompleted = false;
-        let completedChapterTitle = '';
-        let nextChapterTitle = '';
 
         if (allCompleted && !chap.completed) {
           chap.completed = true;

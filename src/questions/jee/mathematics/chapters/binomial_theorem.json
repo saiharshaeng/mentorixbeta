@@ -1,0 +1,3955 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2025_S_Q76",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2025_S_Q76_RAW",
+    "question": {
+      "latex": "Let $\\alpha, \\beta, \\gamma$ and $\\delta$ be the coefficients of $x^7, x^6, x^5$ and x respectively in the expansion of $(x+\\sqrt{x^3-1})^5 + (x-\\sqrt{x^3-1})^5$, x > 1. If u and v satisfy the equations $\\alpha u + \\beta v = 18$, $\\gamma u + \\delta v = 20$, then u + v equals :",
+      "unicode": "Let α, β, gamma and delta be the coefficients of x^7, x^6, x^5 and x respectively in the expansion of (x+√(x³-1))^5 + (x-√(x³-1))^5, x > 1. If u and v satisfy the equations α u + β v = 18, gamma u + delta v = 20, then u + v equals :",
+      "plainText": "Let alpha, beta, gamma and delta be the coefficients of x^7, x^6, x^5 and x respectively in the expansion of (x+sqrt(x^3-1))^5 + (x-sqrt(x^3-1))^5, x > 1. If u and v satisfy the equations alpha u + beta v = 18, gamma u + delta v = 20, then u + v equals :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "d",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.041Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.041Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2025_S_Q99",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2025_S_Q99_RAW",
+    "question": {
+      "latex": "If $\\sum_{r=1}^{30} r(31-r) \\cdot {^{29}C_{r-1}} = \\alpha \\times 2^{28}$, then $\\alpha$ is equal to",
+      "unicode": "If sum_{r=1}^{30} r(31-r) · {^{29}C_{r-1}} = α × 2^{28}, then α is equal to",
+      "plainText": "If sum_{r=1}^{30} r(31-r) cdot {^{29}C_{r-1}} = alpha times 2^{28}, then alpha is equal to"
+    },
+    "options": [],
+    "answers": [
+      "3"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S_Q157",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S_Q157_RAW",
+    "question": {
+      "latex": "The number of elements in the set $S = \\left\\{ (r, k) : k \\in \\mathbb{Z} \\text{ and } {}^{36}C_{r+1} = \\frac{6 \\left({}^{35}C_r\\right)}{k^2 - 3} \\right\\}$, is :",
+      "unicode": "The number of elements in the set S = left{ (r, k) : k in mathbb{Z} text{ and } {}^{36}C_{r+1} = frac{6 left({}^{35}C_rright)}{k² - 3} right}, is :",
+      "plainText": "The number of elements in the set S = left{ (r, k) : k in mathbb{Z} text{ and } {}^{36}C_{r+1} = frac{6 left({}^{35}C_rright)}{k^2 - 3} right}, is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "16",
+        "unicode": "16",
+        "plainText": "16"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S_Q231",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S_Q231_RAW",
+    "question": {
+      "latex": "If for $3 \\leq r \\leq 30$, $\\binom{30}{30-r} + 3\\binom{30}{31-r} + 3\\binom{30}{32-r} + \\binom{30}{33-r} = \\binom{m}{r}$, then $m$ equals:",
+      "unicode": "If for 3 leq r leq 30, binom{30}{30-r} + 3binom{30}{31-r} + 3binom{30}{32-r} + binom{30}{33-r} = binom{m}{r}, then m equals:",
+      "plainText": "If for 3 leq r leq 30, binom{30}{30-r} + 3binom{30}{31-r} + 3binom{30}{32-r} + binom{30}{33-r} = binom{m}{r}, then m equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$31$",
+        "unicode": "31",
+        "plainText": "31"
+      },
+      {
+        "id": "b",
+        "latex": "$32$",
+        "unicode": "32",
+        "plainText": "32"
+      },
+      {
+        "id": "c",
+        "latex": "$33$",
+        "unicode": "33",
+        "plainText": "33"
+      },
+      {
+        "id": "d",
+        "latex": "$34$",
+        "unicode": "34",
+        "plainText": "34"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.051Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.051Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S_Q309",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S_Q309_RAW",
+    "question": {
+      "latex": "Let the smallest value of $k \\in \\mathbb{N}$, for which the coefficient of $x^3$ in $(1 + x)^3 + (1 + x)^4 + (1 + x)^5 + \\dots + (1 + x)^{99} + (1 + kx)^{100}$, $x \\neq 0$, is $\\left(43n + \\frac{101}{4}\\right) \\binom{100}{3}$ for some $n \\in \\mathbb{N}$, be $p$. Then the value of $p + n$ is:",
+      "unicode": "Let the smallest value of k in mathbb{N}, for which the coefficient of x³ in (1 + x)³ + (1 + x)^4 + (1 + x)^5 + dots + (1 + x)^{99} + (1 + kx)^{100}, x neq 0, is left(43n + (101/4)right) binom{100}{3} for some n in mathbb{N}, be p. Then the value of p + n is:",
+      "plainText": "Let the smallest value of k in mathbb{N}, for which the coefficient of x^3 in (1 + x)^3 + (1 + x)^4 + (1 + x)^5 + dots + (1 + x)^{99} + (1 + kx)^{100}, x neq 0, is left(43n + (101)/(4)right) binom{100}{3} for some n in mathbb{N}, be p. Then the value of p + n is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$10$",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "b",
+        "latex": "$11$",
+        "unicode": "11",
+        "plainText": "11"
+      },
+      {
+        "id": "c",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "d",
+        "latex": "$13$",
+        "unicode": "13",
+        "plainText": "13"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q44",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q44_RAW",
+    "question": {
+      "latex": "an edg of a variabl cube is increas at the rate of \\ ( 3 \\mathrm { cm } \\mathrm { s } \\ ) how fast is the",
+      "unicode": "an edg of a variabl cube is increas at the rate of  ( 3 mathrm { cm } mathrm { s }  ) how fast is the",
+      "plainText": "an edg of a variabl cube is increas at the rate of ( 3 mathrm { cm } mathrm { s } ) how fast is the"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "volum of the cube increas when the",
+        "unicode": "volum of the cube increas when the",
+        "plainText": "volum of the cube increas when the"
+      },
+      {
+        "id": "b",
+        "latex": "edg is \\ ( 10 \\mathrm { cm } \\ ) long",
+        "unicode": "edg is  ( 10 mathrm { cm }  ) long",
+        "plainText": "edg is ( 10 mathrm { cm } ) long"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 900 \\mathrm { cm } ^ { 3 } \\mathrm { s } \\ )",
+        "unicode": " ( 900 mathrm { cm } ^ { 3 } mathrm { s }  )",
+        "plainText": "( 900 mathrm { cm } ^ { 3 } mathrm { s } )"
+      },
+      {
+        "id": "d",
+        "latex": "\\ ( 920 \\mathrm { cm } ^ { 3 } \\mathrm { s } \\ )",
+        "unicode": " ( 920 mathrm { cm } ^ { 3 } mathrm { s }  )",
+        "plainText": "( 920 mathrm { cm } ^ { 3 } mathrm { s } )"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.849Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.849Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q84",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q84_RAW",
+    "question": {
+      "latex": "a man start hi job with a certain monthli salari and earn a fix increment everi year if hi salari wa",
+      "unicode": "a man start hi job with a certain monthli salari and earn a fix increment everi year if hi salari wa",
+      "plainText": "a man start hi job with a certain monthli salari and earn a fix increment everi year if hi salari wa"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "rs 1500 after 4 year of servic and rs",
+        "unicode": "rs 1500 after 4 year of servic and rs",
+        "plainText": "rs 1500 after 4 year of servic and rs"
+      },
+      {
+        "id": "b",
+        "latex": "1800 after 10 year of servic what wa",
+        "unicode": "1800 after 10 year of servic what wa",
+        "plainText": "1800 after 10 year of servic what wa"
+      },
+      {
+        "id": "c",
+        "latex": "hi start salari and what is the annual increment",
+        "unicode": "hi start salari and what is the annual increment",
+        "plainText": "hi start salari and what is the annual increment"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.850Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.850Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q132",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q132_RAW",
+    "question": {
+      "latex": "if the height of cylind increas from 8 inch to 12 inch then it volum",
+      "unicode": "if the height of cylind increas from 8 inch to 12 inch then it volum",
+      "plainText": "if the height of cylind increas from 8 inch to 12 inch then it volum"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "increas from \\ ( 72 \\pi \\ ) to \\ ( v \\ ) find the valu",
+        "unicode": "increas from  ( 72 π  ) to  ( v  ) find the valu",
+        "plainText": "increas from ( 72 pi ) to ( v ) find the valu"
+      },
+      {
+        "id": "b",
+        "latex": "of \\ ( \\boldsymbol { v } \\ )",
+        "unicode": "of  ( boldsymbol { v }  )",
+        "plainText": "of ( boldsymbol { v } )"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( \\mathbf { a } \\cdot 76 \\pi \\ )",
+        "unicode": " ( mathbf { a } · 76 π  )",
+        "plainText": "( mathbf { a } cdot 76 pi )"
+      },
+      {
+        "id": "d",
+        "latex": "в \\ ( 108 \\pi \\ )",
+        "unicode": "в  ( 108 π  )",
+        "plainText": "в ( 108 pi )"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.853Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.853Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q345",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q345_RAW",
+    "question": {
+      "latex": "if the volum of spheric ball is increas at the rate of \\ ( 4 \\pi c c \\ ) sec then",
+      "unicode": "if the volum of spheric ball is increas at the rate of  ( 4 π c c  ) sec then",
+      "plainText": "if the volum of spheric ball is increas at the rate of ( 4 pi c c ) sec then"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "the rate of chang of it surfac area",
+        "unicode": "the rate of chang of it surfac area",
+        "plainText": "the rate of chang of it surfac area"
+      },
+      {
+        "id": "b",
+        "latex": "when the volum is \\ ( 288 \\pi c c \\ ) is",
+        "unicode": "when the volum is  ( 288 π c c  ) is",
+        "plainText": "when the volum is ( 288 pi c c ) is"
+      },
+      {
+        "id": "c",
+        "latex": "a \\ ( \\cdot \\frac { 4 } { 3 } \\pi c m^ { 2 } \\ ) sec",
+        "unicode": "a  ( · frac { 4 } { 3 } π c m^ { 2 }  ) sec",
+        "plainText": "a ( cdot frac { 4 } { 3 } pi c m^ { 2 } ) sec"
+      },
+      {
+        "id": "d",
+        "latex": "в \\ ( \\frac { 2 } { 3 } \\pi c m^ { 2 } \\ ) sec",
+        "unicode": "в  ( frac { 2 } { 3 } π c m^ { 2 }  ) sec",
+        "plainText": "в ( frac { 2 } { 3 } pi c m^ { 2 } ) sec"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.860Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.860Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q396",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q396_RAW",
+    "question": {
+      "latex": "the cost of an air cooler ha increas",
+      "unicode": "the cost of an air cooler ha increas",
+      "plainText": "the cost of an air cooler ha increas"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "from rs 2250 to rs 2500 what is the",
+        "unicode": "from rs 2250 to rs 2500 what is the",
+        "plainText": "from rs 2250 to rs 2500 what is the"
+      },
+      {
+        "id": "b",
+        "latex": "percentag chang",
+        "unicode": "percentag chang",
+        "plainText": "percentag chang"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.862Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.862Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q794",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q794_RAW",
+    "question": {
+      "latex": "amit wa given an increment of \\ ( 20 \\ % \\ ) on hi salari if hi new salari is rs30600 what wa hi salari befor the increment",
+      "unicode": "amit wa given an increment of  ( 20  %  ) on hi salari if hi new salari is rs30600 what wa hi salari befor the increment",
+      "plainText": "amit wa given an increment of ( 20 % ) on hi salari if hi new salari is rs30600 what wa hi salari befor the increment"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.880Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.880Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q1300",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q1300_RAW",
+    "question": {
+      "latex": "increas 5 by \\ ( 35 \\ % \\ )",
+      "unicode": "increas 5 by  ( 35  %  )",
+      "plainText": "increas 5 by ( 35 % )"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.915Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.915Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q1948",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q1948_RAW",
+    "question": {
+      "latex": "a spheric balloon is be inflat so that it volum increas uniformli at",
+      "unicode": "a spheric balloon is be inflat so that it volum increas uniformli at",
+      "plainText": "a spheric balloon is be inflat so that it volum increas uniformli at"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "the rate of \\ ( 40 \\mathrm { cm } ^ { 3 } \\mathrm { min } \\ ) \\ ( r=8 \\mathrm { cm } \\ ) it",
+        "unicode": "the rate of  ( 40 mathrm { cm } ^ { 3 } mathrm { min }  )  ( r=8 mathrm { cm }  ) it",
+        "plainText": "the rate of ( 40 mathrm { cm } ^ { 3 } mathrm { min } ) ( r=8 mathrm { cm } ) it"
+      },
+      {
+        "id": "b",
+        "latex": "surfac area increas at the rate",
+        "unicode": "surfac area increas at the rate",
+        "plainText": "surfac area increas at the rate"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( \\mathbf { a } \\cdot 8 \\mathrm { cm } ^ { 2 } \\mathrm { min } \\ )",
+        "unicode": " ( mathbf { a } · 8 mathrm { cm } ^ { 2 } mathrm { min }  )",
+        "plainText": "( mathbf { a } cdot 8 mathrm { cm } ^ { 2 } mathrm { min } )"
+      },
+      {
+        "id": "d",
+        "latex": "b \\ ( 10 \\mathrm { cm } ^ { 2 } \\mathrm { min } \\ )",
+        "unicode": "b  ( 10 mathrm { cm } ^ { 2 } mathrm { min }  )",
+        "plainText": "b ( 10 mathrm { cm } ^ { 2 } mathrm { min } )"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.943Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.943Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q2128",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q2128_RAW",
+    "question": {
+      "latex": "a man 2 metr high walk at a uniform speed of \\ ( 6 \\mathrm { km } \\mathrm { h } \\ ) away from a lamp-post 6 metr high find the rate at which the length of hi shadow increas ( in",
+      "unicode": "a man 2 metr high walk at a uniform speed of  ( 6 mathrm { km } mathrm { h }  ) away from a lamp-post 6 metr high find the rate at which the length of hi shadow increas ( in",
+      "plainText": "a man 2 metr high walk at a uniform speed of ( 6 mathrm { km } mathrm { h } ) away from a lamp-post 6 metr high find the rate at which the length of hi shadow increas ( in"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( \\boldsymbol { k } \\boldsymbol { m } \\boldsymbol { h } \\boldsymbol { r } ) \\ )",
+        "unicode": " ( boldsymbol { k } boldsymbol { m } boldsymbol { h } boldsymbol { r } )  )",
+        "plainText": "( boldsymbol { k } boldsymbol { m } boldsymbol { h } boldsymbol { r } ) )"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.954Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.954Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q2224",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q2224_RAW",
+    "question": {
+      "latex": "naveen got an increment of \\ ( 15 \\ % \\ ) in hi",
+      "unicode": "naveen got an increment of  ( 15  %  ) in hi",
+      "plainText": "naveen got an increment of ( 15 % ) in hi"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "salari if hi salari is \\ ( r s 14030 \\ ) what wa hi origin salari",
+        "unicode": "salari if hi salari is  ( r s 14030  ) what wa hi origin salari",
+        "plainText": "salari if hi salari is ( r s 14030 ) what wa hi origin salari"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.958Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.958Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q2603",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q2603_RAW",
+    "question": {
+      "latex": "the popul of a town increas everi year at the rate of 25 per thousand the",
+      "unicode": "the popul of a town increas everi year at the rate of 25 per thousand the",
+      "plainText": "the popul of a town increas everi year at the rate of 25 per thousand the"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "present popul of the town is",
+        "unicode": "present popul of the town is",
+        "plainText": "present popul of the town is"
+      },
+      {
+        "id": "b",
+        "latex": "262400find popul befor one year",
+        "unicode": "262400find popul befor one year",
+        "plainText": "262400find popul befor one year"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.976Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.976Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3434",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3434_RAW",
+    "question": {
+      "latex": "the present popul of a town is \\ ( 14000 \\ ) if it increas at the rate of \\ ( 10 \\ % \\ )",
+      "unicode": "the present popul of a town is  ( 14000  ) if it increas at the rate of  ( 10  %  )",
+      "plainText": "the present popul of a town is ( 14000 ) if it increas at the rate of ( 10 % )"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "per annum what will be it popul",
+        "unicode": "per annum what will be it popul",
+        "plainText": "per annum what will be it popul"
+      },
+      {
+        "id": "b",
+        "latex": "after 4 year",
+        "unicode": "after 4 year",
+        "plainText": "after 4 year"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( \\mathbf { a } \\cdot 10497 \\ )",
+        "unicode": " ( mathbf { a } · 10497  )",
+        "plainText": "( mathbf { a } cdot 10497 )"
+      },
+      {
+        "id": "d",
+        "latex": "b 20497",
+        "unicode": "b 20497",
+        "plainText": "b 20497"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.017Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.017Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3553",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3553_RAW",
+    "question": {
+      "latex": "what is the percentag increas in the",
+      "unicode": "what is the percentag increas in the",
+      "plainText": "what is the percentag increas in the"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "number of student in 2002 over 2000",
+        "unicode": "number of student in 2002 over 2000",
+        "plainText": "number of student in 2002 over 2000"
+      },
+      {
+        "id": "b",
+        "latex": "number of student who qualifi catixatcet fxam",
+        "unicode": "number of student who qualifi catixatcet fxam",
+        "plainText": "number of student who qualifi catixatcet fxam"
+      },
+      {
+        "id": "c",
+        "latex": "30\\ %",
+        "unicode": "30 %",
+        "plainText": "30 %"
+      },
+      {
+        "id": "d",
+        "latex": "1764\\ %",
+        "unicode": "1764 %",
+        "plainText": "1764 %"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.025Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.025Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3579",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3579_RAW",
+    "question": {
+      "latex": "by what per cent the volum of a cube increas if the length of each edg wa increas by \\ ( 50 \\ % \\ )",
+      "unicode": "by what per cent the volum of a cube increas if the length of each edg wa increas by  ( 50  %  )",
+      "plainText": "by what per cent the volum of a cube increas if the length of each edg wa increas by ( 50 % )"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 2375 \\ % \\ )",
+        "unicode": " ( 2375  %  )",
+        "plainText": "( 2375 % )"
+      },
+      {
+        "id": "b",
+        "latex": "в 2735\\ %",
+        "unicode": "в 2735 %",
+        "plainText": "в 2735 %"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 125 \\ % \\ )",
+        "unicode": " ( 125  %  )",
+        "plainText": "( 125 % )"
+      },
+      {
+        "id": "d",
+        "latex": "\\ ( 50 \\ % \\ )",
+        "unicode": " ( 50  %  )",
+        "plainText": "( 50 % )"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.027Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.027Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3736",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3736_RAW",
+    "question": {
+      "latex": "the contraposit of the follow statement `` if the side of a squar doubl then it area increas four",
+      "unicode": "the contraposit of the follow statement `` if the side of a squar doubl then it area increas four",
+      "plainText": "the contraposit of the follow statement `` if the side of a squar doubl then it area increas four"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "time '' is :",
+        "unicode": "time '' is :",
+        "plainText": "time '' is :"
+      },
+      {
+        "id": "b",
+        "latex": "if the area of a squar increas four time then it side is not doubl",
+        "unicode": "if the area of a squar increas four time then it side is not doubl",
+        "plainText": "if the area of a squar increas four time then it side is not doubl"
+      },
+      {
+        "id": "c",
+        "latex": "if the area of a squar increas four time then it side is doubl",
+        "unicode": "if the area of a squar increas four time then it side is doubl",
+        "plainText": "if the area of a squar increas four time then it side is doubl"
+      },
+      {
+        "id": "d",
+        "latex": "if the area of a squar doe not increas four time then it side is not doubl",
+        "unicode": "if the area of a squar doe not increas four time then it side is not doubl",
+        "plainText": "if the area of a squar doe not increas four time then it side is not doubl"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.037Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.037Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3809",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3809_RAW",
+    "question": {
+      "latex": "the popul of a town at percent is \\ ( 80000 \\ ) if the annual rate of increas is",
+      "unicode": "the popul of a town at percent is  ( 80000  ) if the annual rate of increas is",
+      "plainText": "the popul of a town at percent is ( 80000 ) if the annual rate of increas is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 4 \\ % \\ ) find the popul after 4 year ( use the formula : \\ ( \\boldsymbol { a } =\\boldsymbol { p } \\left ( 1+\\frac { \\boldsymbol { r } } { \\mathbf { 1 0 0 } } \\right ) ^ { \\boldsymbol { n } } \\ )",
+        "unicode": " ( 4  %  ) find the popul after 4 year ( use the formula :  ( boldsymbol { a } =boldsymbol { p } left ( 1+frac { boldsymbol { r } } { mathbf { 1 0 0 } } right ) ^ { boldsymbol { n } }  )",
+        "plainText": "( 4 % ) find the popul after 4 year ( use the formula : ( boldsymbol { a } =boldsymbol { p } left ( 1+frac { boldsymbol { r } } { mathbf { 1 0 0 } } right ) ^ { boldsymbol { n } } )"
+      },
+      {
+        "id": "b",
+        "latex": "where \\ ( p \\ ) is the origin popul )",
+        "unicode": "where  ( p  ) is the origin popul )",
+        "plainText": "where ( p ) is the origin popul )"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.041Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.041Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3824",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3824_RAW",
+    "question": {
+      "latex": "the popul of hyderabad wa 6809000 in the year 2011 if it increas at the rate of \\ ( 47 \\ % \\ ) per annum",
+      "unicode": "the popul of hyderabad wa 6809000 in the year 2011 if it increas at the rate of  ( 47  %  ) per annum",
+      "plainText": "the popul of hyderabad wa 6809000 in the year 2011 if it increas at the rate of ( 47 % ) per annum"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "what will be the popul at the end of the year 2015",
+        "unicode": "what will be the popul at the end of the year 2015",
+        "plainText": "what will be the popul at the end of the year 2015"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.041Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.041Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3929",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3929_RAW",
+    "question": {
+      "latex": "kruti took a loan at simpl interest at \\ ( 6 \\ % \\ ) in the first year with an increas of \\ ( 05 \\ % \\ ) in each subsequ year she paid rs 3375 as interest after 4 year how much loan did she take",
+      "unicode": "kruti took a loan at simpl interest at  ( 6  %  ) in the first year with an increas of  ( 05  %  ) in each subsequ year she paid rs 3375 as interest after 4 year how much loan did she take",
+      "plainText": "kruti took a loan at simpl interest at ( 6 % ) in the first year with an increas of ( 05 % ) in each subsequ year she paid rs 3375 as interest after 4 year how much loan did she take"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "rs 12500",
+        "unicode": "rs 12500",
+        "plainText": "rs 12500"
+      },
+      {
+        "id": "b",
+        "latex": "rs 15800",
+        "unicode": "rs 15800",
+        "plainText": "rs 15800"
+      },
+      {
+        "id": "c",
+        "latex": "rs 33250",
+        "unicode": "rs 33250",
+        "plainText": "rs 33250"
+      },
+      {
+        "id": "d",
+        "latex": "rs 30 000",
+        "unicode": "rs 30 000",
+        "plainText": "rs 30 000"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.047Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.047Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3999",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q3999_RAW",
+    "question": {
+      "latex": "the percentag error in the surfac area of a cube with edg \\ ( x \\mathrm { cm } \\ ) when the edg is increas by \\ ( 11 \\ % \\ ) is",
+      "unicode": "the percentag error in the surfac area of a cube with edg  ( x mathrm { cm }  ) when the edg is increas by  ( 11  %  ) is",
+      "plainText": "the percentag error in the surfac area of a cube with edg ( x mathrm { cm } ) when the edg is increas by ( 11 % ) is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "11",
+        "unicode": "11",
+        "plainText": "11"
+      },
+      {
+        "id": "b",
+        "latex": "b 22",
+        "unicode": "b 22",
+        "plainText": "b 22"
+      },
+      {
+        "id": "c",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "d",
+        "latex": "44",
+        "unicode": "44",
+        "plainText": "44"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.050Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4293",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4293_RAW",
+    "question": {
+      "latex": "if \\ ( f ( x ) =x^ { 2 } e^ { -x^ { 2 } a^ { 2 } } \\ ) is an increas",
+      "unicode": "if  ( f ( x ) =x^ { 2 } e^ { -x^ { 2 } a^ { 2 } }  ) is an increas",
+      "plainText": "if ( f ( x ) =x^ { 2 } e^ { -x^ { 2 } a^ { 2 } } ) is an increas"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "function then ( for \\ ( a > 0 \\ ) ) x lie in the",
+        "unicode": "function then ( for  ( a > 0  ) ) x lie in the",
+        "plainText": "function then ( for ( a > 0 ) ) x lie in the"
+      },
+      {
+        "id": "b",
+        "latex": "interv",
+        "unicode": "interv",
+        "plainText": "interv"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( \\mathbf { a } \\cdot [ a 2 a ] \\ )",
+        "unicode": " ( mathbf { a } · [ a 2 a ]  )",
+        "plainText": "( mathbf { a } cdot [ a 2 a ] )"
+      },
+      {
+        "id": "d",
+        "latex": "в \\ ( ( -\\infty-a ) \\cup ( 0 a ) \\ )",
+        "unicode": "в  ( ( -∞-a ) cup ( 0 a )  )",
+        "plainText": "в ( ( -infty-a ) cup ( 0 a ) )"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.063Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.063Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4467",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4467_RAW",
+    "question": {
+      "latex": "if each side of a rectangl is increas by \\ ( 20 \\ % \\ ) then the percentag increas in it area is :",
+      "unicode": "if each side of a rectangl is increas by  ( 20  %  ) then the percentag increas in it area is :",
+      "plainText": "if each side of a rectangl is increas by ( 20 % ) then the percentag increas in it area is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 40 \\ % \\ )",
+        "unicode": " ( 40  %  )",
+        "plainText": "( 40 % )"
+      },
+      {
+        "id": "b",
+        "latex": "20\\ %",
+        "unicode": "20 %",
+        "plainText": "20 %"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 44 \\ % \\ )",
+        "unicode": " ( 44  %  )",
+        "plainText": "( 44 % )"
+      },
+      {
+        "id": "d",
+        "latex": "30\\ %",
+        "unicode": "30 %",
+        "plainText": "30 %"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.071Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.071Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4498",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4498_RAW",
+    "question": {
+      "latex": "three number form an increas gp if the middl number is doubl then",
+      "unicode": "three number form an increas gp if the middl number is doubl then",
+      "plainText": "three number form an increas gp if the middl number is doubl then"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "the new number are in ap the",
+        "unicode": "the new number are in ap the",
+        "plainText": "the new number are in ap the"
+      },
+      {
+        "id": "b",
+        "latex": "common ratio of gp is-",
+        "unicode": "common ratio of gp is-",
+        "plainText": "common ratio of gp is-"
+      },
+      {
+        "id": "c",
+        "latex": "a \\ ( 2-\\sqrt { 3 } \\ )",
+        "unicode": "a  ( 2-sqrt { 3 }  )",
+        "plainText": "a ( 2-sqrt { 3 } )"
+      },
+      {
+        "id": "d",
+        "latex": "\\ ( 2+\\sqrt { 3 } \\ )",
+        "unicode": " ( 2+sqrt { 3 }  )",
+        "plainText": "( 2+sqrt { 3 } )"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.073Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.073Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4859",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4859_RAW",
+    "question": {
+      "latex": "frame the given statement into a mathemat express : `` thrice of a number increas by 150 ``",
+      "unicode": "frame the given statement into a mathemat express : `` thrice of a number increas by 150 ``",
+      "plainText": "frame the given statement into a mathemat express : `` thrice of a number increas by 150 ``"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 150-x \\ )",
+        "unicode": " ( 150-x  )",
+        "plainText": "( 150-x )"
+      },
+      {
+        "id": "b",
+        "latex": "\\ ( 3 x-150 \\ )",
+        "unicode": " ( 3 x-150  )",
+        "plainText": "( 3 x-150 )"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 3 x+150 \\ )",
+        "unicode": " ( 3 x+150  )",
+        "plainText": "( 3 x+150 )"
+      },
+      {
+        "id": "d",
+        "latex": "none of these",
+        "unicode": "none of these",
+        "plainText": "none of these"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Assertion"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.099Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.099Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4943",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S_Q4943_RAW",
+    "question": {
+      "latex": "the popul of a villag is \\ ( 6250 \\ ) it is found that the rate of increas in",
+      "unicode": "the popul of a villag is  ( 6250  ) it is found that the rate of increas in",
+      "plainText": "the popul of a villag is ( 6250 ) it is found that the rate of increas in"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "popul is \\ ( 8 \\ % \\ ) per annum find the",
+        "unicode": "popul is  ( 8  %  ) per annum find the",
+        "plainText": "popul is ( 8 % ) per annum find the"
+      },
+      {
+        "id": "b",
+        "latex": "popul after 2 year",
+        "unicode": "popul after 2 year",
+        "plainText": "popul after 2 year"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:47.101Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:47.101Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2025_S1_Q61",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2025_S1_Q61_RAW",
+    "question": {
+      "latex": "Let $\\alpha, \\beta, \\gamma$ and $\\delta$ be the coefficients of $x^7, x^6, x^5$ and x respectively in the expansion of $$x+\\sqrt{x^3-1}$^5 + $x-\\sqrt{x^3-1}$^5$, x > 1. If u and v satisfy the equations $\\alpha u + \\beta v = 18$, $\\gamma u + \\delta v = 20$, then u + v equals :",
+      "unicode": "Let α, β, gamma and delta be the coefficients of x^7, x^6, x^5 and x respectively in the expansion of x+√(x³-1)^5 + x-√(x³-1)^5, x > 1. If u and v satisfy the equations α u + β v = 18, gamma u + delta v = 20, then u + v equals :",
+      "plainText": "Let alpha, beta, gamma and delta be the coefficients of x^7, x^6, x^5 and x respectively in the expansion of x+sqrt(x^3-1)^5 + x-sqrt(x^3-1)^5, x > 1. If u and v satisfy the equations alpha u + beta v = 18, gamma u + delta v = 20, then u + v equals :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "d",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.525Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.525Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S1_Q127",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S1_Q127_RAW",
+    "question": {
+      "latex": "The number of elements in the set $S = \\left\\{ $r, k$ : k \\in \\mathbb{Z} \\text{ and } {}^{36}C_{r+1} = \\frac{6 \\left${}^{35}C_r\\right$}{k^2 - 3} \\right\\}$, is :",
+      "unicode": "The number of elements in the set S = left{ r, k : k in mathbb{Z} text{ and } {}^{36}C_{r+1} = frac{6 left{}^{35}C_rright}{k² - 3} right}, is :",
+      "plainText": "The number of elements in the set S = left{ r, k : k in mathbb{Z} text{ and } {}^{36}C_{r+1} = frac{6 left{}^{35}C_rright}{k^2 - 3} right}, is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "16",
+        "unicode": "16",
+        "plainText": "16"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "We use the identity ${}^nC_r = \\frac{n}{r} {}^{n-1}C_{r-1}$.\nApplying this to ${}^{36}C_{r+1}$, we get ${}^{36}C_{r+1} = \\frac{36}{r+1} {}^{35}C_r$.\nEquating this to the given expression:\n$\\frac{36}{r+1} {}^{35}C_r = \\frac{6}{k^2 - 3} {}^{35}C_r$\nAssuming ${}^{35}C_r \\neq 0$ (so $0 \\le r \\le 35$), we get:\n$\\frac{6}{r+1} = \\frac{1}{k^2 - 3} \\implies k^2 - 3 = \\frac{r+1}{6} \\implies k^2 = \\frac{r+19}{6}$\nSince $k$ is an integer, $k^2$ must be a perfect square. Also, $\\frac{r+19}{6}$ must be an integer, which implies $r + 19$ is a multiple of 6, or $r \\equiv 5 \\pmod 6$.\nThe possible values of $r$ in the range $0 \\le r \\le 35$ are 5, 11, 17, 23, 29, 35.\nChecking these values for perfect squares $k^2$:\nIf $r = 5$, $k^2 = (5+19)/6 = 24/6 = 4 \\implies k = \\pm 2$. Valid pairs: $(5, 2), (5, -2)$.\nIf $r = 11$, $k^2 = 30/6 = 5$ (not a perfect square).\nIf $r = 17$, $k^2 = 36/6 = 6$ (not a perfect square).\nIf $r = 23$, $k^2 = 42/6 = 7$ (not a perfect square).\nIf $r = 29$, $k^2 = 48/6 = 8$ (not a perfect square).\nIf $r = 35$, $k^2 = 54/6 = 9 \\implies k = \\pm 3$. Valid pairs: $(35, 3), (35, -3)$.\nTotal number of pairs in $S$ is 4.",
+      "unicode": "We use the identity {}^nC_r = (n/r) {}^{n-1}C_{r-1}.\nApplying this to {}^{36}C_{r+1}, we get {}^{36}C_{r+1} = (36/r+1) {}^{35}C_r.\nEquating this to the given expression:\n(36/r+1) {}^{35}C_r = (6/k² - 3) {}^{35}C_r\nAssuming {}^{35}C_r neq 0 (so 0 le r le 35), we get:\n(6/r+1) = (1/k² - 3) implies k² - 3 = (r+1/6) implies k² = (r+19/6)\nSince k is an integer, k² must be a perfect square. Also, (r+19/6) must be an integer, which implies r + 19 is a multiple of 6, or r equiv 5 ±od 6.\nThe possible values of r in the range 0 le r le 35 are 5, 11, 17, 23, 29, 35.\nChecking these values for perfect squares k²:\nIf r = 5, k² = (5+19)/6 = 24/6 = 4 implies k = ± 2. Valid pairs: (5, 2), (5, -2).\nIf r = 11, k² = 30/6 = 5 (not a perfect square).\nIf r = 17, k² = 36/6 = 6 (not a perfect square).\nIf r = 23, k² = 42/6 = 7 (not a perfect square).\nIf r = 29, k² = 48/6 = 8 (not a perfect square).\nIf r = 35, k² = 54/6 = 9 implies k = ± 3. Valid pairs: (35, 3), (35, -3).\nTotal number of pairs in S is 4.",
+      "plainText": "We use the identity {}^nC_r = (n)/(r) {}^{n-1}C_{r-1}. Applying this to {}^{36}C_{r+1}, we get {}^{36}C_{r+1} = (36)/(r+1) {}^{35}C_r. Equating this to the given expression: (36)/(r+1) {}^{35}C_r = (6)/(k^2 - 3) {}^{35}C_r Assuming {}^{35}C_r neq 0 (so 0 le r le 35), we get: (6)/(r+1) = (1)/(k^2 - 3) implies k^2 - 3 = (r+1)/(6) implies k^2 = (r+19)/(6) Since k is an integer, k^2 must be a perfect square. Also, (r+19)/(6) must be an integer, which implies r + 19 is a multiple of 6, or r equiv 5 pmod 6. The possible values of r in the range 0 le r le 35 are 5, 11, 17, 23, 29, 35. Checking these values for perfect squares k^2: If r = 5, k^2 = (5+19)/6 = 24/6 = 4 implies k = pm 2. Valid pairs: (5, 2), (5, -2). If r = 11, k^2 = 30/6 = 5 (not a perfect square). If r = 17, k^2 = 36/6 = 6 (not a perfect square). If r = 23, k^2 = 42/6 = 7 (not a perfect square). If r = 29, k^2 = 48/6 = 8 (not a perfect square). If r = 35, k^2 = 54/6 = 9 implies k = pm 3. Valid pairs: (35, 3), (35, -3). Total number of pairs in S is 4."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.529Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.529Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S1_Q249",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2026_S1_Q249_RAW",
+    "question": {
+      "latex": "Let the smallest value of $k \\in \\mathbb{N}$, for which the coefficient of $x^3$ in $$1 + x$^3 + $1 + x$^4 + $1 + x$^5 + \\dots + $1 + x$^{99} + $1 + kx$^{100}$, $x \\neq 0$, is $\\left$43n + \\frac{101}{4}\\right$ \\binom{100}{3}$ for some $n \\in \\mathbb{N}$, be $p$. Then the value of $p + n$ is:",
+      "unicode": "Let the smallest value of k in mathbb{N}, for which the coefficient of x³ in 1 + x³ + 1 + x^4 + 1 + x^5 + dots + 1 + x^{99} + 1 + kx^{100}, x neq 0, is left43n + (101/4)right binom{100}{3} for some n in mathbb{N}, be p. Then the value of p + n is:",
+      "plainText": "Let the smallest value of k in mathbb{N}, for which the coefficient of x^3 in 1 + x^3 + 1 + x^4 + 1 + x^5 + dots + 1 + x^{99} + 1 + kx^{100}, x neq 0, is left43n + (101)/(4)right binom{100}{3} for some n in mathbb{N}, be p. Then the value of p + n is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$10$",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "b",
+        "latex": "$11$",
+        "unicode": "11",
+        "plainText": "11"
+      },
+      {
+        "id": "c",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "d",
+        "latex": "$13$",
+        "unicode": "13",
+        "plainText": "13"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The given expression is $S = \\sum_{r=3}^{99} (1 + x)^r + (1 + kx)^{100}$.\nThe coefficient of $x^3$ in $\\sum_{r=3}^{99} (1 + x)^r$ is $\\sum_{r=3}^{99} \\binom{r}{3} = \\binom{100}{4}$.\nThe coefficient of $x^3$ in $(1 + kx)^{100}$ is $\\binom{100}{3} k^3$.\nTotal coefficient $= \\binom{100}{4} + k^3 \\binom{100}{3}$.\nUsing the property $\\binom{n}{r} = \\frac{n-r+1}{r} \\binom{n}{r-1}$, we have $\\binom{100}{4} = \\frac{97}{4} \\binom{100}{3}$.\nTotal coefficient $= \\left(\\frac{97}{4} + k^3\\right) \\binom{100}{3}$.\nEquating this with $\\left(43n + \\frac{101}{4}\\right) \\binom{100}{3}$, we get:\n$k^3 - 43n = \\frac{101 - 97}{4} = 1 \\implies k^3 = 43n + 1$.\nThis implies $k^3 \\equiv 1 \\pmod{43}$, which can be factored as $(k - 1)(k^2 + k + 1) \\equiv 0 \\pmod{43}$.\nSince $n \\in \\mathbb{N}$, $k$ cannot be $1$ because it would make $n=0$. We solve $k^2 + k + 1 \\equiv 0 \\pmod{43}$.\n$k^2 + k - 42 \\equiv 0 \\pmod{43} \\implies (k + 7)(k - 6) \\equiv 0 \\pmod{43}$.\nThe smallest $k \\in \\mathbb{N}$ satisfying this is $k = 6$.\nSubstituting $k = 6$ to find $n$: $6^3 = 43n + 1 \\implies 216 = 43n + 1 \\implies n = 5$.\nTherefore, $p = 6$ and $p + n = 6 + 5 = 11$.",
+      "unicode": "The given expression is S = sum_{r=3}^{99} (1 + x)^r + (1 + kx)^{100}.\nThe coefficient of x³ in sum_{r=3}^{99} (1 + x)^r is sum_{r=3}^{99} binom{r}{3} = binom{100}{4}.\nThe coefficient of x³ in (1 + kx)^{100} is binom{100}{3} k³.\nTotal coefficient = binom{100}{4} + k³ binom{100}{3}.\nUsing the property binom{n}{r} = (n-r+1/r) binom{n}{r-1}, we have binom{100}{4} = (97/4) binom{100}{3}.\nTotal coefficient = left((97/4) + k³right) binom{100}{3}.\nEquating this with left(43n + (101/4)right) binom{100}{3}, we get:\nk³ - 43n = (101 - 97/4) = 1 implies k³ = 43n + 1.\nThis implies k³ equiv 1 ±od{43}, which can be factored as (k - 1)(k² + k + 1) equiv 0 ±od{43}.\nSince n in mathbb{N}, k cannot be 1 because it would make n=0. We solve k² + k + 1 equiv 0 ±od{43}.\nk² + k - 42 equiv 0 ±od{43} implies (k + 7)(k - 6) equiv 0 ±od{43}.\nThe smallest k in mathbb{N} satisfying this is k = 6.\nSubstituting k = 6 to find n: 6³ = 43n + 1 implies 216 = 43n + 1 implies n = 5.\nTherefore, p = 6 and p + n = 6 + 5 = 11.",
+      "plainText": "The given expression is S = sum_{r=3}^{99} (1 + x)^r + (1 + kx)^{100}. The coefficient of x^3 in sum_{r=3}^{99} (1 + x)^r is sum_{r=3}^{99} binom{r}{3} = binom{100}{4}. The coefficient of x^3 in (1 + kx)^{100} is binom{100}{3} k^3. Total coefficient = binom{100}{4} + k^3 binom{100}{3}. Using the property binom{n}{r} = (n-r+1)/(r) binom{n}{r-1}, we have binom{100}{4} = (97)/(4) binom{100}{3}. Total coefficient = left((97)/(4) + k^3right) binom{100}{3}. Equating this with left(43n + (101)/(4)right) binom{100}{3}, we get: k^3 - 43n = (101 - 97)/(4) = 1 implies k^3 = 43n + 1. This implies k^3 equiv 1 pmod{43}, which can be factored as (k - 1)(k^2 + k + 1) equiv 0 pmod{43}. Since n in mathbb{N}, k cannot be 1 because it would make n=0. We solve k^2 + k + 1 equiv 0 pmod{43}. k^2 + k - 42 equiv 0 pmod{43} implies (k + 7)(k - 6) equiv 0 pmod{43}. The smallest k in mathbb{N} satisfying this is k = 6. Substituting k = 6 to find n: 6^3 = 43n + 1 implies 216 = 43n + 1 implies n = 5. Therefore, p = 6 and p + n = 6 + 5 = 11."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.537Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.537Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q5981",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q5981_RAW",
+    "question": {
+      "latex": "an edg of a variabl cube is increas at the rate of \\ $ 3 \\mathrm { cm } \\mathrm { s } \\ $ how fast is the",
+      "unicode": "an edg of a variabl cube is increas at the rate of   3 mathrm { cm } mathrm { s }   how fast is the",
+      "plainText": "an edg of a variabl cube is increas at the rate of 3 mathrm { cm } mathrm { s } how fast is the"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "volum of the cube increas when the",
+        "unicode": "volum of the cube increas when the",
+        "plainText": "volum of the cube increas when the"
+      },
+      {
+        "id": "b",
+        "latex": "edg is \\ ( 10 \\mathrm { cm } \\ ) long",
+        "unicode": "edg is  ( 10 mathrm { cm }  ) long",
+        "plainText": "edg is ( 10 mathrm { cm } ) long"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 900 \\mathrm { cm } ^ { 3 } \\mathrm { s } \\ )",
+        "unicode": " ( 900 mathrm { cm } ^ { 3 } mathrm { s }  )",
+        "plainText": "( 900 mathrm { cm } ^ { 3 } mathrm { s } )"
+      },
+      {
+        "id": "d",
+        "latex": "\\ ( 920 \\mathrm { cm } ^ { 3 } \\mathrm { s } \\ )",
+        "unicode": " ( 920 mathrm { cm } ^ { 3 } mathrm { s }  )",
+        "plainText": "( 920 mathrm { cm } ^ { 3 } mathrm { s } )"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.652Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.652Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q6280",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q6280_RAW",
+    "question": {
+      "latex": "if the volum of spheric ball is increas at the rate of \\ $ 4 \\pi c c \\ $ sec then",
+      "unicode": "if the volum of spheric ball is increas at the rate of   4 π c c   sec then",
+      "plainText": "if the volum of spheric ball is increas at the rate of 4 pi c c sec then"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "the rate of chang of it surfac area",
+        "unicode": "the rate of chang of it surfac area",
+        "plainText": "the rate of chang of it surfac area"
+      },
+      {
+        "id": "b",
+        "latex": "when the volum is \\ ( 288 \\pi c c \\ ) is",
+        "unicode": "when the volum is  ( 288 π c c  ) is",
+        "plainText": "when the volum is ( 288 pi c c ) is"
+      },
+      {
+        "id": "c",
+        "latex": "a \\ ( \\cdot \\frac { 4 } { 3 } \\pi c m^ { 2 } \\ ) sec",
+        "unicode": "a  ( · frac { 4 } { 3 } π c m^ { 2 }  ) sec",
+        "plainText": "a ( cdot frac { 4 } { 3 } pi c m^ { 2 } ) sec"
+      },
+      {
+        "id": "d",
+        "latex": "в \\ ( \\frac { 2 } { 3 } \\pi c m^ { 2 } \\ ) sec",
+        "unicode": "в  ( frac { 2 } { 3 } π c m^ { 2 }  ) sec",
+        "plainText": "в ( frac { 2 } { 3 } pi c m^ { 2 } ) sec"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.659Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.659Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q6726",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q6726_RAW",
+    "question": {
+      "latex": "amit wa given an increment of \\ $ 20 \\ % \\ $ on hi salari if hi new salari is rs30600 what wa hi salari befor the increment",
+      "unicode": "amit wa given an increment of   20  %   on hi salari if hi new salari is rs30600 what wa hi salari befor the increment",
+      "plainText": "amit wa given an increment of 20 % on hi salari if hi new salari is rs30600 what wa hi salari befor the increment"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.671Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.671Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q7228",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q7228_RAW",
+    "question": {
+      "latex": "increas 5 by \\ $ 35 \\ % \\ $",
+      "unicode": "increas 5 by   35  %  ",
+      "plainText": "increas 5 by 35 %"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.684Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.684Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q8042",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q8042_RAW",
+    "question": {
+      "latex": "a man 2 metr high walk at a uniform speed of \\ $ 6 \\mathrm { km } \\mathrm { h } \\ $ away from a lamp-post 6 metr high find the rate at which the length of hi shadow increas $ in",
+      "unicode": "a man 2 metr high walk at a uniform speed of   6 mathrm { km } mathrm { h }   away from a lamp-post 6 metr high find the rate at which the length of hi shadow increas  in",
+      "plainText": "a man 2 metr high walk at a uniform speed of 6 mathrm { km } mathrm { h } away from a lamp-post 6 metr high find the rate at which the length of hi shadow increas in"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( \\boldsymbol { k } \\boldsymbol { m } \\boldsymbol { h } \\boldsymbol { r } ) \\ )",
+        "unicode": " ( boldsymbol { k } boldsymbol { m } boldsymbol { h } boldsymbol { r } )  )",
+        "plainText": "( boldsymbol { k } boldsymbol { m } boldsymbol { h } boldsymbol { r } ) )"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.707Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.707Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q8135",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q8135_RAW",
+    "question": {
+      "latex": "naveen got an increment of \\ $ 15 \\ % \\ $ in hi",
+      "unicode": "naveen got an increment of   15  %   in hi",
+      "plainText": "naveen got an increment of 15 % in hi"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "salari if hi salari is \\ ( r s 14030 \\ ) what wa hi origin salari",
+        "unicode": "salari if hi salari is  ( r s 14030  ) what wa hi origin salari",
+        "plainText": "salari if hi salari is ( r s 14030 ) what wa hi origin salari"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.709Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.709Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9308",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9308_RAW",
+    "question": {
+      "latex": "the present popul of a town is \\ $ 14000 \\ $ if it increas at the rate of \\ $ 10 \\ % \\ $",
+      "unicode": "the present popul of a town is   14000   if it increas at the rate of   10  %  ",
+      "plainText": "the present popul of a town is 14000 if it increas at the rate of 10 %"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "per annum what will be it popul",
+        "unicode": "per annum what will be it popul",
+        "plainText": "per annum what will be it popul"
+      },
+      {
+        "id": "b",
+        "latex": "after 4 year",
+        "unicode": "after 4 year",
+        "plainText": "after 4 year"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( \\mathbf { a } \\cdot 10497 \\ )",
+        "unicode": " ( mathbf { a } · 10497  )",
+        "plainText": "( mathbf { a } cdot 10497 )"
+      },
+      {
+        "id": "d",
+        "latex": "b 20497",
+        "unicode": "b 20497",
+        "plainText": "b 20497"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.758Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.758Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9444",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9444_RAW",
+    "question": {
+      "latex": "by what per cent the volum of a cube increas if the length of each edg wa increas by \\ $ 50 \\ % \\ $",
+      "unicode": "by what per cent the volum of a cube increas if the length of each edg wa increas by   50  %  ",
+      "plainText": "by what per cent the volum of a cube increas if the length of each edg wa increas by 50 %"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 2375 \\ % \\ )",
+        "unicode": " ( 2375  %  )",
+        "plainText": "( 2375 % )"
+      },
+      {
+        "id": "b",
+        "latex": "в 2735\\ %",
+        "unicode": "в 2735 %",
+        "plainText": "в 2735 %"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 125 \\ % \\ )",
+        "unicode": " ( 125  %  )",
+        "plainText": "( 125 % )"
+      },
+      {
+        "id": "d",
+        "latex": "\\ ( 50 \\ % \\ )",
+        "unicode": " ( 50  %  )",
+        "plainText": "( 50 % )"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.767Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.767Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9663",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9663_RAW",
+    "question": {
+      "latex": "the popul of a town at percent is \\ $ 80000 \\ $ if the annual rate of increas is",
+      "unicode": "the popul of a town at percent is   80000   if the annual rate of increas is",
+      "plainText": "the popul of a town at percent is 80000 if the annual rate of increas is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 4 \\ % \\ ) find the popul after 4 year ( use the formula : \\ ( \\boldsymbol { a } =\\boldsymbol { p } \\left ( 1+\\frac { \\boldsymbol { r } } { \\mathbf { 1 0 0 } } \\right ) ^ { \\boldsymbol { n } } \\ )",
+        "unicode": " ( 4  %  ) find the popul after 4 year ( use the formula :  ( boldsymbol { a } =boldsymbol { p } left ( 1+frac { boldsymbol { r } } { mathbf { 1 0 0 } } right ) ^ { boldsymbol { n } }  )",
+        "plainText": "( 4 % ) find the popul after 4 year ( use the formula : ( boldsymbol { a } =boldsymbol { p } left ( 1+frac { boldsymbol { r } } { mathbf { 1 0 0 } } right ) ^ { boldsymbol { n } } )"
+      },
+      {
+        "id": "b",
+        "latex": "where \\ ( p \\ ) is the origin popul )",
+        "unicode": "where  ( p  ) is the origin popul )",
+        "plainText": "where ( p ) is the origin popul )"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.775Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.775Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9678",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9678_RAW",
+    "question": {
+      "latex": "the popul of hyderabad wa 6809000 in the year 2011 if it increas at the rate of \\ $ 47 \\ % \\ $ per annum",
+      "unicode": "the popul of hyderabad wa 6809000 in the year 2011 if it increas at the rate of   47  %   per annum",
+      "plainText": "the popul of hyderabad wa 6809000 in the year 2011 if it increas at the rate of 47 % per annum"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "what will be the popul at the end of the year 2015",
+        "unicode": "what will be the popul at the end of the year 2015",
+        "plainText": "what will be the popul at the end of the year 2015"
+      },
+      {
+        "id": "b",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.775Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.775Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9779",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9779_RAW",
+    "question": {
+      "latex": "kruti took a loan at simpl interest at \\ $ 6 \\ % \\ $ in the first year with an increas of \\ $ 05 \\ % \\ $ in each subsequ year she paid rs 3375 as interest after 4 year how much loan did she take",
+      "unicode": "kruti took a loan at simpl interest at   6  %   in the first year with an increas of   05  %   in each subsequ year she paid rs 3375 as interest after 4 year how much loan did she take",
+      "plainText": "kruti took a loan at simpl interest at 6 % in the first year with an increas of 05 % in each subsequ year she paid rs 3375 as interest after 4 year how much loan did she take"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "rs 12500",
+        "unicode": "rs 12500",
+        "plainText": "rs 12500"
+      },
+      {
+        "id": "b",
+        "latex": "rs 15800",
+        "unicode": "rs 15800",
+        "plainText": "rs 15800"
+      },
+      {
+        "id": "c",
+        "latex": "rs 33250",
+        "unicode": "rs 33250",
+        "plainText": "rs 33250"
+      },
+      {
+        "id": "d",
+        "latex": "rs 30 000",
+        "unicode": "rs 30 000",
+        "plainText": "rs 30 000"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.779Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.779Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9845",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q9845_RAW",
+    "question": {
+      "latex": "the percentag error in the surfac area of a cube with edg \\ $ x \\mathrm { cm } \\ $ when the edg is increas by \\ $ 11 \\ % \\ $ is",
+      "unicode": "the percentag error in the surfac area of a cube with edg   x mathrm { cm }   when the edg is increas by   11  %   is",
+      "plainText": "the percentag error in the surfac area of a cube with edg x mathrm { cm } when the edg is increas by 11 % is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "11",
+        "unicode": "11",
+        "plainText": "11"
+      },
+      {
+        "id": "b",
+        "latex": "b 22",
+        "unicode": "b 22",
+        "plainText": "b 22"
+      },
+      {
+        "id": "c",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "d",
+        "latex": "44",
+        "unicode": "44",
+        "plainText": "44"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.781Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.781Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q10130",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q10130_RAW",
+    "question": {
+      "latex": "if \\ $ f $ x $ =x^ { 2 } e^ { -x^ { 2 } a^ { 2 } } \\ $ is an increas",
+      "unicode": "if   f  x  =x^ { 2 } e^ { -x^ { 2 } a^ { 2 } }   is an increas",
+      "plainText": "if f x =x^ { 2 } e^ { -x^ { 2 } a^ { 2 } } is an increas"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "function then ( for \\ ( a > 0 \\ ) ) x lie in the",
+        "unicode": "function then ( for  ( a > 0  ) ) x lie in the",
+        "plainText": "function then ( for ( a > 0 ) ) x lie in the"
+      },
+      {
+        "id": "b",
+        "latex": "interv",
+        "unicode": "interv",
+        "plainText": "interv"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( \\mathbf { a } \\cdot [ a 2 a ] \\ )",
+        "unicode": " ( mathbf { a } · [ a 2 a ]  )",
+        "plainText": "( mathbf { a } cdot [ a 2 a ] )"
+      },
+      {
+        "id": "d",
+        "latex": "в \\ ( ( -\\infty-a ) \\cup ( 0 a ) \\ )",
+        "unicode": "в  ( ( -∞-a ) cup ( 0 a )  )",
+        "plainText": "в ( ( -infty-a ) cup ( 0 a ) )"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.788Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.788Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q10298",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q10298_RAW",
+    "question": {
+      "latex": "if each side of a rectangl is increas by \\ $ 20 \\ % \\ $ then the percentag increas in it area is :",
+      "unicode": "if each side of a rectangl is increas by   20  %   then the percentag increas in it area is :",
+      "plainText": "if each side of a rectangl is increas by 20 % then the percentag increas in it area is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "\\ ( 40 \\ % \\ )",
+        "unicode": " ( 40  %  )",
+        "plainText": "( 40 % )"
+      },
+      {
+        "id": "b",
+        "latex": "20\\ %",
+        "unicode": "20 %",
+        "plainText": "20 %"
+      },
+      {
+        "id": "c",
+        "latex": "\\ ( 44 \\ % \\ )",
+        "unicode": " ( 44  %  )",
+        "plainText": "( 44 % )"
+      },
+      {
+        "id": "d",
+        "latex": "30\\ %",
+        "unicode": "30 %",
+        "plainText": "30 %"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.792Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.792Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q10744",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_BINOMIALTHEO_2024_S1_Q10744_RAW",
+    "question": {
+      "latex": "the popul of a villag is \\ $ 6250 \\ $ it is found that the rate of increas in",
+      "unicode": "the popul of a villag is   6250   it is found that the rate of increas in",
+      "plainText": "the popul of a villag is 6250 it is found that the rate of increas in"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "popul is \\ ( 8 \\ % \\ ) per annum find the",
+        "unicode": "popul is  ( 8  %  ) per annum find the",
+        "plainText": "popul is ( 8 % ) per annum find the"
+      },
+      {
+        "id": "b",
+        "latex": "popul after 2 year",
+        "unicode": "popul after 2 year",
+        "plainText": "popul after 2 year"
+      },
+      {
+        "id": "c",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      },
+      {
+        "id": "d",
+        "latex": "nan",
+        "unicode": "nan",
+        "plainText": "nan"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "subchapter": "Binomial Theorem Core Concepts",
+      "topic": "Binomial Theorem Primary Topic",
+      "learningOutcome": "Master fundamental principles of Binomial Theorem",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.805Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.805Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

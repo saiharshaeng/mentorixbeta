@@ -20,7 +20,7 @@
 'use strict';
 
 function addXP(a, lb = '') {
-  D.xp += a; saveAll(); updateSB();
+  D.xp += a; if (typeof saveAll === 'function') saveAll(); if (typeof updateSB === 'function') updateSB();
   if (D.settings?.notifications !== false) {
     toast(`⚡ +${a} XP${lb ? ' · ' + lb : ''}`);
     let zone = document.getElementById('xp-pop-zone');

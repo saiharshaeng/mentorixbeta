@@ -1,0 +1,1768 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S_Q92",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S_Q92_RAW",
+    "question": {
+      "latex": "If A and B are two events such that P(A$\\cap$B) = 0.1, and P(A|B) and P(B|A) are the roots of the equation $12x^2 - 7x + 1 = 0$, then the value of $P(\\overline{A} \\cup \\overline{B}) / P(\\overline{A} \\cap \\overline{B})$ is:",
+      "unicode": "If A and B are two events such that P(AcapB) = 0.1, and P(A|B) and P(B|A) are the roots of the equation 12x² - 7x + 1 = 0, then the value of P(overline{A} cup overline{B}) / P(overline{A} cap overline{B}) is:",
+      "plainText": "If A and B are two events such that P(AcapB) = 0.1, and P(A|B) and P(B|A) are the roots of the equation 12x^2 - 7x + 1 = 0, then the value of P(overline{A} cup overline{B}) / P(overline{A} cap overline{B}) is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5/3",
+        "unicode": "5/3",
+        "plainText": "5/3"
+      },
+      {
+        "id": "b",
+        "latex": "4/3",
+        "unicode": "4/3",
+        "plainText": "4/3"
+      },
+      {
+        "id": "c",
+        "latex": "9/4",
+        "unicode": "9/4",
+        "plainText": "9/4"
+      },
+      {
+        "id": "d",
+        "latex": "7/4",
+        "unicode": "7/4",
+        "plainText": "7/4"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2026_S_Q173",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2026_S_Q173_RAW",
+    "question": {
+      "latex": "Let $a, b, c \\in \\{1, 2, 3, 4\\}$. If the probability, that $ax^2 + 2\\sqrt{2}bx + c > 0$ for all $x \\in \\mathbb{R}$, is $\\frac{m}{n}$, $\\gcd(m, n) = 1$, then $m + n$ is equal to _______.",
+      "unicode": "Let a, b, c in {1, 2, 3, 4}. If the probability, that ax² + 2√(2)bx + c > 0 for all x in mathbb{R}, is (m/n), gcd(m, n) = 1, then m + n is equal to _______.",
+      "plainText": "Let a, b, c in {1, 2, 3, 4}. If the probability, that ax^2 + 2sqrt(2)bx + c > 0 for all x in mathbb{R}, is (m)/(n), gcd(m, n) = 1, then m + n is equal to _______."
+    },
+    "options": [],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2026_S_Q233",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2026_S_Q233_RAW",
+    "question": {
+      "latex": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is $\\frac{m}{n}$, $\\gcd(m, n) = 1$, then $m + n$ is equal to:",
+      "unicode": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is (m/n), gcd(m, n) = 1, then m + n is equal to:",
+      "plainText": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is (m)/(n), gcd(m, n) = 1, then m + n is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$53$",
+        "unicode": "53",
+        "plainText": "53"
+      },
+      {
+        "id": "b",
+        "latex": "$55$",
+        "unicode": "55",
+        "plainText": "55"
+      },
+      {
+        "id": "c",
+        "latex": "$107$",
+        "unicode": "107",
+        "plainText": "107"
+      },
+      {
+        "id": "d",
+        "latex": "$105$",
+        "unicode": "105",
+        "plainText": "105"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.051Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.051Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2026_S_Q321",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2026_S_Q321_RAW",
+    "question": {
+      "latex": "A coin is tossed 8 times. If the probability that exactly 4 heads appear in the first six tosses and exactly 3 heads appear in the last five tosses is $p$, then $96p$ is equal to \\_\\_\\_\\_\\_.",
+      "unicode": "A coin is tossed 8 times. If the probability that exactly 4 heads appear in the first six tosses and exactly 3 heads appear in the last five tosses is p, then 96p is equal to _____.",
+      "plainText": "A coin is tossed 8 times. If the probability that exactly 4 heads appear in the first six tosses and exactly 3 heads appear in the last five tosses is p, then 96p is equal to _____."
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_PROBABILITY_2020_S1_Q42",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_PROBABILITY_2020_S1_Q42_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2020] Let 퐶 1 and 퐶 2 be two biased coins such that the probabilities of getting head in a single toss are 2 3 and 1 3 , respectively. Suppose 훼 is the number of heads that appear when 퐶 1 is tossed twice, independently, and suppose 훽 is the number of heads that appear when 퐶 2 is tossed twice, independently. Then the probability that the roots of the qu",
+      "unicode": "[JEE PYQ 2020] Let 퐶 1 and 퐶 2 be two biased coins such that the probabilities of getting head in a single toss are 2 3 and 1 3 , respectively. Suppose 훼 is the number of heads that appear when 퐶 1 is tossed twice, independently, and suppose 훽 is the number of heads that appear when 퐶 2 is tossed twice, independently. Then the probability that the roots of the qu",
+      "plainText": "[JEE PYQ 2020] Let 퐶 1 and 퐶 2 be two biased coins such that the probabilities of getting head in a single toss are 2 3 and 1 3 , respectively. Suppose 훼 is the number of heads that appear when 퐶 1 is tossed twice, independently, and suppose 훽 is the number of heads that appear when 퐶 2 is tossed twice, independently. Then the probability that the roots of the qu"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "40 81",
+        "unicode": "40 81",
+        "plainText": "40 81"
+      },
+      {
+        "id": "b",
+        "latex": "20 81",
+        "unicode": "20 81",
+        "plainText": "20 81"
+      },
+      {
+        "id": "c",
+        "latex": "1 2",
+        "unicode": "1 2",
+        "plainText": "1 2"
+      },
+      {
+        "id": "d",
+        "latex": "1 4",
+        "unicode": "1 4",
+        "plainText": "1 4"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2020.pdf",
+      "createdDate": "2026-07-29T19:27:46.142Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.142Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_PROBABILITY_2021_S1_Q95",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_PROBABILITY_2021_S1_Q95_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2021] Let 휃 1 ,휃 2 ,...,휃 10 be positive valued angles (in radian) such that 휃 1 + 휃 2 +⋯+휃 10 =2휋. Define the complex numbers 푧 1 =푒 푖휃 1 , 푧 푘 =푧 푘−1 푒 푖휃 푘 for 푘=2,3,...,10, where 푖= √ −1 . Consider the statements 푃 and 푄 given below: 푃 : | 푧 2 −푧 1 | + | 푧 3 −푧 2 | +⋯+ | 푧 10 −푧 9 | + | 푧 1 −푧 10 | ≤2휋 푄 : | 푧 2 2 −푧 1 2 | + | 푧 3 2 −푧 2 2 | +⋯+ | 푧",
+      "unicode": "[JEE PYQ 2021] Let 휃 1 ,휃 2 ,...,휃 10 be positive valued angles (in radian) such that 휃 1 + 휃 2 +⋯+휃 10 =2휋. Define the complex numbers 푧 1 =푒 푖휃 1 , 푧 푘 =푧 푘−1 푒 푖휃 푘 for 푘=2,3,...,10, where 푖= √ −1 . Consider the statements 푃 and 푄 given below: 푃 : | 푧 2 −푧 1 | + | 푧 3 −푧 2 | +⋯+ | 푧 10 −푧 9 | + | 푧 1 −푧 10 | ≤2휋 푄 : | 푧 2 2 −푧 1 2 | + | 푧 3 2 −푧 2 2 | +⋯+ | 푧",
+      "plainText": "[JEE PYQ 2021] Let 휃 1 ,휃 2 ,...,휃 10 be positive valued angles (in radian) such that 휃 1 + 휃 2 +⋯+휃 10 =2휋. Define the complex numbers 푧 1 =푒 푖휃 1 , 푧 푘 =푧 푘−1 푒 푖휃 푘 for 푘=2,3,...,10, where 푖= √ −1 . Consider the statements 푃 and 푄 given below: 푃 : | 푧 2 −푧 1 | + | 푧 3 −푧 2 | +⋯+ | 푧 10 −푧 9 | + | 푧 1 −푧 10 | ≤2휋 푄 : | 푧 2 2 −푧 1 2 | + | 푧 3 2 −푧 2 2 | +⋯+ | 푧"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P is TRUE and 푄 is FALSE",
+        "unicode": "P is TRUE and 푄 is FALSE",
+        "plainText": "P is TRUE and 푄 is FALSE"
+      },
+      {
+        "id": "b",
+        "latex": "푄 is TRUE and P is FALSE",
+        "unicode": "푄 is TRUE and P is FALSE",
+        "plainText": "푄 is TRUE and P is FALSE"
+      },
+      {
+        "id": "c",
+        "latex": "both P and 푄 are TRUE",
+        "unicode": "both P and 푄 are TRUE",
+        "plainText": "both P and 푄 are TRUE"
+      },
+      {
+        "id": "d",
+        "latex": "both P and 푄 are FALSE JEE",
+        "unicode": "both P and 푄 are FALSE JEE",
+        "plainText": "both P and 푄 are FALSE JEE"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2021,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2021.pdf",
+      "createdDate": "2026-07-29T19:27:46.149Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.149Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_PROBABILITY_2025_S1_Q267",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_PROBABILITY_2025_S1_Q267_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Three students 푆 1 ,푆 2 , and 푆 3 are given a problem to solve. Consider the following events: 푈: At least one of 푆 1 ,푆 2 , and 푆 3 can solve the problem, 푉: 푆 1 can solve the problem, given that neither 푆 2 nor 푆 3 can solve the problem, 푊: 푆 2 can solve the problem and 푆 3 cannot solve the problem, 푇: 푆 3 can solve the problem. For any event 퐸,",
+      "unicode": "[JEE PYQ 2025] Three students 푆 1 ,푆 2 , and 푆 3 are given a problem to solve. Consider the following events: 푈: At least one of 푆 1 ,푆 2 , and 푆 3 can solve the problem, 푉: 푆 1 can solve the problem, given that neither 푆 2 nor 푆 3 can solve the problem, 푊: 푆 2 can solve the problem and 푆 3 cannot solve the problem, 푇: 푆 3 can solve the problem. For any event 퐸,",
+      "plainText": "[JEE PYQ 2025] Three students 푆 1 ,푆 2 , and 푆 3 are given a problem to solve. Consider the following events: 푈: At least one of 푆 1 ,푆 2 , and 푆 3 can solve the problem, 푉: 푆 1 can solve the problem, given that neither 푆 2 nor 푆 3 can solve the problem, 푊: 푆 2 can solve the problem and 푆 3 cannot solve the problem, 푇: 푆 3 can solve the problem. For any event 퐸,"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "13 36",
+        "unicode": "13 36",
+        "plainText": "13 36"
+      },
+      {
+        "id": "b",
+        "latex": "1 3",
+        "unicode": "1 3",
+        "plainText": "1 3"
+      },
+      {
+        "id": "c",
+        "latex": "19 60",
+        "unicode": "19 60",
+        "plainText": "19 60"
+      },
+      {
+        "id": "d",
+        "latex": "1 4 JEE",
+        "unicode": "1 4 JEE",
+        "plainText": "1 4 JEE"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2025.pdf",
+      "createdDate": "2026-07-29T19:27:46.174Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.174Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q457",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q457_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (b) Jt is given thatu is the numbe r of heads that appear when C 1 is tossed tw ice, the probability distribution of random variable u is u 0 1 2 P(u) Gr 2 rn)G) rnr Similarly, it is given that~ is the number of heads that appear when C 2 is tossed twice, so probability distribution of random variable ~ is ~ 0 1 2 P@) rnr 4 1 -- 9 9 Now, as the roo",
+      "unicode": "[JEE PYQ 2025] (b) Jt is given thatu is the numbe r of heads that appear when C 1 is tossed tw ice, the probability distribution of random variable u is u 0 1 2 P(u) Gr 2 rn)G) rnr Similarly, it is given that~ is the number of heads that appear when C 2 is tossed twice, so probability distribution of random variable ~ is ~ 0 1 2 P@) rnr 4 1 -- 9 9 Now, as the roo",
+      "plainText": "[JEE PYQ 2025] (b) Jt is given thatu is the numbe r of heads that appear when C 1 is tossed tw ice, the probability distribution of random variable u is u 0 1 2 P(u) Gr 2 rn)G) rnr Similarly, it is given that~ is the number of heads that appear when C 2 is tossed twice, so probability distribution of random variable ~ is ~ 0 1 2 P@) rnr 4 1 -- 9 9 Now, as the roo"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Jt is given thatu is the numbe r of heads that appear when C 1 is tossed tw ice, the probability dis",
+        "unicode": "Jt is given thatu is the numbe r of heads that appear when C 1 is tossed tw ice, the probability dis",
+        "plainText": "Jt is given thatu is the numbe r of heads that appear when C 1 is tossed tw ice, the probability dis"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.187Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.187Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q520",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q520_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (8. 00) Let a n event E of s um ofoutputs are pe rfect square (i.e., 4 or 9), so E = {(I, 3), (2, 2), (3, I), (3, 6), (4, 5), (5, 4), (6, 3)} a nd an event F of sum of o utputs are prime numbers (i.e. , 2, 3, 5, 7, 11) so F = {( I, I), ( I, 2), (2, I), ( I , 4), (2, 3), (3, 2), (4, 1),(1, 6),(2,5), (3, 4),(4,3),(5,2),(6, I), (5, 6), (6, 5)} a nd ev",
+      "unicode": "[JEE PYQ 2025] (8. 00) Let a n event E of s um ofoutputs are pe rfect square (i.e., 4 or 9), so E = {(I, 3), (2, 2), (3, I), (3, 6), (4, 5), (5, 4), (6, 3)} a nd an event F of sum of o utputs are prime numbers (i.e. , 2, 3, 5, 7, 11) so F = {( I, I), ( I, 2), (2, I), ( I , 4), (2, 3), (3, 2), (4, 1),(1, 6),(2,5), (3, 4),(4,3),(5,2),(6, I), (5, 6), (6, 5)} a nd ev",
+      "plainText": "[JEE PYQ 2025] (8. 00) Let a n event E of s um ofoutputs are pe rfect square (i.e., 4 or 9), so E = {(I, 3), (2, 2), (3, I), (3, 6), (4, 5), (5, 4), (6, 3)} a nd an event F of sum of o utputs are prime numbers (i.e. , 2, 3, 5, 7, 11) so F = {( I, I), ( I, 2), (2, I), ( I , 4), (2, 3), (3, 2), (4, 1),(1, 6),(2,5), (3, 4),(4,3),(5,2),(6, I), (5, 6), (6, 5)} a nd ev"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.191Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.191Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q676",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q676_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (a,c) Key Idea: Use conditional probability, total probability and Baye's theorem. It is given that there are three bags B 1 , B 2 and B 3 and probabilities of being chosen B 1 , B 2 and B 3 are r espectively. 3 3 4 P(B 1 ) = -, P(B 2 ) = -and P(B 3 ) = -. 10 10 10 LllJ ~ LllJ 81 82 8 3 Now, probability that th e chosen ball is green, gi ven that s",
+      "unicode": "[JEE PYQ 2025] (a,c) Key Idea: Use conditional probability, total probability and Baye's theorem. It is given that there are three bags B 1 , B 2 and B 3 and probabilities of being chosen B 1 , B 2 and B 3 are r espectively. 3 3 4 P(B 1 ) = -, P(B 2 ) = -and P(B 3 ) = -. 10 10 10 LllJ ~ LllJ 81 82 8 3 Now, probability that th e chosen ball is green, gi ven that s",
+      "plainText": "[JEE PYQ 2025] (a,c) Key Idea: Use conditional probability, total probability and Baye's theorem. It is given that there are three bags B 1 , B 2 and B 3 and probabilities of being chosen B 1 , B 2 and B 3 are r espectively. 3 3 4 P(B 1 ) = -, P(B 2 ) = -and P(B 3 ) = -. 10 10 10 LllJ ~ LllJ 81 82 8 3 Now, probability that th e chosen ball is green, gi ven that s"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.202Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.202Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q865",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q865_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (NH 4 )iCrz0 7 ~N 2 + 4Hz0 + Crp 3 Ba(N 3 Ji-Ba + 3N 2 Thus, only (NI-Li bS0 4 does not gives Ni on heating ( It gi ve N~). While rest of the given compounds gives Ni on their thermal decomposition. (c) Among the given metals Al forms white gelatinous ppt. with NaOH. Hence, the probable metal can be Al. T his ppt. is dissolved in excess of NaOH due",
+      "unicode": "[JEE PYQ 2025] (NH 4 )iCrz0 7 ~N 2 + 4Hz0 + Crp 3 Ba(N 3 Ji-Ba + 3N 2 Thus, only (NI-Li bS0 4 does not gives Ni on heating ( It gi ve N~). While rest of the given compounds gives Ni on their thermal decomposition. (c) Among the given metals Al forms white gelatinous ppt. with NaOH. Hence, the probable metal can be Al. T his ppt. is dissolved in excess of NaOH due",
+      "plainText": "[JEE PYQ 2025] (NH 4 )iCrz0 7 ~N 2 + 4Hz0 + Crp 3 Ba(N 3 Ji-Ba + 3N 2 Thus, only (NI-Li bS0 4 does not gives Ni on heating ( It gi ve N~). While rest of the given compounds gives Ni on their thermal decomposition. (c) Among the given metals Al forms white gelatinous ppt. with NaOH. Hence, the probable metal can be Al. T his ppt. is dissolved in excess of NaOH due"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Among the given metals Al forms white gelatinous ppt. with NaOH. Hence, the probable metal can be Al",
+        "unicode": "Among the given metals Al forms white gelatinous ppt. with NaOH. Hence, the probable metal can be Al",
+        "plainText": "Among the given metals Al forms white gelatinous ppt. with NaOH. Hence, the probable metal can be Al"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.212Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.212Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q901",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q901_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (b) Key idea Use the theorem of total probability Let E 1 = Event that first ball drawn is red E 2 = Event that first ball drawn is black A = Event that second ball drawn is red P(E ) = _i_, P(~J = i_ I 10 E1 12 ⇒ P(E 2l = 1~' p( ~ J = G By law of total proba bility P(A) = P(Ei) x P(; J + P(E 2 ) x P(:J 4 6 6 4 =-x-+-x- 10 12 10 12 24 + 24 48 2 ---",
+      "unicode": "[JEE PYQ 2025] (b) Key idea Use the theorem of total probability Let E 1 = Event that first ball drawn is red E 2 = Event that first ball drawn is black A = Event that second ball drawn is red P(E ) = _i_, P(~J = i_ I 10 E1 12 ⇒ P(E 2l = 1~' p( ~ J = G By law of total proba bility P(A) = P(Ei) x P(; J + P(E 2 ) x P(:J 4 6 6 4 =-x-+-x- 10 12 10 12 24 + 24 48 2 ---",
+      "plainText": "[JEE PYQ 2025] (b) Key idea Use the theorem of total probability Let E 1 = Event that first ball drawn is red E 2 = Event that first ball drawn is black A = Event that second ball drawn is red P(E ) = _i_, P(~J = i_ I 10 E1 12 ⇒ P(E 2l = 1~' p( ~ J = G By law of total proba bility P(A) = P(Ei) x P(; J + P(E 2 ) x P(:J 4 6 6 4 =-x-+-x- 10 12 10 12 24 + 24 48 2 ---"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "= P",
+        "unicode": "= P",
+        "plainText": "= P"
+      },
+      {
+        "id": "b",
+        "latex": "Key idea Use the theorem of total probability Let E 1 = Event that first ball drawn is red E 2 = Eve",
+        "unicode": "Key idea Use the theorem of total probability Let E 1 = Event that first ball drawn is red E 2 = Eve",
+        "plainText": "Key idea Use the theorem of total probability Let E 1 = Event that first ball drawn is red E 2 = Eve"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.214Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.214Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q1735",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q1735_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] A computer producing factory has only two plants T 1 and T 2 . Plant T 1 produces 20% and plant T 2 produces 80% of the total computers produced. 7% of computers produced in the factory turn out to be defective. It is knownthat P ( computer turns out to be defective, given that it is produced in plant T 1 ) = IOP Section 2 (Maximum Marks: 32) • Thi",
+      "unicode": "[JEE PYQ 2025] A computer producing factory has only two plants T 1 and T 2 . Plant T 1 produces 20% and plant T 2 produces 80% of the total computers produced. 7% of computers produced in the factory turn out to be defective. It is knownthat P ( computer turns out to be defective, given that it is produced in plant T 1 ) = IOP Section 2 (Maximum Marks: 32) • Thi",
+      "plainText": "[JEE PYQ 2025] A computer producing factory has only two plants T 1 and T 2 . Plant T 1 produces 20% and plant T 2 produces 80% of the total computers produced. 7% of computers produced in the factory turn out to be defective. It is knownthat P ( computer turns out to be defective, given that it is produced in plant T 1 ) = IOP Section 2 (Maximum Marks: 32) • Thi"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "36",
+        "unicode": "36",
+        "plainText": "36"
+      },
+      {
+        "id": "b",
+        "latex": "47",
+        "unicode": "47",
+        "plainText": "47"
+      },
+      {
+        "id": "c",
+        "latex": "78",
+        "unicode": "78",
+        "plainText": "78"
+      },
+      {
+        "id": "d",
+        "latex": "75 73 79 93 83 • Each question has FOUR options",
+        "unicode": "75 73 79 93 83 • Each question has FOUR options",
+        "plainText": "75 73 79 93 83 • Each question has FOUR options"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.263Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.263Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q1819",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q1819_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (c) This graph s hows the probability of finding the e lectron within s hell at various di stances from the nuc leus (radial probability). The curve shows the maximum, which means th at the radial probability is greatest for a given distance from the nucleus. This distan ce is equal to Boh,'sra:~ ,. (a) It is for 2s-orbital. (b) It is radial wave f",
+      "unicode": "[JEE PYQ 2025] (c) This graph s hows the probability of finding the e lectron within s hell at various di stances from the nuc leus (radial probability). The curve shows the maximum, which means th at the radial probability is greatest for a given distance from the nucleus. This distan ce is equal to Boh,'sra:~ ,. (a) It is for 2s-orbital. (b) It is radial wave f",
+      "plainText": "[JEE PYQ 2025] (c) This graph s hows the probability of finding the e lectron within s hell at various di stances from the nuc leus (radial probability). The curve shows the maximum, which means th at the radial probability is greatest for a given distance from the nucleus. This distan ce is equal to Boh,'sra:~ ,. (a) It is for 2s-orbital. (b) It is radial wave f"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "It is for 2s-orbital.",
+        "unicode": "It is for 2s-orbital.",
+        "plainText": "It is for 2s-orbital."
+      },
+      {
+        "id": "b",
+        "latex": "It is radial wave function for ls.",
+        "unicode": "It is radial wave function for ls.",
+        "plainText": "It is radial wave function for ls."
+      },
+      {
+        "id": "c",
+        "latex": "This graph s hows the probability of finding the e lectron within s hell at various di stances from",
+        "unicode": "This graph s hows the probability of finding the e lectron within s hell at various di stances from",
+        "plainText": "This graph s hows the probability of finding the e lectron within s hell at various di stances from"
+      },
+      {
+        "id": "d",
+        "latex": "Probability cannot be zero at a certa in distance from nucleus.",
+        "unicode": "Probability cannot be zero at a certa in distance from nucleus.",
+        "plainText": "Probability cannot be zero at a certa in distance from nucleus."
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.267Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.267Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q2596",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q2596_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The probability t hat Xi +-½ + 43 is odd , l S 29 (a) 105 (c) 2_ 105 (b) ~ 105 (d) ! 2",
+      "unicode": "[JEE PYQ 2025] The probability t hat Xi +-½ + 43 is odd , l S 29 (a) 105 (c) 2_ 105 (b) ~ 105 (d) ! 2",
+      "plainText": "[JEE PYQ 2025] The probability t hat Xi +-½ + 43 is odd , l S 29 (a) 105 (c) 2_ 105 (b) ~ 105 (d) ! 2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "105",
+        "unicode": "105",
+        "plainText": "105"
+      },
+      {
+        "id": "b",
+        "latex": "~ 105",
+        "unicode": "~ 105",
+        "plainText": "~ 105"
+      },
+      {
+        "id": "c",
+        "latex": "2_ 105",
+        "unicode": "2_ 105",
+        "plainText": "2_ 105"
+      },
+      {
+        "id": "d",
+        "latex": "! 2",
+        "unicode": "! 2",
+        "plainText": "! 2"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.314Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.314Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q2716",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q2716_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Plan if x,, x 2 , x 3 are in AP. Then, x 2 - x 1 = x 3 - x 2 ⇒ 2x 2 = X 1 + X3 ·: x 1 , x 2 , x 3 are in AP. x 1 + x 3 =2x 2 So, x 1 + x 3 should be even numbe r Either both x 1 and x 3 are odd or both are even. :. Required probability -2el X 4el + lei X 3el - 3 e x 5 e x 7 e I I I 11 105",
+      "unicode": "[JEE PYQ 2025] Plan if x,, x 2 , x 3 are in AP. Then, x 2 - x 1 = x 3 - x 2 ⇒ 2x 2 = X 1 + X3 ·: x 1 , x 2 , x 3 are in AP. x 1 + x 3 =2x 2 So, x 1 + x 3 should be even numbe r Either both x 1 and x 3 are odd or both are even. :. Required probability -2el X 4el + lei X 3el - 3 e x 5 e x 7 e I I I 11 105",
+      "plainText": "[JEE PYQ 2025] Plan if x,, x 2 , x 3 are in AP. Then, x 2 - x 1 = x 3 - x 2 ⇒ 2x 2 = X 1 + X3 ·: x 1 , x 2 , x 3 are in AP. x 1 + x 3 =2x 2 So, x 1 + x 3 should be even numbe r Either both x 1 and x 3 are odd or both are even. :. Required probability -2el X 4el + lei X 3el - 3 e x 5 e x 7 e I I I 11 105"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.326Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.326Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q3031",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q3031_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] If 1 ball is drawn from each of the boxes Bi, B 2 and B 3 , the probability that all 3 drawn balls are of the same colour is (a) 82 (b) 90 648 648 (c) 558 (d) 566 648 648",
+      "unicode": "[JEE PYQ 2025] If 1 ball is drawn from each of the boxes Bi, B 2 and B 3 , the probability that all 3 drawn balls are of the same colour is (a) 82 (b) 90 648 648 (c) 558 (d) 566 648 648",
+      "plainText": "[JEE PYQ 2025] If 1 ball is drawn from each of the boxes Bi, B 2 and B 3 , the probability that all 3 drawn balls are of the same colour is (a) 82 (b) 90 648 648 (c) 558 (d) 566 648 648"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "82",
+        "unicode": "82",
+        "plainText": "82"
+      },
+      {
+        "id": "b",
+        "latex": "90 648 648",
+        "unicode": "90 648 648",
+        "plainText": "90 648 648"
+      },
+      {
+        "id": "c",
+        "latex": "558",
+        "unicode": "558",
+        "plainText": "558"
+      },
+      {
+        "id": "d",
+        "latex": "566 648 648",
+        "unicode": "566 648 648",
+        "plainText": "566 648 648"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.348Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.348Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q3388",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q3388_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Concept Involved (i) Conditional probability i.e., P(A/B) = P (An B) P(B) (ii) P (Au B) = P(A) + P(B) -P(A n B) (iii) Independent event, then P(A n B) = P(A)-P(B) Sol. Here, P (XI Y) = _!_, P (!_) = _!_ 2 X 3 and P (X n Y) = 6 ⇒ ⇒ ⇒ ⇒ p (X) = P (X n Y) Y P(Y) 1 1/6 -=-- 2 P(Y) P(Y) = _!_ 3 p(; ) =½ P (X n Y) l P(X) 3 .!_ = _!_ P(X ) 6 3 P(X) = _!_",
+      "unicode": "[JEE PYQ 2025] Concept Involved (i) Conditional probability i.e., P(A/B) = P (An B) P(B) (ii) P (Au B) = P(A) + P(B) -P(A n B) (iii) Independent event, then P(A n B) = P(A)-P(B) Sol. Here, P (XI Y) = _!_, P (!_) = _!_ 2 X 3 and P (X n Y) = 6 ⇒ ⇒ ⇒ ⇒ p (X) = P (X n Y) Y P(Y) 1 1/6 -=-- 2 P(Y) P(Y) = _!_ 3 p(; ) =½ P (X n Y) l P(X) 3 .!_ = _!_ P(X ) 6 3 P(X) = _!_",
+      "plainText": "[JEE PYQ 2025] Concept Involved (i) Conditional probability i.e., P(A/B) = P (An B) P(B) (ii) P (Au B) = P(A) + P(B) -P(A n B) (iii) Independent event, then P(A n B) = P(A)-P(B) Sol. Here, P (XI Y) = _!_, P (!_) = _!_ 2 X 3 and P (X n Y) = 6 ⇒ ⇒ ⇒ ⇒ p (X) = P (X n Y) Y P(Y) 1 1/6 -=-- 2 P(Y) P(Y) = _!_ 3 p(; ) =½ P (X n Y) l P(X) 3 .!_ = _!_ P(X ) 6 3 P(X) = _!_"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "+ P",
+        "unicode": "+ P",
+        "plainText": "+ P"
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "Conceptual",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.374Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.374Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q3574",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q3574_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Given that the drawn ball from U z is white, the probability that head appeared on the coin is (a)_!-2_ 23 Paragraph (Q. Nos. 14-16) (b) _!_!_ 23 (c) ~ 23 (d) 12 23 Letcbandcbeth,moolaumbe,ssat;sjy;ag[a b dl~ ~ ~] 0 10 0 OJ .. . (E)",
+      "unicode": "[JEE PYQ 2025] Given that the drawn ball from U z is white, the probability that head appeared on the coin is (a)_!-2_ 23 Paragraph (Q. Nos. 14-16) (b) _!_!_ 23 (c) ~ 23 (d) 12 23 Letcbandcbeth,moolaumbe,ssat;sjy;ag[a b dl~ ~ ~] 0 10 0 OJ .. . (E)",
+      "plainText": "[JEE PYQ 2025] Given that the drawn ball from U z is white, the probability that head appeared on the coin is (a)_!-2_ 23 Paragraph (Q. Nos. 14-16) (b) _!_!_ 23 (c) ~ 23 (d) 12 23 Letcbandcbeth,moolaumbe,ssat;sjy;ag[a b dl~ ~ ~] 0 10 0 OJ .. . (E)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "_!-2_ 23 Paragraph",
+        "unicode": "_!-2_ 23 Paragraph",
+        "plainText": "_!-2_ 23 Paragraph"
+      },
+      {
+        "id": "b",
+        "latex": "_!_!_ 23",
+        "unicode": "_!_!_ 23",
+        "plainText": "_!_!_ 23"
+      },
+      {
+        "id": "c",
+        "latex": "~ 23",
+        "unicode": "~ 23",
+        "plainText": "~ 23"
+      },
+      {
+        "id": "d",
+        "latex": "12 23 Letcbandcbeth,moolaumbe,ssat;sjy;ag[a b dl~ ~ ~] 0 10 0 OJ .. .",
+        "unicode": "12 23 Letcbandcbeth,moolaumbe,ssat;sjy;ag[a b dl~ ~ ~] 0 10 0 OJ .. .",
+        "plainText": "12 23 Letcbandcbeth,moolaumbe,ssat;sjy;ag[a b dl~ ~ ~] 0 10 0 OJ .. ."
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Probability NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Probability NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.383Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.383Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q77",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2025_S1_Q77_RAW",
+    "question": {
+      "latex": "If A and B are two events such that P$A$\\cap$B$ = 0.1, and P$A|B$ and P$B|A$ are the roots of the equation $12x^2 - 7x + 1 = 0$, then the value of $P$\\overline{A} \\cup \\overline{B}$ / P$\\overline{A} \\cap \\overline{B}$$ is:",
+      "unicode": "If A and B are two events such that PAcapB = 0.1, and PA|B and PB|A are the roots of the equation 12x² - 7x + 1 = 0, then the value of Poverline{A} cup overline{B} / Poverline{A} cap overline{B} is:",
+      "plainText": "If A and B are two events such that PAcapB = 0.1, and PA|B and PB|A are the roots of the equation 12x^2 - 7x + 1 = 0, then the value of Poverline{A} cup overline{B} / Poverline{A} cap overline{B} is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5/3",
+        "unicode": "5/3",
+        "plainText": "5/3"
+      },
+      {
+        "id": "b",
+        "latex": "4/3",
+        "unicode": "4/3",
+        "plainText": "4/3"
+      },
+      {
+        "id": "c",
+        "latex": "9/4",
+        "unicode": "9/4",
+        "plainText": "9/4"
+      },
+      {
+        "id": "d",
+        "latex": "7/4",
+        "unicode": "7/4",
+        "plainText": "7/4"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_PROBABILITY_2026_S1_Q188",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_PROBABILITY_2026_S1_Q188_RAW",
+    "question": {
+      "latex": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is $\\frac{m}{n}$, $\\gcd$m, n$ = 1$, then $m + n$ is equal to:",
+      "unicode": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is (m/n), gcdm, n = 1, then m + n is equal to:",
+      "plainText": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is (m)/(n), gcdm, n = 1, then m + n is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$53$",
+        "unicode": "53",
+        "plainText": "53"
+      },
+      {
+        "id": "b",
+        "latex": "$55$",
+        "unicode": "55",
+        "plainText": "55"
+      },
+      {
+        "id": "c",
+        "latex": "$107$",
+        "unicode": "107",
+        "plainText": "107"
+      },
+      {
+        "id": "d",
+        "latex": "$105$",
+        "unicode": "105",
+        "plainText": "105"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $P(k)$ be the probability of getting exactly $5k$ points. On each toss, adding a Head gives $10$ points (two units of $5$) and adding a Tail gives $5$ points (one unit of $5$). \nTherefore, $P(k) = \\frac{1}{2} P(k-2) + \\frac{1}{2} P(k-1)$ with $P(0) = 1$ and $P(1) = 1/2$.\nEvaluating recursively:\n$P(2) = \\frac{1}{2}(1) + \\frac{1}{2}(\\frac{1}{2}) = \\frac{3}{4}$\n$P(3) = \\frac{1}{2}(\\frac{1}{2}) + \\frac{1}{2}(\\frac{3}{4}) = \\frac{5}{8}$\n$P(4) = \\frac{1}{2}(\\frac{3}{4}) + \\frac{1}{2}(\\frac{5}{8}) = \\frac{11}{16}$\n$P(5) = \\frac{1}{2}(\\frac{5}{8}) + \\frac{1}{2}(\\frac{11}{16}) = \\frac{21}{32}$\n$P(6) = \\frac{1}{2}(\\frac{11}{16}) + \\frac{1}{2}(\\frac{21}{32}) = \\frac{43}{64}$.\n$30$ points means $k=6$. So probability is $43/64$, meaning $m = 43$ and $n = 64$. $m+n = 107$.",
+      "unicode": "Let P(k) be the probability of getting exactly 5k points. On each toss, adding a Head gives 10 points (two units of 5) and adding a Tail gives 5 points (one unit of 5). \nTherefore, P(k) = (1/2) P(k-2) + (1/2) P(k-1) with P(0) = 1 and P(1) = 1/2.\nEvaluating recursively:\nP(2) = (1/2)(1) + (1/2)((1/2)) = (3/4)\nP(3) = (1/2)((1/2)) + (1/2)((3/4)) = (5/8)\nP(4) = (1/2)((3/4)) + (1/2)((5/8)) = (11/16)\nP(5) = (1/2)((5/8)) + (1/2)((11/16)) = (21/32)\nP(6) = (1/2)((11/16)) + (1/2)((21/32)) = (43/64).\n30 points means k=6. So probability is 43/64, meaning m = 43 and n = 64. m+n = 107.",
+      "plainText": "Let P(k) be the probability of getting exactly 5k points. On each toss, adding a Head gives 10 points (two units of 5) and adding a Tail gives 5 points (one unit of 5). Therefore, P(k) = (1)/(2) P(k-2) + (1)/(2) P(k-1) with P(0) = 1 and P(1) = 1/2. Evaluating recursively: P(2) = (1)/(2)(1) + (1)/(2)((1)/(2)) = (3)/(4) P(3) = (1)/(2)((1)/(2)) + (1)/(2)((3)/(4)) = (5)/(8) P(4) = (1)/(2)((3)/(4)) + (1)/(2)((5)/(8)) = (11)/(16) P(5) = (1)/(2)((5)/(8)) + (1)/(2)((11)/(16)) = (21)/(32) P(6) = (1)/(2)((11)/(16)) + (1)/(2)((21)/(32)) = (43)/(64). 30 points means k=6. So probability is 43/64, meaning m = 43 and n = 64. m+n = 107."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "subchapter": "Probability Core Concepts",
+      "topic": "Probability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Probability",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,260 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_TRIGONOMETRI_2025_S_Q93",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_TRIGONOMETRI_2025_S_Q93_RAW",
+    "question": {
+      "latex": "The sum of all values of $\\theta \\in [0, 2\\pi]$ satisfying $2\\sin^2\\theta = \\cos2\\theta$ and $2\\cos^2\\theta = 3\\sin\\theta$ is",
+      "unicode": "The sum of all values of θ in [0, 2π] satisfying 2sin²θ = cos2θ and 2cos²θ = 3sinθ is",
+      "plainText": "The sum of all values of theta in [0, 2pi] satisfying 2sin^2theta = cos2theta and 2cos^2theta = 3sintheta is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\pi/2$",
+        "unicode": "π/2",
+        "plainText": "pi/2"
+      },
+      {
+        "id": "b",
+        "latex": "$4\\pi$",
+        "unicode": "4π",
+        "plainText": "4pi"
+      },
+      {
+        "id": "c",
+        "latex": "$5\\pi/6$",
+        "unicode": "5π/6",
+        "plainText": "5pi/6"
+      },
+      {
+        "id": "d",
+        "latex": "$\\pi$",
+        "unicode": "π",
+        "plainText": "pi"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Trigonometric Equations",
+      "subchapter": "Trigonometric Equations Core Concepts",
+      "topic": "Trigonometric Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Trigonometric Equations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_TRIGONOMETRI_2026_S_Q162",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_TRIGONOMETRI_2026_S_Q162_RAW",
+    "question": {
+      "latex": "Let $S = \\{x \\in [-\\pi, \\pi] : \\sin x(\\sin x + \\cos x) = a, a \\in \\mathbb{Z}\\}$. Then $n(S)$ is equal to :",
+      "unicode": "Let S = {x in [-π, π] : sin x(sin x + cos x) = a, a in mathbb{Z}}. Then n(S) is equal to :",
+      "plainText": "Let S = {x in [-pi, pi] : sin x(sin x + cos x) = a, a in mathbb{Z}}. Then n(S) is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      },
+      {
+        "id": "d",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Trigonometric Equations",
+      "subchapter": "Trigonometric Equations Core Concepts",
+      "topic": "Trigonometric Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Trigonometric Equations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_TRIGONOMETRI_2026_S1_Q132",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_TRIGONOMETRI_2026_S1_Q132_RAW",
+    "question": {
+      "latex": "Let $S = \\{x \\in [-\\pi, \\pi] : \\sin x$\\sin x + \\cos x$ = a, a \\in \\mathbb{Z}\\}$. Then $n$S$$ is equal to :",
+      "unicode": "Let S = {x in [-π, π] : sin xsin x + cos x = a, a in mathbb{Z}}. Then nS is equal to :",
+      "plainText": "Let S = {x in [-pi, pi] : sin xsin x + cos x = a, a in mathbb{Z}}. Then nS is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      },
+      {
+        "id": "d",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $f(x) = \\sin^2 x + \\sin x \\cos x = \\frac{1 - \\cos 2x}{2} + \\frac{\\sin 2x}{2} = \\frac{1}{2} + \\frac{\\sin 2x - \\cos 2x}{2}$.\nThe range of $\\sin 2x - \\cos 2x$ is $[-\\sqrt{2}, \\sqrt{2}]$.\nSo the range of $f(x)$ is $\\left[\\frac{1 - \\sqrt{2}}{2}, \\frac{1 + \\sqrt{2}}{2}\\right] \\approx [-0.207, 1.207]$.\nSince $a \\in \\mathbb{Z}$ and must lie within the range of $f(x)$, the only possible values of $a$ are $0$ and $1$.\n\nIf $a = 0$:\n$\\sin x(\\sin x + \\cos x) = 0$.\n$\\sin x = 0 \\implies x = -\\pi, 0, \\pi$ (3 solutions in $[-\\pi, \\pi]$).\n$\\sin x + \\cos x = 0 \\implies \\tan x = -1 \\implies x = -\\pi/4, 3\\pi/4$ (2 solutions).\nTotal solutions for $a = 0$ is $3 + 2 = 5$.\n\nIf $a = 1$:\n$\\sin^2 x + \\sin x \\cos x = 1 \\implies \\sin x \\cos x = \\cos^2 x \\implies \\cos x(\\sin x - \\cos x) = 0$.\n$\\cos x = 0 \\implies x = -\\pi/2, \\pi/2$ (2 solutions).\n$\\sin x - \\cos x = 0 \\implies \\tan x = 1 \\implies x = -3\\pi/4, \\pi/4$ (2 solutions).\nTotal solutions for $a = 1$ is $2 + 2 = 4$.\n\nTotal number of elements in $S$ is $n(S) = 5 + 4 = 9$.",
+      "unicode": "Let f(x) = sin² x + sin x cos x = (1 - cos 2x/2) + (sin 2x/2) = (1/2) + (sin 2x - cos 2x/2).\nThe range of sin 2x - cos 2x is [-√(2), √(2)].\nSo the range of f(x) is left[frac{1 - √(2)}{2}, frac{1 + √(2)}{2}right] approx [-0.207, 1.207].\nSince a in mathbb{Z} and must lie within the range of f(x), the only possible values of a are 0 and 1.\n\nIf a = 0:\nsin x(sin x + cos x) = 0.\nsin x = 0 implies x = -π, 0, π (3 solutions in [-π, π]).\nsin x + cos x = 0 implies tan x = -1 implies x = -π/4, 3π/4 (2 solutions).\nTotal solutions for a = 0 is 3 + 2 = 5.\n\nIf a = 1:\nsin² x + sin x cos x = 1 implies sin x cos x = cos² x implies cos x(sin x - cos x) = 0.\ncos x = 0 implies x = -π/2, π/2 (2 solutions).\nsin x - cos x = 0 implies tan x = 1 implies x = -3π/4, π/4 (2 solutions).\nTotal solutions for a = 1 is 2 + 2 = 4.\n\nTotal number of elements in S is n(S) = 5 + 4 = 9.",
+      "plainText": "Let f(x) = sin^2 x + sin x cos x = (1 - cos 2x)/(2) + (sin 2x)/(2) = (1)/(2) + (sin 2x - cos 2x)/(2). The range of sin 2x - cos 2x is [-sqrt(2), sqrt(2)]. So the range of f(x) is left[frac{1 - sqrt(2)}{2}, frac{1 + sqrt(2)}{2}right] approx [-0.207, 1.207]. Since a in mathbb{Z} and must lie within the range of f(x), the only possible values of a are 0 and 1. If a = 0: sin x(sin x + cos x) = 0. sin x = 0 implies x = -pi, 0, pi (3 solutions in [-pi, pi]). sin x + cos x = 0 implies tan x = -1 implies x = -pi/4, 3pi/4 (2 solutions). Total solutions for a = 0 is 3 + 2 = 5. If a = 1: sin^2 x + sin x cos x = 1 implies sin x cos x = cos^2 x implies cos x(sin x - cos x) = 0. cos x = 0 implies x = -pi/2, pi/2 (2 solutions). sin x - cos x = 0 implies tan x = 1 implies x = -3pi/4, pi/4 (2 solutions). Total solutions for a = 1 is 2 + 2 = 4. Total number of elements in S is n(S) = 5 + 4 = 9."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Trigonometric Equations",
+      "subchapter": "Trigonometric Equations Core Concepts",
+      "topic": "Trigonometric Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Trigonometric Equations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

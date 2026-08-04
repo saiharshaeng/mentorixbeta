@@ -6,34 +6,61 @@
 
 let RV={mode:null,topic:null,flashIdx:0,flipped:false,quiz:null,quizAns:{},quizSub:false,loading:false};
 
-// Returns next review interval in days using SM-2
-function sm2NextInterval(topic){
-  const mem=D.memory||{};
-  const score=mem.scores?.[topic]??null;
-  const history=(mem.history||[]).filter(h=>h.topic===topic);
-  const reps=history.length;
-  const lastReview=history[history.length-1];
-  if(!lastReview)return{days:1,label:'New',cls:'sm2-due'};
-  const daysSince=Math.floor((Date.now()-new Date(lastReview.date).getTime())/86400000);
-  // SM-2 algorithm: interval grows exponentially based on easiness factor
-  const q=score!=null?Math.round((score/100)*5):2; // convert % score to 0-5 quality rating
-  const efFactor=Math.max(1.3,2.5+(0.1-((5-q)*(0.08+((5-q)*0.02)))));
-  let interval;
-  if(reps<=1)     interval=1;
-  else if(reps===2) interval=6;
-  else {
-    // True SM-2: multiply the PREVIOUS interval by efFactor (exponential growth)
-    // Reconstruct the previous interval from review dates if available
-    const prevReview=history[history.length-2];
-    const prevInterval = prevReview
-      ? Math.max(1, Math.floor((new Date(lastReview.date)-new Date(prevReview.date))/86400000))
-      : 6; // fallback to second-interval default
-    interval=Math.round(prevInterval*efFactor);
+// Returns next review interval in days using Multi-Factor Spaced Repetition (MFSR)
+function sm2NextInterval(topic) {
+  const mem = D.memory || {};
+  const score = mem.scores?.[topic] ?? null;
+  const history = (mem.history || []).filter(h => h.topic === topic);
+  const reps = history.length;
+  const lastReview = history[history.length - 1];
+  if (!lastReview) return { days: 1, label: 'New', cls: 'sm2-due' };
+
+  const lastDate = new Date(lastReview.date || Date.now());
+  const daysSince = Math.max(0, Math.floor((Date.now() - lastDate.getTime()) / 86400000));
+
+  // Convert % score (0-100) to 0-5 quality rating q
+  const q = score != null ? Math.round((score / 100) * 5) : 2;
+
+  // Calculate Easiness Factor (EF) with stability multiplier
+  let efFactor = Math.max(1.3, 2.5 + (0.1 - ((5 - q) * (0.08 + ((5 - q) * 0.02)))));
+
+  // Factor in weak spot status if concept is currently tagged weak
+  const isWeak = (D.memory?.weakSpots || []).some(w => (w.concept || w.topic || w) === topic);
+  if (isWeak) {
+    efFactor = Math.max(1.3, efFactor * 0.85); // Adjust for concept instability
   }
-  const due=interval-daysSince;
-  if(due<=0)return{days:Math.abs(due),label:due===0?'Due today!':'Overdue '+Math.abs(due)+'d',cls:'sm2-due'};
-  if(due<=3)return{days:due,label:'Due in '+due+'d',cls:'sm2-soon'};
-  return{days:due,label:'Due in '+due+'d',cls:'sm2-good'};
+
+  let interval;
+  if (reps <= 1) {
+    interval = (q >= 4) ? 2 : 1;
+  } else if (reps === 2) {
+    interval = (q >= 4) ? 6 : 3;
+  } else {
+    // Reconstruct previous interval safely — protect against same-day review resets
+    const prevReview = history[history.length - 2];
+    let prevInterval = lastReview.interval;
+
+    if (!prevInterval && prevReview) {
+      const daysBetween = Math.floor((lastDate.getTime() - new Date(prevReview.date).getTime()) / 86400000);
+      prevInterval = daysBetween > 0 ? daysBetween : (prevReview.interval || 6);
+    }
+    if (!prevInterval) prevInterval = 6;
+
+    // If reviewed on the same day, build on prevInterval rather than shrinking to 1
+    if (daysSince === 0) {
+      interval = Math.max(prevInterval, Math.round(prevInterval * (q >= 3 ? 1.2 : 1.0)));
+    } else {
+      interval = Math.max(1, Math.round(prevInterval * efFactor));
+    }
+  }
+
+  // Record computed interval back on lastReview for future reference
+  lastReview.interval = interval;
+
+  const due = interval - daysSince;
+  if (due <= 0) return { days: Math.abs(due), label: due === 0 ? 'Due today!' : 'Overdue ' + Math.abs(due) + 'd', cls: 'sm2-due' };
+  if (due <= 3) return { days: due, label: 'Due in ' + due + 'd', cls: 'sm2-soon' };
+  return { days: due, label: 'Due in ' + due + 'd', cls: 'sm2-good' };
 }
 
 function getRevisionQueue(){
@@ -41,16 +68,47 @@ function getRevisionQueue(){
   const mem = D.memory || {};
   const history = mem.history || [];
   const scores = mem.scores || {};
-  return (D.topics||[]).map(t=>{
+  const seenTopics = new Set();
+  const queue = [];
+
+  // 1. All completed topics (original behaviour)
+  (D.topics||[]).forEach(t=>{
+    if (seenTopics.has(t)) return;
+    seenTopics.add(t);
     const note=D.notes?.[t];
     const savedAt=note?.savedAt||0;
     const lastRevised=history.filter(h=>h && h.topic===t).slice(-1)[0]?.date;
     const lastTs=lastRevised?new Date(lastRevised).getTime():savedAt;
     const daysSince=Math.floor((now-lastTs)/86400000);
-    const score=scores[t]??100;
+    const score=scores[t]??30;
     const priority=daysSince>=7?'high':daysSince>=3?'mid':'low';
-    return{topic:t,daysSince,score,priority,note};
-  }).sort((a,b)=>{
+    queue.push({topic:t,daysSince,score,priority,note,needsRepair:false});
+  });
+
+  // 2. Topics with low scores that may not be in D.topics yet (attempted but failed)
+  Object.entries(scores).forEach(([t, score])=>{
+    if (seenTopics.has(t)) return;
+    if (score >= 65) return; // Only surface topics with meaningful struggles
+    seenTopics.add(t);
+    const lastRevised=history.filter(h=>h && h.topic===t).slice(-1)[0]?.date;
+    const lastTs=lastRevised?new Date(lastRevised).getTime():0;
+    const daysSince=lastTs>0?Math.floor((now-lastTs)/86400000):999;
+    queue.push({topic:t,daysSince,score,priority:'high',note:D.notes?.[t],needsRepair:true});
+  });
+
+  // 3. Active weak spots whose topics aren't already in queue
+  (mem.weakSpots||[]).forEach(w=>{
+    const t = w.topic;
+    if (!t || w.solved || seenTopics.has(t)) return;
+    seenTopics.add(t);
+    const score = scores[t] ?? 20;
+    queue.push({topic:t,daysSince:999,score,priority:'high',note:D.notes?.[t],needsRepair:true});
+  });
+
+  return queue.sort((a,b)=>{
+    // needsRepair items always come first
+    if (a.needsRepair && !b.needsRepair) return -1;
+    if (!a.needsRepair && b.needsRepair) return 1;
     const po={high:0,mid:1,low:2};
     return po[a.priority]-po[b.priority]||b.daysSince-a.daysSince;
   });
@@ -90,10 +148,10 @@ function rRevision(){
       <p style="color:var(--mut);margin-bottom:20px;font-size:var(--fs-md)">Learn some topics first, then come back to revise them.</p>
       <button class="btn bpri mx-btn-primary" style="padding:13px 28px" onclick="go('learn')">Start Learning →</button>
     </div>`:`
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px" class="s2">
-      ${queue.map(item=>{
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px" class="s2" id="rev-queue-grid">
+      ${queue.slice(0, 15).map(item=>{
         const urgColor={high:['var(--red)','rgba(239,68,68,.06)'],mid:['var(--gold)','rgba(245,158,11,.06)'],low:['var(--ok)','rgba(16,185,129,.04)']}[item.priority];
-        const urgLabel={high:'⚠️ Overdue',mid:'📅 Due soon',low:'✅ On track'}[item.priority];
+        const urgLabel=item.needsRepair?'🔧 Needs Repair':{high:'⚠️ Overdue',mid:'📅 Due soon',low:'✅ On track'}[item.priority];
         const sm2=sm2NextInterval(item.topic);
         const scoreBar=`<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Last score</span><span style="color:${item.score>=80?'var(--okl)':item.score>=50?'var(--goldl)':'var(--redl)'};font-size:var(--fs-xs);font-weight:700;font-family:var(--f-num)">${item.score}%</span></div><div class="mastery-bar-wrap"><div class="mastery-bar ${item.score>=80?'mastery-good':item.score>=50?'mastery-ok':'mastery-low'}" style="width:${item.score}%"></div></div></div>`;
         return `<div class="rev-card rev-${item.priority} mx-glass-card" style="background:${urgColor[1]};cursor:default" role="article" aria-label="${esc(item.topic)} - ${urgLabel}">
@@ -110,8 +168,35 @@ function rRevision(){
           </div>
         </div>`;
       }).join('')}
-    </div>`}
+    </div>
+    ${queue.length > 15 ? `<div style="text-align:center;margin-top:16px" id="rev-show-more-wrap">
+      <button class="btn bgh" style="padding:12px 28px;font-size:13px" onclick="document.getElementById('rev-queue-grid').innerHTML += window._revQueueRemainder; document.getElementById('rev-show-more-wrap').remove();">
+        📋 Show ${queue.length - 15} More Topics
+      </button>
+    </div>` : ''}`}
   </div>`;
+  // Pre-render remainder for "Show More" button
+  if (queue.length > 15) {
+    window._revQueueRemainder = queue.slice(15).map(item=>{
+      const urgColor={high:['var(--red)','rgba(239,68,68,.06)'],mid:['var(--gold)','rgba(245,158,11,.06)'],low:['var(--ok)','rgba(16,185,129,.04)']}[item.priority];
+      const urgLabel=item.needsRepair?'🔧 Needs Repair':{high:'⚠️ Overdue',mid:'📅 Due soon',low:'✅ On track'}[item.priority];
+      const sm2=sm2NextInterval(item.topic);
+      const scoreBar=`<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Last score</span><span style="color:${item.score>=80?'var(--okl)':item.score>=50?'var(--goldl)':'var(--redl)'};font-size:var(--fs-xs);font-weight:700;font-family:var(--f-num)">${item.score}%</span></div><div class="mastery-bar-wrap"><div class="mastery-bar ${item.score>=80?'mastery-good':item.score>=50?'mastery-ok':'mastery-low'}" style="width:${item.score}%"></div></div></div>`;
+      return `<div class="rev-card rev-${item.priority} mx-glass-card" style="background:${urgColor[1]};cursor:default" role="article" aria-label="${esc(item.topic)} - ${urgLabel}">
+        <div class="between mb10">
+          <div class="font-serif" style="font-size:var(--fs-md);font-weight:700;color:#fff;flex:1;margin-right:10px">${esc(item.topic)}</div>
+          <span class="font-poiret" style="font-size:var(--fs-xs);color:${urgColor[0]};font-weight:600;white-space:nowrap">${urgLabel}</span>
+        </div>
+        <div style="color:var(--mut);font-size:var(--fs-xs);margin-bottom:10px">${item.daysSince===0?'Studied today':item.daysSince===1?'Studied yesterday':`${item.daysSince} days ago`} · <span class="${sm2.cls}">${sm2.label}</span></div>
+        ${scoreBar}
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px">
+          <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','flashcards')"><span style="font-size:20px" aria-hidden="true">🃏</span><span>Flashcards</span></button>
+          <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','quiz')"><span style="font-size:20px" aria-hidden="true">🎯</span><span>Mini Quiz</span></button>
+          <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','recap')"><span style="font-size:20px" aria-hidden="true">📖</span><span>Recap</span></button>
+        </div>
+      </div>`;
+    }).join('');
+  }
   setTimeout(() => { if (typeof renderMath === 'function') renderMath(); }, 80);
 }
 

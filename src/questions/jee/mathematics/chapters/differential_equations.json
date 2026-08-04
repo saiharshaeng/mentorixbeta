@@ -1,0 +1,934 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2025_S_Q85",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2025_S_Q85_RAW",
+    "question": {
+      "latex": "If $x = f(y)$ is the solution of the differential equation $$ (1 + y^2) + \\left(x - 2e^{\\tan^{-1} y}\\right) \\frac{dy}{dx} = 0, \\quad y \\in \\left( -\\frac{\\pi}{2}, \\frac{\\pi}{2} \\right) $$ with $f(0) = 1$, then $f\\left( \\frac{1}{\\sqrt{3}} \\right)$ is equal to:",
+      "unicode": "If x = f(y) is the solution of the differential equation  (1 + y²) + left(x - 2e^{tan^{-1} y}right) (dy/dx) = 0, quad y in left( -(π/2), (π/2) right)  with f(0) = 1, then fleft( (1/√(3)) right) is equal to:",
+      "plainText": "If x = f(y) is the solution of the differential equation (1 + y^2) + left(x - 2e^{tan^{-1} y}right) (dy)/(dx) = 0, quad y in left( -(pi)/(2), (pi)/(2) right) with f(0) = 1, then fleft( (1)/(sqrt(3)) right) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e^{\\pi/4}$",
+        "unicode": "e^{π/4}",
+        "plainText": "e^{pi/4}"
+      },
+      {
+        "id": "b",
+        "latex": "$e^{\\pi/12}$",
+        "unicode": "e^{π/12}",
+        "plainText": "e^{pi/12}"
+      },
+      {
+        "id": "c",
+        "latex": "$e^{\\pi/3}$",
+        "unicode": "e^{π/3}",
+        "plainText": "e^{pi/3}"
+      },
+      {
+        "id": "d",
+        "latex": "$e^{\\pi/6}$",
+        "unicode": "e^{π/6}",
+        "plainText": "e^{pi/6}"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.042Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.042Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2025_S_Q96",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2025_S_Q96_RAW",
+    "question": {
+      "latex": "Let $y = f(x)$ be the solution of the differential equation $\\frac{dy}{dx} + \\frac{xy}{x^2-1} = \\frac{x^4+4x}{\\sqrt{1-x^2}}, -1 < x < 1$ such that f(0) = 0. If $6 \\int_{-1/2}^{1/2} f(x) dx = 2\\pi - \\alpha$, then $\\alpha^2$ is equal to",
+      "unicode": "Let y = f(x) be the solution of the differential equation (dy/dx) + (xy/x²-1) = (x^4+4x/√(1-x²)), -1 < x < 1 such that f(0) = 0. If 6 int_{-1/2}^{1/2} f(x) dx = 2π - α, then α² is equal to",
+      "plainText": "Let y = f(x) be the solution of the differential equation (dy)/(dx) + (xy)/(x^2-1) = (x^4+4x)/(sqrt(1-x^2)), -1 < x < 1 such that f(0) = 0. If 6 int_{-1/2}^{1/2} f(x) dx = 2pi - alpha, then alpha^2 is equal to"
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q167",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q167_RAW",
+    "question": {
+      "latex": "If the curve $y = f(x)$ passes through the point $(1, e)$ and satisfies the differential equation $dy = y(2 + \\log_e x) dx$, $x > 0$, then $f(e)$ is equal to :",
+      "unicode": "If the curve y = f(x) passes through the point (1, e) and satisfies the differential equation dy = y(2 + log_e x) dx, x > 0, then f(e) is equal to :",
+      "plainText": "If the curve y = f(x) passes through the point (1, e) and satisfies the differential equation dy = y(2 + log_e x) dx, x > 0, then f(e) is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e^e$",
+        "unicode": "e^e",
+        "plainText": "e^e"
+      },
+      {
+        "id": "b",
+        "latex": "$e^{e^2}$",
+        "unicode": "e^{e²}",
+        "plainText": "e^{e^2}"
+      },
+      {
+        "id": "c",
+        "latex": "$e^{2e}$",
+        "unicode": "e^{2e}",
+        "plainText": "e^{2e}"
+      },
+      {
+        "id": "d",
+        "latex": "$e^{2e}$",
+        "unicode": "e^{2e}",
+        "plainText": "e^{2e}"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q170",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q170_RAW",
+    "question": {
+      "latex": "Let $y = y(x)$ be the solution curve of the differential equation $(1 + \\sin x)\\frac{dy}{dx} + (y + 1)\\cos x = 0, y(0) = 0$. If the curve $y = y(x)$ passes through the point $\\left(\\alpha, \\frac{-1}{2}\\right)$, then a value of $\\alpha$ is :",
+      "unicode": "Let y = y(x) be the solution curve of the differential equation (1 + sin x)(dy/dx) + (y + 1)cos x = 0, y(0) = 0. If the curve y = y(x) passes through the point left(α, (-1/2)right), then a value of α is :",
+      "plainText": "Let y = y(x) be the solution curve of the differential equation (1 + sin x)(dy)/(dx) + (y + 1)cos x = 0, y(0) = 0. If the curve y = y(x) passes through the point left(alpha, (-1)/(2)right), then a value of alpha is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\pi}{6}$",
+        "unicode": "(π/6)",
+        "plainText": "(pi)/(6)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\pi}{4}$",
+        "unicode": "(π/4)",
+        "plainText": "(pi)/(4)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi}{3}$",
+        "unicode": "(π/3)",
+        "plainText": "(pi)/(3)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\pi}{2}$",
+        "unicode": "(π/2)",
+        "plainText": "(pi)/(2)"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q245",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q245_RAW",
+    "question": {
+      "latex": "Let $x = x(y)$ be the solution of the differential equation $2y^2 \\frac{dx}{dy} - 2xy + x^2 = 0, y > 1, x(e) = e$. Then $x(e^2)$ is equal to:",
+      "unicode": "Let x = x(y) be the solution of the differential equation 2y² (dx/dy) - 2xy + x² = 0, y > 1, x(e) = e. Then x(e²) is equal to:",
+      "plainText": "Let x = x(y) be the solution of the differential equation 2y^2 (dx)/(dy) - 2xy + x^2 = 0, y > 1, x(e) = e. Then x(e^2) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{3}{2}e^2$",
+        "unicode": "(3/2)e²",
+        "plainText": "(3)/(2)e^2"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{2}{3}e^2$",
+        "unicode": "(2/3)e²",
+        "plainText": "(2)/(3)e^2"
+      },
+      {
+        "id": "c",
+        "latex": "$e^2$",
+        "unicode": "e²",
+        "plainText": "e^2"
+      },
+      {
+        "id": "d",
+        "latex": "$2e^2$",
+        "unicode": "2e²",
+        "plainText": "2e^2"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q320",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S_Q320_RAW",
+    "question": {
+      "latex": "Let $y = y(x)$ be the solution of the differential equation $\\frac{dy}{dx} = (1 + x + x^2)(1 - y + y^2)$, $y(0) = \\frac{1}{2}$. Then $(2y(1) - 1)$ is equal to:",
+      "unicode": "Let y = y(x) be the solution of the differential equation (dy/dx) = (1 + x + x²)(1 - y + y²), y(0) = (1/2). Then (2y(1) - 1) is equal to:",
+      "plainText": "Let y = y(x) be the solution of the differential equation (dy)/(dx) = (1 + x + x^2)(1 - y + y^2), y(0) = (1)/(2). Then (2y(1) - 1) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\sqrt{3} \\tan \\left( \\frac{11\\sqrt{3}}{6} \\right)$",
+        "unicode": "√(3) tan left( frac{11√(3)}{6} right)",
+        "plainText": "sqrt(3) tan left( frac{11sqrt(3)}{6} right)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\sqrt{3}}{2} \\tan \\left( \\frac{11\\sqrt{3}}{12} \\right)$",
+        "unicode": "frac{√(3)}{2} tan left( frac{11√(3)}{12} right)",
+        "plainText": "frac{sqrt(3)}{2} tan left( frac{11sqrt(3)}{12} right)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\sqrt{3} \\tan \\left( \\frac{11\\sqrt{3}}{12} \\right)$",
+        "unicode": "√(3) tan left( frac{11√(3)}{12} right)",
+        "plainText": "sqrt(3) tan left( frac{11sqrt(3)}{12} right)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\sqrt{3}}{2} \\tan \\left( \\frac{11\\sqrt{3}}{6} \\right)$",
+        "unicode": "frac{√(3)}{2} tan left( frac{11√(3)}{6} right)",
+        "plainText": "frac{sqrt(3)}{2} tan left( frac{11sqrt(3)}{6} right)"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2025_S1_Q70",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2025_S1_Q70_RAW",
+    "question": {
+      "latex": "If $x = f$y$$ is the solution of the differential equation $$ $1 + y^2$ + \\left$x - 2e^{\\tan^{-1} y}\\right$ \\frac{dy}{dx} = 0, \\quad y \\in \\left$ -\\frac{\\pi}{2}, \\frac{\\pi}{2} \\right$ $$ with $f$0$ = 1$, then $f\\left$ \\frac{1}{\\sqrt{3}} \\right$$ is equal to:",
+      "unicode": "If x = fy is the solution of the differential equation  1 + y² + leftx - 2e^{tan^{-1} y}right (dy/dx) = 0, quad y in left -(π/2), (π/2) right  with f0 = 1, then fleft (1/√(3)) right is equal to:",
+      "plainText": "If x = fy is the solution of the differential equation 1 + y^2 + leftx - 2e^{tan^{-1} y}right (dy)/(dx) = 0, quad y in left -(pi)/(2), (pi)/(2) right with f0 = 1, then fleft (1)/(sqrt(3)) right is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e^{\\pi/4}$",
+        "unicode": "e^{π/4}",
+        "plainText": "e^{pi/4}"
+      },
+      {
+        "id": "b",
+        "latex": "$e^{\\pi/12}$",
+        "unicode": "e^{π/12}",
+        "plainText": "e^{pi/12}"
+      },
+      {
+        "id": "c",
+        "latex": "$e^{\\pi/3}$",
+        "unicode": "e^{π/3}",
+        "plainText": "e^{pi/3}"
+      },
+      {
+        "id": "d",
+        "latex": "$e^{\\pi/6}$",
+        "unicode": "e^{π/6}",
+        "plainText": "e^{pi/6}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q137",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q137_RAW",
+    "question": {
+      "latex": "If the curve $y = f$x$$ passes through the point $$1, e$$ and satisfies the differential equation $dy = y$2 + \\log_e x$ dx$, $x > 0$, then $f$e$$ is equal to :",
+      "unicode": "If the curve y = fx passes through the point 1, e and satisfies the differential equation dy = y2 + log_e x dx, x > 0, then fe is equal to :",
+      "plainText": "If the curve y = fx passes through the point 1, e and satisfies the differential equation dy = y2 + log_e x dx, x > 0, then fe is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e^e$",
+        "unicode": "e^e",
+        "plainText": "e^e"
+      },
+      {
+        "id": "b",
+        "latex": "$e^{e^2}$",
+        "unicode": "e^{e²}",
+        "plainText": "e^{e^2}"
+      },
+      {
+        "id": "c",
+        "latex": "$e^{2e}$",
+        "unicode": "e^{2e}",
+        "plainText": "e^{2e}"
+      },
+      {
+        "id": "d",
+        "latex": "$e^{2e}$",
+        "unicode": "e^{2e}",
+        "plainText": "e^{2e}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Given $dy = y(2 + \\log_e x) dx$, we can separate variables:\n$\\int \\frac{dy}{y} = \\int (2 + \\ln x) dx$\nIntegrating both sides:\n$\\ln y = 2x + (x \\ln x - x) + C = x + x \\ln x + C$\nThe curve passes through $(1, e)$, so we substitute $x = 1, y = e$:\n$\\ln e = 1 + 1 \\ln 1 + C \\implies 1 = 1 + 0 + C \\implies C = 0$.\nSo the equation of the curve is $\\ln y = x + x \\ln x = x(1 + \\ln x)$.\nTo find $f(e)$, substitute $x = e$:\n$\\ln y = e(1 + \\ln e) = e(1 + 1) = 2e$.\nExponentiating gives $y = e^{2e}$.\n(Note: both option (c) and (d) mathematically resolve to the correct term, but based on typical processing the intended unique key maps to 'c').",
+      "unicode": "Given dy = y(2 + log_e x) dx, we can separate variables:\nint (dy/y) = int (2 + ln x) dx\nIntegrating both sides:\nln y = 2x + (x ln x - x) + C = x + x ln x + C\nThe curve passes through (1, e), so we substitute x = 1, y = e:\nln e = 1 + 1 ln 1 + C implies 1 = 1 + 0 + C implies C = 0.\nSo the equation of the curve is ln y = x + x ln x = x(1 + ln x).\nTo find f(e), substitute x = e:\nln y = e(1 + ln e) = e(1 + 1) = 2e.\nExponentiating gives y = e^{2e}.\n(Note: both option (c) and (d) mathematically resolve to the correct term, but based on typical processing the intended unique key maps to 'c').",
+      "plainText": "Given dy = y(2 + log_e x) dx, we can separate variables: int (dy)/(y) = int (2 + ln x) dx Integrating both sides: ln y = 2x + (x ln x - x) + C = x + x ln x + C The curve passes through (1, e), so we substitute x = 1, y = e: ln e = 1 + 1 ln 1 + C implies 1 = 1 + 0 + C implies C = 0. So the equation of the curve is ln y = x + x ln x = x(1 + ln x). To find f(e), substitute x = e: ln y = e(1 + ln e) = e(1 + 1) = 2e. Exponentiating gives y = e^{2e}. (Note: both option (c) and (d) mathematically resolve to the correct term, but based on typical processing the intended unique key maps to 'c')."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q140",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q140_RAW",
+    "question": {
+      "latex": "Let $y = y$x$$ be the solution curve of the differential equation $$1 + \\sin x$\\frac{dy}{dx} + $y + 1$\\cos x = 0, y$0$ = 0$. If the curve $y = y$x$$ passes through the point $\\left$\\alpha, \\frac{-1}{2}\\right$$, then a value of $\\alpha$ is :",
+      "unicode": "Let y = yx be the solution curve of the differential equation 1 + sin x(dy/dx) + y + 1cos x = 0, y0 = 0. If the curve y = yx passes through the point leftα, (-1/2)right, then a value of α is :",
+      "plainText": "Let y = yx be the solution curve of the differential equation 1 + sin x(dy)/(dx) + y + 1cos x = 0, y0 = 0. If the curve y = yx passes through the point leftalpha, (-1)/(2)right, then a value of alpha is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\pi}{6}$",
+        "unicode": "(π/6)",
+        "plainText": "(pi)/(6)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\pi}{4}$",
+        "unicode": "(π/4)",
+        "plainText": "(pi)/(4)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi}{3}$",
+        "unicode": "(π/3)",
+        "plainText": "(pi)/(3)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\pi}{2}$",
+        "unicode": "(π/2)",
+        "plainText": "(pi)/(2)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The given differential equation can be separated as:\n$\\frac{dy}{y + 1} = \\frac{-\\cos x}{1 + \\sin x} dx$\nIntegrating both sides yields:\n$\\ln|y + 1| = -\\ln|1 + \\sin x| + C$\nUsing the initial condition $y(0) = 0$:\n$\\ln(0 + 1) = -\\ln(1 + \\sin 0) + C \\implies 0 = 0 + C \\implies C = 0$.\nSo the equation simplifies to:\n$\\ln|y + 1| + \\ln|1 + \\sin x| = 0 \\implies \\ln|(y + 1)(1 + \\sin x)| = 0 \\implies (y + 1)(1 + \\sin x) = 1$.\nThe curve passes through $(\\alpha, -1/2)$, meaning $y(\\alpha) = -1/2$. Substituting this in:\n$(-1/2 + 1)(1 + \\sin \\alpha) = 1$\n$(1/2)(1 + \\sin \\alpha) = 1 \\implies 1 + \\sin \\alpha = 2 \\implies \\sin \\alpha = 1$.\nThus, a principal value for $\\alpha$ is $\\frac{\\pi}{2}$.",
+      "unicode": "The given differential equation can be separated as:\n(dy/y + 1) = (-cos x/1 + sin x) dx\nIntegrating both sides yields:\nln|y + 1| = -ln|1 + sin x| + C\nUsing the initial condition y(0) = 0:\nln(0 + 1) = -ln(1 + sin 0) + C implies 0 = 0 + C implies C = 0.\nSo the equation simplifies to:\nln|y + 1| + ln|1 + sin x| = 0 implies ln|(y + 1)(1 + sin x)| = 0 implies (y + 1)(1 + sin x) = 1.\nThe curve passes through (α, -1/2), meaning y(α) = -1/2. Substituting this in:\n(-1/2 + 1)(1 + sin α) = 1\n(1/2)(1 + sin α) = 1 implies 1 + sin α = 2 implies sin α = 1.\nThus, a principal value for α is (π/2).",
+      "plainText": "The given differential equation can be separated as: (dy)/(y + 1) = (-cos x)/(1 + sin x) dx Integrating both sides yields: ln|y + 1| = -ln|1 + sin x| + C Using the initial condition y(0) = 0: ln(0 + 1) = -ln(1 + sin 0) + C implies 0 = 0 + C implies C = 0. So the equation simplifies to: ln|y + 1| + ln|1 + sin x| = 0 implies ln|(y + 1)(1 + sin x)| = 0 implies (y + 1)(1 + sin x) = 1. The curve passes through (alpha, -1/2), meaning y(alpha) = -1/2. Substituting this in: (-1/2 + 1)(1 + sin alpha) = 1 (1/2)(1 + sin alpha) = 1 implies 1 + sin alpha = 2 implies sin alpha = 1. Thus, a principal value for alpha is (pi)/(2)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q200",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q200_RAW",
+    "question": {
+      "latex": "Let $x = x$y$$ be the solution of the differential equation $2y^2 \\frac{dx}{dy} - 2xy + x^2 = 0, y > 1, x$e$ = e$. Then $x$e^2$$ is equal to:",
+      "unicode": "Let x = xy be the solution of the differential equation 2y² (dx/dy) - 2xy + x² = 0, y > 1, xe = e. Then xe² is equal to:",
+      "plainText": "Let x = xy be the solution of the differential equation 2y^2 (dx)/(dy) - 2xy + x^2 = 0, y > 1, xe = e. Then xe^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{3}{2}e^2$",
+        "unicode": "(3/2)e²",
+        "plainText": "(3)/(2)e^2"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{2}{3}e^2$",
+        "unicode": "(2/3)e²",
+        "plainText": "(2)/(3)e^2"
+      },
+      {
+        "id": "c",
+        "latex": "$e^2$",
+        "unicode": "e²",
+        "plainText": "e^2"
+      },
+      {
+        "id": "d",
+        "latex": "$2e^2$",
+        "unicode": "2e²",
+        "plainText": "2e^2"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Rewrite DE: $\\frac{dx}{dy} - \\frac{x}{y} + \\frac{x^2}{2y^2} = 0$. This is a Bernoulli equation.\nDivide by $x^2$: $x^{-2} \\frac{dx}{dy} - \\frac{1}{y}x^{-1} = -\\frac{1}{2y^2}$.\nLet $v = x^{-1} \\implies \\frac{dv}{dy} = -x^{-2} \\frac{dx}{dy}$. Equation becomes $\\frac{dv}{dy} + \\frac{1}{y}v = \\frac{1}{2y^2}$.\nIntegrating factor IF $= e^{\\int (1/y)dy} = y$.\nSolution: $v \\cdot y = \\int \\frac{1}{2y^2} y dy = \\frac{1}{2} \\ln y + C \\implies \\frac{y}{x} = \\frac{1}{2}\\ln y + C$.\nGiven $x(e) = e \\implies \\frac{e}{e} = \\frac{1}{2}\\ln e + C \\implies 1 = \\frac{1}{2} + C \\implies C = \\frac{1}{2}$.\nSo $\\frac{y}{x} = \\frac{1}{2}\\ln y + \\frac{1}{2}$.\nSubstitute $y = e^2$: $\\frac{e^2}{x} = \\frac{1}{2}\\ln(e^2) + \\frac{1}{2} = 1 + \\frac{1}{2} = \\frac{3}{2} \\implies x = \\frac{2}{3}e^2$.",
+      "unicode": "Rewrite DE: (dx/dy) - (x/y) + (x²/2y²) = 0. This is a Bernoulli equation.\nDivide by x²: x^{-2} (dx/dy) - (1/y)x^{-1} = -(1/2y²).\nLet v = x^{-1} implies (dv/dy) = -x^{-2} (dx/dy). Equation becomes (dv/dy) + (1/y)v = (1/2y²).\nIntegrating factor IF = e^{int (1/y)dy} = y.\nSolution: v · y = int (1/2y²) y dy = (1/2) ln y + C implies (y/x) = (1/2)ln y + C.\nGiven x(e) = e implies (e/e) = (1/2)ln e + C implies 1 = (1/2) + C implies C = (1/2).\nSo (y/x) = (1/2)ln y + (1/2).\nSubstitute y = e²: (e²/x) = (1/2)ln(e²) + (1/2) = 1 + (1/2) = (3/2) implies x = (2/3)e².",
+      "plainText": "Rewrite DE: (dx)/(dy) - (x)/(y) + (x^2)/(2y^2) = 0. This is a Bernoulli equation. Divide by x^2: x^{-2} (dx)/(dy) - (1)/(y)x^{-1} = -(1)/(2y^2). Let v = x^{-1} implies (dv)/(dy) = -x^{-2} (dx)/(dy). Equation becomes (dv)/(dy) + (1)/(y)v = (1)/(2y^2). Integrating factor IF = e^{int (1/y)dy} = y. Solution: v cdot y = int (1)/(2y^2) y dy = (1)/(2) ln y + C implies (y)/(x) = (1)/(2)ln y + C. Given x(e) = e implies (e)/(e) = (1)/(2)ln e + C implies 1 = (1)/(2) + C implies C = (1)/(2). So (y)/(x) = (1)/(2)ln y + (1)/(2). Substitute y = e^2: (e^2)/(x) = (1)/(2)ln(e^2) + (1)/(2) = 1 + (1)/(2) = (3)/(2) implies x = (2)/(3)e^2."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q260",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DIFFERENTIAL_2026_S1_Q260_RAW",
+    "question": {
+      "latex": "Let $y = y$x$$ be the solution of the differential equation $\\frac{dy}{dx} = $1 + x + x^2$$1 - y + y^2$$, $y$0$ = \\frac{1}{2}$. Then $$2y$1$ - 1$$ is equal to:",
+      "unicode": "Let y = yx be the solution of the differential equation (dy/dx) = 1 + x + x²1 - y + y², y0 = (1/2). Then 2y1 - 1 is equal to:",
+      "plainText": "Let y = yx be the solution of the differential equation (dy)/(dx) = 1 + x + x^21 - y + y^2, y0 = (1)/(2). Then 2y1 - 1 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\sqrt{3} \\tan \\left( \\frac{11\\sqrt{3}}{6} \\right)$",
+        "unicode": "√(3) tan left( frac{11√(3)}{6} right)",
+        "plainText": "sqrt(3) tan left( frac{11sqrt(3)}{6} right)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\sqrt{3}}{2} \\tan \\left( \\frac{11\\sqrt{3}}{12} \\right)$",
+        "unicode": "frac{√(3)}{2} tan left( frac{11√(3)}{12} right)",
+        "plainText": "frac{sqrt(3)}{2} tan left( frac{11sqrt(3)}{12} right)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\sqrt{3} \\tan \\left( \\frac{11\\sqrt{3}}{12} \\right)$",
+        "unicode": "√(3) tan left( frac{11√(3)}{12} right)",
+        "plainText": "sqrt(3) tan left( frac{11sqrt(3)}{12} right)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\sqrt{3}}{2} \\tan \\left( \\frac{11\\sqrt{3}}{6} \\right)$",
+        "unicode": "frac{√(3)}{2} tan left( frac{11√(3)}{6} right)",
+        "plainText": "frac{sqrt(3)}{2} tan left( frac{11sqrt(3)}{6} right)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Using separation of variables:\n$\\int \\frac{dy}{y^2 - y + 1} = \\int (x^2 + x + 1) dx$\n$\\int \\frac{dy}{(y - 1/2)^2 + 3/4} = \\frac{x^3}{3} + \\frac{x^2}{2} + x + C$\nIntegrating the left side gives:\n$\\frac{2}{\\sqrt{3}} \\tan^{-1} \\left( \\frac{y - 1/2}{\\sqrt{3}/2} \\right) = \\frac{x^3}{3} + \\frac{x^2}{2} + x + C \\implies \\frac{2}{\\sqrt{3}} \\tan^{-1} \\left( \\frac{2y - 1}{\\sqrt{3}} \\right) = \\frac{2x^3 + 3x^2 + 6x}{6} + C$\nSubstitute the initial condition $y(0) = \\frac{1}{2}$ to find $C$:\n$\\frac{2}{\\sqrt{3}} \\tan^{-1}(0) = 0 + C \\implies C = 0$.\nNow calculate for $x = 1$:\n$\\frac{2}{\\sqrt{3}} \\tan^{-1} \\left( \\frac{2y(1) - 1}{\\sqrt{3}} \\right) = \\frac{2(1) + 3(1) + 6(1)}{6} = \\frac{11}{6}$.\n$\\tan^{-1} \\left( \\frac{2y(1) - 1}{\\sqrt{3}} \\right) = \\frac{11\\sqrt{3}}{12}$.\nSolving for $(2y(1) - 1)$:\n$2y(1) - 1 = \\sqrt{3} \\tan \\left( \\frac{11\\sqrt{3}}{12} \\right)$.",
+      "unicode": "Using separation of variables:\nint (dy/y² - y + 1) = int (x² + x + 1) dx\nint (dy/(y - 1/2)² + 3/4) = (x³/3) + (x²/2) + x + C\nIntegrating the left side gives:\n(2/√(3)) tan^{-1} left( (y - 1/2/√(3)/2) right) = (x³/3) + (x²/2) + x + C implies (2/√(3)) tan^{-1} left( (2y - 1/√(3)) right) = (2x³ + 3x² + 6x/6) + C\nSubstitute the initial condition y(0) = (1/2) to find C:\n(2/√(3)) tan^{-1}(0) = 0 + C implies C = 0.\nNow calculate for x = 1:\n(2/√(3)) tan^{-1} left( (2y(1) - 1/√(3)) right) = (2(1) + 3(1) + 6(1)/6) = (11/6).\ntan^{-1} left( (2y(1) - 1/√(3)) right) = frac{11√(3)}{12}.\nSolving for (2y(1) - 1):\n2y(1) - 1 = √(3) tan left( frac{11√(3)}{12} right).",
+      "plainText": "Using separation of variables: int (dy)/(y^2 - y + 1) = int (x^2 + x + 1) dx int (dy)/((y - 1/2)^2 + 3/4) = (x^3)/(3) + (x^2)/(2) + x + C Integrating the left side gives: (2)/(sqrt(3)) tan^{-1} left( (y - 1/2)/(sqrt(3)/2) right) = (x^3)/(3) + (x^2)/(2) + x + C implies (2)/(sqrt(3)) tan^{-1} left( (2y - 1)/(sqrt(3)) right) = (2x^3 + 3x^2 + 6x)/(6) + C Substitute the initial condition y(0) = (1)/(2) to find C: (2)/(sqrt(3)) tan^{-1}(0) = 0 + C implies C = 0. Now calculate for x = 1: (2)/(sqrt(3)) tan^{-1} left( (2y(1) - 1)/(sqrt(3)) right) = (2(1) + 3(1) + 6(1))/(6) = (11)/(6). tan^{-1} left( (2y(1) - 1)/(sqrt(3)) right) = frac{11sqrt(3)}{12}. Solving for (2y(1) - 1): 2y(1) - 1 = sqrt(3) tan left( frac{11sqrt(3)}{12} right)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.539Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.539Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -35,7 +35,7 @@ function rRoadmap(){
     <div class="h1">🗺️ Career Roadmap</div>
     <p class="sub">Get a comprehensive, AI-powered career plan — exams, syllabus, timeline, salary, jobs & more</p>
 
-    ${D.roadmaps.length?`
+    ${(D.roadmaps && D.roadmaps.length)?`
     <div class="card mb18">
       <div class="between mb12"><div class="h3" style="color:var(--pl)">📁 Saved Roadmaps</div><span class="tag tp">${D.roadmaps.length} saved</span></div>
       ${D.roadmaps.map((r,i)=>`

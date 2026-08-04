@@ -1,0 +1,342 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_LIMITSANDCON_2025_S_Q82",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_LIMITSANDCON_2025_S_Q82_RAW",
+    "question": {
+      "latex": "If $$\\lim_{x \\to 0} \\left( \\left( \\frac{e}{1 - e} \\right) \\left( \\frac{1}{e} - \\frac{x}{1 + x} \\right) \\right)^x = \\alpha$$, then the value of $$\\frac{\\log_e \\alpha}{1 + \\log_e \\alpha}$$ equals:",
+      "unicode": "If lim_{x to 0} left( left( (e/1 - e) right) left( (1/e) - (x/1 + x) right) right)^x = α, then the value of (log_e α/1 + log_e α) equals:",
+      "plainText": "If lim_{x to 0} left( left( (e)/(1 - e) right) left( (1)/(e) - (x)/(1 + x) right) right)^x = alpha, then the value of (log_e alpha)/(1 + log_e alpha) equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e$",
+        "unicode": "e",
+        "plainText": "e"
+      },
+      {
+        "id": "b",
+        "latex": "$e^{2}$",
+        "unicode": "e^{2}",
+        "plainText": "e^{2}"
+      },
+      {
+        "id": "c",
+        "latex": "$e^{3}$",
+        "unicode": "e^{3}",
+        "plainText": "e^{3}"
+      },
+      {
+        "id": "d",
+        "latex": "$e^{-1}$",
+        "unicode": "e^{-1}",
+        "plainText": "e^{-1}"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Limits and Continuity",
+      "subchapter": "Limits and Continuity Core Concepts",
+      "topic": "Limits and Continuity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Limits and Continuity",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.042Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.042Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_LIMITSANDCON_2023_S1_Q5",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_LIMITSANDCON_2023_S1_Q5_RAW",
+    "question": {
+      "latex": "The value of $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$ is:",
+      "unicode": "The value of lim_{x to 0} (sin(5x)/x) is:",
+      "plainText": "The value of lim_{x to 0} (sin(5x))/(x) is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "c",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "d",
+        "latex": "1/5",
+        "unicode": "1/5",
+        "plainText": "1/5"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Using standard limit $\\lim_{\\theta \\to 0} \\frac{\\sin k\\theta}{\\theta} = k$, here $k=5$, so the limit is 5.",
+      "unicode": "Using standard limit lim_{θ to 0} (sin kθ/θ) = k, here k=5, so the limit is 5.",
+      "plainText": "Using standard limit lim_{theta to 0} (sin ktheta)/(theta) = k, here k=5, so the limit is 5."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Limits and Continuity",
+      "subchapter": "Limits and Continuity Core Concepts",
+      "topic": "Limits and Continuity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Limits and Continuity",
+      "tags": [],
+      "difficulty": "easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.058Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.058Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_LIMITSANDCON_2025_S1_Q67",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_LIMITSANDCON_2025_S1_Q67_RAW",
+    "question": {
+      "latex": "If $$\\lim_{x \\to 0} \\left$ \\left$ \\frac{e}{1 - e} \\right$ \\left$ \\frac{1}{e} - \\frac{x}{1 + x} \\right$ \\right$^x = \\alpha$$, then the value of $$\\frac{\\log_e \\alpha}{1 + \\log_e \\alpha}$$ equals:",
+      "unicode": "If lim_{x to 0} left left (e/1 - e) right left (1/e) - (x/1 + x) right right^x = α, then the value of (log_e α/1 + log_e α) equals:",
+      "plainText": "If lim_{x to 0} left left (e)/(1 - e) right left (1)/(e) - (x)/(1 + x) right right^x = alpha, then the value of (log_e alpha)/(1 + log_e alpha) equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e$",
+        "unicode": "e",
+        "plainText": "e"
+      },
+      {
+        "id": "b",
+        "latex": "$e^{2}$",
+        "unicode": "e^{2}",
+        "plainText": "e^{2}"
+      },
+      {
+        "id": "c",
+        "latex": "$e^{3}$",
+        "unicode": "e^{3}",
+        "plainText": "e^{3}"
+      },
+      {
+        "id": "d",
+        "latex": "$e^{-1}$",
+        "unicode": "e^{-1}",
+        "plainText": "e^{-1}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Limits and Continuity",
+      "subchapter": "Limits and Continuity Core Concepts",
+      "topic": "Limits and Continuity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Limits and Continuity",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_LIMITSANDCON_2023_S1_Q305",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_LIMITSANDCON_2023_S1_Q305_RAW",
+    "question": {
+      "latex": "The value of $\\lim_{x \\to 0} \\frac{\\sin$5x$}{x}$ is:",
+      "unicode": "The value of lim_{x to 0} (sin5x/x) is:",
+      "plainText": "The value of lim_{x to 0} (sin5x)/(x) is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "c",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "d",
+        "latex": "1/5",
+        "unicode": "1/5",
+        "plainText": "1/5"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Using standard limit $\\lim_{\\theta \\to 0} \\frac{\\sin k\\theta}{\\theta} = k$, here $k=5$, so the limit is 5.",
+      "unicode": "Using standard limit lim_{θ to 0} (sin kθ/θ) = k, here k=5, so the limit is 5.",
+      "plainText": "Using standard limit lim_{theta to 0} (sin ktheta)/(theta) = k, here k=5, so the limit is 5."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Limits and Continuity",
+      "subchapter": "Limits and Continuity Core Concepts",
+      "topic": "Limits and Continuity Primary Topic",
+      "learningOutcome": "Master fundamental principles of Limits and Continuity",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.541Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.541Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

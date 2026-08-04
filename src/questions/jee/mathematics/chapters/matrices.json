@@ -1,0 +1,63 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_MATRICES_2026_S_Q247",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_MATRICES_2026_S_Q247_RAW",
+    "question": {
+      "latex": "Consider the matrices $A = \\begin{bmatrix} 2 & -2 \\\\ 4 & -2 \\end{bmatrix}$ and $B = \\begin{bmatrix} 3 & 9 \\\\ 1 & 3 \\end{bmatrix}$. If matrices $P$ and $Q$ are such that $PA = B$ and $AQ = B$, then the absolute value of the sum of the diagonal elements of $2(P + Q)$ is:",
+      "unicode": "Consider the matrices A = begin{bmatrix} 2 & -2  4 & -2 end{bmatrix} and B = begin{bmatrix} 3 & 9  1 & 3 end{bmatrix}. If matrices P and Q are such that PA = B and AQ = B, then the absolute value of the sum of the diagonal elements of 2(P + Q) is:",
+      "plainText": "Consider the matrices A = begin{bmatrix} 2 & -2 4 & -2 end{bmatrix} and B = begin{bmatrix} 3 & 9 1 & 3 end{bmatrix}. If matrices P and Q are such that PA = B and AQ = B, then the absolute value of the sum of the diagonal elements of 2(P + Q) is:"
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "subchapter": "Matrices Core Concepts",
+      "topic": "Matrices Primary Topic",
+      "learningOutcome": "Master fundamental principles of Matrices",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

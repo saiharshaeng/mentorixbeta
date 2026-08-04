@@ -129,11 +129,10 @@ window.cleanMathDelimiters = cleanMathDelimiters;
  * Pre-processes LaTeX & chemical formulas synchronously to avoid FOUT.
  */
 function renderMath(el, force = false) {
-  const target = el || (typeof document !== 'undefined' ? document.body : null);
+  const target = el || document.body;
   if (!target) return;
 
-  const html = target.innerHTML || '';
-  if (!force && target.dataset && target.dataset.katexRendered === 'true' && !html.includes('\\(') && !html.includes('\\ce{')) {
+  if (!force && target.dataset && target.dataset.katexRendered === 'true' && !target.innerHTML.includes('\\(') && !target.innerHTML.includes('\\ce{')) {
     return;
   }
 
@@ -747,31 +746,17 @@ window.renderBreadcrumb  = renderBreadcrumb;
 window.openGlobalSearch  = openGlobalSearch;
 window.detectDeviceHardwareTier = detectDeviceHardwareTier;
 window.initNetworkResilience    = initNetworkResilience;
-function openImageZoomModal(imgSrc) {
-  if (!imgSrc || typeof document === 'undefined') return;
-
-  const existing = document.getElementById('mx-image-zoom-modal');
-  if (existing) existing.remove();
-
-  const modal = document.createElement('div');
-  modal.id = 'mx-image-zoom-modal';
-  modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,10,26,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:999999;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;cursor:zoom-out;animation:mxFadeIn 0.25s ease-out;';
-  
-  modal.innerHTML = `
-    <div style="position:relative;max-width:90vw;max-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-      <button onclick="document.getElementById('mx-image-zoom-modal').remove()" style="position:absolute;top:-40px;right:-10px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:24px;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
-      <img src="${imgSrc}" style="max-width:100%;max-height:80vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.8);border:1px solid rgba(255,255,255,0.1);" onerror="this.onerror=null;this.parentElement.innerHTML='<div style=\"color:#f87171;padding:20px;text-align:center;background:#1e1e38;border-radius:12px;\">⚠️ Diagram Image Unavailable</div>';" />
-      <p style="color:#94a3b8;font-size:12px;margin-top:12px;letter-spacing:0.5px;">Click anywhere to close zoom view</p>
-    </div>
-  `;
-
-  modal.onclick = (e) => {
-    if (e.target.tagName !== 'IMG') modal.remove();
-  };
-
-  document.body.appendChild(modal);
-}
-
-window.openImageZoomModal = openImageZoomModal;
 window.saveContinuityState      = saveContinuityState;
 window.getContinuityState       = getContinuityState;
+
+window.readoutTioExplanation = function(text) {
+  if (!text) return;
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-IN';
+    u.rate = 0.9;
+    window.speechSynthesis.speak(u);
+  }
+};
+

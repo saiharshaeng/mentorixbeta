@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_SEMICONDUCTO_2026_S_Q187",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_SEMICONDUCTO_2026_S_Q187_RAW",
+    "question": {
+      "latex": "For a given circuit the time dependent input voltage $v_{in}(t)$ is a sine wave alternating between $20\\text{V}$ and $-20\\text{V}$. The corresponding output $v_o(t)$ is clipped flat at $+5\\text{V}$ and $-5\\text{V}$. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "unicode": "For a given circuit the time dependent input voltage v_{in}(t) is a sine wave alternating between 20text{V} and -20text{V}. The corresponding output v_o(t) is clipped flat at +5text{V} and -5text{V}. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output.",
+      "plainText": "For a given circuit the time dependent input voltage v_{in}(t) is a sine wave alternating between 20text{V} and -20text{V}. The corresponding output v_o(t) is clipped flat at +5text{V} and -5text{V}. Identify the components that are used in the circuit in the parallel branch between points X and Y to produce this clipped output."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "A resistor and a standard p-n junction diode",
+        "unicode": "A resistor and a standard p-n junction diode",
+        "plainText": "A resistor and a standard p-n junction diode"
+      },
+      {
+        "id": "b",
+        "latex": "Two standard p-n junction diodes connected back-to-back",
+        "unicode": "Two standard p-n junction diodes connected back-to-back",
+        "plainText": "Two standard p-n junction diodes connected back-to-back"
+      },
+      {
+        "id": "c",
+        "latex": "A resistor and a Zener diode",
+        "unicode": "A resistor and a Zener diode",
+        "plainText": "A resistor and a Zener diode"
+      },
+      {
+        "id": "d",
+        "latex": "Two Zener diodes connected back-to-back",
+        "unicode": "Two Zener diodes connected back-to-back",
+        "plainText": "Two Zener diodes connected back-to-back"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Semiconductors",
+      "subchapter": "Semiconductors Core Concepts",
+      "topic": "Semiconductors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Semiconductors",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

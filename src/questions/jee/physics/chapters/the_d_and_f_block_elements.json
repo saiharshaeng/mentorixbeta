@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_THEDANDFBLOC_2026_S1_Q552",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_THEDANDFBLOC_2026_S1_Q552_RAW",
+    "question": {
+      "latex": "Number of paramagnetic ions among the following d- and f-block metal ions is _______.\n$Mn^{2+}, Cu^{2+}, Zn^{2+}, Yb^{2+}, Sc^{3+}, La^{3+}, Gd^{3+}, Lu^{3+}, Ti^{4+}, Ce^{4+}$\n$Atomic numbers of Mn = 25, Cu = 29, Zn = 30, Yb = 70, Sc = 21, La = 57, Gd = 64, Lu = 71, Ti = 22, Ce = 58$",
+      "unicode": "Number of paramagnetic ions among the following d- and f-block metal ions is _______.\nMn^{2+}, Cu^{2+}, Zn^{2+}, Yb^{2+}, Sc^{3+}, La^{3+}, Gd^{3+}, Lu^{3+}, Ti^{4+}, Ce^{4+}\nAtomic numbers of Mn = 25, Cu = 29, Zn = 30, Yb = 70, Sc = 21, La = 57, Gd = 64, Lu = 71, Ti = 22, Ce = 58",
+      "plainText": "Number of paramagnetic ions among the following d- and f-block metal ions is _______. Mn^{2+}, Cu^{2+}, Zn^{2+}, Yb^{2+}, Sc^{3+}, La^{3+}, Gd^{3+}, Lu^{3+}, Ti^{4+}, Ce^{4+} Atomic numbers of Mn = 25, Cu = 29, Zn = 30, Yb = 70, Sc = 21, La = 57, Gd = 64, Lu = 71, Ti = 22, Ce = 58"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "$3$",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "c",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "d",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Paramagnetic ions must possess unpaired electrons:\n- $Mn^{2+} (3d^5)$ : 5 unpaired electrons (Paramagnetic)\n- $Cu^{2+} (3d^9)$ : 1 unpaired electron (Paramagnetic)\n- $Zn^{2+} (3d^{10})$ : 0 unpaired electrons (Diamagnetic)\n- $Yb^{2+} (4f^{14})$ : 0 unpaired electrons (Diamagnetic)\n- $Sc^{3+} (3d^0)$ : 0 unpaired electrons (Diamagnetic)\n- $La^{3+} (4f^0)$ : 0 unpaired electrons (Diamagnetic)\n- $Gd^{3+} (4f^7)$ : 7 unpaired electrons (Paramagnetic)\n- $Lu^{3+} (4f^{14})$ : 0 unpaired electrons (Diamagnetic)\n- $Ti^{4+} (3d^0)$ : 0 unpaired electrons (Diamagnetic)\n- $Ce^{4+} (4f^0)$ : 0 unpaired electrons (Diamagnetic)\nTotal number of paramagnetic ions is 3.",
+      "unicode": "Paramagnetic ions must possess unpaired electrons:\n- Mn^{2+} (3d^5) : 5 unpaired electrons (Paramagnetic)\n- Cu^{2+} (3d^9) : 1 unpaired electron (Paramagnetic)\n- Zn^{2+} (3d^{10}) : 0 unpaired electrons (Diamagnetic)\n- Yb^{2+} (4f^{14}) : 0 unpaired electrons (Diamagnetic)\n- Sc^{3+} (3d^0) : 0 unpaired electrons (Diamagnetic)\n- La^{3+} (4f^0) : 0 unpaired electrons (Diamagnetic)\n- Gd^{3+} (4f^7) : 7 unpaired electrons (Paramagnetic)\n- Lu^{3+} (4f^{14}) : 0 unpaired electrons (Diamagnetic)\n- Ti^{4+} (3d^0) : 0 unpaired electrons (Diamagnetic)\n- Ce^{4+} (4f^0) : 0 unpaired electrons (Diamagnetic)\nTotal number of paramagnetic ions is 3.",
+      "plainText": "Paramagnetic ions must possess unpaired electrons: - Mn^{2+} (3d^5) : 5 unpaired electrons (Paramagnetic) - Cu^{2+} (3d^9) : 1 unpaired electron (Paramagnetic) - Zn^{2+} (3d^{10}) : 0 unpaired electrons (Diamagnetic) - Yb^{2+} (4f^{14}) : 0 unpaired electrons (Diamagnetic) - Sc^{3+} (3d^0) : 0 unpaired electrons (Diamagnetic) - La^{3+} (4f^0) : 0 unpaired electrons (Diamagnetic) - Gd^{3+} (4f^7) : 7 unpaired electrons (Paramagnetic) - Lu^{3+} (4f^{14}) : 0 unpaired electrons (Diamagnetic) - Ti^{4+} (3d^0) : 0 unpaired electrons (Diamagnetic) - Ce^{4+} (4f^0) : 0 unpaired electrons (Diamagnetic) Total number of paramagnetic ions is 3."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "The d- and f-Block Elements",
+      "subchapter": "The d- and f-Block Elements Core Concepts",
+      "topic": "The d- and f-Block Elements Primary Topic",
+      "learningOutcome": "Master fundamental principles of The d- and f-Block Elements",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

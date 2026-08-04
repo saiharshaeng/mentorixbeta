@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_INDEFINITEAN_2026_S_Q317",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INDEFINITEAN_2026_S_Q317_RAW",
+    "question": {
+      "latex": "Let $f$ be a real polynomial of degree $n$ such that $f(x) = f'(x)f''(x)$, for all $x \\in \\mathbb{R}$. If $f(0) = 0$, then $36 \\left( f'(2) + f''(2) + \\int_0^2 f(x) dx \\right)$ is equal to:",
+      "unicode": "Let f be a real polynomial of degree n such that f(x) = f'(x)f''(x), for all x in mathbb{R}. If f(0) = 0, then 36 left( f'(2) + f''(2) + int_0² f(x) dx right) is equal to:",
+      "plainText": "Let f be a real polynomial of degree n such that f(x) = f'(x)f''(x), for all x in mathbb{R}. If f(0) = 0, then 36 left( f'(2) + f''(2) + int_0^2 f(x) dx right) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$42$",
+        "unicode": "42",
+        "plainText": "42"
+      },
+      {
+        "id": "b",
+        "latex": "$46$",
+        "unicode": "46",
+        "plainText": "46"
+      },
+      {
+        "id": "c",
+        "latex": "$56$",
+        "unicode": "56",
+        "plainText": "56"
+      },
+      {
+        "id": "d",
+        "latex": "$66$",
+        "unicode": "66",
+        "plainText": "66"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Indefinite and Definite Integration",
+      "subchapter": "Indefinite and Definite Integration Core Concepts",
+      "topic": "Indefinite and Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Indefinite and Definite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INDEFINITEAN_2026_S1_Q257",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INDEFINITEAN_2026_S1_Q257_RAW",
+    "question": {
+      "latex": "Let $f$ be a real polynomial of degree $n$ such that $f$x$ = f'$x$f''$x$$, for all $x \\in \\mathbb{R}$. If $f$0$ = 0$, then $36 \\left$ f'$2$ + f''$2$ + \\int_0^2 f$x$ dx \\right$$ is equal to:",
+      "unicode": "Let f be a real polynomial of degree n such that fx = f'xf''x, for all x in mathbb{R}. If f0 = 0, then 36 left f'2 + f''2 + int_0² fx dx right is equal to:",
+      "plainText": "Let f be a real polynomial of degree n such that fx = f'xf''x, for all x in mathbb{R}. If f0 = 0, then 36 left f'2 + f''2 + int_0^2 fx dx right is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$42$",
+        "unicode": "42",
+        "plainText": "42"
+      },
+      {
+        "id": "b",
+        "latex": "$46$",
+        "unicode": "46",
+        "plainText": "46"
+      },
+      {
+        "id": "c",
+        "latex": "$56$",
+        "unicode": "56",
+        "plainText": "56"
+      },
+      {
+        "id": "d",
+        "latex": "$66$",
+        "unicode": "66",
+        "plainText": "66"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Comparing the degrees of both sides: $n = (n-1) + (n-2) \\implies n = 3$.\nLet $f(x) = ax^3 + bx^2 + cx + d$. Since $f(0) = 0 \\implies d = 0$.\n$f'(x) = 3ax^2 + 2bx + c$ and $f''(x) = 6ax + 2b$.\nSubstitute into $f(x) = f'(x)f''(x)$:\n$ax^3 + bx^2 + cx = (3ax^2 + 2bx + c)(6ax + 2b) = 18a^2 x^3 + 18ab x^2 + (4b^2 + 6ac) x + 2bc$.\nComparing coefficients:\n$a = 18a^2 \\implies a = \\frac{1}{18}$ (since degree is 3, $a \\neq 0$).\n$b = 18ab \\implies 1 = 18a$ (which matches).\n$c = 4b^2 + 6ac \\implies c = 4b^2 + \\frac{1}{3}c \\implies \\frac{2}{3}c = 4b^2 \\implies c = 6b^2$.\nConstant term $0 = 2bc$. If $b = 0$, then $c = 0$.\nSo, $f(x) = \\frac{x^3}{18}$.\nWe have $f'(x) = \\frac{x^2}{6}$ and $f''(x) = \\frac{x}{3}$.\nCalculate the required values at $x=2$:\n$f'(2) = \\frac{4}{6} = \\frac{2}{3}$.\n$f''(2) = \\frac{2}{3}$.\n$\\int_0^2 f(x) dx = \\int_0^2 \\frac{x^3}{18} dx = \\left[ \\frac{x^4}{72} \\right]_0^2 = \\frac{16}{72} = \\frac{2}{9}$.\nFinally: $36 \\left( \\frac{2}{3} + \\frac{2}{3} + \\frac{2}{9} \\right) = 36 \\left( \\frac{14}{9} \\right) = 4 \\times 14 = 56$.",
+      "unicode": "Comparing the degrees of both sides: n = (n-1) + (n-2) implies n = 3.\nLet f(x) = ax³ + bx² + cx + d. Since f(0) = 0 implies d = 0.\nf'(x) = 3ax² + 2bx + c and f''(x) = 6ax + 2b.\nSubstitute into f(x) = f'(x)f''(x):\nax³ + bx² + cx = (3ax² + 2bx + c)(6ax + 2b) = 18a² x³ + 18ab x² + (4b² + 6ac) x + 2bc.\nComparing coefficients:\na = 18a² implies a = (1/18) (since degree is 3, a neq 0).\nb = 18ab implies 1 = 18a (which matches).\nc = 4b² + 6ac implies c = 4b² + (1/3)c implies (2/3)c = 4b² implies c = 6b².\nConstant term 0 = 2bc. If b = 0, then c = 0.\nSo, f(x) = (x³/18).\nWe have f'(x) = (x²/6) and f''(x) = (x/3).\nCalculate the required values at x=2:\nf'(2) = (4/6) = (2/3).\nf''(2) = (2/3).\nint_0² f(x) dx = int_0² (x³/18) dx = left[ (x^4/72) right]_0² = (16/72) = (2/9).\nFinally: 36 left( (2/3) + (2/3) + (2/9) right) = 36 left( (14/9) right) = 4 × 14 = 56.",
+      "plainText": "Comparing the degrees of both sides: n = (n-1) + (n-2) implies n = 3. Let f(x) = ax^3 + bx^2 + cx + d. Since f(0) = 0 implies d = 0. f'(x) = 3ax^2 + 2bx + c and f''(x) = 6ax + 2b. Substitute into f(x) = f'(x)f''(x): ax^3 + bx^2 + cx = (3ax^2 + 2bx + c)(6ax + 2b) = 18a^2 x^3 + 18ab x^2 + (4b^2 + 6ac) x + 2bc. Comparing coefficients: a = 18a^2 implies a = (1)/(18) (since degree is 3, a neq 0). b = 18ab implies 1 = 18a (which matches). c = 4b^2 + 6ac implies c = 4b^2 + (1)/(3)c implies (2)/(3)c = 4b^2 implies c = 6b^2. Constant term 0 = 2bc. If b = 0, then c = 0. So, f(x) = (x^3)/(18). We have f'(x) = (x^2)/(6) and f''(x) = (x)/(3). Calculate the required values at x=2: f'(2) = (4)/(6) = (2)/(3). f''(2) = (2)/(3). int_0^2 f(x) dx = int_0^2 (x^3)/(18) dx = left[ (x^4)/(72) right]_0^2 = (16)/(72) = (2)/(9). Finally: 36 left( (2)/(3) + (2)/(3) + (2)/(9) right) = 36 left( (14)/(9) right) = 4 times 14 = 56."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Indefinite and Definite Integration",
+      "subchapter": "Indefinite and Definite Integration Core Concepts",
+      "topic": "Indefinite and Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Indefinite and Definite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.538Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.538Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

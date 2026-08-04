@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_GEN_ALGORITHMS_2023_S1_Q3",
+    "version": 1,
+    "rawRef": "JEE_MAIN_GEN_ALGORITHMS_2023_S1_Q3_RAW",
+    "question": {
+      "latex": "The worst-case time complexity of QuickSort on an array of $n$ elements is:",
+      "unicode": "The worst-case time complexity of QuickSort on an array of n elements is:",
+      "plainText": "The worst-case time complexity of QuickSort on an array of n elements is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\mathcal{O}(n^2)$",
+        "unicode": "mathcal{O}(n²)",
+        "plainText": "mathcal{O}(n^2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\mathcal{O}(n \\log n)$",
+        "unicode": "mathcal{O}(n log n)",
+        "plainText": "mathcal{O}(n log n)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\mathcal{O}(n)$",
+        "unicode": "mathcal{O}(n)",
+        "plainText": "mathcal{O}(n)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\mathcal{O}(\\log n)$",
+        "unicode": "mathcal{O}(log n)",
+        "plainText": "mathcal{O}(log n)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Worst case occurs when the pivot chosen is always the smallest or largest element (e.g. already sorted array), yielding $T(n) = T(n-1) + \\mathcal{O}(n) = \\mathcal{O}(n^2)$.",
+      "unicode": "Worst case occurs when the pivot chosen is always the smallest or largest element (e.g. already sorted array), yielding T(n) = T(n-1) + mathcal{O}(n) = mathcal{O}(n²).",
+      "plainText": "Worst case occurs when the pivot chosen is always the smallest or largest element (e.g. already sorted array), yielding T(n) = T(n-1) + mathcal{O}(n) = mathcal{O}(n^2)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Computer Science & IT",
+      "chapter": "Algorithms",
+      "subchapter": "Algorithms Core Concepts",
+      "topic": "Algorithms Primary Topic",
+      "learningOutcome": "Master fundamental principles of Algorithms",
+      "tags": [],
+      "difficulty": "easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.425Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.425Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

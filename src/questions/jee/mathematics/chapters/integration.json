@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_INTEGRATION_2025_S_Q86",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRATION_2025_S_Q86_RAW",
+    "question": {
+      "latex": "If $$ \\int e^x \\left( \\frac{x \\sin^{-1} x}{\\sqrt{1 - x^2}} + \\frac{\\sin^{-1} x}{(1 - x^2)^{3/2}} + \\frac{x}{1 - x^2} \\right) dx = g(x) + C, $$ where $C$ is the constant of integration, then $g\\left(\\frac{1}{2}\\right)$ equals:",
+      "unicode": "If  int e^x left( frac{x sin^{-1} x}{√(1 - x²)} + frac{sin^{-1} x}{(1 - x²)^{3/2}} + (x/1 - x²) right) dx = g(x) + C,  where C is the constant of integration, then gleft((1/2)right) equals:",
+      "plainText": "If int e^x left( frac{x sin^{-1} x}{sqrt(1 - x^2)} + frac{sin^{-1} x}{(1 - x^2)^{3/2}} + (x)/(1 - x^2) right) dx = g(x) + C, where C is the constant of integration, then gleft((1)/(2)right) equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\pi}{6} \\sqrt{\\frac{e}{2}}$",
+        "unicode": "(π/6) √((e/2))",
+        "plainText": "(pi)/(6) sqrt((e)/(2))"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\pi}{4} \\sqrt{\\frac{e}{2}}$",
+        "unicode": "(π/4) √((e/2))",
+        "plainText": "(pi)/(4) sqrt((e)/(2))"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi}{6} \\sqrt{\\frac{e}{3}}$",
+        "unicode": "(π/6) √((e/3))",
+        "plainText": "(pi)/(6) sqrt((e)/(3))"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\pi}{4} \\sqrt{\\frac{e}{3}}$",
+        "unicode": "(π/4) √((e/3))",
+        "plainText": "(pi)/(4) sqrt((e)/(3))"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Integration",
+      "subchapter": "Integration Core Concepts",
+      "topic": "Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.042Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.042Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_INTEGRATION_2025_S1_Q71",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_INTEGRATION_2025_S1_Q71_RAW",
+    "question": {
+      "latex": "If $$ \\int e^x \\left$ \\frac{x \\sin^{-1} x}{\\sqrt{1 - x^2}} + \\frac{\\sin^{-1} x}{$1 - x^2$^{3/2}} + \\frac{x}{1 - x^2} \\right$ dx = g$x$ + C, $$ where $C$ is the constant of integration, then $g\\left$\\frac{1}{2}\\right$$ equals:",
+      "unicode": "If  int e^x left frac{x sin^{-1} x}{√(1 - x²)} + frac{sin^{-1} x}{1 - x²^{3/2}} + (x/1 - x²) right dx = gx + C,  where C is the constant of integration, then gleft(1/2)right equals:",
+      "plainText": "If int e^x left frac{x sin^{-1} x}{sqrt(1 - x^2)} + frac{sin^{-1} x}{1 - x^2^{3/2}} + (x)/(1 - x^2) right dx = gx + C, where C is the constant of integration, then gleft(1)/(2)right equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\pi}{6} \\sqrt{\\frac{e}{2}}$",
+        "unicode": "(π/6) √((e/2))",
+        "plainText": "(pi)/(6) sqrt((e)/(2))"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\pi}{4} \\sqrt{\\frac{e}{2}}$",
+        "unicode": "(π/4) √((e/2))",
+        "plainText": "(pi)/(4) sqrt((e)/(2))"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\pi}{6} \\sqrt{\\frac{e}{3}}$",
+        "unicode": "(π/6) √((e/3))",
+        "plainText": "(pi)/(6) sqrt((e)/(3))"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{\\pi}{4} \\sqrt{\\frac{e}{3}}$",
+        "unicode": "(π/4) √((e/3))",
+        "plainText": "(pi)/(4) sqrt((e)/(3))"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Integration",
+      "subchapter": "Integration Core Concepts",
+      "topic": "Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

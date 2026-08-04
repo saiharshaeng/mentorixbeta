@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_CONTINUITYAN_2026_S1_Q543",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_CONTINUITYAN_2026_S1_Q543_RAW",
+    "question": {
+      "latex": "The number of points in the interval $[2, 4]$, at which the function $f$x$ = \\left[ x^2 - x - \\frac{1}{2} \\right]$, where $[\\cdot]$ denotes the greatest integer function, is discontinuous, is:",
+      "unicode": "The number of points in the interval [2, 4], at which the function fx = left[ x² - x - (1/2) right], where [·] denotes the greatest integer function, is discontinuous, is:",
+      "plainText": "The number of points in the interval [2, 4], at which the function fx = left[ x^2 - x - (1)/(2) right], where [cdot] denotes the greatest integer function, is discontinuous, is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "b",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "c",
+        "latex": "$10$",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "d",
+        "latex": "$11$",
+        "unicode": "11",
+        "plainText": "11"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $g(x) = x^2 - x - \\frac{1}{2}$. $g'(x) = 2x - 1 > 0$ for $x \\in [2, 4]$. Thus $g(x)$ is strictly increasing on $[2, 4]$.\nAt $x=2$, $g(2) = 4 - 2 - 0.5 = 1.5$.\nAt $x=4$, $g(4) = 16 - 4 - 0.5 = 11.5$.\nThe greatest integer function $[g(x)]$ will have a jump discontinuity wherever $g(x)$ equals an integer (since it's strictly increasing and continuous).\nThe integers in the range $(1.5, 11.5)$ are $2, 3, 4, 5, 6, 7, 8, 9, 10, 11$.\nThere are exactly $11 - 2 + 1 = 10$ integers, giving 10 points of discontinuity.",
+      "unicode": "Let g(x) = x² - x - (1/2). g'(x) = 2x - 1 > 0 for x in [2, 4]. Thus g(x) is strictly increasing on [2, 4].\nAt x=2, g(2) = 4 - 2 - 0.5 = 1.5.\nAt x=4, g(4) = 16 - 4 - 0.5 = 11.5.\nThe greatest integer function [g(x)] will have a jump discontinuity wherever g(x) equals an integer (since it's strictly increasing and continuous).\nThe integers in the range (1.5, 11.5) are 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.\nThere are exactly 11 - 2 + 1 = 10 integers, giving 10 points of discontinuity.",
+      "plainText": "Let g(x) = x^2 - x - (1)/(2). g'(x) = 2x - 1 > 0 for x in [2, 4]. Thus g(x) is strictly increasing on [2, 4]. At x=2, g(2) = 4 - 2 - 0.5 = 1.5. At x=4, g(4) = 16 - 4 - 0.5 = 11.5. The greatest integer function [g(x)] will have a jump discontinuity wherever g(x) equals an integer (since it's strictly increasing and continuous). The integers in the range (1.5, 11.5) are 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. There are exactly 11 - 2 + 1 = 10 integers, giving 10 points of discontinuity."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Continuity and Differentiability",
+      "subchapter": "Continuity and Differentiability Core Concepts",
+      "topic": "Continuity and Differentiability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Continuity and Differentiability",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_CONTINUITYAN_2026_S1_Q558",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_CONTINUITYAN_2026_S1_Q558_RAW",
+    "question": {
+      "latex": "The number of points, at which the function $f$x$ = \\max\\{6x, 2 + 3x^2\\} + |x - 1| \\left| \\cos \\left$ x^2 - \\frac{1}{4} \\right$ \\right|, x \\in $-\\pi, \\pi$$, is not differentiable, is \\_\\_\\_\\_\\_.",
+      "unicode": "The number of points, at which the function fx = max{6x, 2 + 3x²} + |x - 1| left| cos left x² - (1/4) right right|, x in -π, π, is not differentiable, is _____.",
+      "plainText": "The number of points, at which the function fx = max{6x, 2 + 3x^2} + |x - 1| left| cos left x^2 - (1)/(4) right right|, x in -pi, pi, is not differentiable, is _____."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "$7$",
+        "unicode": "7",
+        "plainText": "7"
+      },
+      {
+        "id": "c",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "d",
+        "latex": "$11$",
+        "unicode": "11",
+        "plainText": "11"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $f(x) = g(x) + h(x)$, where $g(x) = \\max\\{6x, 2 + 3x^2\\}$ and $h(x) = |x - 1| |\\cos(x^2 - 1/4)|$.\nTo find points of non-differentiability for $g(x)$, find where the graphs cross: $6x = 2 + 3x^2 \\implies 3x^2 - 6x + 2 = 0 \\implies x = 1 \\pm \\frac{1}{\\sqrt{3}}$. At these $2$ points, left and right derivatives differ. \nFor $h(x)$, $|A| \\cdot |B|$ is non-differentiable where its argument crosses zero with non-zero derivative.\nFirst, $|x-1|$ is zero at $x = 1$. At $x=1$, $\\cos(1^2 - 1/4) = \\cos(3/4) \\neq 0$, so $h$ is non-differentiable at $x = 1$ ($1$ point).\nSecond, where $\\cos(x^2 - 1/4) = 0$. This happens when $x^2 - 1/4 = \\pm \\frac{\\pi}{2}, \\pm \\frac{3\\pi}{2}, \\dots$ within $x \\in (-\\pi, \\pi)$.\nSince $-\\pi < x < \\pi \\implies 0 \\le x^2 < \\pi^2 \\approx 9.87$.\nSo, $x^2 = \\frac{1}{4} + (2k+1)\\frac{\\pi}{2}$ for $k \\in \\mathbb{Z}$.\nFor $k=-1$: $x^2 = 0.25 - 1.57 < 0$ (no root).\nFor $k=0$: $x^2 = 0.25 + 1.57 = 1.82 < 9.87$ ($2$ roots: $\\pm \\sqrt{1.82}$).\nFor $k=1$: $x^2 = 0.25 + 4.71 = 4.96 < 9.87$ ($2$ roots).\nFor $k=2$: $x^2 = 0.25 + 7.85 = 8.10 < 9.87$ ($2$ roots).\nFor $k=3$: $x^2 > 9.87$ (out of bounds).\nThis gives $6$ more points. None coincide with $x=1$ or $1 \\pm 1/\\sqrt{3}$.\nTotal points of non-differentiability $= 2 + 1 + 6 = 9$.",
+      "unicode": "Let f(x) = g(x) + h(x), where g(x) = max{6x, 2 + 3x²} and h(x) = |x - 1| |cos(x² - 1/4)|.\nTo find points of non-differentiability for g(x), find where the graphs cross: 6x = 2 + 3x² implies 3x² - 6x + 2 = 0 implies x = 1 ± (1/√(3)). At these 2 points, left and right derivatives differ. \nFor h(x), |A| · |B| is non-differentiable where its argument crosses zero with non-zero derivative.\nFirst, |x-1| is zero at x = 1. At x=1, cos(1² - 1/4) = cos(3/4) neq 0, so h is non-differentiable at x = 1 (1 point).\nSecond, where cos(x² - 1/4) = 0. This happens when x² - 1/4 = ± (π/2), ± (3π/2), dots within x in (-π, π).\nSince -π < x < π implies 0 le x² < π² approx 9.87.\nSo, x² = (1/4) + (2k+1)(π/2) for k in mathbb{Z}.\nFor k=-1: x² = 0.25 - 1.57 < 0 (no root).\nFor k=0: x² = 0.25 + 1.57 = 1.82 < 9.87 (2 roots: ± √(1.82)).\nFor k=1: x² = 0.25 + 4.71 = 4.96 < 9.87 (2 roots).\nFor k=2: x² = 0.25 + 7.85 = 8.10 < 9.87 (2 roots).\nFor k=3: x² > 9.87 (out of bounds).\nThis gives 6 more points. None coincide with x=1 or 1 ± 1/√(3).\nTotal points of non-differentiability = 2 + 1 + 6 = 9.",
+      "plainText": "Let f(x) = g(x) + h(x), where g(x) = max{6x, 2 + 3x^2} and h(x) = |x - 1| |cos(x^2 - 1/4)|. To find points of non-differentiability for g(x), find where the graphs cross: 6x = 2 + 3x^2 implies 3x^2 - 6x + 2 = 0 implies x = 1 pm (1)/(sqrt(3)). At these 2 points, left and right derivatives differ. For h(x), |A| cdot |B| is non-differentiable where its argument crosses zero with non-zero derivative. First, |x-1| is zero at x = 1. At x=1, cos(1^2 - 1/4) = cos(3/4) neq 0, so h is non-differentiable at x = 1 (1 point). Second, where cos(x^2 - 1/4) = 0. This happens when x^2 - 1/4 = pm (pi)/(2), pm (3pi)/(2), dots within x in (-pi, pi). Since -pi < x < pi implies 0 le x^2 < pi^2 approx 9.87. So, x^2 = (1)/(4) + (2k+1)(pi)/(2) for k in mathbb{Z}. For k=-1: x^2 = 0.25 - 1.57 < 0 (no root). For k=0: x^2 = 0.25 + 1.57 = 1.82 < 9.87 (2 roots: pm sqrt(1.82)). For k=1: x^2 = 0.25 + 4.71 = 4.96 < 9.87 (2 roots). For k=2: x^2 = 0.25 + 7.85 = 8.10 < 9.87 (2 roots). For k=3: x^2 > 9.87 (out of bounds). This gives 6 more points. None coincide with x=1 or 1 pm 1/sqrt(3). Total points of non-differentiability = 2 + 1 + 6 = 9."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Continuity and Differentiability",
+      "subchapter": "Continuity and Differentiability Core Concepts",
+      "topic": "Continuity and Differentiability Primary Topic",
+      "learningOutcome": "Master fundamental principles of Continuity and Differentiability",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

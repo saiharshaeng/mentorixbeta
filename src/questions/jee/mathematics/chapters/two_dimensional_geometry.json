@@ -1,0 +1,170 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_TWODIMENSION_2026_S_Q312",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_TWODIMENSION_2026_S_Q312_RAW",
+    "question": {
+      "latex": "Let the vertex $A$ of a triangle $ABC$ be $(1, 2)$, and the mid-point of the side $AB$ be $(5, -1)$. If the centroid of this triangle is $(3, 4)$ and its circumcenter is $(\\alpha, \\beta)$, then $21(\\alpha + \\beta)$ is equal to:",
+      "unicode": "Let the vertex A of a triangle ABC be (1, 2), and the mid-point of the side AB be (5, -1). If the centroid of this triangle is (3, 4) and its circumcenter is (α, β), then 21(α + β) is equal to:",
+      "plainText": "Let the vertex A of a triangle ABC be (1, 2), and the mid-point of the side AB be (5, -1). If the centroid of this triangle is (3, 4) and its circumcenter is (alpha, beta), then 21(alpha + beta) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$309$",
+        "unicode": "309",
+        "plainText": "309"
+      },
+      {
+        "id": "b",
+        "latex": "$403$",
+        "unicode": "403",
+        "plainText": "403"
+      },
+      {
+        "id": "c",
+        "latex": "$497$",
+        "unicode": "497",
+        "plainText": "497"
+      },
+      {
+        "id": "d",
+        "latex": "$524$",
+        "unicode": "524",
+        "plainText": "524"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Two Dimensional Geometry",
+      "subchapter": "Two Dimensional Geometry Core Concepts",
+      "topic": "Two Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Two Dimensional Geometry",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_TWODIMENSION_2026_S1_Q252",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_TWODIMENSION_2026_S1_Q252_RAW",
+    "question": {
+      "latex": "Let the vertex $A$ of a triangle $ABC$ be $$1, 2$$, and the mid-point of the side $AB$ be $$5, -1$$. If the centroid of this triangle is $$3, 4$$ and its circumcenter is $$\\alpha, \\beta$$, then $21$\\alpha + \\beta$$ is equal to:",
+      "unicode": "Let the vertex A of a triangle ABC be 1, 2, and the mid-point of the side AB be 5, -1. If the centroid of this triangle is 3, 4 and its circumcenter is α, β, then 21α + β is equal to:",
+      "plainText": "Let the vertex A of a triangle ABC be 1, 2, and the mid-point of the side AB be 5, -1. If the centroid of this triangle is 3, 4 and its circumcenter is alpha, beta, then 21alpha + beta is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$309$",
+        "unicode": "309",
+        "plainText": "309"
+      },
+      {
+        "id": "b",
+        "latex": "$403$",
+        "unicode": "403",
+        "plainText": "403"
+      },
+      {
+        "id": "c",
+        "latex": "$497$",
+        "unicode": "497",
+        "plainText": "497"
+      },
+      {
+        "id": "d",
+        "latex": "$524$",
+        "unicode": "524",
+        "plainText": "524"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since the midpoint of $AB$ is $D(5, -1)$, we can find vertex $B$:\n$B = 2D - A = (2(5) - 1, 2(-1) - 2) = (9, -4)$.\nCentroid $G(3, 4) = \\frac{A + B + C}{3} \\implies A + B + C = (9, 12)$.\n$(1, 2) + (9, -4) + C = (9, 12) \\implies (10, -2) + C = (9, 12) \\implies C = (-1, 14)$.\nThe circumcenter $O(\\alpha, \\beta)$ is equidistant from $A, B$, and $C$, meaning $|OA|^2 = |OB|^2 = |OC|^2$.\n$|OA|^2 = |OB|^2 \\implies (\\alpha - 1)^2 + (\\beta - 2)^2 = (\\alpha - 9)^2 + (\\beta + 4)^2$\n$-2\\alpha + 1 - 4\\beta + 4 = -18\\alpha + 81 + 8\\beta + 16 \\implies 16\\alpha - 12\\beta = 92 \\implies 4\\alpha - 3\\beta = 23 \\quad \\dots (1)$\n$|OA|^2 = |OC|^2 \\implies (\\alpha - 1)^2 + (\\beta - 2)^2 = (\\alpha + 1)^2 + (\\beta - 14)^2$\n$-2\\alpha + 1 - 4\\beta + 4 = 2\\alpha + 1 - 28\\beta + 196 \\implies -4\\alpha + 24\\beta = 192 \\implies \\alpha - 6\\beta = -48 \\quad \\dots (2)$\nFrom (2), $\\alpha = 6\\beta - 48$. Substituting into (1):\n$4(6\\beta - 48) - 3\\beta = 23 \\implies 24\\beta - 192 - 3\\beta = 23 \\implies 21\\beta = 215 \\implies \\beta = \\frac{215}{21}$.\n$\\alpha = 6 \\left( \\frac{215}{21} \\right) - 48 = \\frac{1290 - 1008}{21} = \\frac{282}{21}$.\nThus, $21(\\alpha + \\beta) = 21 \\left( \\frac{282 + 215}{21} \\right) = 497$.",
+      "unicode": "Since the midpoint of AB is D(5, -1), we can find vertex B:\nB = 2D - A = (2(5) - 1, 2(-1) - 2) = (9, -4).\nCentroid G(3, 4) = (A + B + C/3) implies A + B + C = (9, 12).\n(1, 2) + (9, -4) + C = (9, 12) implies (10, -2) + C = (9, 12) implies C = (-1, 14).\nThe circumcenter O(α, β) is equidistant from A, B, and C, meaning |OA|² = |OB|² = |OC|².\n|OA|² = |OB|² implies (α - 1)² + (β - 2)² = (α - 9)² + (β + 4)²\n-2α + 1 - 4β + 4 = -18α + 81 + 8β + 16 implies 16α - 12β = 92 implies 4α - 3β = 23 quad dots (1)\n|OA|² = |OC|² implies (α - 1)² + (β - 2)² = (α + 1)² + (β - 14)²\n-2α + 1 - 4β + 4 = 2α + 1 - 28β + 196 implies -4α + 24β = 192 implies α - 6β = -48 quad dots (2)\nFrom (2), α = 6β - 48. Substituting into (1):\n4(6β - 48) - 3β = 23 implies 24β - 192 - 3β = 23 implies 21β = 215 implies β = (215/21).\nα = 6 left( (215/21) right) - 48 = (1290 - 1008/21) = (282/21).\nThus, 21(α + β) = 21 left( (282 + 215/21) right) = 497.",
+      "plainText": "Since the midpoint of AB is D(5, -1), we can find vertex B: B = 2D - A = (2(5) - 1, 2(-1) - 2) = (9, -4). Centroid G(3, 4) = (A + B + C)/(3) implies A + B + C = (9, 12). (1, 2) + (9, -4) + C = (9, 12) implies (10, -2) + C = (9, 12) implies C = (-1, 14). The circumcenter O(alpha, beta) is equidistant from A, B, and C, meaning |OA|^2 = |OB|^2 = |OC|^2. |OA|^2 = |OB|^2 implies (alpha - 1)^2 + (beta - 2)^2 = (alpha - 9)^2 + (beta + 4)^2 -2alpha + 1 - 4beta + 4 = -18alpha + 81 + 8beta + 16 implies 16alpha - 12beta = 92 implies 4alpha - 3beta = 23 quad dots (1) |OA|^2 = |OC|^2 implies (alpha - 1)^2 + (beta - 2)^2 = (alpha + 1)^2 + (beta - 14)^2 -2alpha + 1 - 4beta + 4 = 2alpha + 1 - 28beta + 196 implies -4alpha + 24beta = 192 implies alpha - 6beta = -48 quad dots (2) From (2), alpha = 6beta - 48. Substituting into (1): 4(6beta - 48) - 3beta = 23 implies 24beta - 192 - 3beta = 23 implies 21beta = 215 implies beta = (215)/(21). alpha = 6 left( (215)/(21) right) - 48 = (1290 - 1008)/(21) = (282)/(21). Thus, 21(alpha + beta) = 21 left( (282 + 215)/(21) right) = 497."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Two Dimensional Geometry",
+      "subchapter": "Two Dimensional Geometry Core Concepts",
+      "topic": "Two Dimensional Geometry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Two Dimensional Geometry",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.537Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.537Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

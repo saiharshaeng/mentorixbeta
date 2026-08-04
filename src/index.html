@@ -80,30 +80,16 @@ if (location.protocol === 'file:') {
 }
 </script>
 
-<!-- Mentorix OS Core Services -->
-<script>
-window._gitVersion = 'a8ffd97';
-window.splashSkip = function() {
-  const el = document.getElementById('mx-splash-screen') || document.querySelector('.mx-splash');
-  if (el) el.remove();
-};
-</script>
-<script src="/js/services/moduleRegistry.js?v=a8ffd97"></script>
-<script src="/js/services/indexedDBCache.js?v=a8ffd97"></script>
-<script>
-if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js?v=a8ffd97').catch(function(err) {
-      console.warn('[PWA ServiceWorker] Registration skipped/failed:', err);
-    });
-  });
-}
-</script>
-<!-- Central Question Intelligence Engine (QIE) -->
-<script src="/modules/questionEngine/QuestionEngine.js?v=a8ffd97"></script>
+<!-- Core Infrastructure & Utility Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/supabaseAuth.js"></script>
+<script src="/js/constants.js?v=80"></script>
+<script src="/js/helpers.js?v=80"></script>
+<script src="/js/storage.js?v=80"></script>
+
 <!-- PYQ Question Banks & Services -->
-<script src="/data/pyq/classified/jee_classified.js?v=a8ffd97"></script>
-<script src="/data/pyqService.js?v=a8ffd97"></script>
+<script src="/data/pyqService.js?v=80"></script>
 <!-- Official Exam Specifications -->
 <script src="/js/exam_specs.js?v=80"></script>
 <!-- Session Generation Engine (SGE) & Session Policy Engine (SPE) -->
@@ -157,6 +143,10 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
 <script src="/js/evaluation/auditTrail.js?v=80"></script>
 <script src="/js/evaluation/reportBuilder.js?v=80"></script>
 <script src="/js/evaluation/index.js?v=80"></script>
+<!-- Modular CBT Examination Engine (v1.2) -->
+<script src="/js/cbt/cbtSessionManager.js?v=80"></script>
+<script src="/js/cbt/cbtNavigationController.js?v=80"></script>
+<script src="/js/cbt/cbtMarkingEngine.js?v=80"></script>
 <!-- Student Intelligence Engine (SIE) & Academic Profile -->
 <script src="/js/sie/profileManager.js?v=80"></script>
 <script src="/js/sie/masteryEstimator.js?v=80"></script>
@@ -182,6 +172,7 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
 <script src="/js/storage/backups/backupEngine.js?v=80"></script>
 <script src="/js/storage/synchronization/syncEngine.js?v=80"></script>
 <script src="/js/storage/storage-api/index.js?v=80"></script>
+<script src="/js/tioEngine.js?v=80"></script>
 
 <script>
 
@@ -197,7 +188,7 @@ window.splashSkip = window.splashSkip || function(){
 // ═══════════════════════════════════════════════════════════
 (function clearStaleCache() {
   if (!window.location.protocol.startsWith('http')) return;
-  const CURRENT_SW_VERSION = 'v75';
+  const CURRENT_SW_VERSION = 'v80';
   // Unregister old service workers
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
@@ -642,13 +633,6 @@ console.log('[KaTeX] System ready');
 <script src="/js/revision/activeRecallEngine.js?v=80"></script>
 <script src="/js/mobile/index.js?v=80"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="/js/supabase.js"></script>
-<script src="/js/supabaseAuth.js"></script>
-
-<script src="/js/helpers.js?v=80"></script>
-<script src="/js/constants.js?v=80"></script>
-<script src="/js/storage.js?v=80"></script>
 <script src="/js/router.js?v=80"></script>
 <script src="/js/ai.js?v=80"></script>
 <script src="/js/auth.js?v=80"></script>
@@ -1918,7 +1902,9 @@ function generateAutoCourses(profile) {
       ])
     ];
   } else {
-    const interests = profile.careers.length ? profile.careers : ['Programming', 'Artificial Intelligence', 'Space Exploration'];
+    const interests = (profile && profile.careers && Array.isArray(profile.careers) && profile.careers.length > 0)
+      ? profile.careers
+      : ['Programming', 'Artificial Intelligence', 'Space Exploration'];
     courses = interests.slice(0, 3).map(interest => {
       return createCourseTemplate(interest, interest, [
         {

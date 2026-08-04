@@ -1,0 +1,342 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_ELECTROMAGNE_2025_S_Q109",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROMAGNE_2025_S_Q109_RAW",
+    "question": {
+      "latex": "A rectangular metallic loop is moving out of a uniform magnetic field region to a field free region with a constant speed. When the loop is partially inside the magnet field, the plot of magnitude of induced emf ($\\epsilon$) with time (t) is given by",
+      "unicode": "A rectangular metallic loop is moving out of a uniform magnetic field region to a field free region with a constant speed. When the loop is partially inside the magnet field, the plot of magnitude of induced emf (epsilon) with time (t) is given by",
+      "plainText": "A rectangular metallic loop is moving out of a uniform magnetic field region to a field free region with a constant speed. When the loop is partially inside the magnet field, the plot of magnitude of induced emf (epsilon) with time (t) is given by"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow1' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><path d='M20,130 C80,130 120,80 180,10' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(1)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow1' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><path d='M20,130 C80,130 120,80 180,10' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(1)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow1' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><path d='M20,130 C80,130 120,80 180,10' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(1)</text></svg>"
+      },
+      {
+        "id": "b",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow2' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='140' y2='30' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(2)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow2' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='140' y2='30' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(2)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow2' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='140' y2='30' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(2)</text></svg>"
+      },
+      {
+        "id": "c",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow3' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><path d='M20,10 C80,10 120,60 180,130' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(3)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow3' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><path d='M20,10 C80,10 120,60 180,130' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(3)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow3' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><path d='M20,10 C80,10 120,60 180,130' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(3)</text></svg>"
+      },
+      {
+        "id": "d",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead4' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='60' x2='160' y2='60' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='10' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(4)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead4' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='60' x2='160' y2='60' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='10' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(4)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead4' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='60' x2='160' y2='60' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='10' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(4)</text></svg>"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electromagnetic Induction",
+      "subchapter": "Electromagnetic Induction Core Concepts",
+      "topic": "Electromagnetic Induction Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electromagnetic Induction",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.044Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.044Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROMAGNE_2026_S_Q188",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROMAGNE_2026_S_Q188_RAW",
+    "question": {
+      "latex": "When a coil is placed in a time dependent magnetic field the power dissipated in it is $P$. The number of turns, area of the coil and radius of the coil wire are $N$, $A$ and $r$ respectively. For a second coil, number of turns, area of the coil and radius of the coil wire are $2N$, $2A$ and $3r$ respectively. When the first coil is replaced with the second coil the power dissipated in it is $\\sqrt{2} \\alpha P$. The value of $\\alpha$ is _______.",
+      "unicode": "When a coil is placed in a time dependent magnetic field the power dissipated in it is P. The number of turns, area of the coil and radius of the coil wire are N, A and r respectively. For a second coil, number of turns, area of the coil and radius of the coil wire are 2N, 2A and 3r respectively. When the first coil is replaced with the second coil the power dissipated in it is √(2) α P. The value of α is _______.",
+      "plainText": "When a coil is placed in a time dependent magnetic field the power dissipated in it is P. The number of turns, area of the coil and radius of the coil wire are N, A and r respectively. For a second coil, number of turns, area of the coil and radius of the coil wire are 2N, 2A and 3r respectively. When the first coil is replaced with the second coil the power dissipated in it is sqrt(2) alpha P. The value of alpha is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "36",
+        "unicode": "36",
+        "plainText": "36"
+      },
+      {
+        "id": "b",
+        "latex": "$128\\sqrt{2}$",
+        "unicode": "128√(2)",
+        "plainText": "128sqrt(2)"
+      },
+      {
+        "id": "c",
+        "latex": "16",
+        "unicode": "16",
+        "plainText": "16"
+      },
+      {
+        "id": "d",
+        "latex": "64",
+        "unicode": "64",
+        "plainText": "64"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Electromagnetic Induction",
+      "subchapter": "Electromagnetic Induction Core Concepts",
+      "topic": "Electromagnetic Induction Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electromagnetic Induction",
+      "tags": [],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROMAGNE_2026_S_Q268",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROMAGNE_2026_S_Q268_RAW",
+    "question": {
+      "latex": "A circular current loop of radius $R$ is placed inside square loop of side length $L$ $(L \\gg R)$ such that they are co-planar and their centers coincide. The permeability of free space is $\\mu_0$. The mutual inductance between circular loop and square loop is _______.",
+      "unicode": "A circular current loop of radius R is placed inside square loop of side length L (L gg R) such that they are co-planar and their centers coincide. The permeability of free space is mu_0. The mutual inductance between circular loop and square loop is _______.",
+      "plainText": "A circular current loop of radius R is placed inside square loop of side length L (L gg R) such that they are co-planar and their centers coincide. The permeability of free space is mu_0. The mutual inductance between circular loop and square loop is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2\\sqrt{2} \\frac{\\mu_0 L^2}{R}$",
+        "unicode": "2√(2) (mu_0 L²/R)",
+        "plainText": "2sqrt(2) (mu_0 L^2)/(R)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\sqrt{2} \\frac{\\mu_0 L^2}{R}$",
+        "unicode": "√(2) (mu_0 L²/R)",
+        "plainText": "sqrt(2) (mu_0 L^2)/(R)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\sqrt{2} \\frac{\\mu_0 R^2}{L}$",
+        "unicode": "√(2) (mu_0 R²/L)",
+        "plainText": "sqrt(2) (mu_0 R^2)/(L)"
+      },
+      {
+        "id": "d",
+        "latex": "$2\\sqrt{2} \\frac{\\mu_0 R^2}{L}$",
+        "unicode": "2√(2) (mu_0 R²/L)",
+        "plainText": "2sqrt(2) (mu_0 R^2)/(L)"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electromagnetic Induction",
+      "subchapter": "Electromagnetic Induction Core Concepts",
+      "topic": "Electromagnetic Induction Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electromagnetic Induction",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROMAGNE_2025_S1_Q89",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROMAGNE_2025_S1_Q89_RAW",
+    "question": {
+      "latex": "A rectangular metallic loop is moving out of a uniform magnetic field region to a field free region with a constant speed. When the loop is partially inside the magnet field, the plot of magnitude of induced emf $$\\epsilon$$ with time $t$ is given by",
+      "unicode": "A rectangular metallic loop is moving out of a uniform magnetic field region to a field free region with a constant speed. When the loop is partially inside the magnet field, the plot of magnitude of induced emf epsilon with time t is given by",
+      "plainText": "A rectangular metallic loop is moving out of a uniform magnetic field region to a field free region with a constant speed. When the loop is partially inside the magnet field, the plot of magnitude of induced emf epsilon with time t is given by"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow1' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><path d='M20,130 C80,130 120,80 180,10' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(1)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow1' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><path d='M20,130 C80,130 120,80 180,10' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(1)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow1' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow1)'/><path d='M20,130 C80,130 120,80 180,10' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(1)</text></svg>"
+      },
+      {
+        "id": "b",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow2' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='140' y2='30' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(2)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow2' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='140' y2='30' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(2)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow2' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow2)'/><line x1='20' y1='130' x2='140' y2='30' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(2)</text></svg>"
+      },
+      {
+        "id": "c",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow3' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><path d='M20,10 C80,10 120,60 180,130' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(3)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow3' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><path d='M20,10 C80,10 120,60 180,130' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(3)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrow3' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrow3)'/><path d='M20,10 C80,10 120,60 180,130' fill='none' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='5' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(3)</text></svg>"
+      },
+      {
+        "id": "d",
+        "latex": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead4' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='60' x2='160' y2='60' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='10' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(4)</text></svg>",
+        "unicode": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead4' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='60' x2='160' y2='60' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='10' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(4)</text></svg>",
+        "plainText": "<svg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><defs><marker id='arrowhead4' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><line x1='20' y1='130' x2='180' y2='130' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='130' x2='20' y2='10' stroke='black' stroke-width='2' marker-end='url(#arrowhead4)'/><line x1='20' y1='60' x2='160' y2='60' stroke='black' stroke-width='2'/><text x='185' y='135' font-family='Arial' font-size='14'>t</text><text x='10' y='15' font-family='Arial' font-size='14'>ε</text><text x='5' y='145' font-family='Arial' font-size='12'>(4)</text></svg>"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Electromagnetic Induction",
+      "subchapter": "Electromagnetic Induction Core Concepts",
+      "topic": "Electromagnetic Induction Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electromagnetic Induction",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.527Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.527Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_STRAIGHTLINE_2026_S_Q311",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_STRAIGHTLINE_2026_S_Q311_RAW",
+    "question": {
+      "latex": "Let the line $L_1 : x + 3 = 0$ intersect the lines $L_2 : x - y = 0$ and $L_3 : 3x + y = 0$ at the points $A$ and $B$, respectively. Let the bisector of the obtuse angle between the lines $L_2$ and $L_3$ intersect the line $L_1$ at the point $C$. Then $BC^2 : AC^2$ is equal to:",
+      "unicode": "Let the line L_1 : x + 3 = 0 intersect the lines L_2 : x - y = 0 and L_3 : 3x + y = 0 at the points A and B, respectively. Let the bisector of the obtuse angle between the lines L_2 and L_3 intersect the line L_1 at the point C. Then BC² : AC² is equal to:",
+      "plainText": "Let the line L_1 : x + 3 = 0 intersect the lines L_2 : x - y = 0 and L_3 : 3x + y = 0 at the points A and B, respectively. Let the bisector of the obtuse angle between the lines L_2 and L_3 intersect the line L_1 at the point C. Then BC^2 : AC^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$5 : 1$",
+        "unicode": "5 : 1",
+        "plainText": "5 : 1"
+      },
+      {
+        "id": "b",
+        "latex": "$1 : 5$",
+        "unicode": "1 : 5",
+        "plainText": "1 : 5"
+      },
+      {
+        "id": "c",
+        "latex": "$2 : 3$",
+        "unicode": "2 : 3",
+        "plainText": "2 : 3"
+      },
+      {
+        "id": "d",
+        "latex": "$3 : 2$",
+        "unicode": "3 : 2",
+        "plainText": "3 : 2"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Straight Lines",
+      "subchapter": "Straight Lines Core Concepts",
+      "topic": "Straight Lines Primary Topic",
+      "learningOutcome": "Master fundamental principles of Straight Lines",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

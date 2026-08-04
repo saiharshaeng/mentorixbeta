@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_NUCLEARPHYSI_2026_S1_Q219",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_NUCLEARPHYSI_2026_S1_Q219_RAW",
+    "question": {
+      "latex": "The binding energy per nucleon of ${}^{209}_{83}\\text{Bi}$ is _______ MeV.\n[Take $m${}^{209}_{83}\\text{Bi}$ = 208.980388\\text{ u}, m_p = 1.007825\\text{ u}, m_n = 1.008665\\text{ u}, 1\\text{ u} = 931\\text{ MeV/c}^2$]",
+      "unicode": "The binding energy per nucleon of {}^{209}_{83}text{Bi} is _______ MeV.\n[Take m{}^{209}_{83}text{Bi} = 208.980388text{ u}, m_p = 1.007825text{ u}, m_n = 1.008665text{ u}, 1text{ u} = 931text{ MeV/c}²]",
+      "plainText": "The binding energy per nucleon of {}^{209}_{83}text{Bi} is _______ MeV. [Take m{}^{209}_{83}text{Bi} = 208.980388text{ u}, m_p = 1.007825text{ u}, m_n = 1.008665text{ u}, 1text{ u} = 931text{ MeV/c}^2]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$7.48$",
+        "unicode": "7.48",
+        "plainText": "7.48"
+      },
+      {
+        "id": "b",
+        "latex": "$7.84$",
+        "unicode": "7.84",
+        "plainText": "7.84"
+      },
+      {
+        "id": "c",
+        "latex": "$8.79$",
+        "unicode": "8.79",
+        "plainText": "8.79"
+      },
+      {
+        "id": "d",
+        "latex": "$6.94$",
+        "unicode": "6.94",
+        "plainText": "6.94"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "For ${}^{209}_{83}\\text{Bi}$, the number of protons $Z = 83$ and neutrons $N = 209 - 83 = 126$.\nMass of constituent nucleons = $83(1.007825) + 126(1.008665) = 83.649475 + 127.091790 = 210.741265\\text{ u}$.\nMass defect $\\Delta m = 210.741265 - 208.980388 = 1.760877\\text{ u}$.\nTotal binding energy $BE = \\Delta m \\times 931 = 1.760877 \\times 931 = 1639.3765\\text{ MeV}$.\nBinding energy per nucleon $= 1639.3765 / 209 = 7.8439\\text{ MeV} \\approx 7.84\\text{ MeV}$.",
+      "unicode": "For {}^{209}_{83}text{Bi}, the number of protons Z = 83 and neutrons N = 209 - 83 = 126.\nMass of constituent nucleons = 83(1.007825) + 126(1.008665) = 83.649475 + 127.091790 = 210.741265text{ u}.\nMass defect Delta m = 210.741265 - 208.980388 = 1.760877text{ u}.\nTotal binding energy BE = Delta m × 931 = 1.760877 × 931 = 1639.3765text{ MeV}.\nBinding energy per nucleon = 1639.3765 / 209 = 7.8439text{ MeV} approx 7.84text{ MeV}.",
+      "plainText": "For {}^{209}_{83}text{Bi}, the number of protons Z = 83 and neutrons N = 209 - 83 = 126. Mass of constituent nucleons = 83(1.007825) + 126(1.008665) = 83.649475 + 127.091790 = 210.741265text{ u}. Mass defect Delta m = 210.741265 - 208.980388 = 1.760877text{ u}. Total binding energy BE = Delta m times 931 = 1.760877 times 931 = 1639.3765text{ MeV}. Binding energy per nucleon = 1639.3765 / 209 = 7.8439text{ MeV} approx 7.84text{ MeV}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Nuclear Physics",
+      "subchapter": "Nuclear Physics Core Concepts",
+      "topic": "Nuclear Physics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Nuclear Physics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.535Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.535Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_CENTREOFMASS_2026_S1_Q203",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_CENTREOFMASS_2026_S1_Q203_RAW",
+    "question": {
+      "latex": "![Pulley system]$https://cracku.in/media/uploads/image_VFI4e0y.png$ $Two blocks are suspended from a pulley$\nTwo blocks of masses $2\\text{ kg}$ and $1\\text{ kg}$ respectively, are tied to the ends of a string which passes over a light frictionless pulley as shown in the figure below. The masses are held at rest at the same horizontal level and then released. The distance traversed by the centre of mass in $2\\text{ s}$ is _______ m. $Take $g = 10\\text{ m/s}^2$$",
+      "unicode": "![Pulley system]https://cracku.in/media/uploads/image_VFI4e0y.png Two blocks are suspended from a pulley\nTwo blocks of masses 2text{ kg} and 1text{ kg} respectively, are tied to the ends of a string which passes over a light frictionless pulley as shown in the figure below. The masses are held at rest at the same horizontal level and then released. The distance traversed by the centre of mass in 2text{ s} is _______ m. Take g = 10text{ m/s}²",
+      "plainText": "![Pulley system]https://cracku.in/media/uploads/image_VFI4e0y.png Two blocks are suspended from a pulley Two blocks of masses 2text{ kg} and 1text{ kg} respectively, are tied to the ends of a string which passes over a light frictionless pulley as shown in the figure below. The masses are held at rest at the same horizontal level and then released. The distance traversed by the centre of mass in 2text{ s} is _______ m. Take g = 10text{ m/s}^2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3.33$",
+        "unicode": "3.33",
+        "plainText": "3.33"
+      },
+      {
+        "id": "b",
+        "latex": "$3.12$",
+        "unicode": "3.12",
+        "plainText": "3.12"
+      },
+      {
+        "id": "c",
+        "latex": "$2.22$",
+        "unicode": "2.22",
+        "plainText": "2.22"
+      },
+      {
+        "id": "d",
+        "latex": "$1.42$",
+        "unicode": "1.42",
+        "plainText": "1.42"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $m_1 = 2\\text{ kg}$ and $m_2 = 1\\text{ kg}$. The acceleration of the blocks is given by $a = \\frac{m_1 - m_2}{m_1 + m_2}g = \\frac{2 - 1}{2 + 1} \\times 10 = \\frac{10}{3}\\text{ m/s}^2$.\nThe $2\\text{ kg}$ block accelerates downwards (let's call this negative), and the $1\\text{ kg}$ block accelerates upwards.\nThe acceleration of the centre of mass is $a_{com} = \\frac{m_1(-a) + m_2(a)}{m_1 + m_2} = \\frac{2(-10/3) + 1(10/3)}{3} = \\frac{-10/3}{3} = -\\frac{10}{9}\\text{ m/s}^2$.\nThe magnitude of acceleration of the COM is $10/9\\text{ m/s}^2$.\nThe distance traversed by the COM from rest in $t = 2\\text{ s}$ is $S = \\frac{1}{2} |a_{com}| t^2 = \\frac{1}{2} \\left(\\frac{10}{9}\\right) (2)^2 = \\frac{20}{9} \\approx 2.22\\text{ m}$.",
+      "unicode": "Let m_1 = 2text{ kg} and m_2 = 1text{ kg}. The acceleration of the blocks is given by a = (m_1 - m_2/m_1 + m_2)g = (2 - 1/2 + 1) × 10 = (10/3)text{ m/s}².\nThe 2text{ kg} block accelerates downwards (let's call this negative), and the 1text{ kg} block accelerates upwards.\nThe acceleration of the centre of mass is a_{com} = (m_1(-a) + m_2(a)/m_1 + m_2) = (2(-10/3) + 1(10/3)/3) = (-10/3/3) = -(10/9)text{ m/s}².\nThe magnitude of acceleration of the COM is 10/9text{ m/s}².\nThe distance traversed by the COM from rest in t = 2text{ s} is S = (1/2) |a_{com}| t² = (1/2) left((10/9)right) (2)² = (20/9) approx 2.22text{ m}.",
+      "plainText": "Let m_1 = 2text{ kg} and m_2 = 1text{ kg}. The acceleration of the blocks is given by a = (m_1 - m_2)/(m_1 + m_2)g = (2 - 1)/(2 + 1) times 10 = (10)/(3)text{ m/s}^2. The 2text{ kg} block accelerates downwards (let's call this negative), and the 1text{ kg} block accelerates upwards. The acceleration of the centre of mass is a_{com} = (m_1(-a) + m_2(a))/(m_1 + m_2) = (2(-10/3) + 1(10/3))/(3) = (-10/3)/(3) = -(10)/(9)text{ m/s}^2. The magnitude of acceleration of the COM is 10/9text{ m/s}^2. The distance traversed by the COM from rest in t = 2text{ s} is S = (1)/(2) |a_{com}| t^2 = (1)/(2) left((10)/(9)right) (2)^2 = (20)/(9) approx 2.22text{ m}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Centre of Mass",
+      "subchapter": "Centre of Mass Core Concepts",
+      "topic": "Centre of Mass Primary Topic",
+      "learningOutcome": "Master fundamental principles of Centre of Mass",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

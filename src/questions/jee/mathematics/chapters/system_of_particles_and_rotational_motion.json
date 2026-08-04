@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_SYSTEMOFPART_2026_S_Q330",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_SYSTEMOFPART_2026_S_Q330_RAW",
+    "question": {
+      "latex": "A solid sphere of mass $M$ and radius $R$ is divided into two unequal parts. The smaller part having mass $M/8$ is converted into a sphere of radius $r$ and the larger part is converted into a circular disc of thickness $t$ and radius $2R$. If $I_1$ is moment of inertia of a sphere having radius $r$ about an axis through its centre and $I_2$ is the moment of inertia of a disc about its diameter, the ratio of their moment of inertia $I_2/I_1 = \\text{\\_\\_\\_\\_\\_}$.",
+      "unicode": "A solid sphere of mass M and radius R is divided into two unequal parts. The smaller part having mass M/8 is converted into a sphere of radius r and the larger part is converted into a circular disc of thickness t and radius 2R. If I_1 is moment of inertia of a sphere having radius r about an axis through its centre and I_2 is the moment of inertia of a disc about its diameter, the ratio of their moment of inertia I_2/I_1 = text{_____}.",
+      "plainText": "A solid sphere of mass M and radius R is divided into two unequal parts. The smaller part having mass M/8 is converted into a sphere of radius r and the larger part is converted into a circular disc of thickness t and radius 2R. If I_1 is moment of inertia of a sphere having radius r about an axis through its centre and I_2 is the moment of inertia of a disc about its diameter, the ratio of their moment of inertia I_2/I_1 = text{_____}."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$35$",
+        "unicode": "35",
+        "plainText": "35"
+      },
+      {
+        "id": "b",
+        "latex": "$70$",
+        "unicode": "70",
+        "plainText": "70"
+      },
+      {
+        "id": "c",
+        "latex": "$140$",
+        "unicode": "140",
+        "plainText": "140"
+      },
+      {
+        "id": "d",
+        "latex": "$210$",
+        "unicode": "210",
+        "plainText": "210"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "System of Particles and Rotational Motion",
+      "subchapter": "System of Particles and Rotational Motion Core Concepts",
+      "topic": "System of Particles and Rotational Motion Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Particles and Rotational Motion",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

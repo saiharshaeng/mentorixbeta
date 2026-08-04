@@ -1,0 +1,89 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_SYSTEMOFLINE_2025_S_Q89",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_SYSTEMOFLINE_2025_S_Q89_RAW",
+    "question": {
+      "latex": "If the system of linear equations : $x + y + 2z = 6$, $2x + 3y + az = a + 1$, $-x - 3y + bz = 2b$, where a, b $\\in$ R, has infinitely many solutions, then 7a + 3b is equal to :",
+      "unicode": "If the system of linear equations : x + y + 2z = 6, 2x + 3y + az = a + 1, -x - 3y + bz = 2b, where a, b in R, has infinitely many solutions, then 7a + 3b is equal to :",
+      "plainText": "If the system of linear equations : x + y + 2z = 6, 2x + 3y + az = a + 1, -x - 3y + bz = 2b, where a, b in R, has infinitely many solutions, then 7a + 3b is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "b",
+        "latex": "12",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "c",
+        "latex": "16",
+        "unicode": "16",
+        "plainText": "16"
+      },
+      {
+        "id": "d",
+        "latex": "22",
+        "unicode": "22",
+        "plainText": "22"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "System of Linear Equations",
+      "subchapter": "System of Linear Equations Core Concepts",
+      "topic": "System of Linear Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of System of Linear Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

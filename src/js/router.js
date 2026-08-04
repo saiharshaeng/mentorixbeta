@@ -20,22 +20,26 @@
 /* ── SCREEN REGISTRY ────────────────────────────────────────── */
 
 const SCREEN_MAP = {
-  dash:     () => typeof rDash     === 'function' && rDash(),
-  courses:  () => typeof rCourses  === 'function' && rCourses(),
-  recovery: () => typeof rRecovery === 'function' && rRecovery(),
-  notebook: () => typeof rNotebook === 'function' && rNotebook(),
-  revision: () => typeof rRevision === 'function' && rRevision(),
-  explore:  () => typeof rExplore  === 'function' && rExplore(),
-  careers:  () => typeof rCareers  === 'function' && rCareers(),
-  roadmap:  () => typeof rRoadmap  === 'function' && rRoadmap(),
-  tests:    () => typeof rTests    === 'function' && rTests(),
-  doubt:    () => typeof rDoubt    === 'function' && rDoubt(),
-  progress: () => typeof rProgress === 'function' && rProgress(),
-  settings: () => typeof rSettings === 'function' && rSettings(),
-  mentor:   () => typeof rMentor   === 'function' && rMentor(),
-  learn:    () => typeof rLearn    === 'function' && rLearn(),
-  comp:     () => typeof rComp     === 'function' && rComp(),
-  qiacp:    () => (typeof renderQIACP === 'function' ? renderQIACP() : (typeof window.renderQIACP === 'function' && window.renderQIACP())),
+  dash:     () => { if (typeof rDash === 'function') { rDash(); return true; } return false; },
+  courses:  () => { if (typeof rCourses === 'function') { rCourses(); return true; } return false; },
+  recovery: () => { if (typeof rRecovery === 'function') { rRecovery(); return true; } return false; },
+  notebook: () => { if (typeof rNotebook === 'function') { rNotebook(); return true; } return false; },
+  revision: () => { if (typeof rRevision === 'function') { rRevision(); return true; } return false; },
+  explore:  () => { if (typeof rExplore === 'function') { rExplore(); return true; } return false; },
+  careers:  () => { if (typeof rCareers === 'function') { rCareers(); return true; } return false; },
+  roadmap:  () => { if (typeof rRoadmap === 'function') { rRoadmap(); return true; } return false; },
+  tests:    () => { if (typeof rTests === 'function') { rTests(); return true; } return false; },
+  doubt:    () => { if (typeof rDoubt === 'function') { rDoubt(); return true; } return false; },
+  progress: () => { if (typeof rProgress === 'function') { rProgress(); return true; } return false; },
+  settings: () => { if (typeof rSettings === 'function') { rSettings(); return true; } return false; },
+  mentor:   () => { if (typeof rMentor === 'function') { rMentor(); return true; } return false; },
+  learn:    () => { if (typeof rLearn === 'function') { rLearn(); return true; } return false; },
+  comp:     () => { if (typeof rComp === 'function') { rComp(); return true; } return false; },
+  qiacp:    () => {
+    const fn = typeof renderQIACP === 'function' ? renderQIACP : (typeof window.renderQIACP === 'function' ? window.renderQIACP : null);
+    if (fn) { fn(); return true; }
+    return false;
+  }
 };
 
 /* ── CANONICAL IA ROUTE REGISTRY ────────────────────────────── */
@@ -55,6 +59,15 @@ const CANONICAL_ROUTES = {
 /* ── MAIN ROUTING FUNCTION ──────────────────────────────────── */
 
 function go(scr, param) {
+  // Ensure main application shell container is initialized before rendering screen
+  if (!document.getElementById('main')) {
+    if (typeof initApp === 'function' && typeof getSession === 'function' && getSession()) {
+      initApp();
+    } else if (typeof continueAsGuest === 'function') {
+      continueAsGuest();
+      return;
+    }
+  }
   // Execute unmount lifecycle cleanup for previous screen
   if (typeof window.onScreenUnmount === 'function') {
     try {
@@ -121,22 +134,7 @@ function go(scr, param) {
   if (typeof buildMobileNav === 'function') buildMobileNav();
 
   // Step 10 — spring page transition
-  let main = document.getElementById('main');
-  if (!main) {
-    if (typeof window.initApp === 'function') {
-      try { window.initApp(); } catch (e) {}
-    }
-    main = document.getElementById('main');
-    if (!main) {
-      const appEl = document.getElementById('app') || document.body;
-      main = document.createElement('div');
-      main.id = 'main';
-      main.setAttribute('role', 'main');
-      main.setAttribute('tabindex', '-1');
-      appEl.appendChild(main);
-    }
-  }
-
+  const main = document.getElementById('main');
   if (main) {
     // Exit: fade + slide up
     main.style.opacity    = '0';
@@ -180,7 +178,7 @@ function go(scr, param) {
 
 /* ── SCREEN RENDERER ────────────────────────────────────────── */
 
-const GATED_SCREENS = ['courses', 'careers', 'tests', 'revision', 'progress', 'roadmap'];
+const GATED_SCREENS = ['dash', 'courses', 'careers', 'tests', 'revision', 'progress', 'roadmap'];
 
 function renderPoliteOnboardingPrompt() {
   const main = document.getElementById('main');
@@ -208,7 +206,7 @@ function renderPoliteOnboardingPrompt() {
 
 /**
  * Calls the correct render function for D.screen.
- * Falls back to rDash if the screen is unknown.
+ * Dynamic module loading via ModuleRegistry ensures on-demand fetching for un-cached screens.
  */
 function renderScr() {
   if (GATED_SCREENS.includes(D.screen) && window.ProfileEngine && !window.ProfileEngine.isPersonalized()) {
@@ -216,11 +214,40 @@ function renderScr() {
     return;
   }
 
-  const fn = SCREEN_MAP[D.screen];
+  const currentScr = D.screen || 'dash';
+  const fn = SCREEN_MAP[currentScr];
+
+  let success = false;
   if (fn) {
-    fn();
-  } else {
-    console.warn('[Router] Unknown screen:', D.screen, '— falling back to dash');
+    try {
+      success = fn();
+    } catch (e) {
+      console.warn(`[Router] Screen render exception for '${currentScr}':`, e);
+    }
+  }
+
+  // If screen function is missing or returned falsy (un-loaded module), lazy load module via ModuleRegistry
+  if (!success && window.ModuleRegistry && typeof window.ModuleRegistry.loadModule === 'function') {
+    const main = document.getElementById('main');
+    if (main) {
+      main.innerHTML = `
+        <div class="sw scr page-enter" style="max-width:800px;margin:80px auto;text-align:center;padding:40px;">
+          <div style="width:36px;height:36px;border:3px solid rgba(139,92,246,0.2);border-top-color:#8b5cf6;border-radius:50%;margin:0 auto 16px;animation:mx-spin 0.8s linear infinite;"></div>
+          <p style="color:var(--sub, #94a3b8);font-size:14px;font-weight:500;">Loading Mentorix ${currentScr.toUpperCase()} Module...</p>
+        </div>
+      `;
+    }
+
+    window.ModuleRegistry.loadModule(currentScr).then(() => {
+      const loadedFn = SCREEN_MAP[currentScr];
+      if (loadedFn) loadedFn();
+    }).catch(e => {
+      console.warn(`[Router] Module loading fallback failed for '${currentScr}' — falling back to dash:`, e);
+      D.screen = 'dash';
+      if (typeof rDash === 'function') rDash();
+    });
+  } else if (!success) {
+    console.warn('[Router] Unknown screen:', currentScr, '— falling back to dash');
     D.screen = 'dash';
     if (typeof rDash === 'function') rDash();
   }

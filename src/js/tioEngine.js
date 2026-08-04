@@ -154,9 +154,27 @@
   // ── 5. REASONING ENGINE ────────────────────────────────────────
   const TioReasoningEngine = {
     diagnoseMistake(mistakeRecord = {}) {
-      const { selectedOption, correctAnswer, confidence, timeTakenSeconds } = mistakeRecord;
+      const { topic, concept, selectedOption, correctAnswer, confidence, timeTakenSeconds } = mistakeRecord;
+      const targetConcept = concept || topic || '';
+
+      // Check for prerequisite dependencies via CurriculumMappingEngine
+      let prereqInfo = null;
+      if (targetConcept && window.CurriculumMappingEngine?.getPrerequisites) {
+        const prereqs = window.CurriculumMappingEngine.getPrerequisites(targetConcept);
+        if (prereqs && prereqs.length > 0) {
+          prereqInfo = prereqs[0];
+        }
+      }
+
       if (confidence === 'Confident' || confidence === 'Very Confident') {
-        return { errorCategory: 'CONCEPTUAL_MISCONCEPTION', priority: 'HIGH', recommendation: 'Review core theory before solving.' };
+        return {
+          errorCategory: 'CONCEPTUAL_MISCONCEPTION',
+          priority: 'HIGH',
+          prerequisite: prereqInfo,
+          recommendation: prereqInfo
+            ? `Review foundational prerequisite "${prereqInfo}" before continuing with ${targetConcept}.`
+            : 'Review core theory before solving.'
+        };
       }
       if (timeTakenSeconds < 15) {
         return { errorCategory: 'RUSHED_GUESS', priority: 'MEDIUM', recommendation: 'Slow down and read carefully.' };
@@ -164,7 +182,14 @@
       if (timeTakenSeconds > 120) {
         return { errorCategory: 'CALCULATION_OR_FORMULA_STUCK', priority: 'HIGH', recommendation: 'Practice step-by-step formula derivations.' };
       }
-      return { errorCategory: 'GENERAL_ERROR', priority: 'MEDIUM', recommendation: 'Solve 3 similar practice questions.' };
+      return {
+        errorCategory: 'GENERAL_ERROR',
+        priority: 'MEDIUM',
+        prerequisite: prereqInfo,
+        recommendation: prereqInfo
+          ? `Review foundational topic "${prereqInfo}".`
+          : 'Solve 3 similar practice questions.'
+      };
     }
   };
 
@@ -188,10 +213,26 @@
       const streak = window.D?.streak || 0;
 
       if (weakList.length > 0) {
+        const primaryWeak = weakList[0];
+        let prereq = null;
+        if (window.CurriculumMappingEngine?.getPrerequisites) {
+          const list = window.CurriculumMappingEngine.getPrerequisites(primaryWeak);
+          if (list && list.length > 0) prereq = list[0];
+        }
+
+        if (prereq) {
+          return {
+            actionType: 'RECOMMEND_PREREQUISITE_REMEDIATION',
+            targetTopic: prereq,
+            advancedTopic: primaryWeak,
+            reason: `Foundational prerequisite review for ${primaryWeak}: master ${prereq} first.`
+          };
+        }
+
         return {
           actionType: 'RECOMMEND_REVISION',
-          targetTopic: weakList[0],
-          reason: `Targeting active weak spot: ${weakList[0]}`
+          targetTopic: primaryWeak,
+          reason: `Targeting active weak spot: ${primaryWeak}`
         };
       }
 

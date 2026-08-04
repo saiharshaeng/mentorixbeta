@@ -1,0 +1,949 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2025_S_Q119",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2025_S_Q119_RAW",
+    "question": {
+      "latex": "Given are statements for certain thermodynamic variables,\n(A) Internal energy, volume (V) and mass (M) are extensive variables.\n(B) Pressure (P), temperature (T) and density ($\\rho$) are intensive variables.\n(C) Volume (V), temperature (T) and density ($\\rho$) are intensive variables.\n(D) Mass (M), temperature (T) and internal energy are extensive variables.\nChoose the correct answer from the points given below :",
+      "unicode": "Given are statements for certain thermodynamic variables,\n(A) Internal energy, volume (V) and mass (M) are extensive variables.\n(B) Pressure (P), temperature (T) and density (rho) are intensive variables.\n(C) Volume (V), temperature (T) and density (rho) are intensive variables.\n(D) Mass (M), temperature (T) and internal energy are extensive variables.\nChoose the correct answer from the points given below :",
+      "plainText": "Given are statements for certain thermodynamic variables, (A) Internal energy, volume (V) and mass (M) are extensive variables. (B) Pressure (P), temperature (T) and density (rho) are intensive variables. (C) Volume (V), temperature (T) and density (rho) are intensive variables. (D) Mass (M), temperature (T) and internal energy are extensive variables. Choose the correct answer from the points given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "(C) and (D) only",
+        "unicode": "(C) and (D) only",
+        "plainText": "(C) and (D) only"
+      },
+      {
+        "id": "b",
+        "latex": "(D) and (A) only",
+        "unicode": "(D) and (A) only",
+        "plainText": "(D) and (A) only"
+      },
+      {
+        "id": "c",
+        "latex": "(A) and (B) only",
+        "unicode": "(A) and (B) only",
+        "plainText": "(A) and (B) only"
+      },
+      {
+        "id": "d",
+        "latex": "(B) and (C) only",
+        "unicode": "(B) and (C) only",
+        "plainText": "(B) and (C) only"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.045Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.045Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2025_S_Q134",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2025_S_Q134_RAW",
+    "question": {
+      "latex": "Match List-I (Partial Derivatives) with List-II(Thermodynamic Quantity). <table><tr><td>(A) $(\\frac{\\partial G}{\\partial T})_P$</td><td>(I) $C_P$</td></tr><tr><td>(B) $(\\frac{\\partial H}{\\partial T})_P$</td><td>(II) -S</td></tr><tr><td>(C) $(\\frac{\\partial G}{\\partial P})_T$</td><td>(III) $C_V$</td></tr><tr><td>(D) $(\\frac{\\partial U}{\\partial T})_V$</td><td>(IV) V</td></tr></table>",
+      "unicode": "Match List-I (Partial Derivatives) with List-II(Thermodynamic Quantity). <table><tr><td>(A) ((partial G/partial T))_P</td><td>(I) C_P</td></tr><tr><td>(B) ((partial H/partial T))_P</td><td>(II) -S</td></tr><tr><td>(C) ((partial G/partial P))_T</td><td>(III) C_V</td></tr><tr><td>(D) ((partial U/partial T))_V</td><td>(IV) V</td></tr></table>",
+      "plainText": "Match List-I (Partial Derivatives) with List-II(Thermodynamic Quantity). <table><tr><td>(A) ((partial G)/(partial T))_P</td><td>(I) C_P</td></tr><tr><td>(B) ((partial H)/(partial T))_P</td><td>(II) -S</td></tr><tr><td>(C) ((partial G)/(partial P))_T</td><td>(III) C_V</td></tr><tr><td>(D) ((partial U)/(partial T))_V</td><td>(IV) V</td></tr></table>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)",
+        "unicode": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)",
+        "plainText": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)"
+      },
+      {
+        "id": "b",
+        "latex": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "unicode": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "plainText": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)"
+      },
+      {
+        "id": "c",
+        "latex": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)",
+        "unicode": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)",
+        "plainText": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)"
+      },
+      {
+        "id": "d",
+        "latex": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)",
+        "unicode": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)",
+        "plainText": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.046Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.046Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q183",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q183_RAW",
+    "question": {
+      "latex": "Heat is supplied to a diatomic gas at constant pressure. Then the ratio of $\\Delta Q : \\Delta U : \\Delta W$ is _______.",
+      "unicode": "Heat is supplied to a diatomic gas at constant pressure. Then the ratio of Delta Q : Delta U : Delta W is _______.",
+      "plainText": "Heat is supplied to a diatomic gas at constant pressure. Then the ratio of Delta Q : Delta U : Delta W is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$2 : 3 : 5$",
+        "unicode": "2 : 3 : 5",
+        "plainText": "2 : 3 : 5"
+      },
+      {
+        "id": "b",
+        "latex": "$5 : 3 : 2$",
+        "unicode": "5 : 3 : 2",
+        "plainText": "5 : 3 : 2"
+      },
+      {
+        "id": "c",
+        "latex": "$2 : 5 : 7$",
+        "unicode": "2 : 5 : 7",
+        "plainText": "2 : 5 : 7"
+      },
+      {
+        "id": "d",
+        "latex": "$7 : 5 : 2$",
+        "unicode": "7 : 5 : 2",
+        "plainText": "7 : 5 : 2"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q197",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q197_RAW",
+    "question": {
+      "latex": "A vessel contains $0.15\\text{ m}^3$ of a gas at pressure 8 bar and temperature $140^\\circ\\text{C}$ with $c_p = 3R$ and $c_v = 2R$. It is expanded adiabatically till pressure falls to 1 bar. The work done during this process is _______ kJ. ($R$ is gas constant)",
+      "unicode": "A vessel contains 0.15text{ m}³ of a gas at pressure 8 bar and temperature 140^circtext{C} with c_p = 3R and c_v = 2R. It is expanded adiabatically till pressure falls to 1 bar. The work done during this process is _______ kJ. (R is gas constant)",
+      "plainText": "A vessel contains 0.15text{ m}^3 of a gas at pressure 8 bar and temperature 140^circtext{C} with c_p = 3R and c_v = 2R. It is expanded adiabatically till pressure falls to 1 bar. The work done during this process is _______ kJ. (R is gas constant)"
+    },
+    "options": [],
+    "answers": [
+      "2"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q204",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q204_RAW",
+    "question": {
+      "latex": "Consider the following data.\n(i) $2Al(s) + 6HCl(aq) \\rightarrow Al_2Cl_6(aq) + 3H_2(g) \\quad \\Delta H_1 = -1200\\text{ kJ/mol}$\n(ii) $H_2(g) + Cl_2(g) \\rightarrow 2HCl(g) \\quad \\Delta H_2 = -164\\text{ kJ/mol}$\n(iii) $HCl(g) + aq \\rightarrow HCl(aq) \\quad \\Delta H_3 = -83\\text{ kJ/mol}$\n(iv) $Al_2Cl_6(s) + aq \\rightarrow Al_2Cl_6(aq) \\quad \\Delta H_4 = -663\\text{ kJ/mol}$\n(Note: The standard convention used here takes $+ Q$ on the product side as an exothermic process, yielding negative $\\Delta H$ values for the above reactions as given in the raw text).\nThe enthalpy of formation of anhydrous solid $Al_2Cl_6$ is :",
+      "unicode": "Consider the following data.\n(i) 2Al(s) + 6HCl(aq) rightarrow Al_2Cl_6(aq) + 3H_2(g) quad Delta H_1 = -1200text{ kJ/mol}\n(ii) H_2(g) + Cl_2(g) rightarrow 2HCl(g) quad Delta H_2 = -164text{ kJ/mol}\n(iii) HCl(g) + aq rightarrow HCl(aq) quad Delta H_3 = -83text{ kJ/mol}\n(iv) Al_2Cl_6(s) + aq rightarrow Al_2Cl_6(aq) quad Delta H_4 = -663text{ kJ/mol}\n(Note: The standard convention used here takes + Q on the product side as an exothermic process, yielding negative Delta H values for the above reactions as given in the raw text).\nThe enthalpy of formation of anhydrous solid Al_2Cl_6 is :",
+      "plainText": "Consider the following data. (i) 2Al(s) + 6HCl(aq) rightarrow Al_2Cl_6(aq) + 3H_2(g) quad Delta H_1 = -1200text{ kJ/mol} (ii) H_2(g) + Cl_2(g) rightarrow 2HCl(g) quad Delta H_2 = -164text{ kJ/mol} (iii) HCl(g) + aq rightarrow HCl(aq) quad Delta H_3 = -83text{ kJ/mol} (iv) Al_2Cl_6(s) + aq rightarrow Al_2Cl_6(aq) quad Delta H_4 = -663text{ kJ/mol} (Note: The standard convention used here takes + Q on the product side as an exothermic process, yielding negative Delta H values for the above reactions as given in the raw text). The enthalpy of formation of anhydrous solid Al_2Cl_6 is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$-648\\text{ kJ mol}^{-1}$",
+        "unicode": "-648text{ kJ mol}^{-1}",
+        "plainText": "-648text{ kJ mol}^{-1}"
+      },
+      {
+        "id": "b",
+        "latex": "$-1350\\text{ kJ mol}^{-1}$",
+        "unicode": "-1350text{ kJ mol}^{-1}",
+        "plainText": "-1350text{ kJ mol}^{-1}"
+      },
+      {
+        "id": "c",
+        "latex": "$-2002\\text{ kJ mol}^{-1}$",
+        "unicode": "-2002text{ kJ mol}^{-1}",
+        "plainText": "-2002text{ kJ mol}^{-1}"
+      },
+      {
+        "id": "d",
+        "latex": "$-1527\\text{ kJ mol}^{-1}$",
+        "unicode": "-1527text{ kJ mol}^{-1}",
+        "plainText": "-1527text{ kJ mol}^{-1}"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q225",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q225_RAW",
+    "question": {
+      "latex": "At the transition temperature $T$, $A \\rightleftharpoons B$ and $\\Delta G^0 = 105 - 35 \\log T$ where $A$ and $B$ are two states of substance $X$. The transition temperature in $^\\circ\\text{C}$ when pressure is $1\\text{ atm}$ is _______. (Nearest integer)",
+      "unicode": "At the transition temperature T, A rightleftharpoons B and Delta G^0 = 105 - 35 log T where A and B are two states of substance X. The transition temperature in ^circtext{C} when pressure is 1text{ atm} is _______. (Nearest integer)",
+      "plainText": "At the transition temperature T, A rightleftharpoons B and Delta G^0 = 105 - 35 log T where A and B are two states of substance X. The transition temperature in ^circtext{C} when pressure is 1text{ atm} is _______. (Nearest integer)"
+    },
+    "options": [],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q273",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q273_RAW",
+    "question": {
+      "latex": "$5$ moles of unknown gas is heated at constant volume from $10^\\circ\\text{C}$ to $20^\\circ\\text{C}$. The molar specific heat of this gas at constant pressure $c_p = 8\\text{ cal/mol.}^\\circ\\text{C}$ and $R = 8.36\\text{ J/mol.}^\\circ\\text{C}$. The change in the internal energy of the gas is _______ calorie.",
+      "unicode": "5 moles of unknown gas is heated at constant volume from 10^circtext{C} to 20^circtext{C}. The molar specific heat of this gas at constant pressure c_p = 8text{ cal/mol.}^circtext{C} and R = 8.36text{ J/mol.}^circtext{C}. The change in the internal energy of the gas is _______ calorie.",
+      "plainText": "5 moles of unknown gas is heated at constant volume from 10^circtext{C} to 20^circtext{C}. The molar specific heat of this gas at constant pressure c_p = 8text{ cal/mol.}^circtext{C} and R = 8.36text{ J/mol.}^circtext{C}. The change in the internal energy of the gas is _______ calorie."
+    },
+    "options": [],
+    "answers": [
+      "2"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q279",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q279_RAW",
+    "question": {
+      "latex": "Gas 'A' undergoes change from state 'X' to state 'Y'. In this process, the heat absorbed and work done by the gas is $10\\text{ J}$ and $18\\text{ J}$ respectively. Now gas is brought back to state 'X' by another process during which $6\\text{ J}$ of heat is evolved. In the reverse process of 'Y' to 'X',",
+      "unicode": "Gas 'A' undergoes change from state 'X' to state 'Y'. In this process, the heat absorbed and work done by the gas is 10text{ J} and 18text{ J} respectively. Now gas is brought back to state 'X' by another process during which 6text{ J} of heat is evolved. In the reverse process of 'Y' to 'X',",
+      "plainText": "Gas 'A' undergoes change from state 'X' to state 'Y'. In this process, the heat absorbed and work done by the gas is 10text{ J} and 18text{ J} respectively. Now gas is brought back to state 'X' by another process during which 6text{ J} of heat is evolved. In the reverse process of 'Y' to 'X',"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$18\\text{ J}$ of the work is done by the gas 'A'.",
+        "unicode": "18text{ J} of the work is done by the gas 'A'.",
+        "plainText": "18text{ J} of the work is done by the gas 'A'."
+      },
+      {
+        "id": "b",
+        "latex": "$2\\text{ J}$ of the work is done by the gas 'A'.",
+        "unicode": "2text{ J} of the work is done by the gas 'A'.",
+        "plainText": "2text{ J} of the work is done by the gas 'A'."
+      },
+      {
+        "id": "c",
+        "latex": "$12\\text{ J}$ of the work is done on the gas 'A' by the surrounding.",
+        "unicode": "12text{ J} of the work is done on the gas 'A' by the surrounding.",
+        "plainText": "12text{ J} of the work is done on the gas 'A' by the surrounding."
+      },
+      {
+        "id": "d",
+        "latex": "$14\\text{ J}$ of the work is done on the gas 'A' by the surrounding.",
+        "unicode": "14text{ J} of the work is done on the gas 'A' by the surrounding.",
+        "plainText": "14text{ J} of the work is done on the gas 'A' by the surrounding."
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q336",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q336_RAW",
+    "question": {
+      "latex": "An ideal gas undergoes a process maintaining relation between pressure $(P)$ and volume $(V)$ as $P = P_o \\left( 1 + \\left(\\frac{V_o}{V}\\right)^2 \\right)^{-1}$, where $P_o$ and $V_o$ are constants. If two samples $A$ and $B$ (two moles each) with initial volumes $V_o$ and $3V_o$ respectively undergo above mentioned process and attain same pressure, then the difference at the temperatures of these samples, $T_B - T_A$ is _____. ($R =$ gas constant)",
+      "unicode": "An ideal gas undergoes a process maintaining relation between pressure (P) and volume (V) as P = P_o left( 1 + left((V_o/V)right)² right)^{-1}, where P_o and V_o are constants. If two samples A and B (two moles each) with initial volumes V_o and 3V_o respectively undergo above mentioned process and attain same pressure, then the difference at the temperatures of these samples, T_B - T_A is _____. (R = gas constant)",
+      "plainText": "An ideal gas undergoes a process maintaining relation between pressure (P) and volume (V) as P = P_o left( 1 + left((V_o)/(V)right)^2 right)^{-1}, where P_o and V_o are constants. If two samples A and B (two moles each) with initial volumes V_o and 3V_o respectively undergo above mentioned process and attain same pressure, then the difference at the temperatures of these samples, T_B - T_A is _____. (R = gas constant)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{9P_oV_o}{8R}$",
+        "unicode": "(9P_oV_o/8R)",
+        "plainText": "(9P_oV_o)/(8R)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{11P_oV_o}{10R}$",
+        "unicode": "(11P_oV_o/10R)",
+        "plainText": "(11P_oV_o)/(10R)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{7P_oV_o}{6R}$",
+        "unicode": "(7P_oV_o/6R)",
+        "plainText": "(7P_oV_o)/(6R)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{13P_oV_o}{11R}$",
+        "unicode": "(13P_oV_o/11R)",
+        "plainText": "(13P_oV_o)/(11R)"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q354",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2026_S_Q354_RAW",
+    "question": {
+      "latex": "Given below are two statements:\nStatement I: For an ideal gas, heat capacity at constant volume is always greater than the heat capacity at constant pressure.\nStatement II: In a constant volume process, no work is produced and all the heat withdrawn goes into the chaotic motion and is reflected by a temperature increase of the ideal gas.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "unicode": "Given below are two statements:\nStatement I: For an ideal gas, heat capacity at constant volume is always greater than the heat capacity at constant pressure.\nStatement II: In a constant volume process, no work is produced and all the heat withdrawn goes into the chaotic motion and is reflected by a temperature increase of the ideal gas.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "plainText": "Given below are two statements: Statement I: For an ideal gas, heat capacity at constant volume is always greater than the heat capacity at constant pressure. Statement II: In a constant volume process, no work is produced and all the heat withdrawn goes into the chaotic motion and is reflected by a temperature increase of the ideal gas. In the light of the above statements, choose the correct answer from the options given below"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both Statement I and Statement II are true",
+        "unicode": "Both Statement I and Statement II are true",
+        "plainText": "Both Statement I and Statement II are true"
+      },
+      {
+        "id": "b",
+        "latex": "Both Statement I and Statement II are false",
+        "unicode": "Both Statement I and Statement II are false",
+        "plainText": "Both Statement I and Statement II are false"
+      },
+      {
+        "id": "c",
+        "latex": "Statement I is true but Statement II is false",
+        "unicode": "Statement I is true but Statement II is false",
+        "plainText": "Statement I is true but Statement II is false"
+      },
+      {
+        "id": "d",
+        "latex": "Statement I is false but Statement II is true",
+        "unicode": "Statement I is false but Statement II is true",
+        "plainText": "Statement I is false but Statement II is true"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [
+        "Assertion"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2025_S1_Q99",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2025_S1_Q99_RAW",
+    "question": {
+      "latex": "Given are statements for certain thermodynamic variables,\n$A$ Internal energy, volume $V$ and mass $M$ are extensive variables.\n$B$ Pressure $P$, temperature $T$ and density $$\\rho$$ are intensive variables.\n$C$ Volume $V$, temperature $T$ and density $$\\rho$$ are intensive variables.\n$D$ Mass $M$, temperature $T$ and internal energy are extensive variables.\nChoose the correct answer from the points given below :",
+      "unicode": "Given are statements for certain thermodynamic variables,\nA Internal energy, volume V and mass M are extensive variables.\nB Pressure P, temperature T and density rho are intensive variables.\nC Volume V, temperature T and density rho are intensive variables.\nD Mass M, temperature T and internal energy are extensive variables.\nChoose the correct answer from the points given below :",
+      "plainText": "Given are statements for certain thermodynamic variables, A Internal energy, volume V and mass M are extensive variables. B Pressure P, temperature T and density rho are intensive variables. C Volume V, temperature T and density rho are intensive variables. D Mass M, temperature T and internal energy are extensive variables. Choose the correct answer from the points given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "(C) and (D) only",
+        "unicode": "(C) and (D) only",
+        "plainText": "(C) and (D) only"
+      },
+      {
+        "id": "b",
+        "latex": "(D) and (A) only",
+        "unicode": "(D) and (A) only",
+        "plainText": "(D) and (A) only"
+      },
+      {
+        "id": "c",
+        "latex": "(A) and (B) only",
+        "unicode": "(A) and (B) only",
+        "plainText": "(A) and (B) only"
+      },
+      {
+        "id": "d",
+        "latex": "(B) and (C) only",
+        "unicode": "(B) and (C) only",
+        "plainText": "(B) and (C) only"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.528Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.528Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_THERMODYNAMI_2025_S1_Q109",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_THERMODYNAMI_2025_S1_Q109_RAW",
+    "question": {
+      "latex": "Match List-I $Partial Derivatives$ with List-II$Thermodynamic Quantity$. <table><tr><td>$A$ $$\\frac{\\partial G}{\\partial T}$_P$</td><td>$I$ $C_P$</td></tr><tr><td>$B$ $$\\frac{\\partial H}{\\partial T}$_P$</td><td>$II$ -S</td></tr><tr><td>$C$ $$\\frac{\\partial G}{\\partial P}$_T$</td><td>$III$ $C_V$</td></tr><tr><td>$D$ $$\\frac{\\partial U}{\\partial T}$_V$</td><td>$IV$ V</td></tr></table>",
+      "unicode": "Match List-I Partial Derivatives with List-IIThermodynamic Quantity. <table><tr><td>A (partial G/partial T)_P</td><td>I C_P</td></tr><tr><td>B (partial H/partial T)_P</td><td>II -S</td></tr><tr><td>C (partial G/partial P)_T</td><td>III C_V</td></tr><tr><td>D (partial U/partial T)_V</td><td>IV V</td></tr></table>",
+      "plainText": "Match List-I Partial Derivatives with List-IIThermodynamic Quantity. <table><tr><td>A (partial G)/(partial T)_P</td><td>I C_P</td></tr><tr><td>B (partial H)/(partial T)_P</td><td>II -S</td></tr><tr><td>C (partial G)/(partial P)_T</td><td>III C_V</td></tr><tr><td>D (partial U)/(partial T)_V</td><td>IV V</td></tr></table>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)",
+        "unicode": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)",
+        "plainText": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)"
+      },
+      {
+        "id": "b",
+        "latex": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "unicode": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "plainText": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)"
+      },
+      {
+        "id": "c",
+        "latex": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)",
+        "unicode": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)",
+        "plainText": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)"
+      },
+      {
+        "id": "d",
+        "latex": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)",
+        "unicode": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)",
+        "plainText": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Thermodynamics",
+      "subchapter": "Thermodynamics Core Concepts",
+      "topic": "Thermodynamics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Thermodynamics",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.528Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.528Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

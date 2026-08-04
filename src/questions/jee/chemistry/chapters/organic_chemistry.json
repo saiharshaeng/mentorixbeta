@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_CHE_ORGANICCHEMI_2024_S1_Q3",
+    "version": 1,
+    "rawRef": "JEE_MAIN_CHE_ORGANICCHEMI_2024_S1_Q3_RAW",
+    "question": {
+      "latex": "Which of the following compounds exhibits optical isomerism?",
+      "unicode": "Which of the following compounds exhibits optical isomerism?",
+      "plainText": "Which of the following compounds exhibits optical isomerism?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2-Chlorobutane",
+        "unicode": "2-Chlorobutane",
+        "plainText": "2-Chlorobutane"
+      },
+      {
+        "id": "b",
+        "latex": "1-Chlorobutane",
+        "unicode": "1-Chlorobutane",
+        "plainText": "1-Chlorobutane"
+      },
+      {
+        "id": "c",
+        "latex": "2-Chloropropane",
+        "unicode": "2-Chloropropane",
+        "plainText": "2-Chloropropane"
+      },
+      {
+        "id": "d",
+        "latex": "Propanoic acid",
+        "unicode": "Propanoic acid",
+        "plainText": "Propanoic acid"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "2-Chlorobutane has a chiral carbon atom (C2 is bonded to -H, -Cl, -CH3, -CH2CH3).",
+      "unicode": "2-Chlorobutane has a chiral carbon atom (C2 is bonded to -H, -Cl, -CH3, -CH2CH3).",
+      "plainText": "2-Chlorobutane has a chiral carbon atom (C2 is bonded to -H, -Cl, -CH3, -CH2CH3)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Chemistry",
+      "chapter": "Organic Chemistry",
+      "subchapter": "Organic Chemistry Core Concepts",
+      "topic": "Organic Chemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Organic Chemistry",
+      "tags": [],
+      "difficulty": "easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.058Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.058Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

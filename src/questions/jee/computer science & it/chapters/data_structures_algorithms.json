@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_GEN_DATASTRUCTUR_2024_S1_Q1",
+    "version": 1,
+    "rawRef": "JEE_MAIN_GEN_DATASTRUCTUR_2024_S1_Q1_RAW",
+    "question": {
+      "latex": "Consider a hash table of size 7 with hash function $h(k) = k \\bmod 7$. Using linear probing, insert keys 10, 24, 42, 17, 31 into the table. What is the index of key 31?",
+      "unicode": "Consider a hash table of size 7 with hash function h(k) = k bmod 7. Using linear probing, insert keys 10, 24, 42, 17, 31 into the table. What is the index of key 31?",
+      "plainText": "Consider a hash table of size 7 with hash function h(k) = k bmod 7. Using linear probing, insert keys 10, 24, 42, 17, 31 into the table. What is the index of key 31?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "c",
+        "latex": "4",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "d",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "$10 \\bmod 7 = 3$, $24 \\bmod 7 = 3 \\to$ probes to index 4. $42 \\bmod 7 = 0$. $17 \\bmod 7 = 3 \\to$ probes to 5. $31 \\bmod 7 = 3 \\to$ probes 3, 4, 5 $\\to$ lands at index 6.",
+      "unicode": "10 bmod 7 = 3, 24 bmod 7 = 3 to probes to index 4. 42 bmod 7 = 0. 17 bmod 7 = 3 to probes to 5. 31 bmod 7 = 3 to probes 3, 4, 5 to lands at index 6.",
+      "plainText": "10 bmod 7 = 3, 24 bmod 7 = 3 to probes to index 4. 42 bmod 7 = 0. 17 bmod 7 = 3 to probes to 5. 31 bmod 7 = 3 to probes 3, 4, 5 to lands at index 6."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Computer Science & IT",
+      "chapter": "Data Structures & Algorithms",
+      "subchapter": "Data Structures & Algorithms Core Concepts",
+      "topic": "Data Structures & Algorithms Primary Topic",
+      "learningOutcome": "Master fundamental principles of Data Structures & Algorithms",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.425Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.425Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

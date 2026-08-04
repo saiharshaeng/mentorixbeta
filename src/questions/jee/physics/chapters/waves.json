@@ -1,0 +1,89 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_WAVES_2026_S1_Q150",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_WAVES_2026_S1_Q150_RAW",
+    "question": {
+      "latex": "The equation of a plane progressive wave is given by $y = 5 \\cos \\pi \\left$200t - \\frac{x}{150}\\right$$ where $x$ and $y$ are in cm and $t$ is in second. The velocity of the wave is _______ m/s.",
+      "unicode": "The equation of a plane progressive wave is given by y = 5 cos π left200t - (x/150)right where x and y are in cm and t is in second. The velocity of the wave is _______ m/s.",
+      "plainText": "The equation of a plane progressive wave is given by y = 5 cos pi left200t - (x)/(150)right where x and y are in cm and t is in second. The velocity of the wave is _______ m/s."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "120",
+        "unicode": "120",
+        "plainText": "120"
+      },
+      {
+        "id": "b",
+        "latex": "150",
+        "unicode": "150",
+        "plainText": "150"
+      },
+      {
+        "id": "c",
+        "latex": "200",
+        "unicode": "200",
+        "plainText": "200"
+      },
+      {
+        "id": "d",
+        "latex": "300",
+        "unicode": "300",
+        "plainText": "300"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The standard equation of a travelling wave is $y = A \\cos(\\omega t - k x)$.\nComparing it with the given equation $y = 5 \\cos \\left(200\\pi t - \\frac{\\pi x}{150}\\right)$, we find:\nAngular frequency $\\omega = 200\\pi\\text{ rad/s}$\nWave number $k = \\frac{\\pi}{150}\\text{ cm}^{-1}$\nThe velocity of the wave is given by $v = \\frac{\\omega}{k}$:\n$v = \\frac{200\\pi}{\\pi / 150} = 200 \\times 150 = 30000\\text{ cm/s}$\nConverting to meters per second:\n$v = 300\\text{ m/s}$.",
+      "unicode": "The standard equation of a travelling wave is y = A cos(omega t - k x).\nComparing it with the given equation y = 5 cos left(200π t - (π x/150)right), we find:\nAngular frequency omega = 200πtext{ rad/s}\nWave number k = (π/150)text{ cm}^{-1}\nThe velocity of the wave is given by v = (omega/k):\nv = (200π/π / 150) = 200 × 150 = 30000text{ cm/s}\nConverting to meters per second:\nv = 300text{ m/s}.",
+      "plainText": "The standard equation of a travelling wave is y = A cos(omega t - k x). Comparing it with the given equation y = 5 cos left(200pi t - (pi x)/(150)right), we find: Angular frequency omega = 200pitext{ rad/s} Wave number k = (pi)/(150)text{ cm}^{-1} The velocity of the wave is given by v = (omega)/(k): v = (200pi)/(pi / 150) = 200 times 150 = 30000text{ cm/s} Converting to meters per second: v = 300text{ m/s}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Waves",
+      "subchapter": "Waves Core Concepts",
+      "topic": "Waves Primary Topic",
+      "learningOutcome": "Master fundamental principles of Waves",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.531Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.531Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

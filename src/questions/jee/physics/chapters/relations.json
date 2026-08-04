@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_RELATIONS_2026_S1_Q539",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_RELATIONS_2026_S1_Q539_RAW",
+    "question": {
+      "latex": "Let $A = \\{2, 3, 4, 5, 6\\}$. Let $R$ be a relation on the set $A \\times A$ given by $$x, y$ R $z, w$$ if and only if $x$ divides $z$ and $y \\leq w$. Then the number of elements in $R$ is:",
+      "unicode": "Let A = {2, 3, 4, 5, 6}. Let R be a relation on the set A × A given by x, y R z, w if and only if x divides z and y leq w. Then the number of elements in R is:",
+      "plainText": "Let A = {2, 3, 4, 5, 6}. Let R be a relation on the set A times A given by x, y R z, w if and only if x divides z and y leq w. Then the number of elements in R is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$60$",
+        "unicode": "60",
+        "plainText": "60"
+      },
+      {
+        "id": "b",
+        "latex": "$90$",
+        "unicode": "90",
+        "plainText": "90"
+      },
+      {
+        "id": "c",
+        "latex": "$120$",
+        "unicode": "120",
+        "plainText": "120"
+      },
+      {
+        "id": "d",
+        "latex": "$150$",
+        "unicode": "150",
+        "plainText": "150"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "A pair $((x,y), (z,w))$ is in $R$ if $x$ divides $z$ and $y \\leq w$.\nThe number of ways to pick $x$ and $z$ from $A$ such that $x | z$:\n- $x=2$: $z \\in \\{2, 4, 6\\}$ (3 ways)\n- $x=3$: $z \\in \\{3, 6\\}$ (2 ways)\n- $x=4$: $z \\in \\{4\\}$ (1 way)\n- $x=5$: $z \\in \\{5\\}$ (1 way)\n- $x=6$: $z \\in \\{6\\}$ (1 way)\nTotal $(x,z)$ pairs = $8$.\nThe number of ways to pick $y$ and $w$ from $A$ such that $y \\leq w$:\nThis is equivalent to picking 2 elements with replacement, $\\binom{5}{2} + 5 = 15$.\nTotal number of elements in $R = 8 \\times 15 = 120$.",
+      "unicode": "A pair ((x,y), (z,w)) is in R if x divides z and y leq w.\nThe number of ways to pick x and z from A such that x | z:\n- x=2: z in {2, 4, 6} (3 ways)\n- x=3: z in {3, 6} (2 ways)\n- x=4: z in {4} (1 way)\n- x=5: z in {5} (1 way)\n- x=6: z in {6} (1 way)\nTotal (x,z) pairs = 8.\nThe number of ways to pick y and w from A such that y leq w:\nThis is equivalent to picking 2 elements with replacement, binom{5}{2} + 5 = 15.\nTotal number of elements in R = 8 × 15 = 120.",
+      "plainText": "A pair ((x,y), (z,w)) is in R if x divides z and y leq w. The number of ways to pick x and z from A such that x | z: - x=2: z in {2, 4, 6} (3 ways) - x=3: z in {3, 6} (2 ways) - x=4: z in {4} (1 way) - x=5: z in {5} (1 way) - x=6: z in {6} (1 way) Total (x,z) pairs = 8. The number of ways to pick y and w from A such that y leq w: This is equivalent to picking 2 elements with replacement, binom{5}{2} + 5 = 15. Total number of elements in R = 8 times 15 = 120."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Relations",
+      "subchapter": "Relations Core Concepts",
+      "topic": "Relations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Relations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

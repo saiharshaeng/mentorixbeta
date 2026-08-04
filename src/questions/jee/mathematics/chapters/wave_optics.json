@@ -1,0 +1,550 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2025_S_Q115",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2025_S_Q115_RAW",
+    "question": {
+      "latex": "Given below are two statements. One is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A) : In Young's double slit experiment, the fringes produced by red light are closer as compared to those produced by blue light.\nReason (R) : The fringe width is directly proportional to the wavelength of light.\nIn the light of above statements, choose the correct answer from the options given below :",
+      "unicode": "Given below are two statements. One is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A) : In Young's double slit experiment, the fringes produced by red light are closer as compared to those produced by blue light.\nReason (R) : The fringe width is directly proportional to the wavelength of light.\nIn the light of above statements, choose the correct answer from the options given below :",
+      "plainText": "Given below are two statements. One is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A) : In Young's double slit experiment, the fringes produced by red light are closer as compared to those produced by blue light. Reason (R) : The fringe width is directly proportional to the wavelength of light. In the light of above statements, choose the correct answer from the options given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "unicode": "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "plainText": "Both (A) and (R) are true and (R) is the correct explanation of (A)"
+      },
+      {
+        "id": "b",
+        "latex": "(A) is false but (R) is true.",
+        "unicode": "(A) is false but (R) is true.",
+        "plainText": "(A) is false but (R) is true."
+      },
+      {
+        "id": "c",
+        "latex": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+        "unicode": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+        "plainText": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A)."
+      },
+      {
+        "id": "d",
+        "latex": "(A) is true but (R) is false.",
+        "unicode": "(A) is true but (R) is false.",
+        "plainText": "(A) is true but (R) is false."
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [
+        "Assertion"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.044Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.044Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2025_S_Q117",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2025_S_Q117_RAW",
+    "question": {
+      "latex": "A transparent film of refractive index, 2.0 is coated on a glass slab of refractive index, 1.45. What is the minimum thickness of transparent film to be coated for the maximum transmission of Green light of wavelength 550 nm. [Assume that the light is incident nearly perpendicular to the glass surface.]",
+      "unicode": "A transparent film of refractive index, 2.0 is coated on a glass slab of refractive index, 1.45. What is the minimum thickness of transparent film to be coated for the maximum transmission of Green light of wavelength 550 nm. [Assume that the light is incident nearly perpendicular to the glass surface.]",
+      "plainText": "A transparent film of refractive index, 2.0 is coated on a glass slab of refractive index, 1.45. What is the minimum thickness of transparent film to be coated for the maximum transmission of Green light of wavelength 550 nm. [Assume that the light is incident nearly perpendicular to the glass surface.]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "94.8 nm",
+        "unicode": "94.8 nm",
+        "plainText": "94.8 nm"
+      },
+      {
+        "id": "b",
+        "latex": "68.7 nm",
+        "unicode": "68.7 nm",
+        "plainText": "68.7 nm"
+      },
+      {
+        "id": "c",
+        "latex": "137.5 nm",
+        "unicode": "137.5 nm",
+        "plainText": "137.5 nm"
+      },
+      {
+        "id": "d",
+        "latex": "275 nm",
+        "unicode": "275 nm",
+        "plainText": "275 nm"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.044Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.044Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q196",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q196_RAW",
+    "question": {
+      "latex": "In single slit diffraction pattern, the wavelength of light used is 628 nm and slit width is 0.2 mm, the angular width of central maximum is $\\alpha \\times 10^{-2}$ degrees. The value of $\\alpha$ is _______.",
+      "unicode": "In single slit diffraction pattern, the wavelength of light used is 628 nm and slit width is 0.2 mm, the angular width of central maximum is α × 10^{-2} degrees. The value of α is _______.",
+      "plainText": "In single slit diffraction pattern, the wavelength of light used is 628 nm and slit width is 0.2 mm, the angular width of central maximum is alpha times 10^{-2} degrees. The value of alpha is _______."
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q271",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q271_RAW",
+    "question": {
+      "latex": "In a Young's double slit experiment, the intensity at some point on the screen is found to be $\\frac{3}{4}$ times of the maximum of the interference pattern. The path difference between the interfering waves at this point is $\\frac{\\lambda}{x}$ where $\\lambda$ is wavelength of the incident light. The value of $x$ is _______.",
+      "unicode": "In a Young's double slit experiment, the intensity at some point on the screen is found to be (3/4) times of the maximum of the interference pattern. The path difference between the interfering waves at this point is (lambda/x) where lambda is wavelength of the incident light. The value of x is _______.",
+      "plainText": "In a Young's double slit experiment, the intensity at some point on the screen is found to be (3)/(4) times of the maximum of the interference pattern. The path difference between the interfering waves at this point is (lambda)/(x) where lambda is wavelength of the incident light. The value of x is _______."
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q333",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q333_RAW",
+    "question": {
+      "latex": "A slit of width $a$ is illuminated by light of wavelength $\\lambda$. The linear separation between $1^{\\text{st}}$ and $3^{\\text{rd}}$ minima in the diffraction pattern produced on a screen placed at a distance $D$ from the slit system is _____.",
+      "unicode": "A slit of width a is illuminated by light of wavelength lambda. The linear separation between 1^{text{st}} and 3^{text{rd}} minima in the diffraction pattern produced on a screen placed at a distance D from the slit system is _____.",
+      "plainText": "A slit of width a is illuminated by light of wavelength lambda. The linear separation between 1^{text{st}} and 3^{text{rd}} minima in the diffraction pattern produced on a screen placed at a distance D from the slit system is _____."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{D\\lambda}{a}$",
+        "unicode": "(Dlambda/a)",
+        "plainText": "(Dlambda)/(a)"
+      },
+      {
+        "id": "b",
+        "latex": "$1.5 \\frac{D\\lambda}{a}$",
+        "unicode": "1.5 (Dlambda/a)",
+        "plainText": "1.5 (Dlambda)/(a)"
+      },
+      {
+        "id": "c",
+        "latex": "$2 \\frac{D\\lambda}{a}$",
+        "unicode": "2 (Dlambda/a)",
+        "plainText": "2 (Dlambda)/(a)"
+      },
+      {
+        "id": "d",
+        "latex": "$3 \\frac{D\\lambda}{a}$",
+        "unicode": "3 (Dlambda/a)",
+        "plainText": "3 (Dlambda)/(a)"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q345",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2026_S_Q345_RAW",
+    "question": {
+      "latex": "![Polarization Reflection](https://cracku.in/media/uploads/image_yxbH5dW.png)\nAn unpolarized light is incident on the plane interface of air-dielectric medium shown in figure. If the incident angle is equal to Brewster angle, identify the expression representing reflected wave.\n(Given the plane of incidence corresponds to the x-z plane such that the reflected ray propagates towards $+x$ and $-z$.)",
+      "unicode": "![Polarization Reflection](https://cracku.in/media/uploads/image_yxbH5dW.png)\nAn unpolarized light is incident on the plane interface of air-dielectric medium shown in figure. If the incident angle is equal to Brewster angle, identify the expression representing reflected wave.\n(Given the plane of incidence corresponds to the x-z plane such that the reflected ray propagates towards +x and -z.)",
+      "plainText": "![Polarization Reflection](https://cracku.in/media/uploads/image_yxbH5dW.png) An unpolarized light is incident on the plane interface of air-dielectric medium shown in figure. If the incident angle is equal to Brewster angle, identify the expression representing reflected wave. (Given the plane of incidence corresponds to the x-z plane such that the reflected ray propagates towards +x and -z.)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$(E_y \\hat{j})\\sin(kx - kz - \\omega t)$",
+        "unicode": "(E_y hat{j})sin(kx - kz - omega t)",
+        "plainText": "(E_y hat{j})sin(kx - kz - omega t)"
+      },
+      {
+        "id": "b",
+        "latex": "$(E_x \\hat{i} + E_z \\hat{k})\\sin(kx + ky - \\omega t)$",
+        "unicode": "(E_x hat{i} + E_z hat{k})sin(kx + ky - omega t)",
+        "plainText": "(E_x hat{i} + E_z hat{k})sin(kx + ky - omega t)"
+      },
+      {
+        "id": "c",
+        "latex": "$(E_x \\hat{j} + E_y \\hat{k})\\sin(ky + kz - \\omega t)$",
+        "unicode": "(E_x hat{j} + E_y hat{k})sin(ky + kz - omega t)",
+        "plainText": "(E_x hat{j} + E_y hat{k})sin(ky + kz - omega t)"
+      },
+      {
+        "id": "d",
+        "latex": "$(E_x \\hat{i} + E_y \\hat{j} + E_z \\hat{k})\\sin(kx + ky - kz - \\omega t)$",
+        "unicode": "(E_x hat{i} + E_y hat{j} + E_z hat{k})sin(kx + ky - kz - omega t)",
+        "plainText": "(E_x hat{i} + E_y hat{j} + E_z hat{k})sin(kx + ky - kz - omega t)"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_WAVEOPTICS_2025_S1_Q95",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WAVEOPTICS_2025_S1_Q95_RAW",
+    "question": {
+      "latex": "Given below are two statements. One is labelled as Assertion $A$ and the other is labelled as Reason $R$.\nAssertion $A$ : In Young's double slit experiment, the fringes produced by red light are closer as compared to those produced by blue light.\nReason $R$ : The fringe width is directly proportional to the wavelength of light.\nIn the light of above statements, choose the correct answer from the options given below :",
+      "unicode": "Given below are two statements. One is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A : In Young's double slit experiment, the fringes produced by red light are closer as compared to those produced by blue light.\nReason R : The fringe width is directly proportional to the wavelength of light.\nIn the light of above statements, choose the correct answer from the options given below :",
+      "plainText": "Given below are two statements. One is labelled as Assertion A and the other is labelled as Reason R. Assertion A : In Young's double slit experiment, the fringes produced by red light are closer as compared to those produced by blue light. Reason R : The fringe width is directly proportional to the wavelength of light. In the light of above statements, choose the correct answer from the options given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "unicode": "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "plainText": "Both (A) and (R) are true and (R) is the correct explanation of (A)"
+      },
+      {
+        "id": "b",
+        "latex": "(A) is false but (R) is true.",
+        "unicode": "(A) is false but (R) is true.",
+        "plainText": "(A) is false but (R) is true."
+      },
+      {
+        "id": "c",
+        "latex": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+        "unicode": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+        "plainText": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A)."
+      },
+      {
+        "id": "d",
+        "latex": "(A) is true but (R) is false.",
+        "unicode": "(A) is true but (R) is false.",
+        "plainText": "(A) is true but (R) is false."
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Wave Optics",
+      "subchapter": "Wave Optics Core Concepts",
+      "topic": "Wave Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Wave Optics",
+      "tags": [
+        "Assertion"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.527Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.527Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

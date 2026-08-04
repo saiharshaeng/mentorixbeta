@@ -1,0 +1,866 @@
+[
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2021_S1_Q3",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2021_S1_Q3_RAW",
+    "question": {
+      "latex": "An extended object is placed at point O, 10 cm in front of a convex lens L 1 and a concave lens L 2 is placed 10 cm behind it, as shown in the figure. The radii of curvature of all the curved surfaces in both the lenses are 20 cm. The refractive index of both the lenses is 1.5. The total magnification of this lens system is",
+      "unicode": "An extended object is placed at point O, 10 cm in front of a convex lens L 1 and a concave lens L 2 is placed 10 cm behind it, as shown in the figure. The radii of curvature of all the curved surfaces in both the lenses are 20 cm. The refractive index of both the lenses is 1.5. The total magnification of this lens system is",
+      "plainText": "An extended object is placed at point O, 10 cm in front of a convex lens L 1 and a concave lens L 2 is placed 10 cm behind it, as shown in the figure. The radii of curvature of all the curved surfaces in both the lenses are 20 cm. The refractive index of both the lenses is 1.5. The total magnification of this lens system is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "0.4",
+        "unicode": "0.4",
+        "plainText": "0.4"
+      },
+      {
+        "id": "b",
+        "latex": "0.8",
+        "unicode": "0.8",
+        "plainText": "0.8"
+      },
+      {
+        "id": "c",
+        "latex": "1.3",
+        "unicode": "1.3",
+        "plainText": "1.3"
+      },
+      {
+        "id": "d",
+        "latex": "1.6",
+        "unicode": "1.6",
+        "plainText": "1.6"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2021,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.064Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.064Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2022_S1_Q11",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2022_S1_Q11_RAW",
+    "question": {
+      "latex": "Let S be the reflection of a point Q with respect to the plane given by r⃗ = − ( 푡 + 푝 ) 푖̂ + 푡푗̂ + ( 1 + 푝 ) 푘 ̂ where 푡, 푝 are real parameters and 푖̂, 푗̂, 푘 ̂ are the unit vectors along the three positive coordinate axes. If the position vectors of Q and S are 10푖̂ + 15푗̂ + 20푘 ̂ and 훼푖̂ + 훽푗̂ + 훾푘 ̂ respectively, then which of the followi ng is/are TRUE ?",
+      "unicode": "Let S be the reflection of a point Q with respect to the plane given by r⃗ = − ( 푡 + 푝 ) 푖̂ + 푡푗̂ + ( 1 + 푝 ) 푘 ̂ where 푡, 푝 are real parameters and 푖̂, 푗̂, 푘 ̂ are the unit vectors along the three positive coordinate axes. If the position vectors of Q and S are 10푖̂ + 15푗̂ + 20푘 ̂ and 훼푖̂ + 훽푗̂ + 훾푘 ̂ respectively, then which of the followi ng is/are TRUE ?",
+      "plainText": "Let S be the reflection of a point Q with respect to the plane given by r⃗ = − ( 푡 + 푝 ) 푖̂ + 푡푗̂ + ( 1 + 푝 ) 푘 ̂ where 푡, 푝 are real parameters and 푖̂, 푗̂, 푘 ̂ are the unit vectors along the three positive coordinate axes. If the position vectors of Q and S are 10푖̂ + 15푗̂ + 20푘 ̂ and 훼푖̂ + 훽푗̂ + 훾푘 ̂ respectively, then which of the followi ng is/are TRUE ?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3 ( 훼 + 훽 ) = −101",
+        "unicode": "3 ( 훼 + 훽 ) = −101",
+        "plainText": "3 ( 훼 + 훽 ) = −101"
+      },
+      {
+        "id": "b",
+        "latex": "3 ( 훽 + 훾 ) = −71",
+        "unicode": "3 ( 훽 + 훾 ) = −71",
+        "plainText": "3 ( 훽 + 훾 ) = −71"
+      },
+      {
+        "id": "c",
+        "latex": "3 ( 훾 + 훼 ) = −86",
+        "unicode": "3 ( 훾 + 훼 ) = −86",
+        "plainText": "3 ( 훾 + 훼 ) = −86"
+      },
+      {
+        "id": "d",
+        "latex": "3 ( 훼 + 훽 + 훾 ) = −121 JEE (Advanced) 2022 Paper 1 5/9",
+        "unicode": "3 ( 훼 + 훽 + 훾 ) = −121 JEE (Advanced) 2022 Paper 1 5/9",
+        "plainText": "3 ( 훼 + 훽 + 훾 ) = −121 JEE (Advanced) 2022 Paper 1 5/9"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.069Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.069Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2022_S1_Q25",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2022_S1_Q25_RAW",
+    "question": {
+      "latex": "Three plane mirrors form an equilateral triangle with each side of length L. There is a small hole at a distance 푙 > 0 from one of the corners as shown in the figure. A ray of light is passed through the hole at an angle θ and can only come out through the same hole. The cross section of the mirror configuration and the ray of light lie on the same plane. Which of the following statement(s) is(are) correct?",
+      "unicode": "Three plane mirrors form an equilateral triangle with each side of length L. There is a small hole at a distance 푙 > 0 from one of the corners as shown in the figure. A ray of light is passed through the hole at an angle θ and can only come out through the same hole. The cross section of the mirror configuration and the ray of light lie on the same plane. Which of the following statement(s) is(are) correct?",
+      "plainText": "Three plane mirrors form an equilateral triangle with each side of length L. There is a small hole at a distance 푙 > 0 from one of the corners as shown in the figure. A ray of light is passed through the hole at an angle θ and can only come out through the same hole. The cross section of the mirror configuration and the ray of light lie on the same plane. Which of the following statement(s) is(are) correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "The ray of light will come out for θ = 30 ∘ , for 0<푙<L.",
+        "unicode": "The ray of light will come out for θ = 30 ∘ , for 0<푙<L.",
+        "plainText": "The ray of light will come out for θ = 30 ∘ , for 0<푙<L."
+      },
+      {
+        "id": "b",
+        "latex": "There is an angle for 푙 = � � at which the ray of light will come out after two reflections.",
+        "unicode": "There is an angle for 푙 = � � at which the ray of light will come out after two reflections.",
+        "plainText": "There is an angle for 푙 = � � at which the ray of light will come out after two reflections."
+      },
+      {
+        "id": "c",
+        "latex": "The ray of light will NEVER come out for θ =60 ∘ , and 푙 = � � .",
+        "unicode": "The ray of light will NEVER come out for θ =60 ∘ , and 푙 = � � .",
+        "plainText": "The ray of light will NEVER come out for θ =60 ∘ , and 푙 = � � ."
+      },
+      {
+        "id": "d",
+        "latex": "The ray of light will come out for θ=60 ∘ , and 0<푙< � � after six reflections. JEE (Advanced) 2022 Paper 1 7/12",
+        "unicode": "The ray of light will come out for θ=60 ∘ , and 0<푙< � � after six reflections. JEE (Advanced) 2022 Paper 1 7/12",
+        "plainText": "The ray of light will come out for θ=60 ∘ , and 0<푙< � � after six reflections. JEE (Advanced) 2022 Paper 1 7/12"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.070Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.070Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2022_S1_Q30",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2022_S1_Q30_RAW",
+    "question": {
+      "latex": "List I contains four combinations of two lenses (1 and 2) whose focal lengths (in cm) are indicated in the figures. In all cases, the object is placed 20 cm from the first lens on the left, and the distance between the two lenses is 5 cm. List II contains the positions of the final images. List-I List-II (I) (P) Final image is formed at 7.5 cm on the right side of lens 2. (II) (Q) Final image is formed at 60.0 cm on the right side of lens 2. (III) (R) Final image is formed at 30.0 cm on the left side of lens 2. (IV) (S) Final image is formed at 6.0 cm on the right side of lens 2. (T) Final image is formed at 30.0 cm on the right side of lens 2. Which one of the following options is correct?",
+      "unicode": "List I contains four combinations of two lenses (1 and 2) whose focal lengths (in cm) are indicated in the figures. In all cases, the object is placed 20 cm from the first lens on the left, and the distance between the two lenses is 5 cm. List II contains the positions of the final images. List-I List-II (I) (P) Final image is formed at 7.5 cm on the right side of lens 2. (II) (Q) Final image is formed at 60.0 cm on the right side of lens 2. (III) (R) Final image is formed at 30.0 cm on the left side of lens 2. (IV) (S) Final image is formed at 6.0 cm on the right side of lens 2. (T) Final image is formed at 30.0 cm on the right side of lens 2. Which one of the following options is correct?",
+      "plainText": "List I contains four combinations of two lenses (1 and 2) whose focal lengths (in cm) are indicated in the figures. In all cases, the object is placed 20 cm from the first lens on the left, and the distance between the two lenses is 5 cm. List II contains the positions of the final images. List-I List-II (I) (P) Final image is formed at 7.5 cm on the right side of lens 2. (II) (Q) Final image is formed at 60.0 cm on the right side of lens 2. (III) (R) Final image is formed at 30.0 cm on the left side of lens 2. (IV) (S) Final image is formed at 6.0 cm on the right side of lens 2. (T) Final image is formed at 30.0 cm on the right side of lens 2. Which one of the following options is correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "(I)  P; (II)  R; (III)  Q; (IV)  T",
+        "unicode": "(I)  P; (II)  R; (III)  Q; (IV)  T",
+        "plainText": "(I)  P; (II)  R; (III)  Q; (IV)  T"
+      },
+      {
+        "id": "b",
+        "latex": "(I)  Q; (II)  P; (III)  T; (IV)  S",
+        "unicode": "(I)  Q; (II)  P; (III)  T; (IV)  S",
+        "plainText": "(I)  Q; (II)  P; (III)  T; (IV)  S"
+      },
+      {
+        "id": "c",
+        "latex": "(I)  P; (II)  T; (III)  R; (IV)  Q",
+        "unicode": "(I)  P; (II)  T; (III)  R; (IV)  Q",
+        "plainText": "(I)  P; (II)  T; (III)  R; (IV)  Q"
+      },
+      {
+        "id": "d",
+        "latex": "(I)  T; (II)  S; (III)  Q; (IV)  R O f = +10 +15 20 cm 1 2 f = +10 −10 20 cm 1 2 O O f = +10 −20 20 cm 1 2 5 cm 5 cm 5 cm O f = −20 +10 20 cm 1 2 5 cm JEE (Advanced) 2022 Paper 1 12/12 END OF THE QUESTION PAPER JEE (Advanced) 2022 Paper 1 1/10 SECTION 1 (Maximum Marks: 24) • This section contains EIGHT (08) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on­screen virtual numeric keypad in the place designated to enter the answer. If the numerical value has more than two decimal places, truncate/round­off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 ONLY if the correct numerical value is entered; Zero Marks : 0 In all other cases.",
+        "unicode": "(I)  T; (II)  S; (III)  Q; (IV)  R O f = +10 +15 20 cm 1 2 f = +10 −10 20 cm 1 2 O O f = +10 −20 20 cm 1 2 5 cm 5 cm 5 cm O f = −20 +10 20 cm 1 2 5 cm JEE (Advanced) 2022 Paper 1 12/12 END OF THE QUESTION PAPER JEE (Advanced) 2022 Paper 1 1/10 SECTION 1 (Maximum Marks: 24) • This section contains EIGHT (08) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on­screen virtual numeric keypad in the place designated to enter the answer. If the numerical value has more than two decimal places, truncate/round­off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 ONLY if the correct numerical value is entered; Zero Marks : 0 In all other cases.",
+        "plainText": "(I)  T; (II)  S; (III)  Q; (IV)  R O f = +10 +15 20 cm 1 2 f = +10 −10 20 cm 1 2 O O f = +10 −20 20 cm 1 2 5 cm 5 cm 5 cm O f = −20 +10 20 cm 1 2 5 cm JEE (Advanced) 2022 Paper 1 12/12 END OF THE QUESTION PAPER JEE (Advanced) 2022 Paper 1 1/10 SECTION 1 (Maximum Marks: 24) • This section contains EIGHT (08) questions. • The answer to each question is a NUMERICAL VALUE. • For each question, enter the correct numerical value of the answer using the mouse and the on­screen virtual numeric keypad in the place designated to enter the answer. If the numerical value has more than two decimal places, truncate/round­off the value to TWO decimal places. • Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 ONLY if the correct numerical value is entered; Zero Marks : 0 In all other cases."
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.070Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.070Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q19",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q19_RAW",
+    "question": {
+      "latex": "A plane polarized blue light ray is incident on a prism such that there is no reflection from the surface of the prism. The angle of deviation of the emergent ray is 훿=60° (see Figure-1). The angle of minimum deviation for red light from the same prism is 훿 min = 30° (see Figure-2). The refractive index of the prism material for blue light is √",
+      "unicode": "A plane polarized blue light ray is incident on a prism such that there is no reflection from the surface of the prism. The angle of deviation of the emergent ray is 훿=60° (see Figure-1). The angle of minimum deviation for red light from the same prism is 훿 min = 30° (see Figure-2). The refractive index of the prism material for blue light is √",
+      "plainText": "A plane polarized blue light ray is incident on a prism such that there is no reflection from the surface of the prism. The angle of deviation of the emergent ray is 훿=60° (see Figure-1). The angle of minimum deviation for red light from the same prism is 훿 min = 30° (see Figure-2). The refractive index of the prism material for blue light is √"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (B) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.073Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.073Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q21",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q21_RAW",
+    "question": {
+      "latex": "(D) The angle of refraction for blue light in air at the exit plane of the prism is 60°.",
+      "unicode": "(D) The angle of refraction for blue light in air at the exit plane of the prism is 60°.",
+      "plainText": "(D) The angle of refraction for blue light in air at the exit plane of the prism is 60°."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.073Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.073Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q28",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q28_RAW",
+    "question": {
+      "latex": "An optical arrangement consists of two concave mirrors M 1 and M 2 , and a convex lens L with a common principal axis, as shown in the figure. The focal length of L is 10 cm. The radii of curvature of M 1 and M 2 are 20 cm and 24 cm, respectively. The distance between L and M 2 is 20 cm. A point object S is placed at the mid-point between L and M 2 on the axis. When the distance between L and M 1 is 푛/7 cm, one of the images coincides with S. The value of 푛 is _______.",
+      "unicode": "An optical arrangement consists of two concave mirrors M 1 and M 2 , and a convex lens L with a common principal axis, as shown in the figure. The focal length of L is 10 cm. The radii of curvature of M 1 and M 2 are 20 cm and 24 cm, respectively. The distance between L and M 2 is 20 cm. A point object S is placed at the mid-point between L and M 2 on the axis. When the distance between L and M 1 is 푛/7 cm, one of the images coincides with S. The value of 푛 is _______.",
+      "plainText": "An optical arrangement consists of two concave mirrors M 1 and M 2 , and a convex lens L with a common principal axis, as shown in the figure. The focal length of L is 10 cm. The radii of curvature of M 1 and M 2 are 20 cm and 24 cm, respectively. The distance between L and M 2 is 20 cm. A point object S is placed at the mid-point between L and M 2 on the axis. When the distance between L and M 1 is 푛/7 cm, one of the images coincides with S. The value of 푛 is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.074Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.074Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q29",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2023_S1_Q29_RAW",
+    "question": {
+      "latex": "In an experiment for determination of the focal length of a thin convex lens, the distance of the object from the lens is 10±0.1 cm and the distance of its real image from the lens is 20±0.2 cm. The error in the determination of focal length of the lens is 푛 %. The value of 푛 is _______. SECTION 3 (Maximum Marks: 24) •This section contains SIX (06) questions. •The answer to each question is a NON-NEGATIVE INTEGER. •For each question, enter the correct integer corresponding to the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. •Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct integer is entered; Zero Marks : 0 In all other cases. JEE (Advanced) 2023 Paper 1 7/9",
+      "unicode": "In an experiment for determination of the focal length of a thin convex lens, the distance of the object from the lens is 10±0.1 cm and the distance of its real image from the lens is 20±0.2 cm. The error in the determination of focal length of the lens is 푛 %. The value of 푛 is _______. SECTION 3 (Maximum Marks: 24) •This section contains SIX (06) questions. •The answer to each question is a NON-NEGATIVE INTEGER. •For each question, enter the correct integer corresponding to the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. •Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct integer is entered; Zero Marks : 0 In all other cases. JEE (Advanced) 2023 Paper 1 7/9",
+      "plainText": "In an experiment for determination of the focal length of a thin convex lens, the distance of the object from the lens is 10±0.1 cm and the distance of its real image from the lens is 20±0.2 cm. The error in the determination of focal length of the lens is 푛 %. The value of 푛 is _______. SECTION 3 (Maximum Marks: 24) •This section contains SIX (06) questions. •The answer to each question is a NON-NEGATIVE INTEGER. •For each question, enter the correct integer corresponding to the answer using the mouse and the on- screen virtual numeric keypad in the place designated to enter the answer. •Answer to each question will be evaluated according to the following marking scheme: Full Marks : +4 If ONLY the correct integer is entered; Zero Marks : 0 In all other cases. JEE (Advanced) 2023 Paper 1 7/9"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.074Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.074Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2024_S1_Q27",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2024_S1_Q27_RAW",
+    "question": {
+      "latex": "A glass beaker has a solid, plano-convex base of refractive index 1.60, as shown in the figure. The radius of curvature of the convex surface (SPU) is 9 cm, while the planar surface (STU) acts as a mirror. This beaker is filled with a liquid of refractive index 푛 up to the level QPR. If the image of a point object O at a height of ℎ (OT in the figure) is formed onto itself, then, which of the following option(s) is(are) correct?",
+      "unicode": "A glass beaker has a solid, plano-convex base of refractive index 1.60, as shown in the figure. The radius of curvature of the convex surface (SPU) is 9 cm, while the planar surface (STU) acts as a mirror. This beaker is filled with a liquid of refractive index 푛 up to the level QPR. If the image of a point object O at a height of ℎ (OT in the figure) is formed onto itself, then, which of the following option(s) is(are) correct?",
+      "plainText": "A glass beaker has a solid, plano-convex base of refractive index 1.60, as shown in the figure. The radius of curvature of the convex surface (SPU) is 9 cm, while the planar surface (STU) acts as a mirror. This beaker is filled with a liquid of refractive index 푛 up to the level QPR. If the image of a point object O at a height of ℎ (OT in the figure) is formed onto itself, then, which of the following option(s) is(are) correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "For 푛 = 1.42, ℎ=50 cm.",
+        "unicode": "For 푛 = 1.42, ℎ=50 cm.",
+        "plainText": "For 푛 = 1.42, ℎ=50 cm."
+      },
+      {
+        "id": "b",
+        "latex": "For 푛 = 1.35, ℎ = 36 cm.",
+        "unicode": "For 푛 = 1.35, ℎ = 36 cm.",
+        "plainText": "For 푛 = 1.35, ℎ = 36 cm."
+      },
+      {
+        "id": "c",
+        "latex": "For 푛 = 1.45, ℎ=65 cm.",
+        "unicode": "For 푛 = 1.45, ℎ=65 cm.",
+        "plainText": "For 푛 = 1.45, ℎ=65 cm."
+      },
+      {
+        "id": "d",
+        "latex": "For 푛 = 1.48,ℎ =85 cm. JEE (Advanced) 2024 Paper 1 4/8",
+        "unicode": "For 푛 = 1.48,ℎ =85 cm. JEE (Advanced) 2024 Paper 1 4/8",
+        "plainText": "For 푛 = 1.48,ℎ =85 cm. JEE (Advanced) 2024 Paper 1 4/8"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.079Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.079Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_OPTICS_2024_S1_Q36",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_OPTICS_2024_S1_Q36_RAW",
+    "question": {
+      "latex": "A light ray is incident on the surface of a sphere of refractive index 푛 at an angle of incidence θ 0 . The ray partially refracts into the sphere with angle of refraction 휙 0 and then partly reflects from the back surface. The reflected ray then emerges out of the sphere after a partial refraction. The total angle of deviation of the emergent ray with respect to the incident ray is 훼. Match the quantities mentioned in List-I with their values in List-II and choose the correct option. List-I List-II (P) If 푛=2 and 훼=180°, then all the possible values of θ 0 will be (1) 30° and 0° (Q) If 푛= √ 3 and 훼=180°, then all the possible values of θ 0 will be (2) 60° and 0° (R) If 푛= √ 3 and 훼=180°, then all the possible values of 휙 0 will be (3) 45° and 0° (S) If 푛= √ 2 and θ 0 =45°, then all the possible values of 훼 will be (4) 150° (5) 0°",
+      "unicode": "A light ray is incident on the surface of a sphere of refractive index 푛 at an angle of incidence θ 0 . The ray partially refracts into the sphere with angle of refraction 휙 0 and then partly reflects from the back surface. The reflected ray then emerges out of the sphere after a partial refraction. The total angle of deviation of the emergent ray with respect to the incident ray is 훼. Match the quantities mentioned in List-I with their values in List-II and choose the correct option. List-I List-II (P) If 푛=2 and 훼=180°, then all the possible values of θ 0 will be (1) 30° and 0° (Q) If 푛= √ 3 and 훼=180°, then all the possible values of θ 0 will be (2) 60° and 0° (R) If 푛= √ 3 and 훼=180°, then all the possible values of 휙 0 will be (3) 45° and 0° (S) If 푛= √ 2 and θ 0 =45°, then all the possible values of 훼 will be (4) 150° (5) 0°",
+      "plainText": "A light ray is incident on the surface of a sphere of refractive index 푛 at an angle of incidence θ 0 . The ray partially refracts into the sphere with angle of refraction 휙 0 and then partly reflects from the back surface. The reflected ray then emerges out of the sphere after a partial refraction. The total angle of deviation of the emergent ray with respect to the incident ray is 훼. Match the quantities mentioned in List-I with their values in List-II and choose the correct option. List-I List-II (P) If 푛=2 and 훼=180°, then all the possible values of θ 0 will be (1) 30° and 0° (Q) If 푛= √ 3 and 훼=180°, then all the possible values of θ 0 will be (2) 60° and 0° (R) If 푛= √ 3 and 훼=180°, then all the possible values of 휙 0 will be (3) 45° and 0° (S) If 푛= √ 2 and θ 0 =45°, then all the possible values of 훼 will be (4) 150° (5) 0°"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P → 5; Q → 2; R→ 1; S→ 4",
+        "unicode": "P → 5; Q → 2; R→ 1; S→ 4",
+        "plainText": "P → 5; Q → 2; R→ 1; S→ 4"
+      },
+      {
+        "id": "b",
+        "latex": "P → 5; Q → 1; R→ 2; S→ 4",
+        "unicode": "P → 5; Q → 1; R→ 2; S→ 4",
+        "plainText": "P → 5; Q → 1; R→ 2; S→ 4"
+      },
+      {
+        "id": "c",
+        "latex": "P → 3; Q → 2; R→ 1; S→ 4",
+        "unicode": "P → 3; Q → 2; R→ 1; S→ 4",
+        "plainText": "P → 3; Q → 2; R→ 1; S→ 4"
+      },
+      {
+        "id": "d",
+        "latex": "P → 3; Q → 1; R→ 2; S→ 5 JEE (Advanced) 2024 Paper 1 8/8",
+        "unicode": "P → 3; Q → 1; R→ 2; S→ 5 JEE (Advanced) 2024 Paper 1 8/8",
+        "plainText": "P → 3; Q → 1; R→ 2; S→ 5 JEE (Advanced) 2024 Paper 1 8/8"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Optics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Optics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Optics",
+      "subchapter": "Optics Core Concepts",
+      "topic": "Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Optics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.080Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.080Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

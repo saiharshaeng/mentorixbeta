@@ -6,33 +6,53 @@
 
 let NB={selTopic:null,genTopic:'',genLoading:false,selSubj:'all'}; // Notebook UI state
 
-function saveToNotebook(topic,auto=false){
+function saveToNotebook(topic, auto = false, isUserAiGen = false) {
   const l = (typeof LS !== 'undefined' && LS) ? LS.lesson : null;
-  if(!l&&!topic)return;
-  const t=topic||l?.topic||'';
-  if(!t)return;
-  // Build note from current lesson if available, otherwise mark for generation
-  const note={
-    title:t,
-    subject:detectSubject(t),
-    savedAt:Date.now(),
-    summary:l?.overview||'',
-    explain:l?.explain||'',
-    formulas:extractFormulas(l?.explain||''),
-    examples:(l?.examples||[]).map(e=>e.t+': '+e.c),
-    points:l?.points||[],
-    fact:l?.fact||'',
-    generated:!!l,
-  };
-  if(!D.notes)D.notes={};
-  // Auto-save should never overwrite a note the user manually crafted or edited.
-  // Only write if: (a) no note exists yet, or (b) existing note was also auto-generated.
-  const existing=D.notes[t];
-  if(auto && existing && !existing.generated){
-    // User has a manually saved note — preserve it, don't overwrite
-    return;
+  if (!l && !topic) return;
+  const t = topic || l?.topic || '';
+  if (!t) return;
+
+  if (!D.notes) D.notes = {};
+  const existing = D.notes[t];
+
+  // PROTECTION RULE: Auto-save from lesson navigation MUST NEVER overwrite existing user notes
+  // or existing AI notes that the student saved or requested.
+  if (auto && existing) {
+    // If existing note is user-edited, user-created, or holds detailed explanation, preserve it!
+    if (existing.userEdited || existing.isUserRequested || !existing.generated || (existing.explain && existing.explain.length > 50)) {
+      return;
+    }
   }
-  D.notes[t]=note;
+
+  // Create version history snapshot if updating an existing note
+  const versions = existing?.versions ? [...existing.versions] : [];
+  if (existing && existing.explain && existing.explain !== (l?.explain || '')) {
+    versions.push({
+      savedAt: existing.savedAt || Date.now(),
+      summary: existing.summary,
+      explain: existing.explain,
+      formulas: existing.formulas,
+      examples: existing.examples
+    });
+  }
+
+  const note = {
+    title: t,
+    subject: detectSubject(t),
+    savedAt: Date.now(),
+    summary: l?.overview || existing?.summary || '',
+    explain: l?.explain || existing?.explain || '',
+    formulas: extractFormulas(l?.explain || ''),
+    examples: (l?.examples || []).map(e => e.t + ': ' + e.c),
+    points: l?.points || existing?.points || [],
+    fact: l?.fact || existing?.fact || '',
+    generated: !isUserAiGen && !!l,
+    isUserRequested: isUserAiGen || existing?.isUserRequested || false,
+    userEdited: existing?.userEdited || false,
+    versions: versions.slice(-5) // Keep last 5 snapshots
+  };
+
+  D.notes[t] = note;
   saveAll();
 
   // Trigger Tio Observation & Memory update
@@ -43,7 +63,7 @@ function saveToNotebook(topic,auto=false){
     window.TioEngine.MemoryEngine.recordInteractionFact(`Saved study notes for ${t}`);
   }
 
-  if(!auto)toast('📓 Saved to AI Notebook!','ok2');
+  if (!auto) toast('📓 Saved to AI Notebook!', 'ok2');
 }
 
 /* detectSubject() → helpers.js */

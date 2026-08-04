@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_WORKPOWERENE_2025_S_Q114",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_WORKPOWERENE_2025_S_Q114_RAW",
+    "question": {
+      "latex": "A force $\\vec{F} = 2\\hat{i} + b\\hat{j} + \\hat{k}$ is applied on a particle and it undergoes a displacement $\\hat{i} - 2\\hat{j} - \\hat{k}$. What will be the value of b, if work done on the particle is zero.",
+      "unicode": "A force vec{F} = 2hat{i} + bhat{j} + hat{k} is applied on a particle and it undergoes a displacement hat{i} - 2hat{j} - hat{k}. What will be the value of b, if work done on the particle is zero.",
+      "plainText": "A force vec{F} = 2hat{i} + bhat{j} + hat{k} is applied on a particle and it undergoes a displacement hat{i} - 2hat{j} - hat{k}. What will be the value of b, if work done on the particle is zero."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "b",
+        "latex": "1/2",
+        "unicode": "1/2",
+        "plainText": "1/2"
+      },
+      {
+        "id": "c",
+        "latex": "1/3",
+        "unicode": "1/3",
+        "plainText": "1/3"
+      },
+      {
+        "id": "d",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Work, Power, Energy",
+      "subchapter": "Work, Power, Energy Core Concepts",
+      "topic": "Work, Power, Energy Primary Topic",
+      "learningOutcome": "Master fundamental principles of Work, Power, Energy",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.044Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.044Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

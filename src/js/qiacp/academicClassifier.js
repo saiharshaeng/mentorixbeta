@@ -1,126 +1,92 @@
 /**
- * qiacp/academicClassifier.js — QIACP Stage 12: Academic Classification Engine
- * Maps every question strictly against official Academic Registry (EXAM_SPECS in exam_specs.js).
- * Formats: Exam -> Subject -> Chapter -> Topic -> Subtopic -> Concepts -> Difficulty Evidence -> Question Type -> PYQ Metadata -> Source Metadata.
- * NEVER invents chapter names or topics. Flags low-confidence matches for Review Queue.
+ * academicClassifier.js — 6-Level Academic Taxonomy & Multi-Tagging Engine
+ * Levels: Subject → Chapter → Subchapter → Topic → Learning Outcome → Question
+ * Includes Tags (Mechanics, Numerical, Formula Based, High Weight) & AI Space
  */
+(function () {
+  'use strict';
 
-'use strict';
+  const CHAPTER_KEYWORDS = {
+    Physics: {
+      'Kinematics': ['velocity', 'acceleration', 'projectile', 'displacement', 'trajectory', 'relative motion'],
+      'Laws of Motion': ['force', 'friction', 'momentum', 'newton', 'tension', 'pulley'],
+      'Work Energy Power': ['work', 'kinetic energy', 'potential energy', 'power', 'conservation of energy'],
+      'Rotational Motion': ['torque', 'moment of inertia', 'angular momentum', 'center of mass'],
+      'Thermodynamics': ['heat', 'entropy', 'enthalpy', 'isothermal', 'adiabatic', 'carnot engine'],
+      'Current Electricity': ['resistor', 'resistance', 'ohm', 'kirchhoff', 'potentiometer', 'current'],
+      'Ray Optics': ['lens', 'mirror', 'refraction', 'focal length', 'prism', 'reflection'],
+      'Modern Physics': ['photon', 'photoelectric', 'work function', 'de broglie', 'nuclear', 'radioactivity']
+    },
+    Chemistry: {
+      'Chemical Bonding': ['dipole', 'hybridization', 'vsepr', 'orbital', 'ionic', 'covalent', 'lewis'],
+      'Chemical Kinetics': ['rate constant', 'order of reaction', 'activation energy', 'arrhenius', 'half life'],
+      'Thermodynamics': ['enthalpy', 'gibbs', 'entropy', 'spontaneous', 'exothermic', 'endothermic'],
+      'Coordination Compounds': ['ligand', 'cfse', 'coordination number', 'isomerism', 'complex ion'],
+      'Organic Chemistry': ['alkane', 'alkene', 'alkyne', 'benzene', 'alcohol', 'aldehyde', 'ketone', 'reaction']
+    },
+    Mathematics: {
+      'Sequences and Series': ['arithmetic progression', 'geometric progression', 'ap', 'gp', 'sum of n terms'],
+      'Matrices and Determinants': ['matrix', 'determinant', 'transpose', 'singular', 'inverse', 'eigen'],
+      'Calculus': ['derivative', 'integration', 'integral', 'limit', 'continuity', 'area under curve'],
+      'Coordinate Geometry': ['straight line', 'circle', 'parabola', 'ellipse', 'hyperbola', 'locus'],
+      'Vector Algebra & 3D': ['vector', 'dot product', 'cross product', 'plane', 'direction cosines']
+    }
+  };
 
-(function(exports) {
+  function classifyTags(text, isNumerical = false) {
+    const tags = new Set();
+    const t = String(text || '').toLowerCase();
 
-  function classifyAcademic(katexResult, options = {}) {
-    
-    const specs = (typeof window !== 'undefined' && window.EXAM_SPECS) ? window.EXAM_SPECS : {};
-    const defaultExamId = options.examId || 'jee_main';
-    const examSpec = specs[defaultExamId] || specs['jee_main'] || {};
+    if (isNumerical || /numerical|find the value of|\=|\d+\.\d+/i.test(t)) tags.add('Numerical');
+    if (/graph|diagram|figure|shown in|plot/i.test(t)) tags.add('Graph');
+    if (/assertion|reason|statement i|statement ii/i.test(t)) tags.add('Assertion');
+    if (/formula|calculate|equation/i.test(t)) tags.add('Formula Based');
+    if (/concept|explain|why|which of the following is true/i.test(t)) tags.add('Conceptual');
+    if (/pyq|official|nta/i.test(t)) tags.add('High Weight');
 
-    const classifiedQuestions = (katexResult.parsedQuestions || []).map(qObj => {
-      const qText = (qObj.questionText || '').toLowerCase();
-      let detectedSubject = 'Physics';
-      let classificationConfidence = 0.95;
+    return Array.from(tags);
+  }
 
-      // Subject detection
-      if (qObj.section) {
-        const secLower = qObj.section.toLowerCase();
-        if (secLower.includes('chem')) detectedSubject = 'Chemistry';
-        else if (secLower.includes('math')) detectedSubject = 'Mathematics';
-        else if (secLower.includes('biol') || secLower.includes('botan') || secLower.includes('zool')) detectedSubject = 'Biology';
-        else if (secLower.includes('phys')) detectedSubject = 'Physics';
-      }
+  function classifyQuestionTaxonomy(questionText, subject, explicitChap) {
+    const text = String(questionText || '').toLowerCase();
+    const subj = subject || 'Physics';
 
-      // Match against EXAM_SPECS syllabus deterministically
-      const subjectSyllabus = examSpec.syllabus ? examSpec.syllabus[detectedSubject] || [] : [];
-      let bestChapterMatch = null;
-      let bestTopicMatch = null;
-      let maxTotalScore = 0;
-
-      subjectSyllabus.forEach(unitObj => {
-        (unitObj.chapters || []).forEach(chapObj => {
-          const chapName = chapObj.name;
-          let chapScore = qText.includes(chapName.toLowerCase()) ? 10 : 0;
-
-          (chapObj.topics || []).forEach(topName => {
-            const topLower = topName.toLowerCase();
-            let topicScore = chapScore;
-
-            if (qText.includes(topLower) || topLower.split(/\s+/).some(w => w.length > 3 && qText.includes(w.replace(/s$/, '')))) {
-              topicScore += 15;
-            } else {
-              const words = topLower.split(/\s+/);
-              words.forEach(w => {
-                const rootWord = w.replace(/s$/, '');
-                if (rootWord.length > 3 && qText.includes(rootWord)) {
-                  topicScore += 5;
-                }
-              });
-            }
-
-            if (topicScore > maxTotalScore) {
-              maxTotalScore = topicScore;
-              bestChapterMatch = chapName;
-              bestTopicMatch = topName;
-            }
-          });
-        });
-      });
-
-      if (maxTotalScore < 3) {
-        classificationConfidence = 0.45;
-        if (subjectSyllabus.length > 0 && subjectSyllabus[0].chapters.length > 0) {
-          bestChapterMatch = subjectSyllabus[0].chapters[0].name;
-          bestTopicMatch = subjectSyllabus[0].chapters[0].topics[0] || 'General';
-        } else {
-          bestChapterMatch = 'General Conceptual Fundamentals';
-          bestTopicMatch = 'Basic Principles';
+    let chapter = explicitChap || 'General';
+    if (!explicitChap || explicitChap === 'General') {
+      const maps = CHAPTER_KEYWORDS[subj] || {};
+      for (const [chapName, keywords] of Object.entries(maps)) {
+        if (keywords.some(kw => text.includes(kw))) {
+          chapter = chapName;
+          break;
         }
       }
-
-      const academicClassification = {
-        exam: examSpec.name || 'JEE Main',
-        examId: defaultExamId,
-        subject: detectedSubject,
-        chapter: bestChapterMatch,
-        topic: bestTopicMatch,
-        subtopic: bestTopicMatch,
-        concepts: [bestTopicMatch],
-        difficultyEvidence: {
-          perceivedDifficulty: qObj.questionType === 'NUMERICAL' ? 'Hard' : 'Medium',
-          conceptualDepth: 'High'
-        },
-        questionType: qObj.questionType || 'MCQ_SINGLE',
-        pyqMetadata: {
-          isPYQ: options.isPYQ !== false,
-          examYear: options.examYear || 2025,
-          examSession: options.examSession || 'January',
-          shift: options.shift || 'Shift 1'
-        },
-        sourceMetadata: {
-          sourceName: options.sourceName || 'NTA Official Paper',
-          paperTitle: options.paperTitle || `${examSpec.name || 'JEE Main'} Official Question Paper`,
-          pageNumber: qObj.pageNumber || 1
-        },
-        confidence: classificationConfidence
-      };
-
-      const flagged = classificationConfidence < 0.70 || qObj.flaggedForReview;
-      const reviewReason = classificationConfidence < 0.70 ? `Low-confidence classification (${Math.round(classificationConfidence * 100)}%)` : qObj.reviewReason;
-
-      return {
-        ...qObj,
-        academicClassification,
-        flaggedForReview: flagged,
-        reviewReason: reviewReason || null
-      };
-    });
+    }
 
     return {
-      ...katexResult,
-      parsedQuestions: classifiedQuestions,
-      stage: 'ACADEMICALLY_CLASSIFIED'
+      subject: subj,
+      chapter: chapter,
+      subchapter: `${chapter} Core Concepts`,
+      topic: `${chapter} Primary Topic`,
+      learningOutcome: `Master fundamental principles of ${chapter}`,
+      tags: classifyTags(text),
+      ai: {
+        concepts: [],
+        prerequisites: [],
+        learningObjectives: []
+      }
     };
   }
 
-  exports.academicClassifier = { classifyAcademic };
+  const AcademicClassifier = {
+    classifyQuestionTaxonomy,
+    classifyTags,
+    CHAPTER_KEYWORDS
+  };
 
-})(typeof module !== 'undefined' && module.exports ? module.exports : (window.QIACP = window.QIACP || {}));
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = AcademicClassifier;
+  }
+  if (typeof window !== 'undefined') {
+    window.AcademicClassifier = AcademicClassifier;
+  }
+})();

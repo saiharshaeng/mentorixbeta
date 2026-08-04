@@ -1,0 +1,493 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2025_S_Q78",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2025_S_Q78_RAW",
+    "question": {
+      "latex": "Let P($4,4\\sqrt{3}$) be a point on the parabola $y^2 = 4ax$ and PQ be a focal chord of the parabola. If M and N are the foot of perpendiculars drawn from P and Q respectively on the directrix of the parabola, then the area of the quadrilateral PQMN is equal to:",
+      "unicode": "Let P(4,4√(3)) be a point on the parabola y² = 4ax and PQ be a focal chord of the parabola. If M and N are the foot of perpendiculars drawn from P and Q respectively on the directrix of the parabola, then the area of the quadrilateral PQMN is equal to:",
+      "plainText": "Let P(4,4sqrt(3)) be a point on the parabola y^2 = 4ax and PQ be a focal chord of the parabola. If M and N are the foot of perpendiculars drawn from P and Q respectively on the directrix of the parabola, then the area of the quadrilateral PQMN is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{263\\sqrt{3}}{8}$",
+        "unicode": "frac{263√(3)}{8}",
+        "plainText": "frac{263sqrt(3)}{8}"
+      },
+      {
+        "id": "b",
+        "latex": "$17\\sqrt{3}$",
+        "unicode": "17√(3)",
+        "plainText": "17sqrt(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{343\\sqrt{3}}{8}$",
+        "unicode": "frac{343√(3)}{8}",
+        "plainText": "frac{343sqrt(3)}{8}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{34\\sqrt{3}}{3}$",
+        "unicode": "frac{34√(3)}{3}",
+        "plainText": "frac{34sqrt(3)}{3}"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "subchapter": "Conic Sections Core Concepts",
+      "topic": "Conic Sections Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.042Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.042Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2025_S_Q91",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2025_S_Q91_RAW",
+    "question": {
+      "latex": "Let E : $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$, a > b and H : $\\frac{x^2}{A^2} - \\frac{y^2}{B^2} = 1$. Let the distance between the foci of E and the foci of H be $2\\sqrt{3}$. If a - A = 2, and the ratio of the eccentricities of E and H is 1/3, then the sum of the lengths of their latus rectums is equal to :",
+      "unicode": "Let E : (x²/a²) + (y²/b²) = 1, a > b and H : (x²/A²) - (y²/B²) = 1. Let the distance between the foci of E and the foci of H be 2√(3). If a - A = 2, and the ratio of the eccentricities of E and H is 1/3, then the sum of the lengths of their latus rectums is equal to :",
+      "plainText": "Let E : (x^2)/(a^2) + (y^2)/(b^2) = 1, a > b and H : (x^2)/(A^2) - (y^2)/(B^2) = 1. Let the distance between the foci of E and the foci of H be 2sqrt(3). If a - A = 2, and the ratio of the eccentricities of E and H is 1/3, then the sum of the lengths of their latus rectums is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "b",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      },
+      {
+        "id": "c",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "subchapter": "Conic Sections Core Concepts",
+      "topic": "Conic Sections Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q160",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q160_RAW",
+    "question": {
+      "latex": "Let an ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, a < b$, pass through the point $(4, 3)$ and have eccentricity $\\frac{\\sqrt{5}}{3}$. Then the length of its latus rectum is :",
+      "unicode": "Let an ellipse (x²/a²) + (y²/b²) = 1, a < b, pass through the point (4, 3) and have eccentricity frac{√(5)}{3}. Then the length of its latus rectum is :",
+      "plainText": "Let an ellipse (x^2)/(a^2) + (y^2)/(b^2) = 1, a < b, pass through the point (4, 3) and have eccentricity frac{sqrt(5)}{3}. Then the length of its latus rectum is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{4\\sqrt{5}}{3}$",
+        "unicode": "frac{4√(5)}{3}",
+        "plainText": "frac{4sqrt(5)}{3}"
+      },
+      {
+        "id": "b",
+        "latex": "$2\\sqrt{5}$",
+        "unicode": "2√(5)",
+        "plainText": "2sqrt(5)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{7\\sqrt{5}}{3}$",
+        "unicode": "frac{7√(5)}{3}",
+        "plainText": "frac{7sqrt(5)}{3}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{8\\sqrt{5}}{3}$",
+        "unicode": "frac{8√(5)}{3}",
+        "plainText": "frac{8sqrt(5)}{3}"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "subchapter": "Conic Sections Core Concepts",
+      "topic": "Conic Sections Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q322",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q322_RAW",
+    "question": {
+      "latex": "Consider the parabola $P : y^2 = 4kx$ and the ellipse $E : \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$. Let the line segment joining the points of intersection of $P$ and $E$, be their latus rectums. If the eccentricity of $E$ is $e$, then $e^2 + 2\\sqrt{2}$ is equal to \\_\\_\\_\\_\\_.",
+      "unicode": "Consider the parabola P : y² = 4kx and the ellipse E : (x²/a²) + (y²/b²) = 1. Let the line segment joining the points of intersection of P and E, be their latus rectums. If the eccentricity of E is e, then e² + 2√(2) is equal to _____.",
+      "plainText": "Consider the parabola P : y^2 = 4kx and the ellipse E : (x^2)/(a^2) + (y^2)/(b^2) = 1. Let the line segment joining the points of intersection of P and E, be their latus rectums. If the eccentricity of E is e, then e^2 + 2sqrt(2) is equal to _____."
+    },
+    "options": [],
+    "answers": [
+      "2"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "subchapter": "Conic Sections Core Concepts",
+      "topic": "Conic Sections Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2025_S1_Q63",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2025_S1_Q63_RAW",
+    "question": {
+      "latex": "Let P$$4,4\\sqrt{3}$$ be a point on the parabola $y^2 = 4ax$ and PQ be a focal chord of the parabola. If M and N are the foot of perpendiculars drawn from P and Q respectively on the directrix of the parabola, then the area of the quadrilateral PQMN is equal to:",
+      "unicode": "Let P4,4√(3) be a point on the parabola y² = 4ax and PQ be a focal chord of the parabola. If M and N are the foot of perpendiculars drawn from P and Q respectively on the directrix of the parabola, then the area of the quadrilateral PQMN is equal to:",
+      "plainText": "Let P4,4sqrt(3) be a point on the parabola y^2 = 4ax and PQ be a focal chord of the parabola. If M and N are the foot of perpendiculars drawn from P and Q respectively on the directrix of the parabola, then the area of the quadrilateral PQMN is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{263\\sqrt{3}}{8}$",
+        "unicode": "frac{263√(3)}{8}",
+        "plainText": "frac{263sqrt(3)}{8}"
+      },
+      {
+        "id": "b",
+        "latex": "$17\\sqrt{3}$",
+        "unicode": "17√(3)",
+        "plainText": "17sqrt(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{343\\sqrt{3}}{8}$",
+        "unicode": "frac{343√(3)}{8}",
+        "plainText": "frac{343sqrt(3)}{8}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{34\\sqrt{3}}{3}$",
+        "unicode": "frac{34√(3)}{3}",
+        "plainText": "frac{34sqrt(3)}{3}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "subchapter": "Conic Sections Core Concepts",
+      "topic": "Conic Sections Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.525Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.525Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S1_Q130",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S1_Q130_RAW",
+    "question": {
+      "latex": "Let an ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, a < b$, pass through the point $$4, 3$$ and have eccentricity $\\frac{\\sqrt{5}}{3}$. Then the length of its latus rectum is :",
+      "unicode": "Let an ellipse (x²/a²) + (y²/b²) = 1, a < b, pass through the point 4, 3 and have eccentricity frac{√(5)}{3}. Then the length of its latus rectum is :",
+      "plainText": "Let an ellipse (x^2)/(a^2) + (y^2)/(b^2) = 1, a < b, pass through the point 4, 3 and have eccentricity frac{sqrt(5)}{3}. Then the length of its latus rectum is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{4\\sqrt{5}}{3}$",
+        "unicode": "frac{4√(5)}{3}",
+        "plainText": "frac{4sqrt(5)}{3}"
+      },
+      {
+        "id": "b",
+        "latex": "$2\\sqrt{5}$",
+        "unicode": "2√(5)",
+        "plainText": "2sqrt(5)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{7\\sqrt{5}}{3}$",
+        "unicode": "frac{7√(5)}{3}",
+        "plainText": "frac{7sqrt(5)}{3}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{8\\sqrt{5}}{3}$",
+        "unicode": "frac{8√(5)}{3}",
+        "plainText": "frac{8sqrt(5)}{3}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since $a < b$, the major axis is along the y-axis, and the relation for eccentricity is $a^2 = b^2(1 - e^2)$.\nGiven $e = \\frac{\\sqrt{5}}{3}$, we have $e^2 = \\frac{5}{9}$.\n$a^2 = b^2 \\left(1 - \\frac{5}{9}\\right) = \\frac{4b^2}{9}$.\nThe ellipse passes through $(4, 3)$, so we substitute $x=4$ and $y=3$ into the ellipse equation:\n$\\frac{16}{a^2} + \\frac{9}{b^2} = 1$\nSubstituting $a^2 = \\frac{4b^2}{9}$:\n$\\frac{16}{(4b^2/9)} + \\frac{9}{b^2} = 1 \\implies \\frac{36}{b^2} + \\frac{9}{b^2} = 1 \\implies \\frac{45}{b^2} = 1 \\implies b^2 = 45$.\nThen $a^2 = \\frac{4(45)}{9} = 20$.\nThe length of the latus rectum for $a < b$ is $\\frac{2a^2}{b}$.\nWe have $a^2 = 20$ and $b = \\sqrt{45} = 3\\sqrt{5}$.\nLatus Rectum = $\\frac{2 \\times 20}{3\\sqrt{5}} = \\frac{40}{3\\sqrt{5}} = \\frac{8\\sqrt{5}}{3}$.",
+      "unicode": "Since a < b, the major axis is along the y-axis, and the relation for eccentricity is a² = b²(1 - e²).\nGiven e = frac{√(5)}{3}, we have e² = (5/9).\na² = b² left(1 - (5/9)right) = (4b²/9).\nThe ellipse passes through (4, 3), so we substitute x=4 and y=3 into the ellipse equation:\n(16/a²) + (9/b²) = 1\nSubstituting a² = (4b²/9):\n(16/(4b²/9)) + (9/b²) = 1 implies (36/b²) + (9/b²) = 1 implies (45/b²) = 1 implies b² = 45.\nThen a² = (4(45)/9) = 20.\nThe length of the latus rectum for a < b is (2a²/b).\nWe have a² = 20 and b = √(45) = 3√(5).\nLatus Rectum = (2 × 20/3√(5)) = (40/3√(5)) = frac{8√(5)}{3}.",
+      "plainText": "Since a < b, the major axis is along the y-axis, and the relation for eccentricity is a^2 = b^2(1 - e^2). Given e = frac{sqrt(5)}{3}, we have e^2 = (5)/(9). a^2 = b^2 left(1 - (5)/(9)right) = (4b^2)/(9). The ellipse passes through (4, 3), so we substitute x=4 and y=3 into the ellipse equation: (16)/(a^2) + (9)/(b^2) = 1 Substituting a^2 = (4b^2)/(9): (16)/((4b^2/9)) + (9)/(b^2) = 1 implies (36)/(b^2) + (9)/(b^2) = 1 implies (45)/(b^2) = 1 implies b^2 = 45. Then a^2 = (4(45))/(9) = 20. The length of the latus rectum for a < b is (2a^2)/(b). We have a^2 = 20 and b = sqrt(45) = 3sqrt(5). Latus Rectum = (2 times 20)/(3sqrt(5)) = (40)/(3sqrt(5)) = frac{8sqrt(5)}{3}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "subchapter": "Conic Sections Core Concepts",
+      "topic": "Conic Sections Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.529Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.529Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

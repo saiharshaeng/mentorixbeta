@@ -1,0 +1,571 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q169",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q169_RAW",
+    "question": {
+      "latex": "Let $[\\cdot]$ denote the greatest integer function. Then the value of $\\int_0^3 \\left( \\frac{e^x + e^{-x}}{[x]!} \\right) dx$ is :",
+      "unicode": "Let [·] denote the greatest integer function. Then the value of int_0³ left( frac{e^x + e^{-x}}{[x]!} right) dx is :",
+      "plainText": "Let [cdot] denote the greatest integer function. Then the value of int_0^3 left( frac{e^x + e^{-x}}{[x]!} right) dx is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e^2 + e^3 - \\frac{1}{e^2} - \\frac{1}{e^3}$",
+        "unicode": "e² + e³ - (1/e²) - (1/e³)",
+        "plainText": "e^2 + e^3 - (1)/(e^2) - (1)/(e^3)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{1}{2} \\left( e^2 + e^3 - \\frac{1}{e^2} - \\frac{1}{e^3} \\right)$",
+        "unicode": "(1/2) left( e² + e³ - (1/e²) - (1/e³) right)",
+        "plainText": "(1)/(2) left( e^2 + e^3 - (1)/(e^2) - (1)/(e^3) right)"
+      },
+      {
+        "id": "c",
+        "latex": "$e^2 + e^3 - \\frac{1}{2e^2} - \\frac{1}{2e^3}$",
+        "unicode": "e² + e³ - (1/2e²) - (1/2e³)",
+        "plainText": "e^2 + e^3 - (1)/(2e^2) - (1)/(2e^3)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{1}{2}(e^2 + e^3) - \\frac{1}{e^2} - \\frac{1}{e^3}$",
+        "unicode": "(1/2)(e² + e³) - (1/e²) - (1/e³)",
+        "plainText": "(1)/(2)(e^2 + e^3) - (1)/(e^2) - (1)/(e^3)"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q175",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q175_RAW",
+    "question": {
+      "latex": "If $\\alpha = \\int_0^{2\\sqrt{3}} \\log_2(x^2 + 4) dx + \\int_2^4 \\sqrt{2^x - 4} dx$, then $\\alpha^2$ is equal to _______.",
+      "unicode": "If α = int_0^{2√(3)} log_2(x² + 4) dx + int_2^4 √(2^x - 4) dx, then α² is equal to _______.",
+      "plainText": "If alpha = int_0^{2sqrt(3)} log_2(x^2 + 4) dx + int_2^4 sqrt(2^x - 4) dx, then alpha^2 is equal to _______."
+    },
+    "options": [],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q242",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q242_RAW",
+    "question": {
+      "latex": "The value of $\\int_0^{20\\pi} (\\sin^4 x + \\cos^4 x) dx$ is equal to:",
+      "unicode": "The value of int_0^{20π} (sin^4 x + cos^4 x) dx is equal to:",
+      "plainText": "The value of int_0^{20pi} (sin^4 x + cos^4 x) dx is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{15\\pi}{2}$",
+        "unicode": "(15π/2)",
+        "plainText": "(15pi)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$25\\pi$",
+        "unicode": "25π",
+        "plainText": "25pi"
+      },
+      {
+        "id": "c",
+        "latex": "$15\\pi$",
+        "unicode": "15π",
+        "plainText": "15pi"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{25\\pi}{2}$",
+        "unicode": "(25π/2)",
+        "plainText": "(25pi)/(2)"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q319",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S_Q319_RAW",
+    "question": {
+      "latex": "Let $\\int_{-2}^{2} (|\\sin x| + [x \\sin x]) dx = 2(3 - \\cos 2) + \\beta$, where $[\\cdot]$ is the greatest integer function. Then $\\beta \\sin \\left( \\frac{\\beta}{2} \\right)$ equals:",
+      "unicode": "Let int_{-2}^{2} (|sin x| + [x sin x]) dx = 2(3 - cos 2) + β, where [·] is the greatest integer function. Then β sin left( (β/2) right) equals:",
+      "plainText": "Let int_{-2}^{2} (|sin x| + [x sin x]) dx = 2(3 - cos 2) + beta, where [cdot] is the greatest integer function. Then beta sin left( (beta)/(2) right) equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "d",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S1_Q139",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S1_Q139_RAW",
+    "question": {
+      "latex": "Let $[\\cdot]$ denote the greatest integer function. Then the value of $\\int_0^3 \\left$ \\frac{e^x + e^{-x}}{[x]!} \\right$ dx$ is :",
+      "unicode": "Let [·] denote the greatest integer function. Then the value of int_0³ left frac{e^x + e^{-x}}{[x]!} right dx is :",
+      "plainText": "Let [cdot] denote the greatest integer function. Then the value of int_0^3 left frac{e^x + e^{-x}}{[x]!} right dx is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$e^2 + e^3 - \\frac{1}{e^2} - \\frac{1}{e^3}$",
+        "unicode": "e² + e³ - (1/e²) - (1/e³)",
+        "plainText": "e^2 + e^3 - (1)/(e^2) - (1)/(e^3)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{1}{2} \\left( e^2 + e^3 - \\frac{1}{e^2} - \\frac{1}{e^3} \\right)$",
+        "unicode": "(1/2) left( e² + e³ - (1/e²) - (1/e³) right)",
+        "plainText": "(1)/(2) left( e^2 + e^3 - (1)/(e^2) - (1)/(e^3) right)"
+      },
+      {
+        "id": "c",
+        "latex": "$e^2 + e^3 - \\frac{1}{2e^2} - \\frac{1}{2e^3}$",
+        "unicode": "e² + e³ - (1/2e²) - (1/2e³)",
+        "plainText": "e^2 + e^3 - (1)/(2e^2) - (1)/(2e^3)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{1}{2}(e^2 + e^3) - \\frac{1}{e^2} - \\frac{1}{e^3}$",
+        "unicode": "(1/2)(e² + e³) - (1/e²) - (1/e³)",
+        "plainText": "(1)/(2)(e^2 + e^3) - (1)/(e^2) - (1)/(e^3)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "We break the integral at the integer points inside the interval $(0, 3)$ since the greatest integer function $[x]$ changes values at integers.\n$I = \\int_0^1 \\frac{e^x + e^{-x}}{0!} dx + \\int_1^2 \\frac{e^x + e^{-x}}{1!} dx + \\int_2^3 \\frac{e^x + e^{-x}}{2!} dx$\nSince $0! = 1$ and $1! = 1$, we can combine the first two intervals:\n$I = \\int_0^2 (e^x + e^{-x}) dx + \\frac{1}{2} \\int_2^3 (e^x + e^{-x}) dx$\nIntegrating:\n$\\int_0^2 (e^x + e^{-x}) dx = [e^x - e^{-x}]_0^2 = (e^2 - e^{-2}) - (e^0 - e^0) = e^2 - e^{-2}$\n$\\frac{1}{2} \\int_2^3 (e^x + e^{-x}) dx = \\frac{1}{2} [e^x - e^{-x}]_2^3 = \\frac{1}{2} ((e^3 - e^{-3}) - (e^2 - e^{-2}))$\nNow add them together:\n$I = e^2 - e^{-2} + \\frac{1}{2} e^3 - \\frac{1}{2} e^{-3} - \\frac{1}{2} e^2 + \\frac{1}{2} e^{-2}$\n$I = \\frac{1}{2} e^2 + \\frac{1}{2} e^3 - \\frac{1}{2} e^{-2} - \\frac{1}{2} e^{-3}$\n$I = \\frac{1}{2} \\left( e^2 + e^3 - \\frac{1}{e^2} - \\frac{1}{e^3} \\right)$",
+      "unicode": "We break the integral at the integer points inside the interval (0, 3) since the greatest integer function [x] changes values at integers.\nI = int_0^1 frac{e^x + e^{-x}}{0!} dx + int_1² frac{e^x + e^{-x}}{1!} dx + int_2³ frac{e^x + e^{-x}}{2!} dx\nSince 0! = 1 and 1! = 1, we can combine the first two intervals:\nI = int_0² (e^x + e^{-x}) dx + (1/2) int_2³ (e^x + e^{-x}) dx\nIntegrating:\nint_0² (e^x + e^{-x}) dx = [e^x - e^{-x}]_0² = (e² - e^{-2}) - (e^0 - e^0) = e² - e^{-2}\n(1/2) int_2³ (e^x + e^{-x}) dx = (1/2) [e^x - e^{-x}]_2³ = (1/2) ((e³ - e^{-3}) - (e² - e^{-2}))\nNow add them together:\nI = e² - e^{-2} + (1/2) e³ - (1/2) e^{-3} - (1/2) e² + (1/2) e^{-2}\nI = (1/2) e² + (1/2) e³ - (1/2) e^{-2} - (1/2) e^{-3}\nI = (1/2) left( e² + e³ - (1/e²) - (1/e³) right)",
+      "plainText": "We break the integral at the integer points inside the interval (0, 3) since the greatest integer function [x] changes values at integers. I = int_0^1 frac{e^x + e^{-x}}{0!} dx + int_1^2 frac{e^x + e^{-x}}{1!} dx + int_2^3 frac{e^x + e^{-x}}{2!} dx Since 0! = 1 and 1! = 1, we can combine the first two intervals: I = int_0^2 (e^x + e^{-x}) dx + (1)/(2) int_2^3 (e^x + e^{-x}) dx Integrating: int_0^2 (e^x + e^{-x}) dx = [e^x - e^{-x}]_0^2 = (e^2 - e^{-2}) - (e^0 - e^0) = e^2 - e^{-2} (1)/(2) int_2^3 (e^x + e^{-x}) dx = (1)/(2) [e^x - e^{-x}]_2^3 = (1)/(2) ((e^3 - e^{-3}) - (e^2 - e^{-2})) Now add them together: I = e^2 - e^{-2} + (1)/(2) e^3 - (1)/(2) e^{-3} - (1)/(2) e^2 + (1)/(2) e^{-2} I = (1)/(2) e^2 + (1)/(2) e^3 - (1)/(2) e^{-2} - (1)/(2) e^{-3} I = (1)/(2) left( e^2 + e^3 - (1)/(e^2) - (1)/(e^3) right)"
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S1_Q197",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S1_Q197_RAW",
+    "question": {
+      "latex": "The value of $\\int_0^{20\\pi} $\\sin^4 x + \\cos^4 x$ dx$ is equal to:",
+      "unicode": "The value of int_0^{20π} sin^4 x + cos^4 x dx is equal to:",
+      "plainText": "The value of int_0^{20pi} sin^4 x + cos^4 x dx is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{15\\pi}{2}$",
+        "unicode": "(15π/2)",
+        "plainText": "(15pi)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$25\\pi$",
+        "unicode": "25π",
+        "plainText": "25pi"
+      },
+      {
+        "id": "c",
+        "latex": "$15\\pi$",
+        "unicode": "15π",
+        "plainText": "15pi"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{25\\pi}{2}$",
+        "unicode": "(25π/2)",
+        "plainText": "(25pi)/(2)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The integrand simplifies to $\\sin^4 x + \\cos^4 x = (\\sin^2 x + \\cos^2 x)^2 - 2\\sin^2 x \\cos^2 x = 1 - \\frac{1}{2} \\sin^2 2x = 1 - \\frac{1}{4} (1 - \\cos 4x) = \\frac{3}{4} + \\frac{1}{4} \\cos 4x$.\nThus $\\int_0^{20\\pi} (\\frac{3}{4} + \\frac{1}{4} \\cos 4x) dx = \\left[ \\frac{3}{4}x + \\frac{1}{16}\\sin 4x \\right]_0^{20\\pi}$.\nSince $\\sin(80\\pi) = 0$, the value is just $\\frac{3}{4} \\times 20\\pi = 15\\pi$.",
+      "unicode": "The integrand simplifies to sin^4 x + cos^4 x = (sin² x + cos² x)² - 2sin² x cos² x = 1 - (1/2) sin² 2x = 1 - (1/4) (1 - cos 4x) = (3/4) + (1/4) cos 4x.\nThus int_0^{20π} ((3/4) + (1/4) cos 4x) dx = left[ (3/4)x + (1/16)sin 4x right]_0^{20π}.\nSince sin(80π) = 0, the value is just (3/4) × 20π = 15π.",
+      "plainText": "The integrand simplifies to sin^4 x + cos^4 x = (sin^2 x + cos^2 x)^2 - 2sin^2 x cos^2 x = 1 - (1)/(2) sin^2 2x = 1 - (1)/(4) (1 - cos 4x) = (3)/(4) + (1)/(4) cos 4x. Thus int_0^{20pi} ((3)/(4) + (1)/(4) cos 4x) dx = left[ (3)/(4)x + (1)/(16)sin 4x right]_0^{20pi}. Since sin(80pi) = 0, the value is just (3)/(4) times 20pi = 15pi."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_DEFINITEINTE_2026_S1_Q259",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_DEFINITEINTE_2026_S1_Q259_RAW",
+    "question": {
+      "latex": "Let $\\int_{-2}^{2} $|\\sin x| + [x \\sin x]$ dx = 2$3 - \\cos 2$ + \\beta$, where $[\\cdot]$ is the greatest integer function. Then $\\beta \\sin \\left$ \\frac{\\beta}{2} \\right$$ equals:",
+      "unicode": "Let int_{-2}^{2} |sin x| + [x sin x] dx = 23 - cos 2 + β, where [·] is the greatest integer function. Then β sin left (β/2) right equals:",
+      "plainText": "Let int_{-2}^{2} |sin x| + [x sin x] dx = 23 - cos 2 + beta, where [cdot] is the greatest integer function. Then beta sin left (beta)/(2) right equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "d",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Split the integral into two even functions: $I_1 = \\int_{-2}^{2} |\\sin x| dx$ and $I_2 = \\int_{-2}^{2} [x \\sin x] dx$.\n$I_1 = 2 \\int_0^2 \\sin x \\, dx = 2[-\\cos x]_0^2 = 2(1 - \\cos 2)$.\nFor $I_2$, note that $x \\sin x$ is continuous on $[0, 2]$. Its maximum value is at $x \\approx 2.028$, and $2 \\sin 2 \\approx 2(0.909) = 1.818$. So for $x \\in [0, 2]$, $0 \\le x \\sin x < 2$.\n$x \\sin x = 1$ has a unique root $x_1$ in $(0, 2)$.\nThen $[x \\sin x] = 0$ for $x \\in [0, x_1)$, and $[x \\sin x] = 1$ for $x \\in (x_1, 2]$.\nThus, $I_2 = 2 \\int_0^2 [x \\sin x] dx = 2 \\int_{x_1}^2 1 \\, dx = 2(2 - x_1)$.\nSumming them: $I_1 + I_2 = 2 - 2\\cos 2 + 4 - 2x_1 = 2(3 - \\cos 2) - 2x_1$.\nComparing with $2(3 - \\cos 2) + \\beta$, we get $\\beta = -2x_1$.\nThe problem requires $\\beta \\sin(\\beta/2) = (-2x_1) \\sin(-x_1) = 2x_1 \\sin x_1$.\nBy definition of $x_1$, $x_1 \\sin x_1 = 1$.\nThus, $\\beta \\sin(\\beta/2) = 2(1) = 2$.",
+      "unicode": "Split the integral into two even functions: I_1 = int_{-2}^{2} |sin x| dx and I_2 = int_{-2}^{2} [x sin x] dx.\nI_1 = 2 int_0² sin x , dx = 2[-cos x]_0² = 2(1 - cos 2).\nFor I_2, note that x sin x is continuous on [0, 2]. Its maximum value is at x approx 2.028, and 2 sin 2 approx 2(0.909) = 1.818. So for x in [0, 2], 0 le x sin x < 2.\nx sin x = 1 has a unique root x_1 in (0, 2).\nThen [x sin x] = 0 for x in [0, x_1), and [x sin x] = 1 for x in (x_1, 2].\nThus, I_2 = 2 int_0² [x sin x] dx = 2 int_{x_1}² 1 , dx = 2(2 - x_1).\nSumming them: I_1 + I_2 = 2 - 2cos 2 + 4 - 2x_1 = 2(3 - cos 2) - 2x_1.\nComparing with 2(3 - cos 2) + β, we get β = -2x_1.\nThe problem requires β sin(β/2) = (-2x_1) sin(-x_1) = 2x_1 sin x_1.\nBy definition of x_1, x_1 sin x_1 = 1.\nThus, β sin(β/2) = 2(1) = 2.",
+      "plainText": "Split the integral into two even functions: I_1 = int_{-2}^{2} |sin x| dx and I_2 = int_{-2}^{2} [x sin x] dx. I_1 = 2 int_0^2 sin x , dx = 2[-cos x]_0^2 = 2(1 - cos 2). For I_2, note that x sin x is continuous on [0, 2]. Its maximum value is at x approx 2.028, and 2 sin 2 approx 2(0.909) = 1.818. So for x in [0, 2], 0 le x sin x < 2. x sin x = 1 has a unique root x_1 in (0, 2). Then [x sin x] = 0 for x in [0, x_1), and [x sin x] = 1 for x in (x_1, 2]. Thus, I_2 = 2 int_0^2 [x sin x] dx = 2 int_{x_1}^2 1 , dx = 2(2 - x_1). Summing them: I_1 + I_2 = 2 - 2cos 2 + 4 - 2x_1 = 2(3 - cos 2) - 2x_1. Comparing with 2(3 - cos 2) + beta, we get beta = -2x_1. The problem requires beta sin(beta/2) = (-2x_1) sin(-x_1) = 2x_1 sin x_1. By definition of x_1, x_1 sin x_1 = 1. Thus, beta sin(beta/2) = 2(1) = 2."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Definite Integration",
+      "subchapter": "Definite Integration Core Concepts",
+      "topic": "Definite Integration Primary Topic",
+      "learningOutcome": "Master fundamental principles of Definite Integration",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.539Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.539Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

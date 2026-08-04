@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_KINETICTHEOR_2026_S1_Q209",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_KINETICTHEOR_2026_S1_Q209_RAW",
+    "question": {
+      "latex": "A mixture of carbon dioxide and oxygen has volume $8310\\text{ cm}^3$, temperature $300\\text{ K}$, pressure $100\\text{ kPa}$ and mass $13.2\\text{ g}$. The number of moles of carbon dioxide and oxygen gases in the mixture respectively are _______. $Assume both carbon dioxide and oxygen gases behave like ideal gases$ [$R = 8.31\\text{ J/mol.K}$]",
+      "unicode": "A mixture of carbon dioxide and oxygen has volume 8310text{ cm}³, temperature 300text{ K}, pressure 100text{ kPa} and mass 13.2text{ g}. The number of moles of carbon dioxide and oxygen gases in the mixture respectively are _______. Assume both carbon dioxide and oxygen gases behave like ideal gases [R = 8.31text{ J/mol.K}]",
+      "plainText": "A mixture of carbon dioxide and oxygen has volume 8310text{ cm}^3, temperature 300text{ K}, pressure 100text{ kPa} and mass 13.2text{ g}. The number of moles of carbon dioxide and oxygen gases in the mixture respectively are _______. Assume both carbon dioxide and oxygen gases behave like ideal gases [R = 8.31text{ J/mol.K}]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$0.15$ and $0.18$",
+        "unicode": "0.15 and 0.18",
+        "plainText": "0.15 and 0.18"
+      },
+      {
+        "id": "b",
+        "latex": "$0.25$ and $0.08$",
+        "unicode": "0.25 and 0.08",
+        "plainText": "0.25 and 0.08"
+      },
+      {
+        "id": "c",
+        "latex": "$0.21$ and $0.12$",
+        "unicode": "0.21 and 0.12",
+        "plainText": "0.21 and 0.12"
+      },
+      {
+        "id": "d",
+        "latex": "$0.13$ and $0.20$",
+        "unicode": "0.13 and 0.20",
+        "plainText": "0.13 and 0.20"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "From ideal gas equation, $PV = nRT$. Total moles $n = \\frac{PV}{RT}$.\n$P = 100 \\times 10^3\\text{ Pa}$, $V = 8310 \\times 10^{-6}\\text{ m}^3 = 8.31 \times 10^{-3}\\text{ m}^3$.\n$n = \\frac{10^5 \\times 8.31 \\times 10^{-3}}{8.31 \\times 300} = \\frac{831}{2493} = \\frac{1}{3} = 0.333$ moles.\nLet moles of $CO_2$ be $x$ and $O_2$ be $y$. Then $x + y = 1/3$. Total mass is $44x + 32y = 13.2$.\nSubstituting $y = 1/3 - x$:\n$44x + 32(1/3 - x) = 13.2 \\implies 12x + 10.667 = 13.2 \\implies 12x = 2.533 \\implies x \\approx 0.211$.\nThen $y = 0.333 - 0.211 = 0.122$.\nHence, the moles are approximately $0.21$ and $0.12$.",
+      "unicode": "From ideal gas equation, PV = nRT. Total moles n = (PV/RT).\nP = 100 × 10³text{ Pa}, V = 8310 × 10^{-6}text{ m}³ = 8.31 \times 10^{-3}text{ m}³.\nn = frac{10^5 × 8.31 × 10^{-3}}{8.31 × 300} = (831/2493) = (1/3) = 0.333 moles.\nLet moles of CO_2 be x and O_2 be y. Then x + y = 1/3. Total mass is 44x + 32y = 13.2.\nSubstituting y = 1/3 - x:\n44x + 32(1/3 - x) = 13.2 implies 12x + 10.667 = 13.2 implies 12x = 2.533 implies x approx 0.211.\nThen y = 0.333 - 0.211 = 0.122.\nHence, the moles are approximately 0.21 and 0.12.",
+      "plainText": "From ideal gas equation, PV = nRT. Total moles n = (PV)/(RT). P = 100 times 10^3text{ Pa}, V = 8310 times 10^{-6}text{ m}^3 = 8.31 imes 10^{-3}text{ m}^3. n = frac{10^5 times 8.31 times 10^{-3}}{8.31 times 300} = (831)/(2493) = (1)/(3) = 0.333 moles. Let moles of CO_2 be x and O_2 be y. Then x + y = 1/3. Total mass is 44x + 32y = 13.2. Substituting y = 1/3 - x: 44x + 32(1/3 - x) = 13.2 implies 12x + 10.667 = 13.2 implies 12x = 2.533 implies x approx 0.211. Then y = 0.333 - 0.211 = 0.122. Hence, the moles are approximately 0.21 and 0.12."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Kinetic Theory of Gases",
+      "subchapter": "Kinetic Theory of Gases Core Concepts",
+      "topic": "Kinetic Theory of Gases Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinetic Theory of Gases",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

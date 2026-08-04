@@ -57,33 +57,27 @@ const server = http.createServer((req, res) => {
 
   fs.readFile(filePath, (err, content) => {
     if (err) {
-      if (err.code === 'ENOENT') {
-        // SPA Fallback: Serve index.html with 200 OK for any SPA route path or missing non-file extension
-        if (!ext || ext === '.html' || decodedPathname.includes('/#/') || decodedPathname.startsWith('/dash') || decodedPathname.startsWith('/comp') || decodedPathname.startsWith('/learn') || decodedPathname.startsWith('/mentor')) {
-          fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
-            if (!indexErr) {
-              res.writeHead(200, {
-                'Content-Type': 'text/html',
-                'Access-Control-Allow-Origin': '*',
-                'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
-              });
-              res.end(indexContent, 'utf-8');
-            } else {
-              res.writeHead(200, { 'Content-Type': 'text/html' });
-              res.end('<!DOCTYPE html><html><body><script>location.href="/";</script></body></html>');
-            }
-          });
-        } else if (ext === '.json') {
+      if (err.code === 'ENOENT' || err.code === 'EISDIR') {
+        if (ext === '.json') {
           // Empty JSON fallback for missing JSON assets to prevent console 404
           res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
           res.end('[]');
-        } else {
-          // Serve index.html as ultimate fallback with 200 OK to keep browser clean
-          fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
-            res.writeHead(200, { 'Content-Type': 'text/html', 'Access-Control-Allow-Origin': '*' });
-            res.end(indexErr ? '<!DOCTYPE html><html><body><script>location.href="/";</script></body></html>' : indexContent, 'utf-8');
-          });
+          return;
         }
+        // Universal SPA Fallback: Serve index.html with 200 OK for any non-existent file path or SPA route
+        fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
+          if (!indexErr) {
+            res.writeHead(200, {
+              'Content-Type': 'text/html',
+              'Access-Control-Allow-Origin': '*',
+              'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
+            });
+            res.end(indexContent, 'utf-8');
+          } else {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end('<!DOCTYPE html><html><body><script>location.href="/";</script></body></html>');
+          }
+        });
       } else {
         res.statusCode = 500;
         res.end(`Server Error: ${err.code}`);

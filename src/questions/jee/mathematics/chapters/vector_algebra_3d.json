@@ -1,0 +1,210 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q23",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q23_RAW",
+    "question": {
+      "latex": "Let $\\vec{c}$ be the projection vector of $\\vec{b} = \\lambda \\hat{i} + 4\\hat{k}$, $\\lambda > 0$, on the vector $\\vec{a} = \\hat{i} + 2\\hat{j} + 2\\hat{k}$. If $|\\vec{a} + \\vec{c}| = 7$, then the area of the parallelogram formed by the vectors $\\vec{b}$ and $\\vec{c}$ is ____",
+      "unicode": "Let vec{c} be the projection vector of vec{b} = lambda hat{i} + 4hat{k}, lambda > 0, on the vector vec{a} = hat{i} + 2hat{j} + 2hat{k}. If |vec{a} + vec{c}| = 7, then the area of the parallelogram formed by the vectors vec{b} and vec{c} is ____",
+      "plainText": "Let vec{c} be the projection vector of vec{b} = lambda hat{i} + 4hat{k}, lambda > 0, on the vector vec{a} = hat{i} + 2hat{j} + 2hat{k}. If |vec{a} + vec{c}| = 7, then the area of the parallelogram formed by the vectors vec{b} and vec{c} is ____"
+    },
+    "options": [],
+    "answers": [
+      "2"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra & 3D",
+      "subchapter": "Vector Algebra & 3D Core Concepts",
+      "topic": "Vector Algebra & 3D Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra & 3D",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.038Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.038Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q28",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q28_RAW",
+    "question": {
+      "latex": "A uniform circular disc of radius 'R' and mass 'M' is rotating about an axis perpendicular to its plane and passing through its centre. A small circular part of radius R/2 is removed from the original disc as shown in the figure. Find the moment of inertia of the remaining part of the original disc about the axis as given above. (Figure shows a large disc of radius R with a smaller disc of radius R/2 removed, the smaller disc's center is R/2 from the center of the larger disc, along a radius).",
+      "unicode": "A uniform circular disc of radius 'R' and mass 'M' is rotating about an axis perpendicular to its plane and passing through its centre. A small circular part of radius R/2 is removed from the original disc as shown in the figure. Find the moment of inertia of the remaining part of the original disc about the axis as given above. (Figure shows a large disc of radius R with a smaller disc of radius R/2 removed, the smaller disc's center is R/2 from the center of the larger disc, along a radius).",
+      "plainText": "A uniform circular disc of radius 'R' and mass 'M' is rotating about an axis perpendicular to its plane and passing through its centre. A small circular part of radius R/2 is removed from the original disc as shown in the figure. Find the moment of inertia of the remaining part of the original disc about the axis as given above. (Figure shows a large disc of radius R with a smaller disc of radius R/2 removed, the smaller disc's center is R/2 from the center of the larger disc, along a radius)."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{1}{2} MR^2$",
+        "unicode": "(1/2) MR²",
+        "plainText": "(1)/(2) MR^2"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{3}{8} MR^2$",
+        "unicode": "(3/8) MR²",
+        "plainText": "(3)/(8) MR^2"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{13}{32} MR^2$",
+        "unicode": "(13/32) MR²",
+        "plainText": "(13)/(32) MR^2"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{15}{32} MR^2$",
+        "unicode": "(15/32) MR²",
+        "plainText": "(15)/(32) MR^2"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra & 3D",
+      "subchapter": "Vector Algebra & 3D Core Concepts",
+      "topic": "Vector Algebra & 3D Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra & 3D",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.038Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.038Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q48",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q48_RAW",
+    "question": {
+      "latex": "The position vectors of two 1 kg particles, (A) and (B), are given by $\\vec{r_A} = (\\alpha_1 t^2 \\hat{i} + \\alpha_2 t \\hat{j} + \\alpha_3 t \\hat{k}) m$ and $\\vec{r_B} = (\\beta_1 t \\hat{i} + \\beta_2 t^2 \\hat{j} + \\beta_3 t \\hat{k}) m$, respectively; ($\\alpha_1 = 1 m/s^2, \\alpha_2 = 3nm/s, \\alpha_3 = 2 m/s, \\beta_1 = 2 m/s, \\beta_2 = -1 m/s^2, \\beta_3 = 4pm/s$), where t is time, n and p are constants. At $t = 1$ s, $|\\vec{V_A}| = |\\vec{V_B}|$ and velocities $\\vec{V_A}$ and $\\vec{V_B}$ of the particles are orthogonal to each other. At $t = 1$ s, the magnitude of angular momentum of particle (A) with respect to the position of particle (B) is $\\sqrt{L} kg m^2 s^{-1}$. The value of L is ____.",
+      "unicode": "The position vectors of two 1 kg particles, (A) and (B), are given by vec{r_A} = (α_1 t² hat{i} + α_2 t hat{j} + α_3 t hat{k}) m and vec{r_B} = (β_1 t hat{i} + β_2 t² hat{j} + β_3 t hat{k}) m, respectively; (α_1 = 1 m/s², α_2 = 3nm/s, α_3 = 2 m/s, β_1 = 2 m/s, β_2 = -1 m/s², β_3 = 4pm/s), where t is time, n and p are constants. At t = 1 s, |vec{V_A}| = |vec{V_B}| and velocities vec{V_A} and vec{V_B} of the particles are orthogonal to each other. At t = 1 s, the magnitude of angular momentum of particle (A) with respect to the position of particle (B) is √(L) kg m² s^{-1}. The value of L is ____.",
+      "plainText": "The position vectors of two 1 kg particles, (A) and (B), are given by vec{r_A} = (alpha_1 t^2 hat{i} + alpha_2 t hat{j} + alpha_3 t hat{k}) m and vec{r_B} = (beta_1 t hat{i} + beta_2 t^2 hat{j} + beta_3 t hat{k}) m, respectively; (alpha_1 = 1 m/s^2, alpha_2 = 3nm/s, alpha_3 = 2 m/s, beta_1 = 2 m/s, beta_2 = -1 m/s^2, beta_3 = 4pm/s), where t is time, n and p are constants. At t = 1 s, |vec{V_A}| = |vec{V_B}| and velocities vec{V_A} and vec{V_B} of the particles are orthogonal to each other. At t = 1 s, the magnitude of angular momentum of particle (A) with respect to the position of particle (B) is sqrt(L) kg m^2 s^{-1}. The value of L is ____."
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra & 3D",
+      "subchapter": "Vector Algebra & 3D Core Concepts",
+      "topic": "Vector Algebra & 3D Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra & 3D",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.039Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.039Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

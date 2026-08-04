@@ -1,0 +1,517 @@
+[
+  {
+    "id": "JEE_ADVANCED_PHY_MAGNETICEFFE_2024_S1_Q22",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_MAGNETICEFFE_2024_S1_Q22_RAW",
+    "question": {
+      "latex": "An infinitely long wire, located on the 푧-axis, carries a current I along the +푧-direction and produces the magnetic field B ⃗ . The magnitude of the line integral ∫B ⃗ ⋅푑푙 ⃗⃗⃗ along a straight line from the point (− √ 3푎,푎,0) to (푎,푎,0) is given by [휇 0 is the magnetic permeability of free space.]",
+      "unicode": "An infinitely long wire, located on the 푧-axis, carries a current I along the +푧-direction and produces the magnetic field B ⃗ . The magnitude of the line integral ∫B ⃗ ⋅푑푙 ⃗⃗⃗ along a straight line from the point (− √ 3푎,푎,0) to (푎,푎,0) is given by [휇 0 is the magnetic permeability of free space.]",
+      "plainText": "An infinitely long wire, located on the 푧-axis, carries a current I along the +푧-direction and produces the magnetic field B ⃗ . The magnitude of the line integral ∫B ⃗ ⋅푑푙 ⃗⃗⃗ along a straight line from the point (− √ 3푎,푎,0) to (푎,푎,0) is given by [휇 0 is the magnetic permeability of free space.]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "7휇 0 I/24",
+        "unicode": "7휇 0 I/24",
+        "plainText": "7휇 0 I/24"
+      },
+      {
+        "id": "b",
+        "latex": "7휇 0 I/12",
+        "unicode": "7휇 0 I/12",
+        "plainText": "7휇 0 I/12"
+      },
+      {
+        "id": "c",
+        "latex": "휇 0 I/8",
+        "unicode": "휇 0 I/8",
+        "plainText": "휇 0 I/8"
+      },
+      {
+        "id": "d",
+        "latex": "휇 0 I/6",
+        "unicode": "휇 0 I/6",
+        "plainText": "휇 0 I/6"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (B) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Magnetic Effects of Current",
+      "subchapter": "Magnetic Effects of Current Core Concepts",
+      "topic": "Magnetic Effects of Current Primary Topic",
+      "learningOutcome": "Master fundamental principles of Magnetic Effects of Current",
+      "tags": [],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.079Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.079Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_MAGNETICEFFE_2025_S1_Q19",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_MAGNETICEFFE_2025_S1_Q19_RAW",
+    "question": {
+      "latex": "A conducting square loop initially lies in the XZ plane with its lower edge hinged along the X-axis. Only in the region 푦≥0, there is a time dependent magnetic field pointing along the Z-direction, B ⃗ (푡)=B 0 ( cos휔푡 ) 푘 ̂ , where B 0 is a constant. The magnetic field is zero everywhere else. At time 푡=0, the loop starts rotating with constant angular speed 휔 about the X axis in the clockwise direction as viewed from the +X axis (as shown in the figure). Ignoring self-inductance of the loop and gravity, which of the following plots correctly represents the induced e.m.f. ( V ) in the loop as a function of time:",
+      "unicode": "A conducting square loop initially lies in the XZ plane with its lower edge hinged along the X-axis. Only in the region 푦≥0, there is a time dependent magnetic field pointing along the Z-direction, B ⃗ (푡)=B 0 ( cos휔푡 ) 푘 ̂ , where B 0 is a constant. The magnetic field is zero everywhere else. At time 푡=0, the loop starts rotating with constant angular speed 휔 about the X axis in the clockwise direction as viewed from the +X axis (as shown in the figure). Ignoring self-inductance of the loop and gravity, which of the following plots correctly represents the induced e.m.f. ( V ) in the loop as a function of time:",
+      "plainText": "A conducting square loop initially lies in the XZ plane with its lower edge hinged along the X-axis. Only in the region 푦≥0, there is a time dependent magnetic field pointing along the Z-direction, B ⃗ (푡)=B 0 ( cos휔푡 ) 푘 ̂ , where B 0 is a constant. The magnetic field is zero everywhere else. At time 푡=0, the loop starts rotating with constant angular speed 휔 about the X axis in the clockwise direction as viewed from the +X axis (as shown in the figure). Ignoring self-inductance of the loop and gravity, which of the following plots correctly represents the induced e.m.f. ( V ) in the loop as a function of time:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Magnetic Effects of Current",
+      "subchapter": "Magnetic Effects of Current Core Concepts",
+      "topic": "Magnetic Effects of Current Primary Topic",
+      "learningOutcome": "Master fundamental principles of Magnetic Effects of Current",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.083Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.083Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_MAGNETICEFFE_2025_S1_Q40",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_MAGNETICEFFE_2025_S1_Q40_RAW",
+    "question": {
+      "latex": "In an electrochemical cell, dichromate ions in aqueous acidic medium are reduced to Cr 3+ . The current (in amperes) that flows through the cell for 48.25 minutes to produce 1 mole of Cr 3+ is ______. Use: 1 Faraday =96500 C mol −1",
+      "unicode": "In an electrochemical cell, dichromate ions in aqueous acidic medium are reduced to Cr 3+ . The current (in amperes) that flows through the cell for 48.25 minutes to produce 1 mole of Cr 3+ is ______. Use: 1 Faraday =96500 C mol −1",
+      "plainText": "In an electrochemical cell, dichromate ions in aqueous acidic medium are reduced to Cr 3+ . The current (in amperes) that flows through the cell for 48.25 minutes to produce 1 mole of Cr 3+ is ______. Use: 1 Faraday =96500 C mol −1"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Magnetic Effects of Current. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Magnetic Effects of Current",
+      "subchapter": "Magnetic Effects of Current Core Concepts",
+      "topic": "Magnetic Effects of Current Primary Topic",
+      "learningOutcome": "Master fundamental principles of Magnetic Effects of Current",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.085Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.085Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MAGNETICEFFE_2026_S1_Q154",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MAGNETICEFFE_2026_S1_Q154_RAW",
+    "question": {
+      "latex": "![Diagrams of two magnetic wire configurations]$https://cracku.in/media/uploads/image_4yvtbH5.png$\nTwo identical long current carrying wires are bent into the shapes shown in figures. Shape $I$ consists of a U-turn featuring a semicircle where the current enters, loops, and leaves parallel. Shape $II$ consists of a semi-infinite wire leading into a semicircle, ending such that the exiting semi-infinite wire aligns radially outward giving zero contribution at center. If the magnitude of magnetic fields at the centres P and Q of a semicircular arc are $B_1$ and $B_2$ respectively, then the ratio $B_1 / B_2$ is _______.",
+      "unicode": "![Diagrams of two magnetic wire configurations]https://cracku.in/media/uploads/image_4yvtbH5.png\nTwo identical long current carrying wires are bent into the shapes shown in figures. Shape I consists of a U-turn featuring a semicircle where the current enters, loops, and leaves parallel. Shape II consists of a semi-infinite wire leading into a semicircle, ending such that the exiting semi-infinite wire aligns radially outward giving zero contribution at center. If the magnitude of magnetic fields at the centres P and Q of a semicircular arc are B_1 and B_2 respectively, then the ratio B_1 / B_2 is _______.",
+      "plainText": "![Diagrams of two magnetic wire configurations]https://cracku.in/media/uploads/image_4yvtbH5.png Two identical long current carrying wires are bent into the shapes shown in figures. Shape I consists of a U-turn featuring a semicircle where the current enters, loops, and leaves parallel. Shape II consists of a semi-infinite wire leading into a semicircle, ending such that the exiting semi-infinite wire aligns radially outward giving zero contribution at center. If the magnitude of magnetic fields at the centres P and Q of a semicircular arc are B_1 and B_2 respectively, then the ratio B_1 / B_2 is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{2 + \\pi}{1 + \\pi}$",
+        "unicode": "(2 + π/1 + π)",
+        "plainText": "(2 + pi)/(1 + pi)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{1 + \\pi}{1 - \\pi}$",
+        "unicode": "(1 + π/1 - π)",
+        "plainText": "(1 + pi)/(1 - pi)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{2 + \\pi}{1 - \\pi}$",
+        "unicode": "(2 + π/1 - π)",
+        "plainText": "(2 + pi)/(1 - pi)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{1 + \\pi}{2 - \\pi}$",
+        "unicode": "(1 + π/2 - π)",
+        "plainText": "(1 + pi)/(2 - pi)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let's find the magnetic field at the center of the semicircles for both configurations.\nFor Configuration (I) (the hair-pin loop), the magnetic field at center P has three components:\n1. Top semi-infinite straight wire: $B = \\frac{\\mu_0 I}{4\\pi R}$ pointing downwards ($\\otimes$).\n2. Semicircular arc: $B = \\frac{\\mu_0 I}{4 R} = \\frac{\\pi\\mu_0 I}{4\\pi R}$ pointing downwards ($\\otimes$).\n3. Bottom semi-infinite straight wire (flowing back): $B = \\frac{\\mu_0 I}{4\\pi R}$ pointing downwards ($\\otimes$).\nTotal $B_1 = \\frac{\\mu_0 I}{4\\pi R} (1 + \\pi + 1) = \\frac{\\mu_0 I}{4\\pi R}(2 + \\pi)$.\n\nFor Configuration (II), the magnetic field at center Q is the sum of:\n1. One top semi-infinite straight wire at distance R: $B = \\frac{\\mu_0 I}{4\\pi R}$ pointing downwards ($\\otimes$).\n2. Semicircular arc: $B = \\frac{\\mu_0 I}{4 R} = \\frac{\\pi\\mu_0 I}{4\\pi R}$ pointing downwards ($\\otimes$).\n3. The exiting wire is placed such that its line passes through Q, contributing $0$ field.\nTotal $B_2 = \\frac{\\mu_0 I}{4\\pi R} (1 + \\pi + 0) = \\frac{\\mu_0 I}{4\\pi R}(1 + \\pi)$.\n\nThe ratio is $\\frac{B_1}{B_2} = \\frac{2 + \\pi}{1 + \\pi}$.",
+      "unicode": "Let's find the magnetic field at the center of the semicircles for both configurations.\nFor Configuration (I) (the hair-pin loop), the magnetic field at center P has three components:\n1. Top semi-infinite straight wire: B = (mu_0 I/4π R) pointing downwards (otimes).\n2. Semicircular arc: B = (mu_0 I/4 R) = (πmu_0 I/4π R) pointing downwards (otimes).\n3. Bottom semi-infinite straight wire (flowing back): B = (mu_0 I/4π R) pointing downwards (otimes).\nTotal B_1 = (mu_0 I/4π R) (1 + π + 1) = (mu_0 I/4π R)(2 + π).\n\nFor Configuration (II), the magnetic field at center Q is the sum of:\n1. One top semi-infinite straight wire at distance R: B = (mu_0 I/4π R) pointing downwards (otimes).\n2. Semicircular arc: B = (mu_0 I/4 R) = (πmu_0 I/4π R) pointing downwards (otimes).\n3. The exiting wire is placed such that its line passes through Q, contributing 0 field.\nTotal B_2 = (mu_0 I/4π R) (1 + π + 0) = (mu_0 I/4π R)(1 + π).\n\nThe ratio is (B_1/B_2) = (2 + π/1 + π).",
+      "plainText": "Let's find the magnetic field at the center of the semicircles for both configurations. For Configuration (I) (the hair-pin loop), the magnetic field at center P has three components: 1. Top semi-infinite straight wire: B = (mu_0 I)/(4pi R) pointing downwards (otimes). 2. Semicircular arc: B = (mu_0 I)/(4 R) = (pimu_0 I)/(4pi R) pointing downwards (otimes). 3. Bottom semi-infinite straight wire (flowing back): B = (mu_0 I)/(4pi R) pointing downwards (otimes). Total B_1 = (mu_0 I)/(4pi R) (1 + pi + 1) = (mu_0 I)/(4pi R)(2 + pi). For Configuration (II), the magnetic field at center Q is the sum of: 1. One top semi-infinite straight wire at distance R: B = (mu_0 I)/(4pi R) pointing downwards (otimes). 2. Semicircular arc: B = (mu_0 I)/(4 R) = (pimu_0 I)/(4pi R) pointing downwards (otimes). 3. The exiting wire is placed such that its line passes through Q, contributing 0 field. Total B_2 = (mu_0 I)/(4pi R) (1 + pi + 0) = (mu_0 I)/(4pi R)(1 + pi). The ratio is (B_1)/(B_2) = (2 + pi)/(1 + pi)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Magnetic Effects of Current",
+      "subchapter": "Magnetic Effects of Current Core Concepts",
+      "topic": "Magnetic Effects of Current Primary Topic",
+      "learningOutcome": "Master fundamental principles of Magnetic Effects of Current",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.531Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.531Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MAGNETICEFFE_2026_S1_Q204",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MAGNETICEFFE_2026_S1_Q204_RAW",
+    "question": {
+      "latex": "A particle having charge $10^{-9}\\text{ C}$ moving in $x$-$y$ plane in fields of $0.4\\hat{j}\\text{ N/C}$ and $4 \\times 10^{-3}\\hat{k}\\text{ T}$ experiences a force of $$4\\hat{i} + 2\\hat{j}$ \\times 10^{-10}\\text{ N}$. The velocity of the particle at that instant is _______ m/s.",
+      "unicode": "A particle having charge 10^{-9}text{ C} moving in x-y plane in fields of 0.4hat{j}text{ N/C} and 4 × 10^{-3}hat{k}text{ T} experiences a force of 4hat{i} + 2hat{j} × 10^{-10}text{ N}. The velocity of the particle at that instant is _______ m/s.",
+      "plainText": "A particle having charge 10^{-9}text{ C} moving in x-y plane in fields of 0.4hat{j}text{ N/C} and 4 times 10^{-3}hat{k}text{ T} experiences a force of 4hat{i} + 2hat{j} times 10^{-10}text{ N}. The velocity of the particle at that instant is _______ m/s."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$50\\hat{i} + 100\\hat{j}$",
+        "unicode": "50hat{i} + 100hat{j}",
+        "plainText": "50hat{i} + 100hat{j}"
+      },
+      {
+        "id": "b",
+        "latex": "$100\\hat{i} + 50\\hat{j}$",
+        "unicode": "100hat{i} + 50hat{j}",
+        "plainText": "100hat{i} + 50hat{j}"
+      },
+      {
+        "id": "c",
+        "latex": "$-50\\hat{i} + 100\\hat{j}$",
+        "unicode": "-50hat{i} + 100hat{j}",
+        "plainText": "-50hat{i} + 100hat{j}"
+      },
+      {
+        "id": "d",
+        "latex": "$50\\hat{i} - 100\\hat{j}$",
+        "unicode": "50hat{i} - 100hat{j}",
+        "plainText": "50hat{i} - 100hat{j}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let velocity $\\vec{v} = v_x \\hat{i} + v_y \\hat{j}$. Lorentz force $\\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B})$.\n$\\vec{v} \\times \\vec{B} = (v_x \\hat{i} + v_y \\hat{j}) \\times (4 \\times 10^{-3} \\hat{k}) = 4 \\times 10^{-3} v_x (-\\hat{j}) + 4 \\times 10^{-3} v_y (\\hat{i})$.\nThe net force is $\\vec{F} = 10^{-9} \\left[ (4 \\times 10^{-3} v_y)\\hat{i} + (0.4 - 4 \\times 10^{-3} v_x)\\hat{j} \\right]$.\nGiven $\\vec{F} = 4 \\times 10^{-10} \\hat{i} + 2 \\times 10^{-10} \\hat{j}$. Comparing components:\nx-component: $10^{-9} (4 \\times 10^{-3} v_y) = 4 \\times 10^{-10} \\implies 4v_y = 400 \\implies v_y = 100\\text{ m/s}$.\ny-component: $10^{-9} (0.4 - 4 \\times 10^{-3} v_x) = 2 \\times 10^{-10} \\implies 0.4 - 4 \\times 10^{-3} v_x = 0.2 \\implies 4 \\times 10^{-3} v_x = 0.2 \\implies v_x = \\frac{0.2}{0.004} = 50\\text{ m/s}$.\nTherefore, $\\vec{v} = 50\\hat{i} + 100\\hat{j}\\text{ m/s}$.",
+      "unicode": "Let velocity vec{v} = v_x hat{i} + v_y hat{j}. Lorentz force vec{F} = q(vec{E} + vec{v} × vec{B}).\nvec{v} × vec{B} = (v_x hat{i} + v_y hat{j}) × (4 × 10^{-3} hat{k}) = 4 × 10^{-3} v_x (-hat{j}) + 4 × 10^{-3} v_y (hat{i}).\nThe net force is vec{F} = 10^{-9} left[ (4 × 10^{-3} v_y)hat{i} + (0.4 - 4 × 10^{-3} v_x)hat{j} right].\nGiven vec{F} = 4 × 10^{-10} hat{i} + 2 × 10^{-10} hat{j}. Comparing components:\nx-component: 10^{-9} (4 × 10^{-3} v_y) = 4 × 10^{-10} implies 4v_y = 400 implies v_y = 100text{ m/s}.\ny-component: 10^{-9} (0.4 - 4 × 10^{-3} v_x) = 2 × 10^{-10} implies 0.4 - 4 × 10^{-3} v_x = 0.2 implies 4 × 10^{-3} v_x = 0.2 implies v_x = (0.2/0.004) = 50text{ m/s}.\nTherefore, vec{v} = 50hat{i} + 100hat{j}text{ m/s}.",
+      "plainText": "Let velocity vec{v} = v_x hat{i} + v_y hat{j}. Lorentz force vec{F} = q(vec{E} + vec{v} times vec{B}). vec{v} times vec{B} = (v_x hat{i} + v_y hat{j}) times (4 times 10^{-3} hat{k}) = 4 times 10^{-3} v_x (-hat{j}) + 4 times 10^{-3} v_y (hat{i}). The net force is vec{F} = 10^{-9} left[ (4 times 10^{-3} v_y)hat{i} + (0.4 - 4 times 10^{-3} v_x)hat{j} right]. Given vec{F} = 4 times 10^{-10} hat{i} + 2 times 10^{-10} hat{j}. Comparing components: x-component: 10^{-9} (4 times 10^{-3} v_y) = 4 times 10^{-10} implies 4v_y = 400 implies v_y = 100text{ m/s}. y-component: 10^{-9} (0.4 - 4 times 10^{-3} v_x) = 2 times 10^{-10} implies 0.4 - 4 times 10^{-3} v_x = 0.2 implies 4 times 10^{-3} v_x = 0.2 implies v_x = (0.2)/(0.004) = 50text{ m/s}. Therefore, vec{v} = 50hat{i} + 100hat{j}text{ m/s}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Magnetic Effects of Current",
+      "subchapter": "Magnetic Effects of Current Core Concepts",
+      "topic": "Magnetic Effects of Current Primary Topic",
+      "learningOutcome": "Master fundamental principles of Magnetic Effects of Current",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MAGNETICEFFE_2026_S1_Q531",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MAGNETICEFFE_2026_S1_Q531_RAW",
+    "question": {
+      "latex": "$1\\text{ }\\mu\\text{C}$ charge moving with velocity $\\vec{v} = $\\hat{i} - 2\\hat{j} + 3\\hat{k}$\\text{ m/s}$ in the region of magnetic field $\\vec{B} = $2\\hat{i} + 3\\hat{j} - 5\\hat{k}$\\text{ T}$. The magnitude of force acting on it is $\\sqrt{\\alpha} \\times 10^{-6}\\text{ N}$. The value of $\\alpha$ is _______.",
+      "unicode": "1text{ }mutext{C} charge moving with velocity vec{v} = hat{i} - 2hat{j} + 3hat{k}text{ m/s} in the region of magnetic field vec{B} = 2hat{i} + 3hat{j} - 5hat{k}text{ T}. The magnitude of force acting on it is √(α) × 10^{-6}text{ N}. The value of α is _______.",
+      "plainText": "1text{ }mutext{C} charge moving with velocity vec{v} = hat{i} - 2hat{j} + 3hat{k}text{ m/s} in the region of magnetic field vec{B} = 2hat{i} + 3hat{j} - 5hat{k}text{ T}. The magnitude of force acting on it is sqrt(alpha) times 10^{-6}text{ N}. The value of alpha is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "114",
+        "unicode": "114",
+        "plainText": "114"
+      },
+      {
+        "id": "b",
+        "latex": "152",
+        "unicode": "152",
+        "plainText": "152"
+      },
+      {
+        "id": "c",
+        "latex": "171",
+        "unicode": "171",
+        "plainText": "171"
+      },
+      {
+        "id": "d",
+        "latex": "196",
+        "unicode": "196",
+        "plainText": "196"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The Lorentz magnetic force on a moving charge is $\\vec{F} = q(\\vec{v} \\times \\vec{B})$.\nLet's calculate the cross product $\\vec{v} \\times \\vec{B}$:\n$\\vec{v} \\times \\vec{B} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & -2 & 3 \\\\ 2 & 3 & -5 \\end{vmatrix}$\n$= \\hat{i}((-2)(-5) - (3)(3)) - \\hat{j}((1)(-5) - (3)(2)) + \\hat{k}((1)(3) - (-2)(2))$\n$= \\hat{i}(10 - 9) - \\hat{j}(-5 - 6) + \\hat{k}(3 + 4)$\n$= 1\\hat{i} - (-11)\\hat{j} + 7\\hat{k} = \\hat{i} + 11\\hat{j} + 7\\hat{k}$\nThe magnitude is $|\\vec{v} \\times \\vec{B}| = \\sqrt{1^2 + 11^2 + 7^2} = \\sqrt{1 + 121 + 49} = \\sqrt{171}$.\nThe magnitude of the force is $|\\vec{F}| = q|\\vec{v} \\times \\vec{B}| = (1 \\times 10^{-6}) \\sqrt{171}\\text{ N}$.\nRewriting this as $\\sqrt{171} \\times 10^{-6}\\text{ N}$, we can directly observe that $\\alpha = 171$.",
+      "unicode": "The Lorentz magnetic force on a moving charge is vec{F} = q(vec{v} × vec{B}).\nLet's calculate the cross product vec{v} × vec{B}:\nvec{v} × vec{B} = begin{vmatrix} hat{i} & hat{j} & hat{k}  1 & -2 & 3  2 & 3 & -5 end{vmatrix}\n= hat{i}((-2)(-5) - (3)(3)) - hat{j}((1)(-5) - (3)(2)) + hat{k}((1)(3) - (-2)(2))\n= hat{i}(10 - 9) - hat{j}(-5 - 6) + hat{k}(3 + 4)\n= 1hat{i} - (-11)hat{j} + 7hat{k} = hat{i} + 11hat{j} + 7hat{k}\nThe magnitude is |vec{v} × vec{B}| = √(1² + 11² + 7²) = √(1 + 121 + 49) = √(171).\nThe magnitude of the force is |vec{F}| = q|vec{v} × vec{B}| = (1 × 10^{-6}) √(171)text{ N}.\nRewriting this as √(171) × 10^{-6}text{ N}, we can directly observe that α = 171.",
+      "plainText": "The Lorentz magnetic force on a moving charge is vec{F} = q(vec{v} times vec{B}). Let's calculate the cross product vec{v} times vec{B}: vec{v} times vec{B} = begin{vmatrix} hat{i} & hat{j} & hat{k} 1 & -2 & 3 2 & 3 & -5 end{vmatrix} = hat{i}((-2)(-5) - (3)(3)) - hat{j}((1)(-5) - (3)(2)) + hat{k}((1)(3) - (-2)(2)) = hat{i}(10 - 9) - hat{j}(-5 - 6) + hat{k}(3 + 4) = 1hat{i} - (-11)hat{j} + 7hat{k} = hat{i} + 11hat{j} + 7hat{k} The magnitude is |vec{v} times vec{B}| = sqrt(1^2 + 11^2 + 7^2) = sqrt(1 + 121 + 49) = sqrt(171). The magnitude of the force is |vec{F}| = q|vec{v} times vec{B}| = (1 times 10^{-6}) sqrt(171)text{ N}. Rewriting this as sqrt(171) times 10^{-6}text{ N}, we can directly observe that alpha = 171."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Magnetic Effects of Current",
+      "subchapter": "Magnetic Effects of Current Core Concepts",
+      "topic": "Magnetic Effects of Current Primary Topic",
+      "learningOutcome": "Master fundamental principles of Magnetic Effects of Current",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

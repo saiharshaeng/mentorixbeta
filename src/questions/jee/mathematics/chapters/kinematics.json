@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_KINEMATICS_2026_S_Q178",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_KINEMATICS_2026_S_Q178_RAW",
+    "question": {
+      "latex": "The velocity of a particle is given as $\\vec{v} = -x\\hat{i} + 2y\\hat{j} - z\\hat{k}\\text{ m/s}$. The magnitude of acceleration at point $(1, 2, 4)$ is _______ $\\text{m/s}^2$.",
+      "unicode": "The velocity of a particle is given as vec{v} = -xhat{i} + 2yhat{j} - zhat{k}text{ m/s}. The magnitude of acceleration at point (1, 2, 4) is _______ text{m/s}².",
+      "plainText": "The velocity of a particle is given as vec{v} = -xhat{i} + 2yhat{j} - zhat{k}text{ m/s}. The magnitude of acceleration at point (1, 2, 4) is _______ text{m/s}^2."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\sqrt{6}$",
+        "unicode": "√(6)",
+        "plainText": "sqrt(6)"
+      },
+      {
+        "id": "b",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "c",
+        "latex": "$\\sqrt{33}$",
+        "unicode": "√(33)",
+        "plainText": "sqrt(33)"
+      },
+      {
+        "id": "d",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Kinematics",
+      "subchapter": "Kinematics Core Concepts",
+      "topic": "Kinematics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinematics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_KINEMATICS_2026_S_Q331",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_KINEMATICS_2026_S_Q331_RAW",
+    "question": {
+      "latex": "Two projectiles are projected with the same initial velocities at the $15^\\circ$ and $30^\\circ$ with respect to the horizontal. The ratio of their ranges is $1 : x$. The value of $x$ is:",
+      "unicode": "Two projectiles are projected with the same initial velocities at the 15^circ and 30^circ with respect to the horizontal. The ratio of their ranges is 1 : x. The value of x is:",
+      "plainText": "Two projectiles are projected with the same initial velocities at the 15^circ and 30^circ with respect to the horizontal. The ratio of their ranges is 1 : x. The value of x is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\sqrt{2}$",
+        "unicode": "√(2)",
+        "plainText": "sqrt(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\sqrt{3}$",
+        "unicode": "√(3)",
+        "plainText": "sqrt(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$2\\sqrt{3}$",
+        "unicode": "2√(3)",
+        "plainText": "2sqrt(3)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{1}{\\sqrt{2}}$",
+        "unicode": "(1/√(2))",
+        "plainText": "(1)/(sqrt(2))"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Kinematics",
+      "subchapter": "Kinematics Core Concepts",
+      "topic": "Kinematics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinematics",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

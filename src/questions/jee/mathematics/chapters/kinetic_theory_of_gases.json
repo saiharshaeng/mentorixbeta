@@ -1,0 +1,344 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_KINETICTHEOR_2025_S_Q108",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_KINETICTHEOR_2025_S_Q108_RAW",
+    "question": {
+      "latex": "For a diatomic gas, if $\\gamma_1 = C_p/C_v$ for rigid molecules and $\\gamma_2 = C_p/C_v$ for another diatomic molecules, but also having vibrational modes. Then, which one of the following options is correct? (Cp and Cv are specific heats of the gas at constant pressure and volume)",
+      "unicode": "For a diatomic gas, if gamma_1 = C_p/C_v for rigid molecules and gamma_2 = C_p/C_v for another diatomic molecules, but also having vibrational modes. Then, which one of the following options is correct? (Cp and Cv are specific heats of the gas at constant pressure and volume)",
+      "plainText": "For a diatomic gas, if gamma_1 = C_p/C_v for rigid molecules and gamma_2 = C_p/C_v for another diatomic molecules, but also having vibrational modes. Then, which one of the following options is correct? (Cp and Cv are specific heats of the gas at constant pressure and volume)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\gamma_2 > \\gamma_1$",
+        "unicode": "gamma_2 > gamma_1",
+        "plainText": "gamma_2 > gamma_1"
+      },
+      {
+        "id": "b",
+        "latex": "$\\gamma_2 = \\gamma_1$",
+        "unicode": "gamma_2 = gamma_1",
+        "plainText": "gamma_2 = gamma_1"
+      },
+      {
+        "id": "c",
+        "latex": "$2\\gamma_2 = \\gamma_1$",
+        "unicode": "2gamma_2 = gamma_1",
+        "plainText": "2gamma_2 = gamma_1"
+      },
+      {
+        "id": "d",
+        "latex": "$\\gamma_2 < \\gamma_1$",
+        "unicode": "gamma_2 < gamma_1",
+        "plainText": "gamma_2 < gamma_1"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Kinetic Theory of Gases",
+      "subchapter": "Kinetic Theory of Gases Core Concepts",
+      "topic": "Kinetic Theory of Gases Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinetic Theory of Gases",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.044Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.044Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_KINETICTHEOR_2026_S_Q259",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_KINETICTHEOR_2026_S_Q259_RAW",
+    "question": {
+      "latex": "A mixture of carbon dioxide and oxygen has volume $8310\\text{ cm}^3$, temperature $300\\text{ K}$, pressure $100\\text{ kPa}$ and mass $13.2\\text{ g}$. The number of moles of carbon dioxide and oxygen gases in the mixture respectively are _______. (Assume both carbon dioxide and oxygen gases behave like ideal gases) [$R = 8.31\\text{ J/mol.K}$]",
+      "unicode": "A mixture of carbon dioxide and oxygen has volume 8310text{ cm}³, temperature 300text{ K}, pressure 100text{ kPa} and mass 13.2text{ g}. The number of moles of carbon dioxide and oxygen gases in the mixture respectively are _______. (Assume both carbon dioxide and oxygen gases behave like ideal gases) [R = 8.31text{ J/mol.K}]",
+      "plainText": "A mixture of carbon dioxide and oxygen has volume 8310text{ cm}^3, temperature 300text{ K}, pressure 100text{ kPa} and mass 13.2text{ g}. The number of moles of carbon dioxide and oxygen gases in the mixture respectively are _______. (Assume both carbon dioxide and oxygen gases behave like ideal gases) [R = 8.31text{ J/mol.K}]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$0.15$ and $0.18$",
+        "unicode": "0.15 and 0.18",
+        "plainText": "0.15 and 0.18"
+      },
+      {
+        "id": "b",
+        "latex": "$0.25$ and $0.08$",
+        "unicode": "0.25 and 0.08",
+        "plainText": "0.25 and 0.08"
+      },
+      {
+        "id": "c",
+        "latex": "$0.21$ and $0.12$",
+        "unicode": "0.21 and 0.12",
+        "plainText": "0.21 and 0.12"
+      },
+      {
+        "id": "d",
+        "latex": "$0.13$ and $0.20$",
+        "unicode": "0.13 and 0.20",
+        "plainText": "0.13 and 0.20"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Kinetic Theory of Gases",
+      "subchapter": "Kinetic Theory of Gases Core Concepts",
+      "topic": "Kinetic Theory of Gases Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinetic Theory of Gases",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_KINETICTHEOR_2026_S_Q335",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_KINETICTHEOR_2026_S_Q335_RAW",
+    "question": {
+      "latex": "One gas of $n_1$ mole of molecules at temperature $T_1$, volume $V_1$, and pressure $P_1$, and another gas of $n_2$ mole of molecules at temperature $T_2$, volume $V_2$, and pressure $P_2$, are mixed resulting in pressure $P$ and volume $V$ of the mixture. The temperature of the mixture is _____.",
+      "unicode": "One gas of n_1 mole of molecules at temperature T_1, volume V_1, and pressure P_1, and another gas of n_2 mole of molecules at temperature T_2, volume V_2, and pressure P_2, are mixed resulting in pressure P and volume V of the mixture. The temperature of the mixture is _____.",
+      "plainText": "One gas of n_1 mole of molecules at temperature T_1, volume V_1, and pressure P_1, and another gas of n_2 mole of molecules at temperature T_2, volume V_2, and pressure P_2, are mixed resulting in pressure P and volume V of the mixture. The temperature of the mixture is _____."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$(T_1 + T_2)/2$",
+        "unicode": "(T_1 + T_2)/2",
+        "plainText": "(T_1 + T_2)/2"
+      },
+      {
+        "id": "b",
+        "latex": "$T_1T_2PV / (T_2P_1V_1 + T_1P_2V_2)$",
+        "unicode": "T_1T_2PV / (T_2P_1V_1 + T_1P_2V_2)",
+        "plainText": "T_1T_2PV / (T_2P_1V_1 + T_1P_2V_2)"
+      },
+      {
+        "id": "c",
+        "latex": "$(T_2P_1V_1 + T_1P_2V_2) / (T_1T_2PV)$",
+        "unicode": "(T_2P_1V_1 + T_1P_2V_2) / (T_1T_2PV)",
+        "plainText": "(T_2P_1V_1 + T_1P_2V_2) / (T_1T_2PV)"
+      },
+      {
+        "id": "d",
+        "latex": "$|T_1 - T_2|/2$",
+        "unicode": "|T_1 - T_2|/2",
+        "plainText": "|T_1 - T_2|/2"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Kinetic Theory of Gases",
+      "subchapter": "Kinetic Theory of Gases Core Concepts",
+      "topic": "Kinetic Theory of Gases Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinetic Theory of Gases",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.056Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.056Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_KINETICTHEOR_2025_S1_Q88",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_KINETICTHEOR_2025_S1_Q88_RAW",
+    "question": {
+      "latex": "For a diatomic gas, if $\\gamma_1 = C_p/C_v$ for rigid molecules and $\\gamma_2 = C_p/C_v$ for another diatomic molecules, but also having vibrational modes. Then, which one of the following options is correct? $Cp and Cv are specific heats of the gas at constant pressure and volume$",
+      "unicode": "For a diatomic gas, if gamma_1 = C_p/C_v for rigid molecules and gamma_2 = C_p/C_v for another diatomic molecules, but also having vibrational modes. Then, which one of the following options is correct? Cp and Cv are specific heats of the gas at constant pressure and volume",
+      "plainText": "For a diatomic gas, if gamma_1 = C_p/C_v for rigid molecules and gamma_2 = C_p/C_v for another diatomic molecules, but also having vibrational modes. Then, which one of the following options is correct? Cp and Cv are specific heats of the gas at constant pressure and volume"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\gamma_2 > \\gamma_1$",
+        "unicode": "gamma_2 > gamma_1",
+        "plainText": "gamma_2 > gamma_1"
+      },
+      {
+        "id": "b",
+        "latex": "$\\gamma_2 = \\gamma_1$",
+        "unicode": "gamma_2 = gamma_1",
+        "plainText": "gamma_2 = gamma_1"
+      },
+      {
+        "id": "c",
+        "latex": "$2\\gamma_2 = \\gamma_1$",
+        "unicode": "2gamma_2 = gamma_1",
+        "plainText": "2gamma_2 = gamma_1"
+      },
+      {
+        "id": "d",
+        "latex": "$\\gamma_2 < \\gamma_1$",
+        "unicode": "gamma_2 < gamma_1",
+        "plainText": "gamma_2 < gamma_1"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Kinetic Theory of Gases",
+      "subchapter": "Kinetic Theory of Gases Core Concepts",
+      "topic": "Kinetic Theory of Gases Primary Topic",
+      "learningOutcome": "Master fundamental principles of Kinetic Theory of Gases",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.527Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.527Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

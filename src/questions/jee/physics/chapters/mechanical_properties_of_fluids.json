@@ -1,0 +1,260 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q160",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q160_RAW",
+    "question": {
+      "latex": "A liquid drop of diameter 2 mm breaks into 512 droplets. The change in surface energy is $\\alpha \\times 10^{-6}\\text{ J}$. The value of $\\alpha$ is _______. $Take surface tension of liquid $= 0.08\\text{ N/m}$$",
+      "unicode": "A liquid drop of diameter 2 mm breaks into 512 droplets. The change in surface energy is α × 10^{-6}text{ J}. The value of α is _______. Take surface tension of liquid = 0.08text{ N/m}",
+      "plainText": "A liquid drop of diameter 2 mm breaks into 512 droplets. The change in surface energy is alpha times 10^{-6}text{ J}. The value of alpha is _______. Take surface tension of liquid = 0.08text{ N/m}"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "b",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      },
+      {
+        "id": "c",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "d",
+        "latex": "11",
+        "unicode": "11",
+        "plainText": "11"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let the radius of the large drop be $R$ and the radius of each small droplet be $r$.\nDiameter of large drop $= 2\\text{ mm} \\implies R = 1\\text{ mm} = 10^{-3}\\text{ m}$.\nBy conservation of volume during splitting into $n=512$ drops:\n$\\frac{4}{3}\\pi R^3 = 512 \\times \\frac{4}{3}\\pi r^3 \\implies R^3 = 512 r^3$\nSince $512 = 8^3$, we get $r = \\frac{R}{8}$.\nThe initial surface area is $A_i = 4\\pi R^2$.\nThe final total surface area is $A_f = 512 \times 4\\pi r^2 = 512 \\times 4\\pi \\left(\\frac{R}{8}\\right)^2 = 512 \\times \\frac{4\\pi R^2}{64} = 8(4\\pi R^2)$.\nThe change in surface area is $\\Delta A = A_f - A_i = 8(4\\pi R^2) - 4\\pi R^2 = 7(4\\pi R^2) = 28\\pi R^2$.\nChange in surface energy is $\\Delta E = T \\times \\Delta A$:\n$\\Delta E = 0.08 \\times 28\\pi \\times (10^{-3})^2 = 2.24\\pi \\times 10^{-6}\\text{ J}$.\nUsing $\\pi \\approx 3.14159$, $\\Delta E \\approx 2.24 \times 3.14159 \\times 10^{-6} = 7.037 \\times 10^{-6}\\text{ J}$.\nThus, $\\Delta E \\approx 7 \\times 10^{-6}\\text{ J}$, meaning $\\alpha = 7$.",
+      "unicode": "Let the radius of the large drop be R and the radius of each small droplet be r.\nDiameter of large drop = 2text{ mm} implies R = 1text{ mm} = 10^{-3}text{ m}.\nBy conservation of volume during splitting into n=512 drops:\n(4/3)π R³ = 512 × (4/3)π r³ implies R³ = 512 r³\nSince 512 = 8³, we get r = (R/8).\nThe initial surface area is A_i = 4π R².\nThe final total surface area is A_f = 512 \times 4π r² = 512 × 4π left((R/8)right)² = 512 × (4π R²/64) = 8(4π R²).\nThe change in surface area is Delta A = A_f - A_i = 8(4π R²) - 4π R² = 7(4π R²) = 28π R².\nChange in surface energy is Delta E = T × Delta A:\nDelta E = 0.08 × 28π × (10^{-3})² = 2.24π × 10^{-6}text{ J}.\nUsing π approx 3.14159, Delta E approx 2.24 \times 3.14159 × 10^{-6} = 7.037 × 10^{-6}text{ J}.\nThus, Delta E approx 7 × 10^{-6}text{ J}, meaning α = 7.",
+      "plainText": "Let the radius of the large drop be R and the radius of each small droplet be r. Diameter of large drop = 2text{ mm} implies R = 1text{ mm} = 10^{-3}text{ m}. By conservation of volume during splitting into n=512 drops: (4)/(3)pi R^3 = 512 times (4)/(3)pi r^3 implies R^3 = 512 r^3 Since 512 = 8^3, we get r = (R)/(8). The initial surface area is A_i = 4pi R^2. The final total surface area is A_f = 512 imes 4pi r^2 = 512 times 4pi left((R)/(8)right)^2 = 512 times (4pi R^2)/(64) = 8(4pi R^2). The change in surface area is Delta A = A_f - A_i = 8(4pi R^2) - 4pi R^2 = 7(4pi R^2) = 28pi R^2. Change in surface energy is Delta E = T times Delta A: Delta E = 0.08 times 28pi times (10^{-3})^2 = 2.24pi times 10^{-6}text{ J}. Using pi approx 3.14159, Delta E approx 2.24 imes 3.14159 times 10^{-6} = 7.037 times 10^{-6}text{ J}. Thus, Delta E approx 7 times 10^{-6}text{ J}, meaning alpha = 7."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Fluids",
+      "subchapter": "Mechanical Properties of Fluids Core Concepts",
+      "topic": "Mechanical Properties of Fluids Primary Topic",
+      "learningOutcome": "Master fundamental principles of Mechanical Properties of Fluids",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.531Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.531Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q533",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q533_RAW",
+    "question": {
+      "latex": "A tub is filled with water and a wooden cube 10 cm $\\times$ 10 cm $\\times$ 10 cm is placed in the water. The wooden cube is found to float on the water with a part of it submerged in water. When a metal coin is placed on the wooden cube, the submerged part is increased by 3.87 cm. The mass of the metal coin is _______ gram. $Take water density as $1\\text{ g/cm}^3$ and density of wood as $0.4\\text{ g/cm}^3$$",
+      "unicode": "A tub is filled with water and a wooden cube 10 cm × 10 cm × 10 cm is placed in the water. The wooden cube is found to float on the water with a part of it submerged in water. When a metal coin is placed on the wooden cube, the submerged part is increased by 3.87 cm. The mass of the metal coin is _______ gram. Take water density as 1text{ g/cm}³ and density of wood as 0.4text{ g/cm}³",
+      "plainText": "A tub is filled with water and a wooden cube 10 cm times 10 cm times 10 cm is placed in the water. The wooden cube is found to float on the water with a part of it submerged in water. When a metal coin is placed on the wooden cube, the submerged part is increased by 3.87 cm. The mass of the metal coin is _______ gram. Take water density as 1text{ g/cm}^3 and density of wood as 0.4text{ g/cm}^3"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "258",
+        "unicode": "258",
+        "plainText": "258"
+      },
+      {
+        "id": "b",
+        "latex": "387",
+        "unicode": "387",
+        "plainText": "387"
+      },
+      {
+        "id": "c",
+        "latex": "420",
+        "unicode": "420",
+        "plainText": "420"
+      },
+      {
+        "id": "d",
+        "latex": "516",
+        "unicode": "516",
+        "plainText": "516"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "When the metal coin is added, the total downward weight increases by the weight of the coin. For the block to remain floating, the upward buoyant force must increase by an equivalent amount.\nThe increase in buoyant force $\\Delta F_B$ is strictly due to the newly displaced volume of water.\n$\\Delta F_B = M_{coin} g$\n$\\Delta F_B = \\rho_{water} \\times \\Delta V_{submerged} \\times g$\nEquating the two: $M_{coin} = \\rho_{water} \\times \\Delta V_{submerged}$.\nThe extra volume submerged is the area of the cube's base multiplied by the extra submerged depth $\\Delta h = 3.87\\text{ cm}$.\n$\\Delta V_{submerged} = (10\\text{ cm} \\times 10\\text{ cm}) \\times 3.87\\text{ cm} = 387\\text{ cm}^3$.\nGiven the density of water $\\rho_{water} = 1\\text{ g/cm}^3$, the mass of the extra displaced water is:\n$M_{coin} = 1\\text{ g/cm}^3 \\times 387\\text{ cm}^3 = 387\\text{ g}$.",
+      "unicode": "When the metal coin is added, the total downward weight increases by the weight of the coin. For the block to remain floating, the upward buoyant force must increase by an equivalent amount.\nThe increase in buoyant force Delta F_B is strictly due to the newly displaced volume of water.\nDelta F_B = M_{coin} g\nDelta F_B = rho_{water} × Delta V_{submerged} × g\nEquating the two: M_{coin} = rho_{water} × Delta V_{submerged}.\nThe extra volume submerged is the area of the cube's base multiplied by the extra submerged depth Delta h = 3.87text{ cm}.\nDelta V_{submerged} = (10text{ cm} × 10text{ cm}) × 3.87text{ cm} = 387text{ cm}³.\nGiven the density of water rho_{water} = 1text{ g/cm}³, the mass of the extra displaced water is:\nM_{coin} = 1text{ g/cm}³ × 387text{ cm}³ = 387text{ g}.",
+      "plainText": "When the metal coin is added, the total downward weight increases by the weight of the coin. For the block to remain floating, the upward buoyant force must increase by an equivalent amount. The increase in buoyant force Delta F_B is strictly due to the newly displaced volume of water. Delta F_B = M_{coin} g Delta F_B = rho_{water} times Delta V_{submerged} times g Equating the two: M_{coin} = rho_{water} times Delta V_{submerged}. The extra volume submerged is the area of the cube's base multiplied by the extra submerged depth Delta h = 3.87text{ cm}. Delta V_{submerged} = (10text{ cm} times 10text{ cm}) times 3.87text{ cm} = 387text{ cm}^3. Given the density of water rho_{water} = 1text{ g/cm}^3, the mass of the extra displaced water is: M_{coin} = 1text{ g/cm}^3 times 387text{ cm}^3 = 387text{ g}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Fluids",
+      "subchapter": "Mechanical Properties of Fluids Core Concepts",
+      "topic": "Mechanical Properties of Fluids Primary Topic",
+      "learningOutcome": "Master fundamental principles of Mechanical Properties of Fluids",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q560",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MECHANICALPR_2026_S1_Q560_RAW",
+    "question": {
+      "latex": "The surface tension of a soap solution is $3.5 \\times 10^{-2}$ N/m. The work required to increase the radius of a soap bubble from $1$ cm to $2$ cm is $\\alpha \\times 10^{-6}$ J. The value of $\\alpha$ is _____. $$\\pi = 22/7$$",
+      "unicode": "The surface tension of a soap solution is 3.5 × 10^{-2} N/m. The work required to increase the radius of a soap bubble from 1 cm to 2 cm is α × 10^{-6} J. The value of α is _____. π = 22/7",
+      "plainText": "The surface tension of a soap solution is 3.5 times 10^{-2} N/m. The work required to increase the radius of a soap bubble from 1 cm to 2 cm is alpha times 10^{-6} J. The value of alpha is _____. pi = 22/7"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$264$",
+        "unicode": "264",
+        "plainText": "264"
+      },
+      {
+        "id": "b",
+        "latex": "$132$",
+        "unicode": "132",
+        "plainText": "132"
+      },
+      {
+        "id": "c",
+        "latex": "$528$",
+        "unicode": "528",
+        "plainText": "528"
+      },
+      {
+        "id": "d",
+        "latex": "$314$",
+        "unicode": "314",
+        "plainText": "314"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Work done to expand a bubble is given by $W = T \\cdot \\Delta A$.\nA soap bubble has two surfaces (inner and outer), so the change in surface area is $\\Delta A = 2 \\times 4\\pi (r_2^2 - r_1^2)$.\nHere, $r_1 = 1 \\text{ cm} = 10^{-2} \\text{ m}$ and $r_2 = 2 \\text{ cm} = 2 \\times 10^{-2} \\text{ m}$.\n$r_2^2 - r_1^2 = (4 \\times 10^{-4}) - (1 \\times 10^{-4}) = 3 \\times 10^{-4} \\text{ m}^2$.\n$\\Delta A = 8\\pi \\times 3 \\times 10^{-4} = 24\\pi \\times 10^{-4} \\text{ m}^2$.\nWork done $W = (3.5 \\times 10^{-2}) \\times (24\\pi \\times 10^{-4}) = 84\\pi \\times 10^{-6} \\text{ J}$.\nUsing $\\pi = \\frac{22}{7}$:\n$W = 84 \\times \\frac{22}{7} \\times 10^{-6} = 12 \\times 22 \\times 10^{-6} = 264 \\times 10^{-6} \\text{ J}$.\nEquating this to $\\alpha \\times 10^{-6}$, we get $\\alpha = 264$.",
+      "unicode": "Work done to expand a bubble is given by W = T · Delta A.\nA soap bubble has two surfaces (inner and outer), so the change in surface area is Delta A = 2 × 4π (r_2² - r_1²).\nHere, r_1 = 1 text{ cm} = 10^{-2} text{ m} and r_2 = 2 text{ cm} = 2 × 10^{-2} text{ m}.\nr_2² - r_1² = (4 × 10^{-4}) - (1 × 10^{-4}) = 3 × 10^{-4} text{ m}².\nDelta A = 8π × 3 × 10^{-4} = 24π × 10^{-4} text{ m}².\nWork done W = (3.5 × 10^{-2}) × (24π × 10^{-4}) = 84π × 10^{-6} text{ J}.\nUsing π = (22/7):\nW = 84 × (22/7) × 10^{-6} = 12 × 22 × 10^{-6} = 264 × 10^{-6} text{ J}.\nEquating this to α × 10^{-6}, we get α = 264.",
+      "plainText": "Work done to expand a bubble is given by W = T cdot Delta A. A soap bubble has two surfaces (inner and outer), so the change in surface area is Delta A = 2 times 4pi (r_2^2 - r_1^2). Here, r_1 = 1 text{ cm} = 10^{-2} text{ m} and r_2 = 2 text{ cm} = 2 times 10^{-2} text{ m}. r_2^2 - r_1^2 = (4 times 10^{-4}) - (1 times 10^{-4}) = 3 times 10^{-4} text{ m}^2. Delta A = 8pi times 3 times 10^{-4} = 24pi times 10^{-4} text{ m}^2. Work done W = (3.5 times 10^{-2}) times (24pi times 10^{-4}) = 84pi times 10^{-6} text{ J}. Using pi = (22)/(7): W = 84 times (22)/(7) times 10^{-6} = 12 times 22 times 10^{-6} = 264 times 10^{-6} text{ J}. Equating this to alpha times 10^{-6}, we get alpha = 264."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Fluids",
+      "subchapter": "Mechanical Properties of Fluids Core Concepts",
+      "topic": "Mechanical Properties of Fluids Primary Topic",
+      "learningOutcome": "Master fundamental principles of Mechanical Properties of Fluids",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

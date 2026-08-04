@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_ELECTROCHEMI_2026_S1_Q551",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_ELECTROCHEMI_2026_S1_Q551_RAW",
+    "question": {
+      "latex": "Consider the following two half-cell reactions along with the standard reduction potential given:\n$CO_2 + 6H^+ + 6e^- \\rightarrow CH_3OH + H_2O \\quad E^\\circ_{red} = 0.02\\text{ V}$\n$\\frac{1}{2}O_2 + 2H^+ + 2e^- \\rightarrow H_2O \\quad E^\\circ_{red} = 1.23\\text{ V}$\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of $CH_3OH$ is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, $\\Delta V$ is _______ $\\text{m}^3$. $nearest integer$\nGiven: $F = 96500\\text{ C mol}^{-1}$",
+      "unicode": "Consider the following two half-cell reactions along with the standard reduction potential given:\nCO_2 + 6H^+ + 6e^- rightarrow CH_3OH + H_2O quad E^circ_{red} = 0.02text{ V}\n(1/2)O_2 + 2H^+ + 2e^- rightarrow H_2O quad E^circ_{red} = 1.23text{ V}\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of CH_3OH is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, Delta V is _______ text{m}³. nearest integer\nGiven: F = 96500text{ C mol}^{-1}",
+      "plainText": "Consider the following two half-cell reactions along with the standard reduction potential given: CO_2 + 6H^+ + 6e^- rightarrow CH_3OH + H_2O quad E^circ_{red} = 0.02text{ V} (1)/(2)O_2 + 2H^+ + 2e^- rightarrow H_2O quad E^circ_{red} = 1.23text{ V} A fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of CH_3OH is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, Delta V is _______ text{m}^3. nearest integer Given: F = 96500text{ C mol}^{-1}"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$-280$",
+        "unicode": "-280",
+        "plainText": "-280"
+      },
+      {
+        "id": "b",
+        "latex": "$-560$",
+        "unicode": "-560",
+        "plainText": "-560"
+      },
+      {
+        "id": "c",
+        "latex": "$+560$",
+        "unicode": "+560",
+        "plainText": "+560"
+      },
+      {
+        "id": "d",
+        "latex": "$-840$",
+        "unicode": "-840",
+        "plainText": "-840"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "In the fuel cell, methanol is oxidized at the anode and oxygen is reduced at the cathode.\nAnode: $CH_3OH + H_2O \\rightarrow CO_2 + 6H^+ + 6e^- \\quad (E^\\circ_{ox} = -0.02\\text{ V})$\nCathode: $\\frac{3}{2}O_2 + 6H^+ + 6e^- \\rightarrow 3H_2O \\quad (E^\\circ_{red} = 1.23\\text{ V})$\nOverall cell potential $E^\\circ = 1.23 - 0.02 = 1.21\\text{ V}$.\nThe maximum electrical work available from 1 mole of methanol ($n=6$) is $-\\Delta G^\\circ = nFE^\\circ = 6 \\times 96500 \\times 1.21 = 700660\\text{ J}$.\nActual useful work derived with 80% efficiency = $0.8 \\times 700660 = 560528\\text{ J}$.\nThis work is done by the cell to compress a gas. By thermodynamics, work done ON the gas is $W = -P_{ext} \\Delta V$.\nThus, $560528 = - (1 \\times 10^3\\text{ Pa}) \\times \\Delta V$.\n$\\Delta V = -560.528\\text{ m}^3$. Rounded to nearest integer, $\\Delta V = -560$.",
+      "unicode": "In the fuel cell, methanol is oxidized at the anode and oxygen is reduced at the cathode.\nAnode: CH_3OH + H_2O rightarrow CO_2 + 6H^+ + 6e^- quad (E^circ_{ox} = -0.02text{ V})\nCathode: (3/2)O_2 + 6H^+ + 6e^- rightarrow 3H_2O quad (E^circ_{red} = 1.23text{ V})\nOverall cell potential E^circ = 1.23 - 0.02 = 1.21text{ V}.\nThe maximum electrical work available from 1 mole of methanol (n=6) is -Delta G^circ = nFE^circ = 6 × 96500 × 1.21 = 700660text{ J}.\nActual useful work derived with 80% efficiency = 0.8 × 700660 = 560528text{ J}.\nThis work is done by the cell to compress a gas. By thermodynamics, work done ON the gas is W = -P_{ext} Delta V.\nThus, 560528 = - (1 × 10³text{ Pa}) × Delta V.\nDelta V = -560.528text{ m}³. Rounded to nearest integer, Delta V = -560.",
+      "plainText": "In the fuel cell, methanol is oxidized at the anode and oxygen is reduced at the cathode. Anode: CH_3OH + H_2O rightarrow CO_2 + 6H^+ + 6e^- quad (E^circ_{ox} = -0.02text{ V}) Cathode: (3)/(2)O_2 + 6H^+ + 6e^- rightarrow 3H_2O quad (E^circ_{red} = 1.23text{ V}) Overall cell potential E^circ = 1.23 - 0.02 = 1.21text{ V}. The maximum electrical work available from 1 mole of methanol (n=6) is -Delta G^circ = nFE^circ = 6 times 96500 times 1.21 = 700660text{ J}. Actual useful work derived with 80% efficiency = 0.8 times 700660 = 560528text{ J}. This work is done by the cell to compress a gas. By thermodynamics, work done ON the gas is W = -P_{ext} Delta V. Thus, 560528 = - (1 times 10^3text{ Pa}) times Delta V. Delta V = -560.528text{ m}^3. Rounded to nearest integer, Delta V = -560."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrochemistry",
+      "subchapter": "Electrochemistry Core Concepts",
+      "topic": "Electrochemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrochemistry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

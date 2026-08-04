@@ -1,0 +1,604 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2025_S_Q94",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2025_S_Q94_RAW",
+    "question": {
+      "latex": "Let the curve $z(1 + i) + \\bar{z}(1-i) = 4, z \\in C$, divide the region $|z - 3| \\leq 1$ into two parts of areas $\\alpha$ and $\\beta$. Then $|\\alpha - \\beta|$ equals :",
+      "unicode": "Let the curve z(1 + i) + bar{z}(1-i) = 4, z in C, divide the region |z - 3| leq 1 into two parts of areas α and β. Then |α - β| equals :",
+      "plainText": "Let the curve z(1 + i) + bar{z}(1-i) = 4, z in C, divide the region |z - 3| leq 1 into two parts of areas alpha and beta. Then |alpha - beta| equals :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1 + \\frac{\\pi}{2}$",
+        "unicode": "1 + (π/2)",
+        "plainText": "1 + (pi)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$1 + \\frac{\\pi}{3}$",
+        "unicode": "1 + (π/3)",
+        "plainText": "1 + (pi)/(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$1 + \\frac{\\pi}{4}$",
+        "unicode": "1 + (π/4)",
+        "plainText": "1 + (pi)/(4)"
+      },
+      {
+        "id": "d",
+        "latex": "$1 + \\frac{\\pi}{6}$",
+        "unicode": "1 + (π/6)",
+        "plainText": "1 + (pi)/(6)"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S_Q152",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S_Q152_RAW",
+    "question": {
+      "latex": "Let $x$ and $y$ be real numbers such that $50 \\left( \\frac{2x}{1 + 3i} - \\frac{y}{1 - 2i} \\right) = 31 + 17i, i = \\sqrt{-1}$. Then the value of $10(x - 3y)$ is :",
+      "unicode": "Let x and y be real numbers such that 50 left( (2x/1 + 3i) - (y/1 - 2i) right) = 31 + 17i, i = √(-1). Then the value of 10(x - 3y) is :",
+      "plainText": "Let x and y be real numbers such that 50 left( (2x)/(1 + 3i) - (y)/(1 - 2i) right) = 31 + 17i, i = sqrt(-1). Then the value of 10(x - 3y) is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "20",
+        "unicode": "20",
+        "plainText": "20"
+      },
+      {
+        "id": "b",
+        "latex": "31",
+        "unicode": "31",
+        "plainText": "31"
+      },
+      {
+        "id": "c",
+        "latex": "35",
+        "unicode": "35",
+        "plainText": "35"
+      },
+      {
+        "id": "d",
+        "latex": "75",
+        "unicode": "75",
+        "plainText": "75"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.047Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.047Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S_Q227",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S_Q227_RAW",
+    "question": {
+      "latex": "Let the circles $C_1 : |z| = r$ and $C_2 : |z - 3 - 4i| = 5, z \\in \\mathbb{C}$, be such that $C_2$ lies within $C_1$. If $z_1$ moves on $C_1$, $z_2$ moves on $C_2$ and $\\min |z_1 - z_2| = 2$, then $\\max |z_1 - z_2|$ is equal to:",
+      "unicode": "Let the circles C_1 : |z| = r and C_2 : |z - 3 - 4i| = 5, z in mathbb{C}, be such that C_2 lies within C_1. If z_1 moves on C_1, z_2 moves on C_2 and min |z_1 - z_2| = 2, then max |z_1 - z_2| is equal to:",
+      "plainText": "Let the circles C_1 : |z| = r and C_2 : |z - 3 - 4i| = 5, z in mathbb{C}, be such that C_2 lies within C_1. If z_1 moves on C_1, z_2 moves on C_2 and min |z_1 - z_2| = 2, then max |z_1 - z_2| is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "b",
+        "latex": "$17$",
+        "unicode": "17",
+        "plainText": "17"
+      },
+      {
+        "id": "c",
+        "latex": "$22$",
+        "unicode": "22",
+        "plainText": "22"
+      },
+      {
+        "id": "d",
+        "latex": "$24$",
+        "unicode": "24",
+        "plainText": "24"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.051Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.051Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S_Q303",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S_Q303_RAW",
+    "question": {
+      "latex": "Let $z$ be a complex number such that $|z + 2| = |z - 2|$ and $\\arg \\left( \\frac{z + 3}{z - i} \\right) = \\frac{\\pi}{4}$. Then $|z|^2$ is equal to:",
+      "unicode": "Let z be a complex number such that |z + 2| = |z - 2| and arg left( (z + 3/z - i) right) = (π/4). Then |z|² is equal to:",
+      "plainText": "Let z be a complex number such that |z + 2| = |z - 2| and arg left( (z + 3)/(z - i) right) = (pi)/(4). Then |z|^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "b",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.055Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.055Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2025_S1_Q79",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2025_S1_Q79_RAW",
+    "question": {
+      "latex": "Let the curve $z$1 + i$ + \\bar{z}$1-i$ = 4, z \\in C$, divide the region $|z - 3| \\leq 1$ into two parts of areas $\\alpha$ and $\\beta$. Then $|\\alpha - \\beta|$ equals :",
+      "unicode": "Let the curve z1 + i + bar{z}1-i = 4, z in C, divide the region |z - 3| leq 1 into two parts of areas α and β. Then |α - β| equals :",
+      "plainText": "Let the curve z1 + i + bar{z}1-i = 4, z in C, divide the region |z - 3| leq 1 into two parts of areas alpha and beta. Then |alpha - beta| equals :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$1 + \\frac{\\pi}{2}$",
+        "unicode": "1 + (π/2)",
+        "plainText": "1 + (pi)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$1 + \\frac{\\pi}{3}$",
+        "unicode": "1 + (π/3)",
+        "plainText": "1 + (pi)/(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$1 + \\frac{\\pi}{4}$",
+        "unicode": "1 + (π/4)",
+        "plainText": "1 + (pi)/(4)"
+      },
+      {
+        "id": "d",
+        "latex": "$1 + \\frac{\\pi}{6}$",
+        "unicode": "1 + (π/6)",
+        "plainText": "1 + (pi)/(6)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S1_Q122",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S1_Q122_RAW",
+    "question": {
+      "latex": "Let $x$ and $y$ be real numbers such that $50 \\left$ \\frac{2x}{1 + 3i} - \\frac{y}{1 - 2i} \\right$ = 31 + 17i, i = \\sqrt{-1}$. Then the value of $10$x - 3y$$ is :",
+      "unicode": "Let x and y be real numbers such that 50 left (2x/1 + 3i) - (y/1 - 2i) right = 31 + 17i, i = √(-1). Then the value of 10x - 3y is :",
+      "plainText": "Let x and y be real numbers such that 50 left (2x)/(1 + 3i) - (y)/(1 - 2i) right = 31 + 17i, i = sqrt(-1). Then the value of 10x - 3y is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "20",
+        "unicode": "20",
+        "plainText": "20"
+      },
+      {
+        "id": "b",
+        "latex": "31",
+        "unicode": "31",
+        "plainText": "31"
+      },
+      {
+        "id": "c",
+        "latex": "35",
+        "unicode": "35",
+        "plainText": "35"
+      },
+      {
+        "id": "d",
+        "latex": "75",
+        "unicode": "75",
+        "plainText": "75"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Multiply the numerators and denominators by their respective complex conjugates:\n$50 \\left( \\frac{2x(1 - 3i)}{10} - \\frac{y(1 + 2i)}{5} \\right) = 31 + 17i$\n$10x(1 - 3i) - 10y(1 + 2i) = 31 + 17i$\nEquating the real parts: $10x - 10y = 31 \\implies x - y = 3.1$\nEquating the imaginary parts: $-30x - 20y = 17 \\implies 30x + 20y = -17$\nWe solve the linear system for $x$ and $y$.\nMultiply the first equation by 3: $30x - 30y = 93$.\nSubtract it from the second equation: $(30x + 20y) - (30x - 30y) = -17 - 93 \\implies 50y = -110 \\implies y = -2.2$.\nSubstitute $y$ back: $x - (-2.2) = 3.1 \\implies x = 0.9$.\nThen we compute $10(x - 3y)$:\n$10(0.9 - 3(-2.2)) = 10(0.9 + 6.6) = 10(7.5) = 75$.",
+      "unicode": "Multiply the numerators and denominators by their respective complex conjugates:\n50 left( (2x(1 - 3i)/10) - (y(1 + 2i)/5) right) = 31 + 17i\n10x(1 - 3i) - 10y(1 + 2i) = 31 + 17i\nEquating the real parts: 10x - 10y = 31 implies x - y = 3.1\nEquating the imaginary parts: -30x - 20y = 17 implies 30x + 20y = -17\nWe solve the linear system for x and y.\nMultiply the first equation by 3: 30x - 30y = 93.\nSubtract it from the second equation: (30x + 20y) - (30x - 30y) = -17 - 93 implies 50y = -110 implies y = -2.2.\nSubstitute y back: x - (-2.2) = 3.1 implies x = 0.9.\nThen we compute 10(x - 3y):\n10(0.9 - 3(-2.2)) = 10(0.9 + 6.6) = 10(7.5) = 75.",
+      "plainText": "Multiply the numerators and denominators by their respective complex conjugates: 50 left( (2x(1 - 3i))/(10) - (y(1 + 2i))/(5) right) = 31 + 17i 10x(1 - 3i) - 10y(1 + 2i) = 31 + 17i Equating the real parts: 10x - 10y = 31 implies x - y = 3.1 Equating the imaginary parts: -30x - 20y = 17 implies 30x + 20y = -17 We solve the linear system for x and y. Multiply the first equation by 3: 30x - 30y = 93. Subtract it from the second equation: (30x + 20y) - (30x - 30y) = -17 - 93 implies 50y = -110 implies y = -2.2. Substitute y back: x - (-2.2) = 3.1 implies x = 0.9. Then we compute 10(x - 3y): 10(0.9 - 3(-2.2)) = 10(0.9 + 6.6) = 10(7.5) = 75."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.529Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.529Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S1_Q243",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_COMPLEXNUMBE_2026_S1_Q243_RAW",
+    "question": {
+      "latex": "Let $z$ be a complex number such that $|z + 2| = |z - 2|$ and $\\arg \\left$ \\frac{z + 3}{z - i} \\right$ = \\frac{\\pi}{4}$. Then $|z|^2$ is equal to:",
+      "unicode": "Let z be a complex number such that |z + 2| = |z - 2| and arg left (z + 3/z - i) right = (π/4). Then |z|² is equal to:",
+      "plainText": "Let z be a complex number such that |z + 2| = |z - 2| and arg left (z + 3)/(z - i) right = (pi)/(4). Then |z|^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$9$",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "b",
+        "latex": "$4$",
+        "unicode": "4",
+        "plainText": "4"
+      },
+      {
+        "id": "c",
+        "latex": "$5$",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "From $|z + 2| = |z - 2|$, the locus of $z$ is the perpendicular bisector of the line segment joining $(-2, 0)$ and $(2, 0)$, which is the imaginary axis. Let $z = iy$, where $y \\in \\mathbb{R}$.\nGiven $\\arg \\left( \\frac{iy + 3}{iy - i} \\right) = \\frac{\\pi}{4}$.\nSimplify the complex fraction: $\\frac{3 + iy}{i(y - 1)} = \\frac{(3 + iy)(-i)}{y - 1} = \\frac{y - 3i}{y - 1} = \\frac{y}{y - 1} + i \\left( \\frac{-3}{y - 1} \\right)$.\nSince the argument is $\\frac{\\pi}{4}$, the real and imaginary parts must be equal and positive:\n$\\frac{y}{y - 1} = \\frac{-3}{y - 1} > 0 \\implies y = -3$.\nFor $y = -3$, the real part is $\\frac{-3}{-4} = \\frac{3}{4} > 0$, satisfying the requirement.\nThus, $z = -3i$.\nThen, $|z|^2 = 0^2 + (-3)^2 = 9$.",
+      "unicode": "From |z + 2| = |z - 2|, the locus of z is the perpendicular bisector of the line segment joining (-2, 0) and (2, 0), which is the imaginary axis. Let z = iy, where y in mathbb{R}.\nGiven arg left( (iy + 3/iy - i) right) = (π/4).\nSimplify the complex fraction: (3 + iy/i(y - 1)) = ((3 + iy)(-i)/y - 1) = (y - 3i/y - 1) = (y/y - 1) + i left( (-3/y - 1) right).\nSince the argument is (π/4), the real and imaginary parts must be equal and positive:\n(y/y - 1) = (-3/y - 1) > 0 implies y = -3.\nFor y = -3, the real part is (-3/-4) = (3/4) > 0, satisfying the requirement.\nThus, z = -3i.\nThen, |z|² = 0² + (-3)² = 9.",
+      "plainText": "From |z + 2| = |z - 2|, the locus of z is the perpendicular bisector of the line segment joining (-2, 0) and (2, 0), which is the imaginary axis. Let z = iy, where y in mathbb{R}. Given arg left( (iy + 3)/(iy - i) right) = (pi)/(4). Simplify the complex fraction: (3 + iy)/(i(y - 1)) = ((3 + iy)(-i))/(y - 1) = (y - 3i)/(y - 1) = (y)/(y - 1) + i left( (-3)/(y - 1) right). Since the argument is (pi)/(4), the real and imaginary parts must be equal and positive: (y)/(y - 1) = (-3)/(y - 1) > 0 implies y = -3. For y = -3, the real part is (-3)/(-4) = (3)/(4) > 0, satisfying the requirement. Thus, z = -3i. Then, |z|^2 = 0^2 + (-3)^2 = 9."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "subchapter": "Complex Numbers Core Concepts",
+      "topic": "Complex Numbers Primary Topic",
+      "learningOutcome": "Master fundamental principles of Complex Numbers",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.537Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.537Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

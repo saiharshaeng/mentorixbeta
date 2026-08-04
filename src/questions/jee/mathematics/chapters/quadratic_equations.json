@@ -1,0 +1,522 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2025_S_Q87",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2025_S_Q87_RAW",
+    "question": {
+      "latex": "Let $\\alpha_\\theta$ and $\\beta_\\theta$ be the distinct roots of $2x^2 + (\\cos\\theta)x - 1 = 0, \\theta \\in (0, 2\\pi)$. If m and M are the minimum and the maximum values of $\\alpha_\\theta^6 + \\beta_\\theta^6$, then 16(M+m) equals :",
+      "unicode": "Let α_θ and β_θ be the distinct roots of 2x² + (cosθ)x - 1 = 0, θ in (0, 2π). If m and M are the minimum and the maximum values of α_θ^6 + β_θ^6, then 16(M+m) equals :",
+      "plainText": "Let alpha_theta and beta_theta be the distinct roots of 2x^2 + (costheta)x - 1 = 0, theta in (0, 2pi). If m and M are the minimum and the maximum values of alpha_theta^6 + beta_theta^6, then 16(M+m) equals :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "24",
+        "unicode": "24",
+        "plainText": "24"
+      },
+      {
+        "id": "b",
+        "latex": "25",
+        "unicode": "25",
+        "plainText": "25"
+      },
+      {
+        "id": "c",
+        "latex": "27",
+        "unicode": "27",
+        "plainText": "27"
+      },
+      {
+        "id": "d",
+        "latex": "17",
+        "unicode": "17",
+        "plainText": "17"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations",
+      "subchapter": "Quadratic Equations Core Concepts",
+      "topic": "Quadratic Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2026_S_Q151",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2026_S_Q151_RAW",
+    "question": {
+      "latex": "Let $\\alpha, \\alpha + 2, \\alpha \\in \\mathbb{Z}$, be the roots of the quadratic equation $x(x + 2) + (x + 1)(x + 3) + (x + 2)(x + 4) + \\dots + (x + n - 1)(x + n + 1) = 4n$ for some $n \\in \\mathbb{N}$. Then $n + \\alpha$ is equal to :",
+      "unicode": "Let α, α + 2, α in mathbb{Z}, be the roots of the quadratic equation x(x + 2) + (x + 1)(x + 3) + (x + 2)(x + 4) + dots + (x + n - 1)(x + n + 1) = 4n for some n in mathbb{N}. Then n + α is equal to :",
+      "plainText": "Let alpha, alpha + 2, alpha in mathbb{Z}, be the roots of the quadratic equation x(x + 2) + (x + 1)(x + 3) + (x + 2)(x + 4) + dots + (x + n - 1)(x + n + 1) = 4n for some n in mathbb{N}. Then n + alpha is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "b",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "c",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "d",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations",
+      "subchapter": "Quadratic Equations Core Concepts",
+      "topic": "Quadratic Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.047Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.047Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2026_S_Q226",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2026_S_Q226_RAW",
+    "question": {
+      "latex": "Let $\\alpha, \\beta$ be the roots of the equation $x^2 - 3x + r = 0$, and $\\frac{\\alpha}{2}, 2\\beta$ be the roots of the equation $x^2 + 3x + r = 0$. If the roots of the equation $x^2 + 6x = m$ are $2\\alpha + \\beta + 2r$ and $\\alpha - 2\\beta - \\frac{r}{2}$, then $m$ is equal to:",
+      "unicode": "Let α, β be the roots of the equation x² - 3x + r = 0, and (α/2), 2β be the roots of the equation x² + 3x + r = 0. If the roots of the equation x² + 6x = m are 2α + β + 2r and α - 2β - (r/2), then m is equal to:",
+      "plainText": "Let alpha, beta be the roots of the equation x^2 - 3x + r = 0, and (alpha)/(2), 2beta be the roots of the equation x^2 + 3x + r = 0. If the roots of the equation x^2 + 6x = m are 2alpha + beta + 2r and alpha - 2beta - (r)/(2), then m is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$-135$",
+        "unicode": "-135",
+        "plainText": "-135"
+      },
+      {
+        "id": "b",
+        "latex": "$-567$",
+        "unicode": "-567",
+        "plainText": "-567"
+      },
+      {
+        "id": "c",
+        "latex": "$135$",
+        "unicode": "135",
+        "plainText": "135"
+      },
+      {
+        "id": "d",
+        "latex": "$567$",
+        "unicode": "567",
+        "plainText": "567"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations",
+      "subchapter": "Quadratic Equations Core Concepts",
+      "topic": "Quadratic Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2024_S1_Q2",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2024_S1_Q2_RAW",
+    "question": {
+      "latex": "If $\\alpha, \\beta$ are the roots of $x^2 - 6x + 8 = 0$, then the quadratic equation whose roots are $\\alpha^2, \\beta^2$ is:",
+      "unicode": "If α, β are the roots of x² - 6x + 8 = 0, then the quadratic equation whose roots are α², β² is:",
+      "plainText": "If alpha, beta are the roots of x^2 - 6x + 8 = 0, then the quadratic equation whose roots are alpha^2, beta^2 is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$x^2 - 20x + 64 = 0$",
+        "unicode": "x² - 20x + 64 = 0",
+        "plainText": "x^2 - 20x + 64 = 0"
+      },
+      {
+        "id": "b",
+        "latex": "$x^2 - 12x + 64 = 0$",
+        "unicode": "x² - 12x + 64 = 0",
+        "plainText": "x^2 - 12x + 64 = 0"
+      },
+      {
+        "id": "c",
+        "latex": "$x^2 - 20x + 16 = 0$",
+        "unicode": "x² - 20x + 16 = 0",
+        "plainText": "x^2 - 20x + 16 = 0"
+      },
+      {
+        "id": "d",
+        "latex": "$x^2 + 20x + 64 = 0$",
+        "unicode": "x² + 20x + 64 = 0",
+        "plainText": "x^2 + 20x + 64 = 0"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Roots are $\\alpha = 2, \\beta = 4$. Their squares are $\\alpha^2 = 4, \\beta^2 = 16$. Sum of new roots $= 20$, product $= 64$. Equation: $x^2 - 20x + 64 = 0$.",
+      "unicode": "Roots are α = 2, β = 4. Their squares are α² = 4, β² = 16. Sum of new roots = 20, product = 64. Equation: x² - 20x + 64 = 0.",
+      "plainText": "Roots are alpha = 2, beta = 4. Their squares are alpha^2 = 4, beta^2 = 16. Sum of new roots = 20, product = 64. Equation: x^2 - 20x + 64 = 0."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2024,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations",
+      "subchapter": "Quadratic Equations Core Concepts",
+      "topic": "Quadratic Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.058Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.058Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2025_S1_Q72",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2025_S1_Q72_RAW",
+    "question": {
+      "latex": "Let $\\alpha_\\theta$ and $\\beta_\\theta$ be the distinct roots of $2x^2 + $\\cos\\theta$x - 1 = 0, \\theta \\in $0, 2\\pi$$. If m and M are the minimum and the maximum values of $\\alpha_\\theta^6 + \\beta_\\theta^6$, then 16$M+m$ equals :",
+      "unicode": "Let α_θ and β_θ be the distinct roots of 2x² + cosθx - 1 = 0, θ in 0, 2π. If m and M are the minimum and the maximum values of α_θ^6 + β_θ^6, then 16M+m equals :",
+      "plainText": "Let alpha_theta and beta_theta be the distinct roots of 2x^2 + costhetax - 1 = 0, theta in 0, 2pi. If m and M are the minimum and the maximum values of alpha_theta^6 + beta_theta^6, then 16M+m equals :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "24",
+        "unicode": "24",
+        "plainText": "24"
+      },
+      {
+        "id": "b",
+        "latex": "25",
+        "unicode": "25",
+        "plainText": "25"
+      },
+      {
+        "id": "c",
+        "latex": "27",
+        "unicode": "27",
+        "plainText": "27"
+      },
+      {
+        "id": "d",
+        "latex": "17",
+        "unicode": "17",
+        "plainText": "17"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations",
+      "subchapter": "Quadratic Equations Core Concepts",
+      "topic": "Quadratic Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_QUADRATICEQU_2026_S1_Q121",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_QUADRATICEQU_2026_S1_Q121_RAW",
+    "question": {
+      "latex": "Let $\\alpha, \\alpha + 2, \\alpha \\in \\mathbb{Z}$, be the roots of the quadratic equation $x$x + 2$ + $x + 1$$x + 3$ + $x + 2$$x + 4$ + \\dots + $x + n - 1$$x + n + 1$ = 4n$ for some $n \\in \\mathbb{N}$. Then $n + \\alpha$ is equal to :",
+      "unicode": "Let α, α + 2, α in mathbb{Z}, be the roots of the quadratic equation xx + 2 + x + 1x + 3 + x + 2x + 4 + dots + x + n - 1x + n + 1 = 4n for some n in mathbb{N}. Then n + α is equal to :",
+      "plainText": "Let alpha, alpha + 2, alpha in mathbb{Z}, be the roots of the quadratic equation xx + 2 + x + 1x + 3 + x + 2x + 4 + dots + x + n - 1x + n + 1 = 4n for some n in mathbb{N}. Then n + alpha is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "b",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "c",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "d",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The given equation is $\\sum_{k=0}^{n-1} (x+k)(x+k+2) = 4n$.\n\n$\\sum_{k=0}^{n-1} (x^2 + 2kx + 2x + k^2 + 2k) = 4n$\n$n x^2 + 2x \\frac{(n-1)n}{2} + 2x n + \\sum_{k=0}^{n-1} k(k + 2) = 4n$\nThis simplifies to:\n$n x^2 + n(n+1)x + \\frac{(n-1)n(2n-1)}{6} + \\frac{2(n-1)n}{2} - 4n = 0$\nDivide by $n$: $x^2 + (n+1)x + \\frac{(n-1)(2n-1)}{6} + (n-1) - 4 = 0$\nSum of roots = $2\\alpha + 2 = -(n+1) \\implies 2\\alpha = -(n+3)$. Since $\\alpha$ is an integer, $n$ must be an odd integer.\nProduct of roots = $\\alpha(\\alpha+2) = \\frac{2n^2 - 3n + 1 + 6n - 30}{6} = \\frac{2n^2 + 3n - 29}{6}$\nFrom $n = -2\\alpha - 3$, $(n+3)/2 = -\\alpha$. Then $\\alpha(\\alpha+2) = \\frac{-(n+3)}{2} \\cdot \\frac{-(n-1)}{2} = \\frac{n^2+2n-3}{4}$.\nEquating the two expressions for the product:\n$\\frac{n^2+2n-3}{4} = \\frac{2n^2+3n-29}{6}$\n$3n^2 + 6n - 9 = 4n^2 + 6n - 58 \\implies n^2 = 49 \\implies n = 7$ (since $n \\in \\mathbb{N}$).\nThen $2\\alpha = -10 \\implies \\alpha = -5$.\nSo $n + \\alpha = 7 - 5 = 2$.",
+      "unicode": "The given equation is sum_{k=0}^{n-1} (x+k)(x+k+2) = 4n.\n\nsum_{k=0}^{n-1} (x² + 2kx + 2x + k² + 2k) = 4n\nn x² + 2x ((n-1)n/2) + 2x n + sum_{k=0}^{n-1} k(k + 2) = 4n\nThis simplifies to:\nn x² + n(n+1)x + ((n-1)n(2n-1)/6) + (2(n-1)n/2) - 4n = 0\nDivide by n: x² + (n+1)x + ((n-1)(2n-1)/6) + (n-1) - 4 = 0\nSum of roots = 2α + 2 = -(n+1) implies 2α = -(n+3). Since α is an integer, n must be an odd integer.\nProduct of roots = α(α+2) = (2n² - 3n + 1 + 6n - 30/6) = (2n² + 3n - 29/6)\nFrom n = -2α - 3, (n+3)/2 = -α. Then α(α+2) = (-(n+3)/2) · (-(n-1)/2) = (n²+2n-3/4).\nEquating the two expressions for the product:\n(n²+2n-3/4) = (2n²+3n-29/6)\n3n² + 6n - 9 = 4n² + 6n - 58 implies n² = 49 implies n = 7 (since n in mathbb{N}).\nThen 2α = -10 implies α = -5.\nSo n + α = 7 - 5 = 2.",
+      "plainText": "The given equation is sum_{k=0}^{n-1} (x+k)(x+k+2) = 4n. sum_{k=0}^{n-1} (x^2 + 2kx + 2x + k^2 + 2k) = 4n n x^2 + 2x ((n-1)n)/(2) + 2x n + sum_{k=0}^{n-1} k(k + 2) = 4n This simplifies to: n x^2 + n(n+1)x + ((n-1)n(2n-1))/(6) + (2(n-1)n)/(2) - 4n = 0 Divide by n: x^2 + (n+1)x + ((n-1)(2n-1))/(6) + (n-1) - 4 = 0 Sum of roots = 2alpha + 2 = -(n+1) implies 2alpha = -(n+3). Since alpha is an integer, n must be an odd integer. Product of roots = alpha(alpha+2) = (2n^2 - 3n + 1 + 6n - 30)/(6) = (2n^2 + 3n - 29)/(6) From n = -2alpha - 3, (n+3)/2 = -alpha. Then alpha(alpha+2) = (-(n+3))/(2) cdot (-(n-1))/(2) = (n^2+2n-3)/(4). Equating the two expressions for the product: (n^2+2n-3)/(4) = (2n^2+3n-29)/(6) 3n^2 + 6n - 9 = 4n^2 + 6n - 58 implies n^2 = 49 implies n = 7 (since n in mathbb{N}). Then 2alpha = -10 implies alpha = -5. So n + alpha = 7 - 5 = 2."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Quadratic Equations",
+      "subchapter": "Quadratic Equations Core Concepts",
+      "topic": "Quadratic Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Quadratic Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.529Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.529Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

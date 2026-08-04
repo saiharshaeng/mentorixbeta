@@ -12,7 +12,9 @@
 (function () {
   'use strict';
 
-  const isNode = typeof window === 'undefined' && typeof process !== 'undefined' && process.versions && process.versions.node;
+  const isNode = typeof process !== 'undefined' && process.versions && !!process.versions.node;
+  const fs = isNode ? require('fs') : null;
+  const path = isNode ? require('path') : null;
 
   // ── CANONICAL PAPER REGISTRY ──────────────────────────────────────────────
   // Only these pristine, validated 75-Q NTA shift papers are used for full mocks.
@@ -105,13 +107,6 @@
     const normTarget = targetExam ? normalizeExamId(targetExam) : null;
 
     const allBanks = [
-      { key: 'jee_math_set',      url: origin + '/questions/jee/mathematics/chapters/set.json',   exam: 'JEE_MAIN',  subject: 'Mathematics' },
-      { key: 'jee_math_mat',      url: origin + '/questions/jee/mathematics/chapters/mat.json',   exam: 'JEE_MAIN',  subject: 'Mathematics' },
-      { key: 'jee_math_lim',      url: origin + '/questions/jee/mathematics/chapters/lim.json',   exam: 'JEE_MAIN',  subject: 'Mathematics' },
-      { key: 'jee_math_conic',    url: origin + '/questions/jee/mathematics/chapters/conic.json', exam: 'JEE_MAIN',  subject: 'Mathematics' },
-      { key: 'jee_math_reas',     url: origin + '/questions/jee/mathematics/chapters/reas.json',  exam: 'JEE_MAIN',  subject: 'Mathematics' },
-      { key: 'jee_phys_gen',      url: origin + '/questions/jee/physics/chapters/phys_gen.json', exam: 'JEE_MAIN',  subject: 'Physics' },
-      { key: 'jee_chem_gen',      url: origin + '/questions/jee/chemistry/chapters/chem_gen.json',exam: 'JEE_MAIN',  subject: 'Chemistry' },
       { key: 'jee_phys_fixed',    url: origin + '/data/pyq/fixed/jee_physics_bank_fixed.json',    exam: 'JEE_MAIN',  subject: 'Physics' },
       { key: 'jee_comp_fixed',    url: origin + '/data/pyq/fixed/jee_main_complete_fixed.json',   exam: 'JEE_MAIN',  subject: null },
       { key: 'jee_cls_fixed',     url: origin + '/data/pyq/fixed/jee_classified_fixed.json',      exam: 'JEE_MAIN',  subject: null },
@@ -144,37 +139,11 @@
         try { onProgress(Math.round((completed / banks.length) * 100)); } catch(e){}
       }
       if (fileCache[bank.key]) continue;
-
-      if (typeof window !== 'undefined' && window.IndexedDBCache) {
-        try {
-          const cachedData = await window.IndexedDBCache.getChapterData(bank.key);
-          if (cachedData && Array.isArray(cachedData) && cachedData.length > 0) {
-            fileCache[bank.key] = { questions: cachedData };
-            totalLoaded += cachedData.length;
-            continue;
-          }
-        } catch(e) {}
-      }
       
       try {
-        let raw = null;
-        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location) {
-          try {
-            const r = await fetch(bank.url, { cache: 'no-store' });
-            if (r.ok) raw = await r.json();
-          } catch(e) {}
-        }
-        if (!raw && typeof require === 'function') {
-          try {
-            const fs = require('fs');
-            const path = require('path');
-            const relativePath = bank.url.replace(/^https?:\/\/[^\/]+/, '').replace(/^\//, '');
-            const fullPath = path.join(process.cwd(), relativePath);
-            if (fs.existsSync(fullPath)) {
-              raw = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
-            }
-          } catch(e) {}
-        }
+        const r = await fetch(bank.url, { cache: 'no-store' });
+        if (!r.ok) continue;
+        const raw = await r.json();
         if (!Array.isArray(raw) || raw.length === 0) continue;
 
         // Filter out corrupted OCR questions & dummy options ("Option A", "JEEBOOKS")
@@ -189,36 +158,12 @@
 
           if (/JEEBOOKS|jeeneetbooks|Answer with Explanations|Central Idea Use geometry/i.test(stem) || /JEEBOOKS|jeeneetbooks/i.test(expl)) return false;
           if (opts.some(opt => /^Option [A-D]$/i.test(String(opt).trim()))) return false;
-          const cleanOptTexts = opts.map(o => String(o).trim().toLowerCase());
-          if (opts.length > 1 && new Set(cleanOptTexts).size < cleanOptTexts.length) return false;
           if (stem.trim().length < 10) return false;
           return true;
         });
 
         // Normalize to pyqService format
         const normalized = validRaw.map((q, i) => {
-          if (q && q.processed) {
-            const p = q.processed;
-            return {
-              id: q.id || (bank.key + '_' + i),
-              q: p.stem || '',
-              opts: p.options || [],
-              ans: [typeof p.correctAnswer === 'number' ? p.correctAnswer : 0],
-              type: (p.type || 'mcq').toLowerCase() === 'mcq' ? 'mcq' : 'numerical',
-              section: p.subject || 'Physics',
-              sectionLabel: 'Section A',
-              chap: p.chapter || 'General',
-              expl: cleanExplanation(p.explanations?.intermediate || p.explanations?.basic || '', p.chapter, p.correctAnswer),
-              difficulty: p.difficulty || 'medium',
-              year: p.year || 2024,
-              marking: { correct: 4, wrong: -1, skip: 0 },
-              source: 'PYQ',
-              exam: p.exam || bank.exam,
-              hasImage: p.hasImage || false,
-              imageRef: p.imageRef || null
-            };
-          }
-
           let opts = [];
           if (Array.isArray(q.options)) opts = q.options;
           else if (q.options && typeof q.options === 'object') opts = [q.options.a||'', q.options.b||'', q.options.c||'', q.options.d||''];
@@ -274,10 +219,57 @@
     return totalLoaded;
   }
 
+  // ── LAZY INTACT PAPER FILE LOADER ─────────────────────────────────────────
+  async function loadPaperFile(paper) {
+    if (fileCache[paper.file]) return fileCache[paper.file];
+
+    if (isNode && typeof fs !== 'undefined' && typeof path !== 'undefined') {
+      try {
+        const p = path.join(process.cwd(), 'src/data', paper.file);
+        if (fs.existsSync(p)) {
+          const data = JSON.parse(fs.readFileSync(p, 'utf8'));
+          fileCache[paper.file] = data;
+          return data;
+        }
+      } catch (e) {
+        console.error('[pyqService] ❌ Lazy Node load failed:', paper.file, e.message);
+      }
+    } else if (typeof window !== 'undefined') {
+      try {
+        const origin = (window.location && window.location.origin) ? window.location.origin : 'http://localhost:8080';
+        const url = origin + '/data/' + paper.file;
+        const r = await fetch(url, { cache: 'no-store' });
+        if (r.ok) {
+          const data = await r.json();
+          fileCache[paper.file] = data;
+          return data;
+        } else {
+          console.warn('[pyqService] ⚠️ HTTP', r.status, 'for paper file', url);
+        }
+      } catch (e) {
+        console.warn('[pyqService] ⚠️ Fetch paper failed:', paper.file, e.message);
+      }
+    }
+    return null;
+  }
+
+  async function loadPaperFiles(targetExam = null) {
+    const normTarget = targetExam ? normalizeExamId(targetExam) : null;
+    const papers = normTarget === 'JEE_ADVANCED'
+      ? JEE_ADVANCED_PAPERS
+      : (normTarget === 'JEE_MAIN' ? JEE_MAIN_PAPERS : [...JEE_MAIN_PAPERS, ...JEE_ADVANCED_PAPERS]);
+
+    let loadedCount = 0;
+    for (const paper of papers) {
+      const data = await loadPaperFile(paper);
+      if (data) loadedCount++;
+    }
+    return loadedCount;
+  }
+
   async function init() {
     if (initialized) return;
     initialized = true;
-    // Instant startup: 0 MB upfront preloading. Question banks loaded on-demand when student selects an exam/curriculum.
   }
 
   async function preloadExam(examId, onProgress = null) {
@@ -286,6 +278,9 @@
       if (onProgress) { try { onProgress(100); } catch(e){} }
       return;
     }
+    // 1. Fetch intact paper files first
+    await loadPaperFiles(id);
+    // 2. Fetch question bank files for practice mode
     await loadBankFiles(id, onProgress);
     _preloadedExams[id] = true;
   }
@@ -310,13 +305,6 @@
     // QUARANTINE ENFORCED: Only non-quarantined fixed/ files loaded in Node environment.
     // Raw jee_chemistry_bank.json and jee_maths_bank.json are AI-generated — permanently blocked.
     const bankFiles = [
-      { key: 'jee_math_set',    p: 'questions/jee/mathematics/chapters/set.json',    subj: 'Mathematics', quarantined: false },
-      { key: 'jee_math_mat',    p: 'questions/jee/mathematics/chapters/mat.json',    subj: 'Mathematics', quarantined: false },
-      { key: 'jee_math_lim',    p: 'questions/jee/mathematics/chapters/lim.json',    subj: 'Mathematics', quarantined: false },
-      { key: 'jee_math_conic',  p: 'questions/jee/mathematics/chapters/conic.json',  subj: 'Mathematics', quarantined: false },
-      { key: 'jee_math_reas',   p: 'questions/jee/mathematics/chapters/reas.json',   subj: 'Mathematics', quarantined: false },
-      { key: 'jee_phys_gen',    p: 'questions/jee/physics/chapters/phys_gen.json',   subj: 'Physics',     quarantined: false },
-      { key: 'jee_chem_gen',    p: 'questions/jee/chemistry/chapters/chem_gen.json', subj: 'Chemistry',   quarantined: false },
       { key: 'jee_phys_fixed',  p: 'src/data/pyq/fixed/jee_physics_bank_fixed.json',  subj: 'Physics',     quarantined: false },
       { key: 'jee_comp_fixed',  p: 'src/data/pyq/fixed/jee_main_complete_fixed.json', subj: null,          quarantined: false },
       { key: 'jee_cls_fixed',   p: 'src/data/pyq/fixed/jee_classified_fixed.json',    subj: null,          quarantined: false },
@@ -414,7 +402,7 @@
    */
   function _getIntactPaper(examId, paperIndex) {
     const id = normalizeExamId(examId);
-    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : (id === 'JEE_MAIN' ? JEE_MAIN_PAPERS : null);
 
     if (!papers || papers.length === 0) return null;
 
@@ -432,31 +420,30 @@
     const paper = papers[idx];
     let data = fileCache[paper.file];
 
-    // Node-side lazy load if not cached yet
-    if (!data && isNode) {
-      try {
-        const fs = require('fs');
-        const path = require('path');
-        const p = path.join(process.cwd(), 'src/data', paper.file);
-        if (fs.existsSync(p)) {
-          data = JSON.parse(fs.readFileSync(p, 'utf8'));
-          fileCache[paper.file] = data;
+    // Lazy load if not cached yet
+    if (!data) {
+      if (isNode && typeof fs !== 'undefined' && typeof path !== 'undefined') {
+        try {
+          const p = path.join(process.cwd(), 'src/data', paper.file);
+          if (fs.existsSync(p)) {
+            data = JSON.parse(fs.readFileSync(p, 'utf8'));
+            fileCache[paper.file] = data;
+          }
+        } catch (e) {
+          console.error('[pyqService] ❌ Lazy load failed:', paper.file, e.message);
         }
-      } catch (e) {
-        console.error('[pyqService] ❌ Lazy load failed:', paper.file, e.message);
       }
     }
 
     if (!data) {
-      console.warn('[pyqService] ⚠️ Paper not yet loaded:', paper.file, '— trying next paper');
-      // Try the next paper
+      console.warn('[pyqService] ⚠️ Paper not in fileCache:', paper.file, '— attempting rotation fallback');
       for (let i = 1; i < papers.length; i++) {
         const alt = papers[(idx + i) % papers.length];
         const altData = fileCache[alt.file];
         if (altData) {
           const altQs = altData.questions || (Array.isArray(altData) ? altData : []);
           if (altQs.length >= 45) {
-            return _normalizePaper(altQs, alt);
+            return JSON.parse(JSON.stringify(_normalizePaper(altQs, alt)));
           }
         }
       }
@@ -469,17 +456,17 @@
       return null;
     }
 
-    return _normalizePaper(rawQs, paper);
+    const normalized = _normalizePaper(rawQs, paper);
+    // Deep clone paper questions to guarantee immutability
+    return JSON.parse(JSON.stringify(normalized));
   }
 
   /**
    * Normalizes an array of raw questions from a known-good NTA JSON file.
-   * The NTA JSON files already have the correct format, we just ensure consistency.
+   * Preserves exact paper section data and labels, and attaches sourceType = 'PAPER'.
    */
   function _normalizePaper(rawQs, paper) {
     return rawQs.map((q, i) => {
-      // These files already have opts[], ans[], type, section, sectionLabel, marking
-      // But let's ensure everything is correct
       const opts = Array.isArray(q.opts) ? q.opts :
         (Array.isArray(q.options) ? q.options :
         (q.options && typeof q.options === 'object') ?
@@ -498,8 +485,9 @@
       const type = (q.type || 'mcq').toLowerCase();
       const isNum = type === 'numerical';
 
-      const section = q.section || (i < 25 ? 'Mathematics' : i < 50 ? 'Physics' : 'Chemistry');
-      const sectionLabel = q.sectionLabel || ((i % 25) < 20 ? 'Section A' : 'Section B');
+      // Preserve paper's existing section metadata directly — no index-based guessing!
+      const section = q.section || q.subject || inferSubject(q);
+      const sectionLabel = q.sectionLabel || 'Section A';
 
       return {
         id: i + 1,
@@ -518,9 +506,41 @@
         marking: isNum
           ? { correct: 4, wrong: 0, skip: 0 }
           : { correct: 4, wrong: -1, skip: 0 },
-        source: 'PYQ (NTA Official)'
+        source: 'PYQ (NTA Official)',
+        sourceType: 'PAPER'
       };
     });
+  }
+
+  function loadQieChapter(subject, chapter) {
+    if (!subject || !chapter || chapter === 'All Chapters' || chapter === 'General') return null;
+    const subClean = String(subject).toLowerCase();
+    const targetKey = String(chapter).toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    if (isNode && typeof path !== 'undefined' && typeof fs !== 'undefined') {
+      try {
+        const dirPath = path.join(__dirname, '..', 'questions', 'jee', subClean, 'chapters');
+        if (fs.existsSync(dirPath)) {
+          const files = fs.readdirSync(dirPath);
+          const match = files.find(f => {
+            const fKey = f.replace('.json', '').replace(/[^a-z0-9]/g, '');
+            return fKey.includes(targetKey) || targetKey.includes(fKey);
+          });
+          if (match) {
+            const raw = JSON.parse(fs.readFileSync(path.join(dirPath, match), 'utf8'));
+            return Array.isArray(raw) ? raw : [];
+          }
+        }
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // In Browser context: Check fileCache first
+    const cacheKey = `qie_${subClean}_${targetKey}`;
+    if (fileCache[cacheKey]) return fileCache[cacheKey];
+
+    return null;
   }
 
   // ── PRACTICE: getBankQuestions ──────────────────────────────────────────
@@ -534,22 +554,42 @@
     const difficulty = options.difficulty || null;
     const qType      = options.type       || null;
 
-    const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+    // Check if QIE structured chapter file exists for fast, isolated lookup
+    const qieChapterQs = loadQieChapter(subject, chapter);
     let pool = [];
 
-    papers.forEach(paper => {
-      const data = fileCache[paper.file];
-      if (!data) return;
-      const rawQs = data.questions || (Array.isArray(data) ? data : []);
-      pool.push(..._normalizePaper(rawQs, { ...paper }));
-    });
+    if (qieChapterQs && qieChapterQs.length > 0) {
+      pool = qieChapterQs.map(q => ({
+        id: q.id,
+        globalQuestionId: q.id,
+        q: q.question ? (q.question.latex || q.question.plainText) : '',
+        opts: (q.options || []).map(o => o.latex || o.plainText || ''),
+        ans: q.answers || [0],
+        expl: q.explanation ? (q.explanation.latex || q.explanation.plainText) : '',
+        chap: q.metadata ? q.metadata.chapter : chapter,
+        chapter: q.metadata ? q.metadata.chapter : chapter,
+        subject: q.metadata ? q.metadata.subject : subject,
+        difficulty: q.metadata ? q.metadata.difficulty : 'medium',
+        type: q.type || 'mcq',
+        image: q.image,
+        sourceType: 'BANK'
+      }));
+    } else {
+      const papers = id === 'JEE_ADVANCED' ? JEE_ADVANCED_PAPERS : JEE_MAIN_PAPERS;
+      papers.forEach(paper => {
+        const data = fileCache[paper.file];
+        if (!data) return;
+        const rawQs = data.questions || (Array.isArray(data) ? data : []);
+        pool.push(..._normalizePaper(rawQs, { ...paper }));
+      });
 
-    Object.keys(fileCache).forEach(key => {
-      const data = fileCache[key];
-      if (!data || !data.questions || !Array.isArray(data.questions)) return;
-      if (papers.some(p => p.file === key)) return;
-      pool.push(...data.questions);
-    });
+      Object.keys(fileCache).forEach(key => {
+        const data = fileCache[key];
+        if (!data || !data.questions || !Array.isArray(data.questions)) return;
+        if (papers.some(p => p.file === key)) return;
+        pool.push(...data.questions);
+      });
+    }
 
     if (pool.length === 0) {
       return { questions: getOfflineFallback(id, subject, count) };
@@ -559,71 +599,80 @@
 
     if (subject) {
       const sl = subject.toLowerCase();
-      const bySubj = filtered.filter(q => {
+      filtered = filtered.filter(q => {
         const subName = inferSubject(q).toLowerCase();
         const secName = (q.section || '').toLowerCase();
         return subName.includes(sl) || secName.includes(sl);
       });
-      if (bySubj.length > 0) filtered = bySubj;
     }
-    if (chapter) {
-      const cl = chapter.toLowerCase();
-      const byChap = filtered.filter(q => (q.chap || '').toLowerCase().includes(cl));
-      if (byChap.length > 0) filtered = byChap;
+
+    // STRICT CHAPTER ISOLATION: When chapter is chosen, filter strictly by chapter name
+    if (chapter && chapter !== 'All Chapters' && chapter !== 'General') {
+      const targetClean = chapter.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const strictChapPool = filtered.filter(q => {
+        const qChap = (q.chap || q.chapter || q.classifiedChapter || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        return qChap.includes(targetClean) || targetClean.includes(qChap);
+      });
+
+      // Strict chapter rule: NEVER bleed into other chapters
+      filtered = strictChapPool;
     }
-    if (difficulty && !['jee-level', 'neet-level', 'jee-adv-level'].includes(difficulty)) {
+
+    if (difficulty && !['jee-level', 'neet-level', 'jee-adv-level', 'all'].includes(difficulty.toLowerCase())) {
       const dl = difficulty.toLowerCase();
       const byDiff = filtered.filter(q => (q.difficulty || '').toLowerCase() === dl);
       if (byDiff.length > 0) filtered = byDiff;
     }
-    if (qType) {
+
+    if (qType && qType !== 'all') {
       const tl = qType.toLowerCase();
       const byType = filtered.filter(q => (q.type || 'mcq').toLowerCase() === tl);
       if (byType.length > 0) filtered = byType;
     }
 
+    // SESSION DUPLICATE TRACKING
+    const globalContext = typeof window !== 'undefined' ? window : global;
+    if (!globalContext.D) globalContext.D = {};
+    if (!globalContext.D._solvedSessionIds) globalContext.D._solvedSessionIds = new Set();
+    const solvedSet = globalContext.D._solvedSessionIds;
+
     const uniqueMap = new Map();
     filtered.forEach(q => {
+      const qId = q.globalQuestionId || q.id || (q.q || q.question || '').slice(0, 40);
       const stemKey = (q.q || q.question || '').trim().toLowerCase();
-      if (stemKey.length > 5 && !uniqueMap.has(stemKey)) {
+      if (stemKey.length > 5 && !uniqueMap.has(stemKey) && !solvedSet.has(qId)) {
         uniqueMap.set(stemKey, q);
       }
     });
 
     const uniqueFiltered = Array.from(uniqueMap.values());
-    const shuffled = shuffleArray([...uniqueFiltered]);
 
-    let selected = shuffled.slice(0, count);
-    let isExhausted = false;
-    let nextChapterRecommendations = [];
-
-    if (chapter) {
-      // STRICT CHAPTER ISOLATION: Never mix questions from other chapters when a specific chapter is requested!
-      if (selected.length < count) {
-        isExhausted = true;
-        nextChapterRecommendations = ['Laws of Motion', 'Work Energy Power', 'Weak Spots Revision', 'Full Subject Practice'];
-      }
-    } else if (selected.length < count && subject) {
-      const selectedStems = new Set(selected.map(q => (q.q || q.question || '').trim().toLowerCase()));
-      const sl = subject.toLowerCase();
-      const sameSubjectPool = pool.filter(q => {
-        const stemKey = (q.q || q.question || '').trim().toLowerCase();
-        const subName = inferSubject(q).toLowerCase();
-        return subName.includes(sl) && !selectedStems.has(stemKey);
-      });
-      const additionalShuffled = shuffleArray([...sameSubjectPool]);
-      for (const addQ of additionalShuffled) {
-        if (selected.length >= count) break;
-        selected.push(addQ);
-        selectedStems.add((addQ.q || addQ.question || '').trim().toLowerCase());
-      }
+    // EXHAUSTION NOTICE WITH NEXT CHAPTER RECOMMENDATIONS
+    if (uniqueFiltered.length === 0 && chapter) {
+      return {
+        questions: [],
+        isExhausted: true,
+        chapter: chapter,
+        message: `🎉 You have completed all available practice questions in ${chapter}!`,
+        recommendations: [
+          'Laws of Motion',
+          'Work Energy Power',
+          'Rotational Motion',
+          'Weak Spot Revision'
+        ]
+      };
     }
 
-    return { 
-      questions: selected.map((q, i) => ({ ...q, id: i + 1, section: inferSubject(q) })),
-      isExhausted,
-      nextChapterRecommendations
-    };
+    const shuffled = shuffleArray([...uniqueFiltered]);
+    let selected = shuffled.slice(0, count);
+
+    // Track chosen questions in session solved set
+    selected.forEach(q => {
+      const qId = q.globalQuestionId || q.id || (q.q || q.question || '').slice(0, 40);
+      solvedSet.add(qId);
+    });
+
+    return { questions: selected.map((q, i) => ({ ...q, id: i + 1, section: inferSubject(q), sourceType: 'BANK' })) };
   }
 
   // ── MAIN API: getQuestions ─────────────────────────────────────────────────
@@ -637,7 +686,7 @@
     const chapter    = options.chapter    || null;
     const paperIndex = options.paperIndex !== undefined ? options.paperIndex : null;
 
-    // ── FULL MOCK: serve complete intact / multi-subject paper ──────────────
+    // ── FULL MOCK: serve complete intact NTA shift paper directly ──────────────
     if ((count >= 45 || options.isFullMock) && !subject && !chapter) {
       if (id === 'NEET') {
         const bioQs  = shuffleArray([...(fileCache['neet_bio']?.questions || [])]);
@@ -646,47 +695,23 @@
 
         if (bioQs.length >= 90 && physQs.length >= 45 && chemQs.length >= 45) {
           const neetPaper = [
-            ...physQs.slice(0, 45).map(q => ({ ...q, section: 'Physics', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' })),
-            ...chemQs.slice(0, 45).map(q => ({ ...q, section: 'Chemistry', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' })),
-            ...bioQs.slice(0, 45).map(q => ({ ...q, section: 'Botany', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' })),
-            ...bioQs.slice(45, 90).map(q => ({ ...q, section: 'Zoology', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ' }))
+            ...physQs.slice(0, 45).map(q => ({ ...q, section: 'Physics', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ', sourceType: 'PAPER' })),
+            ...chemQs.slice(0, 45).map(q => ({ ...q, section: 'Chemistry', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ', sourceType: 'PAPER' })),
+            ...bioQs.slice(0, 45).map(q => ({ ...q, section: 'Botany', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ', sourceType: 'PAPER' })),
+            ...bioQs.slice(45, 90).map(q => ({ ...q, section: 'Zoology', sectionLabel: 'Section A', examDate: 'NEET Official PYQ', source: 'NEET PYQ', sourceType: 'PAPER' }))
           ];
           return { questions: neetPaper.map((q, i) => ({ ...q, id: i + 1, marking: { correct: 4, wrong: -1, skip: 0 } })) };
         }
       }
 
-      if (id === 'JEE_ADVANCED') {
-        const mathPool = shuffleArray([...(fileCache['jee_main_math']?.questions || [])]);
-        const physPool = shuffleArray([...(fileCache['jee_main_phys']?.questions || [])]);
-        const chemPool = shuffleArray([...(fileCache['jee_main_chem']?.questions || [])]);
-
-        if (mathPool.length >= 18 && physPool.length >= 18 && chemPool.length >= 18) {
-          const formatAdvSub = (pool, subName) => {
-            const mcqs = pool.filter(q => q.type === 'mcq').slice(0, 12);
-            const nums = pool.filter(q => q.type === 'numerical' || q.type === 'mcq').slice(12, 18);
-            
-            const sec1 = mcqs.slice(0, 6).map(q => ({ ...q, section: subName, sectionLabel: 'Section 1', marking: { correct: 3, wrong: -1, skip: 0 }, examDate: 'JEE Advanced PYQ', source: 'JEE Advanced PYQ' }));
-            const sec2 = mcqs.slice(6, 12).map(q => ({ ...q, section: subName, type: 'msq', sectionLabel: 'Section 2', marking: { correct: 4, wrong: -2, skip: 0 }, examDate: 'JEE Advanced PYQ', source: 'JEE Advanced PYQ' }));
-            const sec3 = nums.map(q => ({ ...q, section: subName, type: 'numerical', sectionLabel: 'Section 3', marking: { correct: 4, wrong: 0, skip: 0 }, examDate: 'JEE Advanced PYQ', source: 'JEE Advanced PYQ' }));
-            
-            return [...sec1, ...sec2, ...sec3];
-          };
-
-          const advPaper = [
-            ...formatAdvSub(mathPool, 'Mathematics'),
-            ...formatAdvSub(physPool, 'Physics'),
-            ...formatAdvSub(chemPool, 'Chemistry')
-          ];
-          return { questions: advPaper.map((q, i) => ({ ...q, id: i + 1 })) };
-        }
-      }
-
+      // For JEE Main & JEE Advanced: ALWAYS serve exact intact paper
       const qs = _getIntactPaper(examId, paperIndex);
       if (qs && qs.length >= 45) {
-        return { questions: qs };
+        return { questions: qs, isIntactPaper: true };
       }
-      console.warn('[pyqService] ⚠️ Intact paper not available — using offline fallback');
-      return { questions: getOfflineFallback(id, null, count) };
+
+      console.warn('[pyqService] ⚠️ Intact paper not available for full mock mode');
+      return { questions: [], error: 'Paper not available' };
     }
 
     return getBankQuestions(options);
@@ -833,7 +858,6 @@
 
   const pyqService = {
     init,
-    loadBankFiles,
     getQuestions,
     getBankQuestions,
     buildFullMockPaper,

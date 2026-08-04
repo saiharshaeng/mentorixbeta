@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_MOTIONINAPLA_2023_S1_Q4",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_MOTIONINAPLA_2023_S1_Q4_RAW",
+    "question": {
+      "latex": "A particle moves along a circular path of radius $R$ with constant angular speed $\\omega$. Its linear acceleration is:",
+      "unicode": "A particle moves along a circular path of radius R with constant angular speed omega. Its linear acceleration is:",
+      "plainText": "A particle moves along a circular path of radius R with constant angular speed omega. Its linear acceleration is:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\omega^2 R$ directed towards the center",
+        "unicode": "omega² R directed towards the center",
+        "plainText": "omega^2 R directed towards the center"
+      },
+      {
+        "id": "b",
+        "latex": "$\\omega^2 R$ directed away from center",
+        "unicode": "omega² R directed away from center",
+        "plainText": "omega^2 R directed away from center"
+      },
+      {
+        "id": "c",
+        "latex": "$\\omega R^2$ along the tangent",
+        "unicode": "omega R² along the tangent",
+        "plainText": "omega R^2 along the tangent"
+      },
+      {
+        "id": "d",
+        "latex": "Zero",
+        "unicode": "Zero",
+        "plainText": "Zero"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "For uniform circular motion, centripetal acceleration $a_c = \\omega^2 R$ directed radially inward towards the center.",
+      "unicode": "For uniform circular motion, centripetal acceleration a_c = omega² R directed radially inward towards the center.",
+      "plainText": "For uniform circular motion, centripetal acceleration a_c = omega^2 R directed radially inward towards the center."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Motion in a Plane",
+      "subchapter": "Motion in a Plane Core Concepts",
+      "topic": "Motion in a Plane Primary Topic",
+      "learningOutcome": "Master fundamental principles of Motion in a Plane",
+      "tags": [],
+      "difficulty": "easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.058Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.058Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -165,7 +165,7 @@ function startRecoverySession(topic, mode) {
 }
 
 function logMistake(topic, concept, question, level, classification, reason) {
-  if (window.MasteryEngine) {
+  if (window.MasteryEngine && typeof window.MasteryEngine.logMistake === 'function') {
     window.MasteryEngine.logMistake({
       topicTitle: topic,
       concept: concept,

@@ -1,0 +1,518 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_VECTORS_2026_S_Q164",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORS_2026_S_Q164_RAW",
+    "question": {
+      "latex": "If $\\vec{a}$ and $\\vec{b}$ are two vectors such that $|\\vec{a}| = 2$ and $|\\vec{b}| = 3$, then the maximum value of $3 \\left| (3\\vec{a} + 2\\vec{b}) \\right| + 4 \\left| (3\\vec{a} - 2\\vec{b}) \\right|$ is :",
+      "unicode": "If vec{a} and vec{b} are two vectors such that |vec{a}| = 2 and |vec{b}| = 3, then the maximum value of 3 left| (3vec{a} + 2vec{b}) right| + 4 left| (3vec{a} - 2vec{b}) right| is :",
+      "plainText": "If vec{a} and vec{b} are two vectors such that |vec{a}| = 2 and |vec{b}| = 3, then the maximum value of 3 left| (3vec{a} + 2vec{b}) right| + 4 left| (3vec{a} - 2vec{b}) right| is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "30",
+        "unicode": "30",
+        "plainText": "30"
+      },
+      {
+        "id": "b",
+        "latex": "36",
+        "unicode": "36",
+        "plainText": "36"
+      },
+      {
+        "id": "c",
+        "latex": "60",
+        "unicode": "60",
+        "plainText": "60"
+      },
+      {
+        "id": "d",
+        "latex": "72",
+        "unicode": "72",
+        "plainText": "72"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "subchapter": "Vectors Core Concepts",
+      "topic": "Vectors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vectors",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORS_2026_S_Q239",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORS_2026_S_Q239_RAW",
+    "question": {
+      "latex": "Let the vectors $\\vec{a} = -\\hat{i} + \\hat{j} + 3\\hat{k}$ and $\\vec{b} = \\hat{i} + 3\\hat{j} + \\hat{k}$. For some $\\lambda, \\mu \\in \\mathbb{R}$, let $\\vec{c} = \\lambda\\vec{a} + \\mu\\vec{b}$. If $\\vec{c} \\cdot (3\\hat{i} - 6\\hat{j} + 2\\hat{k}) = 10$ and $\\vec{c} \\cdot (\\hat{i} + \\hat{j} + \\hat{k}) = -2$, then $|\\vec{c}|^2$ is equal to:",
+      "unicode": "Let the vectors vec{a} = -hat{i} + hat{j} + 3hat{k} and vec{b} = hat{i} + 3hat{j} + hat{k}. For some lambda, mu in mathbb{R}, let vec{c} = lambdavec{a} + muvec{b}. If vec{c} · (3hat{i} - 6hat{j} + 2hat{k}) = 10 and vec{c} · (hat{i} + hat{j} + hat{k}) = -2, then |vec{c}|² is equal to:",
+      "plainText": "Let the vectors vec{a} = -hat{i} + hat{j} + 3hat{k} and vec{b} = hat{i} + 3hat{j} + hat{k}. For some lambda, mu in mathbb{R}, let vec{c} = lambdavec{a} + muvec{b}. If vec{c} cdot (3hat{i} - 6hat{j} + 2hat{k}) = 10 and vec{c} cdot (hat{i} + hat{j} + hat{k}) = -2, then |vec{c}|^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "b",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "c",
+        "latex": "$14$",
+        "unicode": "14",
+        "plainText": "14"
+      },
+      {
+        "id": "d",
+        "latex": "$15$",
+        "unicode": "15",
+        "plainText": "15"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "subchapter": "Vectors Core Concepts",
+      "topic": "Vectors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vectors",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORS_2026_S_Q241",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORS_2026_S_Q241_RAW",
+    "question": {
+      "latex": "Two adjacent sides of a parallelogram PQRS are given by $\\vec{PQ} = \\hat{j} + \\hat{k}$ and $\\vec{PS} = \\hat{i} - \\hat{j}$. If the side PS is rotated about the point P by an acute angle $\\alpha$ in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then $\\sin^2 \\left(\\frac{5\\alpha}{2}\\right) - \\sin^2 \\left(\\frac{\\alpha}{2}\\right)$ is equal to:",
+      "unicode": "Two adjacent sides of a parallelogram PQRS are given by vec{PQ} = hat{j} + hat{k} and vec{PS} = hat{i} - hat{j}. If the side PS is rotated about the point P by an acute angle α in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then sin² left((5α/2)right) - sin² left((α/2)right) is equal to:",
+      "plainText": "Two adjacent sides of a parallelogram PQRS are given by vec{PQ} = hat{j} + hat{k} and vec{PS} = hat{i} - hat{j}. If the side PS is rotated about the point P by an acute angle alpha in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then sin^2 left((5alpha)/(2)right) - sin^2 left((alpha)/(2)right) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{1}{2}$",
+        "unicode": "(1/2)",
+        "plainText": "(1)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\sqrt{3}}{2}$",
+        "unicode": "frac{√(3)}{2}",
+        "plainText": "frac{sqrt(3)}{2}"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\sqrt{3}}{4}$",
+        "unicode": "frac{√(3)}{4}",
+        "plainText": "frac{sqrt(3)}{4}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{2\\sqrt{3}}{5}$",
+        "unicode": "frac{2√(3)}{5}",
+        "plainText": "frac{2sqrt(3)}{5}"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "subchapter": "Vectors Core Concepts",
+      "topic": "Vectors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vectors",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORS_2026_S1_Q134",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORS_2026_S1_Q134_RAW",
+    "question": {
+      "latex": "If $\\vec{a}$ and $\\vec{b}$ are two vectors such that $|\\vec{a}| = 2$ and $|\\vec{b}| = 3$, then the maximum value of $3 \\left| $3\\vec{a} + 2\\vec{b}$ \\right| + 4 \\left| $3\\vec{a} - 2\\vec{b}$ \\right|$ is :",
+      "unicode": "If vec{a} and vec{b} are two vectors such that |vec{a}| = 2 and |vec{b}| = 3, then the maximum value of 3 left| 3vec{a} + 2vec{b} right| + 4 left| 3vec{a} - 2vec{b} right| is :",
+      "plainText": "If vec{a} and vec{b} are two vectors such that |vec{a}| = 2 and |vec{b}| = 3, then the maximum value of 3 left| 3vec{a} + 2vec{b} right| + 4 left| 3vec{a} - 2vec{b} right| is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "30",
+        "unicode": "30",
+        "plainText": "30"
+      },
+      {
+        "id": "b",
+        "latex": "36",
+        "unicode": "36",
+        "plainText": "36"
+      },
+      {
+        "id": "c",
+        "latex": "60",
+        "unicode": "60",
+        "plainText": "60"
+      },
+      {
+        "id": "d",
+        "latex": "72",
+        "unicode": "72",
+        "plainText": "72"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let $\\vec{x} = 3\\vec{a} + 2\\vec{b}$ and $\\vec{y} = 3\\vec{a} - 2\\vec{b}$.\nUsing the parallelogram law of vectors: $|\\vec{x}|^2 + |\\vec{y}|^2 = 2(|3\\vec{a}|^2 + |2\\vec{b}|^2)$.\nWe are given $|\\vec{a}| = 2 \\implies |3\\vec{a}| = 6 \\implies |3\\vec{a}|^2 = 36$.\nAnd $|\\vec{b}| = 3 \\implies |2\\vec{b}| = 6 \\implies |2\\vec{b}|^2 = 36$.\nSo $|\\vec{x}|^2 + |\\vec{y}|^2 = 2(36 + 36) = 144$.\nWe need to find the maximum value of $3|\\vec{x}| + 4|\\vec{y}|$.\nUsing the Cauchy-Schwarz inequality: $(a_1b_1 + a_2b_2)^2 \\le (a_1^2 + a_2^2)(b_1^2 + b_2^2)$\n$(3|\\vec{x}| + 4|\\vec{y}|)^2 \\le (3^2 + 4^2)(|\\vec{x}|^2 + |\\vec{y}|^2)$\n$(3|\\vec{x}| + 4|\\vec{y}|)^2 \\le (9 + 16)(144) = 25 \\times 144$\n$3|\\vec{x}| + 4|\\vec{y}| \\le \\sqrt{3600} = 60$.\nThus, the maximum value is 60.",
+      "unicode": "Let vec{x} = 3vec{a} + 2vec{b} and vec{y} = 3vec{a} - 2vec{b}.\nUsing the parallelogram law of vectors: |vec{x}|² + |vec{y}|² = 2(|3vec{a}|² + |2vec{b}|²).\nWe are given |vec{a}| = 2 implies |3vec{a}| = 6 implies |3vec{a}|² = 36.\nAnd |vec{b}| = 3 implies |2vec{b}| = 6 implies |2vec{b}|² = 36.\nSo |vec{x}|² + |vec{y}|² = 2(36 + 36) = 144.\nWe need to find the maximum value of 3|vec{x}| + 4|vec{y}|.\nUsing the Cauchy-Schwarz inequality: (a_1b_1 + a_2b_2)² le (a_1² + a_2²)(b_1² + b_2²)\n(3|vec{x}| + 4|vec{y}|)² le (3² + 4²)(|vec{x}|² + |vec{y}|²)\n(3|vec{x}| + 4|vec{y}|)² le (9 + 16)(144) = 25 × 144\n3|vec{x}| + 4|vec{y}| le √(3600) = 60.\nThus, the maximum value is 60.",
+      "plainText": "Let vec{x} = 3vec{a} + 2vec{b} and vec{y} = 3vec{a} - 2vec{b}. Using the parallelogram law of vectors: |vec{x}|^2 + |vec{y}|^2 = 2(|3vec{a}|^2 + |2vec{b}|^2). We are given |vec{a}| = 2 implies |3vec{a}| = 6 implies |3vec{a}|^2 = 36. And |vec{b}| = 3 implies |2vec{b}| = 6 implies |2vec{b}|^2 = 36. So |vec{x}|^2 + |vec{y}|^2 = 2(36 + 36) = 144. We need to find the maximum value of 3|vec{x}| + 4|vec{y}|. Using the Cauchy-Schwarz inequality: (a_1b_1 + a_2b_2)^2 le (a_1^2 + a_2^2)(b_1^2 + b_2^2) (3|vec{x}| + 4|vec{y}|)^2 le (3^2 + 4^2)(|vec{x}|^2 + |vec{y}|^2) (3|vec{x}| + 4|vec{y}|)^2 le (9 + 16)(144) = 25 times 144 3|vec{x}| + 4|vec{y}| le sqrt(3600) = 60. Thus, the maximum value is 60."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "subchapter": "Vectors Core Concepts",
+      "topic": "Vectors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vectors",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORS_2026_S1_Q194",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORS_2026_S1_Q194_RAW",
+    "question": {
+      "latex": "Let the vectors $\\vec{a} = -\\hat{i} + \\hat{j} + 3\\hat{k}$ and $\\vec{b} = \\hat{i} + 3\\hat{j} + \\hat{k}$. For some $\\lambda, \\mu \\in \\mathbb{R}$, let $\\vec{c} = \\lambda\\vec{a} + \\mu\\vec{b}$. If $\\vec{c} \\cdot $3\\hat{i} - 6\\hat{j} + 2\\hat{k}$ = 10$ and $\\vec{c} \\cdot $\\hat{i} + \\hat{j} + \\hat{k}$ = -2$, then $|\\vec{c}|^2$ is equal to:",
+      "unicode": "Let the vectors vec{a} = -hat{i} + hat{j} + 3hat{k} and vec{b} = hat{i} + 3hat{j} + hat{k}. For some lambda, mu in mathbb{R}, let vec{c} = lambdavec{a} + muvec{b}. If vec{c} · 3hat{i} - 6hat{j} + 2hat{k} = 10 and vec{c} · hat{i} + hat{j} + hat{k} = -2, then |vec{c}|² is equal to:",
+      "plainText": "Let the vectors vec{a} = -hat{i} + hat{j} + 3hat{k} and vec{b} = hat{i} + 3hat{j} + hat{k}. For some lambda, mu in mathbb{R}, let vec{c} = lambdavec{a} + muvec{b}. If vec{c} cdot 3hat{i} - 6hat{j} + 2hat{k} = 10 and vec{c} cdot hat{i} + hat{j} + hat{k} = -2, then |vec{c}|^2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$8$",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "b",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "c",
+        "latex": "$14$",
+        "unicode": "14",
+        "plainText": "14"
+      },
+      {
+        "id": "d",
+        "latex": "$15$",
+        "unicode": "15",
+        "plainText": "15"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since $\\vec{c}$ lies in the plane of $\\vec{a}$ and $\\vec{b}$, $\\vec{c} \\cdot (\\vec{a} \\times \\vec{b}) = 0$. $\\vec{a} \\times \\vec{b} = -8\\hat{i} + 4\\hat{j} - 4\\hat{k}$. Simplifying the direction, $-2\\hat{i} + \\hat{j} - \\hat{k}$. Letting $\\vec{c} = x\\hat{i} + y\\hat{j} + z\\hat{k}$, we get $2x - y + z = 0$.\nWe are given $3x - 6y + 2z = 10$ and $x + y + z = -2 \\implies z = -x -y -2$.\nSubstitute $z$: $2x - y + (-x - y - 2) = 0 \\implies x = 2y + 2$.\nSubstitute into the second equation: $3(2y+2) - 6y + 2(-(2y+2) - y - 2) = 10 \\implies -6y = 12 \\implies y = -2$.\nThen $x = -2$, and $z = 2$. Therefore $\\vec{c} = -2\\hat{i} - 2\\hat{j} + 2\\hat{k}$.\n$|\\vec{c}|^2 = (-2)^2 + (-2)^2 + 2^2 = 12$.",
+      "unicode": "Since vec{c} lies in the plane of vec{a} and vec{b}, vec{c} · (vec{a} × vec{b}) = 0. vec{a} × vec{b} = -8hat{i} + 4hat{j} - 4hat{k}. Simplifying the direction, -2hat{i} + hat{j} - hat{k}. Letting vec{c} = xhat{i} + yhat{j} + zhat{k}, we get 2x - y + z = 0.\nWe are given 3x - 6y + 2z = 10 and x + y + z = -2 implies z = -x -y -2.\nSubstitute z: 2x - y + (-x - y - 2) = 0 implies x = 2y + 2.\nSubstitute into the second equation: 3(2y+2) - 6y + 2(-(2y+2) - y - 2) = 10 implies -6y = 12 implies y = -2.\nThen x = -2, and z = 2. Therefore vec{c} = -2hat{i} - 2hat{j} + 2hat{k}.\n|vec{c}|² = (-2)² + (-2)² + 2² = 12.",
+      "plainText": "Since vec{c} lies in the plane of vec{a} and vec{b}, vec{c} cdot (vec{a} times vec{b}) = 0. vec{a} times vec{b} = -8hat{i} + 4hat{j} - 4hat{k}. Simplifying the direction, -2hat{i} + hat{j} - hat{k}. Letting vec{c} = xhat{i} + yhat{j} + zhat{k}, we get 2x - y + z = 0. We are given 3x - 6y + 2z = 10 and x + y + z = -2 implies z = -x -y -2. Substitute z: 2x - y + (-x - y - 2) = 0 implies x = 2y + 2. Substitute into the second equation: 3(2y+2) - 6y + 2(-(2y+2) - y - 2) = 10 implies -6y = 12 implies y = -2. Then x = -2, and z = 2. Therefore vec{c} = -2hat{i} - 2hat{j} + 2hat{k}. |vec{c}|^2 = (-2)^2 + (-2)^2 + 2^2 = 12."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "subchapter": "Vectors Core Concepts",
+      "topic": "Vectors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vectors",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORS_2026_S1_Q196",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORS_2026_S1_Q196_RAW",
+    "question": {
+      "latex": "Two adjacent sides of a parallelogram PQRS are given by $\\vec{PQ} = \\hat{j} + \\hat{k}$ and $\\vec{PS} = \\hat{i} - \\hat{j}$. If the side PS is rotated about the point P by an acute angle $\\alpha$ in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then $\\sin^2 \\left$\\frac{5\\alpha}{2}\\right$ - \\sin^2 \\left$\\frac{\\alpha}{2}\\right$$ is equal to:",
+      "unicode": "Two adjacent sides of a parallelogram PQRS are given by vec{PQ} = hat{j} + hat{k} and vec{PS} = hat{i} - hat{j}. If the side PS is rotated about the point P by an acute angle α in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then sin² left(5α/2)right - sin² left(α/2)right is equal to:",
+      "plainText": "Two adjacent sides of a parallelogram PQRS are given by vec{PQ} = hat{j} + hat{k} and vec{PS} = hat{i} - hat{j}. If the side PS is rotated about the point P by an acute angle alpha in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then sin^2 left(5alpha)/(2)right - sin^2 left(alpha)/(2)right is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{1}{2}$",
+        "unicode": "(1/2)",
+        "plainText": "(1)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{\\sqrt{3}}{2}$",
+        "unicode": "frac{√(3)}{2}",
+        "plainText": "frac{sqrt(3)}{2}"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{\\sqrt{3}}{4}$",
+        "unicode": "frac{√(3)}{4}",
+        "plainText": "frac{sqrt(3)}{4}"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{2\\sqrt{3}}{5}$",
+        "unicode": "frac{2√(3)}{5}",
+        "plainText": "frac{2sqrt(3)}{5}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Let initial angle between $\\vec{PQ}$ and $\\vec{PS}$ be $\\theta$. $\\cos \\theta = \\frac{\\vec{PQ} \\cdot \\vec{PS}}{|\\vec{PQ}| |\\vec{PS}|} = \\frac{(0)(1) + (1)(-1) + (1)(0)}{\\sqrt{2}\\sqrt{2}} = -\\frac{1}{2} \\implies \\theta = 120^\\circ$.\nThe side is rotated to be perpendicular ($90^\\circ$) by an acute angle $\\alpha$. Hence, the rotation angle $\\alpha = 120^\\circ - 90^\\circ = 30^\\circ$.\nWe need to compute $\\sin^2 \\left(\\frac{5(30^\\circ)}{2}\\right) - \\sin^2 \\left(\\frac{30^\\circ}{2}\\right) = \\sin^2 75^\\circ - \\sin^2 15^\\circ$.\nUsing the identity $\\sin^2 A - \\sin^2 B = \\sin(A+B)\\sin(A-B) = \\sin(90^\\circ)\\sin(60^\\circ) = 1 \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{2}$.",
+      "unicode": "Let initial angle between vec{PQ} and vec{PS} be θ. cos θ = frac{vec{PQ} · vec{PS}}{|vec{PQ}| |vec{PS}|} = ((0)(1) + (1)(-1) + (1)(0)/√(2)sqrt{2)} = -(1/2) implies θ = 120^circ.\nThe side is rotated to be perpendicular (90^circ) by an acute angle α. Hence, the rotation angle α = 120^circ - 90^circ = 30^circ.\nWe need to compute sin² left((5(30^circ)/2)right) - sin² left((30^circ/2)right) = sin² 75^circ - sin² 15^circ.\nUsing the identity sin² A - sin² B = sin(A+B)sin(A-B) = sin(90^circ)sin(60^circ) = 1 × frac{√(3)}{2} = frac{√(3)}{2}.",
+      "plainText": "Let initial angle between vec{PQ} and vec{PS} be theta. cos theta = frac{vec{PQ} cdot vec{PS}}{|vec{PQ}| |vec{PS}|} = ((0)(1) + (1)(-1) + (1)(0))/(sqrt(2)sqrt{2)} = -(1)/(2) implies theta = 120^circ. The side is rotated to be perpendicular (90^circ) by an acute angle alpha. Hence, the rotation angle alpha = 120^circ - 90^circ = 30^circ. We need to compute sin^2 left((5(30^circ))/(2)right) - sin^2 left((30^circ)/(2)right) = sin^2 75^circ - sin^2 15^circ. Using the identity sin^2 A - sin^2 B = sin(A+B)sin(A-B) = sin(90^circ)sin(60^circ) = 1 times frac{sqrt(3)}{2} = frac{sqrt(3)}{2}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "subchapter": "Vectors Core Concepts",
+      "topic": "Vectors Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vectors",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_SOMEBASICCON_2026_S1_Q536",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_SOMEBASICCON_2026_S1_Q536_RAW",
+    "question": {
+      "latex": "One mole of an alkane $x$ requires 8 mole oxygen for complete combustion. Sum of number of carbon and hydrogen atoms in the alkane $x$ is _______.",
+      "unicode": "One mole of an alkane x requires 8 mole oxygen for complete combustion. Sum of number of carbon and hydrogen atoms in the alkane x is _______.",
+      "plainText": "One mole of an alkane x requires 8 mole oxygen for complete combustion. Sum of number of carbon and hydrogen atoms in the alkane x is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "15",
+        "unicode": "15",
+        "plainText": "15"
+      },
+      {
+        "id": "b",
+        "latex": "16",
+        "unicode": "16",
+        "plainText": "16"
+      },
+      {
+        "id": "c",
+        "latex": "17",
+        "unicode": "17",
+        "plainText": "17"
+      },
+      {
+        "id": "d",
+        "latex": "18",
+        "unicode": "18",
+        "plainText": "18"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "The general formula for the complete combustion of an alkane ($C_n H_{2n+2}$) is:\n$C_n H_{2n+2} + \\left(\\frac{3n+1}{2}\\right)O_2 \\rightarrow n CO_2 + (n+1) H_2O$\nWe are given that 1 mole of the alkane requires 8 moles of $O_2$. Therefore:\n$\\frac{3n+1}{2} = 8$\n$3n + 1 = 16 \\implies 3n = 15 \\implies n = 5$.\nThe alkane is pentane, with formula $C_5H_{12}$.\nThe number of carbon atoms is 5 and the number of hydrogen atoms is 12.\nThe sum of carbon and hydrogen atoms is $5 + 12 = 17$.",
+      "unicode": "The general formula for the complete combustion of an alkane (C_n H_{2n+2}) is:\nC_n H_{2n+2} + left((3n+1/2)right)O_2 rightarrow n CO_2 + (n+1) H_2O\nWe are given that 1 mole of the alkane requires 8 moles of O_2. Therefore:\n(3n+1/2) = 8\n3n + 1 = 16 implies 3n = 15 implies n = 5.\nThe alkane is pentane, with formula C_5H_{12}.\nThe number of carbon atoms is 5 and the number of hydrogen atoms is 12.\nThe sum of carbon and hydrogen atoms is 5 + 12 = 17.",
+      "plainText": "The general formula for the complete combustion of an alkane (C_n H_{2n+2}) is: C_n H_{2n+2} + left((3n+1)/(2)right)O_2 rightarrow n CO_2 + (n+1) H_2O We are given that 1 mole of the alkane requires 8 moles of O_2. Therefore: (3n+1)/(2) = 8 3n + 1 = 16 implies 3n = 15 implies n = 5. The alkane is pentane, with formula C_5H_{12}. The number of carbon atoms is 5 and the number of hydrogen atoms is 12. The sum of carbon and hydrogen atoms is 5 + 12 = 17."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Some Basic Concepts of Chemistry",
+      "subchapter": "Some Basic Concepts of Chemistry Core Concepts",
+      "topic": "Some Basic Concepts of Chemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Some Basic Concepts of Chemistry",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

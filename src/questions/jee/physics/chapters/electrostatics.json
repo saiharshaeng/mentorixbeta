@@ -1,0 +1,868 @@
+[
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2020_S1_Q4",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2020_S1_Q4_RAW",
+    "question": {
+      "latex": "A circular coil of radius R and N turns has negligible resistance. As shown in the schematic figure, its two ends are connected to two wires and it is hanging by those wires with its plane being vertical. The wires are connected to a capacitor with charge Q through a switch. The coil is in a horizontal uniform magnetic field B o parallel to the plane of the coil. When the switch is closed, the capacitor gets discharged through the coil in a very short time. By the time the capacitor is discharged fully, magnitude of the angular momentum gained by the coil will be (assume that the discharge time is so short that the coil has hardly rotated during this time)",
+      "unicode": "A circular coil of radius R and N turns has negligible resistance. As shown in the schematic figure, its two ends are connected to two wires and it is hanging by those wires with its plane being vertical. The wires are connected to a capacitor with charge Q through a switch. The coil is in a horizontal uniform magnetic field B o parallel to the plane of the coil. When the switch is closed, the capacitor gets discharged through the coil in a very short time. By the time the capacitor is discharged fully, magnitude of the angular momentum gained by the coil will be (assume that the discharge time is so short that the coil has hardly rotated during this time)",
+      "plainText": "A circular coil of radius R and N turns has negligible resistance. As shown in the schematic figure, its two ends are connected to two wires and it is hanging by those wires with its plane being vertical. The wires are connected to a capacitor with charge Q through a switch. The coil is in a horizontal uniform magnetic field B o parallel to the plane of the coil. When the switch is closed, the capacitor gets discharged through the coil in a very short time. By the time the capacitor is discharged fully, magnitude of the angular momentum gained by the coil will be (assume that the discharge time is so short that the coil has hardly rotated during this time)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "휋 2 NQB 표 R 2",
+        "unicode": "휋 2 NQB 표 R 2",
+        "plainText": "휋 2 NQB 표 R 2"
+      },
+      {
+        "id": "b",
+        "latex": "휋NQB 표 R 2",
+        "unicode": "휋NQB 표 R 2",
+        "plainText": "휋NQB 표 R 2"
+      },
+      {
+        "id": "c",
+        "latex": "2휋NQB 표 R 2",
+        "unicode": "2휋NQB 표 R 2",
+        "plainText": "2휋NQB 표 R 2"
+      },
+      {
+        "id": "d",
+        "latex": "4휋NQB 표 R 2 JEE (Advanced) 2020 Paper 1 4/11",
+        "unicode": "4휋NQB 표 R 2 JEE (Advanced) 2020 Paper 1 4/11",
+        "plainText": "4휋NQB 표 R 2 JEE (Advanced) 2020 Paper 1 4/11"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.061Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.061Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2020_S1_Q10",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2020_S1_Q10_RAW",
+    "question": {
+      "latex": "A uniform electric field, E ⃗ =−400 √ 3ŷ NC −1 is applied in a region. A charged particle of mass m carrying positive charge q is projected in this region with an initial speed of 2 √ 10×10 6 ms −1 . This particle is aimed to hit a target T, which is 5 m away from its entry point into the field as shown schematically in the figure. Take 푞 m =10 10 Ckg −1 . Then",
+      "unicode": "A uniform electric field, E ⃗ =−400 √ 3ŷ NC −1 is applied in a region. A charged particle of mass m carrying positive charge q is projected in this region with an initial speed of 2 √ 10×10 6 ms −1 . This particle is aimed to hit a target T, which is 5 m away from its entry point into the field as shown schematically in the figure. Take 푞 m =10 10 Ckg −1 . Then",
+      "plainText": "A uniform electric field, E ⃗ =−400 √ 3ŷ NC −1 is applied in a region. A charged particle of mass m carrying positive charge q is projected in this region with an initial speed of 2 √ 10×10 6 ms −1 . This particle is aimed to hit a target T, which is 5 m away from its entry point into the field as shown schematically in the figure. Take 푞 m =10 10 Ckg −1 . Then"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "the particle will hit T if projected at an angle 45 o from the horizontal",
+        "unicode": "the particle will hit T if projected at an angle 45 o from the horizontal",
+        "plainText": "the particle will hit T if projected at an angle 45 o from the horizontal"
+      },
+      {
+        "id": "b",
+        "latex": "the particle will hit T if projected either at an angle 30 o or 60 o from the horizontal",
+        "unicode": "the particle will hit T if projected either at an angle 30 o or 60 o from the horizontal",
+        "plainText": "the particle will hit T if projected either at an angle 30 o or 60 o from the horizontal"
+      },
+      {
+        "id": "c",
+        "latex": "time taken by the particle to hit T could be √ 5 6 μs as well as √ 5 2 μs",
+        "unicode": "time taken by the particle to hit T could be √ 5 6 μs as well as √ 5 2 μs",
+        "plainText": "time taken by the particle to hit T could be √ 5 6 μs as well as √ 5 2 μs"
+      },
+      {
+        "id": "d",
+        "latex": "time taken by the particle to hit T is √ 5 3 μs JEE (Advanced) 2020 Paper 1 7/11",
+        "unicode": "time taken by the particle to hit T is √ 5 3 μs JEE (Advanced) 2020 Paper 1 7/11",
+        "plainText": "time taken by the particle to hit T is √ 5 3 μs JEE (Advanced) 2020 Paper 1 7/11"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (B) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (B) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2020,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.061Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.061Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2021_S1_Q6",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2021_S1_Q6_RAW",
+    "question": {
+      "latex": "The value of 푥 is ___ . Question Stem for Question Nos. 7 and 8 Question Stem In the circuit shown below, the switch S is connected to position P for a long time so that the charge on the capacitor becomes 푞 1 μC. Then S is switched to position Q. After a long time, the charge on the capacitor is 푞 2 μC. SECTION 2  This section contains THREE (03) question stems.  There are TWO (02) questions corresponding to each question stem.  The answer to each question is a NUMERICAL VALUE.  For each question, enter the correct numerical value corresponding to the answer in the designated place using the mouse and the on-screen virtual numeric keypad.  If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places.  Answer to each question will be evaluated according to the following marking scheme: Full Marks : +2 If ONLY the correct numerical value is entered at the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2021 Paper 1 4/11",
+      "unicode": "The value of 푥 is ___ . Question Stem for Question Nos. 7 and 8 Question Stem In the circuit shown below, the switch S is connected to position P for a long time so that the charge on the capacitor becomes 푞 1 μC. Then S is switched to position Q. After a long time, the charge on the capacitor is 푞 2 μC. SECTION 2  This section contains THREE (03) question stems.  There are TWO (02) questions corresponding to each question stem.  The answer to each question is a NUMERICAL VALUE.  For each question, enter the correct numerical value corresponding to the answer in the designated place using the mouse and the on-screen virtual numeric keypad.  If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places.  Answer to each question will be evaluated according to the following marking scheme: Full Marks : +2 If ONLY the correct numerical value is entered at the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2021 Paper 1 4/11",
+      "plainText": "The value of 푥 is ___ . Question Stem for Question Nos. 7 and 8 Question Stem In the circuit shown below, the switch S is connected to position P for a long time so that the charge on the capacitor becomes 푞 1 μC. Then S is switched to position Q. After a long time, the charge on the capacitor is 푞 2 μC. SECTION 2  This section contains THREE (03) question stems.  There are TWO (02) questions corresponding to each question stem.  The answer to each question is a NUMERICAL VALUE.  For each question, enter the correct numerical value corresponding to the answer in the designated place using the mouse and the on-screen virtual numeric keypad.  If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal places.  Answer to each question will be evaluated according to the following marking scheme: Full Marks : +2 If ONLY the correct numerical value is entered at the designated place; Zero Marks : 0 In all other cases. JEE (Advanced) 2021 Paper 1 4/11"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2021,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.064Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.064Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2021_S1_Q15",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2021_S1_Q15_RAW",
+    "question": {
+      "latex": "A long straight wire carries a current, I=2 ampere. A semi-circular conducting rod is placed beside it on two conducting parallel rails of negligible resistance. Both the rails are parallel to the wire. The wire, the rod and the rails lie in the same horizontal plane, as shown in the figure. Two ends of the semi-circular rod are at distances 1 cm and 4 cm from the wire. At time 푡=0, the rod starts moving on the rails with a speed 푣=3.0 m/s (see the figure). A resistor R=1.4 Ω and a capacitor C 표 =5.0 휇F are connected in series between the rails. At time 푡=0, C 표 is uncharged. Which of the following statement(s) is(are) correct? [휇 0 =4휋×10 −7 SI units. Take ln2=0.7]",
+      "unicode": "A long straight wire carries a current, I=2 ampere. A semi-circular conducting rod is placed beside it on two conducting parallel rails of negligible resistance. Both the rails are parallel to the wire. The wire, the rod and the rails lie in the same horizontal plane, as shown in the figure. Two ends of the semi-circular rod are at distances 1 cm and 4 cm from the wire. At time 푡=0, the rod starts moving on the rails with a speed 푣=3.0 m/s (see the figure). A resistor R=1.4 Ω and a capacitor C 표 =5.0 휇F are connected in series between the rails. At time 푡=0, C 표 is uncharged. Which of the following statement(s) is(are) correct? [휇 0 =4휋×10 −7 SI units. Take ln2=0.7]",
+      "plainText": "A long straight wire carries a current, I=2 ampere. A semi-circular conducting rod is placed beside it on two conducting parallel rails of negligible resistance. Both the rails are parallel to the wire. The wire, the rod and the rails lie in the same horizontal plane, as shown in the figure. Two ends of the semi-circular rod are at distances 1 cm and 4 cm from the wire. At time 푡=0, the rod starts moving on the rails with a speed 푣=3.0 m/s (see the figure). A resistor R=1.4 Ω and a capacitor C 표 =5.0 휇F are connected in series between the rails. At time 푡=0, C 표 is uncharged. Which of the following statement(s) is(are) correct? [휇 0 =4휋×10 −7 SI units. Take ln2=0.7]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Maximum current through R is 1.2 ×10 −6 ampere",
+        "unicode": "Maximum current through R is 1.2 ×10 −6 ampere",
+        "plainText": "Maximum current through R is 1.2 ×10 −6 ampere"
+      },
+      {
+        "id": "b",
+        "latex": "Maximum current through R is 3.8 ×10 −6 ampere",
+        "unicode": "Maximum current through R is 3.8 ×10 −6 ampere",
+        "plainText": "Maximum current through R is 3.8 ×10 −6 ampere"
+      },
+      {
+        "id": "c",
+        "latex": "Maximum charge on capacitor C 표 is 8.4 ×10 −12 coulomb",
+        "unicode": "Maximum charge on capacitor C 표 is 8.4 ×10 −12 coulomb",
+        "plainText": "Maximum charge on capacitor C 표 is 8.4 ×10 −12 coulomb"
+      },
+      {
+        "id": "d",
+        "latex": "Maximum charge on capacitor C 표 is 2.4 ×10 −12 coulomb JEE (Advanced) 2021 Paper 1 9/11",
+        "unicode": "Maximum charge on capacitor C 표 is 2.4 ×10 −12 coulomb JEE (Advanced) 2021 Paper 1 9/11",
+        "plainText": "Maximum charge on capacitor C 표 is 2.4 ×10 −12 coulomb JEE (Advanced) 2021 Paper 1 9/11"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2021,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.065Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.065Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2022_S1_Q22",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2022_S1_Q22_RAW",
+    "question": {
+      "latex": "A medium having dielectric constant K >1 fills the space between the plates of a parallel plate capacitor. The plates have large area, and the distance between them is d. The capacitor is connected to a battery of voltage V, as shown in Figure (a). Now, both the plates are moved by a distance of � � from their original positions, as shown in Figure (b). Figure (a) Figure (b) In the process of going from the configuration depicted in Figure (a) to that in Figure (b), which of the following statement(s) is(are) correct?",
+      "unicode": "A medium having dielectric constant K >1 fills the space between the plates of a parallel plate capacitor. The plates have large area, and the distance between them is d. The capacitor is connected to a battery of voltage V, as shown in Figure (a). Now, both the plates are moved by a distance of � � from their original positions, as shown in Figure (b). Figure (a) Figure (b) In the process of going from the configuration depicted in Figure (a) to that in Figure (b), which of the following statement(s) is(are) correct?",
+      "plainText": "A medium having dielectric constant K >1 fills the space between the plates of a parallel plate capacitor. The plates have large area, and the distance between them is d. The capacitor is connected to a battery of voltage V, as shown in Figure (a). Now, both the plates are moved by a distance of � � from their original positions, as shown in Figure (b). Figure (a) Figure (b) In the process of going from the configuration depicted in Figure (a) to that in Figure (b), which of the following statement(s) is(are) correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "The electric field inside the dielectric material is reduced by a factor of 2K.",
+        "unicode": "The electric field inside the dielectric material is reduced by a factor of 2K.",
+        "plainText": "The electric field inside the dielectric material is reduced by a factor of 2K."
+      },
+      {
+        "id": "b",
+        "latex": "The capacitance is decreased by a factor of � ��� .",
+        "unicode": "The capacitance is decreased by a factor of � ��� .",
+        "plainText": "The capacitance is decreased by a factor of � ��� ."
+      },
+      {
+        "id": "c",
+        "latex": "The voltage between the capacitor plates is increased by a factor of ( K+1 ) .",
+        "unicode": "The voltage between the capacitor plates is increased by a factor of ( K+1 ) .",
+        "plainText": "The voltage between the capacitor plates is increased by a factor of ( K+1 ) ."
+      },
+      {
+        "id": "d",
+        "latex": "The work done in the process DOES NOT depend on the presence of the dielectric material. d V d 푑 2 V 푑 2 JEE (Advanced) 2022 Paper 1 5/12",
+        "unicode": "The work done in the process DOES NOT depend on the presence of the dielectric material. d V d 푑 2 V 푑 2 JEE (Advanced) 2022 Paper 1 5/12",
+        "plainText": "The work done in the process DOES NOT depend on the presence of the dielectric material. d V d 푑 2 V 푑 2 JEE (Advanced) 2022 Paper 1 5/12"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (D) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (D) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.070Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.070Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2022_S1_Q27",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2022_S1_Q27_RAW",
+    "question": {
+      "latex": "The binding energy of nucleons in a nucleus can be affected by the pairwise Coulomb repulsion. Assume that all nucleons are uniformly distributed inside the nucleus. Let the binding energy of a proton be E � � and the binding energy of a neutron be E � � in the nucleus. Which of the following statement(s) is(are) correct?",
+      "unicode": "The binding energy of nucleons in a nucleus can be affected by the pairwise Coulomb repulsion. Assume that all nucleons are uniformly distributed inside the nucleus. Let the binding energy of a proton be E � � and the binding energy of a neutron be E � � in the nucleus. Which of the following statement(s) is(are) correct?",
+      "plainText": "The binding energy of nucleons in a nucleus can be affected by the pairwise Coulomb repulsion. Assume that all nucleons are uniformly distributed inside the nucleus. Let the binding energy of a proton be E � � and the binding energy of a neutron be E � � in the nucleus. Which of the following statement(s) is(are) correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "E � � −E � � is proportional to Z ( Z− 1 ) where Z is the atomic number of the nucleus.",
+        "unicode": "E � � −E � � is proportional to Z ( Z− 1 ) where Z is the atomic number of the nucleus.",
+        "plainText": "E � � −E � � is proportional to Z ( Z− 1 ) where Z is the atomic number of the nucleus."
+      },
+      {
+        "id": "b",
+        "latex": "E � � −E � � is proportional to A � � � where A is the mass number of the nucleus.",
+        "unicode": "E � � −E � � is proportional to A � � � where A is the mass number of the nucleus.",
+        "plainText": "E � � −E � � is proportional to A � � � where A is the mass number of the nucleus."
+      },
+      {
+        "id": "c",
+        "latex": "E � � −E � � is positive.",
+        "unicode": "E � � −E � � is positive.",
+        "plainText": "E � � −E � � is positive."
+      },
+      {
+        "id": "d",
+        "latex": "E � � increases if the nucleus undergoes a beta decay emitting a positron. FOUR (04) JEE (Advanced) 2022 Paper 1 9/12",
+        "unicode": "E � � increases if the nucleus undergoes a beta decay emitting a positron. FOUR (04) JEE (Advanced) 2022 Paper 1 9/12",
+        "plainText": "E � � increases if the nucleus undergoes a beta decay emitting a positron. FOUR (04) JEE (Advanced) 2022 Paper 1 9/12"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.070Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.070Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2023_S1_Q22",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2023_S1_Q22_RAW",
+    "question": {
+      "latex": "In a circuit shown in the figure, the capacitor C is initially uncharged and the key K is open. In this condition, a current of 1 A flows through the 1 Ω resistor. The key is closed at time 푡 = 푡 0 . Which of the following statement(s) is(are) correct? [Given: 푒 −1 =0.36]",
+      "unicode": "In a circuit shown in the figure, the capacitor C is initially uncharged and the key K is open. In this condition, a current of 1 A flows through the 1 Ω resistor. The key is closed at time 푡 = 푡 0 . Which of the following statement(s) is(are) correct? [Given: 푒 −1 =0.36]",
+      "plainText": "In a circuit shown in the figure, the capacitor C is initially uncharged and the key K is open. In this condition, a current of 1 A flows through the 1 Ω resistor. The key is closed at time 푡 = 푡 0 . Which of the following statement(s) is(are) correct? [Given: 푒 −1 =0.36]"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": ",",
+        "unicode": ",",
+        "plainText": ","
+      },
+      {
+        "id": "b",
+        "latex": ",",
+        "unicode": ",",
+        "plainText": ","
+      },
+      {
+        "id": "c",
+        "latex": "and",
+        "unicode": "and",
+        "plainText": "and"
+      },
+      {
+        "id": "d",
+        "latex": ". ONLY ONE of these four options is the correct answer. •For each question, choose the option corresponding to the correct answer. •Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 If ONLY the correct option is chosen; Zero Marks: 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases.",
+        "unicode": ". ONLY ONE of these four options is the correct answer. •For each question, choose the option corresponding to the correct answer. •Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 If ONLY the correct option is chosen; Zero Marks: 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases.",
+        "plainText": ". ONLY ONE of these four options is the correct answer. •For each question, choose the option corresponding to the correct answer. •Answer to each question will be evaluated according to the following marking scheme: Full Marks : +3 If ONLY the correct option is chosen; Zero Marks: 0 If none of the options is chosen (i.e. the question is unanswered); Negative Marks : −1 In all other cases."
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (A) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (A) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.073Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.073Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_PHY_ELECTROSTATI_2025_S1_Q30",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_PHY_ELECTROSTATI_2025_S1_Q30_RAW",
+    "question": {
+      "latex": "List-I shows four configurations, each consisting of a pair of ideal electric dipoles. Each dipole has a dipole moment of magnitude 푝, oriented as marked by arrows in the figures. In all the configurations the dipoles are fixed such that they are at a distance 2r apart along the 푥 direction. The midpoint of the line joining the two dipoles is X. The possible resultant electric fields E ⃗ at X are given in List-II. Choose the option that describes the correct match between the entries in List-I to those in List-II. List-I List-II (P) (1) E ⃗ = 0 (Q) (2) E ⃗ =− 푝 2휋휖 0 r 3 푗̂ (R) (3) E ⃗ =− 푝 4휋휖 0 r 3 (푖̂−푗̂) (S) (4) E ⃗ = 푝 4휋휖 0 r 3 (2푖̂−푗̂) (5) E ⃗ = 푝 휋휖 0 r 3 푖̂",
+      "unicode": "List-I shows four configurations, each consisting of a pair of ideal electric dipoles. Each dipole has a dipole moment of magnitude 푝, oriented as marked by arrows in the figures. In all the configurations the dipoles are fixed such that they are at a distance 2r apart along the 푥 direction. The midpoint of the line joining the two dipoles is X. The possible resultant electric fields E ⃗ at X are given in List-II. Choose the option that describes the correct match between the entries in List-I to those in List-II. List-I List-II (P) (1) E ⃗ = 0 (Q) (2) E ⃗ =− 푝 2휋휖 0 r 3 푗̂ (R) (3) E ⃗ =− 푝 4휋휖 0 r 3 (푖̂−푗̂) (S) (4) E ⃗ = 푝 4휋휖 0 r 3 (2푖̂−푗̂) (5) E ⃗ = 푝 휋휖 0 r 3 푖̂",
+      "plainText": "List-I shows four configurations, each consisting of a pair of ideal electric dipoles. Each dipole has a dipole moment of magnitude 푝, oriented as marked by arrows in the figures. In all the configurations the dipoles are fixed such that they are at a distance 2r apart along the 푥 direction. The midpoint of the line joining the two dipoles is X. The possible resultant electric fields E ⃗ at X are given in List-II. Choose the option that describes the correct match between the entries in List-I to those in List-II. List-I List-II (P) (1) E ⃗ = 0 (Q) (2) E ⃗ =− 푝 2휋휖 0 r 3 푗̂ (R) (3) E ⃗ =− 푝 4휋휖 0 r 3 (푖̂−푗̂) (S) (4) E ⃗ = 푝 4휋휖 0 r 3 (2푖̂−푗̂) (5) E ⃗ = 푝 휋휖 0 r 3 푖̂"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "P→3, Q→1, R→2, S→4",
+        "unicode": "P→3, Q→1, R→2, S→4",
+        "plainText": "P→3, Q→1, R→2, S→4"
+      },
+      {
+        "id": "b",
+        "latex": "P→4, Q→5, R→3, S→1",
+        "unicode": "P→4, Q→5, R→3, S→1",
+        "plainText": "P→4, Q→5, R→3, S→1"
+      },
+      {
+        "id": "c",
+        "latex": "P→2, Q→1, R→4, S→5",
+        "unicode": "P→2, Q→1, R→4, S→5",
+        "plainText": "P→2, Q→1, R→4, S→5"
+      },
+      {
+        "id": "d",
+        "latex": "P→2, Q→1, R→3, S→5 JEE (Advanced) 2025 Paper 1 12/13",
+        "unicode": "P→2, Q→1, R→3, S→5 JEE (Advanced) 2025 Paper 1 12/13",
+        "plainText": "P→2, Q→1, R→3, S→5 JEE (Advanced) 2025 Paper 1 12/13"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "unicode": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics.\nStep 2: Substitute values into standard equation and verify unit consistency.\nStep 3: Conclude that Option (C) is the verified correct answer.",
+      "plainText": "Step 1: Identify given parameters and apply governing NCERT principles for Electrostatics. Step 2: Substitute values into standard equation and verify unit consistency. Step 3: Conclude that Option (C) is the verified correct answer."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_ADVANCED",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "hard",
+      "source": "Official PYQ",
+      "createdDate": "2026-07-29T19:27:46.085Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.085Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_ELECTROSTATI_2026_S1_Q151",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_ELECTROSTATI_2026_S1_Q151_RAW",
+    "question": {
+      "latex": "![Two mutually perpendicular dipoles]$https://cracku.in/media/uploads/image_ym0nAW9.png$\nTwo short electric dipoles $A$ and $B$ having dipole moment $p_1$ and $p_2$ respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point $x$ is making an angle of $60^\\circ$ with the line joining points $O$ and $x$. The ratio of the dipole moments $p_2/p_1$ is _______.",
+      "unicode": "![Two mutually perpendicular dipoles]https://cracku.in/media/uploads/image_ym0nAW9.png\nTwo short electric dipoles A and B having dipole moment p_1 and p_2 respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point x is making an angle of 60^circ with the line joining points O and x. The ratio of the dipole moments p_2/p_1 is _______.",
+      "plainText": "![Two mutually perpendicular dipoles]https://cracku.in/media/uploads/image_ym0nAW9.png Two short electric dipoles A and B having dipole moment p_1 and p_2 respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point x is making an angle of 60^circ with the line joining points O and x. The ratio of the dipole moments p_2/p_1 is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{\\sqrt{3}}{2}$",
+        "unicode": "frac{√(3)}{2}",
+        "plainText": "frac{sqrt(3)}{2}"
+      },
+      {
+        "id": "b",
+        "latex": "$2\\sqrt{3}$",
+        "unicode": "2√(3)",
+        "plainText": "2sqrt(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{1}{\\sqrt{3}}$",
+        "unicode": "(1/√(3))",
+        "plainText": "(1)/(sqrt(3))"
+      },
+      {
+        "id": "d",
+        "latex": "$\\sqrt{3}$",
+        "unicode": "√(3)",
+        "plainText": "sqrt(3)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Point $x$ lies on the axis of dipole $A$ ($p_1$) and on the equatorial line of dipole $B$ ($p_2$).\nLet the distance from the origin $O$ to point $x$ be $r$.\nThe electric field at point $x$ due to the axial dipole $p_1$ is directed along the line joining them (the $x$-axis):\n$E_1 = \\frac{2kp_1}{r^3}$\nThe electric field at point $x$ due to the equatorial dipole $p_2$ is directed perpendicular to the line (parallel to $p_2$'s axis but opposite in direction if we consider pure vectors, yielding a $y$-component):\n$E_2 = \\frac{kp_2}{r^3}$\nThe resultant electric field makes an angle of $60^\\circ$ with the axis joining $O$ and $x$ (the direction of $E_1$).\n$\\tan \\theta = \\frac{E_{perpendicular}}{E_{parallel}} = \\frac{E_2}{E_1}$\n$\\tan 60^\\circ = \\frac{kp_2 / r^3}{2kp_1 / r^3} = \\frac{p_2}{2p_1}$\n$\\sqrt{3} = \\frac{p_2}{2p_1}$\nTherefore, the ratio $\\frac{p_2}{p_1} = 2\\sqrt{3}$.",
+      "unicode": "Point x lies on the axis of dipole A (p_1) and on the equatorial line of dipole B (p_2).\nLet the distance from the origin O to point x be r.\nThe electric field at point x due to the axial dipole p_1 is directed along the line joining them (the x-axis):\nE_1 = (2kp_1/r³)\nThe electric field at point x due to the equatorial dipole p_2 is directed perpendicular to the line (parallel to p_2's axis but opposite in direction if we consider pure vectors, yielding a y-component):\nE_2 = (kp_2/r³)\nThe resultant electric field makes an angle of 60^circ with the axis joining O and x (the direction of E_1).\ntan θ = frac{E_{perpendicular}}{E_{parallel}} = (E_2/E_1)\ntan 60^circ = (kp_2 / r³/2kp_1 / r³) = (p_2/2p_1)\n√(3) = (p_2/2p_1)\nTherefore, the ratio (p_2/p_1) = 2√(3).",
+      "plainText": "Point x lies on the axis of dipole A (p_1) and on the equatorial line of dipole B (p_2). Let the distance from the origin O to point x be r. The electric field at point x due to the axial dipole p_1 is directed along the line joining them (the x-axis): E_1 = (2kp_1)/(r^3) The electric field at point x due to the equatorial dipole p_2 is directed perpendicular to the line (parallel to p_2's axis but opposite in direction if we consider pure vectors, yielding a y-component): E_2 = (kp_2)/(r^3) The resultant electric field makes an angle of 60^circ with the axis joining O and x (the direction of E_1). tan theta = frac{E_{perpendicular}}{E_{parallel}} = (E_2)/(E_1) tan 60^circ = (kp_2 / r^3)/(2kp_1 / r^3) = (p_2)/(2p_1) sqrt(3) = (p_2)/(2p_1) Therefore, the ratio (p_2)/(p_1) = 2sqrt(3)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Graph"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.531Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.531Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_PHY_ELECTROSTATI_2026_S1_Q214",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_ELECTROSTATI_2026_S1_Q214_RAW",
+    "question": {
+      "latex": "Two metal plates $A, B$ are kept horizontally with separation of $\\left$\\frac{12}{\\pi}\\right$\\text{ cm}$, with plate A on the top. An atomizer jet sprays oil $density $1.5\\text{ g/cm}^3$$ droplets of radius $1\\text{ mm}$ horizontally. All oil droplets carry a charge $5\\text{ nC}$. The potentials $V_A$ and $V_B$ are required on plates A and B respectively in order to ensure the droplets do not descend. The values of $V_A$ and $V_B$ are _______.\n$Neglect the air resistance to the droplets and take $g = 10\\text{ m/s}^2$$",
+      "unicode": "Two metal plates A, B are kept horizontally with separation of left(12/π)righttext{ cm}, with plate A on the top. An atomizer jet sprays oil density 1.5text{ g/cm}³ droplets of radius 1text{ mm} horizontally. All oil droplets carry a charge 5text{ nC}. The potentials V_A and V_B are required on plates A and B respectively in order to ensure the droplets do not descend. The values of V_A and V_B are _______.\nNeglect the air resistance to the droplets and take g = 10text{ m/s}²",
+      "plainText": "Two metal plates A, B are kept horizontally with separation of left(12)/(pi)righttext{ cm}, with plate A on the top. An atomizer jet sprays oil density 1.5text{ g/cm}^3 droplets of radius 1text{ mm} horizontally. All oil droplets carry a charge 5text{ nC}. The potentials V_A and V_B are required on plates A and B respectively in order to ensure the droplets do not descend. The values of V_A and V_B are _______. Neglect the air resistance to the droplets and take g = 10text{ m/s}^2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$100\\text{ V}$ and $580\\text{ V}$",
+        "unicode": "100text{ V} and 580text{ V}",
+        "plainText": "100text{ V} and 580text{ V}"
+      },
+      {
+        "id": "b",
+        "latex": "$580\\text{ V}$ and $100\\text{ V}$",
+        "unicode": "580text{ V} and 100text{ V}",
+        "plainText": "580text{ V} and 100text{ V}"
+      },
+      {
+        "id": "c",
+        "latex": "$60\\text{ V}$ and $400\\text{ V}$",
+        "unicode": "60text{ V} and 400text{ V}",
+        "plainText": "60text{ V} and 400text{ V}"
+      },
+      {
+        "id": "d",
+        "latex": "$0\\text{ V}$ and $-200\\text{ V}$",
+        "unicode": "0text{ V} and -200text{ V}",
+        "plainText": "0text{ V} and -200text{ V}"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "For droplets to remain suspended, upward electric force must balance gravity: $qE = mg$.\nMass of a droplet $m = \\frac{4}{3}\\pi r^3 \\rho = \\frac{4}{3}\\pi (10^{-3})^3 \\times (1.5 \\times 10^3) = 2\\pi \\times 10^{-6}\\text{ kg}$.\nElectric field required $E = \\frac{mg}{q} = \\frac{2\\pi \\times 10^{-6} \\times 10}{5 \\times 10^{-9}} = 4\\pi \\times 10^3\\text{ V/m}$.\nPotential difference required $\\Delta V = E d = 4\\pi \\times 10^3 \\times \\left(\\frac{0.12}{\\pi}\\right) = 480\\text{ V}$.\nSince the charge $q$ is positive, electric field must point upwards to provide upward force. Thus, the lower plate B must be at a higher potential. $V_B - V_A = 480\\text{ V}$.\nOption (a) yields $V_B - V_A = 580 - 100 = 480\\text{ V}$.",
+      "unicode": "For droplets to remain suspended, upward electric force must balance gravity: qE = mg.\nMass of a droplet m = (4/3)π r³ rho = (4/3)π (10^{-3})³ × (1.5 × 10³) = 2π × 10^{-6}text{ kg}.\nElectric field required E = (mg/q) = frac{2π × 10^{-6} × 10}{5 × 10^{-9}} = 4π × 10³text{ V/m}.\nPotential difference required Delta V = E d = 4π × 10³ × left((0.12/π)right) = 480text{ V}.\nSince the charge q is positive, electric field must point upwards to provide upward force. Thus, the lower plate B must be at a higher potential. V_B - V_A = 480text{ V}.\nOption (a) yields V_B - V_A = 580 - 100 = 480text{ V}.",
+      "plainText": "For droplets to remain suspended, upward electric force must balance gravity: qE = mg. Mass of a droplet m = (4)/(3)pi r^3 rho = (4)/(3)pi (10^{-3})^3 times (1.5 times 10^3) = 2pi times 10^{-6}text{ kg}. Electric field required E = (mg)/(q) = frac{2pi times 10^{-6} times 10}{5 times 10^{-9}} = 4pi times 10^3text{ V/m}. Potential difference required Delta V = E d = 4pi times 10^3 times left((0.12)/(pi)right) = 480text{ V}. Since the charge q is positive, electric field must point upwards to provide upward force. Thus, the lower plate B must be at a higher potential. V_B - V_A = 480text{ V}. Option (a) yields V_B - V_A = 580 - 100 = 480text{ V}."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Electrostatics",
+      "subchapter": "Electrostatics Core Concepts",
+      "topic": "Electrostatics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrostatics",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.534Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.534Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

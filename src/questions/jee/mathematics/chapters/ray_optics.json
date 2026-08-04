@@ -1,0 +1,407 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_RAYOPTICS_2025_S_Q101",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_RAYOPTICS_2025_S_Q101_RAW",
+    "question": {
+      "latex": "A symmetric thin biconvex lens is cut into four equal parts by two planes AB and CD as shown in figure. If the power of original lens is 4D then the power of a part of the divided lens is \n <svg width='300' height='400' viewBox='0 0 300 400' xmlns='http://www.w3.org/2000/svg'><path d='M 150 80 Q 120 200 150 320' fill='none' stroke='black' stroke-width='2'/><path d='M 150 80 Q 180 200 150 320' fill='none' stroke='black' stroke-width='2'/><line x1='30' y1='200' x2='270' y2='200' stroke='black' stroke-width='1'/><line x1='150' y1='30' x2='150' y2='370' stroke='black' stroke-width='1'/><defs><marker id='arrowhead' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><text x='20' y='205' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>A</text><text x='280' y='205' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>B</text><text x='150' y='25' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>C</text><text x='150' y='390' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>D</text></svg>",
+      "unicode": "A symmetric thin biconvex lens is cut into four equal parts by two planes AB and CD as shown in figure. If the power of original lens is 4D then the power of a part of the divided lens is \n <svg width='300' height='400' viewBox='0 0 300 400' xmlns='http://www.w3.org/2000/svg'><path d='M 150 80 Q 120 200 150 320' fill='none' stroke='black' stroke-width='2'/><path d='M 150 80 Q 180 200 150 320' fill='none' stroke='black' stroke-width='2'/><line x1='30' y1='200' x2='270' y2='200' stroke='black' stroke-width='1'/><line x1='150' y1='30' x2='150' y2='370' stroke='black' stroke-width='1'/><defs><marker id='arrowhead' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><text x='20' y='205' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>A</text><text x='280' y='205' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>B</text><text x='150' y='25' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>C</text><text x='150' y='390' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>D</text></svg>",
+      "plainText": "A symmetric thin biconvex lens is cut into four equal parts by two planes AB and CD as shown in figure. If the power of original lens is 4D then the power of a part of the divided lens is <svg width='300' height='400' viewBox='0 0 300 400' xmlns='http://www.w3.org/2000/svg'><path d='M 150 80 Q 120 200 150 320' fill='none' stroke='black' stroke-width='2'/><path d='M 150 80 Q 180 200 150 320' fill='none' stroke='black' stroke-width='2'/><line x1='30' y1='200' x2='270' y2='200' stroke='black' stroke-width='1'/><line x1='150' y1='30' x2='150' y2='370' stroke='black' stroke-width='1'/><defs><marker id='arrowhead' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='black'/></marker></defs><text x='20' y='205' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>A</text><text x='280' y='205' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>B</text><text x='150' y='25' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>C</text><text x='150' y='390' font-family='Arial, sans-serif' font-size='16' text-anchor='middle'>D</text></svg>"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "8D",
+        "unicode": "8D",
+        "plainText": "8D"
+      },
+      {
+        "id": "b",
+        "latex": "4D",
+        "unicode": "4D",
+        "plainText": "4D"
+      },
+      {
+        "id": "c",
+        "latex": "1D",
+        "unicode": "1D",
+        "plainText": "1D"
+      },
+      {
+        "id": "d",
+        "latex": "2D",
+        "unicode": "2D",
+        "plainText": "2D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Ray Optics",
+      "subchapter": "Ray Optics Core Concepts",
+      "topic": "Ray Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Ray Optics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q190",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q190_RAW",
+    "question": {
+      "latex": "For a thin symmetric prism made of glass (refractive index 1.5), the ratio of incident angle and minimum deviation will be _______.",
+      "unicode": "For a thin symmetric prism made of glass (refractive index 1.5), the ratio of incident angle and minimum deviation will be _______.",
+      "plainText": "For a thin symmetric prism made of glass (refractive index 1.5), the ratio of incident angle and minimum deviation will be _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3 : 4",
+        "unicode": "3 : 4",
+        "plainText": "3 : 4"
+      },
+      {
+        "id": "b",
+        "latex": "3 : 2",
+        "unicode": "3 : 2",
+        "plainText": "3 : 2"
+      },
+      {
+        "id": "c",
+        "latex": "2 : 1",
+        "unicode": "2 : 1",
+        "plainText": "2 : 1"
+      },
+      {
+        "id": "d",
+        "latex": "1 : 2",
+        "unicode": "1 : 2",
+        "plainText": "1 : 2"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Ray Optics",
+      "subchapter": "Ray Optics Core Concepts",
+      "topic": "Ray Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Ray Optics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Easy",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q191",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q191_RAW",
+    "question": {
+      "latex": "![Object near a concave spherical refracting surface with marked pole and center of curvature](https://cracku.in/media/uploads/image_STnkdxu.png)\nRefer the figure given. An object of height 2 cm is placed 40 cm from the pole $P$ of a single spherical refracting surface. The center of curvature $C$ is at a distance of 20 cm from $P$, situated between the object and the pole. $\\mu_1 = 1$ and $\\mu_2 = 1.54$ (approximated behavior as 1.5 in intended keys) are refractive indices of air and lens material. The magnitude of the height of image will be _______ cm.",
+      "unicode": "![Object near a concave spherical refracting surface with marked pole and center of curvature](https://cracku.in/media/uploads/image_STnkdxu.png)\nRefer the figure given. An object of height 2 cm is placed 40 cm from the pole P of a single spherical refracting surface. The center of curvature C is at a distance of 20 cm from P, situated between the object and the pole. mu_1 = 1 and mu_2 = 1.54 (approximated behavior as 1.5 in intended keys) are refractive indices of air and lens material. The magnitude of the height of image will be _______ cm.",
+      "plainText": "![Object near a concave spherical refracting surface with marked pole and center of curvature](https://cracku.in/media/uploads/image_STnkdxu.png) Refer the figure given. An object of height 2 cm is placed 40 cm from the pole P of a single spherical refracting surface. The center of curvature C is at a distance of 20 cm from P, situated between the object and the pole. mu_1 = 1 and mu_2 = 1.54 (approximated behavior as 1.5 in intended keys) are refractive indices of air and lens material. The magnitude of the height of image will be _______ cm."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "0.5",
+        "unicode": "0.5",
+        "plainText": "0.5"
+      },
+      {
+        "id": "c",
+        "latex": "1.2",
+        "unicode": "1.2",
+        "plainText": "1.2"
+      },
+      {
+        "id": "d",
+        "latex": "0.25",
+        "unicode": "0.25",
+        "plainText": "0.25"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Ray Optics",
+      "subchapter": "Ray Optics Core Concepts",
+      "topic": "Ray Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Ray Optics",
+      "tags": [
+        "Numerical",
+        "Graph"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.049Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.049Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q266",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q266_RAW",
+    "question": {
+      "latex": "One side of an equilateral prism is painted by a transparent material of refractive index $n_2$. The refractive index of prism is $1.6$. The maximum (limit condition originally referred as minimum boundary requirement for total internal reflection in OCR) value of $n_2$ required for total internal reflection from painted face is _______.",
+      "unicode": "One side of an equilateral prism is painted by a transparent material of refractive index n_2. The refractive index of prism is 1.6. The maximum (limit condition originally referred as minimum boundary requirement for total internal reflection in OCR) value of n_2 required for total internal reflection from painted face is _______.",
+      "plainText": "One side of an equilateral prism is painted by a transparent material of refractive index n_2. The refractive index of prism is 1.6. The maximum (limit condition originally referred as minimum boundary requirement for total internal reflection in OCR) value of n_2 required for total internal reflection from painted face is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$3\\sqrt{3}/1.6$",
+        "unicode": "3√(3)/1.6",
+        "plainText": "3sqrt(3)/1.6"
+      },
+      {
+        "id": "b",
+        "latex": "$\\sqrt{3}$",
+        "unicode": "√(3)",
+        "plainText": "sqrt(3)"
+      },
+      {
+        "id": "c",
+        "latex": "$3.2/\\sqrt{3}$",
+        "unicode": "3.2/√(3)",
+        "plainText": "3.2/sqrt(3)"
+      },
+      {
+        "id": "d",
+        "latex": "$4\\sqrt{3}/5$",
+        "unicode": "4√(3)/5",
+        "plainText": "4sqrt(3)/5"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Ray Optics",
+      "subchapter": "Ray Optics Core Concepts",
+      "topic": "Ray Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Ray Optics",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q274",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_RAYOPTICS_2026_S_Q274_RAW",
+    "question": {
+      "latex": "If sunlight is focused on a paper using a convex lens, it starts burning the paper in shortest time when the lens is kept at $30\\text{ cm}$ above the paper. If the radius of curvature of the lens is $60\\text{ cm}$ then the refractive index of the lens material is $\\frac{\\alpha}{10}$. The value of $\\alpha$ is _______.",
+      "unicode": "If sunlight is focused on a paper using a convex lens, it starts burning the paper in shortest time when the lens is kept at 30text{ cm} above the paper. If the radius of curvature of the lens is 60text{ cm} then the refractive index of the lens material is (α/10). The value of α is _______.",
+      "plainText": "If sunlight is focused on a paper using a convex lens, it starts burning the paper in shortest time when the lens is kept at 30text{ cm} above the paper. If the radius of curvature of the lens is 60text{ cm} then the refractive index of the lens material is (alpha)/(10). The value of alpha is _______."
+    },
+    "options": [],
+    "answers": [
+      "2"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Ray Optics",
+      "subchapter": "Ray Optics Core Concepts",
+      "topic": "Ray Optics Primary Topic",
+      "learningOutcome": "Master fundamental principles of Ray Optics",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.053Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.053Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

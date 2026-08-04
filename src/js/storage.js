@@ -104,11 +104,12 @@ const ld = (k, fb) => {
 
 /* ── PER-USER PERSISTENCE ───────────────────────────────────── */
 
-/** All keys that belong to a user's persisted state. */
+/** All keys that belong to a user's persisted state (Phase 2 Persistence). */
 const USER_DATA_KEYS = [
   'profile', 'xp', 'streak', 'lastStudy', 'badges', 'topics',
   'chatMsgs', 'exploredCats', 'settings', 'memory', 'notes',
-  'roadmaps', 'courses'
+  'roadmaps', 'courses', 'currentLesson', 'currentChapter',
+  'revisionQueue', 'weakSpots', 'progress'
 ];
 
 /**
@@ -180,7 +181,7 @@ async function loadUserData(uid) {
  * @returns {Promise}
  */
 async function saveUserData() {
-  const s = getSession();
+  const s = typeof getSession === 'function' ? getSession() : null;
   if (!s?.id) return;
   const saves = USER_DATA_KEYS.map(k => idbSet(`${s.id}_${k}`, D[k]));
   try {

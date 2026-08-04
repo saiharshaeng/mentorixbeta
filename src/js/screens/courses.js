@@ -190,8 +190,8 @@ function rCourses(){
   let totalCourseTopics = 0;
   let completedCourseTopics = 0;
 
-  (currentCourse.units || []).forEach(unit => {
-    (unit.chapters || []).forEach(chapter => {
+  (currentCourse.units || []).forEach((unit, ui) => {
+    (unit.chapters || []).forEach((chapter, ci) => {
       const topics = chapter.topics || [];
       topics.forEach(t => {
         totalCourseTopics++;
@@ -213,8 +213,8 @@ function rCourses(){
   (currentCourse.units || []).forEach((unit, ui) => {
     (unit.chapters || []).forEach((chapter, ci) => {
       const isChapterCompleted = chapter.completed;
-      const isChapterUnlocked = !chapter.locked;
-      const isChapterActive = activePos ? (activePos.unitIdx === ui && activePos.chapterIdx === ci) : (isChapterUnlocked && !isChapterCompleted);
+      const isChapterUnlocked = true; // All chapters unlocked for 100% learning flexibility
+      const isChapterActive = activePos ? (activePos.unitIdx === ui && activePos.chapterIdx === ci) : (!isChapterCompleted);
 
       let topicsNodesHTML = '';
       const subchapters = chapter.subchapters || [];
@@ -234,13 +234,13 @@ function rCourses(){
           (sub.topics || []).forEach((t, ti) => {
             const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
             const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
-            const isUnlocked = isChapterUnlocked && (isDone || (typeof t === 'object' ? t.status === 'Unlocked' : true) || (si === 0 && ti === 0));
-            const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (isUnlocked && !isDone);
+            const isUnlocked = true; // All topics unlocked for flexible access anywhere
+            const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (!isDone);
             const posClass = PATH_POSITIONS[globalNodeIdx % PATH_POSITIONS.length];
             globalNodeIdx++;
 
-            let nodeIcon = isDone ? '✓' : isActive ? '⚡' : isUnlocked ? '🟡' : '🔒';
-            let nodeStateClass = isDone ? 'node-completed' : isActive ? 'node-active' : isUnlocked ? 'node-unlocked' : 'node-locked';
+            let nodeIcon = isDone ? '✓' : isActive ? '⚡' : '🟡';
+            let nodeStateClass = isDone ? 'node-completed' : isActive ? 'node-active' : 'node-unlocked';
 
             let avatarHTML = isActive ? `
               <div class="node-avatar-companion avatar-companion-anim" title="You are here!">
@@ -263,9 +263,9 @@ function rCourses(){
                 <div class="world-node-wrap">
                   ${avatarHTML}
                   <button class="world-node ${nodeStateClass}" 
-                    onclick="if (${isUnlocked}) { activeCourseId='${currentCourse.id}'; D.lastCourseId='${currentCourse.id}'; saveNow(); go('learn', '${escON(tTitle)}'); } else { skipToTopic('${currentCourse.id}', ${ui}, ${ci}, ${ti}, '${escON(tTitle)}'); }"
+                    onclick="activeCourseId='${currentCourse.id}'; D.lastCourseId='${currentCourse.id}'; saveNow(); go('learn', '${escON(tTitle)}');"
                     tabindex="0"
-                    aria-label="Topic: ${esc(tTitle)} - ${isDone ? 'Completed' : isUnlocked ? 'Unlocked' : 'Locked'}">
+                    aria-label="Topic: ${esc(tTitle)} - ${isDone ? 'Completed' : 'Unlocked'}">
                     <span>${nodeIcon}</span>
                   </button>
                   <div class="node-title-pill">${esc(tTitle)}</div>
@@ -278,13 +278,13 @@ function rCourses(){
         (chapter.topics || []).forEach((t, ti) => {
           const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
           const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
-          const isUnlocked = isChapterUnlocked && (isDone || (typeof t === 'object' ? t.status === 'Unlocked' : true) || ti === 0);
-          const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (isUnlocked && !isDone);
+          const isUnlocked = true; // All topics unlocked for flexible access anywhere
+          const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (!isDone);
           const posClass = PATH_POSITIONS[globalNodeIdx % PATH_POSITIONS.length];
           globalNodeIdx++;
 
-          let nodeIcon = isDone ? '✓' : isActive ? '⚡' : isUnlocked ? '🟡' : '🔒';
-          let nodeStateClass = isDone ? 'node-completed' : isActive ? 'node-active' : isUnlocked ? 'node-unlocked' : 'node-locked';
+          let nodeIcon = isDone ? '✓' : isActive ? '⚡' : '🟡';
+          let nodeStateClass = isDone ? 'node-completed' : isActive ? 'node-active' : 'node-unlocked';
 
           let avatarHTML = isActive ? `
             <div class="node-avatar-companion avatar-companion-anim" title="You are here!">
@@ -297,9 +297,9 @@ function rCourses(){
               <div class="world-node-wrap">
                 ${avatarHTML}
                 <button class="world-node ${nodeStateClass}" 
-                  onclick="if (${isUnlocked}) { activeCourseId='${currentCourse.id}'; D.lastCourseId='${currentCourse.id}'; saveNow(); go('learn', '${escON(tTitle)}'); } else { skipToTopic('${currentCourse.id}', ${ui}, ${ci}, ${ti}, '${escON(tTitle)}'); }"
+                  onclick="activeCourseId='${currentCourse.id}'; D.lastCourseId='${currentCourse.id}'; saveNow(); go('learn', '${escON(tTitle)}');"
                   tabindex="0"
-                  aria-label="Topic: ${esc(tTitle)} - ${isDone ? 'Completed' : isUnlocked ? 'Unlocked' : 'Locked'}">
+                  aria-label="Topic: ${esc(tTitle)} - ${isDone ? 'Completed' : 'Unlocked'}">
                   <span>${nodeIcon}</span>
                 </button>
                 <div class="node-title-pill">${esc(tTitle)}</div>
@@ -320,8 +320,8 @@ function rCourses(){
               </div>
             </div>
             <div style="display:flex;align-items:center;gap:8px">
-              <span class="tag font-poiret ${isChapterCompleted ? 'tok' : isChapterUnlocked ? 'tp' : 'tred'}" style="font-size:11px;padding:4px 10px">
-                ${isChapterCompleted ? '✓ Completed' : isChapterUnlocked ? '🟡 Active Region' : '🔒 Locked'}
+              <span class="tag font-poiret ${isChapterCompleted ? 'tok' : 'tp'}" style="font-size:11px;padding:4px 10px">
+                ${isChapterCompleted ? '✓ Completed' : '🟡 Open Region'}
               </span>
             </div>
           </div>
@@ -333,13 +333,13 @@ function rCourses(){
             <div class="world-node-row pos-center" style="margin-top:20px;margin-bottom:10px">
               <div class="world-node-wrap">
                 <button class="world-node node-boss ${isChapterCompleted ? 'node-completed' : 'node-locked'}" 
-                  onclick="if (${isChapterCompleted}) { toast('Chapter mastered! Boss challenge passed.'); } else { go('tests'); }"
+                  onclick="launchBossTest('${currentCourse.id}', ${ui}, ${ci}, '${esc(chapter.title || '')}')"
                   tabindex="0"
                   aria-label="Chapter ${ci + 1} Boss Test Checkpoint">
-                  <span>👑</span>
+                  <span>${isChapterCompleted ? '✅' : '👑'}</span>
                 </button>
                 <div class="node-title-pill font-poiret" style="border-color:rgba(245,158,11,0.4);color:var(--goldl);font-weight:700">
-                  Chapter Boss Assessment
+                  ${isChapterCompleted ? 'Boss Passed ✓' : 'Chapter Boss Assessment'}
                 </div>
               </div>
             </div>
@@ -632,7 +632,7 @@ function closeCourseSetupModal(){
 function renderCourseSetupBody(){
   const isHS = csm.grade === 'Grade 11' || csm.grade === 'Grade 12';
   const subjOpts = isHS ? (SUBJECTS_BY_STREAM[csm.stream] || []) : SUBJECTS_K10;
-  const grades = ['Grade 6','Grade 7','Grade 8','Grade 9','Grade 10','Grade 11','Grade 12','Undergraduate','Postgraduate'];
+  const grades = (typeof CBSE_GRADES !== 'undefined' && Array.isArray(CBSE_GRADES)) ? CBSE_GRADES : ['Grade 6','Grade 7','Grade 8','Grade 9','Grade 10','Grade 11','Grade 12'];
   return `
     <div class="h2" style="color:#fff;margin-bottom:4px">Quick setup before we build your course</div>
     <p class="sub" style="margin-bottom:18px">I need a couple of details so I only teach exactly your syllabus — nothing extra, nothing missing.</p>
@@ -719,6 +719,14 @@ async function submitCourseSetup(){
 }
 
 async function generateAutoCoursesAsync(profile, onProgress) {
+  if (window.ModuleRegistry && typeof window.ModuleRegistry.loadModule === 'function') {
+    try {
+      await window.ModuleRegistry.loadModule('curriculum');
+    } catch (e) {
+      console.warn('[Courses] Failed to load curriculum module:', e);
+    }
+  }
+
   const subjects = (profile?.subjects && profile.subjects.length > 0)
     ? profile.subjects
     : ['Mathematics', 'Physics', 'Chemistry'];
@@ -900,4 +908,17 @@ window.submitCourseSetup = submitCourseSetup;
 window.openCustomCourseModal = openCustomCourseModal;
 window.closeCustomCourseModal = closeCustomCourseModal;
 window.submitCustomCourse = submitCustomCourse;
+function launchBossTest(courseId, unitIdx, chapterIdx, chapterTitle) {
+  // Navigate to tests screen with chapter context pre-loaded
+  D._bossTestContext = { courseId, unitIdx, chapterIdx, chapterTitle };
+  go('tests');
+  // After tests screen loads, show a toast indicating this is a Boss Test
+  setTimeout(() => {
+    if (typeof toast === 'function') {
+      toast(`👑 Boss Test: ${chapterTitle} — Complete to unlock chapter mastery!`, 'badge');
+    }
+  }, 300);
+}
+window.launchBossTest = launchBossTest;
+
 window.createCustomUserCourse = createCustomUserCourse;

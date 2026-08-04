@@ -1,0 +1,1653 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q90",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S_Q90_RAW",
+    "question": {
+      "latex": "Let $\\vec{a}$ and $\\vec{b}$ be two unit vectors such that the angle between them is $\\pi/3$. If $\\lambda \\vec{a} + 2\\vec{b}$ and $3\\vec{a} - \\lambda \\vec{b}$ are perpendicular to each other, then the number of values of $\\lambda$ in [-1, 3] is :",
+      "unicode": "Let vec{a} and vec{b} be two unit vectors such that the angle between them is π/3. If lambda vec{a} + 2vec{b} and 3vec{a} - lambda vec{b} are perpendicular to each other, then the number of values of lambda in [-1, 3] is :",
+      "plainText": "Let vec{a} and vec{b} be two unit vectors such that the angle between them is pi/3. If lambda vec{a} + 2vec{b} and 3vec{a} - lambda vec{b} are perpendicular to each other, then the number of values of lambda in [-1, 3] is :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "d",
+        "latex": "0",
+        "unicode": "0",
+        "plainText": "0"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.043Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.043Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_VECTORALGEBR_2021_S1_Q68",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_VECTORALGEBR_2021_S1_Q68_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2021] A particle of mass 푀=0.2 kg is initially at rest in the xy-plane at a point (푥=−푙, 푦=−ℎ), where 푙=10 m and ℎ=1 m. The particle is accelerated at time 푡=0 with a constant acceleration 푎=10 m/s 2 along the positive x-direction. Its angular momentum and torque with respect to the origin, in SI units, are represented by 퐿 ⃗ and 휏 , respectively. 푖̂, 푗̂",
+      "unicode": "[JEE PYQ 2021] A particle of mass 푀=0.2 kg is initially at rest in the xy-plane at a point (푥=−푙, 푦=−ℎ), where 푙=10 m and ℎ=1 m. The particle is accelerated at time 푡=0 with a constant acceleration 푎=10 m/s 2 along the positive x-direction. Its angular momentum and torque with respect to the origin, in SI units, are represented by 퐿 ⃗ and 휏 , respectively. 푖̂, 푗̂",
+      "plainText": "[JEE PYQ 2021] A particle of mass 푀=0.2 kg is initially at rest in the xy-plane at a point (푥=−푙, 푦=−ℎ), where 푙=10 m and ℎ=1 m. The particle is accelerated at time 푡=0 with a constant acceleration 푎=10 m/s 2 along the positive x-direction. Its angular momentum and torque with respect to the origin, in SI units, are represented by 퐿 ⃗ and 휏 , respectively. 푖̂, 푗̂"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "The particle arrives at the point",
+        "unicode": "The particle arrives at the point",
+        "plainText": "The particle arrives at the point"
+      },
+      {
+        "id": "b",
+        "latex": "휏 = 2 푘 ̂ when the particle passes through the point",
+        "unicode": "휏 = 2 푘 ̂ when the particle passes through the point",
+        "plainText": "휏 = 2 푘 ̂ when the particle passes through the point"
+      },
+      {
+        "id": "c",
+        "latex": "퐿 ⃗ = 4 푘 ̂ when the particle passes through the point",
+        "unicode": "퐿 ⃗ = 4 푘 ̂ when the particle passes through the point",
+        "plainText": "퐿 ⃗ = 4 푘 ̂ when the particle passes through the point"
+      },
+      {
+        "id": "d",
+        "latex": "휏 = 푘 ̂ when the particle passes through the point",
+        "unicode": "휏 = 푘 ̂ when the particle passes through the point",
+        "plainText": "휏 = 푘 ̂ when the particle passes through the point"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2021,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2021.pdf",
+      "createdDate": "2026-07-29T19:27:46.144Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.144Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_VECTORALGEBR_2022_S1_Q120",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_VECTORALGEBR_2022_S1_Q120_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2022] Let 푆 be the reflection of a point 푄 with respect to the plane given by 푟⃗ = − ( 푡 + 푝 ) 푖̂ + 푡푗̂ + ( 1 + 푝 ) 푘 ̂ where 푡, 푝 are real parameters and 푖̂, 푗̂, 푘 ̂ are the unit vectors along the three positive coordinate axes. If the position vectors of 푄 and 푆 are 10푖̂ + 15푗̂ + 20푘 ̂ and 훼푖̂ + 훽푗̂ + 훾푘 ̂ respectively, then which of the followi ng is/",
+      "unicode": "[JEE PYQ 2022] Let 푆 be the reflection of a point 푄 with respect to the plane given by 푟⃗ = − ( 푡 + 푝 ) 푖̂ + 푡푗̂ + ( 1 + 푝 ) 푘 ̂ where 푡, 푝 are real parameters and 푖̂, 푗̂, 푘 ̂ are the unit vectors along the three positive coordinate axes. If the position vectors of 푄 and 푆 are 10푖̂ + 15푗̂ + 20푘 ̂ and 훼푖̂ + 훽푗̂ + 훾푘 ̂ respectively, then which of the followi ng is/",
+      "plainText": "[JEE PYQ 2022] Let 푆 be the reflection of a point 푄 with respect to the plane given by 푟⃗ = − ( 푡 + 푝 ) 푖̂ + 푡푗̂ + ( 1 + 푝 ) 푘 ̂ where 푡, 푝 are real parameters and 푖̂, 푗̂, 푘 ̂ are the unit vectors along the three positive coordinate axes. If the position vectors of 푄 and 푆 are 10푖̂ + 15푗̂ + 20푘 ̂ and 훼푖̂ + 훽푗̂ + 훾푘 ̂ respectively, then which of the followi ng is/"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "c",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "d",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2022.pdf",
+      "createdDate": "2026-07-29T19:27:46.152Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.152Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q724",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q724_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (1 8) Given vectors a = 2i + j -k and b = i + 2j + k So, a + b = 3i + 3) ⇒ la + bl= 3✓'2 Sin ce, it is given that projec tion of c = aa + Pb on the vector (a + b) is 3✓'2, then (a+ b).c = 3J2 la+ bl ⇒ (a + b) . (aa + Pb) = 18 ⇒ a(a .a) + P(a.b) + a (b.a) + P(a.b) = 18 ⇒ 6a + ~ + 3a + ~ = 18 ⇒9a+~=l8⇒(a+P)=2 ... (i) Now, for minimum value of (c - (a",
+      "unicode": "[JEE PYQ 2025] (1 8) Given vectors a = 2i + j -k and b = i + 2j + k So, a + b = 3i + 3) ⇒ la + bl= 3✓'2 Sin ce, it is given that projec tion of c = aa + Pb on the vector (a + b) is 3✓'2, then (a+ b).c = 3J2 la+ bl ⇒ (a + b) . (aa + Pb) = 18 ⇒ a(a .a) + P(a.b) + a (b.a) + P(a.b) = 18 ⇒ 6a + ~ + 3a + ~ = 18 ⇒9a+~=l8⇒(a+P)=2 ... (i) Now, for minimum value of (c - (a",
+      "plainText": "[JEE PYQ 2025] (1 8) Given vectors a = 2i + j -k and b = i + 2j + k So, a + b = 3i + 3) ⇒ la + bl= 3✓'2 Sin ce, it is given that projec tion of c = aa + Pb on the vector (a + b) is 3✓'2, then (a+ b).c = 3J2 la+ bl ⇒ (a + b) . (aa + Pb) = 18 ⇒ a(a .a) + P(a.b) + a (b.a) + P(a.b) = 18 ⇒ 6a + ~ + 3a + ~ = 18 ⇒9a+~=l8⇒(a+P)=2 ... (i) Now, for minimum value of (c - (a"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "= 18 [As minimum value of ax 2 + bx + c = -.P_, if a > O] 4a",
+        "unicode": "= 18 [As minimum value of ax 2 + bx + c = -.P_, if a > O] 4a",
+        "plainText": "= 18 [As minimum value of ax 2 + bx + c = -.P_, if a > O] 4a"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.204Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.204Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q913",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q913_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Two vectors A and B a re defined as A = ai and B = a ( cos wti + sinwtj), wh ere a is a constant and w = n / 6 rads- 1 . IflA+BI= ✓3IA-B lat time t = i-for the first time, the value of i-, in seconds, is . ... ....... .. .",
+      "unicode": "[JEE PYQ 2025] Two vectors A and B a re defined as A = ai and B = a ( cos wti + sinwtj), wh ere a is a constant and w = n / 6 rads- 1 . IflA+BI= ✓3IA-B lat time t = i-for the first time, the value of i-, in seconds, is . ... ....... .. .",
+      "plainText": "[JEE PYQ 2025] Two vectors A and B a re defined as A = ai and B = a ( cos wti + sinwtj), wh ere a is a constant and w = n / 6 rads- 1 . IflA+BI= ✓3IA-B lat time t = i-for the first time, the value of i-, in seconds, is . ... ....... .. ."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.215Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.215Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q1216",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q1216_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let a = 2i + ) -2k, b = i + ) and c be a vector such that I c -a I = 3, I ( a x b ) x c I = 3 and the angle be t ween c and a x b is 30°. Then, a • c is equal to (a) 25 (b) 2 (c) 5 (d) _:1_ 8 8",
+      "unicode": "[JEE PYQ 2025] Let a = 2i + ) -2k, b = i + ) and c be a vector such that I c -a I = 3, I ( a x b ) x c I = 3 and the angle be t ween c and a x b is 30°. Then, a • c is equal to (a) 25 (b) 2 (c) 5 (d) _:1_ 8 8",
+      "plainText": "[JEE PYQ 2025] Let a = 2i + ) -2k, b = i + ) and c be a vector such that I c -a I = 3, I ( a x b ) x c I = 3 and the angle be t ween c and a x b is 30°. Then, a • c is equal to (a) 25 (b) 2 (c) 5 (d) _:1_ 8 8"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "25",
+        "unicode": "25",
+        "plainText": "25"
+      },
+      {
+        "id": "b",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "_:1_ 8 8",
+        "unicode": "_:1_ 8 8",
+        "plainText": "_:1_ 8 8"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.233Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.233Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q1372",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q1372_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Three vectors P, Q and R are shown in the figure. Let S be any point on the vector R. The distance between the points P and S is b[R]. The general relation among vectors P, Q and Sis y p·~ .. · R = Q - P s _O __ :...._ ________ -+X (a) S = (1- b 2 )P + bQ (b) S = (b -1)P + bQ (c) S = (1 -b)P + b Q (d) S = (1 -b)P + b 2 Q",
+      "unicode": "[JEE PYQ 2025] Three vectors P, Q and R are shown in the figure. Let S be any point on the vector R. The distance between the points P and S is b[R]. The general relation among vectors P, Q and Sis y p·~ .. · R = Q - P s _O __ :...._ ________ -+X (a) S = (1- b 2 )P + bQ (b) S = (b -1)P + bQ (c) S = (1 -b)P + b Q (d) S = (1 -b)P + b 2 Q",
+      "plainText": "[JEE PYQ 2025] Three vectors P, Q and R are shown in the figure. Let S be any point on the vector R. The distance between the points P and S is b[R]. The general relation among vectors P, Q and Sis y p·~ .. · R = Q - P s _O __ :...._ ________ -+X (a) S = (1- b 2 )P + bQ (b) S = (b -1)P + bQ (c) S = (1 -b)P + b Q (d) S = (1 -b)P + b 2 Q"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "S =",
+        "unicode": "S =",
+        "plainText": "S ="
+      },
+      {
+        "id": "b",
+        "latex": "S =",
+        "unicode": "S =",
+        "plainText": "S ="
+      },
+      {
+        "id": "c",
+        "latex": "S =",
+        "unicode": "S =",
+        "plainText": "S ="
+      },
+      {
+        "id": "d",
+        "latex": "S =",
+        "unicode": "S =",
+        "plainText": "S ="
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.246Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.246Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q1702",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q1702_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The position vector r of particle of mass m is given by the following equation r (t)=cxt 3 i +St 2 j where, a = !Q ms -J, S = 5 ms - 2 and 3 m = 0.1 kg. At t = Is, w hich of the following statement(s) is (are) true about the particle? (a) The velocity v is g iven by v = (!Oi + IOj)ms- 1 (b) The angular momentum L w ith r espect t~ the o rigin is gi",
+      "unicode": "[JEE PYQ 2025] The position vector r of particle of mass m is given by the following equation r (t)=cxt 3 i +St 2 j where, a = !Q ms -J, S = 5 ms - 2 and 3 m = 0.1 kg. At t = Is, w hich of the following statement(s) is (are) true about the particle? (a) The velocity v is g iven by v = (!Oi + IOj)ms- 1 (b) The angular momentum L w ith r espect t~ the o rigin is gi",
+      "plainText": "[JEE PYQ 2025] The position vector r of particle of mass m is given by the following equation r (t)=cxt 3 i +St 2 j where, a = !Q ms -J, S = 5 ms - 2 and 3 m = 0.1 kg. At t = Is, w hich of the following statement(s) is (are) true about the particle? (a) The velocity v is g iven by v = (!Oi + IOj)ms- 1 (b) The angular momentum L w ith r espect t~ the o rigin is gi"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "The velocity v is g iven by v =",
+        "unicode": "The velocity v is g iven by v =",
+        "plainText": "The velocity v is g iven by v ="
+      },
+      {
+        "id": "b",
+        "latex": "The angular momentum L w ith r espect t~ the o rigin is given by L =",
+        "unicode": "The angular momentum L w ith r espect t~ the o rigin is given by L =",
+        "plainText": "The angular momentum L w ith r espect t~ the o rigin is given by L ="
+      },
+      {
+        "id": "c",
+        "latex": "The force Fis g iven by F =",
+        "unicode": "The force Fis g iven by F =",
+        "plainText": "The force Fis g iven by F ="
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.262Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.262Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2521",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2521_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let x, y and z be three vectors each of magnitude ✓2 and the angle between each pair of them is ~-If a is a 3 non-zero vector perpendicular to x and y x z and b is non-zero vector perpendicular to y and z x x , then (a) b=(b •z)(z-x) (b) a =(a -y)(y-z) (c) a-b= - (a -y)(b•z ) (d) a =(a -y)(z-y)",
+      "unicode": "[JEE PYQ 2025] Let x, y and z be three vectors each of magnitude ✓2 and the angle between each pair of them is ~-If a is a 3 non-zero vector perpendicular to x and y x z and b is non-zero vector perpendicular to y and z x x , then (a) b=(b •z)(z-x) (b) a =(a -y)(y-z) (c) a-b= - (a -y)(b•z ) (d) a =(a -y)(z-y)",
+      "plainText": "[JEE PYQ 2025] Let x, y and z be three vectors each of magnitude ✓2 and the angle between each pair of them is ~-If a is a 3 non-zero vector perpendicular to x and y x z and b is non-zero vector perpendicular to y and z x x , then (a) b=(b •z)(z-x) (b) a =(a -y)(y-z) (c) a-b= - (a -y)(b•z ) (d) a =(a -y)(z-y)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "b=",
+        "unicode": "b=",
+        "plainText": "b="
+      },
+      {
+        "id": "b",
+        "latex": "a =",
+        "unicode": "a =",
+        "plainText": "a ="
+      },
+      {
+        "id": "c",
+        "latex": "a-b= -",
+        "unicode": "a-b= -",
+        "plainText": "a-b= -"
+      },
+      {
+        "id": "d",
+        "latex": "a =",
+        "unicode": "a =",
+        "plainText": "a ="
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.310Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.310Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2602",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2602_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Match List I with List II and select the correct answer using the codes given below the lists. Lisi I P. Let y(x) = cos(3cos- 1 x), x E (-1,1],x * ± J3. Then, 2 (i) _ 1 _{ (x 2 -1/ 2 Y(X) + xc/y(x)} equals y(x) dx 2 dx 0 . Let A 1 , A 2 , ... An,(n > 2) be the vertices of a regular polygon of n sides (ii) with its centre at the origin. Let a 1 be t",
+      "unicode": "[JEE PYQ 2025] Match List I with List II and select the correct answer using the codes given below the lists. Lisi I P. Let y(x) = cos(3cos- 1 x), x E (-1,1],x * ± J3. Then, 2 (i) _ 1 _{ (x 2 -1/ 2 Y(X) + xc/y(x)} equals y(x) dx 2 dx 0 . Let A 1 , A 2 , ... An,(n > 2) be the vertices of a regular polygon of n sides (ii) with its centre at the origin. Let a 1 be t",
+      "plainText": "[JEE PYQ 2025] Match List I with List II and select the correct answer using the codes given below the lists. Lisi I P. Let y(x) = cos(3cos- 1 x), x E (-1,1],x * ± J3. Then, 2 (i) _ 1 _{ (x 2 -1/ 2 Y(X) + xc/y(x)} equals y(x) dx 2 dx 0 . Let A 1 , A 2 , ... An,(n > 2) be the vertices of a regular polygon of n sides (ii) with its centre at the origin. Let a 1 be t"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.314Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.314Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2791",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2791_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] If the vectors AB = 3 i + 4 k and AC = 5 i -2 J + 4 k are the sides of a i'.ABC, then the length of the median through A is (a) ✓18 (c) 53 (b) ✓72 (d) J45",
+      "unicode": "[JEE PYQ 2025] If the vectors AB = 3 i + 4 k and AC = 5 i -2 J + 4 k are the sides of a i'.ABC, then the length of the median through A is (a) ✓18 (c) 53 (b) ✓72 (d) J45",
+      "plainText": "[JEE PYQ 2025] If the vectors AB = 3 i + 4 k and AC = 5 i -2 J + 4 k are the sides of a i'.ABC, then the length of the median through A is (a) ✓18 (c) 53 (b) ✓72 (d) J45"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "✓18",
+        "unicode": "✓18",
+        "plainText": "✓18"
+      },
+      {
+        "id": "b",
+        "latex": "✓72",
+        "unicode": "✓72",
+        "plainText": "✓72"
+      },
+      {
+        "id": "c",
+        "latex": "53",
+        "unicode": "53",
+        "plainText": "53"
+      },
+      {
+        "id": "d",
+        "latex": "J45",
+        "unicode": "J45",
+        "plainText": "J45"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.334Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.334Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2947",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2947_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let PR= 3i + J -2k and SQ = i -3 J -4 k determine diagonals of a parallelogram PQRS and PT = i + 21 + 3 k be a nother vector. Then, the vo lume of the parallelopiped determined by the vectors PT, PQ and PS is (a) 5 (c) 10 (b) 20 (d) 30",
+      "unicode": "[JEE PYQ 2025] Let PR= 3i + J -2k and SQ = i -3 J -4 k determine diagonals of a parallelogram PQRS and PT = i + 21 + 3 k be a nother vector. Then, the vo lume of the parallelopiped determined by the vectors PT, PQ and PS is (a) 5 (c) 10 (b) 20 (d) 30",
+      "plainText": "[JEE PYQ 2025] Let PR= 3i + J -2k and SQ = i -3 J -4 k determine diagonals of a parallelogram PQRS and PT = i + 21 + 3 k be a nother vector. Then, the vo lume of the parallelopiped determined by the vectors PT, PQ and PS is (a) 5 (c) 10 (b) 20 (d) 30"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "b",
+        "latex": "20",
+        "unicode": "20",
+        "plainText": "20"
+      },
+      {
+        "id": "c",
+        "latex": "10",
+        "unicode": "10",
+        "plainText": "10"
+      },
+      {
+        "id": "d",
+        "latex": "30",
+        "unicode": "30",
+        "plainText": "30"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.343Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.343Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2962",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q2962_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The coefficients of three co nsecutive terms of (1 + x)° + 5 are in the ratio 5: 10 : 14. Then, n is equal to 18.Consider the set of eight vectors V =[a i + b J +ck: a, b, c E {-1, 1}]. Three non-coplanar vectors can be c hosen from V in 2P ways. The n , pis",
+      "unicode": "[JEE PYQ 2025] The coefficients of three co nsecutive terms of (1 + x)° + 5 are in the ratio 5: 10 : 14. Then, n is equal to 18.Consider the set of eight vectors V =[a i + b J +ck: a, b, c E {-1, 1}]. Three non-coplanar vectors can be c hosen from V in 2P ways. The n , pis",
+      "plainText": "[JEE PYQ 2025] The coefficients of three co nsecutive terms of (1 + x)° + 5 are in the ratio 5: 10 : 14. Then, n is equal to 18.Consider the set of eight vectors V =[a i + b J +ck: a, b, c E {-1, 1}]. Three non-coplanar vectors can be c hosen from V in 2P ways. The n , pis"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.344Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.344Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3190",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3190_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Two identical discs of same radius R are rotating about their axes in opposite directions with the same constant angular speed w. The discs are in the same horizontal plane. At time t = 0, the points P and Q are facing each other as shown in the figure. t2f0 The relative speed between the two points P and Q is v r · In one time period (T) of rotati",
+      "unicode": "[JEE PYQ 2025] Two identical discs of same radius R are rotating about their axes in opposite directions with the same constant angular speed w. The discs are in the same horizontal plane. At time t = 0, the points P and Q are facing each other as shown in the figure. t2f0 The relative speed between the two points P and Q is v r · In one time period (T) of rotati",
+      "plainText": "[JEE PYQ 2025] Two identical discs of same radius R are rotating about their axes in opposite directions with the same constant angular speed w. The discs are in the same horizontal plane. At time t = 0, the points P and Q are facing each other as shown in the figure. t2f0 The relative speed between the two points P and Q is v r · In one time period (T) of rotati"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "v,",
+        "unicode": "v,",
+        "plainText": "v,"
+      },
+      {
+        "id": "b",
+        "latex": "0 .____,_ __ __,J,___,_.,.. T v,",
+        "unicode": "0 .____,_ __ __,J,___,_.,.. T v,",
+        "plainText": "0 .____,_ __ __,J,___,_.,.. T v,"
+      },
+      {
+        "id": "c",
+        "latex": "T v,",
+        "unicode": "T v,",
+        "plainText": "T v,"
+      },
+      {
+        "id": "d",
+        "latex": "0 T IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/fr",
+        "unicode": "0 T IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/fr",
+        "plainText": "0 T IWWW.JEEBOOKS.INI www.jeeneetbooks.in For More Such Study Materials - Books Join https://t.me/fr"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.363Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.363Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3334",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3334_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] If a, band c are unit vectors satisfying I a - b 1 2 + I b - c 1 2 + I c - a 1 2 = 9, then l2a+Sb+Scl,is Paper2 Section I Direction (Q. Nos. 21-28) This section contains 8 multiple choice questions. Each question has four choices (a), (b ), (c) and (d) out of which only one is correct.",
+      "unicode": "[JEE PYQ 2025] If a, band c are unit vectors satisfying I a - b 1 2 + I b - c 1 2 + I c - a 1 2 = 9, then l2a+Sb+Scl,is Paper2 Section I Direction (Q. Nos. 21-28) This section contains 8 multiple choice questions. Each question has four choices (a), (b ), (c) and (d) out of which only one is correct.",
+      "plainText": "[JEE PYQ 2025] If a, band c are unit vectors satisfying I a - b 1 2 + I b - c 1 2 + I c - a 1 2 = 9, then l2a+Sb+Scl,is Paper2 Section I Direction (Q. Nos. 21-28) This section contains 8 multiple choice questions. Each question has four choices (a), (b ), (c) and (d) out of which only one is correct."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": ",",
+        "unicode": ",",
+        "plainText": ","
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "and",
+        "unicode": "and",
+        "plainText": "and"
+      },
+      {
+        "id": "d",
+        "latex": "out of which only one is correct.",
+        "unicode": "out of which only one is correct.",
+        "plainText": "out of which only one is correct."
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.372Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.372Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3571",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3571_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The vector(s) which is/are coplanar with vectors i + j + 2 k and i + 2] + k, are perpendicular to the vector i + j + k is/are (a) j -k (b) -i + j (c) i -j (d) - ] + k",
+      "unicode": "[JEE PYQ 2025] The vector(s) which is/are coplanar with vectors i + j + 2 k and i + 2] + k, are perpendicular to the vector i + j + k is/are (a) j -k (b) -i + j (c) i -j (d) - ] + k",
+      "plainText": "[JEE PYQ 2025] The vector(s) which is/are coplanar with vectors i + j + 2 k and i + 2] + k, are perpendicular to the vector i + j + k is/are (a) j -k (b) -i + j (c) i -j (d) - ] + k"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "j -k",
+        "unicode": "j -k",
+        "plainText": "j -k"
+      },
+      {
+        "id": "b",
+        "latex": "-i + j",
+        "unicode": "-i + j",
+        "plainText": "-i + j"
+      },
+      {
+        "id": "c",
+        "latex": "i -j",
+        "unicode": "i -j",
+        "plainText": "i -j"
+      },
+      {
+        "id": "d",
+        "latex": "- ] + k",
+        "unicode": "- ] + k",
+        "plainText": "- ] + k"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.383Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.383Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3598",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3598_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let a = -i -k, b = -i + j and c = i + 2J + 3k be three given vectors. If r is a vector such that r x b = c x b and r • a = 0, then the value of r • b is",
+      "unicode": "[JEE PYQ 2025] Let a = -i -k, b = -i + j and c = i + 2J + 3k be three given vectors. If r is a vector such that r x b = c x b and r • a = 0, then the value of r • b is",
+      "plainText": "[JEE PYQ 2025] Let a = -i -k, b = -i + j and c = i + 2J + 3k be three given vectors. If r is a vector such that r x b = c x b and r • a = 0, then the value of r • b is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.384Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.384Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3793",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3793_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let P, Q, R and S be the points on the rhombus nor a rectangle (b) square plane with pos1t1on vectors -2l -i 4i, 3i + 3j an d -3i + 2j SECTION II (c) rectangle, but not a square (d) rhombus, but not a square (Straight Objective Type) More than One Options are Correct This section contains 5 multiple choice questions. Each question has 4 choices (a)",
+      "unicode": "[JEE PYQ 2025] Let P, Q, R and S be the points on the rhombus nor a rectangle (b) square plane with pos1t1on vectors -2l -i 4i, 3i + 3j an d -3i + 2j SECTION II (c) rectangle, but not a square (d) rhombus, but not a square (Straight Objective Type) More than One Options are Correct This section contains 5 multiple choice questions. Each question has 4 choices (a)",
+      "plainText": "[JEE PYQ 2025] Let P, Q, R and S be the points on the rhombus nor a rectangle (b) square plane with pos1t1on vectors -2l -i 4i, 3i + 3j an d -3i + 2j SECTION II (c) rectangle, but not a square (d) rhombus, but not a square (Straight Objective Type) More than One Options are Correct This section contains 5 multiple choice questions. Each question has 4 choices (a)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": ",",
+        "unicode": ",",
+        "plainText": ","
+      },
+      {
+        "id": "b",
+        "latex": "square plane with pos1t1on vectors -2l -i 4i, 3i + 3j an d -3i + 2j SECTION II",
+        "unicode": "square plane with pos1t1on vectors -2l -i 4i, 3i + 3j an d -3i + 2j SECTION II",
+        "plainText": "square plane with pos1t1on vectors -2l -i 4i, 3i + 3j an d -3i + 2j SECTION II"
+      },
+      {
+        "id": "c",
+        "latex": "rectangle, but not a square",
+        "unicode": "rectangle, but not a square",
+        "plainText": "rectangle, but not a square"
+      },
+      {
+        "id": "d",
+        "latex": "rhombus, but not a square",
+        "unicode": "rhombus, but not a square",
+        "plainText": "rhombus, but not a square"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.404Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.404Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3829",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_VECTORALGEBR_2025_S1_Q3829_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Match the statements of Column I with values of Column IL Column I Column II (A) I\" fr th .. thli x - 2 y-1 z+l d (p) -4 A me om e ongm meets e nes --= --= --an 1 2 1 8 x-- 3 y + 3 z - 1 . --= --= --at P and Q respecnvely. If length PQ = d, then 2 - 1 1 dz. IS (B) The value of x satisfying tan- 1 (x + 3) -tan- 1 (x-3) = sin- 1 ( ¾) (q) 0 are (C) No",
+      "unicode": "[JEE PYQ 2025] Match the statements of Column I with values of Column IL Column I Column II (A) I\" fr th .. thli x - 2 y-1 z+l d (p) -4 A me om e ongm meets e nes --= --= --an 1 2 1 8 x-- 3 y + 3 z - 1 . --= --= --at P and Q respecnvely. If length PQ = d, then 2 - 1 1 dz. IS (B) The value of x satisfying tan- 1 (x + 3) -tan- 1 (x-3) = sin- 1 ( ¾) (q) 0 are (C) No",
+      "plainText": "[JEE PYQ 2025] Match the statements of Column I with values of Column IL Column I Column II (A) I\" fr th .. thli x - 2 y-1 z+l d (p) -4 A me om e ongm meets e nes --= --= --an 1 2 1 8 x-- 3 y + 3 z - 1 . --= --= --at P and Q respecnvely. If length PQ = d, then 2 - 1 1 dz. IS (B) The value of x satisfying tan- 1 (x + 3) -tan- 1 (x-3) = sin- 1 ( ¾) (q) 0 are (C) No"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "I\" fr th .. thli x - 2 y-1 z+l d",
+        "unicode": "I\" fr th .. thli x - 2 y-1 z+l d",
+        "plainText": "I\" fr th .. thli x - 2 y-1 z+l d"
+      },
+      {
+        "id": "b",
+        "latex": "The value of x satisfying tan- 1",
+        "unicode": "The value of x satisfying tan- 1",
+        "plainText": "The value of x satisfying tan- 1"
+      },
+      {
+        "id": "c",
+        "latex": "Non-zero vectors °i, b and c satisfy i -b = 0,",
+        "unicode": "Non-zero vectors °i, b and c satisfy i -b = 0,",
+        "plainText": "Non-zero vectors °i, b and c satisfy i -b = 0,"
+      },
+      {
+        "id": "d",
+        "latex": "Let f be the function on [ -rr, rr] given by f",
+        "unicode": "Let f be the function on [ -rr, rr] given by f",
+        "plainText": "Let f be the function on [ -rr, rr] given by f"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Vector Algebra NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Vector Algebra NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Vector Algebra",
+      "subchapter": "Vector Algebra Core Concepts",
+      "topic": "Vector Algebra Primary Topic",
+      "learningOutcome": "Master fundamental principles of Vector Algebra",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.405Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.405Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

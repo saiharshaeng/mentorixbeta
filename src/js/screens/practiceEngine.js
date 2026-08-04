@@ -72,14 +72,6 @@
                 }
                 questions = pool;
 
-                // Sort by difficulty progression: easy -> medium -> hard (assuming numeric or specific strings)
-                const diffMap = { 'easy': 1, 'medium': 2, 'hard': 3 };
-                questions.sort((a, b) => {
-                    const diffA = diffMap[a.difficulty] || 2;
-                    const diffB = diffMap[b.difficulty] || 2;
-                    return diffA - diffB;
-                });
-
                 const sessionId = 'ps_' + Date.now();
                 return {
                     questions,
@@ -261,6 +253,40 @@
             } catch (e) {
                 console.error('Error generating session summary', e);
                 return {};
+            }
+        },
+
+        /**
+         * Returns progressive Socratic explanation (Stage 1: Hint, Stage 2: Formula Strategy, Stage 3: Full Worked Solution)
+         * @param {Object} question The question object
+         * @param {Number} stage Progressive reveal stage (1, 2, or 3)
+         * @returns {Object} Socratic explanation structure
+         */
+        getSocraticExplanation: function(question, stage = 1) {
+            const rawExpl = String(question?.expl || question?.explanation || 'Think about the fundamental principles underlying this topic.').trim();
+            const sentences = rawExpl.split(/(?<=[.!?])\s+/);
+
+            if (stage === 1) {
+                return {
+                    stage: 1,
+                    title: '💡 Step 1: Conceptual Hint & Approach',
+                    content: sentences[0] || 'Identify the given variables and recall the core physical/mathematical balance equation.',
+                    nextActionLabel: 'Need formula strategy?'
+                };
+            } else if (stage === 2) {
+                return {
+                    stage: 2,
+                    title: '📐 Step 2: Formula & Key Strategy',
+                    content: (sentences.slice(0, Math.min(2, sentences.length)).join(' ')) || rawExpl,
+                    nextActionLabel: 'Show full worked derivation'
+                };
+            } else {
+                return {
+                    stage: 3,
+                    title: '✅ Step 3: Complete Worked Derivation',
+                    content: rawExpl,
+                    nextActionLabel: null
+                };
             }
         }
     };

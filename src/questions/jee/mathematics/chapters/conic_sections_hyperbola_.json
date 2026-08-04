@@ -1,0 +1,174 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q236",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S_Q236_RAW",
+    "question": {
+      "latex": "Let O be the origin, and P and Q be two points on the rectangular hyperbola $xy = 12$ such that the mid point of the line segment PQ is $(\\frac{1}{2}, -\\frac{1}{2})$. Then the area of the triangle OPQ equals:",
+      "unicode": "Let O be the origin, and P and Q be two points on the rectangular hyperbola xy = 12 such that the mid point of the line segment PQ is ((1/2), -(1/2)). Then the area of the triangle OPQ equals:",
+      "plainText": "Let O be the origin, and P and Q be two points on the rectangular hyperbola xy = 12 such that the mid point of the line segment PQ is ((1)/(2), -(1)/(2)). Then the area of the triangle OPQ equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{3}{2}$",
+        "unicode": "(3/2)",
+        "plainText": "(3)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{5}{2}$",
+        "unicode": "(5/2)",
+        "plainText": "(5)/(2)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{7}{2}$",
+        "unicode": "(7/2)",
+        "plainText": "(7)/(2)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{9}{2}$",
+        "unicode": "(9/2)",
+        "plainText": "(9)/(2)"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections (Hyperbola)",
+      "subchapter": "Conic Sections (Hyperbola) Core Concepts",
+      "topic": "Conic Sections (Hyperbola) Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections (Hyperbola)",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_CONICSECTION_2026_S1_Q191",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CONICSECTION_2026_S1_Q191_RAW",
+    "question": {
+      "latex": "Let O be the origin, and P and Q be two points on the rectangular hyperbola $xy = 12$ such that the mid point of the line segment PQ is $$\\frac{1}{2}, -\\frac{1}{2}$$. Then the area of the triangle OPQ equals:",
+      "unicode": "Let O be the origin, and P and Q be two points on the rectangular hyperbola xy = 12 such that the mid point of the line segment PQ is (1/2), -(1/2). Then the area of the triangle OPQ equals:",
+      "plainText": "Let O be the origin, and P and Q be two points on the rectangular hyperbola xy = 12 such that the mid point of the line segment PQ is (1)/(2), -(1)/(2). Then the area of the triangle OPQ equals:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$\\frac{3}{2}$",
+        "unicode": "(3/2)",
+        "plainText": "(3)/(2)"
+      },
+      {
+        "id": "b",
+        "latex": "$\\frac{5}{2}$",
+        "unicode": "(5/2)",
+        "plainText": "(5)/(2)"
+      },
+      {
+        "id": "c",
+        "latex": "$\\frac{7}{2}$",
+        "unicode": "(7/2)",
+        "plainText": "(7)/(2)"
+      },
+      {
+        "id": "d",
+        "latex": "$\\frac{9}{2}$",
+        "unicode": "(9/2)",
+        "plainText": "(9)/(2)"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Equation of chord with a given midpoint $(x_1, y_1)$ for $xy=c^2$ is given by $T = S_1$:\n$\\frac{x y_1 + y x_1}{2} - 12 = x_1 y_1 - 12 \\implies \\frac{x(-1/2) + y(1/2)}{2} = \\frac{-1/4}{2} \\implies -x + y = -1 \\implies y = x - 1$.\nSubstituting into the hyperbola equation: $x(x - 1) = 12 \\implies x^2 - x - 12 = 0 \\implies x = 4, -3$.\nThe points $P$ and $Q$ are $(4, 3)$ and $(-3, -4)$.\nThe area of $\\Delta OPQ$ is $\\frac{1}{2}|x_1y_2 - x_2y_1| = \\frac{1}{2}|(4)(-4) - (3)(-3)| = \\frac{1}{2}|-16 + 9| = \\frac{7}{2}$.",
+      "unicode": "Equation of chord with a given midpoint (x_1, y_1) for xy=c² is given by T = S_1:\n(x y_1 + y x_1/2) - 12 = x_1 y_1 - 12 implies (x(-1/2) + y(1/2)/2) = (-1/4/2) implies -x + y = -1 implies y = x - 1.\nSubstituting into the hyperbola equation: x(x - 1) = 12 implies x² - x - 12 = 0 implies x = 4, -3.\nThe points P and Q are (4, 3) and (-3, -4).\nThe area of Delta OPQ is (1/2)|x_1y_2 - x_2y_1| = (1/2)|(4)(-4) - (3)(-3)| = (1/2)|-16 + 9| = (7/2).",
+      "plainText": "Equation of chord with a given midpoint (x_1, y_1) for xy=c^2 is given by T = S_1: (x y_1 + y x_1)/(2) - 12 = x_1 y_1 - 12 implies (x(-1/2) + y(1/2))/(2) = (-1/4)/(2) implies -x + y = -1 implies y = x - 1. Substituting into the hyperbola equation: x(x - 1) = 12 implies x^2 - x - 12 = 0 implies x = 4, -3. The points P and Q are (4, 3) and (-3, -4). The area of Delta OPQ is (1)/(2)|x_1y_2 - x_2y_1| = (1)/(2)|(4)(-4) - (3)(-3)| = (1)/(2)|-16 + 9| = (7)/(2)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Conic Sections (Hyperbola)",
+      "subchapter": "Conic Sections (Hyperbola) Core Concepts",
+      "topic": "Conic Sections (Hyperbola) Primary Topic",
+      "learningOutcome": "Master fundamental principles of Conic Sections (Hyperbola)",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

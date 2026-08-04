@@ -1,0 +1,2964 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S_Q83",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S_Q83_RAW",
+    "question": {
+      "latex": "Let $f(x) = \\int_0^{x^2} \\frac{t^2-8t+15}{e^t} dt, x \\in \\mathbb{R}$. Then the numbers of local maximum and local minimum points of f, respectively, are :",
+      "unicode": "Let f(x) = int_0^{x²} (t²-8t+15/e^t) dt, x in mathbb{R}. Then the numbers of local maximum and local minimum points of f, respectively, are :",
+      "plainText": "Let f(x) = int_0^{x^2} (t^2-8t+15)/(e^t) dt, x in mathbb{R}. Then the numbers of local maximum and local minimum points of f, respectively, are :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2 and 3",
+        "unicode": "2 and 3",
+        "plainText": "2 and 3"
+      },
+      {
+        "id": "b",
+        "latex": "3 and 2",
+        "unicode": "3 and 2",
+        "plainText": "3 and 2"
+      },
+      {
+        "id": "c",
+        "latex": "1 and 3",
+        "unicode": "1 and 3",
+        "plainText": "1 and 3"
+      },
+      {
+        "id": "d",
+        "latex": "2 and 2",
+        "unicode": "2 and 2",
+        "plainText": "2 and 2"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.042Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.042Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2026_S_Q168",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2026_S_Q168_RAW",
+    "question": {
+      "latex": "The number of critical points of the function $f(x) = \\begin{cases} \\left| \\frac{\\sin x}{x} \\right|, & x \\neq 0 \\\\ 1, & x = 0 \\end{cases}$ in the interval $(-2\\pi, 2\\pi)$ is equal to :",
+      "unicode": "The number of critical points of the function f(x) = begin{cases} left| (sin x/x) right|, & x neq 0  1, & x = 0 end{cases} in the interval (-2π, 2π) is equal to :",
+      "plainText": "The number of critical points of the function f(x) = begin{cases} left| (sin x)/(x) right|, & x neq 0 1, & x = 0 end{cases} in the interval (-2pi, 2pi) is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "c",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.048Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.048Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2026_S_Q243",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2026_S_Q243_RAW",
+    "question": {
+      "latex": "Let $f(x)$ be a polynomial of degree 5, and have extrema at $x = 1$ and $x = -1$. If $\\lim_{x \\to 0} \\left( \\frac{f(x)}{x^3} \\right) = -5$, then $f(2) - f(-2)$ is equal to:",
+      "unicode": "Let f(x) be a polynomial of degree 5, and have extrema at x = 1 and x = -1. If lim_{x to 0} left( (f(x)/x³) right) = -5, then f(2) - f(-2) is equal to:",
+      "plainText": "Let f(x) be a polynomial of degree 5, and have extrema at x = 1 and x = -1. If lim_{x to 0} left( (f(x))/(x^3) right) = -5, then f(2) - f(-2) is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$0$",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "b",
+        "latex": "$50$",
+        "unicode": "50",
+        "plainText": "50"
+      },
+      {
+        "id": "c",
+        "latex": "$92$",
+        "unicode": "92",
+        "plainText": "92"
+      },
+      {
+        "id": "d",
+        "latex": "$112$",
+        "unicode": "112",
+        "plainText": "112"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.052Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.052Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_APPLICATIONO_2022_S1_Q126",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_APPLICATIONO_2022_S1_Q126_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2022] Consider the ellipse 푥 2 4 + 푦 2 3 = 1 . Let 퐻 ( 훼,0 ) , 0 < 훼 < 2, be a point. A straight line drawn through 퐻 parallel to the 푦-axis crosses the ellipse and its auxiliary circle at points 퐸 and 퐹 respectively, in the first quadrant. The tangent to the ellipse at the point 퐸 intersects the positive 푥-axis at a point 퐺. Suppose the straight line jo",
+      "unicode": "[JEE PYQ 2022] Consider the ellipse 푥 2 4 + 푦 2 3 = 1 . Let 퐻 ( 훼,0 ) , 0 < 훼 < 2, be a point. A straight line drawn through 퐻 parallel to the 푦-axis crosses the ellipse and its auxiliary circle at points 퐸 and 퐹 respectively, in the first quadrant. The tangent to the ellipse at the point 퐸 intersects the positive 푥-axis at a point 퐺. Suppose the straight line jo",
+      "plainText": "[JEE PYQ 2022] Consider the ellipse 푥 2 4 + 푦 2 3 = 1 . Let 퐻 ( 훼,0 ) , 0 < 훼 < 2, be a point. A straight line drawn through 퐻 parallel to the 푦-axis crosses the ellipse and its auxiliary circle at points 퐸 and 퐹 respectively, in the first quadrant. The tangent to the ellipse at the point 퐸 intersects the positive 푥-axis at a point 퐺. Suppose the straight line jo"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2022,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2022.pdf",
+      "createdDate": "2026-07-29T19:27:46.152Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.152Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_ADVANCED_MAT_APPLICATIONO_2023_S1_Q158",
+    "version": 1,
+    "rawRef": "JEE_ADVANCED_MAT_APPLICATIONO_2023_S1_Q158_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2023] Let 1 T and 2 T be two distinct common tangents to the ellipse 22 :1 63 xy E and the parabola 2 :12Pyx . Suppose that the tangent 1 T touches P and E at the points 1 A and 2 A , respectively and the tangent 2 T touches P and E at the points 4 A and 3 A , respectively. Then which of the following statements is(are) true? (A) The area of the quadr",
+      "unicode": "[JEE PYQ 2023] Let 1 T and 2 T be two distinct common tangents to the ellipse 22 :1 63 xy E and the parabola 2 :12Pyx . Suppose that the tangent 1 T touches P and E at the points 1 A and 2 A , respectively and the tangent 2 T touches P and E at the points 4 A and 3 A , respectively. Then which of the following statements is(are) true? (A) The area of the quadr",
+      "plainText": "[JEE PYQ 2023] Let 1 T and 2 T be two distinct common tangents to the ellipse 22 :1 63 xy E and the parabola 2 :12Pyx . Suppose that the tangent 1 T touches P and E at the points 1 A and 2 A , respectively and the tangent 2 T touches P and E at the points 4 A and 3 A , respectively. Then which of the following statements is(are) true? (A) The area of the quadr"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "The area of the quadrilateral 1234 AAAA is 35 square units",
+        "unicode": "The area of the quadrilateral 1234 AAAA is 35 square units",
+        "plainText": "The area of the quadrilateral 1234 AAAA is 35 square units"
+      },
+      {
+        "id": "b",
+        "latex": "The area of the quadrilateral 1234 AAAA is 36 square units",
+        "unicode": "The area of the quadrilateral 1234 AAAA is 36 square units",
+        "plainText": "The area of the quadrilateral 1234 AAAA is 36 square units"
+      },
+      {
+        "id": "c",
+        "latex": "The tangents 1 T and 2 T meet the x -axis at the point",
+        "unicode": "The tangents 1 T and 2 T meet the x -axis at the point",
+        "plainText": "The tangents 1 T and 2 T meet the x -axis at the point"
+      },
+      {
+        "id": "d",
+        "latex": "The tangents 1 T and 2 T meet the x -axis at the point",
+        "unicode": "The tangents 1 T and 2 T meet the x -axis at the point",
+        "plainText": "The tangents 1 T and 2 T meet the x -axis at the point"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_advanced",
+      "year": 2023,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_Advanced_2023.pdf",
+      "createdDate": "2026-07-29T19:27:46.155Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.155Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q346",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q346_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] 33. JEE Advanced~ Solved Paper 20 20 Consider the reaction, A s====>-Bat 1000 K. At time/', the temperature of the system was increased to 2000 Kand the system was allowed to reach equilibrium. Throughout this experime nt the partial pressure of A was maintained at 1 bar. Given, below is the plot of the partial pressure of B with time. What is the",
+      "unicode": "[JEE PYQ 2025] 33. JEE Advanced~ Solved Paper 20 20 Consider the reaction, A s====>-Bat 1000 K. At time/', the temperature of the system was increased to 2000 Kand the system was allowed to reach equilibrium. Throughout this experime nt the partial pressure of A was maintained at 1 bar. Given, below is the plot of the partial pressure of B with time. What is the",
+      "plainText": "[JEE PYQ 2025] 33. JEE Advanced~ Solved Paper 20 20 Consider the reaction, A s====>-Bat 1000 K. At time/', the temperature of the system was increased to 2000 Kand the system was allowed to reach equilibrium. Throughout this experime nt the partial pressure of A was maintained at 1 bar. Given, below is the plot of the partial pressure of B with time. What is the"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.180Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.180Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q406",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q406_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let b be a nonzero real number. Suppose f: R ---t R is a differentiable function such that /(0) = L If the derivative f' off satisfies th e equation f'(x) = ___fJ!l__ b2 + x2 for all x ER, then which of the following statements is/are TRUE? (a) If b > 0, then f is an increasing function (b) If b < 0, then f is a decreasing function (c) f(x)f (-x) =",
+      "unicode": "[JEE PYQ 2025] Let b be a nonzero real number. Suppose f: R ---t R is a differentiable function such that /(0) = L If the derivative f' off satisfies th e equation f'(x) = ___fJ!l__ b2 + x2 for all x ER, then which of the following statements is/are TRUE? (a) If b > 0, then f is an increasing function (b) If b < 0, then f is a decreasing function (c) f(x)f (-x) =",
+      "plainText": "[JEE PYQ 2025] Let b be a nonzero real number. Suppose f: R ---t R is a differentiable function such that /(0) = L If the derivative f' off satisfies th e equation f'(x) = ___fJ!l__ b2 + x2 for all x ER, then which of the following statements is/are TRUE? (a) If b > 0, then f is an increasing function (b) If b < 0, then f is a decreasing function (c) f(x)f (-x) ="
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "If b > 0, then f is an increasing function",
+        "unicode": "If b > 0, then f is an increasing function",
+        "plainText": "If b > 0, then f is an increasing function"
+      },
+      {
+        "id": "b",
+        "latex": "If b < 0, then f is a decreasing function",
+        "unicode": "If b < 0, then f is a decreasing function",
+        "plainText": "If b < 0, then f is a decreasing function"
+      },
+      {
+        "id": "c",
+        "latex": "f",
+        "unicode": "f",
+        "plainText": "f"
+      },
+      {
+        "id": "d",
+        "latex": "f",
+        "unicode": "f",
+        "plainText": "f"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.184Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.184Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q565",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q565_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let r denote a curve y = y(x) which is in the first quadrant and let the point ( 1, 0) lie on it. Let the tangent tor at a point P intersect the y-axis at Yp. If PYp has length 1 for each point Pon r, then which of the following options is/are correct? (a) xy' + F7 = 0 (b) xy' -F7 = 0 (c) y = log,{ + r:=7]-F7 (d) y = -log,,(1 + r:=7] + F7",
+      "unicode": "[JEE PYQ 2025] Let r denote a curve y = y(x) which is in the first quadrant and let the point ( 1, 0) lie on it. Let the tangent tor at a point P intersect the y-axis at Yp. If PYp has length 1 for each point Pon r, then which of the following options is/are correct? (a) xy' + F7 = 0 (b) xy' -F7 = 0 (c) y = log,{ + r:=7]-F7 (d) y = -log,,(1 + r:=7] + F7",
+      "plainText": "[JEE PYQ 2025] Let r denote a curve y = y(x) which is in the first quadrant and let the point ( 1, 0) lie on it. Let the tangent tor at a point P intersect the y-axis at Yp. If PYp has length 1 for each point Pon r, then which of the following options is/are correct? (a) xy' + F7 = 0 (b) xy' -F7 = 0 (c) y = log,{ + r:=7]-F7 (d) y = -log,,(1 + r:=7] + F7"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "xy' + F7 = 0",
+        "unicode": "xy' + F7 = 0",
+        "plainText": "xy' + F7 = 0"
+      },
+      {
+        "id": "b",
+        "latex": "xy' -F7 = 0",
+        "unicode": "xy' -F7 = 0",
+        "plainText": "xy' -F7 = 0"
+      },
+      {
+        "id": "c",
+        "latex": "y = log,{ + r:=7]-F7",
+        "unicode": "y = log,{ + r:=7]-F7",
+        "plainText": "y = log,{ + r:=7]-F7"
+      },
+      {
+        "id": "d",
+        "latex": "y = -log,,",
+        "unicode": "y = -log,,",
+        "plainText": "y = -log,,"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.194Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.194Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q808",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q808_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Tangent and normal are drawn at P(l6,16) on the parabola y 2 =16x, which intersect the axis of the parabola at A and B, respectively. If C is the centre of the circle through the points P, A and Band LCPB = 8, then a valu e of tan 8 is 1 (a) 2 (b) 2 (c) 3 (d) ~ 3",
+      "unicode": "[JEE PYQ 2025] Tangent and normal are drawn at P(l6,16) on the parabola y 2 =16x, which intersect the axis of the parabola at A and B, respectively. If C is the centre of the circle through the points P, A and Band LCPB = 8, then a valu e of tan 8 is 1 (a) 2 (b) 2 (c) 3 (d) ~ 3",
+      "plainText": "[JEE PYQ 2025] Tangent and normal are drawn at P(l6,16) on the parabola y 2 =16x, which intersect the axis of the parabola at A and B, respectively. If C is the centre of the circle through the points P, A and Band LCPB = 8, then a valu e of tan 8 is 1 (a) 2 (b) 2 (c) 3 (d) ~ 3"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "b",
+        "latex": "2",
+        "unicode": "2",
+        "plainText": "2"
+      },
+      {
+        "id": "c",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "d",
+        "latex": "~ 3",
+        "unicode": "~ 3",
+        "plainText": "~ 3"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.209Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.209Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q922",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q922_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The relation between [ E 0 ] and [μ 0 ] is (a) [μol = [Eo] [L]2 [T]-2 (b) [μol = [Eo][Lr 2 [T] 2 (c) [μol = [Eor 1 [L]2 [Tr 2 (d) [μol = [Eor 1 [Lr 2 [TJ 2 Paragraph \"A\" If the measurement errors in all the independent quantities are known, then it is possible to determine the error in any dependent quantity. This is done by the use of serie s expa",
+      "unicode": "[JEE PYQ 2025] The relation between [ E 0 ] and [μ 0 ] is (a) [μol = [Eo] [L]2 [T]-2 (b) [μol = [Eo][Lr 2 [T] 2 (c) [μol = [Eor 1 [L]2 [Tr 2 (d) [μol = [Eor 1 [Lr 2 [TJ 2 Paragraph \"A\" If the measurement errors in all the independent quantities are known, then it is possible to determine the error in any dependent quantity. This is done by the use of serie s expa",
+      "plainText": "[JEE PYQ 2025] The relation between [ E 0 ] and [μ 0 ] is (a) [μol = [Eo] [L]2 [T]-2 (b) [μol = [Eo][Lr 2 [T] 2 (c) [μol = [Eor 1 [L]2 [Tr 2 (d) [μol = [Eor 1 [Lr 2 [TJ 2 Paragraph \"A\" If the measurement errors in all the independent quantities are known, then it is possible to determine the error in any dependent quantity. This is done by the use of serie s expa"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "[μol = [Eo] [L]2 [T]-2",
+        "unicode": "[μol = [Eo] [L]2 [T]-2",
+        "plainText": "[μol = [Eo] [L]2 [T]-2"
+      },
+      {
+        "id": "b",
+        "latex": "[μol = [Eo][Lr 2 [T] 2",
+        "unicode": "[μol = [Eo][Lr 2 [T] 2",
+        "plainText": "[μol = [Eo][Lr 2 [T] 2"
+      },
+      {
+        "id": "c",
+        "latex": "[μol = [Eor 1 [L]2 [Tr 2",
+        "unicode": "[μol = [Eor 1 [L]2 [Tr 2",
+        "plainText": "[μol = [Eor 1 [L]2 [Tr 2"
+      },
+      {
+        "id": "d",
+        "latex": "[μol = [Eor 1 [Lr 2 [TJ 2 Paragraph \"A\" If the measurement errors in all the independent quantities",
+        "unicode": "[μol = [Eor 1 [Lr 2 [TJ 2 Paragraph \"A\" If the measurement errors in all the independent quantities",
+        "plainText": "[μol = [Eor 1 [Lr 2 [TJ 2 Paragraph \"A\" If the measurement errors in all the independent quantities"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.215Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.215Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q958",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q958_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Let P be a point on the circle S with both coordinates being positive. Let the tangent to Sat P intersect the coordinate axes at the points Mand N . Then, the mid-point of th e line seg ment MN must lie on the curve (a) (x + y) 2 = 3xy (b) x 2/3 + y2l3 = 2 4/3 (c) x 2 + y2 = 2xy (d) x2 + y2 = x2y2 Paragraph A There are five students S 1 , S 2 , S 3",
+      "unicode": "[JEE PYQ 2025] Let P be a point on the circle S with both coordinates being positive. Let the tangent to Sat P intersect the coordinate axes at the points Mand N . Then, the mid-point of th e line seg ment MN must lie on the curve (a) (x + y) 2 = 3xy (b) x 2/3 + y2l3 = 2 4/3 (c) x 2 + y2 = 2xy (d) x2 + y2 = x2y2 Paragraph A There are five students S 1 , S 2 , S 3",
+      "plainText": "[JEE PYQ 2025] Let P be a point on the circle S with both coordinates being positive. Let the tangent to Sat P intersect the coordinate axes at the points Mand N . Then, the mid-point of th e line seg ment MN must lie on the curve (a) (x + y) 2 = 3xy (b) x 2/3 + y2l3 = 2 4/3 (c) x 2 + y2 = 2xy (d) x2 + y2 = x2y2 Paragraph A There are five students S 1 , S 2 , S 3"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "x 2/3 + y2l3 = 2 4/3",
+        "unicode": "x 2/3 + y2l3 = 2 4/3",
+        "plainText": "x 2/3 + y2l3 = 2 4/3"
+      },
+      {
+        "id": "c",
+        "latex": "x 2 + y2 = 2xy",
+        "unicode": "x 2 + y2 = 2xy",
+        "plainText": "x 2 + y2 = 2xy"
+      },
+      {
+        "id": "d",
+        "latex": "x2 + y2 = x2y2 Paragraph A There are five students S 1 , S 2 , S 3 , S 4 and S 5 in a music class an",
+        "unicode": "x2 + y2 = x2y2 Paragraph A There are five students S 1 , S 2 , S 3 , S 4 and S 5 in a music class an",
+        "plainText": "x2 + y2 = x2y2 Paragraph A There are five students S 1 , S 2 , S 3 , S 4 and S 5 in a music class an"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.216Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.216Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1213",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1213_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] If a hyperbola passes through the point P(✓Z, ✓3) and has foci at (± 2, 0), then the tangent to this h yp erbola at P also passes through the point (a)(M,213) (c) (13, ./2) (b) (2./2, 313) (d) (-./2, -13)",
+      "unicode": "[JEE PYQ 2025] If a hyperbola passes through the point P(✓Z, ✓3) and has foci at (± 2, 0), then the tangent to this h yp erbola at P also passes through the point (a)(M,213) (c) (13, ./2) (b) (2./2, 313) (d) (-./2, -13)",
+      "plainText": "[JEE PYQ 2025] If a hyperbola passes through the point P(✓Z, ✓3) and has foci at (± 2, 0), then the tangent to this h yp erbola at P also passes through the point (a)(M,213) (c) (13, ./2) (b) (2./2, 313) (d) (-./2, -13)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.233Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.233Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1357",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1357_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] If a chord, which is not a tangent, of the parabola y 2 = 16x has the equation Zx + y = p, and mid-point (h, k), then which of the following is(are) possible value(s) of p,h and k? (a) p = -1, h = 1, k = -3 (b) p = 2, h = 3, k = -4 (c) p = -2, h = 2, k = -4 (d) p = 5, h = 4, k = -3 Section 2 (Maximum Marks: 15) • This section contains FIVE question",
+      "unicode": "[JEE PYQ 2025] If a chord, which is not a tangent, of the parabola y 2 = 16x has the equation Zx + y = p, and mid-point (h, k), then which of the following is(are) possible value(s) of p,h and k? (a) p = -1, h = 1, k = -3 (b) p = 2, h = 3, k = -4 (c) p = -2, h = 2, k = -4 (d) p = 5, h = 4, k = -3 Section 2 (Maximum Marks: 15) • This section contains FIVE question",
+      "plainText": "[JEE PYQ 2025] If a chord, which is not a tangent, of the parabola y 2 = 16x has the equation Zx + y = p, and mid-point (h, k), then which of the following is(are) possible value(s) of p,h and k? (a) p = -1, h = 1, k = -3 (b) p = 2, h = 3, k = -4 (c) p = -2, h = 2, k = -4 (d) p = 5, h = 4, k = -3 Section 2 (Maximum Marks: 15) • This section contains FIVE question"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "p = -1, h = 1, k = -3",
+        "unicode": "p = -1, h = 1, k = -3",
+        "plainText": "p = -1, h = 1, k = -3"
+      },
+      {
+        "id": "b",
+        "latex": "p = 2, h = 3, k = -4",
+        "unicode": "p = 2, h = 3, k = -4",
+        "plainText": "p = 2, h = 3, k = -4"
+      },
+      {
+        "id": "c",
+        "latex": "p = -2, h = 2, k = -4",
+        "unicode": "p = -2, h = 2, k = -4",
+        "plainText": "p = -2, h = 2, k = -4"
+      },
+      {
+        "id": "d",
+        "latex": "p = 5, h = 4, k = -3 Section 2",
+        "unicode": "p = 5, h = 4, k = -3 Section 2",
+        "plainText": "p = 5, h = 4, k = -3 Section 2"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.245Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.245Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1363",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1363_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] For a= ✓2, if a tangent i s drawn to a suitable conic (Column 1 ) a t the point of contact (-1, 1), then which of the following options is the only CORRECT combination for obtaining its equation? (a) (I) (ii) (0) (b) (I) (i) (P) (c) (Ill) (i) (P) (d) (II) (ii) (0)",
+      "unicode": "[JEE PYQ 2025] For a= ✓2, if a tangent i s drawn to a suitable conic (Column 1 ) a t the point of contact (-1, 1), then which of the following options is the only CORRECT combination for obtaining its equation? (a) (I) (ii) (0) (b) (I) (i) (P) (c) (Ill) (i) (P) (d) (II) (ii) (0)",
+      "plainText": "[JEE PYQ 2025] For a= ✓2, if a tangent i s drawn to a suitable conic (Column 1 ) a t the point of contact (-1, 1), then which of the following options is the only CORRECT combination for obtaining its equation? (a) (I) (ii) (0) (b) (I) (i) (P) (c) (Ill) (i) (P) (d) (II) (ii) (0)"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "b",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "c",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      },
+      {
+        "id": "d",
+        "latex": "",
+        "unicode": "",
+        "plainText": ""
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.245Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.245Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1846",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1846_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (a, c) Given, RS is th e diameter o f x 2 + y2 = I. Here, eq uation of the tangent at P(cos 0, sin 0) is xcos 0 + ysin 0 = I. R (-1,0) P (cose, sine) Q ,------· ' ......... ,S(1,0) ,._ : xcos0 +ysin0 ~1 I I I Intersecting with x = I , I -cos 0 y =--- sin e Q(l, 1 ~i~o; e) : . Equati on of the line thro ugh Q parall el to RS is . 2 e 2 s1n - 1 - cos",
+      "unicode": "[JEE PYQ 2025] (a, c) Given, RS is th e diameter o f x 2 + y2 = I. Here, eq uation of the tangent at P(cos 0, sin 0) is xcos 0 + ysin 0 = I. R (-1,0) P (cose, sine) Q ,------· ' ......... ,S(1,0) ,._ : xcos0 +ysin0 ~1 I I I Intersecting with x = I , I -cos 0 y =--- sin e Q(l, 1 ~i~o; e) : . Equati on of the line thro ugh Q parall el to RS is . 2 e 2 s1n - 1 - cos",
+      "plainText": "[JEE PYQ 2025] (a, c) Given, RS is th e diameter o f x 2 + y2 = I. Here, eq uation of the tangent at P(cos 0, sin 0) is xcos 0 + ysin 0 = I. R (-1,0) P (cose, sine) Q ,------· ' ......... ,S(1,0) ,._ : xcos0 +ysin0 ~1 I I I Intersecting with x = I , I -cos 0 y =--- sin e Q(l, 1 ~i~o; e) : . Equati on of the line thro ugh Q parall el to RS is . 2 e 2 s1n - 1 - cos"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Sine 2 sin -COS - 2 2 sine N ormal at P: y = --•x cos e ⇒ y=xtan e ...",
+        "unicode": "Sine 2 sin -COS - 2 2 sine N ormal at P: y = --•x cos e ⇒ y=xtan e ...",
+        "plainText": "Sine 2 sin -COS - 2 2 sine N ormal at P: y = --•x cos e ⇒ y=xtan e ..."
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.269Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.269Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1897",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q1897_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (a, c, d) Tangent to/= 4x at (t2, 21) is y (t2, 21) y(2 t) = 2(x + t 2 ) ⇒ yl = X + 1 2 ... (i) Equation of normal at P(t2, 2 I) is y+ tx = 21 + t3 Since, normal at P passes through centre of circle S (2, 8). : . 8 + 21 = 21 + 1 3 ⇒ I = 2, i.e. P(4, 4 ) [s ince, shortest d istance between two curves lie al ong their common normal and the common nor",
+      "unicode": "[JEE PYQ 2025] (a, c, d) Tangent to/= 4x at (t2, 21) is y (t2, 21) y(2 t) = 2(x + t 2 ) ⇒ yl = X + 1 2 ... (i) Equation of normal at P(t2, 2 I) is y+ tx = 21 + t3 Since, normal at P passes through centre of circle S (2, 8). : . 8 + 21 = 21 + 1 3 ⇒ I = 2, i.e. P(4, 4 ) [s ince, shortest d istance between two curves lie al ong their common normal and the common nor",
+      "plainText": "[JEE PYQ 2025] (a, c, d) Tangent to/= 4x at (t2, 21) is y (t2, 21) y(2 t) = 2(x + t 2 ) ⇒ yl = X + 1 2 ... (i) Equation of normal at P(t2, 2 I) is y+ tx = 21 + t3 Since, normal at P passes through centre of circle S (2, 8). : . 8 + 21 = 21 + 1 3 ⇒ I = 2, i.e. P(4, 4 ) [s ince, shortest d istance between two curves lie al ong their common normal and the common nor"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "is correct. A l so, SQ= 2 PQ = SP -SQ = 2✓5 - 2 Thus SQ = - 1 - = ✓5 + I ' QP ✓5 - 1 4 :. Option",
+        "unicode": "is correct. A l so, SQ= 2 PQ = SP -SQ = 2✓5 - 2 Thus SQ = - 1 - = ✓5 + I ' QP ✓5 - 1 4 :. Option",
+        "plainText": "is correct. A l so, SQ= 2 PQ = SP -SQ = 2✓5 - 2 Thus SQ = - 1 - = ✓5 + I ' QP ✓5 - 1 4 :. Option"
+      },
+      {
+        "id": "b",
+        "latex": "is incorrect. Now, x-intercept of norma l i s X = 2 + 2 2 = 6 :. Option",
+        "unicode": "is incorrect. Now, x-intercept of norma l i s X = 2 + 2 2 = 6 :. Option",
+        "plainText": "is incorrect. Now, x-intercept of norma l i s X = 2 + 2 2 = 6 :. Option"
+      },
+      {
+        "id": "c",
+        "latex": "is correct. I I S lope of tangent= -= - I 2 :. Option",
+        "unicode": "is correct. I I S lope of tangent= -= - I 2 :. Option",
+        "plainText": "is correct. I I S lope of tangent= -= - I 2 :. Option"
+      },
+      {
+        "id": "d",
+        "latex": "is incorrect . I a -ibt",
+        "unicode": "is incorrect . I a -ibt",
+        "plainText": "is incorrect . I a -ibt"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.271Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.271Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2074",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2074_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] (c) Central Idea Number of common tangents depend on the position of the circle with respect to each other. (i) If circles touch externally ⇒ Ci C 2 = 1i + r 2 ,3 common tangents (ii) If circles touch internally ⇒ Ci C 2 = r 2 - ri, 1 common tangent (iii) If circles do not touch each other, 4 common tangents Given equations of circles are x 2 + I -",
+      "unicode": "[JEE PYQ 2025] (c) Central Idea Number of common tangents depend on the position of the circle with respect to each other. (i) If circles touch externally ⇒ Ci C 2 = 1i + r 2 ,3 common tangents (ii) If circles touch internally ⇒ Ci C 2 = r 2 - ri, 1 common tangent (iii) If circles do not touch each other, 4 common tangents Given equations of circles are x 2 + I -",
+      "plainText": "[JEE PYQ 2025] (c) Central Idea Number of common tangents depend on the position of the circle with respect to each other. (i) If circles touch externally ⇒ Ci C 2 = 1i + r 2 ,3 common tangents (ii) If circles touch internally ⇒ Ci C 2 = r 2 - ri, 1 common tangent (iii) If circles do not touch each other, 4 common tangents Given equations of circles are x 2 + I -"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Central Idea Number of common tangents depend on the position of the circle with respect to each oth",
+        "unicode": "Central Idea Number of common tangents depend on the position of the circle with respect to each oth",
+        "plainText": "Central Idea Number of common tangents depend on the position of the circle with respect to each oth"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.281Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.281Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2236",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2236_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] End points of latusrectum are (a,± 2a) i.e. (I, ± 2). Equation of normal at (x 1 , y 1 ) is y -Y1 = _1'!_ X - x 1 2a i.e. and y + 2 2 -- = - x-1 2 ⇒ X + y= 3 and x -y= 3 which is tangent to ⇒ (x -3)2 + (y + 2)2 = r2. Length of perpendicular from centre = Radius 13 -2 -31 ~=~=r ~ r2 =2",
+      "unicode": "[JEE PYQ 2025] End points of latusrectum are (a,± 2a) i.e. (I, ± 2). Equation of normal at (x 1 , y 1 ) is y -Y1 = _1'!_ X - x 1 2a i.e. and y + 2 2 -- = - x-1 2 ⇒ X + y= 3 and x -y= 3 which is tangent to ⇒ (x -3)2 + (y + 2)2 = r2. Length of perpendicular from centre = Radius 13 -2 -31 ~=~=r ~ r2 =2",
+      "plainText": "[JEE PYQ 2025] End points of latusrectum are (a,± 2a) i.e. (I, ± 2). Equation of normal at (x 1 , y 1 ) is y -Y1 = _1'!_ X - x 1 2a i.e. and y + 2 2 -- = - x-1 2 ⇒ X + y= 3 and x -y= 3 which is tangent to ⇒ (x -3)2 + (y + 2)2 = r2. Length of perpendicular from centre = Radius 13 -2 -31 ~=~=r ~ r2 =2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.291Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.291Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2287",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2287_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] 200 mmol I 00 mo! 0 0 I00mmol 0 I00mmol A buffer is now formed. K = [H+ ][CH 3 COO- ] = [W] a [CH 3 COOH] [·: [CH 3 COOH] = [CH 3 COO- ]] ⇒pH= pKa = - log (2 x l0- 5 ) = 5 - log2 = 4.7 = Terms having x 9 = [ 199 -x9, 198 ·X·X8, 198 ·X2 ·X 7, 198 ·X3 ·X6, 198 ·X4 ·x5, 197 ·X·X2.x5, 197 ·X·X3 ·x5, 1 91 ·x2-x3-x4] :. Coefficient of x 9 = 8 Y' y 2 =Bx",
+      "unicode": "[JEE PYQ 2025] 200 mmol I 00 mo! 0 0 I00mmol 0 I00mmol A buffer is now formed. K = [H+ ][CH 3 COO- ] = [W] a [CH 3 COOH] [·: [CH 3 COOH] = [CH 3 COO- ]] ⇒pH= pKa = - log (2 x l0- 5 ) = 5 - log2 = 4.7 = Terms having x 9 = [ 199 -x9, 198 ·X·X8, 198 ·X2 ·X 7, 198 ·X3 ·X6, 198 ·X4 ·x5, 197 ·X·X2.x5, 197 ·X·X3 ·x5, 1 91 ·x2-x3-x4] :. Coefficient of x 9 = 8 Y' y 2 =Bx",
+      "plainText": "[JEE PYQ 2025] 200 mmol I 00 mo! 0 0 I00mmol 0 I00mmol A buffer is now formed. K = [H+ ][CH 3 COO- ] = [W] a [CH 3 COOH] [·: [CH 3 COOH] = [CH 3 COO- ]] ⇒pH= pKa = - log (2 x l0- 5 ) = 5 - log2 = 4.7 = Terms having x 9 = [ 199 -x9, 198 ·X·X8, 198 ·X2 ·X 7, 198 ·X3 ·X6, 198 ·X4 ·x5, 197 ·X·X2.x5, 197 ·X·X3 ·x5, 1 91 ·x2-x3-x4] :. Coefficient of x 9 = 8 Y' y 2 =Bx"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.295Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.295Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2470",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2470_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Y/ Le t the tangent to parabola be y = mx + a/m, if it touches the other curve, then O = 0, to get the value of m , For parabola, y2 = 4x Le t y = mx + l / m be tangent lin e a nd it touch es t he parabola x2 = - 32y. ⇒ ⇒ x2 = -32( mx + :) x2 + 32mx + 32 = 0 m D = O (32m>2- 4 ( :)=o 3 1 m = - 8 1 m=- 2",
+      "unicode": "[JEE PYQ 2025] Y/ Le t the tangent to parabola be y = mx + a/m, if it touches the other curve, then O = 0, to get the value of m , For parabola, y2 = 4x Le t y = mx + l / m be tangent lin e a nd it touch es t he parabola x2 = - 32y. ⇒ ⇒ x2 = -32( mx + :) x2 + 32mx + 32 = 0 m D = O (32m>2- 4 ( :)=o 3 1 m = - 8 1 m=- 2",
+      "plainText": "[JEE PYQ 2025] Y/ Le t the tangent to parabola be y = mx + a/m, if it touches the other curve, then O = 0, to get the value of m , For parabola, y2 = 4x Le t y = mx + l / m be tangent lin e a nd it touch es t he parabola x2 = - 32y. ⇒ ⇒ x2 = -32( mx + :) x2 + 32mx + 32 = 0 m D = O (32m>2- 4 ( :)=o 3 1 m = - 8 1 m=- 2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.306Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.306Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2590",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2590_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The common tangents to the circle x2 + y2 = 2 and the parabola y2 = 8x touch the circle at the points P,Q and the parabola at the points R, S. Then, the area of the quadrilateral PQRS is (a) 3 (b) 6 (c) 9 (d) 15",
+      "unicode": "[JEE PYQ 2025] The common tangents to the circle x2 + y2 = 2 and the parabola y2 = 8x touch the circle at the points P,Q and the parabola at the points R, S. Then, the area of the quadrilateral PQRS is (a) 3 (b) 6 (c) 9 (d) 15",
+      "plainText": "[JEE PYQ 2025] The common tangents to the circle x2 + y2 = 2 and the parabola y2 = 8x touch the circle at the points P,Q and the parabola at the points R, S. Then, the area of the quadrilateral PQRS is (a) 3 (b) 6 (c) 9 (d) 15"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "b",
+        "latex": "6",
+        "unicode": "6",
+        "plainText": "6"
+      },
+      {
+        "id": "c",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "d",
+        "latex": "15",
+        "unicode": "15",
+        "plainText": "15"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.314Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.314Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2599",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2599_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] If st = l , then the tangent at P and the normal at S to t h e parabola meet at a point whose ordinate is (t 2 +1) 2 a(t 2 +1) 2 (a) ~ (b) 2t3 (c) a(t 2 + 1)2 (d) a(t 2 +2) 2 t3 t 3 Paragraph 3 Given t h at for each a E (0, 1), lim f l-h r 0 (1-t) 0 - 1 dt exists. Let this h->O+ h limit beg (a). In addition, it is given that the function g(a) is di",
+      "unicode": "[JEE PYQ 2025] If st = l , then the tangent at P and the normal at S to t h e parabola meet at a point whose ordinate is (t 2 +1) 2 a(t 2 +1) 2 (a) ~ (b) 2t3 (c) a(t 2 + 1)2 (d) a(t 2 +2) 2 t3 t 3 Paragraph 3 Given t h at for each a E (0, 1), lim f l-h r 0 (1-t) 0 - 1 dt exists. Let this h->O+ h limit beg (a). In addition, it is given that the function g(a) is di",
+      "plainText": "[JEE PYQ 2025] If st = l , then the tangent at P and the normal at S to t h e parabola meet at a point whose ordinate is (t 2 +1) 2 a(t 2 +1) 2 (a) ~ (b) 2t3 (c) a(t 2 + 1)2 (d) a(t 2 +2) 2 t3 t 3 Paragraph 3 Given t h at for each a E (0, 1), lim f l-h r 0 (1-t) 0 - 1 dt exists. Let this h->O+ h limit beg (a). In addition, it is given that the function g(a) is di"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "~",
+        "unicode": "~",
+        "plainText": "~"
+      },
+      {
+        "id": "b",
+        "latex": "2t3",
+        "unicode": "2t3",
+        "plainText": "2t3"
+      },
+      {
+        "id": "c",
+        "latex": "a",
+        "unicode": "a",
+        "plainText": "a"
+      },
+      {
+        "id": "d",
+        "latex": "a",
+        "unicode": "a",
+        "plainText": "a"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.314Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.314Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2710",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2710_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Plan If there are n different objects and n corresponding places, then the number of ways of putting these objects so that no object occupies its corresponding place r1 1 n1l = n, L21-3! + ··· (- 1 ) niJ -. We have six cards C 1 , C 2 , C 3 , C,i, C 5 , C 6 and envelopes E 1 , E 2 , E 3 , E,i, E 5 , E5. Let t he number of dearrangement when C 1 is",
+      "unicode": "[JEE PYQ 2025] Plan If there are n different objects and n corresponding places, then the number of ways of putting these objects so that no object occupies its corresponding place r1 1 n1l = n, L21-3! + ··· (- 1 ) niJ -. We have six cards C 1 , C 2 , C 3 , C,i, C 5 , C 6 and envelopes E 1 , E 2 , E 3 , E,i, E 5 , E5. Let t he number of dearrangement when C 1 is",
+      "plainText": "[JEE PYQ 2025] Plan If there are n different objects and n corresponding places, then the number of ways of putting these objects so that no object occupies its corresponding place r1 1 n1l = n, L21-3! + ··· (- 1 ) niJ -. We have six cards C 1 , C 2 , C 3 , C,i, C 5 , C 6 and envelopes E 1 , E 2 , E 3 , E,i, E 5 , E5. Let t he number of dearrangement when C 1 is"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.325Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.325Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2812",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2812_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The intercepts on x-axis made by tangents to the curve, y = f; I t I dt, x E R, which are parallel to the line y = 2x, are equal to (a) ± 1 (b) ± 2 (c) ± 3 (d) ± 4",
+      "unicode": "[JEE PYQ 2025] The intercepts on x-axis made by tangents to the curve, y = f; I t I dt, x E R, which are parallel to the line y = 2x, are equal to (a) ± 1 (b) ± 2 (c) ± 3 (d) ± 4",
+      "plainText": "[JEE PYQ 2025] The intercepts on x-axis made by tangents to the curve, y = f; I t I dt, x E R, which are parallel to the line y = 2x, are equal to (a) ± 1 (b) ± 2 (c) ± 3 (d) ± 4"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "± 1",
+        "unicode": "± 1",
+        "plainText": "± 1"
+      },
+      {
+        "id": "b",
+        "latex": "± 2",
+        "unicode": "± 2",
+        "plainText": "± 2"
+      },
+      {
+        "id": "c",
+        "latex": "± 3",
+        "unicode": "± 3",
+        "plainText": "± 3"
+      },
+      {
+        "id": "d",
+        "latex": "± 4",
+        "unicode": "± 4",
+        "plainText": "± 4"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.337Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.337Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2902",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2902_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Equation of circle can be rewritten as x2 + y2 = ~ 2' centre➔ (0, ) and radius➔ ~ Let common tangent be ✓S y = mx+ - m ⇒ m 2 x - my + ✓S = 0 The perpendicular from centre to the tangent is equal to radius of the circle. ✓S ~ {s ✓1 + m 2 =~2 ⇒ m✓l + m 2 = ✓2 ⇒ m 2 (1 + m 2 ) = 2 ⇒ m 4 +m 2 -2= 0 ⇒ (m 2 + 2) (m 2 - 1) = 0 JEE Main Solved Paper 2013 2",
+      "unicode": "[JEE PYQ 2025] Equation of circle can be rewritten as x2 + y2 = ~ 2' centre➔ (0, ) and radius➔ ~ Let common tangent be ✓S y = mx+ - m ⇒ m 2 x - my + ✓S = 0 The perpendicular from centre to the tangent is equal to radius of the circle. ✓S ~ {s ✓1 + m 2 =~2 ⇒ m✓l + m 2 = ✓2 ⇒ m 2 (1 + m 2 ) = 2 ⇒ m 4 +m 2 -2= 0 ⇒ (m 2 + 2) (m 2 - 1) = 0 JEE Main Solved Paper 2013 2",
+      "plainText": "[JEE PYQ 2025] Equation of circle can be rewritten as x2 + y2 = ~ 2' centre➔ (0, ) and radius➔ ~ Let common tangent be ✓S y = mx+ - m ⇒ m 2 x - my + ✓S = 0 The perpendicular from centre to the tangent is equal to radius of the circle. ✓S ~ {s ✓1 + m 2 =~2 ⇒ m✓l + m 2 = ✓2 ⇒ m 2 (1 + m 2 ) = 2 ⇒ m 4 +m 2 -2= 0 ⇒ (m 2 + 2) (m 2 - 1) = 0 JEE Main Solved Paper 2013 2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.341Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.341Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2968",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q2968_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] A steady current I flows along an infinitely long hollow cylindrical conductor of radius R. This cylinder is placed coaxially inside an infinite solenoid of radius 2R. The solenoid has n turns per unit length and carries a steady current I. Consider a point P at a distance r from the common axis. The correct statement(s) is (are) (a) In the region",
+      "unicode": "[JEE PYQ 2025] A steady current I flows along an infinitely long hollow cylindrical conductor of radius R. This cylinder is placed coaxially inside an infinite solenoid of radius 2R. The solenoid has n turns per unit length and carries a steady current I. Consider a point P at a distance r from the common axis. The correct statement(s) is (are) (a) In the region",
+      "plainText": "[JEE PYQ 2025] A steady current I flows along an infinitely long hollow cylindrical conductor of radius R. This cylinder is placed coaxially inside an infinite solenoid of radius 2R. The solenoid has n turns per unit length and carries a steady current I. Consider a point P at a distance r from the common axis. The correct statement(s) is (are) (a) In the region"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "In the region O < r < R, the magnetic field is non-zero",
+        "unicode": "In the region O < r < R, the magnetic field is non-zero",
+        "plainText": "In the region O < r < R, the magnetic field is non-zero"
+      },
+      {
+        "id": "b",
+        "latex": "In the region R < r < 2R, the magnetic field is along the common axis",
+        "unicode": "In the region R < r < 2R, the magnetic field is along the common axis",
+        "plainText": "In the region R < r < 2R, the magnetic field is along the common axis"
+      },
+      {
+        "id": "c",
+        "latex": "In the region R < r < 2R, the magnetic field is tangential to the circle of radius r, centered on th",
+        "unicode": "In the region R < r < 2R, the magnetic field is tangential to the circle of radius r, centered on th",
+        "plainText": "In the region R < r < 2R, the magnetic field is tangential to the circle of radius r, centered on th"
+      },
+      {
+        "id": "d",
+        "latex": "In the region r > 2R, the magnetic field is non-zero",
+        "unicode": "In the region r > 2R, the magnetic field is non-zero",
+        "plainText": "In the region r > 2R, the magnetic field is non-zero"
+      }
+    ],
+    "answers": [
+      "c"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (C).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (C)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.345Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.345Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3109",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3109_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Q @ P ➔ Hollow cylindrical conductor O➔ Solenoid In the region, 0 < r < R Bp =0, BQ * 0, along the axis Bnet * O In the region, R < r < 2R Bp * 0, tangential to the circle of radius r, centred on the axis. BQ * 0, along the axis. :. Bnec * 0 neither in the directions mentioned in options (b) or (c). In region, r > 2R Bp * 0 BQ cfc-0 Bnet * 0",
+      "unicode": "[JEE PYQ 2025] Q @ P ➔ Hollow cylindrical conductor O➔ Solenoid In the region, 0 < r < R Bp =0, BQ * 0, along the axis Bnet * O In the region, R < r < 2R Bp * 0, tangential to the circle of radius r, centred on the axis. BQ * 0, along the axis. :. Bnec * 0 neither in the directions mentioned in options (b) or (c). In region, r > 2R Bp * 0 BQ cfc-0 Bnet * 0",
+      "plainText": "[JEE PYQ 2025] Q @ P ➔ Hollow cylindrical conductor O➔ Solenoid In the region, 0 < r < R Bp =0, BQ * 0, along the axis Bnet * O In the region, R < r < 2R Bp * 0, tangential to the circle of radius r, centred on the axis. BQ * 0, along the axis. :. Bnec * 0 neither in the directions mentioned in options (b) or (c). In region, r > 2R Bp * 0 BQ cfc-0 Bnet * 0"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "or",
+        "unicode": "or",
+        "plainText": "or"
+      },
+      {
+        "id": "c",
+        "latex": ". In region, r > 2R Bp * 0 BQ cfc-0 Bnet * 0",
+        "unicode": ". In region, r > 2R Bp * 0 BQ cfc-0 Bnet * 0",
+        "plainText": ". In region, r > 2R Bp * 0 BQ cfc-0 Bnet * 0"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.355Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.355Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3346",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3346_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] The value of b 6 is (a) 7 (b) 8 (c) 9 (d) 11 Paragraph A tangent PT is drawn to the circle x 2 + y 2 =4 at the point P(✓3,l). A straight line L, perpendicular to PT is a tangent to the circle (x -3) 2 + y 2 = 1.",
+      "unicode": "[JEE PYQ 2025] The value of b 6 is (a) 7 (b) 8 (c) 9 (d) 11 Paragraph A tangent PT is drawn to the circle x 2 + y 2 =4 at the point P(✓3,l). A straight line L, perpendicular to PT is a tangent to the circle (x -3) 2 + y 2 = 1.",
+      "plainText": "[JEE PYQ 2025] The value of b 6 is (a) 7 (b) 8 (c) 9 (d) 11 Paragraph A tangent PT is drawn to the circle x 2 + y 2 =4 at the point P(✓3,l). A straight line L, perpendicular to PT is a tangent to the circle (x -3) 2 + y 2 = 1."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      },
+      {
+        "id": "b",
+        "latex": "8",
+        "unicode": "8",
+        "plainText": "8"
+      },
+      {
+        "id": "c",
+        "latex": "9",
+        "unicode": "9",
+        "plainText": "9"
+      },
+      {
+        "id": "d",
+        "latex": "11 Paragraph A tangent PT is drawn to the circle x 2 + y 2 =4 at the point P",
+        "unicode": "11 Paragraph A tangent PT is drawn to the circle x 2 + y 2 =4 at the point P",
+        "plainText": "11 Paragraph A tangent PT is drawn to the circle x 2 + y 2 =4 at the point P"
+      }
+    ],
+    "answers": [
+      "a"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (A).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (A)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Graph",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.372Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.372Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3385",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3385_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] b 6 = Six digit flt!Jlilber ellffillffiith 1. Case I L!.L _l.! .. l..1..!J ⇒ - Now, the four places are to be filled. i.e., for for 3 places, all l 's are used = 1 way one zero is used = 3 C 1 = 3 two zeros are used = 1 way 0 1 0 1.. ...... . Total= Sways Case II @_ _ fil[D for 3 places, all l's are used = 1 way o ne zero is used = 2 C 1 = 2 ways =",
+      "unicode": "[JEE PYQ 2025] b 6 = Six digit flt!Jlilber ellffillffiith 1. Case I L!.L _l.! .. l..1..!J ⇒ - Now, the four places are to be filled. i.e., for for 3 places, all l 's are used = 1 way one zero is used = 3 C 1 = 3 two zeros are used = 1 way 0 1 0 1.. ...... . Total= Sways Case II @_ _ fil[D for 3 places, all l's are used = 1 way o ne zero is used = 2 C 1 = 2 ways =",
+      "plainText": "[JEE PYQ 2025] b 6 = Six digit flt!Jlilber ellffillffiith 1. Case I L!.L _l.! .. l..1..!J ⇒ - Now, the four places are to be filled. i.e., for for 3 places, all l 's are used = 1 way one zero is used = 3 C 1 = 3 two zeros are used = 1 way 0 1 0 1.. ...... . Total= Sways Case II @_ _ fil[D for 3 places, all l's are used = 1 way o ne zero is used = 2 C 1 = 2 ways ="
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.374Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.374Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3583",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3583_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] Consider the parabola y 2 = 8.x:. Let t. 1 be the area of the triangle formed by the end points of its latusrectum and the point 1 ½, 2) on the parabola and t. 2 be the area of the triangle formed by drawing tangents at P and at the end points of t. . the latusrectum. Then, - 1 1s Llz",
+      "unicode": "[JEE PYQ 2025] Consider the parabola y 2 = 8.x:. Let t. 1 be the area of the triangle formed by the end points of its latusrectum and the point 1 ½, 2) on the parabola and t. 2 be the area of the triangle formed by drawing tangents at P and at the end points of t. . the latusrectum. Then, - 1 1s Llz",
+      "plainText": "[JEE PYQ 2025] Consider the parabola y 2 = 8.x:. Let t. 1 be the area of the triangle formed by the end points of its latusrectum and the point 1 ½, 2) on the parabola and t. 2 be the area of the triangle formed by drawing tangents at P and at the end points of t. . the latusrectum. Then, - 1 1s Llz"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "b"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (B).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (B)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.384Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.384Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3853",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q3853_RAW",
+    "question": {
+      "latex": "[JEE PYQ 2025] ⇒ 2a 0 =--+ l e a 1 e 2 Also, y = -2x + 1 is tangent to hyperbola ⇒ ⇒ ⇒ ⇒ 1 = 4a 2 -b 2 1 2 -= 4-(e -1) a2 y 4 2 ;=5-e e 4 - 5 e 2 + 4 = 0 (e 2 -4)(e 2 - 1) = 0 ⇒ e=2,e= l e = 1 gives the conic as parabola. But conic is given as hyperbola, hence e = 2 Equation of plane containing the given x-1 y-2 z-3 lines is 2 3 3 4 4 = 0 5 ⇒ (x-1)(- 1) -(y-2)(-2",
+      "unicode": "[JEE PYQ 2025] ⇒ 2a 0 =--+ l e a 1 e 2 Also, y = -2x + 1 is tangent to hyperbola ⇒ ⇒ ⇒ ⇒ 1 = 4a 2 -b 2 1 2 -= 4-(e -1) a2 y 4 2 ;=5-e e 4 - 5 e 2 + 4 = 0 (e 2 -4)(e 2 - 1) = 0 ⇒ e=2,e= l e = 1 gives the conic as parabola. But conic is given as hyperbola, hence e = 2 Equation of plane containing the given x-1 y-2 z-3 lines is 2 3 3 4 4 = 0 5 ⇒ (x-1)(- 1) -(y-2)(-2",
+      "plainText": "[JEE PYQ 2025] ⇒ 2a 0 =--+ l e a 1 e 2 Also, y = -2x + 1 is tangent to hyperbola ⇒ ⇒ ⇒ ⇒ 1 = 4a 2 -b 2 1 2 -= 4-(e -1) a2 y 4 2 ;=5-e e 4 - 5 e 2 + 4 = 0 (e 2 -4)(e 2 - 1) = 0 ⇒ e=2,e= l e = 1 gives the conic as parabola. But conic is given as hyperbola, hence e = 2 Equation of plane containing the given x-1 y-2 z-3 lines is 2 3 3 4 4 = 0 5 ⇒ (x-1)(- 1) -(y-2)(-2"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Option A",
+        "unicode": "Option A",
+        "plainText": "Option A"
+      },
+      {
+        "id": "b",
+        "latex": "Option B",
+        "unicode": "Option B",
+        "plainText": "Option B"
+      },
+      {
+        "id": "c",
+        "latex": "Option C",
+        "unicode": "Option C",
+        "plainText": "Option C"
+      },
+      {
+        "id": "d",
+        "latex": "Option D",
+        "unicode": "Option D",
+        "plainText": "Option D"
+      }
+    ],
+    "answers": [
+      "d"
+    ],
+    "explanation": {
+      "latex": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "unicode": "Step 1: Apply governing Application of Derivatives NCERT equations.\nStep 2: Verify dimensional consistency and conclude Option (D).",
+      "plainText": "Step 1: Apply governing Application of Derivatives NCERT equations. Step 2: Verify dimensional consistency and conclude Option (D)."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical",
+        "Formula Based",
+        "High Weight"
+      ],
+      "difficulty": "hard",
+      "source": "PDF Ingestion: JEE_PYQ_2.pdf",
+      "createdDate": "2026-07-29T19:27:46.407Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.407Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q68",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2025_S1_Q68_RAW",
+    "question": {
+      "latex": "Let $f$x$ = \\int_0^{x^2} \\frac{t^2-8t+15}{e^t} dt, x \\in \\mathbb{R}$. Then the numbers of local maximum and local minimum points of f, respectively, are :",
+      "unicode": "Let fx = int_0^{x²} (t²-8t+15/e^t) dt, x in mathbb{R}. Then the numbers of local maximum and local minimum points of f, respectively, are :",
+      "plainText": "Let fx = int_0^{x^2} (t^2-8t+15)/(e^t) dt, x in mathbb{R}. Then the numbers of local maximum and local minimum points of f, respectively, are :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "2 and 3",
+        "unicode": "2 and 3",
+        "plainText": "2 and 3"
+      },
+      {
+        "id": "b",
+        "latex": "3 and 2",
+        "unicode": "3 and 2",
+        "plainText": "3 and 2"
+      },
+      {
+        "id": "c",
+        "latex": "1 and 3",
+        "unicode": "1 and 3",
+        "plainText": "1 and 3"
+      },
+      {
+        "id": "d",
+        "latex": "2 and 2",
+        "unicode": "2 and 2",
+        "plainText": "2 and 2"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.526Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.526Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2026_S1_Q138",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2026_S1_Q138_RAW",
+    "question": {
+      "latex": "The number of critical points of the function $f$x$ = \\begin{cases} \\left| \\frac{\\sin x}{x} \\right|, & x \\neq 0 \\\\ 1, & x = 0 \\end{cases}$ in the interval $$-2\\pi, 2\\pi$$ is equal to :",
+      "unicode": "The number of critical points of the function fx = begin{cases} left| (sin x/x) right|, & x neq 0  1, & x = 0 end{cases} in the interval -2π, 2π is equal to :",
+      "plainText": "The number of critical points of the function fx = begin{cases} left| (sin x)/(x) right|, & x neq 0 1, & x = 0 end{cases} in the interval -2pi, 2pi is equal to :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "1",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "b",
+        "latex": "3",
+        "unicode": "3",
+        "plainText": "3"
+      },
+      {
+        "id": "c",
+        "latex": "5",
+        "unicode": "5",
+        "plainText": "5"
+      },
+      {
+        "id": "d",
+        "latex": "7",
+        "unicode": "7",
+        "plainText": "7"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "$f(x)$ is continuous in $(-2\\pi, 2\\pi)$. A critical point occurs where $f'(x) = 0$ or $f'(x)$ is undefined.\nFirst, the modulus causes sharp corners (non-differentiable points) when the inside expression crosses zero. $\\frac{\\sin x}{x} = 0 \\implies \\sin x = 0$.\nIn $(-2\\pi, 2\\pi)$, the roots are $x = -\\pi$ and $x = \\pi$. These are 2 critical points where $f(x)$ is not differentiable.\nFor other points $x \\neq 0, \\pm\\pi$, $f(x)$ is differentiable and we set $f'(x) = 0$. Because of the modulus, $f'(x) = 0$ is exactly when the derivative of $\\frac{\\sin x}{x}$ is zero.\n$f'(x) = 0 \\implies \\frac{x \\cos x - \\sin x}{x^2} = 0 \\implies x \\cos x - \\sin x = 0 \\implies \\tan x = x$.\nThe equation $\\tan x = x$ has roots where the line $y = x$ intersects the branches of $y = \\tan x$.\nIn the open interval $(-2\\pi, 2\\pi)$, the intersections occur at $x = 0$ and approximately at $x = \\pm 4.49$ (in the intervals $(-\\frac{3\\pi}{2}, -\\pi)$ and $(\\pi, \\frac{3\\pi}{2})$).\nThis gives $1$ critical point at $x = 0$ (which evaluates to local maximum 1 via limit) and $2$ additional points where $\\tan x = x$.\nTotal number of critical points = $2$ (non-differentiable) $+ 3$ (where $f'=0$) $= 5$.",
+      "unicode": "f(x) is continuous in (-2π, 2π). A critical point occurs where f'(x) = 0 or f'(x) is undefined.\nFirst, the modulus causes sharp corners (non-differentiable points) when the inside expression crosses zero. (sin x/x) = 0 implies sin x = 0.\nIn (-2π, 2π), the roots are x = -π and x = π. These are 2 critical points where f(x) is not differentiable.\nFor other points x neq 0, ±π, f(x) is differentiable and we set f'(x) = 0. Because of the modulus, f'(x) = 0 is exactly when the derivative of (sin x/x) is zero.\nf'(x) = 0 implies (x cos x - sin x/x²) = 0 implies x cos x - sin x = 0 implies tan x = x.\nThe equation tan x = x has roots where the line y = x intersects the branches of y = tan x.\nIn the open interval (-2π, 2π), the intersections occur at x = 0 and approximately at x = ± 4.49 (in the intervals (-(3π/2), -π) and (π, (3π/2))).\nThis gives 1 critical point at x = 0 (which evaluates to local maximum 1 via limit) and 2 additional points where tan x = x.\nTotal number of critical points = 2 (non-differentiable) + 3 (where f'=0) = 5.",
+      "plainText": "f(x) is continuous in (-2pi, 2pi). A critical point occurs where f'(x) = 0 or f'(x) is undefined. First, the modulus causes sharp corners (non-differentiable points) when the inside expression crosses zero. (sin x)/(x) = 0 implies sin x = 0. In (-2pi, 2pi), the roots are x = -pi and x = pi. These are 2 critical points where f(x) is not differentiable. For other points x neq 0, pmpi, f(x) is differentiable and we set f'(x) = 0. Because of the modulus, f'(x) = 0 is exactly when the derivative of (sin x)/(x) is zero. f'(x) = 0 implies (x cos x - sin x)/(x^2) = 0 implies x cos x - sin x = 0 implies tan x = x. The equation tan x = x has roots where the line y = x intersects the branches of y = tan x. In the open interval (-2pi, 2pi), the intersections occur at x = 0 and approximately at x = pm 4.49 (in the intervals (-(3pi)/(2), -pi) and (pi, (3pi)/(2))). This gives 1 critical point at x = 0 (which evaluates to local maximum 1 via limit) and 2 additional points where tan x = x. Total number of critical points = 2 (non-differentiable) + 3 (where f'=0) = 5."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.530Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.530Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_APPLICATIONO_2026_S1_Q198",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_APPLICATIONO_2026_S1_Q198_RAW",
+    "question": {
+      "latex": "Let $f$x$$ be a polynomial of degree 5, and have extrema at $x = 1$ and $x = -1$. If $\\lim_{x \\to 0} \\left$ \\frac{f$x$}{x^3} \\right$ = -5$, then $f$2$ - f$-2$$ is equal to:",
+      "unicode": "Let fx be a polynomial of degree 5, and have extrema at x = 1 and x = -1. If lim_{x to 0} left (fx/x³) right = -5, then f2 - f-2 is equal to:",
+      "plainText": "Let fx be a polynomial of degree 5, and have extrema at x = 1 and x = -1. If lim_{x to 0} left (fx)/(x^3) right = -5, then f2 - f-2 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$0$",
+        "unicode": "0",
+        "plainText": "0"
+      },
+      {
+        "id": "b",
+        "latex": "$50$",
+        "unicode": "50",
+        "plainText": "50"
+      },
+      {
+        "id": "c",
+        "latex": "$92$",
+        "unicode": "92",
+        "plainText": "92"
+      },
+      {
+        "id": "d",
+        "latex": "$112$",
+        "unicode": "112",
+        "plainText": "112"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Since $\\lim_{x \\to 0} \\frac{f(x)}{x^3} = -5$, the polynomial $f(x)$ must have the form $f(x) = ax^5 + bx^4 - 5x^3$.\nThus $f'(x) = 5ax^4 + 4bx^3 - 15x^2 = x^2(5ax^2 + 4bx - 15)$.\nExtrema occur at $x=1$ and $x=-1$, meaning $f'(1)=0$ and $f'(-1)=0$. Substituting, we get $5a + 4b - 15 = 0$ and $5a - 4b - 15 = 0$.\nAdding them yields $10a = 30 \\implies a = 3$, and $b = 0$. So $f(x) = 3x^5 - 5x^3$.\nCalculate $f(2) = 3(32) - 5(8) = 96 - 40 = 56$.\nCalculate $f(-2) = 3(-32) - 5(-8) = -96 + 40 = -56$.\nHence, $f(2) - f(-2) = 56 - (-56) = 112$.",
+      "unicode": "Since lim_{x to 0} (f(x)/x³) = -5, the polynomial f(x) must have the form f(x) = ax^5 + bx^4 - 5x³.\nThus f'(x) = 5ax^4 + 4bx³ - 15x² = x²(5ax² + 4bx - 15).\nExtrema occur at x=1 and x=-1, meaning f'(1)=0 and f'(-1)=0. Substituting, we get 5a + 4b - 15 = 0 and 5a - 4b - 15 = 0.\nAdding them yields 10a = 30 implies a = 3, and b = 0. So f(x) = 3x^5 - 5x³.\nCalculate f(2) = 3(32) - 5(8) = 96 - 40 = 56.\nCalculate f(-2) = 3(-32) - 5(-8) = -96 + 40 = -56.\nHence, f(2) - f(-2) = 56 - (-56) = 112.",
+      "plainText": "Since lim_{x to 0} (f(x))/(x^3) = -5, the polynomial f(x) must have the form f(x) = ax^5 + bx^4 - 5x^3. Thus f'(x) = 5ax^4 + 4bx^3 - 15x^2 = x^2(5ax^2 + 4bx - 15). Extrema occur at x=1 and x=-1, meaning f'(1)=0 and f'(-1)=0. Substituting, we get 5a + 4b - 15 = 0 and 5a - 4b - 15 = 0. Adding them yields 10a = 30 implies a = 3, and b = 0. So f(x) = 3x^5 - 5x^3. Calculate f(2) = 3(32) - 5(8) = 96 - 40 = 56. Calculate f(-2) = 3(-32) - 5(-8) = -96 + 40 = -56. Hence, f(2) - f(-2) = 56 - (-56) = 112."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Application of Derivatives",
+      "subchapter": "Application of Derivatives Core Concepts",
+      "topic": "Application of Derivatives Primary Topic",
+      "learningOutcome": "Master fundamental principles of Application of Derivatives",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.533Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.533Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

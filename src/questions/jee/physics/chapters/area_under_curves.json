@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_AREAUNDERCUR_2026_S1_Q542",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_AREAUNDERCUR_2026_S1_Q542_RAW",
+    "question": {
+      "latex": "If the area of the region bounded by $16x^2 - 9y^2 = 144$ and $8x - 3y = 24$ is $A$, then $3$A + 6 \\log_e$3$$$ is equal to:",
+      "unicode": "If the area of the region bounded by 16x² - 9y² = 144 and 8x - 3y = 24 is A, then 3A + 6 log_e3 is equal to:",
+      "plainText": "If the area of the region bounded by 16x^2 - 9y^2 = 144 and 8x - 3y = 24 is A, then 3A + 6 log_e3 is equal to:"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$12$",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "b",
+        "latex": "$16$",
+        "unicode": "16",
+        "plainText": "16"
+      },
+      {
+        "id": "c",
+        "latex": "$20$",
+        "unicode": "20",
+        "plainText": "20"
+      },
+      {
+        "id": "d",
+        "latex": "$24$",
+        "unicode": "24",
+        "plainText": "24"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Rewrite curve as hyperbola $\\frac{x^2}{9} - \\frac{y^2}{16} = 1 \\implies y = \\frac{4}{3}\\sqrt{x^2 - 9}$ and line $y = \\frac{8}{3}(x - 3)$.\nIntersection points satisfy: $\\frac{16}{9}(x^2 - 9) = \\frac{64}{9}(x-3)^2 \\implies x^2 - 9 = 4(x^2 - 6x + 9) \\implies 3x^2 - 24x + 45 = 0 \\implies x=3, x=5$.\nThe line lies below the hyperbola in this interval. Thus $A = \\int_3^5 \\left( \\frac{4}{3}\\sqrt{x^2 - 9} - \\frac{8}{3}(x - 3) \\right) dx$.\n$= \\left[ \\frac{4}{3} \\left( \\frac{x}{2}\\sqrt{x^2-9} - \\frac{9}{2}\\ln(x+\\sqrt{x^2-9}) \\right) - \\frac{4}{3}(x-3)^2 \\right]_3^5$.\n$= \\left( \\frac{4}{3} (10 - \\frac{9}{2}\\ln 9) - \\frac{4}{3}(4) \\right) - \\left( -6\\ln 3 - 0 \\right) = 8 - 6\\ln 3$.\nWe find $3(A + 6\\ln 3) = 3(8 - 6\\ln 3 + 6\\ln 3) = 24$.",
+      "unicode": "Rewrite curve as hyperbola (x²/9) - (y²/16) = 1 implies y = (4/3)√(x² - 9) and line y = (8/3)(x - 3).\nIntersection points satisfy: (16/9)(x² - 9) = (64/9)(x-3)² implies x² - 9 = 4(x² - 6x + 9) implies 3x² - 24x + 45 = 0 implies x=3, x=5.\nThe line lies below the hyperbola in this interval. Thus A = int_3^5 left( (4/3)√(x² - 9) - (8/3)(x - 3) right) dx.\n= left[ (4/3) left( (x/2)√(x²-9) - (9/2)ln(x+√(x²-9)) right) - (4/3)(x-3)² right]_3^5.\n= left( (4/3) (10 - (9/2)ln 9) - (4/3)(4) right) - left( -6ln 3 - 0 right) = 8 - 6ln 3.\nWe find 3(A + 6ln 3) = 3(8 - 6ln 3 + 6ln 3) = 24.",
+      "plainText": "Rewrite curve as hyperbola (x^2)/(9) - (y^2)/(16) = 1 implies y = (4)/(3)sqrt(x^2 - 9) and line y = (8)/(3)(x - 3). Intersection points satisfy: (16)/(9)(x^2 - 9) = (64)/(9)(x-3)^2 implies x^2 - 9 = 4(x^2 - 6x + 9) implies 3x^2 - 24x + 45 = 0 implies x=3, x=5. The line lies below the hyperbola in this interval. Thus A = int_3^5 left( (4)/(3)sqrt(x^2 - 9) - (8)/(3)(x - 3) right) dx. = left[ (4)/(3) left( (x)/(2)sqrt(x^2-9) - (9)/(2)ln(x+sqrt(x^2-9)) right) - (4)/(3)(x-3)^2 right]_3^5. = left( (4)/(3) (10 - (9)/(2)ln 9) - (4)/(3)(4) right) - left( -6ln 3 - 0 right) = 8 - 6ln 3. We find 3(A + 6ln 3) = 3(8 - 6ln 3 + 6ln 3) = 24."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Area Under Curves",
+      "subchapter": "Area Under Curves Core Concepts",
+      "topic": "Area Under Curves Primary Topic",
+      "learningOutcome": "Master fundamental principles of Area Under Curves",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.556Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.556Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

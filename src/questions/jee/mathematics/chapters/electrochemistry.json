@@ -1,0 +1,318 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_ELECTROCHEMI_2025_S_Q144",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROCHEMI_2025_S_Q144_RAW",
+    "question": {
+      "latex": "Given below are two statements :\nStatement (I) : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement (II) : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "unicode": "Given below are two statements :\nStatement (I) : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement (II) : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "plainText": "Given below are two statements : Statement (I) : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode. Statement (II) : The rate of corrosion is more in alkaline medium than in acidic medium. In the light of the above statements, choose the correct answer from the options given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both Statement I and Statement II are false",
+        "unicode": "Both Statement I and Statement II are false",
+        "plainText": "Both Statement I and Statement II are false"
+      },
+      {
+        "id": "b",
+        "latex": "Statement I is false but Statement II is true",
+        "unicode": "Statement I is false but Statement II is true",
+        "plainText": "Statement I is false but Statement II is true"
+      },
+      {
+        "id": "c",
+        "latex": "Both Statement I and Statement II are true",
+        "unicode": "Both Statement I and Statement II are true",
+        "plainText": "Both Statement I and Statement II are true"
+      },
+      {
+        "id": "d",
+        "latex": "Statement I is true but Statement II is false",
+        "unicode": "Statement I is true but Statement II is false",
+        "plainText": "Statement I is true but Statement II is false"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electrochemistry",
+      "subchapter": "Electrochemistry Core Concepts",
+      "topic": "Electrochemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrochemistry",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.046Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.046Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROCHEMI_2026_S_Q207",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROCHEMI_2026_S_Q207_RAW",
+    "question": {
+      "latex": "An electrochemical cell is constructed using half cells in the direction of spontaneous change\n$Fe(OH)_2(s) + 2e^- \\rightarrow Fe(s) + 2OH^-(aq) \\quad E^\\theta = -0.88\\text{ V}$\nand $AgBr(s) + e^- \\rightarrow Ag(s) + Br^-(aq) \\quad E^\\theta = +0.07\\text{ V}$\nWhich of the following option is correct?",
+      "unicode": "An electrochemical cell is constructed using half cells in the direction of spontaneous change\nFe(OH)_2(s) + 2e^- rightarrow Fe(s) + 2OH^-(aq) quad E^θ = -0.88text{ V}\nand AgBr(s) + e^- rightarrow Ag(s) + Br^-(aq) quad E^θ = +0.07text{ V}\nWhich of the following option is correct?",
+      "plainText": "An electrochemical cell is constructed using half cells in the direction of spontaneous change Fe(OH)_2(s) + 2e^- rightarrow Fe(s) + 2OH^-(aq) quad E^theta = -0.88text{ V} and AgBr(s) + e^- rightarrow Ag(s) + Br^-(aq) quad E^theta = +0.07text{ V} Which of the following option is correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Overall reaction $Fe(s) + 2OH^-(aq) + 2AgBr(s) \\rightleftharpoons Fe(OH)_2(s) + 2Ag(s) + 2Br^-(aq)$",
+        "unicode": "Overall reaction Fe(s) + 2OH^-(aq) + 2AgBr(s) rightleftharpoons Fe(OH)_2(s) + 2Ag(s) + 2Br^-(aq)",
+        "plainText": "Overall reaction Fe(s) + 2OH^-(aq) + 2AgBr(s) rightleftharpoons Fe(OH)_2(s) + 2Ag(s) + 2Br^-(aq)"
+      },
+      {
+        "id": "b",
+        "latex": "$E_{cell}^\\theta = -0.95\\text{ V}$",
+        "unicode": "E_{cell}^θ = -0.95text{ V}",
+        "plainText": "E_{cell}^theta = -0.95text{ V}"
+      },
+      {
+        "id": "c",
+        "latex": "Fe is reduced in the electrochemical cell",
+        "unicode": "Fe is reduced in the electrochemical cell",
+        "plainText": "Fe is reduced in the electrochemical cell"
+      },
+      {
+        "id": "d",
+        "latex": "$E_{cell}^\\theta$ is an extensive property",
+        "unicode": "E_{cell}^θ is an extensive property",
+        "plainText": "E_{cell}^theta is an extensive property"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Electrochemistry",
+      "subchapter": "Electrochemistry Core Concepts",
+      "topic": "Electrochemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrochemistry",
+      "tags": [
+        "Numerical",
+        "High Weight"
+      ],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.050Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.050Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROCHEMI_2026_S_Q298",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROCHEMI_2026_S_Q298_RAW",
+    "question": {
+      "latex": "Consider the following two half-cell reactions along with the standard reduction potential given:\n$CO_2 + 6H^+ + 6e^- \\rightarrow CH_3OH + H_2O \\quad E^\\circ_{red} = 0.02\\text{ V}$\n$\\frac{1}{2}O_2 + 2H^+ + 2e^- \\rightarrow H_2O \\quad E^\\circ_{red} = 1.23\\text{ V}$\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of $CH_3OH$ is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, $\\Delta V$ is _______ $\\text{m}^3$. (nearest integer)\nGiven: $F = 96500\\text{ C mol}^{-1}$",
+      "unicode": "Consider the following two half-cell reactions along with the standard reduction potential given:\nCO_2 + 6H^+ + 6e^- rightarrow CH_3OH + H_2O quad E^circ_{red} = 0.02text{ V}\n(1/2)O_2 + 2H^+ + 2e^- rightarrow H_2O quad E^circ_{red} = 1.23text{ V}\nA fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of CH_3OH is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, Delta V is _______ text{m}³. (nearest integer)\nGiven: F = 96500text{ C mol}^{-1}",
+      "plainText": "Consider the following two half-cell reactions along with the standard reduction potential given: CO_2 + 6H^+ + 6e^- rightarrow CH_3OH + H_2O quad E^circ_{red} = 0.02text{ V} (1)/(2)O_2 + 2H^+ + 2e^- rightarrow H_2O quad E^circ_{red} = 1.23text{ V} A fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80% efficiency. If the work derived from the cell using 1 mol of CH_3OH is used to compress an ideal gas isothermally against a constant pressure of 1 kPa, then the change in the volume of the gas, Delta V is _______ text{m}^3. (nearest integer) Given: F = 96500text{ C mol}^{-1}"
+    },
+    "options": [],
+    "answers": [
+      "1"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "numerical",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Afternoon",
+      "subject": "Mathematics",
+      "chapter": "Electrochemistry",
+      "subchapter": "Electrochemistry Core Concepts",
+      "topic": "Electrochemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrochemistry",
+      "tags": [
+        "Numerical"
+      ],
+      "difficulty": "Hard",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.054Z",
+      "healthScore": "70%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.054Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  },
+  {
+    "id": "JEE_MAIN_MAT_ELECTROCHEMI_2025_S1_Q119",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_ELECTROCHEMI_2025_S1_Q119_RAW",
+    "question": {
+      "latex": "Given below are two statements :\nStatement $I$ : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement $II$ : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "unicode": "Given below are two statements :\nStatement I : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode.\nStatement II : The rate of corrosion is more in alkaline medium than in acidic medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "plainText": "Given below are two statements : Statement I : Corrosion is an electrochemical phenomenon in which pure metal acts as an anode and impure metal as a cathode. Statement II : The rate of corrosion is more in alkaline medium than in acidic medium. In the light of the above statements, choose the correct answer from the options given below :"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "Both Statement I and Statement II are false",
+        "unicode": "Both Statement I and Statement II are false",
+        "plainText": "Both Statement I and Statement II are false"
+      },
+      {
+        "id": "b",
+        "latex": "Statement I is false but Statement II is true",
+        "unicode": "Statement I is false but Statement II is true",
+        "plainText": "Statement I is false but Statement II is true"
+      },
+      {
+        "id": "c",
+        "latex": "Both Statement I and Statement II are true",
+        "unicode": "Both Statement I and Statement II are true",
+        "plainText": "Both Statement I and Statement II are true"
+      },
+      {
+        "id": "d",
+        "latex": "Statement I is true but Statement II is false",
+        "unicode": "Statement I is true but Statement II is false",
+        "plainText": "Statement I is true but Statement II is false"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Mathematics",
+      "chapter": "Electrochemistry",
+      "subchapter": "Electrochemistry Core Concepts",
+      "topic": "Electrochemistry Primary Topic",
+      "learningOutcome": "Master fundamental principles of Electrochemistry",
+      "tags": [],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.529Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.529Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

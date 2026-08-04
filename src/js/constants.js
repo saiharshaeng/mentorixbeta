@@ -41,15 +41,17 @@ const BADGES = [
 
 /* ── CURRICULUM — ONBOARDING ────────────────────────────────── */
 
+const CBSE_GRADES = ['Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
+
 const STREAMS_11_12 = ['Science', 'Commerce', 'Humanities'];
 
 const SUBJECTS_BY_STREAM = {
-  'Science':    ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Computer Science', 'Physical Education', 'English'],
-  'Commerce':   ['Accountancy', 'Business Studies', 'Economics', 'Mathematics', 'Computer Science', 'English'],
-  'Humanities': ['History', 'Political Science', 'Geography', 'Sociology', 'Psychology', 'Economics', 'English']
+  'Science':    ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'English'],
+  'Commerce':   ['Accountancy', 'Business Studies', 'Economics', 'Mathematics', 'English'],
+  'Humanities': ['History', 'Geography', 'Political Science', 'Economics', 'English']
 };
 
-const SUBJECTS_K10 = ['Mathematics', 'Science', 'English', 'Social Science', 'Second Language', 'Computer Science'];
+const SUBJECTS_K10 = ['Mathematics', 'Science', 'English', 'Social Science'];
 
 /* ── EXPLORE CATEGORIES ─────────────────────────────────────── */
 
@@ -107,6 +109,7 @@ window.MODEL_REASON     = MODEL_REASON;
 window.MODEL            = MODEL;
 window.MAX_COURSES      = MAX_COURSES;
 window.BADGES           = BADGES;
+window.CBSE_GRADES      = CBSE_GRADES;
 window.STREAMS_11_12    = STREAMS_11_12;
 window.SUBJECTS_BY_STREAM = SUBJECTS_BY_STREAM;
 window.SUBJECTS_K10     = SUBJECTS_K10;

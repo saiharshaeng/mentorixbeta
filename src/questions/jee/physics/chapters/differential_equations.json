@@ -1,0 +1,89 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_DIFFERENTIAL_2025_S1_Q508",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_DIFFERENTIAL_2025_S1_Q508_RAW",
+    "question": {
+      "latex": "Let $y = f$x$$ be the solution of the differential equation $\\frac{dy}{dx} + \\frac{xy}{x^2-1} = \\frac{x^4+4x}{\\sqrt{1-x^2}}, -1 < x < 1$ such that f$0$ = 0. If $6 \\int_{-1/2}^{1/2} f$x$ dx = 2\\pi - \\alpha$, then $\\alpha^2$ is equal to",
+      "unicode": "Let y = fx be the solution of the differential equation (dy/dx) + (xy/x²-1) = (x^4+4x/√(1-x²)), -1 < x < 1 such that f0 = 0. If 6 int_{-1/2}^{1/2} fx dx = 2π - α, then α² is equal to",
+      "plainText": "Let y = fx be the solution of the differential equation (dy)/(dx) + (xy)/(x^2-1) = (x^4+4x)/(sqrt(1-x^2)), -1 < x < 1 such that f0 = 0. If 6 int_{-1/2}^{1/2} fx dx = 2pi - alpha, then alpha^2 is equal to"
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "25",
+        "unicode": "25",
+        "plainText": "25"
+      },
+      {
+        "id": "b",
+        "latex": "27",
+        "unicode": "27",
+        "plainText": "27"
+      },
+      {
+        "id": "c",
+        "latex": "30",
+        "unicode": "30",
+        "plainText": "30"
+      },
+      {
+        "id": "d",
+        "latex": "36",
+        "unicode": "36",
+        "plainText": "36"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2025,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Differential Equations",
+      "subchapter": "Differential Equations Core Concepts",
+      "topic": "Differential Equations Primary Topic",
+      "learningOutcome": "Master fundamental principles of Differential Equations",
+      "tags": [
+        "Numerical",
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.554Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.554Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

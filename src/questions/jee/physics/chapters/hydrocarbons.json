@@ -1,0 +1,88 @@
+[
+  {
+    "id": "JEE_MAIN_PHY_HYDROCARBONS_2026_S1_Q535",
+    "version": 1,
+    "rawRef": "JEE_MAIN_PHY_HYDROCARBONS_2026_S1_Q535_RAW",
+    "question": {
+      "latex": "Consider the isomers of hydrocarbon with molecular formula $C_5H_{10}$. These isomers do not decolourise $KMnO_4$ solution. These isomers are subjected to chlorination with chlorine in presence of light to give monochloro compounds. The total number of monochloro compounds $structural isomers only$ formed is _______.",
+      "unicode": "Consider the isomers of hydrocarbon with molecular formula C_5H_{10}. These isomers do not decolourise KMnO_4 solution. These isomers are subjected to chlorination with chlorine in presence of light to give monochloro compounds. The total number of monochloro compounds structural isomers only formed is _______.",
+      "plainText": "Consider the isomers of hydrocarbon with molecular formula C_5H_{10}. These isomers do not decolourise KMnO_4 solution. These isomers are subjected to chlorination with chlorine in presence of light to give monochloro compounds. The total number of monochloro compounds structural isomers only formed is _______."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "12",
+        "unicode": "12",
+        "plainText": "12"
+      },
+      {
+        "id": "b",
+        "latex": "13",
+        "unicode": "13",
+        "plainText": "13"
+      },
+      {
+        "id": "c",
+        "latex": "14",
+        "unicode": "14",
+        "plainText": "14"
+      },
+      {
+        "id": "d",
+        "latex": "15",
+        "unicode": "15",
+        "plainText": "15"
+      }
+    ],
+    "answers": [
+      0
+    ],
+    "explanation": {
+      "latex": "Isomers of $C_5H_{10}$ that do not decolorize $KMnO_4$ must be cycloalkanes (no double bonds).\nThe structural isomers of cycloalkane $C_5H_{10}$ are:\n1) Cyclopentane\n2) Methylcyclobutane\n3) Ethylcyclopropane\n4) 1,1-dimethylcyclopropane\n5) 1,2-dimethylcyclopropane\n\nNow, we find the number of structurally distinct monochloro derivatives for each:\n1) Cyclopentane: Only 1 type of hydrogen $\\rightarrow$ 1 product.\n2) Methylcyclobutane: Chlorination can happen on the methyl group, or positions C1, C2, C3 of the ring $\\rightarrow$ 4 products.\n3) Ethylcyclopropane: Chlorination can happen on the $CH_3$, the $CH_2$ of the ethyl group, or on the cyclopropane ring at the $CH$ attached to the substituent, or the equivalent $CH_2$ groups $\\rightarrow$ 4 products.\n4) 1,1-dimethylcyclopropane: Chlorination can happen on the identical methyl groups or on the ring $CH_2$ groups $\\rightarrow$ 2 products.\n5) 1,2-dimethylcyclopropane: Chlorination can happen on the identical methyl groups, the ring $CH$ groups with methyls, or the un-substituted $CH_2$ group $\\rightarrow$ 3 products.\nTotal number of structural monochloro compounds = $1 + 4 + 4 + 2 + 3 = 14$.",
+      "unicode": "Isomers of C_5H_{10} that do not decolorize KMnO_4 must be cycloalkanes (no double bonds).\nThe structural isomers of cycloalkane C_5H_{10} are:\n1) Cyclopentane\n2) Methylcyclobutane\n3) Ethylcyclopropane\n4) 1,1-dimethylcyclopropane\n5) 1,2-dimethylcyclopropane\n\nNow, we find the number of structurally distinct monochloro derivatives for each:\n1) Cyclopentane: Only 1 type of hydrogen rightarrow 1 product.\n2) Methylcyclobutane: Chlorination can happen on the methyl group, or positions C1, C2, C3 of the ring rightarrow 4 products.\n3) Ethylcyclopropane: Chlorination can happen on the CH_3, the CH_2 of the ethyl group, or on the cyclopropane ring at the CH attached to the substituent, or the equivalent CH_2 groups rightarrow 4 products.\n4) 1,1-dimethylcyclopropane: Chlorination can happen on the identical methyl groups or on the ring CH_2 groups rightarrow 2 products.\n5) 1,2-dimethylcyclopropane: Chlorination can happen on the identical methyl groups, the ring CH groups with methyls, or the un-substituted CH_2 group rightarrow 3 products.\nTotal number of structural monochloro compounds = 1 + 4 + 4 + 2 + 3 = 14.",
+      "plainText": "Isomers of C_5H_{10} that do not decolorize KMnO_4 must be cycloalkanes (no double bonds). The structural isomers of cycloalkane C_5H_{10} are: 1) Cyclopentane 2) Methylcyclobutane 3) Ethylcyclopropane 4) 1,1-dimethylcyclopropane 5) 1,2-dimethylcyclopropane Now, we find the number of structurally distinct monochloro derivatives for each: 1) Cyclopentane: Only 1 type of hydrogen rightarrow 1 product. 2) Methylcyclobutane: Chlorination can happen on the methyl group, or positions C1, C2, C3 of the ring rightarrow 4 products. 3) Ethylcyclopropane: Chlorination can happen on the CH_3, the CH_2 of the ethyl group, or on the cyclopropane ring at the CH attached to the substituent, or the equivalent CH_2 groups rightarrow 4 products. 4) 1,1-dimethylcyclopropane: Chlorination can happen on the identical methyl groups or on the ring CH_2 groups rightarrow 2 products. 5) 1,2-dimethylcyclopropane: Chlorination can happen on the identical methyl groups, the ring CH groups with methyls, or the un-substituted CH_2 group rightarrow 3 products. Total number of structural monochloro compounds = 1 + 4 + 4 + 2 + 3 = 14."
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Shift 1",
+      "subject": "Physics",
+      "chapter": "Hydrocarbons",
+      "subchapter": "Hydrocarbons Core Concepts",
+      "topic": "Hydrocarbons Primary Topic",
+      "learningOutcome": "Master fundamental principles of Hydrocarbons",
+      "tags": [
+        "Formula Based"
+      ],
+      "difficulty": "unknown",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:48.555Z",
+      "healthScore": "100%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:48.555Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "JEE_MAIN_MAT_CAPACITANCE_2026_S_Q340",
+    "version": 1,
+    "rawRef": "JEE_MAIN_MAT_CAPACITANCE_2026_S_Q340_RAW",
+    "question": {
+      "latex": "A parallel plate air capacitor is connected to a battery. The plates are pulled apart at uniform speed $v$. If $x$ is the separation between the plates at any instant, then the time rate of change of electrostatic energy of the capacitor is proportional to $x^\\alpha$, where $\\alpha$ is _____.",
+      "unicode": "A parallel plate air capacitor is connected to a battery. The plates are pulled apart at uniform speed v. If x is the separation between the plates at any instant, then the time rate of change of electrostatic energy of the capacitor is proportional to x^α, where α is _____.",
+      "plainText": "A parallel plate air capacitor is connected to a battery. The plates are pulled apart at uniform speed v. If x is the separation between the plates at any instant, then the time rate of change of electrostatic energy of the capacitor is proportional to x^alpha, where alpha is _____."
+    },
+    "options": [
+      {
+        "id": "a",
+        "latex": "$-2$",
+        "unicode": "-2",
+        "plainText": "-2"
+      },
+      {
+        "id": "b",
+        "latex": "$1$",
+        "unicode": "1",
+        "plainText": "1"
+      },
+      {
+        "id": "c",
+        "latex": "$-1$",
+        "unicode": "-1",
+        "plainText": "-1"
+      },
+      {
+        "id": "d",
+        "latex": "$2$",
+        "unicode": "2",
+        "plainText": "2"
+      }
+    ],
+    "answers": [
+      "0"
+    ],
+    "explanation": {
+      "latex": "",
+      "unicode": "",
+      "plainText": ""
+    },
+    "type": "mcq",
+    "image": {
+      "originalUrl": null,
+      "ocrText": null,
+      "imageMeta": {
+        "width": null,
+        "height": null,
+        "dpi": 300,
+        "caption": null,
+        "boundingBoxes": []
+      }
+    },
+    "metadata": {
+      "exam": "JEE_MAIN",
+      "year": 2026,
+      "shift": "Morning",
+      "subject": "Mathematics",
+      "chapter": "Capacitance",
+      "subchapter": "Capacitance Core Concepts",
+      "topic": "Capacitance Primary Topic",
+      "learningOutcome": "Master fundamental principles of Capacitance",
+      "tags": [],
+      "difficulty": "Medium",
+      "source": "Official NTA PYQ",
+      "createdDate": "2026-07-29T19:27:46.057Z",
+      "healthScore": "95%"
+    },
+    "analytics": {
+      "attemptCount": 0,
+      "correctCount": 0,
+      "correctPct": 0,
+      "avgTimeMs": 0,
+      "mostCommonWrongOption": null,
+      "lastUpdated": "2026-07-29T19:27:46.057Z"
+    },
+    "ai": {
+      "concepts": [],
+      "prerequisites": [],
+      "learningObjectives": []
+    }
+  }
+]
