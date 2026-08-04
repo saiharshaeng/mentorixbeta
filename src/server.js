@@ -58,13 +58,23 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT' || err.code === 'EISDIR') {
+        if (ext === '.js') {
+          res.writeHead(200, { 'Content-Type': 'text/javascript', 'Access-Control-Allow-Origin': '*' });
+          res.end('/* File not found stub */');
+          return;
+        }
+        if (ext === '.css') {
+          res.writeHead(200, { 'Content-Type': 'text/css', 'Access-Control-Allow-Origin': '*' });
+          res.end('/* File not found stub */');
+          return;
+        }
         if (ext === '.json') {
           // Empty JSON fallback for missing JSON assets to prevent console 404
           res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
           res.end('[]');
           return;
         }
-        // Universal SPA Fallback: Serve index.html with 200 OK for any non-existent file path or SPA route
+        // Universal SPA Fallback: Serve index.html with 200 OK for any non-existent page route
         fs.readFile(path.join(root, 'index.html'), (indexErr, indexContent) => {
           if (!indexErr) {
             res.writeHead(200, {
