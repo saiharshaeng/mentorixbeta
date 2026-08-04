@@ -4470,6 +4470,15 @@ function updateDailyTime(val) {
 
 // Global exports
 window.rComp = rComp;
+
+// Register screen unmount handler so router.js can stop the exam timer cleanly
+// when the student navigates away from the comp screen mid-exam.
+window.onScreenUnmount = function() {
+  if (typeof examTimerInterval !== 'undefined' && examTimerInterval) {
+    clearInterval(examTimerInterval);
+    examTimerInterval = null;
+  }
+};
 window.setCompTab = setCompTab;
 window.switchCompTab = setCompTab;
 window.updateTargetVal = updateTargetVal;

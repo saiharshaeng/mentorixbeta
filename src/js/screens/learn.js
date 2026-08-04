@@ -552,7 +552,10 @@ Output a single JSON object with these exact keys:
     }
 
     // Persist to Supabase DB cache & local storage for instant future loads for all students
-    saveLessonToCache(topicKey, lesson);
+    // Only cache real AI-generated lessons — never cache fallback placeholder lessons
+    if (!lesson._isFallback && lesson.explanation && lesson.explanation.length > 150) {
+      saveLessonToCache(topicKey, lesson);
+    }
     try {
       localStorage.setItem(`mx_lesson_${topic}`, JSON.stringify(lesson));
     } catch (e) {}
@@ -919,6 +922,7 @@ function generateFallbackLesson(topic) {
 
   // DEFAULT / GENERAL SYLLABUS FALLBACK
   return {
+    "_isFallback": true,
     "topic": topic,
     "hook": `Understanding "${topic}" is essential for mastering the core concepts of your syllabus.`,
     "intuition": `Break "${topic}" down into fundamental building blocks: state the definitions, map the governing principles, and practice applying them to standard numerical problems.`,
@@ -1761,23 +1765,6 @@ function advanceStage(stageNum, force) {
   }
 
   if (stageNum === 8) {
-    const l = LS.lesson;
-    const checks = l ? (l.checks || []) : [];
-    const total = checks.length || 5;
-    let correctCount = 0;
-    for (let i = 0; i < total; i++) {
-      const att = LS.checkAttempts ? LS.checkAttempts[i] : null;
-      if (att && att.correct) correctCount++;
-    }
-    const scorePct = total > 0 ? Math.round((correctCount / total) * 100) : 100;
-    if (scorePct === 100) {
-      if (typeof addXP === 'function') addXP(50, 'Perfect Score');
-    } else if (scorePct >= 60) {
-      if (typeof addXP === 'function') addXP(30, 'Topic Mastered');
-    } else {
-      if (typeof addXP === 'function') addXP(10, 'Topic Attempted');
-    }
-
     if (typeof completeStageSession === 'function') {
       completeStageSession();
     }

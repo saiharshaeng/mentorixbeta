@@ -117,7 +117,8 @@
       { key: 'jee_adv2022_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2022_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
       { key: 'jee_adv2023_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2023_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
       { key: 'jee_adv2024_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2024_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null }
+      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'neet_bio',          url: origin + '/data/pyq/neet/neet_biology_bank.json',           exam: 'NEET',         subject: 'Biology' }
     ];
 
     const banks = normTarget 
@@ -689,9 +690,16 @@
     // ── FULL MOCK: serve complete intact NTA shift paper directly ──────────────
     if ((count >= 45 || options.isFullMock) && !subject && !chapter) {
       if (id === 'NEET') {
-        const bioQs  = shuffleArray([...(fileCache['neet_bio']?.questions || [])]);
-        const physQs = shuffleArray([...(fileCache['jee_main_phys']?.questions || [])]);
-        const chemQs = shuffleArray([...(fileCache['jee_main_chem']?.questions || [])]);
+        const bioQs  = shuffleArray([...(fileCache['neet_bio'] || [])]);
+        const allPhys = [
+          ...(fileCache['jee_phys_fixed'] || []),
+          ...(fileCache['jee_comp_fixed'] || []).filter(q => (q.section || q.subject || '').toLowerCase().includes('phys'))
+        ];
+        const allChem = [
+          ...(fileCache['jee_comp_fixed'] || []).filter(q => (q.section || q.subject || '').toLowerCase().includes('chem'))
+        ];
+        const physQs = shuffleArray(allPhys);
+        const chemQs = shuffleArray(allChem);
 
         if (bioQs.length >= 90 && physQs.length >= 45 && chemQs.length >= 45) {
           const neetPaper = [
