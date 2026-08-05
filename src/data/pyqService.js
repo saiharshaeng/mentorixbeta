@@ -97,28 +97,35 @@
     return expl.trim();
   }
 
+  function getAssetUrl(relativePath) {
+    if (typeof window === 'undefined' || !window.location) return 'data/' + relativePath;
+    const pathname = window.location.pathname || '/';
+    const baseDir = pathname.substring(0, pathname.lastIndexOf('/') + 1);
+    const cleanPath = relativePath.startsWith('/') ? relativePath.slice(1) : relativePath;
+    return baseDir + (cleanPath.startsWith('data/') ? cleanPath : 'data/' + cleanPath);
+  }
+
   // ── BANK FILE WIRING ──────────────────────────────────────
   // The actual question banks are at different paths than JEE_MAIN_PAPERS expects.
   // This function loads them directly and injects into fileCache.
   const _preloadedExams = {};
 
   async function loadBankFiles(targetExam = null, onProgress = null) {
-    const origin = (typeof window !== 'undefined' && window.location && window.location.origin) ? window.location.origin : 'http://localhost:8080';
     const normTarget = targetExam ? normalizeExamId(targetExam) : null;
 
     const allBanks = [
-      { key: 'jee_phys_fixed',    url: origin + '/data/pyq/fixed/jee_physics_bank_fixed.json',    exam: 'JEE_MAIN',  subject: 'Physics' },
-      { key: 'jee_comp_fixed',    url: origin + '/data/pyq/fixed/jee_main_complete_fixed.json',   exam: 'JEE_MAIN',  subject: null },
-      { key: 'jee_cls_fixed',     url: origin + '/data/pyq/fixed/jee_classified_fixed.json',      exam: 'JEE_MAIN',  subject: null },
-      { key: 'jee_m2025_fixed',   url: origin + '/data/pyq/fixed/jee_main_2025_fixed.json',       exam: 'JEE_MAIN',  subject: null },
-      { key: 'jee_m2026_fixed',   url: origin + '/data/pyq/fixed/jee_main_2026_fixed.json',       exam: 'JEE_MAIN',  subject: null },
-      { key: 'jee_adv2020_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2020_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2021_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2021_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2022_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2022_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2023_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2023_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2024_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2024_fixed.json',  exam: 'JEE_ADVANCED', subject: null },
-      { key: 'jee_adv2025_fixed', url: origin + '/data/pyq/fixed/jee_advanced_2025_fixed.json',  exam: 'JEE_ADVANCED', subject: null }
-      // { key: 'neet_bio',          url: origin + '/data/pyq/neet/neet_biology_bank.json',           exam: 'NEET',         subject: 'Biology' }
+      { key: 'jee_phys_fixed',    url: getAssetUrl('pyq/fixed/jee_physics_bank_fixed.json'),    exam: 'JEE_MAIN',  subject: 'Physics' },
+      { key: 'jee_comp_fixed',    url: getAssetUrl('pyq/fixed/jee_main_complete_fixed.json'),   exam: 'JEE_MAIN',  subject: null },
+      { key: 'jee_cls_fixed',     url: getAssetUrl('pyq/fixed/jee_classified_fixed.json'),      exam: 'JEE_MAIN',  subject: null },
+      { key: 'jee_m2025_fixed',   url: getAssetUrl('pyq/fixed/jee_main_2025_fixed.json'),       exam: 'JEE_MAIN',  subject: null },
+      { key: 'jee_m2026_fixed',   url: getAssetUrl('pyq/fixed/jee_main_2026_fixed.json'),       exam: 'JEE_MAIN',  subject: null },
+      { key: 'jee_adv2020_fixed', url: getAssetUrl('pyq/fixed/jee_advanced_2020_fixed.json'),  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2021_fixed', url: getAssetUrl('pyq/fixed/jee_advanced_2021_fixed.json'),  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2022_fixed', url: getAssetUrl('pyq/fixed/jee_advanced_2022_fixed.json'),  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2023_fixed', url: getAssetUrl('pyq/fixed/jee_advanced_2023_fixed.json'),  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2024_fixed', url: getAssetUrl('pyq/fixed/jee_advanced_2024_fixed.json'),  exam: 'JEE_ADVANCED', subject: null },
+      { key: 'jee_adv2025_fixed', url: getAssetUrl('pyq/fixed/jee_advanced_2025_fixed.json'),  exam: 'JEE_ADVANCED', subject: null }
+      // { key: 'neet_bio',          url: getAssetUrl('pyq/neet/neet_biology_bank.json'),           exam: 'NEET',         subject: 'Biology' }
       // DISABLED: all 5000 questions have correct='a' (data corruption). Re-enable after fixing answer field.
     ];
 
@@ -238,8 +245,7 @@
       }
     } else if (typeof window !== 'undefined') {
       try {
-        const origin = (window.location && window.location.origin) ? window.location.origin : 'http://localhost:8080';
-        const url = origin + '/data/' + paper.file;
+        const url = getAssetUrl(paper.file);
         const r = await fetch(url, { cache: 'no-store' });
         if (r.ok) {
           const data = await r.json();
@@ -374,12 +380,11 @@
   }
 
   async function _preloadAllBrowser() {
-    const origin = (typeof window !== 'undefined' && window.location && window.location.origin) ? window.location.origin : 'http://localhost:8080';
     const allPapers = [...JEE_MAIN_PAPERS, ...JEE_ADVANCED_PAPERS];
     await Promise.all(allPapers.map(async paper => {
       if (fileCache[paper.file]) return;
       try {
-        const url = origin + '/data/' + paper.file;
+        const url = getAssetUrl(paper.file);
         const r = await fetch(url, { cache: 'no-store' });
         if (r.ok) {
           fileCache[paper.file] = await r.json();
