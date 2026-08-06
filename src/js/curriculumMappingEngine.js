@@ -131,7 +131,10 @@
     const exams = ['jee_main', 'jee_adv', 'neet', 'bitSat'];
     exams.forEach(examId => {
       if (window.pyqService && typeof window.pyqService.getQuestions === 'function') {
-        const res = window.pyqService.getQuestions({ examId, count: 100 });
+        // Use count: 10 (not 100) — count >= 45 triggers full mock path which
+        // requires preloaded fileCache. count: 10 uses getBankQuestions which
+        // handles empty cache gracefully and returns [] without crashing.
+        const res = window.pyqService.getQuestions({ examId, count: 10 });
         if (Array.isArray(res)) {
           res.forEach(q => registerQuestion(q));
         } else if (res && res.questions) {

@@ -367,9 +367,9 @@ function isValidLesson(lesson) {
     lesson &&
     typeof lesson === 'object' &&
     lesson.topic &&
-    lesson.explanation &&
+    (lesson.explanation || lesson.technical) &&
     Array.isArray(lesson.checks) &&
-    lesson.checks.length >= 3
+    lesson.checks.length >= 1
   );
 }
 
@@ -488,7 +488,7 @@ Output a single JSON object with these exact keys:
   ]
 }`;
 
-    const topicKey = topic.toLowerCase().trim().replace(/\s+/g, '_');
+    const topicKey = topic.toLowerCase().trim().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
     let raw = null;
     let lesson = null;
 
@@ -537,6 +537,10 @@ Output a single JSON object with these exact keys:
           timeoutPromise
         ]);
         lesson = raw ? pJSON(raw) : null;
+        if (lesson && !validateLessonDepth(lesson, curCtx)) {
+          console.warn('[LearnEngine] AI lesson failed depth validation — regenerating fallback');
+          lesson = generateFallbackLesson(topic);
+        }
       } catch (err) {
         // Activate local high-fidelity lesson generator instantly (Zero 503 latency)
         lesson = generateFallbackLesson(topic);
@@ -555,10 +559,10 @@ Output a single JSON object with these exact keys:
     // Only cache real AI-generated lessons — never cache fallback placeholder lessons
     if (!lesson._isFallback && lesson.explanation && lesson.explanation.length > 150) {
       saveLessonToCache(topicKey, lesson);
+      try {
+        localStorage.setItem(`mx_lesson_${topic}`, JSON.stringify(lesson));
+      } catch (e) {}
     }
-    try {
-      localStorage.setItem(`mx_lesson_${topic}`, JSON.stringify(lesson));
-    } catch (e) {}
     
     LS.lesson=lesson;
     LS.loading=false;
@@ -592,6 +596,12 @@ Output a single JSON object with these exact keys:
 }
 
 function generateFallbackLesson(topic) {
+  const lesson = _rawGenerateFallbackLesson(topic);
+  if (lesson) lesson._isFallback = true;
+  return lesson;
+}
+
+function _rawGenerateFallbackLesson(topic) {
   const tLower = (topic || '').toLowerCase();
 
   // 1. ELECTROSTATICS / ELECTRIC CHARGES & FIELDS
@@ -1868,6 +1878,7 @@ function completeStageSession() {
   if (D.memory) {
     delete D.memory.activeLesson;
   }
+  if (typeof checkStreak === 'function') checkStreak(true);
   saveAll();
 
   // If chapter was completed, play the celebration ceremony overlay!

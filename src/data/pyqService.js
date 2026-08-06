@@ -272,6 +272,15 @@
   async function init() {
     if (initialized) return;
     initialized = true;
+    if (isNode) {
+      _preloadAllNode();
+    } else {
+      try {
+        await loadPaperFiles('JEE_MAIN');
+      } catch (e) {
+        console.warn('[pyqService] Initial paper load warning:', e);
+      }
+    }
   }
 
   async function preloadExam(examId, onProgress = null) {
@@ -393,6 +402,29 @@
   }
 
 
+  /**
+   * Returns all preloaded bank questions for a given exam from fileCache.
+   * Used as last-resort fallback when no intact paper file is available.
+   * @param {string} examId — normalized exam id e.g. 'JEE_MAIN'
+   * @returns {Array} flat array of raw question objects
+   */
+  function _getAllBankQuestions(examId) {
+    const id = normalizeExamId(examId);
+    const allQs = [];
+    Object.keys(fileCache).forEach(key => {
+      const data = fileCache[key];
+      if (!data) return;
+      const qs = Array.isArray(data) ? data : (data.questions || []);
+      qs.forEach(q => {
+        const qExam = normalizeExamId(q.exam || q.examId || 'JEE_MAIN');
+        if (!examId || qExam === id || id === 'JEE_MAIN') {
+          allQs.push(q);
+        }
+      });
+    });
+    return allQs;
+  }
+
   // ── CORE: GET A SINGLE INTACT PAPER ──────────────────────────────────────
 
   /**
@@ -448,6 +480,12 @@
             return JSON.parse(JSON.stringify(_normalizePaper(altQs, alt)));
           }
         }
+      }
+      // Fallback: Assemble paper from preloaded bank files
+      const bankFallbackQs = _getAllBankQuestions(id);
+      if (bankFallbackQs.length >= 45) {
+        console.log('[pyqService] 💡 Assembling mock paper from', bankFallbackQs.length, 'preloaded bank questions');
+        return JSON.parse(JSON.stringify(_normalizePaper(bankFallbackQs.slice(0, 75), paper)));
       }
       return null;
     }

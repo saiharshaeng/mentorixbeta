@@ -46,8 +46,8 @@ const CBSE_GRADES = ['Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Gr
 const STREAMS_11_12 = ['Science', 'Commerce', 'Humanities'];
 
 const SUBJECTS_BY_STREAM = {
-  'Science':    ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'English'],
-  'Commerce':   ['Accountancy', 'Business Studies', 'Economics', 'Mathematics', 'English'],
+  'Science':    ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
+  'Commerce':   ['Accountancy', 'Business Studies', 'Economics', 'Mathematics'],
   'Humanities': ['History', 'Geography', 'Political Science', 'Economics', 'English']
 };
 

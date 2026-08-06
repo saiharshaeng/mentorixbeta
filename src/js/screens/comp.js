@@ -812,6 +812,9 @@ function initCompState() {
     };
   }
   compState.examId = D.compExam.examId || 'jee_main';
+  if (compState.examId !== 'jee_main' && compState.examId !== 'jee_adv') {
+    compState.examId = 'jee_main';
+  }
   compState.targetScore = D.compExam.targetScore || 240;
   compState.dailyTime = D.compExam.dailyTime || 60;
   compState.practiceDifficulty = D.compExam.difficulty || 'medium';
@@ -1002,6 +1005,14 @@ window.toggleCBTFullscreen = toggleCBTFullscreen;
 // 🏁 Router Render Entry
 function rComp() {
   initCompState();
+
+  // Re-register on every screen entry so router.js can always clean up the timer
+  window.onScreenUnmount = function() {
+    if (typeof examTimerInterval !== 'undefined' && examTimerInterval) {
+      clearInterval(examTimerInterval);
+      examTimerInterval = null;
+    }
+  };
 
   if (!D.compExam.configured) {
     renderOnboardingWizard();
@@ -1266,8 +1277,13 @@ function renderOnboardingWizard() {
 }
 
 function selectObExam(id) {
+  if (id !== 'jee_main' && id !== 'jee_adv') {
+    if (typeof toast === 'function') toast('Only JEE Main and JEE Advanced are currently available. Other exams are coming soon!', 'warn');
+    return;
+  }
   compState.examId = id;
   const exam = WORLD_EXAMS.find(e => e.id === id);
+  if (!exam) return;
   compState.targetScore = exam.isMajor ? exam.defaultTarget : Math.round(exam.maxScore * 0.8);
   compState.searchQuery = '';
   renderOnboardingWizard();
@@ -2516,6 +2532,9 @@ async function startMockExamSetup(forcedMode) {
       if (typeof window !== 'undefined' && window.toast) {
         window.toast('⚠️ Exam Paper Unavailable: Please check your connection or try another exam.', 'err');
       }
+      compState.currentTab = 'mock';
+      rComp();
+      return;
     }
   } else {
     // Diagnostic 6 Qs
@@ -3377,6 +3396,7 @@ function submitMockExam() {
   if (xpEarned > 0 && typeof addXP === 'function') {
     addXP(xpEarned);
   }
+  if (typeof checkStreak === 'function') checkStreak(true);
 
   const evalRep = {
     evaluationId: 'eval_' + Date.now(),
@@ -4239,7 +4259,10 @@ function launchMultiPracticeOverlay(questions) {
       const numInput = document.getElementById('mp-num-input');
       const val = numInput ? numInput.value.trim() : '';
       sessionState.answers[idx] = val;
-      isCorrect = String(val) === String(q.ans);
+      const correctVal = Array.isArray(q.ans) ? q.ans[0] : q.ans;
+      const numUser = parseFloat(String(val).replace(/[^0-9.\-eE]/g, ''));
+      const numCorrect = parseFloat(String(correctVal).replace(/[^0-9.\-eE]/g, ''));
+      isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
     } else {
       isCorrect = userAns !== undefined && (q.ans || []).includes(userAns);
     }
@@ -4471,14 +4494,6 @@ function updateDailyTime(val) {
 // Global exports
 window.rComp = rComp;
 
-// Register screen unmount handler so router.js can stop the exam timer cleanly
-// when the student navigates away from the comp screen mid-exam.
-window.onScreenUnmount = function() {
-  if (typeof examTimerInterval !== 'undefined' && examTimerInterval) {
-    clearInterval(examTimerInterval);
-    examTimerInterval = null;
-  }
-};
 window.setCompTab = setCompTab;
 window.switchCompTab = setCompTab;
 window.updateTargetVal = updateTargetVal;
