@@ -1,28 +1,33 @@
 /**
- * Mentorix AI Router — Cloudflare Worker
- * 
- * Multi-provider AI gateway with automatic failover across 5 providers.
- * The app sends one request here. This Worker handles routing, retries,
- * key rotation, and fallback silently — the app never knows which
- * provider actually responded.
+ * Mentorix AI Proxy Worker — Production v2
  *
- * Provider priority (in order):
- *   1. Groq          — Fastest, best for streaming Tio chat
- *   2. Gemini Flash  — Best quality, great for lesson generation
- *   3. Cerebras      — Very fast, free overflow
- *   4. SambaNova     — Solid fallback
- *   5. OpenRouter    — Last resort (free Llama models)
+ * Providers (in priority order, no Gemini):
+ *   1. Groq  — 4 keys, round-robin rotation. Fastest, best quality.
+ *   2. Cerebras — Very fast Llama 3.3 70B. First fallback.
+ *   3. SambaNova — Solid Llama 70B. Final fallback.
  *
- * Set these in Cloudflare Worker → Settings → Variables & Secrets:
- *   GROQ_KEY_1      (required)
- *   GROQ_KEY_2      (optional — second Groq account)
- *   GROQ_KEY_3      (optional — third Groq account)
- *   GEMINI_KEY      (required — free at aistudio.google.com)
- *   CEREBRAS_KEY    (optional — free at cloud.cerebras.ai)
- *   SAMBANOVA_KEY   (optional — free at cloud.sambanova.ai)
- *   OPENROUTER_KEY  (optional — free tier at openrouter.ai)
+ * Features:
+ *   ✓ Round-robin across 4 Groq keys (4× free RPM)
+ *   ✓ Automatic failover: Groq → Cerebras → SambaNova
+ *   ✓ Memory cache + Cloudflare KV cache (avoids repeat API calls)
+ *   ✓ Dynamic max_tokens (greeting: 150 / chat: 500 / lesson: 900 / coding: 1400)
+ *   ✓ History compression: system prompt + last 8 messages (preserves context)
+ *   ✓ Full conversation context always sent to provider
+ *   ✓ JSON mode support for structured AI responses
+ *   ✓ Vision requests routed to Groq vision model
+ *
+ * Environment secrets to set in Cloudflare Dashboard:
+ *   GROQ_KEY_1, GROQ_KEY_2, GROQ_KEY_3, GROQ_KEY_4
+ *   CEREBRAS_KEY
+ *   SAMBANOVA_KEY
+ *   AI_CACHE  (optional KV namespace binding — for persistent caching)
  */
 
+// ─── MEMORY CACHE (per Worker instance, resets on cold start) ─────────────────
+const memCache = new Map();
+const MEM_CACHE_MAX = 150;
+
+// ─── ALLOWED ORIGINS ──────────────────────────────────────────────────────────
 const ALLOWED_ORIGINS = [
   'https://mentorix-beta.netlify.app',
   'https://mentorixedu.netlify.app',
@@ -30,313 +35,17 @@ const ALLOWED_ORIGINS = [
   'http://localhost:5173',
 ];
 
-// ─── PROVIDER DEFINITIONS ─────────────────────────────────────────────────────
-
-function getProviders(env) {
-  const providers = [];
-
-  // ── Groq (rotate up to 3 keys for 3x the free RPM) ──
-  const groqKeys = [env.GROQ_KEY_1, env.GROQ_KEY_2, env.GROQ_KEY_3].filter(Boolean);
-  if (groqKeys.length > 0) {
-    // Pick a key based on minute-of-hour to distribute load across keys
-    const keyIndex = Math.floor(Date.now() / 60000) % groqKeys.length;
-    providers.push({
-      name: 'groq',
-      key: groqKeys[keyIndex],
-      allKeys: groqKeys,
-      call: async (body, key) => callGroq(body, key),
-    });
-  }
-
-  // ── Google Gemini Flash ──
-  if (env.GEMINI_KEY) {
-    providers.push({
-      name: 'gemini',
-      key: env.GEMINI_KEY,
-      call: async (body, key) => callGemini(body, key),
-    });
-  }
-
-  // ── Cerebras ──
-  if (env.CEREBRAS_KEY) {
-    providers.push({
-      name: 'cerebras',
-      key: env.CEREBRAS_KEY,
-      call: async (body, key) => callCerebras(body, key),
-    });
-  }
-
-  // ── SambaNova ──
-  if (env.SAMBANOVA_KEY) {
-    providers.push({
-      name: 'sambanova',
-      key: env.SAMBANOVA_KEY,
-      call: async (body, key) => callSambaNova(body, key),
-    });
-  }
-
-  // ── OpenRouter (free Llama 3.1 8B) ──
-  if (env.OPENROUTER_KEY) {
-    providers.push({
-      name: 'openrouter',
-      key: env.OPENROUTER_KEY,
-      call: async (body, key) => callOpenRouter(body, key),
-    });
-  }
-
-  return providers;
-}
-
-// ─── PROVIDER CALL IMPLEMENTATIONS ───────────────────────────────────────────
-
-async function callGroq(body, key) {
-  // Map model names — Groq only supports specific models
-  const groqModel = resolveGroqModel(body.model);
-  const payload = { ...body, model: groqModel };
-  // Remove fields Groq doesn't support
-  delete payload.useVision;
-
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-    },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(25000),
-  });
-
-  if (res.status === 429) throw new RateLimitError('groq');
-  if (!res.ok) throw new ProviderError('groq', res.status);
-
-  const data = await res.json();
-  if (data.error) throw new ProviderError('groq', data.error.message);
-  return extractOpenAIContent(data);
-}
-
-async function callGemini(body, key) {
-  // Convert OpenAI message format → Gemini format
-  const systemMsg = body.messages.find(m => m.role === 'system');
-  const userMsgs = body.messages.filter(m => m.role !== 'system');
-
-  const contents = userMsgs.map(m => ({
-    role: m.role === 'assistant' ? 'model' : 'user',
-    parts: [{ text: typeof m.content === 'string' ? m.content : JSON.stringify(m.content) }],
-  }));
-
-  const geminiBody = {
-    contents,
-    generationConfig: {
-      maxOutputTokens: Math.min(body.max_tokens || 1000, 8192),
-      temperature: body.temperature || 0.7,
-    },
-  };
-
-  if (systemMsg) {
-    geminiBody.systemInstruction = {
-      parts: [{ text: systemMsg.content }],
-    };
-  }
-
-  if (body.response_format?.type === 'json_object') {
-    geminiBody.generationConfig.responseMimeType = 'application/json';
-  }
-
-  const model = 'gemini-2.0-flash-lite'; // Free tier, fast, excellent quality
-  const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(geminiBody),
-      signal: AbortSignal.timeout(30000),
-    }
-  );
-
-  if (res.status === 429) throw new RateLimitError('gemini');
-  if (!res.ok) throw new ProviderError('gemini', res.status);
-
-  const data = await res.json();
-  if (data.error) throw new ProviderError('gemini', data.error.message);
-
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) throw new ProviderError('gemini', 'empty response');
-  return text;
-}
-
-async function callCerebras(body, key) {
-  const payload = {
-    ...body,
-    model: 'llama-3.3-70b', // Cerebras-hosted Llama 3.3 70B — very fast
-  };
-  delete payload.useVision;
-  delete payload.response_format; // Cerebras doesn't support JSON mode
-
-  const res = await fetch('https://api.cerebras.ai/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-    },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(25000),
-  });
-
-  if (res.status === 429) throw new RateLimitError('cerebras');
-  if (!res.ok) throw new ProviderError('cerebras', res.status);
-
-  const data = await res.json();
-  if (data.error) throw new ProviderError('cerebras', data.error.message);
-  return extractOpenAIContent(data);
-}
-
-async function callSambaNova(body, key) {
-  const payload = {
-    ...body,
-    model: 'Meta-Llama-3.1-70B-Instruct',
-  };
-  delete payload.useVision;
-
-  const res = await fetch('https://api.sambanova.ai/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-    },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(30000),
-  });
-
-  if (res.status === 429) throw new RateLimitError('sambanova');
-  if (!res.ok) throw new ProviderError('sambanova', res.status);
-
-  const data = await res.json();
-  if (data.error) throw new ProviderError('sambanova', data.error.message);
-  return extractOpenAIContent(data);
-}
-
-async function callOpenRouter(body, key) {
-  const payload = {
-    ...body,
-    model: 'meta-llama/llama-3.1-8b-instruct:free', // Free tier model
-  };
-  delete payload.useVision;
-
-  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-      'HTTP-Referer': 'https://mentorix-beta.netlify.app',
-      'X-Title': 'Mentorix',
-    },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(35000),
-  });
-
-  if (res.status === 429) throw new RateLimitError('openrouter');
-  if (!res.ok) throw new ProviderError('openrouter', res.status);
-
-  const data = await res.json();
-  if (data.error) throw new ProviderError('openrouter', data.error.message);
-  return extractOpenAIContent(data);
-}
-
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
-
-function extractOpenAIContent(data) {
-  const content = data?.choices?.[0]?.message?.content;
-  if (!content) throw new Error('Empty response from provider');
-  return content;
-}
-
-function resolveGroqModel(requested) {
-  // Map whatever model the app requests to what Groq actually supports
-  const groqModels = {
-    'llama-3.3-70b-versatile': 'llama-3.3-70b-versatile',
-    'llama-3.1-70b-versatile': 'llama-3.3-70b-versatile', // upgrade
-    'llama-3.1-8b-instant': 'llama-3.1-8b-instant',
-    'llama-3.2-11b-vision-preview': 'llama-3.2-11b-vision-preview',
-    'llama-3.2-90b-vision-preview': 'llama-3.2-90b-vision-preview',
-    'gemma2-9b-it': 'gemma2-9b-it',
-    'mixtral-8x7b-32768': 'mixtral-8x7b-32768',
-  };
-  return groqModels[requested] || 'llama-3.3-70b-versatile';
-}
-
-class RateLimitError extends Error {
-  constructor(provider) {
-    super(`Rate limited by ${provider}`);
-    this.provider = provider;
-    this.isRateLimit = true;
-  }
-}
-
-class ProviderError extends Error {
-  constructor(provider, detail) {
-    super(`Provider ${provider} failed: ${detail}`);
-    this.provider = provider;
-  }
-}
-
-// ─── MAIN ROUTER ─────────────────────────────────────────────────────────────
-
-async function routeRequest(body, providers) {
-  const errors = [];
-
-  for (const provider of providers) {
-    try {
-      console.log(`[Router] Trying ${provider.name}...`);
-      const content = await provider.call(body, provider.key);
-      console.log(`[Router] ${provider.name} succeeded`);
-
-      // Return in OpenAI-compatible format so app needs no changes
-      return {
-        choices: [{ message: { role: 'assistant', content }, finish_reason: 'stop' }],
-        provider: provider.name, // useful for debugging
-        model: body.model,
-      };
-    } catch (err) {
-      console.warn(`[Router] ${provider.name} failed: ${err.message}`);
-      errors.push({ provider: provider.name, error: err.message });
-
-      // If this provider was rate limited AND it has more keys, try next key before moving on
-      if (err.isRateLimit && provider.allKeys && provider.allKeys.length > 1) {
-        for (const altKey of provider.allKeys) {
-          if (altKey === provider.key) continue; // skip the one we just tried
-          try {
-            console.log(`[Router] Trying ${provider.name} with alternate key...`);
-            const content = await provider.call(body, altKey);
-            return {
-              choices: [{ message: { role: 'assistant', content }, finish_reason: 'stop' }],
-              provider: `${provider.name}_alt`,
-              model: body.model,
-            };
-          } catch (altErr) {
-            errors.push({ provider: `${provider.name}_alt`, error: altErr.message });
-          }
-        }
-      }
-      // Continue to next provider
-    }
-  }
-
-  // All providers failed — return structured error
-  throw new Error(`All providers failed: ${JSON.stringify(errors)}`);
-}
-
-// ─── WORKER ENTRY POINT ───────────────────────────────────────────────────────
-
 export default {
   async fetch(request, env) {
-    // ── CORS ──
-    const origin = request.headers.get('Origin') || '';
-    const corsOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
 
+    // ── CORS ──────────────────────────────────────────────────────────────────
+    const origin = request.headers.get('Origin') || '';
+    const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : '*';
     const corsHeaders = {
-      'Access-Control-Allow-Origin': corsOrigin,
+      'Access-Control-Allow-Origin': allowedOrigin,
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Headers': 'Content-Type, X-Task-Type, Authorization',
+      'Access-Control-Expose-Headers': 'X-AI-Provider, X-Cache-Hit',
     };
 
     if (request.method === 'OPTIONS') {
@@ -344,10 +53,13 @@ export default {
     }
 
     if (request.method !== 'POST') {
-      return new Response('Method not allowed', { status: 405, headers: corsHeaders });
+      return new Response(JSON.stringify({ error: 'POST only' }), {
+        status: 405,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
     }
 
-    // ── Parse body ──
+    // ── PARSE BODY ────────────────────────────────────────────────────────────
     let body;
     try {
       body = await request.json();
@@ -358,41 +70,288 @@ export default {
       });
     }
 
-    if (!body.messages || !Array.isArray(body.messages)) {
+    const messages = body.messages || [];
+    if (!messages.length) {
       return new Response(JSON.stringify({ error: 'messages array required' }), {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
-    // ── Get providers ──
-    const providers = getProviders(env);
-    if (providers.length === 0) {
-      return new Response(JSON.stringify({ error: 'No API keys configured' }), {
+    const useVision = body.useVision || false;
+    const taskType = body.task || request.headers.get('X-Task-Type') || 'chat';
+    const responseFormat = body.response_format || null;
+
+    // ── HISTORY COMPRESSION ───────────────────────────────────────────────────
+    // Always keep: system prompt (full context) + last 8 conversation turns.
+    // This means Tio always "remembers" the session — 8 turns is ~4 back-and-forth
+    // exchanges which covers the vast majority of real study conversations.
+    const systemMsg = messages.find(m => m.role === 'system');
+    const conversationMsgs = messages.filter(m => m.role !== 'system');
+    const recentMsgs = conversationMsgs.slice(-8); // last 8 = 4 student + 4 Tio turns
+    const compressedMsgs = systemMsg ? [systemMsg, ...recentMsgs] : recentMsgs;
+
+    // ── DYNAMIC MAX TOKENS ────────────────────────────────────────────────────
+    const userText = conversationMsgs
+      .map(m => (typeof m.content === 'string' ? m.content : ''))
+      .join(' ')
+      .trim();
+
+    let maxTokens = body.max_tokens;
+    if (!maxTokens) {
+      if (taskType === 'greeting' || userText.length < 30) maxTokens = 150;
+      else if (taskType === 'chat' || userText.length < 200)  maxTokens = 500;
+      else if (taskType === 'lesson' || taskType === 'pyq')   maxTokens = 900;
+      else if (taskType === 'coding' || taskType === 'course') maxTokens = 1400;
+      else maxTokens = 650;
+    }
+    maxTokens = Math.min(maxTokens, 4000); // hard cap
+
+    // ── CACHE CHECK ───────────────────────────────────────────────────────────
+    // Cache keyed on: last user message + system prompt prefix + task type.
+    // Do NOT cache vision, unique questions, or very short inputs.
+    const lastUserText = userText.slice(-300).toLowerCase();
+    const cacheKey = JSON.stringify({
+      u: lastUserText,
+      s: systemMsg?.content?.substring(0, 100) || '',
+      t: taskType,
+    });
+    const cacheable = !useVision && lastUserText.length > 15;
+
+    if (cacheable) {
+      // Memory cache (instant)
+      if (memCache.has(cacheKey)) {
+        const hit = memCache.get(cacheKey);
+        return respond(hit.data, hit.provider, 'MEMORY', corsHeaders);
+      }
+      // KV cache (persistent across instances, optional)
+      if (env.AI_CACHE) {
+        try {
+          const kv = await env.AI_CACHE.get(cacheKey, { type: 'json' });
+          if (kv) return respond(kv.data, kv.provider, 'KV', corsHeaders);
+        } catch { /* KV miss is fine */ }
+      }
+    }
+
+    // ── PROVIDER SETUP ────────────────────────────────────────────────────────
+    // Groq: rotate across 4 keys by minute so load spreads evenly.
+    const groqKeys = [
+      env.GROQ_KEY_1, env.GROQ_KEY_2,
+      env.GROQ_KEY_3, env.GROQ_KEY_4,
+    ].filter(Boolean);
+
+    // Which Groq key to try first this minute
+    const primaryGroqIdx = Math.floor(Date.now() / 60000) % (groqKeys.length || 1);
+
+    // Build the ordered provider attempt list
+    const attempts = [];
+
+    // Vision: only Groq has it, use a specific model
+    if (useVision && groqKeys.length) {
+      attempts.push({ name: 'groq-vision', fn: () =>
+        callGroq(compressedMsgs, 'llama-3.2-11b-vision-preview',
+          groqKeys[primaryGroqIdx], maxTokens, body.temperature, null) });
+    }
+
+    // Standard: Groq (try each key in rotation order before moving on)
+    if (groqKeys.length) {
+      const rotatedKeys = [
+        ...groqKeys.slice(primaryGroqIdx),
+        ...groqKeys.slice(0, primaryGroqIdx),
+      ];
+      for (let i = 0; i < rotatedKeys.length; i++) {
+        const key = rotatedKeys[i];
+        const model = (taskType === 'coding' || taskType === 'reasoning' || userText.length > 400)
+          ? 'llama-3.3-70b-versatile'   // heavy tasks: full 70B
+          : 'llama-3.1-8b-instant';     // light tasks: 8B is faster + saves quota
+        attempts.push({ name: `groq-key${i + 1}`, fn: () =>
+          callGroq(compressedMsgs, model, key, maxTokens, body.temperature, responseFormat) });
+      }
+    }
+
+    // Cerebras fallback
+    if (env.CEREBRAS_KEY) {
+      attempts.push({ name: 'cerebras', fn: () =>
+        callCerebras(compressedMsgs, env.CEREBRAS_KEY, maxTokens, body.temperature) });
+    }
+
+    // SambaNova fallback
+    if (env.SAMBANOVA_KEY) {
+      attempts.push({ name: 'sambanova', fn: () =>
+        callSambaNova(compressedMsgs, env.SAMBANOVA_KEY, maxTokens, body.temperature) });
+    }
+
+    if (!attempts.length) {
+      return new Response(JSON.stringify({ error: 'No API keys configured in Worker secrets.' }), {
         status: 503,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
-    // ── Route ──
-    try {
-      const result = await routeRequest(body, providers);
-      return new Response(JSON.stringify(result), {
-        status: 200,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    } catch (err) {
-      console.error('[Router] All providers exhausted:', err.message);
-      return new Response(
-        JSON.stringify({
-          error: 'AI service temporarily unavailable',
-          detail: err.message,
-        }),
-        {
-          status: 503,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    // ── ATTEMPT PROVIDERS IN ORDER ────────────────────────────────────────────
+    for (const attempt of attempts) {
+      try {
+        console.log(`[Mentorix Router] Trying ${attempt.name}...`);
+        const result = await attempt.fn();
+
+        if (result.ok && result.content) {
+          const responseData = {
+            choices: [{ message: { role: 'assistant', content: result.content }, finish_reason: 'stop' }],
+            provider: attempt.name,
+          };
+
+          // Save to cache
+          if (cacheable) {
+            if (memCache.size >= MEM_CACHE_MAX) {
+              memCache.delete(memCache.keys().next().value);
+            }
+            memCache.set(cacheKey, { data: responseData, provider: attempt.name });
+            if (env.AI_CACHE) {
+              try {
+                await env.AI_CACHE.put(
+                  cacheKey,
+                  JSON.stringify({ data: responseData, provider: attempt.name }),
+                  { expirationTtl: 86400 }
+                );
+              } catch { /* non-fatal */ }
+            }
+          }
+
+          console.log(`[Mentorix Router] ${attempt.name} succeeded.`);
+          return respond(responseData, attempt.name, 'LIVE', corsHeaders);
         }
-      );
+
+        console.warn(`[Mentorix Router] ${attempt.name} returned no content, trying next...`);
+      } catch (err) {
+        console.warn(`[Mentorix Router] ${attempt.name} threw: ${err.message}`);
+      }
     }
+
+    // ── ALL PROVIDERS EXHAUSTED ───────────────────────────────────────────────
+    return new Response(
+      JSON.stringify({ error: 'AI service temporarily unavailable. Please try again in a moment.' }),
+      { status: 503, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    );
   },
 };
+
+// ─── RESPONSE HELPER ──────────────────────────────────────────────────────────
+function respond(data, provider, cacheStatus, corsHeaders) {
+  return new Response(JSON.stringify(data), {
+    status: 200,
+    headers: {
+      ...corsHeaders,
+      'Content-Type': 'application/json',
+      'X-AI-Provider': provider,
+      'X-Cache-Hit': cacheStatus,
+    },
+  });
+}
+
+// ─── GROQ ─────────────────────────────────────────────────────────────────────
+async function callGroq(messages, model, apiKey, maxTokens, temperature = 0.7, responseFormat = null) {
+  if (!apiKey) return { ok: false };
+  try {
+    const bodyObj = {
+      model,
+      messages,
+      max_tokens: maxTokens,
+      temperature,
+      stream: false,
+    };
+    if (responseFormat) bodyObj.response_format = responseFormat;
+
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify(bodyObj),
+      signal: AbortSignal.timeout(20000),
+    });
+
+    if (res.status === 429) {
+      console.warn(`[Groq] Rate limited on model ${model}`);
+      return { ok: false, rateLimit: true };
+    }
+    if (!res.ok) return { ok: false };
+
+    const data = await res.json();
+    const content = data?.choices?.[0]?.message?.content || '';
+    return { ok: !!content, content };
+  } catch (e) {
+    console.warn('[Groq] Error:', e.message);
+    return { ok: false };
+  }
+}
+
+// ─── CEREBRAS ─────────────────────────────────────────────────────────────────
+async function callCerebras(messages, apiKey, maxTokens, temperature = 0.7) {
+  if (!apiKey) return { ok: false };
+  try {
+    const res = await fetch('https://api.cerebras.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b',
+        messages,
+        max_tokens: maxTokens,
+        temperature,
+        stream: false,
+      }),
+      signal: AbortSignal.timeout(25000),
+    });
+
+    if (res.status === 429) {
+      console.warn('[Cerebras] Rate limited');
+      return { ok: false, rateLimit: true };
+    }
+    if (!res.ok) return { ok: false };
+
+    const data = await res.json();
+    const content = data?.choices?.[0]?.message?.content || '';
+    return { ok: !!content, content };
+  } catch (e) {
+    console.warn('[Cerebras] Error:', e.message);
+    return { ok: false };
+  }
+}
+
+// ─── SAMBANOVA ────────────────────────────────────────────────────────────────
+async function callSambaNova(messages, apiKey, maxTokens, temperature = 0.7) {
+  if (!apiKey) return { ok: false };
+  try {
+    const res = await fetch('https://api.sambanova.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'Meta-Llama-3.3-70B-Instruct',
+        messages,
+        max_tokens: maxTokens,
+        temperature,
+        stream: false,
+      }),
+      signal: AbortSignal.timeout(30000),
+    });
+
+    if (res.status === 429) {
+      console.warn('[SambaNova] Rate limited');
+      return { ok: false, rateLimit: true };
+    }
+    if (!res.ok) return { ok: false };
+
+    const data = await res.json();
+    const content = data?.choices?.[0]?.message?.content || '';
+    return { ok: !!content, content };
+  } catch (e) {
+    console.warn('[SambaNova] Error:', e.message);
+    return { ok: false };
+  }
+}

@@ -1,23 +1,28 @@
 name = "mentorix-ai-proxy"
 main = "cloudflare-worker/index.js"
-compatibility_date = "2026-08-08"
+compatibility_date = "2026-08-16"
 compatibility_flags = ["nodejs_compat"]
 
-# Deploy with:
-#   npx wrangler deploy
+# ─────────────────────────────────────────────────────────────────
+# HOW TO DEPLOY
+# ─────────────────────────────────────────────────────────────────
+# 1. Install wrangler:  npm install -g wrangler
+# 2. Login:             npx wrangler login
+# 3. Add secrets ONE BY ONE (paste key when prompted):
 #
-# Set secrets with (do NOT put real keys in this file):
-#   npx wrangler secret put GROQ_KEY_1
-#   npx wrangler secret put GROQ_KEY_2
-#   npx wrangler secret put GROQ_KEY_3
-#   npx wrangler secret put GEMINI_KEY
-#   npx wrangler secret put CEREBRAS_KEY
-#   npx wrangler secret put SAMBANOVA_KEY
-#   npx wrangler secret put OPENROUTER_KEY
+#       npx wrangler secret put GROQ_KEY_1
+#       npx wrangler secret put GROQ_KEY_2
+#       npx wrangler secret put GROQ_KEY_3
+#       npx wrangler secret put GROQ_KEY_4
+#       npx wrangler secret put CEREBRAS_KEY
+#       npx wrangler secret put SAMBANOVA_KEY
 #
-# Get free API keys from:
-#   Groq (up to 3 accounts):  https://console.groq.com
-#   Gemini:                   https://aistudio.google.com/apikey
-#   Cerebras:                 https://cloud.cerebras.ai
-#   SambaNova:                https://cloud.sambanova.ai
-#   OpenRouter:               https://openrouter.ai
+# 4. Deploy:            npx wrangler deploy
+#
+# ─────────────────────────────────────────────────────────────────
+# OPTIONAL: KV cache for persistent cross-instance caching
+# Uncomment after running: npx wrangler kv namespace create AI_CACHE
+# ─────────────────────────────────────────────────────────────────
+# [[kv_namespaces]]
+# binding = "AI_CACHE"
+# id = "YOUR_KV_NAMESPACE_ID_HERE"
