@@ -189,7 +189,8 @@ async function sendMsg() {
       content: m.c
     }));
 
-    const reply = await ai(messagesHistory, systemPrompt, 1200, false, window.MODEL_CHAT);
+    const reply = await ai(messagesHistory, systemPrompt, 600, false, window.MODEL_CHAT);
+
     const cleanReply = reply || 'I am here with you! What would you like to explore next? 🌟';
 
     D.chatMsgs.push({ r: 'ai', c: cleanReply });

@@ -181,16 +181,25 @@ function initKaTeX() {
   // Auto-render any math already on page
   const target = document.body || document.documentElement;
   if (target && typeof renderMathInElement === 'function') {
-    renderMathInElement(target, {
-      delimiters: [
-        {left:'$$',right:'$$',display:true},
-        {left:'$',right:'$',display:false},
-        {left:'\\(',right:'\\)',display:false},
-        {left:'\\[',right:'\\]',display:true}
-      ],
-      throwOnError: false,
-      strict: false
-    });
+    try {
+      renderMathInElement(target, {
+        delimiters: [
+          {left:'$$',right:'$$',display:true},
+          {left:'$',right:'$',display:false},
+          {left:'\\(',right:'\\)',display:false},
+          {left:'\\[',right:'\\]',display:true}
+        ],
+        throwOnError: false,
+        strict: false
+      });
+    } catch(e) { console.warn('[KaTeX] initKaTeX error:', e.message); }
+    // Flush any containers that were queued before KaTeX was ready
+    if (window._katexRenderQueue && window._katexRenderQueue.length > 0) {
+      const queue = window._katexRenderQueue.splice(0);
+      queue.forEach(container => {
+        try { window.renderMath(container); } catch(e) { /* skip */ }
+      });
+    }
   }
 }
 </script>
@@ -235,41 +244,35 @@ window.addEventListener('unhandledrejection', function(e) {
   console.warn('[Mentorix Async Boundary]', e.reason);
 });
 
-// Global function called after 
-// every dynamic HTML insertion
+// Global function called after every dynamic HTML insertion.
+// If KaTeX hasn't loaded yet, queues the container and retries when ready.
+window._katexRenderQueue = window._katexRenderQueue || [];
 window.renderMath = function(container) {
   if (!container) return;
-  if (typeof renderMathInElement !== 'function') return;
+  if (typeof renderMathInElement !== 'function') {
+    // KaTeX not ready yet — queue this container and come back
+    if (!window._katexRenderQueue.includes(container)) {
+      window._katexRenderQueue.push(container);
+    }
+    return;
+  }
+  const DELIMITERS = [
+    {left:'$$', right:'$$', display:true},
+    {left:'$',  right:'$',  display:false},
+    {left:'\\(', right:'\\)', display:false},
+    {left:'\\[', right:'\\]', display:true}
+  ];
+  const OPTS = { delimiters: DELIMITERS, throwOnError: false, errorColor: '#ef4444', strict: false };
   try {
-    const targets = container.querySelectorAll 
-      ? container.querySelectorAll('.katex-render-target') 
+    const targets = container.querySelectorAll
+      ? container.querySelectorAll('.katex-render-target')
       : [];
     if (targets && targets.length > 0) {
       targets.forEach(el => {
-        renderMathInElement(el, {
-          delimiters: [
-            {left:'$$',right:'$$',display:true},
-            {left:'$',right:'$',display:false},
-            {left:'\\(',right:'\\)',display:false},
-            {left:'\\[',right:'\\]',display:true}
-          ],
-          throwOnError: false,
-          errorColor: '#ef4444',
-          strict: false
-        });
+        try { renderMathInElement(el, OPTS); } catch(e) { /* skip bad element */ }
       });
     } else {
-      renderMathInElement(container, {
-        delimiters: [
-          {left:'$$',right:'$$',display:true},
-          {left:'$',right:'$',display:false},
-          {left:'\\(',right:'\\)',display:false},
-          {left:'\\[',right:'\\]',display:true}
-        ],
-        throwOnError: false,
-        errorColor: '#ef4444',
-        strict: false
-      });
+      renderMathInElement(container, OPTS);
     }
   } catch(e) {
     console.warn('[KaTeX] render error:', e.message);

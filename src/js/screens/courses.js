@@ -735,7 +735,8 @@ async function submitCourseSetup(){
   try {
     const newCourses = await generateAutoCoursesAsync(D.profile, (i, total, subj) => {
       if (submitBtn) submitBtn.textContent = `Building ${subj}… (${i+1}/${total})`;
-    });
+    }, true); // forceAll=true: user explicitly selected these subjects
+
     closeCourseSetupModal();
     mergeNewCourses(newCourses);
   } catch (e) {
@@ -751,7 +752,7 @@ async function submitCourseSetup(){
 // landmine. getStaticCourseTemplate(), generateSubjectCourseAI(), and
 // generateAutoCourses() (sync, non-academic-goal path) still live in index.html
 // as plain global helper functions and are called from here.
-async function generateAutoCoursesAsync(profile, onProgress) {
+async function generateAutoCoursesAsync(profile, onProgress, forceAll = false) {
   if (!profile || profile.goal !== 'Academic Learning') {
     return (typeof generateAutoCourses === 'function') ? generateAutoCourses(profile) : [];
   }
@@ -759,12 +760,15 @@ async function generateAutoCoursesAsync(profile, onProgress) {
   const grade = profile.grade || 'Grade 10';
   const board = profile.board || 'CBSE';
 
-  // If the student's board/grade changed since their last course batch, don't
-  // treat old-grade subjects as "already covered" — regenerate everything.
-  const boardOrGradeChanged = D.courses && D.courses.length > 0 &&
-    (!D.courses[0].title.includes(board) || !D.courses[0].title.includes(grade));
-
-  const existingSubjects = new Set(boardOrGradeChanged ? [] : (D.courses || []).map(c => c.subject));
+  // If forceAll is true (user just went through setup modal and explicitly selected
+  // these subjects), generate ALL of them and let mergeNewCourses handle conflicts.
+  // Only skip subjects that already exist when this is an additive "add more" call.
+  let existingSubjects = new Set();
+  if (!forceAll) {
+    const boardOrGradeChanged = D.courses && D.courses.length > 0 &&
+      (!D.courses[0].title.includes(board) || !D.courses[0].title.includes(grade));
+    existingSubjects = new Set(boardOrGradeChanged ? [] : (D.courses || []).map(c => c.subject));
+  }
 
   const allSubjects = (profile.subjects && profile.subjects.length)
     ? profile.subjects
@@ -805,6 +809,7 @@ async function generateAutoCoursesAsync(profile, onProgress) {
   }
   return out;
 }
+
 
 let pendingMergeCourses = [];
 function mergeNewCourses(newCourses){
