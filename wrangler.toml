@@ -1,6 +1,23 @@
-name = "mentorixbeta"
-pages_build_output_dir = "src"
+name = "mentorix-ai-proxy"
+main = "cloudflare-worker/index.js"
 compatibility_date = "2026-08-08"
+compatibility_flags = ["nodejs_compat"]
 
-[site]
-bucket = "./src"
+# Deploy with:
+#   npx wrangler deploy
+#
+# Set secrets with (do NOT put real keys in this file):
+#   npx wrangler secret put GROQ_KEY_1
+#   npx wrangler secret put GROQ_KEY_2
+#   npx wrangler secret put GROQ_KEY_3
+#   npx wrangler secret put GEMINI_KEY
+#   npx wrangler secret put CEREBRAS_KEY
+#   npx wrangler secret put SAMBANOVA_KEY
+#   npx wrangler secret put OPENROUTER_KEY
+#
+# Get free API keys from:
+#   Groq (up to 3 accounts):  https://console.groq.com
+#   Gemini:                   https://aistudio.google.com/apikey
+#   Cerebras:                 https://cloud.cerebras.ai
+#   SambaNova:                https://cloud.sambanova.ai
+#   OpenRouter:               https://openrouter.ai
