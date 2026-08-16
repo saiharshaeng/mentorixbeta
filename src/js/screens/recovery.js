@@ -7,7 +7,9 @@
 function rRecovery(){
   const weakSpots = D.memory?.weakSpots || [];
   const activeWeakSpots = weakSpots.filter(w => !w.solved);
-  const diary = D.memory?.mistakeDiary || [];
+  const diary = (window.MasteryEngine && typeof window.MasteryEngine.getMistakeDiary === 'function')
+    ? window.MasteryEngine.getMistakeDiary()
+    : (D.memory?.mistakeDiary || []);
   
   const grouped = {};
   activeWeakSpots.forEach(w => {
@@ -165,14 +167,8 @@ function startRecoverySession(topic, mode) {
 }
 
 function logMistake(topic, concept, question, level, classification, reason) {
-  if (window.MasteryEngine && typeof window.MasteryEngine.logMistake === 'function') {
-    window.MasteryEngine.logMistake({
-      topicTitle: topic,
-      concept: concept,
-      question: question,
-      errorType: classification || 'Conceptual Error'
-    });
-  } else {
+  // Always push to D.memory.weakSpots (local store — works offline)
+  if (window.D) {
     if (!D.memory) D.memory = { weakSpots: [], history: [], scores: {}, mistakeDiary: [] };
     if (!D.memory.weakSpots) D.memory.weakSpots = [];
     const exists = D.memory.weakSpots.some(w => w.topic === topic && w.concept === concept && !w.solved);
@@ -191,6 +187,18 @@ function logMistake(topic, concept, question, level, classification, reason) {
       saveAll();
     }
   }
+  if (window.MasteryEngine && typeof window.MasteryEngine.logAttempt === 'function') {
+    window.MasteryEngine.logAttempt({
+      topic: topic,
+      questionText: question,
+      isCorrect: false,
+      difficulty: level === 5 ? 'hard' : level === 1 ? 'easy' : 'medium',
+      errorType: classification || 'Conceptual Error'
+    });
+  }
+
+  // Fix 12: If MasteryEngine later marks topic mastery >= 80, it will resolve weakSpots
+  // via the resolveWeakSpots() call added to MasteryEngine.logAttempt (see masteryEngine.js)
 }
 
 function logQuizMistake(topic, concept, question, level, classification) {
@@ -206,18 +214,76 @@ function practiceWeakAreas() {
     toast("No active focus concepts to practice right now!");
     return;
   }
+  // Group by topic to find topic with most weak spots (most urgent)
+  const topicCounts = {};
+  active.forEach(w => { topicCounts[w.topic] = (topicCounts[w.topic] || 0) + 1; });
+  const sortedTopics = Object.keys(topicCounts).sort((a, b) => topicCounts[b] - topicCounts[a]);
+  const targetTopic = sortedTopics[0] || active[0].topic;
+
   go('revision');
   setTimeout(() => {
-    startRevision(active[0].topic, 'recovery');
+    if (typeof RV !== 'undefined') RV._quickMode = false;
+    startRevision(targetTopic, 'recovery');
   }, 100);
 }
 
 function startTargetedRecovery() {
-  practiceWeakAreas();
+  const weakSpots = D.memory?.weakSpots || [];
+  const active = weakSpots.filter(w => !w.solved);
+  if (active.length === 0) {
+    toast("No active focus concepts to practice right now!");
+    return;
+  }
+  const topics = [...new Set(active.map(w => w.topic))];
+  if (topics.length === 1) {
+    go('revision');
+    setTimeout(() => {
+      if (typeof RV !== 'undefined') RV._quickMode = false;
+      startRevision(topics[0], 'recovery');
+    }, 100);
+    return;
+  }
+
+  // Show targeted topic selection modal
+  const modalHTML = `
+    <div class="modal-overlay" id="targeted-recovery-modal" onclick="if(event.target===this)this.remove()">
+      <div class="modal-box mx-glass-card" style="max-width:440px;padding:24px">
+        <div class="between mb14">
+          <div class="h3 font-serif" style="color:#fff">🎯 Targeted Concept Practice</div>
+          <button class="btn bgh bsm" onclick="document.getElementById('targeted-recovery-modal')?.remove()">✖</button>
+        </div>
+        <p class="sub" style="font-size:13px;margin-bottom:14px">Select a focus topic to practice:</p>
+        <div style="display:flex;flex-direction:column;gap:8px;max-height:280px;overflow-y:auto">
+          ${topics.map(t => {
+            const count = active.filter(w => w.topic === t).length;
+            return `<button class="btn bgh" style="text-align:left;justify-content:space-between;padding:12px 14px;border:1px solid rgba(139,92,246,0.25)" onclick="document.getElementById('targeted-recovery-modal')?.remove();go('revision');setTimeout(()=>{ if(typeof RV!=='undefined')RV._quickMode=false; startRevision('${escON(t)}','recovery'); },100)">
+              <span style="font-weight:600;color:#fff">${esc(t)}</span>
+              <span class="tag tp" style="font-size:10px">${count} spot${count>1?'s':''}</span>
+            </button>`;
+          }).join('')}
+        </div>
+      </div>
+    </div>`;
+  const prevModal = document.getElementById('targeted-recovery-modal');
+  if (prevModal) prevModal.remove();
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
 }
 
 function startQuickRecovery() {
-  practiceWeakAreas();
+  const weakSpots = D.memory?.weakSpots || [];
+  const active = weakSpots.filter(w => !w.solved);
+  if (active.length === 0) {
+    toast("No active focus concepts!");
+    return;
+  }
+  // Most urgent (most recently logged spot)
+  const urgent = active[active.length - 1];
+  go('revision');
+  setTimeout(() => {
+    if (typeof RV !== 'undefined') RV._quickMode = true;
+    startRevision(urgent.topic, 'recovery');
+    if (typeof toast === 'function') toast('⏱️ 5-Minute Quick Recovery Session started!', 'badge');
+  }, 100);
 }
 
 window.rRecovery = rRecovery;
@@ -226,3 +292,4 @@ window.logQuizMistake = logQuizMistake;
 window.practiceWeakAreas = practiceWeakAreas;
 window.startTargetedRecovery = startTargetedRecovery;
 window.startQuickRecovery = startQuickRecovery;
+

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="apple-touch-icon" href="./logo.png">
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; manifest-src 'self' blob:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src https://fonts.gstatic.com https://cdn.jsdelivr.net data:; connect-src 'self' file: https://*.supabase.co wss://*.supabase.co https://rpkhrwtowmvoccznqubo.supabase.co https://mentorix-ai-proxy.mentorix.workers.dev https://api.groq.com https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: blob:; worker-src 'self';">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- maximum-scale removed: disabling pinch-zoom blocks low-vision users from
      reading content, a WCAG 2.1 failure. The app's settings panel already
@@ -12,6 +13,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mentorix">
+<meta name="theme-color" content="#0a0a1a">
 <title>MENTORIX — Your AI Learning Universe</title>
 
 <style>
@@ -87,98 +90,20 @@ if (location.protocol === 'file:') {
 </script>
 
 <!-- Core Infrastructure & Utility Dependencies -->
-<script src="/vendor/supabase.min.js"></script>
-<script src="/js/supabase.js"></script>
-<script src="/js/supabaseAuth.js"></script>
-<script src="/js/constants.js?v=80"></script>
-<script src="/js/helpers.js?v=80"></script>
-<script src="/js/storage.js?v=80"></script>
+<script src="./vendor/supabase.min.js" defer></script>
+<script src="./js/supabase.js" defer></script>
+<script src="./js/supabaseAuth.js" defer></script>
+<script src="./js/constants.js?v=80" defer></script>
+<script src="./js/helpers.js?v=80" defer></script>
+<script src="./js/storage.js?v=80" defer></script>
 
 <!-- PYQ Question Banks & Services -->
-<script src="/data/pyqService.js?v=80"></script>
+<script src="./data/pyqService.js?v=80" defer></script>
 <!-- Official Exam Specifications -->
-<script src="/js/exam_specs.js?v=80"></script>
+<script src="./js/exam_specs.js?v=80" defer></script>
 <!-- Session Generation Engine (SGE) & Session Policy Engine (SPE) -->
-<script src="/js/sge/sessionPolicyEngine.js?v=80"></script>
-<script src="/js/sge/sessionBlueprint.js?v=80"></script>
-<script src="/js/sge/sessionCache.js?v=80"></script>
-<script src="/js/sge/sessionGenerationEngine.js?v=80"></script>
-<script src="/js/sge/index.js?v=80"></script>
-<!-- Question Ingestion & Academic Classification Pipeline (QIACP) -->
-<script src="/js/qiacp/pdfIngestion.js?v=80"></script>
-<script src="/js/qiacp/ocrEngine.js?v=80"></script>
-<script src="/js/qiacp/textCleanup.js?v=80"></script>
-<script src="/js/qiacp/pageSegmentation.js?v=80"></script>
-<script src="/js/qiacp/questionDetector.js?v=80"></script>
-<script src="/js/qiacp/optionDetector.js?v=80"></script>
-<script src="/js/qiacp/answerExtractor.js?v=80"></script>
-<script src="/js/qiacp/solutionExtractor.js?v=80"></script>
-<script src="/js/qiacp/imageExtractor.js?v=80"></script>
-<script src="/js/qiacp/equationCleanup.js?v=80"></script>
-<script src="/js/qiacp/katexNormalizer.js?v=80"></script>
-<script src="/js/qiacp/academicClassifier.js?v=80"></script>
-<script src="/js/qiacp/metadataGenerator.js?v=80"></script>
-<script src="/js/qiacp/validator.js?v=80"></script>
-<script src="/js/qiacp/duplicateDetector.js?v=80"></script>
-<script src="/js/qiacp/jsonPackageGenerator.js?v=80"></script>
-<script src="/js/qiacp/qiacpPipeline.js?v=80"></script>
-<script src="/js/qiacp/index.js?v=80"></script>
-<script src="/js/screens/qiacp.js?v=80"></script>
-<!-- Runtime Engine (RE) & Interaction Recorder -->
-<script src="/js/runtime/validator.js?v=80"></script>
-<script src="/js/runtime/loader.js?v=80"></script>
-<script src="/js/runtime/renderer.js?v=80"></script>
-<script src="/js/runtime/events.js?v=80"></script>
-<script src="/js/runtime/state.js?v=80"></script>
-<script src="/js/runtime/palette.js?v=80"></script>
-<script src="/js/runtime/timer.js?v=80"></script>
-<script src="/js/runtime/navigation.js?v=80"></script>
-<script src="/js/runtime/autosave.js?v=80"></script>
-<script src="/js/runtime/recovery.js?v=80"></script>
-<script src="/js/runtime/recorder.js?v=80"></script>
-<script src="/js/runtime/submission.js?v=80"></script>
-<script src="/js/runtime/index.js?v=80"></script>
-<!-- Evaluation & Scoring Engine (ESE) & Evaluation Audit Trail -->
-<script src="/js/evaluation/verification.js?v=80"></script>
-<script src="/js/evaluation/answerValidator.js?v=80"></script>
-<script src="/js/evaluation/markingEngine.js?v=80"></script>
-<script src="/js/evaluation/subjectEvaluator.js?v=80"></script>
-<script src="/js/evaluation/sectionEvaluator.js?v=80"></script>
-<script src="/js/evaluation/scoringEngine.js?v=80"></script>
-<script src="/js/evaluation/statistics.js?v=80"></script>
-<script src="/js/evaluation/auditTrail.js?v=80"></script>
-<script src="/js/evaluation/reportBuilder.js?v=80"></script>
-<script src="/js/evaluation/index.js?v=80"></script>
-<!-- Modular CBT Examination Engine (v1.2) -->
-<script src="/js/cbt/cbtSessionManager.js?v=80"></script>
-<script src="/js/cbt/cbtNavigationController.js?v=80"></script>
-<script src="/js/cbt/cbtMarkingEngine.js?v=80"></script>
-<!-- Student Intelligence Engine (SIE) & Academic Profile -->
-<script src="/js/sie/profileManager.js?v=80"></script>
-<script src="/js/sie/masteryEstimator.js?v=80"></script>
-<script src="/js/sie/timeBehaviorAnalyzer.js?v=80"></script>
-<script src="/js/sie/mistakeClusterer.js?v=80"></script>
-<script src="/js/sie/timelineTracker.js?v=80"></script>
-<script src="/js/sie/studentMemory.js?v=80"></script>
-<script src="/js/sie/index.js?v=80"></script>
-<!-- Persistent Academic Storage & Student Data Engine (PSDE) -->
-<script src="/js/storage/authentication/authStorage.js?v=80"></script>
-<script src="/js/storage/profiles/profileStorage.js?v=80"></script>
-<script src="/js/storage/academic/academicStorage.js?v=80"></script>
-<script src="/js/storage/attempts/attemptStorage.js?v=80"></script>
-<script src="/js/storage/sessions/sessionStorage.js?v=80"></script>
-<script src="/js/storage/questions/questionStorage.js?v=80"></script>
-<script src="/js/storage/mistakes/mistakeStorage.js?v=80"></script>
-<script src="/js/storage/progress/progressStorage.js?v=80"></script>
-<script src="/js/storage/preferences/preferenceStorage.js?v=80"></script>
-<script src="/js/storage/achievements/achievementStorage.js?v=80"></script>
-<script src="/js/storage/leaderboard/leaderboardStorage.js?v=80"></script>
-<script src="/js/storage/tio/tioStorage.js?v=80"></script>
-<script src="/js/storage/feedback/feedbackStorage.js?v=80"></script>
-<script src="/js/storage/backups/backupEngine.js?v=80"></script>
-<script src="/js/storage/synchronization/syncEngine.js?v=80"></script>
-<script src="/js/storage/storage-api/index.js?v=80"></script>
-<script src="/js/tioEngine.js?v=80"></script>
+<!-- Core Subsystems & Engine Architecture (Bundled into mentorix-core.min.js for sub-200ms loading) -->
+
 
 <script>
 
@@ -243,29 +168,19 @@ if (window.location.protocol.startsWith('http')) {
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Poiret+One&family=Manrope:wght@300;400;500;600;700;800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Poiret+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/index.css?v=80">
 <link 
   rel="stylesheet" 
   href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
   crossorigin="anonymous"
 >
-<script 
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
-  crossorigin="anonymous"
-></script>
-<script 
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-  crossorigin="anonymous"
-  onload="initKaTeX()"
-></script>
 <script>
 function initKaTeX() {
   // Auto-render any math already on page
-  if (typeof renderMathInElement === 'function') {
-    renderMathInElement(document.body, {
+  const target = document.body || document.documentElement;
+  if (target && typeof renderMathInElement === 'function') {
+    renderMathInElement(target, {
       delimiters: [
         {left:'$$',right:'$$',display:true},
         {left:'$',right:'$',display:false},
@@ -277,6 +192,47 @@ function initKaTeX() {
     });
   }
 }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" onerror="loadLocalKaTeX()"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="initKaTeX()"></script>
+<script>
+function loadLocalKaTeX() {
+  if (window._katexLocalLoading) return;
+  window._katexLocalLoading = true;
+  console.warn('[Mentorix] KaTeX CDN unreachable, falling back to local copy...');
+  const s = document.createElement('script');
+  s.src = './vendor/katex/katex.min.js';
+  s.onerror = function() {
+    const sFallback = document.createElement('script');
+    sFallback.src = './lib/katex.min.js';
+    sFallback.onload = function() {
+      const s2Fallback = document.createElement('script');
+      s2Fallback.src = './lib/auto-render.min.js';
+      s2Fallback.onload = initKaTeX;
+      document.head.appendChild(s2Fallback);
+    };
+    document.head.appendChild(sFallback);
+  };
+  s.onload = function() {
+    const s2 = document.createElement('script');
+    s2.src = './vendor/katex/auto-render.min.js';
+    s2.onload = initKaTeX;
+    document.head.appendChild(s2);
+    const l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = './vendor/katex/katex.min.css';
+    document.head.appendChild(l);
+  };
+  document.head.appendChild(s);
+}
+</script>
+<script>
+window.addEventListener('error', function(e) {
+  console.warn('[Mentorix Error Boundary]', e.message);
+});
+window.addEventListener('unhandledrejection', function(e) {
+  console.warn('[Mentorix Async Boundary]', e.reason);
+});
 
 // Global function called after 
 // every dynamic HTML insertion
@@ -320,10 +276,9 @@ window.renderMath = function(container) {
 };
 console.log('[KaTeX] System ready');
 </script>
-<script src="./lib/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="./lib/anime.min.js"></script>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; manifest-src 'self' blob:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src https://fonts.gstatic.com https://cdn.jsdelivr.net data:; connect-src 'self' file: https://*.supabase.co wss://*.supabase.co https://rpkhrwtowmvoccznqubo.supabase.co https://mentorix-ai-proxy.mentorix.workers.dev https://api.groq.com https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: blob:; worker-src 'self';">
+<script src="./lib/gsap.min.js" defer></script>
+<script src="./lib/anime.min.js" defer></script>
+
 </head>
 <body>
 <div id="orbs"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
@@ -358,7 +313,7 @@ console.log('[KaTeX] System ready');
 <div class="ambient-shape amb-shape-1"></div>
 <div class="ambient-shape amb-shape-2"></div>
 <!-- Loading screen -->
-<div id="mx-splash">
+<div id="mx-splash" onclick="splashSkip()" title="Click anywhere to enter Mentorix" style="cursor:pointer">
   <div id="mx-stars"></div>
   <div id="mx-nebula"></div>
   <div id="mx-nebula-cyan"></div>
@@ -385,29 +340,6 @@ console.log('[KaTeX] System ready');
 <div id="mob-top-header" class="mob-top-header"></div>
 <div id="app"></div>
 
-<!-- MENTORIX MOBILE BOTTOM NAVIGATION BAR (PART 1 ADAPTIVE NAV) -->
-<nav id="mx-bottom-nav" class="mx-bottom-nav mx-glass-card" aria-label="Mobile Navigation">
-  <button class="mx-bnav-item active font-poiret" onclick="go('dashboard')" data-screen="dashboard">
-    <span class="mx-bnav-icon">🏠</span>
-    <span class="mx-bnav-label">Home</span>
-  </button>
-  <button class="mx-bnav-item font-poiret" onclick="go('courses')" data-screen="courses">
-    <span class="mx-bnav-icon">📚</span>
-    <span class="mx-bnav-label">Courses</span>
-  </button>
-  <button class="mx-bnav-item font-poiret" onclick="go('learn')" data-screen="learn">
-    <span class="mx-bnav-icon">⚡</span>
-    <span class="mx-bnav-label">Learn</span>
-  </button>
-  <button class="mx-bnav-item font-poiret" onclick="go('notebook')" data-screen="notebook">
-    <span class="mx-bnav-icon">📓</span>
-    <span class="mx-bnav-label">Notes</span>
-  </button>
-  <button class="mx-bnav-item font-poiret" onclick="toggleMobDrawer()" data-screen="more">
-    <span class="mx-bnav-icon">☰</span>
-    <span class="mx-bnav-label">More</span>
-  </button>
-</nav>
 
 <div id="toasts"></div>
 <div class="success-overlay" id="sov"><div class="success-check">✨</div><div class="sov-title">Welcome to Mentorix!</div><div class="sov-sub">Tio is ready for you…</div></div>
@@ -454,9 +386,9 @@ console.log('[KaTeX] System ready');
     <button class="btn bsm bgh" onclick="timerReset()">↺ Reset</button>
   </div>
   <div class="timer-modes-row">
-    <button class="btn bsm bgh" class="timer-mode-btn" onclick="setTimerMode(25,'FOCUS')">25m</button>
-    <button class="btn bsm bgh" class="timer-mode-btn" onclick="setTimerMode(5,'SHORT BREAK')">5m</button>
-    <button class="btn bsm bgh" class="timer-mode-btn" onclick="setTimerMode(15,'LONG BREAK')">15m</button>
+    <button class="btn bsm bgh timer-mode-btn" onclick="setTimerMode(25,'FOCUS')">25m</button>
+    <button class="btn bsm bgh timer-mode-btn" onclick="setTimerMode(5,'SHORT BREAK')">5m</button>
+    <button class="btn bsm bgh timer-mode-btn" onclick="setTimerMode(15,'LONG BREAK')">15m</button>
   </div>
   <div id="timer-sessions" class="timer-sessions-el">Sessions today: 0</div>
 </div>
@@ -473,212 +405,50 @@ console.log('[KaTeX] System ready');
   <button class="pwa-close-btn" onclick="document.getElementById('pwa-banner').classList.remove('show')">✖</button>
 </div>
 
-<!-- Universal Device Intelligence & Capability Detection System (UDICDS) -->
-<script src="/js/device/deviceProfile.js?v=80"></script>
-<script src="/js/device/deviceDetector.js?v=80"></script>
-<script src="/js/device/capabilityAnalyzer.js?v=80"></script>
-<script src="/js/device/browserDetector.js?v=80"></script>
-<script src="/js/device/performanceProfiler.js?v=80"></script>
-<script src="/js/device/networkMonitor.js?v=80"></script>
-<script src="/js/device/accessibilityDetector.js?v=80"></script>
-<script src="/js/device/deviceEvents.js?v=80"></script>
-<script src="/js/device/deviceManager.js?v=80"></script>
-<script src="/js/device/index.js?v=80"></script>
+<!-- Mentorix Unified Core Bundle (Replaces 200+ micro-files for sub-200ms loading & zero console errors) -->
+<script src="./js/mentorix-core.min.js?v=80" defer></script>
 
-<!-- Universal Adaptive Layout Engine (UALE) -->
-<script src="/js/layout/layoutTokens.js?v=80"></script>
-<script src="/js/layout/safeAreaManager.js?v=80"></script>
-<script src="/js/layout/orientationManager.js?v=80"></script>
-<script src="/js/layout/layoutResolver.js?v=80"></script>
-<script src="/js/layout/layoutRegistry.js?v=80"></script>
-<script src="/js/layout/layoutEngine.js?v=80"></script>
-<script src="/js/layouts/desktop/desktopLayout.js?v=80"></script>
-<script src="/js/layouts/laptop/laptopLayout.js?v=80"></script>
-<script src="/js/layouts/tablet/tabletLayout.js?v=80"></script>
-<script src="/js/layouts/mobile/mobileLayout.js?v=80"></script>
-<script src="/js/layouts/foldable/foldableLayout.js?v=80"></script>
-<script src="/js/layout/index.js?v=80"></script>
-
-<!-- Universal Navigation & Interaction Architecture (UNIA) -->
-<script src="/js/navigation/navigationRegistry.js?v=80"></script>
-<script src="/js/navigation/historyManager.js?v=80"></script>
-<script src="/js/navigation/deepLinkResolver.js?v=80"></script>
-<script src="/js/navigation/breadcrumbManager.js?v=80"></script>
-<script src="/js/navigation/focusModeManager.js?v=80"></script>
-<script src="/js/navigation/routeGuards.js?v=80"></script>
-<script src="/js/navigation/navigationManager.js?v=80"></script>
-<script src="/js/navigation/navigationEngine.js?v=80"></script>
-<script src="/js/navigation/index.js?v=80"></script>
-
-<!-- Universal Rendering & Component Adaptation Engine (URCAE) -->
-<script src="/js/component/responsiveTokens.js?v=80"></script>
-<script src="/js/component/accessibilityProfiles.js?v=80"></script>
-<script src="/js/component/componentProfiles.js?v=80"></script>
-<script src="/js/component/adaptationRegistry.js?v=80"></script>
-<script src="/js/component/componentAdapter.js?v=80"></script>
-<script src="/js/component/index.js?v=80"></script>
-
-<!-- Adaptive Reusable UI Components -->
-<script src="components/Button/adaptiveButton.js?v=80"></script>
-<script src="components/Card/adaptiveCard.js?v=80"></script>
-<script src="components/Table/adaptiveTable.js?v=80"></script>
-<script src="components/Dialog/adaptiveDialog.js?v=80"></script>
-<script src="components/Input/adaptiveInput.js?v=80"></script>
-<script src="components/Chart/adaptiveChart.js?v=80"></script>
-<script src="components/KaTeX/adaptiveKaTeX.js?v=80"></script>
-
-<!-- Mobile Phase M1.1 (UMFIS) & M1.2 (UMNGA) -->
-<script src="/js/mobile/mobileSpacingTokens.js?v=80"></script>
-<script src="/js/mobile/mobileTypographyScale.js?v=80"></script>
-<script src="/js/mobile/touchStandards.js?v=80"></script>
-<script src="/js/mobile/safeAreaManager.js?v=80"></script>
-<script src="/js/mobile/keyboardInteractionManager.js?v=80"></script>
-<script src="/js/mobile/mobileInteractionProfiles.js?v=80"></script>
-<script src="/js/mobile/studyComfortStandard.js?v=80"></script>
-<script src="/js/mobile/mobileNavEngine.js?v=80"></script>
-<script src="/js/mobile/gestureManager.js?v=80"></script>
-<script src="/js/mobile/bottomSheetManager.js?v=80"></script>
-<script src="/js/mobile/thumbFABManager.js?v=80"></script>
-<script src="/js/mobile/pullToRefreshManager.js?v=80"></script>
-<script src="/js/mobile/viewportManager.js?v=80"></script>
-<script src="/js/mobile/keyboardViewport.js?v=80"></script>
-<script src="/js/mobile/scrollRestoration.js?v=80"></script>
-<script src="/js/mobile/screenLifecycle.js?v=80"></script>
-<script src="/js/mobile/screenTemplates.js?v=80"></script>
-<script src="/js/mobile/screenManager.js?v=80"></script>
-<script src="/js/mobile/mobileStandards.js?v=80"></script>
-<script src="/js/mobile/mediaViewer.js?v=80"></script>
-<script src="/js/mobile/checkpointManager.js?v=80"></script>
-<script src="/js/mobile/lessonBlockRenderer.js?v=80"></script>
-<script src="/js/mobile/lessonProgressTracker.js?v=80"></script>
-<script src="/js/mobile/lessonSessionManager.js?v=80"></script>
-<script src="/js/mobile/lessonResumeManager.js?v=80"></script>
-<script src="/js/mobile/lessonConfidenceManager.js?v=80"></script>
-<script src="/js/mobile/lessonMistakeTracker.js?v=80"></script>
-<script src="/js/mobile/lessonHintManager.js?v=80"></script>
-<script src="/js/mobile/lessonExplanationRenderer.js?v=80"></script>
-<script src="/js/mobile/lessonQuestionRenderer.js?v=80"></script>
-<script src="/js/mobile/reviewQueueManager.js?v=80"></script>
-<script src="/js/mobile/reflectionManager.js?v=80"></script>
-<script src="/js/mobile/keyInsightRenderer.js?v=80"></script>
-<script src="/js/mobile/misconceptionManager.js?v=80"></script>
-<script src="/js/mobile/solutionRenderer.js?v=80"></script>
-<script src="/js/mobile/breakSuggestionManager.js?v=80"></script>
-<script src="/js/mobile/continueLearningManager.js?v=80"></script>
-<script src="/js/mobile/lessonCompletionManager.js?v=80"></script>
-<script src="/js/mobile/sessionMomentumManager.js?v=80"></script>
-<script src="/js/mobile/lessonTransitionManager.js?v=80"></script>
-<script src="/js/mobile/sessionContextManager.js?v=80"></script>
-<script src="/js/mobile/formulaDrawer.js?v=80"></script>
-<script src="/js/mobile/conceptTrailManager.js?v=80"></script>
-<script src="/js/mobile/sessionTimeline.js?v=80"></script>
-<script src="/js/mobile/workspaceResumeManager.js?v=80"></script>
-<script src="/js/mobile/sessionReflectionManager.js?v=80"></script>
-<script src="/js/mobile/nextStepManager.js?v=80"></script>
-<script src="/js/mobile/sessionExportManager.js?v=80"></script>
-<script src="/js/mobile/dailyLearningSummary.js?v=80"></script>
-<script src="/js/performance/performanceLogger.js?v=80"></script>
-<script src="/js/performance/renderProfiler.js?v=80"></script>
-<script src="/js/performance/eventLifecycleManager.js?v=80"></script>
-<script src="/js/performance/visibilityManager.js?v=80"></script>
-<script src="/js/performance/idleTaskManager.js?v=80"></script>
-<script src="/js/performance/animationBudgetManager.js?v=80"></script>
-<script src="/js/performance/memoryManager.js?v=80"></script>
-<script src="/js/performance/moduleLoader.js?v=80"></script>
-<script src="/js/performance/lifecycleManager.js?v=80"></script>
-<script src="/js/performance/renderScheduler.js?v=80"></script>
-<script src="/js/rendering/animationSynchronizer.js?v=80"></script>
-<script src="/js/rendering/katexRenderStage.js?v=80"></script>
-<script src="/js/rendering/skeletonManager.js?v=80"></script>
-<script src="/js/rendering/renderCancellationManager.js?v=80"></script>
-<script src="/js/rendering/layoutValidator.js?v=80"></script>
-<script src="/js/rendering/incrementalRenderer.js?v=80"></script>
-<script src="/js/rendering/renderGroupManager.js?v=80"></script>
-<script src="/js/rendering/renderPriorityManager.js?v=80"></script>
-<script src="/js/rendering/renderQueue.js?v=80"></script>
-<script src="/js/rendering/renderPipeline.js?v=80"></script>
-<script src="/js/resources/resourcePriority.js?v=80"></script>
-<script src="/js/resources/cacheController.js?v=80"></script>
-<script src="/js/resources/assetValidator.js?v=80"></script>
-<script src="/js/resources/resourceTracker.js?v=80"></script>
-<script src="/js/resources/resourceCleanup.js?v=80"></script>
-<script src="/js/resources/preloadManager.js?v=80"></script>
-<script src="/js/resources/resourceLoader.js?v=80"></script>
-<script src="/js/resources/resourceManager.js?v=80"></script>
-<script src="/js/state/eventBus.js?v=80"></script>
-<script src="/js/state/stateRegistry.js?v=80"></script>
-<script src="/js/state/updateDispatcher.js?v=80"></script>
-<script src="/js/state/sessionStateManager.js?v=80"></script>
-<script src="/js/state/applicationStateManager.js?v=80"></script>
-<script src="/js/state/userStateManager.js?v=80"></script>
-<script src="/js/state/statePersistence.js?v=80"></script>
-<script src="/js/state/stateDebugger.js?v=80"></script>
-<script src="/js/state/stateManager.js?v=80"></script>
-<script src="js/build/bundleRegistry.js?v=80"></script>
-<script src="js/build/sharedDependencyRegistry.js?v=80"></script>
-<script src="js/build/featureLoader.js?v=80"></script>
-<script src="js/build/routeLoader.js?v=80"></script>
-<script src="js/build/buildValidator.js?v=80"></script>
-<script src="js/build/bundleAnalyzer.js?v=80"></script>
-<script src="/js/revision/knowledgeUnitRegistry.js?v=80"></script>
-<script src="/js/revision/revisionEvidenceManager.js?v=80"></script>
-<script src="/js/revision/retentionTracker.js?v=80"></script>
-<script src="/js/revision/revisionPriorityEngine.js?v=80"></script>
-<script src="/js/revision/revisionQueueBuilder.js?v=80"></script>
-<script src="/js/revision/revisionSessionManager.js?v=80"></script>
-<script src="/js/revision/revisionHistoryManager.js?v=80"></script>
-<script src="/js/revision/revisionEngine.js?v=80"></script>
-<script src="/js/revision/recallPromptManager.js?v=80"></script>
-<script src="/js/revision/confidenceTracker.js?v=80"></script>
-<script src="/js/revision/responseEvaluator.js?v=80"></script>
-<script src="/js/revision/repairContentManager.js?v=80"></script>
-<script src="/js/revision/reinforcementManager.js?v=80"></script>
-<script src="/js/revision/revisionEvidenceReporter.js?v=80"></script>
-<script src="/js/revision/revisionSessionFlow.js?v=80"></script>
-<script src="/js/revision/activeRecallEngine.js?v=80"></script>
-<script src="/js/mobile/index.js?v=80"></script>
-
-<script src="/js/router.js?v=80"></script>
-<script src="/js/ai.js?v=80"></script>
-<script src="/js/auth.js?v=80"></script>
-<script src="/js/xp.js?v=80"></script>
-<script src="/js/screens/dashboard.js?v=80"></script>
-<script src="/js/masteryEngine.js?v=80"></script>
-<script src="/js/curriculumEngine.js?v=80"></script>
-<script src="/js/courseProgressionEngine.js?v=80"></script>
-<script src="/js/screens/courses.js?v=80"></script>
-<script src="/js/screens/recovery.js?v=80"></script>
-<script src="/js/screens/learn.js?v=80"></script>
-<script src="/js/screens/mentor.js?v=80"></script>
-<script src="/js/screens/explore.js?v=80"></script>
-<script src="/js/careerEngine.js?v=80"></script>
-<script src="/js/screens/careers.js?v=80"></script>
-<script src="/js/screens/roadmap.js?v=80"></script>
-<script src="/js/screens/tests.js?v=80"></script>
-<script src="/js/screens/doubt.js?v=80"></script>
-<script src="/js/screens/progress.js?v=80"></script>
-<script src="/js/screens/settings.js?v=80"></script>
-<script src="/js/screens/notebook.js?v=80"></script>
-<script src="/js/screens/revision.js?v=80"></script>
-<script src="/data/jeeData.js?v=80"></script>
-<script src="/data/examPatterns.js?v=80"></script>
-<script src="/js/examEngine.js?v=80"></script>
-<script src="/js/curriculumMappingEngine.js?v=80"></script>
-<script src="/js/sessionEngine.js?v=80"></script>
-<script src="/js/questionDeliveryEngine.js?v=80"></script>
-<script src="/js/evaluationEngine.js?v=80"></script>
-<script src="/js/services/compOrchestrator.js?v=80"></script>
-<script src="/js/services/tioOrchestrator.js?v=80"></script>
-<script src="/js/services/uaesEngine.js?v=80"></script>
-<script src="/js/services/uascaEngine.js?v=80"></script>
-<script src="/js/services/aslaEngine.js?v=80"></script>
-<script src="/js/services/udfiaEngine.js?v=80"></script>
-<script src="/js/services/devMode.js?v=80"></script>
-<script src="/js/services/overlayManager.js?v=80"></script>
-<script src="/js/services/commandPalette.js?v=80"></script>
-<script src="/js/services/milestoneCelebration.js?v=80"></script>
-<script src="/js/screens/qraReviewEngine.js?v=80"></script>
-<script src="/js/screens/comp.js?v=80"></script>
+<script src="./js/router.js?v=80" defer></script>
+<script src="./js/ai.js?v=80" defer></script>
+<script src="./js/auth.js?v=80" defer></script>
+<script src="./js/xp.js?v=80" defer></script>
+<script src="./js/screens/dashboard.js?v=80" defer></script>
+<script src="./js/masteryEngine.js?v=80" defer></script>
+<script src="./js/curriculumEngine.js?v=80" defer></script>
+<script src="./js/courseProgressionEngine.js?v=80" defer></script>
+<script src="./js/screens/courses.js?v=80" defer></script>
+<script src="./js/screens/recovery.js?v=80" defer></script>
+<script src="./js/screens/learn.js?v=80" defer></script>
+<script src="./js/screens/mentor.js?v=80" defer></script>
+<script src="./js/screens/explore.js?v=80" defer></script>
+<script src="./js/careerEngine.js?v=80" defer></script>
+<script src="./js/screens/careers.js?v=80" defer></script>
+<script src="./js/screens/roadmap.js?v=80" defer></script>
+<script src="./js/screens/tests.js?v=80" defer></script>
+<script src="./js/screens/doubt.js?v=80" defer></script>
+<script src="./js/screens/progress.js?v=80" defer></script>
+<script src="./js/screens/settings.js?v=80" defer></script>
+<script src="./js/screens/notebook.js?v=80" defer></script>
+<script src="./js/screens/revision.js?v=80" defer></script>
+<script src="./data/jeeData.js?v=80" defer></script>
+<script src="./data/examPatterns.js?v=80" defer></script>
+<script src="./js/examEngine.js?v=80" defer></script>
+<script src="./js/curriculumMappingEngine.js?v=80" defer></script>
+<script src="./js/sessionEngine.js?v=80" defer></script>
+<script src="./js/questionDeliveryEngine.js?v=80" defer></script>
+<script src="./js/evaluationEngine.js?v=80" defer></script>
+<script src="./js/services/compOrchestrator.js?v=80" defer></script>
+<script src="./js/services/tioOrchestrator.js?v=80" defer></script>
+<script src="./js/services/uaesEngine.js?v=80" defer></script>
+<script src="./js/services/uascaEngine.js?v=80" defer></script>
+<script src="./js/services/aslaEngine.js?v=80" defer></script>
+<script src="./js/services/udfiaEngine.js?v=80" defer></script>
+<script src="./js/services/devMode.js?v=80" defer></script>
+<script src="./js/services/overlayManager.js?v=80" defer></script>
+<script src="./js/services/commandPalette.js?v=80" defer></script>
+<script src="./js/services/milestoneCelebration.js?v=80" defer></script>
+<script src="./js/screens/qraReviewEngine.js?v=80" defer></script>
+<script src="./js/screens/comp.js?v=80" defer></script>
 <script>
 'use strict';
 window.LS = null;
@@ -717,6 +487,12 @@ window.D={
   notes:{},
   roadmaps:[],
   courses:[],
+  revisionQueue:[],
+  retryQueue:[],
+  weakSpots:[],
+  courseStates:{},
+  currentLesson:null,
+  currentChapter:null,
   settings:{
     darkMode:false,colorTheme:'vibrant',bossMode:false,
     mentorTone:'friendly',explanationDepth:'standard',
@@ -825,7 +601,7 @@ function getNextStep(current) {
   if (current === 3) {
     return 5;
   }
-  if (current === 4) return 5; // Degree details -> Board
+  // Note: step 4 (Degree/Major) removed — app supports Grades 6–12 only
   if (current === 5) {
     // Board -> Stream (only Grade 11/12) -> else straight to Subjects
     if (isHighSchool()) return 6;
@@ -875,21 +651,23 @@ function renderOB(guest = false) {
 }
 
 function obProg() {
-  // ob.step ranges 0–14 (15 total steps with branching paths).
-  // Divide by 14 so the bar reaches 100% at the final step.
-  const pct = Math.round((ob.step / 14) * 100);
+  // Max step index in Academic & general paths is 14 (onboarding complete)
+  const maxStep = 14;
+  const pct = Math.min(100, Math.round((ob.step / maxStep) * 100));
   const p = document.getElementById('obp');
   if (p) p.style.width = pct + '%';
-  // Update step dots
+  // Update step dots across dots
   const dots = document.querySelectorAll('.ob-step-dot');
-  const stepIdx = Math.min(Math.floor(ob.step / 2), dots.length - 1);
-  dots.forEach((d,i)=>{
-    d.classList.remove('active','done');
-    if(i < stepIdx) d.classList.add('done');
-    else if(i === stepIdx) d.classList.add('active');
-  });
-  const dotsWrap = document.getElementById('ob-dots');
-  if(dotsWrap) dotsWrap.setAttribute('aria-valuenow', stepIdx + 1);
+  if (dots.length > 0) {
+    const stepIdx = Math.min(Math.floor((ob.step / maxStep) * dots.length), dots.length - 1);
+    dots.forEach((d,i)=>{
+      d.classList.remove('active','done');
+      if(i < stepIdx) d.classList.add('done');
+      else if(i === stepIdx) d.classList.add('active');
+    });
+    const dotsWrap = document.getElementById('ob-dots');
+    if(dotsWrap) dotsWrap.setAttribute('aria-valuenow', stepIdx + 1);
+  }
 }
 
 function obTio(msg) {
@@ -962,15 +740,15 @@ function renderOBS() {
   // STEP 3 — GRADE (Academic Only)
   if (ob.step === 3) {
     const grades = [
-      'Grade 8', 'Grade 9', 'Grade 10',
+      'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10',
       'Grade 11', 'Grade 12'
     ];
     // Pre-select a default grade if none set yet
     if (!ob.grade) ob.grade = 'Grade 10';
     c.innerHTML = `
-      ${obTio('"Which grade or level of academic study are you currently in?"')}
+      ${obTio('"Which grade or level are you currently in?"')}
       <div class="h2 mb4">Academic Grade</div>
-      <p class="sub">Select your level of education</p>
+      <p class="sub">Select your level of education (Grade 6 – 12)</p>
       <div class="inp-wrap">
         <select class="inp" id="obgrade" onchange="ob.grade=this.value;document.getElementById('ob3btn').disabled=!this.value">
           ${grades.map(g => `<option value="${g}" ${ob.grade === g ? 'selected' : ''}>${g}</option>`).join('')}
@@ -979,31 +757,6 @@ function renderOBS() {
       <div style="display:flex;gap:8px">
         <button class="btn bgh" onclick="ob.step=2;renderOBS()">← Back</button>
         <button class="btn bpri bfull" id="ob3btn" ${!ob.grade ? 'disabled' : ''} onclick="ob.step=getNextStep(3);renderOBS()">Continue →</button>
-      </div>`;
-    return;
-  }
-
-  // STEP 4 — UNDERGRAD/POSTGRAD DETAILS
-  if (ob.step === 4) {
-    c.innerHTML = `
-      ${obTio('"Provide some details about your degree so I can align with your university curriculum."')}
-      <div class="h2 mb4">Degree Details</div>
-      <p class="sub">Let\'s customize your higher education courses</p>
-      <div class="inp-wrap">
-        <label class="inp-label">DEGREE TYPE (E.G. B.TECH, BSC, BA)</label>
-        <input class="inp" id="obdeg" placeholder="e.g. B.Sc." value="${esc(ob.degree)}" oninput="ob.degree=this.value;checkOb4()">
-      </div>
-      <div class="inp-wrap">
-        <label class="inp-label">MAJOR (E.G. COMPUTER SCIENCE, PHYSICS)</label>
-        <input class="inp" id="obmaj" placeholder="e.g. Computer Science" value="${esc(ob.major)}" oninput="ob.major=this.value;checkOb4()">
-      </div>
-      <div class="inp-wrap">
-        <label class="inp-label">SPECIALIZATION (OPTIONAL)</label>
-        <input class="inp" id="obspec" placeholder="e.g. AI & Robotics" value="${esc(ob.specialization)}" oninput="ob.specialization=this.value">
-      </div>
-      <div style="display:flex;gap:8px">
-        <button class="btn bgh" onclick="ob.step=3;renderOBS()">← Back</button>
-        <button class="btn bpri bfull" id="ob4btn" ${!ob.degree || !ob.major ? 'disabled' : ''} onclick="ob.step=getNextStep(4);renderOBS()">Continue →</button>
       </div>`;
     return;
   }
@@ -1335,7 +1088,7 @@ function obSkipToLearn() {
   D.roadmaps = [];
   D.courses = [];
   
-  D.chatMsgs = [{ r: 'ai', c: "Hey there! 👋 I'm Tio. You skipped personalization, so I haven't built any courses yet — head to Courses whenever you're ready and I'll ask a couple of quick questions first so I get your syllabus right. Until then, search any topic and I'll teach it on the spot! 🚀" }];
+  D.chatMsgs = [{ r: 'ai', c: "Hey there! 👋 I'm Tio. You skipped personalisation — no problem! Head to **Courses** whenever you're ready and tap **Build Your World** — I'll ask your grade and subjects first, then build your full curriculum. From there, tap any topic to start a lesson and I'll guide you through it step by step. 🚀" }];
   
   initApp();
   setTimeout(() => go('dash'), 100);
@@ -1350,11 +1103,17 @@ async function generateSubjectCourseAI(profile, subject) {
   const grade = profile.grade || '';
   const board = profile.board || '';
   const stream = profile.stream || '';
+  const compExamTarget = typeof profile.compExam === 'object' 
+    ? (profile.compExam?.examId === 'jee_adv' ? 'JEE Advanced' : profile.compExam?.examId === 'jee_main' ? 'JEE Main' : profile.compExam?.title || 'Competitive Exams')
+    : profile.compExam;
+  const goalContext = profile.goal === 'Academic Learning' && (profile.grade === 'Grade 11' || profile.grade === 'Grade 12') && profile.compExam
+    ? `\nEXAM FOCUS: This student is preparing for ${compExamTarget}. Weight the syllabus toward topics with highest exam frequency. Mark high-weightage chapters.`
+    : '';
   const sys = `You are a curriculum architect who only outputs real, accurate, syllabus-matched course structures. Output ONLY valid JSON, no markdown, no commentary.`;
   const p = `Build a complete course structure for this EXACT student:
 Board: ${board}
 Grade/Level: ${grade}
-${stream ? `Stream: ${stream}\n` : ''}Subject: ${subject}
+${stream ? `Stream: ${stream}\n` : ''}Subject: ${subject}${goalContext}
 
 STRICT RULES:
 - Use ONLY topics that are actually part of the real ${board} ${grade} ${subject} syllabus${stream ? ` (${stream} stream)` : ''}. Do not invent topics that aren't in the real curriculum.
@@ -1568,50 +1327,11 @@ function getStaticCourseTemplate(grade, board, subject) {
   return null;
 }
 
-async function generateAutoCoursesAsync(profile, onProgress) {
-  if (profile.goal === 'Academic Learning') {
-    const grade = profile.grade || 'Grade 10';
-    const board = profile.board || 'CBSE';
-    
-    const boardOrGradeChanged = D.courses && D.courses.length > 0 && 
-      (!D.courses[0].title.includes(board) || !D.courses[0].title.includes(grade));
-      
-    const existingSubjects = new Set(boardOrGradeChanged ? [] : (D.courses || []).map(c => c.subject));
-    
-    const allSubjects = (profile.subjects && profile.subjects.length)
-      ? profile.subjects
-      : (grade === 'Grade 12' ? ['Mathematics', 'Physics', 'Chemistry'] : ['Mathematics', 'Science', 'English']);
-      
-    const subjects = allSubjects.filter(s => !existingSubjects.has(s));
-    
-    if (subjects.length === 0) {
-      return [];
-    }
-    
-    const courses = [];
-    for (let i = 0; i < subjects.length; i++) {
-      const subj = subjects[i];
-      if (onProgress) onProgress(i, subjects.length, subj);
-      
-      const staticCourse = getStaticCourseTemplate(grade, board, subj);
-      if (staticCourse) {
-        courses.push(staticCourse);
-      } else {
-        try {
-          const course = await generateSubjectCourseAI(profile, subj);
-          if (course) courses.push(course);
-        } catch (e) {
-          console.error('[Mentorix] Failed to generate dynamic course for:', subj, e);
-        }
-      }
-    }
-    if (courses.length === 0) {
-      throw new Error('Could not generate any courses. Please check your connection and try again.');
-    }
-    return courses;
-  }
-  return generateAutoCourses(profile);
-}
+// generateAutoCoursesAsync() now lives in js/screens/courses.js (single canonical
+// copy — this file used to have a duplicate that silently shadowed the one in
+// courses.js; consolidated to remove that landmine). It calls the helpers below
+// (getStaticCourseTemplate, generateSubjectCourseAI, and generateAutoCourses just
+// below) as plain globals, so they stay here.
 
 function generateAutoCourses(profile) {
   let courses = [];
@@ -1698,6 +1418,115 @@ function generateAutoCourses(profile) {
               { name: 'Dual Nature of Matter and Radiation', topics: ['Photoelectric Effect & Einstein\'s Equation', 'Hertz and Lenard\'s Observations', 'Matter Waves & de Broglie Relation'] },
               { name: 'Atoms and Nuclei', topics: ['Alpha-particle Scattering Experiment', 'Rutherford & Bohr Models of Atom', 'Hydrogen Line Spectra', 'Composition and Size of Nucleus', 'Mass-Energy Relation & Binding Energy', 'Radioactivity (Alpha, Beta, Gamma Decay)', 'Nuclear Fission and Fusion'] },
               { name: 'Semiconductor Electronics', topics: ['Energy Bands in Solids', 'Intrinsic and Extrinsic Semiconductors', 'p-n Junction Diode & V-I Characteristics', 'Diode as a Rectifier (Half/Full Wave)', 'Special Purpose p-n Junction Diodes (LED, Photodiode, Solar Cell)'] }
+            ]
+          }
+        ])
+      ];
+    } else if (grade === 'Grade 11' && curr === 'CBSE') {
+      courses = [
+        createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+          {
+            name: 'Unit 1: Sets and Functions',
+            chapters: [
+              { name: 'Sets', topics: ['Sets and their Representations', 'Empty, Finite and Infinite Sets', 'Subsets and Power Set', 'Venn Diagrams & Set Operations'] },
+              { name: 'Relations and Functions', topics: ['Cartesian Product of Sets', 'Domain, Co-domain & Range of Relations', 'Function as a Special Type of Relation', 'Real Valued Functions'] },
+              { name: 'Trigonometric Functions', topics: ['Positive and Negative Angles', 'Measuring Angles in Radians & Degrees', 'Trigonometric Functions & Graphs', 'Trigonometric Identities & Equations'] }
+            ]
+          },
+          {
+            name: 'Unit 2: Algebra',
+            chapters: [
+              { name: 'Complex Numbers and Quadratic Equations', topics: ['Need for Complex Numbers', 'Algebraic Properties of Complex Numbers', 'Argand Plane and Polar Representation', 'Complex Roots of Quadratic Equations'] },
+              { name: 'Linear Inequalities', topics: ['Algebraic Solutions of Linear Inequalities in One Variable', 'Graphical Solution of Linear Inequalities in Two Variables'] },
+              { name: 'Permutations and Combinations', topics: ['Fundamental Principle of Counting', 'Factorial Notation n!', 'Derivation of nPr and nCr Formulas', 'Simple Applications of Permutations & Combinations'] },
+              { name: 'Binomial Theorem', topics: ['Pascal\'s Triangle', 'Statement and Proof of Binomial Theorem for Positive Integral Indices', 'General and Middle Term in Binomial Expansion'] },
+              { name: 'Sequences and Series', topics: ['Arithmetic Progression (AP)', 'Geometric Progression (GP)', 'Sum to n terms of a GP', 'Infinite GP and its Sum', 'Sum to n terms of Special Series'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Coordinate Geometry',
+            chapters: [
+              { name: 'Straight Lines', topics: ['Slope of a Line & Angle between Two Lines', 'Various Forms of Equations of a Line', 'General Equation of a Line', 'Distance of a Point from a Line'] },
+              { name: 'Conic Sections', topics: ['Sections of a Cone', 'Circle Standard Equation', 'Parabola Standard Equations & Properties', 'Ellipse & Hyperbola Standard Equations'] },
+              { name: 'Introduction to Three Dimensional Geometry', topics: ['Coordinate Axes and Coordinate Planes in 3D', 'Coordinates of a Point in Space', 'Distance between Two Points in 3D', 'Section Formula in 3D'] }
+            ]
+          },
+          {
+            name: 'Unit 4: Calculus & Reasoning',
+            chapters: [
+              { name: 'Limits and Derivatives', topics: ['Intuitive Idea of Derivatives', 'Limits of Functions & Standard Limits', 'Trigonometric Limits', 'Derivative of Polynomial and Trig Functions using First Principle'] }
+            ]
+          },
+          {
+            name: 'Unit 5: Statistics and Probability',
+            chapters: [
+              { name: 'Statistics', topics: ['Measures of Dispersion', 'Range, Mean Deviation for Ungrouped/Grouped Data', 'Variance and Standard Deviation', 'Analysis of Frequency Distributions'] },
+              { name: 'Probability', topics: ['Random Experiments & Sample Space', 'Events (Impossible, Sure, Mutually Exclusive)', 'Axiomatic Approach to Probability'] }
+            ]
+          }
+        ]),
+        createCourseTemplate(`${prefix} - Physics`, 'Science', [
+          {
+            name: 'Unit 1: Physical World & Kinematics',
+            chapters: [
+              { name: 'Units and Measurements', topics: ['SI Units & Fundamental Quantities', 'Accuracy, Precision and Errors in Measurement', 'Dimensions of Physical Quantities & Dimensional Analysis'] },
+              { name: 'Motion in a Straight Line', topics: ['Frame of Reference & Position-Time Graph', 'Speed and Velocity', 'Uniformly Accelerated Motion', 'Calculus Method for Equations of Motion'] },
+              { name: 'Motion in a Plane', topics: ['Scalar and Vector Quantities', 'Vector Addition & Resolution of Vectors', 'Relative Velocity in 2D', 'Projectile Motion & Uniform Circular Motion'] }
+            ]
+          },
+          {
+            name: 'Unit 2: Laws of Motion, Work & Rotational Dynamics',
+            chapters: [
+              { name: 'Laws of Motion', topics: ['Intuitive Concept of Force & Inertia', 'Newton\'s Three Laws of Motion', 'Law of Conservation of Linear Momentum', 'Static and Kinetic Friction', 'Centripetal Force & Banking of Roads'] },
+              { name: 'Work, Energy and Power', topics: ['Work Done by Constant and Variable Force', 'Work-Energy Theorem', 'Kinetic & Potential Energy of a Spring', 'Conservative & Non-Conservative Forces', 'Collisions in 1D and 2D'] },
+              { name: 'System of Particles and Rotational Motion', topics: ['Center of Mass of a Two-Particle System', 'Torque and Angular Momentum', 'Conservation of Angular Momentum', 'Moment of Inertia & Radius of Gyration', 'Parallel and Perpendicular Axes Theorems'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Gravitation & Properties of Matter',
+            chapters: [
+              { name: 'Gravitation', topics: ['Kepler\'s Laws of Planetary Motion', 'Universal Law of Gravitation', 'Acceleration due to Gravity & Variation with Altitude/Depth', 'Gravitational Potential Energy & Escape Velocity', 'Orbital Velocity of a Satellite'] },
+              { name: 'Mechanical Properties of Solids & Fluids', topics: ['Stress-Strain Relationship & Hooke\'s Law', 'Young\'s, Bulk & Shear Modulus', 'Pascal\'s Law & Hydraulic Lift', 'Viscosity & Stokes\' Law', 'Terminal Velocity & Streamline Flow', 'Bernoulli\'s Theorem & Applications', 'Surface Tension & Capillarity'] }
+            ]
+          },
+          {
+            name: 'Unit 4: Thermodynamics & Kinetic Theory',
+            chapters: [
+              { name: 'Thermal Properties of Matter & Thermodynamics', topics: ['Thermal Expansion & Specific Heat Capacity', 'Calorimetry & Latent Heat', 'Heat Transfer (Conduction, Convection, Radiation)', 'Zeroth, First & Second Laws of Thermodynamics', 'Isothermal & Adiabatic Processes', 'Reversible & Irreversible Processes'] },
+              { name: 'Kinetic Theory of Gases', topics: ['Equation of State of a Perfect Gas', 'Kinetic Theory Assumptions & Pressure Formula', 'Kinetic Interpretation of Temperature & RMS Speed', 'Degrees of Freedom & Law of Equipartition of Energy'] }
+            ]
+          },
+          {
+            name: 'Unit 5: Oscillations and Waves',
+            chapters: [
+              { name: 'Oscillations', topics: ['Periodic & Oscillatory Motion', 'Simple Harmonic Motion (SHM) & Equation', 'SHM Phase & Velocity/Acceleration', 'Simple Pendulum & Spring-Mass System', 'Free, Damped & Forced Oscillations, Resonance'] },
+              { name: 'Waves', topics: ['Wave Motion & Transverse/Longitudinal Waves', 'Speed of Travelling Waves', 'Displacement Relation for Progressive Waves', 'Principle of Superposition & Standing Waves', 'Beats & Doppler Effect'] }
+            ]
+          }
+        ]),
+        createCourseTemplate(`${prefix} - Chemistry`, 'Science', [
+          {
+            name: 'Unit 1: Chemical Structure & Bonding',
+            chapters: [
+              { name: 'Some Basic Concepts of Chemistry', topics: ['Importance of Chemistry & Atomic/Molecular Mass', 'Mole Concept & Molar Mass', 'Percentage Composition & Empirical Formula', 'Stoichiometry & Stoichiometric Calculations'] },
+              { name: 'Structure of Atom', topics: ['Bohr\'s Model & Limitations', 'Dual Nature of Matter & Heisenberg Uncertainty Principle', 'Quantum Numbers & Atomic Orbitals (s, p, d, f)', 'Rules for Filling Orbitals (Aufbau, Pauli, Hund)'] },
+              { name: 'Classification of Elements & Periodicity', topics: ['Modern Periodic Law & Periodic Table', 'Periodic Trends in Properties (Atomic Radius, Ionization Enthalpy, Electron Gain Enthalpy, Electronegativity)'] },
+              { name: 'Chemical Bonding and Molecular Structure', topics: ['Ionic and Covalent Bonds & Lewis Structures', 'VSEPR Theory & Molecular Geometry', 'Valence Bond Theory & Hybridization (sp, sp2, sp3)', 'Molecular Orbital Theory & Homonuclear Diatomic Molecules'] }
+            ]
+          },
+          {
+            name: 'Unit 2: Chemical Thermodynamics & Equilibrium',
+            chapters: [
+              { name: 'Chemical Thermodynamics', topics: ['System & Surroundings, Types of Systems', 'First Law of Thermodynamics (Enthalpy, Heat Capacity)', 'Hess\'s Law of Constant Heat Summation', 'Second Law of Thermodynamics & Entropy', 'Gibbs Free Energy & Spontaneity'] },
+              { name: 'Equilibrium', topics: ['Dynamic Equilibrium in Physical & Chemical Processes', 'Law of Mass Action & Equilibrium Constant (Kp, Kc)', 'Le Chatelier\'s Principle & Applications', 'Ionic Equilibrium (Acids, Bases, pH, Buffer Solutions, Solubility Product)'] }
+            ]
+          },
+          {
+            name: 'Unit 3: Redox & Organic Chemistry',
+            chapters: [
+              { name: 'Redox Reactions', topics: ['Concept of Oxidation and Reduction', 'Oxidation Number & Rules for Assignment', 'Balancing Redox Reactions (Ion-Electron & Oxidation Number Methods)'] },
+              { name: 'Organic Chemistry: Basic Principles & Techniques', topics: ['IUPAC Nomenclature of Organic Compounds', 'Isomerism (Structural and Stereoisomerism)', 'Electronic Effects (Inductive, Electromeric, Resonance, Hyperconjugation)', 'Purification & Qualitative/Quantitative Analysis'] },
+              { name: 'Hydrocarbons', topics: ['Alkanes: Conformations & Reactions', 'Alkenes: Structure, Isomerism & Addition Reactions (Markovnikov Rule)', 'Alkynes: Structure & Acidic Character', 'Aromatic Hydrocarbons: Benzene Structure, Resonance & Electrophilic Substitution'] }
             ]
           }
         ])
@@ -1796,33 +1625,70 @@ function generateAutoCourses(profile) {
         ])
       ];
     } else {
-      courses = [
-        createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
-          {
-            name: 'Algebra',
-            chapters: [
-              { name: 'Quadratic Equations', topics: ['Introduction to Quadratics', 'Solving by Factoring', 'Quadratic Formula', 'Nature of Roots', 'Real-world Applications'] },
-              { name: 'Arithmetic Progressions', topics: ['Introduction to AP', 'nth Term of an AP', 'Sum of First n Terms', 'Word Problems', 'AP in Real Life'] }
-            ]
-          },
-          {
-            name: 'Geometry',
-            chapters: [
-              { name: 'Triangles', topics: ['Congruence vs Similarity', 'Basic Proportionality Theorem', 'Criteria for Similarity', 'Areas of Similar Triangles', 'Pythagoras Theorem'] },
-              { name: 'Circles', topics: ['Tangents to a Circle', 'Properties of Tangents', 'Secants and Angles', 'Constructions', 'Theorem Proofs'] }
-            ]
-          }
-        ]),
-        createCourseTemplate(`${prefix} - Science`, 'Science', [
-          {
-            name: 'Chemical Substances',
-            chapters: [
-              { name: 'Chemical Reactions and Equations', topics: ['Chemical Equations', 'Balanced Equations', 'Types of Reactions', 'Oxidation and Reduction', 'Corrosion and Rancidity'] },
-              { name: 'Acids, Bases and Salts', topics: ['General Properties', 'pH Scale and Importance', 'Sodium Hydroxide and Bleaching Powder', 'Baking Soda and Washing Soda', 'Plaster of Paris'] }
-            ]
-          }
-        ])
-      ];
+      const isMiddleSchool = ['Grade 6', 'Grade 7', 'Grade 8', 'Grade 9'].includes(grade);
+      if (isMiddleSchool) {
+        courses = [
+          createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+            {
+              name: 'Numbers & Basic Algebra',
+              chapters: [
+                { name: 'Integers and Rational Numbers', topics: ['Introduction to Integers', 'Addition & Subtraction of Integers', 'Fractions and Decimals', 'Operations on Rational Numbers'] },
+                { name: 'Basic Algebra & Equations', topics: ['Algebraic Expressions', 'Linear Equations in One Variable', 'Solving Simple Equations', 'Real-world Word Problems'] }
+              ]
+            },
+            {
+              name: 'Basic Geometry & Measurement',
+              chapters: [
+                { name: 'Lines, Angles & Shapes', topics: ['Basic Geometric Ideas', 'Understanding Elementary Shapes', 'Lines and Angles', 'Properties of Triangles'] },
+                { name: 'Perimeter, Area & Volume', topics: ['Perimeter of Rectangles & Squares', 'Area of Triangles & Parallelogram', 'Surface Area & Volume Foundations'] }
+              ]
+            }
+          ]),
+          createCourseTemplate(`${prefix} - Science`, 'Science', [
+            {
+              name: 'Matter and Energy',
+              chapters: [
+                { name: 'Matter and State Changes', topics: ['States of Matter', 'Physical and Chemical Changes', 'Elements, Compounds and Mixtures', 'Separation Techniques'] },
+                { name: 'Force, Motion & Energy', topics: ['Types of Forces', 'Basic Motion & Speed', 'Work and Energy Concepts', 'Light, Sound and Heat Basics'] }
+              ]
+            },
+            {
+              name: 'Living World & Biology',
+              chapters: [
+                { name: 'Basic Biology & Ecosystems', topics: ['Cell Structure and Function', 'Plant and Animal Nutrition', 'Components of Food & Health', 'Ecosystems & Conservation'] }
+              ]
+            }
+          ])
+        ];
+      } else {
+        courses = [
+          createCourseTemplate(`${prefix} - Mathematics`, 'Mathematics', [
+            {
+              name: 'Algebra',
+              chapters: [
+                { name: 'Quadratic Equations', topics: ['Introduction to Quadratics', 'Solving by Factoring', 'Quadratic Formula', 'Nature of Roots', 'Real-world Applications'] },
+                { name: 'Arithmetic Progressions', topics: ['Introduction to AP', 'nth Term of an AP', 'Sum of First n Terms', 'Word Problems', 'AP in Real Life'] }
+              ]
+            },
+            {
+              name: 'Geometry',
+              chapters: [
+                { name: 'Triangles', topics: ['Congruence vs Similarity', 'Basic Proportionality Theorem', 'Criteria for Similarity', 'Areas of Similar Triangles', 'Pythagoras Theorem'] },
+                { name: 'Circles', topics: ['Tangents to a Circle', 'Properties of Tangents', 'Secants and Angles', 'Constructions', 'Theorem Proofs'] }
+              ]
+            }
+          ]),
+          createCourseTemplate(`${prefix} - Science`, 'Science', [
+            {
+              name: 'Chemical Substances',
+              chapters: [
+                { name: 'Chemical Reactions and Equations', topics: ['Chemical Equations', 'Balanced Equations', 'Types of Reactions', 'Oxidation and Reduction', 'Corrosion and Rancidity'] },
+                { name: 'Acids, Bases and Salts', topics: ['General Properties', 'pH Scale and Importance', 'Sodium Hydroxide and Bleaching Powder', 'Baking Soda and Washing Soda', 'Plaster of Paris'] }
+              ]
+            }
+          ])
+        ];
+      }
     }
   } else if (profile.goal === 'Skill Learning') {
     courses = [
@@ -2037,10 +1903,14 @@ function initApp(){
   if(window._challengeData){setTimeout(()=>showChallengeWelcome(window._challengeData),2000);delete window._challengeData;}
   if(!window._navDelegated){document.addEventListener('click',navDel);window._navDelegated=true;}
   updateSB();
-  // Handle shared topic link (?topic=...)
+  // Handle shared topic link (?topic=...) or deep-linked hash route (#/comp, #/tests, etc.)
   if(window._sharedTopic){
     const t=window._sharedTopic;delete window._sharedTopic;
     go('learn',t);
+  } else if (window.location.hash && window.location.hash.startsWith('#/')) {
+    const targetScr = window.location.hash.replace('#/', '');
+    if (targetScr && targetScr !== 'dash') go(targetScr);
+    else go('dash');
   } else {
     go('dash');
   }
@@ -2100,17 +1970,16 @@ function navDel(e){const n=e.target.closest('[data-nav]');if(n)go(n.dataset.nav)
 ─────────────────────────────────────────── */
 const MOB_NAV=[
   {id:'dash',ic:'🏠',lb:'Home'},
-  {id:'courses',ic:'📖',lb:'Learning'},
+  {id:'courses',ic:'📖',lb:'Learn'},
   {id:'comp',ic:'🎯',lb:'Exams'},
-  {id:'mentor',ic:'🤖',lb:'Tio'},
-  {id:'settings',ic:'👤',lb:'Profile'}
+  {id:'revision',ic:'🛡️',lb:'Revise'},
+  {id:'progress',ic:'📊',lb:'Progress'}
 ];
 const MOB_DRAWER_NAV=[
   {id:'notebook',ic:'📓',lb:'Notes'},
-  {id:'revision',ic:'🔄',lb:'Revise'},
   {id:'recovery',ic:'🛡️',lb:'Recovery'},
   {id:'tests',ic:'📝',lb:'Tests'},
-  {id:'progress',ic:'📊',lb:'Progress'},
+  {id:'mentor',ic:'🤖',lb:'Tio AI'},
   {id:'explore',ic:'🌐',lb:'Explore'},
   {id:'careers',ic:'🚀',lb:'Careers'},
   {id:'settings',ic:'⚙️',lb:'Settings'},
@@ -2132,7 +2001,7 @@ function buildMobileHeader(){
       <div class="mhdr-avatar">${initial}</div>
     </div>
     <div class="mhdr-brand" onclick="go('dash')">
-      <span class="mhdr-logo">🎯</span>
+      <img src="./logo.png" class="mhdr-logo-img" style="width:24px;height:24px;border-radius:6px;object-fit:cover;vertical-align:middle;" alt="Logo">
       <span class="mhdr-title">${screenTitle}</span>
     </div>
     <div class="mhdr-actions">
@@ -2145,7 +2014,7 @@ function buildMobileNav(){
   buildMobileHeader();
   const el=document.getElementById('mbn');if(!el)return;
   el.innerHTML=MOB_NAV.map(n=>`
-    <div class="mn-item${D.screen===n.id?' on':''}" data-nav="${n.id}">
+    <div class="mn-item${D.screen===n.id?' on':''}" data-nav="${n.id}" onclick="go('${n.id}')">
       <span>${n.ic}</span><span>${n.lb}</span>
     </div>`).join('')
   +`<div class="mn-more" onclick="openMobDrawer()">
@@ -2170,6 +2039,14 @@ function closeMobDrawer(){
   document.getElementById('mob-drawer').classList.remove('open');
   document.getElementById('mob-drawer-bg').classList.remove('show');
   document.body.style.overflow='';
+}
+function toggleMobDrawer(){
+  const drawer = document.getElementById('mob-drawer');
+  if (drawer && drawer.classList.contains('open')) {
+    closeMobDrawer();
+  } else {
+    openMobDrawer();
+  }
 }
 
 /* ───────────────────────────────────────────
@@ -2574,13 +2451,15 @@ async function tutorAction(action){
   el.innerHTML=`<div class="tio-thinking"><div class="nxav" style="background:linear-gradient(135deg,var(--p),var(--c));width:28px;height:28px;font-size:13px;flex-shrink:0">✨</div><div style="color:#C4B5FD;font-size:13px;flex:1">Tio is ${{simpler:'simplifying…',different:'finding a new angle…',example:'crafting an example…',test:'preparing a challenge…'}[action]||'thinking…'}</div><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div></div>`;
   el.style.display='block';
   try{
-    const prompts={
-      simpler:`Explain "${l.topic}" in the simplest possible way. Imagine explaining to a 10-year-old. 2-3 sentences max. Be concrete and use an everyday analogy.`,
-      different:`Explain "${l.topic}" from a completely different angle. Use a fresh analogy or perspective. Keep it short and clear.`,
-      example:`Give one more vivid, memorable real-world example of "${l.topic}" that is different from any previously given. Make it relatable and specific.`,
-      test:`Ask me ONE quick conceptual question about "${l.topic}" (not multiple choice — open-ended). After I answer, evaluate my response. Wait for my answer.`,
+    const isCompExam = D.profile?.grade === 'Grade 11' || D.profile?.grade === 'Grade 12';
+    const gradeCtx = `Student: ${D.profile?.grade || 'school student'}, ${D.profile?.board || 'CBSE'}.`;
+    const prompts = {
+      simpler: `Explain "${l.topic}" more simply for a ${D.profile?.grade || 'school'} student. Use an everyday analogy they'd actually relate to. 2-3 sentences max.`,
+      different: `Explain "${l.topic}" from a completely different angle. Fresh analogy or perspective. Keep it appropriate for ${D.profile?.grade || 'school'} level.`,
+      example: `Give one vivid, real-world example of "${l.topic}" that a ${D.profile?.grade || 'school'} student would find relatable and memorable.`,
+      test: `Ask a ${D.profile?.grade || 'school'}-level question about "${l.topic}". ${isCompExam ? 'Make it calculation-based, exam-style.' : 'Make it conceptual and thought-provoking.'} One question only.`,
     };
-    const sys=`You are Tio, a ${D.settings?.mentorTone||'friendly'} AI tutor. Be concise — max 3-4 sentences. No markdown, no asterisks. Just clear natural text.`;
+    const sys = `You are Tio, a ${D.settings?.mentorTone || 'friendly'} AI tutor for a ${D.profile?.grade || 'school'} student. Be concise — max 3 sentences. No markdown. Natural text.`;
     const reply=await ai([{role:'user',content:prompts[action]}],sys,600);
     el.innerHTML=`
       <div class="tio-inline" style="background:rgba(6,182,212,.08);border-color:rgba(6,182,212,.22)">
@@ -2612,8 +2491,8 @@ async function checkTutorAnswer(){
   if(btn){btn.disabled=true;btn.textContent='Checking…';}
   res.innerHTML=`<div class="tio-thinking" style="margin-top:8px"><div class="nxav" style="background:linear-gradient(135deg,var(--p),var(--c));width:28px;height:28px;font-size:13px;flex-shrink:0">✨</div><div style="color:#C4B5FD;font-size:13px;flex:1">Tio is checking your answer…</div><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div></div>`;
   try{
-    const sys=`You are Tio, a ${D.settings?.mentorTone||'friendly'} AI tutor. Be concise — max 3-4 sentences. No markdown, no asterisks. Just clear natural text.`;
-    const prompt=`Topic: "${ch.topic}". You asked the student: "${ch.question}". The student answered: "${answer}". Briefly evaluate whether their answer is correct, gently correct any mistakes, and add one short encouraging note.`;
+    const sys=`You are Tio, a ${D.settings?.mentorTone||'friendly'} AI tutor for a ${D.profile?.grade || 'school'} student. Be concise — max 3-4 sentences. No markdown, no asterisks. Just clear natural text.`;
+    const prompt=`Topic: "${ch.topic}". Grade: ${D.profile?.grade || 'school'}. You asked: "${ch.question}". Student answered: "${answer}". Evaluate at ${D.profile?.grade || 'school'} level. Is the core idea correct? Gently correct mistakes. One encouraging closing sentence.`;
     const reply=await ai([{role:'user',content:prompt}],sys,400);
     res.innerHTML=`
       <div class="tio-inline" style="margin-top:8px;background:rgba(6,182,212,.08);border-color:rgba(6,182,212,.22)">
@@ -2951,7 +2830,7 @@ function renderProgressCharts(){
   const el=document.getElementById('progress-chart');
   if(!el)return;
 
-  const isLight = document.body.classList.contains('theme-cream') || document.body.classList.contains('theme-light');
+  const isLight = document.body.classList.contains('theme-light');
   const tickColor = isLight ? '#475569' : '#94A3B8';
   const gridColor = isLight ? 'rgba(0,0,0,.06)' : 'rgba(255,255,255,.06)';
 
@@ -3159,9 +3038,9 @@ async function startSocraticMode(topic){
   if(!el)return;
   el.innerHTML=`<div class="tio-thinking" style="justify-content:center;padding:20px"><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div><span style="color:#C4B5FD;font-size:13px;margin-left:10px">Tio is preparing a Socratic challenge…</span></div>`;
   try{
-    const sys='You are a Socratic tutor. Output ONLY valid JSON.';
-    const p=`Create a Socratic question for topic: "${topic.replace(/"/g,"'")}". Don't give the answer — lead the student to discover it.
-Output ONLY: {"question":"thought-provoking open question that requires reasoning?","hints":["subtle hint 1","subtle hint 2","subtle hint 3"],"answer":"the key insight they should reach","followup":"deeper question once they answer"}`;
+    const sys=`You are a Socratic tutor for a ${D.profile?.grade || 'school'} student. Output ONLY valid JSON.`;
+    const p=`Create a Socratic question for topic: "${topic.replace(/"/g,"'")}" for a ${D.profile?.grade || 'school'} ${D.profile?.board || 'CBSE'} student. The question should make them THINK and discover the core idea, not recall a fact.
+Output ONLY: {"question":"open thought-provoking question appropriate for ${D.profile?.grade || 'school'}?","hints":["subtle hint 1","subtle hint 2","subtle hint 3"],"answer":"the key insight at ${D.profile?.grade || 'school'} level","followup":"deeper question once they answer"}`;
     const raw=await ai([{role:'user',content:p}],sys,1000,true);
     const data=pJSON(raw);
     if(!data?.question)throw new Error('No data');
@@ -3343,8 +3222,12 @@ async function generateMnemonic(topic, containerId){
   const el=document.getElementById(containerId);if(!el)return;
   el.innerHTML=`<div class="tio-thinking" style="background:transparent;border:none;padding:6px 0"><div class="think-wave"><span></span><span></span><span></span><span></span><span></span></div><span style="color:var(--goldl);font-size:12px;margin-left:8px">Creating a memory trick…</span></div>`;
   try{
+    const curCtx = window.CurriculumEngine ? window.CurriculumEngine.getTopicContextForAI(topic) : null;
+    const keyTermsHint = curCtx 
+      ? `Key terms from curriculum: ${curCtx.slice(0, 200)}` 
+      : `Key concept: ${topic}`;
     const sys='You are a memory expert. Output ONLY valid JSON. Be creative and memorable.';
-    const p=`Create a mnemonic device to remember the key idea of: "${topic.replace(/"/g,"'")}".
+    const p=`Create a mnemonic device to remember the key idea of: "${topic.replace(/"/g,"'")}". ${keyTermsHint}.
 Output ONLY: {"type":"acronym|rhyme|story|analogy","mnemonic":"the actual memory device","explanation":"how it helps remember the concept","keyword":"the single most important word to remember"}`;
     const raw=await ai([{role:'user',content:p}],sys,500,true);
     const data=pJSON(raw)||{};
@@ -3591,8 +3474,8 @@ function shareCertificate(topic,score){
 async function checkPrerequisites(topic){
   const known=new Set(D.topics.map(t=>t.toLowerCase()));
   try{
-    const sys='Curriculum expert. Output ONLY valid JSON. Be strict — only truly essential prerequisites.';
-    const p=`What are the 2-3 most important prerequisite topics to know BEFORE studying "${topic.replace(/"/g,"'")}". Skip obvious ones like "basic math".
+    const sys=`Curriculum expert for a ${D.profile?.grade || 'school'} student. Output ONLY valid JSON. Be strict — only truly essential prerequisites.`;
+    const p=`What are the 2-3 most important prerequisite topics a ${D.profile?.grade || 'school'} ${D.profile?.board || 'CBSE'} student needs to know BEFORE studying "${topic.replace(/"/g,"'")}". Only list things genuinely needed at this grade level.
 Output ONLY: {"prerequisites":["prereq 1","prereq 2"],"reason":"why in ≤10 words"}`;
     const raw=await ai([{role:'user',content:p}],sys,400,true);
     const data=pJSON(raw);
@@ -3660,17 +3543,15 @@ function showChallengeWelcome(data){
 function applyAppTheme(theme){
   // Remove all theme classes — dark is the base (no class needed)
   document.body.classList.remove(
-    'theme-light','theme-lively','theme-emerald','theme-cream',
-    'theme-green','theme-vibrant','theme-playful'
+    'theme-light','theme-lively','theme-green','theme-vibrant','theme-friendly','theme-genius'
   );
   // dark = no class (base styles in :root are the dark theme)
-  if(theme==='light')        document.body.classList.add('theme-light');
-  else if(theme==='green')   document.body.classList.add('theme-green');
-  else if(theme==='vibrant') document.body.classList.add('theme-vibrant');
-  else if(theme==='playful') document.body.classList.add('theme-playful');
-  else if(theme==='emerald') document.body.classList.add('theme-emerald');
-  else if(theme==='cream')   document.body.classList.add('theme-cream');
-  else if(theme==='lively'){ document.body.classList.add('theme-lively'); startEmojiFloats(); }
+  if(theme==='light')         document.body.classList.add('theme-light');
+  else if(theme==='green')    document.body.classList.add('theme-green');
+  else if(theme==='vibrant')  document.body.classList.add('theme-vibrant');
+  else if(theme==='friendly') document.body.classList.add('theme-friendly');
+  else if(theme==='genius')   document.body.classList.add('theme-genius');
+  else if(theme==='lively'){  document.body.classList.add('theme-lively'); startEmojiFloats(); }
   // dark: no class — base root styles apply
   if(theme!=='lively') stopEmojiFloats();
   // Sync colorTheme with appTheme for consistency
@@ -3710,11 +3591,12 @@ function setAppTheme(theme){
   D.settings.appTheme=theme;saveAll();
   applyAppTheme(theme);
   const msgs={
-    light:'☀️ Light mode on',cream:'🍦 Cream mode on',lively:'🎉 Lively mode on!',
-    emerald:'🌲 Emerald mode on',green:'🌿 Green Universe on',
-    vibrant:'⚡ Vibrant mode on',playful:'🎨 Playful mode on'
+    light:'☀️ Light mode on',lively:'🎉 Lively mode on!',
+    green:'🌿 Green Universe on',vibrant:'⚡ Vibrant mode on',
+    friendly:'🤝 Friendly mode on',genius:'🧠 Genius mode on',
+    dark:'🌙 Dark mode on'
   };
-  toast(msgs[theme]||'🌙 Dark mode on','ok2');
+  toast(msgs[theme]||'Theme updated!','ok2');
   rSettings();
 }
 function setAccentColor(accent){
@@ -4113,7 +3995,8 @@ const MxAudio=(function(){
   };
 
   function initCustomCursor() {
-    if (D.settings?.customCursor === false) {
+    const isCoarsePointer = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (D.settings?.customCursor === false || isCoarsePointer) {
       destroyCustomCursor();
       return;
     }
@@ -4579,41 +4462,136 @@ function addHydrationBar(el){
   const progress = document.getElementById('mx-progress');
   const fill = document.querySelector('.mx-progress-fill');
 
+  // ── Intro Audio Setup ──
+  // Create and preload the audio element scoped to the splash lifecycle
+  var _introAudio = null;
+  (function setupIntroAudio() {
+    try {
+      var a = new Audio('./Intro_bass.mp3');
+      a.volume = 0;
+      a.preload = 'auto';
+      a.loop = false;
+      _introAudio = a;
+    } catch(e) {}
+  })();
+
+  function playIntroAudio() {
+    if (!_introAudio) return;
+    if (prefersReducedMotion) return; // Respect accessibility
+    _introAudio.currentTime = 0;
+    _introAudio.volume = 0;
+
+    function rampUp() {
+      var vol = 0;
+      var target = 0.85;
+      var step = target / 14;
+      var ramp = setInterval(function() {
+        if (!_introAudio) { clearInterval(ramp); return; }
+        vol += step;
+        if (vol >= target) { _introAudio.volume = target; clearInterval(ramp); }
+        else { _introAudio.volume = vol; }
+      }, 30); // 14 steps × 30ms = ~420ms ramp in
+    }
+
+    var p = _introAudio.play();
+    if (p && typeof p.then === 'function') {
+      p.then(function() {
+        rampUp(); // Play succeeded — start ramp
+      }).catch(function() {
+        // Autoplay blocked — use a played flag so multiple simultaneous gesture events
+        // (touchstart + pointerdown firing together) only trigger one ramp
+        var _played = false;
+        var tryPlay = function() {
+          if (_played || !_introAudio) return;
+          _played = true;
+          _introAudio.volume = 0;
+          _introAudio.play().then(rampUp).catch(function(){});
+        };
+        ['click','touchstart','keydown','pointerdown'].forEach(function(evt) {
+          window.addEventListener(evt, tryPlay, { once: true, passive: true });
+        });
+      });
+    } else {
+      // Old browser — best-effort ramp
+      rampUp();
+    }
+  }
+
+  function stopIntroAudio() {
+    if (!_introAudio) return;
+    var audioToStop = _introAudio;
+    _introAudio = null; // Set to null immediately to act as lock — prevents double-stop
+    try {
+      // Smooth fade out over 600ms
+      var vol = audioToStop.volume;
+      var steps = 12;
+      var decrement = vol / steps;
+      var fade = setInterval(function() {
+        vol -= decrement;
+        if (vol <= 0) {
+          audioToStop.volume = 0;
+          audioToStop.pause();
+          clearInterval(fade);
+        } else {
+          audioToStop.volume = Math.max(0, vol);
+        }
+      }, 50);
+    } catch(e) { /* already nulled */ }
+  }
+
+  var _splashDismissed = false;
+
   function cleanupAndRemove() {
+    if (_splashDismissed) return;
+    _splashDismissed = true;
+    stopIntroAudio();
     if (window.anime) {
-      anime.remove('#mx-stars div');
-      anime.remove('#mx-nebula');
+      try {
+        anime.remove('#mx-stars div');
+        anime.remove('#mx-nebula');
+      } catch(e) {}
     }
     const allAnimated = [
       splash, stars, nebula, cyanNebula, content, icon, progress, fill,
-      '.mx-letter'
+      '.mx-letter', '#mx-milestone-overlay'
     ].filter(Boolean);
     if (window.gsap) {
-      gsap.set(allAnimated, { clearProps: 'will-change' });
+      try {
+        gsap.killTweensOf(allAnimated);
+      } catch(e) {}
     }
-    if (splash) splash.remove();
+    const sp = document.getElementById('mx-splash') || splash;
+    if (sp) {
+      sp.style.transition = 'opacity 0.35s ease-out';
+      sp.style.opacity = '0';
+      sp.style.pointerEvents = 'none';
+      setTimeout(function() {
+        if (sp && sp.parentNode) sp.parentNode.removeChild(sp);
+      }, 350);
+    }
   }
 
   window.splashSkip = cleanupAndRemove;
 
-  if (prefersReducedMotion) {
-    if (window.gsap) {
-      gsap.set([
-        splash, stars, nebula, cyanNebula, content, icon, '.mx-letter', progress, fill
-      ].filter(Boolean), {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        x: 0,
-        scaleX: 1,
-        boxShadow: '0 0 40px rgba(139,92,246,0.3), 0 24px 64px rgba(0,0,0,0.8)'
-      });
-    }
-    setTimeout(cleanupAndRemove, 1500);
-    return;
-  }
-
   function runExistingSplashTimeline() {
+    if (_splashDismissed) return;
+    if (prefersReducedMotion) {
+      if (window.gsap) {
+        gsap.set([
+          splash, stars, nebula, cyanNebula, content, icon, '.mx-letter', progress, fill
+        ].filter(Boolean), {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          x: 0,
+          scaleX: 1,
+          boxShadow: '0 0 40px rgba(139,92,246,0.3), 0 24px 64px rgba(0,0,0,0.8)'
+        });
+      }
+      setTimeout(cleanupAndRemove, 1200);
+      return;
+    }
+
     // 2. Star Field
     if (stars && window.anime) {
     const isMobile = window.innerWidth < 768;
@@ -4853,14 +4831,39 @@ function addHydrationBar(el){
       onComplete: cleanupAndRemove
     }, '-=0.2');
   } else {
-    setTimeout(cleanupAndRemove, 3500);
+    setTimeout(cleanupAndRemove, 2500);
     }
   }
 
-  if (window.MilestoneCelebration) {
-    window.MilestoneCelebration.play(runExistingSplashTimeline);
+  function startSplash() {
+    playIntroAudio();
+    // Safety watchdog: ensure splash is unconditionally dismissed after 2.0s max
+    var _safetyTimer = setTimeout(function() {
+      cleanupAndRemove();
+    }, 2000);
+
+    function onComplete() {
+      clearTimeout(_safetyTimer);
+      cleanupAndRemove();
+    }
+
+    if (window.MilestoneCelebration && typeof window.MilestoneCelebration.play === 'function') {
+      window.MilestoneCelebration.play(function() {
+        if (!_splashDismissed) {
+          runExistingSplashTimeline();
+        }
+      });
+    } else {
+      if (!_splashDismissed) {
+        runExistingSplashTimeline();
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startSplash);
   } else {
-    runExistingSplashTimeline();
+    startSplash();
   }
 })();
 
@@ -4917,22 +4920,37 @@ function init(){
     }
   }
 
-  // Start the app logic immediately (in background, while splash plays)
-  // The splash engine handles its own dismiss at 5000ms
-  // We start app at 200ms so it's ready when splash exits
-  setTimeout(startApp, 200);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(startApp, 100));
+  } else {
+    setTimeout(startApp, 100);
+  }
 
-  // Hard failsafe — force remove loading screen after 6s no matter what
+  // Hard failsafe — force remove splash / loading overlay after 2.5s no matter what
   setTimeout(()=>{
-    const ls=document.getElementById('loading-screen');
-    if(ls){ls.style.opacity='0';ls.style.pointerEvents='none';setTimeout(()=>{try{ls.remove();}catch(e){}},400);}
-  },6000);
+    const sp = document.getElementById('mx-splash');
+    if (sp) {
+      sp.style.transition = 'opacity 0.3s ease-out';
+      sp.style.opacity = '0';
+      sp.style.pointerEvents = 'none';
+      setTimeout(()=>{ try { if (sp.parentNode) sp.parentNode.removeChild(sp); } catch(e){} }, 300);
+    }
+    const ls = document.getElementById('loading-screen');
+    if (ls) {
+      ls.style.transition = 'opacity 0.3s ease-out';
+      ls.style.opacity = '0';
+      ls.style.pointerEvents = 'none';
+      setTimeout(()=>{ try { if (ls.parentNode) ls.parentNode.removeChild(ls); } catch(e){} }, 300);
+    }
+  }, 2500);
 }
 // Global exports for inline HTML onclick/onchange handlers and cross-module access
 window.openGlobalSearch = openGlobalSearch;
 window.closeGlobalSearch = closeGlobalSearch;
 window.onGSearch = onGSearch;
+window.openMobDrawer = openMobDrawer;
 window.closeMobDrawer = closeMobDrawer;
+window.toggleMobDrawer = toggleMobDrawer;
 window.buildMobileNav = buildMobileNav;
 window.updateSB = updateSB;
 window.initApp = initApp;
@@ -4965,6 +4983,20 @@ function openTioFloat() {
   go('mentor');
 }
 window.openTioFloat = openTioFloat;
+
+function skipToTopic(courseId, unitIdx, chapterIdx, topicIdx, title) {
+  try {
+    if (D && D.courses) {
+      const c = D.courses.find(x => x.id === courseId);
+      if (c && c.units && c.units[unitIdx] && c.units[unitIdx].chapters && c.units[unitIdx].chapters[chapterIdx] && c.units[unitIdx].chapters[chapterIdx].topics && c.units[unitIdx].chapters[chapterIdx].topics[topicIdx]) {
+        c.units[unitIdx].chapters[chapterIdx].topics[topicIdx].status = 'In Progress';
+        saveNow();
+      }
+    }
+  } catch(e){}
+  go('learn', title);
+}
+window.skipToTopic = skipToTopic;
 
 init();
 </script>

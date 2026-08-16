@@ -27,21 +27,27 @@
     return;
   }
 
-  const client = supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY,
-    {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        storageKey: 'mentorix_supabase_session',
-        storage: window.localStorage
+  let client = null;
+  try {
+    client = supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY,
+      {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true,
+          storageKey: 'mentorix_supabase_session',
+          storage: window.localStorage
+        }
       }
-    }
-  );
-
-  window.SupabaseClient = client;
-  window.SupabaseReady = true;
+    );
+    window.SupabaseClient = client;
+    window.SupabaseReady = true;
+  } catch(err) {
+    console.warn('[Supabase] Client init fallback to local mode:', err.message);
+    window.SupabaseClient = null;
+    window.SupabaseReady = false;
+  }
 
   // Expose auth helpers globally
   window.SupabaseAuth = {
@@ -163,7 +169,7 @@
       return await client.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: 'https://mentorixbeta.netlify.app'
+          emailRedirectTo: 'https://mentorix-beta.netlify.app'
         }
       });
     }

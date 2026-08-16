@@ -3,13 +3,21 @@
  * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-shell-v80';
+const CACHE_NAME = 'mentorix-v83';
 
 const CORE_ASSETS = [
   './',
   './index.html',
+  './index.css',
+  './js/mentorix-core.min.js',
+  './js/screens/comp.js',
+  './js/screens/learn.js',
+  './vendor/katex/katex.min.js',
+  './vendor/katex/auto-render.min.js',
+  './vendor/katex/katex.min.css',
   './logo.png',
-  './manifest.json'
+  './manifest.json',
+  './Intro_bass.mp3'
 ];
 
 self.addEventListener('install', function(e) {
@@ -45,17 +53,25 @@ self.addEventListener('fetch', function(e) {
     return;
   }
 
-  // PYQ data & structured QIE files — Network-First with Cache / JS Fallback
+  // PYQ data & structured QIE files — Network-First with Cache / JSON Fallback
   if (url.includes('/data/pyq/') || url.includes('/questions/jee/') || url.includes('pyqService') || url.includes('master_index')) {
     e.respondWith(
-      fetch(e.request).catch(function() {
-        return caches.match(e.request).then(function(cached) {
-          return cached || new Response('/* Offline fallback */', {
-            status: 200,
-            headers: { 'Content-Type': 'text/javascript' }
+      fetch(e.request)
+        .then(function(response) {
+          if (response && response.ok && e.request.method === 'GET' && e.request.url.startsWith('http')) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(function(c) { c.put(e.request, clone); });
+          }
+          return response;
+        })
+        .catch(function() {
+          return caches.match(e.request).then(function(cached) {
+            return cached || new Response('{}', {
+              status: 200,
+              headers: { 'Content-Type': 'application/json' }
+            });
           });
-        });
-      })
+        })
     );
     return;
   }
@@ -80,8 +96,9 @@ self.addEventListener('fetch', function(e) {
     return;
   }
 
-  // JS / CSS / JSON — Network-First with Cache / JS Fallback
+  // JS / CSS / JSON — Network-First with Cache / Safe Fallback
   if (url.match(/\.(js|css|json)$/)) {
+    const isJson = url.endsWith('.json');
     e.respondWith(
       fetch(e.request)
         .then(function(response) {
@@ -93,7 +110,14 @@ self.addEventListener('fetch', function(e) {
         })
         .catch(function() {
           return caches.match(e.request).then(function(cached) {
-            return cached || new Response('/* Offline fallback */', {
+            if (cached) return cached;
+            if (isJson) {
+              return new Response('{}', {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+            return new Response('/* Offline fallback */', {
               status: 200,
               headers: { 'Content-Type': 'text/javascript' }
             });

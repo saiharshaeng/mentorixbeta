@@ -167,9 +167,23 @@ async function sendMsg() {
 
   mentorBusy = true;
   renderMsgs();
-
   try {
-    const systemPrompt = window.TioEngine ? window.TioEngine.getSystemContextPayload() : 'You are Tio, AI mentor.';
+    // Use the full personalized system prompt from ai.js if available.
+    // This includes learning style, mentor tone, career interests, eli5Mode, and all
+    // profile-level personalization settings. TioEngine.getSystemContextPayload() only
+    // has a minimal subset of this context and was only a temporary fallback.
+    let systemPrompt;
+    if (typeof TIO_SYSTEM_PROMPT === 'function') {
+      systemPrompt = TIO_SYSTEM_PROMPT(window.D?.profile || {}, (typeof LS !== 'undefined' ? LS?.topic : '') || '');
+    } else if (typeof buildStudentContext === 'function') {
+      const profile = window.D?.profile || {};
+      const ctx = buildStudentContext(profile);
+      systemPrompt = `You are Tio, Mentorix's AI mentor. ${ctx}`;
+    } else if (window.TioEngine) {
+      systemPrompt = window.TioEngine.getSystemContextPayload((typeof LS !== 'undefined' ? LS?.topic : '') || '');
+    } else {
+      systemPrompt = 'You are Tio, a helpful AI tutor. Be concise, clear, and encouraging.';
+    }
     const messagesHistory = D.chatMsgs.slice(-6).map(m => ({
       role: m.r === 'ai' ? 'assistant' : 'user',
       content: m.c

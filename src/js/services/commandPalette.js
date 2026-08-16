@@ -92,7 +92,25 @@
     }
 
     setupGlobalKeybindings() {
-      // Keyboard shortcuts disabled per constitution
+      // Fix 14: Re-enable Ctrl+K / Cmd+K global shortcut
+      document.addEventListener('keydown', (e) => {
+        // Ctrl+K or Cmd+K
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          this.toggle();
+          return;
+        }
+        // '/' key when not focused in input/textarea
+        if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+          e.preventDefault();
+          this.open();
+        }
+        // ESC to close
+        if (e.key === 'Escape' && this.isOpen) {
+          e.preventDefault();
+          this.close();
+        }
+      });
     }
 
     toggle() {

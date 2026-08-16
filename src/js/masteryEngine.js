@@ -26,14 +26,22 @@
 
   let mistakeDiary = []; // array of mistake records
 
+  // Issue 21 fix: Returns a user-scoped key so mastery data is per-profile, not shared across accounts
+  function masteryKey(base) {
+    try {
+      const s = typeof getSession === 'function' ? getSession() : null;
+      return s?.id ? `mx3_${s.id}_${base}` : `mx3_${base}`;
+    } catch(e) { return `mx3_${base}`; }
+  }
+
   function init() {
     try {
-      const storedProfile = localStorage.getItem('mx3_mastery_profile');
+      const storedProfile = localStorage.getItem(masteryKey('mastery_profile'));
       if (storedProfile) {
         profile = JSON.parse(storedProfile);
       }
-      
-      const storedDiary = localStorage.getItem('mx3_mistake_diary');
+
+      const storedDiary = localStorage.getItem(masteryKey('mistake_diary'));
       if (storedDiary) {
         mistakeDiary = JSON.parse(storedDiary);
       }
@@ -44,11 +52,34 @@
 
   function save() {
     try {
-      localStorage.setItem('mx3_mastery_profile', JSON.stringify(profile));
-      localStorage.setItem('mx3_mistake_diary', JSON.stringify(mistakeDiary));
+      localStorage.setItem(masteryKey('mastery_profile'), JSON.stringify(profile));
+      localStorage.setItem(masteryKey('mistake_diary'), JSON.stringify(mistakeDiary));
     } catch (e) {
       console.error('[MasteryEngine] Save error:', e);
     }
+  }
+
+  // Internal helper — marks matching weakSpots in D.memory as solved when concept/topic is reattempted
+  function _resolveWeakSpots(topic, concept = null) {
+    try {
+      if (window.D && window.D.memory && Array.isArray(window.D.memory.weakSpots)) {
+        let changed = false;
+        const topicNorm = String(topic || '').trim().toLowerCase();
+        const conceptNorm = concept ? String(concept).trim().toLowerCase() : null;
+
+        window.D.memory.weakSpots.forEach(ws => {
+          if (!ws.solved && ws.topic && ws.topic.toLowerCase() === topicNorm) {
+            if (!conceptNorm || (ws.concept && ws.concept.toLowerCase().includes(conceptNorm)) || !ws.concept) {
+              ws.solved = true;
+              ws.resolvedAt = Date.now();
+              ws.specificConceptReattempted = true;
+              changed = true;
+            }
+          }
+        });
+        if (changed && typeof window.saveAll === 'function') window.saveAll();
+      }
+    } catch (e) { /* non-critical */ }
   }
 
   const MasteryEngine = {
@@ -56,24 +87,69 @@
       init();
     },
 
+    getTopicDecayedMastery(topic) {
+      if (!topic) return 0;
+      const baseM = (profile.conceptMastery && profile.conceptMastery[topic]) || 0;
+      if (baseM === 0) return 0;
+      const lastAttempt = profile.lastAttemptDates && profile.lastAttemptDates[topic];
+      if (!lastAttempt) return baseM;
+      const daysSince = (Date.now() - new Date(lastAttempt).getTime()) / (1000 * 60 * 60 * 24);
+      if (daysSince <= 14) return baseM;
+      const weeksOverdue = (daysSince - 14) / 7;
+      const decayFactor = Math.pow(0.92, weeksOverdue);
+      return Math.round(Math.max(baseM * 0.35, baseM * decayFactor));
+    },
+
     initTopicMastery(topic) {
       if (!topic) return { level: 'Improving', dimensions: { conceptUnderstanding: 3, problemSolving: 2, speed: 2, confidence: 3, retention: 2, examReadiness: 2 } };
-      const m = (profile.conceptMastery && profile.conceptMastery[topic]) || 50;
-      const stars = Math.min(5, Math.max(1, Math.round(m / 20)));
+      const m = this.getTopicDecayedMastery(topic);
+
+      // --- Independent dimension calculation (Fix 8: each dimension uses real data, not aliased from one 'stars') ---
+
+      // Concept understanding: directly from topic mastery %
+      const conceptUnderstanding = Math.min(5, Math.max(1, Math.round(m / 20)));
+
+      // Problem solving: from application + reasoning scores, scaled to 1-5
+      const problemSolving = Math.min(5, Math.max(1,
+        Math.round(((profile.applicationScore || 60) + (profile.reasoningScore || 60)) / 40)
+      ));
+
+      // Speed: from solvingSpeedSec — faster = higher (under 10s=5, 10-20s=4, 20-40s=3, 40-80s=2, >80s=1)
+      const speedSec = profile.solvingSpeedSec || 0;
+      const speed = speedSec === 0 ? 3
+        : speedSec < 10 ? 5
+        : speedSec < 20 ? 4
+        : speedSec < 40 ? 3
+        : speedSec < 80 ? 2 : 1;
+
+      // Confidence: from confidenceRating (0-100 -> 1-5)
+      const confidence = Math.min(5, Math.max(1, Math.round((profile.confidenceRating || 70) / 20)));
+
+      // Retention: decay based on days since last attempt on this topic (Fix 9: dynamic, not hardcoded 85)
+      let retention = 3; // default 'Improving'
+      const lastAttemptDate = profile.lastAttemptDates && profile.lastAttemptDates[topic];
+      if (lastAttemptDate) {
+        const daysSince = (Date.now() - new Date(lastAttemptDate).getTime()) / (1000 * 60 * 60 * 24);
+        retention = daysSince < 1 ? 5
+          : daysSince < 3 ? 4
+          : daysSince < 7 ? 3
+          : daysSince < 14 ? 2 : 1;
+      } else if (m >= 80) {
+        retention = 4; // strong mastery but no date logged = assume recent
+      }
+
+      // Exam readiness: combined score of concept, problem solving, and confidence
+      const examReadiness = Math.min(5, Math.max(1,
+        Math.round((conceptUnderstanding + problemSolving + confidence) / 3)
+      ));
+
       return {
         level: m >= 80 ? 'Mastered' : m >= 50 ? 'Improving' : 'Needs Practice',
-        dimensions: {
-          conceptUnderstanding: stars,
-          problemSolving: Math.max(1, Math.min(5, stars - 1)),
-          speed: Math.max(1, Math.min(5, stars)),
-          confidence: Math.max(1, Math.min(5, stars)),
-          retention: Math.max(1, Math.min(5, stars)),
-          examReadiness: Math.max(1, Math.min(5, stars - 1))
-        }
+        dimensions: { conceptUnderstanding, problemSolving, speed, confidence, retention, examReadiness }
       };
     },
 
-    logAttempt({ topic, questionText, correctAnswer, selectedAnswer, isCorrect, difficulty, timeTakenSeconds, confidence, errorType = 'Conceptual misunderstanding' }) {
+    logAttempt({ topic, concept = null, questionText, correctAnswer, selectedAnswer, isCorrect, difficulty, timeTakenSeconds, confidence, errorType = 'Conceptual misunderstanding' }) {
       profile.totalAttempts++;
       if (isCorrect) {
         profile.correctAttempts++;
@@ -100,6 +176,16 @@
           delta = difficulty === 'hard' ? -5 : difficulty === 'medium' ? -10 : -15;
         }
         profile.conceptMastery[topic] = Math.max(0, Math.min(100, currentM + delta));
+
+        // Fix 9: Track last attempt date per topic for retention calculation
+        if (!profile.lastAttemptDates) profile.lastAttemptDates = {};
+        profile.lastAttemptDates[topic] = new Date().toISOString();
+
+        // Resolve weak spots in D.memory: by specific concept or mastery >= 80
+        if (isCorrect) {
+          if (concept) _resolveWeakSpots(topic, concept);
+          if (profile.conceptMastery[topic] >= 80) _resolveWeakSpots(topic, null);
+        }
       }
 
       // Update confidence metric

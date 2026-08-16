@@ -19,16 +19,11 @@
 
 'use strict';
 
-function esc(str) {
-  if (str === null || str === undefined) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
-window.esc = window.esc || esc;
+// esc() intentionally NOT redefined here — this file used to declare its own
+// copy, which (because comp.js is the last script loaded and isn't module-
+// scoped) silently overwrote helpers.js's global esc() for every other screen
+// in the app from that point on. Removed to close that gap; helpers.js's esc()
+// is functionally equivalent and is already loaded by the time this file runs.
 
 // State Management
 let compState = {
@@ -424,14 +419,48 @@ function getExamCountdown() {
   return diff > 0 ? diff : 0;
 }
 function setExamDate() {
-  const d = prompt('Enter exam date (YYYY-MM-DD):');
-  if (d && !isNaN(new Date(d))) {
+  const existingModal = document.getElementById('set-exam-date-modal');
+  if (existingModal) existingModal.remove();
+
+  const today = new Date().toISOString().split('T')[0];
+  const currVal = (D.compExam && D.compExam.examDate) || '';
+
+  const modal = document.createElement('div');
+  modal.id = 'set-exam-date-modal';
+  modal.className = 'modal-overlay';
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);';
+  modal.innerHTML = `
+    <div class="modal-box mx-glass-card" style="max-width:360px;width:90%;padding:24px;background:var(--card-bg,#12121f);border:1px solid var(--brd,rgba(255,255,255,0.1));border-radius:16px;">
+      <div class="between mb14">
+        <div class="h3 font-serif" style="color:#fff;margin:0">📅 Set Exam Date</div>
+        <button class="btn bgh bsm" onclick="document.getElementById('set-exam-date-modal')?.remove()" style="padding:4px 8px;min-height:auto">✕</button>
+      </div>
+      <p class="sub" style="font-size:13px;margin-bottom:14px">Select your target examination date for real-time countdown tracking:</p>
+      <input type="date" id="exam-date-input" min="${today}" value="${currVal}" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(139,92,246,0.3);border-radius:10px;color:#fff;font-size:15px;margin-bottom:18px;outline:none;box-sizing:border-box;">
+      <div style="display:flex;gap:10px">
+        <button onclick="document.getElementById('set-exam-date-modal')?.remove()" class="btn bgh" style="flex:1">Cancel</button>
+        <button onclick="saveExamDateFromInput()" class="btn bpri" style="flex:1">Save Date</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+function saveExamDateFromInput() {
+  const inp = document.getElementById('exam-date-input');
+  const v = inp ? inp.value : '';
+  if (v && !isNaN(new Date(v).getTime())) {
     if (!D.compExam) D.compExam = {};
-    D.compExam.examDate = d;
-    saveAll(); rComp();
+    D.compExam.examDate = v;
+    if (typeof saveNow === 'function') saveNow(); else if (typeof saveAll === 'function') saveAll();
+    if (typeof toast === 'function') toast('📅 Exam target date saved!', 'ok2');
+    rComp();
   }
+  const modal = document.getElementById('set-exam-date-modal');
+  if (modal) modal.remove();
 }
 window.setExamDate = setExamDate;
+window.saveExamDateFromInput = saveExamDateFromInput;
 
 function renderCountdownBanner(exam) {
   const days = getExamCountdown();
@@ -678,7 +707,7 @@ function renderPYQTab(exam) {
   if (!compState.pyqSubject) compState.pyqSubject = subjects[0];
   return `<div class="card" style="padding:20px">
     <div class="h2 mb6" style="color:#fff">📋 Previous Year Questions Bank</div>
-    <p class="sub mb18">AI-reconstructed questions styled from past ${esc(exam.name)} papers. Real patterns, real difficulty.</p>
+    <p class="sub mb18">Verified previous year questions from past ${esc(exam.name)} papers with step-by-step solutions.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px">
       <div><label class="inp-label">SUBJECT</label>
         <select class="inp" onchange="compState.pyqSubject=this.value">
@@ -696,7 +725,7 @@ function renderPYQTab(exam) {
         </select></div>
     </div>
     <div style="background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.15);border-radius:8px;padding:12px;margin-bottom:16px;font-size:11px;color:var(--sub)">
-      <strong style="color:#fff">📌 Note:</strong> Questions are AI-reconstructed in the style of official ${esc(exam.name)} ${compState.pyqYear||'2023'} papers — faithful to original patterns but not verbatim copies.
+      <strong style="color:#fff">📌 Note:</strong> Questions are sourced from verified previous year papers. Where official questions are unavailable for the selected year/subject, AI-reconstructed questions matching the official pattern are used.
     </div>
     <button id="start-pyq-btn" class="btn bpri blg w100" style="padding:13px" onclick="startPYQSession()">
       📋 Load ${compState.pyqYear||'2023'} Paper — ${esc(compState.pyqSubject||subjects[0])}
@@ -720,7 +749,8 @@ async function startPYQSession() {
     const result = window.pyqService.getQuestions({
       examId: compState.examId,
       count: count,
-      subject: subject
+      subject: subject,
+      year: compState.pyqYear ? parseInt(compState.pyqYear) : null  // Issue 12 fix: year was read but never passed
     });
     if (result && result.questions && result.questions.length > 0) {
       questions = result.questions;
@@ -729,7 +759,7 @@ async function startPYQSession() {
 
   // Fallback to AI if no questions loaded
   if (!questions.length) {
-    const prompt = `Reconstruct ${count} questions from the ${exam.name} ${year} paper, subject: ${subject}. Match the exact difficulty, style, and topic distribution of the real ${year} paper. Use LaTeX for math ($formula$). Return ONLY JSON: {"questions":[{"q":"...","opts":["A","B","C","D"],"ans":[0],"type":"mcq","chap":"...","expl":"step-by-step solution"}]}`;
+    const prompt = `Generate ${count} realistic ${exam.name} ${subject} questions at the actual difficulty and style of ${exam.name} papers. These should be original questions that COULD appear in ${exam.name}, not claims to be from the actual ${year} paper. Use LaTeX for math ($formula$). Return ONLY JSON: {"questions":[{"q":"...","opts":["A","B","C","D"],"ans":[0],"type":"mcq","chap":"...","expl":"step-by-step solution"}]}`;
     try {
       const reply = await ai([{role:'user',content:prompt}], 'You are a professional exam paper setter. Output ONLY valid JSON.', count*300+300, true);
       if (reply) { const data = parseAiJsonSafely(reply); if (data&&data.questions) questions=data.questions; }
@@ -756,19 +786,26 @@ window.startPYQSession = startPYQSession;
 // RANK PREDICTOR (shown in hub)
 // ════════════════════════════════════════════════════════════════
 function renderRankPredictor(exam) {
+  const ex = exam || (typeof WORLD_EXAMS !== 'undefined' ? (WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0]) : null) || { maxScore: 300 };
   const mocks = ((D.compExam&&D.compExam.sessionHistory)||[]).filter(s=>s.type==='mock'||s.type==='full');
   if (!mocks.length) return `<div class="card" style="padding:14px;text-align:center"><div style="font-size:11px;font-weight:700;color:var(--mut);margin-bottom:4px">🏆 RANK PREDICTOR</div><p style="font-size:12px;color:var(--mut);margin:0">Complete a mock exam to see your estimated rank range.</p></div>`;
-  const last = mocks[0];
-  const max = exam.maxScore||360;
-  const pct = (last.score||0)/max*100;
-  let band='',color='';
-  if (pct>=95){band='Top 100 — Elite zone';color='#10B981';}
-  else if(pct>=85){band='Top 500 — IIT/AIIMS/Top tier';color='#10B981';}
-  else if(pct>=75){band='Top 2,000 — Strong contender';color='#F59E0B';}
-  else if(pct>=60){band='Top 10,000 — Mid-range';color='#F59E0B';}
-  else if(pct>=45){band='Top 50,000 — Needs work';color='#EF4444';}
-  else{band='Below cutoff — Intensive practice needed';color='#EF4444';}
-  return `<div class="card" style="padding:14px"><div style="font-size:10px;font-weight:700;color:var(--mut);margin-bottom:6px;text-transform:uppercase">🏆 Rank Predictor</div><div style="font-size:18px;font-weight:800;color:${color};margin-bottom:3px">${band}</div><div style="font-size:11px;color:var(--mut)">Last mock: ${last.score||0}/${max} (${Math.round(pct)}%)</div></div>`;
+  
+  // Problem 14 fix: Weighted average of the last 3 mock sessions
+  const recent = mocks.slice(-3);
+  const weightedSum = recent.reduce((sum, m, idx) => sum + (m.score || 0) * (idx + 1), 0);
+  const weightSum = recent.reduce((sum, _, idx) => sum + (idx + 1), 0);
+  const avgScore = Math.round(weightedSum / weightSum);
+  
+  const max = ex.maxScore || 300;
+  const pct = (avgScore) / max * 100;
+  let band = '', color = '';
+  if (pct >= 95) { band = 'Top 100 — Elite zone'; color = '#10B981'; }
+  else if (pct >= 85) { band = 'Top 500 — IIT/AIIMS/Top tier'; color = '#10B981'; }
+  else if (pct >= 75) { band = 'Top 2,000 — Strong contender'; color = '#F59E0B'; }
+  else if (pct >= 60) { band = 'Top 10,000 — Mid-range'; color = '#F59E0B'; }
+  else if (pct >= 45) { band = 'Top 50,000 — Needs work'; color = '#EF4444'; }
+  else { band = 'Below cutoff — Intensive practice needed'; color = '#EF4444'; }
+  return `<div class="card" style="padding:14px"><div style="font-size:10px;font-weight:700;color:var(--mut);margin-bottom:6px;text-transform:uppercase">🏆 Rank Predictor</div><div style="font-size:18px;font-weight:800;color:${color};margin-bottom:3px">${band}</div><div style="font-size:11px;color:var(--mut)">Weighted Avg (last ${recent.length} mocks): ${avgScore}/${max} (${Math.round(pct)}%)</div></div>`;
 }
 
 
@@ -906,9 +943,11 @@ function triggerMath() {
   }
 }
 
-// Internal math renderer — does NOT call window.renderMath to avoid infinite recursion.
-// window.renderMath (index.html) and this function are BOTH in global scope so they
-// are the same object. Always call _doRenderMath directly inside comp.js.
+// Internal math renderer for the Comp/CBT screen. Call this directly — do not
+// reintroduce a public renderMath() wrapper in this file; helpers.js already
+// owns that global name and comp.js used to silently shadow it (see repo fix
+// history). If comp.js needs its own container-defaulting behavior, give that
+// wrapper a comp.js-specific name instead, e.g. renderCBTMath().
 function _doRenderMath(containerEl) {
   if (!containerEl) return;
 
@@ -952,14 +991,6 @@ function _doRenderMath(containerEl) {
           '<em style="font-style:italic">$1</em>');
     });
   }
-}
-
-// Keep renderMath as the public name — delegates to _doRenderMath
-function renderMath(containerEl) {
-  if (!containerEl) {
-    containerEl = document.getElementById('cbt-question-panel') || document.getElementById('main') || document.body;
-  }
-  _doRenderMath(containerEl);
 }
 
 function toggleCBTFullscreen(enable) {
@@ -1037,11 +1068,11 @@ function rComp() {
         setTimeout(() => {
           const el = document.getElementById('main');
           if (el && window.renderMath) {
-            window.renderMath(el);
+            _doRenderMath(el);
           }
         }, 50);
         const container = document.getElementById('cbt-question-panel');
-        if (container) renderMath(container);
+        if (container) _doRenderMath(container);
         triggerMath();
         return;
       }
@@ -1871,8 +1902,15 @@ function renderAnalyticsTab(exam) {
   const avgAccuracy = totalQs > 0 ? Math.round((totalCorrect / totalQs) * 100) : 0;
   
   const mockHistory = history.filter(h => h.type === 'mock');
-  const latestMock = mockHistory.length > 0 ? mockHistory[mockHistory.length - 1] : null;
-  const estimatedScore = latestMock ? latestMock.score : Math.round((avgAccuracy / 100) * 300);
+  let estimatedScore = 0;
+  if (mockHistory.length > 0) {
+    const recent = mockHistory.slice(-3);
+    const weightedSum = recent.reduce((sum, m, idx) => sum + (m.score || 0) * (idx + 1), 0);
+    const weightSum = recent.reduce((sum, _, idx) => sum + (idx + 1), 0);
+    estimatedScore = Math.round(weightedSum / weightSum);
+  } else {
+    estimatedScore = Math.round((avgAccuracy / 100) * 300);
+  }
   
   const est = estimateJEEPercentileAndRank(estimatedScore);
   const targetScore = compState.targetScore || 240;
@@ -2297,7 +2335,7 @@ function restoreFloatingElementsAfterExam() {
     el.style.display = el.dataset.examHidden || '';
     delete el.dataset.examHidden;
   });
-  document.body.dataset.examMode = '';
+  if (document.body && document.body.dataset) document.body.dataset.examMode = '';
 }
 window.restoreFloatingElementsAfterExam = restoreFloatingElementsAfterExam;
 
@@ -2568,7 +2606,7 @@ Return ONLY a JSON object containing a "questions" array with exactly 6 question
 }`;
 
     try {
-      const sys = "You are a professional examiner. Output valid JSON.";
+      const sys = `You are a JEE/competitive exam question setter with 10 years experience. Questions must be solvable in 2-3 minutes, use specific numbers, and have exactly one unambiguously correct answer. Output ONLY valid JSON.`;
       const reply = await ai([{ role: 'user', content: prompt }], sys, 1200, true);
       
       if (reply) {
@@ -2662,7 +2700,7 @@ function startExamTimer(totalSeconds) {
       compState.activeExam.timeLeft = examSecondsLeft;
     }
 
-    updateTimerDisplay();
+    updateCBTTimerDisplay();
 
     if (examSecondsLeft <= 0) {
       clearInterval(examTimerInterval);
@@ -2677,7 +2715,7 @@ function startExamTimer(totalSeconds) {
   examTimerInterval = setInterval(tick, 1000);
 }
 
-function updateTimerDisplay() {
+function updateCBTTimerDisplay() {
   const h = Math.floor(examSecondsLeft / 3600);
   const m = Math.floor((examSecondsLeft % 3600) / 60);
   const s = examSecondsLeft % 60;
@@ -2713,7 +2751,10 @@ function updateTimerDisplay() {
 
 // Export for access
 window.startExamTimer = startExamTimer;
-window.updateTimerDisplay = updateTimerDisplay;
+window.updateCBTTimerDisplay = updateCBTTimerDisplay;
+// Note: NOT exported as window.updateTimerDisplay — that name is owned by
+// dashboard.js's Pomodoro timer. comp.js used to shadow it, breaking the
+// dashboard sprint timer display. Renamed to updateCBTTimerDisplay to fix that.
 
 // CBT Simulator UI
 function renderActiveExamUI() {
@@ -2973,6 +3014,9 @@ function renderActiveExamUI() {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
               Clear
             </button>
+            <button class="nta-btn" onclick="bookmarkQuestion()" title="Bookmark question" style="border:1px solid rgba(245,158,11,0.35);color:#F59E0B;background:rgba(245,158,11,0.08);padding:6px 12px;border-radius:6px;font-size:12px;display:inline-flex;align-items:center;gap:4px;cursor:pointer;">
+              🔖 Bookmark
+            </button>
           </div>
           <div class="nta-action-right">
             <button class="nta-btn nta-btn-mark" onclick="markMockForReview()">🔖 Mark &amp; Next</button>
@@ -3059,30 +3103,57 @@ function markMockForReview() {
 }
 
 function bookmarkQuestion(qId) {
-  if (!D.memory) D.memory = { bookmarks: [] };
-  if (!D.memory.bookmarks) D.memory.bookmarks = [];
+  if (!D.memory) D.memory = {};
+  if (!D.memory.bookmarks) D.memory.bookmarks = {};
+  
+  // Normalize if previously stored as Array
+  if (Array.isArray(D.memory.bookmarks)) {
+    const obj = {};
+    D.memory.bookmarks.forEach(b => { if (b && (b.id || b.question)) obj[b.id || b.question] = b; });
+    D.memory.bookmarks = obj;
+  }
+
   const exam = compState.activeExam;
   const currentQ = exam ? exam.questions[exam.currentIndex] : null;
-  const targetId = qId || (currentQ ? currentQ.id : ('q_' + Date.now()));
-  const exists = D.memory.bookmarks.some(b => b.id === targetId || b.question === targetId);
-  if (!exists && currentQ) {
-    D.memory.bookmarks.push({
+  const targetId = qId || (currentQ ? (currentQ.id || ('q_' + exam.currentIndex)) : ('q_' + Date.now()));
+
+  if (D.memory.bookmarks[targetId]) {
+    delete D.memory.bookmarks[targetId];
+    if (typeof saveNow === 'function') saveNow(); else if (typeof saveAll === 'function') saveAll();
+    if (typeof toast === 'function') toast('🔖 Bookmark removed', 'info');
+  } else if (currentQ) {
+    D.memory.bookmarks[targetId] = {
       id: targetId,
-      question: currentQ.question,
-      options: currentQ.options,
-      correct: currentQ.correct || currentQ.answer,
-      subject: currentQ.subject || 'General',
-      chapter: currentQ.chapter || 'PYQ Practice',
-      solution: currentQ.solution || currentQ.explanation,
+      question: currentQ.q || currentQ.question,
+      q: currentQ.q || currentQ.question,
+      options: currentQ.opts || currentQ.options,
+      opts: currentQ.opts || currentQ.options,
+      correct: currentQ.ans !== undefined ? currentQ.ans : currentQ.correct,
+      ans: currentQ.ans !== undefined ? currentQ.ans : currentQ.correct,
+      subject: currentQ.section || currentQ.subject || 'General',
+      chapter: currentQ.chap || currentQ.chapter || 'PYQ Practice',
+      solution: currentQ.expl || currentQ.solution || currentQ.explanation || '',
+      expl: currentQ.expl || currentQ.solution || currentQ.explanation || '',
       savedAt: Date.now()
-    });
-    if (typeof saveNow === 'function') saveNow();
-    if (typeof toast === 'function') toast('🔖 Question saved to Bookmarked PYQs in Notebook!', 'ok2');
-  } else if (exists) {
-    if (typeof toast === 'function') toast('🔖 Bookmark already saved in Notebook!', 'ok2');
+    };
+    if (typeof saveNow === 'function') saveNow(); else if (typeof saveAll === 'function') saveAll();
+    if (typeof toast === 'function') toast('🔖 Question bookmarked for review!', 'ok2');
   }
 }
 window.bookmarkQuestion = bookmarkQuestion;
+
+function addToRetryQueue(questionId) {
+  if (!D.memory) D.memory = {};
+  if (!D.memory.retryQueue) D.memory.retryQueue = [];
+  if (!D.memory.retryQueue.includes(questionId)) {
+    D.memory.retryQueue.push(questionId);
+    if (typeof saveNow === 'function') saveNow(); else if (typeof saveAll === 'function') saveAll();
+    if (typeof toast === 'function') toast('🔄 Added to Retry Queue!', 'ok2');
+  } else {
+    if (typeof toast === 'function') toast('Already in Retry Queue', 'info');
+  }
+}
+window.addToRetryQueue = addToRetryQueue;
 
 function saveAndNextMock() {
   const exam = compState.activeExam;
@@ -3199,7 +3270,8 @@ function submitMockExam() {
   const exam = compState.activeExam;
   if (!exam) return;
 
-  clearInterval(exam.timerInterval);
+  clearInterval(examTimerInterval); // Bug 5 fix: was clearing exam.timerInterval (always null); correct handle is module-level examTimerInterval
+  examTimerInterval = null;
 
   if (exam.lastEntryTime) {
     const elapsed = Math.floor((Date.now() - exam.lastEntryTime) / 1000);
@@ -3328,39 +3400,47 @@ function submitMockExam() {
     };
   });
 
-  // Mistake Pattern Analysis & Spaced Repetition Auto-Add
-  let newtonCount = 0;
-  let calculusCount = 0;
-  let organicCount = 0;
-  let thermoCount = 0;
-  
+  // Mistake Pattern Analysis & Spaced Repetition Auto-Add (Chapter-Driven)
+  const chapterMistakes = {};
   exam.questions.forEach((q, idx) => {
-    if (!results[idx].isCorrect) {
-      const text = q.q.toLowerCase();
-      if (text.includes('newton') || text.includes('force') || text.includes('law of motion')) newtonCount++;
-      if (text.includes('limit') || text.includes('integr') || text.includes('deriv')) calculusCount++;
-      if (text.includes('organic') || text.includes('ether') || text.includes('carbon') || text.includes('reaction')) organicCount++;
-      if (text.includes('thermo') || text.includes('heat') || text.includes('entropy')) thermoCount++;
+    const r = results[idx];
+    const isSkipped = r && r.isSkipped;
+    const isCorrect = r && r.isCorrect;
+    const chap = q.chap || q.chapter || q.section || 'General';
+    const sub = q.section || 'General';
+
+    // Record chapter accuracy for heatmap & priority targets (Problem 1)
+    if (typeof recordChapterResult === 'function') {
+      recordChapterResult(chap, sub, isCorrect ? 1 : 0, 1);
+    }
+
+    // Log attempt to MasteryEngine (Problem 3)
+    if (window.MasteryEngine && typeof window.MasteryEngine.logAttempt === 'function' && !isSkipped) {
+      window.MasteryEngine.logAttempt({
+        topic: chap,
+        questionText: q.q,
+        correctAnswer: String(r.correct || ''),
+        selectedAnswer: String(r.user || ''),
+        isCorrect: isCorrect,
+        difficulty: q.difficulty || 'hard',
+        timeTakenSeconds: exam.timeSpent[idx] || 0,
+        errorType: isCorrect ? null : 'Mock Exam Error'
+      });
+    }
+
+    // Count mistakes per chapter
+    if (!isCorrect && !isSkipped) {
+      chapterMistakes[chap] = (chapterMistakes[chap] || 0) + 1;
     }
   });
 
-  const patterns = [];
-  if (newtonCount > 0) {
-    patterns.push(`You always get <strong>Newton's Laws & Mechanics</strong> wrong in application questions (${newtonCount} mistakes).`);
-    addTopicToRevision("Newton's Laws & Work-Energy");
-  }
-  if (calculusCount > 0) {
-    patterns.push(`You struggle with <strong>Calculus & Derivatives</strong> under timed pressure (${calculusCount} mistakes).`);
-    addTopicToRevision("Calculus");
-  }
-  if (organicCount > 0) {
-    patterns.push(`You made mistakes in <strong>Organic Chemistry Reactions</strong> (${organicCount} mistakes).`);
-    addTopicToRevision("Organic Chemistry");
-  }
-  if (thermoCount > 0) {
-    patterns.push(`You face conceptual gaps in <strong>Thermodynamics</strong> (${thermoCount} mistakes).`);
-    addTopicToRevision("Thermodynamics");
-  }
+  const patterns = Object.entries(chapterMistakes)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 4)
+    .map(([chap, count]) => {
+      if (typeof addTopicToRevision === 'function') addTopicToRevision(chap);
+      return `You got <strong>${esc(chap)}</strong> questions wrong (${count} mistake${count > 1 ? 's' : ''}).`;
+    });
 
   let mistakeAnalysisHTML = '';
   if (patterns.length > 0) {
@@ -3452,43 +3532,6 @@ function submitMockExam() {
     };
     D.compExam.sessionHistory.push(sessionRec);
     if (typeof saveAll === 'function') saveAll();
-
-    // Call PSDE Persistent Academic Storage Engine
-    if (window.PSDE) {
-      const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
-      window.PSDE.SaveSession(sessionRec);
-      window.PSDE.SaveAttempt({
-        attemptId: `att_${Date.now()}`,
-        sessionId: sessionRec.sessionId,
-        studentId: studentId,
-        questionIds: exam.questions.map(q => q.id || q.q),
-        answers: exam.answers,
-        timeSpent: exam.timeSpent,
-        evaluation: { score, correct, incorrect, skipped },
-        statistics: { subjectStats },
-        version: '2.0.0'
-      });
-      window.PSDE.SaveProgress({
-        totalQuestions: exam.questions.length,
-        accuracy: sessionRec.accuracy,
-        totalMarks: sessionRec.totalMarks,
-        level: D.level || 1,
-        masteryOverall: sessionRec.accuracy
-      }, studentId);
-
-      // Record Mistakes in Mistake Archive
-      results.forEach((r, qIdx) => {
-        if (!r.isCorrect) {
-          const qObj = exam.questions[qIdx];
-          window.PSDE.RecordMistake({
-            questionId: qObj.id || `q_${qIdx}_${Date.now()}`,
-            concept: qObj.section || 'General Concept',
-            reason: 'CONCEPTUAL_GAP',
-            studentId: studentId
-          });
-        }
-      });
-    }
 
     // Cloud sync — non-blocking, fires in background after local save
     if (window.SyncEngine) {
@@ -3608,10 +3651,15 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
   if (!main) return;
 
   toggleCBTFullscreen(false);
-  const targetScore = compState.targetScore || 180;
+  const examDb = WORLD_EXAMS.find(e => e.id === compState.examId) || WORLD_EXAMS[0];
+  const qCount = results ? results.length : 75;
+  const isDiagnostic = qCount < 30;
+  const maxPossibleScore = isDiagnostic ? (qCount * 4) : (examDb.id === 'jee_adv' ? 360 : examDb.id === 'neet' ? 720 : (examDb.maxScore || 300));
+  
+  const targetScore = compState.targetScore || (isDiagnostic ? Math.round(maxPossibleScore * 0.7) : 180);
   const isTargetAchieved = score >= targetScore;
 
-  const est = estimateJEEPercentileAndRank(score);
+  const est = isDiagnostic ? { percentile: '--', rank: 'Diagnostic Mode (Take Full Mock for AIR)' } : estimateJEEPercentileAndRank(score);
 
   main.innerHTML = `
     <div class="sw scr" style="padding-top:16px">
@@ -3619,19 +3667,23 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
         <div style="font-size:54px;margin-bottom:12px">${isTargetAchieved?'🏆':'📊'}</div>
         <div class="h1" style="color:#fff;margin-bottom:8px">Mock Exam Performance Scorecard</div>
         
-        <div class="between" style="max-width:560px;margin:0 auto 20px;gap:16px">
+        <div class="between" style="max-width:560px;margin:0 auto 14px;gap:16px">
           <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
             <span style="font-size:11px;font-weight:700;color:var(--mut)">FINAL SCORE</span>
-            <div class="h1" style="color:var(--c);margin:8px 0 0 0;font-size:36px">${Math.round(score * 100) / 100} <span style="font-size:16px;color:var(--mut)">/ 300</span></div>
+            <div class="h1" style="color:var(--c);margin:8px 0 0 0;font-size:36px">${Math.round(score * 100) / 100} <span style="font-size:16px;color:var(--mut)">/ ${maxPossibleScore}</span></div>
           </div>
           <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
             <span style="font-size:11px;font-weight:700;color:var(--mut)">PREDICTED PERCENTILE</span>
-            <div class="h1" style="color:var(--pl);margin:8px 0 0 0;font-size:36px">${est.percentile}%</div>
+            <div class="h1" style="color:var(--pl);margin:8px 0 0 0;font-size:36px">${est.percentile !== '--' ? est.percentile + '%' : 'N/A'}</div>
           </div>
           <div class="card" style="flex:1;padding:16px;background:rgba(255,255,255,0.02)">
             <span style="font-size:11px;font-weight:700;color:var(--mut)">ESTIMATED AIR</span>
-            <div class="h1" style="color:var(--okl);margin:8px 0 0 0;font-size:32px">~${est.rank}</div>
+            <div class="h1" style="color:var(--okl);margin:8px 0 0 0;font-size:${isDiagnostic ? '15px' : '32px'};line-height:1.3">${isDiagnostic ? est.rank : '~' + est.rank}</div>
           </div>
+        </div>
+
+        <div style="font-size:11px;color:var(--mut);margin-bottom:16px">
+          ⚠️ Rank estimate is based on historical ${compState.examId === 'jee_adv' ? 'JEE Advanced' : compState.examId === 'neet' ? 'NEET' : 'JEE Main'} cutoffs and is indicative only.
         </div>
 
         <div style="display:flex;justify-content:center;gap:20px;font-size:13px;color:var(--sub);margin-bottom:20px">
@@ -3791,7 +3843,12 @@ function renderMockScorecard(score, correct, incorrect, skipped, results, xpEarn
                 ${statusTag}
                 ${mistakeTag}
               </div>
-              ${(!res.isCorrect && !isUnattempted) ? `<button onclick="addToRevisionFromReview('${esc(res.q || '').substring(0,40)}')" style="font-size:10px;padding:3px 10px;border-radius:12px;background:rgba(139,92,246,0.12);color:#A78BFA;border:1px solid rgba(139,92,246,0.3);cursor:pointer;font-weight:700">+ Add to Revision</button>` : ''}
+              ${(!res.isCorrect && !isUnattempted) ? `
+                <div style="display:flex;gap:6px">
+                  <button onclick="addToRevisionFromReview('${escON(res.q || '').substring(0,40)}')" style="font-size:10px;padding:3px 10px;border-radius:12px;background:rgba(139,92,246,0.12);color:#A78BFA;border:1px solid rgba(139,92,246,0.3);cursor:pointer;font-weight:700">+ Add to Revision</button>
+                  <button onclick="addToRetryQueue('${escON(res.id || res.q?.substring(0,30) || idx)}', '${escON(res.q?.substring(0,60) || '')}'); this.textContent='✓ Added';" style="font-size:10px;padding:3px 10px;border-radius:12px;background:rgba(245,158,11,0.12);color:#FBBF24;border:1px solid rgba(245,158,11,0.3);cursor:pointer;font-weight:700">➕ Add to Retry Queue</button>
+                </div>
+              ` : ''}
             </div>
             <p style="font-size:13px;color:#fff;line-height:1.5;margin-bottom:10px;white-space:pre-line" class="katex-render-target">${renderQuestionText(res.q)}${renderQuestionImage(res)}</p>
             
@@ -4025,13 +4082,26 @@ async function startFilterPractice(filterType) {
   const count = compState.practiceCount || 5;
 
   if (filterType === 'bookmarks') {
-    const bookmarkedIds = Object.keys(D.memory?.bookmarks || {});
-    if (!bookmarkedIds.length) {
+    const bookmarks = D.memory?.bookmarks || {};
+    const bookmarkList = Array.isArray(bookmarks) ? bookmarks : Object.values(bookmarks);
+    if (!bookmarkList.length) {
       if (typeof toast === 'function') toast('No bookmarked questions yet', 'info');
       return;
     }
+    const bookmarkedIds = bookmarkList.map(b => b.id || b.questionId || b.question);
     if (window.pyqService) {
       questions = (window.pyqService.getQuestions({ count: 50, examId: compState.examId })?.questions || []).filter(q => bookmarkedIds.includes(q.id));
+    }
+    if (questions.length === 0 && bookmarkList.length > 0) {
+      questions = bookmarkList.map(b => ({
+        id: b.id || 'bm_' + Math.random(),
+        q: b.q || b.question,
+        opts: b.opts || b.options || ['A', 'B', 'C', 'D'],
+        ans: b.ans !== undefined ? (Array.isArray(b.ans) ? b.ans : [b.ans]) : (b.correct !== undefined ? (Array.isArray(b.correct) ? b.correct : [b.correct]) : [0]),
+        expl: b.expl || b.solution || b.explanation || '',
+        section: b.section || b.subject || 'General',
+        chap: b.chap || b.chapter || 'Bookmarks'
+      }));
     }
   } else if (filterType === 'retry') {
     const retryIds = D.memory?.retryQueue || [];
@@ -4135,19 +4205,50 @@ window.startCompPractice = startCompPractice;
 
 // ═══════════════════════════════════════════════════════════
 // MULTI-QUESTION PRACTICE SESSION OVERLAY
-// Replaces single-question launchPracticeOverlay for sessions
+// Features 5-level hint progression, auto-mistake tracking, and SM-2 integration
 // ═══════════════════════════════════════════════════════════
 function launchMultiPracticeOverlay(questions) {
   const existing = document.getElementById('practice-modal');
   if (existing) existing.remove();
 
-  // State for this session
+  // State for this session with 5-level hint system
   let sessionState = {
     questions,
     current: 0,
     answers: {},
     revealed: {},
+    hintLevel: {},
+    hints: {},
     score: 0
+  };
+
+  questions.forEach((q, i) => {
+    sessionState.hintLevel[i] = 0;
+    if (Array.isArray(q.hints) && q.hints.length > 0) {
+      sessionState.hints[i] = q.hints.slice(0, 5);
+      while (sessionState.hints[i].length < 5) {
+        sessionState.hints[i].push(q.expl || q.hint || 'Review the full solution carefully.');
+      }
+    } else {
+      const basicHint = q.hint || 'Think carefully about the core concept being tested.';
+      const expl = q.expl || 'Work through the problem step by step.';
+      sessionState.hints[i] = [
+        basicHint,
+        'Key concept: ' + (q.chap || q.chapter || 'core topic'),
+        'Apply the relevant formula or law for this type of problem.',
+        'Identify given parameters vs unknown variables, then set up the equation.',
+        expl
+      ];
+    }
+  });
+
+  window.mpRevealNextHint = function() {
+    const idx = sessionState.current;
+    const currL = sessionState.hintLevel[idx] || 0;
+    if (currL < 5) {
+      sessionState.hintLevel[idx] = currL + 1;
+      renderQuestion();
+    }
   };
 
   function renderQuestion() {
@@ -4160,6 +4261,8 @@ function launchMultiPracticeOverlay(questions) {
     const idx = sessionState.current;
     const total = sessionState.questions.length;
     const isRevealed = sessionState.revealed[idx];
+    const currentHintLevel = sessionState.hintLevel[idx] || 0;
+    const availableHints = sessionState.hints[idx] || [];
 
     const optionsHTML = q.type === 'numerical' ? `
       <div style="display:flex;flex-direction:column;gap:8px">
@@ -4168,7 +4271,7 @@ function launchMultiPracticeOverlay(questions) {
       </div>
     ` : (q.opts || []).map((opt, oIdx) => {
       const isSelected = sessionState.answers[idx] === oIdx;
-      const isCorrect = isRevealed && (q.ans || []).includes(oIdx);
+      const isCorrect = isRevealed && (Array.isArray(q.ans) ? q.ans.includes(oIdx) : q.ans === oIdx);
       const isWrong = isRevealed && isSelected && !isCorrect;
       let bg = 'rgba(255,255,255,0.03)';
       let border = 'var(--brd)';
@@ -4206,6 +4309,16 @@ function launchMultiPracticeOverlay(questions) {
         ${optionsHTML}
       </div>
 
+      ${currentHintLevel > 0 ? `
+        <div style="margin-bottom:14px;display:flex;flex-direction:column;gap:6px">
+          ${availableHints.slice(0, currentHintLevel).map((h, hi) => `
+            <div style="padding:10px 12px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;font-size:12px;color:var(--goldl)">
+              <strong>Hint ${hi+1}/5:</strong> <span class="katex-render-target">${renderQuestionText(h)}</span>
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
+
       ${isRevealed ? `
         <div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:14px;margin-bottom:14px">
           <div style="font-weight:700;color:var(--okl);font-size:12px;margin-bottom:6px">SOLUTION</div>
@@ -4215,7 +4328,9 @@ function launchMultiPracticeOverlay(questions) {
 
       <div class="between" style="padding-top:12px;border-top:1px solid var(--brd)">
         ${!isRevealed ? `
-          <button class="btn bgh bsm" onclick="document.getElementById('mp-hint').style.display='block'">💡 Hint</button>
+          <button class="btn bgh bsm" onclick="mpRevealNextHint()" ${currentHintLevel >= 5 ? 'disabled style="opacity:0.5"' : ''}>
+            💡 Hint (${currentHintLevel}/5)
+          </button>
           <div style="display:flex;gap:8px">
             <button class="btn bsec bsm" onclick="mpRevealAnswer()">Show Answer</button>
             <button class="btn bpri bsm" onclick="mpSubmitAnswer()">Submit →</button>
@@ -4228,17 +4343,13 @@ function launchMultiPracticeOverlay(questions) {
           }
         `}
       </div>
-
-      <div id="mp-hint" style="display:none;margin-top:12px;padding:10px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;font-size:12px;color:var(--goldl)">
-        💡 ${renderQuestionText(q.hint || 'Analyze the given parameters carefully and apply the relevant formula.')}
-      </div>
     `;
     
     triggerMath();
     setTimeout(() => {
       const el = document.getElementById('mp-content');
       if (el && window.renderMath) {
-        window.renderMath(el);
+        _doRenderMath(el);
       }
     }, 50);
   }
@@ -4264,12 +4375,27 @@ function launchMultiPracticeOverlay(questions) {
       const numCorrect = parseFloat(String(correctVal).replace(/[^0-9.\-eE]/g, ''));
       isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
     } else {
-      isCorrect = userAns !== undefined && (q.ans || []).includes(userAns);
+      isCorrect = userAns !== undefined && (Array.isArray(q.ans) ? q.ans.includes(userAns) : q.ans === userAns);
     }
     
     if (isCorrect) {
       sessionState.score++;
-      if (typeof addXP === 'function') addXP(25);
+      if (typeof addXP === 'function') addXP(25, 'Practice Correct');
+    } else {
+      // Save mistake to D.compExam.mistakes (Problem 4)
+      if (typeof saveMistake === 'function') {
+        saveMistake(q, userAns, 'practice');
+      }
+      // Add to retry queue so the student can specifically re-practice wrong answers later
+      const questionId = q.id || q.q?.substring(0, 40) || ('mp_' + idx);
+      if (typeof addToRetryQueue === 'function') {
+        addToRetryQueue(questionId, q.q);
+      }
+      // Also log to recovery Mistake Diary
+      if (typeof logMistake === 'function') {
+        const chap = q.chap || q.chapter || compState.practiceChapter || 'General';
+        logMistake(chap, q.concept || chap, q.q, 3, 'Practice Mistake', q.expl || '');
+      }
     }
     renderQuestion();
   };
@@ -4293,26 +4419,144 @@ function launchMultiPracticeOverlay(questions) {
       recordPracticeSessionForRank(score, total);
     }
 
+    // Record per-chapter accuracy for heatmap & priority targets (Problem 1)
+    const sessionChapterMap = {};
+    sessionState.questions.forEach((q, i) => {
+      const chap = q.chap || q.chapter || compState.practiceChapter || 'General';
+      const sub = q.section || q.subject || compState.practiceSubject || 'General';
+      const key = sub + '::' + chap;
+      if (!sessionChapterMap[key]) sessionChapterMap[key] = { chap, sub, correct: 0, total: 0 };
+      sessionChapterMap[key].total++;
+      const userAns = sessionState.answers[i];
+      let isCorrect = false;
+      if (q.type === 'numerical') {
+        const correctVal = Array.isArray(q.ans) ? q.ans[0] : q.ans;
+        const numUser = parseFloat(String(userAns || '').replace(/[^0-9.\-eE]/g, ''));
+        const numCorrect = parseFloat(String(correctVal).replace(/[^0-9.\-eE]/g, ''));
+        isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
+      } else {
+        isCorrect = userAns !== undefined && (Array.isArray(q.ans) ? q.ans.includes(userAns) : q.ans === userAns);
+      }
+      if (isCorrect) sessionChapterMap[key].correct++;
+    });
+
+    Object.values(sessionChapterMap).forEach(item => {
+      if (typeof recordChapterResult === 'function') {
+        recordChapterResult(item.chap, item.sub, item.correct, item.total);
+      }
+    });
+
+    const qChap = sessionState.questions[0]?.chap || sessionState.questions[0]?.chapter;
+    const qSubj = sessionState.questions[0]?.section || sessionState.questions[0]?.subject;
+    const chapter = (compState.practiceChapter && !['All Chapters', 'General', 'bookmarks', 'retry', 'mistakes'].includes(compState.practiceChapter)) ? compState.practiceChapter : (qChap || 'General');
+    const subject = (compState.practiceSubject && !['General', 'BOOKMARKS', 'RETRY', 'MISTAKES'].includes(compState.practiceSubject)) ? compState.practiceSubject : (qSubj || 'General');
+
+    // Feed revision SM-2 scheduler & MasteryEngine (Problem 3)
+    const topic = (chapter && !['All Chapters', 'General', 'bookmarks', 'retry', 'mistakes'].includes(chapter)) ? chapter : (qChap || subject);
+    if (!D.memory) D.memory = { scores: {}, history: [], weakSpots: [], retryQueue: [] };
+    if (!D.memory.scores) D.memory.scores = {};
+    if (!D.memory.history) D.memory.history = [];
+    D.memory.scores[topic] = pct;
+    D.memory.history.push({ topic, date: new Date().toISOString(), score: pct, type: 'practice', interval: 1 });
+    if (D.memory.history.length > 60) D.memory.history = D.memory.history.slice(-60);
+    if (pct < 70 && typeof addTopicToRevision === 'function') addTopicToRevision(topic);
+
+    // Log each attempt to MasteryEngine
+    sessionState.questions.forEach((q, i) => {
+      const userAns = sessionState.answers[i];
+      let isCorrect = false;
+      if (q.type === 'numerical') {
+        const correctVal = Array.isArray(q.ans) ? q.ans[0] : q.ans;
+        const numUser = parseFloat(String(userAns || '').replace(/[^0-9.\-eE]/g, ''));
+        const numCorrect = parseFloat(String(correctVal).replace(/[^0-9.\-eE]/g, ''));
+        isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
+      } else {
+        isCorrect = userAns !== undefined && (Array.isArray(q.ans) ? q.ans.includes(userAns) : q.ans === userAns);
+      }
+      if (window.MasteryEngine && typeof window.MasteryEngine.logAttempt === 'function') {
+        window.MasteryEngine.logAttempt({
+          topic: q.chap || q.chapter || topic,
+          questionText: q.q,
+          correctAnswer: String(Array.isArray(q.ans) ? q.ans.join(', ') : q.ans),
+          selectedAnswer: String(userAns !== undefined ? userAns : ''),
+          isCorrect: isCorrect,
+          difficulty: q.difficulty || compState.practiceDifficulty || 'medium',
+          errorType: isCorrect ? null : 'Practice Mistake'
+        });
+      }
+    });
+
     if (window.CompEventBus) {
       window.CompEventBus.publish('EvaluationCompleted', { type: 'practice', score, totalQuestions: total, accuracyPct: pct });
       window.CompEventBus.publish('ProfileUpdated', { profileId: window.D?.profile?.id || 'guest', lastExam: 'Practice Session', latestScore: score, latestAccuracy: pct });
     }
+
+    // Collect wrong questions for review breakdown (Problem 9)
+    const wrongQuestions = [];
+    sessionState.questions.forEach((q, i) => {
+      const userAns = sessionState.answers[i];
+      let isCorrect = false;
+      if (q.type === 'numerical') {
+        const correctVal = Array.isArray(q.ans) ? q.ans[0] : q.ans;
+        const numUser = parseFloat(String(userAns || '').replace(/[^0-9.\-eE]/g, ''));
+        const numCorrect = parseFloat(String(correctVal).replace(/[^0-9.\-eE]/g, ''));
+        isCorrect = !isNaN(numUser) && !isNaN(numCorrect) && Math.abs(numUser - numCorrect) < 0.01;
+      } else {
+        isCorrect = userAns !== undefined && (Array.isArray(q.ans) ? q.ans.includes(userAns) : q.ans === userAns);
+      }
+      if (!isCorrect) {
+        wrongQuestions.push({ q, userAns, idx: i });
+      }
+    });
+
+    let wrongReviewHTML = '';
+    if (wrongQuestions.length > 0) {
+      wrongReviewHTML = `
+        <div style="text-align:left;margin-top:20px;border-top:1px solid var(--brd);padding-top:16px">
+          <div style="font-size:13px;font-weight:700;color:var(--redl);margin-bottom:12px">⚠️ Review Mistakes (${wrongQuestions.length})</div>
+          <div style="display:flex;flex-direction:column;gap:10px;max-height:280px;overflow-y:auto;padding-right:4px">
+            ${wrongQuestions.map((w) => {
+              const qObj = w.q;
+              const corrText = Array.isArray(qObj.ans) ? qObj.ans.map(a => qObj.opts ? qObj.opts[a] : a).join(', ') : (qObj.opts ? qObj.opts[qObj.ans] : qObj.ans);
+              const userText = w.userAns !== undefined ? (qObj.opts ? (qObj.opts[w.userAns] || w.userAns) : w.userAns) : 'Skipped';
+              const targetQId = qObj.id || ('pq_' + w.idx);
+              return `
+                <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:12px;font-size:12px">
+                  <div style="color:#fff;font-weight:600;margin-bottom:6px" class="katex-render-target">${renderQuestionText(qObj.q)}</div>
+                  <div style="display:flex;gap:12px;font-size:11px;margin-bottom:6px">
+                    <span style="color:var(--redl)">Your Answer: <strong>${esc(userText)}</strong></span>
+                    <span style="color:var(--okl)">Correct: <strong>${esc(corrText)}</strong></span>
+                  </div>
+                  <div style="color:var(--sub);font-size:11px;line-height:1.4;margin-bottom:8px" class="katex-render-target">${renderQuestionText(qObj.expl || 'Standard solution.')}</div>
+                  <div style="display:flex;gap:8px">
+                    <button class="btn bsm bgh" style="font-size:10px;padding:3px 8px;min-height:auto" onclick="addToRevisionFromReview('${escON(qObj.chap || qObj.chapter || topic)}')">➕ Add to Revision</button>
+                    <button class="btn bsm bgh" style="font-size:10px;padding:3px 8px;min-height:auto" onclick="addToRetryQueue('${escON(targetQId)}')">🔄 Add to Retry Queue</button>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
+
     document.getElementById('mp-content').innerHTML = `
-      <div style="text-align:center;padding:20px 0">
-        <div style="font-size:48px;margin-bottom:12px">${pct >= 80 ? '🏆' : pct >= 50 ? '📈' : '📚'}</div>
-        <div class="h2" style="color:#fff;margin-bottom:8px">Practice Complete!</div>
-        <div style="font-size:32px;font-weight:800;color:var(--pl);margin-bottom:4px">${score}/${total}</div>
-        <div style="font-size:14px;color:var(--mut);margin-bottom:20px">${pct}% accuracy · +${score * 25} XP earned</div>
-        <div style="display:flex;gap:10px;justify-content:center">
+      <div style="text-align:center;padding:10px 0">
+        <div style="font-size:44px;margin-bottom:8px">${pct >= 80 ? '🏆' : pct >= 50 ? '📈' : '📚'}</div>
+        <div class="h2" style="color:#fff;margin-bottom:4px">Practice Complete!</div>
+        <div style="font-size:32px;font-weight:800;color:var(--pl);margin-bottom:2px">${score}/${total}</div>
+        <div style="font-size:13px;color:var(--mut);margin-bottom:16px">${pct}% accuracy · +${score * 25} XP earned</div>
+        <div style="display:flex;gap:10px;justify-content:center;margin-bottom:8px">
           <button class="btn bgh" onclick="closePracticeOverlay()">Close</button>
           <button class="btn bpri" onclick="closePracticeOverlay();startCompPractice()">Practice Again</button>
         </div>
+        ${wrongReviewHTML}
       </div>
     `;
     setTimeout(() => {
       const el = document.getElementById('mp-content');
       if (el && window.renderMath) {
-        window.renderMath(el);
+        _doRenderMath(el);
       }
     }, 50);
   };
@@ -4524,7 +4768,6 @@ window.categorizeMistake = categorizeMistake;
 
 // Safe no-op stubs — these are overridden by launchMultiPracticeOverlay()
 // when a practice session is active. Defined here to prevent ReferenceError
-// if onclick handlers fire before the overlay is opened.
 if (!window.mpSelectOpt)     window.mpSelectOpt     = function() {};
 if (!window.mpSubmitAnswer)  window.mpSubmitAnswer  = function() {};
 if (!window.mpRevealAnswer)  window.mpRevealAnswer  = function() {};
@@ -4602,24 +4845,26 @@ if (typeof window !== 'undefined') {
   window.WORLD_EXAMS = WORLD_EXAMS;
 
   // ⌨️ CBT EXAM KEYBOARD SHORTCUTS (Alt+N: Next, Alt+P: Prev, Alt+M: Mark Review, Alt+C: Clear)
-  window.addEventListener('keydown', function(e) {
-    if (!compState.activeExam || !compState.activeExam.instructionsRead) return;
-    const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
-    if (activeTag === 'input' || activeTag === 'textarea') return;
+  if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+    window.addEventListener('keydown', function(e) {
+      if (!compState.activeExam || !compState.activeExam.instructionsRead) return;
+      const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
+      if (activeTag === 'input' || activeTag === 'textarea') return;
 
-    if (e.altKey && (e.key === 'n' || e.key === 'N')) {
-      e.preventDefault();
-      saveAndNextMock();
-    } else if (e.altKey && (e.key === 'p' || e.key === 'P')) {
-      e.preventDefault();
-      if (typeof prevMockQuestion === 'function') prevMockQuestion();
-    } else if (e.altKey && (e.key === 'm' || e.key === 'M' || e.key === 'r' || e.key === 'R')) {
-      e.preventDefault();
-      markMockForReview();
-    } else if (e.altKey && (e.key === 'c' || e.key === 'C')) {
-      e.preventDefault();
-      clearActiveExamAnswer();
-    }
-  });
+      if (e.altKey && (e.key === 'n' || e.key === 'N')) {
+        e.preventDefault();
+        saveAndNextMock();
+      } else if (e.altKey && (e.key === 'p' || e.key === 'P')) {
+        e.preventDefault();
+        if (typeof prevMockQuestion === 'function') prevMockQuestion();
+      } else if (e.altKey && (e.key === 'm' || e.key === 'M' || e.key === 'r' || e.key === 'R')) {
+        e.preventDefault();
+        markMockForReview();
+      } else if (e.altKey && (e.key === 'c' || e.key === 'C')) {
+        e.preventDefault();
+        clearActiveExamAnswer();
+      }
+    });
+  }
 }
 

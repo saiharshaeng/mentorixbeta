@@ -21,7 +21,8 @@
 
 function addXP(a, lb = '') {
   D.xp += a; if (typeof saveAll === 'function') saveAll(); if (typeof updateSB === 'function') updateSB();
-  if (D.settings?.notifications !== false) {
+  const isCBTExamActive = (window.D?.screen === 'comp' || (typeof window.currentScr !== 'undefined' && window.currentScr === 'comp')) && !!(window.compState && window.compState.activeExam);
+  if (D.settings?.notifications !== false && !isCBTExamActive) {
     toast(`⚡ +${a} XP${lb ? ' · ' + lb : ''}`);
     let zone = document.getElementById('xp-pop-zone');
     if (!zone) {
@@ -48,13 +49,14 @@ function applyMentorTheme() {
 }
 
 function awardBadge(id) {
+  if (!D.badges) D.badges = [];
   if (D.badges.includes(id)) return;
   D.badges.push(id); saveAll();
-  const b = BADGES.find(x => x.id === id);
+  const b = (typeof BADGES !== 'undefined' && Array.isArray(BADGES)) ? BADGES.find(x => x.id === id) : null;
   if (b) {
-    haptic('celebration');
+    if (typeof haptic === 'function') haptic('celebration');
     setTimeout(() => {
-      toast(`${b.ic} New Badge: ${id}!`, 'badge');
+      if (typeof toast === 'function') toast(`${b.ic} New Badge: ${id}!`, 'badge');
       if (typeof launchConfetti === 'function') launchConfetti(30);
     }, 400);
   }

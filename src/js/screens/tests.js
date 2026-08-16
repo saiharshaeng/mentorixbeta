@@ -11,8 +11,21 @@
  * - Competitive Mock
  * Uses a dynamic 12-question pool to route users adaptively through difficulty levels without latency.
  */
+/**
+ * PENDING INTEGRATION: Practice session question sourcing
+ * Per design spec: 2 easy + 2 medium + 2 hard per practice session
+ * Source priority: (1) PYQ bank via pyqService.getQuestions(), (2) AI-generated per topic
+ * See: SECTION H of ANTIGRAVITY BUILD BRIEF — Mentorix Learning Engine Redesign
+ * When pyqService has questions for the topic: use those. Else: generate via doChunkLesson's check questions.
+ * Do not implement this until pyqService PYQ-by-topic routing is confirmed working.
+ */
 'use strict';
-function escON(s){return String(s||'').replace(/'/g,"\\'");}
+// escON() intentionally NOT redefined here — this file used to declare a
+// weaker local copy (it only escaped single quotes, not <, >, or "), which
+// silently overwrote helpers.js's full version globally for every screen
+// loaded after this file. Removed to close that gap. helpers.js's escON()
+// is already loaded by the time this file runs and is a strict superset of
+// what this file needs.
 
 let TS = {
   step: 'home',             // 'home' | 'source' | 'configure' | 'active' | 'results'
@@ -293,10 +306,12 @@ async function genTest() {
   try {
     const isAdaptive = TS.assessmentType === 'adaptive' || TS.assessmentType === 'diagnostic';
 
+    const gradeCtx = `Student: ${D.profile?.grade || 'school'}, ${D.profile?.board || 'CBSE'}. ALL questions must be appropriate for this grade level.`;
     let prompt = '';
     if (isAdaptive) {
       // Adaptive Pool generation
-      prompt = `Create a pool of exactly 12 MCQ questions on "${TS.topic.replace(/"/g,"'")}".
+      prompt = `${gradeCtx}
+Create a pool of exactly 12 MCQ questions on "${TS.topic.replace(/"/g,"'")}".
 The pool must contain exactly:
 - 4 Easy questions (fundamental recall, definitions)
 - 4 Medium questions (logical application)
@@ -310,7 +325,8 @@ Output ONLY this JSON:
 ]}`;
     } else {
       // Standard config setup
-      prompt = `Create exactly ${TS.dist.easy + TS.dist.medium + TS.dist.hard} MCQ questions on "${TS.topic.replace(/"/g,"'")}".
+      prompt = `${gradeCtx}
+Create exactly ${TS.dist.easy + TS.dist.medium + TS.dist.hard} MCQ questions on "${TS.topic.replace(/"/g,"'")}".
 Breakdown: ${TS.dist.easy} Easy, ${TS.dist.medium} Medium, ${TS.dist.hard} Hard.
 Output ONLY this JSON:
 {"title":"${TS.topic.replace(/"/g,"'")} Assessment","qs":[
@@ -318,7 +334,8 @@ Output ONLY this JSON:
 ]}`;
     }
 
-    const sys = `You are a world-class educational assessment author. Output ONLY valid JSON. LaTeX formatting must be wrapped in single dollar signs ($) for inline math, or double dollar signs ($) for block math. If chemistry, use \\ce{...} tags.`;
+    const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
+    const sys = `You are a world-class educational assessment author. Output ONLY valid JSON. LaTeX formatting must be wrapped in single dollar signs ($) for inline math, or double dollar signs ($) for block math. If chemistry, use \\ce{...} tags.\n${studentCtx}`;
     const raw = await ai([{ role: 'user', content: prompt }], sys, 8000, true);
     const data = pJSON(raw);
     if (!data?.qs || data.qs.length < 1) throw new Error('Could not parse assessment questions.');
@@ -555,16 +572,16 @@ function subTest() {
   const sc = qs.filter((q, i) => TS.ans[i] === q.a).length;
   const pct = Math.round((sc / total) * 100);
 
-  // Log standard attempts closed-loop if not adaptive
-  if (!isAdaptive && window.MasteryEngine) {
+  // Fix 13: Log ALL attempts to MasteryEngine — both adaptive and standard modes
+  if (window.MasteryEngine) {
     qs.forEach((q, i) => {
       const chosenOidx = TS.ans[i];
       const isCorrect = chosenOidx === q.a;
       window.MasteryEngine.logAttempt({
         topic: TS.topic,
         questionText: q.q,
-        correctAnswer: q.o[q.a],
-        selectedAnswer: chosenOidx !== undefined ? q.o[chosenOidx] : '',
+        correctAnswer: q.o?.[q.a],
+        selectedAnswer: chosenOidx !== undefined ? q.o?.[chosenOidx] : '',
         isCorrect: isCorrect,
         difficulty: q.difficulty || 'Medium',
         timeTakenSeconds: 15, // default estimated

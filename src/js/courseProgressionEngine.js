@@ -70,6 +70,13 @@
       });
     }
 
+    if (state.completedTopics && state.completedTopics.length > 0) {
+      if (!Array.isArray(window.D.topics)) window.D.topics = [];
+      state.completedTopics.forEach(t => {
+        if (t && !window.D.topics.includes(t)) window.D.topics.push(t);
+      });
+    }
+
     const pos = _computeCurrentPosition(course, state);
     state.currentPosition = pos;
     state.progressPct = _computeProgressPct(course, state);
@@ -213,10 +220,19 @@
           });
         }
 
-        const allCompleted = (chap.topics || []).every(t => {
-          const tName = typeof t === 'string' ? t : (t.title || t.name || '');
-          return state.completedTopics.includes(tName.trim()) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
-        });
+        let allTopicsForChapter = [];
+        if (chap.subchapters && chap.subchapters.length > 0) {
+          chap.subchapters.forEach(sub => {
+            (sub.topics || []).forEach(t => allTopicsForChapter.push(t));
+          });
+        } else {
+          allTopicsForChapter = chap.topics || [];
+        }
+        const allCompleted = allTopicsForChapter.length > 0 && allTopicsForChapter.every(t => {
+            const tName = typeof t === 'string' ? t : (t.title || t.name || '');
+            const lowerTName = tName.trim().toLowerCase();
+            return state.completedTopics.some(ct => (ct || '').trim().toLowerCase() === lowerTName) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
+          });
 
         if (allCompleted && !chap.completed) {
           chap.completed = true;
@@ -457,6 +473,11 @@
     try {
       if (typeof localStorage !== 'undefined') {
         localStorage.setItem(STORAGE_KEY_PREFIX + courseId, JSON.stringify(state));
+      }
+      // Also keep D.courseStates in sync so saveAll() persists it to IndexedDB
+      if (window.D) {
+        if (!window.D.courseStates) window.D.courseStates = {};
+        window.D.courseStates[courseId] = state;
       }
     } catch(e) {}
   }

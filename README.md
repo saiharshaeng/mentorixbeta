@@ -1,100 +1,132 @@
-# 🚀 Mentorix AI Learning Ecosystem (v2.4)
-> The authoritative, curriculum-first AI learning platform & competitive exam ecosystem built for JEE Main, JEE Advanced, and NEET UG test simulations. Free forever for under-resourced students.
+# Mentorix — AI Learning Platform (v83)
+
+> Free, curriculum-first AI learning OS for Indian students — Grades 6–12.  
+> Built for JEE Main, JEE Advanced, NEET UG, CBSE, and state board preparation.
+
+**App:** [mentorix-beta.netlify.app](https://mentorix-beta.netlify.app) &nbsp;|&nbsp; **Landing:** [mentorixedu.netlify.app](https://mentorixedu.netlify.app)
 
 ---
 
-## 🏛️ Ecosystem Architecture
-Mentorix is built on a highly modular, decoupled architecture where every subsystem owns exactly one responsibility. Academic logic, AI coaching, design systems, adaptive layouts, and state continuity remain strictly isolated and event-driven.
+## What Mentorix Actually Does
 
-```mermaid
-graph TD
-    A["Student Action"] --> B["UASCA Workspaces State Engine"]
-    B --> C["UAES 3D Context Architecture"]
-    C --> D["QDE Question Delivery Engine"]
-    D --> E["Deterministic ESAI Evaluation Engine"]
-    E --> F["Academic Event Bus"]
-    F --> G["CompOrchestrator Practice Pipeline"]
-    F --> H["Tio Orchestration Engine"]
-    F --> I["Spaced Repetition & Revision Queue"]
-    F --> J["IndexedDB Permanent Storage"]
+- **Tio** — AI study companion that teaches through dialogue, not just answers
+- **CBL (Concept-Based Learning)** — breaks every topic into chunks; teaches each chunk, tests it, then moves on
+- **Mastery Engine** — tracks concept-level mastery with spaced-repetition decay (SM-2 algorithm)
+- **Mistake Diary** — logs weak concepts, groups by root cause, resurfaces them before they decay
+- **Competitive Exam Engine** — full JEE/NEET timed CBT sessions with PYQ question banks
+- **Smart Revision** — time-decay based revision queue, not arbitrary reminders
+- **AI Mentor** — long-form contextual help for stuck students
+- **Offline-first** — Service Worker pre-caches core assets; fallback lessons serve from Supabase cache
+
+---
+
+## Architecture
+
+```
+src/
+├── index.html               # App shell, boot sequence, KaTeX 3-tier fallback, SW registration
+├── index.css                # Full design system (359KB — all screens inline)
+├── sw.js                    # Service Worker v83 — network-first, API bypass, offline fallback
+├── manifest.json            # PWA manifest — standalone, maskable icon
+├── js/
+│   ├── mentorix-core.min.js # Unified core bundle (replaces 160+ micro-files)
+│   ├── router.js            # Hash-based SPA router + emergency screen fallback
+│   ├── ai.js                # Groq LLM call layer with retry + streaming
+│   ├── masteryEngine.js     # SM-2 mastery tracking + time decay + concept repair
+│   ├── storage.js           # IndexedDB persistence + Supabase cloud sync
+│   ├── xp.js                # XP/gamification (suppressed during CBT exams)
+│   ├── curriculumEngine.js  # Grade 6–12 curriculum map (CBSE + JEE/NEET aligned)
+│   ├── evaluationEngine.js  # Deterministic answer scoring (no AI for correctness)
+│   ├── examEngine.js        # CBT exam session management
+│   ├── tioEngine.js         # Tio character logic + 6 teaching modes
+│   ├── supabase.js          # Supabase client + lesson/question cache layer
+│   ├── screens/
+│   │   ├── learn.js         # CBL lesson delivery (6-stage sequence)
+│   │   ├── comp.js          # Competitive exam UI + PYQ delivery
+│   │   ├── dashboard.js     # Daily focus + Tio briefing
+│   │   ├── courses.js       # Course/chapter/topic navigator
+│   │   ├── recovery.js      # Mistake diary + skill recovery
+│   │   ├── revision.js      # Smart revision session runner
+│   │   ├── notebook.js      # AI-generated notes
+│   │   ├── progress.js      # Mastery heatmaps + streak tracking
+│   │   └── ...              # mentor, explore, careers, tests, settings, doubt
+│   └── services/
+│       ├── compOrchestrator.js   # Exam session orchestration
+│       ├── tioOrchestrator.js    # Tio context switching + suppression
+│       ├── milestoneCelebration.js # XP milestone animations
+│       └── overlayManager.js     # Modal/overlay lifecycle
+├── data/
+│   ├── pyqService.js        # PYQ question bank service
+│   ├── jeeData.js           # JEE syllabus + chapter map
+│   └── examPatterns.js      # Exam pattern specs (marks, timing, sectioning)
+├── vendor/
+│   ├── supabase.min.js      # Supabase JS client (offline-vendored)
+│   └── katex/               # KaTeX math rendering (tier-1 local fallback)
+├── lib/
+│   ├── gsap.min.js          # Animation library
+│   ├── anime.min.js         # Micro-animation library
+│   └── katex/               # KaTeX (tier-2 fallback)
+└── database/
+    └── supabase_audit_fixes_aug2026.sql  # Security patch — run in Supabase SQL Editor
+
+mentorix-landing-final/landing/   # Landing page (Vite + React)
+├── src/
+│   ├── pages/               # Route pages (Home, About, Vision, Feedback, etc.)
+│   └── components/          # Shared UI components
+├── public/
+│   └── og-image.png         # Social preview image (1200×630)
+└── index.html               # OG/Twitter meta tags
 ```
 
 ---
 
-## 📂 System Modules & Architecture
+## Key Design Principles
 
-| Module | Location | Responsibility |
-| :--- | :--- | :--- |
-| **UASCA Engine** | [`src/js/services/uascaEngine.js`](file:///c:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src/js/services/uascaEngine.js) | 4-Level state classification (UI, Session, Learning, Identity) & 4 isolated Workspaces (`Learning`, `Comp`, `Tio`, `Profile`). |
-| **UAES Engine** | [`src/js/services/uaesEngine.js`](file:///c:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src/js/services/uaesEngine.js) | Reshapes interface across 3 simultaneous dimensions: Device Personas, User Context, and Activity Context. |
-| **Tio Orchestrator** | [`src/js/services/tioOrchestrator.js`](file:///c:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src/js/services/tioOrchestrator.js) | Central AI companion layer with 6 context modes & high-focus exam suppression. |
-| **Comp Orchestrator** | [`src/js/services/compOrchestrator.js`](file:///c:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src/js/services/compOrchestrator.js) | End-to-end exam practice orchestrator connecting QDE, ESAI, and Mastery Engine. |
-| **Universal Navigation** | [`src/js/router.js`](file:///c:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src/js/router.js) | Canonical route single source of truth, hash URL deep-linking, and scroll preservation. |
-| **Universal Design System** | [`src/index.css`](file:///c:/Users/Harsha/.gemini/antigravity-ide/scratch/mentorix/src/index.css) | Standardized intent palette (`--uds-cyan`, `--uds-green`, `--uds-gold`, `--uds-red`, `--uds-purple`), motion budgets, and touch targets. |
+1. **AI never scores answers** — `evaluationEngine.js` is fully deterministic
+2. **Same inputs always produce the same output** — no randomness in evaluation or session blueprints
+3. **Offline-first** — app must be usable without internet after first load
+4. **Grades 6–12 only** — curriculum engine enforces this at every entry point
+5. **Fail gracefully** — every screen has a fallback; errors never crash the session
 
 ---
 
-## 🎯 6-Level Curriculum Hierarchy
-Every question is strictly bound to our curriculum-first hierarchy:
-
-```
-[Level 1: Exam]       JEE Main / JEE Advanced / NEET UG
-       ↓
-[Level 2: Subject]    Physics / Chemistry / Mathematics
-       ↓
-[Level 3: Chapter]    Electrostatics / Complex Numbers
-       ↓
-[Level 4: Topic]      Coulomb's Law / Euler Form
-       ↓
-[Level 5: Subtopic]   Coulomb's Law Detailed
-       ↓
-[Level 6: Concept]    Coulomb Forces (Leaf nodes mapping questions)
-```
-
----
-
-## 🛠️ Verification & Test Suite Execution
-We maintain an automated verification toolkit to certify every module and state transition:
+## Running Locally
 
 ```bash
-# Execute Ultimate Codebase & UX System Audit
-node scratch/ultimate_codebase_audit.js
+# Serve the app (required — file:// protocol blocks PYQ data)
+node src/server.js
+# → Open http://localhost:8080
 
-# Individual Phase Verification Scripts
-node scratch/phase19_verification.js   # UASCA 4-Level State & Workspaces
-node scratch/phase18_verification.js   # UAES 3D Context & Personas
-node scratch/phase17_verification.js   # Universal Device Compatibility
-node scratch/phase16_verification.js   # Universal Navigation & IA
-node scratch/phase15_verification.js   # Tio Orchestration Engine
-node scratch/phase14_verification.js   # Universal Design System (UDS)
-node scratch/full_codebase_audit.js    # Deep 37-Module VM Execution Audit
-node scratch/regression_test.js        # E2E Navigation Simulation
+# Landing page (dev)
+cd mentorix-landing-final/landing
+npm install
+npm run dev
 ```
 
 ---
 
-## 🗺️ Completed Milestones
-- [x] **Phase 1: Core Foundation & Domain Models**
-- [x] **Phase 2: Academic Registry & Curriculum Intelligence**
-- [x] **Phase 3: Question Repository & Question Intelligence System (QRIS)**
-- [x] **Phase 4: Evaluation, Scoring & Attempt Intelligence Engine (ESAI)**
-- [x] **Phase 5: Practice Engine & Adaptive Session Generator**
-- [x] **Phase 6: CBT Simulation Engine & Official Exam Blueprinting**
-- [x] **Phase 7: Spaced Repetition & Revision Engine (QRAReviewEngine)**
-- [x] **Phase 8: Analytics & Dashboard Telemetry**
-- [x] **Phase 9: Tio AI Coach Integration & Event Bus Dispatches**
-- [x] **Phase 10: Full Application SPA Modularization**
-- [x] **Phase 11: Production Deploy Sync & IndexedDB Storage System**
-- [x] **Phase 12: Targeted Practice & Mistake Diary Integration**
-- [x] **Phase 13: Question Delivery Engine (QDE) & KaTeX Pre-rendering**
-- [x] **Phase 14: Universal Design System (UDS) & Token Intent Palette**
-- [x] **Phase 15: Tio Orchestration Layer & Contextual AI Companion Engine**
-- [x] **Phase 16: Universal Navigation & Information Architecture (IA)**
-- [x] **Phase 17: Universal Device Compatibility & Hardware Scaling Engine**
-- [x] **Phase 18: Universal Adaptive Experience System (UAES) & 3D Context Architecture**
-- [x] **Phase 19: Universal Application State & Continuity Architecture (UASCA) & Workspaces**
+## Supabase Setup
+
+Project: `rpkhrwtowmvoccznqubo` (ap-southeast-2)
+
+Tables used:
+- `cached_lessons` — AI lesson cache (INSERT: anon, UPDATE: authenticated only)
+- `cached_questions` — question cache (same policy)
+- `landing_feedback` — landing page contact form submissions
+- `profiles` — user profiles (linked to Supabase Auth)
+- `revision_queue` — per-user spaced repetition queue
+- `tio_memory` — Tio conversation context
+
+**Before launch:** Run `src/database/supabase_audit_fixes_aug2026.sql` in the Supabase SQL Editor to apply security patches.
 
 ---
 
-> [!IMPORTANT]
-> **Pedagogical Rule #1:** AI should never decide whether a student answer is correct or incorrect. Correctness is evaluated deterministically by the official verification engine, while AI is utilized later to explain the underlying logic.
+## Deployment
+
+- **App** → Netlify, root: `src/`, publish: `src/`
+- **Landing** → Netlify, root: `mentorix-landing-final/landing/`, publish: `dist/`
+- `src/_redirects` handles SPA routing (`/* → /index.html 200`)
+
+---
+
+*Built by Harsha, Hyderabad — mentorixbeta@gmail.com*

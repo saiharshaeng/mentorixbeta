@@ -143,7 +143,7 @@
       if (fileCache[bank.key]) continue;
       
       try {
-        const r = await fetch(bank.url, { cache: 'no-store' });
+        const r = await fetch(bank.url);
         if (!r.ok) continue;
         const raw = await r.json();
         if (!Array.isArray(raw) || raw.length === 0) continue;
@@ -240,7 +240,7 @@
       try {
         const origin = (window.location && window.location.origin) ? window.location.origin : 'http://localhost:8080';
         const url = origin + '/data/' + paper.file;
-        const r = await fetch(url, { cache: 'no-store' });
+        const r = await fetch(url);
         if (r.ok) {
           const data = await r.json();
           fileCache[paper.file] = data;
@@ -389,7 +389,7 @@
       if (fileCache[paper.file]) return;
       try {
         const url = origin + '/data/' + paper.file;
-        const r = await fetch(url, { cache: 'no-store' });
+        const r = await fetch(url);
         if (r.ok) {
           fileCache[paper.file] = await r.json();
         } else {
@@ -668,6 +668,12 @@
       const tl = qType.toLowerCase();
       const byType = filtered.filter(q => (q.type || 'mcq').toLowerCase() === tl);
       if (byType.length > 0) filtered = byType;
+    }
+
+    if (options.year && options.year !== 'all' && options.year !== 'All Years') {
+      const yStr = String(options.year);
+      const byYear = filtered.filter(q => String(q.year || q.paperYear || '') === yStr || (q.paper && String(q.paper).includes(yStr)));
+      if (byYear.length > 0) filtered = byYear;
     }
 
     // SESSION DUPLICATE TRACKING

@@ -4,9 +4,15 @@
  */
 'use strict';
 
+function _haptic(type) {
+  if (typeof haptic === 'function') {
+    try { haptic(type); } catch(e) {}
+  }
+}
+
 function saveCheckpoint() {
   if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
-  if (LS && LS.topic && LS.lesson) {
+  if (LS && LS.topic) {
     D.memory.activeLesson = {
       topic: LS.topic,
       tab: LS.tab,
@@ -24,7 +30,15 @@ function saveCheckpoint() {
       goal: LS.goal,
       lesson: LS.lesson,
       activeStage: LS.activeStage || 1,
-      checkAttempts: LS.checkAttempts || {}
+      checkAttempts: LS.checkAttempts || {},
+      // CBL fields
+      cblEnabled: LS.cblEnabled,
+      chunks: LS.chunks,
+      currentChunkIdx: LS.currentChunkIdx,
+      chunkLessons: LS.chunkLessons,
+      chunkAttempts: LS.chunkAttempts || {},
+      chunkComplete: LS.chunkComplete,
+      topicReviewMode: LS.topicReviewMode
     };
     if (typeof saveAll === 'function') saveAll();
   }
@@ -38,7 +52,7 @@ async function fetchCachedLesson(topicKey) {
       .from('cached_lessons')
       .select('content')
       .eq('topic_key', topicKey)
-      .single();
+      .maybeSingle();
     if (error || !data) return null;
     return data.content;
   } catch(e) { return null; }
@@ -66,7 +80,7 @@ async function fetchCachedQuestions(topicKey) {
       .from('cached_questions')
       .select('questions')
       .eq('topic_key', topicKey)
-      .single();
+      .maybeSingle();
     if (error || !data) return null;
     return data.questions;
   } catch(e) { return null; }
@@ -84,23 +98,41 @@ async function saveQuestionsToCache(topicKey, questionsArray) {
 }
 
 function validateLessonDepth(lesson, curCtx) {
-  if (!lesson || !curCtx) return true;
-  const match = curCtx.match(/Required Formulae: (.+)/);
-  if (!match) return true;
+  if (!lesson) return false;
   
-  const formulaeInContext = match[1].split(',').map(f => f.trim()).filter(f => f && f !== 'None' && f !== 'N/A');
-  if (formulaeInContext.length === 0) return true;
-
-  const lessonText = JSON.stringify(lesson);
-  const presentFormulae = formulaeInContext.filter(f => {
-    const rawSymbol = f.split(/[^a-zA-Z]/)[0];
-    return rawSymbol ? lessonText.includes(rawSymbol) : true;
-  });
-
-  if (presentFormulae.length < Math.ceil(formulaeInContext.length / 2)) {
-    console.warn('[LearnEngine] Lesson failed depth validation. Missing key formulae.');
+  // 1. Minimum content completeness gate
+  const totalText = `${lesson.hook || ''} ${lesson.technical || ''} ${lesson.intuition || ''} ${lesson.derivation || ''} ${lesson.explanation || ''}`;
+  if (totalText.trim().length < 80) {
+    console.warn('[LearnEngine] Lesson failed depth validation: content too brief.');
     return false;
   }
+
+  // 2. Check questions structure validation
+  if (lesson.checks && Array.isArray(lesson.checks) && lesson.checks.length === 0 && !lesson.practiceTest) {
+    console.warn('[LearnEngine] Lesson failed depth validation: missing check questions.');
+    return false;
+  }
+
+  // 3. Formula & mathematical depth validation when curriculum requires formulae
+  if (curCtx && typeof curCtx === 'string') {
+    const match = curCtx.match(/Required Formulae: (.+)/);
+    if (match) {
+      const formulaeInContext = match[1].split(',').map(f => f.trim()).filter(f => f && f !== 'None' && f !== 'N/A');
+      if (formulaeInContext.length > 0) {
+        const lessonText = JSON.stringify(lesson);
+        const hasLaTeX = lessonText.includes('$') || lessonText.includes('\\(') || lessonText.includes('\\frac');
+        const presentCount = formulaeInContext.filter(f => {
+          const clean = f.replace(/[^a-zA-Z0-9]/g, '');
+          return clean && clean.length >= 2 ? lessonText.includes(clean) : true;
+        }).length;
+        if (!hasLaTeX && presentCount === 0 && formulaeInContext.length >= 2) {
+          console.warn('[LearnEngine] Lesson failed depth validation: missing technical/mathematical depth.');
+          return false;
+        }
+      }
+    }
+  }
+
   return true;
 }
 
@@ -183,30 +215,47 @@ function rLearn(){
   }
 
   if (!t && (!LS || !LS.topic) && (!D.memory || !D.memory.activeLesson)) {
-    if (typeof openCourseSetupModal === 'function') {
+    if (D.courses && D.courses.length > 0) {
+      // Find first available topic in user's active course
+      const firstCourse = D.courses[0];
+      const firstChap = firstCourse?.units?.[0]?.chapters?.[0];
+      const firstTopic = firstChap?.subchapters?.[0]?.topics?.[0] || firstChap?.topics?.[0];
+      t = typeof firstTopic === 'string' ? firstTopic : (firstTopic?.title || "Newton's Laws of Motion");
+    } else if (typeof openCourseSetupModal === 'function') {
       openCourseSetupModal();
+      return;
     } else {
       go('courses');
+      return;
     }
-    return;
   }
 
   if(!LS){
     if(D.memory && D.memory.activeLesson){
       LS=Object.assign({}, D.memory.activeLesson);
     }else{
+      // Issue 7 fix: allow diagnostic for Grade 7+ so lesson depth actually matches the student's level
+      const _profileGrade = D.profile?.grade ? parseInt(String(D.profile.grade).replace(/[^0-9]/g, '')) || 0 : 0;
+      const _skipDiag = _profileGrade < 7;
       LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:t,
-          diagDone:true,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
+          diagDone:_skipDiag,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
           score:0,weakAreas:[],masteryPct:0,reinforcing:false,reLesson:null,
-          activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{}};
+          activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{},
+          cblEnabled:true,chunks:null,currentChunkIdx:0,chunkLessons:{},
+          chunkAttempts:{},chunkComplete:{},topicReviewMode:false};
     }
   }
 
   if(t&&t!==LS.topic){
+    // Issue 7 fix: allow diagnostic for Grade 7+ so lesson depth actually matches the student's level
+    const _profileGradeNew = D.profile?.grade ? parseInt(String(D.profile.grade).replace(/[^0-9]/g, '')) || 0 : 0;
+    const _skipDiagNew = _profileGradeNew < 7;
     LS={lesson:null,loading:false,tab:'overview',ans:{},sub:false,err:'',topic:t,
-        diagDone:true,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
+        diagDone:_skipDiagNew,diagLevel:'beginner',priorKnowledge:'1',depth:'2',goal:'2',
         score:0,weakAreas:[],masteryPct:0,reinforcing:false,reLesson:null,
-        activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{}};
+        activeSectionIdx:0,sectionAnswers:{},activeStage:1,checkAttempts:{},
+        cblEnabled:true,chunks:null,currentChunkIdx:0,chunkLessons:{},
+        chunkAttempts:{},chunkComplete:{},topicReviewMode:false};
     if(D.memory){
       delete D.memory.activeLesson;
       saveAll();
@@ -373,6 +422,176 @@ function isValidLesson(lesson) {
   );
 }
 
+// ═══════════════════════════════════════════════════════
+//  CBL — CHUNK-BASED LEARNING ENGINE (Phase 1 + Phase 2)
+// ═══════════════════════════════════════════════════════
+
+// PHASE 1: Get or build chunk decomposition for this topic
+async function getChunkPlan(topic, grade, subject) {
+  const topicKey = topic.toLowerCase().trim().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
+  const cacheKey = `chunks_${topicKey}`;
+
+  // Check Supabase cache first
+  try {
+    const sb = window.SupabaseClient || window.supabase || null;
+    if (sb) {
+      const { data } = await sb.from('cached_lessons').select('content').eq('topic_key', cacheKey).maybeSingle();
+      if (data?.content?.chunks && Array.isArray(data.content.chunks) && data.content.chunks.length >= 2) {
+        return data.content.chunks;
+      }
+    }
+  } catch(e) {}
+
+  // Check localStorage cache
+  try {
+    const stored = localStorage.getItem(`mx_chunks_${topicKey}`);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (parsed?.chunks && Array.isArray(parsed.chunks) && parsed.chunks.length >= 2) return parsed.chunks;
+    }
+  } catch(e) {}
+
+  // Build decomposition prompt
+  const decompSys = `You are an expert curriculum designer for Indian students Grade 6-12.
+Output ONLY raw JSON. No markdown. No backticks. No explanation.
+Your job is to decompose a topic into 2-5 non-overlapping sub-concepts (chunks).
+RULES:
+- Each chunk must cover a DISTINCT concept. Never repeat the same idea in two chunks.
+- Chunks must be in logical learning order (simpler first, complex later).
+- Each chunk title must be specific, not generic. Bad: "Introduction". Good: "Newton's First Law — Inertia and Rest".
+- For Grade 9-10 topics: 2-3 chunks. For Grade 11-12 topics: 3-5 chunks.
+- Do NOT include "Introduction", "Summary", "Overview", or "Revision" as chunks. Only core sub-concepts.`;
+
+  const decompPrompt = `Topic: "${topic}"
+Grade: ${grade}
+Subject: ${subject || 'STEM'}
+
+Decompose this topic into 2-5 chunks. Each chunk = one distinct teachable sub-concept.
+
+Output this exact JSON structure:
+{
+  "topic": "${topic}",
+  "chunks": [
+    {
+      "id": "c1",
+      "title": "Specific sub-concept name",
+      "core_idea": "One sentence: the single most important thing to understand in this chunk",
+      "formula_hint": "The key formula if any, in plain text (not LaTeX). Leave empty string if non-STEM.",
+      "estimated_minutes": 4
+    }
+  ]
+}`;
+
+  try {
+    const raw = await ai([{role:'user', content: decompPrompt}], decompSys, 600, true);
+    const parsed = pJSON(raw);
+    if (parsed?.chunks && Array.isArray(parsed.chunks) && parsed.chunks.length >= 1) {
+      parsed.chunks = parsed.chunks.map((c, idx) => ({ ...c, id: 'c' + (idx + 1) }));
+      // Cache it
+      try { localStorage.setItem(`mx_chunks_${topicKey}`, JSON.stringify(parsed)); } catch(e) {}
+      try {
+        const sb = window.SupabaseClient || window.supabase || null;
+        if (sb) await sb.from('cached_lessons').upsert({ topic_key: cacheKey, content: parsed, updated_at: new Date().toISOString() }, { onConflict: 'topic_key' });
+      } catch(e) {}
+      return parsed.chunks;
+    }
+  } catch(e) { console.warn('[CBL] Chunk decomposition failed:', e); }
+
+  // Fallback: create a single chunk from the whole topic
+  return [{ id: 'c1', title: topic, core_idea: `Master the fundamentals of ${topic}`, formula_hint: '', estimated_minutes: 10 }];
+}
+
+// PHASE 2: Generate focused micro-lesson for ONE chunk (cached per chunk forever)
+async function doChunkLesson(chunk, topicContext, grade, subject) {
+  const chunkKey = (topicContext + '_chunk_' + chunk.id).toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
+  const fullKey = 'chunk_' + chunkKey;
+
+  // Cache check — Supabase
+  try {
+    const sb = window.SupabaseClient || window.supabase || null;
+    if (sb) {
+      const { data } = await sb.from('cached_lessons').select('content').eq('topic_key', fullKey).maybeSingle();
+      if (data?.content?.checks && data.content.explanation) return data.content;
+    }
+  } catch(e) {}
+  // Cache check — localStorage
+  try {
+    const stored = localStorage.getItem(`mx_cl_${fullKey}`);
+    if (stored) { const p = JSON.parse(stored); if (p?.checks) return p; }
+  } catch(e) {}
+
+  const isSTEM = !chunk.title.match(/essay|grammar|prose|poem|chapter|story|novel|history|civics|geography|economics|social|language|vocabulary|comprehension/i);
+  const gradeNum = parseInt(String(grade || '').replace(/[^0-9]/g,'')) || 10;
+
+  const sys = `You are Mentorix AI tutor. Output ONLY raw JSON. No markdown, no backticks, no explanation.
+You are teaching a single sub-concept (chunk) of a larger topic. Be focused — teach ONLY this specific chunk.
+Do NOT teach the full parent topic. Do NOT repeat content from other chunks.
+Grade level: ${grade}. Adapt ALL vocabulary, formula depth, and example complexity to this grade.
+${gradeNum >= 11 ? 'Include full derivations where relevant.' : 'Focus on understanding and application, not heavy derivations.'}
+STEM: ${isSTEM}. ${isSTEM ? 'All formulae MUST be in LaTeX ($...$).' : 'Focus on language clarity and structure.'}
+CONTENT ACCURACY MANDATE:
+- For STEM subjects: All formulae, constants, and definitions must match NCERT textbooks for Indian curriculum Grade ${gradeNum}. If unsure, use the NCERT-standard value/definition.
+- For Grade 11-12 Physics/Chemistry: Cross-check with JEE Main syllabus 2024-2025. Do NOT include concepts outside the syllabus.
+- Never invent formulae. If a formula is uncertain, describe the concept in words instead.
+- Constants to always use: g = 9.8 m/s² (or 10 m/s² for JEE approximation), e = 1.6×10⁻¹⁹ C, h = 6.626×10⁻³⁴ J·s, Na = 6.022×10²³ mol⁻¹.
+- Year context: 2025-2026 academic year. No outdated syllabus content.`;
+
+  const prompt = `Parent topic: "${topicContext}"
+This chunk: "${chunk.title}"
+Core idea to teach: "${chunk.core_idea}"
+${chunk.formula_hint ? 'Key formula: ' + chunk.formula_hint : ''}
+
+Generate a FOCUSED micro-lesson for THIS chunk ONLY. Output this exact JSON:
+{
+  "chunk_id": "${chunk.id}",
+  "chunk_title": "${chunk.title}",
+  "hook": "1-sentence connection to something the student knows or sees in real life",
+  "core_definition": "The clearest possible definition of this chunk's concept in 1-2 sentences",
+  "explanation": "Step-by-step explanation. Include all relevant formulae in LaTeX. Show HOW it works, not just WHAT it is. Grade-appropriate depth.",
+  "worked_example": {
+    "problem": "A specific numerical problem (with real numbers) that tests ONLY this chunk",
+    "solution": "Full step-by-step solution showing every substitution and calculation"
+  },
+  "common_mistake": "The single most common mistake students make specifically with THIS chunk",
+  "checks": [
+    {"q": "Question 1 — tests core definition or formula", "o": ["A","B","C","D"], "a": 0, "e": "Brief explanation", "difficulty": "easy"},
+    {"q": "Question 2 — applies the concept", "o": ["A","B","C","D"], "a": 1, "e": "Brief explanation", "difficulty": "medium"},
+    {"q": "Question 3 — harder application or trap question", "o": ["A","B","C","D"], "a": 2, "e": "Brief explanation", "difficulty": "hard"}
+  ],
+  "summary_line": "One sentence: the single thing the student MUST remember from this chunk",
+  "flashcard": {"q": "Formula/definition prompt for this chunk", "a": "Answer in LaTeX if STEM, plain text if humanities"}
+}`;
+
+  try {
+    const raw = await ai([{role:'user', content:prompt}], sys, 1800, true);
+    const lesson = pJSON(raw);
+    if (lesson?.checks && lesson.explanation) {
+      try { localStorage.setItem(`mx_cl_${fullKey}`, JSON.stringify(lesson)); } catch(e) {}
+      try {
+        const sb = window.SupabaseClient || window.supabase || null;
+        if (sb) await sb.from('cached_lessons').upsert({ topic_key: fullKey, content: lesson, updated_at: new Date().toISOString() }, { onConflict: 'topic_key' });
+      } catch(e) {}
+      return lesson;
+    }
+  } catch(e) { console.warn('[CBL] Chunk lesson failed for', chunk.title, e); }
+
+  // Fallback chunk lesson
+  return {
+    chunk_id: chunk.id,
+    chunk_title: chunk.title,
+    hook: chunk.core_idea,
+    core_definition: chunk.core_idea,
+    explanation: `Focus on: ${chunk.core_idea}. ${chunk.formula_hint ? 'Key formula: ' + chunk.formula_hint : ''}`,
+    worked_example: { problem: `Apply the concept of ${chunk.title} to a real scenario.`, solution: 'Follow the formula step by step, substituting known values.' },
+    common_mistake: 'Not checking units or boundary conditions before applying the formula.',
+    checks: [
+      { q: `What is the core principle of ${chunk.title}?`, o: [chunk.core_idea, 'It has no fixed principle', 'It only applies in vacuums', 'None of the above'], a: 0, e: chunk.core_idea, difficulty: 'easy' }
+    ],
+    summary_line: chunk.core_idea,
+    flashcard: { q: `Key idea for ${chunk.title}?`, a: chunk.core_idea }
+  };
+}
+
 async function doLesson(){
   const topic=(LS.topic||'').trim();
   if(!topic)return;
@@ -415,7 +634,39 @@ async function doLesson(){
     D._param=topic;
     rLLoading();
   
-  try{
+    // ── CBL PATH ──
+    try {
+    if (LS.cblEnabled !== false) {
+      const _cblGrade = D?.profile?.grade || 'Grade 10';
+      const _cblSubject = D?.courses?.[0]?.subject || (D?.courses?.[0]?.title) || 'STEM';
+
+      // Phase 1: Get chunk plan
+      const chunks = await getChunkPlan(topic, _cblGrade, _cblSubject);
+      LS.chunks = chunks;
+      LS.currentChunkIdx = 0;
+      LS.chunkLessons = LS.chunkLessons || {};
+      LS.chunkComplete = LS.chunkComplete || {};
+      LS.topicReviewMode = false;
+      LS.loading = false;
+
+      saveCheckpoint();
+
+      // Phase 2: Load first chunk
+      if (Array.isArray(chunks) && chunks.length >= 2) {
+        // True CBL: multiple chunks
+        await loadAndRenderChunk(0);
+        return; // Don't run the flat lesson path below
+      }
+      // Single chunk: fall through to flat lesson with chunk context
+    }
+    } catch (cblErr) {
+      console.warn('[CBL] Chunk plan failed, falling through to flat lesson:', cblErr);
+      LS.chunks = null;
+      LS.cblEnabled = false; // Disable CBL for this session
+    }
+    // ── FLAT LESSON PATH (single chunk or CBL disabled) ──
+
+   try{
     if (typeof checkStreak === 'function') checkStreak();
 
     if (!LS.diagDone) {
@@ -442,19 +693,53 @@ async function doLesson(){
                    LS.goal==='4'?'Target competitive exam standards (Olympiad, JEE, Advanced problem solving)':
                    'Focus on conceptual mastery and practical applications';
 
+    const isSTEM = !topic.match(/essay|grammar|prose|poem|chapter|story|novel|plot|character|comprehension|vocabulary|literature|language|speech|writing|history|civics|geography|economics|social/i);
+
+    const applicationInstruction = isSTEM
+      ? `"application": "2-3 sentences on real-world use of this topic in science, engineering, medicine, or technology. Be specific."`
+      : `"application": "2-3 sentences on where and why this topic matters in real reading, writing, communication, or everyday life."`;
+
+    const hookInstruction = isSTEM
+      ? `"hook": "1-2 sentence real-world hook connecting this topic to something the student sees or experiences in daily life"`
+      : `"hook": "1-2 sentence opening that makes this ${D.profile?.grade || 'school'} English/Humanities topic feel relevant and interesting to a student"`;
+
+    const g = D.profile?.grade || '';
+    const checksCount = (g === 'Grade 1' || g === 'Grade 2' || g === 'Grade 3') ? 3 : 5;
+
+    const isCompExam = D.profile?.grade === 'Grade 11' || D.profile?.grade === 'Grade 12';
+    const targetExam = D.compExam?.examId === 'jee_adv' ? 'JEE Advanced' : 
+                       D.compExam?.examId === 'jee_main' ? 'JEE Main' : null;
+    const subjectContext = !isSTEM ? 'LANGUAGE_ARTS' : 'STEM';
+
+    const examInsightInstruction = isCompExam && targetExam
+      ? `4. EXAM INSIGHT: The exam_insight field MUST name specific question patterns from ${targetExam} for this exact topic. Include mark weightage and common traps.`
+      : subjectContext === 'LANGUAGE_ARTS'
+      ? `4. EXAM INSIGHT: The exam_insight field should describe how this topic is tested in school board exams (${D.profile?.board || 'CBSE'} ${D.profile?.grade || ''} standard). Do NOT mention JEE, NEET or engineering exams.`
+      : `4. EXAM INSIGHT: The exam_insight field should describe how this topic is tested at ${D.profile?.grade || 'school'} level for ${D.profile?.board || 'CBSE'} standard. Only mention JEE/NEET if this topic actually appears in those exams.`;
+
+    const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
     const sys = `You are Mentorix AI tutor. Output ONLY raw JSON. No markdown. No backticks.
 
-GRADE: ${D.profile?.grade || 'Grade 10'}
+${studentCtx}
+
+SUBJECT TYPE: ${isSTEM ? 'STEM' : 'Humanities/Language Arts'}
 LEVEL ADAPTATION: ${levelHint}
 GOAL: ${goalHint}
 
+CRITICAL RULES:
+- You are teaching a ${D.profile?.grade || 'school'} student. Match ALL content to this grade level exactly.
+- Do NOT assume the student is preparing for JEE, NEET, or any engineering exam unless their grade is 11 or 12 AND targetExam is set.
+- Difficulty, vocabulary, examples, and depth MUST be appropriate for ${D.profile?.grade || 'Grade 10'}.
+- "technical" field: provide a complete explanation appropriate for ${D.profile?.grade || 'Grade 10'}. ${LS.diagLevel === 'advanced' ? 'Include full derivations.' : 'Focus on clear understanding over derivation depth.'}
+
+
 MANDATORY CONTENT RULES:
-1. FORMULAS: Every formula listed in the curriculum boundary MUST appear in your response using LaTeX ($...$). Do not omit any formula.
-2. DERIVATIONS: If depth level is 3+, show step-by-step derivations, not just final answers.
-3. WORKED EXAMPLES: Must include actual numerical values, not placeholder variables. Show every substitution step.
-4. EXAM TRAPS: The exam_insight field must name specific question patterns from JEE Main/NEET, not generic advice.
-5. MISCONCEPTIONS: Must be specific to this exact topic, not generic study advice.
-6. CHECKS: Questions must test formula application (not just recall). At least 1 question must require a calculation.
+1. FORMULAS: Every formula relevant to this topic at ${D.profile?.grade || 'Grade 10'} level MUST appear in LaTeX ($...$).
+2. DERIVATIONS: Show step-by-step working appropriate for ${D.profile?.grade || 'Grade 10'}.
+3. WORKED EXAMPLES: Use actual numerical values. Show every step. Keep difficulty at ${D.profile?.grade || 'Grade 10'} level.
+${examInsightInstruction}
+5. MISCONCEPTIONS: Must be specific to this exact topic and this grade level.
+6. CHECKS: Generate exactly ${checksCount} check questions, no more, no less. Questions must be appropriate for ${D.profile?.grade || 'Grade 10'} level — not entrance exam level unless grade is 11/12.
 
 MATH FORMATTING: Wrap all equations in single dollar signs, e.g. $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$`;
 
@@ -465,12 +750,12 @@ Generate a complete lesson for the topic: "${topic}"
 Output a single JSON object with these exact keys:
 {
   "topic": "${topic}",
-  "hook": "1-2 sentence real-world hook",
+  ${hookInstruction},
   "prerequisites": ["concept students must know before this topic", "another prerequisite"],
-  "application": "2-3 sentences on real-world use cases of this topic in engineering, medicine, or daily life — NOT exam patterns",
+  ${applicationInstruction},
   "intuition": "core intuition in plain language",
   "technical": "complete technical explanation with ALL formulae in LaTeX ($...$). Show derivations if depth >= 3.",
-  "exam_insight": "specific JEE Main/Advanced question patterns for this exact topic",
+  "exam_insight": "specific exam and testing patterns for this exact topic",
   "explanation": "step-by-step worked solution with actual numbers",
   "misconceptions": ["specific mistake 1", "specific mistake 2"],
   "examples": [
@@ -478,9 +763,7 @@ Output a single JSON object with these exact keys:
     {"q": "harder problem", "s": "full step-by-step solution"}
   ],
   "checks": [
-    {"q": "question", "o": ["A","B","C","D"], "a": 0, "e": "explanation", "concept": "name"},
-    {"q": "question", "o": ["A","B","C","D"], "a": 1, "e": "explanation", "concept": "name"},
-    {"q": "question", "o": ["A","B","C","D"], "a": 2, "e": "explanation", "concept": "name"}
+${Array.from({ length: checksCount }, (_, i) => `    {"q": "question ${i + 1}", "o": ["A","B","C","D"], "a": ${i % 4}, "e": "explanation", "concept": "name"}`).join(',\n')}
   ],
   "summary": ["key point 1", "key point 2", "key point 3"],
   "flashcards": [
@@ -521,7 +804,7 @@ Output a single JSON object with these exact keys:
       LS.lesson = lesson;
       LS.loading = false;
       LS.err = '';
-      addXP(10, 'Mission Started');
+      if (typeof addXP === 'function') addXP(10, 'Mission Started');
       saveCheckpoint();
       renderLesson();
       return; // ← Exit early: $0ms lag, 0 AI calls
@@ -568,7 +851,7 @@ Output a single JSON object with these exact keys:
     LS.loading=false;
     LS.err='';
     
-    addXP(10,'Mission Started');
+    if (typeof addXP === 'function') addXP(10,'Mission Started');
     saveCheckpoint();
     renderLesson();
   }catch(e){
@@ -930,6 +1213,129 @@ function _rawGenerateFallbackLesson(topic) {
     };
   }
 
+  // 9. ROTATIONAL MOTION & TORQUE
+  if (tLower.includes('rotational') || tLower.includes('torque') || tLower.includes('inertia') || tLower.includes('angular momentum')) {
+    return {
+      "topic": topic,
+      "hook": "Every spinning object from a top to a planet follows the same rotational laws.",
+      "intuition": "Rotational motion is the angular analog of translational motion. Force becomes torque, mass becomes moment of inertia, and linear momentum becomes angular momentum.",
+      "technical": "Torque: $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = r F \\sin\\theta$. Moment of inertia: $I = \\sum m_i r_i^2 = \\int r^2 dm$. Parallel axis theorem: $I = I_{cm} + Md^2$. Perpendicular axis theorem: $I_z = I_x + I_y$ (flat bodies). Rotational kinetic energy: $K = \\frac{1}{2}I\\omega^2$. Angular momentum: $L = I\\omega$, conserved when $\\tau_{ext} = 0$.",
+      "exam_insight": "JEE Main: 2-3 questions per paper on torque (\\tau = r \\times F), moment of inertia (I = \\sum m r^2), and angular momentum conservation. Most common trap: using wrong axis for I calculation.",
+      "explanation": "Calculate moment of inertia of a uniform rod of mass $M$ and length $L$ about an axis through its center: $I = \\frac{1}{12}ML^2$. About an axis through one end using parallel axis theorem: $I_{end} = \\frac{1}{12}ML^2 + M(L/2)^2 = \\frac{1}{3}ML^2$.",
+      "misconceptions": [
+        "Moment of inertia depends on the axis of rotation, not just the mass of the body.",
+        "Angular momentum $L = I\\omega$ is conserved only if net EXTERNAL torque is zero."
+      ],
+      "examples": [
+        {"q": "A wheel of radius $0.5\\text{ m}$ has a force of $20\\text{ N}$ applied tangentially. Find torque.", "s": "$\\tau = r F \\sin(90^\\circ) = 0.5 \\times 20 = 10\\text{ N m}$."}
+      ],
+      "checks": [
+        {"q": "What is the parallel axis theorem for moment of inertia?", "o": ["$I = I_{cm} + Md^2$", "$I_z = I_x + I_y$", "$I = m r^2$", "$\\tau = I \\alpha$"], "a": 0, "e": "Parallel axis theorem states $I = I_{cm} + Md^2$, where $d$ is distance between parallel axes.", "concept": "Moment of Inertia"}
+      ],
+      "summary": [
+        "Torque $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$. Moment of Inertia $I = \\sum m_i r_i^2$.",
+        "Parallel axis theorem: $I = I_{cm} + Md^2$.",
+        "Angular momentum $L = I\\omega$ is conserved when $\\tau_{ext} = 0$."
+      ],
+      "flashcards": [
+        {"q": "Torque formula?", "a": "$\\tau = r F \\sin\\theta$"},
+        {"q": "Parallel axis theorem?", "a": "$I = I_{cm} + Md^2$"}
+      ]
+    };
+  }
+
+  // 10. GRAVITATION & ORBITAL MOTION
+  if (tLower.includes('gravitat') || tLower.includes('orbital') || tLower.includes('escape velocity') || tLower.includes('kepler')) {
+    return {
+      "topic": topic,
+      "hook": "The same force that drops an apple to the ground holds the Moon in its orbit around Earth.",
+      "intuition": "Gravity is a universal attractive force between any two masses, decreasing with the square of the distance between them.",
+      "technical": "Newton's Law of Gravitation: $F = G \\frac{m_1 m_2}{r^2}$ where $G = 6.674 \\times 10^{-11}\\text{ N m}^2/\\text{kg}^2$. Gravitational acceleration at height $h$: $g' = g\\left(1 - \\frac{2h}{R}\\right)$ for $h \\ll R$. Orbital velocity: $v_o = \\sqrt{\\frac{GM}{r}}$. Escape velocity: $v_e = \\sqrt{\\frac{2GM}{R}} = \\sqrt{2gR} \\approx 11.2\\text{ km/s}$ for Earth. Kepler's Third Law: $T^2 \\propto r^3$.",
+      "exam_insight": "JEE Main tests: (1) g variation with height/depth/latitude, (2) orbital velocity v_o = \\sqrt{GM/r}, (3) escape velocity v_e = \\sqrt{2GM/R}, (4) Kepler's laws — especially T^2 \\propto r^3.",
+      "explanation": "Find escape velocity from Earth's surface where $g = 9.8\\text{ m/s}^2$ and $R = 6400\\text{ km}$. $v_e = \\sqrt{2 g R} = \\sqrt{2 \\times 9.8 \\times 6.4 \\times 10^6} = \\sqrt{1.2544 \\times 10^8} = 11200\\text{ m/s} = 11.2\\text{ km/s}$.",
+      "misconceptions": [
+        "Escape velocity depends on the mass of Earth, NOT on the mass of the escaping projectile.",
+        "Inside Earth at depth $d$, gravitational acceleration decreases linearly: $g' = g(1 - d/R)$."
+      ],
+      "examples": [
+        {"q": "Ratio of escape velocity to orbital velocity near Earth's surface is:", "s": "$v_e / v_o = \\sqrt{2gR} / \\sqrt{gR} = \\sqrt{2}$."}
+      ],
+      "checks": [
+        {"q": "According to Kepler's Third Law, the orbital period $T$ and orbital radius $r$ are related by:", "o": ["$T^2 \\propto r^3$", "$T \\propto r^2$", "$T^3 \\propto r^2$", "$T \\propto 1/r$"], "a": 0, "e": "Kepler's Third Law states $T^2 \\propto r^3$.", "concept": "Kepler's Laws"}
+      ],
+      "summary": [
+        "Gravitational force $F = G \\frac{m_1 m_2}{r^2}$.",
+        "Orbital velocity $v_o = \\sqrt{GM/r}$, Escape velocity $v_e = \\sqrt{2GM/R} = \\sqrt{2} v_o$.",
+        "Kepler's Third Law: $T^2 \\propto r^3$."
+      ],
+      "flashcards": [
+        {"q": "Escape velocity formula?", "a": "$v_e = \\sqrt{\\frac{2GM}{R}} = \\sqrt{2gR}$"},
+        {"q": "Kepler's Third Law?", "a": "$T^2 \\propto r^3$"}
+      ]
+    };
+  }
+
+  // 11. COORDINATE GEOMETRY & CONIC SECTIONS
+  if (tLower.includes('coordinate') || tLower.includes('conic') || tLower.includes('parabola') || tLower.includes('ellipse') || tLower.includes('hyperbola')) {
+    return {
+      "topic": topic,
+      "hook": "Conic sections describe planet orbits, headlight reflectors, and whisper galleries — all created by slicing a cone at different angles.",
+      "intuition": "A conic section is the locus of a point whose distance from a fixed point (focus) bears a constant ratio (eccentricity $e$) to its distance from a fixed line (directrix).",
+      "technical": "Parabola: $y^2 = 4ax$, $e = 1$, tangent $y = mx + a/m$. Ellipse: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$, $e = \\sqrt{1 - b^2/a^2} < 1$, condition for tangency to $y = mx + c$: $c^2 = a^2 m^2 + b^2$. Hyperbola: $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$, $e = \\sqrt{1 + b^2/a^2} > 1$, asymptotes $y = \\pm \\frac{b}{a}x$.",
+      "exam_insight": "JEE Main: equation of tangent/normal, pair of tangents from external point, chord of contact. Most marks come from standard form recognition and condition for tangency.",
+      "explanation": "Find eccentricity of ellipse $\\frac{x^2}{25} + \\frac{y^2}{16} = 1$. Here $a^2 = 25, b^2 = 16$. $e = \\sqrt{1 - 16/25} = \\sqrt{9/25} = 3/5 = 0.6$.",
+      "misconceptions": [
+        "Parabola has eccentricity $e = 1$, ellipse has $e < 1$, hyperbola has $e > 1$.",
+        "Condition of tangency for $y = mx+c$ to parabola $y^2 = 4ax$ is $c = a/m$, whereas for ellipse it is $c^2 = a^2m^2 + b^2$."
+      ],
+      "examples": [
+        {"q": "Find focus of parabola $y^2 = 12x$.", "s": "$4a = 12 \\implies a = 3$. Focus is at $(a, 0) = (3, 0)$."}
+      ],
+      "checks": [
+        {"q": "What is the eccentricity of a parabola?", "o": ["1", "Less than 1", "Greater than 1", "0"], "a": 0, "e": "For any parabola, eccentricity $e = 1$.", "concept": "Conic Sections"}
+      ],
+      "summary": [
+        "Parabola ($e=1$): $y^2 = 4ax$. Ellipse ($e<1$): $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$. Hyperbola ($e>1$): $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$.",
+        "Tangency for ellipse: $c^2 = a^2m^2 + b^2$. Tangency for parabola: $c = a/m$."
+      ],
+      "flashcards": [
+        {"q": "Condition of tangency to ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$?", "a": "$c^2 = a^2 m^2 + b^2$"},
+        {"q": "Eccentricity of hyperbola?", "a": "$e = \\sqrt{1 + b^2/a^2} > 1$"}
+      ]
+    };
+  }
+
+  // 12. IONIC EQUILIBRIUM & PH
+  if (tLower.includes('ionic') || tLower.includes('ph') || tLower.includes('buffer') || tLower.includes('hydrolysis') || tLower.includes('solubility product')) {
+    return {
+      "topic": topic,
+      "hook": "Your blood stays strictly at pH 7.4 despite everything you eat or drink — thanks to natural buffer solutions operating ionic equilibrium.",
+      "intuition": "Ionic equilibrium deals with reversible ionization of weak electrolytes in aqueous solution, regulated by equilibrium constants $K_a, K_b, K_w$.",
+      "technical": "$pH = -\\log_{10}[H^+]$, $pOH = -\\log_{10}[OH^-]$, $pH + pOH = 14$ at 25°C ($K_w = 10^{-14}$). Henderson-Hasselbalch equation for acidic buffer: $pH = pK_a + \\log\\frac{[\\text{Salt}]}{[\\text{Acid}]}$. Hydrolysis of salt of weak acid & strong base: $pH = 7 + \\frac{1}{2}pK_a + \\frac{1}{2}\\log C$. Solubility product: $K_{sp}$ for $A_x B_y \\rightleftharpoons xA^{y+} + yB^{x-}$ is $K_{sp} = x^x y^y S^{x+y}$.",
+      "exam_insight": "JEE Main tests: Henderson-Hasselbalch equation (pH = pK_a + \\log[A^-]/[HA]), degree of hydrolysis, solubility product K_{sp} and common ion effect.",
+      "explanation": "Find pH of a buffer solution containing 0.1 M $CH_3COOH$ ($pK_a = 4.74$) and 0.2 M $CH_3COONa$. $pH = pK_a + \\log\\frac{[Salt]}{[Acid]} = 4.74 + \\log\\frac{0.2}{0.1} = 4.74 + \\log(2) = 4.74 + 0.301 = 5.041$.",
+      "misconceptions": [
+        "Adding common ion DECREASES solubility of a sparingly soluble salt (Common Ion Effect).",
+        "Water autoionization constant $K_w = 10^{-14}$ changes with temperature — at higher temperatures, pure water pH < 7 but remains neutral."
+      ],
+      "examples": [
+        {"q": "Calculate solubility product $K_{sp}$ for $AgCl$ if its solubility $S = 10^{-5}\\text{ M}$.", "s": "$AgCl \\rightleftharpoons Ag^+ + Cl^- \\implies K_{sp} = S^2 = (10^{-5})^2 = 10^{-10}$."}
+      ],
+      "checks": [
+        {"q": "Which equation gives the pH of an acidic buffer solution?", "o": ["Henderson-Hasselbalch equation", "Nernst equation", "Arrhenius equation", "Van 't Hoff equation"], "a": 0, "e": "Henderson-Hasselbalch equation: $pH = pK_a + \\log\\frac{[\\text{Salt}]}{[\\text{Acid}]}$.", "concept": "Buffer Solutions"}
+      ],
+      "summary": [
+        "$pH = -\\log[H^+]$, $pH + pOH = 14$ at 25°C.",
+        "Henderson-Hasselbalch: $pH = pK_a + \\log\\frac{[\\text{Salt}]}{[\\text{Acid}]}$.",
+        "Common ion effect suppresses ionization and lowers solubility."
+      ],
+      "flashcards": [
+        {"q": "Henderson-Hasselbalch formula for acidic buffer?", "a": "$pH = pK_a + \\log\\frac{[\\text{Salt}]}{[\\text{Acid}]}$"},
+        {"q": "Relationship between $pH$ and $pOH$ at 25°C?", "a": "$pH + pOH = 14$"}
+      ]
+    };
+  }
+
   // DEFAULT / GENERAL SYLLABUS FALLBACK
   return {
     "_isFallback": true,
@@ -1071,27 +1477,24 @@ function convertLessonToStructuredSections(lesson) {
 
 function renderLesson() {
   const a=document.getElementById('larea');if(!a)return;
+
+  // CBL guard: if in topic review mode, delegate entirely
+  if (LS.cblEnabled !== false && LS.chunks && LS.chunks.length >= 2 && LS.topicReviewMode) {
+    // renderTopicReview handles its own header rendering
+    // but we still need a fallback lesson for completeStageSession
+    if (!LS.lesson) {
+      const topicFb = LS.topic || 'General Lesson';
+      LS.lesson = generateFallbackLesson(topicFb);
+    }
+    renderTopicReview();
+    return;
+  }
+
   if (!LS.lesson) {
     const topic = LS.topic || 'General Lesson';
     LS.lesson = generateFallbackLesson(topic);
   }
   const l=LS.lesson;
-
-  // Integrate Phase L1 Universal Mobile Lesson Reader
-  if (window.LessonReader) {
-    const structuredSections = convertLessonToStructuredSections(l);
-    window.LessonReader.renderMobileLesson({
-      topic: l.topic,
-      meta: {
-        estimatedMins: 25,
-        difficulty: 'Intermediate',
-        chapterTitle: (LS.topicContext && LS.topicContext.chapterTitle) || 'Active Chapter'
-      },
-      sections: structuredSections,
-      content: l.explanation
-    }, a);
-    return;
-  }
 
   const stage = LS.activeStage || 1;
 
@@ -1106,30 +1509,475 @@ function renderLesson() {
     'Step 8: Results & Pathway Choice'
   ];
 
-  const pct = Math.round((stage / 8) * 100);
+  // CBL: build chunk dots UI
+  const chunks = LS.chunks || [];
+  const isCBL = LS.cblEnabled !== false && chunks.length >= 2;
+
+  const chunkDotsHTML = isCBL ? `
+    <div style="display:flex;align-items:center;gap:6px;margin-top:12px;flex-wrap:wrap">
+      ${chunks.map((ch, idx) => {
+        const isDone = LS.chunkComplete && LS.chunkComplete[ch.id];
+        const isCurrent = idx === (LS.currentChunkIdx || 0) && !LS.topicReviewMode;
+        const dotColor = isDone ? 'var(--ok)' : isCurrent ? 'var(--pl)' : 'rgba(255,255,255,0.15)';
+        const icon = isDone ? '✓' : (idx+1).toString();
+        return `<div style="display:flex;align-items:center;gap:4px">
+          <div style="width:22px;height:22px;border-radius:50%;background:${dotColor};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:${isDone||isCurrent?'#fff':'rgba(255,255,255,0.4)'}" title="${esc(ch.title)}">${icon}</div>
+          ${idx < chunks.length-1 ? `<div style="width:16px;height:2px;background:${isDone?'var(--ok)':'rgba(255,255,255,0.1)'}"></div>` : ''}
+        </div>`;
+      }).join('')}
+      ${LS.topicReviewMode ? `<div style="font-size:10px;color:var(--pl);font-weight:700;margin-left:4px">FINAL REVIEW</div>` : ''}
+    </div>
+  ` : '';
+
+  const currentChunk = isCBL ? chunks[LS.currentChunkIdx || 0] : null;
+  const chunkLabel = LS.topicReviewMode
+    ? 'Final Topic Review'
+    : currentChunk
+      ? `Chunk ${(LS.currentChunkIdx||0)+1} of ${chunks.length}: ${currentChunk.title}`
+      : l.topic;
+
+  // For single-chunk or non-CBL path, keep the 8-stage progress bar
+  const pct = !isCBL
+    ? Math.round((stage / 8) * 100)
+    : LS.topicReviewMode
+      ? 100
+      : Math.round(((LS.currentChunkIdx || 0) / chunks.length) * 100);
 
   a.innerHTML = `
     <div class="lhero scr mx-glass-card" style="padding:16px 20px;margin-bottom:16px">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
         <div>
-          <div class="font-poiret" style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">8-Step Master Topic Learning Cycle</div>
-          <div class="h2 font-serif" style="margin:2px 0 0">${esc(l.topic)}</div>
+          <div class="font-poiret" style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">
+            ${isCBL ? 'Chunk-Based Learning' : '8-Step Master Lesson'}
+          </div>
+          <div class="h2 font-serif" style="margin:2px 0 0">${esc(l.topic || LS.topic)}</div>
         </div>
         <div style="text-align:right">
-          <div class="font-poiret" style="font-size:11px;color:var(--mut);font-weight:700">STEP ${stage} OF 8</div>
-          <div class="font-serif" style="font-size:13px;color:var(--txt);font-weight:700">${stageTitles[stage - 1]}</div>
+          <div class="font-poiret" style="font-size:11px;color:var(--mut);font-weight:700">${isCBL ? esc(chunkLabel) : 'STEP '+stage+' OF 8'}</div>
+          ${!isCBL ? `<div class="font-serif" style="font-size:13px;color:var(--txt);font-weight:700">${stageTitles[stage - 1]}</div>` : ''}
         </div>
       </div>
-      <div style="margin-top:14px">
+      ${chunkDotsHTML}
+      <div style="margin-top:12px">
         <div class="pw" style="height:6px;background:rgba(255,255,255,0.05);border-radius:3px">
-          <div class="pf" style="width:${pct}%;background:linear-gradient(90deg, var(--p), var(--c))"></div>
+          <div class="pf" style="width:${pct}%;background:linear-gradient(90deg, var(--p), var(--c));transition:width 0.4s ease"></div>
         </div>
       </div>
     </div>
+    ${(l._isFallback || (isCBL && LS.chunkLessons?.[currentChunk?.id]?._isFallback)) ? `
+      <div style="margin-bottom:14px;padding:10px 14px;background:rgba(234,179,8,0.1);border:1px solid rgba(234,179,8,0.3);border-radius:10px;display:flex;align-items:center;gap:10px;font-size:12px;color:#fef08a">
+        <span style="font-size:16px">📶</span>
+        <span><strong>Offline Lesson:</strong> Displaying structured curriculum lesson archive. Connect to internet for live AI adaptations.</span>
+      </div>
+    ` : ''}
     <div id="stage-card-wrap" class="mx-readable-content"></div>
   `;
 
+  // CBL mode: render chunk lesson instead of stage content
+  if (isCBL && !LS.topicReviewMode) {
+    const chunk = chunks[LS.currentChunkIdx || 0];
+    const chunkLesson = LS.chunkLessons?.[chunk?.id];
+    if (chunkLesson && chunk) {
+      renderChunkLesson(chunkLesson, chunk);
+      return;
+    }
+    // If chunk lesson not loaded yet and not currently loading, trigger async load
+    if (chunk && LS._loadingChunkId !== chunk.id) {
+      loadAndRenderChunk(LS.currentChunkIdx || 0);
+    }
+    return;
+  }
+
   renderStageContent();
+}
+
+// ═══════════════════════════════════════════════════════
+//  CBL — CHUNK RENDERING & NAVIGATION FUNCTIONS
+// ═══════════════════════════════════════════════════════
+
+function renderChunkLesson(chunkLesson, chunk) {
+  const c = document.getElementById('stage-card-wrap');
+  if (!c || !chunkLesson) return;
+  const _esc = typeof escMath === 'function' ? escMath : (s => String(s || ''));
+
+  const chunkIdx = LS.currentChunkIdx || 0;
+  const totalChunks = (LS.chunks || []).length;
+
+  // 3-question check state for this chunk
+  const checkKey = 'chunk_checks_' + chunk.id;
+  if (!LS.checkAttempts) LS.checkAttempts = {};
+
+  const checks = chunkLesson.checks || [];
+  const allAnswered = checks.length > 0 && checks.every((_, i) => LS.checkAttempts[checkKey + '_' + i]?.answered);
+  const correctSoFar = checks.filter((_, i) => LS.checkAttempts[checkKey + '_' + i]?.correct).length;
+
+  c.innerHTML = `
+    <div class="card" style="padding:22px;margin-bottom:16px">
+      <!-- Hook -->
+      <div style="background:rgba(139,92,246,0.06);border-left:3px solid var(--pl);border-radius:0 12px 12px 0;padding:14px;margin-bottom:18px">
+        <div style="font-size:11px;color:var(--pl);font-weight:700;text-transform:uppercase;margin-bottom:4px">💡 WHY THIS MATTERS</div>
+        <div style="font-size:14px;color:#E2E8F0;line-height:1.65">${_esc(chunkLesson.hook)}</div>
+      </div>
+
+      <!-- Core Definition -->
+      <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:14px;margin-bottom:16px">
+        <div style="font-size:10px;color:var(--okl);font-weight:700;text-transform:uppercase;margin-bottom:6px">📐 DEFINITION</div>
+        <div style="font-size:15px;color:#fff;font-weight:600;line-height:1.65" class="katex-render-target">${_esc(chunkLesson.core_definition)}</div>
+      </div>
+
+      <!-- Explanation -->
+      <div style="margin-bottom:16px">
+        <div style="font-size:10px;color:var(--pl);font-weight:700;text-transform:uppercase;margin-bottom:8px">📖 HOW IT WORKS</div>
+        <div style="font-size:14px;color:#E2E8F0;line-height:1.8" class="katex-render-target">${_esc(chunkLesson.explanation)}</div>
+      </div>
+
+      <!-- Worked Example -->
+      ${chunkLesson.worked_example ? `
+      <div style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px;margin-bottom:16px">
+        <div style="font-size:10px;color:#60a5fa;font-weight:700;text-transform:uppercase;margin-bottom:8px">✏️ WORKED EXAMPLE</div>
+        <div style="font-size:13.5px;color:#fff;font-weight:600;margin-bottom:10px" class="katex-render-target">${_esc(chunkLesson.worked_example.problem)}</div>
+        <div style="font-size:12.5px;color:var(--sub);line-height:1.7;padding-left:10px;border-left:2px solid rgba(59,130,246,0.3)" class="katex-render-target">${_esc(chunkLesson.worked_example.solution)}</div>
+      </div>` : ''}
+
+      <!-- Common Mistake -->
+      ${chunkLesson.common_mistake ? `
+      <div style="background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.18);border-radius:10px;padding:12px;margin-bottom:16px">
+        <div style="font-size:10px;color:var(--redl);font-weight:700;text-transform:uppercase;margin-bottom:4px">⚠️ COMMON MISTAKE</div>
+        <div style="font-size:12.5px;color:#E2E8F0;line-height:1.6" class="katex-render-target">🚨 ${_esc(chunkLesson.common_mistake)}</div>
+      </div>` : ''}
+    </div>
+
+    <!-- 3-Question Mini Check -->
+    <div class="card" style="padding:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <div>
+          <div style="font-size:10px;color:var(--pl);font-weight:700;text-transform:uppercase">✅ CHUNK CHECK — ${checks.length} QUESTIONS</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:2px">Answer all to unlock the next chunk</div>
+        </div>
+        ${allAnswered ? `<span style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;color:var(--okl)">${correctSoFar}/${checks.length} Correct</span>` : ''}
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:20px">
+        ${checks.map((ch, qidx) => {
+          const ck = checkKey + '_' + qidx;
+          const attempt = LS.checkAttempts[ck] || { answered: false, correct: false, selected: -1 };
+          return `
+            <div style="border:1px solid ${attempt.answered ? (attempt.correct ? 'rgba(16,185,129,0.4)' : 'rgba(239,68,68,0.4)') : 'var(--brd)'};border-radius:12px;padding:14px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                <span style="font-size:10px;color:var(--mut);font-weight:700;text-transform:uppercase">Q${qidx+1}</span>
+                <span style="font-size:10px;color:var(--mut);background:rgba(255,255,255,0.05);padding:2px 8px;border-radius:8px">${ch.difficulty || 'medium'}</span>
+              </div>
+              <div style="color:#fff;font-size:14px;font-weight:600;margin-bottom:10px" class="katex-render-target">${_esc(ch.q)}</div>
+              <div style="display:flex;flex-direction:column;gap:7px">
+                ${(ch.o || []).map((opt, oidx) => {
+                  let optCls = 'qopt';
+                  if (attempt.answered) { if (oidx === ch.a) optCls += ' cor'; else if (attempt.selected === oidx) optCls += ' wrg'; }
+                  else if (attempt.selected === oidx) optCls += ' sel';
+                  const canClick = !attempt.answered;
+                  return `<div class="${optCls}" ${canClick ? `onclick="submitChunkCheck('${chunk.id}','${checkKey}',${qidx},${oidx})"` : ''}>
+                    <span class="qltr">${String.fromCharCode(65+oidx)}</span>
+                    <span class="katex-render-target">${_esc(opt)}</span>
+                  </div>`;
+                }).join('')}
+              </div>
+              ${attempt.answered ? `<div style="margin-top:8px;padding:10px;background:${attempt.correct?'rgba(16,185,129,0.05)':'rgba(239,68,68,0.05)'};border:1px solid ${attempt.correct?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'};border-radius:8px;font-size:12px;color:var(--sub);line-height:1.5" class="katex-render-target"><strong style="color:${attempt.correct?'var(--okl)':'var(--redl)'}">${attempt.correct?'✓ Correct':'✗ Incorrect'}</strong> — ${_esc(ch.e)}</div>` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
+
+      ${allAnswered ? `
+        <div id="chunk-result-panel">
+          ${correctSoFar >= Math.ceil(checks.length * 0.67) ? `
+            <div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px">
+              <div style="font-size:20px;margin-bottom:6px">🎉</div>
+              <div style="color:var(--okl);font-weight:700;font-size:14px">Chunk Passed! (${correctSoFar}/${checks.length})</div>
+              <div style="color:var(--sub);font-size:12px;margin-top:4px">${chunkLesson.summary_line || ''}</div>
+            </div>
+            <button class="btn bpri blg w100" onclick="advanceToNextChunk('${chunk.id}')">
+              ${chunkIdx + 1 < totalChunks ? `Continue to Chunk ${chunkIdx+2}: ${esc((LS.chunks||[])[chunkIdx+1]?.title||'')} →` : '📋 Go to Final Topic Review →'}
+            </button>
+          ` : `
+            <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px">
+              <div style="font-size:20px;margin-bottom:6px">💪</div>
+              <div style="color:var(--goldl);font-weight:700;font-size:14px">Got ${correctSoFar}/${checks.length} — Let's Review Again</div>
+              <div style="color:var(--sub);font-size:12px;margin-top:4px">You need at least ${Math.ceil(checks.length*0.67)} correct to move on. No rush — review the explanation above.</div>
+            </div>
+            <div style="display:flex;gap:10px">
+              <button class="btn bgh bfull" onclick="retryChunk('${chunk.id}')">🔄 Re-Read & Retry</button>
+              <button class="btn bsec" style="white-space:nowrap" onclick="advanceToNextChunk('${chunk.id}', true)">Skip Anyway</button>
+            </div>
+          `}
+        </div>
+      ` : ''}
+    </div>
+  `;
+
+  requestAnimationFrame(() => {
+    const el = document.getElementById('stage-card-wrap');
+    if (el && window.renderMath) window.renderMath(el, true);
+  });
+}
+
+function submitChunkCheck(chunkId, checkKey, qidx, oidx) {
+  const chunk = (LS.chunks || []).find(c => c.id === chunkId);
+  if (!chunk) return;
+  const chunkLesson = LS.chunkLessons?.[chunkId];
+  if (!chunkLesson || !chunkLesson.checks || !chunkLesson.checks[qidx]) return;
+
+  if (!LS.checkAttempts) LS.checkAttempts = {};
+  const ck = checkKey + '_' + qidx;
+  if (LS.checkAttempts[ck]?.answered) return;
+
+  const ch = chunkLesson.checks[qidx];
+  const isCorrect = oidx === ch.a;
+  const elapsed = LS.questionStartTime ? Math.round((Date.now() - LS.questionStartTime) / 1000) : 8;
+
+  LS.checkAttempts[ck] = { answered: true, correct: isCorrect, selected: oidx, timeTaken: elapsed };
+
+  if (window.MasteryEngine) {
+    window.MasteryEngine.logAttempt({
+      topic: LS.topic,
+      concept: chunk.title || ch.concept || 'Chunk Check',
+      questionText: ch.q,
+      correctAnswer: (ch.o && ch.o[ch.a]) ? ch.o[ch.a] : '',
+      selectedAnswer: (ch.o && ch.o[oidx]) ? ch.o[oidx] : '',
+      isCorrect, difficulty: ch.difficulty || 'medium',
+      timeTakenSeconds: elapsed, confidence: 'Confident'
+    });
+  }
+
+  if (isCorrect) { if (typeof addXP === 'function') addXP(8, 'Chunk Check Correct'); if (typeof toast === 'function') toast('✓ Correct! +8 XP'); _haptic('success'); }
+  else { if (typeof toast === 'function') toast('✗ Incorrect — review the explanation above.'); _haptic('error'); }
+
+  LS.questionStartTime = Date.now();
+  saveCheckpoint();
+  renderChunkLesson(chunkLesson, chunk);
+}
+
+function advanceToNextChunk(chunkId, skipAnyway) {
+  const chunks = LS.chunks || [];
+  const chunkIdx = chunks.findIndex(c => c.id === chunkId);
+  if (!LS.chunkComplete) LS.chunkComplete = {};
+  if (!skipAnyway) {
+    LS.chunkComplete[chunkId] = true;
+    if (typeof addXP === 'function') addXP(20, 'Chunk Mastered');
+  }
+  const nextIdx = chunkIdx + 1;
+  if (nextIdx < chunks.length) {
+    LS.currentChunkIdx = nextIdx;
+    LS.questionStartTime = Date.now();
+    saveCheckpoint();
+    loadAndRenderChunk(nextIdx);
+  } else {
+    // All chunks done — enter final topic review
+    LS.topicReviewMode = true;
+    saveCheckpoint();
+    renderLesson(); // Will delegate to renderTopicReview via the CBL guard
+  }
+}
+
+function retryChunk(chunkId) {
+  const chunks = LS.chunks || [];
+  const chunk = chunks.find(c => c.id === chunkId);
+  if (!chunk) return;
+  const checkKey = 'chunk_checks_' + chunkId;
+  const chunkLesson = LS.chunkLessons?.[chunkId];
+  if (!chunkLesson) return;
+  // Clear check attempts for this chunk only
+  if (LS.checkAttempts) {
+    (chunkLesson.checks || []).forEach((_, i) => { delete LS.checkAttempts[checkKey + '_' + i]; });
+  }
+  LS.questionStartTime = Date.now();
+  saveCheckpoint();
+  renderLesson(); // Will re-render from top (chunk dots + chunk content)
+}
+
+async function loadAndRenderChunk(chunkIdx) {
+  const chunks = LS.chunks || [];
+  const chunk = chunks[chunkIdx];
+  if (!chunk) return;
+
+  // Check if already loaded
+  if (LS.chunkLessons?.[chunk.id]) {
+    LS._loadingChunkId = null;
+    renderLesson(); // Header + dots
+    return;
+  }
+
+  // Prevent re-entrant or duplicate parallel loads
+  if (LS._loadingChunkId === chunk.id) return;
+  LS._loadingChunkId = chunk.id;
+
+  // Render header first, then show loading in card wrap
+  renderLesson();
+  const c = document.getElementById('stage-card-wrap');
+  if (c) c.innerHTML = `<div class="card" style="padding:40px;text-align:center"><div class="think-wave" style="justify-content:center"><span></span><span></span><span></span></div><p style="color:var(--mut);margin-top:16px;font-size:13px">Loading: ${esc(chunk.title)}...</p></div>`;
+
+  // Load from AI (with cache)
+  try {
+    const grade = D?.profile?.grade || 'Grade 10';
+    const subject = D?.courses?.[0]?.subject || 'STEM';
+    const lesson = await doChunkLesson(chunk, LS.topic, grade, subject);
+    if (!LS.chunkLessons) LS.chunkLessons = {};
+    LS.chunkLessons[chunk.id] = lesson;
+    LS.questionStartTime = Date.now();
+    saveCheckpoint();
+  } finally {
+    LS._loadingChunkId = null;
+  }
+  renderLesson(); // Will now find the chunkLesson and render it
+}
+
+// ═══════════════════════════════════════════════════════
+//  CBL — FINAL TOPIC REVIEW (2 easy + 2 medium + 2 hard)
+// ═══════════════════════════════════════════════════════
+
+function _collectReviewChecks() {
+  const allChecks = [];
+  (LS.chunks || []).forEach(chunk => {
+    const lesson = LS.chunkLessons?.[chunk.id];
+    if (lesson?.checks) {
+      lesson.checks.forEach(ch => allChecks.push({ ...ch, chunk_title: chunk.title }));
+    }
+  });
+  // Fallback from flat lesson checks
+  const fallbackChecks = LS.lesson?.checks || [];
+  if (allChecks.length < 4 && fallbackChecks.length > 0) {
+    fallbackChecks.forEach(ch => allChecks.push(ch));
+  }
+  // Select up to 6: prioritize hard → medium → easy
+  const hard = allChecks.filter(c => c.difficulty === 'hard');
+  const medium = allChecks.filter(c => c.difficulty === 'medium');
+  const easy = allChecks.filter(c => c.difficulty === 'easy');
+  const reviewChecks = [...hard.slice(0,2), ...medium.slice(0,2), ...easy.slice(0,2)].slice(0,6);
+  if (reviewChecks.length < 3) reviewChecks.push(...allChecks.slice(0, 3 - reviewChecks.length));
+  return reviewChecks;
+}
+
+function renderTopicReview() {
+  const a = document.getElementById('larea');
+  if (!a) return;
+  const _esc = typeof escMath === 'function' ? escMath : (s => String(s || ''));
+  const reviewKey = 'topic_review';
+  if (!LS.checkAttempts) LS.checkAttempts = {};
+
+  const reviewChecks = _collectReviewChecks();
+  const allAnswered = reviewChecks.length > 0 && reviewChecks.every((_, i) => LS.checkAttempts[reviewKey+'_'+i]?.answered);
+  const correctCount = reviewChecks.filter((_, i) => LS.checkAttempts[reviewKey+'_'+i]?.correct).length;
+
+  const chunks = LS.chunks || [];
+  // Build header with chunk dots
+  const chunkDotsHTML = chunks.length > 1 ? `
+    <div style="display:flex;align-items:center;gap:6px;margin-top:12px;flex-wrap:wrap">
+      ${chunks.map((ch, idx) => {
+        const isDone = LS.chunkComplete && LS.chunkComplete[ch.id];
+        return `<div style="display:flex;align-items:center;gap:4px">
+          <div style="width:22px;height:22px;border-radius:50%;background:${isDone?'var(--ok)':'rgba(255,255,255,0.15)'};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:${isDone?'#fff':'rgba(255,255,255,0.4)'}" title="${esc(ch.title)}">✓</div>
+          ${idx < chunks.length-1 ? `<div style="width:16px;height:2px;background:var(--ok)"></div>` : ''}
+        </div>`;
+      }).join('')}
+      <div style="font-size:10px;color:var(--pl);font-weight:700;margin-left:4px">FINAL REVIEW</div>
+    </div>` : '';
+
+  a.innerHTML = `
+    <div class="lhero scr mx-glass-card" style="padding:16px 20px;margin-bottom:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <div class="font-poiret" style="font-size:10px;color:var(--pl);font-weight:700;letter-spacing:1px;text-transform:uppercase">Chunk-Based Learning</div>
+          <div class="h2 font-serif" style="margin:2px 0 0">${esc(LS.topic)}</div>
+        </div>
+        <div style="text-align:right">
+          <div class="font-poiret" style="font-size:11px;color:var(--mut);font-weight:700">Final Topic Review</div>
+        </div>
+      </div>
+      ${chunkDotsHTML}
+      <div style="margin-top:12px">
+        <div class="pw" style="height:6px;background:rgba(255,255,255,0.05);border-radius:3px">
+          <div class="pf" style="width:100%;background:linear-gradient(90deg, var(--p), var(--c));transition:width 0.4s ease"></div>
+        </div>
+      </div>
+    </div>
+    <div id="stage-card-wrap" class="mx-readable-content">
+      <div class="card" style="padding:22px">
+        <div style="text-align:center;margin-bottom:20px">
+          <div style="font-size:32px;margin-bottom:8px">📋</div>
+          <div style="font-size:10px;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:1px">FINAL TOPIC REVIEW</div>
+          <div style="font-size:18px;font-weight:800;color:#fff;margin-top:4px">${esc(LS.topic)}</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">${reviewChecks.length} questions across all ${chunks.length} chunks • 2 easy · 2 medium · 2 hard</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:20px">
+          ${reviewChecks.map((ch, qidx) => {
+            const ck = reviewKey+'_'+qidx;
+            const attempt = LS.checkAttempts[ck] || { answered: false, correct: false, selected: -1 };
+            return `
+              <div style="border:1px solid ${attempt.answered?(attempt.correct?'rgba(16,185,129,0.4)':'rgba(239,68,68,0.4)'):'var(--brd)'};border-radius:12px;padding:14px">
+                ${ch.chunk_title ? `<div style="font-size:10px;color:var(--mut);margin-bottom:6px">From: ${esc(ch.chunk_title)}</div>` : ''}
+                <div style="color:#fff;font-size:14px;font-weight:600;margin-bottom:10px" class="katex-render-target">${_esc(ch.q)}</div>
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  ${(ch.o||[]).map((opt,oidx) => {
+                    let cls='qopt';
+                    if(attempt.answered){if(oidx===ch.a)cls+=' cor';else if(attempt.selected===oidx)cls+=' wrg';}
+                    else if(attempt.selected===oidx)cls+=' sel';
+                    return `<div class="${cls}" ${!attempt.answered?`onclick="submitReviewCheck(${qidx},${oidx})"`:''}><span class="qltr">${String.fromCharCode(65+oidx)}</span><span class="katex-render-target">${_esc(opt)}</span></div>`;
+                  }).join('')}
+                </div>
+                ${attempt.answered?`<div style="margin-top:8px;padding:8px;background:${attempt.correct?'rgba(16,185,129,0.05)':'rgba(239,68,68,0.05)'};border-radius:8px;font-size:12px;color:var(--sub)" class="katex-render-target"><strong style="color:${attempt.correct?'var(--okl)':'var(--redl)'}">${attempt.correct?'✓':'✗'}</strong> ${_esc(ch.e)}</div>`:''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        ${allAnswered ? `
+          <button class="btn bpri blg w100" onclick="completeTopicFromReview()">
+            ${correctCount}/${reviewChecks.length} Correct — Complete Topic →
+          </button>
+        ` : ''}
+      </div>
+    </div>
+  `;
+
+  requestAnimationFrame(() => { const el=document.getElementById('stage-card-wrap'); if(el&&window.renderMath) window.renderMath(el,true); });
+}
+
+function submitReviewCheck(qidx, oidx) {
+  const reviewKey = 'topic_review';
+  const reviewChecks = _collectReviewChecks();
+  const ch = reviewChecks[qidx];
+  if (!ch) return;
+  const ck = reviewKey+'_'+qidx;
+  if (!LS.checkAttempts) LS.checkAttempts = {};
+  if (LS.checkAttempts[ck]?.answered) return;
+  const isCorrect = oidx === ch.a;
+  LS.checkAttempts[ck] = { answered: true, correct: isCorrect, selected: oidx };
+  if (isCorrect) { if (typeof addXP === 'function') addXP(10, 'Review Correct'); _haptic('success'); } else { _haptic('error'); }
+  saveCheckpoint();
+  renderTopicReview();
+}
+
+function completeTopicFromReview() {
+  // Compute the actual CBL final review score before delegating.
+  // completeStageSession() reads LS.checkAttempts with numeric keys [0,1,2...]
+  // but CBL review answers are stored as 'topic_review_0', 'topic_review_1', etc.
+  // Without this, the completion always records 0% score in CBL mode.
+  if (LS && LS.topicReviewMode && LS.checkAttempts) {
+    let correct = 0;
+    let total = 0;
+    Object.entries(LS.checkAttempts).forEach(function(entry) {
+      const key = entry[0];
+      const val = entry[1];
+      if (key.startsWith('topic_review_')) {
+        total++;
+        if (val && (val.correct || val.isCorrect)) correct++;
+      }
+    });
+    if (total > 0) {
+      // Inject the real score into LS so completeStageSession reads it
+      LS._cblFinalScore = { correct: correct, total: total };
+    }
+  }
+  if (typeof completeStageSession === 'function') completeStageSession();
 }
 
 /**
@@ -1240,7 +2088,7 @@ function renderStageContent() {
       <div class="card" style="padding:22px">
         <div class="between mb14">
           <h3 class="h3" style="color:var(--pl);margin:0">📖 Step 2: Introduction & Overview</h3>
-          <button class="btn bsec bsm font-poiret" onclick="readoutTioExplanation('${escON(speechText)}')">🔊 Listen to Tio</button>
+          <button class="btn bsec bsm font-poiret" onclick="readAloud('${escON(speechText)}')">🔊 Listen to Tio</button>
         </div>
 
         <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.18);border-radius:12px;padding:16px;margin-bottom:14px">
@@ -1668,12 +2516,15 @@ function advanceStage(stageNum, force) {
         if (att && att.answered && !att.correct) {
           const ch = checks[i] || {};
           const conceptStr = ch.concept || (ch.q ? ch.q.substring(0, 40) : LS.topic);
-          window.D.memory.weakSpots.push({
-            topic: LS.topic,
-            concept: conceptStr,
-            solved: false,
-            addedAt: Date.now()
-          });
+          const alreadyExists = window.D.memory.weakSpots.some(ws => !ws.solved && ws.topic === LS.topic && ws.concept === conceptStr);
+          if (!alreadyExists) {
+            window.D.memory.weakSpots.push({
+              topic: LS.topic,
+              concept: conceptStr,
+              solved: false,
+              addedAt: Date.now()
+            });
+          }
         }
       }
     }
@@ -1732,6 +2583,7 @@ function submitConfidence(level) {
   if (window.MasteryEngine) {
     window.MasteryEngine.logAttempt({
       topic: LS.topic,
+      concept: ch.concept || 'Concept Check',
       questionText: ch.q,
       correctAnswer: ch.o[ch.a],
       selectedAnswer: ch.o[oidx],
@@ -1744,46 +2596,12 @@ function submitConfidence(level) {
 
   // Handle XP & feedback
   if (isCorrect) {
-    addXP(10, 'Check Correct');
-    toast("✨¨ Correct! +10 XP");
+    if (typeof addXP === 'function') addXP(10, 'Check Correct');
+    toast("✨ Correct! +10 XP");
     haptic('success');
   } else {
     if (typeof logMistake === 'function') {
       logMistake(LS.topic, ch.concept || 'Concept Check', ch.q, 3, 'Knowledge Gap', `Self-reflected on "${LS.topic}"`);
-    }
-  }
-
-  // Hook PSDE Storage Engine for Learning Session
-  if (window.PSDE) {
-    const studentId = (typeof getSession === 'function' ? getSession()?.id : null) || 'std_default';
-    const sessRec = {
-      sessionId: `sess_learn_${Date.now()}`,
-      topic: LS.topic,
-      sessionType: 'LEARNING',
-      date: new Date().toISOString(),
-      score: isCorrect ? 10 : 0,
-      totalMarks: 10,
-      accuracy: isCorrect ? 100 : 0
-    };
-    window.PSDE.SaveSession(sessRec);
-    window.PSDE.SaveAttempt({
-      attemptId: `att_learn_${Date.now()}`,
-      sessionId: sessRec.sessionId,
-      studentId: studentId,
-      questionIds: [ch.q],
-      answers: [oidx],
-      timeSpent: [timeTaken],
-      evaluation: { isCorrect, confidence: level },
-      statistics: { topic: LS.topic },
-      version: '2.0.0'
-    });
-    if (!isCorrect) {
-      window.PSDE.RecordMistake({
-        questionId: `q_learn_${Date.now()}`,
-        concept: ch.concept || LS.topic,
-        reason: 'CONCEPTUAL_GAP',
-        studentId: studentId
-      });
     }
   }
 
@@ -1801,21 +2619,74 @@ function submitConfidence(level) {
 }
 
 function completeStageSession() {
-  const l = LS.lesson;
-  if (!l) return;
-  
-  // Calculate score based on first attempts
-  let correctCount = 0;
-  let checksCount = (l.checks || []).length || 3;
-  for (let i = 0; i < checksCount; i++) {
-    const attempt = LS.checkAttempts[i];
-    if (attempt && attempt.correct) correctCount++;
+  let l = LS.lesson;
+
+  // BUG-01 FIX: In CBL mode, LS.lesson is never set — synthesize it from chunk data
+  // so the session completion logic below works correctly for both paths.
+  if (!l && LS.chunks && LS.chunks.length > 0) {
+    const _chunkChecks = [];
+    (LS.chunks || []).forEach(chunk => {
+      const cl = LS.chunkLessons?.[chunk.id];
+      if (cl?.checks) cl.checks.forEach(ch => _chunkChecks.push(ch));
+    });
+    l = LS.lesson = {
+      topic: LS.topic || 'Topic',
+      checks: _chunkChecks.slice(0, 6),
+      flashcards: (LS.chunks || []).map(chunk => {
+        const cl = LS.chunkLessons?.[chunk.id];
+        return cl?.flashcard ? { q: cl.flashcard.q, a: cl.flashcard.a } : null;
+      }).filter(Boolean),
+      overview: `Completed ${LS.chunks.length}-chunk CBL session on ${LS.topic}`,
+      explain: (LS.chunks || []).map(ch => {
+        const cl = LS.chunkLessons?.[ch.id];
+        return cl ? `${ch.title}: ${cl.core_definition || ''}` : '';
+      }).filter(Boolean).join('\n\n'),
+      summary: (LS.chunks || []).map(ch => ch.core_idea || ch.title).filter(Boolean),
+      points: (LS.chunks || []).map(ch => {
+        const cl = LS.chunkLessons?.[ch.id];
+        return cl?.summary_line || ch.title;
+      }).filter(Boolean)
+    };
   }
+
+  if (!l) return; // Nothing to complete — flat lesson also missing
+
+  // CBL mode: use injected review score if available
+  let correctCount = 0;
+  let checksCount = 0;
+  if (LS && LS._cblFinalScore && LS._cblFinalScore.total > 0) {
+    correctCount = LS._cblFinalScore.correct;
+    checksCount = LS._cblFinalScore.total;
+    delete LS._cblFinalScore; // clean up
+  } else if (LS.chunks && LS.chunks.length >= 2) {
+    // CBL fallback: count from topic_review_0, topic_review_1, or chunk attempts
+    const reviewChecks = typeof _collectReviewChecks === 'function' ? _collectReviewChecks() : [];
+    checksCount = reviewChecks.length || (LS.chunks || []).length || 3;
+    for (let i = 0; i < checksCount; i++) {
+      const attempt = LS.checkAttempts ? (LS.checkAttempts['topic_review_' + i] || LS.checkAttempts['c' + (i+1)] || LS.checkAttempts[i]) : null;
+      if (attempt && (attempt.correct || attempt.isCorrect)) correctCount++;
+    }
+    // If no specific review attempts were recorded but chunks are marked complete, use passed chunk count
+    if (correctCount === 0 && LS.chunkComplete && Object.keys(LS.chunkComplete).length > 0) {
+      const passed = Object.keys(LS.chunkComplete).length;
+      const totalC = (LS.chunks || []).length || passed;
+      correctCount = passed;
+      checksCount = totalC;
+    }
+  } else {
+    // Flat lesson: numeric keys
+    checksCount = (l.checks || []).length || 3;
+    for (let i = 0; i < checksCount; i++) {
+      const attempt = LS.checkAttempts ? LS.checkAttempts[i] : null;
+      if (attempt && (attempt.correct || attempt.isCorrect)) correctCount++;
+    }
+  }
+  if (checksCount === 0) checksCount = 1; // prevent /0
 
   const scorePct = Math.round((correctCount / checksCount) * 100);
   LS.score = correctCount;
   LS.masteryPct = scorePct;
-  
+
   // Add to revision database / queue
   if (typeof getSession === 'function') {
     const session = getSession();
@@ -1834,12 +2705,38 @@ function completeStageSession() {
     }
   }
 
-  // Push Flashcards into spaced revision queue
-  if (l.flashcards && l.flashcards.length > 0 && window.D) {
-    if (!window.D.revisionQueue) window.D.revisionQueue = [];
-    const confRatingForRevision = LS.confidenceRating || 3;
+  // Push ALL chunk flashcards into revision queue (CBL-aware)
+  if (!window.D.revisionQueue) window.D.revisionQueue = [];
+
+  let flashcardsToAdd = [];
+
+  // CBL path: collect from all chunk lessons
+  if (LS.chunks && LS.chunks.length >= 2 && LS.chunkLessons) {
+    LS.chunks.forEach(chunk => {
+      const cl = LS.chunkLessons[chunk.id];
+      if (cl?.flashcard?.q) {
+        flashcardsToAdd.push({
+          topic: LS.topic,
+          chunkTitle: chunk.title,
+          question: cl.flashcard.q,
+          answer: cl.flashcard.a,
+          priority: (LS.chunkComplete?.[chunk.id]) ? 'medium' : 'high',
+          confidenceRating: 3,
+          daysSince: 0,
+          createdAt: new Date().toISOString()
+        });
+      }
+    });
+  }
+
+  // Flat lesson path: collect from lesson flashcards
+  if (flashcardsToAdd.length === 0 && l.flashcards && l.flashcards.length > 0) {
+    const _confMap = { 'Very Confident': 5, 'Confident': 4, 'Unsure': 2, 'Just a Guess': 1 };
+    const _attempts = Object.values(LS.checkAttempts || {});
+    const _avgConf = _attempts.length ? _attempts.reduce((s, a) => s + (_confMap[a.confidence] || 3), 0) / _attempts.length : 3;
+    const confRatingForRevision = Math.round(_avgConf);
     l.flashcards.forEach(card => {
-      window.D.revisionQueue.push({
+      flashcardsToAdd.push({
         topic: LS.topic,
         question: card.q,
         answer: card.a,
@@ -1851,21 +2748,105 @@ function completeStageSession() {
     });
   }
 
+  // Add to queue (no duplicates)
+  flashcardsToAdd.forEach(card => {
+    const alreadyExists = window.D.revisionQueue.some(r => r.question === card.question && r.topic === card.topic);
+    if (!alreadyExists) window.D.revisionQueue.push(card);
+  });
+
   // Award XP based on perfection rating
   let xpReward = 50; // base complete topic XP
   if (scorePct === 100) {
     xpReward += 30; // perfection bonus
-    toast("† Perfect Score! 100% Mastery bonus +30 XP!", "badge");
-    awardBadge('Quiz Hero');
-    launchConfetti(80);
-    haptic('celebration');
+    if (typeof toast === 'function') toast("🏆 Perfect Score! 100% Mastery bonus +30 XP!", "badge");
+    if (typeof awardBadge === 'function') awardBadge('Quiz Hero');
+    if (typeof launchConfetti === 'function') launchConfetti(80);
+    if (typeof haptic === 'function') haptic('celebration');
   } else if (scorePct >= 60) {
     xpReward += 10;
-    launchConfetti(35);
-    haptic('success');
+    if (typeof launchConfetti === 'function') launchConfetti(35);
+    if (typeof haptic === 'function') haptic('success');
   }
   
-  addXP(xpReward, 'Micro Topic Mastered');
+  if (typeof addXP === 'function') addXP(xpReward, 'Micro Topic Mastered');
+
+  // Write to D.memory so SM-2 and Revision can schedule future reviews
+  if (!D.memory) D.memory = { scores: {}, history: [], weakAreas: {}, strongAreas: {}, weakSpots: [] };
+  if (!D.memory.scores) D.memory.scores = {};
+  if (!D.memory.history) D.memory.history = [];
+
+  D.memory.scores[LS.topic] = scorePct;
+  D.memory.history.push({
+    topic: LS.topic,
+    date: new Date().toISOString(),
+    score: scorePct,
+    type: 'lesson',
+    interval: 1
+  });
+  if (D.memory.history.length > 60) D.memory.history = D.memory.history.slice(-60);
+
+  // Ensure topic is recorded in D.topics for Revision and Achievements
+  if (typeof addTopic === 'function') addTopic(LS.topic);
+
+  // Update Competitive Exam Engine Chapter Heatmap if available
+  if (typeof recordChapterResult === 'function') {
+    const detectedSubj = typeof detectSubject === 'function' ? detectSubject(LS.topic) : 'General';
+    recordChapterResult(LS.topic, detectedSubj, correctCount, checksCount);
+  }
+
+  // BUG-02 FIX: Auto-generate note in notebook-compatible schema
+  (function _autoGenerateNote() {
+    try {
+      const _topicDone = LS.topic;
+      if (!_topicDone) return;
+      if (!D.notes) D.notes = {};
+      if (D.notes[_topicDone] && (D.notes[_topicDone].userEdited || D.notes[_topicDone].isUserRequested)) return; // Don't overwrite user notes
+
+      // Build content arrays in notebook.js-compatible schema
+      const _summaryLines = [];
+      const _explainParts = [];
+      const _formulas = [];
+      const _points = [];
+
+      if (LS.chunks && LS.chunks.length > 0 && LS.chunkLessons && Object.keys(LS.chunkLessons).length > 0) {
+        LS.chunks.forEach(chunk => {
+          const cl = LS.chunkLessons?.[chunk.id];
+          if (!cl) return;
+          // Summary: one sentence per chunk
+          if (cl.summary_line) _summaryLines.push(cl.summary_line);
+          // Explain: definition + common mistake per chunk
+          _explainParts.push(`${chunk.title}:\n${cl.core_definition || ''}${cl.common_mistake ? '\nWatch out: ' + cl.common_mistake : ''}`);
+          // Points: key ideas
+          if (cl.summary_line) _points.push(cl.summary_line);
+          // Formulas: extract from flashcard answers
+          if (cl.flashcard?.a && /\$|=|\\/.test(cl.flashcard.a)) _formulas.push(cl.flashcard.a);
+        });
+      } else if (l) {
+        if (Array.isArray(l.summary)) l.summary.forEach(s => _summaryLines.push(s));
+        else if (typeof l.summary === 'string') _summaryLines.push(l.summary);
+        if (Array.isArray(l.points)) l.points.forEach(p => _points.push(p));
+        if (l.explain) _explainParts.push(l.explain);
+      }
+
+      if (_summaryLines.length > 0 || _explainParts.length > 0) {
+        D.notes[_topicDone] = {
+          title: _topicDone,
+          subject: typeof detectSubject === 'function' ? detectSubject(_topicDone) : 'General',
+          savedAt: Date.now(),
+          summary: _summaryLines.slice(0, 3).join(' '),
+          explain: _explainParts.join('\n\n'),
+          formulas: _formulas.slice(0, 5),
+          points: _points.slice(0, 6),
+          examples: [],
+          fact: '',
+          generated: true,
+          source: 'cbl-auto'
+        };
+        if (typeof toast === 'function') toast('📓 Chapter notes auto-saved to your Notebook', 'ok2');
+        if (typeof saveNow === 'function') saveNow(); else if (typeof saveAll === 'function') saveAll();
+      }
+    } catch(e) { console.warn('[Notebook] Auto-note generation failed:', e); }
+  })();
 
   // Complete in Progression Engine
   let completionResult = null;
@@ -1879,7 +2860,8 @@ function completeStageSession() {
     delete D.memory.activeLesson;
   }
   if (typeof checkStreak === 'function') checkStreak(true);
-  saveAll();
+  // Use saveNow() — critical persistence point, tab may close within 300ms (Issue 14 fix)
+  if (typeof saveNow === 'function') { saveNow(); } else if (typeof saveAll === 'function') { saveAll(); }
 
   // If chapter was completed, play the celebration ceremony overlay!
   if (completionResult && completionResult.chapterCompleted) {
@@ -1892,7 +2874,12 @@ function completeStageSession() {
   // ”€”€ MLOS Completion Screen ”€”€
   // Show what was learned and what comes next before navigating away.
   const topicCompleted = LS.topic;
-  const finalConf = LS.confidenceRating || 3;
+  // Use same computed average for the completion screen display
+  const _confMapDisplay = { 'Very Confident': 5, 'Confident': 4, 'Unsure': 2, 'Just a Guess': 1 };
+  const _attemptsDisplay = Object.values(LS.checkAttempts || {});
+  const finalConf = _attemptsDisplay.length
+    ? Math.round(_attemptsDisplay.reduce((s, a) => s + (_confMapDisplay[a.confidence] || 3), 0) / _attemptsDisplay.length)
+    : 3;
   const confLabels = ['', 'Lost', 'Shaky', 'Getting There', 'Confident', 'Mastered'];
   const confEmojis = ['', '😟', '😕', '🙂', '😊', '🔥'];
   let nextTopicName = '';
@@ -2025,3 +3012,13 @@ window.submitStageCheck = submitStageCheck;
 window.submitConfidence = submitConfidence;
 window.completeStageSession = completeStageSession;
 window.saveReflections = saveReflections;
+window.submitChunkCheck = submitChunkCheck;
+window.advanceToNextChunk = advanceToNextChunk;
+window.retryChunk = retryChunk;
+window.loadAndRenderChunk = loadAndRenderChunk;
+window.renderTopicReview = renderTopicReview;
+window.submitReviewCheck = submitReviewCheck;
+window.completeTopicFromReview = completeTopicFromReview;
+window.getChunkPlan = getChunkPlan;
+window.doChunkLesson = doChunkLesson;
+window.renderChunkLesson = renderChunkLesson;

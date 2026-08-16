@@ -150,6 +150,138 @@
       pros: ['High earning potential & bonuses', 'Fast career growth', 'Global opportunities'],
       challenges: ['Long work hours during deal cycles', 'High market volatility'],
       related: ['Management Consultant', 'Chartered Accountant', 'Fintech Specialist']
+    },
+    {
+      id: 'lawyer',
+      title: 'Legal Advocate / Corporate Counsel',
+      emoji: '⚖️',
+      category: 'Law & Governance',
+      tagline: 'Defend rights, draft legal contracts, and guide individuals and corporations through legal systems.',
+      desc: 'Specializes in constitutional law, corporate law, intellectual property, or criminal litigation.',
+      salary: '₹7L – ₹35L+ / yr',
+      growth: 'High',
+      difficulty: 'Hard',
+      requiredDegrees: ['BA LLB (5-yr Integrated)', 'BBA LLB', 'LLM Master of Laws'],
+      requiredExams: ['CLAT', 'AILET', 'SLAT', 'LSAT India'],
+      skills: ['Legal Argumentation', 'Critical Thinking', 'Contract Drafting', 'Public Speaking'],
+      duties: [
+        'Represent clients in court trials, arbitrations, and hearings',
+        'Draft legal agreements, contracts, and constitutional petitions',
+        'Provide strategic legal advice to corporations and individuals'
+      ],
+      pros: ['Prestige and influence', 'Diverse career paths (Corporate/Litigation)', 'Independent practice potential'],
+      challenges: ['High reading volume', 'Initial years in litigation require persistence'],
+      related: ['Corporate Counsel', 'Judicial Officer', 'Public Policy Analyst']
+    },
+    {
+      id: 'civil-services',
+      title: 'Civil Servant (IAS / IPS / IFS)',
+      emoji: '🏛️',
+      category: 'Public Policy & Administration',
+      tagline: 'Lead public administration, shape national policy, and drive societal development at scale.',
+      desc: 'Administers government departments, enforces law & order, and executes national policies across districts and ministries.',
+      salary: '₹8L – ₹25L+ / yr + Perquisites',
+      growth: 'High',
+      difficulty: 'Very Hard',
+      requiredDegrees: ['Bachelor\'s Degree in any discipline (BA, B.Sc, B.Tech, MBBS)'],
+      requiredExams: ['UPSC Civil Services Examination (CSE)'],
+      skills: ['Governance & Policy', 'Leadership', 'Crisis Management', 'Public Ethics'],
+      duties: [
+        'Oversee district administration, public welfare, and development infrastructure',
+        'Draft policy recommendations for state and central government ministries',
+        'Manage emergency relief and law & order during public crises'
+      ],
+      pros: ['Unmatched societal impact & authority', 'High job security & prestige', 'Service to the nation'],
+      challenges: ['Extremely competitive exam (< 0.1% pass rate)', 'Frequent administrative transfers'],
+      related: ['Diplomat (IFS)', 'Police Officer (IPS)', 'Public Policy Consultant']
+    },
+    {
+      id: 'educator',
+      title: 'Professor / Academic Researcher',
+      emoji: '🎓',
+      category: 'Education & Research',
+      tagline: 'Inspire future generations, lead cutting-edge academic research, and advance human knowledge.',
+      desc: 'Teaches specialized subjects at schools, colleges, or universities while publishing original research papers.',
+      salary: '₹6L – ₹24L+ / yr',
+      growth: 'Medium-High',
+      difficulty: 'Medium-Hard',
+      requiredDegrees: ['B.Ed / M.A / M.Sc / Ph.D in Subject Specialty'],
+      requiredExams: ['UGC NET', 'CSIR NET', 'CTET'],
+      skills: ['Pedagogy & Teaching', 'Academic Research', 'Curriculum Design', 'Public Speaking'],
+      duties: [
+        'Deliver engaging lectures and mentor undergraduate/postgraduate students',
+        'Conduct scholarly research and publish peer-reviewed papers',
+        'Design curriculum boundaries, examinations, and laboratory experiments'
+      ],
+      pros: ['Intellectually fulfilling', 'High work-life balance & vacations', 'Respected societal position'],
+      challenges: ['Requires Master\'s/Ph.D for senior posts', 'Research grant competition'],
+      related: ['Curriculum Architect', 'Educational Researcher', 'Instructional Designer']
+    },
+    {
+      id: 'psychologist',
+      title: 'Clinical Psychologist / Counsellor',
+      emoji: '🧠',
+      category: 'Psychology & Healthcare',
+      tagline: 'Understand human behavior, support mental wellness, and guide individuals through life challenges.',
+      desc: 'Assesses mental health conditions, conducts psychotherapy sessions, and helps clients develop coping mechanisms.',
+      salary: '₹5L – ₹20L+ / yr',
+      growth: 'Very High',
+      difficulty: 'Medium-Hard',
+      requiredDegrees: ['B.A / B.Sc Psychology', 'M.A / M.Sc Clinical Psychology', 'M.Phil Clinical Psychology'],
+      requiredExams: ['CUET PG', 'RCI Licensing Exam'],
+      skills: ['Active Listening', 'Empathy & Counseling', 'Psychometric Testing', 'Behavioral Analysis'],
+      duties: [
+        'Conduct psychological evaluations and psychometric tests',
+        'Provide evidence-based therapy (CBT, counseling) to clients',
+        'Design mental health wellness programs for schools and corporations'
+      ],
+      pros: ['Rapidly growing field', 'Deeply rewarding personal impact', 'Private practice flexibility'],
+      challenges: ['Emotional toll of client trauma', 'Requires licensed post-graduate degrees'],
+      related: ['Neuropsychologist', 'Organizational Psychologist', 'Behavioral Researcher']
+    },
+    {
+      id: 'architect',
+      title: 'Architect / Urban Designer',
+      emoji: '📐',
+      category: 'Architecture & Design',
+      tagline: 'Blend art, engineering, and environmental design to sculpt buildings and sustainable cities.',
+      desc: 'Designs physical structures, residential complexes, and urban landscapes balancing aesthetics and structural safety.',
+      salary: '₹6L – ₹26L+ / yr',
+      growth: 'High',
+      difficulty: 'Hard',
+      requiredDegrees: ['B.Arch (Bachelor of Architecture)'],
+      requiredExams: ['NATA', 'JEE Main Paper 2'],
+      skills: ['3D CAD / AutoCAD', 'Spatial Design', 'Structural Physics', 'Sustainability'],
+      duties: [
+        'Draft architectural blueprints and 3D computer visualizations',
+        'Collaborate with civil engineers and construction contractors on site',
+        'Ensure building designs meet safety codes, budget, and environmental norms'
+      ],
+      pros: ['Tangible physical legacy', 'Creative freedom blended with engineering', 'High entrepreneurial potential'],
+      challenges: ['Long design iteration cycles', 'Strict safety and compliance standards'],
+      related: ['Interior Designer', 'Urban Planner', 'Civil Structural Engineer']
+    },
+    {
+      id: 'journalist',
+      title: 'Journalist / Media Content Director',
+      emoji: '📰',
+      category: 'Media, Journalism & Literature',
+      tagline: 'Investigate stories, inform the public, and shape public discourse through powerful storytelling.',
+      desc: 'Researches news events, conducts investigative interviews, and produces articles, video reports, or podcasts.',
+      salary: '₹5L – ₹22L+ / yr',
+      growth: 'Medium-High',
+      difficulty: 'Medium',
+      requiredDegrees: ['B.A Journalism & Mass Communication', 'B.A English Literature / Political Science'],
+      requiredExams: ['IIMC Entrance', 'CUET UG/PG'],
+      skills: ['Investigative Reporting', 'Writing & Editing', 'Media Production', 'Public Interviewing'],
+      duties: [
+        'Research current affairs, interview key subjects, and verify source facts',
+        'Write compelling articles, editorial columns, or script video news segments',
+        'Publish digital content across news platforms and investigative media'
+      ],
+      pros: ['Dynamic, exciting work', 'Platform to expose truth and inform society', 'Diverse media formats'],
+      challenges: ['Tight publication deadlines', 'Evolving digital media business models'],
+      related: ['Content Strategist', 'Communications Specialist', 'Publishing Editor']
     }
   ];
 
@@ -191,10 +323,22 @@
       const matchReasons = [];
 
       // 1. Subject Alignment
-      if (c.id === 'software-engineer' || c.id === 'data-scientist' || c.id === 'robotics-engineer') {
+      if (c.id === 'software-engineer') {
         if (favSubjs.some(s => ['Mathematics', 'Physics', 'Computer Science'].includes(s))) {
           score += 15;
           matchReasons.push('Strong alignment with your interest in Math & Tech');
+        }
+      }
+      if (c.id === 'data-scientist') {
+        if (favSubjs.some(s => ['Mathematics', 'Computer Science', 'Economics'].includes(s))) {
+          score += 15;
+          matchReasons.push('Statistical and analytical skills match data science');
+        }
+      }
+      if (c.id === 'robotics-engineer') {
+        if (favSubjs.some(s => ['Physics', 'Mathematics'].includes(s))) {
+          score += 15;
+          matchReasons.push('Strong physics and math foundation for robotics');
         }
       }
       if (c.id === 'medical-doctor') {
@@ -204,7 +348,7 @@
         }
       }
       if (c.id === 'ux-designer') {
-        if (interests.includes('design') || interests.includes('art') || interests.includes('creative') || interests.includes('coding')) {
+        if (favSubjs.some(s => ['English', 'Computer Science'].includes(s)) || interests.includes('design') || interests.includes('art') || interests.includes('creative') || interests.includes('coding')) {
           score += 18;
           matchReasons.push('Matches your passion for visual creativity & technology');
         }
@@ -215,15 +359,59 @@
           matchReasons.push('Fits your quantitative skills and financial interests');
         }
       }
+      if (c.id === 'lawyer') {
+        if (favSubjs.some(s => ['English', 'Social Studies', 'Economics', 'History'].includes(s))) {
+          score += 18;
+          matchReasons.push('Strong legal reasoning, reading, and social science foundation');
+        }
+      }
+      if (c.id === 'civil-services') {
+        if (favSubjs.some(s => ['Social Studies', 'History', 'Economics', 'English'].includes(s))) {
+          score += 18;
+          matchReasons.push('Excellent fit for public policy, governance, and social sciences');
+        }
+      }
+      if (c.id === 'educator') {
+        if (favSubjs.length > 0) {
+          score += 15;
+          matchReasons.push('Passionate subject foundation aligns with teaching and academia');
+        }
+      }
+      if (c.id === 'psychologist') {
+        if (favSubjs.some(s => ['Biology', 'Social Studies', 'English'].includes(s)) || interests.includes('help') || interests.includes('people') || interests.includes('mind')) {
+          score += 18;
+          matchReasons.push('Matches your empathy and interest in human behavior & biology');
+        }
+      }
+      if (c.id === 'architect') {
+        if (favSubjs.some(s => ['Mathematics', 'Physics'].includes(s)) || interests.includes('design') || interests.includes('art') || interests.includes('drawing') || interests.includes('building')) {
+          score += 18;
+          matchReasons.push('Blends spatial design, art, and structural mathematics');
+        }
+      }
+      if (c.id === 'journalist') {
+        if (favSubjs.some(s => ['English', 'Social Studies', 'History'].includes(s)) || interests.includes('write') || interests.includes('news') || interests.includes('story') || interests.includes('media')) {
+          score += 18;
+          matchReasons.push('Strong written communication, curiosity, and language skills');
+        }
+      }
 
       // 2. Goal Priority Alignment
-      if (goalPriority === 'high-paying' && (c.salary.includes('35L') || c.salary.includes('40L') || c.salary.includes('50L'))) {
+      if (goalPriority === 'high-paying' && ['software-engineer', 'data-scientist', 'financial-analyst', 'medical-doctor', 'lawyer'].includes(c.id)) {
         score += 10;
         matchReasons.push('High salary ceiling matches your top career priority');
       }
-      if (goalPriority === 'impact' && (c.id === 'medical-doctor' || c.id === 'data-scientist')) {
+      if (goalPriority === 'impact' && ['medical-doctor', 'civil-services', 'educator', 'psychologist', 'data-scientist'].includes(c.id)) {
         score += 10;
         matchReasons.push('High societal impact aligns with your purpose goal');
+      }
+      if (goalPriority === 'creative' && ['ux-designer', 'architect', 'journalist'].includes(c.id)) {
+        score += 10;
+        matchReasons.push('Creative expression matches your primary career driver');
+      }
+      if (goalPriority === 'stability' && ['civil-services', 'educator', 'medical-doctor'].includes(c.id)) {
+        score += 10;
+        matchReasons.push('Job security and institutional stability match your priority');
       }
 
       const matchPct = Math.min(98, Math.max(65, score));
@@ -236,7 +424,9 @@
         matchPct,
         transparentWhy
       };
-    }).sort((a, b) => b.matchPct - a.matchPct);
+    })
+    .sort((a, b) => b.matchPct - a.matchPct)
+    .filter(c => c.matchPct >= 72);
   }
 
   /**

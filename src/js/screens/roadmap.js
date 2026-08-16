@@ -91,9 +91,10 @@ async function generateFullRoadmap(){
   if(!goal){toast('Please enter a career goal!','err');return;}
   RM.goal=goal;RM.loading=true;rRoadmap();
   try{
+    const studentCtx = `${D.profile?.grade || 'school student'}, ${D.profile?.board || 'CBSE'}, goal: ${D.profile?.goal || 'learning'}, country: ${RM.country || 'India'}`;
     const sys='You are Mentorix AI, an expert career counselor and education advisor. Output ONLY a valid JSON object. No markdown, no code fences, no extra text — just pure JSON.';
     const p=`Create an exhaustive career roadmap for someone who wants to become: "${goal}".
-Student profile: ${pCtx()}
+Student profile: ${studentCtx}
 Education level: ${RM.education||'Not specified'}
 Country: ${RM.country||'Not specified'}
 Desired timeline: ${RM.timeline||'Flexible'}

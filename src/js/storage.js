@@ -26,17 +26,40 @@ if (typeof window !== 'undefined' && window.LS === undefined) {
 const DB_NAME = 'mentorix_db';
 const STORE_NAME = 'user_state';
 
+const IDB_AVAILABLE = (function() {
+  try {
+    return typeof window !== 'undefined' && 'indexedDB' in window && window.indexedDB !== null;
+  } catch(e) { return false; }
+})();
+
 function openDB() {
+  if (!IDB_AVAILABLE) {
+    return Promise.reject(new Error('IndexedDB is not supported or accessible in this environment.'));
+  }
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open(DB_NAME, 1);
-    request.onupgradeneeded = (e) => {
-      const db = e.target.result;
-      if (!db.objectStoreNames.contains(STORE_NAME)) {
-        db.createObjectStore(STORE_NAME);
-      }
-    };
-    request.onsuccess = (e) => resolve(e.target.result);
-    request.onerror = (e) => reject(e.target.error);
+    try {
+      const request = indexedDB.open(DB_NAME, 1);
+      request.onupgradeneeded = (e) => {
+        const db = e.target.result;
+        if (!db.objectStoreNames.contains(STORE_NAME)) {
+          db.createObjectStore(STORE_NAME);
+        }
+      };
+      request.onsuccess = (e) => resolve(e.target.result);
+      request.onerror = (e) => {
+        if (!window._idbErrorShown) {
+          window._idbErrorShown = true;
+          if (typeof toast === 'function') {
+            toast('⚠️ Storage limited — progress may not save between sessions. Try exiting private/incognito mode.', 'err');
+          } else {
+            console.warn('[Mentorix] IndexedDB unavailable:', e.target.error);
+          }
+        }
+        reject(e.target.error);
+      };
+    } catch(err) {
+      reject(err);
+    }
   });
 }
 
@@ -109,7 +132,7 @@ const USER_DATA_KEYS = [
   'profile', 'xp', 'streak', 'lastStudy', 'badges', 'topics',
   'chatMsgs', 'exploredCats', 'settings', 'memory', 'notes',
   'roadmaps', 'courses', 'currentLesson', 'currentChapter',
-  'revisionQueue', 'weakSpots', 'progress'
+  'revisionQueue', 'weakSpots', 'progress', 'courseStates', 'retryQueue'
 ];
 
 /**
@@ -148,32 +171,20 @@ async function loadUserData(uid) {
 
   await Promise.all(migrations);
 
-  // Deep Integration with PSDE Engine
-  if (window.PSDE) {
-    try {
-      const psdeStudent = await window.PSDE.LoadStudent(uid);
-      if (!psdeStudent) {
-        await window.PSDE.CreateStudent({ studentId: uid, name: D.profile?.name || 'Aspirant', email: D.profile?.email || `${uid}@student.mentorix.ai` });
-      }
-      const history = await window.PSDE.LoadAcademicHistory(uid);
-      if (history && history.length > 0) {
-        D.academicHistory = history;
-      }
-      const achievements = await window.PSDE.LoadAchievements(uid);
-      if (achievements) {
-        D.xp = achievements.xp || D.xp;
-        D.level = achievements.level || D.level;
-        D.badges = achievements.badges || D.badges;
-      }
-      const tioMem = await window.PSDE.LoadTioMemoryRefs(uid);
-      if (tioMem) {
-        D.tioMemoryRefs = tioMem;
-      }
-    } catch (err) {
-      console.warn('[PSDE] Integration load warning:', err);
+  if (!Array.isArray(D.revisionQueue)) D.revisionQueue = [];
+  if (!Array.isArray(D.retryQueue)) D.retryQueue = [];
+  if (!Array.isArray(D.weakSpots)) D.weakSpots = [];
+  if (!D.courseStates || typeof D.courseStates !== 'object') D.courseStates = {};
+
+  // Fix 10 companion: Re-apply D.settings.mockAI to localStorage after profile load
+  try {
+    if (D.settings && typeof D.settings.mockAI === 'boolean') {
+      localStorage.setItem('mx3_use_mock', D.settings.mockAI ? 'true' : 'false');
     }
-  }
+  } catch (e) { /* non-critical */ }
+
 }
+
 
 /**
  * Persist all D state keys for the currently logged-in user.
@@ -183,31 +194,31 @@ async function loadUserData(uid) {
 async function saveUserData() {
   const s = typeof getSession === 'function' ? getSession() : null;
   if (!s?.id) return;
-  const saves = USER_DATA_KEYS.map(k => idbSet(`${s.id}_${k}`, D[k]));
-  try {
-    await Promise.all(saves);
-  } catch (e) {
-    console.error('[Mentorix] Failed to save user data to IndexedDB:', e);
+
+  // Prune weakSpots if array grows beyond 100 entries (keep most recent)
+  if (D.memory && Array.isArray(D.memory.weakSpots) && D.memory.weakSpots.length > 100) {
+    const unsolved = D.memory.weakSpots.filter(w => !w.solved);
+    const solved = D.memory.weakSpots.filter(w => w.solved);
+    D.memory.weakSpots = [...unsolved.slice(-75), ...solved.slice(-25)];
   }
 
-  // Deep Integration with PSDE Engine
-  if (window.PSDE) {
+  try {
+    const saves = USER_DATA_KEYS.map(k => idbSet(`${s.id}_${k}`, D[k]));
+    await Promise.all(saves);
+  } catch (e) {
+    console.error('[Mentorix] IDB save failed, falling back to localStorage:', e);
     try {
-      await window.PSDE.SaveAchievements({
-        xp: D.xp || 0,
-        level: D.level || 1,
-        badges: D.badges || [],
-        milestones: D.milestones || []
-      }, s.id);
-      await window.PSDE.SavePreference({
-        theme: D.settings?.theme || 'dark',
-        learningStyle: D.settings?.learningStyle || 'visual'
-      }, s.id);
-    } catch (err) {
-      console.warn('[PSDE] Integration save warning:', err);
+      USER_DATA_KEYS.forEach(k => {
+        if (D[k] !== undefined) {
+          localStorage.setItem(`mx3_${s.id}_${k}`, JSON.stringify(D[k]));
+        }
+      });
+    } catch(le) {
+      console.error('[Mentorix] localStorage fallback also failed:', le);
     }
   }
 }
+
 
 /**
  * Remove all IndexedDB and localStorage data for a given user ID.

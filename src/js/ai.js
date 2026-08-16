@@ -61,7 +61,73 @@ function checkRateLimit() {
   return true;
 }
 
-// ── 3. SYSTEM PROMPT BUILDER ────────────────────────────────
+// ── 3. SYSTEM PROMPT & STUDENT CONTEXT BUILDER ──────────────
+function buildStudentContext(customProfile) {
+  const p = customProfile || window.D?.profile || {};
+  const D = window.D || {};
+  
+  // What they've already studied
+  const completedTopics = (D.topics || []).slice(-10); // last 10 studied
+  
+  // Weak spots (what they're struggling with)
+  const weakSpots = (D.memory?.weakSpots || [])
+    .filter(w => !w.solved)
+    .slice(0, 5)
+    .map(w => (typeof w === 'string' ? w : (w.concept || w.topic || w.chapter || '')))
+    .filter(Boolean);
+  
+  // Strong areas  
+  const strongAreas = Object.entries(D.memory?.scores || {})
+    .filter(([, score]) => score >= 80)
+    .slice(0, 3)
+    .map(([topic]) => topic);
+
+  // Learning style guidance
+  const lstyleMap = {
+    'Visual': 'prefers diagrams, charts, and visual analogies',
+    'Auditory': 'learns well through verbal explanations and rhythm',
+    'Reading': 'prefers text-heavy explanations and written examples',
+    'Kinesthetic': 'learns through doing — hands-on examples and step-by-step working',
+    'Mixed': 'responds well to varied formats'
+  };
+  
+  // Attention span guidance
+  const attentionMap = {
+    'Short (5-10m)': 'keep explanations brief and punchy — max 3 key points at a time',
+    'Medium (15-30m)': 'moderate depth is fine — can handle 5-6 key points',
+    'Long (45m+)': 'can handle deep comprehensive explanations'
+  };
+
+  return `STUDENT CONTEXT:
+- Name: ${p.name || 'Student'}
+- Grade: ${p.grade || 'school level'}
+- Board/Curriculum: ${p.board || 'CBSE'}
+- Stream: ${p.stream || 'General'}
+- Subjects they study: ${(p.subjects || []).join(', ') || 'Not specified'}
+- Target Exams: ${(p.targetExams || []).join(', ') || 'School Curriculum'}
+- Learning goal: ${p.goal || 'Academic Learning'}
+- Career interests: ${p.careerText || p.careers?.[0] || p.careerInterest || 'Not specified'}
+- Learning style: ${p.lstyle || p.learningStyle || 'Mixed'} — ${lstyleMap[p.lstyle || p.learningStyle] || 'varied formats'}
+- Attention span: ${attentionMap[p.attentionSpan] || 'moderate depth is fine'}
+- Preferred difficulty: ${p.difficulty || 'Medium'}
+- Mentor tone: ${p.mentorTone || 'Friendly'}
+- Current streak: ${D.streak || 0} days | XP Level: ${typeof window.lv === 'function' ? window.lv(D.xp || 0) : 1}
+- Topics recently studied: ${completedTopics.slice(-5).join(', ') || 'None yet'}
+- Currently struggling with: ${weakSpots.join(', ') || 'Nothing flagged yet'}
+- Strong in: ${strongAreas.join(', ') || 'Still building foundation'}
+
+ADAPTATION RULES:
+- Match depth, vocabulary, and examples to ${p.grade || 'their grade'} level
+- If learning style is Visual: use diagrams described in words, tables, spatial explanations
+- If Kinesthetic: prioritize worked examples and step-by-step process over theory
+- If attention span is Short: frontload the most important point, keep it punchy
+- Difficulty preference is ${p.difficulty || 'Medium'}: calibrate challenge accordingly
+- Career interest (${p.careerText || 'unspecified'}): when relevant, connect this topic to that career path
+- Do NOT assume this student is preparing for JEE/NEET unless grade is 11/12 AND they've set a competitive exam target`;
+}
+
+window.buildStudentContext = buildStudentContext;
+
 let _systemPromptCache = { key: '', prompt: '' };
 
 const TIO_SYSTEM_PROMPT = (profile, activeTopicTitle = '') => {
@@ -91,10 +157,6 @@ You are warm, encouraging, and direct. Speak like a brilliant older sibling. Nev
 
   const personalityBlock = personalityBlocks[tone] || personalityBlocks.friendly;
 
-  const weakSpotsStr = Array.isArray(profile?.weakSpots)
-    ? profile.weakSpots.map(w => (typeof w === 'string' ? w : (w.concept || w.topic || w.chapter || ''))).filter(Boolean).slice(0, 5).join(', ')
-    : 'Not yet identified';
-
   const curriculumCtx = (window.CurriculumEngine && activeTopicTitle)
     ? window.CurriculumEngine.getTopicContextForAI(activeTopicTitle)
     : '';
@@ -103,16 +165,16 @@ You are warm, encouraging, and direct. Speak like a brilliant older sibling. Nev
     ? window.MasteryEngine.getAIContext(activeTopicTitle)
     : '';
 
+  const platformDescription = `a free learning platform for ${profile?.grade || 'school'} students across all subjects, boards, and goals`;
+
+  const studentFullCtx = buildStudentContext(profile);
+
   const prompt = `<system_instructions>
-You are Tio — the AI mentor inside Mentorix, a free learning platform for students preparing for competitive exams (JEE/NEET/CBSE).
+You are Tio — the AI mentor inside Mentorix, ${platformDescription}.
 
 ${personalityBlock}
 
-STUDENT PROFILE:
-- Name: ${profile?.name || 'Student'}
-- Target Exam: ${profile?.targetExam || 'General'}
-- Streak: ${profile?.streak || 0} days | Level: ${profile?.level || 1}
-- Top Weak Areas: ${weakSpotsStr}
+${studentFullCtx}
 
 ${curriculumCtx}
 ${masteryCtx}
@@ -315,52 +377,89 @@ function generateMockAIResponse(msgs, sys, mt, json) {
     const subjMatch = userMsgText.match(/Subject:\s*([^\n]+)/i);
     const subject = subjMatch ? subjMatch[1].trim() : 'Physics & Mathematics';
     
+    const subjLower = subject.toLowerCase();
+    const isSTEM = !subjLower.includes('english') && !subjLower.includes('history') && !subjLower.includes('economics');
     return JSON.stringify({
-      units: [
-        {
-          name: `Unit 1: Core Principles of ${subject}`,
-          didYouKnow: `Fun Fact: Principles of ${subject} govern competitive engineering dynamics.`,
-          chapters: [
-            {
-              name: `Foundational Theories & Formulas`,
-              topics: [
-                `Essential Mathematical Modeling for ${subject}`,
-                `System Boundaries and Phase Spaces`,
-                `Derivation of first-order differential variables`,
-                `Boundary Value Problems and Saturation thresholds`
-              ]
-            }
+      units: [{
+        name: isSTEM ? `Unit 1: Core Principles of ${subject}` : `Unit 1: Foundations of ${subject}`,
+        chapters: [{
+          name: isSTEM ? `Foundational Theories & Formulas` : `Core Concepts of ${subject}`,
+          topics: isSTEM ? [
+            `Essential Mathematical Modeling for ${subject}`,
+            `System Boundaries and Phase Spaces`,
+            `Derivation of first-order differential variables`,
+            `Boundary Value Problems and Saturation thresholds`
+          ] : [
+            `Introduction to ${subject}`,
+            `Key Concepts and Vocabulary`,
+            `Reading and Comprehension Skills`,
+            `Writing and Expression`
           ]
-        }
-      ]
+        }]
+      }]
     });
   }
 
   // B. Intent: Assessment / Test Generation (MCQs)
-  if (prompt.includes('generate mcq') || prompt.includes('create mcq') || (json && (prompt.includes('qs') || prompt.includes('questions')))) {
-    const topicMatch = userMsgText.match(/topic:\s*([^\n"]+)/i) || userMsgText.match(/for:\s*"([^\n"]+)"/i);
-    const topic = topicMatch ? topicMatch[1].replace(/[^a-zA-Z0-9 ]/g, '').trim() : 'Physics & Chemistry';
+  if (prompt.includes('generate mcq') || prompt.includes('create mcq') || prompt.includes('quiz') || (json && (prompt.includes('qs') || prompt.includes('questions') || prompt.includes('checks')))) {
+    // Detect subject domain from user message and system prompt to avoid wrong fallback content
+    const combinedContext = (prompt + ' ' + (sys || '').toLowerCase()).substring(0, 2000);
+    const isBio = /\b(photosynthes\w*|cellular|cell|cells|plant|plants|animal|animals|genetics|organism|organisms|bacteria|virus|viruses|enzyme|enzymes|protein|proteins|dna|rna|mitosis|meiosis|chloro\w*)\b|\bevolution\b/i.test(combinedContext);
+    const isHistory = /\b(history|french|revolution|world war|ww1|ww2|empire|empires|ancient|medieval|colonial|independence|civics|geography|constitution|government|republic|dynasty)\b/i.test(combinedContext);
+    const isLang = /\b(grammar|essay|prose|poem|poetry|novel|chapter|comprehension|vocabulary|verb|verbs|noun|nouns|adjective|adjectives|simile|metaphor|shakespeare|literature|english)\b/i.test(combinedContext);
+    const isChem = /\b(acid|acids|base|bases|chemical|reaction|reactions|bonding|element|elements|compound|compounds|organic|inorganic|periodic|mole|moles|titration|electrolysis|stoichiometry)\b/i.test(combinedContext);
+    const isPhys = /\b(newton|physics|force|forces|velocity|acceleration|momentum|kinematics|optics|electric|magnetic|thermodynamic|quantum|gravitation|wave|waves)\b/i.test(combinedContext);
+    const isMath = /\b(math|maths|mathematics|derivative|derivatives|integral|integrals|calculus|algebra|geometry|trigonometry|matrix|matrices|vector|vectors|probability|statistics)\b/i.test(combinedContext);
 
-    const qCountMatch = userMsgText.match(/(\d+)\s*MCQ/i);
-    const qCount = qCountMatch ? parseInt(qCountMatch[1], 10) : 5;
+    let fallbackQ, fallbackOpts, fallbackAns, fallbackExpl;
 
-    const mockQuestions = [];
-    for (let idx = 0; idx < qCount; idx++) {
-      const qNum = idx + 1;
-      mockQuestions.push({
-        q: `[JEE Main] Question ${qNum} on ${topic}: Calculate the derivative at boundary limit $x = \\pi$.`,
-        o: ["$-\\pi^2$", "$\\pi^2$", "$2\\pi$", "$0$"],
-        a: 0,
-        e: `Applying fundamental derivative rules gives $-\\pi^2$ at $x = \\pi$.`,
-        concept: `${topic} Concepts`,
-        level: 5,
-        difficulty: "Hard"
-      });
+    if (isBio) {
+      fallbackQ = 'Which organelle is responsible for producing ATP through cellular respiration?';
+      fallbackOpts = ['A. Nucleus', 'B. Mitochondria', 'C. Ribosome', 'D. Chloroplast'];
+      fallbackAns = 1;
+      fallbackExpl = 'Mitochondria are the site of aerobic respiration and ATP synthesis.';
+    } else if (isHistory) {
+      fallbackQ = 'Which event is considered the immediate trigger of World War I?';
+      fallbackOpts = ['A. The Russian Revolution', 'B. Assassination of Archduke Franz Ferdinand', 'C. The Zimmermann Telegram', 'D. The Treaty of Versailles'];
+      fallbackAns = 1;
+      fallbackExpl = 'The assassination of Archduke Franz Ferdinand in 1914 triggered the alliance system and started WWI.';
+    } else if (isLang) {
+      fallbackQ = 'Which of the following is an example of a simile?';
+      fallbackOpts = ['A. The wind whispered through the trees', 'B. Her voice was like music', 'C. The stars danced in the sky', 'D. Time is a thief'];
+      fallbackAns = 1;
+      fallbackExpl = 'A simile uses "like" or "as" to compare two unlike things. "Her voice was like music" is a simile.';
+    } else if (isChem) {
+      fallbackQ = 'What is the pH of a neutral solution at 25°C?';
+      fallbackOpts = ['A. 0', 'B. 7', 'C. 14', 'D. 1'];
+      fallbackAns = 1;
+      fallbackExpl = 'A neutral solution has equal concentrations of H⁺ and OH⁻ ions, giving pH = 7 at 25°C.';
+    } else if (isPhys) {
+      fallbackQ = 'A body of mass 5 kg is acted upon by a net force of 20 N. What is its acceleration?';
+      fallbackOpts = ['A. 2 m/s²', 'B. 4 m/s²', 'C. 10 m/s²', 'D. 100 m/s²'];
+      fallbackAns = 1;
+      fallbackExpl = 'Using Newton\'s Second Law: a = F/m = 20/5 = 4 m/s².';
+    } else if (isMath) {
+      fallbackQ = 'What is the derivative of $f(x) = x^3 + 2x$ at $x = 1$?';
+      fallbackOpts = ['A. 3', 'B. 5', 'C. 7', 'D. 2'];
+      fallbackAns = 1;
+      fallbackExpl = 'f\'(x) = 3x² + 2. At x = 1: f\'(1) = 3(1) + 2 = 5.';
+    } else {
+      // Generic fallback for unknown subject
+      fallbackQ = 'Which of the following best describes a hypothesis?';
+      fallbackOpts = ['A. A proven fact', 'B. A testable prediction based on observation', 'C. A random guess with no basis', 'D. A final conclusion after all experiments'];
+      fallbackAns = 1;
+      fallbackExpl = 'A hypothesis is a testable, specific prediction made before conducting an experiment.';
     }
 
     return JSON.stringify({
-      title: `${topic} Diagnostic Test`,
-      qs: mockQuestions
+      checks: [
+        { q: fallbackQ, o: fallbackOpts, a: fallbackAns, e: fallbackExpl, difficulty: 'medium' }
+      ],
+      qs: [
+        { q: fallbackQ, o: fallbackOpts, a: fallbackAns, e: fallbackExpl, difficulty: 'medium' }
+      ],
+      offline: true,
+      warning: 'Generated offline — connect to internet for full AI-powered questions'
     });
   }
 

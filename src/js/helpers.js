@@ -136,7 +136,7 @@ function renderMath(el, force = false) {
     return;
   }
 
-  const runRender = () => {
+  const runRender = (attempt = 0) => {
     if (typeof window.renderMathInElement === 'function') {
       try {
         if (target.innerHTML && (target.innerHTML.includes('\\ (') || target.innerHTML.includes('\\ )') || target.innerHTML.includes('\\left') || target.innerHTML.includes('\\ce{'))) {
@@ -156,8 +156,11 @@ function renderMath(el, force = false) {
       } catch (e) {
         console.warn('[KaTeX Cache] Render warning:', e);
       }
+    } else if (attempt < 30) {
+      // Fix 6: max 30 retries (4.5 seconds) — prevents infinite loop if KaTeX CDN fails to load
+      setTimeout(() => runRender(attempt + 1), 150);
     } else {
-      setTimeout(() => renderMath(target, force), 150);
+      console.warn('[KaTeX] renderMathInElement not available after 30 retries — KaTeX may not have loaded.');
     }
   };
 
@@ -399,33 +402,6 @@ function animKeyPress(el) {
   }, 100);
 }
 
-/* ── UDS COMPONENT HELPER GENERATORS ───────────────────────────── */
-
-function renderUDSEmptyState(icon, title, desc, actionBtnHTML = '') {
-  return `
-    <div class="uds-empty-state">
-      <div class="uds-empty-icon" aria-hidden="true">${icon || '✨'}</div>
-      <div class="uds-empty-title">${esc(title || 'No data yet')}</div>
-      <div class="uds-empty-desc">${esc(desc || 'Start an activity to populate this section.')}</div>
-      ${actionBtnHTML ? `<div style="margin-top:8px">${actionBtnHTML}</div>` : ''}
-    </div>
-  `;
-}
-
-function renderUDSErrorBox(title, body, actionBtnHTML = '') {
-  return `
-    <div class="uds-error-box">
-      <div class="uds-error-title">⚠️ ${esc(title || 'Action could not be completed')}</div>
-      <div class="uds-error-body">${esc(body || 'An unexpected state occurred. Please retry or check your network.')}</div>
-      ${actionBtnHTML ? `<div style="margin-top:8px">${actionBtnHTML}</div>` : ''}
-    </div>
-  `;
-}
-
-function renderUDSSkeleton(heightPx = 40, widthPct = 100) {
-  return `<div class="uds-skeleton" style="height:${heightPx}px;width:${widthPct}%"></div>`;
-}
-
 /* ── CANONICAL BREADCRUMB ENGINE ───────────────────────────── */
 
 /**
@@ -566,13 +542,30 @@ function renderUDSEmptyState(moduleKey = 'general', customTitle = '', customMess
     }
   };
 
-  const cfg = configs[moduleKey] || configs.general;
+  let cfg;
+  if (configs[moduleKey]) {
+    cfg = configs[moduleKey];
+  } else if (typeof moduleKey === 'string' && (moduleKey.length <= 4 || /[\u{1F300}-\u{1F9FF}]/u.test(moduleKey))) {
+    // First argument is a custom emoji icon (legacy 3-argument call pattern)
+    cfg = {
+      emoji: moduleKey,
+      title: customTitle || 'Nothing Here Yet',
+      message: customMessage || 'Complete learning tasks to see your activity update automatically.',
+      actionLabel: 'Go to Dashboard',
+      actionRoute: 'dash'
+    };
+  } else {
+    cfg = configs.general;
+  }
+
+  const titleText = customTitle && configs[moduleKey] ? customTitle : cfg.title;
+  const messageText = customMessage && configs[moduleKey] ? customMessage : cfg.message;
 
   return `
     <div class="card mx-glass-card" style="text-align:center;padding:48px 24px;max-width:520px;margin:24px auto">
       <div style="font-size:52px;margin-bottom:16px">${cfg.emoji}</div>
-      <div class="h2 font-serif" style="color:#fff;margin-bottom:8px">${esc(customTitle || cfg.title)}</div>
-      <p style="color:var(--sub);font-size:13px;line-height:1.6;margin-bottom:24px">${esc(customMessage || cfg.message)}</p>
+      <div class="h2 font-serif" style="color:#fff;margin-bottom:8px">${esc(titleText)}</div>
+      <p style="color:var(--sub);font-size:14px;line-height:1.6;margin-bottom:24px">${esc(messageText)}</p>
       <button class="btn bpri mx-btn-primary" onclick="go('${cfg.actionRoute}')">${esc(cfg.actionLabel)}</button>
     </div>
   `;
@@ -632,33 +625,31 @@ function renderUDSErrorBox(message = 'An unexpected issue occurred.', retryFnNam
 /* ── ADAPTIVE HARDWARE TIER ENGINE ────────────────────────── */
 
 function detectDeviceHardwareTier() {
+  let tier = 'high';
   if (window.DeviceManager && typeof window.DeviceManager.getProfile === 'function') {
     const profile = window.DeviceManager.getProfile();
-    const tier = (profile.performanceTier || 'High').toLowerCase();
-    if (document.body && typeof document.body.setAttribute === 'function') {
-      document.body.setAttribute('data-hardware-tier', tier);
-      document.body.setAttribute('data-is-touch', profile.inputMethods?.touch ? 'true' : 'false');
-      document.body.setAttribute('data-device-class', (profile.deviceClass || 'Desktop').toLowerCase());
+    tier = (profile.performanceTier || 'High').toLowerCase();
+  } else {
+    const nav = typeof navigator !== 'undefined' ? navigator : {};
+    const mem = nav.deviceMemory || 8;
+    const cores = nav.hardwareConcurrency || 8;
+    const conn = nav.connection || nav.mozConnection || nav.webkitConnection;
+
+    if (mem <= 4 || cores <= 4 || (conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === '3g'))) {
+      tier = 'low';
+    } else if (mem <= 6 || cores <= 6) {
+      tier = 'medium';
     }
-    return tier;
   }
 
-  let tier = 'high';
-  const nav = typeof navigator !== 'undefined' ? navigator : {};
-  const mem = nav.deviceMemory || 8;
-  const cores = nav.hardwareConcurrency || 8;
-  const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || (nav.maxTouchPoints && nav.maxTouchPoints > 0));
-  const conn = nav.connection || nav.mozConnection || nav.webkitConnection;
-
-  if (mem <= 4 || cores <= 4 || (conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === '3g'))) {
-    tier = 'low';
-  } else if (mem <= 6 || cores <= 6) {
-    tier = 'medium';
-  }
+  const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || (typeof navigator !== 'undefined' && navigator.maxTouchPoints && navigator.maxTouchPoints > 0));
 
   if (document.body && typeof document.body.setAttribute === 'function') {
     document.body.setAttribute('data-hardware-tier', tier);
     document.body.setAttribute('data-is-touch', isTouch ? 'true' : 'false');
+  }
+  if (document.documentElement && typeof document.documentElement.setAttribute === 'function') {
+    document.documentElement.setAttribute('data-perf-tier', tier);
   }
   return tier;
 }
@@ -755,10 +746,19 @@ window.readoutTioExplanation = function(text) {
   if (!text) return;
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-IN';
-    u.rate = 0.9;
-    window.speechSynthesis.speak(u);
+    // Chunk text into <= 180 char segments to prevent iOS Safari 15s cutoff bug
+    const chunks = text.match(/.{1,180}(?:\s|$)/g) || [text];
+    let i = 0;
+    function speakNext() {
+      if (i >= chunks.length || !window.speechSynthesis) return;
+      const u = new SpeechSynthesisUtterance(chunks[i++].trim());
+      u.lang = 'en-IN';
+      u.rate = 0.95;
+      u.onend = speakNext;
+      u.onerror = speakNext;
+      window.speechSynthesis.speak(u);
+    }
+    speakNext();
   }
 };
 

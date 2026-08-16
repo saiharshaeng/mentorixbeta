@@ -210,9 +210,19 @@ function rCourses(){
   let worldMapHTML = '';
   let globalNodeIdx = 0;
 
+  let firstIncompleteFound = false;
+
   (currentCourse.units || []).forEach((unit, ui) => {
     (unit.chapters || []).forEach((chapter, ci) => {
-      const isChapterCompleted = chapter.completed;
+      // Calculate if all topics in this chapter are done
+      const allChapTopics = [];
+      if (chapter.subchapters && chapter.subchapters.length > 0) {
+        chapter.subchapters.forEach(s => (s.topics || []).forEach(t => allChapTopics.push(typeof t === 'string' ? t : (t.title || t.name || ''))));
+      } else {
+        (chapter.topics || []).forEach(t => allChapTopics.push(typeof t === 'string' ? t : (t.title || t.name || '')));
+      }
+      const isAllTopicsDone = allChapTopics.length > 0 && allChapTopics.every(t => (D.topics || []).includes(t));
+      const isChapterCompleted = chapter.completed || isAllTopicsDone;
       const isChapterUnlocked = true; // All chapters unlocked for 100% learning flexibility
       const isChapterActive = activePos ? (activePos.unitIdx === ui && activePos.chapterIdx === ci) : (!isChapterCompleted);
 
@@ -235,7 +245,15 @@ function rCourses(){
             const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
             const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
             const isUnlocked = true; // All topics unlocked for flexible access anywhere
-            const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (!isDone);
+            let isActive = false;
+            if (activeTopicTitle) {
+              isActive = (tTitle.toLowerCase() === activeTopicTitle.toLowerCase());
+            } else if (!isDone && !firstIncompleteFound) {
+              isActive = true;
+              firstIncompleteFound = true;
+            } else if (overallProgress === 100 && ui === (currentCourse.units.length - 1) && ci === (unit.chapters.length - 1) && ti === (sub.topics.length - 1)) {
+              isActive = true; // 100% done — place avatar companion on the final victory node!
+            }
             const posClass = PATH_POSITIONS[globalNodeIdx % PATH_POSITIONS.length];
             globalNodeIdx++;
 
@@ -243,8 +261,8 @@ function rCourses(){
             let nodeStateClass = isDone ? 'node-completed' : isActive ? 'node-active' : 'node-unlocked';
 
             let avatarHTML = isActive ? `
-              <div class="node-avatar-companion avatar-companion-anim" title="You are here!">
-                ${getAvatarEmoji()}
+              <div class="node-avatar-companion avatar-companion-anim" title="${overallProgress === 100 ? 'Course Mastered! 🎉' : 'You are here!'}">
+                ${overallProgress === 100 ? '👑' : getAvatarEmoji()}
               </div>
             ` : '';
 
@@ -279,7 +297,15 @@ function rCourses(){
           const tTitle = typeof t === 'string' ? t : (t.title || t.name || '');
           const isDone = (D.topics || []).includes(tTitle) || (typeof t === 'object' && (t.status === 'Completed' || t.status === 'Mastered'));
           const isUnlocked = true; // All topics unlocked for flexible access anywhere
-          const isActive = activeTopicTitle ? (tTitle.toLowerCase() === activeTopicTitle.toLowerCase()) : (!isDone);
+          let isActive = false;
+          if (activeTopicTitle) {
+            isActive = (tTitle.toLowerCase() === activeTopicTitle.toLowerCase());
+          } else if (!isDone && !firstIncompleteFound) {
+            isActive = true;
+            firstIncompleteFound = true;
+          } else if (overallProgress === 100 && ui === (currentCourse.units.length - 1) && ci === (unit.chapters.length - 1) && ti === (chapter.topics.length - 1)) {
+            isActive = true; // 100% done — place avatar companion on final victory node!
+          }
           const posClass = PATH_POSITIONS[globalNodeIdx % PATH_POSITIONS.length];
           globalNodeIdx++;
 
@@ -287,8 +313,8 @@ function rCourses(){
           let nodeStateClass = isDone ? 'node-completed' : isActive ? 'node-active' : 'node-unlocked';
 
           let avatarHTML = isActive ? `
-            <div class="node-avatar-companion avatar-companion-anim" title="You are here!">
-              ${getAvatarEmoji()}
+            <div class="node-avatar-companion avatar-companion-anim" title="${overallProgress === 100 ? 'Course Mastered! 🎉' : 'You are here!'}">
+              ${overallProgress === 100 ? '👑' : getAvatarEmoji()}
             </div>
           ` : '';
 
@@ -718,45 +744,64 @@ async function submitCourseSetup(){
   }
 }
 
+// NOTE: This is the single canonical implementation of generateAutoCoursesAsync.
+// A second, incompatible copy of this function used to live inline in index.html
+// (defined later in document parse order) and silently overwrote this one at
+// runtime — every call site in the app was actually running that hidden version,
+// landmine. getStaticCourseTemplate(), generateSubjectCourseAI(), and
+// generateAutoCourses() (sync, non-academic-goal path) still live in index.html
+// as plain global helper functions and are called from here.
 async function generateAutoCoursesAsync(profile, onProgress) {
-  if (window.ModuleRegistry && typeof window.ModuleRegistry.loadModule === 'function') {
-    try {
-      await window.ModuleRegistry.loadModule('curriculum');
-    } catch (e) {
-      console.warn('[Courses] Failed to load curriculum module:', e);
-    }
+  if (!profile || profile.goal !== 'Academic Learning') {
+    return (typeof generateAutoCourses === 'function') ? generateAutoCourses(profile) : [];
   }
 
-  const subjects = (profile?.subjects && profile.subjects.length > 0)
-    ? profile.subjects
-    : ['Mathematics', 'Physics', 'Chemistry'];
+  const grade = profile.grade || 'Grade 10';
+  const board = profile.board || 'CBSE';
 
-  const board = profile?.board || 'CBSE';
-  const grade = profile?.grade || 'Class 11';
-  const stream = profile?.stream || '';
+  // If the student's board/grade changed since their last course batch, don't
+  // treat old-grade subjects as "already covered" — regenerate everything.
+  const boardOrGradeChanged = D.courses && D.courses.length > 0 &&
+    (!D.courses[0].title.includes(board) || !D.courses[0].title.includes(grade));
+
+  const existingSubjects = new Set(boardOrGradeChanged ? [] : (D.courses || []).map(c => c.subject));
+
+  const allSubjects = (profile.subjects && profile.subjects.length)
+    ? profile.subjects
+    : (grade === 'Grade 12' ? ['Mathematics', 'Physics', 'Chemistry'] : ['Mathematics', 'Science', 'English']);
+
+  const subjects = allSubjects.filter(s => !existingSubjects.has(s));
+  if (subjects.length === 0) return [];
 
   const out = [];
   for (let i = 0; i < subjects.length; i++) {
     const subj = subjects[i];
     if (typeof onProgress === 'function') onProgress(i, subjects.length, subj);
 
-    let courseObj = null;
-    if (window.CurriculumEngine) {
-      const syl = window.CurriculumEngine.getSyllabus({ board, grade, subject: subj, stream });
-      if (syl && syl.units && syl.units.length > 0) {
-        if (typeof window.createCourseTemplate === 'function') {
-          courseObj = window.createCourseTemplate(syl.title, syl.subject, syl.units);
-        } else {
-          courseObj = syl;
-        }
-      }
+    // 1. Hand-curated static template (fast, verified-accurate) when available.
+    const staticCourse = (typeof getStaticCourseTemplate === 'function')
+      ? getStaticCourseTemplate(grade, board, subj)
+      : null;
+
+    if (staticCourse) {
+      out.push(staticCourse);
+      continue;
     }
-    if (courseObj) {
-      if (!courseObj.id) {
-        courseObj.id = 'c_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5);
-      }
-      out.push(courseObj);
+
+    // 2. AI-generated fallback, scoped strictly to this board/grade/subject.
+    //    Wrapped per-subject so one failure doesn't abort the whole batch.
+    try {
+      const course = (typeof generateSubjectCourseAI === 'function')
+        ? await generateSubjectCourseAI(profile, subj)
+        : null;
+      if (course) out.push(course);
+    } catch (e) {
+      console.error('[Courses] Failed to generate course for:', subj, e);
     }
+  }
+
+  if (out.length === 0) {
+    throw new Error('Could not generate any courses. Please check your connection and try again.');
   }
   return out;
 }
@@ -922,3 +967,34 @@ function launchBossTest(courseId, unitIdx, chapterIdx, chapterTitle) {
 window.launchBossTest = launchBossTest;
 
 window.createCustomUserCourse = createCustomUserCourse;
+
+// Fix 4: getAllCourseTopicsFlat — returns a flat array of all topic title strings across all courses
+// Called by tests.js for topic source selection
+function getAllCourseTopicsFlat() {
+  const topics = [];
+  const seen = new Set();
+  try {
+    (window.D?.courses || []).forEach(course => {
+      (course.units || []).forEach(unit => {
+        (unit.chapters || []).forEach(chapter => {
+          // Handle subchapters
+          if (chapter.subchapters && chapter.subchapters.length > 0) {
+            chapter.subchapters.forEach(sub => {
+              (sub.topics || []).forEach(t => {
+                const title = typeof t === 'string' ? t : (t.title || t.name || '');
+                if (title && !seen.has(title)) { seen.add(title); topics.push(title); }
+              });
+            });
+          } else {
+            (chapter.topics || []).forEach(t => {
+              const title = typeof t === 'string' ? t : (t.title || t.name || '');
+              if (title && !seen.has(title)) { seen.add(title); topics.push(title); }
+            });
+          }
+        });
+      });
+    });
+  } catch (e) { console.warn('[getAllCourseTopicsFlat]', e); }
+  return topics;
+}
+window.getAllCourseTopicsFlat = getAllCourseTopicsFlat;

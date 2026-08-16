@@ -336,3 +336,25 @@ create policy "Users can read own avatar"
 create policy "Anyone can read question images"
   on storage.objects for select
   using (bucket_id = 'question-images');
+
+-- ── AI CURRICULUM CACHE ───────────────────────
+-- Stores AI-generated topic metadata so subsequent students get
+-- instant responses without re-generating via Groq / Cloudflare Worker.
+-- Source: curriculumEngine.js ensureTopicMetadata()
+
+create table if not exists cached_topic_metadata (
+  topic_key   text primary key,
+  metadata    jsonb not null,
+  created_at  timestamptz not null default now()
+);
+
+alter table cached_topic_metadata enable row level security;
+
+create policy "Public read topic metadata"
+  on cached_topic_metadata for select
+  using (true);
+
+create policy "Auth write topic metadata"
+  on cached_topic_metadata for insert
+  with check (true);
+

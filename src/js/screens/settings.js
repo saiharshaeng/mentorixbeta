@@ -155,8 +155,30 @@ function rSettings(){
           <button class="btn bsec bsm font-poiret" onclick="go('comp')">Configure Exam Hub →</button>
         </div>
         <div class="set-row">
-          <div><div style="color:var(--txt);font-size:14px;font-weight:500">Daily Study Goal</div><div style="color:var(--mut);font-size:12px">${esc(p.dailyStudyGoalMinutes || 45)} mins per day</div></div>
-          <span class="tag tok font-mono">${esc(p.dailyStudyGoalMinutes || 45)}m / day</span>
+          <div><div style="color:var(--txt);font-size:14px;font-weight:500">Daily Study Goal</div><div style="color:var(--mut);font-size:12px">Target study time per day for the dashboard ring</div></div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--brd);border-radius:10px;padding:6px 12px">
+              <button onclick="
+                const v = parseInt(document.getElementById('daily-goal-input').value)||45;
+                if(v>=5 && v<=360){
+                  if(!D.profile) D.profile={};
+                  D.profile.dailyStudyGoalMinutes=v;
+                  if(typeof saveNow==='function')saveNow();
+                  if(typeof toast==='function')toast('✅ Daily goal updated to '+v+' mins','ok2');
+                  if(typeof rSettings==='function')rSettings();
+                } else {
+                  if(typeof toast==='function')toast('Please enter a value between 5 and 360 minutes','');
+                }
+              " class="btn bsm bpri" style="padding:4px 10px;font-size:12px">Save</button>
+              <input id="daily-goal-input" type="number" min="5" max="360" step="5"
+                value="${p.dailyStudyGoalMinutes || 45}"
+                style="width:60px;background:transparent;border:none;color:#fff;font-size:15px;font-weight:700;text-align:center"
+                onchange="this.value=Math.min(360,Math.max(5,parseInt(this.value)||45))"
+              />
+              <span style="color:var(--mut);font-size:12px">mins / day</span>
+            </div>
+            <div style="font-size:11px;color:var(--mut)">5–360 minutes</div>
+          </div>
         </div>
       </div>
     </div>
@@ -185,12 +207,15 @@ function rSettings(){
       <div class="card mx-glass-card">
         <div style="margin-bottom:18px">
           <div style="color:var(--txt);font-size:14px;font-weight:600;margin-bottom:12px">Theme Palette</div>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:6px">
             ${[
-              {id:'dark',    label:'Dark',    ic:'🌙',desc:'Deep space',preview:'linear-gradient(135deg,#04040f 0%,#0b0b20 50%,#1a0a3e 100%)',dot:'#8B5CF6'},
-              {id:'light',   label:'Light',   ic:'☀️',desc:'Clean & bright',preview:'linear-gradient(135deg,#F4F3FF 0%,#FFFFFF 50%,#EEF2FF 100%)',dot:'#6D28D9'},
-              {id:'green',   label:'Green',   ic:'🌿',desc:'Forest universe',preview:'linear-gradient(135deg,#020D08 0%,#0A1F16 50%,#10B981 100%)',dot:'#10B981'},
-              {id:'vibrant', label:'Vibrant', ic:'⚡',desc:'Blue + Pink',preview:'linear-gradient(135deg,#05040F 0%,#1D4ED8 45%,#EC4899 100%)',dot:'#3B82F6'}
+              {id:'dark',     label:'Dark',     ic:'🌙',desc:'Deep space',preview:'linear-gradient(135deg,#04040f 0%,#0b0b20 50%,#1a0a3e 100%)',dot:'#8B5CF6'},
+              {id:'light',    label:'Light',    ic:'☀️',desc:'Clean & bright',preview:'linear-gradient(135deg,#F4F3FF 0%,#FFFFFF 50%,#EEF2FF 100%)',dot:'#6D28D9'},
+              {id:'green',    label:'Green',    ic:'🌿',desc:'Forest universe',preview:'linear-gradient(135deg,#020D08 0%,#0A1F16 50%,#10B981 100%)',dot:'#10B981'},
+              {id:'vibrant',  label:'Vibrant',  ic:'⚡',desc:'Blue + Pink',preview:'linear-gradient(135deg,#05040F 0%,#1D4ED8 45%,#EC4899 100%)',dot:'#3B82F6'},
+              {id:'friendly', label:'Friendly', ic:'🤝',desc:'Warm amber glow',preview:'linear-gradient(135deg,#1c1204 0%,#78350f 50%,#f59e0b 100%)',dot:'#F59E0B'},
+              {id:'genius',   label:'Genius',   ic:'🧠',desc:'Deep indigo mind',preview:'linear-gradient(135deg,#030712 0%,#1e3a8a 50%,#3b82f6 100%)',dot:'#3B82F6'},
+              {id:'lively',   label:'Lively',   ic:'🎉',desc:'Floating emojis',preview:'linear-gradient(135deg,#0F172A 0%,#6366F1 50%,#A855F7 100%)',dot:'#A855F7'}
             ].map(t=>{
                const cur=D.settings?.colorTheme===t.id||((!D.settings?.colorTheme)&&t.id==='vibrant');
               return `<div onclick="applyAppTheme('${t.id}');D.settings.colorTheme='${t.id}';D.settings.appTheme='${t.id}';saveAll();rSettings()" style="border-radius:14px;overflow:hidden;cursor:pointer;border:2px solid ${cur?'var(--p)':'var(--brd)'};transition:all .2s;transform:${cur?'scale(1.04)':'scale(1)'}">
@@ -423,6 +448,12 @@ function toggleCursor(checked) {
 
 function toggleMockAI(checked) {
   localStorage.setItem('mx3_use_mock', checked ? 'true' : 'false');
+  // Fix 10: also persist through D.settings so the value survives profile switches
+  if (window.D) {
+    if (!D.settings) D.settings = {};
+    D.settings.mockAI = checked;
+    if (typeof saveAll === 'function') saveAll();
+  }
   if (window.toast) {
     window.toast(checked ? '🤖 Mock AI Mode activated!' : '⚡ Mock AI Mode deactivated!', 'ok2');
   }

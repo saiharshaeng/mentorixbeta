@@ -98,18 +98,26 @@ async function generateNoteAI(topic){
   if(isTopicForbidden(topic)){toast('⚠️ That topic isn\'t available for your age group.','err');return;}
   NB.genLoading=true;rNotebook();
   try{
-    const sys='You are Mentorix AI. Output ONLY valid JSON.';
-    const p=`Create comprehensive study notes for: "${topic.replace(/"/g,"'")}". Output ONLY:
-{"title":"${topic}","subject":"Physics/Maths/etc","summary":"2 sentences","explain":"1 clear paragraph","formulas":["formula 1","formula 2"],"examples":["example 1","example 2","example 3"],"points":["key point 1","key point 2","key point 3","key point 4","key point 5"],"fact":"1 surprising fact"}`;
+    const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
+    const sys=`You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}`;
+    const gradeNum = parseInt((D.profile?.grade || 'Grade 10').replace(/[^0-9]/g,'')) || 10;
+    const gradeInstruction = gradeNum <= 10
+      ? 'Use simple analogies, concrete real-life examples, and intuitive explanations. Avoid heavy derivations. Prioritize foundational conceptual clarity.'
+      : 'Include rigorous definitions, key formulas in LaTeX ($...$), and exam-relevant derivation insights. Connect to JEE/NEET competitive patterns if applicable.';
+
+    const p=`Create comprehensive study notes for "${topic.replace(/"/g,"'")}" for a ${D.profile?.grade || 'school'} ${D.profile?.board || 'CBSE'} student.
+Pedagogical guidance: ${gradeInstruction}
+Output ONLY:
+{"title":"${topic}","subject":"${typeof detectSubject === 'function' ? detectSubject(topic) : 'Science'}","summary":"2 sentences at this grade level","explain":"1 clear paragraph — no jargon beyond ${D.profile?.grade || 'school'} level","formulas":["formula 1 in LaTeX","formula 2 in LaTeX"],"examples":["concrete example 1","concrete example 2","concrete example 3"],"points":["key takeaway 1","key takeaway 2","key takeaway 3","key takeaway 4","key takeaway 5"],"fact":"1 surprising fact about this topic"}`;
     const raw=await ai([{role:'user',content:p}],sys,2000,true);
     const data=pJSON(raw);
     if(!data?.title)throw new Error('No data');
     const note={...data,savedAt:Date.now(),generated:true};
     if(!D.notes)D.notes={};
-    D.notes[topic]=note;
-    NB.selTopic=topic;
-    addTopic(topic);
-    addXP(15,'Notes generated');
+    D.notes[topic] = note;
+    NB.selTopic = topic;
+    if (typeof addTopic === 'function') addTopic(topic);
+    if (typeof addXP === 'function') addXP(15,'Notes generated');
     saveAll();
   }catch(e){
     
@@ -217,10 +225,53 @@ function rNotebook(){
         </div>`:''}
 
         ${selNote.fact?`<div class="ffact mb12"><p style="margin:0;font-size:13px;color:#86EFAC">🌌 <strong style="color:var(--okl)">Fun Fact: </strong>${sanitizeHTML(selNote.fact)}</p></div>`:''}
+
+        ${(selNote.versions||[]).length > 0 ? `
+        <div class="card mb12 mx-glass-card">
+          <details>
+            <summary style="cursor:pointer;color:var(--pl);font-size:12px;font-weight:600">📋 ${selNote.versions.length} Previous Version(s)</summary>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+              ${selNote.versions.slice().reverse().map((v, i) => {
+                const vIdx = selNote.versions.length - 1 - i;
+                return `<div style="border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:10px;background:rgba(0,0,0,0.2)">
+                  <div class="between mb6">
+                    <span style="font-size:11px;color:var(--mut)">Saved ${new Date(v.savedAt).toLocaleDateString()} ${new Date(v.savedAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</span>
+                    <button class="btn bsm bgh" style="font-size:11px;padding:3px 8px" onclick="restoreNoteVersion('${escON(NB.selTopic)}', ${vIdx})">↺ Restore</button>
+                  </div>
+                  <div style="font-size:12px;color:var(--sub);line-height:1.6">${sanitizeHTML((v.summary || v.explain || '').substring(0, 180))}...</div>
+                </div>`;
+              }).join('')}
+            </div>
+          </details>
+        </div>` : ''}
       </div>`:`<div style="display:flex;align-items:center;justify-content:center;min-height:260px;color:var(--mut);text-align:center"><div><div style="font-size:44px;margin-bottom:12px">👈</div><p style="font-size:14px">Select a note to read it</p></div></div>`}
     </div>
   </div>`;
   setTimeout(() => { if (typeof renderMath === 'function') renderMath(); }, 80);
+}
+
+function restoreNoteVersion(topic, vIdx) {
+  if (!D.notes?.[topic]) return;
+  const note = D.notes[topic];
+  if (!note.versions || !note.versions[vIdx]) return;
+  const version = note.versions[vIdx];
+  // Snapshot current before restoring
+  note.versions.push({
+    savedAt: note.savedAt || Date.now(),
+    summary: note.summary,
+    explain: note.explain,
+    formulas: note.formulas,
+    examples: note.examples
+  });
+  note.summary = version.summary || '';
+  note.explain = version.explain || '';
+  note.formulas = version.formulas || [];
+  note.examples = version.examples || [];
+  note.savedAt = Date.now();
+  note.versions = note.versions.slice(-5);
+  saveAll();
+  toast('Note version restored!', 'ok2');
+  rNotebook();
 }
 
 function genNoteTrigger(){
@@ -235,5 +286,6 @@ function genNoteTrigger(){
 ─────────────────────────────────────────── */
 window.rNotebook = rNotebook;
 window.genNoteTrigger = genNoteTrigger;
+window.restoreNoteVersion = restoreNoteVersion;
 
 

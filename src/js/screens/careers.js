@@ -102,7 +102,7 @@ function renderDiscoveryFlow(container) {
           <div style="font-size:36px">🤖</div>
           <div>
             <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
-            <div style="color:var(--sub);font-size:12px">Step 1 of 3: Academic Preferences</div>
+            <div style="color:var(--sub);font-size:12px">Step 1 of 4: Academic Preferences</div>
           </div>
         </div>
 
@@ -135,7 +135,7 @@ function renderDiscoveryFlow(container) {
           <div style="font-size:36px">💡</div>
           <div>
             <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
-            <div style="color:var(--sub);font-size:12px">Step 2 of 3: Passions & Skills</div>
+            <div style="color:var(--sub);font-size:12px">Step 2 of 4: Passions & Skills</div>
           </div>
         </div>
 
@@ -167,7 +167,7 @@ function renderDiscoveryFlow(container) {
           <div style="font-size:36px">🌟</div>
           <div>
             <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
-            <div style="color:var(--sub);font-size:12px">Step 3 of 3: Life Goals & Priorities</div>
+            <div style="color:var(--sub);font-size:12px">Step 3 of 4: Life Goals & Priorities</div>
           </div>
         </div>
 
@@ -183,6 +183,44 @@ function renderDiscoveryFlow(container) {
 
         <div style="display:flex;justify-content:space-between">
           <button class="btn bgh" onclick="CS.discoveryStep=2;renderCareerContent()">← Back</button>
+          <button class="btn bpri" onclick="CS.discoveryStep=4;renderCareerContent()">
+            Next Step →
+          </button>
+        </div>
+      </div>
+    `;
+  } else if (step === 4) {
+    const countries = [
+      { id: 'India', label: '🇮🇳 India', desc: 'Domestic university pathways, JEE/NEET/CUET, Indian job market' },
+      { id: 'USA', label: '🇺🇸 United States', desc: 'US higher education (SAT/ACT), STEM OPT, US job ecosystem' },
+      { id: 'UK', label: '🇬🇧 United Kingdom', desc: 'UCAS, Russell Group universities, UK graduate route' },
+      { id: 'Canada', label: '🇨🇦 Canada', desc: 'Canadian university programs, Post-Graduation Work Permit' },
+      { id: 'Australia', label: '🇦🇺 Australia', desc: 'Australian universities, post-study work rights' },
+      { id: 'Global', label: '🌐 Global / Remote', desc: 'International opportunities, remote tech & digital careers' }
+    ];
+
+    container.innerHTML = `
+      <div class="card scr" style="max-width:600px;margin:20px auto;padding:32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <div style="font-size:36px">🌐</div>
+          <div>
+            <div style="color:var(--pl);font-weight:700;font-size:14px">Tio — Career Discovery</div>
+            <div style="color:var(--sub);font-size:12px">Step 4 of 4: Target Country & Region</div>
+          </div>
+        </div>
+
+        <p style="color:#fff;font-size:14px;margin-bottom:14px;font-weight:600">WHERE DO YOU PLAN TO STUDY AND BUILD YOUR CAREER?</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:24px">
+          ${countries.map(c => `
+            <button class="obtn${(CS.intake.targetCountry || 'India') === c.id ? ' on' : ''}" onclick="CS.intake.targetCountry='${c.id}';renderCareerContent()" style="text-align:left;padding:12px 14px">
+              <div style="font-weight:700;font-size:13px">${c.label}</div>
+              <div style="font-size:10px;color:var(--sub);margin-top:2px;line-height:1.3">${c.desc}</div>
+            </button>
+          `).join('')}
+        </div>
+
+        <div style="display:flex;justify-content:space-between">
+          <button class="btn bgh" onclick="CS.discoveryStep=3;renderCareerContent()">← Back</button>
           <button class="btn bpri blg" onclick="finishDiscovery()" style="padding:12px 24px">
             ✨ Generate My Personalized Careers →
           </button>

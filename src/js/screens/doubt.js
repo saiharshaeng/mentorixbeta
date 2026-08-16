@@ -47,9 +47,10 @@ async function askDoubt(){
   if(btn){btn.disabled=true;btn.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';}
   const _el_dans=document.getElementById('dans');if(_el_dans)_el_dans.innerHTML=`<div class="card" style="text-align:center;padding:40px"><div class="spin" style="width:40px;height:40px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 14px"></div><p style="color:var(--sub)">Tio is thinking… 🤔</p></div>`;
   try{
-    const sys=`You are Tio, Mentorix AI tutor. Student: ${pCtx()}. Output ONLY valid JSON.`;
-    const p=`Explain this doubt clearly: "${q.replace(/"/g,"'")}". 
-Output ONLY: {"summary":"1 sentence answer","steps":[{"n":"Step 1 title","c":"explanation"},{"n":"Step 2 title","c":"explanation"},{"n":"Step 3 title","c":"explanation"}],"example":"1 real-world example","analogy":"1 simple analogy","testq":{"q":"follow-up question?","o":["A","B","C","D"],"a":0,"e":"reason"}}`;
+    const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
+    const sys=`You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}`;
+    const p=`Explain this clearly for a ${D.profile?.grade || 'school'} student: "${q.replace(/"/g,"'")}".
+Output ONLY: {"summary":"1 sentence direct answer","steps":[{"n":"Step 1 title","c":"explanation"},{"n":"Step 2 title","c":"explanation"},{"n":"Step 3 title","c":"explanation"}],"example":"1 concrete example appropriate for ${D.profile?.grade || 'school'}","analogy":"1 analogy ONLY if this is a conceptual topic — leave blank string if factual","testq":{"q":"follow-up question to test understanding?","o":["A","B","C","D"],"a":0,"e":"reason"}}`;
     const raw=await ai([{role:'user',content:p}],sys,2500,true);
     const data=pJSON(raw);
     if(!data?.summary)throw new Error('No answer');
@@ -106,7 +107,16 @@ function renderDoubtAnswer(){
     </div>`;
 }
 
+
 /* ───────────────────────────────────────────
    PROGRESS
 ─────────────────────────────────────────── */
 window.rDoubt = rDoubt;
+
+// Fix 3: Voice input stub — prevents crash on button click
+function toggleDoubtVoice() {
+  if (typeof toast === 'function') {
+    toast('🎙️ Voice input is coming soon! Type your question for now.', 'ok2');
+  }
+}
+window.toggleDoubtVoice = toggleDoubtVoice;

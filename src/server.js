@@ -93,7 +93,7 @@ const server = http.createServer((req, res) => {
         res.end(`Server Error: ${err.code}`);
       }
     } else {
-      const cacheControl = (ext === '.html')
+      const cacheControl = (ext === '.html' || ext === '.json')
         ? 'no-cache, must-revalidate'
         : 'public, max-age=31536000, immutable';
 

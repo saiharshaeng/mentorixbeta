@@ -206,20 +206,36 @@ async function selectProfile(id) {
 }
 
 function deleteProfileTrigger(id, name) {
-  showConfirm('Delete Profile', `Are you sure you want to delete profile "${name}"? All progress, notes, and classes will be permanently lost.`, 'Delete', 'bgh', () => {
+  showConfirm('Delete Profile', `Are you sure you want to delete profile "${name}"? All progress, notes, and classes will be permanently lost.`, 'Delete', 'bgh', async () => {
     const profiles = getProfiles();
     const filtered = profiles.filter(x => x.id !== id);
+
     // Reindex remaining profiles to keep profile_1_ ... profile_N_ matching index positions
-    const reindexed = filtered.map((p, index) => {
+    // Fix 2: Reindex BOTH IndexedDB AND localStorage (storage.js migrates all data to IDB)
+    const USER_DATA_KEYS = [
+      'profile', 'xp', 'streak', 'lastStudy', 'badges', 'topics',
+      'chatMsgs', 'exploredCats', 'settings', 'memory', 'notes',
+      'roadmaps', 'courses', 'courseStates', 'revisionQueue',
+      'weakSpots', 'progress', 'currentLesson', 'currentChapter'
+    ];
+
+    const reindexed = await Promise.all(filtered.map(async (p, index) => {
       const oldId = p.id;
       const newId = `profile_${index + 1}`;
       if (oldId !== newId) {
-        // Move data keys in localStorage
-        const USER_DATA_KEYS = [
-          'profile', 'xp', 'streak', 'lastStudy', 'badges', 'topics',
-          'chatMsgs', 'exploredCats', 'settings', 'memory', 'notes',
-          'roadmaps', 'courses'
-        ];
+        // Move data keys in IndexedDB (primary store since storage.js migration)
+        if (typeof idbGet === 'function' && typeof idbSet === 'function') {
+          await Promise.all(USER_DATA_KEYS.map(async (k) => {
+            try {
+              const val = await idbGet(`${oldId}_${k}`);
+              if (val !== undefined) {
+                await idbSet(`${newId}_${k}`, val);
+                if (typeof idbDel === 'function') await idbDel(`${oldId}_${k}`);
+              }
+            } catch (e) { console.warn('[auth] IDB reindex error for key', k, e); }
+          }));
+        }
+        // Also move any remaining localStorage keys (legacy fallback)
         USER_DATA_KEYS.forEach(k => {
           const val = localStorage.getItem(`mx3_${oldId}_${k}`);
           if (val !== null) {
@@ -230,19 +246,20 @@ function deleteProfileTrigger(id, name) {
         p.id = newId;
       }
       return p;
-    });
+    }));
+
     saveProfiles(reindexed);
-    
+
     // Clear leftover data from the tail slot that is no longer occupied
     const tailId = `profile_${filtered.length + 1}`;
-    clearUserData(tailId);
-    
+    if (typeof clearUserData === 'function') clearUserData(tailId);
+
     // If active session was deleted, clear session
     const s = getSession();
     if (s && s.id === id) {
       clearSession();
     }
-    
+
     renderAuth();
     toast('Profile deleted', 'ok2');
   });

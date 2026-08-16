@@ -70,6 +70,16 @@ async function runRealBrowserTest() {
   });
   console.log(`  - Splash Screen Element Present: ${splashPresent}`);
 
+  // Click Continue as Guest link on the profile selector screen
+  try {
+    await page.waitForSelector('.skip-auth a', { timeout: 3000 });
+    await page.click('.skip-auth a');
+    await new Promise(r => setTimeout(r, 1000));
+    console.log('✓ Clicked "Continue as Guest" successfully!');
+  } catch (e) {
+    console.warn('⚠️ Guest button click skipped or session already active');
+  }
+
   // Test screen transitions
   const screensToTest = ['dash', 'courses', 'comp', 'revision', 'doubt', 'settings'];
   console.log('\nTesting UI Screen Navigation across all routes...');

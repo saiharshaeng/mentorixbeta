@@ -109,13 +109,12 @@ function go(scr, param) {
   document.body.setAttribute('data-screen', scr);
 
   // Sync mobile bottom navigation bar active state
-  const bnavItems = document.querySelectorAll('#mx-bottom-nav .mx-bnav-item');
-  const targetScreen = scr === 'dash' ? 'dashboard' : scr;
+  const bnavItems = document.querySelectorAll('#mbn .mn-item');
   bnavItems.forEach(item => {
-    if (item.getAttribute('data-screen') === targetScreen) {
-      item.classList.add('active');
+    if (item.getAttribute('data-nav') === scr) {
+      item.classList.add('on');
     } else {
-      item.classList.remove('active');
+      item.classList.remove('on');
     }
   });
 
@@ -166,6 +165,7 @@ function go(scr, param) {
 
       // Focus management
       requestAnimationFrame(() => {
+        const h = main ? main.querySelector('h1, h2, [data-focus]') : null;
         if (h && typeof h.focus === 'function') { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
         if (window.TioOrchestrator) window.TioOrchestrator.updateState();
       });
@@ -246,10 +246,36 @@ function renderScr() {
       if (typeof rDash === 'function') rDash();
     });
   } else if (!success) {
-    console.warn('[Router] Unknown screen:', currentScr, '— falling back to dash');
+    console.warn('[Router] Unknown screen or render failure:', currentScr, '— falling back to dash');
     D.screen = 'dash';
-    if (typeof rDash === 'function') rDash();
+    try {
+      if (typeof rDash === 'function') rDash();
+      else renderEmergencyScreen();
+    } catch(err) {
+      console.error('[Router] rDash emergency failure:', err);
+      renderEmergencyScreen(err);
+    }
   }
+}
+
+function renderEmergencyScreen(err) {
+  const main = document.getElementById('main');
+  if (!main) return;
+  main.innerHTML = `
+    <div class="sw scr page-enter" style="max-width:540px;margin:60px auto;text-align:center;padding:32px">
+      <div style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.25);border-radius:20px;padding:32px 24px">
+        <div style="font-size:48px;margin-bottom:12px">🛡️</div>
+        <div class="h2" style="color:#fff;margin-bottom:8px">System Restored to Safe State</div>
+        <p style="color:var(--sub, #94a3b8);font-size:13px;line-height:1.6;margin-bottom:24px">
+          Mentorix encountered a display issue and safely preserved your attempt records and notes.
+        </p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <button class="btn bpri" onclick="location.reload()" style="padding:10px 20px;border-radius:10px">Reload Mentorix</button>
+          <button class="btn bgh" onclick="if(window.go)window.go('courses')" style="padding:10px 16px;border-radius:10px">Go to Courses</button>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 /* ── BACK BUTTON ────────────────────────────────────────────── */
@@ -288,6 +314,10 @@ function initSwipe() {
   }, { passive: true });
 
   main.addEventListener('touchend', e => {
+    // Don't intercept swipes that start on a scrollable element
+    const scrollTarget = e.target.closest('.comp-segmented-tabs, .lesson-stepper, .nta-q-scroll, .world-path-container, [style*="overflow-x"]');
+    if (scrollTarget) return;
+
     const dx = e.changedTouches[0].clientX - tx;
     const dy = e.changedTouches[0].clientY - ty;
     if (Math.abs(dx) < 60 || Math.abs(dy) > 40) return;

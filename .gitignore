@@ -23,3 +23,21 @@ src/data/pyq/normalized/
 *.pdf
 Newupdate_extracted/
 files/
+
+# Raw / unprocessed source data
+raw/
+data/
+questions/
+android/
+assets/
+
+# Build artifacts
+mentorix-landing-final/landing/dist/
+mentorix-landing-final/landing/node_modules/
+
+# One-off root-level scripts not part of app
+pyq_parser.js
+verify_qiacp_pipeline.js
+
+# Tools directory (internal dev utilities)
+tools/

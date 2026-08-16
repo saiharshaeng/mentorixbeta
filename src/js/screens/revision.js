@@ -105,6 +105,32 @@ function getRevisionQueue(){
     queue.push({topic:t,daysSince:999,score,priority:'high',note:D.notes?.[t],needsRepair:true});
   });
 
+  // 4. Merge flashcards from lesson completion queue (grouped by topic)
+  const topicGroups = {};
+  (window.D.revisionQueue || []).forEach(card => {
+    if (!card) return;
+    const t = card.topic || card.chunkTitle;
+    if (!t) return;
+    if (!topicGroups[t]) topicGroups[t] = { topic: t, flashcards: [], priority: card.priority || 'medium' };
+    if (card.question && card.answer) {
+      const alreadyHas = topicGroups[t].flashcards.some(f => f.q === card.question);
+      if (!alreadyHas) topicGroups[t].flashcards.push({ q: card.question, a: card.answer });
+    }
+  });
+
+  Object.values(topicGroups).forEach(group => {
+    if (!seenTopics.has(group.topic)) {
+      seenTopics.add(group.topic);
+      queue.push({
+        topic: group.topic,
+        daysSince: 0,
+        score: scores[group.topic] ?? null,
+        priority: group.priority,
+        note: { flashcards: group.flashcards, points: [], formulas: [] }
+      });
+    }
+  });
+
   return queue.sort((a,b)=>{
     // needsRepair items always come first
     if (a.needsRepair && !b.needsRepair) return -1;
@@ -149,12 +175,15 @@ function rRevision(){
       <button class="btn bpri mx-btn-primary" style="padding:13px 28px" onclick="go('learn')">Start Learning →</button>
     </div>`:`
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px" class="s2" id="rev-queue-grid">
-      ${queue.slice(0, 15).map(item=>{
+      ${queue.map((item, idx)=>{
         const urgColor={high:['var(--red)','rgba(239,68,68,.06)'],mid:['var(--gold)','rgba(245,158,11,.06)'],low:['var(--ok)','rgba(16,185,129,.04)']}[item.priority];
         const urgLabel=item.needsRepair?'🔧 Needs Repair':{high:'⚠️ Overdue',mid:'📅 Due soon',low:'✅ On track'}[item.priority];
         const sm2=sm2NextInterval(item.topic);
-        const scoreBar=`<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Last score</span><span style="color:${item.score>=80?'var(--okl)':item.score>=50?'var(--goldl)':'var(--redl)'};font-size:var(--fs-xs);font-weight:700;font-family:var(--f-num)">${item.score}%</span></div><div class="mastery-bar-wrap"><div class="mastery-bar ${item.score>=80?'mastery-good':item.score>=50?'mastery-ok':'mastery-low'}" style="width:${item.score}%"></div></div></div>`;
-        return `<div class="rev-card rev-${item.priority} mx-glass-card" style="background:${urgColor[1]};cursor:default" role="article" aria-label="${esc(item.topic)} - ${urgLabel}">
+        const scoreVal=item.score;
+        const scoreBar=(scoreVal == null)
+          ? `<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Status</span><span style="color:var(--pl);font-size:var(--fs-xs);font-weight:600">New · Ready to Revise</span></div><div class="mastery-bar-wrap"><div class="mastery-bar mastery-good" style="width:100%;opacity:0.35"></div></div></div>`
+          : `<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Last score</span><span style="color:${scoreVal>=80?'var(--okl)':scoreVal>=50?'var(--goldl)':'var(--redl)'};font-size:var(--fs-xs);font-weight:700;font-family:var(--f-num)">${scoreVal}%</span></div><div class="mastery-bar-wrap"><div class="mastery-bar ${scoreVal>=80?'mastery-good':scoreVal>=50?'mastery-ok':'mastery-low'}" style="width:${scoreVal}%"></div></div></div>`;
+        return `<div class="rev-card rev-${item.priority} mx-glass-card" style="background:${urgColor[1]};cursor:default;${idx >= 15 ? 'display:none;' : ''}" role="article" aria-label="${esc(item.topic)} - ${urgLabel}" data-rev-idx="${idx}">
           <div class="between mb10">
             <div class="font-serif" style="font-size:var(--fs-md);font-weight:700;color:#fff;flex:1;margin-right:10px">${esc(item.topic)}</div>
             <span class="font-poiret" style="font-size:var(--fs-xs);color:${urgColor[0]};font-weight:600;white-space:nowrap">${urgLabel}</span>
@@ -170,33 +199,11 @@ function rRevision(){
       }).join('')}
     </div>
     ${queue.length > 15 ? `<div style="text-align:center;margin-top:16px" id="rev-show-more-wrap">
-      <button class="btn bgh" style="padding:12px 28px;font-size:13px" onclick="document.getElementById('rev-queue-grid').innerHTML += window._revQueueRemainder; document.getElementById('rev-show-more-wrap').remove();">
+      <button class="btn bgh" style="padding:12px 28px;font-size:13px" onclick="document.querySelectorAll('#rev-queue-grid [data-rev-idx]').forEach(el => el.style.display=''); document.getElementById('rev-show-more-wrap')?.remove();">
         📋 Show ${queue.length - 15} More Topics
       </button>
     </div>` : ''}`}
   </div>`;
-  // Pre-render remainder for "Show More" button
-  if (queue.length > 15) {
-    window._revQueueRemainder = queue.slice(15).map(item=>{
-      const urgColor={high:['var(--red)','rgba(239,68,68,.06)'],mid:['var(--gold)','rgba(245,158,11,.06)'],low:['var(--ok)','rgba(16,185,129,.04)']}[item.priority];
-      const urgLabel=item.needsRepair?'🔧 Needs Repair':{high:'⚠️ Overdue',mid:'📅 Due soon',low:'✅ On track'}[item.priority];
-      const sm2=sm2NextInterval(item.topic);
-      const scoreBar=`<div style="margin-top:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:var(--mut);font-size:var(--fs-xs)">Last score</span><span style="color:${item.score>=80?'var(--okl)':item.score>=50?'var(--goldl)':'var(--redl)'};font-size:var(--fs-xs);font-weight:700;font-family:var(--f-num)">${item.score}%</span></div><div class="mastery-bar-wrap"><div class="mastery-bar ${item.score>=80?'mastery-good':item.score>=50?'mastery-ok':'mastery-low'}" style="width:${item.score}%"></div></div></div>`;
-      return `<div class="rev-card rev-${item.priority} mx-glass-card" style="background:${urgColor[1]};cursor:default" role="article" aria-label="${esc(item.topic)} - ${urgLabel}">
-        <div class="between mb10">
-          <div class="font-serif" style="font-size:var(--fs-md);font-weight:700;color:#fff;flex:1;margin-right:10px">${esc(item.topic)}</div>
-          <span class="font-poiret" style="font-size:var(--fs-xs);color:${urgColor[0]};font-weight:600;white-space:nowrap">${urgLabel}</span>
-        </div>
-        <div style="color:var(--mut);font-size:var(--fs-xs);margin-bottom:10px">${item.daysSince===0?'Studied today':item.daysSince===1?'Studied yesterday':`${item.daysSince} days ago`} · <span class="${sm2.cls}">${sm2.label}</span></div>
-        ${scoreBar}
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px">
-          <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','flashcards')"><span style="font-size:20px" aria-hidden="true">🃏</span><span>Flashcards</span></button>
-          <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','quiz')"><span style="font-size:20px" aria-hidden="true">🎯</span><span>Mini Quiz</span></button>
-          <button class="rev-method-btn font-poiret" onclick="startRevision('${esc(item.topic)}','recap')"><span style="font-size:20px" aria-hidden="true">📖</span><span>Recap</span></button>
-        </div>
-      </div>`;
-    }).join('');
-  }
   setTimeout(() => { if (typeof renderMath === 'function') renderMath(); }, 80);
 }
 
@@ -240,6 +247,8 @@ async function doRecap(){
       </div>
       ${(note.points||[]).length?`<div class="card mb14"><div class="h3 mb10" style="color:var(--pl)">🔑 Key Points</div>${note.points.map(p=>`<div class="nb-point">${sanitizeHTML(p)}</div>`).join('')}</div>`:''}
       ${(note.formulas||[]).length?`<div class="card mb14"><div class="h3 mb10" style="color:var(--cl)">📄 Formulas</div>${note.formulas.map(f=>`<div class="nb-formula">${sanitizeHTML(f)}</div>`).join('')}</div>`:''}
+      ${(note.examples||[]).length?`<div class="card mb14"><div class="h3 mb10" style="color:var(--gold)">💡 Examples</div>${note.examples.map((e,i)=>`<div style="display:flex;gap:9px;margin-bottom:8px"><div style="width:20px;height:20px;border-radius:50%;background:rgba(245,158,11,.2);color:var(--goldl);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">${i+1}</div><span style="color:#CBD5E1;font-size:13px;line-height:1.65">${sanitizeHTML(e)}</span></div>`).join('')}</div>`:''}
+      ${note.fact?`<div class="ffact mb14"><p style="margin:0;font-size:13px;color:#86EFAC">🌌 <strong style="color:var(--okl)">Fun Fact: </strong>${sanitizeHTML(note.fact)}</p></div>`:''}
       <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:4px">
         <button class="btn bpri" onclick="startRevision('${escON(RV.topic)}','flashcards')">🃏 Try Flashcards</button>
         <button class="btn bsec" onclick="startRevision('${escON(RV.topic)}','quiz')">🎯 Take Quiz</button>
@@ -250,8 +259,10 @@ async function doRecap(){
   RV.loading=true;
   el.innerHTML=`<div class="card" style="text-align:center;padding:40px"><div class="spin" style="width:40px;height:40px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 14px"></div><p style="color:var(--sub)">✨ Tio is building your recap…</p></div>`;
   try{
-    const sys='You are Mentorix AI. Output ONLY valid JSON.';
-    const p=`Quick revision recap for: "${RV.topic.replace(/"/g,"'")}". Output ONLY: {"summary":"2 sentences","points":["point 1","point 2","point 3","point 4"],"tip":"1 exam tip"}`;
+    const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
+    const sys=`You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}`;
+    const p=`Quick revision recap for "${RV.topic.replace(/"/g,"'")}" for a ${D.profile?.grade || 'school'} ${D.profile?.board || 'CBSE'} student.
+Output ONLY: {"summary":"2 sentences at ${D.profile?.grade || 'school'} level","points":["point 1","point 2","point 3","point 4"],"tip":"1 specific exam tip for ${D.profile?.board || 'board'} ${D.profile?.grade || ''} student — not generic advice"}`;
     const raw=await ai([{role:'user',content:p}],sys,1200,true);
     const data=pJSON(raw)||{};
     el.innerHTML=`
@@ -272,23 +283,41 @@ async function doRecap(){
 
 async function doFlashcards(){
   const el=document.getElementById('rev-content');if(!el)return;
-  // Build flashcards from notes or generate
-  const note=D.notes?.[RV.topic];
   let cards=[];
-  if(note?.points?.length){
-    cards=note.points.map(p=>{
-      const parts=p.split(/[:\-–—]/);
-      return{q:parts[0]?.trim()||p,a:parts.slice(1).join(':').trim()||p};
-    });
-    if(note.formulas?.length)note.formulas.forEach(f=>cards.push({q:'Formula: '+RV.topic+'?',a:f}));
+
+  // 1. Source 1: Check D.revisionQueue for matching saved flashcards for this topic
+  const queueCards = (window.D.revisionQueue || [])
+    .filter(c => c && (c.topic === RV.topic || c.chunkTitle === RV.topic))
+    .map(c => ({ q: c.question, a: c.answer }));
+  if (queueCards.length > 0) {
+    cards = queueCards;
+  }
+
+  // 2. Source 2: Note points & formulas
+  if (cards.length < 3) {
+    const note=D.notes?.[RV.topic];
+    if(note?.points?.length){
+      const noteCards=note.points.map(p=>{
+        const parts=p.split(/[:\-–—]/);
+        return{q:parts[0]?.trim()||p,a:parts.slice(1).join(':').trim()||p};
+      });
+      if(note.formulas?.length)note.formulas.forEach(f=>noteCards.push({q:'Formula: '+RV.topic+'?',a:f}));
+      cards=[...cards, ...noteCards];
+    }
   }
   if(cards.length<3){
     if(RV.loading)return;
     RV.loading=true;
     el.innerHTML=`<div class="card" style="text-align:center;padding:40px"><div class="spin" style="width:38px;height:38px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 12px"></div><p style="color:var(--sub)">Generating flashcards…</p></div>`;
     try{
-      const sys='You are Mentorix AI. Output ONLY valid JSON.';
-      const p=`Create 6 flashcards for: "${RV.topic.replace(/"/g,"'")}". Output ONLY: {"cards":[{"q":"question or concept?","a":"answer or definition"},{"q":"...","a":"..."}]}`;
+      const isCompExam = D.profile?.grade === 'Grade 11' || D.profile?.grade === 'Grade 12';
+      const targetExam = isCompExam 
+        ? (D.compExam?.examId === 'jee_adv' ? 'JEE Advanced' : D.compExam?.examId === 'neet' ? 'NEET' : 'JEE Main')
+        : null;
+      const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
+      const sys=`You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}`;
+      const p = `Create 6 flashcards for "${RV.topic.replace(/"/g,"'")}" for a ${D.profile?.grade || 'school'} ${D.profile?.board || 'CBSE'} student.${isCompExam && targetExam ? ` Focus on ${targetExam} exam patterns — include formula-based and application cards.` : ''}
+Output ONLY: {"cards":[{"q":"specific question appropriate for ${D.profile?.grade || 'school'}?","a":"precise answer with formula if applicable"},{"q":"...","a":"..."}]}`;
       const raw=await ai([{role:'user',content:p}],sys,1500,true);
       const data=pJSON(raw)||{};
       cards=data.cards||[];
@@ -351,23 +380,40 @@ async function doRevQuiz(){
   el.innerHTML=`<div class="card" style="text-align:center;padding:40px"><div class="spin" style="width:38px;height:38px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 12px"></div><p style="color:var(--sub)">${loadMsg}</p></div>`;
   RV.loading=true;
   try{
+    const isCompExam = D.profile?.grade === 'Grade 11' || D.profile?.grade === 'Grade 12';
+    const targetExam = D.compExam?.examId === 'jee_adv' ? 'JEE Advanced' : 
+                       D.compExam?.examId === 'jee_main' ? 'JEE Main' : 'Competitive Exam';
+    const numQuestions = RV._quickMode ? 3 : 5;
+    const gradeNum = parseInt((D.profile?.grade || 'Grade 10').replace(/[^0-9]/g,'')) || 10;
+    const hardContext = isCompExam
+      ? `Hard question must be ${targetExam} exam-style (application + multi-step).`
+      : gradeNum >= 9
+        ? `Hard question should require applying the concept to a multi-step real-world problem appropriate for ${D.profile?.grade || 'Grade 10'}.`
+        : `Hard question should challenge with a non-obvious twist on the main concept at ${D.profile?.grade || 'school'} level.`;
+
     let p;
     if (RV.mode === 'recovery') {
       const activeSpots = (D.memory?.weakSpots || []).filter(w => w.topic === RV.topic && !w.solved);
       const spotsCtx = activeSpots.map((w, idx) => `Spot ${idx+1}: Concept: "${w.concept}". Failed question: "${w.question}". Failure classification: "${w.classification}". Reason: "${w.reason}"`).join('\n');
       p = `The student is undergoing targeted recovery for "${RV.topic.replace(/"/g,"'")}". They previously made mistakes on these concepts:
 ${spotsCtx}
-Generate a 5-question recovery quiz. Design the questions to specifically verify that they have understood these concepts and corrected their previous error classifications.
+Generate a ${numQuestions}-question recovery quiz for a ${D.profile?.grade || 'school'} ${D.profile?.board || 'CBSE'} student. Design the questions to specifically verify that they have understood these concepts and corrected their previous error classifications.
 Output ONLY: {"qs":[{"q":"targeted recovery question?","o":["A","B","C","D"],"a":0,"e":"brief explanation of mistake and correction","concept":"exact matching concept from the failed spot list"}]}`;
     } else {
       const weakCtx=(D.memory?.weakAreas?.[RV.topic]||[]).join(', ');
-      p=`Create a 5-question revision quiz for: "${RV.topic.replace(/"/g,"'")}".${weakCtx?` Focus on these weak areas: ${weakCtx}.`:''}
-Output ONLY: {"qs":[{"q":"q?","o":["A","B","C","D"],"a":0,"e":"brief reason","concept":"concept"},{"q":"q?","o":["A","B","C","D"],"a":1,"e":"reason","concept":"concept"},{"q":"q?","o":["A","B","C","D"],"a":2,"e":"reason","concept":"concept"},{"q":"q?","o":["A","B","C","D"],"a":3,"e":"reason","concept":"concept"},{"q":"q?","o":["A","B","C","D"],"a":0,"e":"reason","concept":"concept"}]}`;
+      p = `Generate a ${numQuestions}-question revision quiz for "${RV.topic.replace(/"/g,"'")}".
+Student: ${D.profile?.grade || 'school'}, ${D.profile?.board || 'CBSE'}.${weakCtx ? ` Target these weak areas: ${weakCtx}.` : ''}
+Difficulty mix: ${numQuestions === 3 ? '1 Easy, 1 Medium, 1 Hard' : '2 Easy, 2 Medium, 1 Hard'}. ${hardContext}
+Output ONLY: {"qs":[{"q":"question?","o":["A","B","C","D"],"a":0,"e":"brief explanation","concept":"concept name","difficulty":"Easy|Medium|Hard"}]}`;
     }
-    const sys='You are Mentorix AI. Output ONLY valid JSON.';
+    const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
+    const sys=`You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}`;
     const raw=await ai([{role:'user',content:p}],sys,2000,true);
     const data=pJSON(raw)||{};
-    RV.quiz=data.qs||[];RV.quizAns={};RV.quizSub=false;
+    RV.quiz=data.qs||data.checks||[];RV.quizAns={};RV.quizSub=false;
+    if (data.offline) {
+      if (typeof toast === 'function') toast('⚠️ Offline mode — connect for full AI questions', 'warn');
+    }
   }catch(e){
     RV.loading=false;
     el.innerHTML=`<div class="card cred" style="text-align:center;padding:32px"><p style="color:var(--redl);margin-bottom:12px">Quiz generation failed.<br><button class="btn bpri bsm" onclick="doRevQuiz()">Retry</button></p></div>`;
@@ -438,7 +484,9 @@ function submitRevQuiz(){
   // Log mistakes to modern Recovery Center database (weakSpots)
   const wrongQs = qs.filter((q,i)=>RV.quizAns[i]!==q.a);
   wrongQs.forEach(q => {
-    logMistake(RV.topic, q.concept || 'Revision question', q.q, q.level || 3, 'Revision Error', 'Incorrect answer on revision quiz.');
+    if (typeof logMistake === 'function') {
+      logMistake(RV.topic, q.concept || 'Revision question', q.q, q.level || 3, 'Revision Error', 'Incorrect answer on revision quiz.');
+    }
   });
 
   // Update memory scores + history
@@ -541,15 +589,38 @@ function submitRevQuiz(){
     }
   }
 
-  // KEY FIX: Mark existing weak spots for this topic as solved when score >= 80% (revision)
-  // or on a per-concept level if they are undergoing targeted recovery
+  // Log attempts to MasteryEngine for ALL questions (correct and incorrect)
+  if (window.MasteryEngine && typeof window.MasteryEngine.logAttempt === 'function') {
+    qs.forEach((q, i) => {
+      const isCorrect = RV.quizAns[i] === q.a;
+      window.MasteryEngine.logAttempt({
+        topic: RV.topic,
+        questionText: q.q,
+        correctAnswer: (q.o && q.o[q.a]) ? q.o[q.a] : '',
+        selectedAnswer: (q.o && q.o[RV.quizAns[i]]) ? q.o[RV.quizAns[i]] : '',
+        isCorrect,
+        difficulty: q.difficulty ? q.difficulty.toLowerCase() : 'medium',
+        errorType: isCorrect ? null : (q.concept ? 'Concept: ' + q.concept : 'Revision Error')
+      });
+    });
+  }
+
+  // KEY FIX: Mark existing weak spots for this topic as solved with fuzzy matching
   let solvedCount = 0;
   if (RV.mode === 'recovery') {
     qs.forEach((q, i) => {
       const isCorrect = RV.quizAns[i] === q.a;
       if (isCorrect && D.memory?.weakSpots) {
+        const qConcept = (q.concept || '').trim().toLowerCase();
         D.memory.weakSpots.forEach(w => {
-          if (w.topic === RV.topic && w.concept === q.concept && !w.solved) {
+          const wConcept = (w.concept || '').trim().toLowerCase();
+          const topicMatch = w.topic === RV.topic;
+          const conceptMatch = !wConcept || !qConcept 
+            || wConcept === qConcept 
+            || wConcept.includes(qConcept) 
+            || qConcept.includes(wConcept) 
+            || wConcept === RV.topic.toLowerCase();
+          if (topicMatch && conceptMatch && !w.solved) {
             w.solved = true;
             w.solvedDate = new Date().toISOString();
             w.solvedScore = pct;
@@ -558,6 +629,17 @@ function submitRevQuiz(){
         });
       }
     });
+    // If student scored >= 80% on recovery, clear ALL remaining weak spots for this topic
+    if (pct >= 80 && D.memory?.weakSpots) {
+      D.memory.weakSpots.forEach(w => {
+        if (w.topic === RV.topic && !w.solved) {
+          w.solved = true;
+          w.solvedDate = new Date().toISOString();
+          w.solvedScore = pct;
+          solvedCount++;
+        }
+      });
+    }
     if (solvedCount > 0) {
       toast(`✅ ${solvedCount} weak spot${solvedCount>1?'s':''} cleared for "${RV.topic}"!`, 'ok2');
     }
@@ -578,7 +660,7 @@ function submitRevQuiz(){
   }
 
   saveAll();
-  addXP(sc*10, 'Revision quiz');
+  if (typeof addXP === 'function') addXP(sc*10, 'Revision quiz');
 
   renderRevQuizUI(null);
 }
