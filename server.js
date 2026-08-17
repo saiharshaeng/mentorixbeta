@@ -97,9 +97,15 @@ const server = http.createServer((req, res) => {
           res.writeHead(200, { 'Content-Type': contentType, 'Access-Control-Allow-Origin': '*' });
           res.end(TRANSPARENT_PNG);
         } else if (['.js', '.json', '.css'].includes(ext)) {
-          // Graceful fallback for missing JS/CSS/JSON stubs
-          res.writeHead(200, { 'Content-Type': contentType, 'Access-Control-Allow-Origin': '*' });
-          res.end(ext === '.json' ? '{}' : '/* asset stub */');
+          // For JSON data files (like PYQ papers), return a real 404 so the
+          // browser fetch() rejects properly. For JS/CSS stubs, return a stub.
+          if (ext === '.json') {
+            res.writeHead(404, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+            res.end('{"error":"File not found"}');
+          } else {
+            res.writeHead(200, { 'Content-Type': contentType, 'Access-Control-Allow-Origin': '*' });
+            res.end('/* asset stub */');
+          }
         } else {
           res.writeHead(200, { 'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*' });
           res.end('');
@@ -109,12 +115,20 @@ const server = http.createServer((req, res) => {
         res.end(`Server Error: ${err.code}`);
       }
     } else {
+      // Binary files (images, fonts, etc.) must NOT have an encoding argument —
+      // passing 'utf-8' to res.end() corrupts binary Buffers by re-encoding them.
+      const TEXT_TYPES = ['.html', '.css', '.js', '.json', '.svg', '.map'];
+      const isText = TEXT_TYPES.includes(ext);
       res.writeHead(200, {
         'Content-Type': contentType,
         'Access-Control-Allow-Origin': '*',
         'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
       });
-      res.end(content, 'utf-8');
+      if (isText) {
+        res.end(content, 'utf-8');
+      } else {
+        res.end(content); // binary — no encoding
+      }
     }
   });
 });
