@@ -30,13 +30,15 @@
     if (!syl || !syl.units) return;
     syl.units.forEach(unit => {
       (unit.chapters || []).forEach(chap => {
-        const flatTopics = [];
-        (chap.subchapters || []).forEach(sub => {
-          (sub.topics || []).forEach(topic => {
-            flatTopics.push(topic);
+        if (Array.isArray(chap.subchapters) && chap.subchapters.length > 0) {
+          const flatTopics = [];
+          chap.subchapters.forEach(sub => {
+            (sub.topics || []).forEach(topic => {
+              flatTopics.push(topic);
+            });
           });
-        });
-        chap.topics = flatTopics;
+          chap.topics = flatTopics;
+        }
       });
     });
   }
