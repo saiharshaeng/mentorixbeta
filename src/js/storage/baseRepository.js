@@ -62,11 +62,16 @@
           for (let i = 0; i < localStorage.length; i++) {
             const k = localStorage.key(i);
             if (k && k.startsWith(prefix)) {
-              const parsed = JSON.parse(localStorage.getItem(k));
-              if (parsed && parsed.data) {
-                if (!filterFn || filterFn(parsed.data)) {
-                  results.push(parsed.data);
+              try {
+                const raw = localStorage.getItem(k);
+                const parsed = raw ? JSON.parse(raw) : null;
+                if (parsed && parsed.data) {
+                  if (!filterFn || filterFn(parsed.data)) {
+                    results.push(parsed.data);
+                  }
                 }
+              } catch (parseErr) {
+                // Ignore corrupt individual item and continue scanning
               }
             }
           }
