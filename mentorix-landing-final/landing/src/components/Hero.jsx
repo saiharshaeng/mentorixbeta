@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import FlowField from "./FlowField";
 
-const APP_URL = "https://mentorix-beta.netlify.app";
+const APP_URL = "https://mentorix-beta.netlify.app"; // TODO: move to app.mentorix.in before launch
 
 // Scripted Tio demo — cycles through real learning moments
 const DEMO_SCRIPT = [
@@ -210,7 +210,7 @@ export default function Hero() {
               }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#a78bfa" }} className="anim-breathe" />
                 <span style={{ fontFamily: "Satoshi, sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.07em", color: "#a78bfa" }}>
-                  Free for every learner · Always
+                  Free · Works offline · No signup required
                 </span>
               </div>
             </motion.div>
@@ -247,11 +247,11 @@ export default function Hero() {
               }}
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.32, duration: 0.7, ease: [0.16,1,0.3,1] }}>
-              Mentorix is your personal learning companion — helping you{" "}
-              <span style={{ color: "#8892a4", fontWeight: 600 }}>understand concepts</span>,{" "}
-              <span style={{ color: "#8892a4", fontWeight: 600 }}>practise deliberately</span>,{" "}
-              <span style={{ color: "#8892a4", fontWeight: 600 }}>find your weak spots</span>, and{" "}
-              <span style={{ color: "#8892a4", fontWeight: 600 }}>know what to study next</span>.
+              Your personal AI tutor for JEE, NEET, and school exams.{" "}
+              <span style={{ color: "#8892a4", fontWeight: 600 }}>20,000+ real PYQs</span>,{" "}
+              <span style={{ color: "#8892a4", fontWeight: 600 }}>adaptive lessons</span>,{" "}
+              <span style={{ color: "#8892a4", fontWeight: 600 }}>weak spot tracking</span> — all{" "}
+              <span style={{ color: "#8892a4", fontWeight: 600 }}>free, forever</span>.
             </motion.p>
 
             {/* CTAs */}

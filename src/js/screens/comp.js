@@ -849,7 +849,9 @@ function initCompState() {
     };
   }
   compState.examId = D.compExam.examId || 'jee_main';
-  if (compState.examId !== 'jee_main' && compState.examId !== 'jee_adv') {
+  // Normalize only truly unknown exam IDs — preserve all supported exam types
+  const SUPPORTED_EXAM_IDS = ['jee_main', 'jee_adv', 'neet', 'eamcet_eng', 'sat', 'cat', 'gate'];
+  if (!SUPPORTED_EXAM_IDS.includes(compState.examId)) {
     compState.examId = 'jee_main';
   }
   compState.targetScore = D.compExam.targetScore || 240;
@@ -4166,6 +4168,10 @@ async function startCompPractice() {
 
   if (window.pyqService) {
     await window.pyqService.preloadExam(compState.examId);
+    // Pre-fetch specific chapter questions if a chapter is selected
+    if (chapter && chapter !== 'All Chapters' && section) {
+      await window.pyqService.preloadQieChapterBrowser(section, chapter).catch(() => {});
+    }
   }
 
   let questions = [];

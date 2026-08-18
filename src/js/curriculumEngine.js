@@ -2685,6 +2685,537 @@ RULES FOR AI: Teach ONLY the concepts listed in the Learning Objectives above. D
             ]}
           ]}
         ]
+      },
+
+      'class_12_mathematics': {
+        title: 'CBSE Class 12 Mathematics',
+        id: 'cbse-12-math',
+        board: 'CBSE',
+        grade: 'Class 12',
+        level: 'Class 12',
+        subject: 'Mathematics',
+        stream: 'PCM',
+        year: '2026',
+        sources: ['Official CBSE Board Curriculum PDF 2026', 'NCERT Class 12 Textbook TOC'],
+        verifiedBy: ['National Curriculum Framework (NCF)', 'Central Board Assessment Guidelines'],
+        units: [
+          {
+            title: 'Unit I — Relations and Functions',
+            chapters: [
+              {
+                title: 'Relations and Functions',
+                topics: [
+                  { title: 'Types of relations', status: 'Not Started' },
+                  { title: 'Types of functions', status: 'Not Started' },
+                  { title: 'Composition of functions and invertible function', status: 'Not Started' },
+                  { title: 'Binary operations', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Inverse Trigonometric Functions',
+                topics: [
+                  { title: 'Definition, range, domain, principal value branches', status: 'Not Started' },
+                  { title: 'Graphs of inverse trigonometric functions', status: 'Not Started' },
+                  { title: 'Elementary properties of inverse trigonometric functions', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit II — Algebra',
+            chapters: [
+              {
+                title: 'Matrices',
+                topics: [
+                  { title: 'Concept, notation, order, equality, types', status: 'Not Started' },
+                  { title: 'Zero and Identity matrix, transpose of a matrix', status: 'Not Started' },
+                  { title: 'Symmetric and skew symmetric matrices', status: 'Not Started' },
+                  { title: 'Operations on matrices: addition, multiplication, scalar multiplication', status: 'Not Started' },
+                  { title: 'Non-commutativity of multiplication, invertible matrices', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Determinants',
+                topics: [
+                  { title: 'Determinant of a square matrix (up to 3×3 matrices)', status: 'Not Started' },
+                  { title: 'Properties of determinants, cofactors and applications', status: 'Not Started' },
+                  { title: 'Minors, co-factors, adjoint and inverse of a square matrix', status: 'Not Started' },
+                  { title: 'Consistency and inconsistency of system of linear equations', status: 'Not Started' },
+                  { title: 'Solution of system of linear equations by Cramer\'s rule', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit III — Calculus',
+            chapters: [
+              {
+                title: 'Continuity and Differentiability',
+                topics: [
+                  { title: 'Continuity and differentiability, chain rule', status: 'Not Started' },
+                  { title: 'Derivatives of inverse trigonometric functions', status: 'Not Started' },
+                  { title: 'Implicit functions, exponential and logarithmic functions', status: 'Not Started' },
+                  { title: 'Logarithmic differentiation, parametric forms', status: 'Not Started' },
+                  { title: 'Second order derivatives', status: 'Not Started' },
+                  { title: 'Rolle\'s and Lagrange\'s Mean Value Theorem', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Applications of Derivatives',
+                topics: [
+                  { title: 'Rate of change of quantities', status: 'Not Started' },
+                  { title: 'Increasing and decreasing functions', status: 'Not Started' },
+                  { title: 'Tangents and normals', status: 'Not Started' },
+                  { title: 'Approximations', status: 'Not Started' },
+                  { title: 'Maxima and minima (local and absolute), first and second derivative tests', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Integrals',
+                topics: [
+                  { title: 'Integration as inverse of differentiation', status: 'Not Started' },
+                  { title: 'Integration by substitution', status: 'Not Started' },
+                  { title: 'Integration by partial fractions', status: 'Not Started' },
+                  { title: 'Integration by parts', status: 'Not Started' },
+                  { title: 'Definite integrals and Fundamental Theorem of Calculus', status: 'Not Started' },
+                  { title: 'Properties of definite integrals', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Applications of Integrals',
+                topics: [
+                  { title: 'Area under simple curves', status: 'Not Started' },
+                  { title: 'Area between two curves', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Differential Equations',
+                topics: [
+                  { title: 'Definition, order and degree', status: 'Not Started' },
+                  { title: 'General and particular solutions', status: 'Not Started' },
+                  { title: 'Formation of differential equations', status: 'Not Started' },
+                  { title: 'Solution by variable separation method', status: 'Not Started' },
+                  { title: 'Homogeneous and linear differential equations', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit IV — Vectors and 3D Geometry',
+            chapters: [
+              {
+                title: 'Vectors',
+                topics: [
+                  { title: 'Vectors and scalars, magnitude and direction', status: 'Not Started' },
+                  { title: 'Types of vectors, position vector', status: 'Not Started' },
+                  { title: 'Addition of vectors, multiplication by a scalar', status: 'Not Started' },
+                  { title: 'Scalar (dot) product and vector (cross) product', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Three Dimensional Geometry',
+                topics: [
+                  { title: 'Direction cosines and direction ratios of a line', status: 'Not Started' },
+                  { title: 'Cartesian and vector equation of a line', status: 'Not Started' },
+                  { title: 'Coplanar and skew lines, angle between two lines', status: 'Not Started' },
+                  { title: 'Distance between two parallel lines', status: 'Not Started' },
+                  { title: 'Cartesian and vector equation of a plane', status: 'Not Started' },
+                  { title: 'Angle between planes, distance of a point from a plane', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit V — Linear Programming',
+            chapters: [
+              {
+                title: 'Linear Programming',
+                topics: [
+                  { title: 'Introduction, terminology, mathematical formulation', status: 'Not Started' },
+                  { title: 'Graphical method of solution for two variable problems', status: 'Not Started' },
+                  { title: 'Feasible and infeasible regions, optimal feasible solution', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VI — Probability',
+            chapters: [
+              {
+                title: 'Probability',
+                topics: [
+                  { title: 'Conditional probability, multiplication theorem', status: 'Not Started' },
+                  { title: 'Independent events, total probability', status: 'Not Started' },
+                  { title: 'Bayes\' theorem, Random variables', status: 'Not Started' },
+                  { title: 'Probability distribution, Binomial distribution', status: 'Not Started' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+
+      'class_12_physics': {
+        title: 'CBSE Class 12 Physics',
+        id: 'cbse-12-physics',
+        board: 'CBSE',
+        grade: 'Class 12',
+        level: 'Class 12',
+        subject: 'Physics',
+        stream: 'PCM',
+        year: '2026',
+        sources: ['Official CBSE Board Curriculum PDF 2026', 'NCERT Class 12 Textbook TOC'],
+        verifiedBy: ['National Curriculum Framework (NCF)', 'Central Board Assessment Guidelines'],
+        units: [
+          {
+            title: 'Unit I — Electrostatics',
+            chapters: [
+              {
+                title: 'Electric Charges and Fields',
+                topics: [
+                  { title: 'Electric charges and conservation of charge', status: 'Not Started' },
+                  { title: 'Coulomb\'s law, forces between multiple charges', status: 'Not Started' },
+                  { title: 'Electric field, field lines, electric flux', status: 'Not Started' },
+                  { title: 'Gauss\'s theorem and its applications', status: 'Not Started' },
+                  { title: 'Electric dipole, field of a dipole, torque on a dipole', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Electrostatic Potential and Capacitance',
+                topics: [
+                  { title: 'Electric potential, potential difference', status: 'Not Started' },
+                  { title: 'Potential due to a point charge, dipole, system of charges', status: 'Not Started' },
+                  { title: 'Equipotential surfaces, relation between E and V', status: 'Not Started' },
+                  { title: 'Capacitors and capacitance, parallel plate capacitor', status: 'Not Started' },
+                  { title: 'Capacitors in series and parallel', status: 'Not Started' },
+                  { title: 'Energy stored in a capacitor', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit II — Current Electricity',
+            chapters: [
+              {
+                title: 'Current Electricity',
+                topics: [
+                  { title: 'Electric current, drift velocity, Ohm\'s law', status: 'Not Started' },
+                  { title: 'Resistance, resistivity, temperature dependence', status: 'Not Started' },
+                  { title: 'EMF, internal resistance of a cell, terminal potential', status: 'Not Started' },
+                  { title: 'Cells in series and parallel', status: 'Not Started' },
+                  { title: 'Kirchhoff\'s laws, Wheatstone bridge, Potentiometer', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit III — Magnetic Effects of Current and Magnetism',
+            chapters: [
+              {
+                title: 'Moving Charges and Magnetism',
+                topics: [
+                  { title: 'Biot-Savart\'s law and its applications', status: 'Not Started' },
+                  { title: 'Ampere\'s law and its applications', status: 'Not Started' },
+                  { title: 'Force on a moving charge in magnetic field (Lorentz force)', status: 'Not Started' },
+                  { title: 'Cyclotron, force on current-carrying conductor', status: 'Not Started' },
+                  { title: 'Moving coil galvanometer, ammeter, voltmeter', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Magnetism and Matter',
+                topics: [
+                  { title: 'Bar magnet as an equivalent solenoid', status: 'Not Started' },
+                  { title: 'Magnetic field lines, Earth\'s magnetic field', status: 'Not Started' },
+                  { title: 'Diamagnetic, paramagnetic, ferromagnetic substances', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit IV — Electromagnetic Induction and Alternating Currents',
+            chapters: [
+              {
+                title: 'Electromagnetic Induction',
+                topics: [
+                  { title: 'Faraday\'s laws of electromagnetic induction', status: 'Not Started' },
+                  { title: 'Lenz\'s law, self and mutual induction', status: 'Not Started' },
+                  { title: 'Eddy currents', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Alternating Current',
+                topics: [
+                  { title: 'AC voltage applied to resistor, inductor, capacitor', status: 'Not Started' },
+                  { title: 'Series LCR circuit, resonance, power in AC circuit', status: 'Not Started' },
+                  { title: 'LC oscillations (qualitative), transformers', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit V — Electromagnetic Waves',
+            chapters: [
+              {
+                title: 'Electromagnetic Waves',
+                topics: [
+                  { title: 'Displacement current, Maxwell\'s equations', status: 'Not Started' },
+                  { title: 'Electromagnetic waves, characteristics and uses', status: 'Not Started' },
+                  { title: 'Electromagnetic spectrum', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VI — Optics',
+            chapters: [
+              {
+                title: 'Ray Optics and Optical Instruments',
+                topics: [
+                  { title: 'Reflection, spherical mirrors, mirror formula', status: 'Not Started' },
+                  { title: 'Refraction, total internal reflection', status: 'Not Started' },
+                  { title: 'Refraction at spherical surfaces, lens formula', status: 'Not Started' },
+                  { title: 'Power of a lens, combination of lenses', status: 'Not Started' },
+                  { title: 'Refraction through a prism', status: 'Not Started' },
+                  { title: 'Microscopes and telescopes', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Wave Optics',
+                topics: [
+                  { title: 'Wavefront and Huygens\' principle', status: 'Not Started' },
+                  { title: 'Reflection and refraction of plane wave (Huygens)', status: 'Not Started' },
+                  { title: 'Interference, Young\'s double slit experiment', status: 'Not Started' },
+                  { title: 'Diffraction due to a single slit', status: 'Not Started' },
+                  { title: 'Polarisation, Brewster\'s law, Malus\' law', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VII — Dual Nature of Radiation and Matter',
+            chapters: [
+              {
+                title: 'Dual Nature of Radiation and Matter',
+                topics: [
+                  { title: 'Dual nature of radiation: photoelectric effect', status: 'Not Started' },
+                  { title: 'Einstein\'s photoelectric equation, particle nature of light', status: 'Not Started' },
+                  { title: 'Matter waves — wave nature of particles, de Broglie relation', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VIII — Atoms and Nuclei',
+            chapters: [
+              {
+                title: 'Atoms',
+                topics: [
+                  { title: 'Alpha particle scattering experiment, Rutherford model', status: 'Not Started' },
+                  { title: 'Bohr model of hydrogen atom, energy levels', status: 'Not Started' },
+                  { title: 'Hydrogen spectrum', status: 'Not Started' }
+                ]
+              },
+              {
+                title: 'Nuclei',
+                topics: [
+                  { title: 'Composition and size of nucleus', status: 'Not Started' },
+                  { title: 'Radioactivity, alpha, beta and gamma particles', status: 'Not Started' },
+                  { title: 'Radioactive decay law, half-life, mass-energy equivalence', status: 'Not Started' },
+                  { title: 'Binding energy per nucleon, nuclear fission and fusion', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit IX — Electronic Devices',
+            chapters: [
+              {
+                title: 'Semiconductor Electronics',
+                topics: [
+                  { title: 'Semiconductors, intrinsic and extrinsic', status: 'Not Started' },
+                  { title: 'p-n junction diode, forward and reverse biasing', status: 'Not Started' },
+                  { title: 'Rectifiers, Zener diode as voltage regulator', status: 'Not Started' },
+                  { title: 'Transistor as amplifier and switch', status: 'Not Started' },
+                  { title: 'Logic gates (OR, AND, NOT, NAND, NOR)', status: 'Not Started' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+
+      'class_12_chemistry': {
+        title: 'CBSE Class 12 Chemistry',
+        id: 'cbse-12-chemistry',
+        board: 'CBSE',
+        grade: 'Class 12',
+        level: 'Class 12',
+        subject: 'Chemistry',
+        stream: 'PCM',
+        year: '2026',
+        sources: ['Official CBSE Board Curriculum PDF 2026', 'NCERT Class 12 Textbook TOC'],
+        verifiedBy: ['National Curriculum Framework (NCF)', 'Central Board Assessment Guidelines'],
+        units: [
+          {
+            title: 'Unit I — Solid State',
+            chapters: [
+              {
+                title: 'Solid State',
+                topics: [
+                  { title: 'Classification of solids based on bonding', status: 'Not Started' },
+                  { title: 'Crystal lattices and unit cells, packing efficiency', status: 'Not Started' },
+                  { title: 'Imperfections in solids', status: 'Not Started' },
+                  { title: 'Electrical and magnetic properties', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit II — Solutions',
+            chapters: [
+              {
+                title: 'Solutions',
+                topics: [
+                  { title: 'Types of solutions, expressing concentration', status: 'Not Started' },
+                  { title: 'Solubility, Henry\'s law', status: 'Not Started' },
+                  { title: 'Vapour pressure of solutions, Raoult\'s law', status: 'Not Started' },
+                  { title: 'Colligative properties: relative lowering of vapour pressure', status: 'Not Started' },
+                  { title: 'Elevation of boiling point, depression of freezing point', status: 'Not Started' },
+                  { title: 'Osmosis and osmotic pressure, van\'t Hoff factor', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit III — Electrochemistry',
+            chapters: [
+              {
+                title: 'Electrochemistry',
+                topics: [
+                  { title: 'Electrochemical cells, Galvanic cells', status: 'Not Started' },
+                  { title: 'Electrode potential, standard electrode potential', status: 'Not Started' },
+                  { title: 'Nernst equation and its application', status: 'Not Started' },
+                  { title: 'Electrolysis and laws of electrolysis (Faraday\'s laws)', status: 'Not Started' },
+                  { title: 'Batteries, fuel cells, corrosion', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit IV — Chemical Kinetics',
+            chapters: [
+              {
+                title: 'Chemical Kinetics',
+                topics: [
+                  { title: 'Rate of reaction, factors affecting rate', status: 'Not Started' },
+                  { title: 'Rate law, rate constant, order and molecularity', status: 'Not Started' },
+                  { title: 'Integrated rate equations for zero and first order reactions', status: 'Not Started' },
+                  { title: 'Arrhenius equation, activation energy', status: 'Not Started' },
+                  { title: 'Collision theory of chemical reactions', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit V — d and f Block Elements',
+            chapters: [
+              {
+                title: 'd and f Block Elements',
+                topics: [
+                  { title: 'Electronic configuration, physical properties', status: 'Not Started' },
+                  { title: 'Oxidation states, chemical reactivity', status: 'Not Started' },
+                  { title: 'Colour, magnetic properties, catalytic properties', status: 'Not Started' },
+                  { title: 'Potassium dichromate and potassium permanganate', status: 'Not Started' },
+                  { title: 'Lanthanoids and Actinoids: electronic configuration', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VI — Coordination Compounds',
+            chapters: [
+              {
+                title: 'Coordination Compounds',
+                topics: [
+                  { title: 'Werner\'s theory, IUPAC nomenclature', status: 'Not Started' },
+                  { title: 'Bonding in coordination compounds: VBT and CFT', status: 'Not Started' },
+                  { title: 'Colour, magnetic properties, stability of complexes', status: 'Not Started' },
+                  { title: 'Importance and applications of coordination compounds', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VII — Haloalkanes and Haloarenes',
+            chapters: [
+              {
+                title: 'Haloalkanes and Haloarenes',
+                topics: [
+                  { title: 'Classification, nomenclature, nature of C-X bond', status: 'Not Started' },
+                  { title: 'Physical properties of haloalkanes', status: 'Not Started' },
+                  { title: 'Chemical reactions: SN1 and SN2 mechanisms', status: 'Not Started' },
+                  { title: 'Reactions of haloarenes, electrophilic substitution', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit VIII — Alcohols, Phenols and Ethers',
+            chapters: [
+              {
+                title: 'Alcohols, Phenols and Ethers',
+                topics: [
+                  { title: 'Classification, IUPAC nomenclature', status: 'Not Started' },
+                  { title: 'Physical and chemical properties of alcohols', status: 'Not Started' },
+                  { title: 'Chemical properties of phenols', status: 'Not Started' },
+                  { title: 'Ethers: preparation and properties', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit IX — Aldehydes, Ketones and Carboxylic Acids',
+            chapters: [
+              {
+                title: 'Aldehydes, Ketones and Carboxylic Acids',
+                topics: [
+                  { title: 'Nomenclature, nature of carbonyl group', status: 'Not Started' },
+                  { title: 'Nucleophilic addition reactions', status: 'Not Started' },
+                  { title: 'Aldol condensation, Cannizzaro reaction', status: 'Not Started' },
+                  { title: 'Carboxylic acids: acidic strength and properties', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit X — Amines',
+            chapters: [
+              {
+                title: 'Amines',
+                topics: [
+                  { title: 'Classification, nomenclature, structure', status: 'Not Started' },
+                  { title: 'Basic character of amines, physical properties', status: 'Not Started' },
+                  { title: 'Chemical reactions of amines', status: 'Not Started' },
+                  { title: 'Diazonium salts: preparation and importance', status: 'Not Started' }
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Unit XI — Biomolecules',
+            chapters: [
+              {
+                title: 'Biomolecules',
+                topics: [
+                  { title: 'Carbohydrates: classification, monosaccharides', status: 'Not Started' },
+                  { title: 'Proteins: amino acids, peptide bond, structure', status: 'Not Started' },
+                  { title: 'Enzymes: general introduction', status: 'Not Started' },
+                  { title: 'Vitamins and nucleic acids (DNA and RNA)', status: 'Not Started' }
+                ]
+              }
+            ]
+          }
+        ]
       }
     };
   }

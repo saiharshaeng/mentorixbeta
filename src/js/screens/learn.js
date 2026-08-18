@@ -1957,6 +1957,10 @@ function submitReviewCheck(qidx, oidx) {
 }
 
 function completeTopicFromReview() {
+  // GUARD: Prevent double-fire from rapid taps or lag
+  if (LS._completionFired) return;
+  LS._completionFired = true;
+
   // Compute the actual CBL final review score before delegating.
   // completeStageSession() reads LS.checkAttempts with numeric keys [0,1,2...]
   // but CBL review answers are stored as 'topic_review_0', 'topic_review_1', etc.
@@ -2658,6 +2662,7 @@ function completeStageSession() {
     correctCount = LS._cblFinalScore.correct;
     checksCount = LS._cblFinalScore.total;
     delete LS._cblFinalScore; // clean up
+    if (LS) delete LS._completionFired; // reset guard for next topic
   } else if (LS.chunks && LS.chunks.length >= 2) {
     // CBL fallback: count from topic_review_0, topic_review_1, or chunk attempts
     const reviewChecks = typeof _collectReviewChecks === 'function' ? _collectReviewChecks() : [];

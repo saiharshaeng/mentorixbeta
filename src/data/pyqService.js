@@ -576,11 +576,74 @@
       }
     }
 
-    // In Browser context: Check fileCache first
+    // In Browser context: Check fileCache first (populated by preloadQieChapter)
     const cacheKey = `qie_${subClean}_${targetKey}`;
     if (fileCache[cacheKey]) return fileCache[cacheKey];
 
+    // Try to find a fuzzy match in already-loaded cache keys
+    // (handles cases where casing/punctuation differs between syllabus and file names)
+    const cachedKey = Object.keys(fileCache).find(k => {
+      if (!k.startsWith('qie_')) return false;
+      const kClean = k.replace(`qie_${subClean}_`, '');
+      return kClean.includes(targetKey) || targetKey.includes(kClean);
+    });
+    if (cachedKey) return fileCache[cachedKey];
+
     return null;
+  }
+
+  /**
+   * Preloads a specific QIE chapter JSON file into fileCache in browser context.
+   * Called by getQuestions() when a chapter filter is requested and the cache is cold.
+   * The chapter JSON files live at: /questions/jee/<subject>/chapters/<chapter_slug>.json
+   */
+  async function preloadQieChapterBrowser(subject, chapter) {
+    if (!subject || !chapter || chapter === 'All Chapters' || chapter === 'General') return;
+    if (isNode) return; // Node uses fs directly, no need to fetch
+
+    const subClean = String(subject).toLowerCase().replace(/[^a-z]/g, '');
+    const targetKey = String(chapter).toLowerCase().replace(/[^a-z0-9]/g, '');
+    const cacheKey = `qie_${subClean}_${targetKey}`;
+    if (fileCache[cacheKey]) return; // Already loaded
+
+    const origin = (typeof window !== 'undefined' && window.location && window.location.origin)
+      ? window.location.origin : 'http://localhost:8080';
+
+    // Build the likely file path: underscored version of the chapter name
+    const chapterSlug = String(chapter).toLowerCase().trim()
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '_');
+
+    const url = `${origin}/questions/jee/${subClean}/chapters/${chapterSlug}.json`;
+
+    try {
+      const r = await fetch(url);
+      if (r.ok) {
+        const data = await r.json();
+        if (Array.isArray(data) && data.length > 0) {
+          fileCache[cacheKey] = data;
+          console.log(`[pyqService] ✅ QIE chapter loaded: ${chapter} (${data.length} questions)`);
+          return;
+        }
+      }
+    } catch (e) {
+      // Silent fail — fall through to bank-based filtering
+    }
+
+    // Fuzzy fallback: try alternate slug forms
+    const altSlug = chapterSlug.replace(/_and_/g, '_').replace(/_of_/g, '_');
+    if (altSlug !== chapterSlug) {
+      try {
+        const r2 = await fetch(`${origin}/questions/jee/${subClean}/chapters/${altSlug}.json`);
+        if (r2.ok) {
+          const data2 = await r2.json();
+          if (Array.isArray(data2) && data2.length > 0) {
+            fileCache[cacheKey] = data2;
+            console.log(`[pyqService] ✅ QIE chapter loaded (alt slug): ${chapter}`);
+          }
+        }
+      } catch (e) { /* silent */ }
+    }
   }
 
   // ── PRACTICE: getBankQuestions ──────────────────────────────────────────
@@ -595,6 +658,13 @@
     const qType      = options.type       || null;
 
     // Check if QIE structured chapter file exists for fast, isolated lookup
+    // In browser: attempt to preload the chapter file if not cached yet (async, best-effort)
+    if (!isNode && chapter && chapter !== 'All Chapters' && chapter !== 'General') {
+      // Fire-and-forget preload (non-blocking). Caller should await preloadQieChapterBrowser
+      // before calling getQuestions if they want guaranteed chapter isolation.
+      // For immediate calls, the cache check below handles it if already loaded.
+      preloadQieChapterBrowser(subject, chapter).catch(() => {});
+    }
     const qieChapterQs = loadQieChapter(subject, chapter);
     let pool = [];
 
@@ -917,6 +987,7 @@
     getMockPaper,
     getChapters,
     preloadExam,
+    preloadQieChapterBrowser: preloadQieChapterBrowser,
     hasData,
     getPapers,
     importPackage

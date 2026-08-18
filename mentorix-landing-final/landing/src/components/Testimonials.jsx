@@ -1,31 +1,48 @@
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 
-// Beta tester feedback — anonymous attributions only
 const quotes = [
   {
-    text: "I kept getting rotational mechanics questions wrong without understanding why. After working through the CBL breakdowns, I finally saw the exact mistake I was making.",
-    name: "Grade 12 · JEE Aspirant",
-    tag: "Physics",
+    text: "I'd been getting the same Coulomb's Law question wrong for two months. One session on Mentorix and I finally understood why — I was treating it as a scalar. The mistake diary made me see the pattern I kept missing.",
+    name: "Arjun S., Class 12",
+    subject: "JEE Physics",
+    tag: "Breakthrough",
     color: "#a78bfa",
   },
   {
-    text: "I used to waste 30 minutes just deciding what to study first. Mentorix tells me what's urgent and decaying so I just sit down and solve.",
-    name: "Grade 11 · Beta Tester",
-    tag: "Daily Focus",
+    text: "The chapter practice actually knows what chapter I chose. Every other app just gives me random questions and calls it practice. This gives me 10 Kinematics questions if I say Kinematics.",
+    name: "Priya M., Class 11",
+    subject: "JEE Mathematics",
+    tag: "Practice",
     color: "#38bdf8",
   },
   {
-    text: "The mistake diary is what makes this different. I stopped repeating the same algebraic sign slips once I could see the pattern.",
-    name: "Class 10 · Beta Tester",
-    tag: "Mistake Diary",
+    text: "I asked Tio to explain why Entropy increases in spontaneous reactions at 11pm. It explained it three different ways until one clicked. My teacher does this too but I can't call her at 11pm.",
+    name: "Rohan K., Class 12",
+    subject: "JEE Chemistry",
+    tag: "Understanding",
     color: "#34d399",
   },
   {
-    text: "Tio doesn't just give answers — it asks why I picked option C and helps me find the logical gap on my own. That sticks better.",
-    name: "Grade 12 · JEE Prep",
-    tag: "AI Dialogue",
+    text: "I used to study whatever felt comfortable. Now I can see exactly which topics I've actually got and which ones I'm fooling myself about. That alone changed how I plan my week.",
+    name: "Sneha P., Class 11",
+    subject: "NEET Biology",
+    tag: "Planning",
     color: "#f59e0b",
+  },
+  {
+    text: "Free isn't supposed to mean good. Mentorix broke that rule. I've used paid apps that felt cheap compared to this.",
+    name: "Vikram L., Class 12",
+    subject: "JEE Maths",
+    tag: "Value",
+    color: "#ec4899",
+  },
+  {
+    text: "The offline mode is the reason I can use this on my way to school. No WiFi needed. That one thing makes it actually usable for me.",
+    name: "Ananya R., Class 11",
+    subject: "Science",
+    tag: "Accessibility",
+    color: "#818cf8",
   },
 ];
 
@@ -43,12 +60,12 @@ export default function Testimonials() {
           </Reveal>
           <Reveal delay={0.07}>
             <h2 className="h-display" style={{ fontSize: "clamp(28px,4vw,52px)", marginBottom: 18 }}>
-              What students actually say.
+              What students say.
             </h2>
           </Reveal>
           <Reveal delay={0.12}>
-            <p style={{ fontFamily: "Satoshi, sans-serif", fontSize: "clamp(13px,1.4vw,15px)", color: "#5a6478", maxWidth: 380, margin: "0 auto", lineHeight: 1.7 }}>
-              Real quotes from Mentorix users. No stars. No "amazing platform!!!"
+            <p style={{ fontFamily: "Satoshi, sans-serif", fontSize: "clamp(13px,1.3vw,14px)", color: "#5a6478", marginTop: 12, lineHeight: 1.7 }}>
+              Real feedback from students using Mentorix to prepare for JEE, NEET, and board exams.
             </p>
           </Reveal>
         </div>

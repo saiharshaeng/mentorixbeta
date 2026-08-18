@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
-const APP_URL = "https://mentorix-beta.netlify.app";
+const APP_URL = "https://mentorix-beta.netlify.app"; // TODO: move to app.mentorix.in before launch
 
 export default function FinalCTA() {
   return (

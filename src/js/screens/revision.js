@@ -140,8 +140,116 @@ function getRevisionQueue(){
   });
 }
 
+/**
+ * Builds a practice-ready question set from D.memory.weakSpots.
+ * For each unsolved weak spot, looks for matching questions in:
+ * 1. D.revisionQueue flashcards (already have q/a pairs)
+ * 2. pyqService chapter query (if pyqService available)
+ * Returns array of { topic, concept, source, q, a, type } objects.
+ */
+function buildWeakSpotQueue(maxItems) {
+  maxItems = maxItems || 8;
+  const spots = (window.D?.memory?.weakSpots || []).filter(w => !w.solved);
+  if (spots.length === 0) return [];
+
+  const queue = [];
+  const revQueue = window.D?.revisionQueue || [];
+
+  spots.slice(0, maxItems).forEach(spot => {
+    const topicClean = (spot.topic || '').toLowerCase();
+    const conceptClean = (spot.concept || spot.topic || '').toLowerCase();
+
+    // 1. Try to find a matching flashcard from revisionQueue
+    const match = revQueue.find(card => {
+      const cardTopic = (card.topic || '').toLowerCase();
+      const cardQ = (card.question || '').toLowerCase();
+      return cardTopic.includes(topicClean) || topicClean.includes(cardTopic) ||
+             cardQ.includes(conceptClean);
+    });
+
+    if (match) {
+      queue.push({
+        topic: spot.topic,
+        concept: spot.concept || spot.topic,
+        source: 'revision_queue',
+        q: match.question,
+        a: match.answer,
+        type: 'flashcard',
+        priority: match.priority || 'high'
+      });
+      return;
+    }
+
+    // 2. Fallback: create a "Tio will explain this" card from the concept text
+    queue.push({
+      topic: spot.topic,
+      concept: spot.concept || spot.topic,
+      source: 'weak_spot',
+      q: `Review: ${spot.concept || spot.topic}`,
+      a: `Ask Tio to explain: "${spot.concept || spot.topic}" in the context of ${spot.topic}`,
+      type: 'review_prompt',
+      priority: 'high'
+    });
+  });
+
+  return queue;
+}
+window.buildWeakSpotQueue = buildWeakSpotQueue;
+
+function launchWeakSpotDrill(queue) {
+  if (!queue || queue.length === 0) {
+    if (typeof toast === 'function') toast('No weak spots to drill right now — great work!', 'ok2');
+    return;
+  }
+
+  // If pyqService available, try to enrich with real PYQ questions for each topic
+  if (window.pyqService) {
+    const enriched = [];
+    queue.forEach(item => {
+      if (item.type === 'flashcard' || item.type === 'review_prompt') {
+        // Try to get 1 real PYQ on this topic
+        const result = window.pyqService.getQuestions({
+          examId: window.D?.compExam?.examId || 'jee_main',
+          count: 1,
+          chapter: item.concept
+        });
+        if (result && result.questions && result.questions.length > 0) {
+          enriched.push({ ...result.questions[0], _weakSpotContext: item });
+        } else {
+          enriched.push(item);
+        }
+      } else {
+        enriched.push(item);
+      }
+    });
+    // Launch the standard multi-practice overlay with enriched questions
+    if (typeof launchMultiPracticeOverlay === 'function' && enriched.length > 0) {
+      const practiceQs = enriched.map(q => q.q ? q : {
+        q: q.q || `Review: ${q.concept}`,
+        opts: ['I understand this now', 'I need to review this again'],
+        ans: [0],
+        type: 'mcq',
+        chap: q.concept || q.topic,
+        expl: q.a || 'Review this concept with Tio for a full explanation.'
+      });
+      go('comp'); // Navigate to comp for the overlay context
+      setTimeout(() => launchMultiPracticeOverlay(practiceQs), 200);
+    }
+  } else {
+    // No pyqService: launch simple flashcard review
+    if (typeof toast === 'function') toast('Starting weak spot review...', 'ok2');
+    // Navigate to learn for the first weak spot topic
+    const firstTopic = queue[0]?.topic;
+    if (firstTopic && typeof go === 'function') {
+      go('learn', firstTopic);
+    }
+  }
+}
+window.launchWeakSpotDrill = launchWeakSpotDrill;
+
 function rRevision(){
   const queue=getRevisionQueue();
+  const weakQueue = buildWeakSpotQueue(6);
   if(RV.mode&&RV.topic){renderRevMode();return;}
   const highCount=queue.filter(q=>q.priority==='high').length;
   const midCount=queue.filter(q=>q.priority==='mid').length;
@@ -166,6 +274,21 @@ function rRevision(){
       <div><div class="font-poiret" style="color:var(--pl);font-size:var(--fs-xs);font-weight:700;margin-bottom:3px">TIO · SM-2 SPACED REPETITION</div>
       <div style="color:var(--sub);font-size:var(--fs-sm);line-height:var(--lh-body)">"Spaced repetition is the #1 memory technique. I'll remind you to revise topics at the perfect time — just before you forget them! 🧠"</div></div>
     </div>
+
+    <!-- Weak Spots Drill Zone -->
+    ${weakQueue.length > 0 ? `
+    <div id="weak-spots-section" class="card mb20 s1 mx-glass-card" style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:var(--r-card);padding:16px 20px" data-section="weakspots">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px">
+        <div>
+          <div class="font-poiret" style="color:var(--redl);font-size:var(--fs-xs);font-weight:700;letter-spacing:1px;text-transform:uppercase">⚠️ CONCEPT RECOVERY CENTER</div>
+          <div class="h3 font-serif" style="margin:2px 0 0;color:#fff">${weakQueue.length} Concepts Need Reinforcement</div>
+        </div>
+        <button class="btn bpri" style="background:var(--red);border-color:var(--red);padding:8px 18px;font-size:13px;font-weight:700" onclick="launchWeakSpotDrill(buildWeakSpotQueue(6))">🎯 Drill ${weakQueue.length} Weak Concepts Now</button>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        ${weakQueue.map(item => `<span style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25);color:var(--redl);padding:4px 10px;border-radius:16px;font-size:12px;font-weight:600">🎯 ${esc(item.concept || item.topic)}</span>`).join('')}
+      </div>
+    </div>` : ''}
 
     ${queue.length===0?`
     <div class="card card-hero mx-glass-card" style="text-align:center;padding:56px 32px">

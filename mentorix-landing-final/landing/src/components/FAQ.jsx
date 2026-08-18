@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: "What subjects and exams does Mentorix cover?",
-    a: "Mentorix supports general learning across subjects including Science, Mathematics, and more. It also has specific support for competitive exam preparation. Coverage is expanding — if your subject or exam isn't there yet, it's being built.",
+    a: "Mentorix currently has full course coverage for Physics, Chemistry, and Mathematics at Class 11 and 12 level (CBSE/NCERT). For competitive exams, it has 20,000+ real PYQs for JEE Main, JEE Advanced, and EAMCET with chapter-wise practice and full CBT mock tests. Class 10 and other subjects are actively being added — if something you need isn't there yet, tell Tio and it will teach the topic even without a formal course structure.",
   },
   {
     q: "Can I use Mentorix on my phone?",
