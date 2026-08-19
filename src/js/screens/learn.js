@@ -3020,20 +3020,23 @@ function saveReflections() {
 function _logReflection(tag, btn) {
   if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
 
+  const currentTopic = (typeof LS !== 'undefined' && LS?.topic) ? LS.topic : (window.LS?.topic || '');
+
   // 1. Write to D.memory so AI system prompt picks it up
   if (!window.D) window.D = {};
   if (!window.D.memory) window.D.memory = {};
   if (!window.D.memory.reflections) window.D.memory.reflections = {};
-  if (!window.D.memory.reflections[LS?.topic || 'general']) {
-    window.D.memory.reflections[LS?.topic || 'general'] = [];
+  const topicKey = currentTopic || 'general';
+  if (!window.D.memory.reflections[topicKey]) {
+    window.D.memory.reflections[topicKey] = [];
   }
-  const topicReflections = window.D.memory.reflections[LS?.topic || 'general'];
+  const topicReflections = window.D.memory.reflections[topicKey];
   if (!topicReflections.includes(tag)) {
     topicReflections.push(tag);
   }
 
   // 2. Write to weak spots so revision picks it up
-  if (window.D.memory.weakSpots && LS?.topic) {
+  if (window.D.memory.weakSpots && currentTopic) {
     const tagLabels = {
       formula: 'Formula application and substitution',
       reading: 'Reading multi-part questions carefully',
@@ -3042,11 +3045,11 @@ function _logReflection(tag, btn) {
     };
     const concept = tagLabels[tag] || tag;
     const alreadyExists = window.D.memory.weakSpots.some(
-      ws => !ws.solved && ws.topic === LS.topic && ws.concept === concept
+      ws => !ws.solved && ws.topic === currentTopic && ws.concept === concept
     );
     if (!alreadyExists) {
       window.D.memory.weakSpots.push({
-        topic: LS.topic,
+        topic: currentTopic,
         concept: concept,
         source: 'reflection',
         solved: false,
