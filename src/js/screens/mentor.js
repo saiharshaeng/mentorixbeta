@@ -153,7 +153,7 @@ async function sendMsg() {
       if (!D.chatMsgs) D.chatMsgs = [];
       D.chatMsgs.push({ r: 'user', c: text });
       D.chatMsgs.push({ r: 'ai', c: routeRes.message });
-      if (D.chatMsgs.length > 100) D.chatMsgs = D.chatMsgs.slice(-100);
+      if (D.chatMsgs.length > 40) D.chatMsgs = D.chatMsgs.slice(-40);
       if (typeof saveAll === 'function') saveAll();
       renderMsgs();
       return;
@@ -162,7 +162,7 @@ async function sendMsg() {
 
   if (!D.chatMsgs) D.chatMsgs = [];
   D.chatMsgs.push({ r: 'user', c: text });
-  if (D.chatMsgs.length > 100) D.chatMsgs = D.chatMsgs.slice(-100);
+  if (D.chatMsgs.length > 40) D.chatMsgs = D.chatMsgs.slice(-40);
   if (typeof saveAll === 'function') saveAll();
 
   mentorBusy = true;
@@ -184,7 +184,9 @@ async function sendMsg() {
     } else {
       systemPrompt = 'You are Tio, a helpful AI tutor. Be concise, clear, and encouraging.';
     }
-    const messagesHistory = D.chatMsgs.slice(-6).map(m => ({
+    // Cap context window to last 8 messages for AI call (6 is too few for multi-turn reasoning)
+    // but never send more than 8 to avoid token bloat on Groq's free tier
+    const messagesHistory = D.chatMsgs.slice(-8).map(m => ({
       role: m.r === 'ai' ? 'assistant' : 'user',
       content: m.c
     }));

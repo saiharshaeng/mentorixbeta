@@ -98,6 +98,24 @@ function buildStudentContext(customProfile) {
     'Long (45m+)': 'can handle deep comprehensive explanations'
   };
 
+  // Reflection signals — learning difficulty tags from previous sessions
+  const reflections = p?.memory?.reflections || (typeof window !== 'undefined' && window.D?.memory?.reflections) || {};
+  const recentReflectionTags = Object.values(reflections).flat().slice(-10);
+  const hasFormulaStruggle = recentReflectionTags.filter(t => t === 'formula').length >= 1;
+  const hasCalcStruggle = recentReflectionTags.filter(t => t === 'calculations').length >= 1;
+  const hasVectorStruggle = recentReflectionTags.filter(t => t === 'vectors').length >= 1;
+
+  let learnerFlags = '';
+  if (hasFormulaStruggle) {
+    learnerFlags += `\n- LEARNER FLAG: This student struggles with formula application. Always show EVERY substitution step explicitly. Never skip from formula to answer.`;
+  }
+  if (hasCalcStruggle) {
+    learnerFlags += `\n- LEARNER FLAG: This student makes calculation errors. Show numerical steps on separate lines. Box the final answer.`;
+  }
+  if (hasVectorStruggle) {
+    learnerFlags += `\n- LEARNER FLAG: This student struggles with vector sign conventions. Explicitly state positive/negative directions at the start of every vector problem.`;
+  }
+
   return `STUDENT CONTEXT:
 - Name: ${p.name || 'Student'}
 - Grade: ${p.grade || 'school level'}
@@ -123,7 +141,7 @@ ADAPTATION RULES:
 - If attention span is Short: frontload the most important point, keep it punchy
 - Difficulty preference is ${p.difficulty || 'Medium'}: calibrate challenge accordingly
 - Career interest (${p.careerText || 'unspecified'}): when relevant, connect this topic to that career path
-- Do NOT assume this student is preparing for JEE/NEET unless grade is 11/12 AND they've set a competitive exam target`;
+- Do NOT assume this student is preparing for JEE/NEET unless grade is 11/12 AND they've set a competitive exam target${learnerFlags}`;
 }
 
 window.buildStudentContext = buildStudentContext;

@@ -48,7 +48,25 @@ async function askDoubt(){
   const _el_dans=document.getElementById('dans');if(_el_dans)_el_dans.innerHTML=`<div class="card" style="text-align:center;padding:40px"><div class="spin" style="width:40px;height:40px;border:3px solid rgba(139,92,246,.2);border-top-color:var(--p);border-radius:50%;margin:0 auto 14px"></div><p style="color:var(--sub)">Tio is thinking… 🤔</p></div>`;
   try{
     const studentCtx = typeof window.buildStudentContext === 'function' ? window.buildStudentContext() : '';
-    const sys=`You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}`;
+
+    // Inject curriculum boundary for this specific question topic
+    let curriculumCtx = '';
+    if (window.CurriculumEngine && typeof window.CurriculumEngine.getTopicContextForAI === 'function') {
+      // Extract likely topic from the question (first 6 words usually contain the subject)
+      const topicGuess = q.split(' ').slice(0, 6).join(' ');
+      curriculumCtx = window.CurriculumEngine.getTopicContextForAI(topicGuess) || '';
+      // Also try the active lesson topic if one is in session
+      if (!curriculumCtx && typeof LS !== 'undefined' && LS?.topic) {
+        curriculumCtx = window.CurriculumEngine.getTopicContextForAI(LS.topic) || '';
+      }
+    }
+
+    // Inject reflection flags (from lesson completion tags — Fix 6)
+    const reflections = window.D?.memory?.reflections || {};
+    const recentTags = Object.values(reflections).flat().slice(-10);
+    const reflectionHint = recentTags.length > 0 ? `\nSTUDENT LEARNING FLAGS (from prior sessions): ${[...new Set(recentTags)].join(', ')} — adjust explanation depth for these areas.` : '';
+
+    const sys = `You are Tio, Mentorix AI tutor. Output ONLY valid JSON.\n${studentCtx}\n${curriculumCtx}\n${reflectionHint}`.trim();
     const p=`Explain this clearly for a ${D.profile?.grade || 'school'} student: "${q.replace(/"/g,"'")}".
 Output ONLY: {"summary":"1 sentence direct answer","steps":[{"n":"Step 1 title","c":"explanation"},{"n":"Step 2 title","c":"explanation"},{"n":"Step 3 title","c":"explanation"}],"example":"1 concrete example appropriate for ${D.profile?.grade || 'school'}","analogy":"1 analogy ONLY if this is a conceptual topic — leave blank string if factual","testq":{"q":"follow-up question to test understanding?","o":["A","B","C","D"],"a":0,"e":"reason"}}`;
     const raw=await ai([{role:'user',content:p}],sys,2500,true);

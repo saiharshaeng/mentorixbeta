@@ -2868,6 +2868,18 @@ function completeStageSession() {
   // Use saveNow() — critical persistence point, tab may close within 300ms (Issue 14 fix)
   if (typeof saveNow === 'function') { saveNow(); } else if (typeof saveAll === 'function') { saveAll(); }
 
+  // Auto-resolve weak spots for topics completed with >=70% score
+  if (scorePct >= 70 && D.memory?.weakSpots) {
+    const topicLower = (LS.topic || '').toLowerCase();
+    D.memory.weakSpots.forEach(w => {
+      if (!w.solved && (w.topic || '').toLowerCase() === topicLower) {
+        w.solved = true;
+        w.solvedAt = Date.now();
+        w.solvedScore = scorePct;
+      }
+    });
+  }
+
   // If chapter was completed, play the celebration ceremony overlay!
   if (completionResult && completionResult.chapterCompleted) {
     if (typeof window.triggerChapterCompletionCeremony === 'function') {
@@ -2919,10 +2931,10 @@ function completeStageSession() {
           <div style="font-size:10px;color:var(--goldl);font-weight:700;text-transform:uppercase;margin-bottom:4px">💬 REFLECTION INSIGHT (OPTIONAL)</div>
           <div style="font-size:12.5px;color:#fff;margin-bottom:10px">What felt hardest during this topic? (Helps Tio personalize future lessons)</div>
           <div style="display:flex;flex-wrap:wrap;gap:6px">
-            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will adjust formula explanations.','ok2');this.disabled=true">📐 Formula Application</button>
-            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will highlight question details.','ok2');this.disabled=true">👁️ Reading Questions</button>
-            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will review vector directions.','ok2');this.disabled=true">↗️ Vector Signs</button>
-            <button class="btn bgh bsm" onclick="toast('Reflection logged! Tio will add full numerical steps.','ok2');this.disabled=true">🔢 Calculations</button>
+            <button class="btn bgh bsm" onclick="_logReflection('formula',this)">📐 Formula Application</button>
+            <button class="btn bgh bsm" onclick="_logReflection('reading',this)">👁️ Reading Questions</button>
+            <button class="btn bgh bsm" onclick="_logReflection('vectors',this)">↗️ Vector Signs</button>
+            <button class="btn bgh bsm" onclick="_logReflection('calculations',this)">🔢 Calculations</button>
           </div>
         </div>` : ''}
 
@@ -3004,6 +3016,60 @@ function saveReflections() {
   if (r3) LS.reflections.q3 = r3.value;
   saveCheckpoint();
 }
+
+function _logReflection(tag, btn) {
+  if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+
+  // 1. Write to D.memory so AI system prompt picks it up
+  if (!window.D) window.D = {};
+  if (!window.D.memory) window.D.memory = {};
+  if (!window.D.memory.reflections) window.D.memory.reflections = {};
+  if (!window.D.memory.reflections[LS?.topic || 'general']) {
+    window.D.memory.reflections[LS?.topic || 'general'] = [];
+  }
+  const topicReflections = window.D.memory.reflections[LS?.topic || 'general'];
+  if (!topicReflections.includes(tag)) {
+    topicReflections.push(tag);
+  }
+
+  // 2. Write to weak spots so revision picks it up
+  if (window.D.memory.weakSpots && LS?.topic) {
+    const tagLabels = {
+      formula: 'Formula application and substitution',
+      reading: 'Reading multi-part questions carefully',
+      vectors: 'Vector direction and sign conventions',
+      calculations: 'Step-by-step numerical calculations'
+    };
+    const concept = tagLabels[tag] || tag;
+    const alreadyExists = window.D.memory.weakSpots.some(
+      ws => !ws.solved && ws.topic === LS.topic && ws.concept === concept
+    );
+    if (!alreadyExists) {
+      window.D.memory.weakSpots.push({
+        topic: LS.topic,
+        concept: concept,
+        source: 'reflection',
+        solved: false,
+        addedAt: Date.now()
+      });
+    }
+  }
+
+  // 3. Persist
+  if (typeof saveAll === 'function') saveAll();
+
+  // 4. Toast with real message
+  const messages = {
+    formula: 'Logged. Tio will show more formula substitution steps in future lessons.',
+    reading: 'Logged. Tio will break down multi-part questions more explicitly.',
+    vectors: 'Logged. Tio will emphasize direction signs in vector problems.',
+    calculations: 'Logged. Tio will show full numerical steps in all worked examples.'
+  };
+  if (typeof toast === 'function') {
+    toast(messages[tag] || 'Reflection saved.', 'ok2');
+  }
+}
+window._logReflection = _logReflection;
 
 window.saveCheckpoint = saveCheckpoint;
 window.rLearn = rLearn;
