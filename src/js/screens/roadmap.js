@@ -489,3 +489,7 @@ function initRoadmapDragging() {
 }
 
 window.rRoadmap = rRoadmap;
+window.generateFullRoadmap = generateFullRoadmap;
+window.saveCurrentRoadmap = saveCurrentRoadmap;
+window.shareRoadmap = shareRoadmap;
+window.toggleExam = toggleExam;

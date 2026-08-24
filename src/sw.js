@@ -1,10 +1,10 @@
 /**
- * sw.js — Mentorix Service Worker v84
+ * sw.js — Mentorix Service Worker v85
  * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-v84';
-const ASSET_VERSION = 84; // Keep in sync with ?v= in index.html
+const CACHE_NAME = 'mentorix-v85';
+const ASSET_VERSION = 85; // Keep in sync with ?v= in index.html
 
 const CORE_ASSETS = [
   './',

@@ -130,6 +130,7 @@ function renderDoubtAnswer(){
    PROGRESS
 ─────────────────────────────────────────── */
 window.rDoubt = rDoubt;
+window.askDoubt = askDoubt;
 
 // Fix 3: Voice input stub — prevents crash on button click
 function toggleDoubtVoice() {

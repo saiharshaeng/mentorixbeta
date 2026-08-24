@@ -292,4 +292,5 @@ window.logQuizMistake = logQuizMistake;
 window.practiceWeakAreas = practiceWeakAreas;
 window.startTargetedRecovery = startTargetedRecovery;
 window.startQuickRecovery = startQuickRecovery;
+window.startRecoverySession = startRecoverySession;
 

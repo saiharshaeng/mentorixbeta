@@ -11,7 +11,7 @@ function _haptic(type) {
 }
 
 function saveCheckpoint() {
-  if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
+  if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [], reflections: {} };
   if (LS && LS.topic) {
     D.memory.activeLesson = {
       topic: LS.topic,
@@ -2776,7 +2776,7 @@ function completeStageSession() {
   if (typeof addXP === 'function') addXP(xpReward, 'Micro Topic Mastered');
 
   // Write to D.memory so SM-2 and Revision can schedule future reviews
-  if (!D.memory) D.memory = { scores: {}, history: [], weakAreas: {}, strongAreas: {}, weakSpots: [] };
+  if (!D.memory) D.memory = { scores: {}, history: [], weakAreas: {}, strongAreas: {}, weakSpots: [], reflections: {} };
   if (!D.memory.scores) D.memory.scores = {};
   if (!D.memory.history) D.memory.history = [];
 
@@ -3096,3 +3096,4 @@ window.completeTopicFromReview = completeTopicFromReview;
 window.getChunkPlan = getChunkPlan;
 window.doChunkLesson = doChunkLesson;
 window.renderChunkLesson = renderChunkLesson;
+window.startFromDiag = startFromDiag;

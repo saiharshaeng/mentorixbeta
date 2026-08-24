@@ -613,7 +613,7 @@ function submitRevQuiz(){
   });
 
   // Update memory scores + history
-  if(!D.memory)D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
+  if(!D.memory)D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[],reflections:{}};
   D.memory.scores[RV.topic] = pct;
 
   // Update weak/strong area tracking
@@ -807,3 +807,8 @@ window.rRevision = rRevision;
 window.startRevision = startRevision;
 window.startRevisionForTopic = startRevisionForTopic;
 window.renderFlashcardUI = renderFlashcardUI;
+window.renderRevMode = renderRevMode;
+window.doRecap = doRecap;
+window.doFlashcards = doFlashcards;
+window.doRevQuiz = doRevQuiz;
+window.submitRevQuiz = submitRevQuiz;

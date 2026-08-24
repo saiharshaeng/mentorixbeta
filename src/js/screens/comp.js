@@ -3105,7 +3105,7 @@ function markMockForReview() {
 }
 
 function bookmarkQuestion(qId) {
-  if (!D.memory) D.memory = {};
+  if (!D.memory) D.memory = { scores: {}, history: [], weakSpots: [], reflections: {} };
   if (!D.memory.bookmarks) D.memory.bookmarks = {};
   
   // Normalize if previously stored as Array
@@ -3145,7 +3145,7 @@ function bookmarkQuestion(qId) {
 window.bookmarkQuestion = bookmarkQuestion;
 
 function addToRetryQueue(questionId) {
-  if (!D.memory) D.memory = {};
+  if (!D.memory) D.memory = { scores: {}, history: [], weakSpots: [], reflections: {} };
   if (!D.memory.retryQueue) D.memory.retryQueue = [];
   if (!D.memory.retryQueue.includes(questionId)) {
     D.memory.retryQueue.push(questionId);
@@ -3617,7 +3617,7 @@ function addTopicToRevision(topic) {
   if (!D.topics.includes(topic)) {
     D.topics.push(topic);
   }
-  if (!D.memory) D.memory = {scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
+  if (!D.memory) D.memory = {scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[],reflections:{}};
   if (!D.memory.weakSpots) D.memory.weakSpots = [];
   if (!D.memory.weakSpots.some(w => w.topic === topic)) {
     D.memory.weakSpots.push({ topic, solved: false, date: new Date().toISOString() });
@@ -4459,7 +4459,7 @@ function launchMultiPracticeOverlay(questions) {
 
     // Feed revision SM-2 scheduler & MasteryEngine (Problem 3)
     const topic = (chapter && !['All Chapters', 'General', 'bookmarks', 'retry', 'mistakes'].includes(chapter)) ? chapter : (qChap || subject);
-    if (!D.memory) D.memory = { scores: {}, history: [], weakSpots: [], retryQueue: [] };
+    if (!D.memory) D.memory = { scores: {}, history: [], weakSpots: [], retryQueue: [], reflections: {} };
     if (!D.memory.scores) D.memory.scores = {};
     if (!D.memory.history) D.memory.history = [];
     D.memory.scores[topic] = pct;

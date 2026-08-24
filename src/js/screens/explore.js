@@ -64,5 +64,6 @@ function renderCatTopics(){
    CAREERS
 ─────────────────────────────────────────── */
 window.rExplore = rExplore;
+window.selCatFn = selCatFn;
 
 

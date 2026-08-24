@@ -287,5 +287,6 @@ function genNoteTrigger(){
 window.rNotebook = rNotebook;
 window.genNoteTrigger = genNoteTrigger;
 window.restoreNoteVersion = restoreNoteVersion;
+window.deleteNote = deleteNote;
 
 

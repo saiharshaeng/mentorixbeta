@@ -1003,3 +1003,4 @@ function getAllCourseTopicsFlat() {
   return topics;
 }
 window.getAllCourseTopicsFlat = getAllCourseTopicsFlat;
+window.resolveMergeConflict = resolveMergeConflict;
