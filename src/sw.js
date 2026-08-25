@@ -3,8 +3,8 @@
  * Network-First with safe fallback responses to eliminate fetch promise rejections.
  */
 
-const CACHE_NAME = 'mentorix-v85';
-const ASSET_VERSION = 85; // Keep in sync with ?v= in index.html
+const CACHE_NAME = 'mentorix-v86';
+const ASSET_VERSION = 86; // Keep in sync with ?v= in index.html
 
 const CORE_ASSETS = [
   './',

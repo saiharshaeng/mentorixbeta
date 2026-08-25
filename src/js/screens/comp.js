@@ -201,7 +201,7 @@ function openImageZoomModal(imgSrc, caption) {
       <button onclick="window.closeImageZoomModal()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:18px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
     </div>
     <div style="max-width:90vw;max-height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:#fff;padding:12px;box-shadow:0 20px 50px rgba(0,0,0,0.5);">
-      <img src="${imgSrc}" style="max-width:100%;max-height:75vh;object-fit:contain;transition:transform 0.2s ease;" id="mx-img-zoom-target" />
+      <img src="${imgSrc}" alt="${caption ? esc(caption) : 'Zoomed question diagram'}" style="max-width:100%;max-height:75vh;object-fit:contain;transition:transform 0.2s ease;" id="mx-img-zoom-target" />
     </div>
     <div style="margin-top:16px;color:#fff;font-size:14px;font-weight:500;text-align:center;max-width:600px;">
       ${caption ? esc(caption) : 'Question Diagram — Click anywhere or press ESC to close'}

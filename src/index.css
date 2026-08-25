@@ -152,6 +152,7 @@ html {
 /* Glassmorphic Container Panel with Specular Metallic Highlights */
 .mx-glass-card {
   background: var(--uds-surface-glass);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
   border: 1px solid var(--border-subtle);
@@ -276,6 +277,7 @@ html {
   right: 0;
   height: var(--mx-bottom-nav-height, 64px);
   background: rgba(13, 11, 31, 0.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -332,6 +334,7 @@ html[data-layout-family="phone"] .mx-bottom-nav {
 /* Performance Tier Visual Fallbacks (Tiers C & D) */
 html[data-perf-tier="low"] .mx-glass-card,
 html[data-perf-tier="verylow"] .mx-glass-card {
+  -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   background: rgba(13, 11, 31, 0.96) !important;
@@ -398,6 +401,7 @@ html[data-perf-tier="verylow"] * {
   border: 1px solid var(--uds-border);
   border-radius: var(--r-card, 20px);
   padding: var(--sp-6, 24px);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: transform var(--uds-motion-hover), border-color var(--uds-motion-hover), box-shadow var(--uds-motion-hover);
@@ -525,6 +529,7 @@ html[data-perf-tier="verylow"] * {
 
 /* Low-Power Hardware Performance Mode Overrides */
 [data-hardware-tier="low"] *, [data-hardware-tier="low"] ::before, [data-hardware-tier="low"] ::after {
+  -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: none !important;
@@ -1696,6 +1701,7 @@ body::before{content:'';position:fixed;inset:0;background:var(--mesh-p),var(--me
 @keyframes of3{0%,100%{transform:translate(0,0)}55%{transform:translate(30px,-50px)}}
 
 /* â”€â”€ LAYOUT â”€â”€ */
+#app{display:flex;flex-direction:row;width:100%;max-width:100vw;height:100%;height:100vh;overflow:hidden;position:relative;z-index:1}
 #app{display:flex;flex-direction:row;width:100%;max-width:100vw;height:100%;height:100dvh;overflow:hidden;position:relative;z-index:1}
 #sb{
   width:224px;min-height:100vh;
@@ -5343,6 +5349,7 @@ body::before {
   font-weight: 500;
   max-width: 220px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   margin-bottom: 12px;
@@ -5393,9 +5400,11 @@ body::before {
    These override anything above — always last in cascade.
    ═══════════════════════════════════════════════════════════════ */
 
+/* Lock the layout container — no overflow on any phone, support 100vh & safe areas */
 /* Lock the layout container — no overflow on any phone, support 100dvh & safe areas */
 html, body {
   height: 100%;
+  height: 100vh;
   height: 100dvh;
   overflow: hidden !important;
 }
@@ -5406,6 +5415,7 @@ html, body {
   width: 100%;
   max-width: 100vw;
   height: 100%;
+  height: 100vh;
   height: 100dvh;
   overflow-y: auto !important;
   overflow-x: hidden !important;
@@ -5689,6 +5699,7 @@ html, body {
 .cbt-topbar {
   grid-column: 1 / -1;
   background: rgba(15, 23, 42, 0.95);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -8142,6 +8153,7 @@ html, body {
   border: 1px solid var(--brd);
   border-radius: 20px;
   padding: 24px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
@@ -8330,6 +8342,7 @@ html, body {
   padding: 24px;
   position: relative;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -10275,6 +10288,7 @@ html, body {
   font-size: 13px;
   font-weight: 600;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
@@ -10293,6 +10307,7 @@ html, body {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   z-index: 99990;
   display: none;
@@ -10923,6 +10938,7 @@ html, body {
 body.budget-device-mode *,
 body.tier-c *,
 body.tier-d * {
+  -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: none !important;
@@ -10947,6 +10963,7 @@ body.tier-d .avatar-companion-anim {
 /* 1. Global Touch & Scroll Momentum Reset */
 html, body {
   height: 100% !important;
+  height: 100vh !important;
   height: 100dvh !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -10960,6 +10977,7 @@ html, body {
   width: 100vw !important;
   max-width: 100vw !important;
   height: 100% !important;
+  height: 100vh !important;
   height: 100dvh !important;
   overflow: hidden !important;
 }
@@ -10971,6 +10989,7 @@ html, body {
   width: 100% !important;
   max-width: 100vw !important;
   height: 100% !important;
+  height: 100vh !important;
   height: 100dvh !important;
   overflow-y: auto !important;
   overflow-x: hidden !important;
