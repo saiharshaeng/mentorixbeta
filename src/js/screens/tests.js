@@ -591,7 +591,7 @@ function subTest() {
   }
 
   // Save history
-  if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [] };
+  if (!D.memory) D.memory = { scores: {}, weakAreas: {}, strongAreas: {}, history: [], weakSpots: [], reflections: {} };
   D.memory.scores[TS.topic] = pct;
   const sessRec = {
     sessionId: `sess_test_${Date.now()}`,

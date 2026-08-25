@@ -338,7 +338,7 @@ function doLogout(){
     if(typeof TM!=='undefined'&&TM.interval){clearInterval(TM.interval);TM.interval=null;TM.running=false;}
     D.profile=null;D.xp=0;D.streak=0;D.lastStudy='';D.streakFrozen=false;
     D.badges=[];D.topics=[];D.chatMsgs=[];D.exploredCats=[];
-    D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
+    D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[],reflections:{}};
     D.notes={};D.courses=[];D.roadmaps=[];D._param='';
     D.settings={theme:'vibrant',fontSize:'md',mentorTone:'Friendly',customCursor:true,colorTheme:'vibrant',accentColor:'purple',animLevel:'full',eli5Mode:false,appTheme:'vibrant'};
     // Reset transient module states
@@ -359,7 +359,7 @@ function continueAsGuest(){
   // Guest mode — no session, no persistence
   clearSession();
   D.profile=null;D.xp=0;D.streak=0;D.badges=[];D.topics=[];D.exploredCats=[];
-  D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
+  D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[],reflections:{}};
   D.notes={};D.courses=[];D.roadmaps=[];
   D.chatMsgs=[{r:'ai',c:"Hey there! 👋 I'm Tio. You're exploring as a guest — your progress won't be saved, but you can still learn anything! What topic shall we start with? 🚀"}];
   renderOB(true);// pass guest flag → skip becomes prominent

@@ -169,7 +169,7 @@ function startRecoverySession(topic, mode) {
 function logMistake(topic, concept, question, level, classification, reason) {
   // Always push to D.memory.weakSpots (local store — works offline)
   if (window.D) {
-    if (!D.memory) D.memory = { weakSpots: [], history: [], scores: {}, mistakeDiary: [] };
+    if (!D.memory) D.memory = { weakSpots: [], history: [], scores: {}, mistakeDiary: [], reflections: {} };
     if (!D.memory.weakSpots) D.memory.weakSpots = [];
     const exists = D.memory.weakSpots.some(w => w.topic === topic && w.concept === concept && !w.solved);
     if (!exists) {

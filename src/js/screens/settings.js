@@ -414,7 +414,7 @@ function resetAll(){
       }
       D.profile=null;D.xp=0;D.streak=0;D.lastStudy='';
       D.badges=[];D.topics=[];D.chatMsgs=[];D.exploredCats=[];
-      D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[]};
+      D.memory={scores:{},weakAreas:{},strongAreas:{},history:[],weakSpots:[],reflections:{}};
       D.notes={};D.courses=[];D.roadmaps=[];
       // Reset transient module states
       if(typeof RV!=='undefined')RV={mode:null,topic:null,flashIdx:0,flipped:false,quiz:null,quizAns:{},quizSub:false,loading:false};
